@@ -22,7 +22,11 @@ RETRY_STATUS = {429, 500, 502, 503, 504}
 
 
 class HttpError(RuntimeError):
-    """Raised when a request still fails after every retry."""
+    """Raised when a request fails (after every retry, for transient errors)."""
+
+    def __init__(self, message: str, status_code: int | None = None) -> None:
+        super().__init__(message)
+        self.status_code = status_code
 
 
 def make_client(transport: httpx.BaseTransport | None = None) -> httpx.Client:
@@ -40,6 +44,7 @@ def get_json(
     url: str,
     params: Mapping[str, Any] | None = None,
     *,
+    headers: Mapping[str, str] | None = None,
     retries: int = 5,
     backoff: float = 2.0,
     sleep: Callable[[float], None] = time.sleep,
@@ -53,7 +58,7 @@ def get_json(
     for attempt in range(retries + 1):
         wait = backoff * 2**attempt
         try:
-            response = client.get(url, params=params)
+            response = client.get(url, params=params, headers=headers)
         except httpx.TransportError as exc:
             last_error = f"network error: {exc}"
         else:
@@ -63,7 +68,9 @@ def get_json(
                 if retry_after and retry_after.isdigit():
                     wait = max(wait, float(retry_after))
             elif response.is_error:
-                raise HttpError(f"HTTP {response.status_code} for {response.url}")
+                raise HttpError(
+                    f"HTTP {response.status_code} for {response.url}", response.status_code
+                )
             else:
                 body = response.json()
                 error = body.get("error") if isinstance(body, dict) else None

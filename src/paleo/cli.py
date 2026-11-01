@@ -183,6 +183,16 @@ def facts(
         if unchanged and not force:
             typer.echo(f"{taxon}: up to date")
             continue
+        study = next((c.doi for c in chunks if c.chunk_id.endswith(":study:1")), None)
+        if study:
+            with make_client() as client:
+                if crossref.ensure_private(client, study, paths.data / "cache"):
+                    chunks = chunks_for(
+                        taxon,
+                        interim_root=paths.interim,
+                        raw_root=paths.raw,
+                        cache_root=paths.data / "cache",
+                    )
         try:
             r = extract_facts(
                 llm,

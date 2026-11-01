@@ -67,6 +67,17 @@ def _cache_private(doi: str, private: dict[str, Any], cache_root: Path) -> None:
     _atomic_write(folder / f"{safe_key(doi)}.json", json.dumps({"doi": doi, **private}) + "\n")
 
 
+def ensure_private(client: httpx.Client, doi: str, cache_root: Path) -> bool:
+    """Fetch the abstract of an already stored work when the local cache lacks it
+    (e.g. on a fresh CI runner). Returns True if a request was made."""
+    if (cache_root / "crossref_abstracts" / f"{safe_key(doi)}.json").exists():
+        return False
+    message = fetch_work(client, doi)
+    if message is not None:
+        _cache_private(doi, split_private(message)[1], cache_root)
+    return True
+
+
 def fetch_work(client: httpx.Client, doi: str) -> dict[str, Any] | None:
     """Crossref ``message`` for ``doi``, or None when Crossref does not know it."""
     try:

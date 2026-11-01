@@ -225,3 +225,11 @@ def test_pages_written_from_the_same_facts_are_up_to_date(tmp_path):
     doc["facts"].append({"fact_id": "F003", "statement": "New fact.", "category": "debate"})
     path.write_text(json.dumps(doc))
     assert not is_up_to_date(path, derived)  # facts changed: write again
+
+
+def test_sources_hash_ignores_private_chunks():
+    from paleo.narrative.facts import sources_hash
+
+    public = Chunk("t:enwiki:1", "wikipedia_article", "en", "T", None, "CC BY-SA 4.0", True, "x")
+    abstract = Chunk("t:abstract:1", "crossref", "en", "T", None, "publisher", False, "y")
+    assert sources_hash([public]) == sources_hash([public, abstract])

@@ -97,3 +97,19 @@ def test_dois_of_interest_are_normalized(tmp_path):
         json.dumps({"references": [{"doi": "10.1/abc"}, {"doi": None}]}) + "\n"
     )
     assert crossref.dois_of_interest(tmp_path) == ["10.1/abc"]
+
+
+def test_missing_abstract_is_fetched_once_for_a_stored_work(tmp_path):
+    calls = []
+    handler = handler_for({DOI: work()})
+
+    def counting(request):
+        calls.append(request.url.path)
+        return handler(request)
+
+    cache = tmp_path / "cache"
+    with make_client(httpx.MockTransport(counting)) as client:
+        assert crossref.ensure_private(client, DOI, cache)
+        assert not crossref.ensure_private(client, DOI, cache)
+    assert len(calls) == 1
+    assert "Copyrighted abstract" in next((cache / "crossref_abstracts").glob("*")).read_text()

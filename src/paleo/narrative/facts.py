@@ -86,7 +86,9 @@ def _user_message(taxon: str, batch: list[Chunk]) -> str:
 
 
 def sources_hash(chunks: list[Chunk]) -> str:
-    joined = "\n".join(f"{c.chunk_id}\n{c.text}" for c in chunks)
+    """Hash of the public sources only. Abstracts live in a local cache that a fresh
+    CI runner does not have, so they must not make a species look changed."""
+    joined = "\n".join(f"{c.chunk_id}\n{c.text}" for c in chunks if c.public_quote)
     return hashlib.sha256(joined.encode("utf-8")).hexdigest()[:16]
 
 

@@ -663,6 +663,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A4 | Python y gestor de dependencias | **uv** + **Python 3.14** (gestionado por uv, no el del sistema), fijado en `.python-version`. Comprobado el 2026-11-01: dbt-core 1.12, dbt-duckdb 1.11, DuckDB 2.0, Airflow 3.3 y PySpark 4.3 declaran soporte para 3.14 y las dependencias se resuelven sin conflictos. Herramientas: ruff (lint + formato) y pytest | 2026-11-01 |
 | A5 | Generador de web | **Propio en Python con Jinja2** + JavaScript sin framework para lo interactivo | 2026-11-01 |
 | A17 | Cómo se redactan las fichas | **Opción A:** fichas narrativas propias desde hechos con cita (§12.1), desde la Fase 1 | 2026-11-01 |
+| A7 | Tolerancia al retraso de PBDB | **8 semanas** (variable `pbdb_lag_weeks` de dbt): antes, aviso; después, error | 2026-11-02 |
 | A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
 
@@ -671,7 +672,6 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 |---|---|---|---|
 | A18 | LLM para fichas (plan gratuito, ES + EN, cuota suficiente) | A comparar | Fase 1, antes de la semana 3 |
 | A6 | Frecuencia de detección y hora del recap | Diario / cada 6 h; lunes 06:00 Canarias | Fase 1 |
-| A7 | Semanas de tolerancia al retraso de PBDB (N) | **Propuesta: 8** (variable `pbdb_lag_weeks` de dbt); a confirmar con datos reales | Fase 1 |
 | A8 | Versión de Airflow | 2.x, 3.x | Fase 2 |
 | A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
 | A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |

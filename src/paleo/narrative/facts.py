@@ -15,7 +15,7 @@ from importlib import resources
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from paleo.llm import LLM
 from paleo.narrative.checks import check_fact, normalize
@@ -28,11 +28,21 @@ Category = Literal[
 BATCH_CHARS = 9_000  # chunks per call, kept well under Groq's 8K tokens/minute with the prompt
 
 
+CATEGORIES = set(Category.__args__)
+
+
 class ExtractedFact(BaseModel):
     chunk_id: str = Field(description="id of the chunk the fact comes from")
     statement: str = Field(description="one self-contained fact, in English")
     category: Category
     quote: str = Field(description="exact span copied from that chunk")
+
+    @field_validator("category", mode="before")
+    @classmethod
+    def _known_category(cls, value: object) -> str:
+        """A made-up category must not sink the whole answer: map it to description."""
+        text = str(value).strip().lower().replace(" ", "_")
+        return text if text in CATEGORIES else "description"
 
 
 class Extraction(BaseModel):

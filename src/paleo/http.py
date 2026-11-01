@@ -74,7 +74,7 @@ def request_json(
             last_error = f"network error: {exc}"
         else:
             if response.status_code in RETRY_STATUS:
-                last_error = f"HTTP {response.status_code}"
+                last_error = f"HTTP {response.status_code}: {response.text[:300]}"
                 if (retry_after := _retry_after(response)) is not None:
                     wait = max(wait, retry_after)
             elif response.is_error:

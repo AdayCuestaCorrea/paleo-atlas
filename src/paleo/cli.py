@@ -254,6 +254,56 @@ def validate_gold() -> None:
     raise typer.Exit(1 if failed else 0)
 
 
+@eval_app.command("run")
+def eval_run(
+    provider: Provider = "ollama",
+    model: Model = None,
+    label: Annotated[str | None, typer.Option(help="Name of the run [default: model].")] = None,
+    only: Only = None,
+) -> None:
+    """Run the narrative pipeline on the gold set with one model and write a report."""
+    import re
+
+    from paleo.llm import LLM
+    from paleo.narrative import evaluate
+    from paleo.narrative.sources import chunks_for
+
+    paths = get_paths()
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    label = label or re.sub(r"[^A-Za-z0-9.-]+", "-", llm.label).strip("-")
+    names = _scientific_names()
+    embed = evaluate.Embedder()
+    results = []
+    for doc in evaluate.load_gold(project_root()):
+        if only and doc["taxon"] not in only:
+            continue
+        chunks = chunks_for(
+            doc["taxon"],
+            interim_root=paths.interim,
+            raw_root=paths.raw,
+            cache_root=paths.data / "cache",
+        )
+        r = evaluate.evaluate_taxon(
+            llm,
+            doc,
+            chunks,
+            run_dir=paths.data / "eval_runs" / label,
+            cache_root=paths.data / "cache",
+            scientific_names=names,
+            embed=embed,
+        )
+        typer.echo(
+            f"{r.taxon}: {r.status} en={r.en} es={r.es} "
+            f"fact_recall={r.fact_recall} text_recall={r.text_recall}"
+        )
+        results.append(r)
+        if r.status == "pending_quota":
+            typer.echo("Quota exhausted: rerun tomorrow; finished calls are cached.")
+    summary = evaluate.summarize(results, llm)
+    report = evaluate.write_report(summary, project_root() / "eval" / "reports", label)
+    typer.echo(f"Report: {report}")
+
+
 @app.command()
 def build() -> None:
     """Run ``dbt build`` (models + tests) on the current raw and interim data."""

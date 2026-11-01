@@ -8,12 +8,15 @@ from __future__ import annotations
 
 import datetime as dt
 import logging
+import os
+import subprocess
 from typing import Annotated
 
 import typer
 
-from paleo.config import enabled_pages, get_paths
+from paleo.config import enabled_pages, get_paths, project_root
 from paleo.http import make_client
+from paleo.ingest import crossref, images, pbdb
 from paleo.ingest import wikipedia as wiki_ingest
 from paleo.parse import wikipedia as wiki_parse
 
@@ -23,6 +26,7 @@ parse_app = typer.Typer(help="Turn raw responses into rows for dbt.", no_args_is
 app.add_typer(ingest_app, name="ingest")
 app.add_typer(parse_app, name="parse")
 
+Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
 
 
@@ -65,14 +69,65 @@ def ingest_wikipedia(year: Year = None) -> None:
             typer.echo(f"{result.revision.title}: revision {result.revision.revid} {state}")
 
 
+@ingest_app.command("pbdb")
+def ingest_pbdb(refresh: Refresh = False) -> None:
+    """Resolve candidate taxon names against PBDB (versioned per name)."""
+    paths = get_paths()
+    names = pbdb.names_of_interest(paths.interim)
+    with make_client() as client:
+        r = pbdb.ingest_names(client, names, raw_root=paths.raw, refresh=refresh)
+    typer.echo(
+        f"PBDB: {r.requested} names, {r.skipped_fresh} fresh, "
+        f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+    )
+
+
+@ingest_app.command("studies")
+def ingest_studies(refresh: Refresh = False) -> None:
+    """Crossref metadata for every cited DOI (abstracts kept out of the repo)."""
+    paths = get_paths()
+    dois = crossref.dois_of_interest(paths.interim)
+    with make_client() as client:
+        r = crossref.ingest_dois(client, dois, raw_root=paths.raw, refresh=refresh)
+    typer.echo(
+        f"Crossref: {r.requested} DOIs, {r.skipped_fresh} fresh, "
+        f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+    )
+
+
+@ingest_app.command("images")
+def ingest_images(refresh: Refresh = False) -> None:
+    """Commons files from the Wikipedia tables and PhyloPic silhouettes."""
+    paths = get_paths()
+    with make_client() as client:
+        r = images.ingest_images(client, paths.interim, raw_root=paths.raw, refresh=refresh)
+    typer.echo(
+        f"Images: {r.commons_files} Commons files, {r.phylopic_queries} PhyloPic lookups "
+        f"({r.phylopic_found} with an image), {r.new_versions} new versions"
+    )
+
+
+@app.command()
+def build() -> None:
+    """Run ``dbt build`` (models + tests) on the current raw and interim data."""
+    dbt_dir = project_root() / "dbt"
+    env = {**os.environ, "PALEO_DATA_DIR": str(get_paths().data)}
+    cmd = ["dbt", "build", "--project-dir", str(dbt_dir), "--profiles-dir", str(dbt_dir)]
+    raise typer.Exit(subprocess.run(cmd, env=env, check=False).returncode)
+
+
 @parse_app.command("wikipedia")
 def parse_wikipedia(
     year: Year = None,
-    all_revisions: Annotated[
-        bool, typer.Option(help="Re-parse every stored revision, not only the latest.")
+    force: Annotated[
+        bool, typer.Option(help="Re-parse revisions that were already parsed.")
     ] = False,
 ) -> None:
-    """Parse stored revisions into new_taxa.jsonl and research.jsonl."""
+    """Parse every stored revision into new_taxa.jsonl and research.jsonl.
+
+    Revisions that already have interim output are skipped unless ``--force``
+    (e.g. after improving the parser).
+    """
     paths = get_paths()
     found = False
     for page in enabled_pages():
@@ -82,14 +137,23 @@ def parse_wikipedia(
             typer.echo(f"{title}: nothing stored yet (run `paleo ingest wikipedia`)", err=True)
             continue
         found = True
-        for revid in revids if all_revisions else revids[-1:]:
+        skipped = 0
+        for revid in revids:
+            done = wiki_parse.interim_dir(title, revid, paths.interim) / "parse_report.json"
+            if done.exists() and not force:
+                skipped += 1
+                continue
             raw = wiki_ingest.load_raw(wiki_ingest.page_dir(title, paths.raw) / f"{revid}.json")
-            parsed = wiki_parse.parse_page(raw["title"], raw["revid"], raw["wikitext"])
+            parsed = wiki_parse.parse_page(
+                raw["title"], raw["revid"], raw["wikitext"], raw.get("timestamp")
+            )
             out = wiki_parse.write_interim(parsed, paths.interim)
             typer.echo(
                 f"{raw['title']} @ {revid}: {len(parsed.new_taxa)} new taxa, "
                 f"{len(parsed.research)} research items, "
                 f"{parsed.warning_count()} warnings → {out}"
             )
+        if skipped:
+            typer.echo(f"{title}: {skipped} revision(s) already parsed (use --force to redo)")
     if not found:
         raise typer.Exit(1)

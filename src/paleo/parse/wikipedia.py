@@ -61,6 +61,11 @@ DEFAULT_COLUMNS = (
 CITE_FIELDS_YEAR = ("year", "date")
 CITE_FIELDS_VENUE = ("journal", "website", "work", "publisher", "series")
 
+# Italic text without a link that looks like a scientific name: "Tyrannosaurus",
+# "Saurosuchus galilei", "Pinacosaurus hilwitnorum" (abbreviations like "T. rex"
+# are skipped: they cannot be resolved without context).
+_ITALIC_TEXT = re.compile(r"(?<!')''(?!')([^'\[\]{}<>|\n]+?)''(?!')")
+_SCIENTIFIC_NAME = re.compile(r"^[A-Z][a-zë-]+(?: [a-z][a-z-]+){0,2}$")
 _ITALIC_LINK = re.compile(r"''\s*\[\[([^\[\]|#]+)(?:#[^\[\]|]*)?(?:\|[^\[\]]*)?\]\]\s*''")
 _YEAR = re.compile(r"\b(1[5-9]\d\d|20\d\d)\b")
 _WHITESPACE = re.compile(r"\s+")
@@ -101,6 +106,7 @@ class NewTaxonRow:
     images: list[str] = field(default_factory=list)
     references: list[Reference] = field(default_factory=list)
     parse_warnings: list[str] = field(default_factory=list)
+    revision_timestamp: str | None = None
 
 
 @dataclass
@@ -112,8 +118,10 @@ class ResearchItem:
     text: str  # plain text, internal use only (CC BY-SA, never published)
     links: list[str] = field(default_factory=list)
     italic_links: list[str] = field(default_factory=list)  # most likely taxa
+    italic_names: list[str] = field(default_factory=list)  # italic, unlinked names
     references: list[Reference] = field(default_factory=list)
     parse_warnings: list[str] = field(default_factory=list)
+    revision_timestamp: str | None = None
 
 
 @dataclass
@@ -122,6 +130,7 @@ class ParsedPage:
     revid: int
     new_taxa: list[NewTaxonRow]
     research: list[ResearchItem]
+    revision_timestamp: str | None = None
 
     def warning_count(self) -> int:
         return sum(len(r.parse_warnings) for r in [*self.new_taxa, *self.research])
@@ -401,6 +410,17 @@ def _bullets(body: Wikicode) -> Iterator[str]:
         yield "\n".join(current)
 
 
+def _italic_names(bullet: str, linked: set[str]) -> list[str]:
+    """Italic, unlinked text that looks like a genus or species name."""
+    without_refs = _REFS.sub("", bullet)
+    names = []
+    for match in _ITALIC_TEXT.finditer(without_refs):
+        name = _clean(match.group(1))
+        if name not in linked and _SCIENTIFIC_NAME.match(name):
+            names.append(name)
+    return list(dict.fromkeys(names))
+
+
 def _research_id(page: str, refs: list[Reference], text: str) -> str:
     doi = next((r.doi for r in refs if r.doi), None)
     key = f"doi:{doi}" if doi else f"text:{page}:{_clean(text)[:300]}"
@@ -421,6 +441,7 @@ def _parse_research(
             warnings.append("no DOI")
         text = _plain(code)
         italic = list(dict.fromkeys(_clean(m.group(1)) for m in _ITALIC_LINK.finditer(bullet)))
+        unlinked = _italic_names(bullet, set(italic))
         items.append(
             ResearchItem(
                 page_title=page,
@@ -430,6 +451,7 @@ def _parse_research(
                 text=text,
                 links=_link_targets(code),
                 italic_links=italic,
+                italic_names=unlinked,
                 references=references,
                 parse_warnings=warnings,
             )
@@ -447,6 +469,7 @@ def _merge_duplicate_research(items: list[ResearchItem]) -> list[ResearchItem]:
         kept = merged[item.research_id]
         kept.links = list(dict.fromkeys([*kept.links, *item.links]))
         kept.italic_links = list(dict.fromkeys([*kept.italic_links, *item.italic_links]))
+        kept.italic_names = list(dict.fromkeys([*kept.italic_names, *item.italic_names]))
         kept.parse_warnings.append(f"also listed under: {' > '.join(item.section_path)}")
     return list(merged.values())
 
@@ -454,7 +477,9 @@ def _merge_duplicate_research(items: list[ResearchItem]) -> list[ResearchItem]:
 # --------------------------------------------------------------------------- entry point
 
 
-def parse_page(page_title: str, revid: int, wikitext: str) -> ParsedPage:
+def parse_page(
+    page_title: str, revid: int, wikitext: str, revision_timestamp: str | None = None
+) -> ParsedPage:
     code = mw.parse(wikitext)
     refs = RefRegistry(code)
     new_taxa: list[NewTaxonRow] = []
@@ -470,7 +495,10 @@ def parse_page(page_title: str, revid: int, wikitext: str) -> ParsedPage:
             new_taxa.extend(_parse_table(table, page_title, revid, path, table_index, refs))
         if "research" in heading:
             research.extend(_parse_research(body, page_title, revid, path, refs))
-    return ParsedPage(page_title, revid, new_taxa, _merge_duplicate_research(research))
+    research = _merge_duplicate_research(research)
+    for row in [*new_taxa, *research]:
+        row.revision_timestamp = revision_timestamp
+    return ParsedPage(page_title, revid, new_taxa, research, revision_timestamp)
 
 
 def to_records(rows: list[NewTaxonRow] | list[ResearchItem]) -> list[dict[str, Any]]:
@@ -483,7 +511,7 @@ def write_interim(parsed: ParsedPage, interim_root: Path) -> Path:
     Output goes to ``<interim>/wikipedia/<slug>/<revid>/``; re-running for the
     same revision overwrites it with identical content (idempotent).
     """
-    out = interim_root / "wikipedia" / slugify_title(parsed.page_title) / str(parsed.revid)
+    out = interim_dir(parsed.page_title, parsed.revid, interim_root)
     out.mkdir(parents=True, exist_ok=True)
     for name, rows in (("new_taxa", parsed.new_taxa), ("research", parsed.research)):
         lines = (json.dumps(r, ensure_ascii=False, sort_keys=True) for r in to_records(rows))
@@ -491,9 +519,14 @@ def write_interim(parsed: ParsedPage, interim_root: Path) -> Path:
     report = {
         "page_title": parsed.page_title,
         "revid": parsed.revid,
+        "revision_timestamp": parsed.revision_timestamp,
         "new_taxa": len(parsed.new_taxa),
         "research": len(parsed.research),
         "warnings": parsed.warning_count(),
     }
     (out / "parse_report.json").write_text(json.dumps(report, indent=1) + "\n", encoding="utf-8")
     return out
+
+
+def interim_dir(page_title: str, revid: int, interim_root: Path) -> Path:
+    return interim_root / "wikipedia" / slugify_title(page_title) / str(revid)

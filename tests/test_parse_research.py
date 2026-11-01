@@ -47,3 +47,24 @@ def test_same_study_under_two_headings_is_merged():
     (item,) = page.research
     assert item.links == ["Tyrannosaurus", "Allosaurus"]
     assert any("also listed under" in w for w in item.parse_warnings)
+
+
+def test_italic_unlinked_names_are_candidate_taxa():
+    wikitext = """== Group ==
+=== Theropod research ===
+* A study on ''Tyrannosaurus rex'' and ''[[Allosaurus]]'' in the ''Hell Creek'' sense, \
+also ''T. rex''.<ref>{{Cite journal |title=A |doi=10.1/a}}</ref>
+"""
+    (item,) = parse_page("2026 in archosaur paleontology", 1, wikitext).research
+    assert item.italic_links == ["Allosaurus"]
+    assert item.italic_names == ["Tyrannosaurus rex"]  # "T. rex" and "Hell Creek" are skipped
+
+
+def test_revision_timestamp_is_attached_to_every_row(archosaur_text):
+    page = parse_page(
+        "2026 in archosaur paleontology", 1383165113, archosaur_text, "2026-11-01T08:48:46Z"
+    )
+    assert page.revision_timestamp == "2026-11-01T08:48:46Z"
+    assert {r.revision_timestamp for r in [*page.new_taxa, *page.research]} == {
+        "2026-11-01T08:48:46Z"
+    }

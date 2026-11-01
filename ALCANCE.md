@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 8 · **Estado:** Fase 1 en curso (semana 1)
+**Creado:** 2026-10-31 · **Versión:** 9 · **Estado:** Fase 1 en curso (semana 2 terminada)
 
 ---
 
@@ -71,7 +71,7 @@ Demostrar, con un sistema que funciona en público, las habilidades que piden la
 | Spark / PySpark | 4 | 2 | Job de GBIF en PySpark local + benchmark contra DuckDB (Fase 3) |
 | Databricks | 3 | — | *Opcional:* mismo job en Databricks Free Edition (Fase 3) |
 | Airflow | 3 | 1 | DAGs en Docker que llaman a los mismos comandos (Fase 2) |
-| dbt | 2 | — | dbt-duckdb: staging → intermediate → marts + **snapshots (SCD2)** para el historial (Fase 1) |
+| dbt | 2 | — | dbt-duckdb: staging → intermediate → marts, **historial SCD2 calculado desde las versiones crudas**, tests de datos y tests unitarios de dbt (Fase 1) |
 | CI/CD | 4 | — | GitHub Actions: tests en cada push + ejecución programada (Fase 1) |
 | Calidad de datos | transversal | — | Tests dbt + pytest + informe de ejecución (Fase 1) |
 | LLM / IA generativa | perfil AI Engineer | — | Fichas narrativas: extracción de hechos con fuente → redacción → verificación de fidelidad y anti-copia (Fases 1 y 3); glosario (Fase 5) |
@@ -92,6 +92,7 @@ Demostrar, con un sistema que funciona en público, las habilidades que piden la
 - Web **bilingüe** (español e inglés) con selector de idioma.
 - Detección diaria de novedades + recap semanal.
 - Historial de cambios por taxón.
+- **Fichas básicas para los taxones ya conocidos** que aparecen en los estudios del año (datos de PBDB, imagen e historial de estudios; texto narrativo en la Fase 3). Decisión del 2026-11-02.
 - Señales de fiabilidad de cada estudio.
 - Enciclopedia con datos de PBDB y GBIF; Spark local + benchmark.
 - Imágenes 2D con licencia libre; modelos 3D curados cuando existan y sean fiables.
@@ -144,7 +145,7 @@ Notas:
 | F4 | PhyloPic — API v2 | Siluetas por taxón (si no hay, se usa la del género o el clado) | API REST | Diaria (solo taxones sin imagen) | Por imagen. **Solo PDM, CC0, CC BY 3.0/4.0, CC BY-SA 3.0** (excluidas CC BY-NC y CC BY-NC-SA) | [x] 2026-11-01 |
 | F5 | Wikimedia Commons — API | Reconstrucciones y fotos de fósiles | API de MediaWiki | Diaria (solo taxones sin imagen) | Por archivo; Commons no admite licencias solo NC ni ND | [x] 2026-11-01 |
 | F6 | Crossref — API REST | Metadatos de cada estudio: tipo (artículo / preprint), revista, ISSN, **retracciones y correcciones** | API pública | Por cada estudio nuevo + revisión mensual | Metadatos de uso libre; los resúmenes (abstracts) pueden tener derechos | [x] 2026-11-01 |
-| F7 | ZooBank | Registro oficial del nombre (obligatorio en publicaciones electrónicas según el ICZN) | API / búsqueda pública | Por cada taxón nuevo | A verificar | [ ] |
+| F7 | ZooBank | Registro oficial del nombre (obligatorio en publicaciones electrónicas según el ICZN) | API / búsqueda pública | Por cada taxón nuevo | **API no disponible** (404 en todas las rutas el 2026-11-02; también informado el 28-08-2026). Se reintenta en la Fase 3; mientras, no se muestra el distintivo | [ ] |
 | F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública | Por cada revista nueva | A verificar | [ ] |
 | F9 | *(Fase 5)* RSS de medios ES/EN | Noticias: titular, enlace, fecha | RSS | Diaria | Solo titular + enlace + resumen propio | [ ] |
 | F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
@@ -201,7 +202,7 @@ F1 F2 F4 F5 F6 F7 ─► raw JSON (rama `data`)         → extracto Parquet
 - **D6.** Imágenes y 3D solo con licencias permitidas (§19); nunca de prensa.
 - **D7.** Fichas narrativas propias: hechos con fuente → redacción nueva con LLM → verificaciones automáticas. La plantilla es el respaldo si algo falla (§12.1).
 - **D8.** Bilingüe desde el principio: los datos no dependen del idioma; solo los textos y las plantillas se duplican.
-- **D9.** Historial con snapshots de dbt desde el día 1: lo que no se captura, no se puede reconstruir después.
+- **D9.** Historial desde el día 1, **calculado en SQL (SCD tipo 2) a partir de las versiones crudas** versionadas en git. Se descartan los `dbt snapshots`: guardan estado entre ejecuciones y chocan con D3 (el almacén se reconstruye desde cero en cada ejecución, así que en CI/Actions se perdería el historial). Lo que no se captura, no se puede reconstruir después.
 - **D10.** Detección de cambios barata antes de ejecutar el pipeline completo.
 
 ---
@@ -227,11 +228,12 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] `ingest wikipedia`: página del año en curso vía API, guardado en crudo
 - [x] Parser de la tabla de taxones (wikitext irregular → filas), con fixtures
 - [x] Parser de las secciones de investigación (estudios sobre taxones ya conocidos → futuros eventos «Nuevo estudio» del historial)
-- [ ] `ingest pbdb`: datos de cada taxón nuevo
-- [ ] `ingest images`: PhyloPic → Commons → silueta del género o clado, con licencia y autor
-- [ ] `ingest studies`: Crossref + ZooBank para cada estudio (§10)
-- [ ] dbt-duckdb: staging, intermediate y marts de §8 *(staging de Wikipedia hecho)*
-- [ ] **dbt snapshots** de taxón y estudio desde la primera ejecución (§9)
+- [x] `ingest pbdb`: datos de cada taxón nuevo y de los taxones citados en los estudios (snapshot por nombre, también «no encontrado»)
+- [x] `ingest images`: Commons (ficheros de la tabla) → PhyloPic especie → género → clado, con licencia y autor
+- [x] `ingest studies`: Crossref para cada estudio (§10), sin guardar abstracts en el crudo público; ZooBank aplazado (API caída)
+- [x] dbt-duckdb: staging, intermediate y marts de §8
+- [x] **Historial SCD2 desde las versiones crudas** (en lugar de `dbt snapshots`, ver D9), con test unitario de dbt
+- [x] Vínculo estudios ↔ taxones (wikilinks y nombres en cursiva resueltos en PBDB) y fichas básicas de taxones conocidos (datos; la web, en la semana 4)
 - [ ] Elegir LLM con plan gratuito (A18)
 - [ ] Extracción de hechos con fuente (Wikipedia ES/EN, PBDB, metadatos de estudios) para las especies nuevas
 - [ ] Redacción narrativa ES + EN a partir de los hechos (§12.1)
@@ -315,9 +317,9 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 | Término del glosario | Término, definición ES, definición EN, estado de revisión (§12) |
 
 ### Capas (nombres orientativos)
-- **seeds:** `scope_clades`, `trusted_journals`, `contested_topics`, `models_3d`, `glossary`, `body_sizes`, `reference_objects`
+- **seeds:** `license_allowlist` *(hecho)*, `trusted_journals` *(hecho)*, `scope_clades`, `trusted_journals`, `contested_topics`, `models_3d`, `glossary`, `body_sizes`, `reference_objects`
 - **staging:** `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_wikipedia__articles`, `stg_pbdb__taxa`, `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
-- **snapshots:** `snap_taxon`, `snap_study`
+- **historial (SCD2 desde versiones crudas):** `int_new_taxa_history`; los `stg_*_versions` / `stg_*_revisions` conservan todas las versiones
 - **intermediate:** `int_taxon_name_resolution`, `int_taxon_enriched`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`, `int_taxon_facts`
 - **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`, `fct_weekly_recap`, `fct_run_summary`
 
@@ -476,9 +478,9 @@ Lo que tiene que existir; la implementación se decide en la Fase 1.
 | `paleo parse wikipedia --year AAAA` | Crudo → `new_taxa.jsonl` + `research.jsonl`; `--all-revisions` re-procesa revisiones antiguas sin volver a descargar | Sí |
 | `paleo ingest pbdb` | Datos PBDB de los taxones pendientes | Sí |
 | `paleo ingest images` | Imagen para taxones sin imagen | Sí |
-| `paleo ingest studies` | Crossref + ZooBank + DOAJ | Sí |
+| `paleo ingest studies` | Crossref (ZooBank y DOAJ cuando estén disponibles); abstracts solo en la caché local | Sí |
 | `paleo gbif extract` *(Fase 3)* | Descarga filtrada + job Spark/DuckDB | Sí |
-| `paleo build` | `dbt snapshot` + `dbt build` | Sí (reconstrucción completa; los snapshots acumulan historia) |
+| `paleo build` | `dbt build` (modelos + tests; el historial sale de las versiones crudas) | Sí (reconstrucción completa) |
 | `paleo site` | Genera la web ES + EN | Sí |
 | `paleo recap --week AAAA-Www` | Genera el recap de esa semana | Sí |
 | `paleo report` | Informe de ejecución | Sí |
@@ -525,6 +527,13 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 - Parser de las tablas de Wikipedia con casos reales guardados (fixtures).
 - Reconciliación de nombres con casos conocidos (sinónimos, erratas).
 - Verificadores de fidelidad y anti-copia, con casos buenos y malos guardados (Fase 1).
+- Ingestas (PBDB, Crossref, Commons, PhyloPic) con transporte simulado: idempotencia, frescura, lotes, «no encontrado», abstract eliminado.
+
+### Tests unitarios de dbt
+- Historial SCD2: solo se abre una versión nueva cuando cambia un campo.
+
+### CI sin red
+- El CI siembra los fixtures crudos (`tests/fixtures/`) y ejecuta el pipeline completo. La variable `as_of` fija «hoy» para que los tests con fechas no cambien de resultado con el paso del tiempo.
 
 ### Informe de ejecución (por cada run)
 Fuentes con cambios, taxones nuevos / actualizados, eventos nuevos, % con correspondencia PBDB, % con imagen por nivel, avisos y errores de tests, duración por paso.
@@ -588,6 +597,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 - **Imágenes y modelos 3D: solo CC0, dominio público, CC BY o CC BY-SA.** Nada NC: si algún día monetizas (anuncios, patrocinios), una imagen NC te obligaría a retirarla.
 - Cada imagen y modelo muestra autor y licencia.
 - Cada descarga de GBIF se cita con su DOI.
+- Los **abstracts de Crossref** (pueden tener derechos de los editores) nunca se guardan en el crudo público: solo en `data/cache/`, local y fuera de git.
 - El texto generado con IA se etiqueta como tal.
 - Rigor: si un dato no está en una fuente, no se muestra.
 
@@ -653,6 +663,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A4 | Python y gestor de dependencias | **uv** + **Python 3.14** (gestionado por uv, no el del sistema), fijado en `.python-version`. Comprobado el 2026-11-01: dbt-core 1.12, dbt-duckdb 1.11, DuckDB 2.0, Airflow 3.3 y PySpark 4.3 declaran soporte para 3.14 y las dependencias se resuelven sin conflictos. Herramientas: ruff (lint + formato) y pytest | 2026-11-01 |
 | A5 | Generador de web | **Propio en Python con Jinja2** + JavaScript sin framework para lo interactivo | 2026-11-01 |
 | A17 | Cómo se redactan las fichas | **Opción A:** fichas narrativas propias desde hechos con cita (§12.1), desde la Fase 1 | 2026-11-01 |
+| A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
 
 ### Abiertas
@@ -660,11 +671,10 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 |---|---|---|---|
 | A18 | LLM para fichas (plan gratuito, ES + EN, cuota suficiente) | A comparar | Fase 1, antes de la semana 3 |
 | A6 | Frecuencia de detección y hora del recap | Diario / cada 6 h; lunes 06:00 Canarias | Fase 1 |
-| A7 | Semanas de tolerancia al retraso de PBDB (N) | 4, 8, 12 | Fase 1 |
+| A7 | Semanas de tolerancia al retraso de PBDB (N) | **Propuesta: 8** (variable `pbdb_lag_weeks` de dbt); a confirmar con datos reales | Fase 1 |
 | A8 | Versión de Airflow | 2.x, 3.x | Fase 2 |
 | A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
 | A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |
-| A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` | Fase 1 |
 
 ---
 
@@ -699,6 +709,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 | Newsletter semanal por correo con el recap | Necesita un servicio de envío gratuito |
 | Más grupos: sinápsidos y mamíferos, invertebrados, plantas | Ampliar el seed de §4 |
 | API pública de datos de Paleo Atlas | Revisar las licencias de redistribución |
+| Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
 
 ---
 
@@ -706,6 +717,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v9: semana 2 terminada (PBDB, Crossref, imágenes, vínculo estudios ↔ taxones, marts); **fichas básicas para taxones conocidos** en la Fase 1; D9 cambia de `dbt snapshots` a SCD2 desde versiones crudas; ZooBank aplazado (API caída); abstracts solo en caché local; A16 cerrada | Decisión del usuario y hallazgos de la semana 2 |
 | 2026-11-02 | v8: los ~380 estudios sobre taxones ya conocidos de las páginas anuales entran en la Fase 1 (eventos «Nuevo estudio» del historial; solo título, revista, DOI y distintivos, nunca la prosa de Wikipedia); nuevo comando `paleo parse wikipedia`; semana 1 completada (ingesta, parser, staging dbt, CI) | Decisión del usuario |
 | 2026-11-01 | v7: entorno configurado (A4 concretada: Python 3.14); `SCOPE.md` creado; **Fase 0 cerrada**; §2 anonimizado (sin nombres de empresas); orden de F10 y del registro corregido | Cierre de la Fase 0 |
 | 2026-11-01 | v6: licencias de F1, F2, F4, F5 y F6 comprobadas; listas blancas de licencias para imágenes; reglas de acceso de Wikimedia y Crossref (§5) | Comprobación de la Fase 0 |

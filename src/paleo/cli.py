@@ -16,7 +16,7 @@ import typer
 
 from paleo.config import enabled_pages, get_paths, project_root
 from paleo.http import make_client
-from paleo.ingest import crossref, images, pbdb
+from paleo.ingest import articles, crossref, images, pbdb
 from paleo.ingest import wikipedia as wiki_ingest
 from paleo.parse import wikipedia as wiki_parse
 
@@ -105,6 +105,119 @@ def ingest_images(refresh: Refresh = False) -> None:
         f"Images: {r.commons_files} Commons files, {r.phylopic_queries} PhyloPic lookups "
         f"({r.phylopic_found} with an image), {r.new_versions} new versions"
     )
+
+
+@ingest_app.command("articles")
+def ingest_articles(refresh: Refresh = False) -> None:
+    """Wikipedia articles (EN and, when it exists, ES) of the new taxa."""
+    paths = get_paths()
+    with make_client() as client:
+        r = articles.ingest_articles(client, paths.interim, raw_root=paths.raw, refresh=refresh)
+    typer.echo(
+        f"Articles: {r.taxa} taxa, {r.skipped_fresh} fresh, {r.found['en']} EN and "
+        f"{r.found['es']} ES found, {r.new_versions} new versions"
+    )
+
+
+Provider = Annotated[str, typer.Option(help="LLM provider: ollama or groq.")]
+Model = Annotated[str | None, typer.Option(help="Model name [default: per provider].")]
+Only = Annotated[list[str] | None, typer.Option(help="Only these taxa (repeatable).")]
+Limit = Annotated[int | None, typer.Option(help="Process at most this many taxa.")]
+DEFAULT_MODELS = {"ollama": "qwen3.5:9b", "groq": "openai/gpt-oss-120b"}
+
+
+def _new_taxa(only: list[str] | None, limit: int | None) -> list[str]:
+    from paleo.ingest.articles import new_taxa_titles
+
+    names = sorted(new_taxa_titles(get_paths().interim))
+    if only:
+        wanted = {o.lower() for o in only}
+        names = [n for n in names if n.lower() in wanted or n.lower().replace(" ", "-") in wanted]
+    return names[:limit] if limit else names
+
+
+def _scientific_names() -> set[str]:
+    from paleo.ingest import pbdb as pbdb_ingest
+
+    paths = get_paths()
+    taxa = pbdb_ingest.store(paths.raw)
+    names = set(_new_taxa(None, None))
+    for key in taxa.stored_keys():
+        latest = taxa.latest(key)
+        if latest and latest["payload"]["found"]:
+            names.update(r.get("taxon_name", "") for r in latest["payload"]["records"])
+    # Genus names (capitalized): they must survive the Spanish adaptation untouched.
+    return {word for name in names for word in name.split() if word[:1].isupper()}
+
+
+@app.command()
+def facts(
+    provider: Provider = "ollama",
+    model: Model = None,
+    only: Only = None,
+    limit: Limit = None,
+) -> None:
+    """Extract checkable facts for new taxa (writes data/derived/facts)."""
+    from paleo.llm import LLM, QuotaExhausted
+    from paleo.narrative.facts import extract_facts
+    from paleo.narrative.sources import chunks_for
+
+    paths = get_paths()
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    for taxon in _new_taxa(only, limit):
+        chunks = chunks_for(
+            taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
+        )
+        try:
+            r = extract_facts(
+                llm,
+                taxon,
+                chunks,
+                derived_root=paths.data / "derived",
+                cache_root=paths.data / "cache",
+            )
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
+            break
+        typer.echo(f"{taxon}: {r.accepted} facts accepted, {r.rejected} rejected")
+    typer.echo(f"{llm.label}: {llm.stats}")
+
+
+@app.command()
+def write(
+    provider: Provider = "ollama",
+    model: Model = None,
+    only: Only = None,
+    limit: Limit = None,
+) -> None:
+    """Write and check the EN text and its ES adaptation (writes data/derived/texts)."""
+    from paleo.llm import LLM, QuotaExhausted
+    from paleo.narrative.sources import chunks_for, taxon_key
+    from paleo.narrative.write import write_page
+
+    paths = get_paths()
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    names = _scientific_names()
+    for taxon in _new_taxa(only, limit):
+        facts_path = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
+        if not facts_path.exists():
+            typer.echo(f"{taxon}: no facts yet (run `paleo facts`)")
+            continue
+        chunks = chunks_for(
+            taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
+        )
+        try:
+            r = write_page(
+                llm, facts_path, chunks, derived_root=paths.data / "derived", scientific_names=names
+            )
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
+            break
+        typer.echo(f"{taxon}: {r.status} {r.words}")
+        for lang, problems in r.problems.items():
+            for problem in problems[:5]:
+                typer.echo(f"   [{lang}] {problem}")
+    typer.echo(f"{llm.label}: {llm.stats}")
 
 
 @app.command()

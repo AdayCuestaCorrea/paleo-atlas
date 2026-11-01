@@ -1,14 +1,25 @@
 [project]
 name = "paleo-atlas"
-version = "0.0.0"
+version = "0.1.0"
 description = "A living, visual paleontology encyclopedia in Spanish and English, rebuilt automatically from open scientific data."
 readme = "README.md"
 license = "AGPL-3.0-only"
 license-files = ["LICENSE", "LICENSE-CONTENT.md"]
 authors = [{ name = "Aday Cuesta Correa" }]
 requires-python = ">=3.14,<3.15"
-# Runtime dependencies are added in Phase 1 with `uv add`.
-dependencies = []
+dependencies = [
+    "dbt-duckdb>=1.11.1",
+    "httpx>=0.28.1",
+    "mwparserfromhell>=0.7.2",
+    "typer>=0.27.3",
+]
+
+[project.scripts]
+paleo = "paleo.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.13,<0.14"]
+build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
@@ -20,6 +31,9 @@ dev = [
 # CachyOS is a rolling distro: use a uv-managed interpreter so a system
 # Python upgrade never breaks the virtualenv.
 python-preference = "only-managed"
+
+[tool.uv.build-backend]
+module-name = "paleo"
 
 [tool.ruff]
 line-length = 100

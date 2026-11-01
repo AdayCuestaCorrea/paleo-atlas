@@ -61,6 +61,7 @@ class WriteResult:
     status: dict[str, str] = field(default_factory=dict)  # lang -> verified | failed
     problems: dict[str, list[str]] = field(default_factory=dict)
     words: dict[str, int] = field(default_factory=dict)
+    review: str | None = None  # Spanish grammar pass: accepted | rejected | unchanged
 
 
 MAX_FACTS_FOR_WRITING = 24
@@ -87,23 +88,30 @@ def facts_hash(facts: list[dict[str, Any]]) -> str:
     return hashlib.sha256(json.dumps(selected, sort_keys=True).encode()).hexdigest()[:16]
 
 
+def prompt_versions() -> dict[str, str]:
+    """Version a text of each language is written with; a change rewrites it."""
+    en = prompt("write_en")[1]
+    return {"en": en, "es": f"{prompt('adapt_es')[1]}+{prompt('review_es')[1]}"}
+
+
 def is_up_to_date(facts_path: Path, derived_root: Path) -> bool:
     """True when both texts (or a failed English one kept for review) were written
-    from exactly these facts, so writing again would only spend quota."""
+    from exactly these facts and prompts, so writing again would only spend quota."""
     doc = json.loads(facts_path.read_text(encoding="utf-8"))
     current = facts_hash(doc["facts"])
+    versions = prompt_versions()
     key = doc["taxon_key"]
 
-    def stored(folder: str, lang: str) -> str | None:
+    def same(folder: str, lang: str) -> bool:
         path = derived_root / folder / f"{key}.{lang}.json"
-        return json.loads(path.read_text(encoding="utf-8"))["facts_hash"] if path.exists() else None
+        if not path.exists():
+            return False
+        stored = json.loads(path.read_text(encoding="utf-8"))
+        return stored["facts_hash"] == current and stored["prompt_version"] == versions[lang]
 
-    if stored("texts_review", "en") == current:
+    if same("texts_review", "en"):
         return True  # English failed with these facts: retry only with --force
-    return stored("texts", "en") == current and current in (
-        stored("texts", "es"),
-        stored("texts_review", "es"),
-    )
+    return same("texts", "en") and (same("texts", "es") or same("texts_review", "es"))
 
 
 def target_words(fact_count: int) -> int:
@@ -170,6 +178,19 @@ def _adapt_es(
     return [by_index.get(i, "") for i in range(1, len(sentences) + 1)] if by_index else []
 
 
+def _review_es(
+    llm: LLM, taxon: str, en: list[tuple[str, list[str], str]], es: list[str]
+) -> list[str]:
+    """Grammar pass over a Spanish text that already passed its checks."""
+    system, _ = prompt("review_es")
+    lines = [f"ANIMAL: {taxon}", "", "FRASES:"]
+    for i, ((english, _, _), spanish) in enumerate(zip(en, es, strict=True), start=1):
+        lines += [f"{i}. {spanish}", f"   (inglés: {english})"]
+    result = llm.complete_json(system, "\n".join(lines), AdaptedText, max_tokens=3_000)
+    by_index = {s.index: _tidy(s.text) for s in result.sentences}
+    return [by_index.get(i, "") for i in range(1, len(es) + 1)]
+
+
 def _save(
     path: Path,
     *,
@@ -183,6 +204,7 @@ def _save(
     sentences: list[tuple[str, list[str], str]],
     report: TextReport | None,
     problems: list[str],
+    review: str | None = None,
 ) -> None:
     sections: dict[str, list[dict[str, Any]]] = {}
     for text, fact_ids, section in sentences:
@@ -198,6 +220,7 @@ def _save(
         "generated_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "word_count": report.word_count if report else None,
         "problems": problems,
+        **({"review": review} if review else {}),
         "sections": [{"section": s, "sentences": v} for s, v in sections.items()],
     }
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -222,8 +245,8 @@ def write_page(
         lang: [c.text for c in chunks if c.lang == lang and c.public_quote] for lang in ("en", "es")
     }
     result = WriteResult(key)
-    _, en_version = prompt("write_en")
-    _, es_version = prompt("adapt_es")
+    versions = prompt_versions()
+    en_version, es_version = versions["en"], versions["es"]
 
     # English from the facts.
     feedback: list[str] | None = None
@@ -255,18 +278,32 @@ def write_page(
         return result  # no Spanish adaptation of an unverified text
 
     # Spanish adapted from the verified English, sentence by sentence.
+    def check_es(adapted: list[str]) -> tuple[list, TextReport, list[str]]:
+        problems = check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
+        es = [(text, f, s) for text, (_, f, s) in zip(adapted, en, strict=False)]
+        report = check_text(
+            [(t, f) for t, f, _ in es], fact_texts, sources["es"], check_names=False
+        )
+        return es, report, problems + report.summary()
+
     feedback = None
     for _attempt in range(retries + 1):
         adapted = _adapt_es(llm, taxon, en, feedback)
-        problems = check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
-        es = [(text, f, s) for text, (_, f, s) in zip(adapted, en, strict=False)]
-        es_report = check_text(
-            [(t, f) for t, f, _ in es], fact_texts, sources["es"], check_names=False
-        )
-        problems += es_report.summary()
+        es, es_report, problems = check_es(adapted)
         if not problems:
             break
         feedback = problems
+    review = None
+    if not problems:
+        # Grammar pass; kept only if the corrected text still passes every check.
+        reviewed = _review_es(llm, taxon, en, adapted)
+        if reviewed == adapted:
+            review = "unchanged"
+        else:
+            r_es, r_report, r_problems = check_es(reviewed)
+            review = "rejected" if r_problems else "accepted"
+            if not r_problems:
+                es, es_report = r_es, r_report
     es_status = "verified" if not problems else "failed"
     _save(
         derived_root / ("texts" if not problems else "texts_review") / f"{key}.es.json",
@@ -280,8 +317,10 @@ def write_page(
         sentences=es,
         report=es_report,
         problems=problems,
+        review=review,
     )
     result.status["es"] = es_status
+    result.review = review
     result.problems["es"] = problems
     result.words["es"] = es_report.word_count
     return result

@@ -242,10 +242,36 @@ def write(
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
             break
-        typer.echo(f"{taxon}: {r.status} {r.words}")
+        typer.echo(f"{taxon}: {r.status} {r.words}" + (f" review={r.review}" if r.review else ""))
         for lang, problems in r.problems.items():
             for problem in problems[:5]:
                 typer.echo(f"   [{lang}] {problem}")
+    typer.echo(f"{llm.label}: {llm.stats}")
+
+
+@app.command()
+def titles(provider: Provider = "ollama", model: Model = None, limit: Limit = None) -> None:
+    """Spanish versions of the study titles (writes data/derived/study_titles)."""
+    from paleo.llm import LLM, QuotaExhausted
+    from paleo.narrative.titles import translate_titles
+
+    paths = get_paths()
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    try:
+        r = translate_titles(
+            llm,
+            raw_root=paths.raw,
+            derived_root=paths.data / "derived",
+            scientific_names=_scientific_names(),
+            limit=limit,
+        )
+    except QuotaExhausted as exc:
+        typer.echo(f"Quota exhausted ({exc}); the rest stay in English until the next run.")
+        return
+    typer.echo(
+        f"{r.total} titles: {r.up_to_date} up to date, {r.translated} translated, "
+        f"{r.rejected} rejected"
+    )
     typer.echo(f"{llm.label}: {llm.stats}")
 
 

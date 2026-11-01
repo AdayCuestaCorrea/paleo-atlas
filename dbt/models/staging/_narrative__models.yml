@@ -10,6 +10,12 @@ models:
           - accepted_values:
               arguments:
                 values: [description, discovery, paleobiology, classification, time_and_habitat, debate]
+  - name: stg_narrative__study_titles
+    columns:
+      - name: doi
+        data_tests: [unique, not_null]
+      - name: title_es
+        data_tests: [not_null]
   - name: stg_narrative__citations
     columns:
       - name: citation_key

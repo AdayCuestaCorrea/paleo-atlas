@@ -1,4 +1,4 @@
--- Latest Commons metadata per file listed in the Wikipedia tables.
+-- Latest Commons metadata per file (Wikipedia tables and taxon galleries).
 select
     key as file_name,
     version_date as checked_on,
@@ -14,6 +14,8 @@ select
     {{ strip_html("payload ->> 'artist_html'") }} as author,
     {{ strip_html("payload ->> 'credit_html'") }} as credit,
     payload ->> 'restrictions' as restrictions,
+    {{ strip_html("payload ->> 'description_html'") }} as description,
+    payload ->> 'categories' as categories,
     -- Normalized license id, matched against the license_allowlist seed.
     case
         when payload ->> 'license_short_name' is null then null

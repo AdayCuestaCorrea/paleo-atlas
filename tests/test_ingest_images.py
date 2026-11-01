@@ -138,3 +138,61 @@ def test_non_commercial_licenses_are_stored_but_filtered_downstream():
     with make_client(httpx.MockTransport(phylopic_handler(known))) as client:
         out = images.fetch_phylopic(client, "Tyrannosaurus rex", BUILD)
     assert "by-nc-sa" in out["image"]["license_url"]
+
+
+ARTICLE = """{{Speciesbox
+| image = Testosaurus rex skull.jpg
+| image_caption = Skull
+}}
+'''Testosaurus rex''' is a theropod.
+[[File:Testosaurus_rex_tooth.jpg|thumb|A tooth]]
+[[Archivo:Testosaurus rex life.png|thumb]]
+{{clade |1={{clade |1=[[File:Baryonyx walkeri restoration.jpg|60px]] }} }}
+[[File:Testosaurus elegans.png|thumb|Another species of the genus]]
+<gallery>
+File:Testosaurus excavation site.jpg|The quarry
+Suchomimus by Artist.png|A relative
+</gallery>
+"""
+
+
+def test_article_files_keep_the_taxon_and_drop_relatives():
+    assert images.article_files(ARTICLE, "Testosaurus rex") == [
+        "Testosaurus rex skull.jpg",
+        "Testosaurus rex tooth.jpg",
+        "Testosaurus rex life.png",
+        "Testosaurus excavation site.jpg",
+    ]
+
+
+def test_category_files_include_subcategories_named_after_the_taxon():
+    def handler(request):
+        title = request.url.params["cmtitle"]
+        members = {
+            "Category:Testosaurus rex": [
+                {"title": "File:A.jpg"},
+                {"title": "Category:Testosaurus rex skulls"},
+                {"title": "Category:Dinosaur toys"},  # not named after it: skipped
+            ],
+            "Category:Testosaurus rex skulls": [{"title": "File:B skull.png"}],
+        }[title]
+        return httpx.Response(200, json={"query": {"categorymembers": members}})
+
+    with make_client(httpx.MockTransport(handler)) as client:
+        assert images.fetch_category_files(client, "Testosaurus rex") == ["A.jpg", "B skull.png"]
+
+
+def test_known_species_fall_back_to_the_genus_category():
+    def handler(request):
+        members = {
+            "Category:Testosaurus rex": [],
+            "Category:Testosaurus": [{"title": "File:Testosaurus skeleton.jpg"},
+                                     {"title": "File:Testosaurus elegans.png"}],
+        }[request.url.params["cmtitle"]]  # fmt: skip
+        return httpx.Response(200, json={"query": {"categorymembers": members}})
+
+    with make_client(httpx.MockTransport(handler)) as client:
+        assert images.fetch_category_files(client, "Testosaurus rex") == []  # a new species
+        assert images.fetch_category_files(client, "Testosaurus rex", genus_fallback=True) == [
+            "Testosaurus skeleton.jpg"  # not the other species
+        ]

@@ -17,6 +17,32 @@ models:
     columns:
       - name: study_id
         data_tests: [unique, not_null]
+  - name: fct_taxon_image
+    description: Gallery of each taxon page; only allowlisted licenses, always with an author.
+    columns:
+      - name: image_key
+        data_tests: [unique, not_null]
+      - name: taxon_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
+      - name: author
+        data_tests: [not_null]
+      - name: license
+        data_tests: [not_null]
+      - name: image_kind
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [size, skeleton, life, skull, tooth, claw, track, egg, holotype, fossil, site, other]
+      - name: image_rank
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   - name: fct_taxon_event
     columns:
       - name: event_id

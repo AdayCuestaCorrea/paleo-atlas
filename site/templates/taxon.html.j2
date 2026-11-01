@@ -1,12 +1,19 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import image, event %}
+{% from "macros.html.j2" import image, event, event_date, study_title %}
 {% block title %}{{ taxon.taxon_name }} · {{ T.site_name }}{% endblock %}
 {% block description %}{{ fallback or taxon.taxon_name }}{% endblock %}
 {% block content %}
 <article class="taxon">
   <header class="taxon__head">
     <figure class="taxon__figure">
-      {{ image(taxon, T, "hero") }}
+      {% if taxon.image_url and taxon.image_page_url %}
+      <a class="zoom" href="{{ taxon.image_page_url }}" data-viewer
+         data-full="{{ taxon.image_url }}"
+         data-caption="{{ T.image_credit }}: {{ taxon.image_author or '—' }} · {{ taxon.image_license }}"
+         data-license-url="{{ taxon.image_license_url or '' }}" aria-label="{{ T.enlarge_image }}">
+        {{ image(taxon, T, "hero") }}
+      </a>
+      {% else %}{{ image(taxon, T, "hero") }}{% endif %}
       <figcaption>
         {% if taxon.image_url %}
           {{ T.image_credit }}: {{ taxon.image_author or '—' }} ·
@@ -41,13 +48,25 @@
     </div>
   </header>
 
+  {% if events %}
+  <aside class="latest-box" aria-labelledby="latest-title">
+    <h2 id="latest-title">{{ T.latest_for_taxon }}</h2>
+    <ol>
+      {% for e in events[:3] %}
+      <li>{{ event_date(e, T, fmt_date) }} · <span class="event__type">{{ T['event_' ~ e.event_type] }}</span> {{ study_title(e, T, compact=True) }}</li>
+      {% endfor %}
+    </ol>
+    <a href="#historial">{{ T.see_history }}{% if events | length > 3 %} ({{ events | length }}){% endif %}</a>
+  </aside>
+  {% endif %}
+
   <section class="block prose">
     <h2>{{ T.text_title }}</h2>
     {% if text %}
       {% for section in SECTION_ORDER %}
         {% for s in text.sections if s.section == section %}
           <h3>{{ T['section_' ~ section] }}</h3>
-          <p>{% for sentence in s.sentences %}{{ sentence.text | md }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>
+          <p>{% for sentence in s.sentences %}{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>
         {% endfor %}
       {% endfor %}
       <p class="note">{{ T.ai_note }}</p>
@@ -59,7 +78,47 @@
     {% endif %}
   </section>
 
-  <section class="block">
+  {% if gallery %}
+  <section class="block" id="imagenes">
+    <h2>{{ T.gallery_title }}</h2>
+    {% set kinds = gallery | map(attribute='image_kind') | unique | list %}
+    {% if gallery | length >= 6 and kinds | length >= 3 %}
+    <div class="gallery__filters" role="group" aria-label="{{ T.gallery_filter }}">
+      <button type="button" class="chip chip--on" data-kind="" aria-pressed="true">{{ T.search_all }}</button>
+      {% for k in kinds %}<button type="button" class="chip" data-kind="{{ k }}" aria-pressed="false">{{ T['kind_' ~ k] }}</button>{% endfor %}
+    </div>
+    {% endif %}
+    <ul class="gallery">
+      {% for img in gallery %}
+      <li class="gallery__item" data-kind="{{ img.image_kind }}">
+        <figure>
+          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}"
+             data-caption="{{ T['kind_' ~ img.image_kind] }} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
+             data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
+            <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <strong>{{ T['kind_' ~ img.image_kind] }}</strong> · {{ img.author }} ·
+            {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
+          </figcaption>
+        </figure>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <dialog class="viewer" aria-label="{{ T.enlarge_image }}">
+    <figure>
+      <img alt="">
+      <figcaption><span class="viewer__caption"></span> · <a class="viewer__license" rel="license noopener">{{ T.license }}</a> · <a class="viewer__source" rel="noopener">{{ T.open_source }}</a></figcaption>
+    </figure>
+    <button type="button" class="viewer__prev" aria-label="{{ T.previous }}">‹</button>
+    <button type="button" class="viewer__next" aria-label="{{ T.next }}">›</button>
+    <button type="button" class="viewer__close" aria-label="{{ T.close }}">×</button>
+  </dialog>
+
+  <section class="block" id="historial">
     <h2>{{ T.history_title }}</h2>
     {% if events %}
       <ol class="timeline">{% for e in events %}{{ event(e, T, fmt_date) }}{% endfor %}</ol>
@@ -72,13 +131,18 @@
     <ol class="sources">
       {% for src in text.sources %}
       <li id="src-{{ src.number }}">
-        {% if src.url %}<a href="{{ src.url }}" rel="noopener">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}
-        {% if src.doi and not src.url %} · <a href="https://doi.org/{{ src.doi }}" rel="noopener">{{ T.doi }} {{ src.doi }}</a>{% endif %}
-        <span class="muted">· {{ src.license }}</span>
+        {% if src.source == 'wikipedia_article' %}
+          Wikipedia: <em>{{ src.title }}</em> —
+          {% for l in src.links %}<a href="{{ l.url }}" rel="noopener" hreflang="{{ l.lang }}">{{ T['in_lang_' ~ l.lang] }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+        {% elif src.links %}<a href="{{ src.links[0].url }}" rel="noopener">{{ src.title | md }}</a>
+        {% else %}{{ src.title | md }}{% endif %}
+        {% if src.doi %} · <span class="muted">{{ T.doi }} {{ src.doi }}</span>{% endif %}
+        {% if src.license %} <span class="muted">· {{ src.license }}</span>{% endif %}
       </li>
       {% endfor %}
     </ol>
   </section>
   {% endif %}
 </article>
+<script src="{{ base }}/static/viewer.js" defer></script>
 {% endblock %}

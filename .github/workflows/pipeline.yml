@@ -80,6 +80,7 @@ jobs:
         run: |
           uv run paleo facts --provider groq
           uv run paleo write --provider groq
+          uv run paleo titles --provider groq
 
       - name: Commit to the data branch
         if: env.RUN == 'true'

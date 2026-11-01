@@ -19,6 +19,9 @@
         <a href="{{ url('taxa') }}"{% if page_kind in ('taxa', 'taxon') %} aria-current="page"{% endif %}>{{ T.nav_taxa }}</a>
         <a href="{{ url('recaps') }}"{% if page_kind in ('recaps', 'recap') %} aria-current="page"{% endif %}>{{ T.nav_recaps }}</a>
         <a href="{{ url('assess') }}"{% if page_kind == 'assess' %} aria-current="page"{% endif %}>{{ T.nav_assess }}</a>
+        <form class="nav__search" action="{{ url('search') }}" role="search">
+          <input type="search" name="q" placeholder="{{ T.search_placeholder_short }}" aria-label="{{ T.search_label }}" autocomplete="off">
+        </form>
         <a class="nav__lang" href="{{ alternate }}" hreflang="{{ other }}" lang="{{ other }}" data-lang="{{ other }}">{{ T.other_language }}</a>
       </nav>
     </div>

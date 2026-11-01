@@ -106,3 +106,74 @@ def test_checker_respects_the_base_path(tmp_path):
     page(tmp_path / "es" / "index.html", '<link rel="alternate" href="/paleo-atlas/es/index.html">')
     assert check_site(tmp_path, base="/paleo-atlas").passed
     assert not check_site(tmp_path, base="").passed
+
+
+def builder():
+    import datetime as dt
+
+    from paleo.site.build import SiteBuilder
+    from paleo.site.data import SiteData
+
+    names = ["Tyrannosaurus rex", "Spinosaurus mirabilis"]
+    taxa = [{"taxon_name": n, "taxon_key": n.lower().replace(" ", "-")} for n in names]
+    return SiteBuilder(SiteData(taxa, {}, {}, {}, {}, dt.date(2026, 11, 1)), base="/pa")
+
+
+def test_scientific_names_are_italic_and_linked():
+    b = builder()
+    out = str(b.prose(
+        "Unlike Tyrannosaurus rex and Carcharodontosaurus, Spinosaurus mirabilis lived in "
+        "Patagonia & Niger; Spinosaurus was described by Sereno.", "en", "Spinosaurus mirabilis",
+    ))  # fmt: skip
+    assert (
+        '<a class="taxon-link" href="/pa/en/taxa/tyrannosaurus-rex.html"><em>Tyrannosaurus rex'
+        in out
+    )
+    assert "search=Carcharodontosaurus&amp;go=Go" not in out  # href is not double-escaped
+    assert "Special:Search?search=Carcharodontosaurus&go=Go" in out
+    assert "<em>Spinosaurus mirabilis</em> lived" in out  # its own page: no link
+    assert "<em>Spinosaurus</em></a> was" in out  # "was" is not an epithet
+    assert "Patagonia &amp; Niger" in out and "Sereno." in out
+
+
+def test_species_epithets_need_a_latin_ending():
+    out = str(
+        builder().prose("Spinosaurus aegyptiacus y Baryonyx vivieron en el Cretácico.", "es", None)
+    )
+    assert "search=Spinosaurus%20aegyptiacus" in out
+    assert "<em>Baryonyx</em></a> vivieron" in out
+
+
+def test_spanish_and_english_forms_of_scientific_names():
+    assert terms.clade_aliases("Abelisauridae") == ["abelisauridos", "abelisaurids"]
+    assert terms.clade_aliases("Spinosauridae")[0] == "espinosauridos"
+    assert terms.genus_aliases("Spinosaurus") == ["espinosaurio", "spinosaur"]
+    assert terms.genus_aliases("Tyrannosaurus")[0] == "tiranosaurio"
+    assert terms.hispanize("Pachycephalo") == "paquicefalo"
+    assert terms.hispanize("Archaeopteryx") == "arqueopterix"
+
+
+def test_time_units_cover_stages_dated_only_in_millions_of_years():
+    units = [es for _, es in terms.time_units(72.2, 66.0)]  # Maastrichtian
+    assert units == ["Cretácico", "Cretácico Superior"]
+    assert ("Jurassic", "Jurásico") in terms.time_units(150.0, 140.0)  # crosses a boundary
+    assert terms.time_units(None, None) == []
+
+
+def test_search_entry_has_both_languages_and_facets():
+    from paleo.site.search import entry
+
+    taxon = {
+        "taxon_name": "Carnotaurus", "taxon_key": "carnotaurus", "page_type": "known",
+        "family_name": "Abelisauridae", "taxon_group": "non_avian_dinosaurs",
+        "early_interval": "Maastrichtian", "late_interval": "Maastrichtian",
+        "first_appearance_max_ma": 72.2, "last_appearance_min_ma": 66.0,
+        "countries": ["Argentina"],
+    }  # fmt: skip
+    e = entry(taxon, "es", "/es/taxones/carnotaurus.html")
+    assert "abelisauridos" in e["f"]["clade"]
+    assert {"Cretácico Superior", "Late Cretaceous", "Maastrichtiense"} <= set(e["f"]["time"])
+    assert e["facets"] == {
+        "clade": "Abelisauridae", "group": "Dinosaurios no avianos",
+        "time": ["Cretácico"], "place": "Argentina",
+    }  # fmt: skip

@@ -17,14 +17,17 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
 
 from paleo.config import project_root
+from paleo.names import GENUS_LIKE
 from paleo.site import terms
 from paleo.site.data import SiteData, load, numbered_text
 from paleo.site.fallback import fallback_text
+from paleo.site.search import build_index
 
 LANGS = ("es", "en")
 I18N_DIR = Path(__file__).parent / "i18n"
@@ -40,6 +43,8 @@ PATHS = {
         "sources": "es/fuentes.html",
         "assess": "es/como-evaluamos.html",
         "about": "es/acerca.html",
+        "search": "es/buscar.html",
+        "search_index": "es/buscar.json",
     },
     "en": {
         "home": "en/index.html",
@@ -50,6 +55,8 @@ PATHS = {
         "sources": "en/sources.html",
         "assess": "en/how-we-assess.html",
         "about": "en/about.html",
+        "search": "en/search.html",
+        "search_index": "en/search.json",
     },
 }
 MONTHS = {
@@ -102,6 +109,17 @@ def week_label(key: str, lang: str) -> str:
     return f"{prefix} {int(week)} · {span}"
 
 
+_GENUS = GENUS_LIKE
+_EPITHET = re.compile(r"[a-z]{4,}(?:us|um|is|ae|ii|ensis|icus|ianus)")
+_NOT_EPITHETS = {"thus", "plus", "status", "bonus", "genus", "corpus", "campus", "virus",
+                 "analysis", "basis", "axis", "this", "naris"}  # fmt: skip
+
+
+def wikipedia_search(name: str, lang: str) -> str:
+    """Goes straight to the article when it exists, to the search results otherwise."""
+    return f"https://{lang}.wikipedia.org/wiki/Special:Search?search={quote(name)}&go=Go"
+
+
 @dataclass
 class Page:
     lang: str
@@ -128,6 +146,51 @@ class SiteBuilder:
         self.env.filters["md"] = md_inline
         self.env.globals["terms"] = terms
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
+        # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
+        self.atlas_names = {t["taxon_name"]: t["taxon_key"] for t in data.taxa}
+        self.atlas_genera = {name.split(" ")[0] for name in self.atlas_names}
+        self._names = re.compile(r"\b[A-Z][a-z]+(?: [a-z]+)?")
+
+    # ----------------------------------------------------------------- prose
+
+    def prose(self, text: str, lang: str, own_name: str | None) -> Markup:
+        """Escape a sentence, italicize scientific names and link them: to their page
+        in the atlas, or to Wikipedia in the page's language."""
+        escaped = html.escape(text)
+
+        def link(name: str) -> str:
+            key = self.atlas_names.get(name)
+            if name == own_name:
+                return f"<em>{name}</em>"
+            if key:
+                href = self.url(lang, "taxon", key)
+                return f'<a class="taxon-link" href="{href}"><em>{name}</em></a>'
+            return (
+                f'<a class="ext" href="{wikipedia_search(name, lang)}" rel="noopener">'
+                f"<em>{name}</em></a>"
+            )
+
+        out, pos = [], 0
+        for match in self._names.finditer(escaped):
+            name = match.group(0)
+            genus, _, epithet = name.partition(" ")
+            if (
+                epithet
+                and name not in self.atlas_names
+                and (
+                    not _EPITHET.fullmatch(epithet)
+                    or epithet in _NOT_EPITHETS
+                    or epithet.endswith("ous")
+                )
+            ):
+                name = genus  # "Spinosaurus was": only the genus is a name
+            if genus not in self.atlas_genera and not _GENUS.fullmatch(genus):
+                continue
+            start = match.start()
+            out += [escaped[pos:start], link(name)]
+            pos = start + len(name)
+        out.append(escaped[pos:])
+        return Markup(re.sub(r"\*([^*]+)\*", r"<em>\1</em>", "".join(out)))
 
     # ------------------------------------------------------------------ urls
 
@@ -166,6 +229,7 @@ class SiteBuilder:
                 out.append(
                     Page(lang, "taxon", key, "taxon.html.j2",
                          {"taxon": taxon, "events": data.events.get(key, []),
+                          "gallery": data.images.get(key, []),
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang)})
                 )  # fmt: skip
@@ -179,6 +243,7 @@ class SiteBuilder:
                 )
             for kind in ("sources", "assess", "about"):
                 out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", {}))
+            out.append(Page(lang, "search", None, "search.html.j2", {}))
         return out
 
     def render(self, page: Page) -> str:
@@ -198,6 +263,9 @@ class SiteBuilder:
             week_label=lambda k: week_label(k, lang),
             built_on=self.data.built_on,
             page_kind=page.kind,
+            prose=lambda text: self.prose(
+                text, lang, (page.context.get("taxon") or {}).get("taxon_name")
+            ),
             **page.context,
         )
 
@@ -213,6 +281,13 @@ class SiteBuilder:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(self.render(page), encoding="utf-8")
             urls.append(f"{SITE_URL}/{self.path(page.lang, page.kind, page.key)}")
+        for lang in LANGS:
+            index = build_index(
+                self.data.taxa, lang, lambda key, lang=lang: self.url(lang, "taxon", key)
+            )
+            (tmp / self.path(lang, "search_index")).write_text(
+                json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+            )
         root_ctx = {"base": self.base, "T": self.i18n}
         (tmp / "index.html").write_text(
             self.env.get_template("root.html.j2").render(**root_ctx), encoding="utf-8"

@@ -94,6 +94,7 @@ def test_evaluate_taxon_end_to_end_with_a_fake_model(tmp_path):
             ]
         },
         {"sentences": [{"index": 1, "text": "Este animal vivía en Níger."}]},
+        {"sentences": [{"index": 1, "text": "Este animal vivía en Níger."}]},  # review
     ]
 
     def handler(request):

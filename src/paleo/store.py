@@ -136,10 +136,17 @@ class RawStore:
 
     # ----------------------------------------------------------------- writes
 
-    def save_if_changed(self, key: str, payload: Any, today: dt.date | None = None) -> SaveResult:
-        """Store ``payload`` for ``key`` unless it equals the latest version."""
+    def save_if_changed(
+        self, key: str, payload: Any, today: dt.date | None = None, *, mark_checked: bool = True
+    ) -> SaveResult:
+        """Store ``payload`` for ``key`` unless it equals the latest version.
+
+        ``mark_checked=False`` keeps the checked-at date: for payloads partly
+        rebuilt from local data without asking the source again.
+        """
         today = today or dt.date.today()
-        self.mark_checked(key, today)
+        if mark_checked:
+            self.mark_checked(key, today)
         previous = self.latest(key)
         directory = self.key_dir(key)
         if previous is not None and _canonical(previous["payload"], self.volatile) == _canonical(

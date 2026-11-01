@@ -1,0 +1,24 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.search_title }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<section class="search" data-search
+         data-index="{{ url('search_index') }}"
+         data-wiki="https://{{ lang }}.wikipedia.org/wiki/Special:Search?go=Go&amp;search="
+         data-lang="{{ lang }}">
+  <h1>{{ T.search_title }}</h1>
+  <form class="search__form" role="search" action="{{ url('search') }}">
+    <label class="visually-hidden" for="q">{{ T.search_label }}</label>
+    <input id="q" type="search" name="q" placeholder="{{ T.search_placeholder }}" autocomplete="off" autofocus>
+  </form>
+  <p class="note">{{ T.search_hint }}</p>
+  <div class="search__chips" aria-live="polite"></div>
+  <p class="search__count muted" aria-live="polite"></p>
+  <div class="grid search__results"></div>
+  <p class="search__empty" hidden>{{ T.search_empty }} <a class="ext" rel="noopener" href="#">{{ T.search_wikipedia }}</a></p>
+  <noscript><p>{{ T.search_noscript }} <a href="{{ url('taxa') }}">{{ T.all_taxa }}</a></p></noscript>
+  <template id="search-strings"
+            data-results="{{ T.search_results }}" data-one="{{ T.search_one }}"
+            data-all="{{ T.search_all }}"></template>
+</section>
+<script src="{{ base }}/static/search.js" defer></script>
+{% endblock %}

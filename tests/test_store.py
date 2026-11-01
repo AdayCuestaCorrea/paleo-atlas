@@ -75,3 +75,13 @@ def test_safe_key_keeps_distinct_keys_distinct():
     assert safe_key("Spinosaurus") == "Spinosaurus"
     assert safe_key("10.1/a/b") != safe_key("10.1/a_b")
     assert "/" not in safe_key("10.1126/science.adx5486")
+
+
+def test_saving_without_marking_checked_keeps_the_freshness_date(tmp_path):
+    import datetime as dt
+
+    store = RawStore("s", "k", raw_root=tmp_path)
+    store.save_if_changed("a", {"v": 1}, dt.date(2026, 1, 1))
+    store.save_if_changed("a", {"v": 2}, dt.date(2026, 1, 20), mark_checked=False)
+    assert store.latest("a")["payload"] == {"v": 2}
+    assert not store.is_fresh("a", 7, dt.date(2026, 1, 20))  # still due for a real check

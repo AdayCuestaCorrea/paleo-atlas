@@ -213,6 +213,12 @@ def pbdb_chunk(taxon: str, raw_root: Path | None) -> Chunk | None:
     return None
 
 
+def study_title(work: dict[str, Any]) -> str:
+    """Plain-text title of a Crossref work (tags removed, entities decoded)."""
+    raw = " ".join((work.get("title") or [""])[0].split())
+    return re.sub(r"<[^>]+>", "", html.unescape(html.unescape(raw)))
+
+
 def crossref_chunks(
     taxon: str, doi: str | None, raw_root: Path | None, cache_root: Path
 ) -> list[Chunk]:
@@ -223,7 +229,7 @@ def crossref_chunks(
     if not latest or not latest["payload"].get("found"):
         return []
     work = latest["payload"]["work"]
-    title = re.sub(r"<[^>]+>", "", html.unescape(" ".join((work.get("title") or [""])[0].split())))
+    title = study_title(work)
     journal = html.unescape((work.get("container-title") or [""])[0])
     year = ((work.get("issued") or {}).get("date-parts") or [[None]])[0][0]
     authors = ", ".join(

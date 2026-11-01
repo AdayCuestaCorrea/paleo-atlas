@@ -37,12 +37,27 @@
 </span>
 {%- endmacro %}
 
+{% macro event_date(e, T, fmt_date) -%}
+<span class="event__date"{% if e.date_precision == 'seen' %} title="{{ T.date_seen_note }}"{% endif %}>{% if e.date_precision == 'seen' %}{{ T.date_seen }} {{ fmt_date(e.event_date) }}{% else %}{{ fmt_date(e.event_date, e.date_precision) }}{% endif %}</span>
+{%- endmacro %}
+
+{#- Spanish pages show the translated title first and the original below it. -#}
+{% macro study_title(e, T, compact=False) -%}
+{% set translated = T.lang == 'es' and e.title_es and e.title_es != e.title %}
+{% if translated %}
+  <span class="event__title" lang="es">{{ e.title_es }}</span>
+  {% if not compact %}<span class="event__original" lang="en"><span class="tag">{{ T.article_in_english }}</span> {{ T.original_title }}: {{ e.title }}</span>{% endif %}
+{% elif e.title %}
+  <span class="event__title"{% if T.lang == 'es' %} lang="en"{% endif %}>{{ e.title }}</span>
+{% endif %}
+{%- endmacro %}
+
 {% macro event(e, T, fmt_date, url=None, show_taxon=False) -%}
 <li class="event event--{{ e.event_type }}">
-  <span class="event__date"{% if e.date_precision == 'seen' %} title="{{ T.date_seen_note }}"{% endif %}>{% if e.date_precision == 'seen' %}{{ T.date_seen }} {{ fmt_date(e.event_date) }}{% else %}{{ fmt_date(e.event_date, e.date_precision) }}{% endif %}</span>
+  {{ event_date(e, T, fmt_date) }}
   <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
   {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
-  {% if e.title %}<span class="event__title">{{ e.title }}</span>{% endif %}
+  {{ study_title(e, T) }}
   <span class="event__source">
     {%- if e.journal %}<cite>{{ e.journal }}</cite>{% endif -%}
     {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}

@@ -6,6 +6,8 @@ them (ALCANCE.md §5, §19):
 * **Wikimedia Commons** — the files listed in the "Images" column of the
   Wikipedia tables (skeletal diagrams, reconstructions, fossil photos).
 * **PhyloPic** — silhouettes, looked up by species, then genus, then clade.
+* **Gallery** — per taxon, the files its Wikipedia articles show and the files
+  of its Commons category (fossils, teeth, reconstructions...).
 
 Everything found is stored; license filtering (allowlist, no NC/ND) and the
 choice of the best image per taxon happen in dbt, where they are tested.
@@ -14,6 +16,7 @@ choice of the best image per taxon happen in dbt, where they are tested.
 from __future__ import annotations
 
 import datetime as dt
+import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
@@ -21,11 +24,14 @@ from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 import httpx
+import mwparserfromhell as mw
 
 from paleo.http import HttpError, get_json
+from paleo.ingest.articles import store as articles_store
 from paleo.ingest.pbdb import looks_like_taxon
 from paleo.ingest.pbdb import store as pbdb_store
 from paleo.interim import latest_rows
+from paleo.names import mentions_other_taxon
 from paleo.store import RawStore
 
 COMMONS_API = "https://commons.wikimedia.org/w/api.php"
@@ -88,6 +94,127 @@ def phylopic_queries(interim_root: Path, raw_root: Path | None = None) -> list[s
     return sorted(n for n in names if n and looks_like_taxon(n))
 
 
+def gallery_store(raw_root: Path | None = None) -> RawStore:
+    """Per taxon: files its Wikipedia articles use and files in its Commons category."""
+    return RawStore("commons", "taxon_files", raw_root=raw_root)
+
+
+_FILE_LINK = re.compile(r"\[\[\s*(?:File|Image|Archivo|Imagen)\s*:\s*([^|\]]+)", re.IGNORECASE)
+_FILE_PARAM = re.compile(
+    r"^\s*\|\s*(?:image\d*|imagen\d*|skeleton|life_image)\s*=\s*([^|\n<]+)",
+    re.IGNORECASE | re.MULTILINE,
+)
+_GALLERY_LINE = re.compile(
+    r"^\s*(?:(?:File|Image|Archivo|Imagen)\s*:)?\s*([^|\n<>]+\.(?:jpe?g|png|svg|gif|webp|tiff?))\s*(?:\||$)",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def article_files(wikitext: str, taxon: str) -> list[str]:
+    """Image files of the taxon in its Wikipedia article: links, infobox parameters
+    and galleries; not the relatives drawn in cladograms nor files named after
+    another taxon."""
+    code = mw.parse(wikitext)
+    for template in code.filter_templates(recursive=False):
+        if str(template.name).strip().lower().startswith(("clade", "cladogram")):
+            code.remove(template)
+    wikitext = str(code)
+    found: list[str] = []
+    galleries = re.findall(r"<gallery[^>]*>(.*?)</gallery>", wikitext, re.DOTALL | re.IGNORECASE)
+    for match in [
+        *_FILE_PARAM.findall(wikitext),
+        *_FILE_LINK.findall(wikitext),
+        *(m for g in galleries for m in _GALLERY_LINE.findall(g)),
+    ]:
+        name = " ".join(match.replace("_", " ").split())
+        name = name.removeprefix("File:").removeprefix("Archivo:")
+        is_image = re.search(r"\.(?:jpe?g|png|svg|gif|webp|tiff?)$", name, re.IGNORECASE)
+        if is_image and name not in found and not mentions_other_taxon(name, taxon):
+            found.append(name)
+    return found
+
+
+def new_taxa_names(interim_root: Path) -> set[str]:
+    return {row["name"] for row in latest_rows(interim_root, "new_taxa") if row.get("name")}
+
+
+def gallery_taxa(interim_root: Path, raw_root: Path | None = None) -> dict[str, list[str]]:
+    """Every taxon with a page -> files used by its Wikipedia articles (EN, then ES)."""
+    out: dict[str, list[str]] = {}
+    for row in latest_rows(interim_root, "new_taxa"):
+        if row.get("name"):
+            out.setdefault(row["name"], [])
+    taxa = pbdb_store(raw_root)
+    for key in taxa.stored_keys():
+        latest = taxa.latest(key)
+        if latest and latest["payload"]["found"]:
+            out.setdefault(key, [])
+    for lang in ("en", "es"):
+        store = articles_store(lang, raw_root)
+        for key in store.stored_keys():
+            latest = store.latest(key)
+            payload = latest["payload"] if latest else {}
+            taxon = payload.get("taxon")
+            if taxon in out and payload.get("wikitext"):
+                files = article_files(payload["wikitext"], taxon)
+                out[taxon] += [f for f in files if f not in out[taxon]]
+    return out
+
+
+def _category_members(client: httpx.Client, category: str, kinds: str, limit: int) -> list[str]:
+    body = get_json(
+        client,
+        COMMONS_API,
+        {
+            "action": "query",
+            "format": "json",
+            "formatversion": "2",
+            "maxlag": "5",
+            "list": "categorymembers",
+            "cmtitle": category,
+            "cmtype": kinds,
+            "cmlimit": str(limit),
+        },
+    )
+    return [m["title"] for m in body.get("query", {}).get("categorymembers", [])]
+
+
+def fetch_category_files(
+    client: httpx.Client,
+    taxon: str,
+    *,
+    genus_fallback: bool = False,
+    limit: int = 50,
+    subcategories: int = 6,
+    per_sub: int = 10,
+) -> list[str]:
+    """Files of the Commons category named after the taxon, plus a few from its
+    subcategories that start with the same name ("Tyrannosaurus rex skulls").
+
+    Commons often files a well-known species under its genus ("Tyrannosaurus rex"
+    is empty, "Tyrannosaurus" is not). ``genus_fallback`` then uses the genus
+    category; only for known taxa, never for a new species of a known genus.
+    Files named after another taxon are left out.
+    """
+    names = [taxon]
+    genus = taxon.split(" ")[0]
+    if genus_fallback and genus != taxon:
+        names.append(genus)
+    files: list[str] = []
+    for name in names:
+        members = _category_members(client, f"Category:{name}", "file|subcat", limit)
+        found = [m.split(":", 1)[1] for m in members if m.startswith("File:")]
+        subs = [m for m in members if m.startswith(f"Category:{name} ")][:subcategories]
+        for sub in subs:
+            found += [m.split(":", 1)[1] for m in _category_members(client, sub, "file", per_sub)]
+        for file in found:
+            if file not in files and not mentions_other_taxon(file, taxon):
+                files.append(file)
+        if files:
+            break
+    return files
+
+
 # --------------------------------------------------------------------------- Commons
 
 
@@ -139,6 +266,8 @@ def fetch_commons(client: httpx.Client, files: list[str]) -> dict[str, dict[str,
             "credit_html": meta.get("Credit"),
             "attribution_required": meta.get("AttributionRequired"),
             "restrictions": meta.get("Restrictions"),
+            "description_html": meta.get("ImageDescription"),
+            "categories": meta.get("Categories"),
         }
     return out
 
@@ -239,10 +368,29 @@ def ingest_images(
 ) -> ImageResult:
     new_versions = 0
 
+    gallery = gallery_store(raw_root)
+    gallery_files: set[str] = set()
+    new_taxa = new_taxa_names(interim_root)
+    for taxon, from_articles in gallery_taxa(interim_root, raw_root).items():
+        # Article files come from raw data we already have, so they are always
+        # recomputed; only the Commons category is fetched when it is stale.
+        latest = gallery.latest(taxon)
+        fetch = refresh or latest is None or not gallery.is_fresh(taxon, REFRESH_DAYS, today)
+        category = (
+            fetch_category_files(client, taxon, genus_fallback=taxon not in new_taxa)
+            if fetch
+            else latest["payload"]["category_files"]
+        )
+        payload = {"taxon": taxon, "article_files": from_articles, "category_files": category}
+        saved = gallery.save_if_changed(taxon, payload, today, mark_checked=fetch)
+        new_versions += saved.created
+        gallery_files.update(from_articles, category)
+    gallery.flush()
+
     commons = commons_store(raw_root)
     files = [
         f
-        for f in commons_files(interim_root)
+        for f in sorted(set(commons_files(interim_root)) | gallery_files)
         if refresh or not commons.is_fresh(f, REFRESH_DAYS, today)
     ]
     for batch in _batches(files, COMMONS_BATCH):

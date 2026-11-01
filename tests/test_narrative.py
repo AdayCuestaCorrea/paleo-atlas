@@ -156,6 +156,12 @@ def test_verified_page_in_both_languages(tmp_path):
                 {"index": 2, "text": "Su cráneo medía 1,2 m."},
             ]
         },
+        {
+            "sentences": [  # grammar pass leaves it as it is
+                {"index": 1, "text": "Este dinosaurio carnívoro vivió en lo que hoy es España."},
+                {"index": 2, "text": "Su cráneo medía 1,2 m."},
+            ]
+        },
     ]
     result = write_page(
         make_llm(tmp_path, answers),
@@ -213,6 +219,9 @@ def test_pages_written_from_the_same_facts_are_up_to_date(tmp_path):
         {"sentences": [
             {"index": 1, "text": "Este dinosaurio carnívoro vivió en lo que hoy es España."},
         ]},
+        {"sentences": [
+            {"index": 1, "text": "Este dinosaurio carnívoro vivió en lo que hoy es España."},
+        ]},
     ]  # fmt: skip
     path = facts_file(tmp_path)
     derived = tmp_path / "derived"
@@ -225,6 +234,54 @@ def test_pages_written_from_the_same_facts_are_up_to_date(tmp_path):
     doc["facts"].append({"fact_id": "F003", "statement": "New fact.", "category": "debate"})
     path.write_text(json.dumps(doc))
     assert not is_up_to_date(path, derived)  # facts changed: write again
+
+
+def test_a_new_prompt_version_writes_again(tmp_path, monkeypatch):
+    from paleo.narrative import write
+
+    path = facts_file(tmp_path)
+    derived = tmp_path / "derived"
+    write_page(make_llm(tmp_path, one_sentence_answers()), path, CHUNKS,
+               derived_root=derived, scientific_names=set())  # fmt: skip
+    assert write.is_up_to_date(path, derived)
+    monkeypatch.setattr(write, "prompt_versions", lambda: {"en": "write-en-v9", "es": "x"})
+    assert not write.is_up_to_date(path, derived)
+
+
+def one_sentence_answers(review="Este dinosaurio carnívoro vivió en lo que hoy es España."):
+    return [
+        {"sections": [{"section": "description", "sentences": [
+            {"text": "This meat-eating dinosaur lived in what is now Spain.", "fact_ids": ["F001"]},
+        ]}]},
+        {"sentences": [
+            {"index": 1, "text": "Este dinosaurio carnívoro vivió en lo que hoy es Espana."},
+        ]},
+        {"sentences": [{"index": 1, "text": review}]},
+    ]  # fmt: skip
+
+
+def written_es(tmp_path):
+    path = tmp_path / "derived" / "texts" / "testosaurus-rex.es.json"
+    return json.loads(path.read_text())
+
+
+def test_grammar_review_is_kept_when_it_passes_the_checks(tmp_path):
+    result = write_page(make_llm(tmp_path, one_sentence_answers()), facts_file(tmp_path), CHUNKS,
+                        derived_root=tmp_path / "derived", scientific_names=set())  # fmt: skip
+    assert result.review == "accepted"
+    es = written_es(tmp_path)
+    assert es["review"] == "accepted"
+    assert es["sections"][0]["sentences"][0]["text"].endswith("España.")
+
+
+def test_grammar_review_that_changes_the_facts_is_rejected(tmp_path):
+    answers = one_sentence_answers(
+        review="Este dinosaurio vivió hace 90 millones de años en España."
+    )
+    result = write_page(make_llm(tmp_path, answers), facts_file(tmp_path), CHUNKS,
+                        derived_root=tmp_path / "derived", scientific_names=set())  # fmt: skip
+    assert result.review == "rejected"
+    assert written_es(tmp_path)["sections"][0]["sentences"][0]["text"].endswith("Espana.")
 
 
 def test_sources_hash_ignores_private_chunks():

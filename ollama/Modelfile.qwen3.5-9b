@@ -1,0 +1,5 @@
+# Paleo Atlas local model: Qwen 3.5 9B (bartowski Q4_K_M) with a 16K context window.
+# Ollama defaults to 4,096 tokens, which truncates fact extraction (prompt ~2,600 + answer).
+# Create it with:  ollama create paleo-qwen3.5-9b -f ollama/Modelfile.qwen3.5-9b
+FROM hf.co/bartowski/Qwen_Qwen3.5-9B-GGUF:Q4_K_M
+PARAMETER num_ctx 16384

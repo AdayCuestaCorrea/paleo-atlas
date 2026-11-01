@@ -123,7 +123,10 @@ Provider = Annotated[str, typer.Option(help="LLM provider: ollama or groq.")]
 Model = Annotated[str | None, typer.Option(help="Model name [default: per provider].")]
 Only = Annotated[list[str] | None, typer.Option(help="Only these taxa (repeatable).")]
 Limit = Annotated[int | None, typer.Option(help="Process at most this many taxa.")]
-DEFAULT_MODELS = {"ollama": "qwen3.5:9b", "groq": "openai/gpt-oss-120b"}
+DEFAULT_MODELS = {
+    "ollama": "paleo-qwen3.5-9b",  # see ollama/Modelfile.qwen3.5-9b (16K context)
+    "groq": "openai/gpt-oss-120b",
+}
 
 
 def _new_taxa(only: list[str] | None, limit: int | None) -> list[str]:

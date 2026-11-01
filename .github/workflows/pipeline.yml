@@ -1,0 +1,131 @@
+name: Pipeline
+
+# Daily refresh (ALCANCE.md §15): ingest the sources, write the pending texts,
+# rebuild the warehouse and the website, and publish it on GitHub Pages.
+# Raw data and derived texts are committed to the `data` branch; the cache
+# (abstracts, private quotes, LLM cache) and the DuckDB file never are.
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC (A6)
+  workflow_dispatch:
+    inputs:
+      narrative:
+        description: Write texts for pending species with Groq
+        type: boolean
+        default: true
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write # commit to the data branch
+    env:
+      PALEO_DATA_DIR: ${{ github.workspace }}/data
+      PALEO_SITE_BASE: /paleo-atlas
+    outputs:
+      site: ${{ steps.site.outcome == 'success' }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Check out the data branch
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: data
+          path: data
+
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: Anything new?
+        # Always run by hand and on Mondays (weekly recap); otherwise only when
+        # the Wikipedia list changed.
+        run: |
+          if [ "${{ github.event_name }}" = workflow_dispatch ] || [ "$(date -u +%u)" = 1 ] \
+             || uv run paleo check; then
+            echo "RUN=true" >> "$GITHUB_ENV"
+          else
+            echo "Nothing changed; the published site stays as it is."
+          fi
+
+      - name: Ingest and parse
+        if: env.RUN == 'true'
+        run: |
+          uv run paleo ingest wikipedia
+          uv run paleo parse wikipedia
+          uv run paleo ingest pbdb
+          uv run paleo ingest studies
+          uv run paleo ingest images
+          uv run paleo ingest articles
+
+      - name: Facts and texts for pending species (Groq)
+        if: env.RUN == 'true' && (github.event_name == 'schedule' || inputs.narrative)
+        # Up-to-date species are skipped. If the free quota runs out or Groq
+        # fails, the rest keep their fallback text and are retried tomorrow.
+        continue-on-error: true
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          uv run paleo facts --provider groq
+          uv run paleo write --provider groq
+
+      - name: Commit to the data branch
+        if: env.RUN == 'true'
+        working-directory: data
+        run: |
+          git add -A
+          if git diff --cached --name-only | grep -E '^(cache|interim)/|\.duckdb'; then
+            echo "::error::private or local files staged; refusing to commit"
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Data update $(date -u +%F)"
+          git pull -q --rebase origin data
+          git push -q origin HEAD:data
+
+      - name: dbt build
+        if: env.RUN == 'true'
+        run: uv run paleo build
+
+      - name: Build the website
+        id: site
+        if: env.RUN == 'true'
+        run: |
+          uv run paleo site
+          uv run paleo site --check
+
+      - uses: actions/upload-pages-artifact@v5.0.0
+        if: steps.site.outcome == 'success'
+        with:
+          path: site/_build
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.site == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5.0.1

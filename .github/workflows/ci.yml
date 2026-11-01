@@ -14,9 +14,9 @@ jobs:
     env:
       PALEO_DATA_DIR: ${{ github.workspace }}/.ci-data
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.3
         with:
           enable-cache: true
 

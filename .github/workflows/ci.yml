@@ -39,4 +39,5 @@ jobs:
       - name: dbt build
         working-directory: dbt
         # as_of pins "today" so date-based tests do not drift on fixture data.
-        run: uv run dbt build --profiles-dir . --vars '{as_of: "2026-11-02"}'
+        run: |
+          uv run dbt build --profiles-dir . --vars '{as_of: "2026-11-02"}'

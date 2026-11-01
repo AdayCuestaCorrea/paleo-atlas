@@ -1,21 +1,22 @@
-"""Store the Wikipedia test fixture as if it had been ingested.
+"""Store the test fixtures as if they had been ingested.
 
-Lets CI (and anyone without network access) run `paleo parse` and `dbt build`
-end to end on real, version-controlled data:
+Copies the Wikipedia excerpt and the recorded PBDB, Crossref, Commons and
+PhyloPic snapshots for its taxa into $PALEO_DATA_DIR/raw, so CI (and anyone
+without network access) can run `paleo parse` and `dbt build` end to end on
+real, version-controlled data:
 
     PALEO_DATA_DIR=/tmp/paleo-data uv run python scripts/seed_fixture_data.py
 """
 
 import json
+import shutil
 from pathlib import Path
 
 from paleo.config import get_paths
 from paleo.ingest.wikipedia import page_dir
 
-FIXTURE = (
-    Path(__file__).resolve().parents[1]
-    / "tests/fixtures/wikipedia/2026_in_archosaur_paleontology.r1383165113.wikitext"
-)
+FIXTURES = Path(__file__).resolve().parents[1] / "tests" / "fixtures"
+FIXTURE = FIXTURES / "wikipedia" / "2026_in_archosaur_paleontology.r1383165113.wikitext"
 TITLE = "2026 in archosaur paleontology"
 REVID = 1383165113
 
@@ -35,6 +36,9 @@ def main() -> None:
     }
     target.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"seeded {target}")
+    for source in sorted(p for p in (FIXTURES / "raw").iterdir() if p.is_dir()):
+        shutil.copytree(source, get_paths().raw / source.name, dirs_exist_ok=True)
+        print(f"seeded {source.name} snapshots")
 
 
 if __name__ == "__main__":

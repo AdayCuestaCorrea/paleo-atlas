@@ -38,3 +38,13 @@ models:
           - accepted_values:
               arguments:
                 values: [description, new_study, study_corrected, study_retracted]
+  - name: fct_taxon_text
+    description: Narrative text per new taxon and language; pending pages use the fallback text.
+    columns:
+      - name: text_key
+        data_tests: [unique, not_null]
+      - name: text_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [verified, pending]

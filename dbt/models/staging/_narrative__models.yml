@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_narrative__facts
+    columns:
+      - name: fact_key
+        data_tests: [unique, not_null]
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [description, discovery, paleobiology, classification, time_and_habitat, debate]
+  - name: stg_narrative__citations
+    columns:
+      - name: citation_key
+        data_tests: [unique, not_null]
+  - name: stg_narrative__texts
+    columns:
+      - name: text_key
+        data_tests: [unique, not_null]
+      - name: lang
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [en, es]

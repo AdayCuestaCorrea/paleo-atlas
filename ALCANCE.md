@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 9 · **Estado:** Fase 1 en curso (semana 2 terminada)
+**Creado:** 2026-10-31 · **Versión:** 10 · **Estado:** Fase 1 en curso (semana 3: pipeline narrativo y evaluación hechos; faltan las 82 fichas)
 
 ---
 
@@ -234,10 +234,15 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] dbt-duckdb: staging, intermediate y marts de §8
 - [x] **Historial SCD2 desde las versiones crudas** (en lugar de `dbt snapshots`, ver D9), con test unitario de dbt
 - [x] Vínculo estudios ↔ taxones (wikilinks y nombres en cursiva resueltos en PBDB) y fichas básicas de taxones conocidos (datos; la web, en la semana 4)
-- [ ] Elegir LLM con plan gratuito (A18)
-- [ ] Extracción de hechos con fuente (Wikipedia ES/EN, PBDB, metadatos de estudios) para las especies nuevas
-- [ ] Redacción narrativa ES + EN a partir de los hechos (§12.1)
-- [ ] Verificaciones: fidelidad, anti-copia, cita por frase (§16) + revisión manual de una muestra
+- [x] Capa LLM intercambiable (Ollama local / Groq) con salida JSON validada, limitador de cuota y caché por contenido
+- [x] Elegir LLM con plan gratuito (A18) *(decisión provisional, ver §22)*
+- [x] Ingesta de artículos de Wikipedia EN/ES de las especies nuevas
+- [x] Extracción de hechos con fuente (Wikipedia ES/EN, PBDB, metadatos y abstracts de estudios)
+- [x] Redacción narrativa EN a partir de los hechos y adaptación ES alineada frase a frase (§12.1)
+- [x] Verificaciones: fidelidad, anti-copia, cita por frase, repeticiones, longitud (§16)
+- [x] Fichas de referencia (12, *gold set*) y evaluación de configuraciones (`eval/`); 4 revisadas por el usuario
+- [x] Modelos dbt de hechos, citas y textos (`fct_taxon_text`)
+- [ ] Generar las fichas narrativas de las 82 especies nuevas
 - [ ] Tests dbt y pytest de §16
 - [ ] Web ES + EN: portada con selector de idioma, «Última hora», ficha de taxón con historial, recap semanal, «Cómo evaluamos las fuentes», «Fuentes y licencias»
 - [x] CI: tests en cada push/PR (lint, pytest, parse + dbt build sobre el fixture)
@@ -438,7 +443,11 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 5. **Revisión manual** de una muestra; se publica el % que pasa cada verificación (§17).
 
 **Reglas:**
-- Si una ficha no pasa las verificaciones, se publica el texto de respaldo (§11.4) y se marca para revisión.
+- **Tono:** divulgativo para todos los públicos, tercera persona, tecnicismos explicados la primera vez (decisión del usuario, 2026-11-01).
+- **Longitud:** según los datos, ~120–450 palabras; nunca se rellena (decisión del usuario). El redactor recibe como mucho 24 hechos, repartidos entre secciones.
+- **Español:** se adapta el texto inglés ya verificado, frase a frase y con las mismas citas (más barato y coherente); la guía fija convenciones (Cretácico Superior, pisos en -iense, tildes de los grupos).
+- **Lo importante se comprueba con código, no se pide al modelo:** un hecho cuya redacción copia su fuente se rechaza en la extracción, porque el redactor la copiaría después.
+- Si una ficha no pasa las verificaciones, se reintenta dos veces con los errores concretos y la forma de corregirlos; si sigue fallando, se publica el texto de respaldo (§11.4) y se marca para revisión.
 - Se generan **una vez por cambio** de los hechos (no en cada visita) y se guardan en el repo → caben en un plan gratuito.
 - Si se acaba la cuota gratuita del LLM, el pipeline sigue funcionando: las fichas pendientes esperan con el texto de respaldo.
 - Los temas en debate (§9) se cuentan como debate, con las posturas y sus estudios; nunca se presenta una hipótesis como hecho.
@@ -520,7 +529,7 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 - Todo estudio tiene al menos una señal de fiabilidad calculada.
 - Todo tamaño corporal tiene rango, método y cita.
 - Todo nodo del árbol tiene origen (Open Tree of Life o PBDB).
-- Fichas narrativas: fidelidad (nombres, números y fechas presentes en los hechos), anti-copia (ninguna secuencia de N o más palabras igual a la fuente; N a fijar en la Fase 1), al menos una cita por frase, todo hecho con fragmento de origen.
+- Fichas narrativas: fidelidad (nombres, números y fechas presentes en los hechos), anti-copia (ninguna secuencia de **8** palabras igual a la fuente que contenga al menos 4 palabras «corrientes»: las listas de nombres, números y epítetos no cuentan como prosa), ningún hecho como única cita de dos frases (repetición), al menos una cita por frase, todo hecho con fragmento de origen.
 - Paridad de idiomas: toda página en ES existe en EN y viceversa.
 
 ### Tests de Python
@@ -576,7 +585,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | GBIF | API de descargas (gratis) en vez de la copia completa en AWS |
 | Spark | Modo local en mi máquina (Docker) |
 | Databricks *(opcional)* | Free Edition (verificar límites) |
-| LLM (desde la Fase 1) | Plan gratuito (A18); si se agota, las fichas esperan con el texto de respaldo |
+| LLM (desde la Fase 1) | **Local:** Ollama con Qwen 3.5 9B en la RTX 5070 Ti del autor (sin cuota; `ollama/Modelfile.*`, contexto de 16K). **Groq** plan gratuito: por modelo 30 peticiones/min, 1.000/día, 8.000 tokens/min y 200.000/día (`qwen3.8-27b`, además, 1.000 tokens de respuesta/min: inservible). GitHub Models cerró el 30-07-2026. Si se agota la cuota, las fichas esperan con el texto de respaldo |
 | Dominio | `github.io` |
 
 ---
@@ -665,12 +674,14 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A17 | Cómo se redactan las fichas | **Opción A:** fichas narrativas propias desde hechos con cita (§12.1), desde la Fase 1 | 2026-11-01 |
 | A7 | Tolerancia al retraso de PBDB | **8 semanas** (variable `pbdb_lag_weeks` de dbt): antes, aviso; después, error | 2026-11-02 |
 | A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
+| A18 | LLM para las fichas | **Provisional:** Qwen 3.5 9B local para desarrollo y lotes grandes (11/12 fichas de referencia verificadas, mayor cobertura de hechos: 46 %); Groq `gpt-oss-120b` para la ejecución programada (9/9 verificadas, 38 % de cobertura en el texto, 4× más rápido). Se confirma al completar sus 3 especies pendientes. Descartados: Qwen 3.5 4B (peor y 4× más lento), Groq `qwen3.8-27b` (límite de salida) | 2026-11-01 |
+| A19 | Tono de las fichas | Divulgativo para todos los públicos | 2026-11-01 |
+| A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
 
 ### Abiertas
 | # | Decisión | Opciones | Cuándo |
 |---|---|---|---|
-| A18 | LLM para fichas (plan gratuito, ES + EN, cuota suficiente) | A comparar | Fase 1, antes de la semana 3 |
 | A6 | Frecuencia de detección y hora del recap | Diario / cada 6 h; lunes 06:00 Canarias | Fase 1 |
 | A8 | Versión de Airflow | 2.x, 3.x | Fase 2 |
 | A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
@@ -717,6 +728,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-01 | v10: pipeline narrativo completo (capa LLM, artículos, hechos, redacción EN + adaptación ES, verificaciones); 12 fichas de referencia y evaluación de 4 configuraciones; A18 provisional, A19 (tono) y A20 (longitud) cerradas; staging de dbt materializado como tablas; modelos de textos | Semana 3 |
 | 2026-11-02 | v9: semana 2 terminada (PBDB, Crossref, imágenes, vínculo estudios ↔ taxones, marts); **fichas básicas para taxones conocidos** en la Fase 1; D9 cambia de `dbt snapshots` a SCD2 desde versiones crudas; ZooBank aplazado (API caída); abstracts solo en caché local; A16 cerrada | Decisión del usuario y hallazgos de la semana 2 |
 | 2026-11-02 | v8: los ~380 estudios sobre taxones ya conocidos de las páginas anuales entran en la Fase 1 (eventos «Nuevo estudio» del historial; solo título, revista, DOI y distintivos, nunca la prosa de Wikipedia); nuevo comando `paleo parse wikipedia`; semana 1 completada (ingesta, parser, staging dbt, CI) | Decisión del usuario |
 | 2026-11-01 | v7: entorno configurado (A4 concretada: Python 3.14); `SCOPE.md` creado; **Fase 0 cerrada**; §2 anonimizado (sin nombres de empresas); orden de F10 y del registro corregido | Cierre de la Fase 0 |

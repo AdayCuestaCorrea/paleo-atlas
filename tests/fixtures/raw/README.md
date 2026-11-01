@@ -11,3 +11,7 @@ Wikipedia excerpt (`../wikipedia/`), recorded on 2026-11-01:
   license, shown in the metadata.
 
 Regenerate by re-recording from a real run (see `scripts/seed_fixture_data.py`).
+
+`../derived/` holds one generated narrative page (facts + EN/ES texts for
+*Spinosaurus mirabilis*) so CI can build the text models. Its quotes are
+Wikipedia excerpts (CC BY-SA 4.0); quotes from abstracts are never stored there.

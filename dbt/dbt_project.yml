@@ -17,7 +17,9 @@ vars:
 models:
   paleo_atlas:
     staging:
-      +materialized: view
+      # Tables, not views: staging reads files with paths relative to dbt/, so
+      # views would break when the warehouse is queried from anywhere else.
+      +materialized: table
     intermediate:
       +materialized: view
     marts:

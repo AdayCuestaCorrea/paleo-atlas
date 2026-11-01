@@ -39,6 +39,9 @@ def main() -> None:
     for source in sorted(p for p in (FIXTURES / "raw").iterdir() if p.is_dir()):
         shutil.copytree(source, get_paths().raw / source.name, dirs_exist_ok=True)
         print(f"seeded {source.name} snapshots")
+    # One generated narrative page (facts + EN/ES texts) so dbt can build the text models.
+    shutil.copytree(FIXTURES / "derived", get_paths().data / "derived", dirs_exist_ok=True)
+    print("seeded derived narrative page")
 
 
 if __name__ == "__main__":

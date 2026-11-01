@@ -1,0 +1,25 @@
+# Local data (versioned raw data lives on the `data` branch)
+data/*
+!data/.gitkeep
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# dbt
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Generated site
+site/_build/
+
+# Secrets
+.env

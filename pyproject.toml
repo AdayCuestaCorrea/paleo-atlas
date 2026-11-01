@@ -1,0 +1,38 @@
+[project]
+name = "paleo-atlas"
+version = "0.0.0"
+description = "A living, visual paleontology encyclopedia in Spanish and English, rebuilt automatically from open scientific data."
+readme = "README.md"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "LICENSE-CONTENT.md"]
+authors = [{ name = "Aday Cuesta Correa" }]
+requires-python = ">=3.14,<3.15"
+# Runtime dependencies are added in Phase 1 with `uv add`.
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[tool.uv]
+# CachyOS is a rolling distro: use a uv-managed interpreter so a system
+# Python upgrade never breaks the virtualenv.
+python-preference = "only-managed"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

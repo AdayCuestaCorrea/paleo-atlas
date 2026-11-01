@@ -25,6 +25,8 @@ ingest_app = typer.Typer(help="Download sources and store raw responses.", no_ar
 parse_app = typer.Typer(help="Turn raw responses into rows for dbt.", no_args_is_help=True)
 app.add_typer(ingest_app, name="ingest")
 app.add_typer(parse_app, name="parse")
+eval_app = typer.Typer(help="Evaluate narrative pages against the gold set.", no_args_is_help=True)
+app.add_typer(eval_app, name="eval")
 
 Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
@@ -221,6 +223,35 @@ def write(
             for problem in problems[:5]:
                 typer.echo(f"   [{lang}] {problem}")
     typer.echo(f"{llm.label}: {llm.stats}")
+
+
+@eval_app.command("validate-gold")
+def validate_gold() -> None:
+    """Check that every gold page passes the same checks as generated pages."""
+    from paleo.narrative import gold
+    from paleo.narrative.sources import chunks_for
+
+    paths = get_paths()
+    names = _scientific_names()
+    failed = 0
+    for path in sorted((project_root() / gold.GOLD_DIR).glob("*.json")):
+        doc = gold.load(path)
+        chunks = chunks_for(
+            doc["taxon"],
+            interim_root=paths.interim,
+            raw_root=paths.raw,
+            cache_root=paths.data / "cache",
+        )
+        problems = gold.validate(doc, chunks, names)
+        words = {
+            lang: sum(len(t.split()) for t, _ in gold.sentences(doc, lang)) for lang in ("en", "es")
+        }
+        status = "OK" if not problems else f"{len(problems)} problems"
+        typer.echo(f"{doc['taxon']}: {len(doc['facts'])} facts, {words} words — {status}")
+        for problem in problems:
+            typer.echo(f"   {problem}")
+        failed += bool(problems)
+    raise typer.Exit(1 if failed else 0)
 
 
 @app.command()

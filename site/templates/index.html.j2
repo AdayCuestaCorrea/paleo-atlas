@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import card, event %}
+{% block content %}
+<section class="hero">
+  <p class="kicker">{{ T.tagline }}</p>
+  <h1>{{ T.site_name }}</h1>
+  <p class="lead">{{ T.lead }}</p>
+  {% if latest_week %}<p><a class="button" href="{{ url('recap', latest_week) }}">{{ T.latest_recap }} · {{ week_label(latest_week) }}</a></p>{% endif %}
+</section>
+
+<section class="block">
+  <h2>{{ T.latest }}</h2>
+  <p class="muted">{{ T.latest_lead }}</p>
+  <ol class="timeline">
+    {% for e in events %}{{ event(e, T, fmt_date, url, show_taxon=True) }}{% endfor %}
+  </ol>
+</section>
+
+<section class="block">
+  <h2>{{ t('new_taxa', year=built_on.year) }}</h2>
+  <p class="muted">{{ T.new_taxa_lead }}</p>
+  <div class="grid">
+    {% for taxon in new %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}
+  </div>
+</section>
+
+<section class="block">
+  <h2>{{ T.known_taxa }}</h2>
+  <p class="muted">{{ T.known_taxa_lead }}</p>
+  <div class="grid">
+    {% for taxon in known %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}
+  </div>
+  <p><a class="button button--ghost" href="{{ url('taxa') }}">{{ T.see_all }} ({{ known_total }})</a></p>
+</section>
+{% endblock %}

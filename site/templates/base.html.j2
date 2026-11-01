@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ T.site_name }} · {{ T.tagline }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ T.lead }}{% endblock %}">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ self_url }}">
+  <link rel="alternate" hreflang="{{ other }}" href="{{ alternate }}">
+  <link rel="stylesheet" href="{{ base }}/static/style.css">
+  <link rel="icon" href="{{ base }}/static/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="brand" href="{{ url('home') }}"><span class="brand__mark" aria-hidden="true">✶</span> {{ T.site_name }}</a>
+      <nav class="nav" aria-label="{{ T.site_name }}">
+        <a href="{{ url('taxa') }}"{% if page_kind in ('taxa', 'taxon') %} aria-current="page"{% endif %}>{{ T.nav_taxa }}</a>
+        <a href="{{ url('recaps') }}"{% if page_kind in ('recaps', 'recap') %} aria-current="page"{% endif %}>{{ T.nav_recaps }}</a>
+        <a href="{{ url('assess') }}"{% if page_kind == 'assess' %} aria-current="page"{% endif %}>{{ T.nav_assess }}</a>
+        <a class="nav__lang" href="{{ alternate }}" hreflang="{{ other }}" lang="{{ other }}" data-lang="{{ other }}">{{ T.other_language }}</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>{{ T.footer_disclaimer }}</p>
+      <p>{{ T.footer_license }}</p>
+      <p>
+        <a href="{{ url('sources') }}">{{ T.nav_sources }}</a> ·
+        <a href="{{ url('assess') }}">{{ T.nav_assess }}</a> ·
+        <a href="{{ url('about') }}">{{ T.nav_about }}</a> ·
+        {{ t('footer_updated', date=fmt_date(built_on)) }}
+      </p>
+    </div>
+  </footer>
+  <script src="{{ base }}/static/app.js" defer></script>
+</body>
+</html>

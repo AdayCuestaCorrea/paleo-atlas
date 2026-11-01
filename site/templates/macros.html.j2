@@ -1,0 +1,52 @@
+{# Small reusable pieces: taxon card, reliability badges, timeline event. #}
+
+{% macro image(taxon, T, size="card") -%}
+  {%- if taxon.image_url -%}
+  <img class="pic pic--{{ size }}{% if taxon.image_source == 'phylopic' %} pic--silhouette{% endif %}"
+       src="{{ taxon.image_url }}" alt="{{ taxon.taxon_name }}" loading="lazy" decoding="async">
+  {%- else -%}
+  <div class="pic pic--{{ size }} pic--empty" aria-hidden="true">✶</div>
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro card(taxon, lang, T, url, terms) -%}
+<a class="card" href="{{ url('taxon', taxon.taxon_key) }}">
+  {{ image(taxon, T) }}
+  <span class="card__body">
+    <span class="card__name"><em>{{ taxon.taxon_name }}</em></span>
+    <span class="card__meta">
+      {%- set group = terms.group(taxon.taxon_group, lang) -%}
+      {%- if taxon.page_type == 'new' -%}
+        {{ terms.age(taxon.age_text, lang) or '' }}{% if taxon.country %} · {{ terms.place(taxon.country, lang) }}{% endif %}
+      {%- else -%}
+        {{ terms.interval(taxon.early_interval, lang) or '' }}{% if taxon.family_name %} · {{ taxon.family_name }}{% endif %}
+      {%- endif -%}
+    </span>
+  </span>
+</a>
+{%- endmacro %}
+
+{% macro badges(study, T) -%}
+<span class="badges">
+  {%- if study.is_retracted %}<span class="badge badge--bad">{{ T.badge_retracted }}</span>{% endif -%}
+  {%- if study.is_corrected %}<span class="badge badge--warn">{{ T.badge_corrected }}</span>{% endif -%}
+  {%- if study.is_preprint %}<span class="badge badge--warn">{{ T.badge_preprint }}</span>{% endif -%}
+  {%- if study.is_peer_reviewed_journal %}<span class="badge badge--ok">{{ T.badge_peer_reviewed }}</span>{% endif -%}
+  {%- if study.in_trusted_journal %}<span class="badge badge--info">{{ T.badge_trusted }}</span>{% endif -%}
+  {%- if study.reliability_status == 'unverified' %}<span class="badge">{{ T.badge_unverified }}</span>{% endif -%}
+</span>
+{%- endmacro %}
+
+{% macro event(e, T, fmt_date, url=None, show_taxon=False) -%}
+<li class="event event--{{ e.event_type }}">
+  <span class="event__date"{% if e.date_precision == 'seen' %} title="{{ T.date_seen_note }}"{% endif %}>{% if e.date_precision == 'seen' %}{{ T.date_seen }} {{ fmt_date(e.event_date) }}{% else %}{{ fmt_date(e.event_date, e.date_precision) }}{% endif %}</span>
+  <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
+  {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
+  {% if e.title %}<span class="event__title">{{ e.title }}</span>{% endif %}
+  <span class="event__source">
+    {%- if e.journal %}<cite>{{ e.journal }}</cite>{% endif -%}
+    {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}
+  </span>
+  {{ badges(e, T) }}
+</li>
+{%- endmacro %}

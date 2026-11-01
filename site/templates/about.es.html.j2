@@ -1,0 +1,10 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_about }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<article class="prose">
+<h1>{{ T.nav_about }}</h1>
+<p class="lead">Paleo Atlas es una enciclopedia de paleontología que se reconstruye sola cada día a partir de datos científicos abiertos.</p>
+<p>Cada mañana comprueba si hay novedades en Wikipedia, la Paleobiology Database y Crossref; si las hay, actualiza los datos, redacta y verifica las fichas nuevas y vuelve a publicar la web. Todo el proceso es abierto y se puede auditar en <a href="https://github.com/AdayCuestaCorrea/paleo-atlas">GitHub</a>.</p>
+<p>Es un proyecto personal de Aday Cuesta Correa, hecho a coste cero con herramientas libres.</p>
+</article>
+{% endblock %}

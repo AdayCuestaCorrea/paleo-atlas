@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import card %}
+{% block title %}{{ T.all_taxa }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<h1>{{ T.all_taxa }}</h1>
+<section class="block">
+  <h2>{{ t('new_taxa', year=built_on.year) }}</h2>
+  <div class="grid">{% for taxon in new %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}</div>
+</section>
+<section class="block">
+  <h2>{{ T.known_taxa }}</h2>
+  <div class="grid">{% for taxon in known %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}</div>
+</section>
+{% endblock %}

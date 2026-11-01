@@ -53,6 +53,7 @@ select
     coalesce(c.journal, s.wiki_venue) as journal,
     coalesce(c.issued_year, s.wiki_year) as publication_year,
     c.issued_on,
+    c.issued_precision,
     c.last_updated_on,
     s.first_seen_at,
     c.work_type,

@@ -1,0 +1,10 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_about }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<article class="prose">
+<h1>{{ T.nav_about }}</h1>
+<p class="lead">Paleo Atlas is a paleontology encyclopedia that rebuilds itself every day from open scientific data.</p>
+<p>Every morning it checks Wikipedia, the Paleobiology Database and Crossref for news; when there are any, it updates the data, writes and checks the new pages and republishes the site. The whole process is open and auditable on <a href="https://github.com/AdayCuestaCorrea/paleo-atlas">GitHub</a>.</p>
+<p>It is a personal project by Aday Cuesta Correa, built at zero cost with open tools.</p>
+</article>
+{% endblock %}

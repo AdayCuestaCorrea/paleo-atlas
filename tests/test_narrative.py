@@ -201,3 +201,27 @@ def test_fact_selection_is_balanced_and_capped():
     chosen = select_facts(facts, limit=10)
     assert len(chosen) == 10
     assert any(f["category"] == "debate" for f in chosen)
+
+
+def test_pages_written_from_the_same_facts_are_up_to_date(tmp_path):
+    from paleo.narrative.write import is_up_to_date
+
+    answers = [
+        {"sections": [{"section": "description", "sentences": [
+            {"text": "This meat-eating dinosaur lived in what is now Spain.", "fact_ids": ["F001"]},
+        ]}]},
+        {"sentences": [
+            {"index": 1, "text": "Este dinosaurio carnívoro vivió en lo que hoy es España."},
+        ]},
+    ]  # fmt: skip
+    path = facts_file(tmp_path)
+    derived = tmp_path / "derived"
+    assert not is_up_to_date(path, derived)
+    write_page(
+        make_llm(tmp_path, answers), path, CHUNKS, derived_root=derived, scientific_names=set()
+    )
+    assert is_up_to_date(path, derived)
+    doc = json.loads(path.read_text())
+    doc["facts"].append({"fact_id": "F003", "statement": "New fact.", "category": "debate"})
+    path.write_text(json.dumps(doc))
+    assert not is_up_to_date(path, derived)  # facts changed: write again

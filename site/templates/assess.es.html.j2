@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_assess }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<article class="prose">
+<h1>{{ T.nav_assess }}</h1>
+<p class="lead">No juzgamos la ciencia: mostramos señales que cualquiera puede comprobar y explicamos qué significan.</p>
+<h2>Distintivos de cada estudio</h2>
+<dl class="legend">
+  <dt><span class="badge badge--ok">{{ T.badge_peer_reviewed }}</span></dt><dd>Publicado como artículo en una revista con ISSN, según Crossref.</dd>
+  <dt><span class="badge badge--warn">{{ T.badge_preprint }}</span></dt><dd>Versión previa que todavía no ha pasado la revisión de otros científicos.</dd>
+  <dt><span class="badge badge--warn">{{ T.badge_corrected }}</span></dt><dd>La revista ha publicado una corrección del estudio.</dd>
+  <dt><span class="badge badge--bad">{{ T.badge_retracted }}</span></dt><dd>El estudio ha sido retirado. No lo borramos: se queda en el historial con este aviso.</dd>
+  <dt><span class="badge badge--info">{{ T.badge_trusted }}</span></dt><dd>Revista de una lista, revisada a mano, de publicaciones consolidadas en paleontología. Es una señal secundaria.</dd>
+  <dt><span class="badge">{{ T.badge_unverified }}</span></dt><dd>No hemos podido comprobar el estudio (por ejemplo, su DOI no está en Crossref). No significa que sea malo.</dd>
+</dl>
+<h2>Cómo se escriben las fichas</h2>
+<ol>
+  <li>Un modelo de lenguaje extrae <strong>hechos</strong> de las fuentes, y cada hecho guarda una cita literal de su fuente.</li>
+  <li>Un programa (no otra IA) comprueba que la cita existe tal cual en la fuente y que los números del hecho están en ella. Si no, el hecho se descarta.</li>
+  <li>El modelo redacta un texto nuevo <strong>solo con esos hechos</strong>, y cada frase indica qué hechos usa.</li>
+  <li>Se comprueba que cada frase cita sus fuentes, que sus números y nombres salen de los hechos citados, que no copia frases de las fuentes y que no repite información.</li>
+  <li>Si algo falla, el texto no se publica y la ficha muestra un resumen generado directamente de los datos.</li>
+</ol>
+<p>Cuando las fuentes no están de acuerdo, lo contamos como debate, con las posturas y sus estudios.</p>
+</article>
+{% endblock %}

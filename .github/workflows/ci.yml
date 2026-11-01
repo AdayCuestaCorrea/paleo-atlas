@@ -41,3 +41,8 @@ jobs:
         # as_of pins "today" so date-based tests do not drift on fixture data.
         run: |
           uv run dbt build --profiles-dir . --vars '{as_of: "2026-11-02"}'
+
+      - name: Build and check the website
+        run: |
+          uv run paleo site --base /paleo-atlas
+          uv run paleo site --check --base /paleo-atlas

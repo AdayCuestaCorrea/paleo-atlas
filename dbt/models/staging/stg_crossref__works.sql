@@ -20,7 +20,7 @@ select
     found_in_crossref,
     work ->> 'type' as work_type,
     {{ strip_html("work ->> '$.title[0]'") }} as title,
-    work ->> '$.container-title[0]' as journal,
+    {{ strip_html("work ->> '$.container-title[0]'") }} as journal,
     work ->> 'publisher' as publisher,
     cast(json_extract(work, '$.ISSN') as varchar[]) as issns,
     try_cast(
@@ -32,6 +32,12 @@ select
         ) as date
     ) as issued_on,
     cast(work ->> '$.issued.date-parts[0][0]' as integer) as issued_year,
+    -- Crossref may only know the year or the month; issued_on fills the rest with 01.
+    case
+        when work ->> '$.issued.date-parts[0][2]' is not null then 'day'
+        when work ->> '$.issued.date-parts[0][1]' is not null then 'month'
+        when work ->> '$.issued.date-parts[0][0]' is not null then 'year'
+    end as issued_precision,
     work ->> 'URL' as url,
     json_extract(work, '$.updated-by') as updated_by
 from works

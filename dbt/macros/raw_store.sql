@@ -14,9 +14,19 @@
     )
 {%- endmacro %}
 
-{# Strip HTML tags and collapse whitespace (Commons and Crossref use HTML). #}
+{#
+  Decode the common HTML entities. Crossref sometimes escapes them twice
+  ("&amp;amp;"), so strip_html applies this twice.
+#}
+{% macro unescape_html(expr) -%}
+    replace(replace(replace(replace(replace(replace(
+        {{ expr }}, '&amp;', '&'), '&lt;', '<'), '&gt;', '>'), '&quot;', '"'), '&#39;', chr(39)), '&nbsp;', ' ')
+{%- endmacro %}
+
+{# Strip HTML tags, decode entities and collapse whitespace (Commons and Crossref use HTML). #}
 {% macro strip_html(expr) -%}
-    nullif(trim(regexp_replace(regexp_replace({{ expr }}, '<[^>]*>', '', 'g'), '\s+', ' ', 'g')), '')
+    nullif(trim(regexp_replace(regexp_replace(
+        {{ unescape_html(unescape_html(expr)) }}, '<[^>]*>', '', 'g'), '\s+', ' ', 'g')), '')
 {%- endmacro %}
 
 {# "Tyrannosaurus rex" -> "tyrannosaurus-rex": stable key for a taxon page. #}

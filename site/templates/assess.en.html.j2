@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_assess }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<article class="prose">
+<h1>{{ T.nav_assess }}</h1>
+<p class="lead">We do not judge the science: we show signals anyone can check, and explain what they mean.</p>
+<h2>Badges on each study</h2>
+<dl class="legend">
+  <dt><span class="badge badge--ok">{{ T.badge_peer_reviewed }}</span></dt><dd>Published as an article in a journal with an ISSN, according to Crossref.</dd>
+  <dt><span class="badge badge--warn">{{ T.badge_preprint }}</span></dt><dd>An early version that has not yet been reviewed by other scientists.</dd>
+  <dt><span class="badge badge--warn">{{ T.badge_corrected }}</span></dt><dd>The journal has published a correction to the study.</dd>
+  <dt><span class="badge badge--bad">{{ T.badge_retracted }}</span></dt><dd>The study was withdrawn. We do not delete it: it stays in the history with this notice.</dd>
+  <dt><span class="badge badge--info">{{ T.badge_trusted }}</span></dt><dd>A journal from a hand-curated list of established paleontology publications. A secondary signal.</dd>
+  <dt><span class="badge">{{ T.badge_unverified }}</span></dt><dd>We could not check the study (for example, its DOI is not in Crossref). It does not mean it is wrong.</dd>
+</dl>
+<h2>How pages are written</h2>
+<ol>
+  <li>A language model extracts <strong>facts</strong> from the sources, and every fact keeps a verbatim quote from its source.</li>
+  <li>A program (not another AI) checks that the quote exists word for word in the source and that the fact's numbers are in it. Otherwise the fact is dropped.</li>
+  <li>The model writes new text <strong>from those facts only</strong>, and each sentence lists the facts it uses.</li>
+  <li>We check that every sentence cites its sources, that its numbers and names come from the cited facts, that it copies no phrases from the sources and that it repeats nothing.</li>
+  <li>If anything fails, the text is not published and the page shows a summary generated directly from the data.</li>
+</ol>
+<p>When the sources disagree, we present it as a debate, with each position and its studies.</p>
+</article>
+{% endblock %}

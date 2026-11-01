@@ -7,6 +7,7 @@ and Airflow can call exactly the same thing (ALCANCE.md §14, decision D4).
 from __future__ import annotations
 
 import datetime as dt
+import json
 import logging
 import os
 import subprocess
@@ -125,6 +126,7 @@ Provider = Annotated[str, typer.Option(help="LLM provider: ollama or groq.")]
 Model = Annotated[str | None, typer.Option(help="Model name [default: per provider].")]
 Only = Annotated[list[str] | None, typer.Option(help="Only these taxa (repeatable).")]
 Limit = Annotated[int | None, typer.Option(help="Process at most this many taxa.")]
+Force = Annotated[bool, typer.Option(help="Regenerate even if the inputs did not change.")]
 DEFAULT_MODELS = {
     "ollama": "paleo-qwen3.5-9b",  # see ollama/Modelfile.qwen3.5-9b (16K context)
     "groq": "openai/gpt-oss-120b",
@@ -161,11 +163,12 @@ def facts(
     model: Model = None,
     only: Only = None,
     limit: Limit = None,
+    force: Force = False,
 ) -> None:
     """Extract checkable facts for new taxa (writes data/derived/facts)."""
     from paleo.llm import LLM, QuotaExhausted
-    from paleo.narrative.facts import extract_facts
-    from paleo.narrative.sources import chunks_for
+    from paleo.narrative.facts import extract_facts, sources_hash
+    from paleo.narrative.sources import chunks_for, taxon_key
 
     paths = get_paths()
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
@@ -173,6 +176,13 @@ def facts(
         chunks = chunks_for(
             taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
         )
+        existing = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
+        unchanged = existing.exists() and json.loads(existing.read_text("utf-8"))[
+            "sources_hash"
+        ] == sources_hash(chunks)
+        if unchanged and not force:
+            typer.echo(f"{taxon}: up to date")
+            continue
         try:
             r = extract_facts(
                 llm,
@@ -194,11 +204,12 @@ def write(
     model: Model = None,
     only: Only = None,
     limit: Limit = None,
+    force: Force = False,
 ) -> None:
     """Write and check the EN text and its ES adaptation (writes data/derived/texts)."""
     from paleo.llm import LLM, QuotaExhausted
     from paleo.narrative.sources import chunks_for, taxon_key
-    from paleo.narrative.write import write_page
+    from paleo.narrative.write import is_up_to_date, write_page
 
     paths = get_paths()
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
@@ -207,6 +218,9 @@ def write(
         facts_path = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
         if not facts_path.exists():
             typer.echo(f"{taxon}: no facts yet (run `paleo facts`)")
+            continue
+        if not force and is_up_to_date(facts_path, paths.data / "derived"):
+            typer.echo(f"{taxon}: up to date")
             continue
         chunks = chunks_for(
             taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
@@ -302,6 +316,41 @@ def eval_run(
     summary = evaluate.summarize(results, llm)
     report = evaluate.write_report(summary, project_root() / "eval" / "reports", label)
     typer.echo(f"Report: {report}")
+
+
+@app.command()
+def site(
+    base: Annotated[
+        str, typer.Option(envvar="PALEO_SITE_BASE", help="URL prefix, e.g. /paleo-atlas.")
+    ] = "",
+    out: Annotated[str | None, typer.Option(help="Output folder [default: site/_build].")] = None,
+    check: Annotated[
+        bool, typer.Option("--check", help="Only check the built site (links, hreflang…).")
+    ] = False,
+) -> None:
+    """Render the static website (ES + EN) from the warehouse, or check it."""
+    from pathlib import Path
+
+    from paleo.site.build import build_site, write_report
+
+    paths = get_paths()
+    out_dir = Path(out) if out else project_root() / "site" / "_build"
+    if check:
+        from paleo.site.check import check_site
+
+        result = check_site(out_dir, base=base)
+        for problem in result.problems[:50]:
+            typer.echo(f"  {problem}")
+        typer.echo(f"Checked {result.pages} pages: {len(result.problems)} problems")
+        raise typer.Exit(0 if result.passed else 1)
+    report = build_site(paths.warehouse, out_dir, base=base)
+    write_report(report, paths.data / "site_report.json")
+    typer.echo(
+        f"Site: {report['pages']} pages, {report['taxa']} taxa, "
+        f"{report['verified_texts']} verified texts → {out_dir}"
+    )
+    if report["untranslated_terms"]:
+        typer.echo(f"Untranslated terms: {', '.join(report['untranslated_terms'])}")
 
 
 @app.command()

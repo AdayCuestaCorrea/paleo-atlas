@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paleo Atlas</title>
+  <meta name="description" content="{{ T.es.lead }}">
+  <link rel="alternate" hreflang="es" href="{{ base }}/es/index.html">
+  <link rel="alternate" hreflang="en" href="{{ base }}/en/index.html">
+  <link rel="stylesheet" href="{{ base }}/static/style.css">
+  <link rel="icon" href="{{ base }}/static/favicon.svg" type="image/svg+xml">
+</head>
+<body class="root">
+  <main class="chooser">
+    <p class="brand brand--big"><span class="brand__mark" aria-hidden="true">✶</span> Paleo Atlas</p>
+    <p class="lead">{{ T.es.tagline }} · <span lang="en">{{ T.en.tagline }}</span></p>
+    <p class="muted">{{ T.es.choose_language }} · <span lang="en">{{ T.en.choose_language }}</span></p>
+    <div class="chooser__options">
+      <a class="button" href="{{ base }}/es/index.html" hreflang="es" data-lang="es">Español</a>
+      <a class="button" href="{{ base }}/en/index.html" hreflang="en" lang="en" data-lang="en">English</a>
+    </div>
+  </main>
+  <script src="{{ base }}/static/app.js"></script>
+</body>
+</html>

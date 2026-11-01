@@ -81,6 +81,31 @@ def select_facts(facts: list[dict[str, Any]], limit: int = MAX_FACTS_FOR_WRITING
     return sorted(chosen, key=lambda f: order[f["fact_id"]])
 
 
+def facts_hash(facts: list[dict[str, Any]]) -> str:
+    """Hash of the facts a page is written from (the selected ones)."""
+    selected = select_facts(facts)
+    return hashlib.sha256(json.dumps(selected, sort_keys=True).encode()).hexdigest()[:16]
+
+
+def is_up_to_date(facts_path: Path, derived_root: Path) -> bool:
+    """True when both texts (or a failed English one kept for review) were written
+    from exactly these facts, so writing again would only spend quota."""
+    doc = json.loads(facts_path.read_text(encoding="utf-8"))
+    current = facts_hash(doc["facts"])
+    key = doc["taxon_key"]
+
+    def stored(folder: str, lang: str) -> str | None:
+        path = derived_root / folder / f"{key}.{lang}.json"
+        return json.loads(path.read_text(encoding="utf-8"))["facts_hash"] if path.exists() else None
+
+    if stored("texts_review", "en") == current:
+        return True  # English failed with these facts: retry only with --force
+    return stored("texts", "en") == current and current in (
+        stored("texts", "es"),
+        stored("texts_review", "es"),
+    )
+
+
 def target_words(fact_count: int) -> int:
     """~120 words for a sparse taxon, up to ~450 for a well documented one."""
     return max(120, min(450, 40 + 10 * fact_count))
@@ -191,7 +216,7 @@ def write_page(
     facts_doc = json.loads(facts_path.read_text(encoding="utf-8"))
     taxon, key = facts_doc["taxon"], facts_doc["taxon_key"]
     facts = select_facts(facts_doc["facts"])
-    facts_hash = hashlib.sha256(json.dumps(facts, sort_keys=True).encode()).hexdigest()[:16]
+    current_hash = facts_hash(facts_doc["facts"])
     fact_texts = _fact_texts(facts)
     sources = {
         lang: [c.text for c in chunks if c.lang == lang and c.public_quote] for lang in ("en", "es")
@@ -218,7 +243,7 @@ def write_page(
         status=en_status,
         llm=llm,
         version=en_version,
-        facts_hash=facts_hash,
+        facts_hash=current_hash,
         sentences=en,
         report=en_report,
         problems=en_report.summary(),
@@ -251,7 +276,7 @@ def write_page(
         status=es_status,
         llm=llm,
         version=es_version,
-        facts_hash=facts_hash,
+        facts_hash=current_hash,
         sentences=es,
         report=es_report,
         problems=problems,

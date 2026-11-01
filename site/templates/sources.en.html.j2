@@ -1,0 +1,22 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_sources }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<article class="prose">
+<h1>{{ T.nav_sources }}</h1>
+<p class="lead">Paleo Atlas is built only from open sources. Every page links its own; here they all are, with their licenses.</p>
+<h2>Data</h2>
+<ul>
+  <li><strong>Wikipedia</strong> (English and Spanish): the yearly paleontology pages and each species' article. Their text is licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; authors are listed in each article's history. <em>We do not copy their text</em>: we only extract facts, which are written anew.</li>
+  <li><strong>Paleobiology Database (PBDB)</strong>: classification, time ranges and finds. Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+  <li><strong>Crossref</strong>: study metadata (journal, date, DOI, retractions and corrections, including Retraction Watch data). Article abstracts may be copyrighted: we never publish them.</li>
+</ul>
+<h2>Images</h2>
+<ul>
+  <li><strong>Wikimedia Commons</strong>: reconstructions and diagrams, each credited with its author and license on the page.</li>
+  <li><strong>PhyloPic</strong>: silhouettes, each credited with its author and license.</li>
+</ul>
+<p>We only use public domain, CC0, CC BY or CC BY-SA images. Never non-commercial licenses or press images.</p>
+<h2>Paleo Atlas licenses</h2>
+<p>Code: AGPL-3.0. Original text: CC BY-NC-SA 4.0. Third-party data and images keep their source's license. The code is on <a href="https://github.com/AdayCuestaCorrea/paleo-atlas">GitHub</a>.</p>
+</article>
+{% endblock %}

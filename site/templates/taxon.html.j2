@@ -1,0 +1,84 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import image, event %}
+{% block title %}{{ taxon.taxon_name }} · {{ T.site_name }}{% endblock %}
+{% block description %}{{ fallback or taxon.taxon_name }}{% endblock %}
+{% block content %}
+<article class="taxon">
+  <header class="taxon__head">
+    <figure class="taxon__figure">
+      {{ image(taxon, T, "hero") }}
+      <figcaption>
+        {% if taxon.image_url %}
+          {{ T.image_credit }}: {{ taxon.image_author or '—' }} ·
+          {% if taxon.image_license_url %}<a href="{{ taxon.image_license_url }}" rel="license noopener">{{ taxon.image_license }}</a>{% else %}{{ taxon.image_license }}{% endif %}
+          {% if taxon.image_page_url %} · <a href="{{ taxon.image_page_url }}" rel="noopener">{{ T.open_source }}</a>{% endif %}
+          {% if taxon.image_level in ('genus', 'clade') %}<br><span class="note">{{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}</span>{% endif %}
+        {% else %}{{ T.no_image }}{% endif %}
+      </figcaption>
+    </figure>
+    <div class="taxon__title">
+      <p class="kicker">{{ terms.group(taxon.taxon_group, lang, plural=True) or '' }}</p>
+      <h1><em>{{ taxon.taxon_name }}</em></h1>
+      {% if taxon.name_authors %}<p class="authority">{{ taxon.name_authors }}{% if taxon.naming_year %}, {{ taxon.naming_year }}{% endif %}</p>{% endif %}
+      <dl class="facts">
+        {% set nov = terms.novelty(taxon.novelty, lang) %}
+        {% if nov %}<dt>{{ T.field_novelty }}</dt><dd>{{ nov[0] }}</dd>{% endif %}
+        {% set status = terms.status(taxon.status, lang) %}
+        {% if status %}<dt>{{ T.field_status }}</dt><dd>{{ status }}</dd>{% endif %}
+        {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>{% endif %}
+        {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
+        {% if taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
+        {% if taxon.family_name or taxon.order_name or taxon.class_name %}
+          <dt>{{ T.field_classification }}</dt>
+          <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}</dd>
+        {% endif %}
+        {% if taxon.page_type == 'known' and taxon.early_interval %}
+          <dt>{{ T.field_time_range }}</dt>
+          <dd>{{ t('time_range', early=terms.interval(taxon.early_interval, lang), late=terms.interval(taxon.late_interval, lang), max=taxon.first_appearance_max_ma, min=taxon.last_appearance_min_ma) }}</dd>
+        {% endif %}
+        {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
+      </dl>
+    </div>
+  </header>
+
+  <section class="block prose">
+    <h2>{{ T.text_title }}</h2>
+    {% if text %}
+      {% for section in SECTION_ORDER %}
+        {% for s in text.sections if s.section == section %}
+          <h3>{{ T['section_' ~ section] }}</h3>
+          <p>{% for sentence in s.sentences %}{{ sentence.text | md }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>
+        {% endfor %}
+      {% endfor %}
+      <p class="note">{{ T.ai_note }}</p>
+    {% elif fallback %}
+      <p>{{ fallback }}</p>
+      <p class="note">{{ T.fallback_note }}</p>
+    {% else %}
+      <p class="note">{{ T.known_note }}</p>
+    {% endif %}
+  </section>
+
+  <section class="block">
+    <h2>{{ T.history_title }}</h2>
+    {% if events %}
+      <ol class="timeline">{% for e in events %}{{ event(e, T, fmt_date) }}{% endfor %}</ol>
+    {% else %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
+  </section>
+
+  {% if text and text.sources %}
+  <section class="block">
+    <h2>{{ T.sources_title }}</h2>
+    <ol class="sources">
+      {% for src in text.sources %}
+      <li id="src-{{ src.number }}">
+        {% if src.url %}<a href="{{ src.url }}" rel="noopener">{{ src.title }}</a>{% else %}{{ src.title }}{% endif %}
+        {% if src.doi and not src.url %} · <a href="https://doi.org/{{ src.doi }}" rel="noopener">{{ T.doi }} {{ src.doi }}</a>{% endif %}
+        <span class="muted">· {{ src.license }}</span>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+</article>
+{% endblock %}

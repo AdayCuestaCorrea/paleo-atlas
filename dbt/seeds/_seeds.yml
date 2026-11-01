@@ -1,0 +1,17 @@
+version: 2
+
+seeds:
+  - name: license_allowlist
+    description: >
+      Image licenses (normalized ids). Only `allowed = true` licenses can be shown
+      (ALCANCE.md §19): no non-commercial (NC) or no-derivatives (ND) licenses.
+    columns:
+      - name: license_id
+        data_tests: [unique, not_null]
+  - name: trusted_journals
+    description: >
+      Initial hand-curated list of established journals (decision A16). A
+      secondary reliability signal only; it never hides a study.
+    columns:
+      - name: journal
+        data_tests: [unique, not_null]

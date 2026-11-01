@@ -11,7 +11,14 @@ snapshot-paths: ["snapshots"]
 
 clean-targets: ["target", "dbt_packages"]
 
+vars:
+  pbdb_lag_weeks: 8  # A7: weeks a new taxon may be missing from PBDB before failing
+
 models:
   paleo_atlas:
     staging:
       +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

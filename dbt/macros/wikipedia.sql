@@ -42,14 +42,16 @@
             authors: 'VARCHAR', age: 'VARCHAR', age_links: 'VARCHAR[]',
             type_locality: 'VARCHAR', type_locality_links: 'VARCHAR[]',
             countries: 'VARCHAR[]', regions: 'VARCHAR[]', notes: 'VARCHAR', note_links: 'VARCHAR[]',
-            images: 'VARCHAR[]', "references": '{{ reference_type }}', parse_warnings: 'VARCHAR[]'
+            images: 'VARCHAR[]', "references": '{{ reference_type }}', parse_warnings: 'VARCHAR[]',
+            revision_timestamp: 'TIMESTAMPTZ'
         {%- endset -%}
     {%- elif kind == 'research' -%}
         {%- set columns -%}
             page_title: 'VARCHAR', revid: 'BIGINT', research_id: 'VARCHAR',
             section_path: 'VARCHAR[]', text: 'VARCHAR',
-            links: 'VARCHAR[]', italic_links: 'VARCHAR[]',
-            "references": '{{ reference_type }}', parse_warnings: 'VARCHAR[]'
+            links: 'VARCHAR[]', italic_links: 'VARCHAR[]', italic_names: 'VARCHAR[]',
+            "references": '{{ reference_type }}', parse_warnings: 'VARCHAR[]',
+            revision_timestamp: 'TIMESTAMPTZ'
         {%- endset -%}
     {%- else -%}
         {{ exceptions.raise_compiler_error("Unknown Wikipedia interim kind: " ~ kind) }}

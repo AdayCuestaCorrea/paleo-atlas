@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: int_taxon_pages
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: page_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [new, known]
+  - name: int_research_taxon_links
+    description: Study ↔ taxon links (wikilinks and italic names resolved in PBDB or new taxa).
+  - name: int_study_reliability
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: reliability_status
+        description: Every study gets one status, so every study shows at least one signal.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [retracted, preprint, peer_reviewed, unverified]
+  - name: int_image_best_per_taxon
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: license_allowed
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [true]
+  - name: int_new_taxa_history
+    columns:
+      - name: valid_from
+        data_tests: [not_null]
+  - name: int_taxon_events
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+
+unit_tests:
+  - name: new_taxa_history_starts_a_version_only_when_a_field_changes
+    description: >
+      Three revisions: the status changes in the second and nothing changes in the
+      third, so there must be two versions and the first must end where the second starts.
+    model: int_new_taxa_history
+    given:
+      - input: ref('stg_wikipedia__new_taxa_revisions')
+        rows:
+          - {new_taxon_id: "p | Antusuchus", taxon_name: Antusuchus, revid: 1, revision_timestamp: "2026-10-01 10:00:00+00", novelty: new_genus_and_species, status: in_press, name_authors: A, age_text: Albian, type_locality: X, countries: "['Argentina']", notes_text: n, primary_doi: "10.1/x"}
+          - {new_taxon_id: "p | Antusuchus", taxon_name: Antusuchus, revid: 2, revision_timestamp: "2026-10-15 10:00:00+00", novelty: new_genus_and_species, status: valid, name_authors: A, age_text: Albian, type_locality: X, countries: "['Argentina']", notes_text: n, primary_doi: "10.1/x"}
+          - {new_taxon_id: "p | Antusuchus", taxon_name: Antusuchus, revid: 3, revision_timestamp: "2026-11-01 10:00:00+00", novelty: new_genus_and_species, status: valid, name_authors: A, age_text: Albian, type_locality: X, countries: "['Argentina']", notes_text: n, primary_doi: "10.1/x"}
+    expect:
+      rows:
+        - {revid: 1, status: in_press, version_number: 1, valid_from: "2026-10-01 10:00:00+00", valid_to: "2026-10-15 10:00:00+00", is_current: false}
+        - {revid: 2, status: valid, version_number: 2, valid_from: "2026-10-15 10:00:00+00", valid_to: null, is_current: true}

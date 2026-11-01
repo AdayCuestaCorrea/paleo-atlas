@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_wikipedia__new_taxa_revisions
+    description: Every stored revision of the new-taxa tables (input for history).
+  - name: stg_wikipedia__research_revisions
+    description: Every stored revision of the research bullets (input for history).
+  - name: stg_pbdb__taxa_versions
+    description: Every stored PBDB lookup, one row per queried name and version.
+  - name: stg_pbdb__taxa
+    description: Latest PBDB lookup per queried name; `first_found_on` measures PBDB lag.
+    columns:
+      - name: queried_name
+        data_tests: [unique, not_null]
+  - name: stg_crossref__works
+    description: Latest Crossref metadata per DOI (no abstracts).
+    columns:
+      - name: doi
+        data_tests: [unique, not_null]
+      - name: work_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [journal-article, posted-content, book-chapter, book, proceedings-article, dissertation, report, monograph, other]
+              config:
+                severity: warn
+  - name: stg_commons__images
+    columns:
+      - name: file_name
+        data_tests: [unique, not_null]
+  - name: stg_phylopic__images
+    columns:
+      - name: queried_name
+        data_tests: [unique, not_null]

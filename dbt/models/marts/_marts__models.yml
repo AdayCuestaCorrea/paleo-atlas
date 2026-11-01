@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: dim_taxon
+    description: One row per taxon page (new 2026 taxa + known taxa studied in 2026).
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: taxon_name
+        data_tests: [not_null]
+      - name: page_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [new, known]
+  - name: dim_study
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+  - name: fct_taxon_event
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+      - name: taxon_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
+      - name: study_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_study')
+                field: study_id
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [description, new_study, study_corrected, study_retracted]

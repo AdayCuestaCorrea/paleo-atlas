@@ -588,3 +588,22 @@ def interim_dir(page_title: str, revid: int, interim_root: Path) -> Path:
 def plain_text(code: Wikicode | str) -> str:
     """Readable text of wikicode (refs, templates, files and markup removed)."""
     return _plain(code)
+
+
+def strip_block_markup(code: Wikicode | str) -> Wikicode:
+    """Expand content templates and drop refs and other templates on a whole block.
+
+    Done before splitting into paragraphs, because a template or a reference may
+    span several paragraphs (e.g. ``{{multiple image ...}}`` with blank lines).
+    """
+    code = mw.parse(str(code))
+    for tag in code.filter_tags(recursive=False, matches=lambda n: n.tag.lower() == "ref"):
+        _safe_remove(code, tag)
+    for template in code.filter_templates(recursive=False):
+        text = _template_text(template)
+        with contextlib.suppress(ValueError):
+            if text is None:
+                code.remove(template)
+            else:
+                code.replace(template, text)
+    return code

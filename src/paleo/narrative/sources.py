@@ -8,6 +8,7 @@ no for publisher abstracts, which may be copyrighted (ALCANCE.md §19).
 
 from __future__ import annotations
 
+import html
 import json
 import re
 from dataclasses import dataclass
@@ -18,7 +19,7 @@ import mwparserfromhell as mw
 
 from paleo.ingest import articles, crossref, pbdb
 from paleo.interim import latest_rows
-from paleo.parse.wikipedia import plain_text
+from paleo.parse.wikipedia import plain_text, strip_block_markup
 from paleo.store import safe_key
 
 MAX_CHUNK_CHARS = 6_000  # ~1,500 tokens: several chunks fit under Groq's 8K tokens/minute
@@ -144,7 +145,8 @@ def article_chunks(taxon: str, lang: str, record: dict[str, Any]) -> list[Chunk]
 
 def _paragraph_text(code: mw.wikicode.Wikicode) -> str:
     """Plain text keeping paragraph breaks (``plain_text`` collapses whitespace)."""
-    return "\n\n".join(p for p in (plain_text(par) for par in re.split(r"\n\s*\n", str(code))) if p)
+    cleaned = str(strip_block_markup(code))  # templates/refs may span several paragraphs
+    return "\n\n".join(p for p in (plain_text(par) for par in re.split(r"\n\s*\n", cleaned)) if p)
 
 
 def table_chunk(row: dict[str, Any]) -> Chunk:
@@ -221,8 +223,8 @@ def crossref_chunks(
     if not latest or not latest["payload"].get("found"):
         return []
     work = latest["payload"]["work"]
-    title = re.sub(r"<[^>]+>", "", " ".join((work.get("title") or [""])[0].split()))
-    journal = (work.get("container-title") or [""])[0]
+    title = re.sub(r"<[^>]+>", "", html.unescape(" ".join((work.get("title") or [""])[0].split())))
+    journal = html.unescape((work.get("container-title") or [""])[0])
     year = ((work.get("issued") or {}).get("date-parts") or [[None]])[0][0]
     authors = ", ".join(
         f"{a.get('given', '')} {a.get('family', '')}".strip() for a in work.get("author", [])[:12]

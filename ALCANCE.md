@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 7 · **Estado:** Fase 0 cerrada · Fase 1 empieza el 2026-11-02
+**Creado:** 2026-10-31 · **Versión:** 8 · **Estado:** Fase 1 en curso (semana 1)
 
 ---
 
@@ -224,12 +224,13 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 **Terminado cuando:** repo publicado en GitHub.
 
 ### Fase 1 — MVP (arcosaurios, bilingüe)
-- [ ] `ingest wikipedia`: página del año en curso vía API, guardado en crudo
-- [ ] Parser de la tabla de taxones (wikitext irregular → filas), con fixtures
+- [x] `ingest wikipedia`: página del año en curso vía API, guardado en crudo
+- [x] Parser de la tabla de taxones (wikitext irregular → filas), con fixtures
+- [x] Parser de las secciones de investigación (estudios sobre taxones ya conocidos → futuros eventos «Nuevo estudio» del historial)
 - [ ] `ingest pbdb`: datos de cada taxón nuevo
 - [ ] `ingest images`: PhyloPic → Commons → silueta del género o clado, con licencia y autor
 - [ ] `ingest studies`: Crossref + ZooBank para cada estudio (§10)
-- [ ] dbt-duckdb: staging, intermediate y marts de §8
+- [ ] dbt-duckdb: staging, intermediate y marts de §8 *(staging de Wikipedia hecho)*
 - [ ] **dbt snapshots** de taxón y estudio desde la primera ejecución (§9)
 - [ ] Elegir LLM con plan gratuito (A18)
 - [ ] Extracción de hechos con fuente (Wikipedia ES/EN, PBDB, metadatos de estudios) para las especies nuevas
@@ -237,7 +238,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [ ] Verificaciones: fidelidad, anti-copia, cita por frase (§16) + revisión manual de una muestra
 - [ ] Tests dbt y pytest de §16
 - [ ] Web ES + EN: portada con selector de idioma, «Última hora», ficha de taxón con historial, recap semanal, «Cómo evaluamos las fuentes», «Fuentes y licencias»
-- [ ] CI: tests en cada push/PR
+- [x] CI: tests en cada push/PR (lint, pytest, parse + dbt build sobre el fixture)
 - [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15)
 - [ ] Informe de ejecución por cada run
 - [ ] Web publicada en GitHub Pages
@@ -315,7 +316,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 
 ### Capas (nombres orientativos)
 - **seeds:** `scope_clades`, `trusted_journals`, `contested_topics`, `models_3d`, `glossary`, `body_sizes`, `reference_objects`
-- **staging:** `stg_wikipedia__new_taxa`, `stg_wikipedia__articles`, `stg_pbdb__taxa`, `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
+- **staging:** `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_wikipedia__articles`, `stg_pbdb__taxa`, `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
 - **snapshots:** `snap_taxon`, `snap_study`
 - **intermediate:** `int_taxon_name_resolution`, `int_taxon_enriched`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`, `int_taxon_facts`
 - **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`, `fct_weekly_recap`, `fct_run_summary`
@@ -471,7 +472,8 @@ Lo que tiene que existir; la implementación se decide en la Fase 1.
 | Comando | Hace | Idempotente |
 |---|---|---|
 | `paleo check` | ¿Ha cambiado alguna fuente desde la última ejecución? (código de salida) | Sí |
-| `paleo ingest wikipedia --year AAAA` | Descarga y guarda en crudo | Sí |
+| `paleo ingest wikipedia --year AAAA` | Descarga y guarda en crudo (un fichero por revisión) | Sí |
+| `paleo parse wikipedia --year AAAA` | Crudo → `new_taxa.jsonl` + `research.jsonl`; `--all-revisions` re-procesa revisiones antiguas sin volver a descargar | Sí |
 | `paleo ingest pbdb` | Datos PBDB de los taxones pendientes | Sí |
 | `paleo ingest images` | Imagen para taxones sin imagen | Sí |
 | `paleo ingest studies` | Crossref + ZooBank + DOAJ | Sí |
@@ -668,12 +670,12 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 
 ## 23. Calendario
 
-A ratos y fines de semana, **sin frenar candidaturas**. Fechas orientativas; las Fases 5 y 6 se fechan al terminar la 4.
+A ratos y fines de semana, **sin frenar candidaturas**. Fechas orientativas; las Fases 5 y 6 se fechan al terminar la 4. Incluir los estudios de la Wikipedia en la Fase 1 puede alargarla unos 3 días.
 
 | Semana | Fechas | Fase |
 |---|---|---|
 | 1 | 2026-11-02 → 11-08 | Fase 1 (ingesta Wikipedia, parser, dbt staging) |
-| 2 | 11-09 → 11-15 | Fase 1 (PBDB, imágenes, estudios, snapshots) |
+| 2 | 11-09 → 11-15 | Fase 1 (PBDB, imágenes, estudios, snapshots, vínculo estudios ↔ taxones) |
 | 3 | 11-16 → 11-22 | Fase 1 (fichas narrativas: hechos, redacción, verificaciones) |
 | 4 | 11-23 → 11-29 | Fase 1 (web ES + EN, Actions; empiezan las 2 semanas de ejecución autónoma) |
 | 5 | 11-30 → 12-06 | Fase 2 + **entrada provisional en el CV** |
@@ -704,6 +706,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v8: los ~380 estudios sobre taxones ya conocidos de las páginas anuales entran en la Fase 1 (eventos «Nuevo estudio» del historial; solo título, revista, DOI y distintivos, nunca la prosa de Wikipedia); nuevo comando `paleo parse wikipedia`; semana 1 completada (ingesta, parser, staging dbt, CI) | Decisión del usuario |
 | 2026-11-01 | v7: entorno configurado (A4 concretada: Python 3.14); `SCOPE.md` creado; **Fase 0 cerrada**; §2 anonimizado (sin nombres de empresas); orden de F10 y del registro corregido | Cierre de la Fase 0 |
 | 2026-11-01 | v6: licencias de F1, F2, F4, F5 y F6 comprobadas; listas blancas de licencias para imágenes; reglas de acceso de Wikimedia y Crossref (§5) | Comprobación de la Fase 0 |
 | 2026-11-01 | v5: fichas narrativas propias desde hechos con cita, adelantadas a la Fase 1 (§12.1); verificaciones de fidelidad y anti-copia; A4 y A5 cerradas; nueva decisión A18 (LLM); calendario ampliado una semana | Decisión del usuario (opción A) |

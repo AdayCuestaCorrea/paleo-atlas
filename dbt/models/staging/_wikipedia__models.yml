@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_wikipedia__new_taxa
+    description: New taxa from the latest stored revision of each yearly Wikipedia page.
+    columns:
+      - name: new_taxon_id
+        description: Page title + taxon name.
+        data_tests: [unique, not_null]
+      - name: taxon_name
+        data_tests: [not_null]
+      - name: taxonomic_block
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [archosaurs, marine_reptiles, fossil_fishes]
+      - name: taxon_group
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [pseudosuchians, non_avian_dinosaurs, birds, pterosaurs, other_archosaurs]
+              config:
+                severity: warn
+      - name: novelty
+        description: Normalized from the "Novelty" column; `other` flags a value to map.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - new_genus_and_species
+                  - new_species
+                  - new_genus_new_combination
+                  - new_genus
+                  - new_combination
+                  - new_subspecies
+                  - replacement_name
+              config:
+                severity: warn
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [valid, in_press, disputed, nomen_nudum, preprint, junior_synonym, unspecified]
+              config:
+                severity: warn
+      - name: primary_doi
+        description: DOI of the naming study; missing DOIs are reviewed, not fatal.
+        data_tests:
+          - not_null:
+              config:
+                severity: warn
+
+  - name: stg_wikipedia__research_items
+    description: Studies about already known taxa, one row per study (merged across headings).
+    columns:
+      - name: research_id
+        description: Hash of the DOI, or of the text when there is no DOI.
+        data_tests: [unique, not_null]
+      - name: taxonomic_block
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [archosaurs, marine_reptiles, fossil_fishes]
+      - name: primary_doi
+        data_tests:
+          - not_null:
+              config:
+                severity: warn

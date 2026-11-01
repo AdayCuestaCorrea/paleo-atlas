@@ -1,0 +1,17 @@
+name: paleo_atlas
+version: "0.1.0"
+config-version: 2
+profile: paleo_atlas
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  paleo_atlas:
+    staging:
+      +materialized: view

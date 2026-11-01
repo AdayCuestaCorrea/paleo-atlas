@@ -1,0 +1,228 @@
+{
+ "generator": "ollama/paleo-qwen3.5-4b",
+ "evaluated_at": "2026-11-01T16:24:41+00:00",
+ "taxa": 12,
+ "done": 9,
+ "pending_quota": 0,
+ "errors": 3,
+ "en_verified": 8,
+ "es_verified": 8,
+ "fact_recall": 0.44,
+ "text_recall": 0.301,
+ "facts_accepted": 146,
+ "facts_rejected": 36,
+ "mean_en_words": 166.0,
+ "calls": 39,
+ "cached_calls": 0,
+ "prompt_tokens": 62575,
+ "completion_tokens": 45402,
+ "seconds": 1556.2,
+ "match_threshold": 0.75,
+ "results": [
+  {
+   "taxon": "Antusuchus",
+   "status": "done",
+   "facts_accepted": 21,
+   "facts_rejected": 0,
+   "reject_reasons": {},
+   "en": "verified",
+   "es": "verified",
+   "en_words": 270,
+   "es_words": 299,
+   "problems": [],
+   "fact_recall": 0.5333333333333333,
+   "text_recall": 0.2,
+   "error": null
+  },
+  {
+   "taxon": "Asio pythiotus",
+   "status": "done",
+   "facts_accepted": 6,
+   "facts_rejected": 2,
+   "reject_reasons": {
+    "quote too short": 2
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 56,
+   "es_words": 61,
+   "problems": [],
+   "fact_recall": 0.4444444444444444,
+   "text_recall": 0.5555555555555556,
+   "error": null
+  },
+  {
+   "taxon": "Bavaricarbo",
+   "status": "done",
+   "facts_accepted": 15,
+   "facts_rejected": 1,
+   "reject_reasons": {
+    "quote too short": 1
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 99,
+   "es_words": 111,
+   "problems": [],
+   "fact_recall": 0.42857142857142855,
+   "text_recall": 0.42857142857142855,
+   "error": null
+  },
+  {
+   "taxon": "Carinthiasuchus",
+   "status": "done",
+   "facts_accepted": 23,
+   "facts_rejected": 1,
+   "reject_reasons": {
+    "numbers not in the quote": 1
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 342,
+   "es_words": 384,
+   "problems": [],
+   "fact_recall": 0.6666666666666666,
+   "text_recall": 0.26666666666666666,
+   "error": null
+  },
+  {
+   "taxon": "Crocodylus lucivenator",
+   "status": "error",
+   "facts_accepted": 0,
+   "facts_rejected": 0,
+   "reject_reasons": {},
+   "en": null,
+   "es": null,
+   "en_words": null,
+   "es_words": null,
+   "problems": [],
+   "fact_recall": null,
+   "text_recall": null,
+   "error": "LLMOutputError: ollama/paleo-qwen3.5-4b: invalid output (Expecting value: line 162 column 15 (char 11719))"
+  },
+  {
+   "taxon": "Cryptarcus",
+   "status": "error",
+   "facts_accepted": 0,
+   "facts_rejected": 0,
+   "reject_reasons": {},
+   "en": null,
+   "es": null,
+   "en_words": null,
+   "es_words": null,
+   "problems": [],
+   "fact_recall": null,
+   "text_recall": null,
+   "error": "LLMOutputError: ollama/paleo-qwen3.5-4b: invalid output (Expecting property name enclosed in double quotes: line 166 column 36 (char 11327))"
+  },
+  {
+   "taxon": "Ctenosuchus",
+   "status": "done",
+   "facts_accepted": 9,
+   "facts_rejected": 5,
+   "reject_reasons": {
+    "statement copies the source wording": 3,
+    "quote not found verbatim in the source": 2
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 45,
+   "es_words": 47,
+   "problems": [],
+   "fact_recall": 0.3333333333333333,
+   "text_recall": 0.3333333333333333,
+   "error": null
+  },
+  {
+   "taxon": "Haolong",
+   "status": "done",
+   "facts_accepted": 14,
+   "facts_rejected": 7,
+   "reject_reasons": {
+    "statement copies the source wording": 7
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 78,
+   "es_words": 83,
+   "problems": [],
+   "fact_recall": 0.35714285714285715,
+   "text_recall": 0.14285714285714285,
+   "error": null
+  },
+  {
+   "taxon": "Rexarthuria",
+   "status": "done",
+   "facts_accepted": 11,
+   "facts_rejected": 4,
+   "reject_reasons": {
+    "statement copies the source wording": 4
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 132,
+   "es_words": 141,
+   "problems": [],
+   "fact_recall": 0.3076923076923077,
+   "text_recall": 0.3076923076923077,
+   "error": null
+  },
+  {
+   "taxon": "Spinosaurus mirabilis",
+   "status": "error",
+   "facts_accepted": 0,
+   "facts_rejected": 0,
+   "reject_reasons": {},
+   "en": null,
+   "es": null,
+   "en_words": null,
+   "es_words": null,
+   "problems": [],
+   "fact_recall": null,
+   "text_recall": null,
+   "error": "LLMOutputError: ollama/paleo-qwen3.5-4b: invalid output (Unterminated string starting at: line 156 column 16 (char 10599))"
+  },
+  {
+   "taxon": "Tromerosaurus",
+   "status": "done",
+   "facts_accepted": 26,
+   "facts_rejected": 7,
+   "reject_reasons": {
+    "numbers not in the quote": 2,
+    "statement copies the source wording": 5
+   },
+   "en": "failed",
+   "es": null,
+   "en_words": 236,
+   "es_words": null,
+   "problems": [
+    "[en] sentence 1 ('The holotype represents an articulated but incomplete skelet'): numbers not in the cited facts: ['52981']",
+    "[en] sentence 1 ('The holotype represents an articulated but incomplete skelet'): names not in the facts: ['Digital']",
+    "[en] sentence 6 ('Powers et al., 2026 classified Tromerosaurus as an albertosa'): cites unknown facts ['F06', 'F07', 'F08']",
+    "[en] sentence 6 ('Powers et al., 2026 classified Tromerosaurus as an albertosa'): numbers not in the cited facts: ['2026']",
+    "[en] sentence 7 ('Tromerosaurus inhabited Canada during the Late Cretaceous, s'): cites unknown facts ['F03', 'F04', 'F05']",
+    "[en] sentence 8 ('Previous work assigned specimens from the Oldman Formation t'): cites unknown facts ['F09', 'F10']"
+   ],
+   "fact_recall": 0.5294117647058824,
+   "text_recall": 0.11764705882352941,
+   "error": null
+  },
+  {
+   "taxon": "Vegavis geitononesos",
+   "status": "done",
+   "facts_accepted": 21,
+   "facts_rejected": 9,
+   "reject_reasons": {
+    "statement copies the source wording": 9
+   },
+   "en": "verified",
+   "es": "verified",
+   "en_words": 236,
+   "es_words": 266,
+   "problems": [],
+   "fact_recall": 0.35714285714285715,
+   "text_recall": 0.35714285714285715,
+   "error": null
+  }
+ ]
+}

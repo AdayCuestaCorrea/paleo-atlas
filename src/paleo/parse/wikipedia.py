@@ -143,11 +143,64 @@ def _clean(text: str) -> str:
     return _WHITESPACE.sub(" ", text).strip()
 
 
+# Inline templates whose text belongs to the sentence (glossary links, units…).
+# Value: which positional parameter holds the text (-1 = the last one).
+_TEXT_TEMPLATES = {
+    "dinogloss": -1,
+    "gloss": -1,
+    "glossary link": -1,
+    "nowrap": 0,
+    "noitalic": 0,
+    "small": 0,
+    "sic": -1,
+    "ill": 0,
+    "lang": 1,
+    "transl": -1,
+    "taxon italics": 0,
+    "taxon": 0,
+    "nobold": 0,
+}
+_SYMBOL_TEMPLATES = {
+    "nbsp": " ",
+    "ndash": "\u2013",
+    "mdash": "\u2014",
+    "snd": " \u2013 ",
+    "spaced ndash": " \u2013 ",
+}
+_CONVERT_TEMPLATES = {"convert", "cvt"}
+
+
+def _template_text(template: Template) -> str | None:
+    """Text a content template renders to, or None to drop the template."""
+    name = _template_name(template)
+    positional = [_clean(str(p.value)) for p in template.params if not p.showkey]
+    if name in _SYMBOL_TEMPLATES:
+        return _SYMBOL_TEMPLATES[name]
+    if name in _CONVERT_TEMPLATES and len(positional) >= 2:
+        # {{convert|8|m|ft}} -> "8 m"; {{convert|1|to|1.5|m}} -> "1 to 1.5 m"
+        if len(positional) >= 4 and positional[1] in {"to", "-", "\u2013", "and", "or"}:
+            return f"{positional[0]} {positional[1]} {positional[2]} {positional[3]}"
+        return f"{positional[0]} {positional[1]}"
+    if name in {"mya", "ma"} and positional:
+        return f"{positional[0]} million years ago"
+    if name.startswith("lang-") and positional:
+        return positional[-1]
+    if name in _TEXT_TEMPLATES and positional:
+        index = _TEXT_TEMPLATES[name]
+        return positional[index] if len(positional) > index else positional[-1]
+    return None
+
+
 def _plain(code: Wikicode | str) -> str:
-    """Readable text: refs, templates, files and markup removed."""
+    """Readable text: refs, files and markup removed; content templates expanded."""
     code = mw.parse(str(code))
     for tag in code.filter_tags(matches=lambda n: n.tag.lower() == "ref"):
         _safe_remove(code, tag)
+    for template in code.filter_templates(recursive=False):
+        text = _template_text(template)
+        if text is not None:
+            with contextlib.suppress(ValueError):
+                code.replace(template, text)
     for link in code.filter_wikilinks():
         if str(link.title).strip().lower().startswith(("file:", "image:")):
             _safe_remove(code, link)
@@ -530,3 +583,8 @@ def write_interim(parsed: ParsedPage, interim_root: Path) -> Path:
 
 def interim_dir(page_title: str, revid: int, interim_root: Path) -> Path:
     return interim_root / "wikipedia" / slugify_title(page_title) / str(revid)
+
+
+def plain_text(code: Wikicode | str) -> str:
+    """Readable text of wikicode (refs, templates, files and markup removed)."""
+    return _plain(code)

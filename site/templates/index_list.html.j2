@@ -3,7 +3,8 @@
 {% if index_kind == 'group' %}{% set heading = terms.group(index_key, lang, plural=True) or index_key %}
 {% elif index_kind == 'period' %}{% set heading = unit_name(index_key, lang) %}
 {% else %}{% set heading = terms.country_name(index_key, lang) %}{% endif %}
-{% set total = sections | map(attribute=1) | map('length') | sum %}
+{# A genus is under every epoch it lived in: count each one once. #}
+{% set total = indices.period_count(index_key) if index_kind == 'period' else sections | map(attribute=1) | map('length') | sum %}
 {% block title %}{{ heading }} · {{ T.nav_encyclopedia }} · {{ T.site_name }}{% endblock %}
 {% block content %}
 <p class="kicker"><a href="{{ url('encyclopedia') }}">{{ T.nav_encyclopedia }}</a> · {{ T['by_' ~ index_kind] }}</p>

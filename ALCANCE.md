@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 10 · **Estado:** Fase 1 en curso (semana 3: pipeline narrativo y evaluación hechos; faltan las 82 fichas)
+**Creado:** 2026-10-31 · **Versión:** 11 · **Estado:** Fase 1 en curso (semana 4: web publicada y fichas generadas; faltan la ejecución programada, el informe de ejecución y las 2 semanas autónomas)
 
 ---
 
@@ -196,7 +196,7 @@ F1 F2 F4 F5 F6 F7 ─► raw JSON (rama `data`)         → extracto Parquet
 **Decisiones de arquitectura (cada una tendrá su ADR, ver §20):**
 - **D1.** Sin Spark en la capa diaria: el volumen no lo justifica.
 - **D2.** DuckDB en vez de base de datos alojada: coste cero, sin mantenimiento.
-- **D3.** El estado vive en git: respuestas crudas versionadas en la rama `data`; el almacén DuckDB se **reconstruye entero** en cada ejecución → idempotente y auditable.
+- **D3.** El estado vive en git: respuestas crudas versionadas en la rama `data`; el almacén DuckDB se **reconstruye entero** en cada ejecución → idempotente y auditable. La rama `data` guarda el crudo versionado y los derivados públicos (hechos, textos y títulos traducidos); **nunca** abstracts ni citas privadas, que solo viven en la caché local.
 - **D4.** Comandos independientes del orquestador: Airflow y GitHub Actions solo los llaman.
 - **D5.** Spark solo para GBIF, en local, y medido contra DuckDB.
 - **D6.** Imágenes y 3D solo con licencias permitidas (§19); nunca de prensa.
@@ -235,20 +235,25 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] **Historial SCD2 desde las versiones crudas** (en lugar de `dbt snapshots`, ver D9), con test unitario de dbt
 - [x] Vínculo estudios ↔ taxones (wikilinks y nombres en cursiva resueltos en PBDB) y fichas básicas de taxones conocidos (datos; la web, en la semana 4)
 - [x] Capa LLM intercambiable (Ollama local / Groq) con salida JSON validada, limitador de cuota y caché por contenido
-- [x] Elegir LLM con plan gratuito (A18) *(decisión provisional, ver §22)*
+- [x] Elegir LLM con plan gratuito (A18, ver §22)
 - [x] Ingesta de artículos de Wikipedia EN/ES de las especies nuevas
 - [x] Extracción de hechos con fuente (Wikipedia ES/EN, PBDB, metadatos y abstracts de estudios)
 - [x] Redacción narrativa EN a partir de los hechos y adaptación ES alineada frase a frase (§12.1)
 - [x] Verificaciones: fidelidad, anti-copia, cita por frase, repeticiones, longitud (§16)
 - [x] Fichas de referencia (12, *gold set*) y evaluación de configuraciones (`eval/`); 4 revisadas por el usuario
 - [x] Modelos dbt de hechos, citas y textos (`fct_taxon_text`)
-- [ ] Generar las fichas narrativas de las 82 especies nuevas
+- [x] Generar las fichas narrativas de las 82 especies nuevas (82/82 verificadas en EN, 81/82 en ES; Tromerosaurus ES con texto de respaldo)
+- [x] Revisión del español (gramática, calcos y fidelidad al inglés) y títulos de los estudios en español (§12.1)
+- [x] Lote robusto: una respuesta cortada se reintenta con el doble de tokens; si vuelve a fallar, se salta la especie y el lote sigue
 - [ ] Tests dbt y pytest de §16
-- [ ] Web ES + EN: portada con selector de idioma, «Última hora», ficha de taxón con historial, recap semanal, «Cómo evaluamos las fuentes», «Fuentes y licencias»
+- [x] Web ES + EN: portada con selector de idioma, «Última hora», ficha de taxón con historial, recap semanal, «Cómo evaluamos las fuentes», «Fuentes y licencias»
+- [x] Ficha: una cita por obra, nombres científicos en cursiva y enlazados, recuadro «Lo último» (§11.1)
+- [x] Buscador (pasa del backlog, decisión del usuario): alias en español (abelisáuridos, espinosaurio), periodos, erratas, facetas y `?q=` compartible
+- [x] Galería de imágenes con visor ampliado: archivos de los artículos y de la categoría de Commons, tipo de imagen, lista blanca de licencias
 - [x] CI: tests en cada push/PR (lint, pytest, parse + dbt build sobre el fixture)
-- [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15)
+- [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(workflow listo; el cron aún no se ha lanzado nunca, 2026-11-02)*
 - [ ] Informe de ejecución por cada run
-- [ ] Web publicada en GitHub Pages
+- [x] Web publicada en GitHub Pages
 
 **Terminado cuando:** la web pública muestra las especies de arcosaurios de 2026 en los dos idiomas, con ficha narrativa verificada, imagen (o la del grupo), señales de fiabilidad e historial, y se ha actualizado sola **2 semanas seguidas** sin intervención.
 
@@ -388,12 +393,15 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 7. **Cómo evaluamos las fuentes.**
 8. **Fuentes y licencias.**
 9. **Acerca de:** qué es, autoría, enlace al repo.
+10. **Buscador** (`/es/buscar.html`, `/en/search.html`): índice JSON por idioma, búsqueda en el navegador sin servidor.
 
 ### 11.1 Contenido de la ficha
 | Campo | Fuente | Si falta |
 |---|---|---|
 | Nombre científico y significado | F1 / PBDB | Ocultar el significado |
-| Imagen 2D + autor + licencia | F4 / F5 | Silueta del género o clado, con aviso «imagen aproximada» |
+| Imagen 2D + autor + licencia, ampliable | F4 / F5 | Silueta del género o clado, con aviso «imagen aproximada» |
+| Galería (fósiles, dientes, esqueletos, reconstrucciones…; máx. 12, con autor y licencia) | F5 | Ocultar |
+| «Lo último»: los 3 eventos más recientes del historial | §9 | Ocultar |
 | Modelo 3D *(Fase 6)* | F10 | Ocultar |
 | Familia y clasificación (familia → orden → clase) | PBDB | El nivel más bajo conocido |
 | Grupo (clado) y bloque | PBDB / seed | Clado de F1 |
@@ -401,7 +409,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 | Lugar del hallazgo | F1 / PBDB | Ocultar |
 | Tamaño (rango + cita) y botón «Comparar» *(Fase 6)* | F12 / seed `body_sizes` (§11.3). **No se inventa** | Ocultar |
 | Árbol de parentesco *(Fase 3)* | §11.2 | Solo la clasificación en texto |
-| **Texto narrativo** por secciones: Descripción, Descubrimiento, Paleobiología, Clasificación, Época y hábitat, Debates; cada frase con su cita | §12.1 | Texto de la plantilla (§11.4) |
+| **Texto narrativo** por secciones: Descripción, Descubrimiento, Paleobiología, Clasificación, Época y hábitat, Debates; cada frase con su cita (una por obra) y los nombres científicos en cursiva, enlazados a su ficha o a Wikipedia | §12.1 | Texto de la plantilla (§11.4) |
 | Línea temporal / historial | §9 | Solo la descripción original |
 | Estudios con distintivos | §10 | — |
 | Mapa de hallazgos *(Fase 3)* | PBDB + GBIF | Ocultar |
@@ -440,7 +448,8 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
    - **Fidelidad:** cada nombre, número y fecha del texto está en los hechos.
    - **Anti-copia:** ninguna frase reproduce secuencias largas de palabras de la fuente.
    - **Cita por frase:** ninguna frase sin al menos una cita.
-5. **Revisión manual** de una muestra; se publica el % que pasa cada verificación (§17).
+5. **Revisión del español:** una pasada más corrige gramática, calcos y errores de traducción frente al inglés; la versión revisada solo se acepta si vuelve a pasar las verificaciones.
+6. **Revisión manual** de una muestra; se publica el % que pasa cada verificación (§17).
 
 **Reglas:**
 - **Tono:** divulgativo para todos los públicos, tercera persona, tecnicismos explicados la primera vez (decisión del usuario, 2026-11-01).
@@ -448,7 +457,10 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 - **Español:** se adapta el texto inglés ya verificado, frase a frase y con las mismas citas (más barato y coherente); la guía fija convenciones (Cretácico Superior, pisos en -iense, tildes de los grupos).
 - **Lo importante se comprueba con código, no se pide al modelo:** un hecho cuya redacción copia su fuente se rechaza en la extracción, porque el redactor la copiaría después.
 - Si una ficha no pasa las verificaciones, se reintenta dos veces con los errores concretos y la forma de corregirlos; si sigue fallando, se publica el texto de respaldo (§11.4) y se marca para revisión.
-- Se generan **una vez por cambio** de los hechos (no en cada visita) y se guardan en el repo → caben en un plan gratuito.
+- Se generan **una vez por cambio** de los hechos o de los prompts (no en cada visita) y se guardan en el repo → caben en un plan gratuito.
+- Los clados por encima de la familia pueden escribirse en español («cocodrilomorfos», «neognatas»); los géneros y las especies, nunca.
+- Los títulos de los estudios se traducen al español con las mismas comprobaciones (números y nombres científicos intactos); en la web ES se muestra el título original con el aviso «Artículo en inglés».
+- **Reparto de cuota:** Groq para lo nuevo de cada día (~10–15 mil tokens por especie → unas 13 especies al día con 200 000 tokens; lo que no cabe espera al día siguiente); la GPU local para regenerarlo todo tras un cambio de prompt y para las evaluaciones.
 - Si se acaba la cuota gratuita del LLM, el pipeline sigue funcionando: las fichas pendientes esperan con el texto de respaldo.
 - Los temas en debate (§9) se cuentan como debate, con las posturas y sus estudios; nunca se presenta una hipótesis como hecho.
 - Pie de cada ficha: «Texto redactado con ayuda de IA a partir de las fuentes citadas y verificado automáticamente».
@@ -505,14 +517,14 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 | Qué | Dónde | Cuándo |
 |---|---|---|
 | Tests (pytest + dbt) | GitHub Actions | Cada push y PR |
-| Detección de cambios + pipeline si hay novedades | GitHub Actions (cron) | Diario (o cada 6 h si se ve útil, A6) |
-| Recap semanal | GitHub Actions (cron) | Lunes por la mañana, hora de Canarias (A6) |
+| Detección de cambios + pipeline si hay novedades | GitHub Actions (cron) | Diario, 06:00 UTC (A6) |
+| Recap semanal | GitHub Actions (cron) | Lunes, en la misma ejecución de las 06:00 UTC (A6) |
 | Pipeline mensual (GBIF, revisión de retracciones) | Local (Spark en mi máquina) | Mensual |
 | Demostración | Airflow en Docker (local) | Bajo demanda |
 
 - Detección barata: comparar el número de revisión de las páginas de Wikipedia y el contenido de RSS/PBDB con lo guardado. Si no hay cambios, no se ejecuta nada más.
 - Fallo del pipeline → aviso por correo de GitHub; la web anterior se queda publicada (nunca se publica una web rota).
-- Los cron de GitHub no son puntuales (pueden retrasarse).
+- Los cron de GitHub no son puntuales (pueden retrasarse). **Pendiente de comprobar:** la primera ejecución programada no se lanzó (2026-11-02).
 - **A verificar:** GitHub desactiva los workflows programados de repos públicos tras 60 días sin actividad. Comprobar si los commits del pipeline cuentan como actividad.
 
 ---
@@ -653,6 +665,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | Árbol presentado como verdad absoluta | Desinformación | Origen indicado en la vista; aviso de que el parentesco está en debate |
 | Modelo 3D desfasado | Desinformación | Preferir escaneos; aviso automático por fecha (§13) |
 | GitHub desactiva el cron por inactividad | La web deja de actualizarse | Verificar la regla (§15); aviso en el informe de ejecución |
+| El cron de GitHub no se lanza | Lo nuevo no se redacta ni se publica | Comprobarlo a diario la primera semana; lanzarlo a mano si falta |
 | Afirmar en CV algo no hecho | Pillada en entrevista | Métricas solo reales (§17); CV vía modo `add` de career-ops |
 
 ---
@@ -674,7 +687,8 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A17 | Cómo se redactan las fichas | **Opción A:** fichas narrativas propias desde hechos con cita (§12.1), desde la Fase 1 | 2026-11-01 |
 | A7 | Tolerancia al retraso de PBDB | **8 semanas** (variable `pbdb_lag_weeks` de dbt): antes, aviso; después, error | 2026-11-02 |
 | A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
-| A18 | LLM para las fichas | **Provisional:** Qwen 3.5 9B local para desarrollo y lotes grandes (11/12 fichas de referencia verificadas, mayor cobertura de hechos: 46 %); Groq `gpt-oss-120b` para la ejecución programada (9/9 verificadas, 38 % de cobertura en el texto, 4× más rápido). Se confirma al completar sus 3 especies pendientes. Descartados: Qwen 3.5 4B (peor y 4× más lento), Groq `qwen3.8-27b` (límite de salida) | 2026-11-01 |
+| A18 | LLM para las fichas | Qwen 3.5 9B local para lotes grandes, regeneraciones y evaluaciones (11/12 fichas de referencia verificadas, 46 % de hechos encontrados); Groq `gpt-oss-120b` para la ejecución diaria (12/12 verificadas en EN y ES, 38 % de los hechos en el texto). Descartados: Qwen 3.5 4B (peor y 4× más lento), Groq `qwen3.8-27b` (límite de salida) | 2026-11-02 |
+| A6 | Frecuencia de detección y hora del recap | Diario a las 06:00 UTC; recap los lunes en esa misma ejecución | 2026-11-02 |
 | A19 | Tono de las fichas | Divulgativo para todos los públicos | 2026-11-01 |
 | A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
@@ -682,7 +696,6 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 ### Abiertas
 | # | Decisión | Opciones | Cuándo |
 |---|---|---|---|
-| A6 | Frecuencia de detección y hora del recap | Diario / cada 6 h; lunes 06:00 Canarias | Fase 1 |
 | A8 | Versión de Airflow | 2.x, 3.x | Fase 2 |
 | A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
 | A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |
@@ -715,11 +728,12 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 |---|---|
 | Tiempo real al minuto | Escuchar los cambios de Wikipedia en directo (EventStreams); necesita un proceso siempre encendido |
 | Feed RSS de la propia web | Fácil con web estática |
-| Buscador en la web | Hay buscadores para webs estáticas que funcionan sin servidor |
 | Mapa paleogeográfico (dónde estaban los continentes en esa época) | Existen servicios de reconstrucción de placas; a investigar |
 | Newsletter semanal por correo con el recap | Necesita un servicio de envío gratuito |
 | Más grupos: sinápsidos y mamíferos, invertebrados, plantas | Ampliar el seed de §4 |
 | API pública de datos de Paleo Atlas | Revisar las licencias de redistribución |
+| Cola de prioridad cuando un día no cabe en la cuota del LLM | Redactar primero las especies más recientes |
+| Segundo proveedor LLM gratuito de reserva | Por si Groq falla o cambia su plan gratuito |
 | Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
 
 ---
@@ -728,6 +742,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v11: semana 4 (web Jinja2 publicada en GitHub Pages, rama `data`, pipeline diario); 82 fichas generadas; buscador del backlog a la Fase 1; galería con visor; revisión del español y títulos en español; una cita por obra y nombres enlazados; reintentos del lote; A6 y A18 cerradas | Ronda de revisión del usuario y semana 4 |
 | 2026-11-01 | v10: pipeline narrativo completo (capa LLM, artículos, hechos, redacción EN + adaptación ES, verificaciones); 12 fichas de referencia y evaluación de 4 configuraciones; A18 provisional, A19 (tono) y A20 (longitud) cerradas; staging de dbt materializado como tablas; modelos de textos | Semana 3 |
 | 2026-11-02 | v9: semana 2 terminada (PBDB, Crossref, imágenes, vínculo estudios ↔ taxones, marts); **fichas básicas para taxones conocidos** en la Fase 1; D9 cambia de `dbt snapshots` a SCD2 desde versiones crudas; ZooBank aplazado (API caída); abstracts solo en caché local; A16 cerrada | Decisión del usuario y hallazgos de la semana 2 |
 | 2026-11-02 | v8: los ~380 estudios sobre taxones ya conocidos de las páginas anuales entran en la Fase 1 (eventos «Nuevo estudio» del historial; solo título, revista, DOI y distintivos, nunca la prosa de Wikipedia); nuevo comando `paleo parse wikipedia`; semana 1 completada (ingesta, parser, staging dbt, CI) | Decisión del usuario |

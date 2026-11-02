@@ -1,7 +1,9 @@
 """Checks on the built site, run in CI before publishing (ALCANCE.md §16).
 
 * every internal link, image, stylesheet and script points to an existing file;
-* every page has its counterpart in the other language (hreflang);
+* every page declares its counterpart in the other language (hreflang link, which
+  the broken-link check then follows);
+* no taxon page is an orphan: some other page links to it;
 * every image in a figure (main image and gallery) has a credit with its license;
 * HTML tags are balanced;
 * the search index lists every taxon page.
@@ -26,6 +28,7 @@ class _PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.refs: list[str] = []
+        self.anchors: list[str] = []  # <a href> links, not to the same page in the other language
         self.alternates: list[str] = []
         self.stack: list[str] = []
         self.unbalanced: list[str] = []
@@ -40,6 +43,8 @@ class _PageParser(HTMLParser):
         for name in ("href", "src"):
             if a.get(name):
                 self.refs.append(a[name] or "")
+        if tag == "a" and a.get("href") and not a.get("hreflang"):
+            self.anchors.append(a["href"] or "")
         if tag == "link" and a.get("rel") == "alternate" and a.get("href"):
             self.alternates.append(a["href"] or "")
         if tag == "img" and "pic--hero" in (a.get("class") or ""):
@@ -113,6 +118,7 @@ def _licensed(caption: str) -> bool:
 def check_site(root: Path, base: str = "") -> CheckReport:
     report = CheckReport()
     base = base.rstrip("/")
+    linked: set[Path] = set()  # every local page some other page links to
     for page in sorted(root.rglob("*.html")):
         report.pages += 1
         rel = page.relative_to(root)
@@ -122,6 +128,10 @@ def check_site(root: Path, base: str = "") -> CheckReport:
             target = _target(ref, base, root, page)
             if target is not None and not target.exists():
                 report.problems.append(f"{rel}: broken link {ref}")
+        for ref in parser.anchors:
+            target = _target(ref, base, root, page)
+            if target is not None and target.resolve() != page.resolve():
+                linked.add(target.resolve())
         if rel.parts[0] in ("es", "en") and not parser.alternates:
             report.problems.append(f"{rel}: no hreflang alternate")
         unlicensed = [
@@ -136,6 +146,14 @@ def check_site(root: Path, base: str = "") -> CheckReport:
             report.problems.append(
                 f"{rel}: unbalanced tags (stray {parser.unbalanced[:3]}, unclosed [{unclosed}])"
             )
+    # No taxon page is an orphan: each one is reachable from an index, a list or
+    # another page (the encyclopedia must be browsable, not only searchable).
+    for folder in ("es/taxones", "en/taxa"):
+        for page in sorted((root / folder).glob("*.html")):
+            if page.name != "index.html" and page.resolve() not in linked:
+                report.problems.append(f"{page.relative_to(root)}: no page links to it")
+    if report.pages == 0:
+        report.problems.append(f"{root}: no pages (was the site built?)")
     for index, folder in (("es/buscar.json", "es/taxones"), ("en/search.json", "en/taxa")):
         if (root / index).exists():
             entries = len(json.loads((root / index).read_text(encoding="utf-8"))["taxa"])

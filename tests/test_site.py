@@ -220,3 +220,56 @@ def test_encyclopedia_genera_cite_the_yearly_page_only_when_studied():
     studied = basic_sources(genus, [{"doi": "10.1/y"}], "2026 in archosaur paleontology")
     assert studied[0]["url"].endswith("2026_in_archosaur_paleontology")
     assert fallback_text(genus, "es").startswith("Género de dinosaurio no aviano")
+
+
+def test_substages_and_cenozoic_periods_in_spanish():
+    from paleo.site import terms
+
+    assert terms.interval("Late Campanian", "es") == "Campaniense superior"
+    assert terms.interval("early Albian", "es") == "Albiense inferior"
+    assert terms.interval("Paleogene", "es") == "Paleógeno"
+    assert terms.country_name("uk", "es") == "Reino Unido"
+    assert terms.country_name("O2", "en") == "North Atlantic"
+
+
+def test_indices_list_each_genus_by_group_family_epoch_and_country():
+    from paleo.site.indices import build_indices
+
+    def genus(name, group, family, oldest, youngest, countries):
+        return {"taxon_key": name.lower(), "taxon_name": name, "page_type": "genus",
+                "taxon_rank": "genus", "taxon_group": group, "family_name": family,
+                "first_appearance_max_ma": oldest, "last_appearance_min_ma": youngest,
+                "country_codes": countries}  # fmt: skip
+
+    taxa = [
+        genus("Tyrannosaurus", "non_avian_dinosaurs", "Tyrannosauridae", 68, 66, ["US", "CA"]),
+        genus("Allosaurus", "non_avian_dinosaurs", None, 155, 145.5, ["US", "PT"]),
+        genus("Archaeopteryx", "birds", None, 151, 149, ["DE"]),
+        {"taxon_key": "t-rex", "taxon_name": "T rex", "page_type": "known",
+         "taxon_rank": "species", "taxon_group": "non_avian_dinosaurs"},  # not a genus
+    ]  # fmt: skip
+    idx = build_indices(taxa, ["birds", "non_avian_dinosaurs"])
+    assert list(idx.groups) == ["birds", "non_avian_dinosaurs"]
+    # families alphabetically, no family last
+    assert list(idx.groups["non_avian_dinosaurs"]) == ["Tyrannosauridae", ""]
+    assert idx.genera == 3 and idx.group_count("non_avian_dinosaurs") == 2
+    assert [e for e, _ in idx.periods["jurassic"]] == ["late-jurassic"]
+    assert idx.period_count("cretaceous") == 1
+    assert [t["taxon_name"] for t in idx.countries["us"]] == ["Allosaurus", "Tyrannosaurus"]
+    assert next(iter(idx.countries)) == "us"  # most genera first
+
+
+def test_the_check_finds_taxon_pages_nobody_links_to(tmp_path):
+    from paleo.site.check import check_site
+
+    for lang, folder in (("es", "taxones"), ("en", "taxa")):
+        page = tmp_path / lang / folder / "lonely.html"
+        page.parent.mkdir(parents=True)
+        other = "en/taxa" if lang == "es" else "es/taxones"
+        page.write_text(f'<html><head><link rel="alternate" href="/{other}/lonely.html">'
+                        f'</head><body><a hreflang="x" href="/{other}/lonely.html">x</a>'
+                        "</body></html>")  # fmt: skip
+    problems = check_site(tmp_path).problems
+    assert "es/taxones/lonely.html: no page links to it" in problems
+    assert "en/taxa/lonely.html: no page links to it" in problems
+    assert check_site(tmp_path / "missing").problems[-1].endswith("(was the site built?)")

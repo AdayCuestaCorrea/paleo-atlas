@@ -8,6 +8,7 @@ typos) happens in the browser.
 
 from __future__ import annotations
 
+import re
 from collections.abc import Callable
 from typing import Any
 
@@ -81,8 +82,81 @@ def entry(taxon: dict[str, Any], lang: str, url: str) -> dict[str, Any]:
     }
 
 
+FACETS = ["clade", "group", "time", "place"]
+# Image URLs share a few long prefixes: stored as "<prefix number>|<rest>".
+IMAGE_PREFIXES = [
+    "https://images.phylopic.org/images/",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/",
+    "https://upload.wikimedia.org/wikipedia/commons/",
+]
+
+
+def _page_key(name: str) -> str:
+    """The dbt macro taxon_key: lowercase, every run of other characters as "-"."""
+    return re.sub(r"[^A-Za-z0-9]+", "-", name.strip()).lower()
+
+
+def _short_image(url: str) -> str:
+    for i, prefix in enumerate(IMAGE_PREFIXES):
+        if url.startswith(prefix):
+            return f"{i}|{url[len(prefix) :]}"
+    return url
+
+
+class _Terms:
+    """Shared string table: the index stores each distinct text once (group names,
+    periods, silhouettes and meta lines repeat across thousands of taxa)."""
+
+    def __init__(self) -> None:
+        self.ids: dict[str, int] = {}
+
+    def __call__(self, text: str | None) -> int | None:
+        if text is None:
+            return None
+        if text not in self.ids:
+            self.ids[text] = len(self.ids)
+        return self.ids[text]
+
+    def many(self, texts: list[str] | None) -> list[int]:
+        return [] if texts is None else [self(t) for t in texts]
+
+    def table(self) -> list[str]:
+        return list(self.ids)
+
+
+def _compact(e: dict[str, Any], key: str, terms_: _Terms) -> list[Any]:
+    """[name, meta, image, flags, fields, facets, key?] with every text as a term id;
+    fields and facets in the order of WEIGHTS and FACETS. flags: 1 silhouette, 2 new."""
+    facets = []
+    for k in FACETS:
+        v = e["facets"].get(k)
+        facets.append(terms_.many(v) if isinstance(v, list) else terms_(v))
+    out = [
+        e["n"],
+        terms_(e["meta"] or None),
+        terms_(_short_image(e["img"])) if e["img"] else None,
+        (1 if e["sil"] else 0) + (2 if e["new"] else 0),
+        [terms_.many(e["f"].get(field)) for field in WEIGHTS],
+        facets,
+    ]
+    if key != _page_key(e["n"]):
+        out.append(key)
+    return out
+
+
 def build_index(taxa: list[dict[str, Any]], lang: str, url: Callable[[str], str]) -> dict[str, Any]:
+    """Compact index (format 2): texts in one shared table, fields by position, URLs
+    as page keys (left out when they follow from the name). search.js expands it."""
+    terms_ = _Terms()
+    prefix, suffix = url("KEY").split("KEY")
+    entries = [_compact(entry(t, lang, url(t["taxon_key"])), t["taxon_key"], terms_) for t in taxa]
     return {
+        "v": 2,
         "weights": WEIGHTS,
-        "taxa": [entry(t, lang, url(t["taxon_key"])) for t in taxa],
+        "fields": list(WEIGHTS),
+        "facets": FACETS,
+        "images": IMAGE_PREFIXES,
+        "url": [prefix, suffix],
+        "terms": terms_.table(),
+        "taxa": entries,
     }

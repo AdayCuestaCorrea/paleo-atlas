@@ -7,6 +7,7 @@ comes from the data, and each part is left out when its field is missing.
 from __future__ import annotations
 
 from typing import Any
+from urllib.parse import quote
 
 from paleo.site import terms
 
@@ -121,8 +122,12 @@ def _known_text(taxon: dict[str, Any], lang: str) -> str | None:
     return sentence + "."
 
 
+def _wiki_url(lang: str, title: str) -> str:
+    return f"https://{lang}.wikipedia.org/wiki/" + quote(title.replace(" ", "_"))
+
+
 def basic_sources(
-    taxon: dict[str, Any], events: list[dict[str, Any]], year_page: str
+    taxon: dict[str, Any], events: list[dict[str, Any]], year_page: str, lang: str = "en"
 ) -> list[dict[str, str]]:
     """Sources of a page without narrative text: the Wikipedia yearly page, PBDB and
     the naming study, so the sources are always visible (§11.1). An encyclopedia
@@ -134,6 +139,14 @@ def basic_sources(
             "url": "https://en.wikipedia.org/wiki/" + year_page.replace(" ", "_"),
             "note": "CC BY-SA 4.0",
         })  # fmt: skip
+    # The taxon's own article (verified against PBDB for the encyclopedia genera).
+    es_title, en_title = taxon.get("wikipedia_article_es"), taxon.get("wikipedia_article")
+    if lang == "es" and es_title:
+        out.append({"title": f"Wikipedia: {es_title}", "url": _wiki_url("es", es_title),
+                    "note": "CC BY-SA 4.0"})  # fmt: skip
+    elif en_title:
+        out.append({"title": f"Wikipedia: {en_title}", "url": _wiki_url("en", en_title),
+                    "note": "CC BY-SA 4.0"})  # fmt: skip
     if taxon.get("pbdb_has_taxon") and taxon.get("pbdb_taxon_no"):
         out.append({
             "title": f"Paleobiology Database: {taxon['taxon_name']}",

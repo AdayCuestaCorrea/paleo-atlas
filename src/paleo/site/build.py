@@ -23,10 +23,12 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoes
 from markupsafe import Markup
 
 from paleo.config import enabled_pages, project_root
+from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
 from paleo.site import terms
 from paleo.site.data import SiteData, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
+from paleo.site.indices import build_indices, unit_key, unit_name
 from paleo.site.search import build_index
 
 LANGS = ("es", "en")
@@ -45,6 +47,10 @@ PATHS = {
         "about": "es/acerca.html",
         "search": "es/buscar.html",
         "search_index": "es/buscar.json",
+        "encyclopedia": "es/enciclopedia/index.html",
+        "group_index": "es/enciclopedia/grupo/{key}.html",
+        "period_index": "es/enciclopedia/epoca/{key}.html",
+        "country_index": "es/enciclopedia/pais/{key}.html",
     },
     "en": {
         "home": "en/index.html",
@@ -57,6 +63,10 @@ PATHS = {
         "about": "en/about.html",
         "search": "en/search.html",
         "search_index": "en/search.json",
+        "encyclopedia": "en/encyclopedia/index.html",
+        "group_index": "en/encyclopedia/group/{key}.html",
+        "period_index": "en/encyclopedia/period/{key}.html",
+        "country_index": "en/encyclopedia/country/{key}.html",
     },
 }
 MONTHS = {
@@ -150,6 +160,11 @@ class SiteBuilder:
         self.atlas_names = {t["taxon_name"]: t["taxon_key"] for t in data.taxa}
         self.atlas_genera = {name.split(" ")[0] for name in self.atlas_names}
         self._names = re.compile(r"\b[A-Z][a-z]+(?: [a-z]+)?")
+        groups = list(dict.fromkeys(c.taxon_group for c in scope_clades(enabled_only=False)))
+        self.indices = build_indices(data.taxa, groups)
+        self.env.globals["indices"] = self.indices
+        self.env.globals["unit_name"] = unit_name
+        self.env.globals["unit_key"] = unit_key
 
     # ----------------------------------------------------------------- prose
 
@@ -219,6 +234,7 @@ class SiteBuilder:
             t for t in data.taxa if t["page_type"] != "new" and data.events.get(t["taxon_key"])
         ]
         year_page = enabled_pages()[0].title(data.built_on.year)
+        idx = self.indices
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []
         for lang in LANGS:
@@ -238,7 +254,7 @@ class SiteBuilder:
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),
                           "basic_sources": basic_sources(
-                              taxon, data.events.get(key, []), year_page)})
+                              taxon, data.events.get(key, []), year_page, lang)})
                 )  # fmt: skip
             out.append(
                 Page(lang, "recaps", None, "recaps.html.j2",
@@ -251,6 +267,19 @@ class SiteBuilder:
             for kind in ("sources", "assess", "about"):
                 out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", {}))
             out.append(Page(lang, "search", None, "search.html.j2", {}))
+            out.append(Page(lang, "encyclopedia", None, "encyclopedia.html.j2", {}))
+            for key, families in idx.groups.items():
+                out.append(Page(lang, "group_index", key, "index_list.html.j2",
+                                {"index_kind": "group", "index_key": key,
+                                 "sections": list(families.items())}))  # fmt: skip
+            for key, sections in idx.periods.items():
+                out.append(Page(lang, "period_index", key, "index_list.html.j2",
+                                {"index_kind": "period", "index_key": key,
+                                 "sections": sections}))  # fmt: skip
+            for key, genera in idx.countries.items():
+                out.append(Page(lang, "country_index", key, "index_list.html.j2",
+                                {"index_kind": "country", "index_key": key,
+                                 "sections": [("", genera)]}))  # fmt: skip
         return out
 
     def render(self, page: Page) -> str:

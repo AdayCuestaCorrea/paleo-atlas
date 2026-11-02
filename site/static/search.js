@@ -46,9 +46,33 @@
     return d <= max ? 0.5 : 0;
   }
 
+  // Format 2 (search.py): [name, meta, image, flags, fields, facets, key?], every
+  // text an id into index.terms; fields and facets by position; the page key follows
+  // from the name unless given.
+  function expand(index, t) {
+    var T = index.terms, f = {}, x = {};
+    index.fields.forEach(function (k, i) {
+      if (t[4][i].length) f[k] = t[4][i].map(function (j) { return T[j]; });
+    });
+    index.facets.forEach(function (k, i) {
+      var v = t[5][i];
+      if (Array.isArray(v) ? v.length : v != null) {
+        x[k] = Array.isArray(v) ? v.map(function (j) { return T[j]; }) : T[v];
+      }
+    });
+    var img = t[2] == null ? null : T[t[2]], bar = img ? img.indexOf("|") : -1;
+    if (bar > 0) img = index.images[+img.slice(0, bar)] + img.slice(bar + 1);
+    var key = t[6] || t[0].trim().replace(/[^A-Za-z0-9]+/g, "-").toLowerCase();
+    return {
+      n: t[0], u: index.url[0] + key + index.url[1], img: img, sil: !!(t[3] & 1),
+      new: !!(t[3] & 2), meta: t[1] == null ? "" : T[t[1]], f: f, facets: x,
+    };
+  }
+
   function prepare(index) {
     weights = index.weights;
-    taxa = index.taxa.map(function (t) {
+    var raw = index.v === 2 ? index.taxa.map(function (t) { return expand(index, t); }) : index.taxa;
+    taxa = raw.map(function (t) {
       var tokens = [];
       Object.keys(t.f).forEach(function (field) {
         t.f[field].forEach(function (text) {
@@ -82,7 +106,7 @@
   }
 
   if (typeof document === "undefined") { // tests (node): only the matching logic
-    module.exports = { prepare: prepare, search: search, words: words };
+    module.exports = { prepare: prepare, search: search, words: words, taxa: function () { return taxa; } };
     return;
   }
   var root = document.querySelector("[data-search]");

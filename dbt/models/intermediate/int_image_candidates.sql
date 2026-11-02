@@ -1,5 +1,6 @@
 -- Every image found for a taxon page, with its level of precision:
---   taxon  = the taxon itself (Commons file from the Wikipedia table, or PhyloPic)
+--   taxon  = the taxon itself (Commons file from the Wikipedia table, the lead image of
+--            the verified Wikipedia article of a genus, or PhyloPic)
 --   genus  = PhyloPic silhouette of its genus
 --   clade  = PhyloPic silhouette of its family/order/class or of a group named in the notes
 --   group  = PhyloPic silhouette of the clade that stands for its group (seed group_clades)
@@ -27,6 +28,24 @@ commons as (
     cross join unnest(p.image_files) as f(file_name)
     inner join {{ ref('stg_commons__images') }} as i
         on i.file_name = f.file_name and i.found_on_commons
+),
+
+lead_images as (
+    -- Lead image of the verified Wikipedia article of an encyclopedia genus.
+    select
+        w.taxon_key,
+        'commons' as image_source,
+        'taxon' as image_level,
+        2 as clade_position,
+        i.file_name as image_ref,
+        coalesce(i.thumb_url, i.url) as image_url,
+        i.description_url as source_page_url,
+        i.author,
+        i.license_id
+    from {{ ref('int_genus_wikipedia') }} as w
+    inner join pages as p using (taxon_key)
+    inner join {{ ref('stg_commons__images') }} as i
+        on i.file_name = w.lead_image and i.found_on_commons
 ),
 
 lookups as (
@@ -78,5 +97,9 @@ select
     coalesce(a.allowed, false) as license_allowed,
     a.label as license_label,
     a.license_url
-from (select * from commons union all select * from phylopic) as c
+from (
+    select * from commons
+    union all select * from lead_images
+    union all select * from phylopic
+) as c
 left join {{ ref('license_allowlist') }} as a using (license_id)

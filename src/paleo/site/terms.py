@@ -28,6 +28,9 @@ _UNITS = {
     "Late Pliocene": "Plioceno Superior",
     "Early Pleistocene": "Pleistoceno Inferior",
     "Late Pleistocene": "Pleistoceno Superior",
+    "Paleogene": "Paleógeno",
+    "Neogene": "Neógeno",
+    "Quaternary": "Cuaternario",
     "Cretaceous": "Cretácico",
     "Jurassic": "Jurásico",
     "Triassic": "Triásico",
@@ -125,6 +128,9 @@ STATUS = {
 
 _UNIT_RE = re.compile("|".join(re.escape(k) for k in sorted(_UNITS, key=len, reverse=True)))
 _STAGE_RE = re.compile(r"\b(" + "|".join(_STAGES) + r")\b")
+# Substages: Spanish puts the part after the stage, in lowercase.
+_PART = {"early": "inferior", "middle": "medio", "late": "superior"}
+_SUBSTAGE_RE = re.compile(r"\b(Early|Middle|Late|early|middle|late) (" + "|".join(_STAGES) + r")\b")
 
 
 def age(text: str | None, lang: str) -> str | None:
@@ -132,6 +138,8 @@ def age(text: str | None, lang: str) -> str | None:
     if not text or lang == "en":
         return text
     out = _UNIT_RE.sub(lambda m: _UNITS[m.group(0)], text)
+    # Substages: "Late Campanian" -> "Campaniense superior".
+    out = _SUBSTAGE_RE.sub(lambda m: f"{_STAGES[m.group(2)]} {_PART[m.group(1).lower()]}", out)
     out = _STAGE_RE.sub(lambda m: _STAGES[m.group(0)], out)
     for en, es in _WORDS.items():
         out = out.replace(en, es)
@@ -143,6 +151,29 @@ def age(text: str | None, lang: str) -> str | None:
 def interval(name: str | None, lang: str) -> str | None:
     """A single PBDB interval name ('Campanian', 'Late Pleistocene')."""
     return age(name, lang)
+
+
+def _country_rows() -> list[dict[str, str]]:
+    """Every PBDB country with its English and Spanish names (dbt seed countries.csv)."""
+    import csv
+
+    from paleo.config import project_root
+
+    path = project_root() / "dbt" / "seeds" / "countries.csv"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f))
+
+
+_COUNTRY_CODES = {r["country_code"].lower(): (r["name_en"], r["name_es"]) for r in _country_rows()}
+COUNTRIES_ES.update({en: es for en, es in _COUNTRY_CODES.values() if en not in COUNTRIES_ES})
+
+
+def country_name(code: str, lang: str) -> str:
+    """Name of a PBDB country code ("ar", "uk", "o2"…) in ``lang``."""
+    en, es = _COUNTRY_CODES.get(code.lower(), (code.upper(), code.upper()))
+    return es if lang == "es" else en
 
 
 def place(name: str | None, lang: str) -> str | None:

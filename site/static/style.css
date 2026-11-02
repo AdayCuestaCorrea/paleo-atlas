@@ -256,3 +256,9 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .figures { border-collapse: collapse; width: 100%; margin: 1rem 0; }
 .figures th, .figures td { text-align: left; padding: .4rem .6rem; border-bottom: 1px solid var(--line, #ddd); }
 .figures td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Encyclopedia indices: long compact lists in columns. */
+.index-list { columns: 16rem auto; column-gap: 2rem; padding: 0; margin: 1rem 0 0; list-style: none; }
+.index-list li { break-inside: avoid; padding: 0.15rem 0; }
+.index-cards { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; padding: 0; list-style: none; }
+.index-toc { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-top: 1rem; font-size: 0.95rem; }

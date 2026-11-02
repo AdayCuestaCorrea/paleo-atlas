@@ -24,7 +24,7 @@
       </figcaption>
     </figure>
     <div class="taxon__title">
-      <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {{ g }}{% endif %}</p>
+      <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {% if taxon.taxon_group in indices.groups %}<a href="{{ url('group_index', taxon.taxon_group) }}">{{ g }}</a>{% else %}{{ g }}{% endif %}{% endif %}</p>
       <h1><em>{{ taxon.taxon_name }}</em></h1>
       {% if taxon.name_authors %}<p class="authority">{{ taxon.name_authors }}{% if taxon.naming_year %}, {{ taxon.naming_year }}{% endif %}</p>{% endif %}
       <dl class="facts">
@@ -35,7 +35,8 @@
         {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>
         {% elif not taxon.early_interval %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
         {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
-        {% if taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
+        {% if taxon.country_codes %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.country_codes %}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+        {% elif taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
         {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
         {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
         {% if taxon.family_name or taxon.order_name or taxon.class_name %}
@@ -44,7 +45,9 @@
         {% endif %}
         {% if taxon.early_interval and taxon.first_appearance_max_ma is not none %}
           <dt>{{ T.field_time_range }}</dt>
-          <dd>{{ t('time_range', early=terms.interval(taxon.early_interval, lang), late=terms.interval(taxon.late_interval, lang), max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}</dd>
+          <dd>{{ t('time_range', early=terms.interval(taxon.early_interval, lang), late=terms.interval(taxon.late_interval, lang), max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}
+            {%- set periods = terms.time_units(taxon.first_appearance_max_ma, taxon.last_appearance_min_ma) | selectattr(0, 'in', terms.PERIODS) | list %}
+            {%- if periods %}<br>{% for en, es in periods %}{% set k = unit_key(en) %}{% if k in indices.periods %}<a href="{{ url('period_index', k) }}">{{ es if lang == 'es' else en }}</a>{% else %}{{ es if lang == 'es' else en }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}{% endif %}</dd>
         {% endif %}
         {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
       </dl>

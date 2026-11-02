@@ -19,7 +19,7 @@
       {%- if taxon.page_type == 'new' -%}
         {{ terms.age(taxon.age_text, lang) or '' }}{% if taxon.country %} · {{ terms.place(taxon.country, lang) }}{% endif %}
       {%- else -%}
-        {{ terms.interval(taxon.early_interval, lang) or '' }}{% if taxon.family_name %} · {{ taxon.family_name }}{% endif %}
+        {% if taxon.page_type == 'genus' and group %}{{ group }} · {% endif %}{{ terms.interval(taxon.early_interval, lang) or '' }}{% if taxon.family_name %} · {{ taxon.family_name }}{% endif %}
       {%- endif -%}
     </span>
   </span>
@@ -68,5 +68,14 @@
     {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}
   </span>
   {{ badges(e, T) }}
+</li>
+{%- endmacro %}
+
+{# One genus in an encyclopedia index: name and time range, compact (lists of thousands). #}
+{% macro genus_item(taxon, lang, url, terms) -%}
+<li><a href="{{ url('taxon', taxon.taxon_key) }}"><em>{{ taxon.taxon_name }}</em></a>
+  {%- set early = terms.interval(taxon.early_interval, lang) -%}
+  {%- set late = terms.interval(taxon.late_interval, lang) -%}
+  {%- if early %} <span class="muted">{{ early }}{% if late and late != early %}–{{ late }}{% endif %}</span>{% endif -%}
 </li>
 {%- endmacro %}

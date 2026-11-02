@@ -115,6 +115,10 @@ class RawStore:
             )
         return self._checked
 
+    def checked_on(self, key: str) -> str | None:
+        """ISO date of the last check of ``key`` (None if never checked)."""
+        return self._load_checked().get(key)
+
     def is_fresh(self, key: str, max_age_days: int, today: dt.date | None = None) -> bool:
         """True when ``key`` was checked less than ``max_age_days`` ago."""
         checked = self._load_checked().get(key)

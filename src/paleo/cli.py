@@ -87,7 +87,7 @@ def ingest_wikipedia(year: Year = None) -> None:
 @ingest_app.command("pbdb")
 def ingest_pbdb(refresh: Refresh = False) -> None:
     """Resolve candidate taxon names against PBDB (versioned per name), and download
-    the catalog of every clade in scope for the encyclopedia (monthly)."""
+    the catalog of every clade in scope and the occurrences of every block (monthly)."""
     paths = get_paths()
     names = pbdb.names_of_interest(paths.interim)
     with make_client() as client:
@@ -97,9 +97,16 @@ def ingest_pbdb(refresh: Refresh = False) -> None:
             f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
         )
         c = pbdb.ingest_catalog(client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh)
+        o = pbdb.ingest_occurrences(
+            client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh
+        )
     typer.echo(
         f"PBDB catalog: {c.clades} clades, {c.skipped_fresh} fresh, "
         f"{c.records} records, {c.new_versions} new versions"
+    )
+    typer.echo(
+        f"PBDB occurrences: {o.blocks} blocks, {o.skipped_fresh} fresh, "
+        f"{o.records} records, {o.new_versions} new versions"
     )
 
 
@@ -136,13 +143,25 @@ def ingest_images(refresh: Refresh = False) -> None:
 
 @ingest_app.command("articles")
 def ingest_articles(refresh: Refresh = False) -> None:
-    """Wikipedia articles (EN and, when it exists, ES) of the new taxa."""
+    """Wikipedia articles (EN and, when it exists, ES) of the new taxa, and the
+    article, Wikidata ids and lead image of the encyclopedia genera (a few hundred
+    genera per run, re-checked monthly)."""
+    from paleo.ingest import genus_articles
+
     paths = get_paths()
     with make_client() as client:
         r = articles.ingest_articles(client, paths.interim, raw_root=paths.raw, refresh=refresh)
+        typer.echo(
+            f"Articles: {r.taxa} taxa, {r.skipped_fresh} fresh, {r.found['en']} EN and "
+            f"{r.found['es']} ES found, {r.new_versions} new versions"
+        )
+        genera = genus_articles.catalog_genera(paths.raw)
+        g = genus_articles.ingest_genus_articles(
+            client, genera, raw_root=paths.raw, refresh=refresh
+        )
     typer.echo(
-        f"Articles: {r.taxa} taxa, {r.skipped_fresh} fresh, {r.found['en']} EN and "
-        f"{r.found['es']} ES found, {r.new_versions} new versions"
+        f"Genus articles: {g.genera} genera, {g.skipped_fresh} fresh, {g.looked_up} looked up, "
+        f"{g.with_article} with an article, {g.new_versions} new versions"
     )
 
 

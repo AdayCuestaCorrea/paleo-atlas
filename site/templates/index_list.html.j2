@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import genus_item %}
+{% if index_kind == 'group' %}{% set heading = terms.group(index_key, lang, plural=True) or index_key %}
+{% elif index_kind == 'period' %}{% set heading = unit_name(index_key, lang) %}
+{% else %}{% set heading = terms.country_name(index_key, lang) %}{% endif %}
+{% set total = sections | map(attribute=1) | map('length') | sum %}
+{% block title %}{{ heading }} · {{ T.nav_encyclopedia }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<p class="kicker"><a href="{{ url('encyclopedia') }}">{{ T.nav_encyclopedia }}</a> · {{ T['by_' ~ index_kind] }}</p>
+<h1>{{ heading }}</h1>
+<p class="lead">{{ t('index_lead_' ~ index_kind, n=total, label=heading) }}</p>
+{% if sections | length > 1 %}
+<nav class="index-toc" aria-label="{{ heading }}">
+  {% for name, genera in sections %}<a href="#s{{ loop.index }}">{% if index_kind == 'period' %}{{ unit_name(name, lang) }}{% else %}{{ name or T.no_family }}{% endif %} <span class="muted">{{ genera | length }}</span></a>{% endfor %}
+</nav>
+{% endif %}
+{% for name, genera in sections %}
+<section class="block" id="s{{ loop.index }}">
+  {% if name or sections | length > 1 %}<h2>{% if index_kind == 'period' %}{{ unit_name(name, lang) }}{% else %}{{ name or T.no_family }}{% endif %} <span class="muted">({{ genera | length }})</span></h2>{% endif %}
+  <ul class="index-list">
+    {% for taxon in genera %}{{ genus_item(taxon, lang, url, terms) }}{% endfor %}
+  </ul>
+</section>
+{% endfor %}
+<p class="note">{{ T.index_source }}</p>
+{% endblock %}

@@ -54,3 +54,30 @@ def test_search_matches_spanish_forms_typos_and_ages(tmp_path):
     assert found["T. rex"] == ["Tyrannosaurus rex"]
     assert found["sereno"] == ["Spinosaurus mirabilis"]
     assert found["zzzz"] == []
+
+
+EXPAND = """
+const s = require(process.argv[2]);
+s.prepare(require(process.argv[3]));
+console.log(JSON.stringify(s.taxa().map(t => ({n: t.n, u: t.u, img: t.img, sil: t.sil,
+  new: t.new, meta: t.meta, f: t.f, facets: t.facets}))));
+"""
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node is not installed")
+def test_compact_index_expands_to_the_full_entries(tmp_path):
+    from paleo.site.search import entry
+
+    url = lambda key: f"/es/taxones/{key}.html"  # noqa: E731
+    index = tmp_path / "index.json"
+    index.write_text(json.dumps(build_index(TAXA, "es", url)))
+    runner = tmp_path / "expand.js"
+    runner.write_text(EXPAND)
+    result = subprocess.run(["node", str(runner), str(JS), str(index)],
+                            capture_output=True, text=True, check=True)  # fmt: skip
+    expanded = json.loads(result.stdout)
+    for got, taxon in zip(expanded, TAXA, strict=True):
+        want = entry(taxon, "es", url(taxon["taxon_key"]))
+        want["facets"] = {k: v for k, v in want["facets"].items() if v}
+        want["meta"] = want["meta"] or ""
+        assert got == want

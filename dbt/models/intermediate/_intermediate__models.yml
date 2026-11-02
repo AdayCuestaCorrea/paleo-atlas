@@ -12,6 +12,21 @@ models:
         data_tests: [not_null]
       - name: taxon_group
         data_tests: [not_null]
+  - name: int_genus_occurrences
+    description: Countries and coordinate range of each genus from PBDB occurrences.
+    columns:
+      - name: genus_name
+        data_tests: [unique, not_null]
+  - name: int_genus_wikipedia
+    description: >
+      Verified Wikipedia articles of the encyclopedia genera: the Wikidata item must
+      carry the PBDB id (P842) of the genus or of one of its species and descend
+      from the block root (P171).
+    columns:
+      - name: genus_name
+        data_tests: [unique, not_null]
+      - name: en_title
+        data_tests: [not_null]
   - name: int_taxon_pages
     columns:
       - name: taxon_key
@@ -93,3 +108,24 @@ unit_tests:
       rows:
         - {taxon_key: archaeopteryx, taxon_group: birds, species_count: 1}
         - {taxon_key: spinosaurus, taxon_group: non_avian_dinosaurs, species_count: 0}
+  - name: genus_articles_need_the_pbdb_id_and_the_right_branch_of_the_tree
+    description: >
+      The moth Coloradia's Wikidata item carries the dinosaur's PBDB id by mistake but
+      does not descend from Archosauria: rejected. An article whose item carries the id
+      of one of the genus' species is accepted. Disambiguation pages never are.
+    model: int_genus_wikipedia
+    given:
+      - input: ref('stg_wikipedia__genus_articles')
+        rows:
+          - {genus_name: Coloradia, en_title: Coloradia, disambiguation: false, pbdb_ids: "['38639']", in_scope_tree: false, version_date: "2026-11-02"}
+          - {genus_name: Fregilupus, en_title: Hoopoe starling, disambiguation: false, pbdb_ids: "['371453']", in_scope_tree: true, version_date: "2026-11-02"}
+          - {genus_name: Rex, en_title: Rex, disambiguation: true, pbdb_ids: "['9']", in_scope_tree: true, version_date: "2026-11-02"}
+      - input: ref('stg_pbdb__catalog')
+        rows:
+          - {pbdb_name: Coloradia, pbdb_taxon_no: "38639", taxon_rank: genus}
+          - {pbdb_name: Fregilupus, pbdb_taxon_no: "371451", taxon_rank: genus}
+          - {pbdb_name: Fregilupus varius, genus_name: Fregilupus, pbdb_taxon_no: "371453", taxon_rank: species}
+          - {pbdb_name: Rex, pbdb_taxon_no: "9", taxon_rank: genus}
+    expect:
+      rows:
+        - {genus_name: Fregilupus, en_title: Hoopoe starling}

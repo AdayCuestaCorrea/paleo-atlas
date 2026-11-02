@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 16 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
+**Creado:** 2026-10-31 · **Versión:** 17 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
 
 ---
 
@@ -147,6 +147,7 @@ Notas:
 | F6 | Crossref — API REST | Metadatos de cada estudio: tipo (artículo / preprint), revista, ISSN, **retracciones y correcciones** | API pública | Por cada estudio nuevo + revisión mensual | Metadatos de uso libre; los resúmenes (abstracts) pueden tener derechos | [x] 2026-11-01 |
 | F7 | ZooBank | Registro oficial del nombre (obligatorio en publicaciones electrónicas según el ICZN) | API / búsqueda pública | Por cada taxón nuevo | **API no disponible** (404 en todas las rutas el 2026-11-02; también informado el 28-08-2026). Se reintenta en la Fase 3; mientras, no se muestra el distintivo | [ ] |
 | F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública (sin clave), por ISSN | Mensual (caché de 30 días) | Metadatos de revistas **CC0** | [x] 2026-11-02 |
+| F13 | Wikidata — SPARQL | Verificación de los artículos de Wikipedia de cada género (ID de PBDB P842 y ascendencia P171 hasta la raíz del bloque) y título del artículo en español | Servicio de consultas público, 100 elementos por consulta | Mensual, escalonado (como mucho 600 géneros por ejecución) | Datos **CC0** | [x] 2026-11-02 |
 | F9 | *(Fase 5)* RSS de medios ES/EN | Noticias: titular, enlace, fecha | RSS | Diaria | Solo titular + enlace + resumen propio | [ ] |
 | F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
 | F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | Mensual | A verificar | [ ] |
@@ -281,7 +282,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Mismo trabajo en DuckDB → **benchmark** (tiempo, memoria, complejidad del código)
 - [ ] *Opcional:* mismo job en Databricks Free Edition (verificar cuotas y acceso a datos externos)
 - [ ] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal
-- [ ] Índices por grupo, época y país
+- [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
 - [ ] Familia y clasificación completa en cada ficha (PBDB)
 - [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM
 - [ ] Árbol de parentesco con escala temporal (§11.2): topología de Open Tree of Life (F11) o, si falta, clasificación de PBDB; rangos temporales de PBDB
@@ -760,6 +761,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v17: Fase 3, hito 2 (rama `fase-3`). Índices por grupo, época y país; ocurrencias de PBDB (países de 2.780 géneros, base del mapa); artículos de Wikipedia de los géneros **verificados** con Wikidata (P842 + ascendencia P171: el elemento de la polilla *Coloradia* lleva por error el ID de PBDB del dinosaurio) y su imagen principal libre como imagen de la ficha; siluetas de PhyloPic de todos los géneros con un tope diario; índice del buscador compacto (2,2 MB → 0,9 MB); traducción de subpisos («Campaniense superior»); el comprobador detecta fichas huérfanas y webs vacías; nueva fuente F13 (Wikidata) | Plan de H2 |
 | 2026-11-02 | v16: empieza la Fase 3 en la rama `fase-3` (datos en `data-fase-3`), con merge a `main` al cerrar la Fase 1. Decisiones: una ficha por género; peces = Placodermi + Chondrichthyes + seed de destacados; narrativas solo para géneros con artículo en Wikipedia, en lotes con la GPU local. Hito 1: seed `scope_clades` (alcance como datos), catálogo de PBDB por clado (`taxon_status=accepted`, sin icnotaxones), 3.040 fichas de género de arcosaurios, enlace especie → género | Decisión del usuario |
 | 2026-11-02 | v15: documentos de fase en `docs/fases/` (§20): Fases 1 y 2 escritos; uno más en cada fase como entregable al cerrarla | Petición del usuario |
 | 2026-11-02 | v14: Fase 2 (Airflow 3.3.2 en Docker): DAGs diario, semanal, mensual provisional y de paridad con el CI; lista única de pasos comprobada contra `pipeline.yml`; huella del almacén y de la web para demostrar el mismo resultado; job de CI que carga los DAGs; A8 cerrada; sin logs estructurados (§14). Se hace en paralelo a las 2 semanas autónomas de la Fase 1 sin tocar lo que usa Actions | Decisión del usuario |

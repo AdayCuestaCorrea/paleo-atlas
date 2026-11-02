@@ -33,6 +33,8 @@ BATCH_SIZE = 100
 REFRESH_DAYS = 7
 CATALOG_REFRESH_DAYS = 30
 CATALOG_SHOW = "attr,app,class,parent,size"
+PBDB_OCCS_LIST = "https://paleobiodb.org/data1.2/occs/list.json"
+OCCURRENCES_SHOW = "loc,coords"
 
 _NAME = re.compile(r"^[A-Z][A-Za-zë-]+(?: [a-z][a-z-]+){0,2}$")
 
@@ -166,6 +168,8 @@ class ScopeClade:
     pbdb_base_name: str
     priority: int
     enabled: bool
+    block_root: bool = False
+    wikidata_item: str | None = None
 
 
 @dataclass(frozen=True)
@@ -187,6 +191,8 @@ def scope_clades(seed: Path | None = None, *, enabled_only: bool = True) -> list
                 r["pbdb_base_name"],
                 int(r["priority"]),
                 r["enabled"].strip().lower() == "true",
+                (r.get("block_root") or "").strip().lower() == "true",
+                (r.get("wikidata_item") or "").strip() or None,
             )
             for r in csv.DictReader(f)
         ]
@@ -241,3 +247,56 @@ def ingest_catalog(
         records += len(rows)
         catalog.flush()
     return CatalogResult(len(clades), len(clades) - len(pending), records, new_versions)
+
+
+# --- Occurrences: where each genus was found (countries now, the map later) ----------
+
+
+@dataclass(frozen=True)
+class OccurrencesResult:
+    blocks: int
+    skipped_fresh: int
+    records: int
+    new_versions: int
+
+
+def occurrences_store(raw_root: Path | None = None) -> RawStore:
+    return RawStore("pbdb", "occurrences", volatile={"elapsed_time"}, raw_root=raw_root)
+
+
+def fetch_occurrences(client: httpx.Client, base_name: str) -> list[dict[str, Any]]:
+    """Occurrences identified at least to genus under ``base_name``, with country and
+    coordinates. Compact field names (vocab=com): the block is tens of thousands
+    of records, and the full names would double the size kept in git."""
+    body = get_json(
+        client,
+        PBDB_OCCS_LIST,
+        {"base_name": base_name, "idreso": "genus", "vocab": "com", "show": OCCURRENCES_SHOW},
+    )
+    return body.get("records", [])
+
+
+def ingest_occurrences(
+    client: httpx.Client,
+    clades: list[ScopeClade],
+    *,
+    raw_root: Path | None = None,
+    refresh: bool = False,
+    today: dt.date | None = None,
+) -> OccurrencesResult:
+    """Snapshot the occurrences of each block once a month (one request per block root)."""
+    store_ = occurrences_store(raw_root)
+    roots = [c for c in clades if c.block_root]
+    pending = [
+        c
+        for c in roots
+        if refresh or not store_.is_fresh(c.pbdb_base_name, CATALOG_REFRESH_DAYS, today)
+    ]
+    records = new_versions = 0
+    for clade in pending:
+        rows = fetch_occurrences(client, clade.pbdb_base_name)
+        payload = {"base_name": clade.pbdb_base_name, "show": OCCURRENCES_SHOW, "records": rows}
+        new_versions += store_.save_if_changed(clade.pbdb_base_name, payload, today).created
+        records += len(rows)
+        store_.flush()
+    return OccurrencesResult(len(roots), len(roots) - len(pending), records, new_versions)

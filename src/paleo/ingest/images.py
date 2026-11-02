@@ -39,6 +39,11 @@ PHYLOPIC_API = "https://api.phylopic.org"
 PHYLOPIC_ACCEPT = "application/vnd.phylopic.v2+json"
 COMMONS_BATCH = 50
 REFRESH_DAYS = 7
+# Encyclopedia names (catalog genera, their parent clades and families): thousands of
+# them, so they are re-checked monthly and at most PHYLOPIC_BUDGET per run, never
+# looked up first, then the oldest checks.
+CATALOG_REFRESH_DAYS = 30
+PHYLOPIC_BUDGET = 300
 
 
 @dataclass(frozen=True)
@@ -93,6 +98,26 @@ def phylopic_queries(interim_root: Path, raw_root: Path | None = None) -> list[s
                     names.add(value)
     names.update(group_clades())
     return sorted(n for n in names if n and looks_like_taxon(n))
+
+
+def catalog_phylopic_queries(raw_root: Path | None = None) -> list[str]:
+    """Genera of the encyclopedia catalog, with their parent clade and family."""
+    from paleo.ingest import pbdb
+
+    catalog = pbdb.catalog_store(raw_root)
+    names: set[str] = set()
+    for clade in pbdb.scope_clades():
+        latest = catalog.latest(clade.pbdb_base_name)
+        for record in (latest or {}).get("payload", {}).get("records", []):
+            name = record.get("taxon_name") or ""
+            if " " in name or set(record.get("flags") or "") & {"I", "F"}:
+                continue
+            names.add(name)
+            for field in ("parent_name", "family"):
+                value = record.get(field)
+                if value and not value.startswith("NO_"):
+                    names.add(value)
+    return sorted(n for n in names if looks_like_taxon(n))
 
 
 def group_clades() -> list[str]:
@@ -376,6 +401,7 @@ def ingest_images(
     raw_root: Path | None = None,
     refresh: bool = False,
     today: dt.date | None = None,
+    budget: int = PHYLOPIC_BUDGET,
 ) -> ImageResult:
     new_versions = 0
 
@@ -398,23 +424,29 @@ def ingest_images(
         gallery_files.update(from_articles, category)
     gallery.flush()
 
+    from paleo.ingest.genus_articles import lead_images
+
     commons = commons_store(raw_root)
-    files = [
-        f
-        for f in sorted(set(commons_files(interim_root)) | gallery_files)
-        if refresh or not commons.is_fresh(f, REFRESH_DAYS, today)
-    ]
+    wanted = set(commons_files(interim_root)) | gallery_files | set(lead_images(raw_root))
+    files = [f for f in sorted(wanted) if refresh or not commons.is_fresh(f, REFRESH_DAYS, today)]
     for batch in _batches(files, COMMONS_BATCH):
         for file, payload in fetch_commons(client, batch).items():
             new_versions += commons.save_if_changed(file, payload, today).created
     commons.flush()
 
     phylopic = phylopic_store(raw_root)
-    queries = [
+    core = phylopic_queries(interim_root, raw_root)
+    queries = [n for n in core if refresh or not phylopic.is_fresh(n, REFRESH_DAYS, today)]
+    core_set = set(core)
+    catalog = [
         n
-        for n in phylopic_queries(interim_root, raw_root)
-        if refresh or not phylopic.is_fresh(n, REFRESH_DAYS, today)
+        for n in catalog_phylopic_queries(raw_root)
+        if n not in core_set and (refresh or not phylopic.is_fresh(n, CATALOG_REFRESH_DAYS, today))
     ]
+    catalog.sort(
+        key=lambda n: (phylopic.checked_on(n) is not None, phylopic.checked_on(n) or "", n)
+    )
+    queries += catalog[:budget]
     found = 0
     if queries:
         build = phylopic_build(client)

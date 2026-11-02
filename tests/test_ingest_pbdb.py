@@ -167,3 +167,26 @@ def test_catalog_asks_for_accepted_extinct_genera_once_a_month(tmp_path):
     assert (params["extant"], params["rank"]) == ("no", "genus,species")
     stored = pbdb.catalog_store(tmp_path).latest("Aves")
     assert stored["payload"]["records"][1]["taxon_name"] == "Avesus rex"
+
+
+def test_occurrences_are_downloaded_once_per_block_root(tmp_path):
+    requests = []
+
+    def handler(request):
+        requests.append(request)
+        rows = [{"oid": "occ:1", "tna": "Spinosaurus aegyptiacus", "cc2": "EG"}]
+        return httpx.Response(200, json={"elapsed_time": 0.1, "records": rows})
+
+    seed = tmp_path / "scope.csv"
+    seed.write_text(
+        "block,taxon_group,pbdb_base_name,priority,enabled,block_root,wikidata_item\n"
+        "archosaurs,birds,Aves,1,true,false,\n"
+        "archosaurs,other_archosaurs,Archosauria,9,true,true,Q130910\n"
+    )
+    clades = pbdb.scope_clades(seed)
+    assert [c.wikidata_item for c in clades] == [None, "Q130910"]
+    with make_client(transport=httpx.MockTransport(handler)) as client:
+        r = pbdb.ingest_occurrences(client, clades, raw_root=tmp_path, today=DAY)
+    assert (r.blocks, r.records) == (1, 1)
+    assert [q.url.params["base_name"] for q in requests] == ["Archosauria"]
+    assert requests[0].url.params["idreso"] == "genus"

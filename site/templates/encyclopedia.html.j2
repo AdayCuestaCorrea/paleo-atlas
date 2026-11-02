@@ -1,0 +1,33 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.nav_encyclopedia }} · {{ T.site_name }}{% endblock %}
+{% block content %}
+<h1>{{ T.nav_encyclopedia }}</h1>
+<p class="lead">{{ t('encyclopedia_lead', n=indices.genera) }}</p>
+
+<section class="block">
+  <h2>{{ T.by_group }}</h2>
+  <ul class="index-cards">
+    {% for key in indices.groups %}<li><a href="{{ url('group_index', key) }}">{{ terms.group(key, lang, plural=True) or key }}</a> <span class="muted">{{ t('genera_n', n=indices.group_count(key)) }}</span></li>{% endfor %}
+  </ul>
+</section>
+
+<section class="block">
+  <h2>{{ T.by_period }}</h2>
+  <ul class="index-cards">
+    {% for key in indices.periods %}<li><a href="{{ url('period_index', key) }}">{{ unit_name(key, lang) }}</a> <span class="muted">{{ t('genera_n', n=indices.period_count(key)) }}</span></li>{% endfor %}
+  </ul>
+</section>
+
+<section class="block">
+  <h2>{{ T.by_country }}</h2>
+  <ul class="index-list">
+    {% for key, genera in indices.countries.items() %}<li><a href="{{ url('country_index', key) }}">{{ terms.country_name(key, lang) }}</a> <span class="muted">{{ genera | length }}</span></li>{% endfor %}
+  </ul>
+</section>
+
+<section class="block">
+  <h2>{{ T.all_taxa }}</h2>
+  <p><a class="button button--ghost" href="{{ url('taxa') }}">{{ t('new_taxa', year=built_on.year) }} · {{ T.known_taxa }}</a></p>
+</section>
+<p class="note">{{ T.index_source }}</p>
+{% endblock %}

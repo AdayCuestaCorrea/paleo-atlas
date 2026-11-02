@@ -32,6 +32,11 @@ genera as (
     from {{ ref('int_catalog_genera') }}
 ),
 
+occurrences as (
+    select genus_name, countries as occurrence_countries, country_codes
+    from {{ ref('int_genus_occurrences') }}
+),
+
 genus_pages as (
     select taxon_key as genus_key, taxon_name as genus_page_name
     from {{ ref('int_taxon_pages') }}
@@ -65,14 +70,19 @@ select
     c.early_interval,
     c.late_interval,
     c.occurrence_count,
-    n.wikipedia_article,
+    coalesce(n.wikipedia_article, w.en_title) as wikipedia_article,
+    w.es_title as wikipedia_article_es,
+    w.wikidata_item,
     n.novelty,
     n.status,
     n.name_authors,
     n.age_text,
     n.type_locality,
     n.country,
-    n.countries,
+    -- New taxa: the countries of the Wikipedia table; genera: where PBDB has them.
+    coalesce(n.countries, case when c.taxon_rank = 'genus' then o.occurrence_countries end)
+        as countries,
+    case when c.taxon_rank = 'genus' then o.country_codes end as country_codes,
     n.regions,
     n.notes_text,
     n.naming_doi,
@@ -94,6 +104,8 @@ left join history as h using (taxon_key)
 left join pbdb as b on b.queried_name = p.taxon_name
 left join {{ ref('int_image_best_per_taxon') }} as i using (taxon_key)
 left join genera as g using (taxon_key)
+left join occurrences as o on o.genus_name = p.taxon_name
+left join {{ ref('int_genus_wikipedia') }} as w using (taxon_key)
 left join genus_pages as gp
     on gp.genus_page_name = c.genus_name
    and gp.genus_key <> p.taxon_key

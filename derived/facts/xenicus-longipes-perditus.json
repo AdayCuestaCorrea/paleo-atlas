@@ -1,0 +1,103 @@
+{
+ "taxon": "Xenicus longipes perditus",
+ "taxon_key": "xenicus-longipes-perditus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v2",
+ "sources_hash": "dc7664d23445e0e0",
+ "generated_at": "2026-11-02T01:23:29+00:00",
+ "citations": {
+  "xenicus-longipes-perditus:table:1": {
+   "source": "wikipedia_table",
+   "title": "2026 in archosaur paleontology (table of new taxa)",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "xenicus-longipes-perditus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Xenicus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=428451",
+   "doi": null,
+   "license": "CC BY 4.0"
+  },
+  "xenicus-longipes-perditus:study:1": {
+   "source": "crossref",
+   "title": "Evolutionary history of Aotearoa New Zealand’s extinct mātuhituhi | bush wren (Molecular Phylogenetics and Evolution, 2026)",
+   "url": "https://doi.org/10.1016/j.ympev.2026.108741",
+   "doi": "10.1016/j.ympev.2026.108741",
+   "license": "metadata (Crossref)"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The subspecies Xenicus longipes perditus was described by Verry and colleagues.",
+   "category": "discovery",
+   "chunk_id": "xenicus-longipes-perditus:table:1",
+   "lang": "en",
+   "quote": "Authors: Verry et al.",
+   "quote_sha": "1c7a2f8895f6b9ae"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Xenicus longipes perditus lived during the Holocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "xenicus-longipes-perditus:table:1",
+   "lang": "en",
+   "quote": "Age: Holocene",
+   "quote_sha": "812bafdebf5ee4bf"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "This subspecies was found in New Zealand.",
+   "category": "time_and_habitat",
+   "chunk_id": "xenicus-longipes-perditus:table:1",
+   "lang": "en",
+   "quote": "Country: New Zealand",
+   "quote_sha": "4c0b27dc8b5f36b1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Xenicus longipes perditus is classified as a subspecies of the bushwren.",
+   "category": "classification",
+   "chunk_id": "xenicus-longipes-perditus:table:1",
+   "lang": "en",
+   "quote": "Notes: A subspecies of the bushwren.",
+   "quote_sha": "c7c6328db3a5c3ac"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Xenicus belongs to the family Acanthisittidae.",
+   "category": "classification",
+   "chunk_id": "xenicus-longipes-perditus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Acanthisittidae",
+   "quote_sha": "81644e0ee9c4fcc4"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus Xenicus existed from the Late Pleistocene to the Holocene, spanning 0.129 to 0 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "xenicus-longipes-perditus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Late Pleistocene to Holocene (0.129 to 0 million years ago)",
+   "quote_sha": "04a5822866be546d"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "xenicus-longipes-perditus:pbdb:1",
+   "statement": "Xenicus is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  },
+  {
+   "chunk_id": "xenicus-longipes-perditus:study:1",
+   "statement": "A study on the evolutionary history of Xenicus longipes perditus was published in 2026 by Verry, Tennyson, Wold, Bond, Nguyen, and Rawlence.",
+   "category": "discovery",
+   "quote": "Authors: Alexander J.F. Verry, Alan J.D. Tennyson, Jana R. Wold, Alexander L. Bond, Jacqueline M.T. Nguyen, Nicolas J. Rawlence",
+   "reason": "numbers not in the quote: ['2026']"
+  }
+ ]
+}

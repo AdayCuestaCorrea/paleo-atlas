@@ -88,3 +88,19 @@ models:
           - accepted_values:
               arguments:
                 values: [verified, pending]
+  - name: dim_institution
+    description: Institutions with GBIF fossil specimens of the encyclopedia genera.
+    columns:
+      - name: institution_code
+        data_tests: [unique, not_null]
+  - name: fct_specimens_by_taxon
+    description: GBIF fossil specimens per genus page (monthly extract).
+    columns:
+      - name: taxon_key
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key

@@ -6,6 +6,23 @@ with occ as (
     left join {{ ref('countries') }} as c on c.country_code = o.country_code
 ),
 
+-- Points of the map of finds: coordinates rounded to 0.5 degrees, as in the GBIF
+-- extract (paleo.gbif_job.spec), with how many occurrences fall in each cell.
+points as (
+    select genus_name,
+        list({'lat': lat, 'lon': lon, 'n': n} order by lat, lon) as points
+    from (
+        select genus_name,
+            floor(latitude / 0.5 + 0.5) * 0.5 as lat,
+            floor(longitude / 0.5 + 0.5) * 0.5 as lon,
+            count(*) as n
+        from occ
+        where latitude is not null and longitude is not null
+        group by all
+    )
+    group by genus_name
+),
+
 by_country as (
     select genus_name, country_code, any_value(country_name) as country_name, count(*) as n
     from occ
@@ -24,6 +41,8 @@ select
     min(latitude) as min_latitude,
     max(latitude) as max_latitude,
     min(longitude) as min_longitude,
-    max(longitude) as max_longitude
+    max(longitude) as max_longitude,
+    any_value(pt.points) as points
 from occ as g
+left join points as pt using (genus_name)
 group by g.genus_name

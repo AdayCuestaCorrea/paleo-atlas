@@ -125,6 +125,33 @@
     <button type="button" class="viewer__close" aria-label="{{ T.close }}">×</button>
   </dialog>
 
+  {% set pbdb_points = taxon.pbdb_points or [] %}
+  {% set gbif_points = taxon.gbif_points or [] %}
+  {% if pbdb_points or gbif_points %}
+  <section class="block" id="hallazgos">
+    <h2>{{ T.map_title }}</h2>
+    <figure class="map">
+      <svg viewBox="-180 -90 360 180" role="img" aria-label="{{ T.map_title }}: {{ taxon.taxon_name }}">
+        <use href="{{ base }}/static/world.svg#land" class="map__land" x="-180" y="-90" width="360" height="180"></use>
+        {% for p in pbdb_points %}<circle class="map__pbdb" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
+        {% for p in gbif_points %}<circle class="map__gbif" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
+      </svg>
+      <figcaption>
+        {% if pbdb_points %}<span class="map__key map__key--pbdb"></span> {{ t('map_pbdb', n=pbdb_points | sum(attribute='n')) }}{% endif %}
+        {% if gbif_points %}<span class="map__key map__key--gbif"></span> {{ t('map_gbif', n=gbif_points | sum(attribute='n')) }}{% endif %}
+        <br><span class="note">{{ T.map_note }}</span>
+      </figcaption>
+    </figure>
+    {% if taxon.gbif_top_institutions %}
+    <h3>{{ T.museums_title }}</h3>
+    <ul class="museums">
+      {% for i in taxon.gbif_top_institutions %}<li><a href="https://www.gbif.org/occurrence/search?institution_code={{ i.code | urlencode }}&amp;basis_of_record=FOSSIL_SPECIMEN" rel="noopener">{{ i.code }}</a> <span class="muted">{{ t('specimens_n', n=i.n) }}</span></li>{% endfor %}
+    </ul>
+    <p class="note">{{ T.museums_note }}{% if taxon.gbif_doi %} <a href="https://doi.org/{{ taxon.gbif_doi }}" rel="noopener">GBIF (DOI {{ taxon.gbif_doi }})</a>.{% endif %}</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
   <section class="block" id="historial">
     <h2>{{ T.history_title }}</h2>
     {% if events %}

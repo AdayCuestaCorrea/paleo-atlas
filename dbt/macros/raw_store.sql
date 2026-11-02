@@ -48,3 +48,37 @@
         }
     )
 {%- endmacro %}
+
+{#
+  Parquet files that may not exist yet (the GBIF extract before the first monthly run):
+  the files when there are some, otherwise an empty relation with the given columns,
+  so the daily build never fails for lack of them.
+#}
+{% macro read_optional_parquet(pattern, empty_columns) -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/" ~ pattern -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+        read_parquet('{{ path }}', union_by_name = true)
+    {%- else -%}
+        (select {% for name, type in empty_columns.items() %}cast(null as {{ type }}) as {{ name }}{% if not loop.last %}, {% endif %}{% endfor %} limit 0)
+    {%- endif -%}
+{%- endmacro %}
+
+{# read_raw_store for a source that may have no versions yet (GBIF before its first run). #}
+{% macro read_optional_raw_store(source, kind) -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/raw/" ~ source ~ "/" ~ kind ~ "/*/*.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+        {{ read_raw_store(source, kind) }}
+    {%- else -%}
+        (select cast(null as varchar) as key, cast(null as varchar) as source,
+                cast(null as varchar) as kind, cast(null as date) as version_date,
+                cast(null as timestamptz) as fetched_at, cast(null as json) as payload limit 0)
+    {%- endif -%}
+{%- endmacro %}

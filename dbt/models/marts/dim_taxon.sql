@@ -33,8 +33,14 @@ genera as (
 ),
 
 occurrences as (
-    select genus_name, countries as occurrence_countries, country_codes
+    select genus_name, countries as occurrence_countries, country_codes, points as pbdb_points
     from {{ ref('int_genus_occurrences') }}
+),
+
+gbif as (
+    select taxon_key, specimens as gbif_specimens, institutions as gbif_institutions,
+        points as gbif_points, top_institutions as gbif_top_institutions, gbif_doi
+    from {{ ref('fct_specimens_by_taxon') }}
 ),
 
 genus_pages as (
@@ -57,6 +63,12 @@ select
     g.species_count,
     g.type_taxon,
     g.catalog_version_date,
+    gb.gbif_specimens,
+    gb.gbif_institutions,
+    gb.gbif_points,
+    gb.gbif_top_institutions,
+    gb.gbif_doi,
+    case when c.taxon_rank = 'genus' then o.pbdb_points end as pbdb_points,
     c.family_name,
     c.order_name,
     c.class_name,
@@ -105,6 +117,7 @@ left join pbdb as b on b.queried_name = p.taxon_name
 left join {{ ref('int_image_best_per_taxon') }} as i using (taxon_key)
 left join genera as g using (taxon_key)
 left join occurrences as o on o.genus_name = p.taxon_name
+left join gbif as gb using (taxon_key)
 left join {{ ref('int_genus_wikipedia') }} as w using (taxon_key)
 left join genus_pages as gp
     on gp.genus_page_name = c.genus_name

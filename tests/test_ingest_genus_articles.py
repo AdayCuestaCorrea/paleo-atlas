@@ -35,14 +35,28 @@ def wikipedia(request):
 
 def wikidata(request):
     query = parse_qs(request.content.decode())["query"][0]
-    assert "wd:Q130910" in query  # the block root of the scope seed
     rows = []
+    if "P171" in query:  # ancestors of each item, compared with the roots in Python
+        if "wd:Q116579" in query:  # the moth: insects, not a root of the scope
+            rows.append(
+                {
+                    "item": {"value": "http://www.wikidata.org/entity/Q116579"},
+                    "anc": {"value": "http://www.wikidata.org/entity/Q1390"},
+                }
+            )
+        if "wd:Q2" in query:  # the starling descends from Archosauria
+            rows.append(
+                {
+                    "item": {"value": "http://www.wikidata.org/entity/Q2"},
+                    "anc": {"value": "http://www.wikidata.org/entity/Q130910"},
+                }
+            )
+        return {"results": {"bindings": rows}}
     if "wd:Q116579" in query:
         rows.append(
             {
                 "item": {"value": "http://www.wikidata.org/entity/Q116579"},
                 "pbdb": {"value": "38639"},
-                "in_scope": {"value": "false"},
             }
         )
     if "wd:Q2" in query:
@@ -50,7 +64,6 @@ def wikidata(request):
             {
                 "item": {"value": "http://www.wikidata.org/entity/Q2"},
                 "pbdb": {"value": "371453"},
-                "in_scope": {"value": "true"},
                 "es": {"value": "https://es.wikipedia.org/wiki/Abubilla_de_Reuni%C3%B3n"},
             }
         )
@@ -76,6 +89,7 @@ def test_lookups_store_the_article_wikidata_ids_and_lead_image(tmp_path):
     starling = store.latest("Fregilupus")["payload"]
     assert starling["en_title"] == "Hoopoe starling" and starling["redirected"]
     assert starling["es_title"] == "Abubilla de Reunión" and starling["in_scope_tree"]
+    assert starling["scope_roots"] == ["Q130910"] and moth["scope_roots"] == []
     assert store.latest("Rex")["payload"]["disambiguation"]
     assert store.latest("Nopeus")["payload"]["en_title"] is None
     assert ga.lead_images(tmp_path) == ["Coloradia_pandora_adult.jpg"]
@@ -96,3 +110,17 @@ def test_the_budget_takes_never_looked_up_genera_first(tmp_path):
             client, ["Rex", "Coloradia"], raw_root=tmp_path, today=later, budget=1
         )
     assert seen == ["Rex", "Coloradia"]
+
+
+def test_a_failing_wikidata_leaves_those_genera_for_the_next_run(tmp_path):
+    def down(request):
+        if request.url.host == "query.wikidata.org":
+            return httpx.Response(400, text="query timeout")
+        return handler(request)
+
+    with make_client(transport=httpx.MockTransport(down)) as client:
+        r = ga.ingest_genus_articles(client, ["Coloradia", "Nopeus"], raw_root=tmp_path, today=DAY)
+    assert r.failed == 1  # Coloradia has an item whose lookup failed: not saved
+    store = ga.store(tmp_path)
+    assert store.latest("Coloradia") is None and not store.is_fresh("Coloradia", 30, DAY)
+    assert store.latest("Nopeus")["payload"]["en_title"] is None  # no item: saved

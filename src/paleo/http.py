@@ -56,6 +56,7 @@ def request_json(
     json: Any = None,
     data: Mapping[str, Any] | None = None,
     headers: Mapping[str, str] | None = None,
+    timeout: float | None = None,
     retries: int = 5,
     backoff: float = 2.0,
     sleep: Callable[[float], None] = time.sleep,
@@ -71,8 +72,9 @@ def request_json(
         wait = backoff * 2**attempt
         try:
             response = client.request(
-                method, url, params=params, json=json, data=data, headers=headers
-            )
+                method, url, params=params, json=json, data=data, headers=headers,
+                timeout=httpx.USE_CLIENT_DEFAULT if timeout is None else timeout,
+            )  # fmt: skip
         except httpx.TransportError as exc:
             last_error = f"network error: {exc}"
         else:

@@ -161,7 +161,8 @@ def ingest_articles(refresh: Refresh = False) -> None:
         )
     typer.echo(
         f"Genus articles: {g.genera} genera, {g.skipped_fresh} fresh, {g.looked_up} looked up, "
-        f"{g.with_article} with an article, {g.new_versions} new versions"
+        f"{g.with_article} with an article, {g.new_versions} new versions, "
+        f"{g.failed} failed (retried next run)"
     )
 
 

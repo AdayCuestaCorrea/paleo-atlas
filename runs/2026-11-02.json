@@ -1,0 +1,75 @@
+[
+ {
+  "started_at": "2026-11-02T11:54:40Z",
+  "trigger": "local",
+  "changed": true,
+  "status": "ok",
+  "finished_at": "2026-11-02T11:54:55Z",
+  "steps": [],
+  "sources_changed": {},
+  "wikipedia_revisions": {
+   "2026_in_archosaur_paleontology": 1383268788
+  },
+  "wikipedia_new_revisions": [],
+  "summary": {
+   "totals": {
+    "taxa_new": 82,
+    "taxa_known": 202,
+    "events": 317,
+    "studies": 458,
+    "texts_en": 82,
+    "texts_es": 81,
+    "gallery_images": 1563,
+    "texts_pending": 1
+   },
+   "events_by_type": {
+    "description": 82,
+    "new_study": 232,
+    "study_corrected": 3
+   },
+   "pbdb": {
+    "known": {
+     "matched": 200,
+     "total": 202
+    },
+    "new": {
+     "matched": 34,
+     "total": 82
+    }
+   },
+   "images": {
+    "phylopic/clade": 115,
+    "commons/taxon": 59,
+    "none": 58,
+    "phylopic/taxon": 42,
+    "phylopic/genus": 10
+   }
+  },
+  "changes_since_previous": {},
+  "dbt": {
+   "counts": {
+    "pass": 81,
+    "success": 30,
+    "warn": 2
+   },
+   "issues": [
+    {
+     "status": "warn",
+     "node": "not_null_stg_wikipedia__research_items_primary_doi.d3f1ad53da",
+     "failures": 12
+    },
+    {
+     "status": "warn",
+     "node": "assert_pbdb_lag_warning",
+     "failures": 48
+    }
+   ]
+  },
+  "llm_tokens": {
+   "openai/gpt-oss-120b": {
+    "requests": 51,
+    "tokens": 129234
+   }
+  }
+ }
+]

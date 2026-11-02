@@ -10,6 +10,7 @@ select
     e.date_precision,
     e.study_id,
     e.research_id,
+    e.changed_fields,
     s.reliability_status,
     s.title as study_title,
     s.journal as study_journal

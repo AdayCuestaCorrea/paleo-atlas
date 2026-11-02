@@ -173,6 +173,13 @@ def _adapt_es(
     if feedback:
         lines += ["", "Tu respuesta anterior no pasó estas comprobaciones. Corrígelas todas:"]
         lines += feedback
+        lines += [
+            "",
+            "Cómo corregirlas: una frase por cada frase inglesa, con el mismo índice; los "
+            "números iguales que en inglés (con coma decimal); los géneros y especies sin "
+            "traducir (los clados por encima de la familia pueden ir en español); y si una "
+            "frase copia ocho palabras seguidas de una fuente, dila con otras palabras.",
+        ]
     result = llm.complete_json(system, "\n".join(lines), AdaptedText, max_tokens=3_000)
     by_index = {s.index: _tidy(s.text) for s in result.sentences}
     return [by_index.get(i, "") for i in range(1, len(sentences) + 1)] if by_index else []

@@ -1,6 +1,10 @@
 version: 2
 
 models:
+  - name: stg_doaj__journals
+    columns:
+      - name: issn
+        data_tests: [unique, not_null]
   - name: stg_wikipedia__new_taxa_revisions
     description: Every stored revision of the new-taxa tables (input for history).
   - name: stg_wikipedia__research_revisions

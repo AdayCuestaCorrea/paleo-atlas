@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches-ignore: [data] # the data branch holds no code
   pull_request:
 
 permissions:

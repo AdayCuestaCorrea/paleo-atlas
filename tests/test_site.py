@@ -177,3 +177,33 @@ def test_search_entry_has_both_languages_and_facets():
         "clade": "Abelisauridae", "group": "Dinosaurios no avianos",
         "time": ["Cretácico"], "place": "Argentina",
     }  # fmt: skip
+
+
+def test_known_taxa_get_a_fallback_sentence_from_pbdb():
+    known = {
+        "page_type": "known", "taxon_rank": "species", "taxon_group": "non_avian_dinosaurs",
+        "family_name": "Tyrannosauridae", "early_interval": "Late Campanian",
+        "late_interval": "Late Maastrichtian", "first_appearance_max_ma": 83.6,
+        "last_appearance_min_ma": 66.0,
+    }  # fmt: skip
+    es = fallback_text(known, "es")
+    assert es.startswith("Especie de dinosaurio no aviano de la familia Tyrannosauridae")
+    assert "(hace 83,6 a 66 millones de años)." in es
+    en = fallback_text(known, "en")
+    assert en.startswith("Species of non-avian dinosaur in the family Tyrannosauridae")
+    assert fallback_text({**known, "taxon_rank": "family"}, "es") is None
+
+
+def test_pages_without_text_still_list_their_sources():
+    from paleo.site.fallback import basic_sources
+
+    sources = basic_sources(
+        {"taxon_name": "Allosaurus", "pbdb_has_taxon": True, "pbdb_taxon_no": "txn:52962"},
+        [{"doi": "10.1/x", "title": "A study"}, {"doi": "10.1/x", "title": "A study"}],
+        "2026 in archosaur paleontology",
+    )
+    assert [s["url"] for s in sources] == [
+        "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology",
+        "https://paleobiodb.org/classic/basicTaxonInfo?taxon_no=52962",
+        "https://doi.org/10.1/x",
+    ]

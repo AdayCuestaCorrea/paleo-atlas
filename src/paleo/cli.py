@@ -17,7 +17,7 @@ import typer
 
 from paleo.config import enabled_pages, get_paths, project_root
 from paleo.http import make_client
-from paleo.ingest import articles, crossref, images, pbdb
+from paleo.ingest import articles, crossref, doaj, images, pbdb
 from paleo.ingest import wikipedia as wiki_ingest
 from paleo.parse import wikipedia as wiki_parse
 
@@ -49,13 +49,23 @@ def main(verbose: Annotated[bool, typer.Option("--verbose", "-v")] = False) -> N
 
 @app.command()
 def check(year: Year = None) -> None:
-    """Exit 0 if any source has changed since the last run, 1 if nothing changed."""
+    """Exit 0 if any source has changed since the last run, 1 if nothing changed and
+    2 if the check itself failed (the workflow then runs everything, so the error
+    surfaces in the ingest and the run report instead of passing for "no changes")."""
+    import httpx
+
+    from paleo.http import HttpError
+
     changed = []
-    with make_client() as client:
-        for page in enabled_pages():
-            title = page.title(_year(year))
-            if wiki_ingest.has_new_revision(client, title):
-                changed.append(title)
+    try:
+        with make_client() as client:
+            for page in enabled_pages():
+                title = page.title(_year(year))
+                if wiki_ingest.has_new_revision(client, title):
+                    changed.append(title)
+    except (HttpError, httpx.HTTPError) as exc:
+        typer.echo(f"check failed: {exc}", err=True)
+        raise typer.Exit(2) from exc
     if changed:
         for title in changed:
             typer.echo(f"changed: {title}")
@@ -94,9 +104,15 @@ def ingest_studies(refresh: Refresh = False) -> None:
     dois = crossref.dois_of_interest(paths.interim)
     with make_client() as client:
         r = crossref.ingest_dois(client, dois, raw_root=paths.raw, refresh=refresh)
+        typer.echo(
+            f"Crossref: {r.requested} DOIs, {r.skipped_fresh} fresh, "
+            f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+        )
+        issns = doaj.issns_of_interest(paths.raw)
+        d = doaj.ingest_issns(client, issns, raw_root=paths.raw, refresh=refresh)
     typer.echo(
-        f"Crossref: {r.requested} DOIs, {r.skipped_fresh} fresh, "
-        f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+        f"DOAJ: {d.requested} ISSNs, {d.skipped_fresh} fresh, {d.listed} listed, "
+        f"{d.not_listed} not listed, {d.new_versions} new versions"
     )
 
 

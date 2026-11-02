@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 12 · **Estado:** Fase 1 en curso (semana 4: web, fichas, informe de ejecución y frescura hechos; falta ver lanzarse el cron y las 2 semanas autónomas)
+**Creado:** 2026-10-31 · **Versión:** 13 · **Estado:** Fase 1 en curso (revisión completa hecha; falta ver lanzarse el cron y las 2 semanas autónomas)
 
 ---
 
@@ -140,13 +140,13 @@ Notas:
 | # | Fuente | Qué aporta | Acceso | Frecuencia | Licencia (a verificar) | Verificado |
 |---|---|---|---|---|---|---|
 | F1 | Wikipedia — páginas anuales de §4 (año en curso + años anteriores para histórico) | Taxones nuevos: nombre, estatus, autores, edad, unidad geológica, localidad, referencia | API de MediaWiki; nunca scraping del HTML | Diaria (detección de cambios) | Texto CC BY-SA 4.0 (+ GFDL): se usan los hechos, no se copia el texto | [x] 2026-11-01 |
-| F2 | PBDB — API `data1.2` | Taxonomía, sinonimias, **opiniones taxonómicas con año y referencia** (historial), rango temporal, ocurrencias | API REST | Diaria (taxones nuevos) + mensual (completo) | CC BY 4.0 (citar PBDB) | [x] 2026-11-01 |
+| F2 | PBDB — API `data1.2` | Taxonomía, sinonimias, **opiniones taxonómicas con año y referencia** (historial), rango temporal, ocurrencias | API REST | Semanal (caché de 7 días; los nombres nuevos, al momento) | CC BY 4.0 (citar PBDB) | [x] 2026-11-01 |
 | F3 | GBIF — API de descargas (filtro en servidor) | Especímenes fósiles (`basisOfRecord = FOSSIL_SPECIMEN`) de los grupos de §4: coordenadas, institución, país | API pública gratuita (cuenta de GBIF) | Mensual | Cada descarga tiene DOI y hay que citarla; licencias por registro | [ ] |
-| F4 | PhyloPic — API v2 | Siluetas por taxón (si no hay, se usa la del género o el clado) | API REST | Diaria (solo taxones sin imagen) | Por imagen. **Solo PDM, CC0, CC BY 3.0/4.0, CC BY-SA 3.0** (excluidas CC BY-NC y CC BY-NC-SA) | [x] 2026-11-01 |
-| F5 | Wikimedia Commons — API | Reconstrucciones y fotos de fósiles | API de MediaWiki | Diaria (solo taxones sin imagen) | Por archivo; Commons no admite licencias solo NC ni ND | [x] 2026-11-01 |
+| F4 | PhyloPic — API v2 | Siluetas por taxón (si no hay, se usa la del género o el clado) | API REST | Semanal (todas las búsquedas; respeta la caché de 7 días) | Por imagen. Lista blanca común con F5 (`license_allowlist`): dominio público, CC0, CC BY y CC BY-SA 2.0–4.0; **nunca NC ni ND** | [x] 2026-11-01 |
+| F5 | Wikimedia Commons — API | Reconstrucciones y fotos de fósiles | API de MediaWiki | Semanal (caché de 7 días) | Por archivo; Commons no admite licencias solo NC ni ND | [x] 2026-11-01 |
 | F6 | Crossref — API REST | Metadatos de cada estudio: tipo (artículo / preprint), revista, ISSN, **retracciones y correcciones** | API pública | Por cada estudio nuevo + revisión mensual | Metadatos de uso libre; los resúmenes (abstracts) pueden tener derechos | [x] 2026-11-01 |
 | F7 | ZooBank | Registro oficial del nombre (obligatorio en publicaciones electrónicas según el ICZN) | API / búsqueda pública | Por cada taxón nuevo | **API no disponible** (404 en todas las rutas el 2026-11-02; también informado el 28-08-2026). Se reintenta en la Fase 3; mientras, no se muestra el distintivo | [ ] |
-| F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública | Por cada revista nueva | A verificar | [ ] |
+| F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública (sin clave), por ISSN | Mensual (caché de 30 días) | Metadatos de revistas **CC0** | [x] 2026-11-02 |
 | F9 | *(Fase 5)* RSS de medios ES/EN | Noticias: titular, enlace, fecha | RSS | Diaria | Solo titular + enlace + resumen propio | [ ] |
 | F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
 | F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | Mensual | A verificar | [ ] |
@@ -160,9 +160,9 @@ Notas:
 | **F2 PBDB** | Toda la base de datos bajo **CC BY 4.0** desde 2013; solo exige atribución | Atribución a PBDB en cada ficha y en «Fuentes y licencias». Mientras no encontremos la fórmula de cita oficial de su web, usamos la cita general del proyecto |
 | **F4 PhyloPic** | Cuatro grupos de licencias: dominio público (PDM, CC0), atribución (CC BY 3.0/4.0), CompartirIgual (CC BY-SA 3.0) y **no comercial (CC BY-NC 3.0, CC BY-NC-SA 3.0)**, que aún llevan algunas imágenes antiguas. Con CC BY hay que citar al autor con el texto de la página de la imagen y enlazar la licencia | Lista blanca de licencias: PDM, CC0, CC BY 3.0/4.0, CC BY-SA 3.0. **Las NC se descartan** (§19). Comprobar en la Fase 1 qué campos de licencia y autor devuelve la API v2 |
 | **F5 Wikimedia Commons** | Licencia por archivo. Commons **no acepta** archivos solo con licencia NC ni con ND. La API (`prop=imageinfo&iiprop=extmetadata`) devuelve `LicenseShortName`, `LicenseUrl`, `Artist`, `Credit`, `AttributionRequired`, `UsageTerms` | Lista blanca por `LicenseShortName` (el campo más fiable). Archivos con varias licencias: revisión manual, porque la API avisa de que esos valores no son fiables |
-| **F6 Crossref** | «Casi ningún metadato tiene derechos de autor; se puede usar para cualquier fin». Los resúmenes (abstracts) sí pueden tenerlos. Las retracciones salen en el campo `update-to`, con `source` = `publisher` o `retraction-watch`; filtro `update-type:retraction` | Usamos los metadatos libremente. De los abstracts solo extraemos hechos, nunca se publican. Peticiones con `mailto=` para entrar en el pool «educado» |
+| **F6 Crossref** | «Casi ningún metadato tiene derechos de autor; se puede usar para cualquier fin». Los resúmenes (abstracts) sí pueden tenerlos. Las retracciones y correcciones de un estudio salen en su campo `updated-by` (el aviso de retracción lleva `update-to` apuntando al original), con `source` = `publisher` o `retraction-watch` | Usamos los metadatos libremente. De los abstracts solo extraemos hechos, nunca se publican. Peticiones con `mailto=` para entrar en el pool «educado» |
 
-**Pendientes de comprobar más adelante:** F3 GBIF (Fase 3), F7 ZooBank, F8 DOAJ, F9 RSS (Fase 5), F10 3D (Fase 6), F11 Open Tree of Life (Fase 3), F12 tamaños (Fase 6).
+**Pendientes de comprobar más adelante:** F3 GBIF (Fase 3), F7 ZooBank, F9 RSS (Fase 5), F10 3D (Fase 6), F11 Open Tree of Life (Fase 3), F12 tamaños (Fase 6).
 
 Fuentes de esta comprobación: [Reusing Wikipedia content](https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content) · [PBDB pasa a CC BY (Creative Commons, 2013)](https://creativecommons.org/2013/12/19/paleobiology-database-now-cc-by/) · [PhyloPic: Usage of Images](https://www.phylopic.org/articles/image-usage) · [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing) · [Extension:CommonsMetadata](https://www.mediawiki.org/wiki/Extension:CommonsMetadata) · [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) · [Crossref: Retraction Watch](https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/) · [Wikimedia User-Agent policy](https://foundation.wikimedia.org/wiki/Policy:User-Agent_policy) · [API:Etiquette](https://www.mediawiki.org/wiki/API:Etiquette)
 
@@ -170,8 +170,9 @@ Fuentes de esta comprobación: [Reusing Wikipedia content](https://en.wikipedia.
 - `User-Agent` con el formato `paleo-atlas-bot/<versión> (<URL del repo>; <correo>) <librería>/<versión>`: Wikimedia exige un User-Agent descriptivo con contacto, que contenga «bot» si es automático, y bloquea sin aviso los genéricos.
 - Wikimedia: peticiones **en serie** (nunca en paralelo), agrupar títulos en una sola petición (`titles=A|B|C`), `maxlag`, gzip, GET para lecturas, caché de lo ya descargado.
 - Crossref: parámetro `mailto=`.
+- DOAJ responde 403 a los User-Agent con «bot»: recibe el mismo User-Agent descriptivo, con proyecto y contacto, sin esa palabra.
 - Respetar los límites de peticiones; reintentos con backoff exponencial.
-- Guardar la respuesta cruda **tal cual** antes de transformar nada.
+- Guardar la respuesta cruda antes de transformar nada. Se quitan solo los campos volátiles (que cambian en cada consulta sin cambiar el dato) y, en Commons y PhyloPic, se guarda el subconjunto de campos que se usa; los abstracts nunca entran en el crudo.
 
 ---
 
@@ -230,9 +231,9 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] Parser de las secciones de investigación (estudios sobre taxones ya conocidos → futuros eventos «Nuevo estudio» del historial)
 - [x] `ingest pbdb`: datos de cada taxón nuevo y de los taxones citados en los estudios (snapshot por nombre, también «no encontrado»)
 - [x] `ingest images`: Commons (ficheros de la tabla) → PhyloPic especie → género → clado, con licencia y autor
-- [x] `ingest studies`: Crossref para cada estudio (§10), sin guardar abstracts en el crudo público; ZooBank aplazado (API caída)
+- [x] `ingest studies`: Crossref para cada estudio (§10), sin guardar abstracts en el crudo público, y DOAJ por ISSN; ZooBank aplazado (API caída)
 - [x] dbt-duckdb: staging, intermediate y marts de §8
-- [x] **Historial SCD2 desde las versiones crudas** (en lugar de `dbt snapshots`, ver D9), con test unitario de dbt
+- [x] **Historial SCD2 desde las versiones crudas** (en lugar de `dbt snapshots`, ver D9), con test unitario de dbt; cada cambio de la fila de Wikipedia es un evento `entry_changed` del historial
 - [x] Vínculo estudios ↔ taxones (wikilinks y nombres en cursiva resueltos en PBDB) y fichas básicas de taxones conocidos (datos; la web, en la semana 4)
 - [x] Capa LLM intercambiable (Ollama local / Groq) con salida JSON validada, limitador de cuota y caché por contenido
 - [x] Elegir LLM con plan gratuito (A18, ver §22)
@@ -318,7 +319,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 | Estudio | Publicación científica: DOI, revista, tipo, señales de fiabilidad (§10) |
 | Espécimen / ocurrencia | Registro fósil con lugar, edad e institución (PBDB y GBIF) |
 | Institución | Museo o colección |
-| Imagen | URL, tipo (silueta / reconstrucción / fósil), licencia, autor, nivel (especie / género / clado) |
+| Imagen | URL, licencia, autor, nivel (especie / género / clado / grupo); el tipo (fósil, diente, reconstrucción…) solo en la galería |
 | Modelo 3D | URL, tipo (escaneo / reconstrucción), año, autor, licencia (§13) |
 | Tamaño corporal | Longitud y/o masa estimada (mín.–máx.), método, cita (§11.3) |
 | Objeto de referencia | Humano, elefante, autobús, avión…: medidas con fuente (§11.3) |
@@ -326,12 +327,12 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 | Texto de ficha | Secciones redactadas por idioma, frases enlazadas a sus hechos, estado de verificación |
 | Término del glosario | Término, definición ES, definición EN, estado de revisión (§12) |
 
-### Capas (nombres orientativos)
-- **seeds:** `license_allowlist` *(hecho)*, `trusted_journals` *(hecho)*, `scope_clades`, `trusted_journals`, `contested_topics`, `models_3d`, `glossary`, `body_sizes`, `reference_objects`
-- **staging:** `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_wikipedia__articles`, `stg_pbdb__taxa`, `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
+### Capas (nombres orientativos; *(hecho)* = existe con ese nombre)
+- **seeds:** `license_allowlist`, `trusted_journals` y `group_clades` *(hechos)*; `contested_topics` *(Fase 3)*, `models_3d`, `glossary`, `body_sizes`, `reference_objects`. El alcance de §4 está en `config.py` y en el macro de grupos, no en un seed
+- **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
 - **historial (SCD2 desde versiones crudas):** `int_new_taxa_history`; los `stg_*_versions` / `stg_*_revisions` conservan todas las versiones
-- **intermediate:** `int_taxon_name_resolution`, `int_taxon_enriched`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`, `int_taxon_facts`
-- **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`, `fct_weekly_recap`, `fct_run_summary`
+- **intermediate:** *(hechos)* `int_taxon_pages`, `int_taxon_classification`, `int_research_taxon_links` (resolución de nombres), `int_image_candidates`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`
+- **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`. *(Hechos:* `dim_taxon`, `dim_study`, `fct_taxon_event`, `fct_taxon_text`, `fct_taxon_image`*.)* El recap semanal se calcula en Python al generar la web y el resumen de ejecución lo escribe `paleo report` en `runs/`
 
 ---
 
@@ -344,12 +345,12 @@ Cada ficha tiene una **línea temporal** con todo lo que se sabe del taxón. Cua
 **De dónde sale:**
 | Origen | Cubre | Fase |
 |---|---|---|
-| Snapshots de dbt sobre nuestras propias ingestas (SCD tipo 2) | Todo cambio desde que arranca el proyecto | 1 |
+| SCD tipo 2 sobre las versiones crudas de nuestras ingestas (evento `entry_changed`: estatus, autores, edad, localidad, estudio…) | Todo cambio desde que arranca el proyecto | 1 |
 | Opiniones taxonómicas de PBDB (cada opinión trae año y referencia) | Historia taxonómica completa hacia atrás | 3 |
 | Páginas anuales de Wikipedia de años anteriores | Descripciones de años pasados | 3 |
 | Noticias clasificadas | Hipótesis nuevas y debates | 5 |
 
-**Debates abiertos:** cuando haya estudios que se contradicen (p. ej., si *Spinosaurus* era cazador acuático o vadeador), el evento se marca **«En debate»** y enlaza a los estudios de cada postura. Se curan a mano en el seed `contested_topics`.
+**Debates abiertos:** cuando haya estudios que se contradicen (p. ej., si *Spinosaurus* era cazador acuático o vadeador), el evento se marca **«En debate»** y enlaza a los estudios de cada postura. Se curan a mano en el seed `contested_topics` *(Fase 3, decisión del usuario del 2026-11-02; hasta entonces los debates se cuentan en la sección «Debates» del texto)*.
 
 ---
 
@@ -363,9 +364,9 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 | Preprint | Crossref: tipo `posted-content`, o servidor de preprints (bioRxiv, PaleorXiv…) | 🟡 Preprint (sin revisar todavía) |
 | Retractado o corregido | Crossref (incluye los datos de Retraction Watch) | 🔴 Retractado / 🟠 Corregido |
 | Nombre registrado | ZooBank | ✔ Registrado en ZooBank |
-| Revista de acceso abierto en DOAJ | DOAJ | Señal secundaria |
+| Revista de acceso abierto en DOAJ | DOAJ, por ISSN | Señal secundaria *(hecho)* |
 | Revista en la lista de confianza | Seed `trusted_journals` (curado a mano: Nature, Science, JVP, Cretaceous Research, PeerJ, Papers in Palaeontology, Acta Palaeontologica Polonica…) | Señal secundaria |
-| Recogido en PBDB | PBDB | Señal secundaria |
+| Recogido en PBDB *(Fase 3)* | PBDB | Señal secundaria |
 
 **Reglas:**
 - La regla que combina las señales es **pública y simple** (sin puntuaciones opacas) y se explica en la página «Cómo evaluamos las fuentes».
@@ -398,8 +399,8 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 ### 11.1 Contenido de la ficha
 | Campo | Fuente | Si falta |
 |---|---|---|
-| Nombre científico y significado | F1 / PBDB | Ocultar el significado |
-| Imagen 2D + autor + licencia, ampliable | F4 / F5 | Silueta del género o clado, con aviso «imagen aproximada» |
+| Nombre científico y significado *(el significado, Fase 3: hecho «etimología» con cita)* | F1 / PBDB | Ocultar el significado |
+| Imagen 2D + autor + licencia, ampliable | F4 / F5 | Silueta del género, del clado o, en último caso, del grupo (seed `group_clades`), con aviso «imagen aproximada» |
 | Galería (fósiles, dientes, esqueletos, reconstrucciones…; máx. 12, con autor y licencia) | F5 | Ocultar |
 | «Lo último»: los 3 eventos más recientes del historial | §9 | Ocultar |
 | Modelo 3D *(Fase 6)* | F10 | Ocultar |
@@ -452,14 +453,14 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 6. **Revisión manual** de una muestra; se publica el % que pasa cada verificación (§17).
 
 **Reglas:**
-- **Tono:** divulgativo para todos los públicos, tercera persona, tecnicismos explicados la primera vez (decisión del usuario, 2026-11-01).
-- **Longitud:** según los datos, ~120–450 palabras; nunca se rellena (decisión del usuario). El redactor recibe como mucho 24 hechos, repartidos entre secciones.
+- **Tono:** divulgativo para adultos curiosos y adolescentes (A19), tercera persona, tecnicismos explicados la primera vez (decisión del usuario, 2026-11-01).
+- **Longitud:** según los datos, ~120–450 palabras, con un tope duro de 520; nunca se rellena (decisión del usuario). El redactor recibe como mucho 24 hechos, repartidos entre secciones.
 - **Español:** se adapta el texto inglés ya verificado, frase a frase y con las mismas citas (más barato y coherente); la guía fija convenciones (Cretácico Superior, pisos en -iense, tildes de los grupos).
 - **Lo importante se comprueba con código, no se pide al modelo:** un hecho cuya redacción copia su fuente se rechaza en la extracción, porque el redactor la copiaría después.
 - Si una ficha no pasa las verificaciones, se reintenta dos veces con los errores concretos y la forma de corregirlos; si sigue fallando, se publica el texto de respaldo (§11.4) y se marca para revisión.
 - Se generan **una vez por cambio** de los hechos o de los prompts (no en cada visita) y se guardan en el repo → caben en un plan gratuito.
 - Los clados por encima de la familia pueden escribirse en español («cocodrilomorfos», «neognatas»); los géneros y las especies, nunca.
-- Los títulos de los estudios se traducen al español con las mismas comprobaciones (números y nombres científicos intactos); en la web ES se muestra el título original con el aviso «Artículo en inglés».
+- Los títulos de los estudios se traducen al español con las mismas comprobaciones (números y nombres científicos intactos); en la web ES se muestra el título traducido y, debajo, el original con el aviso «Artículo en inglés».
 - **Reparto de cuota:** Groq para lo nuevo de cada día (~10–15 mil tokens por especie → unas 13 especies al día con 200 000 tokens; lo que no cabe espera al día siguiente); la GPU local para regenerarlo todo tras un cambio de prompt y para las evaluaciones.
 - Si se acaba la cuota gratuita del LLM, el pipeline sigue funcionando: las fichas pendientes esperan con el texto de respaldo.
 - Los temas en debate (§9) se cuentan como debate, con las posturas y sus estudios; nunca se presenta una hipótesis como hecho.
@@ -494,19 +495,22 @@ Lo que tiene que existir; la implementación se decide en la Fase 1.
 
 | Comando | Hace | Idempotente |
 |---|---|---|
-| `paleo check` | ¿Ha cambiado alguna fuente desde la última ejecución? (código de salida) | Sí |
+| `paleo check` | ¿Ha cambiado la página de Wikipedia desde la última ejecución? Sale con 0 (sí), 1 (no) o 2 (no se pudo comprobar: el workflow lo trata como «sí») | Sí |
 | `paleo ingest wikipedia --year AAAA` | Descarga y guarda en crudo (un fichero por revisión) | Sí |
-| `paleo parse wikipedia --year AAAA` | Crudo → `new_taxa.jsonl` + `research.jsonl`; `--all-revisions` re-procesa revisiones antiguas sin volver a descargar | Sí |
+| `paleo parse wikipedia --year AAAA` | Crudo → `new_taxa.jsonl` + `research.jsonl`; `--force` re-procesa las revisiones ya procesadas sin volver a descargar | Sí |
 | `paleo ingest pbdb` | Datos PBDB de los taxones pendientes | Sí |
-| `paleo ingest images` | Imagen para taxones sin imagen | Sí |
-| `paleo ingest studies` | Crossref (ZooBank y DOAJ cuando estén disponibles); abstracts solo en la caché local | Sí |
+| `paleo ingest images` | Commons y PhyloPic (taxón, género, clados y grupo) y la galería | Sí |
+| `paleo ingest articles` | Artículos de Wikipedia EN/ES de las especies nuevas | Sí |
+| `paleo facts` / `write` / `titles` | Hechos, fichas EN + ES y títulos en español (`--provider ollama\|groq`) | Sí (caché por contenido) |
+| `paleo eval run` | Evaluación sobre las fichas de referencia | Sí |
+| `paleo ingest studies` | Crossref y DOAJ (ZooBank cuando vuelva su API); abstracts solo en la caché local | Sí |
 | `paleo gbif extract` *(Fase 3)* | Descarga filtrada + job Spark/DuckDB | Sí |
 | `paleo build` | `dbt build` (modelos + tests; el historial sale de las versiones crudas) | Sí (reconstrucción completa) |
 | `paleo site` | Genera la web ES + EN | Sí |
-| `paleo recap --week AAAA-Www` | Genera el recap de esa semana | Sí |
-| `paleo report` | Informe de ejecución | Sí |
+| *(recap)* | Lo genera `paleo site` para todas las semanas | Sí |
+| `paleo report start` / `finish` / `ran-today` | Registro e informe de la ejecución (§16) | Sí |
 
-Requisitos: códigos de salida fiables (0 = OK), logs estructurados, sin estado oculto fuera de git y de `data/`.
+Requisitos: códigos de salida fiables (0 = OK), logs legibles (los logs estructurados, si hacen falta, con Airflow en la Fase 2), sin estado oculto fuera de git y de `data/`.
 
 ---
 
@@ -526,7 +530,7 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 - **Registro de ejecuciones** (`runs/<fecha>.json` en la rama `data`): toda ejecución deja constancia, también sin cambios. Lo leen el test de frescura (§16) y el pie de la web («fuentes comprobadas el…»), y da actividad diaria al repositorio (regla de los 60 días).
 - Fallo del pipeline → aviso por correo de GitHub; la web anterior se queda publicada (nunca se publica una web rota).
 - Los cron de GitHub no son puntuales: en el minuto 0 de cada hora pueden retrasarse o descartarse. Por eso la ejecución va a las 06:23 y hay una reserva a las 10:47 que no hace nada si la principal ya terminó bien. La primera ejecución programada (06:00) no se lanzó el 2026-11-02.
-- **A verificar:** GitHub desactiva los workflows programados de repos públicos tras 60 días sin actividad. Comprobar si los commits del pipeline cuentan como actividad.
+- GitHub desactiva los workflows programados de repos públicos tras 60 días sin actividad. Mitigado: el pipeline hace un commit diario en la rama `data` (registro de ejecuciones). Si aun así se desactivara, el test de frescura y el pie de la web lo delatan.
 
 ---
 
@@ -568,22 +572,22 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 
 | Métrica | Valor | Fecha |
 |---|---|---|
-| Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | — | — |
-| Taxones en la enciclopedia por bloque | — | — |
-| Eventos en el historial | — | — |
-| % con correspondencia en PBDB | — | — |
-| % con imagen (especie / género / clado) | — | — |
-| % de estudios revisados por pares / preprints / retractados | — | — |
+| Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | 82 / 82 (arcosaurios) | 2026-11-02 |
+| Taxones en la enciclopedia por bloque | Arcosaurios: 280 (82 nuevos + 198 conocidos) | 2026-11-02 |
+| Eventos en el historial | 313 | 2026-11-02 |
+| % con correspondencia en PBDB | Nuevos 41 % (PBDB tarda en añadirlos) · conocidos 99 % | 2026-11-02 |
+| % con imagen (especie / género / clado) | 100 %: especie 36 % · género 4 % · clado 49 % · grupo 11 % | 2026-11-02 |
+| % de estudios revisados por pares / preprints / retractados | 94 % / 0 % / 0 % (5 corregidos; 28 % en revistas DOAJ) | 2026-11-02 |
 | Retraso medio publicación → web (horas) | — | — |
-| Semanas seguidas sin intervención manual | — | — |
-| Nº de tests (pytest + dbt) | — | — |
-| Duración del pipeline diario | — | — |
+| Semanas seguidas sin intervención manual | 0 (empieza a contar con el primer cron) | 2026-11-02 |
+| Nº de tests (pytest + dbt) | 131 + 127 | 2026-11-02 |
+| Duración del pipeline diario | ~1 min (ejecución completa sin LLM, 2026-11-02) | 2026-11-02 |
 | Coste mensual | 0 € | — |
 | GBIF: especímenes fósiles procesados | — | — |
 | Benchmark Spark vs DuckDB: tiempo, memoria | — | — |
 | Clasificador de noticias: precisión / recall (baseline vs LLM) | — | — |
-| Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | — | — |
-| Hechos extraídos que pasan la comprobación (%) | — | — |
+| Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies) | 2026-11-02 |
+| Hechos extraídos que pasan la comprobación (%) | 78 % (1685 de 2158) | 2026-11-02 |
 
 ---
 
@@ -690,7 +694,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
 | A18 | LLM para las fichas | Qwen 3.5 9B local para lotes grandes, regeneraciones y evaluaciones (11/12 fichas de referencia verificadas, 46 % de hechos encontrados); Groq `gpt-oss-120b` para la ejecución diaria (12/12 verificadas en EN y ES, 38 % de los hechos en el texto). Descartados: Qwen 3.5 4B (peor y 4× más lento), Groq `qwen3.8-27b` (límite de salida) | 2026-11-02 |
 | A6 | Frecuencia de detección y hora del recap | Diario a las 06:23 UTC (reserva a las 10:47); recap los lunes en esa misma ejecución | 2026-11-02 |
-| A19 | Tono de las fichas | Divulgativo para todos los públicos | 2026-11-01 |
+| A19 | Tono de las fichas | Divulgativo para adultos curiosos y adolescentes (lo que ya dice el prompt; ajustado el 2026-11-02 para no regenerar) | 2026-11-01 |
 | A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
 
@@ -743,6 +747,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v13: revisión completa de la Fase 1. Arreglos: `paleo check` distingue un fallo (salida 2), PBDB deja de consultar nombres que no son taxones, CI en todas las ramas, fichas «conocidas» fuera de §4 (mamíferos) eliminadas. Añadido: silueta del grupo (0 fichas sin imagen), eventos `entry_changed` desde el SCD2, señal DOAJ, crédito de PBDB en cada ficha, texto de respaldo y fuentes en las fichas sin texto, cifras de verificación en «Cómo evaluamos», hreflang absolutos. A Fase 3: «En debate», «Recogido en PBDB» y significado del nombre; A19 ajustada. Documento alineado con el código (§5, §8, §14, §26) | Revisión pedida por el usuario |
 | 2026-11-02 | v12: informe de ejecución (`paleo report`) y registro diario en `runs/`; test de frescura; cron a las 06:23 con reserva a las 10:47; la web se reconstruye a diario aunque no haya cambios; el commit a `data` va al final y siempre | El cron de las 06:00 no se lanzó |
 | 2026-11-02 | v11: semana 4 (web Jinja2 publicada en GitHub Pages, rama `data`, pipeline diario); 82 fichas generadas; buscador del backlog a la Fase 1; galería con visor; revisión del español y títulos en español; una cita por obra y nombres enlazados; reintentos del lote; A6 y A18 cerradas | Ronda de revisión del usuario y semana 4 |
 | 2026-11-01 | v10: pipeline narrativo completo (capa LLM, artículos, hechos, redacción EN + adaptación ES, verificaciones); 12 fichas de referencia y evaluación de 4 configuraciones; A18 provisional, A19 (tono) y A20 (longitud) cerradas; staging de dbt materializado como tablas; modelos de textos | Semana 3 |
@@ -769,21 +774,25 @@ paleo-atlas/
 ├── LICENSE-CONTENT.md      ← CC BY-NC-SA 4.0 (contenido propio)
 ├── pyproject.toml / uv.lock / .python-version
 ├── src/paleo/
-│   ├── ingest/             ← F1–F12
-│   ├── enrich/             ← reconciliación de nombres, imágenes, fiabilidad
-│   └── site/               ← generador de web (ES + EN)
+│   ├── ingest/             ← F1–F12 (descargas al crudo versionado)
+│   ├── parse/              ← wikitext → filas (interim)
+│   ├── narrative/          ← hechos, redacción, verificaciones, evaluación, prompts
+│   ├── site/               ← generador de web (ES + EN) y comprobador
+│   └── cli.py, llm.py, store.py, report.py, names.py…
 ├── spark/jobs/             ← job de GBIF (Fase 3)
 ├── dbt/
 │   ├── models/{staging,intermediate,marts}/
-│   ├── snapshots/          ← historial (§9)
 │   ├── tests/  seeds/  macros/
 ├── airflow/dags/
 ├── .github/workflows/
 ├── site/{templates,static}/
-├── benchmarks/             ← Spark vs DuckDB
-├── tests/                  ← pytest
+├── benchmarks/             ← Spark vs DuckDB (Fase 3)
+├── eval/                   ← fichas de referencia e informes de evaluación
+├── ollama/                 ← Modelfiles del LLM local
+├── scripts/                ← utilidades (sembrar los fixtures del CI)
+├── tests/                  ← pytest (+ fixtures)
 ├── docs/
 │   ├── adr/
 │   └── interview-pack/
-└── data/                   ← local, ignorado por git (lo versionado va a la rama `data`)
+└── data/                   ← worktree local de la rama `data` (raw, derived, runs); cache/ e interim/ nunca se versionan
 ```

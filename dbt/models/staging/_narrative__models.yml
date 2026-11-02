@@ -5,11 +5,28 @@ models:
     columns:
       - name: fact_key
         data_tests: [unique, not_null]
+      - name: taxon_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
       - name: category
         data_tests:
           - accepted_values:
               arguments:
                 values: [description, discovery, paleobiology, classification, time_and_habitat, debate]
+  - name: stg_narrative__fact_counts
+    columns:
+      - name: taxon_key
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
   - name: stg_narrative__study_titles
     columns:
       - name: doi
@@ -24,6 +41,13 @@ models:
     columns:
       - name: text_key
         data_tests: [unique, not_null]
+      - name: taxon_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
       - name: lang
         data_tests:
           - accepted_values:

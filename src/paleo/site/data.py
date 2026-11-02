@@ -33,6 +33,7 @@ class SiteData:
     built_on: dt.date = field(default_factory=dt.date.today)
     images: dict[str, list[dict[str, Any]]] = field(default_factory=dict)  # gallery per taxon
     last_checked: dt.date | None = None  # last change detection (pipeline run log)
+    stats: dict[str, Any] = field(default_factory=dict)  # verification figures (§12.1, §17)
 
     @property
     def by_key(self) -> dict[str, dict[str, Any]]:
@@ -71,10 +72,10 @@ def load(warehouse: Path) -> SiteData:
             con,
             """
             select e.taxon_key, e.event_type, e.event_date, e.date_is_publication, e.date_precision,
-                   e.study_id,
+                   e.study_id, e.changed_fields,
                    s.doi, s.title, t.title_es, s.journal, s.publication_year,
                    s.reliability_status, s.is_peer_reviewed_journal, s.is_preprint,
-                   s.is_retracted, s.is_corrected, s.in_trusted_journal
+                   s.is_retracted, s.is_corrected, s.in_trusted_journal, s.in_doaj
             from main.fct_taxon_event as e
             left join main.dim_study as s using (study_id)
             left join main.stg_narrative__study_titles as t on t.doi = s.doi
@@ -99,6 +100,25 @@ def load(warehouse: Path) -> SiteData:
         images: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for row in _rows(con, "select * from main.fct_taxon_image order by taxon_key, image_rank"):
             images[row["taxon_key"]].append(row)
+        stats = _rows(
+            con,
+            """
+            select
+                (select count(*) from main.dim_taxon where page_type = 'new') as new_taxa,
+                (select count(*) from main.fct_taxon_text
+                 where lang = 'en' and text_status = 'verified') as verified_en,
+                (select count(*) from main.fct_taxon_text
+                 where lang = 'es' and text_status = 'verified') as verified_es,
+                (select sum(facts_accepted) from main.stg_narrative__fact_counts) as facts_ok,
+                (select sum(facts_rejected) from main.stg_narrative__fact_counts) as facts_bad,
+                (select count(*) from main.dim_study) as studies,
+                (select count(*) from main.dim_study
+                 where reliability_status = 'peer_reviewed') as peer_reviewed,
+                (select count(*) from main.dim_study where reliability_status = 'preprint')
+                    as preprints,
+                (select count(*) from main.dim_study where in_doaj) as in_doaj
+            """,
+        )[0]
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -106,7 +126,7 @@ def load(warehouse: Path) -> SiteData:
         con.close()
     return SiteData(
         taxa, dict(events), texts, dict(facts), dict(citations),
-        images=dict(images), last_checked=last_checked,
+        images=dict(images), last_checked=last_checked, stats=stats,
     )  # fmt: skip
 
 

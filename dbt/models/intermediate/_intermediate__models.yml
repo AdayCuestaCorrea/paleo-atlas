@@ -55,5 +55,5 @@ unit_tests:
           - {new_taxon_id: "p | Antusuchus", taxon_name: Antusuchus, revid: 3, revision_timestamp: "2026-11-01 10:00:00+00", novelty: new_genus_and_species, status: valid, name_authors: A, age_text: Albian, type_locality: X, countries: "['Argentina']", notes_text: n, primary_doi: "10.1/x"}
     expect:
       rows:
-        - {revid: 1, status: in_press, version_number: 1, valid_from: "2026-10-01 10:00:00+00", valid_to: "2026-10-15 10:00:00+00", is_current: false}
-        - {revid: 2, status: valid, version_number: 2, valid_from: "2026-10-15 10:00:00+00", valid_to: null, is_current: true}
+        - {revid: 1, status: in_press, version_number: 1, valid_from: "2026-10-01 10:00:00+00", valid_to: "2026-10-15 10:00:00+00", is_current: false, changed_fields: "[]"}
+        - {revid: 2, status: valid, version_number: 2, valid_from: "2026-10-15 10:00:00+00", valid_to: null, is_current: true, changed_fields: "['status']"}

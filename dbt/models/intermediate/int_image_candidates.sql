@@ -1,7 +1,8 @@
 -- Every image found for a taxon page, with its level of precision:
 --   taxon  = the taxon itself (Commons file from the Wikipedia table, or PhyloPic)
 --   genus  = PhyloPic silhouette of its genus
---   clade  = PhyloPic silhouette of its family/order or of a group named in the notes
+--   clade  = PhyloPic silhouette of its family/order/class or of a group named in the notes
+--   group  = PhyloPic silhouette of the clade that stands for its group (seed group_clades)
 with pages as (
     select c.*, n.notes_terms, n.image_files
     from {{ ref('int_taxon_classification') }} as c
@@ -44,6 +45,16 @@ lookups as (
     union all
     select taxon_key, unnest(notes_terms), 'clade', 4 + unnest(range(len(notes_terms)))
     from pages where notes_terms is not null
+    union all
+    select taxon_key, class_name, 'clade', 100 from pages
+    -- PBDB's "Reptilia" is too broad for an archosaur (a lizard silhouette): the
+    -- group image is a better fallback.
+    where class_name is not null and class_name not like 'NO\_%' escape '\'
+      and class_name <> 'Reptilia'
+    union all
+    select p.taxon_key, g.clade_name, 'group', 1
+    from {{ ref('int_taxon_pages') }} as p
+    inner join {{ ref('group_clades') }} as g using (taxon_group)
 ),
 
 phylopic as (

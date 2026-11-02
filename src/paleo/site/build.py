@@ -22,11 +22,11 @@ from urllib.parse import quote
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup
 
-from paleo.config import project_root
+from paleo.config import enabled_pages, project_root
 from paleo.names import GENUS_LIKE
 from paleo.site import terms
 from paleo.site.data import SiteData, load, numbered_text
-from paleo.site.fallback import fallback_text
+from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.search import build_index
 
 LANGS = ("es", "en")
@@ -214,6 +214,7 @@ class SiteBuilder:
         week_keys = sorted(weeks, reverse=True)
         new = [t for t in data.taxa if t["page_type"] == "new"]
         known = [t for t in data.taxa if t["page_type"] == "known"]
+        year_page = enabled_pages()[0].title(data.built_on.year)
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []
         for lang in LANGS:
@@ -231,7 +232,9 @@ class SiteBuilder:
                          {"taxon": taxon, "events": data.events.get(key, []),
                           "gallery": data.images.get(key, []),
                           "text": numbered_text(data, key, lang),
-                          "fallback": fallback_text(taxon, lang)})
+                          "fallback": fallback_text(taxon, lang),
+                          "basic_sources": basic_sources(
+                              taxon, data.events.get(key, []), year_page)})
                 )  # fmt: skip
             out.append(
                 Page(lang, "recaps", None, "recaps.html.j2",
@@ -258,11 +261,16 @@ class SiteBuilder:
             alternate=self.url(other, page.kind, page.key),
             self_url=self.url(lang, page.kind, page.key),
             canonical=f"{SITE_URL}/{self.path(lang, page.kind, page.key)}",
+            alternate_absolute=f"{SITE_URL}/{self.path(other, page.kind, page.key)}",
             base=self.base,
             fmt_date=lambda d, precision="day": fmt_date(d, lang, precision),
+            num=lambda v: (
+                (f"{v:g}".replace(".", ",") if lang == "es" else f"{v:g}") if v is not None else ""
+            ),
             week_label=lambda k: week_label(k, lang),
             built_on=self.data.built_on,
             last_checked=self.data.last_checked,
+            stats=self.data.stats,
             page_kind=page.kind,
             prose=lambda text: self.prose(
                 text, lang, (page.context.get("taxon") or {}).get("taxon_name")

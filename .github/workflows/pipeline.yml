@@ -68,7 +68,12 @@ jobs:
             "schedule/47 10 * * *") trigger=backup ;;
             *) trigger=schedule ;;
           esac
-          if [ "$trigger" = manual ] || [ "$(date -u +%u)" = 1 ] || uv run paleo check; then
+          # paleo check: 0 changed, 1 nothing new, 2 the check failed (then run everything).
+          code=0
+          if [ "$trigger" != manual ] && [ "$(date -u +%u)" != 1 ]; then
+            uv run paleo check || code=$?
+          fi
+          if [ "$code" != 1 ]; then
             echo "RUN=true" >> "$GITHUB_ENV"
             uv run paleo report start --trigger "$trigger" --changed
           else

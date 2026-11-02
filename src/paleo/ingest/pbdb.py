@@ -47,20 +47,53 @@ def looks_like_taxon(name: str) -> bool:
     return bool(_NAME.match(name)) and len(name) <= 80
 
 
+# Words that wikilinks and italics on the yearly pages often start with but that are
+# never genera: formations and places ("Morrison", "Brazil"), stages ("Albian"),
+# common names ("Arabian ostrich") and glossary terms ("Nomen dubium").
+_NOT_GENERA = {
+    "Axis", "Basal", "Convergent", "Crown", "Cuban", "Dinosaur", "Early", "East", "El",
+    "Fourier", "Gondwana", "Homology", "La",
+    "Late", "Laramidia", "Last", "Lower", "Manus", "Middle", "Nomen", "North", "Pangaea",
+    "Pes", "PhyloCode", "Plesiomorphy", "Radius", "Santa", "South", "Upper", "West",
+}  # fmt: skip
+_ADJECTIVE = re.compile(r"[A-Z][a-z]+(?:ian|ean|ese|ish)")
+
+
+def _never_a_genus(word: str) -> bool:
+    from paleo.site.terms import COUNTRIES_ES, TIME_UNITS
+
+    stages = {w for _, _, en, _ in TIME_UNITS for w in en.split(" ")}
+    return (
+        word in _NOT_GENERA
+        or word in COUNTRIES_ES
+        or word in stages
+        or bool(_ADJECTIVE.fullmatch(word))
+    )
+
+
+def looks_like_linked_taxon(name: str) -> bool:
+    """Stricter filter for names taken from links and italics in the prose: the
+    first word must be able to be a genus (epithets are too varied to check: rex, xui)."""
+    return looks_like_taxon(name) and not _never_a_genus(name.split(" ")[0])
+
+
 def names_of_interest(interim_root: Path) -> list[str]:
     """Candidate taxon names from the latest parse of every Wikipedia page."""
-    names: list[str] = []
+    names: list[str] = []  # the new taxa themselves: always asked
+    linked: list[str] = []  # names in links and italics: only if they look like taxa
     for row in latest_rows(interim_root, "new_taxa"):
         for value in (row.get("name"), row.get("name_link")):
             if value:
                 names.append(value)
                 names.append(value.split(" ")[0])  # genus of a binomial
-        names.extend(row.get("note_links") or [])
+        linked.extend(row.get("note_links") or [])
     for item in latest_rows(interim_root, "research"):
-        for value in [*(item.get("links") or []), *(item.get("italic_names") or [])]:
+        linked.extend([*(item.get("links") or []), *(item.get("italic_names") or [])])
+    for value in (n.strip() for n in linked if n):
+        if looks_like_linked_taxon(value):
             names.append(value)
             if " " in value:
-                names.append(value.split(" ")[0])
+                names.append(value.split(" ")[0])  # genus of a binomial
     cleaned = (n.strip() for n in names if n)
     return sorted({n for n in cleaned if looks_like_taxon(n)})
 

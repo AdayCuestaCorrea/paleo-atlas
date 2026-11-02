@@ -19,12 +19,12 @@
           {{ T.image_credit }}: {{ taxon.image_author or '—' }} ·
           {% if taxon.image_license_url %}<a href="{{ taxon.image_license_url }}" rel="license noopener">{{ taxon.image_license }}</a>{% else %}{{ taxon.image_license }}{% endif %}
           {% if taxon.image_page_url %} · <a href="{{ taxon.image_page_url }}" rel="noopener">{{ T.open_source }}</a>{% endif %}
-          {% if taxon.image_level in ('genus', 'clade') %}<br><span class="note">{{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}</span>{% endif %}
+          {% if taxon.image_level in ('genus', 'clade', 'group') %}<br><span class="note">{{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}</span>{% endif %}
         {% else %}{{ T.no_image }}{% endif %}
       </figcaption>
     </figure>
     <div class="taxon__title">
-      <p class="kicker">{{ terms.group(taxon.taxon_group, lang, plural=True) or '' }}</p>
+      <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {{ g }}{% endif %}</p>
       <h1><em>{{ taxon.taxon_name }}</em></h1>
       {% if taxon.name_authors %}<p class="authority">{{ taxon.name_authors }}{% if taxon.naming_year %}, {{ taxon.naming_year }}{% endif %}</p>{% endif %}
       <dl class="facts">
@@ -32,19 +32,21 @@
         {% if nov %}<dt>{{ T.field_novelty }}</dt><dd>{{ nov[0] }}</dd>{% endif %}
         {% set status = terms.status(taxon.status, lang) %}
         {% if status %}<dt>{{ T.field_status }}</dt><dd>{{ status }}</dd>{% endif %}
-        {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>{% endif %}
+        {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>
+        {% elif not taxon.early_interval %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
         {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
         {% if taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
         {% if taxon.family_name or taxon.order_name or taxon.class_name %}
           <dt>{{ T.field_classification }}</dt>
           <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}</dd>
         {% endif %}
-        {% if taxon.page_type == 'known' and taxon.early_interval %}
+        {% if taxon.early_interval and taxon.first_appearance_max_ma is not none %}
           <dt>{{ T.field_time_range }}</dt>
-          <dd>{{ t('time_range', early=terms.interval(taxon.early_interval, lang), late=terms.interval(taxon.late_interval, lang), max=taxon.first_appearance_max_ma, min=taxon.last_appearance_min_ma) }}</dd>
+          <dd>{{ t('time_range', early=terms.interval(taxon.early_interval, lang), late=terms.interval(taxon.late_interval, lang), max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}</dd>
         {% endif %}
         {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
       </dl>
+      {% if taxon.pbdb_has_taxon %}<p class="note">{{ T.pbdb_credit }} <a href="https://paleobiodb.org/classic/basicTaxonInfo?taxon_no={{ taxon.pbdb_taxon_no | replace('txn:', '') }}" rel="noopener">Paleobiology Database</a> (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>).</p>{% endif %}
     </div>
   </header>
 
@@ -72,10 +74,9 @@
       <p class="note">{{ T.ai_note }}</p>
     {% elif fallback %}
       <p>{{ fallback }}</p>
-      <p class="note">{{ T.fallback_note }}</p>
-    {% else %}
-      <p class="note">{{ T.known_note }}</p>
+      {% if taxon.page_type == 'new' %}<p class="note">{{ T.fallback_note }}</p>{% endif %}
     {% endif %}
+    {% if not text and taxon.page_type == 'known' %}<p class="note">{{ T.known_note }}</p>{% endif %}
   </section>
 
   {% if gallery %}
@@ -125,6 +126,14 @@
     {% else %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
   </section>
 
+  {% if not (text and text.sources) %}
+  <section class="block">
+    <h2>{{ T.sources_title }}</h2>
+    <ul class="sources">
+      {% for src in basic_sources %}<li><a href="{{ src.url }}" rel="noopener">{{ src.title }}</a>{% if src.note %} <span class="muted">· {{ src.note }}</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   {% if text and text.sources %}
   <section class="block">
     <h2>{{ T.sources_title }}</h2>

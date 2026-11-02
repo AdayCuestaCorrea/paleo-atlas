@@ -11,6 +11,7 @@
   <dt><span class="badge badge--warn">{{ T.badge_corrected }}</span></dt><dd>La revista ha publicado una corrección del estudio.</dd>
   <dt><span class="badge badge--bad">{{ T.badge_retracted }}</span></dt><dd>El estudio ha sido retirado. No lo borramos: se queda en el historial con este aviso.</dd>
   <dt><span class="badge badge--info">{{ T.badge_trusted }}</span></dt><dd>Revista de una lista, revisada a mano, de publicaciones consolidadas en paleontología. Es una señal secundaria.</dd>
+  <dt><span class="badge badge--info">{{ T.badge_doaj }}</span></dt><dd>La revista está en el <a href="https://doaj.org/" rel="noopener">Directorio de Revistas de Acceso Abierto (DOAJ)</a>, que exige revisión por pares y licencia abierta. Señal secundaria: muchas revistas excelentes no son de acceso abierto.</dd>
   <dt><span class="badge">{{ T.badge_unverified }}</span></dt><dd>No hemos podido comprobar el estudio (por ejemplo, su DOI no está en Crossref). No significa que sea malo.</dd>
 </dl>
 <h2>Cómo se escriben las fichas</h2>
@@ -22,5 +23,17 @@
   <li>Si algo falla, el texto no se publica y la ficha muestra un resumen generado directamente de los datos.</li>
 </ol>
 <p>Cuando las fuentes no están de acuerdo, lo contamos como debate, con las posturas y sus estudios.</p>
+<h2>En cifras</h2>
+{% set s = stats %}
+{% macro pct(a, b) %}{{ (100 * a / b) | round | int if b else 0 }} %{% endmacro %}
+<table class="figures">
+  <tr><th>Especies nuevas con ficha verificada en inglés</th><td>{{ s.verified_en }} de {{ s.new_taxa }} ({{ pct(s.verified_en, s.new_taxa) }})</td></tr>
+  <tr><th>… y en español</th><td>{{ s.verified_es }} de {{ s.new_taxa }} ({{ pct(s.verified_es, s.new_taxa) }})</td></tr>
+  <tr><th>Hechos que pasan la comprobación</th><td>{{ s.facts_ok }} de {{ s.facts_ok + s.facts_bad }} ({{ pct(s.facts_ok, s.facts_ok + s.facts_bad) }})</td></tr>
+  <tr><th>Estudios revisados por pares</th><td>{{ s.peer_reviewed }} de {{ s.studies }} ({{ pct(s.peer_reviewed, s.studies) }})</td></tr>
+  <tr><th>Preprints</th><td>{{ s.preprints }} ({{ pct(s.preprints, s.studies) }})</td></tr>
+  <tr><th>En revistas de acceso abierto (DOAJ)</th><td>{{ s.in_doaj }} ({{ pct(s.in_doaj, s.studies) }})</td></tr>
+</table>
+<p class="note">Una ficha que no pasa todas las comprobaciones no se publica: se muestra el resumen generado de los datos.</p>
 </article>
 {% endblock %}

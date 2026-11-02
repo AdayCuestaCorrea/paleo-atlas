@@ -84,7 +84,12 @@ class CheckReport:
 
 
 def _target(ref: str, base: str, root: Path, page: Path) -> Path | None:
-    """Local file a reference points to, or None for external links."""
+    """Local file a reference points to, or None for external links. Absolute URLs
+    of the site itself (canonical, hreflang) are checked as local files too."""
+    from paleo.site.build import SITE_URL
+
+    if ref.startswith(SITE_URL + "/"):
+        return root / ref[len(SITE_URL) + 1 :].split("#")[0]
     parsed = urlparse(ref)
     if parsed.scheme or ref.startswith(("mailto:", "#", "//")):
         return None

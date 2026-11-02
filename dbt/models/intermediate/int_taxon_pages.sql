@@ -26,6 +26,13 @@ known as (
     where match_source = 'pbdb'
       and taxon_rank in ('species', 'subspecies', 'genus')
       and taxon_key not in (select taxon_key from new_taxa)
+      -- Animals outside the taxonomic scope (§4) that archosaur studies mention,
+      -- e.g. mammals bitten by crocodiles, get no page.
+      and taxon_key not in (
+          select {{ taxon_key('queried_name') }} from {{ ref('stg_pbdb__taxa') }}
+          where class_name in ('Mammalia', 'Amphibia', 'Actinopterygii', 'Chondrichthyes',
+                               'Sarcopterygii', 'Insecta')
+      )
     group by taxon_key
 )
 

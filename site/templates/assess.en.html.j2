@@ -11,6 +11,7 @@
   <dt><span class="badge badge--warn">{{ T.badge_corrected }}</span></dt><dd>The journal has published a correction to the study.</dd>
   <dt><span class="badge badge--bad">{{ T.badge_retracted }}</span></dt><dd>The study was withdrawn. We do not delete it: it stays in the history with this notice.</dd>
   <dt><span class="badge badge--info">{{ T.badge_trusted }}</span></dt><dd>A journal from a hand-curated list of established paleontology publications. A secondary signal.</dd>
+  <dt><span class="badge badge--info">{{ T.badge_doaj }}</span></dt><dd>The journal is listed in the <a href="https://doaj.org/" rel="noopener">Directory of Open Access Journals (DOAJ)</a>, which requires peer review and an open license. A secondary signal: many excellent journals are not open access.</dd>
   <dt><span class="badge">{{ T.badge_unverified }}</span></dt><dd>We could not check the study (for example, its DOI is not in Crossref). It does not mean it is wrong.</dd>
 </dl>
 <h2>How pages are written</h2>
@@ -22,5 +23,17 @@
   <li>If anything fails, the text is not published and the page shows a summary generated directly from the data.</li>
 </ol>
 <p>When the sources disagree, we present it as a debate, with each position and its studies.</p>
+<h2>In figures</h2>
+{% set s = stats %}
+{% macro pct(a, b) %}{{ (100 * a / b) | round | int if b else 0 }} %{% endmacro %}
+<table class="figures">
+  <tr><th>New species with a verified page in English</th><td>{{ s.verified_en }} of {{ s.new_taxa }} ({{ pct(s.verified_en, s.new_taxa) }})</td></tr>
+  <tr><th>… and in Spanish</th><td>{{ s.verified_es }} of {{ s.new_taxa }} ({{ pct(s.verified_es, s.new_taxa) }})</td></tr>
+  <tr><th>Facts that pass the checks</th><td>{{ s.facts_ok }} of {{ s.facts_ok + s.facts_bad }} ({{ pct(s.facts_ok, s.facts_ok + s.facts_bad) }})</td></tr>
+  <tr><th>Peer-reviewed studies</th><td>{{ s.peer_reviewed }} of {{ s.studies }} ({{ pct(s.peer_reviewed, s.studies) }})</td></tr>
+  <tr><th>Preprints</th><td>{{ s.preprints }} ({{ pct(s.preprints, s.studies) }})</td></tr>
+  <tr><th>In open-access journals (DOAJ)</th><td>{{ s.in_doaj }} ({{ pct(s.in_doaj, s.studies) }})</td></tr>
+</table>
+<p class="note">A page that fails any check is not published: the summary generated from the data is shown instead.</p>
 </article>
 {% endblock %}

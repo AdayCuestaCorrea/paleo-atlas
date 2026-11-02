@@ -8,6 +8,13 @@ seeds:
     columns:
       - name: license_id
         data_tests: [unique, not_null]
+  - name: group_clades
+    description: >
+      Last-resort image for a taxon page: the PhyloPic silhouette of the clade that
+      stands for its group (ALCANCE.md §11.1, "o la del grupo").
+    columns:
+      - name: taxon_group
+        data_tests: [unique, not_null]
   - name: trusted_journals
     description: >
       Initial hand-curated list of established journals (decision A16). A

@@ -87,11 +87,22 @@ def phylopic_queries(interim_root: Path, raw_root: Path | None = None) -> list[s
             continue
         names.add(key)
         for record in latest["payload"]["records"]:
-            for field in ("genus", "parent_name", "family", "order"):
+            for field in ("genus", "parent_name", "family", "order", "class"):
                 value = record.get(field)
                 if value and not value.startswith("NO_"):
                     names.add(value)
+    names.update(group_clades())
     return sorted(n for n in names if n and looks_like_taxon(n))
+
+
+def group_clades() -> list[str]:
+    """Clades that stand for each taxon group (dbt seed group_clades.csv)."""
+    import csv
+
+    from paleo.config import project_root
+
+    with (project_root() / "dbt" / "seeds" / "group_clades.csv").open(encoding="utf-8") as f:
+        return sorted({row["clade_name"] for row in csv.DictReader(f)})
 
 
 def gallery_store(raw_root: Path | None = None) -> RawStore:

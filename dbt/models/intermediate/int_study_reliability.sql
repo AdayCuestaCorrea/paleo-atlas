@@ -71,6 +71,10 @@ select
     lower(coalesce(c.journal, s.wiki_venue)) in (
         select lower(journal) from {{ ref('trusted_journals') }}
     ) as in_trusted_journal,
+    coalesce(list_has_any(
+        list_transform(c.issns, lambda x: upper(x)),
+        (select coalesce(list(issn), []) from {{ ref('stg_doaj__journals') }} where listed_in_doaj)
+    ), false) as in_doaj,
     case
         when list_has_any(c.update_types, ['retraction', 'withdrawal', 'removal']) then 'retracted'
         when c.work_type = 'posted-content' or s.citation_template ilike '%rxiv%' then 'preprint'

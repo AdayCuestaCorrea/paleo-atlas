@@ -55,6 +55,14 @@ def test_names_of_interest_collects_candidates(tmp_path):
     } <= set(names)
     assert "crocodile" not in names  # lowercase: not a scientific name
     assert "Hell Creek Formation" not in names  # four words
+    assert "Andrea" not in names and "Hell" not in names  # no genus split of non-taxa
+
+
+def test_linked_names_that_are_never_genera_are_not_asked():
+    for name in ("Albian", "Brazil", "Arabian ostrich", "Late Cretaceous", "Nomen dubium"):
+        assert not pbdb.looks_like_linked_taxon(name), name
+    for name in ("Tyrannosaurus rex", "Asiatyrannus xui", "Camptosaurus dispar", "Jian"):
+        assert pbdb.looks_like_linked_taxon(name), name
 
 
 def test_found_and_missing_names_are_both_stored(tmp_path):

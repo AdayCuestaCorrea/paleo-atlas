@@ -33,6 +33,7 @@
   {%- if study.is_preprint %}<span class="badge badge--warn">{{ T.badge_preprint }}</span>{% endif -%}
   {%- if study.is_peer_reviewed_journal %}<span class="badge badge--ok">{{ T.badge_peer_reviewed }}</span>{% endif -%}
   {%- if study.in_trusted_journal %}<span class="badge badge--info">{{ T.badge_trusted }}</span>{% endif -%}
+  {%- if study.in_doaj %}<span class="badge badge--info">{{ T.badge_doaj }}</span>{% endif -%}
   {%- if study.reliability_status == 'unverified' %}<span class="badge">{{ T.badge_unverified }}</span>{% endif -%}
 </span>
 {%- endmacro %}
@@ -57,7 +58,11 @@
   {{ event_date(e, T, fmt_date) }}
   <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
   {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
+  {% if e.event_type == 'entry_changed' %}
+  <span class="event__title">{{ T.entry_changed_fields }}: {% for f in e.changed_fields %}{{ T['changed_' ~ f] }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
+  {% else %}
   {{ study_title(e, T) }}
+  {% endif %}
   <span class="event__source">
     {%- if e.journal %}<cite>{{ e.journal }}</cite>{% endif -%}
     {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}

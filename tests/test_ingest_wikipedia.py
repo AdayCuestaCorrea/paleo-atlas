@@ -129,3 +129,17 @@ def test_client_errors_are_not_retried():
     with make_client(httpx.MockTransport(handler)) as c, pytest.raises(HttpError):
         get_json(c, "https://example.org/api", sleep=lambda s: None)
     assert len(calls) == 1
+
+
+def test_check_exits_2_when_the_check_itself_fails(monkeypatch):
+    from typer.testing import CliRunner
+
+    from paleo import cli
+    from paleo.http import HttpError
+
+    def boom(*args, **kwargs):
+        raise HttpError("HTTP 503 for the API", 503)
+
+    monkeypatch.setattr(cli.wiki_ingest, "has_new_revision", boom)
+    result = CliRunner().invoke(cli.app, ["check"])
+    assert result.exit_code == 2  # not 1: an outage must not pass for "no changes"

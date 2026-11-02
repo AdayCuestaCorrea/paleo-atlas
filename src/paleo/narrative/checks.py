@@ -331,6 +331,28 @@ def check_text(
     return TextReport(reports, problems, word_count)
 
 
+# Clades above the family keep their Latin form in English but are written in
+# Spanish ("Crocodylomorpha" -> "cocodrilomorfos"); genera and species never are.
+_HIGHER_CLADE = re.compile(r"(?:morpha|poda|ia|formes|oidea|idae|inae)$")
+
+
+def _fold(text: str) -> str:
+    return "".join(
+        c for c in unicodedata.normalize("NFD", text.lower()) if unicodedata.category(c) != "Mn"
+    )
+
+
+def _spanish_clade_in(name: str, text: str) -> bool:
+    """True when `text` writes the clade `name` in Spanish: same hispanized stem,
+    any ending (Crocodylomorpha -> cocodrilomorfos, Neosauropoda -> neosaurópodos)."""
+    from paleo.site.terms import hispanize
+
+    if not _HIGHER_CLADE.search(name):
+        return False
+    stem = re.sub(r"[aeiou]+$", "", hispanize(name)).replace("crocodil", "cocodril")
+    return len(stem) >= 6 and any(w.startswith(stem) for w in re.findall(r"\w+", _fold(text)))
+
+
 def check_alignment(
     source: list[tuple[str, list[str]]],
     adapted: list[str],
@@ -348,6 +370,6 @@ def check_alignment(
                 f"({sorted(numbers(src))} vs {sorted(numbers(dst))})"
             )
         kept = {n for n in scientific_names if n in src}
-        if lost := {n for n in kept if n not in dst}:
+        if lost := {n for n in kept if n not in dst and not _spanish_clade_in(n, dst)}:
             problems.append(f"sentence {i + 1}: scientific names lost {sorted(lost)}")
     return problems

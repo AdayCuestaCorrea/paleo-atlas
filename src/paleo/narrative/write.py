@@ -225,6 +225,8 @@ def _save(
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     _atomic_write(path, json.dumps(record, ensure_ascii=False, indent=1) + "\n")
+    if path.parent.name == "texts":  # a verified text retires the failed one it replaces
+        (path.parent.parent / "texts_review" / path.name).unlink(missing_ok=True)
 
 
 def write_page(

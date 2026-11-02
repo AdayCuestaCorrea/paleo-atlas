@@ -200,6 +200,12 @@ def test_failed_text_goes_to_review_after_retries(tmp_path):
     assert (tmp_path / "derived" / "texts_review" / "testosaurus-rex.en.json").exists()
     assert not (tmp_path / "derived" / "texts" / "testosaurus-rex.en.json").exists()
 
+    # A later verified text retires the failed one.
+    write_page(make_llm(tmp_path / "again", one_sentence_answers()), facts_file(tmp_path), CHUNKS,
+               derived_root=tmp_path / "derived", scientific_names=set())  # fmt: skip
+    assert (tmp_path / "derived" / "texts" / "testosaurus-rex.en.json").exists()
+    assert not (tmp_path / "derived" / "texts_review" / "testosaurus-rex.en.json").exists()
+
 
 def test_fact_selection_is_balanced_and_capped():
     facts = [{"fact_id": f"F{i:03d}", "category": "description"} for i in range(30)]

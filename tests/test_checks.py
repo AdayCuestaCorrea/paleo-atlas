@@ -126,3 +126,13 @@ def test_alignment_keeps_numbers_and_scientific_names():
     assert check_alignment(english, ["Pesaba 1 742,8 kg."], {"Spinosaurus"})
     assert check_alignment(english, ["Spinosaurus pesaba 1 743 kg."], {"Spinosaurus"})
     assert check_alignment(english, ["Uno.", "Dos."], {"Spinosaurus"})
+
+
+def test_alignment_accepts_higher_clades_written_in_spanish():
+    names = {"Eosphorosuchus", "Crocodylomorpha"}
+    english = [("Eosphorosuchus is an early member of Crocodylomorpha.", ["F1"])]
+    ok = "Eosphorosuchus es un miembro temprano de los cocodrilomorfos."
+    assert check_alignment(english, [ok], names) == []
+    assert check_alignment(english, ["Eosphorosuchus es un cocodrilo temprano."], names)
+    # Genera are never translated.
+    assert check_alignment(english, ["Eosforosuco es un cocodrilomorfo."], names)

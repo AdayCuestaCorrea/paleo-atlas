@@ -46,3 +46,30 @@ jobs:
         run: |
           uv run paleo site --base /paleo-atlas
           uv run paleo site --check --base /paleo-atlas
+
+      - name: Fingerprint
+        # What this job produced (warehouse tables and site files), for the parity
+        # check with the paleo_ci_parity DAG of Airflow (scripts/parity.py).
+        run: uv run python scripts/fingerprint.py --output fingerprint.json
+
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: fingerprint
+          path: fingerprint.json
+
+  dags:
+    # The Airflow DAGs load without import errors or cycles (Airflow 3.3, ALCANCE A8).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - uses: astral-sh/setup-uv@v10.3.3
+
+      - name: Install Airflow
+        run: |
+          uv venv --python 3.14 .airflow-venv
+          uv pip install --python .airflow-venv "apache-airflow==3.3.2" pytest \
+            --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.3.2/constraints-3.14.txt
+
+      - name: Load the DAGs
+        run: .airflow-venv/bin/python -m pytest -q airflow/tests

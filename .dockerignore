@@ -1,0 +1,17 @@
+# Build context of airflow/Dockerfile: the code only, never data or secrets.
+.git
+.venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+.env
+.env.*
+.ci-data
+data
+airflow/work
+airflow/logs
+site/_build
+dbt/target
+dbt/logs
+dbt/.user.yml
+logs

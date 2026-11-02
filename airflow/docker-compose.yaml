@@ -1,0 +1,127 @@
+# Local Airflow for Paleo Atlas (ALCANCE.md §7, Fase 2; §15 "Demostración").
+#
+# A trimmed version of the official docker-compose.yaml of Airflow 3.3.2: LocalExecutor
+# (no Redis, no Celery workers, no triggerer) to keep it light on a laptop. The UI on
+# http://localhost:8080 needs no password (simple auth manager, everyone is admin):
+# it only listens on 127.0.0.1 and is meant for local use only.
+#
+#   cd airflow
+#   ./bin/init-work.sh                      # clone of the data branch in work/data
+#   GIT_SHA=$(git rev-parse HEAD) docker compose up -d --build
+#   docker compose down                     # stop (add -v to drop the metadata DB)
+#
+# The DAGs never publish: GitHub Actions stays the only writer of the data branch and
+# of GitHub Pages. Everything Airflow produces stays in airflow/work/ (git-ignored).
+
+name: paleo-airflow
+
+x-airflow-common: &airflow-common
+  build:
+    context: ..
+    dockerfile: airflow/Dockerfile
+    args:
+      GIT_SHA: ${GIT_SHA:-unknown}
+  image: paleo-atlas-airflow:local
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__AUTH_MANAGER: airflow.api_fastapi.auth.managers.simple.simple_auth_manager.SimpleAuthManager
+    AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS: "true"
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    # Paused until switched on in the UI: a local demo must not query the sources by itself.
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-apiserver:8080/execution/
+    # Shared by the API server and the scheduler; local only, not a real secret.
+    AIRFLOW__API_AUTH__JWT_SECRET: ${AIRFLOW_JWT_SECRET:-paleo-atlas-local-only}
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: "true"
+    # Pipeline settings: the same variables as in .github/workflows/pipeline.yml.
+    PALEO_DATA_DIR: /opt/airflow/work/data
+    PALEO_SITE_BASE: /paleo-atlas
+    PALEO_SITE_OUT: /opt/airflow/work/site
+    # Optional narrative step with the host's Ollama (narrative=ollama). Ollama must
+    # listen on an address the containers can reach (OLLAMA_HOST=0.0.0.0 on the host).
+    OLLAMA_BASE_URL: http://host.docker.internal:11434/v1
+  extra_hosts:
+    - host.docker.internal:host-gateway
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./work:/opt/airflow/work
+  # Files in logs/ and work/ belong to the host user (1000 on most Linux desktops).
+  user: "${AIRFLOW_UID:-1000}:0"
+  depends_on: &airflow-common-depends-on
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+
+  airflow-init:
+    <<: *airflow-common
+    command: version
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_MIGRATE: "true"
+
+  airflow-apiserver:
+    <<: *airflow-common
+    command: api-server
+    ports:
+      - "127.0.0.1:8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/api/v2/monitor/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type SchedulerJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-dag-processor:
+    <<: *airflow-common
+    command: dag-processor
+    healthcheck:
+      test: ["CMD-SHELL", 'airflow jobs check --job-type DagProcessorJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      <<: *airflow-common-depends-on
+      airflow-init:
+        condition: service_completed_successfully
+
+volumes:
+  postgres-db-volume:

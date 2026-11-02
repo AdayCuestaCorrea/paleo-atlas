@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 13 · **Estado:** Fase 1 en curso (revisión completa hecha; falta ver lanzarse el cron y las 2 semanas autónomas)
+**Creado:** 2026-10-31 · **Versión:** 14 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha en paralelo, sin tocar lo que usa Actions
 
 ---
 
@@ -210,7 +210,7 @@ F1 F2 F4 F5 F6 F7 ─► raw JSON (rama `data`)         → extracto Parquet
 
 ## 7. Fases y entregables
 
-Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar la anterior.
+Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar la anterior. *Excepción (v14):* la Fase 2 se hace mientras la Fase 1 espera sus 2 semanas de ejecución autónoma, sin tocar `pipeline.yml`, `src/paleo/` ni `dbt/` para que esas semanas sigan contando (solo se añaden `airflow/`, scripts, tests y `ci.yml`).
 
 ### Fase 0 — Preparación
 - [x] Esqueleto de carpetas
@@ -259,10 +259,14 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 **Terminado cuando:** la web pública muestra las especies de arcosaurios de 2026 en los dos idiomas, con ficha narrativa verificada, imagen (o la del grupo), señales de fiabilidad e historial, y se ha actualizado sola **2 semanas seguidas** sin intervención.
 
 ### Fase 2 — Airflow
-- [ ] `docker compose` con Airflow
-- [ ] DAG diario y DAG semanal (recap), que llaman a los mismos comandos que Actions
-- [ ] DAG mensual (provisional hasta la Fase 3)
-- [ ] Capturas para el README (DAG, ejecución correcta, reintento)
+- [x] `docker compose` con Airflow 3.3.2 (LocalExecutor; `paleo` en su propio venv dentro de la imagen)
+- [x] DAG diario y DAG semanal (recap), que llaman a los mismos comandos que Actions (`airflow/dags/paleo_steps.py`, una lista de pasos comprobada contra `pipeline.yml` por un test)
+- [x] DAG mensual (provisional hasta la Fase 3: todas las fuentes otra vez, sin frescura)
+- [x] Capturas para el README (DAG, ejecución correcta, reintento real con Wikipedia bloqueada)
+- [x] Paridad con Actions: huella (hash por tabla del almacén y por archivo de la web) del DAG `paleo_ci_parity` igual a la que sube el CI para el mismo commit (`scripts/parity.py`); la ejecución diaria del DAG da los mismos totales que la de Actions del mismo día
+- [x] Job de CI que carga los DAGs con Airflow 3.3.2 (sin errores de importación)
+
+Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/work/`, fuera de git) y hacen commit sin push; Actions sigue siendo el único que publica. El paso narrativo se salta por defecto (`narrative=ollama` para usar el Ollama local; nunca Groq, cuya cuota es de Actions).
 
 **Terminado cuando:** los DAGs producen exactamente el mismo resultado que los workflows de Actions.
 
@@ -510,7 +514,7 @@ Lo que tiene que existir; la implementación se decide en la Fase 1.
 | *(recap)* | Lo genera `paleo site` para todas las semanas | Sí |
 | `paleo report start` / `finish` / `ran-today` | Registro e informe de la ejecución (§16) | Sí |
 
-Requisitos: códigos de salida fiables (0 = OK), logs legibles (los logs estructurados, si hacen falta, con Airflow en la Fase 2), sin estado oculto fuera de git y de `data/`.
+Requisitos: códigos de salida fiables (0 = OK), logs legibles, sin estado oculto fuera de git y de `data/`. Sin logs estructurados: Airflow guarda el log de cada tarea y el informe de ejecución (§16) recoge lo que hay que medir (decidido en la Fase 2).
 
 ---
 
@@ -524,7 +528,7 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 | Detección de cambios + pipeline si hay novedades | GitHub Actions (cron) | Diario, 06:23 UTC; reserva a las 10:47 UTC si la principal no terminó (A6) |
 | Recap semanal | GitHub Actions (cron) | Lunes, en la misma ejecución diaria (A6) |
 | Pipeline mensual (GBIF, revisión de retracciones) | Local (Spark en mi máquina) | Mensual |
-| Demostración | Airflow en Docker (local) | Bajo demanda |
+| Demostración | Airflow en Docker (local): `paleo_daily` (mar–dom), `paleo_weekly` (lunes), `paleo_monthly` y `paleo_ci_parity`; pausados al crearse, sin publicar | Bajo demanda |
 
 - Detección barata: comparar el número de revisión de las páginas de Wikipedia y el contenido de RSS/PBDB con lo guardado. Si no hay cambios, no se ingesta ni se gasta LLM; solo se reconstruyen el almacén y la web (~1–2 min) y se guarda el registro de la ejecución.
 - **Registro de ejecuciones** (`runs/<fecha>.json` en la rama `data`): toda ejecución deja constancia, también sin cambios. Lo leen el test de frescura (§16) y el pie de la web («fuentes comprobadas el…»), y da actividad diaria al repositorio (regla de los 60 días).
@@ -697,11 +701,11 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A19 | Tono de las fichas | Divulgativo para adultos curiosos y adolescentes (lo que ya dice el prompt; ajustado el 2026-11-02 para no regenerar) | 2026-11-01 |
 | A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
+| A8 | Versión de Airflow | **3.3.2** (imagen oficial `python3.14`), LocalExecutor y auth simple solo en local | 2026-11-02 |
 
 ### Abiertas
 | # | Decisión | Opciones | Cuándo |
 |---|---|---|---|
-| A8 | Versión de Airflow | 2.x, 3.x | Fase 2 |
 | A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
 | A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |
 
@@ -747,6 +751,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v14: Fase 2 (Airflow 3.3.2 en Docker): DAGs diario, semanal, mensual provisional y de paridad con el CI; lista única de pasos comprobada contra `pipeline.yml`; huella del almacén y de la web para demostrar el mismo resultado; job de CI que carga los DAGs; A8 cerrada; sin logs estructurados (§14). Se hace en paralelo a las 2 semanas autónomas de la Fase 1 sin tocar lo que usa Actions | Decisión del usuario |
 | 2026-11-02 | v13: revisión completa de la Fase 1. Arreglos: `paleo check` distingue un fallo (salida 2), PBDB deja de consultar nombres que no son taxones, CI en todas las ramas, fichas «conocidas» fuera de §4 (mamíferos) eliminadas. Añadido: silueta del grupo (0 fichas sin imagen), eventos `entry_changed` desde el SCD2, señal DOAJ, crédito de PBDB en cada ficha, texto de respaldo y fuentes en las fichas sin texto, cifras de verificación en «Cómo evaluamos», hreflang absolutos. A Fase 3: «En debate», «Recogido en PBDB» y significado del nombre; A19 ajustada. Documento alineado con el código (§5, §8, §14, §26) | Revisión pedida por el usuario |
 | 2026-11-02 | v12: informe de ejecución (`paleo report`) y registro diario en `runs/`; test de frescura; cron a las 06:23 con reserva a las 10:47; la web se reconstruye a diario aunque no haya cambios; el commit a `data` va al final y siempre | El cron de las 06:00 no se lanzó |
 | 2026-11-02 | v11: semana 4 (web Jinja2 publicada en GitHub Pages, rama `data`, pipeline diario); 82 fichas generadas; buscador del backlog a la Fase 1; galería con visor; revisión del español y títulos en español; una cita por obra y nombres enlazados; reintentos del lote; A6 y A18 cerradas | Ronda de revisión del usuario y semana 4 |
@@ -783,13 +788,18 @@ paleo-atlas/
 ├── dbt/
 │   ├── models/{staging,intermediate,marts}/
 │   ├── tests/  seeds/  macros/
-├── airflow/dags/
+├── airflow/
+│   ├── dags/               ← paleo_steps.py (pasos) + paleo_pipeline.py (DAGs)
+│   ├── bin/                ← init-work.sh (clon de `data`), step.py (registro de pasos)
+│   ├── tests/              ← carga de los DAGs (job `dags` del CI)
+│   ├── Dockerfile, docker-compose.yaml
+│   └── work/, logs/        ← locales, fuera de git
 ├── .github/workflows/
 ├── site/{templates,static}/
 ├── benchmarks/             ← Spark vs DuckDB (Fase 3)
 ├── eval/                   ← fichas de referencia e informes de evaluación
 ├── ollama/                 ← Modelfiles del LLM local
-├── scripts/                ← utilidades (sembrar los fixtures del CI)
+├── scripts/                ← sembrar los fixtures del CI, huella (fingerprint.py) y paridad Airflow/Actions (parity.py)
 ├── tests/                  ← pytest (+ fixtures)
 ├── docs/
 │   ├── adr/

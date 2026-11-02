@@ -166,7 +166,7 @@ def facts(
     force: Force = False,
 ) -> None:
     """Extract checkable facts for new taxa (writes data/derived/facts)."""
-    from paleo.llm import LLM, QuotaExhausted
+    from paleo.llm import LLM, LLMOutputError, QuotaExhausted
     from paleo.narrative.facts import extract_facts, sources_hash
     from paleo.narrative.sources import chunks_for, taxon_key
 
@@ -204,6 +204,9 @@ def facts(
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
             break
+        except LLMOutputError as exc:  # one bad answer must not stop the batch
+            typer.echo(f"{taxon}: skipped, invalid model output ({exc})")
+            continue
         typer.echo(f"{taxon}: {r.accepted} facts accepted, {r.rejected} rejected")
     typer.echo(f"{llm.label}: {llm.stats}")
 
@@ -217,7 +220,7 @@ def write(
     force: Force = False,
 ) -> None:
     """Write and check the EN text and its ES adaptation (writes data/derived/texts)."""
-    from paleo.llm import LLM, QuotaExhausted
+    from paleo.llm import LLM, LLMOutputError, QuotaExhausted
     from paleo.narrative.sources import chunks_for, taxon_key
     from paleo.narrative.write import is_up_to_date, write_page
 
@@ -242,6 +245,9 @@ def write(
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
             break
+        except LLMOutputError as exc:  # one bad answer must not stop the batch
+            typer.echo(f"{taxon}: skipped, invalid model output ({exc})")
+            continue
         typer.echo(f"{taxon}: {r.status} {r.words}" + (f" review={r.review}" if r.review else ""))
         for lang, problems in r.problems.items():
             for problem in problems[:5]:

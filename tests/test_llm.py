@@ -72,6 +72,21 @@ def test_invalid_output_raises(tmp_path):
         llm.complete_json("sys", "user", Answer)
 
 
+def test_cut_answer_is_retried_once_with_more_tokens(tmp_path):
+    sent = []
+    answers = ['{"answer": "o', '{"answer": "ok", "number": 7}']
+
+    def handler(request):
+        sent.append(json.loads(request.content)["max_tokens"])
+        return reply(answers.pop(0))
+
+    llm = make_llm(tmp_path, handler)
+    assert llm.complete_json("sys", "user", Answer, max_tokens=100).number == 7
+    assert sent == [100, 200]
+    assert llm.complete_json("sys", "user", Answer, max_tokens=100).number == 7  # cached
+    assert llm.stats.calls == 2
+
+
 def test_json_schema_is_downgraded_when_rejected(tmp_path):
     formats = []
 

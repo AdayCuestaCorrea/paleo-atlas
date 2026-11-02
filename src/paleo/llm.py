@@ -300,10 +300,30 @@ class LLM:
             content = json.loads(cache_path.read_text(encoding="utf-8"))["content"]
             return output.model_validate(parse_json(content))
 
-        estimated = sum(len(m["content"]) for m in messages) // CHARS_PER_TOKEN + max_tokens
+        payload["response_format"] = self._response_format(output.__name__, schema)
+        # A cut or malformed answer gets one more try with twice the room; the cache
+        # keeps the first key, so a later run reuses the good answer.
+        for attempt in range(2):
+            content = self._answer(payload, messages)
+            try:
+                result = output.model_validate(parse_json(content))
+                break
+            except (json.JSONDecodeError, ValidationError) as exc:
+                if attempt:
+                    raise LLMOutputError(f"{self.label}: invalid output ({exc})") from exc
+                log.warning("%s: invalid output, retrying with more tokens (%s)", self.label, exc)
+                payload["max_tokens"] = max_tokens * 2
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        record = {"model": self.label, "created": dt.datetime.now(dt.UTC).isoformat()}
+        _atomic_write(cache_path, json.dumps({**record, "content": content}, ensure_ascii=False))
+        return result
+
+    def _answer(self, payload: dict[str, Any], messages: list[dict[str, str]]) -> str:
+        estimated = (
+            sum(len(m["content"]) for m in messages) // CHARS_PER_TOKEN + payload["max_tokens"]
+        )
         if self.limiter:
             self.limiter.acquire(self.model, estimated)
-        payload["response_format"] = self._response_format(output.__name__, schema)
         started = time.monotonic()
         body = self._post(payload)
         self.stats.seconds += time.monotonic() - started
@@ -313,16 +333,7 @@ class LLM:
         self.stats.completion_tokens += usage.get("completion_tokens", 0)
         if self.limiter:
             self.limiter.record(self.model, usage.get("total_tokens", estimated))
-
-        content = body["choices"][0]["message"].get("content") or ""
-        try:
-            result = output.model_validate(parse_json(content))
-        except (json.JSONDecodeError, ValidationError) as exc:
-            raise LLMOutputError(f"{self.label}: invalid output ({exc})") from exc
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-        record = {"model": self.label, "created": dt.datetime.now(dt.UTC).isoformat()}
-        _atomic_write(cache_path, json.dumps({**record, "content": content}, ensure_ascii=False))
-        return result
+        return body["choices"][0]["message"].get("content") or ""
 
     def _post(self, payload: dict[str, Any]) -> dict[str, Any]:
         url = f"{self.provider.base_url}/chat/completions"

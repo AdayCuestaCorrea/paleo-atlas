@@ -136,3 +136,6 @@ def test_alignment_accepts_higher_clades_written_in_spanish():
     assert check_alignment(english, ["Eosphorosuchus es un cocodrilo temprano."], names)
     # Genera are never translated.
     assert check_alignment(english, ["Eosforosuco es un cocodrilomorfo."], names)
+    names = {"Vegavis", "Neognathae"}
+    english = [("Vegavis belongs to Neognathae.", ["F1"])]
+    assert check_alignment(english, ["Vegavis pertenece a las neognatas."], names) == []

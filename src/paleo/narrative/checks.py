@@ -333,7 +333,7 @@ def check_text(
 
 # Clades above the family keep their Latin form in English but are written in
 # Spanish ("Crocodylomorpha" -> "cocodrilomorfos"); genera and species never are.
-_HIGHER_CLADE = re.compile(r"(?:morpha|poda|ia|formes|oidea|idae|inae)$")
+_HIGHER_CLADE = re.compile(r"(?:morpha|poda|ia|formes|oidea|idae|inae|ae)$")
 
 
 def _fold(text: str) -> str:

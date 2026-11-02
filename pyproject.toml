@@ -28,6 +28,11 @@ dev = [
     "ruff",
     "pytest",
 ]
+# The monthly GBIF job in Spark (ALCANCE.md §7, Phase 3): local only, never in CI.
+# Needs Java 17+ (the system's locally; the Airflow image installs one).
+spark = [
+    "pyspark==4.2.0",
+]
 
 [tool.uv]
 # CachyOS is a rolling distro: use a uv-managed interpreter so a system

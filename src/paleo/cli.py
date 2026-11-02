@@ -30,6 +30,10 @@ eval_app = typer.Typer(help="Evaluate narrative pages against the gold set.", no
 app.add_typer(eval_app, name="eval")
 report_app = typer.Typer(help="Run log and run report (ALCANCE.md §16).", no_args_is_help=True)
 app.add_typer(report_app, name="report")
+gbif_app = typer.Typer(
+    help="GBIF fossil specimens, monthly (ALCANCE.md §7, Phase 3).", no_args_is_help=True
+)
+app.add_typer(gbif_app, name="gbif")
 
 Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
@@ -530,3 +534,37 @@ def parse_wikipedia(
             typer.echo(f"{title}: {skipped} revision(s) already parsed (use --force to redo)")
     if not found:
         raise typer.Exit(1)
+
+
+@gbif_app.command("extract")
+def gbif_extract(
+    key: Annotated[
+        str | None, typer.Option(help="Resume an already requested download instead.")
+    ] = None,
+) -> None:
+    """Request the monthly GBIF download, wait for it (minutes to hours) and fetch it
+    to the local cache; its record (key, DOI, filter) goes to the raw store."""
+    from paleo.ingest import gbif
+
+    with make_client() as client:
+        try:
+            rec, path = gbif.extract(client, raw_root=get_paths().raw, key=key)
+        except gbif.GbifError as exc:
+            typer.echo(f"GBIF: {exc}", err=True)
+            raise typer.Exit(1) from exc
+    typer.echo(
+        f"GBIF download {rec['key']}: {rec['total_records']} records, DOI {rec['doi']} -> {path}"
+    )
+
+
+@gbif_app.command("reconcile")
+def gbif_reconcile(
+    key: Annotated[str, typer.Argument(help="GBIF download key (paleo gbif extract).")],
+    engine: Annotated[str, typer.Option(help="duckdb or spark.")] = "duckdb",
+) -> None:
+    """Reconcile the download with the PBDB genera and write the aggregated extract
+    (genus_specimens, institutions, countries, unmatched) to the raw store."""
+    from paleo.gbif_job.run import reconcile
+
+    counts, seconds = reconcile(key, engine)
+    typer.echo(f"GBIF {key} with {engine} in {seconds:.1f} s: {counts}")

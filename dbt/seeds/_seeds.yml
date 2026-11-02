@@ -22,7 +22,8 @@ seeds:
       several clades: PBDB keeps Aves (Confuciusornis…) and Avialae (Archaeopteryx,
       Hesperornis…) apart, so birds take both. When a genus is in several clades (a
       bird is also a dinosaur and an archosaur), the lowest `priority` wins. Blocks
-      are switched on by phase with `enabled`. `block_root` marks the clade that
+      are switched on by phase with `enabled`; the row order is the order of the
+      groups on the site. `block_root` marks the clade that
       contains the whole block: its occurrences are downloaded once for the block,
       and a Wikipedia article of a genus is only trusted when its Wikidata item
       descends from the root's `wikidata_item` (P171).

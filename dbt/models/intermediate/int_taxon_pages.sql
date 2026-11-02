@@ -45,8 +45,16 @@ known as (
       -- e.g. mammals bitten by crocodiles, get no page.
       and taxon_key not in (
           select {{ taxon_key('queried_name') }} from {{ ref('stg_pbdb__taxa') }}
-          where class_name in ('Mammalia', 'Amphibia', 'Actinopterygii', 'Chondrichthyes',
-                               'Sarcopterygii', 'Insecta')
+          where class_name in ('Mammalia', 'Amphibia', 'Actinopterygii', 'Sarcopterygii',
+                               'Insecta')
+      )
+      -- Marine reptile and fish studies mention many other animals (turtles, lizards,
+      -- bony fishes): their known taxa need a genus of the encyclopedia catalog.
+      and (
+          taxonomic_block = 'archosaurs'
+          or {{ taxon_key("split_part(taxon_name, ' ', 1)") }} in (
+              select taxon_key from {{ ref('int_catalog_genera') }}
+          )
       )
     group by taxon_key
 )

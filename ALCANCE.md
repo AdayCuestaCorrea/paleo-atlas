@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 17 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
+**Creado:** 2026-10-31 · **Versión:** 18 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
 
 ---
 
@@ -129,6 +129,8 @@ El alcance se define en un fichero de datos (`dbt/seeds/scope_clades.csv`, *hech
 
 Notas:
 - Los mosasaurios son escamosos (parientes de lagartos y serpientes), no arcosaurios. Por eso van en «reptiles marinos» y no en el bloque 1.
+- **Peces destacados** (seed `featured_fishes.csv`, editable, con el motivo de cada uno): 29 géneros famosos fuera de Placodermi y Chondrichthyes, como *Leedsichthys*, *Xiphactinus*, *Tiktaalik*, *Coelacanthus*, *Arandaspis* o *Saurichthys*. De las páginas anuales de reptiles y peces solo entran ictiosaurios, sauropterigios, mosasaurios (entre los escamosos, si el texto los nombra), placodermos, condrictios y los géneros destacados; tortugas, lagartos y la mayoría de peces óseos quedan fuera.
+- Los homónimos entre bloques (*Paracorax*: cormorán fósil y tiburón) tienen una sola ficha, la del bloque anterior; un test de dbt los avisa.
 - Fuera por ahora (backlog): sinápsidos y mamíferos fósiles (*Dimetrodon*, mamut), invertebrados (trilobites, ammonites), plantas.
 
 ---
@@ -275,7 +277,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Fase 3 — Enciclopedia, ampliación y Spark
 - [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(arcosaurios hechos: 3.040 géneros, una descarga mensual por clado del seed; reptiles marinos y peces al activar sus filas)*
-- [ ] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4)
+- [x] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4) *(358 géneros de reptiles marinos y 1.353 de peces; de sus páginas anuales solo entran las secciones del alcance)*
 - [ ] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9)
 - [ ] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes
 - [ ] Job PySpark local: reconciliación de nombres con PBDB (sinónimos, erratas, rango) + agregados
@@ -761,6 +763,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v18: Fase 3, hito 3 (rama `fase-3`). Activados los reptiles marinos y los peces fósiles: páginas anuales de reptiles y paleoictiología (solo las secciones del alcance; mosasaurios entre los escamosos), seed de peces destacados, raíces de bloque en Wikidata, Paleozoico (Ordovícico–Pérmico y sus pisos en español), grupos nuevos, la columna «Location» de las tablas de peces es el país, estudios listados en dos páginas fusionados, homónimos entre bloques | Plan de H3 |
 | 2026-11-02 | v17: Fase 3, hito 2 (rama `fase-3`). Índices por grupo, época y país; ocurrencias de PBDB (países de 2.780 géneros, base del mapa); artículos de Wikipedia de los géneros **verificados** con Wikidata (P842 + ascendencia P171: el elemento de la polilla *Coloradia* lleva por error el ID de PBDB del dinosaurio) y su imagen principal libre como imagen de la ficha; siluetas de PhyloPic de todos los géneros con un tope diario; índice del buscador compacto (2,2 MB → 0,9 MB); traducción de subpisos («Campaniense superior»); el comprobador detecta fichas huérfanas y webs vacías; nueva fuente F13 (Wikidata) | Plan de H2 |
 | 2026-11-02 | v16: empieza la Fase 3 en la rama `fase-3` (datos en `data-fase-3`), con merge a `main` al cerrar la Fase 1. Decisiones: una ficha por género; peces = Placodermi + Chondrichthyes + seed de destacados; narrativas solo para géneros con artículo en Wikipedia, en lotes con la GPU local. Hito 1: seed `scope_clades` (alcance como datos), catálogo de PBDB por clado (`taxon_status=accepted`, sin icnotaxones), 3.040 fichas de género de arcosaurios, enlace especie → género | Decisión del usuario |
 | 2026-11-02 | v15: documentos de fase en `docs/fases/` (§20): Fases 1 y 2 escritos; uno más en cada fase como entregable al cerrarla | Petición del usuario |

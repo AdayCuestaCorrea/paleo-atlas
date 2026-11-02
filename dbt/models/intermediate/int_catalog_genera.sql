@@ -49,6 +49,14 @@ select
     g.version_date as catalog_version_date
 from genera as g
 left join species as s on s.genus_name = g.pbdb_name
--- Two genera with the same name in different clades (homonyms) would share a key:
--- keep the one in the most specific clade.
-qualify row_number() over (partition by taxon_key order by g.priority, g.pbdb_taxon_no) = 1
+-- Two genera with the same name (homonyms: Paracorax is a fossil cormorant and a
+-- shark) would share a key: one page per name, the earlier block first (archosaurs,
+-- marine reptiles, fishes), then the most specific clade. The test
+-- assert_catalog_homonyms lists the genera left without a page.
+qualify row_number() over (
+    partition by taxon_key
+    order by
+        case g.taxonomic_block when 'archosaurs' then 1 when 'marine_reptiles' then 2 else 3 end,
+        g.priority,
+        g.pbdb_taxon_no
+) = 1

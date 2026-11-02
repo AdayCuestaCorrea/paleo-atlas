@@ -28,6 +28,26 @@ _UNITS = {
     "Late Pliocene": "Plioceno Superior",
     "Early Pleistocene": "Pleistoceno Inferior",
     "Late Pleistocene": "Pleistoceno Superior",
+    "Early Ordovician": "Ordovícico Inferior",
+    "Middle Ordovician": "Ordovícico Medio",
+    "Late Ordovician": "Ordovícico Superior",
+    "Early Devonian": "Devónico Inferior",
+    "Middle Devonian": "Devónico Medio",
+    "Late Devonian": "Devónico Superior",
+    "Mississippian": "Misisípico",
+    "Pennsylvanian": "Pensilvánico",
+    "Cisuralian": "Cisuraliense",
+    "Guadalupian": "Guadalupiense",
+    "Lopingian": "Lopingiense",
+    "Llandovery": "Llandovery",
+    "Wenlock": "Wenlock",
+    "Ludlow": "Ludlow",
+    "Pridoli": "Přídolí",
+    "Ordovician": "Ordovícico",
+    "Silurian": "Silúrico",
+    "Devonian": "Devónico",
+    "Carboniferous": "Carbonífero",
+    "Permian": "Pérmico",
     "Paleogene": "Paleógeno",
     "Neogene": "Neógeno",
     "Quaternary": "Cuaternario",
@@ -62,6 +82,20 @@ _STAGES = {
     "Sinemurian": "Sinemuriense", "Thanetian": "Thanetiense", "Tithonian": "Titoniense",
     "Toarcian": "Toarciense", "Tortonian": "Tortoniense", "Turonian": "Turoniense",
     "Valanginian": "Valanginiense", "Ypresian": "Ypresiense", "Zanclean": "Zancliense",
+    # Paleozoic and Early Triassic (fossil fishes, Phase 3)
+    "Tremadocian": "Tremadociense", "Floian": "Floiense", "Dapingian": "Dapingiense",
+    "Darriwilian": "Darriwiliense", "Sandbian": "Sandbiense", "Katian": "Katiense",
+    "Hirnantian": "Hirnantiense", "Rhuddanian": "Rhuddaniense", "Aeronian": "Aeroniense",
+    "Telychian": "Telychiense", "Sheinwoodian": "Sheinwoodiense", "Homerian": "Homeriense",
+    "Gorstian": "Gorstiense", "Ludfordian": "Ludfordiense", "Lochkovian": "Lochkoviense",
+    "Pragian": "Pragiense", "Emsian": "Emsiense", "Eifelian": "Eifeliense",
+    "Givetian": "Givetiense", "Frasnian": "Frasniense", "Famennian": "Fameniense",
+    "Tournaisian": "Tournaisiense", "Visean": "Viseense", "Serpukhovian": "Serpujoviense",
+    "Bashkirian": "Bashkiriense", "Moscovian": "Moscoviense", "Kasimovian": "Kasimoviense",
+    "Gzhelian": "Gzheliense", "Asselian": "Asseliense", "Sakmarian": "Sakmariense",
+    "Artinskian": "Artinskiense", "Kungurian": "Kunguriense", "Roadian": "Roadiense",
+    "Wordian": "Wordiense", "Capitanian": "Capitaniense", "Wuchiapingian": "Wuchiapingiense",
+    "Changhsingian": "Changhsingiense", "Induan": "Induense", "Olenekian": "Olenekiense",
 }  # fmt: skip
 
 _WORDS = {" or ": " o ", " to ": " a ", " and ": " y "}
@@ -77,12 +111,15 @@ COUNTRIES_ES = {
     "Portugal": "Portugal", "Italy": "Italia", "Russia": "Rusia",
     "South Africa": "Sudáfrica", "Tanzania": "Tanzania", "Madagascar": "Madagascar",
     "New Mexico": "Nuevo México", "North Dakota": "Dakota del Norte",
+    "South Carolina": "Carolina del Sur", "North Carolina": "Carolina del Norte",
+    "Tula Oblast": "Óblast de Tula", "New Jersey": "Nueva Jersey",
     "South Dakota": "Dakota del Sur",
 }  # fmt: skip
 # Same name in both languages (not "untranslated").
 _SAME = {
     "Argentina", "Australia", "Austria", "China", "Crimea", "India", "Indonesia",
     "Mongolia", "Uruguay", "Alberta", "Arizona", "Colorado", "Montana", "Wyoming",
+    "Indiana", "Kansas", "Texas", "Utah", "Nebraska", "Alabama", "Mississippi",
 }  # fmt: skip
 
 GROUPS = {
@@ -99,6 +136,22 @@ GROUPS = {
     "other_archosaurs": {
         "es": ("arcosaurio", "Otros arcosaurios"),
         "en": ("archosaur", "Other archosaurs"),
+    },
+    # Marine reptiles and fossil fishes (Phase 3)
+    "ichthyosaurs": {"es": ("ictiosaurio", "Ictiosaurios"), "en": ("ichthyosaur", "Ichthyosaurs")},
+    "sauropterygians": {
+        "es": ("sauropterigio", "Sauropterigios"),
+        "en": ("sauropterygian", "Sauropterygians"),
+    },
+    "mosasaurs": {"es": ("mosasaurio", "Mosasaurios"), "en": ("mosasaur", "Mosasaurs")},
+    "placoderms": {"es": ("placodermo", "Placodermos"), "en": ("placoderm", "Placoderms")},
+    "cartilaginous_fishes": {
+        "es": ("condrictio", "Tiburones y otros condrictios"),
+        "en": ("cartilaginous fish", "Sharks and other cartilaginous fishes"),
+    },
+    "other_fishes": {
+        "es": ("pez", "Otros peces destacados"),
+        "en": ("fish", "Other notable fishes"),
     },
 }
 
@@ -282,7 +335,27 @@ def genus_aliases(genus: str | None) -> list[str]:
 
 # Periods and epochs by age (Ma, ICS 2023), so taxa dated only by a stage
 # ("Maastrichtian") or by PBDB ranges are found by "Cretácico".
-TIME_UNITS = [  # (oldest Ma, youngest Ma, English, Spanish)
+TIME_UNITS = [  # (oldest Ma, youngest Ma, English, Spanish); ICS chart, each period then its epochs
+    (486.85, 443.1, "Ordovician", "Ordovícico"),
+    (486.85, 471.3, "Early Ordovician", "Ordovícico Inferior"),
+    (471.3, 458.2, "Middle Ordovician", "Ordovícico Medio"),
+    (458.2, 443.1, "Late Ordovician", "Ordovícico Superior"),
+    (443.1, 419.62, "Silurian", "Silúrico"),
+    (443.1, 432.9, "Llandovery", "Llandovery"),
+    (432.9, 426.7, "Wenlock", "Wenlock"),
+    (426.7, 422.7, "Ludlow", "Ludlow"),
+    (422.7, 419.62, "Pridoli", "Přídolí"),
+    (419.62, 358.86, "Devonian", "Devónico"),
+    (419.62, 393.47, "Early Devonian", "Devónico Inferior"),
+    (393.47, 382.31, "Middle Devonian", "Devónico Medio"),
+    (382.31, 358.86, "Late Devonian", "Devónico Superior"),
+    (358.86, 298.9, "Carboniferous", "Carbonífero"),
+    (358.86, 323.4, "Mississippian", "Misisípico"),
+    (323.4, 298.9, "Pennsylvanian", "Pensilvánico"),
+    (298.9, 251.902, "Permian", "Pérmico"),
+    (298.9, 274.4, "Cisuralian", "Cisuraliense"),
+    (274.4, 259.51, "Guadalupian", "Guadalupiense"),
+    (259.51, 251.902, "Lopingian", "Lopingiense"),
     (251.902, 201.4, "Triassic", "Triásico"),
     (251.902, 247.2, "Early Triassic", "Triásico Inferior"),
     (247.2, 237.0, "Middle Triassic", "Triásico Medio"),
@@ -307,7 +380,10 @@ TIME_UNITS = [  # (oldest Ma, youngest Ma, English, Spanish)
 ]
 
 
-PERIODS = {"Triassic", "Jurassic", "Cretaceous", "Paleogene", "Neogene", "Quaternary"}
+PERIODS = {
+    "Ordovician", "Silurian", "Devonian", "Carboniferous", "Permian",
+    "Triassic", "Jurassic", "Cretaceous", "Paleogene", "Neogene", "Quaternary",
+}  # fmt: skip
 
 
 def time_units(max_ma: float | None, min_ma: float | None) -> list[tuple[str, str]]:

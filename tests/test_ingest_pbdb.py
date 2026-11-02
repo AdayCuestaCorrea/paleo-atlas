@@ -136,9 +136,23 @@ def test_scope_seed_gives_the_enabled_clades(tmp_path):
     assert [(c.block, c.priority, c.enabled) for c in every][-1] == ("fossil_fishes", 1, False)
 
 
-def test_the_real_scope_seed_starts_with_the_archosaurs_only():
-    blocks = {c.block for c in pbdb.scope_clades()}
-    assert blocks == {"archosaurs"}
+def test_the_real_scope_seed_covers_the_three_blocks_of_the_scope():
+    clades = pbdb.scope_clades()
+    assert {c.block for c in clades} == {"archosaurs", "marine_reptiles", "fossil_fishes"}
+    # every block has a root, used for occurrences and to verify articles in Wikidata
+    roots = {c.block for c in clades if c.block_root and c.wikidata_item}
+    assert roots == {"archosaurs", "marine_reptiles", "fossil_fishes"}
+
+
+def test_featured_fishes_are_asked_for_by_name(tmp_path):
+    seeds = tmp_path / "seeds"
+    seeds.mkdir()
+    (seeds / "featured_fishes.csv").write_text("genus,reason\nLeedsichthys,big\nTiktaalik,legs\n")
+    clade = pbdb.ScopeClade("fossil_fishes", "other_fishes", "featured_fishes", 1, True,
+                            True, "Q25241", "seed:featured_fishes")  # fmt: skip
+    assert clade.base_names(seeds) == "Leedsichthys,Tiktaalik"
+    plain = pbdb.ScopeClade("archosaurs", "birds", "Aves", 1, True)
+    assert plain.base_names(seeds) == "Aves"
 
 
 def test_catalog_asks_for_accepted_extinct_genera_once_a_month(tmp_path):

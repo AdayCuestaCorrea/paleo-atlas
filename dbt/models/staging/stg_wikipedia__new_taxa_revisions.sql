@@ -59,6 +59,19 @@ cleaned as (
         parse_warnings,
         len(parse_warnings) as parse_warning_count
     from source
+),
+
+-- Rows outside the scope of §4 (turtles, lizards, most bony fishes…) never enter.
+scoped as (
+    select
+        * replace (
+            {{ wikipedia_in_scope(
+                'taxonomic_block', 'taxon_group',
+                "split_part(taxon_name, ' ', 1) in (select genus from " ~ ref('featured_fishes') ~ ")",
+                "coalesce(notes_text, '') || ' ' || array_to_string(coalesce(notes_terms, []), ' ')"
+            ) }} as taxon_group
+        )
+    from cleaned
 )
 
-select * from cleaned
+select * from scoped where taxon_group is not null

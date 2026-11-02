@@ -16,3 +16,15 @@ def archosaur_text() -> str:
 @pytest.fixture(scope="session")
 def archosaur_page(archosaur_text: str) -> ParsedPage:
     return parse_page("2026 in archosaur paleontology", 1383165113, archosaur_text)
+
+
+@pytest.fixture(scope="session")
+def fish_page() -> ParsedPage:
+    path = FIXTURES / "wikipedia" / "2026_in_paleoichthyology.r1383218081.wikitext"
+    return parse_page("2026 in paleoichthyology", 1383218081, path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture(scope="session")
+def reptile_page() -> ParsedPage:
+    path = FIXTURES / "wikipedia" / "2026_in_reptile_paleontology.r1383217772.wikitext"
+    return parse_page("2026 in reptile paleontology", 1383217772, path.read_text(encoding="utf-8"))

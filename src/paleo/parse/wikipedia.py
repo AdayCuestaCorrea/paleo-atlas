@@ -326,10 +326,14 @@ def iter_sections(code: Wikicode) -> Iterator[tuple[list[str], Wikicode]]:
 
 
 def _header_fields(cells: list[Tag], warnings: list[str]) -> list[str | None]:
+    labels = [_plain(cell.contents).lower() for cell in cells]
     fields = []
-    for cell in cells:
-        label = _plain(cell.contents).lower()
+    for label in labels:
         mapped = COLUMN_MAP.get(label)
+        # Some tables (paleoichthyology) have both "Type locality" and "Location":
+        # then "Location" is the country.
+        if label == "location" and "type locality" in labels:
+            mapped = "country"
         if mapped is None:
             warnings.append(f"unknown column {label!r}")
         fields.append(mapped)

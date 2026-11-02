@@ -233,7 +233,9 @@ class SiteBuilder:
         known = [
             t for t in data.taxa if t["page_type"] != "new" and data.events.get(t["taxon_key"])
         ]
-        year_page = enabled_pages()[0].title(data.built_on.year)
+        # Each taxon cites the yearly page of its own block (§4).
+        year_pages = {pg.block: pg.title(data.built_on.year) for pg in enabled_pages()}
+        default_page = enabled_pages()[0].title(data.built_on.year)
         idx = self.indices
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []
@@ -254,7 +256,9 @@ class SiteBuilder:
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),
                           "basic_sources": basic_sources(
-                              taxon, data.events.get(key, []), year_page, lang)})
+                              taxon, data.events.get(key, []),
+                              year_pages.get(taxon.get("taxonomic_block"), default_page),
+                              lang)})
                 )  # fmt: skip
             out.append(
                 Page(lang, "recaps", None, "recaps.html.j2",

@@ -170,6 +170,15 @@ class ScopeClade:
     enabled: bool
     block_root: bool = False
     wikidata_item: str | None = None
+    pbdb_query: str | None = None  # "seed:<name>": the genera of that seed
+
+    def base_names(self, seeds: Path | None = None) -> str:
+        """Value of PBDB's base_name parameter: the clade, or a seed's genus list."""
+        if not self.pbdb_query or not self.pbdb_query.startswith("seed:"):
+            return self.pbdb_base_name
+        folder = seeds or project_root() / "dbt" / "seeds"
+        with (folder / f"{self.pbdb_query[5:]}.csv").open(encoding="utf-8", newline="") as f:
+            return ",".join(r["genus"].strip() for r in csv.DictReader(f) if r["genus"].strip())
 
 
 @dataclass(frozen=True)
@@ -193,6 +202,7 @@ def scope_clades(seed: Path | None = None, *, enabled_only: bool = True) -> list
                 r["enabled"].strip().lower() == "true",
                 (r.get("block_root") or "").strip().lower() == "true",
                 (r.get("wikidata_item") or "").strip() or None,
+                (r.get("pbdb_query") or "").strip() or None,
             )
             for r in csv.DictReader(f)
         ]
@@ -241,7 +251,7 @@ def ingest_catalog(
     ]
     records = new_versions = 0
     for clade in pending:
-        rows = fetch_catalog(client, clade.pbdb_base_name)
+        rows = fetch_catalog(client, clade.base_names())
         payload = {"base_name": clade.pbdb_base_name, "show": CATALOG_SHOW, "records": rows}
         new_versions += catalog.save_if_changed(clade.pbdb_base_name, payload, today).created
         records += len(rows)
@@ -294,7 +304,7 @@ def ingest_occurrences(
     ]
     records = new_versions = 0
     for clade in pending:
-        rows = fetch_occurrences(client, clade.pbdb_base_name)
+        rows = fetch_occurrences(client, clade.base_names())
         payload = {"base_name": clade.pbdb_base_name, "show": OCCURRENCES_SHOW, "records": rows}
         new_versions += store_.save_if_changed(clade.pbdb_base_name, payload, today).created
         records += len(rows)

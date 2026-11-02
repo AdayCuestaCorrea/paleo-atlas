@@ -26,7 +26,9 @@ seeds:
       groups on the site. `block_root` marks the clade that
       contains the whole block: its occurrences are downloaded once for the block,
       and a Wikipedia article of a genus is only trusted when its Wikidata item
-      descends from the root's `wikidata_item` (P171).
+      descends from the root's `wikidata_item` (P171). `pbdb_query` replaces the
+      clade in the PBDB requests: `seed:featured_fishes` asks for the genera listed in
+      that seed (famous fishes outside Placodermi and Chondrichthyes).
       Read by `paleo ingest pbdb` too (src/paleo/ingest/pbdb.py), so the scope
       lives in one place.
     columns:
@@ -38,6 +40,14 @@ seeds:
           - accepted_values:
               arguments:
                 values: [archosaurs, marine_reptiles, fossil_fishes]
+  - name: featured_fishes
+    description: >
+      Hand-picked famous extinct fishes outside Placodermi and Chondrichthyes
+      (decision of 2026-11-02), with the reason each one is in. Spelled as in PBDB
+      (Eustenopteron). Edit freely: one row per genus.
+    columns:
+      - name: genus
+        data_tests: [unique, not_null]
   - name: countries
     description: >
       PBDB country codes (data1.2/config?show=countries) with English and Spanish

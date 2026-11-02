@@ -3,8 +3,9 @@
 -- only, never published (ALCANCE.md §19).
 with source as (
     select * from {{ read_wikipedia_interim('research') }}
-)
+),
 
+cleaned as (
 select
     research_id,
     page_title,
@@ -28,3 +29,19 @@ select
     parse_warnings,
     len(parse_warnings) as parse_warning_count
 from source
+),
+
+-- Studies outside the scope of §4 (turtles, lizards, most bony fishes…) never enter.
+scoped as (
+    select
+        * replace (
+            {{ wikipedia_in_scope(
+                'taxonomic_block', 'taxon_group',
+                "exists (select 1 from " ~ ref('featured_fishes') ~ " as f where text_internal like '%' || f.genus || '%')",
+                "coalesce(text_internal, '')"
+            ) }} as taxon_group
+        )
+    from cleaned
+)
+
+select * from scoped where taxon_group is not null

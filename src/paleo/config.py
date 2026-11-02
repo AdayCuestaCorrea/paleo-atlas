@@ -69,11 +69,12 @@ class WikipediaPage:
         return self.title_template.format(year=year)
 
 
-# ALCANCE.md §4: archosaurs in Phase 1; marine reptiles and fossil fishes in Phase 3.
+# ALCANCE.md §4: archosaurs since Phase 1; marine reptiles and fossil fishes since Phase 3
+# (only their sections in scope get pages: dbt macro wikipedia_group).
 WIKIPEDIA_PAGES: tuple[WikipediaPage, ...] = (
     WikipediaPage("archosaurs", "{year} in archosaur paleontology", enabled=True),
-    WikipediaPage("marine_reptiles", "{year} in reptile paleontology", enabled=False),
-    WikipediaPage("fossil_fishes", "{year} in paleoichthyology", enabled=False),
+    WikipediaPage("marine_reptiles", "{year} in reptile paleontology", enabled=True),
+    WikipediaPage("fossil_fishes", "{year} in paleoichthyology", enabled=True),
 )
 
 

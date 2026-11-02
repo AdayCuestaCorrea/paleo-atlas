@@ -11,8 +11,13 @@ genera as (
     from {{ ref('stg_pbdb__catalog') }} as c
     inner join scope as s on s.pbdb_base_name = c.base_name
     where c.taxon_rank = 'genus'
+    -- PBDB sometimes lists the same taxon twice in one download (one record with its
+    -- occurrences, one without): the one with more occurrences wins, and the rest of
+    -- the order only makes the choice the same on every build.
     qualify row_number() over (
-        partition by c.pbdb_taxon_no order by s.priority, c.base_name
+        partition by c.pbdb_taxon_no
+        order by s.priority, c.base_name, c.occurrence_count desc nulls last,
+                 c.attribution nulls last, c.parent_name, c.family_name nulls last
     ) = 1
 ),
 

@@ -35,6 +35,7 @@ class SiteData:
     images: dict[str, list[dict[str, Any]]] = field(default_factory=dict)  # gallery per taxon
     last_checked: dt.date | None = None  # last change detection (pipeline run log)
     stats: dict[str, Any] = field(default_factory=dict)  # verification figures (§12.1, §17)
+    gbif: dict[str, Any] | None = None  # the GBIF download the specimens come from (cite it)
 
     @cached_property
     def by_key(self) -> dict[str, dict[str, Any]]:
@@ -120,6 +121,18 @@ def load(warehouse: Path) -> SiteData:
                 (select count(*) from main.dim_study where in_doaj) as in_doaj
             """,
         )[0]
+        gbif = _rows(
+            con,
+            """
+            select d.doi, d.citation, d.total_records, d.created_at::date as created_on,
+                   (select sum(gbif_specimens) from main.dim_taxon) as specimens,
+                   (select count(gbif_specimens) from main.dim_taxon) as genera
+            from main.stg_gbif__downloads as d
+            where d.doi in (select gbif_doi from main.dim_taxon)
+            order by d.created_at desc
+            limit 1
+            """,
+        )
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -128,6 +141,7 @@ def load(warehouse: Path) -> SiteData:
     return SiteData(
         taxa, dict(events), texts, dict(facts), dict(citations),
         images=dict(images), last_checked=last_checked, stats=stats,
+        gbif=gbif[0] if gbif else None,
     )  # fmt: skip
 
 

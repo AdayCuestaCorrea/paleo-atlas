@@ -1,0 +1,48 @@
+{
+ "key": "0023284-261023074918325",
+ "source": "gbif",
+ "kind": "downloads",
+ "version_date": "2026-11-02",
+ "fetched_at": "2026-11-02T22:03:43+00:00",
+ "payload": {
+  "key": "0023284-261023074918325",
+  "doi": "10.15468/dl.8v87yz",
+  "format": "SIMPLE_PARQUET",
+  "predicate": {
+   "type": "and",
+   "predicates": [
+    {
+     "type": "equals",
+     "key": "BASIS_OF_RECORD",
+     "value": "FOSSIL_SPECIMEN"
+    },
+    {
+     "type": "in",
+     "key": "TAXON_KEY",
+     "values": [
+      "44"
+     ]
+    },
+    {
+     "type": "not",
+     "predicate": {
+      "type": "in",
+      "key": "TAXON_KEY",
+      "values": [
+       "359",
+       "11418114"
+      ]
+     }
+    }
+   ]
+  },
+  "status": "SUCCEEDED",
+  "created": "2026-11-02T19:27:53.690+00:00",
+  "modified": "2026-11-02T21:57:02.801+00:00",
+  "total_records": 932494,
+  "number_datasets": 0,
+  "size_bytes": 46625638,
+  "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+  "citation": "GBIF.org (2026-11-02) GBIF Occurrence Download https://doi.org/10.15468/dl.8v87yz"
+ }
+}

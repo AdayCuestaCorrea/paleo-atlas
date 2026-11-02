@@ -20,11 +20,15 @@ def unpack(download_zip: Path) -> str:
     """Unzip a simple download next to itself; returns the glob of its data files.
 
     SIMPLE_PARQUET zips hold a folder ``occurrence.parquet/`` of part files without
-    extension; SIMPLE_CSV zips hold one tab-separated ``.csv``."""
+    extension, some of them empty (0 bytes, not valid Parquet: they are skipped);
+    SIMPLE_CSV zips hold one tab-separated ``.csv``."""
     folder = download_zip.with_suffix("")
     if not folder.exists():
         with zipfile.ZipFile(download_zip) as z:
-            z.extractall(folder)
+            z.extractall(folder, members=[m for m in z.infolist() if m.file_size > 0])
+    for empty in folder.rglob("*"):
+        if empty.is_file() and empty.stat().st_size == 0:
+            empty.unlink()
     parts = next(folder.rglob("occurrence.parquet"), None)
     if parts is not None and parts.is_dir():
         return str(parts / "*")
@@ -78,16 +82,62 @@ def reconcile(key: str, engine: str, out_dir: Path | None = None) -> tuple[dict[
     genera = export_genera(data / "cache" / "gbif" / key / "pbdb_genera.parquet")
     extracts = data / "raw" / "gbif" / "extract"
     out = out_dir or extracts / key
-    if out_dir is None and extracts.exists():
-        for old in extracts.iterdir():  # one extract at a time; git keeps the history
-            shutil.rmtree(old)
-    elif out.exists():
-        shutil.rmtree(out)
+    fresh = out.with_name(f".{out.name}.new")
+    if fresh.exists():
+        shutil.rmtree(fresh)
     start = time.perf_counter()
     if engine == "duckdb":
         from paleo.gbif_job.duckdb_job import run
 
-        counts = run(gbif_files, str(genera), out)
+        counts = run(gbif_files, str(genera), fresh)
     else:
-        counts = spark_job().run(gbif_files, str(genera), str(out))
-    return counts, time.perf_counter() - start
+        counts = spark_job().run(gbif_files, str(genera), str(fresh))
+    seconds = time.perf_counter() - start
+    if engine == "spark":
+        _single_files(fresh)
+    if out.exists() and same_content(out, fresh):
+        # Same rows: keep the files as they are. The two engines write the same data
+        # with different bytes, and the data branch must not change for nothing.
+        shutil.rmtree(fresh)
+        return counts, seconds
+    if out_dir is None and extracts.exists():
+        for old in extracts.iterdir():  # one extract at a time; git keeps the history
+            if old != fresh:
+                shutil.rmtree(old)
+    elif out.exists():
+        shutil.rmtree(out)
+    fresh.rename(out)
+    return counts, seconds
+
+
+def same_content(a: Path, b: Path) -> bool:
+    """True when two extracts hold the same rows in every output (whatever the bytes)."""
+    from paleo.gbif_job.spec import OUTPUTS
+
+    def rows(folder: Path, name: str) -> list[str]:
+        target = folder / f"{name}.parquet"
+        if not target.exists():
+            return []
+        con = duckdb.connect()
+        try:
+            return sorted(map(repr, con.execute(f"select * from '{target}'").fetchall()))
+        finally:
+            con.close()
+
+    return all(rows(a, name) == rows(b, name) for name in OUTPUTS)
+
+
+def _single_files(out: Path) -> None:
+    """Spark writes each output as a folder (one part file, _SUCCESS, .crc files): keep
+    just the part file, as ``<name>.parquet``, the same layout as the DuckDB job."""
+    from paleo.gbif_job.spec import OUTPUTS
+
+    for name in OUTPUTS:
+        folder = out / f"{name}.parquet"
+        if not folder.is_dir():
+            continue
+        (part,) = folder.glob("part-*.parquet")
+        tmp = out / f".{name}.parquet"
+        part.rename(tmp)
+        shutil.rmtree(folder)
+        tmp.rename(folder)

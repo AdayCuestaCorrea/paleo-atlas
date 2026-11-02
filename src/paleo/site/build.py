@@ -269,7 +269,8 @@ class SiteBuilder:
                     Page(lang, "recap", key, "recap.html.j2", {"week": key, "events": weeks[key]})
                 )
             for kind in ("sources", "assess", "about"):
-                out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", {}))
+                extra = {"gbif": data.gbif} if kind == "sources" else {}
+                out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", extra))
             out.append(Page(lang, "search", None, "search.html.j2", {}))
             out.append(Page(lang, "encyclopedia", None, "encyclopedia.html.j2", {}))
             for key, families in idx.groups.items():

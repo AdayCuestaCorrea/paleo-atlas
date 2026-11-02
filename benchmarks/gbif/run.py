@@ -11,7 +11,7 @@ same rows) it runs the job ``--repeats`` times, each in a fresh process, and rec
 * rows per second;
 * lines of code of each implementation.
 
-Writes benchmarks/gbif/results.json and the table of benchmarks/gbif/results.md.
+Writes benchmarks/gbif/results.json; benchmarks/gbif/results.md reports and discusses it.
 """
 
 from __future__ import annotations
@@ -127,14 +127,14 @@ def run_once(engine: str, gbif: str, genera: str, out: Path) -> dict:
 def subset(gbif: str, fraction: float, folder: Path) -> tuple[str, int]:
     """The same rows for both engines: gbifid hash below the fraction."""
     if fraction >= 1:
-        rows = duckdb.sql(f"select count(*) from read_parquet('{gbif}')").fetchone()[0]
+        rows = duckdb.execute(f"select count(*) from read_parquet('{gbif}')").fetchone()[0]
         return gbif, rows
     target = folder / f"gbif_{int(fraction * 100)}.parquet"
-    duckdb.sql(
+    duckdb.execute(
         f"copy (select * from read_parquet('{gbif}') "
         f"where hash(gbifid) % 1000 < {int(fraction * 1000)}) to '{target}' (format parquet)"
     )
-    return str(target), duckdb.sql(f"select count(*) from '{target}'").fetchone()[0]
+    return str(target), duckdb.execute(f"select count(*) from '{target}'").fetchone()[0]
 
 
 def machine() -> dict:

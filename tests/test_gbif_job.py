@@ -11,17 +11,20 @@ PBDB = [("Tyrannosaurus", "Tyrannosauridae"), ("Plateosaurus", "Plateosauridae")
         ("Allosaurus", "Allosauridae"), ("Proa", None), ("Prob", None)]  # fmt: skip
 
 
-def rec(gid, genus, verbatim, family, country, inst, lat=None, lon=None, name=None):
+def rec(gid, genus, verbatim, family, country, inst, lat=None, lon=None, name=None, issue=()):
     """A GBIF record: interpreted genus, verbatim (original) name, family…"""
     name = name if name is not None else (f"{genus} sp." if genus else "")
-    return (gid, genus, name, verbatim, family, country, lat, lon, inst)
+    return (gid, genus, name, verbatim, family, country, lat, lon, inst, list(issue))
 
 
 T = "Tyrannosauridae"
+MISMATCH = ["GEODETIC_DATUM_ASSUMED_WGS84", "COUNTRY_COORDINATE_MISMATCH"]
 GBIF = [
     rec("1", "Tyrannosaurus", "Tyrannosaurus rex", T, "US", "AMNH", "47.3", "-106.9"),
     rec("2", "Tyrannosaurus", "Tyrannosaurus rex", T, "CA", "ROM", "51.0", "-112.0"),
     rec("3", "Tyrannosaurus", "Tyrannosaurus rex", T, "US", "AMNH", "47.4", "-106.8"),
+    # a specimen, but GBIF says its point is not in the US: no point on the map
+    rec("10", "Tyrannosaurus", None, T, "US", "ANSP", "45.7", "45.7", issue=MISMATCH),
     # GBIF moved the name; the verbatim genus is the PBDB one
     rec("4", "Dinosaurus", "Plateosaurus erlenbergiensis", "Plateosauridae", "DE", "SMNS"),
     # one letter off, same family
@@ -34,12 +37,14 @@ GBIF = [
     rec("9", "Megalosaurus", "Megalosaurus bucklandii", "Megalosauridae", "UK", "OUM"),
 ]
 COLUMNS = ["gbifID", "genus", "scientificName", "verbatimScientificName", "family",
-           "countryCode", "decimalLatitude", "decimalLongitude", "institutionCode"]  # fmt: skip
+           "countryCode", "decimalLatitude", "decimalLongitude", "institutionCode",
+           "issue"]  # fmt: skip
 
 
 def write_inputs(tmp_path):
     con = duckdb.connect()
-    con.execute(f"create table g ({', '.join(f'{c} varchar' for c in COLUMNS)})")
+    types = ", ".join(f"{c} varchar[]" if c == "issue" else f"{c} varchar" for c in COLUMNS)
+    con.execute(f"create table g ({types})")
     con.executemany(f"insert into g values ({', '.join('?' * len(COLUMNS))})", GBIF)
     con.execute(f"copy g to '{tmp_path}/gbif.parquet' (format parquet)")
     con.execute("create table p (taxon_name varchar, family_name varchar)")
@@ -58,13 +63,14 @@ def read(path, name):
 def test_reconciliation_and_aggregates_in_duckdb(tmp_path):
     gbif, pbdb = write_inputs(tmp_path)
     counts = duckdb_job.run(gbif, pbdb, tmp_path / "out")
-    assert counts == {"genus_specimens": 3, "institutions": 4, "countries": 3, "unmatched": 4}
+    assert counts == {"genus_specimens": 3, "institutions": 5, "countries": 3, "unmatched": 4}
     rows = {r[0]: r for r in read(tmp_path / "out", "genus_specimens")}
     t = rows["Tyrannosaurus"]
-    assert t[1:4] == (3, 2, ["US", "CA"])  # specimens, institutions, countries (most first)
+    assert t[1:4] == (4, 3, ["US", "CA"])  # specimens, institutions, countries (most first)
     # points rounded to 0.5 degrees: records 1 and 3 fall in the same cell
     assert t[4] == [{"lat": 47.5, "lon": -107.0, "n": 2}, {"lat": 51.0, "lon": -112.0, "n": 1}]
-    assert t[6] == [{"code": "AMNH", "n": 2}, {"code": "ROM", "n": 1}]  # top institutions
+    # top institutions: most specimens first, then by code
+    assert t[6] == [{"code": "AMNH", "n": 2}, {"code": "ANSP", "n": 1}, {"code": "ROM", "n": 1}]
     assert rows["Plateosaurus"][5] == [{"method": "synonym", "n": 1}]
     assert rows["Allosaurus"][5] == [{"method": "typo", "n": 1}]
     unmatched = {r[0]: r[2] for r in read(tmp_path / "out", "unmatched")}
@@ -91,3 +97,21 @@ def test_spark_writes_the_same_extract_as_duckdb(tmp_path):
         assert sorted(map(str, read(tmp_path / "duck", name))) == sorted(
             map(str, read(tmp_path / "spark", name))
         ), name
+
+
+def test_an_extract_with_the_same_rows_counts_as_unchanged(tmp_path):
+    from paleo.gbif_job.run import same_content
+
+    def extract(folder, rows):
+        folder.mkdir()
+        con = duckdb.connect()
+        con.execute("create table c (country_code varchar, specimens bigint)")
+        con.executemany("insert into c values (?, ?)", rows)
+        con.execute(f"copy c to '{folder}/countries.parquet' (format parquet)")
+        con.close()
+        return folder
+
+    a = extract(tmp_path / "a", [("US", 3), ("CA", 1)])
+    b = extract(tmp_path / "b", [("CA", 1), ("US", 3)])  # same rows, another order
+    c = extract(tmp_path / "c", [("CA", 1), ("US", 4)])
+    assert same_content(a, b) and not same_content(a, c)

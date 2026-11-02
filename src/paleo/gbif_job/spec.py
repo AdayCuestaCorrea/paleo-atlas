@@ -3,7 +3,8 @@
 Input
   * GBIF records (simple download, columns lower-cased): gbifid, genus,
     scientificname, verbatimscientificname, family, countrycode, decimallatitude,
-    decimallongitude, institutioncode.
+    decimallongitude, institutioncode, and issue (GBIF's quality flags: a list in
+    Parquet, a ';'-separated string in CSV; optional).
   * PBDB genera of the encyclopedia: taxon_name, family_name.
 
 Reconciliation, per distinct GBIF name (a few thousand), in this order:
@@ -13,6 +14,9 @@ Reconciliation, per distinct GBIF name (a few thousand), in this order:
   3. ``typo``:     one edit away (Levenshtein <= 1) from exactly one PBDB genus with
                    the same first letter and the same family (or no family known).
   4. otherwise ``unmatched``, with a reason: ``no_name`` or ``not_in_catalog``.
+
+Coordinates: a record flagged with one of COORDINATE_ISSUES (e.g. the point is not
+in the country it names) still counts as a specimen, but gives no point on the map.
 
 Outputs (Parquet, rows sorted by their key so both engines write the same bytes of data):
   * genus_specimens: genus, specimens, institutions, countries (codes, most first),
@@ -32,4 +36,10 @@ OUTPUTS = ("genus_specimens", "institutions", "countries", "unmatched")
 GBIF_COLUMNS = (
     "gbifid", "genus", "scientificname", "verbatimscientificname", "family",
     "countrycode", "decimallatitude", "decimallongitude", "institutioncode",
+)  # fmt: skip
+# GBIF flags that make a record's coordinates unusable for the map (the record still counts).
+# PRESUMED_NEGATED_* / PRESUMED_SWAPPED_* are not here: GBIF already fixed those coordinates.
+COORDINATE_ISSUES = (
+    "ZERO_COORDINATE", "COORDINATE_INVALID", "COORDINATE_OUT_OF_RANGE",
+    "COUNTRY_COORDINATE_MISMATCH", "CONTINENT_COORDINATE_MISMATCH",
 )  # fmt: skip

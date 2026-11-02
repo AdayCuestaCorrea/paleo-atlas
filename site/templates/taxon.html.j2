@@ -127,9 +127,10 @@
 
   {% set pbdb_points = taxon.pbdb_points or [] %}
   {% set gbif_points = taxon.gbif_points or [] %}
-  {% if pbdb_points or gbif_points %}
+  {% if pbdb_points or gbif_points or taxon.gbif_top_institutions %}
   <section class="block" id="hallazgos">
     <h2>{{ T.map_title }}</h2>
+    {% if pbdb_points or gbif_points %}
     <figure class="map">
       <svg viewBox="-180 -90 360 180" role="img" aria-label="{{ T.map_title }}: {{ taxon.taxon_name }}">
         <use href="{{ base }}/static/world.svg#land" class="map__land" x="-180" y="-90" width="360" height="180"></use>
@@ -138,10 +139,11 @@
       </svg>
       <figcaption>
         {% if pbdb_points %}<span class="map__key map__key--pbdb"></span> {{ t('map_pbdb', n=pbdb_points | sum(attribute='n')) }}{% endif %}
-        {% if gbif_points %}<span class="map__key map__key--gbif"></span> {{ t('map_gbif', n=gbif_points | sum(attribute='n')) }}{% endif %}
+        {% if gbif_points %}<span class="map__key map__key--gbif"></span> {{ t('map_gbif', n=gbif_points | sum(attribute='n'), total=taxon.gbif_specimens) }}{% endif %}
         <br><span class="note">{{ T.map_note }}</span>
       </figcaption>
     </figure>
+    {% endif %}
     {% if taxon.gbif_top_institutions %}
     <h3>{{ T.museums_title }}</h3>
     <ul class="museums">

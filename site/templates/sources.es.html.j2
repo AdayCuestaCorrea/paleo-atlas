@@ -8,6 +8,7 @@
 <ul>
   <li><strong>Wikipedia</strong> (en inglés y en español): las páginas anuales de paleontología y los artículos de cada especie. Su texto tiene licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>; sus autores figuran en el historial de cada artículo. <em>No copiamos su texto</em>: solo extraemos hechos, que se redactan de nuevo.</li>
   <li><strong>Paleobiology Database (PBDB)</strong>: clasificación, rangos temporales y hallazgos. Licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>.</li>
+  {% if gbif %}<li><strong>GBIF</strong>: los especímenes fósiles de museos y colecciones de cada ficha (dónde se encontraron y qué instituciones los guardan); {{ "{:,}".format(gbif.specimens) | replace(",", ".") }} especímenes de {{ "{:,}".format(gbif.genera) | replace(",", ".") }} géneros, de la descarga del {{ fmt_date(gbif.created_on) }}: <cite>GBIF.org ({{ gbif.created_on }}) GBIF Occurrence Download <a href="https://doi.org/{{ gbif.doi }}">https://doi.org/{{ gbif.doi }}</a></cite>. Cada registro tiene su licencia (CC0, CC BY o CC BY-NC); solo publicamos recuentos y zonas de unos 50 km, nunca registros sueltos.</li>{% endif %}
   <li><strong>Crossref</strong>: metadatos de los estudios (revista, fecha, DOI, retracciones y correcciones, con datos de Retraction Watch). Los resúmenes de los artículos pueden tener derechos de autor: nunca los publicamos.</li>
 </ul>
 <h2>Imágenes</h2>

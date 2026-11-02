@@ -103,7 +103,11 @@ def step_task(step: Step, **kwargs) -> BashOperator:
 
 
 def checkout_task() -> BashOperator:
-    """Like actions/checkout of the data branch: the latest published data, nothing else."""
+    """Like actions/checkout of the data branch: the latest published data, nothing else.
+
+    The branch is the one the clone follows (``data``, or the data branch of a phase in
+    progress: init-work.sh BRANCH). ``cache/`` survives the clean: it is local and never
+    versioned (the GBIF download, abstracts), as a cache restored by Actions would be."""
     script = f"""
 set -euo pipefail
 if [ ! -d {DATA}/.git ]; then
@@ -111,9 +115,10 @@ if [ ! -d {DATA}/.git ]; then
   exit 1
 fi
 cd {DATA}
-{STEP} checkout_data -- bash -c 'git fetch --quiet origin data \\
-  && git reset --quiet --hard origin/data && git clean -qfdx'
-git log -1 --format='data branch at %h: %s'
+branch=$(git rev-parse --abbrev-ref HEAD)
+{STEP} checkout_data -- bash -c "git fetch --quiet origin $branch \\
+  && git reset --quiet --hard origin/$branch && git clean -qfdx -e /cache/"
+git log -1 --format="$branch branch at %h: %s"
 """
     return BashOperator(
         task_id="checkout_data",
@@ -144,7 +149,8 @@ if [ -z "$(git diff --cached --name-only | grep -v '^runs/')" ]; then
 fi
 git -c user.name="Paleo Atlas (local Airflow)" -c user.email="airflow@localhost" \\
   commit -q -m "$message (local Airflow, not pushed)"
-git show --stat --format='%h %s' HEAD | head -40
+# sed reads everything: head would close the pipe early and fail with SIGPIPE (141)
+git show --stat --format='%h %s' HEAD | sed -n '1,40p'
 """
     return BashOperator(
         task_id="commit_data", bash_command=script, trigger_rule=TriggerRule.ALL_DONE

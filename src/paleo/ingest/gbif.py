@@ -34,6 +34,9 @@ from paleo.store import RawStore
 
 GBIF_API = "https://api.gbif.org/v1"
 FORMATS = ("SIMPLE_PARQUET", "SIMPLE_CSV")  # preferred first
+# A monthly download: a retry or a second run within this many days reuses the last one
+# (same predicate) instead of asking GBIF for hours of work again.
+REUSE_DAYS = 28
 DONE = {"SUCCEEDED"}
 FAILED = {"FAILED", "KILLED", "CANCELLED", "FILE_ERASED"}
 log = logging.getLogger(__name__)
@@ -176,6 +179,26 @@ def record(status: dict[str, Any], pred: dict[str, Any], fmt: str) -> dict[str, 
     }
 
 
+def recent_download(
+    pred: dict[str, Any], today: dt.date | None = None, raw_root: Path | None = None
+) -> dict[str, Any] | None:
+    """The newest SUCCEEDED download with this predicate created less than REUSE_DAYS ago."""
+    today = today or dt.date.today()
+    downloads = store(raw_root)
+    best = None
+    for key in downloads.stored_keys():
+        latest = downloads.latest(key)
+        rec = latest["payload"] if latest else {}
+        if rec.get("status") != "SUCCEEDED" or rec.get("predicate") != pred:
+            continue
+        created = dt.date.fromisoformat((rec.get("created") or "")[:10] or "1970-01-01")
+        if (today - created).days >= REUSE_DAYS:
+            continue
+        if best is None or rec["created"] > best["created"]:
+            best = rec
+    return best
+
+
 def extract(
     client: httpx.Client,
     *,
@@ -189,6 +212,12 @@ def extract(
     keep, drop = taxa_filter()
     pred = predicate(keep, drop)
     fmt = FORMATS[0]
+    if key is None and (recent := recent_download(pred, today, raw_root)):
+        target = cache_dir(recent["key"]) / f"{recent['key']}.zip"
+        if target.exists():
+            log.info("GBIF download %s is recent: reused", recent["key"])
+            return recent, target
+        key = recent["key"]  # recorded but not in this machine's cache: fetch it again
     if key is None:
         try:
             key = request_download(client, creds, pred, fmt)

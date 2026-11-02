@@ -80,3 +80,29 @@ def test_a_failed_download_stops_with_its_status():
         pytest.raises(gbif.GbifError, match="FAILED"),
     ):
         gbif.wait_download(client, "k", sleep=lambda s: None)
+
+
+def test_a_recent_download_is_reused_and_an_old_one_is_not(tmp_path, creds, monkeypatch):
+    import datetime as dt
+
+    monkeypatch.setenv("PALEO_DATA_DIR", str(tmp_path / "data"))
+    pred = gbif.predicate(*gbif.taxa_filter())
+    rec = {"key": "0001-2026", "status": "SUCCEEDED", "predicate": pred,
+           "created": "2026-11-02T10:00:00", "doi": "10.15468/dl.abc"}  # fmt: skip
+    gbif.store(tmp_path / "raw").save_if_changed("0001-2026", rec, dt.date(2026, 11, 2))
+    gbif.store(tmp_path / "raw").flush()
+    zip_path = gbif.cache_dir("0001-2026") / "0001-2026.zip"
+    zip_path.parent.mkdir(parents=True)
+    zip_path.write_bytes(b"PK..")
+    requests = []
+
+    def handler(request):
+        requests.append(request.url.path)
+        return httpx.Response(400, text="no")
+
+    with make_client(transport=httpx.MockTransport(handler)) as client:
+        got, path = gbif.extract(client, raw_root=tmp_path / "raw", today=dt.date(2026, 11, 20))
+        assert (got["key"], path, requests) == ("0001-2026", zip_path, [])  # no network
+        with pytest.raises(gbif.GbifError, match="HTTP 400"):  # 31 days later: a new request
+            gbif.extract(client, raw_root=tmp_path / "raw", today=dt.date(2026, 12, 3))
+    assert requests and requests[0].endswith("/download/request")

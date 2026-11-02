@@ -13,6 +13,7 @@ import sys
 
 from pyspark.sql import DataFrame, SparkSession
 from pyspark.sql import functions as F
+from pyspark.sql.types import ArrayType
 
 GBIF_COLUMNS = (
     "gbifid",
@@ -25,6 +26,10 @@ GBIF_COLUMNS = (
     "decimallongitude",
     "institutioncode",
 )  # fmt: skip  (paleo.gbif_job.spec; repeated so the job runs without the package)
+COORDINATE_ISSUES = (
+    "ZERO_COORDINATE", "COORDINATE_INVALID", "COORDINATE_OUT_OF_RANGE",
+    "COUNTRY_COORDINATE_MISMATCH", "CONTINENT_COORDINATE_MISMATCH",
+)  # fmt: skip
 POINT_STEP = 0.5
 TOP_UNMATCHED = 500
 TOP_INSTITUTIONS = 5
@@ -38,6 +43,7 @@ def session(memory: str | None = None) -> SparkSession:
         SparkSession.builder.master("local[*]")
         .appName("paleo-gbif-reconcile")
         .config("spark.ui.enabled", "false")
+        .config("spark.ui.showConsoleProgress", "false")
         .config("spark.driver.host", "127.0.0.1")
         .config("spark.driver.bindAddress", "127.0.0.1")
         .config("spark.sql.session.timeZone", "UTC")
@@ -53,17 +59,31 @@ def _nullif_empty(col):
     return F.when(col == "", None).otherwise(col)  # as nullif(x, '') in DuckDB
 
 
+def _flagged(raw: DataFrame, issue: str | None):
+    """True when the record has a COORDINATE_ISSUES flag (array in Parquet, string in CSV)."""
+    if issue is None:
+        return F.lit(False)
+    col = F.col(f"`{issue}`")
+    if isinstance(raw.schema[issue].dataType, ArrayType):
+        hit = F.arrays_overlap(col, F.array(*[F.lit(f) for f in COORDINATE_ISSUES]))
+    else:
+        hit = col.rlike(f"(^|;)({'|'.join(COORDINATE_ISSUES)})(;|$)")
+    return F.coalesce(hit, F.lit(False))
+
+
 def load(spark: SparkSession, gbif: str, pbdb_genera: str) -> tuple[DataFrame, DataFrame]:
     if gbif.endswith((".csv", ".csv.gz", ".txt")):
         raw = spark.read.options(header=True, sep="\t", quote="").csv(gbif)
     else:
-        raw = spark.read.parquet(gbif)
+        # A folder of part files: give Spark the folder, not the glob (no metadata warning).
+        raw = spark.read.parquet(gbif.removesuffix("/*"))
     actual = {c.lower(): c for c in raw.columns}
     g = raw.select(
         *[
             (F.col(f"`{actual[c]}`") if c in actual else F.lit(None)).cast("string").alias(c)
             for c in GBIF_COLUMNS
-        ]
+        ],
+        _flagged(raw, actual.get("issue")).alias("coords_flagged"),
     )
     g = (
         g.withColumn(
@@ -121,6 +141,12 @@ def reconcile(g: DataFrame, pbdb: DataFrame) -> tuple[DataFrame, DataFrame]:
     return names, exact.unionByName(synonym).unionByName(typo)
 
 
+def _cell(coordinate: str):
+    """Coordinate rounded to POINT_STEP; none when GBIF flagged the record's coordinates."""
+    rounded = F.floor(F.col(coordinate).try_cast("double") / POINT_STEP + 0.5) * POINT_STEP
+    return F.when(~F.col("g.coords_flagged"), rounded)
+
+
 def aggregate(g: DataFrame, names: DataFrame, resolved: DataFrame) -> dict[str, DataFrame]:
     r = resolved.alias("r")
     matched = (
@@ -135,14 +161,8 @@ def aggregate(g: DataFrame, names: DataFrame, resolved: DataFrame) -> dict[str, 
             "g.*",
             F.col("r.genus").alias("pbdb_genus"),
             F.col("r.method").alias("method"),
-            (
-                F.floor(F.col("g.decimallatitude").try_cast("double") / POINT_STEP + 0.5)
-                * POINT_STEP
-            ).alias("lat"),
-            (
-                F.floor(F.col("g.decimallongitude").try_cast("double") / POINT_STEP + 0.5)
-                * POINT_STEP
-            ).alias("lon"),
+            _cell("g.decimallatitude").alias("lat"),
+            _cell("g.decimallongitude").alias("lon"),
         )
         .cache()
     )

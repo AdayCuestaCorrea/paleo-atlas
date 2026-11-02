@@ -14,6 +14,7 @@ from pathlib import Path
 import duckdb
 
 from paleo.gbif_job.spec import (
+    COORDINATE_ISSUES,
     GBIF_COLUMNS,
     OUTPUTS,
     POINT_STEP,
@@ -28,14 +29,28 @@ def _reader(gbif: str) -> str:
     return f"read_parquet('{gbif}', union_by_name=true)"
 
 
+def _flagged(described: list[tuple]) -> str:
+    """SQL: true when the record has a COORDINATE_ISSUES flag (list in Parquet, string in CSV)."""
+    issue = next((c for c in described if c[0].lower() == "issue"), None)
+    if issue is None:
+        return "false"
+    if issue[1].endswith("[]"):
+        flags = ", ".join(f"'{f}'" for f in COORDINATE_ISSUES)
+        return f'coalesce(list_has_any("{issue[0]}", [{flags}]), false)'
+    pattern = "|".join(COORDINATE_ISSUES)
+    return f"""coalesce(regexp_matches("{issue[0]}", '(^|;)({pattern})(;|$)'), false)"""
+
+
 def load(con: duckdb.DuckDBPyConnection, gbif: str, pbdb_genera: str) -> None:
     """Views ``gbif`` (columns lower-cased, as in the spec) and ``pbdb``."""
     con.execute(f"create or replace view gbif_raw as select * from {_reader(gbif)}")
-    actual = {c[0].lower(): c[0] for c in con.execute("describe gbif_raw").fetchall()}
+    described = con.execute("describe gbif_raw").fetchall()
+    actual = {c[0].lower(): c[0] for c in described}
     cols = ", ".join(
         f'"{actual[c]}" as {c}' if c in actual else f"null as {c}" for c in GBIF_COLUMNS
     )
-    con.execute(f"create or replace view gbif_cols as select {cols} from gbif_raw")
+    con.execute(f"create or replace view gbif_cols as select {cols}, {_flagged(described)} "
+                "as coords_flagged from gbif_raw")  # fmt: skip
     # The name keys of the spec, computed once: interpreted genus, verbatim genus, family.
     con.execute("""
         create or replace view gbif as
@@ -89,8 +104,10 @@ union all select * from typo;
 
 create or replace temp table matched as
 select g.*, r.genus as pbdb_genus, r.method,
-    floor(try_cast(g.decimallatitude as double) / {POINT_STEP} + 0.5) * {POINT_STEP} as lat,
-    floor(try_cast(g.decimallongitude as double) / {POINT_STEP} + 0.5) * {POINT_STEP} as lon
+    case when not g.coords_flagged then
+        floor(try_cast(g.decimallatitude as double) / {POINT_STEP} + 0.5) * {POINT_STEP} end as lat,
+    case when not g.coords_flagged then
+        floor(try_cast(g.decimallongitude as double) / {POINT_STEP} + 0.5) * {POINT_STEP} end as lon
 from gbif as g
 inner join resolved as r
     on r.name is not distinct from g.name_key

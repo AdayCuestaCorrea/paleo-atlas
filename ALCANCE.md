@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 18 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
+**Creado:** 2026-10-31 · **Versión:** 19 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
 
 ---
 
@@ -143,7 +143,7 @@ Notas:
 |---|---|---|---|---|---|---|
 | F1 | Wikipedia — páginas anuales de §4 (año en curso + años anteriores para histórico) | Taxones nuevos: nombre, estatus, autores, edad, unidad geológica, localidad, referencia | API de MediaWiki; nunca scraping del HTML | Diaria (detección de cambios) | Texto CC BY-SA 4.0 (+ GFDL): se usan los hechos, no se copia el texto | [x] 2026-11-01 |
 | F2 | PBDB — API `data1.2` | Taxonomía, sinonimias, **opiniones taxonómicas con año y referencia** (historial), rango temporal, ocurrencias | API REST | Semanal por nombre (caché de 7 días; los nombres nuevos, al momento); catálogo de la enciclopedia mensual, una descarga por clado del seed `scope_clades` | CC BY 4.0 (citar PBDB) | [x] 2026-11-01 |
-| F3 | GBIF — API de descargas (filtro en servidor) | Especímenes fósiles (`basisOfRecord = FOSSIL_SPECIMEN`) de los grupos de §4: coordenadas, institución, país | API pública gratuita (cuenta de GBIF) | Mensual | Cada descarga tiene DOI y hay que citarla; licencias por registro | [ ] |
+| F3 | GBIF — API de descargas (filtro en servidor) | Especímenes fósiles (`basisOfRecord = FOSSIL_SPECIMEN`) de los grupos de §4: coordenadas, institución, país | API pública gratuita (cuenta de GBIF) | Mensual | Cada descarga tiene DOI y hay que citarla; licencias por registro (CC0, CC BY, CC BY-NC) | [x] 2026-11-02 |
 | F4 | PhyloPic — API v2 | Siluetas por taxón (si no hay, se usa la del género o el clado) | API REST | Semanal (todas las búsquedas; respeta la caché de 7 días) | Por imagen. Lista blanca común con F5 (`license_allowlist`): dominio público, CC0, CC BY y CC BY-SA 2.0–4.0; **nunca NC ni ND** | [x] 2026-11-01 |
 | F5 | Wikimedia Commons — API | Reconstrucciones y fotos de fósiles | API de MediaWiki | Semanal (caché de 7 días) | Por archivo; Commons no admite licencias solo NC ni ND | [x] 2026-11-01 |
 | F6 | Crossref — API REST | Metadatos de cada estudio: tipo (artículo / preprint), revista, ISSN, **retracciones y correcciones** | API pública | Por cada estudio nuevo + revisión mensual | Metadatos de uso libre; los resúmenes (abstracts) pueden tener derechos | [x] 2026-11-01 |
@@ -163,9 +163,10 @@ Notas:
 | **F2 PBDB** | Toda la base de datos bajo **CC BY 4.0** desde 2013; solo exige atribución | Atribución a PBDB en cada ficha y en «Fuentes y licencias». Mientras no encontremos la fórmula de cita oficial de su web, usamos la cita general del proyecto |
 | **F4 PhyloPic** | Cuatro grupos de licencias: dominio público (PDM, CC0), atribución (CC BY 3.0/4.0), CompartirIgual (CC BY-SA 3.0) y **no comercial (CC BY-NC 3.0, CC BY-NC-SA 3.0)**, que aún llevan algunas imágenes antiguas. Con CC BY hay que citar al autor con el texto de la página de la imagen y enlazar la licencia | Lista blanca de licencias: PDM, CC0, CC BY 3.0/4.0, CC BY-SA 3.0. **Las NC se descartan** (§19). Comprobar en la Fase 1 qué campos de licencia y autor devuelve la API v2 |
 | **F5 Wikimedia Commons** | Licencia por archivo. Commons **no acepta** archivos solo con licencia NC ni con ND. La API (`prop=imageinfo&iiprop=extmetadata`) devuelve `LicenseShortName`, `LicenseUrl`, `Artist`, `Credit`, `AttributionRequired`, `UsageTerms` | Lista blanca por `LicenseShortName` (el campo más fiable). Archivos con varias licencias: revisión manual, porque la API avisa de que esos valores no son fiables |
+| **F3 GBIF** | Cada descarga tiene un DOI que **hay que citar** («GBIF.org (fecha) GBIF Occurrence Download https://doi.org/…»). Cada registro conserva la licencia de su conjunto de datos: CC0, CC BY 4.0 o CC BY-NC 4.0; la descarga entera toma la más restrictiva (CC BY-NC 4.0). La API de descargas exige una cuenta gratuita | Se publican solo **agregados** (recuentos por género, institución y país, y zonas de 0,5°), nunca registros sueltos, y se cita el DOI en cada ficha con datos de GBIF y en «Fuentes y licencias». La descarga cruda se queda en la caché local (A11). Credenciales solo en `.env`, nunca en el crudo ni en los logs |
 | **F6 Crossref** | «Casi ningún metadato tiene derechos de autor; se puede usar para cualquier fin». Los resúmenes (abstracts) sí pueden tenerlos. Las retracciones y correcciones de un estudio salen en su campo `updated-by` (el aviso de retracción lleva `update-to` apuntando al original), con `source` = `publisher` o `retraction-watch` | Usamos los metadatos libremente. De los abstracts solo extraemos hechos, nunca se publican. Peticiones con `mailto=` para entrar en el pool «educado» |
 
-**Pendientes de comprobar más adelante:** F3 GBIF (Fase 3), F7 ZooBank, F9 RSS (Fase 5), F10 3D (Fase 6), F11 Open Tree of Life (Fase 3), F12 tamaños (Fase 6).
+**Pendientes de comprobar más adelante:** F7 ZooBank, F9 RSS (Fase 5), F10 3D (Fase 6), F11 Open Tree of Life (Fase 3), F12 tamaños (Fase 6).
 
 Fuentes de esta comprobación: [Reusing Wikipedia content](https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content) · [PBDB pasa a CC BY (Creative Commons, 2013)](https://creativecommons.org/2013/12/19/paleobiology-database-now-cc-by/) · [PhyloPic: Usage of Images](https://www.phylopic.org/articles/image-usage) · [Commons:Licensing](https://commons.wikimedia.org/wiki/Commons:Licensing) · [Extension:CommonsMetadata](https://www.mediawiki.org/wiki/Extension:CommonsMetadata) · [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) · [Crossref: Retraction Watch](https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/) · [Wikimedia User-Agent policy](https://foundation.wikimedia.org/wiki/Policy:User-Agent_policy) · [API:Etiquette](https://www.mediawiki.org/wiki/API:Etiquette)
 
@@ -279,16 +280,16 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(arcosaurios hechos: 3.040 géneros, una descarga mensual por clado del seed; reptiles marinos y peces al activar sus filas)*
 - [x] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4) *(358 géneros de reptiles marinos y 1.353 de peces; de sus páginas anuales solo entran las secciones del alcance)*
 - [ ] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9)
-- [ ] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes
-- [ ] Job PySpark local: reconciliación de nombres con PBDB (sinónimos, erratas, rango) + agregados
-- [ ] Mismo trabajo en DuckDB → **benchmark** (tiempo, memoria, complejidad del código)
+- [x] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes *(fósiles de cordados sin mamíferos ni tortugas: 932.494 registros, DOI [10.15468/dl.8v87yz](https://doi.org/10.15468/dl.8v87yz); `paleo gbif extract` reutiliza una descarga de menos de 28 días)*
+- [x] Job PySpark local: reconciliación de nombres con PBDB (sinónimos, erratas, rango) + agregados *(138.388 especímenes en 1.739 géneros: exacto 118.371, sinónimo 17.052, errata 2.965; las coordenadas que GBIF marca como erróneas no van al mapa)*
+- [x] Mismo trabajo en DuckDB → **benchmark** (tiempo, memoria, complejidad del código) *(mismo extracto fila a fila; DuckDB 15–17× más rápido y 3–6× menos memoria: [`benchmarks/gbif/results.md`](benchmarks/gbif/results.md))*
 - [ ] *Opcional:* mismo job en Databricks Free Edition (verificar cuotas y acceso a datos externos)
-- [ ] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal
+- [ ] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(mapa de PBDB + GBIF y museos hechos; falta la línea temporal hacia atrás, H4)*
 - [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
 - [ ] Familia y clasificación completa en cada ficha (PBDB)
 - [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM
 - [ ] Árbol de parentesco con escala temporal (§11.2): topología de Open Tree of Life (F11) o, si falta, clasificación de PBDB; rangos temporales de PBDB
-- [ ] DAG mensual real en Airflow
+- [x] DAG mensual real en Airflow *(2026-11-02, en verde en local: refresco de fuentes → catálogo → descarga de GBIF (reutilizada) → job de Spark en Docker (14 s) → build → web; el extracto solo cambia si cambian sus filas, sea cual sea el motor)*
 - [ ] Documento de fase (`docs/fases/fase-3.md`)
 
 **Terminado cuando:** la enciclopedia de los tres bloques de §4 está publicada y el benchmark está documentado con cifras reales.
@@ -342,10 +343,10 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Capas (nombres orientativos; *(hecho)* = existe con ese nombre)
 - **seeds:** `license_allowlist`, `trusted_journals`, `group_clades` y `scope_clades` *(hechos; `scope_clades` es el alcance de §4)*; `contested_topics` *(Fase 3)*, `models_3d`, `glossary`, `body_sizes`, `reference_objects`. El título de las páginas anuales sigue en `config.py` y en la macro `wikipedia_block` (se unifica al activar los bloques nuevos)
-- **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
+- **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__genus_specimens`, `stg_gbif__institutions`, `stg_gbif__downloads` *(los de GBIF, hechos: leen el extracto agregado, no los registros)*, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
 - **historial (SCD2 desde versiones crudas):** `int_new_taxa_history`; los `stg_*_versions` / `stg_*_revisions` conservan todas las versiones
 - **intermediate:** *(hechos)* `int_taxon_pages`, `int_taxon_classification`, `int_research_taxon_links` (resolución de nombres), `int_image_candidates`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`
-- **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`. *(Hechos:* `dim_taxon`, `dim_study`, `fct_taxon_event`, `fct_taxon_text`, `fct_taxon_image`*.)* El recap semanal se calcula en Python al generar la web y el resumen de ejecución lo escribe `paleo report` en `runs/`
+- **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`. *(Hechos:* `dim_taxon`, `dim_study`, `dim_institution`, `fct_taxon_event`, `fct_taxon_text`, `fct_taxon_image`, `fct_specimens_by_taxon`*.)* El recap semanal se calcula en Python al generar la web y el resumen de ejecución lo escribe `paleo report` en `runs/`
 
 ---
 
@@ -517,7 +518,8 @@ Lo que tiene que existir; la implementación se decide en la Fase 1.
 | `paleo facts` / `write` / `titles` | Hechos, fichas EN + ES y títulos en español (`--provider ollama\|groq`) | Sí (caché por contenido) |
 | `paleo eval run` | Evaluación sobre las fichas de referencia | Sí |
 | `paleo ingest studies` | Crossref y DOAJ (ZooBank cuando vuelva su API); abstracts solo en la caché local | Sí |
-| `paleo gbif extract` *(Fase 3)* | Descarga filtrada + job Spark/DuckDB | Sí |
+| `paleo gbif extract` *(Fase 3)* | Descarga filtrada de GBIF (espera a que GBIF la prepare; reutiliza una de menos de 28 días) | Sí |
+| `paleo gbif reconcile [--engine duckdb\|spark]` *(Fase 3)* | Reconciliación con PBDB y agregados → extracto en `raw/gbif/extract/` | Sí (mismo extracto con los dos motores) |
 | `paleo build` | `dbt build` (modelos + tests; el historial sale de las versiones crudas) | Sí (reconstrucción completa) |
 | `paleo site` | Genera la web ES + EN | Sí |
 | *(recap)* | Lo genera `paleo site` para todas las semanas | Sí |
@@ -593,11 +595,11 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | % de estudios revisados por pares / preprints / retractados | 94 % / 0 % / 0 % (5 corregidos; 28 % en revistas DOAJ) | 2026-11-02 |
 | Retraso medio publicación → web (horas) | — | — |
 | Semanas seguidas sin intervención manual | 0 (empieza a contar con el primer cron) | 2026-11-02 |
-| Nº de tests (pytest + dbt) | 131 + 127 | 2026-11-02 |
+| Nº de tests (pytest + dbt) | 165 + 121 (rama `fase-3`) | 2026-11-02 |
 | Duración del pipeline diario | ~1 min (ejecución completa sin LLM, 2026-11-02) | 2026-11-02 |
 | Coste mensual | 0 € | — |
-| GBIF: especímenes fósiles procesados | — | — |
-| Benchmark Spark vs DuckDB: tiempo, memoria | — | — |
+| GBIF: especímenes fósiles procesados | 932.494 procesados → 138.388 reconciliados con 1.739 géneros, de 78 instituciones | 2026-11-02 |
+| Benchmark Spark vs DuckDB: tiempo, memoria | 932.494 filas: DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB (local, 16 hilos); código 124 vs 242 líneas | 2026-11-02 |
 | Clasificador de noticias: precisión / recall (baseline vs LLM) | — | — |
 | Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies) | 2026-11-02 |
 | Hechos extraídos que pasan la comprobación (%) | 78 % (1685 de 2158) | 2026-11-02 |
@@ -713,12 +715,12 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A19 | Tono de las fichas | Divulgativo para adultos curiosos y adolescentes (lo que ya dice el prompt; ajustado el 2026-11-02 para no regenerar) | 2026-11-01 |
 | A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
+| A11 | Dónde se guarda el extracto de GBIF | La descarga cruda (46 MB) se queda en la caché local, sin versionar: se puede reproducir con su DOI. En la rama `data` va solo el extracto agregado (76 KB) y la ficha de la descarga (clave, DOI, predicado, recuentos y licencia) | 2026-11-02 |
 | A8 | Versión de Airflow | **3.3.2** (imagen oficial `python3.14`), LocalExecutor y auth simple solo en local | 2026-11-02 |
 
 ### Abiertas
 | # | Decisión | Opciones | Cuándo |
 |---|---|---|---|
-| A11 | Dónde se guarda el extracto de GBIF | Rama `data`, GitHub Releases | Fase 3 |
 | A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |
 
 ---
@@ -763,6 +765,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v19: Fase 3, hito 5 (rama `fase-3`). Descarga de GBIF (F3 verificada; A11 cerrada): fósiles de cordados sin mamíferos ni tortugas (932.494 registros, DOI 10.15468/dl.8v87yz), pues el árbol de GBIF no tiene los clados de §4 y el filtro fino lo hace la reconciliación. El mismo job en DuckDB y en PySpark (especificación única; extractos idénticos con datos reales) y el **benchmark**: DuckDB gana a este volumen (0,9 s frente a 13,7 s). Mapa de hallazgos (SVG propio con Natural Earth, PBDB + GBIF; sin las coordenadas que GBIF marca como erróneas) y museos en cada ficha; cita del DOI en «Fuentes y licencias». DAG mensual con la descarga y Spark; la imagen de Airflow lleva Java | Plan de H5 |
 | 2026-11-02 | v18: Fase 3, hito 3 (rama `fase-3`). Activados los reptiles marinos y los peces fósiles: páginas anuales de reptiles y paleoictiología (solo las secciones del alcance; mosasaurios entre los escamosos), seed de peces destacados, raíces de bloque en Wikidata, Paleozoico (Ordovícico–Pérmico y sus pisos en español), grupos nuevos, la columna «Location» de las tablas de peces es el país, estudios listados en dos páginas fusionados, homónimos entre bloques. La regla de alcance vive en un solo sitio (`paleo/scope.py`, aplicada al parsear): ninguna ingesta ni el LLM gastan peticiones o cuota en taxones fuera de §4 (de 259 especies nuevas de las tres páginas, 114 en alcance). Robustez: un fallo de Wikidata o de un lote de Commons ya no detiene la ingesta (se reintenta en la siguiente ejecución); el registro fósil usa las épocas de las edades en Ma cuando PBDB no da el nombre del intervalo | Plan de H3 |
 | 2026-11-02 | v17: Fase 3, hito 2 (rama `fase-3`). Índices por grupo, época y país; ocurrencias de PBDB (países de 2.780 géneros, base del mapa); artículos de Wikipedia de los géneros **verificados** con Wikidata (P842 + ascendencia P171: el elemento de la polilla *Coloradia* lleva por error el ID de PBDB del dinosaurio) y su imagen principal libre como imagen de la ficha; siluetas de PhyloPic de todos los géneros con un tope diario; índice del buscador compacto (2,2 MB → 0,9 MB); traducción de subpisos («Campaniense superior»); el comprobador detecta fichas huérfanas y webs vacías; nueva fuente F13 (Wikidata) | Plan de H2 |
 | 2026-11-02 | v16: empieza la Fase 3 en la rama `fase-3` (datos en `data-fase-3`), con merge a `main` al cerrar la Fase 1. Decisiones: una ficha por género; peces = Placodermi + Chondrichthyes + seed de destacados; narrativas solo para géneros con artículo en Wikipedia, en lotes con la GPU local. Hito 1: seed `scope_clades` (alcance como datos), catálogo de PBDB por clado (`taxon_status=accepted`, sin icnotaxones), 3.040 fichas de género de arcosaurios, enlace especie → género | Decisión del usuario |

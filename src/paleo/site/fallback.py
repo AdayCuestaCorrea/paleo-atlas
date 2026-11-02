@@ -55,7 +55,7 @@ def fallback_text(taxon: dict[str, Any], lang: str) -> str | None:
             sentence += f", {participle} por {authors}"
             if year:
                 sentence += f" en {year}"
-        return sentence + "."
+        return sentence.rstrip(".") + "."  # "et al." ends with a dot
 
     head = nov[0] if nov else "New taxon"
     parts = [head]
@@ -72,7 +72,7 @@ def fallback_text(taxon: dict[str, Any], lang: str) -> str | None:
         sentence += f", described by {authors}"
         if year:
             sentence += f" in {year}"
-    return sentence + "."
+    return sentence.rstrip(".") + "."  # "et al." ends with a dot
 
 
 _RANKS = {  # rank -> (Spanish, gender, English)
@@ -97,8 +97,7 @@ def _known_text(taxon: dict[str, Any], lang: str) -> str | None:
     if not rank or not group:
         return None
     family = taxon.get("family_name")
-    early = terms.interval(taxon.get("early_interval"), lang)
-    late = terms.interval(taxon.get("late_interval"), lang) or early
+    early, late = terms.span(taxon, lang)
     oldest = _ma(taxon.get("first_appearance_max_ma"), lang)
     youngest = _ma(taxon.get("last_appearance_min_ma"), lang)
     if lang == "es":
@@ -110,7 +109,7 @@ def _known_text(taxon: dict[str, Any], lang: str) -> str | None:
             sentence += f", que vivió {span}"
             if oldest and youngest:
                 sentence += f" (hace {oldest} a {youngest} millones de años)"
-        return sentence + "."
+        return sentence.rstrip(".") + "."  # "et al." ends with a dot
     sentence = f"{rank[2]} of {group}"
     if family:
         sentence += f" in the family {family}"
@@ -119,7 +118,7 @@ def _known_text(taxon: dict[str, Any], lang: str) -> str | None:
         sentence += f", which lived {span}"
         if oldest and youngest:
             sentence += f" ({oldest} to {youngest} million years ago)"
-    return sentence + "."
+    return sentence.rstrip(".") + "."  # "et al." ends with a dot
 
 
 def _wiki_url(lang: str, title: str) -> str:

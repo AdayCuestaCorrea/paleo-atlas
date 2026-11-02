@@ -11,7 +11,7 @@ cleaned as (
         revision_timestamp,
         cast(regexp_extract(page_title, '^(\d{4})', 1) as integer) as page_year,
         {{ wikipedia_block('page_title') }} as taxonomic_block,
-        {{ wikipedia_group('section_path') }} as taxon_group,
+        taxon_group,  -- paleo.scope, decided at parse time (null = outside §4)
         section_path,
         table_index,
         row_index,
@@ -59,19 +59,7 @@ cleaned as (
         parse_warnings,
         len(parse_warnings) as parse_warning_count
     from source
-),
-
--- Rows outside the scope of §4 (turtles, lizards, most bony fishes…) never enter.
-scoped as (
-    select
-        * replace (
-            {{ wikipedia_in_scope(
-                'taxonomic_block', 'taxon_group',
-                "split_part(taxon_name, ' ', 1) in (select genus from " ~ ref('featured_fishes') ~ ")",
-                "coalesce(notes_text, '') || ' ' || array_to_string(coalesce(notes_terms, []), ' ')"
-            ) }} as taxon_group
-        )
-    from cleaned
 )
 
-select * from scoped where taxon_group is not null
+-- Rows outside the scope of §4 (turtles, lizards, most bony fishes…) never enter.
+select * from cleaned where taxon_group is not null

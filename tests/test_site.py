@@ -273,3 +273,25 @@ def test_the_check_finds_taxon_pages_nobody_links_to(tmp_path):
     assert "es/taxones/lonely.html: no page links to it" in problems
     assert "en/taxa/lonely.html: no page links to it" in problems
     assert check_site(tmp_path / "missing").problems[-1].endswith("(was the site built?)")
+
+
+def test_the_fossil_record_falls_back_to_the_epochs_of_its_ages():
+    from paleo.site import terms
+
+    with_names = {"early_interval": "Late Campanian", "late_interval": "Maastrichtian"}
+    assert terms.span(with_names, "es") == ("Campaniense superior", "Maastrichtiense")
+    only_ages = {"first_appearance_max_ma": 168.2, "last_appearance_min_ma": 157.9}
+    assert terms.span(only_ages, "es") == ("Jurásico Medio", "Jurásico Superior")
+    assert terms.span(only_ages, "en") == ("Middle Jurassic", "Late Jurassic")
+    assert terms.span({}, "es") == (None, None)
+    fish = {"page_type": "genus", "taxon_rank": "genus", "taxon_group": "other_fishes",
+            "family_name": "Pachycormidae", **only_ages}  # fmt: skip
+    assert fallback_text(fish, "es") == (
+        "Género de pez de la familia Pachycormidae, que vivió del Jurásico Medio al Jurásico "
+        "Superior (hace 168,2 a 157,9 millones de años)."
+    )  # fmt: skip
+
+
+def test_no_double_dot_after_et_al():
+    text = fallback_text(taxon(name_authors="Zietlow et al.", naming_year=None), "es")
+    assert text.endswith("Zietlow et al.") and not text.endswith("..")

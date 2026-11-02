@@ -30,6 +30,7 @@ import mwparserfromhell as mw
 from mwparserfromhell.nodes import Tag, Template
 from mwparserfromhell.wikicode import Wikicode
 
+from paleo import scope
 from paleo.config import slugify_title
 
 # Table header label -> field name. Unknown headers produce a warning.
@@ -107,6 +108,7 @@ class NewTaxonRow:
     references: list[Reference] = field(default_factory=list)
     parse_warnings: list[str] = field(default_factory=list)
     revision_timestamp: str | None = None
+    taxon_group: str | None = None  # paleo.scope: None = outside §4
 
 
 @dataclass
@@ -122,6 +124,7 @@ class ResearchItem:
     references: list[Reference] = field(default_factory=list)
     parse_warnings: list[str] = field(default_factory=list)
     revision_timestamp: str | None = None
+    taxon_group: str | None = None  # paleo.scope: None = outside §4
 
 
 @dataclass
@@ -555,6 +558,11 @@ def parse_page(
     research = _merge_duplicate_research(research)
     for row in [*new_taxa, *research]:
         row.revision_timestamp = revision_timestamp
+    for taxon in new_taxa:
+        text = " ".join([taxon.notes or "", *taxon.note_links])
+        taxon.taxon_group = scope.new_taxon_group(page_title, taxon.section_path, taxon.name, text)
+    for item in research:
+        item.taxon_group = scope.research_group(page_title, item.section_path, item.text)
     return ParsedPage(page_title, revid, new_taxa, research, revision_timestamp)
 
 

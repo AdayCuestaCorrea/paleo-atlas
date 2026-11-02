@@ -392,3 +392,23 @@ def time_units(max_ma: float | None, min_ma: float | None) -> list[tuple[str, st
         return []
     low = min_ma if min_ma is not None else max_ma
     return [(en, es) for old, young, en, es in TIME_UNITS if max_ma > young and low < old]
+
+
+def span(taxon: dict, lang: str) -> tuple[str | None, str | None]:
+    """(oldest, youngest) interval names of a taxon's fossil record. PBDB's own
+    interval names when it gives them; otherwise the epochs its ages (Ma) fall in
+    (PBDB sometimes gives the ages without the names)."""
+    if taxon.get("early_interval"):
+        early = interval(taxon["early_interval"], lang)
+        return early, interval(taxon.get("late_interval"), lang) or early
+    epochs = [
+        (en, es)
+        for en, es in time_units(
+            taxon.get("first_appearance_max_ma"), taxon.get("last_appearance_min_ma")
+        )
+        if en not in PERIODS
+    ]
+    if not epochs:
+        return None, None
+    pick = 1 if lang == "es" else 0
+    return epochs[0][pick], epochs[-1][pick]

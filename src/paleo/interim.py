@@ -24,7 +24,16 @@ def latest_revision_dirs(interim_root: Path) -> list[Path]:
     return out
 
 
-def latest_rows(interim_root: Path, kind: str) -> Iterator[dict[str, Any]]:
-    """Rows of ``kind`` (``new_taxa`` or ``research``) from every page's latest parse."""
+def latest_rows(
+    interim_root: Path, kind: str, *, in_scope_only: bool = True
+) -> Iterator[dict[str, Any]]:
+    """Rows of ``kind`` (``new_taxa`` or ``research``) from every page's latest parse.
+
+    Rows outside the taxonomic scope (paleo.scope: turtles, lizards, most bony
+    fishes on the reptile and fish pages) are left out, so no step spends requests
+    or LLM quota on taxa that never get a page."""
     for folder in latest_revision_dirs(interim_root):
-        yield from read_jsonl(folder / f"{kind}.jsonl")
+        for row in read_jsonl(folder / f"{kind}.jsonl"):
+            if in_scope_only and "taxon_group" in row and row["taxon_group"] is None:
+                continue
+            yield row

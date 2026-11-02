@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_pipeline__runs
+    columns:
+      - name: started_at
+        data_tests: [unique, not_null]
+      - name: trigger
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [schedule, backup, manual, local]
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [running, ok, failed]

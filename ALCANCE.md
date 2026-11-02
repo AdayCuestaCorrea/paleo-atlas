@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 11 · **Estado:** Fase 1 en curso (semana 4: web publicada y fichas generadas; faltan la ejecución programada, el informe de ejecución y las 2 semanas autónomas)
+**Creado:** 2026-10-31 · **Versión:** 12 · **Estado:** Fase 1 en curso (semana 4: web, fichas, informe de ejecución y frescura hechos; falta ver lanzarse el cron y las 2 semanas autónomas)
 
 ---
 
@@ -245,14 +245,14 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] Generar las fichas narrativas de las 82 especies nuevas (82/82 verificadas en EN, 81/82 en ES; Tromerosaurus ES con texto de respaldo)
 - [x] Revisión del español (gramática, calcos y fidelidad al inglés) y títulos de los estudios en español (§12.1)
 - [x] Lote robusto: una respuesta cortada se reintenta con el doble de tokens; si vuelve a fallar, se salta la especie y el lote sigue
-- [ ] Tests dbt y pytest de §16
+- [x] Tests dbt y pytest de §16 (los de la Fase 1; tamaños, árbol y 3D llegan con sus fases)
 - [x] Web ES + EN: portada con selector de idioma, «Última hora», ficha de taxón con historial, recap semanal, «Cómo evaluamos las fuentes», «Fuentes y licencias»
 - [x] Ficha: una cita por obra, nombres científicos en cursiva y enlazados, recuadro «Lo último» (§11.1)
 - [x] Buscador (pasa del backlog, decisión del usuario): alias en español (abelisáuridos, espinosaurio), periodos, erratas, facetas y `?q=` compartible
 - [x] Galería de imágenes con visor ampliado: archivos de los artículos y de la categoría de Commons, tipo de imagen, lista blanca de licencias
 - [x] CI: tests en cada push/PR (lint, pytest, parse + dbt build sobre el fixture)
-- [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(workflow listo; el cron aún no se ha lanzado nunca, 2026-11-02)*
-- [ ] Informe de ejecución por cada run
+- [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(workflow listo; el cron de las 06:00 no se lanzó el 2026-11-02 → horario movido a 06:23 con reserva a las 10:47)*
+- [x] Informe de ejecución por cada run (`paleo report`: registro en `runs/` de la rama `data` y resumen en Actions)
 - [x] Web publicada en GitHub Pages
 
 **Terminado cuando:** la web pública muestra las especies de arcosaurios de 2026 en los dos idiomas, con ficha narrativa verificada, imagen (o la del grupo), señales de fiabilidad e historial, y se ha actualizado sola **2 semanas seguidas** sin intervención.
@@ -517,14 +517,15 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 | Qué | Dónde | Cuándo |
 |---|---|---|
 | Tests (pytest + dbt) | GitHub Actions | Cada push y PR |
-| Detección de cambios + pipeline si hay novedades | GitHub Actions (cron) | Diario, 06:00 UTC (A6) |
-| Recap semanal | GitHub Actions (cron) | Lunes, en la misma ejecución de las 06:00 UTC (A6) |
+| Detección de cambios + pipeline si hay novedades | GitHub Actions (cron) | Diario, 06:23 UTC; reserva a las 10:47 UTC si la principal no terminó (A6) |
+| Recap semanal | GitHub Actions (cron) | Lunes, en la misma ejecución diaria (A6) |
 | Pipeline mensual (GBIF, revisión de retracciones) | Local (Spark en mi máquina) | Mensual |
 | Demostración | Airflow en Docker (local) | Bajo demanda |
 
-- Detección barata: comparar el número de revisión de las páginas de Wikipedia y el contenido de RSS/PBDB con lo guardado. Si no hay cambios, no se ejecuta nada más.
+- Detección barata: comparar el número de revisión de las páginas de Wikipedia y el contenido de RSS/PBDB con lo guardado. Si no hay cambios, no se ingesta ni se gasta LLM; solo se reconstruyen el almacén y la web (~1–2 min) y se guarda el registro de la ejecución.
+- **Registro de ejecuciones** (`runs/<fecha>.json` en la rama `data`): toda ejecución deja constancia, también sin cambios. Lo leen el test de frescura (§16) y el pie de la web («fuentes comprobadas el…»), y da actividad diaria al repositorio (regla de los 60 días).
 - Fallo del pipeline → aviso por correo de GitHub; la web anterior se queda publicada (nunca se publica una web rota).
-- Los cron de GitHub no son puntuales (pueden retrasarse). **Pendiente de comprobar:** la primera ejecución programada no se lanzó (2026-11-02).
+- Los cron de GitHub no son puntuales: en el minuto 0 de cada hora pueden retrasarse o descartarse. Por eso la ejecución va a las 06:23 y hay una reserva a las 10:47 que no hace nada si la principal ya terminó bien. La primera ejecución programada (06:00) no se lanzó el 2026-11-02.
 - **A verificar:** GitHub desactiva los workflows programados de repos públicos tras 60 días sin actividad. Comprobar si los commits del pipeline cuentan como actividad.
 
 ---
@@ -665,7 +666,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | Árbol presentado como verdad absoluta | Desinformación | Origen indicado en la vista; aviso de que el parentesco está en debate |
 | Modelo 3D desfasado | Desinformación | Preferir escaneos; aviso automático por fecha (§13) |
 | GitHub desactiva el cron por inactividad | La web deja de actualizarse | Verificar la regla (§15); aviso en el informe de ejecución |
-| El cron de GitHub no se lanza | Lo nuevo no se redacta ni se publica | Comprobarlo a diario la primera semana; lanzarlo a mano si falta |
+| El cron de GitHub no se lanza | Lo nuevo no se redacta ni se publica | Hora fuera del minuto 0 y cron de reserva; test de frescura (§16) y fecha de comprobación en el pie de la web |
 | Afirmar en CV algo no hecho | Pillada en entrevista | Métricas solo reales (§17); CV vía modo `add` de career-ops |
 
 ---
@@ -688,7 +689,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 | A7 | Tolerancia al retraso de PBDB | **8 semanas** (variable `pbdb_lag_weeks` de dbt): antes, aviso; después, error | 2026-11-02 |
 | A16 | Lista inicial de revistas de confianza | Seed `trusted_journals` (30 revistas); se amplía a mano | 2026-11-02 |
 | A18 | LLM para las fichas | Qwen 3.5 9B local para lotes grandes, regeneraciones y evaluaciones (11/12 fichas de referencia verificadas, 46 % de hechos encontrados); Groq `gpt-oss-120b` para la ejecución diaria (12/12 verificadas en EN y ES, 38 % de los hechos en el texto). Descartados: Qwen 3.5 4B (peor y 4× más lento), Groq `qwen3.8-27b` (límite de salida) | 2026-11-02 |
-| A6 | Frecuencia de detección y hora del recap | Diario a las 06:00 UTC; recap los lunes en esa misma ejecución | 2026-11-02 |
+| A6 | Frecuencia de detección y hora del recap | Diario a las 06:23 UTC (reserva a las 10:47); recap los lunes en esa misma ejecución | 2026-11-02 |
 | A19 | Tono de las fichas | Divulgativo para todos los públicos | 2026-11-01 |
 | A20 | Longitud de las fichas | Según los datos (~120–450 palabras), sin relleno | 2026-11-01 |
 | A15 | Explicador conversacional | **Descartado**; se queda el glosario (§12.2) | 2026-11-01 |
@@ -742,6 +743,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v12: informe de ejecución (`paleo report`) y registro diario en `runs/`; test de frescura; cron a las 06:23 con reserva a las 10:47; la web se reconstruye a diario aunque no haya cambios; el commit a `data` va al final y siempre | El cron de las 06:00 no se lanzó |
 | 2026-11-02 | v11: semana 4 (web Jinja2 publicada en GitHub Pages, rama `data`, pipeline diario); 82 fichas generadas; buscador del backlog a la Fase 1; galería con visor; revisión del español y títulos en español; una cita por obra y nombres enlazados; reintentos del lote; A6 y A18 cerradas | Ronda de revisión del usuario y semana 4 |
 | 2026-11-01 | v10: pipeline narrativo completo (capa LLM, artículos, hechos, redacción EN + adaptación ES, verificaciones); 12 fichas de referencia y evaluación de 4 configuraciones; A18 provisional, A19 (tono) y A20 (longitud) cerradas; staging de dbt materializado como tablas; modelos de textos | Semana 3 |
 | 2026-11-02 | v9: semana 2 terminada (PBDB, Crossref, imágenes, vínculo estudios ↔ taxones, marts); **fichas básicas para taxones conocidos** en la Fase 1; D9 cambia de `dbt snapshots` a SCD2 desde versiones crudas; ZooBank aplazado (API caída); abstracts solo en caché local; A16 cerrada | Decisión del usuario y hallazgos de la semana 2 |

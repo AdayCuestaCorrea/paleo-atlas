@@ -33,3 +33,18 @@
 {% macro taxon_key(expr) -%}
     lower(regexp_replace(trim({{ expr }}), '[^A-Za-z0-9]+', '-', 'g'))
 {%- endmacro %}
+
+{#
+  Pipeline run log written by paleo.report: $PALEO_DATA_DIR/runs/<YYYY-MM-DD>.json,
+  a JSON array with one item per run (also the runs that found nothing new).
+#}
+{% macro read_runs() -%}
+    read_json(
+        '{{ env_var("PALEO_DATA_DIR", "../data") }}/runs/*.json',
+        format = 'array',
+        columns = {
+            started_at: 'TIMESTAMPTZ', finished_at: 'TIMESTAMPTZ', trigger: 'VARCHAR',
+            changed: 'BOOLEAN', status: 'VARCHAR'
+        }
+    )
+{%- endmacro %}

@@ -262,6 +262,7 @@ class SiteBuilder:
             fmt_date=lambda d, precision="day": fmt_date(d, lang, precision),
             week_label=lambda k: week_label(k, lang),
             built_on=self.data.built_on,
+            last_checked=self.data.last_checked,
             page_kind=page.kind,
             prose=lambda text: self.prose(
                 text, lang, (page.context.get("taxon") or {}).get("taxon_name")

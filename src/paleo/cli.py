@@ -28,6 +28,8 @@ app.add_typer(ingest_app, name="ingest")
 app.add_typer(parse_app, name="parse")
 eval_app = typer.Typer(help="Evaluate narrative pages against the gold set.", no_args_is_help=True)
 app.add_typer(eval_app, name="eval")
+report_app = typer.Typer(help="Run log and run report (ALCANCE.md §16).", no_args_is_help=True)
+app.add_typer(report_app, name="report")
 
 Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
@@ -402,6 +404,47 @@ def build() -> None:
     env = {**os.environ, "PALEO_DATA_DIR": str(get_paths().data)}
     cmd = ["dbt", "build", "--project-dir", str(dbt_dir), "--profiles-dir", str(dbt_dir)]
     raise typer.Exit(subprocess.run(cmd, env=env, check=False).returncode)
+
+
+@report_app.command("start")
+def report_start(
+    trigger: Annotated[str, typer.Option(help="schedule, backup, manual or local.")] = "local",
+    changed: Annotated[bool, typer.Option(help="Change detection found something new.")] = True,
+) -> None:
+    """Record that a run started and what change detection found (data/runs/)."""
+    from paleo import report
+
+    run = report.start_run(get_paths().data, trigger=trigger, changed=changed)
+    typer.echo(f"Run started {run['started_at']} ({trigger}, changed={changed})")
+
+
+@report_app.command("finish")
+def report_finish(
+    jobs: Annotated[
+        str | None, typer.Option(help="GitHub API dump of this run's jobs (step durations).")
+    ] = None,
+) -> None:
+    """Complete the current run record and print the report as Markdown."""
+    from pathlib import Path
+
+    from paleo import report
+
+    paths = get_paths()
+    run = report.finish_run(
+        paths.data,
+        warehouse=paths.warehouse,
+        run_results=project_root() / "dbt" / "target" / "run_results.json",
+        jobs=Path(jobs) if jobs else None,
+    )
+    typer.echo(report.markdown(run))
+
+
+@report_app.command("ran-today")
+def report_ran_today() -> None:
+    """Exit 0 if a run already finished without failures today, 1 otherwise."""
+    from paleo import report
+
+    raise typer.Exit(0 if report.ran_today(get_paths().data) else 1)
 
 
 @parse_app.command("wikipedia")

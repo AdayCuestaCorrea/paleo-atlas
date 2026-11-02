@@ -42,6 +42,9 @@ def main() -> None:
     # One generated narrative page (facts + EN/ES texts) so dbt can build the text models.
     shutil.copytree(FIXTURES / "derived", get_paths().data / "derived", dirs_exist_ok=True)
     print("seeded derived narrative page")
+    # One recorded run, so the freshness test and the site footer have a date.
+    shutil.copytree(FIXTURES / "runs", get_paths().data / "runs", dirs_exist_ok=True)
+    print("seeded run log")
 
 
 if __name__ == "__main__":

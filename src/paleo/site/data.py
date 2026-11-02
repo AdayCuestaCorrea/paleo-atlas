@@ -32,6 +32,7 @@ class SiteData:
     citations: dict[str, dict[str, dict[str, Any]]]  # taxon_key -> chunk_id -> citation
     built_on: dt.date = field(default_factory=dt.date.today)
     images: dict[str, list[dict[str, Any]]] = field(default_factory=dict)  # gallery per taxon
+    last_checked: dt.date | None = None  # last change detection (pipeline run log)
 
     @property
     def by_key(self) -> dict[str, dict[str, Any]]:
@@ -98,9 +99,15 @@ def load(warehouse: Path) -> SiteData:
         images: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for row in _rows(con, "select * from main.fct_taxon_image order by taxon_key, image_rank"):
             images[row["taxon_key"]].append(row)
+        last_checked = con.execute(
+            "select max(started_at)::date from main.stg_pipeline__runs"
+        ).fetchone()[0]
     finally:
         con.close()
-    return SiteData(taxa, dict(events), texts, dict(facts), dict(citations), images=dict(images))
+    return SiteData(
+        taxa, dict(events), texts, dict(facts), dict(citations),
+        images=dict(images), last_checked=last_checked,
+    )  # fmt: skip
 
 
 def _work(citation: dict[str, Any]) -> tuple[str, str]:

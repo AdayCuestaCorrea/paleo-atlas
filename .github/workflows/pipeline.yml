@@ -7,7 +7,10 @@ name: Pipeline
 
 on:
   schedule:
-    - cron: "0 6 * * *" # 06:00 UTC (A6)
+    # Off the top of the hour, when GitHub delays or drops scheduled runs. The
+    # second one is a backup: it does nothing if a run already finished today.
+    - cron: "23 6 * * *" # main run (A6)
+    - cron: "47 10 * * *" # backup
   workflow_dispatch:
     inputs:
       narrative:
@@ -28,6 +31,7 @@ jobs:
     timeout-minutes: 90
     permissions:
       contents: write # commit to the data branch
+      actions: read # step durations for the run report
     env:
       PALEO_DATA_DIR: ${{ github.workspace }}/data
       PALEO_SITE_BASE: /paleo-atlas
@@ -50,14 +54,26 @@ jobs:
         run: uv sync --locked
 
       - name: Anything new?
-        # Always run by hand and on Mondays (weekly recap); otherwise only when
-        # the Wikipedia list changed.
+        # Every run leaves a record in data/runs (paleo report), also when nothing
+        # changed: the freshness test and the site footer read it. Ingest and texts
+        # only run by hand, on Mondays (weekly recap) or when the Wikipedia list changed.
         run: |
-          if [ "${{ github.event_name }}" = workflow_dispatch ] || [ "$(date -u +%u)" = 1 ] \
-             || uv run paleo check; then
+          if [ "${{ github.event.schedule }}" = "47 10 * * *" ] && uv run paleo report ran-today; then
+            echo "The main run already finished today."
+            echo "SKIP=true" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          case "${{ github.event_name }}/${{ github.event.schedule }}" in
+            workflow_dispatch/*) trigger=manual ;;
+            "schedule/47 10 * * *") trigger=backup ;;
+            *) trigger=schedule ;;
+          esac
+          if [ "$trigger" = manual ] || [ "$(date -u +%u)" = 1 ] || uv run paleo check; then
             echo "RUN=true" >> "$GITHUB_ENV"
+            uv run paleo report start --trigger "$trigger" --changed
           else
-            echo "Nothing changed; the published site stays as it is."
+            echo "Nothing changed: only the run log, the warehouse and the site are refreshed."
+            uv run paleo report start --trigger "$trigger" --no-changed
           fi
 
       - name: Ingest and parse
@@ -82,8 +98,32 @@ jobs:
           uv run paleo write --provider groq
           uv run paleo titles --provider groq
 
+      - name: dbt build
+        if: env.SKIP != 'true'
+        # interim/ is never committed: rebuild it from the stored revisions (no network).
+        run: |
+          [ "$RUN" = true ] || uv run paleo parse wikipedia
+          uv run paleo build
+
+      - name: Build the website
+        id: site
+        if: env.SKIP != 'true'
+        run: |
+          uv run paleo site
+          uv run paleo site --check
+
+      - name: Run report
+        if: always() && env.SKIP != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/attempts/${{ github.run_attempt }}/jobs" \
+            > "$RUNNER_TEMP/jobs.json" || echo '{}' > "$RUNNER_TEMP/jobs.json"
+          uv run paleo report finish --jobs "$RUNNER_TEMP/jobs.json" | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Commit to the data branch
-        if: env.RUN == 'true'
+        # Always, so new raw data and the run log are kept even if dbt or the site fail.
+        if: always() && env.SKIP != 'true'
         working-directory: data
         run: |
           git add -A
@@ -95,25 +135,18 @@ jobs:
             echo "No data changes."
             exit 0
           fi
+          message="Data update $(date -u +%F)"
+          if [ -z "$(git diff --cached --name-only | grep -v '^runs/')" ]; then
+            message="Run log $(date -u +%F)"
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -q -m "Data update $(date -u +%F)"
+          git commit -q -m "$message"
           git pull -q --rebase origin data
           git push -q origin HEAD:data
 
-      - name: dbt build
-        if: env.RUN == 'true'
-        run: uv run paleo build
-
-      - name: Build the website
-        id: site
-        if: env.RUN == 'true'
-        run: |
-          uv run paleo site
-          uv run paleo site --check
-
       - uses: actions/upload-pages-artifact@v5.0.0
-        if: steps.site.outcome == 'success'
+        if: always() && steps.site.outcome == 'success'
         with:
           path: site/_build
 

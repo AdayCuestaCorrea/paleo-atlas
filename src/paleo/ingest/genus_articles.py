@@ -37,6 +37,7 @@ WIKIPEDIA_EN_API = "https://en.wikipedia.org/w/api.php"
 WIKIDATA_SPARQL = "https://query.wikidata.org/sparql"
 TITLES_PER_REQUEST = 50
 ITEMS_PER_QUERY = 100
+PICTURE_EXTENSIONS = {"jpg", "jpeg", "png", "gif", "svg", "webp", "tif", "tiff"}
 SPARQL_TIMEOUT = 70.0  # the query service gives up at 60 s
 log = logging.getLogger(__name__)
 REFRESH_DAYS = 30
@@ -240,6 +241,8 @@ def lead_images(raw_root: Path | None = None) -> list[str]:
     files = set()
     for key in articles.stored_keys():
         latest = articles.latest(key)
-        if latest and latest["payload"].get("lead_image"):
-            files.add(latest["payload"]["lead_image"])
+        image = latest and latest["payload"].get("lead_image")
+        # The "lead image" of an article can be a PDF (a paper): pictures only.
+        if image and image.lower().rsplit(".", 1)[-1] in PICTURE_EXTENSIONS:
+            files.add(image)
     return sorted(files)

@@ -15,7 +15,9 @@ def wikipedia(request):
     titles = request.url.params["titles"].split("|")
     pages, redirects = [], []
     for t in titles:
-        if t == "Coloradia":  # the moth's article, with a lead image
+        if t == "Paperus":  # an article whose "lead image" is a PDF
+            pages.append({"title": "Paperus", "pageimage": "10_24072_paper.pdf"})
+        elif t == "Coloradia":  # the moth's article, with a lead image
             pages.append(
                 {
                     "title": "Coloradia",
@@ -79,9 +81,10 @@ def handler(request):
 def test_lookups_store_the_article_wikidata_ids_and_lead_image(tmp_path):
     with make_client(transport=httpx.MockTransport(handler)) as client:
         r = ga.ingest_genus_articles(
-            client, ["Coloradia", "Fregilupus", "Rex", "Nopeus"], raw_root=tmp_path, today=DAY
-        )
-    assert (r.looked_up, r.with_article) == (4, 3)
+            client, ["Coloradia", "Fregilupus", "Rex", "Nopeus", "Paperus"],
+            raw_root=tmp_path, today=DAY,
+        )  # fmt: skip
+    assert (r.looked_up, r.with_article) == (5, 4)
     store = ga.store(tmp_path)
     moth = store.latest("Coloradia")["payload"]
     assert moth["pbdb_ids"] == ["38639"] and moth["in_scope_tree"] is False

@@ -16,6 +16,7 @@ choice of the best image per taxon happen in dbt, where they are tested.
 from __future__ import annotations
 
 import datetime as dt
+import logging
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass
@@ -38,6 +39,7 @@ COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 PHYLOPIC_API = "https://api.phylopic.org"
 PHYLOPIC_ACCEPT = "application/vnd.phylopic.v2+json"
 COMMONS_BATCH = 50
+log = logging.getLogger(__name__)
 REFRESH_DAYS = 7
 # Encyclopedia names (catalog genera, their parent clades and families): thousands of
 # them, so they are re-checked monthly and at most PHYLOPIC_BUDGET per run, never
@@ -430,7 +432,12 @@ def ingest_images(
     wanted = set(commons_files(interim_root)) | gallery_files | set(lead_images(raw_root))
     files = [f for f in sorted(wanted) if refresh or not commons.is_fresh(f, REFRESH_DAYS, today)]
     for batch in _batches(files, COMMONS_BATCH):
-        for file, payload in fetch_commons(client, batch).items():
+        try:
+            fetched = fetch_commons(client, batch)
+        except HttpError as exc:  # one bad file can fail a batch: retried next run
+            log.warning("Commons metadata of %d files failed: %s", len(batch), exc)
+            continue
+        for file, payload in fetched.items():
             new_versions += commons.save_if_changed(file, payload, today).created
     commons.flush()
 

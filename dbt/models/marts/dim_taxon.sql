@@ -1,5 +1,5 @@
--- One row per taxon page: the 2026 new taxa and the known taxa that 2026 studies
--- are about. This is what the site renders (ALCANCE.md §11.1).
+-- One row per taxon page: the 2026 new taxa, the genera of the encyclopedia and the
+-- known taxa that 2026 studies are about. This is what the site renders (§11.1).
 with history as (
     select taxon_key, min(revision_timestamp) as first_seen_on_wikipedia
     from {{ ref('int_new_taxa_history') }}
@@ -25,6 +25,17 @@ new_taxa as (
 
 pbdb as (
     select queried_name, first_checked_on, first_found_on from {{ ref('stg_pbdb__taxa') }}
+),
+
+genera as (
+    select taxon_key, species_names, species_count, type_taxon, catalog_version_date
+    from {{ ref('int_catalog_genera') }}
+),
+
+genus_pages as (
+    select taxon_key as genus_key, taxon_name as genus_page_name
+    from {{ ref('int_taxon_pages') }}
+    where page_type = 'genus'
 )
 
 select
@@ -35,6 +46,12 @@ select
     p.taxon_group,
     c.taxon_rank,
     c.genus_name,
+    -- The encyclopedia page of the genus of a species page (null for genus pages).
+    case when p.page_type <> 'genus' then gp.genus_key end as genus_key,
+    g.species_names,
+    g.species_count,
+    g.type_taxon,
+    g.catalog_version_date,
     c.family_name,
     c.order_name,
     c.class_name,
@@ -76,3 +93,7 @@ left join new_taxa as n using (taxon_key)
 left join history as h using (taxon_key)
 left join pbdb as b on b.queried_name = p.taxon_name
 left join {{ ref('int_image_best_per_taxon') }} as i using (taxon_key)
+left join genera as g using (taxon_key)
+left join genus_pages as gp
+    on gp.genus_page_name = c.genus_name
+   and gp.genus_key <> p.taxon_key

@@ -207,3 +207,16 @@ def test_pages_without_text_still_list_their_sources():
         "https://paleobiodb.org/classic/basicTaxonInfo?taxon_no=52962",
         "https://doi.org/10.1/x",
     ]
+
+
+def test_encyclopedia_genera_cite_the_yearly_page_only_when_studied():
+    from paleo.site.fallback import basic_sources
+
+    genus = {"page_type": "genus", "taxon_name": "Brontosaurus", "pbdb_has_taxon": True,
+             "pbdb_taxon_no": "txn:52986", "taxon_rank": "genus",
+             "taxon_group": "non_avian_dinosaurs"}  # fmt: skip
+    urls = [s["url"] for s in basic_sources(genus, [], "2026 in archosaur paleontology")]
+    assert urls == ["https://paleobiodb.org/classic/basicTaxonInfo?taxon_no=52986"]
+    studied = basic_sources(genus, [{"doi": "10.1/y"}], "2026 in archosaur paleontology")
+    assert studied[0]["url"].endswith("2026_in_archosaur_paleontology")
+    assert fallback_text(genus, "es").startswith("Género de dinosaurio no aviano")

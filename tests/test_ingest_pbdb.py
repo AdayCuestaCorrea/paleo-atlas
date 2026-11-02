@@ -114,3 +114,56 @@ def test_homonyms_keep_every_record(tmp_path):
     with make_client(httpx.MockTransport(handler)) as client:
         by_name = pbdb.fetch_batch(client, ["Ozimek"])
     assert len(by_name["Ozimek"]) == 2
+
+
+# --- Encyclopedia catalog (Phase 3) ----------------------------------------------------
+
+
+def write_seed(path):
+    path.write_text(
+        "block,taxon_group,pbdb_base_name,priority,enabled\n"
+        "archosaurs,birds,Aves,1,true\n"
+        "archosaurs,non_avian_dinosaurs,Dinosauria,2,true\n"
+        "fossil_fishes,placoderms,Placodermi,1,false\n"
+    )
+    return path
+
+
+def test_scope_seed_gives_the_enabled_clades(tmp_path):
+    seed = write_seed(tmp_path / "scope.csv")
+    assert [c.pbdb_base_name for c in pbdb.scope_clades(seed)] == ["Aves", "Dinosauria"]
+    every = pbdb.scope_clades(seed, enabled_only=False)
+    assert [(c.block, c.priority, c.enabled) for c in every][-1] == ("fossil_fishes", 1, False)
+
+
+def test_the_real_scope_seed_starts_with_the_archosaurs_only():
+    blocks = {c.block for c in pbdb.scope_clades()}
+    assert blocks == {"archosaurs"}
+
+
+def test_catalog_asks_for_accepted_extinct_genera_once_a_month(tmp_path):
+    requests = []
+
+    def handler(request):
+        requests.append(request)
+        base = request.url.params["base_name"]
+        rows = [{"taxon_name": f"{base}us"}, {"taxon_name": f"{base}us rex"}]
+        return httpx.Response(200, json={"elapsed_time": 0.5, "records": rows})
+
+    clades = pbdb.scope_clades(write_seed(tmp_path / "scope.csv"))
+    with make_client(transport=httpx.MockTransport(handler)) as client:
+        first = pbdb.ingest_catalog(client, clades, raw_root=tmp_path, today=DAY)
+        again = pbdb.ingest_catalog(
+            client, clades, raw_root=tmp_path, today=DAY + dt.timedelta(days=29)
+        )
+        later = pbdb.ingest_catalog(
+            client, clades, raw_root=tmp_path, today=DAY + dt.timedelta(days=31)
+        )
+    assert (first.records, first.new_versions) == (4, 2)
+    assert again.skipped_fresh == 2 and later.skipped_fresh == 0
+    assert later.new_versions == 0  # same answer (elapsed_time is volatile): no new version
+    params = requests[0].url.params
+    assert params["taxon_status"] == "accepted"  # "valid" would list junior synonyms
+    assert (params["extant"], params["rank"]) == ("no", "genus,species")
+    stored = pbdb.catalog_store(tmp_path).latest("Aves")
+    assert stored["payload"]["records"][1]["taxon_name"] == "Avesus rex"

@@ -125,12 +125,15 @@ def basic_sources(
     taxon: dict[str, Any], events: list[dict[str, Any]], year_page: str
 ) -> list[dict[str, str]]:
     """Sources of a page without narrative text: the Wikipedia yearly page, PBDB and
-    the naming study, so the sources are always visible (§11.1)."""
-    out = [{
-        "title": f"Wikipedia: {year_page}",
-        "url": "https://en.wikipedia.org/wiki/" + year_page.replace(" ", "_"),
-        "note": "CC BY-SA 4.0",
-    }]  # fmt: skip
+    the naming study, so the sources are always visible (§11.1). An encyclopedia
+    genus only cites the yearly page when a study of that page is about it."""
+    out = []
+    if taxon.get("page_type") != "genus" or events:
+        out.append({
+            "title": f"Wikipedia: {year_page}",
+            "url": "https://en.wikipedia.org/wiki/" + year_page.replace(" ", "_"),
+            "note": "CC BY-SA 4.0",
+        })  # fmt: skip
     if taxon.get("pbdb_has_taxon") and taxon.get("pbdb_taxon_no"):
         out.append({
             "title": f"Paleobiology Database: {taxon['taxon_name']}",

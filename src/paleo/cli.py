@@ -86,14 +86,20 @@ def ingest_wikipedia(year: Year = None) -> None:
 
 @ingest_app.command("pbdb")
 def ingest_pbdb(refresh: Refresh = False) -> None:
-    """Resolve candidate taxon names against PBDB (versioned per name)."""
+    """Resolve candidate taxon names against PBDB (versioned per name), and download
+    the catalog of every clade in scope for the encyclopedia (monthly)."""
     paths = get_paths()
     names = pbdb.names_of_interest(paths.interim)
     with make_client() as client:
         r = pbdb.ingest_names(client, names, raw_root=paths.raw, refresh=refresh)
+        typer.echo(
+            f"PBDB: {r.requested} names, {r.skipped_fresh} fresh, "
+            f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+        )
+        c = pbdb.ingest_catalog(client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh)
     typer.echo(
-        f"PBDB: {r.requested} names, {r.skipped_fresh} fresh, "
-        f"{r.found} found, {r.not_found} not found, {r.new_versions} new versions"
+        f"PBDB catalog: {c.clades} clades, {c.skipped_fresh} fresh, "
+        f"{c.records} records, {c.new_versions} new versions"
     )
 
 

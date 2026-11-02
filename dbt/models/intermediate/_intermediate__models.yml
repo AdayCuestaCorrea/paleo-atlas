@@ -1,6 +1,17 @@
 version: 2
 
 models:
+  - name: int_catalog_genera
+    description: >
+      Encyclopedia genera (Phase 3): every accepted extinct genus of the enabled clades of
+      the scope seed, in its most specific clade, with its accepted species (no junior synonyms).
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: taxonomic_block
+        data_tests: [not_null]
+      - name: taxon_group
+        data_tests: [not_null]
   - name: int_taxon_pages
     columns:
       - name: taxon_key
@@ -9,7 +20,7 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: [new, known]
+                values: [new, genus, known]
   - name: int_research_taxon_links
     description: Study ↔ taxon links (wikilinks and italic names resolved in PBDB or new taxa).
   - name: int_study_reliability
@@ -57,3 +68,28 @@ unit_tests:
       rows:
         - {revid: 1, status: in_press, version_number: 1, valid_from: "2026-10-01 10:00:00+00", valid_to: "2026-10-15 10:00:00+00", is_current: false, changed_fields: "[]"}
         - {revid: 2, status: valid, version_number: 2, valid_from: "2026-10-15 10:00:00+00", valid_to: null, is_current: true, changed_fields: "['status']"}
+  - name: catalog_genera_take_the_most_specific_clade_in_scope
+    description: >
+      A bird genus is listed under Avialae, Dinosauria and Archosauria: its page is in
+      the birds group (lowest priority). A genus of a disabled clade gets no page, and
+      species are listed under their genus.
+    model: int_catalog_genera
+    given:
+      - input: ref('scope_clades')
+        rows:
+          - {block: archosaurs, taxon_group: birds, pbdb_base_name: Avialae, priority: 1, enabled: true}
+          - {block: archosaurs, taxon_group: non_avian_dinosaurs, pbdb_base_name: Dinosauria, priority: 2, enabled: true}
+          - {block: archosaurs, taxon_group: other_archosaurs, pbdb_base_name: Archosauria, priority: 9, enabled: true}
+          - {block: fossil_fishes, taxon_group: placoderms, pbdb_base_name: Placodermi, priority: 1, enabled: false}
+      - input: ref('stg_pbdb__catalog')
+        rows:
+          - {base_name: Archosauria, pbdb_taxon_no: "1", pbdb_name: Archaeopteryx, taxon_rank: genus, version_date: "2026-11-01"}
+          - {base_name: Dinosauria, pbdb_taxon_no: "1", pbdb_name: Archaeopteryx, taxon_rank: genus, version_date: "2026-11-01"}
+          - {base_name: Avialae, pbdb_taxon_no: "1", pbdb_name: Archaeopteryx, taxon_rank: genus, version_date: "2026-11-01"}
+          - {base_name: Avialae, pbdb_taxon_no: "2", pbdb_name: Archaeopteryx lithographica, taxon_rank: species, genus_name: Archaeopteryx, version_date: "2026-11-01"}
+          - {base_name: Dinosauria, pbdb_taxon_no: "3", pbdb_name: Spinosaurus, taxon_rank: genus, version_date: "2026-11-01"}
+          - {base_name: Placodermi, pbdb_taxon_no: "4", pbdb_name: Dunkleosteus, taxon_rank: genus, version_date: "2026-11-01"}
+    expect:
+      rows:
+        - {taxon_key: archaeopteryx, taxon_group: birds, species_count: 1}
+        - {taxon_key: spinosaurus, taxon_group: non_avian_dinosaurs, species_count: 0}

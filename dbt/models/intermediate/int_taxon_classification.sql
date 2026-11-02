@@ -1,13 +1,40 @@
 -- Classification and time range for every taxon page.
--- Known taxa: their own PBDB record. New taxa: their own record when PBDB already
+-- Encyclopedia genera and known taxa: their own PBDB record. New taxa: their own record when PBDB already
 -- has them; otherwise their genus (new species of a known genus) or the family
 -- linked in the Wikipedia notes ("A member of the family Peirosauridae").
 with pages as (
     select * from {{ ref('int_taxon_pages') }}
 ),
 
-pbdb as (
+by_name as (
     select * from {{ ref('stg_pbdb__taxa') }} where found
+),
+
+-- PBDB records by name: the lookups by name, plus the encyclopedia catalog for the
+-- genera nobody looked up by name.
+pbdb as (
+    select * from by_name
+    union all by name
+    select
+        taxon_name as queried_name,
+        true as found,
+        pbdb_taxon_no,
+        taxon_name as pbdb_name,
+        'genus' as taxon_rank,
+        attribution,
+        parent_name,
+        phylum,
+        class_name,
+        order_name,
+        family_name,
+        taxon_name as genus_name,
+        occurrence_count,
+        first_appearance_max_ma,
+        last_appearance_min_ma,
+        early_interval,
+        late_interval
+    from {{ ref('int_catalog_genera') }}
+    where taxon_name not in (select queried_name from by_name)
 ),
 
 new_taxa as (

@@ -1,6 +1,9 @@
--- Taxa that get a page: the new taxa of the yearly pages, plus every species,
+-- Taxa that get a page: the new taxa of the yearly pages; every extinct genus of the
+-- clades in scope (the encyclopedia, Phase 3: one page per genus); and every species,
 -- subspecies or genus that PBDB knows and that a study links or names in italics
 -- (decision of 2026-11-02: basic pages for known taxa in the MVP).
+-- A key gets one page: new > genus > known. A known genus that a study cites is the
+-- encyclopedia page of that genus, and keeps its events (joined by taxon_key).
 with new_taxa as (
     select
         {{ taxon_key('taxon_name') }} as taxon_key,
@@ -9,6 +12,17 @@ with new_taxa as (
         taxonomic_block,
         taxon_group
     from {{ ref('stg_wikipedia__new_taxa') }}
+),
+
+genera as (
+    select
+        taxon_key,
+        taxon_name,
+        'genus' as page_type,
+        taxonomic_block,
+        taxon_group
+    from {{ ref('int_catalog_genera') }}
+    where taxon_key not in (select taxon_key from new_taxa)
 ),
 
 mentions as (
@@ -26,6 +40,7 @@ known as (
     where match_source = 'pbdb'
       and taxon_rank in ('species', 'subspecies', 'genus')
       and taxon_key not in (select taxon_key from new_taxa)
+      and taxon_key not in (select taxon_key from genera)
       -- Animals outside the taxonomic scope (§4) that archosaur studies mention,
       -- e.g. mammals bitten by crocodiles, get no page.
       and taxon_key not in (
@@ -37,5 +52,7 @@ known as (
 )
 
 select * from new_taxa
+union all
+select * from genera
 union all
 select * from known

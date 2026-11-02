@@ -5,10 +5,15 @@ mentioned in the notes ("A member of the family Peirosauridae") and taxa linked
 or italicised in research items. Each name gets its own versioned snapshot in
 the raw store, including "not found" — new taxa usually take weeks to reach
 PBDB, and that lag is measured and tested downstream (ALCANCE.md §16).
+
+The encyclopedia (Phase 3) also needs every extinct genus of the clades in scope:
+`ingest_catalog` downloads them with one request per clade of the
+`dbt/seeds/scope_clades.csv` seed, the single definition of the scope (§4).
 """
 
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import re
 from collections.abc import Iterable
@@ -18,6 +23,7 @@ from typing import Any
 
 import httpx
 
+from paleo.config import project_root
 from paleo.http import get_json
 from paleo.interim import latest_rows
 from paleo.store import RawStore
@@ -25,6 +31,8 @@ from paleo.store import RawStore
 PBDB_TAXA_LIST = "https://paleobiodb.org/data1.2/taxa/list.json"
 BATCH_SIZE = 100
 REFRESH_DAYS = 7
+CATALOG_REFRESH_DAYS = 30
+CATALOG_SHOW = "attr,app,class,parent,size"
 
 _NAME = re.compile(r"^[A-Z][A-Za-zë-]+(?: [a-z][a-z-]+){0,2}$")
 
@@ -146,3 +154,90 @@ def ingest_names(
         taxa.flush()  # keep progress if a later batch fails
     taxa.flush()
     return PbdbResult(len(names), len(names) - len(pending), found, not_found, new_versions)
+
+
+# --- Encyclopedia catalog: every extinct genus and species of the clades in scope ----
+
+
+@dataclass(frozen=True)
+class ScopeClade:
+    block: str
+    taxon_group: str
+    pbdb_base_name: str
+    priority: int
+    enabled: bool
+
+
+@dataclass(frozen=True)
+class CatalogResult:
+    clades: int
+    skipped_fresh: int
+    records: int
+    new_versions: int
+
+
+def scope_clades(seed: Path | None = None, *, enabled_only: bool = True) -> list[ScopeClade]:
+    """Rows of the scope seed (ALCANCE.md §4); only the enabled blocks by default."""
+    path = seed or project_root() / "dbt" / "seeds" / "scope_clades.csv"
+    with path.open(encoding="utf-8", newline="") as f:
+        rows = [
+            ScopeClade(
+                r["block"],
+                r["taxon_group"],
+                r["pbdb_base_name"],
+                int(r["priority"]),
+                r["enabled"].strip().lower() == "true",
+            )
+            for r in csv.DictReader(f)
+        ]
+    return [r for r in rows if r.enabled or not enabled_only]
+
+
+def catalog_store(raw_root: Path | None = None) -> RawStore:
+    return RawStore("pbdb", "catalog", volatile={"elapsed_time"}, raw_root=raw_root)
+
+
+def fetch_catalog(client: httpx.Client, base_name: str) -> list[dict[str, Any]]:
+    """Accepted extinct genera and species under ``base_name`` (one request, a few MB).
+
+    ``accepted``, not ``valid``: PBDB counts junior synonyms as valid, so "valid"
+    would list Manospondylus gigas as a species of Tyrannosaurus and give the
+    synonym genus a page of its own."""
+    body = get_json(
+        client,
+        PBDB_TAXA_LIST,
+        {
+            "base_name": base_name,
+            "rank": "genus,species",
+            "extant": "no",
+            "taxon_status": "accepted",
+            "vocab": "pbdb",
+            "show": CATALOG_SHOW,
+        },
+    )
+    return body.get("records", [])
+
+
+def ingest_catalog(
+    client: httpx.Client,
+    clades: list[ScopeClade],
+    *,
+    raw_root: Path | None = None,
+    refresh: bool = False,
+    today: dt.date | None = None,
+) -> CatalogResult:
+    """Snapshot the catalog of each clade, re-downloaded monthly."""
+    catalog = catalog_store(raw_root)
+    pending = [
+        c
+        for c in clades
+        if refresh or not catalog.is_fresh(c.pbdb_base_name, CATALOG_REFRESH_DAYS, today)
+    ]
+    records = new_versions = 0
+    for clade in pending:
+        rows = fetch_catalog(client, clade.pbdb_base_name)
+        payload = {"base_name": clade.pbdb_base_name, "show": CATALOG_SHOW, "records": rows}
+        new_versions += catalog.save_if_changed(clade.pbdb_base_name, payload, today).created
+        records += len(rows)
+        catalog.flush()
+    return CatalogResult(len(clades), len(clades) - len(pending), records, new_versions)

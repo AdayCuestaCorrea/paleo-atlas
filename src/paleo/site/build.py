@@ -213,7 +213,11 @@ class SiteBuilder:
             weeks[iso_week(event["event_date"])].append(event)
         week_keys = sorted(weeks, reverse=True)
         new = [t for t in data.taxa if t["page_type"] == "new"]
-        known = [t for t in data.taxa if t["page_type"] == "known"]
+        # Taxa with studies this year: known pages and the encyclopedia genera that a
+        # study is about (a genus page replaces the known page of that genus).
+        known = [
+            t for t in data.taxa if t["page_type"] != "new" and data.events.get(t["taxon_key"])
+        ]
         year_page = enabled_pages()[0].title(data.built_on.year)
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []

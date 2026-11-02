@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 15 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha en paralelo, sin tocar lo que usa Actions
+**Creado:** 2026-10-31 · **Versión:** 16 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
 
 ---
 
@@ -119,7 +119,7 @@ Demostrar, con un sistema que funciona en público, las habilidades que piden la
 
 ## 4. Alcance taxonómico
 
-El alcance se define en un fichero de datos (`dbt/seeds/scope_clades.csv`), no en el código. **Ampliar = añadir filas al seed + entrada en el registro de cambios.**
+El alcance se define en un fichero de datos (`dbt/seeds/scope_clades.csv`, *hecho*), no en el código: una fila por clado de PBDB con su bloque, su grupo, su prioridad (gana el clado más específico) y si está activo. Lo leen dbt y `paleo ingest pbdb`. **Ampliar = añadir o activar filas del seed + entrada en el registro de cambios.** Las aves necesitan dos filas porque PBDB separa Aves (*Confuciusornis*…) de Avialae (*Archaeopteryx*, *Hesperornis*…). La enciclopedia tiene **una ficha por género** (decisión del usuario, 2026-11-02), con sus especies aceptadas dentro; los géneros con especies vivas y los icnotaxones (huellas, huevos) no entran.
 
 | Bloque | Grupos | Ejemplos famosos | Página de Wikipedia anual (verificar nombre exacto) | Fase |
 |---|---|---|---|---|
@@ -140,7 +140,7 @@ Notas:
 | # | Fuente | Qué aporta | Acceso | Frecuencia | Licencia (a verificar) | Verificado |
 |---|---|---|---|---|---|---|
 | F1 | Wikipedia — páginas anuales de §4 (año en curso + años anteriores para histórico) | Taxones nuevos: nombre, estatus, autores, edad, unidad geológica, localidad, referencia | API de MediaWiki; nunca scraping del HTML | Diaria (detección de cambios) | Texto CC BY-SA 4.0 (+ GFDL): se usan los hechos, no se copia el texto | [x] 2026-11-01 |
-| F2 | PBDB — API `data1.2` | Taxonomía, sinonimias, **opiniones taxonómicas con año y referencia** (historial), rango temporal, ocurrencias | API REST | Semanal (caché de 7 días; los nombres nuevos, al momento) | CC BY 4.0 (citar PBDB) | [x] 2026-11-01 |
+| F2 | PBDB — API `data1.2` | Taxonomía, sinonimias, **opiniones taxonómicas con año y referencia** (historial), rango temporal, ocurrencias | API REST | Semanal por nombre (caché de 7 días; los nombres nuevos, al momento); catálogo de la enciclopedia mensual, una descarga por clado del seed `scope_clades` | CC BY 4.0 (citar PBDB) | [x] 2026-11-01 |
 | F3 | GBIF — API de descargas (filtro en servidor) | Especímenes fósiles (`basisOfRecord = FOSSIL_SPECIMEN`) de los grupos de §4: coordenadas, institución, país | API pública gratuita (cuenta de GBIF) | Mensual | Cada descarga tiene DOI y hay que citarla; licencias por registro | [ ] |
 | F4 | PhyloPic — API v2 | Siluetas por taxón (si no hay, se usa la del género o el clado) | API REST | Semanal (todas las búsquedas; respeta la caché de 7 días) | Por imagen. Lista blanca común con F5 (`license_allowlist`): dominio público, CC0, CC BY y CC BY-SA 2.0–4.0; **nunca NC ni ND** | [x] 2026-11-01 |
 | F5 | Wikimedia Commons — API | Reconstrucciones y fotos de fósiles | API de MediaWiki | Semanal (caché de 7 días) | Por archivo; Commons no admite licencias solo NC ni ND | [x] 2026-11-01 |
@@ -273,7 +273,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 **Terminado cuando:** los DAGs producen exactamente el mismo resultado que los workflows de Actions.
 
 ### Fase 3 — Enciclopedia, ampliación y Spark
-- [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos)
+- [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(arcosaurios hechos: 3.040 géneros, una descarga mensual por clado del seed; reptiles marinos y peces al activar sus filas)*
 - [ ] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4)
 - [ ] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9)
 - [ ] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes
@@ -338,7 +338,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 | Término del glosario | Término, definición ES, definición EN, estado de revisión (§12) |
 
 ### Capas (nombres orientativos; *(hecho)* = existe con ese nombre)
-- **seeds:** `license_allowlist`, `trusted_journals` y `group_clades` *(hechos)*; `contested_topics` *(Fase 3)*, `models_3d`, `glossary`, `body_sizes`, `reference_objects`. El alcance de §4 está en `config.py` y en el macro de grupos, no en un seed
+- **seeds:** `license_allowlist`, `trusted_journals`, `group_clades` y `scope_clades` *(hechos; `scope_clades` es el alcance de §4)*; `contested_topics` *(Fase 3)*, `models_3d`, `glossary`, `body_sizes`, `reference_objects`. El título de las páginas anuales sigue en `config.py` y en la macro `wikipedia_block` (se unifica al activar los bloques nuevos)
 - **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__fossil_specimens`, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
 - **historial (SCD2 desde versiones crudas):** `int_new_taxa_history`; los `stg_*_versions` / `stg_*_revisions` conservan todas las versiones
 - **intermediate:** *(hechos)* `int_taxon_pages`, `int_taxon_classification`, `int_research_taxon_links` (resolución de nombres), `int_image_candidates`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`
@@ -760,6 +760,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v16: empieza la Fase 3 en la rama `fase-3` (datos en `data-fase-3`), con merge a `main` al cerrar la Fase 1. Decisiones: una ficha por género; peces = Placodermi + Chondrichthyes + seed de destacados; narrativas solo para géneros con artículo en Wikipedia, en lotes con la GPU local. Hito 1: seed `scope_clades` (alcance como datos), catálogo de PBDB por clado (`taxon_status=accepted`, sin icnotaxones), 3.040 fichas de género de arcosaurios, enlace especie → género | Decisión del usuario |
 | 2026-11-02 | v15: documentos de fase en `docs/fases/` (§20): Fases 1 y 2 escritos; uno más en cada fase como entregable al cerrarla | Petición del usuario |
 | 2026-11-02 | v14: Fase 2 (Airflow 3.3.2 en Docker): DAGs diario, semanal, mensual provisional y de paridad con el CI; lista única de pasos comprobada contra `pipeline.yml`; huella del almacén y de la web para demostrar el mismo resultado; job de CI que carga los DAGs; A8 cerrada; sin logs estructurados (§14). Se hace en paralelo a las 2 semanas autónomas de la Fase 1 sin tocar lo que usa Actions | Decisión del usuario |
 | 2026-11-02 | v13: revisión completa de la Fase 1. Arreglos: `paleo check` distingue un fallo (salida 2), PBDB deja de consultar nombres que no son taxones, CI en todas las ramas, fichas «conocidas» fuera de §4 (mamíferos) eliminadas. Añadido: silueta del grupo (0 fichas sin imagen), eventos `entry_changed` desde el SCD2, señal DOAJ, crédito de PBDB en cada ficha, texto de respaldo y fuentes en las fichas sin texto, cifras de verificación en «Cómo evaluamos», hreflang absolutos. A Fase 3: «En debate», «Recogido en PBDB» y significado del nombre; A19 ajustada. Documento alineado con el código (§5, §8, §14, §26) | Revisión pedida por el usuario |

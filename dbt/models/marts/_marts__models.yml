@@ -2,7 +2,9 @@ version: 2
 
 models:
   - name: dim_taxon
-    description: One row per taxon page (new 2026 taxa + known taxa studied in 2026).
+    description: >
+      One row per taxon page: new 2026 taxa, encyclopedia genera (Phase 3) and known
+      taxa studied in 2026.
     columns:
       - name: taxon_key
         data_tests: [unique, not_null]
@@ -12,7 +14,14 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: [new, known]
+                values: [new, genus, known]
+      - name: genus_key
+        description: Encyclopedia page of the genus of a species page.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
   - name: dim_study
     columns:
       - name: study_id

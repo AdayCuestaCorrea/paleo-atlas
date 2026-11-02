@@ -36,6 +36,8 @@
         {% elif not taxon.early_interval %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
         {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
         {% if taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
+        {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
+        {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
         {% if taxon.family_name or taxon.order_name or taxon.class_name %}
           <dt>{{ T.field_classification }}</dt>
           <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}</dd>

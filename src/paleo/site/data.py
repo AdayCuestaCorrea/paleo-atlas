@@ -1,7 +1,7 @@
 """Load the dbt marts once and shape them for the templates.
 
-The dataset is small (hundreds of taxa), so everything is read into memory with
-a few queries instead of one query per page.
+Everything is read into memory with a few queries instead of one query per page:
+a few thousand taxa (the encyclopedia genera) fit easily.
 """
 
 from __future__ import annotations
@@ -10,6 +10,7 @@ import datetime as dt
 import json
 from collections import defaultdict
 from dataclasses import dataclass, field
+from functools import cached_property
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
@@ -35,7 +36,7 @@ class SiteData:
     last_checked: dt.date | None = None  # last change detection (pipeline run log)
     stats: dict[str, Any] = field(default_factory=dict)  # verification figures (§12.1, §17)
 
-    @property
+    @cached_property
     def by_key(self) -> dict[str, dict[str, Any]]:
         return {t["taxon_key"]: t for t in self.taxa}
 

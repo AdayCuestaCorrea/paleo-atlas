@@ -15,6 +15,24 @@ seeds:
     columns:
       - name: taxon_group
         data_tests: [unique, not_null]
+  - name: scope_clades
+    description: >
+      Taxonomic scope of ALCANCE.md §4 as data: every PBDB clade whose extinct genera
+      get an encyclopedia page, with its block and Wikipedia group. A group may need
+      several clades: PBDB keeps Aves (Confuciusornis…) and Avialae (Archaeopteryx,
+      Hesperornis…) apart, so birds take both. When a genus is in several clades (a
+      bird is also a dinosaur and an archosaur), the lowest `priority` wins. Blocks
+      are switched on by phase with `enabled`. Read by `paleo ingest pbdb` too
+      (src/paleo/ingest/pbdb.py), so the scope lives in one place.
+    columns:
+      - name: pbdb_base_name
+        data_tests: [unique, not_null]
+      - name: block
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [archosaurs, marine_reptiles, fossil_fishes]
   - name: trusted_journals
     description: >
       Initial hand-curated list of established journals (decision A16). A

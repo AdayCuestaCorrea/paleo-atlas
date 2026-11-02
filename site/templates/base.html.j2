@@ -38,6 +38,7 @@
         <a href="{{ url('assess') }}">{{ T.nav_assess }}</a> ·
         <a href="{{ url('about') }}">{{ T.nav_about }}</a> ·
         {{ t('footer_updated', date=fmt_date(built_on)) }}
+        {%- if last_checked %} · {{ t('footer_checked', date=fmt_date(last_checked)) }}{% endif %}
       </p>
     </div>
   </footer>

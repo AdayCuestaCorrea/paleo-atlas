@@ -7,7 +7,7 @@
 #
 #   cd airflow
 #   ./bin/init-work.sh                      # clone of the data branch in work/data
-#   GIT_SHA=$(git rev-parse HEAD) docker compose up -d --build
+#   GIT_SHA=$(git rev-parse HEAD) docker compose --env-file ../.env up -d --build
 #   docker compose down                     # stop (add -v to drop the metadata DB)
 #
 # The DAGs never publish: GitHub Actions stays the only writer of the data branch and
@@ -41,6 +41,12 @@ x-airflow-common: &airflow-common
     # Optional narrative step with the host's Ollama (narrative=ollama). Ollama must
     # listen on an address the containers can reach (OLLAMA_HOST=0.0.0.0 on the host).
     OLLAMA_BASE_URL: http://host.docker.internal:11434/v1
+    # GBIF account for the monthly download, and nothing else from the repo's .env:
+    #   docker compose --env-file ../.env up -d
+    GBIF_USERNAME: ${GBIF_USERNAME:-}
+    GBIF_PASSWORD: ${GBIF_PASSWORD:-}
+    GBIF_MAIL: ${GBIF_MAIL:-}
+    SPARK_LOCAL_IP: 127.0.0.1
   extra_hosts:
     - host.docker.internal:host-gateway
   volumes:

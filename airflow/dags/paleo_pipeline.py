@@ -3,7 +3,7 @@
 * ``paleo_daily``   — Tuesday to Sunday: change detection, then the full pipeline only
   if something changed (otherwise the warehouse and the site are just rebuilt).
 * ``paleo_weekly``  — Mondays: everything, without change detection (weekly recap).
-* ``paleo_monthly`` — provisional until Phase 3: every source queried again.
+* ``paleo_monthly`` — every source queried again, then GBIF reconciled in Spark.
 * ``paleo_ci_parity`` — the CI fixture job, to prove both produce the same output.
 
 Every task calls a `paleo` command from paleo_steps.py (decision D4: no pipeline logic
@@ -22,7 +22,6 @@ from pathlib import Path
 
 import pendulum
 from airflow.providers.standard.operators.bash import BashOperator
-from airflow.providers.standard.operators.empty import EmptyOperator
 from airflow.sdk import DAG, Param, TriggerRule, chain, task
 
 sys.path.insert(0, str(Path(__file__).parent))  # paleo_steps.py, next to this file
@@ -260,18 +259,19 @@ paleo_weekly = pipeline_dag(
 with DAG(
     "paleo_monthly",
     schedule="23 7 1 * *",
-    doc_md="Provisional monthly run (until Phase 3): every source queried again, ignoring "
-    "freshness, for retractions, corrections and DOAJ changes. GBIF and Spark come in "
-    "Phase 3.",
-    **COMMON,
+    doc_md="Monthly run: every source queried again, ignoring freshness (retractions, "
+    "corrections, DOAJ changes), then the GBIF download of fossil specimens (GBIF can take "
+    "hours to prepare it) reconciled with the PBDB genera in Spark, and the site rebuilt.",
+    **{**COMMON, "dagrun_timeout": dt.timedelta(hours=10)},
 ) as paleo_monthly:
     m = {sid: step_task(s) for sid, s in by_id(MONTHLY).items()}
+    m["gbif_extract"].execution_timeout = dt.timedelta(hours=8)
     m["report_finish"].trigger_rule = TriggerRule.ALL_DONE
-    gbif = EmptyOperator(task_id="gbif_extract_phase3")
     chain(
         checkout_task(), m["report_start"], m["parse_wikipedia"], m["refresh_pbdb"],
-        m["refresh_studies"], m["refresh_images"], gbif, m["dbt_build"], m["site"],
-        m["site_check"], m["report_finish"], commit_task(),
+        m["refresh_studies"], m["refresh_images"], m["catalog_build"], m["gbif_extract"],
+        m["gbif_reconcile"], m["dbt_build"], m["site"], m["site_check"], m["report_finish"],
+        commit_task(),
     )  # fmt: skip
     list(paleo_monthly.tasks) >> watcher_task()
 

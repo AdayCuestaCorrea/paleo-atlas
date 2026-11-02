@@ -559,12 +559,18 @@ def gbif_extract(
 
 @gbif_app.command("reconcile")
 def gbif_reconcile(
-    key: Annotated[str, typer.Argument(help="GBIF download key (paleo gbif extract).")],
+    key: Annotated[
+        str | None, typer.Argument(help="GBIF download key [default: the latest download].")
+    ] = None,
     engine: Annotated[str, typer.Option(help="duckdb or spark.")] = "duckdb",
 ) -> None:
     """Reconcile the download with the PBDB genera and write the aggregated extract
     (genus_specimens, institutions, countries, unmatched) to the raw store."""
-    from paleo.gbif_job.run import reconcile
+    from paleo.gbif_job.run import latest_download, reconcile
 
+    key = key or latest_download()
+    if key is None:
+        typer.echo("No GBIF download yet: run `paleo gbif extract` first.", err=True)
+        raise typer.Exit(1)
     counts, seconds = reconcile(key, engine)
     typer.echo(f"GBIF {key} with {engine} in {seconds:.1f} s: {counts}")

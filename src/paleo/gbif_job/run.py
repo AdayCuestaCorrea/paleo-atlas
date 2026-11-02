@@ -34,6 +34,18 @@ def unpack(download_zip: Path) -> str:
     return str(csv[0])
 
 
+def latest_download() -> str | None:
+    """Key of the most recent GBIF download recorded in the raw store."""
+    from paleo.ingest.gbif import store
+
+    downloads = store(get_paths().raw)
+    records = [downloads.latest(k) for k in downloads.stored_keys()]
+    records = [r["payload"] for r in records if r and r["payload"].get("status") == "SUCCEEDED"]
+    if not records:
+        return None
+    return max(records, key=lambda r: (r.get("created") or "", r["key"]))["key"]
+
+
 def export_genera(target: Path) -> Path:
     """PBDB genera of the encyclopedia (taxon_name, family_name) from the warehouse."""
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -64,8 +76,12 @@ def reconcile(key: str, engine: str, out_dir: Path | None = None) -> tuple[dict[
     zip_path = data / "cache" / "gbif" / key / f"{key}.zip"
     gbif_files = unpack(zip_path)
     genera = export_genera(data / "cache" / "gbif" / key / "pbdb_genera.parquet")
-    out = out_dir or data / "raw" / "gbif" / "extract" / key
-    if out.exists():
+    extracts = data / "raw" / "gbif" / "extract"
+    out = out_dir or extracts / key
+    if out_dir is None and extracts.exists():
+        for old in extracts.iterdir():  # one extract at a time; git keeps the history
+            shutil.rmtree(old)
+    elif out.exists():
         shutil.rmtree(out)
     start = time.perf_counter()
     if engine == "duckdb":

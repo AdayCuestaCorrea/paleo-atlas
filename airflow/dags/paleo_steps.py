@@ -51,15 +51,18 @@ ACTIONS_ONLY = {
     "report ran-today": "the 10:47 backup cron of GitHub Actions; Airflow schedules reliably",
 }
 
-# Monthly run (provisional until GBIF and Spark arrive in Phase 3): every source is
-# queried again, ignoring freshness, to pick up retractions, corrections (Crossref
-# updated-by), DOAJ changes and new PBDB records for taxa that were already stored.
+# Monthly run: every source queried again, ignoring freshness (retractions,
+# corrections, DOAJ changes, new PBDB records), then the GBIF download (it can take
+# GBIF hours to prepare) reconciled with the PBDB genera in Spark (§7, Phase 3).
 MONTHLY: tuple[Step, ...] = (
     Step("report_start", ("report start --changed",)),
     Step("parse_wikipedia", ("parse wikipedia",)),
     Step("refresh_pbdb", ("ingest pbdb --refresh",), network=True),
     Step("refresh_studies", ("ingest studies --refresh",), network=True),
     Step("refresh_images", ("ingest images --refresh",), network=True),
+    Step("catalog_build", ("build",)),  # the genera the GBIF job reconciles with
+    Step("gbif_extract", ("gbif extract",), network=True),
+    Step("gbif_reconcile", ("gbif reconcile --engine spark",)),
     Step("dbt_build", ("build",)),
     Step("site", ("site",)),
     Step("site_check", ("site --check",)),

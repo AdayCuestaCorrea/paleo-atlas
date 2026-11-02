@@ -4,9 +4,10 @@
 FROM apache/airflow:3.3.2-python3.14
 
 USER root
-# git for the data clone; gcc for mwparserfromhell, which has no wheel for this Python.
+# git for the data clone; gcc for mwparserfromhell, which has no wheel for this Python;
+# a Java runtime for the monthly GBIF job in Spark (PySpark local mode).
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git gcc libc6-dev \
+    && apt-get install -y --no-install-recommends git gcc libc6-dev openjdk-17-jre-headless \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=ghcr.io/astral-sh/uv:0.13.1 /uv /usr/local/bin/uv
 
@@ -19,7 +20,7 @@ COPY pyproject.toml uv.lock README.md LICENSE LICENSE-CONTENT.md ./
 COPY src ./src
 # The image's Python 3.14 instead of a downloaded one (pyproject asks for managed
 # interpreters only because CachyOS is a rolling distro).
-RUN uv sync --locked --no-dev --python-preference only-system --python python3.14
+RUN uv sync --locked --no-dev --group spark --python-preference only-system --python python3.14
 COPY . .
 ARG GIT_SHA=unknown
 ENV PALEO_COMMIT=${GIT_SHA}

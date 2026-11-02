@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 14 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha en paralelo, sin tocar lo que usa Actions
+**Creado:** 2026-10-31 · **Versión:** 15 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha en paralelo, sin tocar lo que usa Actions
 
 ---
 
@@ -255,6 +255,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(workflow listo; el cron de las 06:00 no se lanzó el 2026-11-02 → horario movido a 06:23 con reserva a las 10:47)*
 - [x] Informe de ejecución por cada run (`paleo report`: registro en `runs/` de la rama `data` y resumen en Actions)
 - [x] Web publicada en GitHub Pages
+- [x] Documento de fase ([`docs/fases/fase-1.md`](docs/fases/fase-1.md))
 
 **Terminado cuando:** la web pública muestra las especies de arcosaurios de 2026 en los dos idiomas, con ficha narrativa verificada, imagen (o la del grupo), señales de fiabilidad e historial, y se ha actualizado sola **2 semanas seguidas** sin intervención.
 
@@ -265,6 +266,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] Capturas para el README (DAG, ejecución correcta, reintento real con Wikipedia bloqueada)
 - [x] Paridad con Actions: huella (hash por tabla del almacén y por archivo de la web) del DAG `paleo_ci_parity` igual a la que sube el CI para el mismo commit (`scripts/parity.py`); la ejecución diaria del DAG da los mismos totales que la de Actions del mismo día
 - [x] Job de CI que carga los DAGs con Airflow 3.3.2 (sin errores de importación)
+- [x] Documento de fase ([`docs/fases/fase-2.md`](docs/fases/fase-2.md))
 
 Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/work/`, fuera de git) y hacen commit sin push; Actions sigue siendo el único que publica. El paso narrativo se salta por defecto (`narrative=ollama` para usar el Ollama local; nunca Groq, cuya cuota es de Actions).
 
@@ -284,6 +286,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM
 - [ ] Árbol de parentesco con escala temporal (§11.2): topología de Open Tree of Life (F11) o, si falta, clasificación de PBDB; rangos temporales de PBDB
 - [ ] DAG mensual real en Airflow
+- [ ] Documento de fase (`docs/fases/fase-3.md`)
 
 **Terminado cuando:** la enciclopedia de los tres bloques de §4 está publicada y el benchmark está documentado con cifras reales.
 
@@ -293,6 +296,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Interview pack: one-pager, vídeo de 2 min, postmortem
 - [ ] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17
 - [ ] Enlace en LinkedIn y en el perfil de GitHub
+- [ ] Documento de fase (`docs/fases/fase-4.md`)
 
 **Terminado cuando:** el proyecto aparece en el CV con URL y métricas verificables.
 
@@ -302,12 +306,14 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Extracción del taxón mencionado y enlace a su ficha
 - [ ] Deduplicación de la misma noticia entre medios (embeddings)
 - [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12)
+- [ ] Documento de fase (`docs/fases/fase-5.md`)
 
 **Terminado cuando:** las métricas de clasificación de noticias están publicadas en el README y el glosario está revisado y en las fichas.
 
 ### Fase 6 — Extras
 - [ ] Modelos 3D curados (§13)
 - [ ] Comparador de tamaños (§11.3)
+- [ ] Documento de fase (`docs/fases/fase-6.md`)
 
 **Terminado cuando:** cada extra cumple sus reglas de §11.3 y §13 y se ha publicado.
 
@@ -646,6 +652,9 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 ### Documento de alcance
 - `ALCANCE.md` (español) es el **canónico**. `SCOPE.md` (inglés) se actualiza al cerrar cada fase, no en cada cambio, para no mantener dos documentos vivos a la vez.
 
+### Documentos de fase (`docs/fases/`)
+Uno por fase, escrito al cerrarla (en español; en inglés junto con `SCOPE.md`). Explica el **porqué**, no el qué: el problema, los conceptos desde cero, cómo funciona en el repo, por qué así (con las alternativas), cómo se comprueba, resultados reales, qué salió mal y preguntas de entrevista con respuesta. Sirve para estudiar y defender el proyecto. Si contradice a este documento, manda este.
+
 ### ADRs (`docs/adr/`)
 D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuencias.
 
@@ -751,6 +760,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-02 | v15: documentos de fase en `docs/fases/` (§20): Fases 1 y 2 escritos; uno más en cada fase como entregable al cerrarla | Petición del usuario |
 | 2026-11-02 | v14: Fase 2 (Airflow 3.3.2 en Docker): DAGs diario, semanal, mensual provisional y de paridad con el CI; lista única de pasos comprobada contra `pipeline.yml`; huella del almacén y de la web para demostrar el mismo resultado; job de CI que carga los DAGs; A8 cerrada; sin logs estructurados (§14). Se hace en paralelo a las 2 semanas autónomas de la Fase 1 sin tocar lo que usa Actions | Decisión del usuario |
 | 2026-11-02 | v13: revisión completa de la Fase 1. Arreglos: `paleo check` distingue un fallo (salida 2), PBDB deja de consultar nombres que no son taxones, CI en todas las ramas, fichas «conocidas» fuera de §4 (mamíferos) eliminadas. Añadido: silueta del grupo (0 fichas sin imagen), eventos `entry_changed` desde el SCD2, señal DOAJ, crédito de PBDB en cada ficha, texto de respaldo y fuentes en las fichas sin texto, cifras de verificación en «Cómo evaluamos», hreflang absolutos. A Fase 3: «En debate», «Recogido en PBDB» y significado del nombre; A19 ajustada. Documento alineado con el código (§5, §8, §14, §26) | Revisión pedida por el usuario |
 | 2026-11-02 | v12: informe de ejecución (`paleo report`) y registro diario en `runs/`; test de frescura; cron a las 06:23 con reserva a las 10:47; la web se reconstruye a diario aunque no haya cambios; el commit a `data` va al final y siempre | El cron de las 06:00 no se lanzó |
@@ -802,6 +812,8 @@ paleo-atlas/
 ├── scripts/                ← sembrar los fixtures del CI, huella (fingerprint.py) y paridad Airflow/Actions (parity.py)
 ├── tests/                  ← pytest (+ fixtures)
 ├── docs/
+│   ├── fases/              ← documento explicativo de cada fase terminada
+│   ├── img/                ← capturas (Airflow)
 │   ├── adr/
 │   └── interview-pack/
 └── data/                   ← worktree local de la rama `data` (raw, derived, runs); cache/ e interim/ nunca se versionan

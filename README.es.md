@@ -6,7 +6,9 @@ Una enciclopedia paleontológica visual y viva, en español e inglés, que se re
 
 **Web:** https://adaycuestacorrea.github.io/paleo-atlas/
 
-**Estado:** la Fase 1 (especies de arcosaurios de 2026, en los dos idiomas) está publicada y GitHub Actions la actualiza a diario; la Fase 2 (Airflow) está en curso. El alcance completo está en [`ALCANCE.md`](ALCANCE.md).
+**Estado:** la Fase 1 (especies de arcosaurios de 2026, en los dos idiomas) está publicada y GitHub Actions la actualiza a diario; la Fase 2 (el mismo pipeline como DAGs de Airflow, con paridad demostrada) está implementada. El alcance completo está en [`ALCANCE.md`](ALCANCE.md).
+
+**Cómo funciona cada fase y por qué:** [`docs/fases/`](docs/fases/).
 
 Este README se completará en la Fase 4 (arquitectura, decisiones de diseño, benchmark, métricas).
 

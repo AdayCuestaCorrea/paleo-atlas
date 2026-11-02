@@ -6,7 +6,9 @@ A living, visual paleontology encyclopedia in Spanish and English, rebuilt autom
 
 **Website:** https://adaycuestacorrea.github.io/paleo-atlas/
 
-**Status:** Phase 1 (archosaur species of 2026, both languages) is live and updated daily by GitHub Actions; Phase 2 (Airflow) is in progress. The full project scope lives in [`ALCANCE.md`](ALCANCE.md) (Spanish, canonical); [`SCOPE.md`](SCOPE.md) is the English version, updated at the end of each phase.
+**Status:** Phase 1 (archosaur species of 2026, both languages) is live and updated daily by GitHub Actions; Phase 2 (the same pipeline as Airflow DAGs, with proven parity) is implemented. The full project scope lives in [`ALCANCE.md`](ALCANCE.md) (Spanish, canonical); [`SCOPE.md`](SCOPE.md) is the English version, updated at the end of each phase.
+
+**How each phase works and why** (Spanish): [`docs/fases/`](docs/fases/).
 
 This README will be completed in Phase 4 (architecture, design decisions, benchmark, metrics).
 

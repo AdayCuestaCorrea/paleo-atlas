@@ -187,5 +187,121 @@
    ]
   },
   "llm_tokens": {}
+ },
+ {
+  "started_at": "2026-11-02T12:30:20Z",
+  "trigger": "manual",
+  "changed": true,
+  "status": "ok",
+  "finished_at": "2026-11-02T12:30:37Z",
+  "steps": [
+   {
+    "name": "Set up job",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Run actions/checkout@v7.0.1",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Check out the data branch",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "Run astral-sh/setup-uv@v10.3.3",
+    "conclusion": "success",
+    "seconds": 4
+   },
+   {
+    "name": "Install",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Anything new?",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Ingest and parse",
+    "conclusion": "success",
+    "seconds": 5
+   },
+   {
+    "name": "dbt build",
+    "conclusion": "success",
+    "seconds": 10
+   }
+  ],
+  "sources_changed": {
+   "doaj/journals": 149,
+   "phylopic/nodes": 7
+  },
+  "wikipedia_revisions": {
+   "2026_in_archosaur_paleontology": 1383268788
+  },
+  "wikipedia_new_revisions": [],
+  "summary": {
+   "totals": {
+    "taxa_new": 82,
+    "taxa_known": 198,
+    "events": 313,
+    "studies": 461,
+    "texts_en": 82,
+    "texts_es": 81,
+    "gallery_images": 1557,
+    "texts_pending": 1
+   },
+   "events_by_type": {
+    "description": 82,
+    "new_study": 228,
+    "study_corrected": 3
+   },
+   "pbdb": {
+    "known": {
+     "matched": 196,
+     "total": 198
+    },
+    "new": {
+     "matched": 34,
+     "total": 82
+    }
+   },
+   "images": {
+    "phylopic/clade": 138,
+    "commons/taxon": 59,
+    "phylopic/taxon": 42,
+    "phylopic/group": 31,
+    "phylopic/genus": 10
+   }
+  },
+  "changes_since_previous": {
+   "taxa_known": -4,
+   "events": -4,
+   "gallery_images": -6
+  },
+  "dbt": {
+   "counts": {
+    "pass": 92,
+    "success": 33,
+    "warn": 2
+   },
+   "issues": [
+    {
+     "status": "warn",
+     "node": "not_null_stg_wikipedia__research_items_primary_doi",
+     "failures": 11
+    },
+    {
+     "status": "warn",
+     "node": "assert_pbdb_lag_warning",
+     "failures": 48
+    }
+   ]
+  },
+  "llm_tokens": {}
  }
 ]

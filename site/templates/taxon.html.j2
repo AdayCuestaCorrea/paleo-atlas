@@ -156,9 +156,19 @@
 
   <section class="block" id="historial">
     <h2>{{ T.history_title }}</h2>
-    {% if events %}
-      <ol class="timeline">{% for e in events %}{{ event(e, T, fmt_date) }}{% endfor %}</ol>
-    {% else %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
+    {% if history.recent %}
+      <ol class="timeline">{% for e in history.recent %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name) }}{% endfor %}</ol>
+    {% elif not history.decades %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
+    {% if history.decades %}
+    <h3 class="history__earlier">{{ T.history_earlier }} <span class="muted">({{ history.backfill }})</span></h3>
+    <p class="note">{{ T.history_earlier_note }}</p>
+    {% for decade, items in history.decades %}
+    <details class="decade"{% if loop.first and not history.recent %} open{% endif %}>
+      <summary>{{ t('decade', n=decade) }} <span class="muted">({{ items | length }})</span></summary>
+      <ol class="timeline">{% for e in items %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name) }}{% endfor %}</ol>
+    </details>
+    {% endfor %}
+    {% endif %}
   </section>
 
   {% if not (text and text.sources) %}

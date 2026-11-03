@@ -66,6 +66,10 @@ models:
     columns:
       - name: event_id
         data_tests: [unique, not_null]
+  - name: int_opinion_events
+    description: >
+      History events from PBDB's taxonomic opinions: the first opinion that gives a
+      name each new status, plus revalidations by PBDB's current classification.
 
 unit_tests:
   - name: new_taxa_history_starts_a_version_only_when_a_field_changes
@@ -129,3 +133,26 @@ unit_tests:
     expect:
       rows:
         - {genus_name: Fregilupus, en_title: Hoopoe starling}
+  - name: opinions_give_one_event_per_new_status_and_a_revalidation
+    description: >
+      Brontosaurus: described in 1879, a synonym of Apatosaurus from 1903 (repeated in
+      1936), valid for Romer in 1966 and accepted again by PBDB's current classification
+      in 2015. Repeated opinions and plain "belongs to" give no event.
+    model: int_opinion_events
+    given:
+      - input: ref('stg_pbdb__opinions')
+        rows:
+          - {opinion_id: "opn:1", pbdb_taxon_no: "txn:1", taxon_name: Brontosaurus, taxon_rank: genus, status: belongs to, parent_name: Apatosaurinae, spelling_reason: original spelling, opinion_author: Marsh, opinion_year: 1879, reference_id: "ref:1", is_current_classification: false}
+          - {opinion_id: "opn:2", pbdb_taxon_no: "txn:1", taxon_name: Brontosaurus, taxon_rank: genus, status: subjective synonym of, parent_name: Apatosaurus, spelling_reason: original spelling, opinion_author: Riggs, opinion_year: 1903, reference_id: "ref:2", is_current_classification: false}
+          - {opinion_id: "opn:3", pbdb_taxon_no: "txn:1", taxon_name: Brontosaurus, taxon_rank: genus, status: subjective synonym of, parent_name: Apatosaurus, spelling_reason: original spelling, opinion_author: Gilmore, opinion_year: 1936, reference_id: "ref:3", is_current_classification: false}
+          - {opinion_id: "opn:4", pbdb_taxon_no: "txn:1", taxon_name: Brontosaurus, taxon_rank: genus, status: belongs to, parent_name: Titanosauridae, spelling_reason: original spelling, opinion_author: Romer, opinion_year: 1966, reference_id: "ref:4", is_current_classification: false}
+          - {opinion_id: "opn:5", pbdb_taxon_no: "txn:1", taxon_name: Brontosaurus, taxon_rank: genus, status: belongs to, parent_name: Apatosaurinae, spelling_reason: original spelling, opinion_author: Tschopp et al., opinion_year: 2015, reference_id: "ref:5", is_current_classification: true}
+      - input: ref('stg_pbdb__refs')
+        rows:
+          - {reference_id: "ref:2", title: Structure of Apatosaurus, journal: Field Columbian Museum, doi: null}
+          - {reference_id: "ref:5", title: Revision of Diplodocidae, journal: PeerJ, doi: 10.7717/peerj.857}
+    expect:
+      rows:
+        - {event_type: description, opinion_year: 1879, related_name: null, study_id: "pbdb:ref:1", reference_journal: null}
+        - {event_type: synonymized, opinion_year: 1903, related_name: Apatosaurus, study_id: "pbdb:ref:2", reference_journal: Field Columbian Museum}
+        - {event_type: revalidated, opinion_year: 2015, related_name: null, study_id: "doi:10.7717/peerj.857", reference_journal: PeerJ}

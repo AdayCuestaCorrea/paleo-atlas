@@ -1,4 +1,7 @@
--- Timeline events for every taxon page (ALCANCE.md §9).
+-- Timeline events for every taxon page (ALCANCE.md §9): the ones tracked since the
+-- project started (origin 'tracked': they feed "Latest" and the weekly recaps) and the
+-- history backwards (origin 'backfill', int_backfill_events: PBDB opinions and the
+-- yearly pages of past years).
 with pages as (
     select taxon_key from {{ ref('int_taxon_pages') }}
 ),
@@ -84,17 +87,60 @@ entry_changes as (
         changed_fields
     from {{ ref('int_new_taxa_history') }}
     where version_number > 1 and len(changed_fields) > 0
+),
+
+tracked as (
+    select
+        *,
+        cast(null as varchar) as subject_name,
+        cast(null as varchar) as related_name,
+        cast(null as varchar) as attribution,
+        cast(null as varchar) as source_title,
+        0 as source_rank,
+        'tracked' as origin
+    from (
+        select * from base
+        union all select * from updates
+        union all select * from entry_changes
+    )
+),
+
+events as (
+    select * from tracked
+    union all by name
+    select * from {{ ref('int_backfill_events') }}
+),
+
+unique_events as (
+    -- The same study can be on this year's page and on last year's: the tracked one wins.
+    select *
+    from events
+    where taxon_key in (select taxon_key from pages)
+    qualify row_number() over (
+        partition by taxon_key, event_type, coalesce(study_id, change_id),
+            coalesce(subject_name, ''), coalesce(related_name, '')
+        order by origin = 'backfill', event_date, source_rank
+    ) = 1
 )
 
+-- One description per page and name: this year's > a past page with DOI > a past
+-- page > PBDB. Null parts are skipped by concat_ws, so tracked ids do not change.
 select
-    md5(concat_ws('|', taxon_key, event_type, coalesce(study_id, change_id))) as event_id,
+    md5(concat_ws(
+        '|', taxon_key, event_type, coalesce(study_id, change_id), subject_name, related_name
+    )) as event_id,
     e.*
-from (
-    select * from base
-    union all select * from updates
-    union all select * from entry_changes
-) as e
-where taxon_key in (select taxon_key from pages)
-qualify row_number() over (
-    partition by taxon_key, event_type, coalesce(study_id, change_id) order by event_date
+from unique_events as e
+-- A species described in the same study as its genus is already that description.
+where not (
+    event_type = 'description' and subject_name is not null
+    and exists (
+        select 1 from unique_events as g
+        where g.taxon_key = e.taxon_key and g.event_type = 'description'
+          and g.subject_name is null and g.study_id = e.study_id
+    )
+)
+qualify event_type <> 'description' or row_number() over (
+    partition by taxon_key, event_type, lower(coalesce(subject_name, ''))
+    order by origin = 'backfill', source_rank, event_date
 ) = 1

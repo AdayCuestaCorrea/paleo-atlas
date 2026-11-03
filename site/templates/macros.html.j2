@@ -53,19 +53,32 @@
 {% endif %}
 {%- endmacro %}
 
-{% macro event(e, T, fmt_date, url=None, show_taxon=False) -%}
+{#- What a taxonomic event says, e.g. "Brontosaurus, synonym of Apatosaurus". The
+    name concerned is the page's own taxon unless the event names another one. -#}
+{% macro event_claim(e, T, page_name) -%}
+{%- if e.event_type in ['synonymized', 'replaced', 'recombined', 'invalidated', 'revalidated'] -%}
+<span class="event__claim">{{ claim(T['claim_' ~ e.event_type], e.subject_name or page_name, e.related_name) }}</span>
+{%- elif e.event_type == 'description' and e.subject_name -%}
+<span class="event__claim">{{ claim(T.claim_description, e.subject_name) }}</span>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro event(e, T, fmt_date, url=None, show_taxon=False, page_name=None) -%}
 <li class="event event--{{ e.event_type }}">
   {{ event_date(e, T, fmt_date) }}
   <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
   {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
+  {{ event_claim(e, T, page_name) }}
   {% if e.event_type == 'entry_changed' %}
   <span class="event__title">{{ T.entry_changed_fields }}: {% for f in e.changed_fields %}{{ T['changed_' ~ f] }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
   {% else %}
   {{ study_title(e, T) }}
   {% endif %}
   <span class="event__source">
-    {%- if e.journal %}<cite>{{ e.journal }}</cite>{% endif -%}
+    {%- if e.attribution %}<span class="event__by">{{ e.attribution }}{% if e.origin == 'backfill' %}, {{ e.event_date.year }}{% endif %}</span>{% endif -%}
+    {%- if e.journal %}{% if e.attribution %} · {% endif %}<cite>{{ e.journal }}</cite>{% endif -%}
     {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}
+    {%- if e.source_title %} · <span class="event__via">{{ T.event_via }} {{ e.source_title }}</span>{% endif -%}
   </span>
   {{ badges(e, T) }}
 </li>

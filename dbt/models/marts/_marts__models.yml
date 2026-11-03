@@ -26,6 +26,13 @@ models:
     columns:
       - name: study_id
         data_tests: [unique, not_null]
+      - name: reliability_status
+        description: unchecked = cited only by the history backwards (not looked up in Crossref).
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [retracted, preprint, peer_reviewed, unverified, unchecked]
   - name: fct_taxon_image
     description: Gallery of each taxon page; only allowlisted licenses, always with an author.
     columns:
@@ -72,7 +79,14 @@ models:
         data_tests:
           - accepted_values:
               arguments:
-                values: [description, new_study, study_corrected, study_retracted, entry_changed]
+                values: [description, new_study, study_corrected, study_retracted, entry_changed, synonymized, invalidated, replaced, revalidated, recombined]
+      - name: origin
+        description: tracked = seen since the project started (Latest, weekly recaps); backfill = history backwards (Phase 3 H4).
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [tracked, backfill]
       - name: date_precision
         data_tests:
           - accepted_values:

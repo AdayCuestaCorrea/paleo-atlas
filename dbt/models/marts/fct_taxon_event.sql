@@ -11,6 +11,15 @@ select
     e.study_id,
     e.research_id,
     e.changed_fields,
+    -- History backwards (Phase 3 H4): the name concerned when it is not the page's own
+    -- taxon, the other name of the event (senior synonym, new genus, kind of nomen),
+    -- who said it, and where (a past yearly page or PBDB).
+    e.subject_name,
+    e.related_name,
+    e.attribution,
+    e.source_title,
+    -- tracked: seen since the project started (Latest, weekly recaps); backfill: history
+    e.origin,
     s.reliability_status,
     s.title as study_title,
     s.journal as study_journal

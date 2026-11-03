@@ -273,3 +273,14 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .map__key--pbdb { background: #e8955b; }
 .map__key--gbif { background: #6fb7d6; }
 .museums { columns: 14rem auto; padding: 0; list-style: none; }
+
+/* History backwards (Phase 3, H4): grouped by decade, closed by default. */
+.history__earlier { margin-top: 1.6rem; font-size: 1.05rem; }
+.decade { margin: 0.4rem 0; }
+.decade > summary { cursor: pointer; font-weight: 600; padding: 0.3rem 0; }
+.decade > .timeline { margin-top: 0.4rem; }
+.event__claim { flex-basis: 100%; }
+.event__by, .event__via { color: var(--muted); }
+.event--synonymized::before, .event--replaced::before, .event--recombined::before { background: var(--fossil); }
+.event--invalidated::before { background: var(--warn); }
+.event--revalidated::before { background: var(--ochre); }

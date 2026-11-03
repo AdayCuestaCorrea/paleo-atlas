@@ -570,13 +570,14 @@ def to_records(rows: list[NewTaxonRow] | list[ResearchItem]) -> list[dict[str, A
     return [asdict(r) for r in rows]
 
 
-def write_interim(parsed: ParsedPage, interim_root: Path) -> Path:
+def write_interim(parsed: ParsedPage, interim_root: Path, folder: str = "wikipedia") -> Path:
     """Write ``new_taxa.jsonl``, ``research.jsonl`` and a small parse report.
 
-    Output goes to ``<interim>/wikipedia/<slug>/<revid>/``; re-running for the
-    same revision overwrites it with identical content (idempotent).
+    Output goes to ``<interim>/<folder>/<slug>/<revid>/`` (``wikipedia_past`` for the
+    pages of past years); re-running for the same revision overwrites it with
+    identical content (idempotent).
     """
-    out = interim_dir(parsed.page_title, parsed.revid, interim_root)
+    out = interim_dir(parsed.page_title, parsed.revid, interim_root, folder)
     out.mkdir(parents=True, exist_ok=True)
     for name, rows in (("new_taxa", parsed.new_taxa), ("research", parsed.research)):
         lines = (json.dumps(r, ensure_ascii=False, sort_keys=True) for r in to_records(rows))
@@ -593,8 +594,8 @@ def write_interim(parsed: ParsedPage, interim_root: Path) -> Path:
     return out
 
 
-def interim_dir(page_title: str, revid: int, interim_root: Path) -> Path:
-    return interim_root / "wikipedia" / slugify_title(page_title) / str(revid)
+def interim_dir(page_title: str, revid: int, interim_root: Path, folder: str = "wikipedia") -> Path:
+    return interim_root / folder / slugify_title(page_title) / str(revid)
 
 
 def plain_text(code: Wikicode | str) -> str:

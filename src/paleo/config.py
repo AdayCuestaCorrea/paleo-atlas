@@ -64,6 +64,7 @@ class WikipediaPage:
     block: str  # taxonomic block from ALCANCE.md §4
     title_template: str
     enabled: bool  # blocks are switched on by phase
+    first_year: int  # first yearly page on Wikipedia (older years: history, Phase 3 H4)
 
     def title(self, year: int) -> str:
         return self.title_template.format(year=year)
@@ -72,9 +73,9 @@ class WikipediaPage:
 # ALCANCE.md §4: archosaurs since Phase 1; marine reptiles and fossil fishes since Phase 3
 # (only their sections in scope get pages: dbt macro wikipedia_group).
 WIKIPEDIA_PAGES: tuple[WikipediaPage, ...] = (
-    WikipediaPage("archosaurs", "{year} in archosaur paleontology", enabled=True),
-    WikipediaPage("marine_reptiles", "{year} in reptile paleontology", enabled=True),
-    WikipediaPage("fossil_fishes", "{year} in paleoichthyology", enabled=True),
+    WikipediaPage("archosaurs", "{year} in archosaur paleontology", True, 2009),
+    WikipediaPage("marine_reptiles", "{year} in reptile paleontology", True, 2014),
+    WikipediaPage("fossil_fishes", "{year} in paleoichthyology", True, 2010),
 )
 
 

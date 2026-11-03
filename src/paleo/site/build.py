@@ -20,13 +20,13 @@ from typing import Any
 from urllib.parse import quote
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
-from markupsafe import Markup
+from markupsafe import Markup, escape
 
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
 from paleo.site import terms
-from paleo.site.data import SiteData, load, numbered_text
+from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.indices import build_indices, unit_key, unit_name
 from paleo.site.search import build_index
@@ -85,6 +85,16 @@ SECTION_ORDER = [
 
 def load_i18n() -> dict[str, dict[str, str]]:
     return {lang: tomllib.loads((I18N_DIR / f"{lang}.toml").read_text("utf-8")) for lang in LANGS}
+
+
+def claim(template: str, name: str | None, other: str | None = None) -> Markup:
+    """A history claim ("{name}, synonym of {other}") with both names in italics."""
+
+    def em(value: str | None) -> str:
+        return f"<em>{escape(value or '')}</em>"
+
+    text = str(escape(template))  # a plain str: Markup.replace would escape the <em>
+    return Markup(text.replace("{name}", em(name)).replace("{other}", em(other)))
 
 
 def md_inline(text: str) -> Markup:
@@ -154,6 +164,7 @@ class SiteBuilder:
             lstrip_blocks=True,
         )
         self.env.filters["md"] = md_inline
+        self.env.globals["claim"] = claim
         self.env.globals["terms"] = terms
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
         # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
@@ -252,6 +263,7 @@ class SiteBuilder:
                 out.append(
                     Page(lang, "taxon", key, "taxon.html.j2",
                          {"taxon": taxon, "events": data.events.get(key, []),
+                          "history": history(data.events.get(key, [])),
                           "gallery": data.images.get(key, []),
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),

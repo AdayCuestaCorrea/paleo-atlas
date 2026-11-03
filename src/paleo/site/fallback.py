@@ -130,9 +130,12 @@ def basic_sources(
 ) -> list[dict[str, str]]:
     """Sources of a page without narrative text: the Wikipedia yearly page, PBDB and
     the naming study, so the sources are always visible (§11.1). An encyclopedia
-    genus only cites the yearly page when a study of that page is about it."""
+    genus only cites the yearly page when a study of that page is about it; the
+    history backwards adds the past yearly pages it comes from (PBDB is cited
+    whenever the page has a PBDB taxon)."""
     out = []
-    if taxon.get("page_type") != "genus" or events:
+    tracked = [e for e in events if e.get("origin", "tracked") == "tracked"]
+    if taxon.get("page_type") != "genus" or tracked:
         out.append({
             "title": f"Wikipedia: {year_page}",
             "url": "https://en.wikipedia.org/wiki/" + year_page.replace(" ", "_"),
@@ -146,6 +149,13 @@ def basic_sources(
     elif en_title:
         out.append({"title": f"Wikipedia: {en_title}", "url": _wiki_url("en", en_title),
                     "note": "CC BY-SA 4.0"})  # fmt: skip
+    # The history backwards: the past yearly pages it comes from, newest first.
+    past = {e["source_title"] for e in events
+            if e.get("origin") == "backfill" and (e.get("source_title") or "").endswith(
+                ("paleontology", "paleoichthyology"))}  # fmt: skip
+    for title in sorted(past, reverse=True):
+        out.append({"title": f"Wikipedia: {title}", "url": _wiki_url("en", title),
+                    "note": "CC BY-SA 4.0"})  # fmt: skip
     if taxon.get("pbdb_has_taxon") and taxon.get("pbdb_taxon_no"):
         out.append({
             "title": f"Paleobiology Database: {taxon['taxon_name']}",
@@ -153,7 +163,7 @@ def basic_sources(
             + str(taxon["pbdb_taxon_no"]).removeprefix("txn:"),
             "note": "CC BY 4.0",
         })  # fmt: skip
-    for e in events:
+    for e in tracked:  # the history backwards cites its studies in the timeline
         if e.get("doi"):
             out.append({"title": e.get("title") or e["doi"], "url": f"https://doi.org/{e['doi']}",
                         "note": f"DOI {e['doi']}"})  # fmt: skip

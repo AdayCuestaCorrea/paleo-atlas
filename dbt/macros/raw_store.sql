@@ -82,3 +82,27 @@
                 cast(null as timestamptz) as fetched_at, cast(null as json) as payload limit 0)
     {%- endif -%}
 {%- endmacro %}
+
+{#
+  A typed RawStore read for a source that may have no versions yet (PBDB opinions on
+  a data branch older than Phase 3 H4, the CI fixture): key, version_date and the
+  payload with the given STRUCT type, or an empty relation with the same columns.
+#}
+{% macro read_optional_typed_raw_store(source, kind, payload_type) -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/raw/" ~ source ~ "/" ~ kind ~ "/*/*.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+    read_json(
+        '{{ path }}',
+        format = 'auto',
+        maximum_object_size = 268435456,
+        columns = {key: 'VARCHAR', version_date: 'DATE', payload: '{{ payload_type }}'}
+    )
+    {%- else -%}
+    (select cast(null as varchar) as key, cast(null as date) as version_date,
+            cast(null as {{ payload_type }}) as payload limit 0)
+    {%- endif -%}
+{%- endmacro %}

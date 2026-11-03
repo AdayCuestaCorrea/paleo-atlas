@@ -15,7 +15,7 @@ from typing import Annotated
 
 import typer
 
-from paleo.config import enabled_pages, get_paths, project_root
+from paleo.config import Paths, enabled_pages, get_paths, project_root
 from paleo.http import make_client
 from paleo.ingest import articles, crossref, doaj, images, pbdb
 from paleo.ingest import wikipedia as wiki_ingest
@@ -79,19 +79,27 @@ def check(year: Year = None) -> None:
 
 
 @ingest_app.command("wikipedia")
-def ingest_wikipedia(year: Year = None) -> None:
-    """Store the latest revision of each enabled yearly page."""
+def ingest_wikipedia(year: Year = None, refresh: Refresh = False) -> None:
+    """Store the latest revision of each enabled yearly page; without ``--year``, also
+    the pages of past years (checked monthly; they only feed the history)."""
     with make_client() as client:
         for page in enabled_pages():
             result = wiki_ingest.ingest_page(client, page.title(_year(year)))
             state = "stored" if result.created else "already stored"
             typer.echo(f"{result.revision.title}: revision {result.revision.revid} {state}")
+        if year is None:  # the past years, for the history (monthly; Phase 3 H4)
+            p = wiki_ingest.ingest_past(client, enabled_pages(), _year(None), refresh=refresh)
+            typer.echo(
+                f"Past yearly pages: {p.pages} pages, {p.skipped_fresh} fresh, "
+                f"{p.missing} missing, {p.new_revisions} new revisions"
+            )
 
 
 @ingest_app.command("pbdb")
 def ingest_pbdb(refresh: Refresh = False) -> None:
     """Resolve candidate taxon names against PBDB (versioned per name), and download
-    the catalog of every clade in scope and the occurrences of every block (monthly)."""
+    the catalog of every clade in scope and the occurrences and taxonomic opinions
+    of every block (monthly)."""
     paths = get_paths()
     names = pbdb.names_of_interest(paths.interim)
     with make_client() as client:
@@ -104,6 +112,7 @@ def ingest_pbdb(refresh: Refresh = False) -> None:
         o = pbdb.ingest_occurrences(
             client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh
         )
+        h = pbdb.ingest_opinions(client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh)
     typer.echo(
         f"PBDB catalog: {c.clades} clades, {c.skipped_fresh} fresh, "
         f"{c.records} records, {c.new_versions} new versions"
@@ -111,6 +120,10 @@ def ingest_pbdb(refresh: Refresh = False) -> None:
     typer.echo(
         f"PBDB occurrences: {o.blocks} blocks, {o.skipped_fresh} fresh, "
         f"{o.records} records, {o.new_versions} new versions"
+    )
+    typer.echo(
+        f"PBDB opinions: {h.blocks} blocks, {h.skipped_fresh} fresh, {h.records} records, "
+        f"{h.new_versions} new versions, {h.refs} new references"
     )
 
 
@@ -675,8 +688,38 @@ def parse_wikipedia(
             )
         if skipped:
             typer.echo(f"{title}: {skipped} revision(s) already parsed (use --force to redo)")
+    if year is None:
+        _parse_past(paths, force)
     if not found:
         raise typer.Exit(1)
+
+
+def _parse_past(paths: Paths, force: bool) -> None:
+    """Parse the latest stored revision of each past yearly page (history only)."""
+    done = parsed_now = 0
+    for title in wiki_ingest.past_titles(enabled_pages(), _year(None)):
+        revids = wiki_ingest.stored_revids(title, paths.raw, wiki_ingest.PAST)
+        if not revids:
+            continue
+        revid = revids[-1]
+        out = wiki_parse.interim_dir(title, revid, paths.interim, wiki_ingest.PAST)
+        if (out / "parse_report.json").exists() and not force:
+            done += 1
+            continue
+        raw = wiki_ingest.load_raw(
+            wiki_ingest.page_dir(title, paths.raw, wiki_ingest.PAST) / f"{revid}.json"
+        )
+        parsed = wiki_parse.parse_page(
+            raw["title"], raw["revid"], raw["wikitext"], raw.get("timestamp")
+        )
+        wiki_parse.write_interim(parsed, paths.interim, wiki_ingest.PAST)
+        parsed_now += 1
+        typer.echo(
+            f"{raw['title']} @ {revid}: {len(parsed.new_taxa)} new taxa, "
+            f"{len(parsed.research)} research items, {parsed.warning_count()} warnings"
+        )
+    if done or parsed_now:
+        typer.echo(f"Past yearly pages: {parsed_now} parsed, {done} already parsed")
 
 
 @gbif_app.command("extract")

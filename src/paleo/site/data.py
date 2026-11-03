@@ -43,13 +43,15 @@ class SiteData:
 
     def all_events(self) -> list[dict[str, Any]]:
         """Events with an exact publication date, newest first (for "Latest" and the
-        weekly recaps); vaguer dates only appear in each taxon's history."""
+        weekly recaps); vaguer dates and the history backwards (origin 'backfill')
+        only appear in each taxon's history."""
         out = []
         for key, events in self.events.items():
             taxon = self.by_key.get(key)
             for event in events:
                 if (
-                    event["date_precision"] == "day"
+                    event.get("origin", "tracked") == "tracked"
+                    and event["date_precision"] == "day"
                     and event["event_date"]
                     and event["event_date"] <= self.built_on
                 ):
@@ -74,7 +76,8 @@ def load(warehouse: Path) -> SiteData:
             con,
             """
             select e.taxon_key, e.event_type, e.event_date, e.date_is_publication, e.date_precision,
-                   e.study_id, e.changed_fields,
+                   e.study_id, e.changed_fields, e.subject_name, e.related_name,
+                   e.attribution, e.source_title, e.origin,
                    s.doi, s.title, t.title_es, s.journal, s.publication_year,
                    s.reliability_status, s.is_peer_reviewed_journal, s.is_preprint,
                    s.is_retracted, s.is_corrected, s.in_trusted_journal, s.in_doaj
@@ -124,7 +127,11 @@ def load(warehouse: Path) -> SiteData:
                     as genus_verified_es,
                 (select sum(facts_accepted) from main.stg_narrative__fact_counts) as facts_ok,
                 (select sum(facts_rejected) from main.stg_narrative__fact_counts) as facts_bad,
-                (select count(*) from main.dim_study) as studies,
+                -- Studies cited only by the history backwards are not checked (H4).
+                (select count(*) from main.dim_study where reliability_status <> 'unchecked')
+                    as studies,
+                (select count(*) from main.dim_study where reliability_status = 'unchecked')
+                    as unchecked_studies,
                 (select count(*) from main.dim_study
                  where reliability_status = 'peer_reviewed') as peer_reviewed,
                 (select count(*) from main.dim_study where reliability_status = 'preprint')
@@ -154,6 +161,21 @@ def load(warehouse: Path) -> SiteData:
         images=dict(images), last_checked=last_checked, stats=stats,
         gbif=gbif[0] if gbif else None,
     )  # fmt: skip
+
+
+def history(events: list[dict[str, Any]]) -> dict[str, Any]:
+    """A taxon's timeline: the events tracked since the project started, then the
+    history backwards grouped by decade, newest first (both lists newest first)."""
+    recent = [e for e in events if e.get("origin", "tracked") == "tracked"]
+    decades: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    for e in events:
+        if e.get("origin", "tracked") != "tracked" and e["event_date"]:
+            decades[e["event_date"].year // 10 * 10].append(e)
+    return {
+        "recent": recent,
+        "decades": [(d, decades[d]) for d in sorted(decades, reverse=True)],
+        "backfill": sum(len(v) for v in decades.values()),
+    }
 
 
 def _work(citation: dict[str, Any]) -> tuple[str, str]:

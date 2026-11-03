@@ -9,6 +9,10 @@ PBDB, and that lag is measured and tested downstream (ALCANCE.md §16).
 The encyclopedia (Phase 3) also needs every extinct genus of the clades in scope:
 `ingest_catalog` downloads them with one request per clade of the
 `dbt/seeds/scope_clades.csv` seed, the single definition of the scope (§4).
+
+The history of each taxon (§9, Phase 3 H4) comes from PBDB's taxonomic opinions:
+`ingest_opinions` downloads them once a month per block, and `ingest_refs` the
+references of the opinions that can become an event.
 """
 
 from __future__ import annotations
@@ -35,6 +39,9 @@ CATALOG_REFRESH_DAYS = 30
 CATALOG_SHOW = "attr,app,class,parent,size"
 PBDB_OCCS_LIST = "https://paleobiodb.org/data1.2/occs/list.json"
 OCCURRENCES_SHOW = "loc,coords"
+PBDB_OPINIONS = "https://paleobiodb.org/data1.2/taxa/opinions.json"
+PBDB_REFS = "https://paleobiodb.org/data1.2/refs/list.json"
+REFS_BATCH = 200
 
 _NAME = re.compile(r"^[A-Z][A-Za-zë-]+(?: [a-z][a-z-]+){0,2}$")
 
@@ -310,3 +317,99 @@ def ingest_occurrences(
         records += len(rows)
         store_.flush()
     return OccurrencesResult(len(roots), len(roots) - len(pending), records, new_versions)
+
+
+# --- Taxonomic opinions and their references: the history backwards (§9, H4) ------
+
+
+@dataclass(frozen=True)
+class OpinionsResult:
+    blocks: int
+    skipped_fresh: int
+    records: int
+    new_versions: int
+    refs: int
+
+
+def opinions_store(raw_root: Path | None = None) -> RawStore:
+    return RawStore("pbdb", "opinions", volatile={"elapsed_time"}, raw_root=raw_root)
+
+
+def refs_store(raw_root: Path | None = None) -> RawStore:
+    return RawStore("pbdb", "refs", volatile={"elapsed_time"}, raw_root=raw_root)
+
+
+def fetch_opinions(client: httpx.Client, base_name: str) -> list[dict[str, Any]]:
+    """Every opinion on the genera and species under ``base_name`` (status, parent,
+    author, year, reference). Compact field names (vocab=com) and no reference text:
+    the block is ~100,000 opinions, kept in git."""
+    body = get_json(
+        client, PBDB_OPINIONS, {"base_name": base_name, "rank": "genus,species", "vocab": "com"}
+    )
+    return body.get("records", [])
+
+
+def event_reference_ids(opinions: Iterable[dict[str, Any]]) -> set[str]:
+    """References that the history can cite (a superset of the events dbt keeps):
+    every opinion that is not a plain "belongs to", the earliest opinion of each
+    taxon (its original description) and PBDB's current classification opinion."""
+    ids: set[str] = set()
+    earliest: dict[str, tuple[str, str]] = {}
+    for o in opinions:
+        rid, tid = o.get("rid"), o.get("tid")
+        if not rid:
+            continue
+        if o.get("sta") != "belongs to" or o.get("spl") == "recombination" or o.get("otp") == "C":
+            ids.add(rid)
+        year = o.get("opy") or "9999"
+        if tid and (tid not in earliest or year < earliest[tid][0]):
+            earliest[tid] = (year, rid)
+    return ids | {rid for _, rid in earliest.values()}
+
+
+def fetch_refs(client: httpx.Client, ids: list[str]) -> list[dict[str, Any]]:
+    """Title, journal, year and DOI of the given references (ref:N ids)."""
+    out = []
+    for i in range(0, len(ids), REFS_BATCH):
+        batch = ",".join(r.removeprefix("ref:") for r in ids[i : i + REFS_BATCH])
+        body = get_json(client, PBDB_REFS, {"ref_id": batch, "vocab": "com"})
+        out.extend(body.get("records", []))
+    return out
+
+
+def ingest_opinions(
+    client: httpx.Client,
+    clades: list[ScopeClade],
+    *,
+    raw_root: Path | None = None,
+    refresh: bool = False,
+    today: dt.date | None = None,
+) -> OpinionsResult:
+    """Snapshot the opinions of each block once a month (one request per block root),
+    then the references they cite (only the ones not stored yet are asked for)."""
+    opinions, refs = opinions_store(raw_root), refs_store(raw_root)
+    roots = [c for c in clades if c.block_root]
+    pending = [
+        c
+        for c in roots
+        if refresh or not opinions.is_fresh(c.pbdb_base_name, CATALOG_REFRESH_DAYS, today)
+    ]
+    records = new_versions = new_refs = 0
+    for clade in pending:
+        rows = fetch_opinions(client, clade.base_names())
+        payload = {"base_name": clade.pbdb_base_name, "records": rows}
+        new_versions += opinions.save_if_changed(clade.pbdb_base_name, payload, today).created
+        records += len(rows)
+        opinions.flush()
+        # One stored list per block: only new references are fetched each month.
+        known = refs.latest(clade.pbdb_base_name)
+        have = {r["oid"]: r for r in (known["payload"]["records"] if known else [])}
+        wanted = event_reference_ids(rows)
+        missing = sorted(wanted - have.keys())
+        fetched = {r["oid"]: r for r in fetch_refs(client, missing)} if missing else {}
+        new_refs += len(fetched)
+        known_now = have | fetched
+        kept = [known_now[k] for k in sorted(wanted & known_now.keys())]
+        refs.save_if_changed(clade.pbdb_base_name, {"records": kept}, today)
+        refs.flush()
+    return OpinionsResult(len(roots), len(roots) - len(pending), records, new_versions, new_refs)

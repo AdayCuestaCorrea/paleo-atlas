@@ -279,12 +279,12 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 ### Fase 3 — Enciclopedia, ampliación y Spark
 - [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(arcosaurios hechos: 3.040 géneros, una descarga mensual por clado del seed; reptiles marinos y peces al activar sus filas)*
 - [x] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4) *(358 géneros de reptiles marinos y 1.353 de peces; de sus páginas anuales solo entran las secciones del alcance)*
-- [ ] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9)
+- [x] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9) *(2026-11-03: 19.354 eventos de 1758 a 2025 en 4.808 fichas; 4.741 de los 4.751 géneros tienen «Historia anterior»)*
 - [x] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes *(fósiles de cordados sin mamíferos ni tortugas: 932.494 registros, DOI [10.15468/dl.8v87yz](https://doi.org/10.15468/dl.8v87yz); `paleo gbif extract` reutiliza una descarga de menos de 28 días)*
 - [x] Job PySpark local: reconciliación de nombres con PBDB (sinónimos, erratas, rango) + agregados *(138.388 especímenes en 1.739 géneros: exacto 118.371, sinónimo 17.052, errata 2.965; las coordenadas que GBIF marca como erróneas no van al mapa)*
 - [x] Mismo trabajo en DuckDB → **benchmark** (tiempo, memoria, complejidad del código) *(mismo extracto fila a fila; DuckDB 15–17× más rápido y 3–6× menos memoria: [`benchmarks/gbif/results.md`](benchmarks/gbif/results.md))*
 - [ ] *Opcional:* mismo job en Databricks Free Edition (verificar cuotas y acceso a datos externos)
-- [ ] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(mapa de PBDB + GBIF y museos hechos; falta la línea temporal hacia atrás, H4)*
+- [x] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(la línea temporal hacia atrás va agrupada por décadas, debajo de lo seguido desde 2026)*
 - [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
 - [ ] Familia y clasificación completa en cada ficha (PBDB)
 - [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM *(en curso: géneros con artículo en Wikipedia, 2.743, en lotes nocturnos con la GPU local, `paleo narrate --scope genera --until HH:MM`, reanudable; primer lote del 2026-11-03: 201 géneros, 181 verificados en EN y 144 en ES)*
@@ -360,8 +360,8 @@ Cada ficha tiene una **línea temporal** con todo lo que se sabe del taxón. Cua
 | Origen | Cubre | Fase |
 |---|---|---|
 | SCD tipo 2 sobre las versiones crudas de nuestras ingestas (evento `entry_changed`: estatus, autores, edad, localidad, estudio…) | Todo cambio desde que arranca el proyecto | 1 |
-| Opiniones taxonómicas de PBDB (cada opinión trae año y referencia) | Historia taxonómica completa hacia atrás | 3 |
-| Páginas anuales de Wikipedia de años anteriores | Descripciones de años pasados | 3 |
+| Opiniones taxonómicas de PBDB (cada opinión trae año y referencia) | Historia taxonómica completa hacia atrás: descripción, sinonimias, *nomen dubium*, nombres sustituidos, nuevas combinaciones y revalidaciones *(hecho)* | 3 |
+| Páginas anuales de Wikipedia de años anteriores (arcosaurios desde 2009, peces desde 2010, reptiles desde 2014) | Descripciones y estudios de años pasados *(hecho)* | 3 |
 | Noticias clasificadas | Hipótesis nuevas y debates | 5 |
 
 **Debates abiertos:** cuando haya estudios que se contradicen (p. ej., si *Spinosaurus* era cazador acuático o vadeador), el evento se marca **«En debate»** y enlaza a los estudios de cada postura. Se curan a mano en el seed `contested_topics` *(Fase 3, decisión del usuario del 2026-11-02; hasta entonces los debates se cuentan en la sección «Debates» del texto)*.
@@ -589,7 +589,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 |---|---|---|
 | Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | 82 / 82 (arcosaurios) | 2026-11-02 |
 | Taxones en la enciclopedia por bloque | Arcosaurios: 280 (82 nuevos + 198 conocidos) | 2026-11-02 |
-| Eventos en el historial | 313 | 2026-11-02 |
+| Eventos en el historial | 403 seguidos desde 2026 + 19.354 hacia atrás (PBDB y páginas anuales 2009–2025) | 2026-11-03 |
 | % con correspondencia en PBDB | Nuevos 41 % (PBDB tarda en añadirlos) · conocidos 99 % | 2026-11-02 |
 | % con imagen (especie / género / clado) | 100 %: especie 36 % · género 4 % · clado 49 % · grupo 11 % | 2026-11-02 |
 | % de estudios revisados por pares / preprints / retractados | 94 % / 0 % / 0 % (5 corregidos; 28 % en revistas DOAJ) | 2026-11-02 |
@@ -758,6 +758,8 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 | Cola de prioridad cuando un día no cabe en la cuota del LLM | Redactar primero las especies más recientes |
 | Segundo proveedor LLM gratuito de reserva | Por si Groq falla o cambia su plan gratuito |
 | Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
+| Retracciones de los estudios de la «Historia anterior» | Cruzar cada mes los ~7.600 DOIs con el CSV de Retraction Watch (vía Crossref) sin guardar un registro por DOI; hoy salen como `unchecked` |
+| Columna «Unit» de las páginas anuales antiguas (≤ 2018) | El parser la ignora con un aviso; los eventos no usan la localidad |
 
 ---
 
@@ -765,6 +767,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-03 | v21: Fase 3, hito 4: historial hacia atrás. **Opiniones taxonómicas de PBDB** (unas 121.000, una descarga al mes por bloque, más las referencias que se citan): un evento la primera vez que un nombre cambia de estado (sinónimo de X, *nomen dubium*, sustituido por X, trasladado al género X), más la revalidación cuando la clasificación actual de PBDB lo vuelve a aceptar; un «belongs to» repetido nunca es evento (los autores discrepan durante décadas: *Brontosaurus*). **Páginas anuales de años anteriores** (45 páginas, carpeta aparte `wikipedia_past`): solo dan eventos, nunca páginas, textos, búsquedas de PBDB o de Crossref. Lo antiguo se marca `origin = backfill`: no entra en «Última hora» ni en los resúmenes semanales, y sus ~7.600 estudios no se comprueban en Crossref (estado `unchecked`, sin distintivo; cruzarlos con Retraction Watch queda en el backlog). Las fuentes de las fichas narrativas no cambian | Plan de H4 aprobado |
 | 2026-11-03 | v20: Fase 3, hito 6 empezado: fichas narrativas de los géneros con artículo en Wikipedia, en lotes nocturnos con la GPU local (los artículos más largos primero). El wikitext de los géneros va a la caché local, no a `data`: cada hecho cita la revisión (`oldid`). Primer lote: 201 géneros en ~7,5 h (137 s por género; GPU a 72 °C de media). Lectura manual: el contenido es fiel; el español arrastra calcos que las verificaciones no ven, de ahí nuevas reglas en los prompts (`write-en-v6`, `adapt-es-v4`, `review-es-v3`), que reescriben esas fichas en el próximo lote. Una respuesta cortada en la extracción se repite en dos mitades | Revisión del primer lote |
 | 2026-11-02 | v19: Fase 3, hito 5 (rama `fase-3`). Descarga de GBIF (F3 verificada; A11 cerrada): fósiles de cordados sin mamíferos ni tortugas (932.494 registros, DOI 10.15468/dl.8v87yz), pues el árbol de GBIF no tiene los clados de §4 y el filtro fino lo hace la reconciliación. El mismo job en DuckDB y en PySpark (especificación única; extractos idénticos con datos reales) y el **benchmark**: DuckDB gana a este volumen (0,9 s frente a 13,7 s). Mapa de hallazgos (SVG propio con Natural Earth, PBDB + GBIF; sin las coordenadas que GBIF marca como erróneas) y museos en cada ficha; cita del DOI en «Fuentes y licencias». DAG mensual con la descarga y Spark; la imagen de Airflow lleva Java | Plan de H5 |
 | 2026-11-02 | v18: Fase 3, hito 3 (rama `fase-3`). Activados los reptiles marinos y los peces fósiles: páginas anuales de reptiles y paleoictiología (solo las secciones del alcance; mosasaurios entre los escamosos), seed de peces destacados, raíces de bloque en Wikidata, Paleozoico (Ordovícico–Pérmico y sus pisos en español), grupos nuevos, la columna «Location» de las tablas de peces es el país, estudios listados en dos páginas fusionados, homónimos entre bloques. La regla de alcance vive en un solo sitio (`paleo/scope.py`, aplicada al parsear): ninguna ingesta ni el LLM gastan peticiones o cuota en taxones fuera de §4 (de 259 especies nuevas de las tres páginas, 114 en alcance). Robustez: un fallo de Wikidata o de un lote de Commons ya no detiene la ingesta (se reintenta en la siguiente ejecución); el registro fósil usa las épocas de las edades en Ma cuando PBDB no da el nombre del intervalo | Plan de H3 |

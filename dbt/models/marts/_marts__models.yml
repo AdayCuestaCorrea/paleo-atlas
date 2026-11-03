@@ -79,7 +79,7 @@ models:
               arguments:
                 values: [day, month, year, seen]
   - name: fct_taxon_text
-    description: Narrative text per new taxon and language; pending pages use the fallback text.
+    description: Narrative text per language of every new taxon and of every genus with a Wikipedia article; pending pages use the fallback text.
     columns:
       - name: text_key
         data_tests: [unique, not_null]

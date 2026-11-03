@@ -29,6 +29,8 @@
 <table class="figures">
   <tr><th>Especies nuevas con ficha verificada en inglés</th><td>{{ s.verified_en }} de {{ s.new_taxa }} ({{ pct(s.verified_en, s.new_taxa) }})</td></tr>
   <tr><th>… y en español</th><td>{{ s.verified_es }} de {{ s.new_taxa }} ({{ pct(s.verified_es, s.new_taxa) }})</td></tr>
+  <tr><th>Géneros con artículo en Wikipedia y ficha verificada en inglés</th><td>{{ s.genus_verified_en }} de {{ s.genera_with_article }} ({{ pct(s.genus_verified_en, s.genera_with_article) }})</td></tr>
+  <tr><th>… y en español</th><td>{{ s.genus_verified_es }} de {{ s.genera_with_article }} ({{ pct(s.genus_verified_es, s.genera_with_article) }})</td></tr>
   <tr><th>Hechos que pasan la comprobación</th><td>{{ s.facts_ok }} de {{ s.facts_ok + s.facts_bad }} ({{ pct(s.facts_ok, s.facts_ok + s.facts_bad) }})</td></tr>
   <tr><th>Estudios revisados por pares</th><td>{{ s.peer_reviewed }} de {{ s.studies }} ({{ pct(s.peer_reviewed, s.studies) }})</td></tr>
   <tr><th>Preprints</th><td>{{ s.preprints }} ({{ pct(s.preprints, s.studies) }})</td></tr>

@@ -107,10 +107,21 @@ def load(warehouse: Path) -> SiteData:
             """
             select
                 (select count(*) from main.dim_taxon where page_type = 'new') as new_taxa,
-                (select count(*) from main.fct_taxon_text
-                 where lang = 'en' and text_status = 'verified') as verified_en,
-                (select count(*) from main.fct_taxon_text
-                 where lang = 'es' and text_status = 'verified') as verified_es,
+                (select count(*) from main.fct_taxon_text join main.dim_taxon using (taxon_key)
+                 where page_type = 'new' and lang = 'en' and text_status = 'verified')
+                    as verified_en,
+                (select count(*) from main.fct_taxon_text join main.dim_taxon using (taxon_key)
+                 where page_type = 'new' and lang = 'es' and text_status = 'verified')
+                    as verified_es,
+                (select count(*) from main.dim_taxon
+                 where page_type = 'genus' and wikipedia_article is not null)
+                    as genera_with_article,
+                (select count(*) from main.fct_taxon_text join main.dim_taxon using (taxon_key)
+                 where page_type = 'genus' and lang = 'en' and text_status = 'verified')
+                    as genus_verified_en,
+                (select count(*) from main.fct_taxon_text join main.dim_taxon using (taxon_key)
+                 where page_type = 'genus' and lang = 'es' and text_status = 'verified')
+                    as genus_verified_es,
                 (select sum(facts_accepted) from main.stg_narrative__fact_counts) as facts_ok,
                 (select sum(facts_rejected) from main.stg_narrative__fact_counts) as facts_bad,
                 (select count(*) from main.dim_study) as studies,

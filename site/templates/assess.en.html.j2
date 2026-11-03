@@ -29,6 +29,8 @@
 <table class="figures">
   <tr><th>New species with a verified page in English</th><td>{{ s.verified_en }} of {{ s.new_taxa }} ({{ pct(s.verified_en, s.new_taxa) }})</td></tr>
   <tr><th>… and in Spanish</th><td>{{ s.verified_es }} of {{ s.new_taxa }} ({{ pct(s.verified_es, s.new_taxa) }})</td></tr>
+  <tr><th>Genera with a Wikipedia article and a verified page in English</th><td>{{ s.genus_verified_en }} of {{ s.genera_with_article }} ({{ pct(s.genus_verified_en, s.genera_with_article) }})</td></tr>
+  <tr><th>… and in Spanish</th><td>{{ s.genus_verified_es }} of {{ s.genera_with_article }} ({{ pct(s.genus_verified_es, s.genera_with_article) }})</td></tr>
   <tr><th>Facts that pass the checks</th><td>{{ s.facts_ok }} of {{ s.facts_ok + s.facts_bad }} ({{ pct(s.facts_ok, s.facts_ok + s.facts_bad) }})</td></tr>
   <tr><th>Peer-reviewed studies</th><td>{{ s.peer_reviewed }} of {{ s.studies }} ({{ pct(s.peer_reviewed, s.studies) }})</td></tr>
   <tr><th>Preprints</th><td>{{ s.preprints }} ({{ pct(s.preprints, s.studies) }})</td></tr>

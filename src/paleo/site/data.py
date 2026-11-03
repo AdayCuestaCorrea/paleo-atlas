@@ -36,6 +36,25 @@ class SiteData:
     last_checked: dt.date | None = None  # last change detection (pipeline run log)
     stats: dict[str, Any] = field(default_factory=dict)  # verification figures (§12.1, §17)
     gbif: dict[str, Any] | None = None  # the GBIF download the specimens come from (cite it)
+    # Kinship neighbourhood per genus page and level ('group', 'up'), §11.2 (H7).
+    neighborhood: dict[str, dict[str, list[dict[str, Any]]]] = field(default_factory=dict)
+
+    @cached_property
+    def silhouettes(self) -> dict[str, str]:
+        """PhyloPic silhouettes of the genus itself (not of its clade) for the tree."""
+        return {
+            t["taxon_key"]: t["image_url"]
+            for t in self.taxa
+            if t.get("image_source") == "phylopic"
+            and t.get("image_level") == "taxon"
+            and t.get("image_url")
+        }
+
+    def kinship(self, taxon: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+        """The neighbourhood of a page: its own, or its genus's for a species page."""
+        return self.neighborhood.get(taxon["taxon_key"]) or self.neighborhood.get(
+            taxon.get("genus_key") or "", {}
+        )
 
     @cached_property
     def by_key(self) -> dict[str, dict[str, Any]]:
@@ -151,6 +170,15 @@ def load(warehouse: Path) -> SiteData:
             limit 1
             """,
         )
+        neighborhood: dict[str, dict[str, list[dict[str, Any]]]] = defaultdict(
+            lambda: defaultdict(list)
+        )
+        for row in _rows(
+            con,
+            "select * from main.fct_taxon_neighborhood "
+            "order by taxon_key, level, common_depth, member_name",
+        ):
+            neighborhood[row["taxon_key"]][row["level"]].append(row)
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -160,6 +188,7 @@ def load(warehouse: Path) -> SiteData:
         taxa, dict(events), texts, dict(facts), dict(citations),
         images=dict(images), last_checked=last_checked, stats=stats,
         gbif=gbif[0] if gbif else None,
+        neighborhood={k: dict(v) for k, v in neighborhood.items()},
     )  # fmt: skip
 
 

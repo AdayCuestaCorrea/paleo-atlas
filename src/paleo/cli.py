@@ -98,8 +98,8 @@ def ingest_wikipedia(year: Year = None, refresh: Refresh = False) -> None:
 @ingest_app.command("pbdb")
 def ingest_pbdb(refresh: Refresh = False) -> None:
     """Resolve candidate taxon names against PBDB (versioned per name), and download
-    the catalog of every clade in scope and the occurrences and taxonomic opinions
-    of every block (monthly)."""
+    the catalog of every clade in scope and the occurrences, taxonomic opinions and
+    clades above genus of every block (monthly)."""
     paths = get_paths()
     names = pbdb.names_of_interest(paths.interim)
     with make_client() as client:
@@ -113,6 +113,7 @@ def ingest_pbdb(refresh: Refresh = False) -> None:
             client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh
         )
         h = pbdb.ingest_opinions(client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh)
+        k = pbdb.ingest_clades(client, pbdb.scope_clades(), raw_root=paths.raw, refresh=refresh)
     typer.echo(
         f"PBDB catalog: {c.clades} clades, {c.skipped_fresh} fresh, "
         f"{c.records} records, {c.new_versions} new versions"
@@ -124,6 +125,10 @@ def ingest_pbdb(refresh: Refresh = False) -> None:
     typer.echo(
         f"PBDB opinions: {h.blocks} blocks, {h.skipped_fresh} fresh, {h.records} records, "
         f"{h.new_versions} new versions, {h.refs} new references"
+    )
+    typer.echo(
+        f"PBDB clades: {k.blocks} blocks, {k.skipped_fresh} fresh, {k.clades} clades, "
+        f"{k.new_versions} new versions"
     )
 
 

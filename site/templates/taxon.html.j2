@@ -41,7 +41,11 @@
         {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
         {% if taxon.family_name or taxon.order_name or taxon.class_name %}
           <dt>{{ T.field_classification }}</dt>
-          <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}</dd>
+          <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}
+          {% if taxon.classification %}<details class="lineage"><summary>{{ T.classification_full }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}{% if c.rank and c.rank != 'unranked clade' %} <span class="muted">({{ T['rank_' ~ c.rank] if ('rank_' ~ c.rank) in T else c.rank }})</span>{% endif %}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details>{% endif %}</dd>
+        {% elif taxon.classification %}
+          <dt>{{ T.field_classification }}</dt>
+          <dd><details class="lineage"><summary>{{ taxon.classification[-1].name }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details></dd>
         {% endif %}
         {% set early, late = terms.span(taxon, lang) %}
         {% if early and taxon.first_appearance_max_ma is not none %}
@@ -151,6 +155,26 @@
     </ul>
     <p class="note">{{ T.museums_note }}{% if taxon.gbif_doi %} <a href="https://doi.org/{{ taxon.gbif_doi }}" rel="noopener">GBIF (DOI {{ taxon.gbif_doi }})</a>.{% endif %}</p>
     {% endif %}
+  </section>
+  {% endif %}
+
+  {% if kin and kin.get('group') %}
+  <section class="block" id="parientes">
+    <h2>{{ T.kin_title }}</h2>
+    {% if taxon.genus_key %}<p class="note">{{ T.kin_of_genus }} <a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a>.</p>{% endif %}
+    {% for level in ['group', 'up'] if kin.get(level) %}
+    {% set rows = kin[level] %}
+    <details class="kin" data-tree{% if loop.first %} open{% endif %}>
+      <summary>{{ T['kin_' ~ level] }}: {{ rows[0].level_clade_name }} <span class="muted">({{ t('kin_shown', n=rows | length, total=rows[0].level_genera) }})</span></summary>
+      <div class="kin__filter" role="group" aria-label="{{ T.kin_filter }}">
+        <button type="button" class="chip chip--on" data-tree-period="">{{ T.kin_all }}</button>
+        {% for key, name in tree_periods(rows, lang) %}<button type="button" class="chip" data-tree-period="{{ key }}">{{ name }}</button>{% endfor %}
+      </div>
+      <div class="kin__scroll">{{ tree_svg(rows, lang=lang, url=url, label=T['kin_' ~ level] ~ ': ' ~ rows[0].level_clade_name, silhouettes=silhouettes) }}</div>
+      <ul class="kin__list">{% for m in rows %}<li><a href="{{ url('taxon', m.member_key) }}"{% if m.is_self %} aria-current="page"{% endif %}><i>{{ m.member_name }}</i></a>{% if m.first_appearance_max_ma is not none %} <span class="muted">{{ num(m.first_appearance_max_ma) }}–{{ num(m.last_appearance_min_ma or 0) }} Ma</span>{% endif %}</li>{% endfor %}</ul>
+    </details>
+    {% endfor %}
+    <p class="note">{{ T.kin_note }}</p>
   </section>
   {% endif %}
 

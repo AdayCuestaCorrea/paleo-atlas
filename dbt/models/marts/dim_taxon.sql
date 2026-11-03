@@ -47,6 +47,27 @@ genus_pages as (
     select taxon_key as genus_key, taxon_name as genus_page_name
     from {{ ref('int_taxon_pages') }}
     where page_type = 'genus'
+),
+
+classification_paths as (
+    -- PBDB's full classification of each genus (§11.2, H7), from the root of its block
+    -- (Archosauria for every archosaur, birds included) down to its parent clade.
+    select
+        l.taxon_key,
+        list({'name': l.clade_name, 'rank': l.clade_rank} order by l.depth desc)
+            filter (where l.depth <= coalesce(r.root_depth, l.depth)) as classification
+    from {{ ref('int_genus_lineage') }} as l
+    left join (
+        select
+            taxon_key,
+            coalesce(
+                max(depth) filter (where clade_name in (select pbdb_base_name from {{ ref('scope_clades') }})),
+                max(depth) filter (where clade_name = 'Vertebrata')
+            ) as root_depth
+        from {{ ref('int_genus_lineage') }}
+        group by taxon_key
+    ) as r using (taxon_key)
+    group by l.taxon_key
 )
 
 select
@@ -74,6 +95,10 @@ select
     c.class_name,
     c.phylum,
     c.classification_source,
+    -- Species pages show the classification of their genus.
+    coalesce(cp.classification, cpg.classification) as classification,
+    case when coalesce(cp.classification, cpg.classification) is not null then 'pbdb' end
+        as lineage_source,
     c.pbdb_has_taxon,
     c.pbdb_taxon_no,
     c.pbdb_attribution,
@@ -122,3 +147,5 @@ left join {{ ref('int_genus_wikipedia') }} as w using (taxon_key)
 left join genus_pages as gp
     on gp.genus_page_name = c.genus_name
    and gp.genus_key <> p.taxon_key
+left join classification_paths as cp on cp.taxon_key = p.taxon_key
+left join classification_paths as cpg on cpg.taxon_key = {{ taxon_key('c.genus_name') }}

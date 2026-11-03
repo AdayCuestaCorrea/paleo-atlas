@@ -118,3 +118,47 @@ models:
               arguments:
                 to: ref('dim_taxon')
                 field: taxon_key
+  - name: fct_taxon_neighborhood
+    description: Kinship neighbourhood of each genus page in PBDB's classification (§11.2); levels 'group' and 'up'.
+    columns:
+      - name: level
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [group, up]
+
+unit_tests:
+  - name: neighbourhood_group_is_the_lowest_clade_with_three_genera
+    description: >
+      A and B share the clade P (only 2 genera); Q holds A, B and C. Every genus's
+      group is Q, and each lists the closest genus first (A and B meet in P).
+    model: fct_taxon_neighborhood
+    given:
+      - input: ref('int_catalog_genera')
+        rows:
+          - {taxon_key: a, taxon_name: A, first_appearance_max_ma: 100, last_appearance_min_ma: 90}
+          - {taxon_key: b, taxon_name: B, first_appearance_max_ma: 100, last_appearance_min_ma: 90}
+          - {taxon_key: c, taxon_name: C, first_appearance_max_ma: 100, last_appearance_min_ma: 90}
+      - input: ref('int_taxon_pages')
+        rows:
+          - {taxon_key: a}
+          - {taxon_key: b}
+          - {taxon_key: c}
+      - input: ref('int_genus_lineage')
+        rows:
+          - {taxon_key: a, clade_no: p, clade_name: P, depth: 1}
+          - {taxon_key: a, clade_no: q, clade_name: Q, depth: 2}
+          - {taxon_key: b, clade_no: p, clade_name: P, depth: 1}
+          - {taxon_key: b, clade_no: q, clade_name: Q, depth: 2}
+          - {taxon_key: c, clade_no: q, clade_name: Q, depth: 1}
+    expect:
+      rows:
+        - {taxon_key: a, level: group, level_clade_name: Q, member_key: a, common_depth: 0}
+        - {taxon_key: a, level: group, level_clade_name: Q, member_key: b, common_depth: 1}
+        - {taxon_key: a, level: group, level_clade_name: Q, member_key: c, common_depth: 2}
+        - {taxon_key: b, level: group, level_clade_name: Q, member_key: a, common_depth: 1}
+        - {taxon_key: b, level: group, level_clade_name: Q, member_key: b, common_depth: 0}
+        - {taxon_key: b, level: group, level_clade_name: Q, member_key: c, common_depth: 2}
+        - {taxon_key: c, level: group, level_clade_name: Q, member_key: a, common_depth: 1}
+        - {taxon_key: c, level: group, level_clade_name: Q, member_key: b, common_depth: 1}
+        - {taxon_key: c, level: group, level_clade_name: Q, member_key: c, common_depth: 0}

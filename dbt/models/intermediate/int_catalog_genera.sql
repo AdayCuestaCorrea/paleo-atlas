@@ -38,6 +38,7 @@ select
     g.taxon_group,
     g.pbdb_taxon_no,
     g.attribution,
+    g.parent_no,
     g.parent_name,
     g.phylum,
     g.class_name,

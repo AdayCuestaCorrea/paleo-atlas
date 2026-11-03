@@ -284,3 +284,25 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .event--synonymized::before, .event--replaced::before, .event--recombined::before { background: var(--fossil); }
 .event--invalidated::before { background: var(--warn); }
 .event--revalidated::before { background: var(--ochre); }
+
+/* Kinship tree (Phase 3, H7): PBDB classification over the geological periods. */
+.lineage > summary { cursor: pointer; color: var(--fossil); font-size: 0.9rem; }
+.lineage ol { margin: 0.4rem 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
+.kin { margin: 0.6rem 0; }
+.kin > summary { cursor: pointer; font-weight: 600; padding: 0.3rem 0; }
+.kin__filter { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0; }
+.kin__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tree { display: block; min-width: 660px; width: 100%; height: auto; font-size: 11px; }
+.tree text { fill: var(--ink); }
+.tree__edge { stroke: var(--muted); stroke-width: 1.2; }
+.tree__clade { fill: var(--muted) !important; font-size: 9px; }
+.tree__period rect { fill: var(--line); opacity: 0.35; }
+.tree__period:nth-of-type(even) rect { opacity: 0.6; }
+.tree__period text { fill: var(--muted) !important; text-anchor: middle; font-size: 10px; }
+.tree__bar { fill: var(--fossil); }
+.tree__leaf.is-self .tree__bar { fill: var(--ochre); }
+.tree__leaf.is-self text { font-weight: 700; }
+.tree__leaf.is-dim { opacity: 0.2; }
+.tree a:hover text, .tree a:focus text { text-decoration: underline; }
+.kin__list { columns: 2; font-size: 0.85rem; margin-top: 0.6rem; }
+@media (max-width: 640px) { .kin__list { columns: 1; } }

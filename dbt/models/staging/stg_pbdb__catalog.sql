@@ -16,7 +16,7 @@ with versions as (
             payload: 'STRUCT(records STRUCT(
                 taxon_no VARCHAR, taxon_name VARCHAR, taxon_rank VARCHAR,
                 accepted_rank VARCHAR, flags VARCHAR, taxon_attr VARCHAR,
-                parent_name VARCHAR, phylum VARCHAR, "class" VARCHAR, "order" VARCHAR,
+                parent_no VARCHAR, parent_name VARCHAR, phylum VARCHAR, "class" VARCHAR, "order" VARCHAR,
                 family VARCHAR, genus VARCHAR, type_taxon VARCHAR, n_occs INTEGER,
                 firstapp_max_ma DOUBLE, lastapp_min_ma DOUBLE,
                 early_interval VARCHAR, late_interval VARCHAR
@@ -42,6 +42,7 @@ select
         case when r.taxon_name like '% %' then 'species' else 'genus' end
     ) as taxon_rank,
     r.taxon_attr as attribution,
+    'txn:' || r.parent_no as parent_no,  -- the clade above (stg_pbdb__clades.clade_no)
     r.parent_name,
     r.phylum,
     r."class" as class_name,

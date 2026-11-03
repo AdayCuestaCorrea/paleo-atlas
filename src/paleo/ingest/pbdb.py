@@ -10,6 +10,10 @@ The encyclopedia (Phase 3) also needs every extinct genus of the clades in scope
 `ingest_catalog` downloads them with one request per clade of the
 `dbt/seeds/scope_clades.csv` seed, the single definition of the scope (§4).
 
+The kinship tree (§11.2, Phase 3 H7) needs the clades above the genera:
+`ingest_clades` downloads them once a month per block, with the ancestors of the
+block root.
+
 The history of each taxon (§9, Phase 3 H4) comes from PBDB's taxonomic opinions:
 `ingest_opinions` downloads them once a month per block, and `ingest_refs` the
 references of the opinions that can become an event.
@@ -413,3 +417,67 @@ def ingest_opinions(
         refs.save_if_changed(clade.pbdb_base_name, {"records": kept}, today)
         refs.flush()
     return OpinionsResult(len(roots), len(roots) - len(pending), records, new_versions, new_refs)
+
+
+# --- Clades above the genera: the classification and the kinship tree (§11.2, H7) --
+
+
+CLADES_SHOW = "parent,app"
+
+
+@dataclass(frozen=True)
+class CladesResult:
+    blocks: int
+    skipped_fresh: int
+    clades: int
+    new_versions: int
+
+
+def clades_store(raw_root: Path | None = None) -> RawStore:
+    return RawStore("pbdb", "clades", volatile={"elapsed_time"}, raw_root=raw_root)
+
+
+def fetch_clades(client: httpx.Client, clade: ScopeClade) -> dict[str, list[dict[str, Any]]]:
+    """Accepted clades above genus under the block root, and every ancestor of the
+    root (or, for a block defined by a list of genera, of those genera). Compact
+    field names (vocab=com): oid, rnk, nam, par (parent), fea/lla (first/last Ma)."""
+    common = {"vocab": "com", "show": CLADES_SHOW}
+    below: list[dict[str, Any]] = []
+    if not clade.pbdb_query:  # a real clade: the clades inside it
+        body = get_json(
+            client,
+            PBDB_TAXA_LIST,
+            {**common, "base_name": clade.pbdb_base_name, "rank": "above_genus",
+             "taxon_status": "accepted"},
+        )  # fmt: skip
+        below = body.get("records", [])
+    body = get_json(
+        client, PBDB_TAXA_LIST, {**common, "name": clade.base_names(), "rel": "all_parents"}
+    )
+    above = [r for r in body.get("records", []) if r.get("rnk") not in ("genus", "species")]
+    return {"clades": below, "ancestors": above}
+
+
+def ingest_clades(
+    client: httpx.Client,
+    clades: list[ScopeClade],
+    *,
+    raw_root: Path | None = None,
+    refresh: bool = False,
+    today: dt.date | None = None,
+) -> CladesResult:
+    """Snapshot the clades of each block once a month (two requests per block root)."""
+    store_ = clades_store(raw_root)
+    roots = [c for c in clades if c.block_root]
+    pending = [
+        c
+        for c in roots
+        if refresh or not store_.is_fresh(c.pbdb_base_name, CATALOG_REFRESH_DAYS, today)
+    ]
+    count = new_versions = 0
+    for clade in pending:
+        payload = {"base_name": clade.pbdb_base_name, **fetch_clades(client, clade)}
+        new_versions += store_.save_if_changed(clade.pbdb_base_name, payload, today).created
+        count += len(payload["clades"]) + len(payload["ancestors"])
+        store_.flush()
+    return CladesResult(len(roots), len(roots) - len(pending), count, new_versions)

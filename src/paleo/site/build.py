@@ -25,7 +25,7 @@ from markupsafe import Markup, escape
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import terms
+from paleo.site import terms, tree
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.indices import build_indices, unit_key, unit_name
@@ -165,6 +165,8 @@ class SiteBuilder:
         )
         self.env.filters["md"] = md_inline
         self.env.globals["claim"] = claim
+        self.env.globals["tree_svg"] = tree.svg
+        self.env.globals["tree_periods"] = tree.tree_periods
         self.env.globals["terms"] = terms
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
         # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
@@ -264,6 +266,8 @@ class SiteBuilder:
                     Page(lang, "taxon", key, "taxon.html.j2",
                          {"taxon": taxon, "events": data.events.get(key, []),
                           "history": history(data.events.get(key, [])),
+                          "kin": data.kinship(taxon),
+                          "silhouettes": data.silhouettes,
                           "gallery": data.images.get(key, []),
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),

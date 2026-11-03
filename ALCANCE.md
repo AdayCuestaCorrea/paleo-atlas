@@ -152,7 +152,7 @@ Notas:
 | F13 | Wikidata — SPARQL | Verificación de los artículos de Wikipedia de cada género (ID de PBDB P842 y ascendencia P171 hasta la raíz del bloque) y título del artículo en español | Servicio de consultas público, 100 elementos por consulta | Mensual, escalonado (como mucho 600 géneros por ejecución) | Datos **CC0** | [x] 2026-11-02 |
 | F9 | *(Fase 5)* RSS de medios ES/EN | Noticias: titular, enlace, fecha | RSS | Diaria | Solo titular + enlace + resumen propio | [ ] |
 | F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
-| F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | Mensual | A verificar | [ ] |
+| F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | — | — | Descartada por ahora (2026-11-03): reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético |
 | F12 | *(Fase 6)* Conjuntos de datos de tamaño corporal publicados (p. ej. en Dryad) + seed curado a mano | Longitud y masa estimadas, con rango y cita | Descarga + curación | Puntual | Dryad publica en CC0; resto, a verificar por conjunto | [ ] |
 
 ### Resultado de la comprobación de licencias (2026-11-01)
@@ -286,9 +286,9 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] *Opcional:* mismo job en Databricks Free Edition (verificar cuotas y acceso a datos externos)
 - [x] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(la línea temporal hacia atrás va agrupada por décadas, debajo de lo seguido desde 2026)*
 - [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
-- [ ] Familia y clasificación completa en cada ficha (PBDB)
+- [x] Familia y clasificación completa en cada ficha (PBDB) *(2026-11-03: los 4.751 géneros, y las especies a través de su género; cadena de PBDB desde la raíz del bloque)*
 - [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM *(en curso: géneros con artículo en Wikipedia, 2.743, en lotes nocturnos con la GPU local, `paleo narrate --scope genera --until HH:MM`, reanudable; primer lote del 2026-11-03: 201 géneros, 181 verificados en EN y 144 en ES)*
-- [ ] Árbol de parentesco con escala temporal (§11.2): topología de Open Tree of Life (F11) o, si falta, clasificación de PBDB; rangos temporales de PBDB
+- [x] Árbol de parentesco con escala temporal (§11.2): clasificación de PBDB; rangos temporales de PBDB *(2026-11-03: 4.846 de 4.930 fichas, 98 %; grupo mediano de 27 géneros, se dibujan hasta 20. Open Tree of Life descartado por ahora: ver F11)*
 - [x] DAG mensual real en Airflow *(2026-11-02, en verde en local: refresco de fuentes → catálogo → descarga de GBIF (reutilizada) → job de Spark en Docker (14 s) → build → web; el extracto solo cambia si cambian sus filas, sea cual sea el motor)*
 - [ ] Documento de fase (`docs/fases/fase-3.md`)
 
@@ -436,7 +436,8 @@ Lo que buscas se llama **cladograma** o, con el eje del tiempo, **árbol filogen
 - **Vista:** el taxón en el centro, su familia y sus «hermanos» (los parientes más cercanos), cada uno con su silueta (F4) y su nombre, y líneas que muestran el parentesco.
 - **Eje temporal:** cada rama se dibuja en el intervalo en que vivió el animal (primera y última aparición en PBDB), sobre la escala de periodos (Triásico, Jurásico, Cretácico…). Filtros por época.
 - **Navegable:** pulsar un hermano abre su ficha; se puede subir o bajar de nivel (familia → orden). Nunca se dibuja el árbol entero de golpe, solo el vecindario del taxón.
-- **Honestidad:** la topología sale de Open Tree of Life (síntesis de muchos estudios) o, si falta, de la clasificación de PBDB, que es una clasificación y no un análisis filogenético. Se indica el origen en la propia vista, y que la ubicación de muchos animales está en debate.
+- **Honestidad:** la topología sale de la clasificación de PBDB, que es una clasificación y no un análisis filogenético. Se indica en la propia vista, y que la ubicación de muchos animales está en debate. *(Open Tree of Life se descartó el 2026-11-03: solo ~12 % de los géneros fósiles están en su árbol sintético, y mezclar las dos fuentes daría vecindarios casi vacíos.)*
+- **Hecho (2026-11-03):** dos niveles, «Grupo» (el clado más bajo con al menos 3 géneros de la enciclopedia) y «Un nivel más arriba», cada uno con hasta 20 géneros, los más cercanos primero; SVG estático con enlaces, más un filtro por periodo; las especies muestran el árbol de su género. Las siluetas solo se ponen cuando son del propio género (41), no las del clado.
 
 ### 11.3 Comparador de tamaños (Fase 6)
 - Elegir 2–4 elementos: taxones del atlas y objetos de referencia (persona, elefante africano, autobús, avión comercial…).
@@ -590,6 +591,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | 82 / 82 (arcosaurios) | 2026-11-02 |
 | Taxones en la enciclopedia por bloque | Arcosaurios: 280 (82 nuevos + 198 conocidos) | 2026-11-02 |
 | Eventos en el historial | 403 seguidos desde 2026 + 19.354 hacia atrás (PBDB y páginas anuales 2009–2025) | 2026-11-03 |
+| Fichas con árbol de parentesco | 4.846 / 4.930 (98 %; clasificación de PBDB) | 2026-11-03 |
 | % con correspondencia en PBDB | Nuevos 41 % (PBDB tarda en añadirlos) · conocidos 99 % | 2026-11-02 |
 | % con imagen (especie / género / clado) | 100 %: especie 36 % · género 4 % · clado 49 % · grupo 11 % | 2026-11-02 |
 | % de estudios revisados por pares / preprints / retractados | 94 % / 0 % / 0 % (5 corregidos; 28 % en revistas DOAJ) | 2026-11-02 |
@@ -757,6 +759,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 | API pública de datos de Paleo Atlas | Revisar las licencias de redistribución |
 | Cola de prioridad cuando un día no cabe en la cuota del LLM | Redactar primero las especies más recientes |
 | Segundo proveedor LLM gratuito de reserva | Por si Groq falla o cambia su plan gratuito |
+| Open Tree of Life como señal en el árbol | Decir en cada ficha si el género está en el árbol sintético y con cuántos estudios (F11 descartada como topología: 12 % de cobertura) |
 | Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
 | Retracciones de los estudios de la «Historia anterior» | Cruzar cada mes los ~7.600 DOIs con el CSV de Retraction Watch (vía Crossref) sin guardar un registro por DOI; hoy salen como `unchecked` |
 | Columna «Unit» de las páginas anuales antiguas (≤ 2018) | El parser la ignora con un aviso; los eventos no usan la localidad |
@@ -767,6 +770,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-03 | v22: Fase 3, hito 7: clasificación completa y árbol de parentesco. Los clados por encima del género se descargan de PBDB una vez al mes por bloque (2.724), con un cierre recursivo en dbt (`int_genus_lineage`) y un mart del vecindario (`fct_taxon_neighborhood`, con test unitario). **Topología solo de PBDB** (decisión del usuario): Open Tree of Life reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético. El árbol es un SVG estático por nivel, con la escala de periodos | Plan de H7 aprobado |
 | 2026-11-03 | v21: Fase 3, hito 4: historial hacia atrás. **Opiniones taxonómicas de PBDB** (unas 121.000, una descarga al mes por bloque, más las referencias que se citan): un evento la primera vez que un nombre cambia de estado (sinónimo de X, *nomen dubium*, sustituido por X, trasladado al género X), más la revalidación cuando la clasificación actual de PBDB lo vuelve a aceptar; un «belongs to» repetido nunca es evento (los autores discrepan durante décadas: *Brontosaurus*). **Páginas anuales de años anteriores** (45 páginas, carpeta aparte `wikipedia_past`): solo dan eventos, nunca páginas, textos, búsquedas de PBDB o de Crossref. Lo antiguo se marca `origin = backfill`: no entra en «Última hora» ni en los resúmenes semanales, y sus ~7.600 estudios no se comprueban en Crossref (estado `unchecked`, sin distintivo; cruzarlos con Retraction Watch queda en el backlog). Las fuentes de las fichas narrativas no cambian | Plan de H4 aprobado |
 | 2026-11-03 | v20: Fase 3, hito 6 empezado: fichas narrativas de los géneros con artículo en Wikipedia, en lotes nocturnos con la GPU local (los artículos más largos primero). El wikitext de los géneros va a la caché local, no a `data`: cada hecho cita la revisión (`oldid`). Primer lote: 201 géneros en ~7,5 h (137 s por género; GPU a 72 °C de media). Lectura manual: el contenido es fiel; el español arrastra calcos que las verificaciones no ven, de ahí nuevas reglas en los prompts (`write-en-v6`, `adapt-es-v4`, `review-es-v3`), que reescriben esas fichas en el próximo lote. Una respuesta cortada en la extracción se repite en dos mitades | Revisión del primer lote |
 | 2026-11-02 | v19: Fase 3, hito 5 (rama `fase-3`). Descarga de GBIF (F3 verificada; A11 cerrada): fósiles de cordados sin mamíferos ni tortugas (932.494 registros, DOI 10.15468/dl.8v87yz), pues el árbol de GBIF no tiene los clados de §4 y el filtro fino lo hace la reconciliación. El mismo job en DuckDB y en PySpark (especificación única; extractos idénticos con datos reales) y el **benchmark**: DuckDB gana a este volumen (0,9 s frente a 13,7 s). Mapa de hallazgos (SVG propio con Natural Earth, PBDB + GBIF; sin las coordenadas que GBIF marca como erróneas) y museos en cada ficha; cita del DOI en «Fuentes y licencias». DAG mensual con la descarga y Spark; la imagen de Airflow lleva Java | Plan de H5 |

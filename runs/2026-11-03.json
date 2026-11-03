@@ -1,0 +1,133 @@
+[
+ {
+  "started_at": "2026-11-03T16:38:32Z",
+  "trigger": "manual",
+  "changed": true,
+  "status": "ok",
+  "finished_at": "2026-11-03T16:38:59Z",
+  "steps": [
+   {
+    "name": "Set up job",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "Run actions/checkout@v7.0.1",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Check out the data branch",
+    "conclusion": "success",
+    "seconds": 9
+   },
+   {
+    "name": "Run astral-sh/setup-uv@v10.3.3",
+    "conclusion": "success",
+    "seconds": 6
+   },
+   {
+    "name": "Install",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "Anything new?",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Ingest and parse",
+    "conclusion": "success",
+    "seconds": 10
+   },
+   {
+    "name": "Facts and texts for pending species (Groq)",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "dbt build",
+    "conclusion": "success",
+    "seconds": 11
+   }
+  ],
+  "sources_changed": {
+   "commons/files": 4,
+   "commons/taxon_files": 2,
+   "crossref/works": 3,
+   "doaj/journals": 2,
+   "pbdb/taxa": 2,
+   "phylopic/nodes": 2,
+   "wikipedia_articles/en": 1
+  },
+  "wikipedia_revisions": {
+   "2026_in_archosaur_paleontology": 1383575897
+  },
+  "wikipedia_new_revisions": [
+   "2026_in_archosaur_paleontology"
+  ],
+  "summary": {
+   "totals": {
+    "taxa_new": 83,
+    "taxa_known": 199,
+    "events": 315,
+    "studies": 464,
+    "texts_en": 82,
+    "texts_es": 81,
+    "gallery_images": 1563,
+    "texts_pending": 2
+   },
+   "events_by_type": {
+    "description": 83,
+    "new_study": 229,
+    "study_corrected": 3
+   },
+   "pbdb": {
+    "known": {
+     "matched": 197,
+     "total": 199
+    },
+    "new": {
+     "matched": 34,
+     "total": 83
+    }
+   },
+   "images": {
+    "phylopic/clade": 139,
+    "commons/taxon": 60,
+    "phylopic/taxon": 42,
+    "phylopic/group": 31,
+    "phylopic/genus": 10
+   }
+  },
+  "changes_since_previous": {
+   "taxa_new": 1,
+   "taxa_known": 1,
+   "events": 2,
+   "studies": 3,
+   "gallery_images": 6,
+   "texts_pending": 1
+  },
+  "dbt": {
+   "counts": {
+    "pass": 92,
+    "success": 33,
+    "warn": 2
+   },
+   "issues": [
+    {
+     "status": "warn",
+     "node": "not_null_stg_wikipedia__research_items_primary_doi",
+     "failures": 11
+    },
+    {
+     "status": "warn",
+     "node": "assert_pbdb_lag_warning",
+     "failures": 49
+    }
+   ]
+  },
+  "llm_tokens": {}
+ }
+]

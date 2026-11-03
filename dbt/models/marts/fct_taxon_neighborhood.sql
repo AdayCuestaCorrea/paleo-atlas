@@ -54,42 +54,55 @@ levels as (
     select * from group_level union all select * from up_level
 ),
 
-members as (
-    -- Every genus under the level's clade, with how close it is to the page's genus:
-    -- the depth (from the page's genus) of their lowest common ancestor.
+cap as (
+    -- Only the closest genera are shown, so only the clade where they all fit is
+    -- searched: the lowest ancestor with at least max_members genera (or the level's
+    -- clade, if lower). The result is the same as ranking every genus of the level,
+    -- but a level can hold thousands (poorly resolved clades), and ranking them all
+    -- needs gigabytes.
     select
         v.taxon_key,
         v.level,
         v.clade_no as level_clade_no,
         v.clade_name as level_clade_name,
         v.genera as level_genera,
-        m.taxon_key as member_key,
-        m.depth as member_depth  -- depth of the level's clade above the member
+        least(
+            v.depth,
+            coalesce(min(r.depth) filter (where r.genera >= {{ max_members }}), v.depth)
+        ) as cap_depth
     from levels as v
-    inner join lineage as m on m.clade_no = v.clade_no
+    inner join ranked as r on r.taxon_key = v.taxon_key
+    group by v.taxon_key, v.level, v.clade_no, v.clade_name, v.genera, v.depth
+),
+
+candidates as (
+    select c.*, m.taxon_key as member_key
+    from cap as c
+    inner join ranked as a on a.taxon_key = c.taxon_key and a.depth = c.cap_depth
+    inner join lineage as m on m.clade_no = a.clade_no
 ),
 
 closeness as (
-    select
-        mb.taxon_key,
-        mb.level,
-        mb.member_key,
-        min(a.depth) as common_depth
-    from members as mb
-    inner join lineage as a on a.taxon_key = mb.taxon_key
-    inner join lineage as b on b.taxon_key = mb.member_key and b.clade_no = a.clade_no
+    -- How close each candidate is to the page's genus: the depth (from the page's
+    -- genus) of their lowest common ancestor.
+    select cd.taxon_key, cd.level, cd.member_key, min(a.depth) as common_depth
+    from candidates as cd
+    inner join ranked as a on a.taxon_key = cd.taxon_key and a.depth <= cd.cap_depth
+    inner join lineage as b on b.taxon_key = cd.member_key and b.clade_no = a.clade_no
     group by all
 ),
 
 chosen as (
     select
-        mb.*,
-        case when mb.member_key = mb.taxon_key then 0 else c.common_depth end as common_depth
-    from members as mb
+        cd.*,
+        case when cd.member_key = cd.taxon_key then 0 else c.common_depth end as common_depth,
+        m.depth as member_depth  -- depth of the level's clade above the member
+    from candidates as cd
     left join closeness as c using (taxon_key, level, member_key)
+    inner join lineage as m on m.taxon_key = cd.member_key and m.clade_no = cd.level_clade_no
     qualify row_number() over (
-        partition by mb.taxon_key, mb.level
-        order by mb.member_key = mb.taxon_key desc, c.common_depth, mb.member_key
+        partition by cd.taxon_key, cd.level
+        order by cd.member_key = cd.taxon_key desc, c.common_depth, cd.member_key
     ) <= {{ max_members }}
 )
 

@@ -143,6 +143,11 @@ flowchart LR
 - **Una respuesta JSON cortada** en la extracción de hechos dejaba el género sin ficha. Ahora se vuelve a preguntar en dos mitades.
 - **Las opiniones de PBDB van y vienen** (*Brontosaurus*): la primera versión daba eventos contradictorios cada pocos años. Se cambió a «primera vez de cada estado» y se fijó con un test unitario de dbt.
 - **Una ventana SQL demasiado ancha** se comía la descripción original de cada género. La partición de «una descripción por nombre» no incluía el tipo de evento, así que un estudio con más prioridad le quitaba el sitio. Lo destapó revisar *Brontosaurus* a mano.
+- **El ensayo del merge destapó dos fallos que los tests no veían:**
+  - **Un PDF en la columna de imágenes** de la página de 2026 hace fallar la petición a Commons de todo su lote. Con el código de `main`, eso tumba `ingest images` y, con él, la publicación del día. Ahora solo se piden imágenes y, si un lote falla, se repite archivo a archivo.
+  - **`fct_taxon_neighborhood` podía agotar la memoria** (12 GiB de disco temporal). Calculaba la cercanía de todos los géneros de niveles que llegan a los 4.787. Ahora solo busca dentro del clado más bajo donde caben los 20 que se muestran. El resultado es idéntico fila a fila (152.596 filas) y tarda 0,3 s en vez de ~4 s.
+  
+  *Lección:* ensayar con los datos reales y en las condiciones del runner, no solo con el fixture.
 - **El escape de HTML de Jinja**: concatenar `<em>` con un valor ya escapado lo escapa también, y `Markup.replace` escapa lo que inserta. Las frases del historial se montan ahora en Python, con un test.
 
 ## 9. Preguntas de entrevista
@@ -173,3 +178,19 @@ Con una CTE recursiva sobre los enlaces padre-hijo de PBDB: unas 4.750 × 40 fil
 - **Estudios antiguos sin comprobar:** cruzarlos cada mes con Retraction Watch, sin guardar un registro por DOI (backlog).
 - **Open Tree of Life** podría volver como señal («este género está en el árbol sintético, con N estudios»), no como topología (backlog).
 - **Merge** de `fase-3` y `data-fase-3` a `main` y `data` cuando la Fase 1 cumpla sus 2 semanas autónomas.
+
+### Lista de comprobación del merge (ensayada el 2026-11-03)
+
+El ensayo se hizo en clones desechables, sin push. Se ejecutaron los pasos de `pipeline.yml` sobre `main` + `fase-3` y `data` + `data-fase-3`, y después se simuló un commit diario de Actions en `data` antes del merge.
+
+1. **Código:** `git checkout main && git merge fase-3`. Hoy es avance rápido, porque `main` no ha cambiado desde que salió `fase-3`.
+2. **Datos:** en el checkout de `data`, `git merge origin/data-fase-3`. Si Actions ya ha hecho commits diarios, habrá conflictos previsibles. `uv run python ../scripts/merge_data.py` los resuelve:
+   - en los `_checked.json`, conserva todas las claves con su fecha más reciente;
+   - en los archivos añadidos el mismo día en las dos ramas, que solo se diferencian en `fetched_at`, se queda con uno;
+   - en `runs/`, hace la unión de las ejecuciones.
+   
+   En el ensayo resolvió 9 de 9 conflictos. Lo que no sepa resolver lo deja para revisarlo a mano.
+3. **`pipeline.yml` y `ci.yml` no necesitan cambios:** las ingestas nuevas van dentro de los comandos de siempre. `paleo parse wikipedia` también parsea las páginas antiguas, en ~12 s.
+4. **Primera ejecución tras el merge** (manual): todo en verde. Tiempos: ingesta ~1,5 min, parseo 12 s, dbt 9 s, web 9 s y su comprobación 55 s. La web pesa 337 MB y tiene 10.342 archivos, lejos del límite de 1 GB de GitHub Pages; la sección «Parientes» es ~60 % de cada ficha. dbt necesita entre 3 y 4 GB de RAM, y el runner tiene 16.
+5. **Al día siguiente, el paso de Groq** reescribe las 82 especies nuevas, porque los prompts subieron de versión (unos 2 días de cuota gratuita). Mientras tanto se publican las versiones anteriores, que siguen verificadas.
+6. **Qué vigilar:** que no haya avisos `Commons batch … failed` repetidos a diario, que la duración de dbt no suba y que la rama `data` (~180 MB de crudo, 29 MB comprimidos en git) crezca solo con las descargas mensuales.

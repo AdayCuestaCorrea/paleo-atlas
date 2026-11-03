@@ -93,3 +93,18 @@ def test_species_pages_show_the_tree_of_their_genus():
     data = SiteData([], {}, {}, {}, {}, neighborhood={"spinosaurus": {"group": ROWS}})
     assert data.kinship({"taxon_key": "spinosaurus-mirabilis", "genus_key": "spinosaurus"})
     assert data.kinship({"taxon_key": "otodus", "genus_key": None}) == {}
+
+
+def test_labels_are_drawn_only_where_they_fit_and_kept_on_hover_otherwise():
+    assert tree.fits("Otodontidae", 80, tree.CLADE_CHAR)
+    assert not tree.fits("Ornithothoraces", 25, tree.CLADE_CHAR)
+    deep = [
+        row(f"g{i}", f"G{i}", ["Ornithothoraces", "Ornithuromorpha", f"C{i % 2}"]) for i in range(4)
+    ]
+    svg = str(tree.svg(deep, lang="en", url=lambda kind, key: key, label="Group"))
+    assert "<title>Ornithuromorpha</title>" in svg  # no room on its short branch
+    assert 'class="tree__clade"' not in svg or "Ornithuromorpha</text>" not in svg
+    # A narrow period (the Quaternary in a Cretaceous-to-today axis) only on hover.
+    wide = [row("a", "A", [], first=140.0, last=0.0, self_=True, depth=0), row("b", "B", [])]
+    axis = str(tree.svg(wide, lang="en", url=lambda kind, key: key, label="Group"))
+    assert ">Cretaceous</text>" in axis and "<title>Quaternary</title>" in axis

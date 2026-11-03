@@ -295,3 +295,15 @@ def test_the_fossil_record_falls_back_to_the_epochs_of_its_ages():
 def test_no_double_dot_after_et_al():
     text = fallback_text(taxon(name_authors="Zietlow et al.", naming_year=None), "es")
     assert text.endswith("Zietlow et al.") and not text.endswith("..")
+
+
+def test_long_lists_show_the_first_items_and_fold_the_rest():
+    b = builder()
+    folded = b.env.get_template("macros.html.j2").module.folded
+    from markupsafe import Markup
+
+    items = [Markup(f"<a href='#{i}'>C{i}</a>") for i in range(20)]  # as the page builds them
+    out = str(folded(items, "and 8 more"))
+    head, _, rest = out.partition("<details")
+    assert head.count("<a ") == 12 and rest.count("<a ") == 8 and "and 8 more" in rest
+    assert "<details" not in str(folded(items[:12], "unused"))  # 12 or fewer: no fold

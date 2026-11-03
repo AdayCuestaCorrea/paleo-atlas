@@ -91,3 +91,10 @@
   {%- if early %} <span class="muted">{{ early }}{% if late and late != early %}–{{ late }}{% endif %}</span>{% endif -%}
 </li>
 {%- endmacro %}
+
+{#- A long comma-separated list: the first ``limit`` items, the rest folded under
+    ``more_label`` ("and 65 more"), without JavaScript. Items are already HTML. -#}
+{% macro folded(items, more_label, limit=12) -%}
+{%- for i in items[:limit] %}{{ i }}{% if not loop.last or items | length > limit %}, {% endif %}{% endfor -%}
+{%- if items | length > limit %}<details class="more"><summary>{{ more_label }}</summary>{% for i in items[limit:] %}{{ i }}{% if not loop.last %}, {% endif %}{% endfor %}</details>{% endif -%}
+{%- endmacro %}

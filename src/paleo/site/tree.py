@@ -22,6 +22,13 @@ CLADO_W = 150  # cladogram width
 LABEL_W = 170  # genus names
 TIME_W = 340  # time axis
 ICON = 16  # PhyloPic silhouette
+CLADE_CHAR = 5.2  # px per character of a clade name (9 px font)
+PERIOD_CHAR = 6.0  # px per character of a period name (10 px font)
+
+
+def fits(text: str, room: float, per_char: float) -> bool:
+    """Whether a label of ``text`` fits in ``room`` px (rough, no font metrics)."""
+    return len(text) * per_char + 4 <= room
 
 
 @dataclass
@@ -142,34 +149,47 @@ def svg(
     ]
     for p_old, p_young, en, es in periods(old, young):
         a, b = tx(p_old), tx(p_young)
-        name = es if lang == "es" else en
+        name = escape(es if lang == "es" else en)
+        # The name only when it fits the band; otherwise on hover (and in the filter).
+        text = (
+            f'<text x="{(a + b) / 2:.0f}" y="{TOP - 12}">{name}</text>'
+            if fits(name, b - a, PERIOD_CHAR)
+            else f"<title>{name}</title>"
+        )
         out.append(
             f'<g class="tree__period" data-period="{escape(en)}" data-old="{p_old:g}" '
-            f'data-young="{p_young:g}"><rect x="{a:.1f}" y="{TOP - 6}" '
-            f'width="{b - a:.1f}" height="{height - TOP - 4}"/>'
-            f'<text x="{(a + b) / 2:.1f}" y="{TOP - 12}">{escape(name)}</text></g>'
+            f'data-young="{p_young:g}"><rect x="{a:.0f}" y="{TOP - 6}" '
+            f'width="{b - a:.0f}" height="{height - TOP - 4}"/>{text}</g>'
         )
 
-    def edges(node: Node) -> None:
+    path: list[str] = []  # every branch in one <path>: much lighter than one <line> each
+    labels: list[str] = []
+
+    def edges(node: Node, parent_x: float) -> None:
         if node.member:
             return
-        out.append(
-            f'<line class="tree__edge" x1="{node.x:.1f}" y1="{node.children[0].y:.1f}" '
-            f'x2="{node.x:.1f}" y2="{node.children[-1].y:.1f}"/>'
-        )
+        path.append(f"M{node.x:.0f} {node.children[0].y:.0f}V{node.children[-1].y:.0f}")
         for c in node.children:
-            out.append(
-                f'<line class="tree__edge" x1="{node.x:.1f}" y1="{c.y:.1f}" '
-                f'x2="{c.x:.1f}" y2="{c.y:.1f}"/>'
+            path.append(f"M{node.x:.0f} {c.y:.0f}H{c.x:.0f}")
+            edges(c, node.x)
+        if node is root:
+            return
+        name = escape(node.name)
+        # Above the branch that leads into the clade, when it fits; otherwise on hover.
+        if fits(name, node.x - parent_x, CLADE_CHAR):
+            labels.append(
+                f'<text class="tree__clade" x="{node.x - 2:.0f}" y="{node.y - 3:.0f}">{name}</text>'
             )
-            edges(c)
-        if node is not root:
-            out.append(
-                f'<text class="tree__clade" x="{node.x + 3:.1f}" y="{node.y - 4:.1f}">'
-                f"{escape(node.name)}</text>"
+        else:
+            labels.append(
+                f'<rect class="tree__hit" x="{node.x - 3:.0f}" y="{node.children[0].y:.0f}" '
+                f'width="6" height="{node.children[-1].y - node.children[0].y:.0f}">'
+                f"<title>{name}</title></rect>"
             )
 
-    edges(root)
+    edges(root, 0.0)
+    out.append(f'<path class="tree__edge" d="{"".join(path)}"/>')
+    out.extend(labels)
     for leaf in root.leaves():
         m = leaf.member
         assert m is not None
@@ -183,21 +203,19 @@ def svg(
         parts.append(">")
         if icon:
             parts.append(
-                f'<image href="{escape(icon)}" x="{CLADO_W + 4}" y="{leaf.y - ICON / 2:.1f}" '
-                f'width="{ICON}" height="{ICON}" preserveAspectRatio="xMidYMid meet"/>'
+                f'<image href="{escape(icon)}" x="{CLADO_W + 4}" y="{leaf.y - ICON / 2:.0f}" '
+                f'width="{ICON}" height="{ICON}"/>'
             )
         parts.append(
             f'<a href="{escape(url("taxon", m["member_key"]))}"><text x="{name_x}" '
-            f'y="{leaf.y + 4:.1f}"><tspan font-style="italic">{escape(m["member_name"])}'
-            "</tspan></text></a>"
+            f'y="{leaf.y + 4:.0f}">{escape(m["member_name"])}</text></a>'
         )
         if first is not None:
             a, b = tx(first), tx(last if last is not None else first)
             parts.append(
-                f'<rect class="tree__bar" x="{a:.1f}" y="{leaf.y - 5:.1f}" '
-                f'width="{max(b - a, 2):.1f}" height="10" rx="2">'
-                f"<title>{escape(m['member_name'])}: {first:g}\u2013{(last or 0):g} Ma"
-                "</title></rect>"
+                f'<rect class="tree__bar" x="{a:.0f}" y="{leaf.y - 5:.0f}" '
+                f'width="{max(b - a, 2):.0f}" height="10" rx="2">'
+                f"<title>{first:g}\u2013{(last or 0):g} Ma</title></rect>"
             )
         parts.append("</g>")
         out.append("".join(parts))

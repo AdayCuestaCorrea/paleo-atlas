@@ -294,8 +294,10 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .kin__scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tree { display: block; min-width: 660px; width: 100%; height: auto; font-size: 11px; }
 .tree text { fill: var(--ink); }
-.tree__edge { stroke: var(--muted); stroke-width: 1.2; }
-.tree__clade { fill: var(--muted) !important; font-size: 9px; }
+.tree__edge { stroke: var(--muted); stroke-width: 1.2; fill: none; }
+.tree__hit { fill: transparent; cursor: help; }
+.tree__clade { fill: var(--muted) !important; font-size: 9px; text-anchor: end; }
+.tree__leaf text { font-style: italic; }
 .tree__period rect { fill: var(--line); opacity: 0.35; }
 .tree__period:nth-of-type(even) rect { opacity: 0.6; }
 .tree__period text { fill: var(--muted) !important; text-anchor: middle; font-size: 10px; }
@@ -306,3 +308,8 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .tree a:hover text, .tree a:focus text { text-decoration: underline; }
 .kin__list { columns: 2; font-size: 0.85rem; margin-top: 0.6rem; }
 @media (max-width: 640px) { .kin__list { columns: 1; } }
+
+/* Long country lists: the first ones, the rest folded. */
+.more { display: inline; }
+.more > summary { display: inline; cursor: pointer; color: var(--fossil); }
+.more[open] > summary { display: none; }

@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import image, event, event_date, study_title %}
+{% from "macros.html.j2" import image, event, event_date, study_title, folded %}
 {% block title %}{{ taxon.taxon_name }} · {{ T.site_name }}{% endblock %}
 {% block description %}{{ fallback or taxon.taxon_name }}{% endblock %}
 {% block content %}
@@ -35,7 +35,10 @@
         {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>
         {% elif taxon.first_appearance_max_ma is none %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
         {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
-        {% if taxon.country_codes %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.country_codes %}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+        {% if taxon.country_codes %}
+          {%- macro country(c) -%}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{%- endmacro -%}
+          {%- set links = [] %}{% for c in taxon.country_codes %}{% set _ = links.append(country(c)) %}{% endfor -%}
+          <dt>{{ T.field_country }}</dt><dd>{{ folded(links, t('and_n_more', n=links | length - 12)) }}</dd>
         {% elif taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
         {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
         {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}

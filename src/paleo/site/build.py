@@ -170,7 +170,10 @@ class SiteBuilder:
         self.env.globals["terms"] = terms
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
         # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
-        self.atlas_names = {t["taxon_name"]: t["taxon_key"] for t in data.taxa}
+        # A species folded into its genus page links there.
+        self.atlas_names = {r["subject_name"]: r["to_key"] for r in data.redirects} | {
+            t["taxon_name"]: t["taxon_key"] for t in data.taxa
+        }
         self.atlas_genera = {name.split(" ")[0] for name in self.atlas_names}
         self._names = re.compile(r"\b[A-Z][a-z]+(?: [a-z]+)?")
         groups = list(dict.fromkeys(c.taxon_group for c in scope_clades(enabled_only=False)))
@@ -192,10 +195,12 @@ class SiteBuilder:
                 return f"<em>{name}</em>"
             if key:
                 href = self.url(lang, "taxon", key)
-                return f'<a class="taxon-link" href="{href}"><em>{name}</em></a>'
+                title = html.escape(self.t(lang, "link_taxon", taxon=name), quote=True)
+                return f'<a class="taxon-link" href="{href}" title="{title}"><em>{name}</em></a>'
+            title = html.escape(self.t(lang, "link_wikipedia", taxon=name), quote=True)
             return (
-                f'<a class="ext" href="{wikipedia_search(name, lang)}" rel="noopener">'
-                f"<em>{name}</em></a>"
+                f'<a class="ext" href="{wikipedia_search(name, lang)}" rel="noopener" '
+                f'title="{title}"><em>{name}</em></a>'
             )
 
         out, pos = [], 0
@@ -344,6 +349,22 @@ class SiteBuilder:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(self.render(page), encoding="utf-8")
             urls.append(f"{SITE_URL}/{self.path(page.lang, page.kind, page.key)}")
+        # Moved pages: a small redirect at the old URL (not in the sitemap or search).
+        redirect = self.env.get_template("redirect.html.j2")
+        for r in self.data.redirects:
+            for lang in LANGS:
+                other = "en" if lang == "es" else "es"
+                target = tmp / self.path(lang, "taxon", r["from_key"])
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(
+                    redirect.render(
+                        lang=lang, T=self.i18n[lang], name=r["subject_name"],
+                        to=self.url(lang, "taxon", r["to_key"]),
+                        canonical=f"{SITE_URL}/{self.path(lang, 'taxon', r['to_key'])}",
+                        alternate=self.url(other, "taxon", r["from_key"]), other=other,
+                    ),
+                    encoding="utf-8",
+                )  # fmt: skip
         for lang in LANGS:
             index = build_index(
                 self.data.taxa, lang, lambda key, lang=lang: self.url(lang, "taxon", key)

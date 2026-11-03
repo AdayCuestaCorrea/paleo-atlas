@@ -92,7 +92,7 @@ Demostrar, con un sistema que funciona en público, las habilidades que piden la
 - Web **bilingüe** (español e inglés) con selector de idioma.
 - Detección diaria de novedades + recap semanal.
 - Historial de cambios por taxón.
-- **Fichas básicas para los taxones ya conocidos** que aparecen en los estudios del año (datos de PBDB, imagen e historial de estudios; texto narrativo en la Fase 3). Decisión del 2026-11-02.
+- **Fichas básicas para los taxones ya conocidos** que aparecen en los estudios del año (datos de PBDB, imagen e historial de estudios; texto narrativo en la Fase 3). Decisión del 2026-11-02. *Revisada el 2026-11-03 (v25): una especie conocida cuyo género tiene ficha de enciclopedia se integra en ella (sus estudios van al historial del género con el nombre de la especie y su URL redirige); las especies nuevas del año conservan su ficha.*
 - Señales de fiabilidad de cada estudio.
 - Enciclopedia con datos de PBDB y GBIF; Spark local + benchmark.
 - Imágenes 2D con licencia libre; modelos 3D curados cuando existan y sean fiables.
@@ -415,7 +415,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 |---|---|---|
 | Nombre científico y significado *(el significado, Fase 3: hecho «etimología» con cita)* | F1 / PBDB | Ocultar el significado |
 | Imagen 2D + autor + licencia, ampliable | F4 / F5 | Silueta del género, del clado o, en último caso, del grupo (seed `group_clades`), con aviso «imagen aproximada» |
-| Galería (fósiles, dientes, esqueletos, reconstrucciones…; máx. 12, con autor y licencia) | F5 | Ocultar |
+| Galería (fósiles, dientes, esqueletos, reconstrucciones…; máx. 12, con autor, licencia y la descripción de Commons; primero las del artículo de Wikipedia, la categoría solo rellena; tira de miniaturas bajo la imagen principal y en el visor) | F5 | Ocultar |
 | «Lo último»: los 3 eventos más recientes del historial | §9 | Ocultar |
 | Modelo 3D *(Fase 6)* | F10 | Ocultar |
 | Familia y clasificación (familia → orden → clase) | PBDB | El nivel más bajo conocido |
@@ -770,6 +770,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-03 | v25: revisión a ojo del usuario. (1) Las 40 especies conocidas cuyo género tiene ficha de enciclopedia (*T. rex*, *Otodus megalodon*…) se integran en él: sus estudios pasan al historial del género («Sobre *T. rex*»), su URL redirige y el buscador ya no da dos resultados; quedan 24 fichas de conocidos. (2) Galería: primero las imágenes del artículo de Wikipedia y la categoría de Commons solo rellena, con el nombre del archivo como condición; fuera estatuas, juguetes, maquetas y gráficas; una copia de cada dibujo (PNG/SVG/traducciones) y pocas del mismo tipo; pie de foto con la descripción de Commons (solo en alfabeto latino). (3) Tira de miniaturas bajo la imagen principal y en el visor. (4) Los enlaces a otras fichas dicen adónde llevan al pasar el ratón. El glosario sigue en la Fase 5 (decisión del usuario) | Revisión del usuario |
 | 2026-11-03 | v24: ensayo del merge de la Fase 3 (clones desechables, sin push): sale bien, y deja una lista de comprobación en `docs/fases/fase-3.md` §10 y `scripts/merge_data.py` para los conflictos previsibles de `data`. Destapó dos fallos: un PDF en la tabla de 2026 rompía la ingesta de imágenes de `main` (y con ella la publicación diaria) y `fct_taxon_neighborhood` podía agotar la memoria (ahora 0,3 s, mismo resultado). **Hotfix en `main` con permiso del usuario** (`d9781bc2`, solo el arreglo de Commons); ejecución manual en verde y web publicada | Ensayo del merge |
 | 2026-11-03 | v23: ADRs D1–D10 en `docs/adr/` (adelantados de la Fase 4): contexto, decisión, alternativas, consecuencias y pruebas con cifras reales; las decisiones matizadas después llevan una sección «Revisión» (D3, D5, D7, D9). Marcada la ingesta completa de PBDB de la Fase 3 (los tres bloques en el catálogo) | Petición del usuario |
 | 2026-11-03 | v22: Fase 3, hito 7: clasificación completa y árbol de parentesco. Los clados por encima del género se descargan de PBDB una vez al mes por bloque (2.724), con un cierre recursivo en dbt (`int_genus_lineage`) y un mart del vecindario (`fct_taxon_neighborhood`, con test unitario). **Topología solo de PBDB** (decisión del usuario): Open Tree of Life reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético. El árbol es un SVG estático por nivel, con la escala de periodos | Plan de H7 aprobado |

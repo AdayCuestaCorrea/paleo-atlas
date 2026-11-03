@@ -30,6 +30,7 @@ class _PageParser(HTMLParser):
         self.refs: list[str] = []
         self.anchors: list[str] = []  # <a href> links, not to the same page in the other language
         self.alternates: list[str] = []
+        self.redirect = False  # <meta http-equiv="refresh">: a moved page
         self.stack: list[str] = []
         self.unbalanced: list[str] = []
         self.hero_images = 0
@@ -47,6 +48,8 @@ class _PageParser(HTMLParser):
             self.anchors.append(a["href"] or "")
         if tag == "link" and a.get("rel") == "alternate" and a.get("href"):
             self.alternates.append(a["href"] or "")
+        if tag == "meta" and (a.get("http-equiv") or "").lower() == "refresh":
+            self.redirect = True
         if tag == "img" and "pic--hero" in (a.get("class") or ""):
             self.hero_images += 1
         if tag == "figcaption":
@@ -119,6 +122,7 @@ def check_site(root: Path, base: str = "") -> CheckReport:
     report = CheckReport()
     base = base.rstrip("/")
     linked: set[Path] = set()  # every local page some other page links to
+    redirects: set[Path] = set()  # old URLs of moved pages (not taxon pages any more)
     for page in sorted(root.rglob("*.html")):
         report.pages += 1
         rel = page.relative_to(root)
@@ -132,6 +136,8 @@ def check_site(root: Path, base: str = "") -> CheckReport:
             target = _target(ref, base, root, page)
             if target is not None and target.resolve() != page.resolve():
                 linked.add(target.resolve())
+        if parser.redirect:
+            redirects.add(page.resolve())
         if rel.parts[0] in ("es", "en") and not parser.alternates:
             report.problems.append(f"{rel}: no hreflang alternate")
         unlicensed = [
@@ -150,14 +156,17 @@ def check_site(root: Path, base: str = "") -> CheckReport:
     # another page (the encyclopedia must be browsable, not only searchable).
     for folder in ("es/taxones", "en/taxa"):
         for page in sorted((root / folder).glob("*.html")):
-            if page.name != "index.html" and page.resolve() not in linked:
+            if page.name != "index.html" and page.resolve() not in linked | redirects:
                 report.problems.append(f"{page.relative_to(root)}: no page links to it")
     if report.pages == 0:
         report.problems.append(f"{root}: no pages (was the site built?)")
     for index, folder in (("es/buscar.json", "es/taxones"), ("en/search.json", "en/taxa")):
         if (root / index).exists():
             entries = len(json.loads((root / index).read_text(encoding="utf-8"))["taxa"])
-            pages = len([p for p in (root / folder).glob("*.html") if p.name != "index.html"])
+            pages = len([
+                p for p in (root / folder).glob("*.html")
+                if p.name != "index.html" and p.resolve() not in redirects
+            ])  # fmt: skip
             if entries != pages:
                 report.problems.append(f"{index}: {entries} taxa in the index, {pages} pages")
     return report

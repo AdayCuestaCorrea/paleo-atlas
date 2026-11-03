@@ -126,9 +126,10 @@ def test_scientific_names_are_italic_and_linked():
         "Patagonia & Niger; Spinosaurus was described by Sereno.", "en", "Spinosaurus mirabilis",
     ))  # fmt: skip
     assert (
-        '<a class="taxon-link" href="/pa/en/taxa/tyrannosaurus-rex.html"><em>Tyrannosaurus rex'
-        in out
+        '<a class="taxon-link" href="/pa/en/taxa/tyrannosaurus-rex.html" '
+        'title="Open the Tyrannosaurus rex page"><em>Tyrannosaurus rex' in out
     )
+    assert 'title="Search Wikipedia for Carcharodontosaurus"' in out  # says where it goes
     assert "search=Carcharodontosaurus&amp;go=Go" not in out  # href is not double-escaped
     assert "Special:Search?search=Carcharodontosaurus&go=Go" in out
     assert "<em>Spinosaurus mirabilis</em> lived" in out  # its own page: no link
@@ -307,3 +308,18 @@ def test_long_lists_show_the_first_items_and_fold_the_rest():
     head, _, rest = out.partition("<details")
     assert head.count("<a ") == 12 and rest.count("<a ") == 8 and "and 8 more" in rest
     assert "<details" not in str(folded(items[:12], "unused"))  # 12 or fewer: no fold
+
+
+def test_a_moved_page_redirects_and_is_not_an_orphan_or_a_taxon(tmp_path):
+    alt = '<link rel="alternate" href="/es/index.html">'
+    page(tmp_path / "es" / "index.html", alt + '<a href="/es/taxones/tyrannosaurus.html">T</a>')
+    page(tmp_path / "es" / "taxones" / "tyrannosaurus.html", alt)
+    # T. rex, folded into its genus: only a redirect is left at its old URL.
+    page(
+        tmp_path / "es" / "taxones" / "tyrannosaurus-rex.html",
+        alt + '<meta http-equiv="refresh" content="0; url=/es/taxones/tyrannosaurus.html">'
+        '<a href="/es/taxones/tyrannosaurus.html">T</a>',
+    )
+    (tmp_path / "es" / "buscar.json").write_text('{"taxa": [["Tyrannosaurus"]]}')
+    report = check_site(tmp_path)
+    assert report.passed, report.problems  # not an orphan, not counted as a taxon page

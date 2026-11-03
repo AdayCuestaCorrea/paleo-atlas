@@ -156,3 +156,34 @@ unit_tests:
         - {event_type: description, opinion_year: 1879, related_name: null, study_id: "pbdb:ref:1", reference_journal: null}
         - {event_type: synonymized, opinion_year: 1903, related_name: Apatosaurus, study_id: "pbdb:ref:2", reference_journal: Field Columbian Museum}
         - {event_type: revalidated, opinion_year: 2015, related_name: null, study_id: "doi:10.7717/peerj.857", reference_journal: PeerJ}
+  - name: a_study_about_a_folded_species_is_one_event_on_its_genus
+    description: >
+      A 2026 study links Tyrannosaurus and Tyrannosaurus rex; T. rex has no page of its
+      own (folded into the genus). The genus page gets one event, named after T. rex.
+    model: int_taxon_events
+    given:
+      - input: ref('int_taxon_pages')
+        rows:
+          - {taxon_key: tyrannosaurus}
+      - input: ref('int_folded_species')
+        rows:
+          - {species_key: tyrannosaurus-rex, species_name: Tyrannosaurus rex, genus_key: tyrannosaurus}
+      - input: ref('int_research_taxon_links')
+        rows:
+          - {research_id: r1, taxon_key: tyrannosaurus}
+          - {research_id: r1, taxon_key: tyrannosaurus-rex}
+      - input: ref('stg_wikipedia__research_items')
+        rows:
+          - {research_id: r1, primary_doi: 10.1/rex, revision_timestamp: "2026-10-01 10:00:00+00"}
+      - input: ref('int_study_reliability')
+        rows:
+          - {study_id: "doi:10.1/rex", issued_on: "2026-09-30", issued_precision: day, is_retracted: false, is_corrected: false}
+      - input: ref('stg_wikipedia__new_taxa_revisions')
+        rows: []
+      - input: ref('int_new_taxa_history')
+        rows: []
+      - input: ref('int_backfill_events')
+        rows: []
+    expect:
+      rows:
+        - {taxon_key: tyrannosaurus, event_type: new_study, subject_name: Tyrannosaurus rex, origin: tracked}

@@ -60,6 +60,8 @@
 <span class="event__claim">{{ claim(T['claim_' ~ e.event_type], e.subject_name or page_name, e.related_name) }}</span>
 {%- elif e.event_type == 'description' and e.subject_name -%}
 <span class="event__claim">{{ claim(T.claim_description, e.subject_name) }}</span>
+{%- elif e.event_type in ['new_study', 'study_corrected', 'study_retracted'] and e.subject_name -%}
+<span class="event__claim">{{ claim(T.claim_about, e.subject_name) }}</span>
 {%- endif -%}
 {%- endmacro %}
 

@@ -9,7 +9,27 @@
   var caption = dialog.querySelector(".viewer__caption");
   var license = dialog.querySelector(".viewer__license");
   var source = dialog.querySelector(".viewer__source");
+  var strip = dialog.querySelector(".viewer__strip");
   var links = [], current = 0;
+
+  // The viewer's own strip of thumbnails: one per picture, the current one marked.
+  function buildStrip() {
+    strip.textContent = "";
+    strip.hidden = links.length < 2;
+    links.forEach(function (a, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "viewer__thumb";
+      b.setAttribute("aria-label", a.getAttribute("aria-label") || String(i + 1));
+      var t = document.createElement("img");
+      t.src = a.dataset.thumb || a.dataset.full;
+      t.alt = "";
+      t.loading = "lazy";
+      b.appendChild(t);
+      b.addEventListener("click", function () { show(i); });
+      strip.appendChild(b);
+    });
+  }
 
   function visible() {
     return Array.prototype.filter.call(document.querySelectorAll("[data-viewer]"), function (a) {
@@ -28,15 +48,36 @@
     var single = links.length < 2;
     dialog.querySelector(".viewer__prev").hidden = single;
     dialog.querySelector(".viewer__next").hidden = single;
+    Array.prototype.forEach.call(strip.children, function (b, i) {
+      var on = i === current;
+      b.classList.toggle("is-current", on);
+      b.setAttribute("aria-current", on ? "true" : "false");
+      if (on) b.scrollIntoView({ block: "nearest", inline: "center" });
+    });
+  }
+
+  function open(list, i) {
+    links = list;
+    buildStrip();
+    dialog.showModal();
+    show(i);
   }
 
   document.addEventListener("click", function (ev) {
+    if (ev.ctrlKey || ev.metaKey || ev.shiftKey) return; // new tab: Commons page
+    // A thumbnail under the main picture: every picture, from that one.
+    var thumb = ev.target.closest("[data-open]");
+    if (thumb) {
+      ev.preventDefault();
+      open(Array.prototype.slice.call(document.querySelectorAll("[data-viewer]")),
+           parseInt(thumb.dataset.open, 10) || 0);
+      return;
+    }
     var a = ev.target.closest("[data-viewer]");
-    if (!a || ev.ctrlKey || ev.metaKey || ev.shiftKey) return; // new tab: Commons page
+    if (!a) return;
     ev.preventDefault();
-    links = visible();
-    show(links.indexOf(a));
-    dialog.showModal();
+    var list = visible();
+    open(list, list.indexOf(a));
   });
   dialog.querySelector(".viewer__prev").addEventListener("click", function () { show(current - 1); });
   dialog.querySelector(".viewer__next").addEventListener("click", function () { show(current + 1); });

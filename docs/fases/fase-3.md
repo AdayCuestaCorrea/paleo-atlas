@@ -148,6 +148,11 @@ flowchart LR
   - **`fct_taxon_neighborhood` podía agotar la memoria** (12 GiB de disco temporal). Calculaba la cercanía de todos los géneros de niveles que llegan a los 4.787. Ahora solo busca dentro del clado más bajo donde caben los 20 que se muestran. El resultado es idéntico fila a fila (152.596 filas) y tarda 0,3 s en vez de ~4 s.
   
   *Lección:* ensayar con los datos reales y en las condiciones del runner, no solo con el fixture.
+- **La revisión a ojo encontró lo que los datos no dicen:**
+  - **Fichas duplicadas.** Las especies «conocidas» de la Fase 1 (*T. rex*) convivían con la ficha de su género, que llegó en esta fase, y el buscador daba dos resultados. Se integraron en el género, con redirección de la URL antigua.
+  - **Imágenes de la categoría de Commons** (una estatua de Papá Noel, un juguete, una gráfica) adelantaban a las del artículo, porque el orden primaba la variedad de tipos sobre la procedencia.
+  
+  *Lección:* una regla que parece neutral («una de cada tipo primero») cambia qué fuente gana, y solo se nota al mirar la página.
 - **El escape de HTML de Jinja**: concatenar `<em>` con un valor ya escapado lo escapa también, y `Markup.replace` escapa lo que inserta. Las frases del historial se montan ahora en Python, con un test.
 
 ## 9. Preguntas de entrevista

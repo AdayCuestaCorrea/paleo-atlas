@@ -90,9 +90,11 @@ entry_changes as (
 ),
 
 tracked as (
+    -- Events of a known species folded into its genus go to the genus page, with the
+    -- species name (int_folded_species).
     select
-        *,
-        cast(null as varchar) as subject_name,
+        e.* replace (coalesce(f.genus_key, e.taxon_key) as taxon_key),
+        f.species_name as subject_name,
         cast(null as varchar) as related_name,
         cast(null as varchar) as attribution,
         cast(null as varchar) as source_title,
@@ -102,7 +104,8 @@ tracked as (
         select * from base
         union all select * from updates
         union all select * from entry_changes
-    )
+    ) as e
+    left join {{ ref('int_folded_species') }} as f on f.species_key = e.taxon_key
 ),
 
 events as (
@@ -116,10 +119,14 @@ unique_events as (
     select *
     from events
     where taxon_key in (select taxon_key from pages)
+    -- A study about the genus and one of its species is one event on the page: the
+    -- species' (more precise).
     qualify row_number() over (
         partition by taxon_key, event_type, coalesce(study_id, change_id),
-            coalesce(subject_name, ''), coalesce(related_name, '')
-        order by origin = 'backfill', event_date, source_rank
+            case when event_type in ('new_study', 'study_corrected', 'study_retracted') then ''
+                 else coalesce(subject_name, '') end,
+            coalesce(related_name, '')
+        order by origin = 'backfill', subject_name is null, event_date, source_rank
     ) = 1
 )
 

@@ -38,6 +38,8 @@ class SiteData:
     gbif: dict[str, Any] | None = None  # the GBIF download the specimens come from (cite it)
     # Kinship neighbourhood per genus page and level ('group', 'up'), §11.2 (H7).
     neighborhood: dict[str, dict[str, list[dict[str, Any]]]] = field(default_factory=dict)
+    # Old URLs of pages folded into another one (known species into their genus).
+    redirects: list[dict[str, Any]] = field(default_factory=list)
 
     @cached_property
     def silhouettes(self) -> dict[str, str]:
@@ -179,6 +181,7 @@ def load(warehouse: Path) -> SiteData:
             "order by taxon_key, level, common_depth, member_name",
         ):
             neighborhood[row["taxon_key"]][row["level"]].append(row)
+        redirects = _rows(con, "select * from main.dim_taxon_redirect order by from_key")
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -189,6 +192,7 @@ def load(warehouse: Path) -> SiteData:
         images=dict(images), last_checked=last_checked, stats=stats,
         gbif=gbif[0] if gbif else None,
         neighborhood={k: dict(v) for k, v in neighborhood.items()},
+        redirects=redirects,
     )  # fmt: skip
 
 

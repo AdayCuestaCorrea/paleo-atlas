@@ -4,7 +4,7 @@
 #}
 {% macro image_kind(expr) -%}
     case
-        when regexp_matches({{ expr }}, 'clad(ogram|e)|phylogen|logo|icon|flag|signature|stamp|\bmaps?\b|mapa|chart|cartoon|chromium|toy|lego')
+        when regexp_matches({{ expr }}, 'clad(ogram|e)|phylogen|logo|icon|flag|signature|stamp|\bmaps?\b|mapa|chart|cartoon|chromium|toy|lego|statue|sculpture|escultura|christmas|xmas|navidad|costume|disfraz|plush|peluche|figurine|\bmodel\b|maqueta|growth|graph|\bsigns?\b')
             then 'excluded'
         when regexp_matches({{ expr }}, 'size[ _-]?comparison|size chart|scale diagram|comparación de tamaño|tamaño') then 'size'
         when regexp_matches({{ expr }}, 'skeletal|skeleton|esqueleto|\bmount|montaje') then 'skeleton'
@@ -16,7 +16,7 @@
         when regexp_matches({{ expr }}, 'restoration|reconstruction|\blife\b|paleoart|reconstrucci|illustration|ilustraci') then 'life'
         when regexp_matches({{ expr }}, 'holotyp|holotipo') then 'holotype'
         when regexp_matches({{ expr }}, 'locality|formation|formación|outcrop|quarry|yacimiento|excavat|stratigraph') then 'site'
-        when regexp_matches({{ expr }}, 'fossil|fósil|\bbones?\b|hueso|specimen|ejemplar|vertebr|centrum|femur|fémur|\bjaw|mandib|frill|museum|museo')
+        when regexp_matches({{ expr }}, 'fossil|fósil|\bbones?\b|hueso|specimen|ejemplar|vertebr|centrum|femur|fémur|\bjaw|mandib|frill')
             then 'fossil'
         else 'other'
     end

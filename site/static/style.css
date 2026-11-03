@@ -313,3 +313,15 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .more { display: inline; }
 .more > summary { display: inline; cursor: pointer; color: var(--fossil); }
 .more[open] > summary { display: none; }
+
+/* Thumbnails under the main picture and inside the viewer (carousel). */
+.strip { display: flex; gap: 0.4rem; overflow-x: auto; list-style: none; padding: 0.5rem 0 0.2rem; margin: 0; scroll-snap-type: x proximity; }
+.strip li { flex: none; scroll-snap-align: start; }
+.strip__item img, .viewer__thumb img { display: block; width: 64px; height: 48px; object-fit: cover; border-radius: 4px; }
+.strip__item { display: block; border: 2px solid transparent; border-radius: 6px; }
+.strip__item:hover, .strip__item:focus-visible { border-color: var(--ochre); }
+.viewer__strip { display: flex; gap: 0.4rem; overflow-x: auto; justify-content: safe center; padding: 0.5rem; margin-top: 0.4rem; }
+.viewer__thumb { flex: none; padding: 0; border: 2px solid transparent; border-radius: 6px; background: none; cursor: pointer; opacity: 0.6; }
+.viewer__thumb.is-current { border-color: var(--ochre); opacity: 1; }
+.viewer__thumb:hover { opacity: 1; }
+.gallery__caption { color: var(--muted); }

@@ -41,6 +41,8 @@ known as (
       and taxon_rank in ('species', 'subspecies', 'genus')
       and taxon_key not in (select taxon_key from new_taxa)
       and taxon_key not in (select taxon_key from genera)
+      -- A known species whose genus has an encyclopedia page is shown there (int_folded_species).
+      and taxon_key not in (select species_key from {{ ref('int_folded_species') }})
       -- Animals outside the taxonomic scope (§4) that archosaur studies mention,
       -- e.g. mammals bitten by crocodiles, get no page.
       and taxon_key not in (

@@ -8,7 +8,7 @@
     <figure class="taxon__figure">
       {% if taxon.image_url and taxon.image_page_url %}
       <a class="zoom" href="{{ taxon.image_page_url }}" data-viewer
-         data-full="{{ taxon.image_url }}"
+         data-full="{{ taxon.image_url }}" data-thumb="{{ taxon.image_url }}"
          data-caption="{{ T.image_credit }}: {{ taxon.image_author or '—' }} · {{ taxon.image_license }}"
          data-license-url="{{ taxon.image_license_url or '' }}" aria-label="{{ T.enlarge_image }}">
         {{ image(taxon, T, "hero") }}
@@ -22,6 +22,14 @@
           {% if taxon.image_level in ('genus', 'clade', 'group') %}<br><span class="note">{{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}</span>{% endif %}
         {% else %}{{ T.no_image }}{% endif %}
       </figcaption>
+      {% if gallery and taxon.image_url and taxon.image_page_url %}
+      {#- Thumbnails of every picture: each opens the viewer there (or, without
+          JavaScript, its Commons page). #}
+      <ul class="strip" aria-label="{{ T.gallery_title }}">
+        <li><a class="strip__item" href="{{ taxon.image_page_url }}" data-open="0" aria-label="{{ T.enlarge_image }}"><img src="{{ taxon.image_url }}" alt="" loading="lazy" decoding="async"></a></li>
+        {% for img in gallery %}<li><a class="strip__item" href="{{ img.page_url }}" data-open="{{ loop.index }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}"><img src="{{ img.thumb_url }}" alt="" loading="lazy" decoding="async"></a></li>{% endfor %}
+      </ul>
+      {% endif %}
     </figure>
     <div class="taxon__title">
       <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {% if taxon.taxon_group in indices.groups %}<a href="{{ url('group_index', taxon.taxon_group) }}">{{ g }}</a>{% else %}{{ g }}{% endif %}{% endif %}</p>
@@ -106,13 +114,13 @@
       {% for img in gallery %}
       <li class="gallery__item" data-kind="{{ img.image_kind }}">
         <figure>
-          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}"
-             data-caption="{{ T['kind_' ~ img.image_kind] }} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
+          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}" data-thumb="{{ img.thumb_url }}"
+             data-caption="{{ T['kind_' ~ img.image_kind] }}{% if img.caption %}: {{ img.caption }}{% endif %} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
              data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
             <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
           </a>
           <figcaption>
-            <strong>{{ T['kind_' ~ img.image_kind] }}</strong> · {{ img.author }} ·
+            <strong>{{ T['kind_' ~ img.image_kind] }}</strong>{% if img.caption %} <span class="gallery__caption"{% if lang != 'en' %} lang="en"{% endif %}>{{ img.caption }}</span>{% endif %}<br>{{ img.author }} ·
             {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
           </figcaption>
         </figure>
@@ -130,6 +138,7 @@
     <button type="button" class="viewer__prev" aria-label="{{ T.previous }}">‹</button>
     <button type="button" class="viewer__next" aria-label="{{ T.next }}">›</button>
     <button type="button" class="viewer__close" aria-label="{{ T.close }}">×</button>
+    <div class="viewer__strip" role="group" aria-label="{{ T.gallery_title }}"></div>
   </dialog>
 
   {% set pbdb_points = taxon.pbdb_points or [] %}

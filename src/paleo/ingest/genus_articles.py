@@ -262,10 +262,15 @@ class GenusTextsResult:
     new_versions: int
 
 
-def text_store(lang: str, raw_root: Path | None = None) -> RawStore:
-    """Wikitext of the genus articles, apart from the new taxa's (raw/wikipedia_articles):
-    the image and new-taxa steps read that store and must not change."""
-    return RawStore("wikimedia", f"genus_text_{lang}", raw_root=raw_root)
+def text_store(lang: str, cache_root: Path | None = None) -> RawStore:
+    """Wikitext of the genus articles, in the local cache (data/cache/wikimedia/), not in
+    the versioned raw data: tens of MB that only the local GPU batches read, and every
+    fact already cites the article revision (oldid) it comes from. Apart from the new
+    taxa's articles (raw/wikipedia_articles), which the image step also reads."""
+    from paleo.config import get_paths
+
+    root = cache_root if cache_root is not None else get_paths().data / "cache"
+    return RawStore("wikimedia", f"genus_text_{lang}", raw_root=root)
 
 
 def verified_titles(warehouse: Path) -> dict[str, tuple[str, str | None]]:
@@ -297,12 +302,12 @@ def ingest_genus_texts(
     client: httpx.Client,
     titles: dict[str, tuple[str, str | None]],
     *,
-    raw_root: Path | None = None,
+    cache_root: Path | None = None,
     refresh: bool = False,
     today: dt.date | None = None,
 ) -> GenusTextsResult:
     """Store the EN (and ES) wikitext of each genus article, keyed by genus name."""
-    stores = {lang: text_store(lang, raw_root) for lang in ("en", "es")}
+    stores = {lang: text_store(lang, cache_root) for lang in ("en", "es")}
     pending = [
         g for g in titles if refresh or not stores["en"].is_fresh(g, TEXT_REFRESH_DAYS, today)
     ]

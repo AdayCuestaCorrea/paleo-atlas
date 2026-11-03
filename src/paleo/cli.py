@@ -153,7 +153,9 @@ def ingest_genus_texts(refresh: Refresh = False) -> None:
     paths = get_paths()
     titles = genus_articles.verified_titles(paths.warehouse)
     with make_client() as client:
-        r = genus_articles.ingest_genus_texts(client, titles, raw_root=paths.raw, refresh=refresh)
+        r = genus_articles.ingest_genus_texts(
+            client, titles, cache_root=paths.data / "cache", refresh=refresh
+        )
     typer.echo(
         f"Genus texts: {r.genera} genera, {r.skipped_fresh} fresh, {r.found['en']} EN and "
         f"{r.found['es']} ES found, {r.new_versions} new versions"
@@ -394,7 +396,7 @@ def genus_queue(only: list[str] | None = None) -> list[str]:
 
     paths = get_paths()
     new = {taxon_key(n) for n in _new_taxa(None)}
-    store = text_store("en", paths.raw)
+    store = text_store("en", paths.data / "cache")
     sizes = {}
     for genus in store.stored_keys():
         payload = (store.latest(genus) or {}).get("payload", {})
@@ -443,7 +445,9 @@ def narrate(
         if deadline and dt.datetime.now() >= deadline:
             typer.echo(f"Deadline {until} reached; the rest stay pending.")
             break
-        chunks = genus_chunks_for(genus, interim_root=paths.interim, raw_root=paths.raw)
+        chunks = genus_chunks_for(
+            genus, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
+        )
         facts_path = paths.data / "derived" / "facts" / f"{taxon_key(genus)}.json"
         fresh_facts = _facts_unchanged(genus, chunks)
         if not force and fresh_facts and is_up_to_date(facts_path, paths.data / "derived"):

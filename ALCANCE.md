@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 19 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
+**Creado:** 2026-10-31 · **Versión:** 20 · **Estado:** Fase 1 esperando sus 2 semanas autónomas (y ver lanzarse el cron); Fase 2 (Airflow) hecha; Fase 3 en curso en la rama `fase-3` (merge a `main` al cerrar la Fase 1)
 
 ---
 
@@ -287,7 +287,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(mapa de PBDB + GBIF y museos hechos; falta la línea temporal hacia atrás, H4)*
 - [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
 - [ ] Familia y clasificación completa en cada ficha (PBDB)
-- [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM
+- [ ] Fichas narrativas para toda la enciclopedia (§12.1), por lotes dentro del plan gratuito del LLM *(en curso: géneros con artículo en Wikipedia, 2.743, en lotes nocturnos con la GPU local, `paleo narrate --scope genera --until HH:MM`, reanudable; primer lote del 2026-11-03: 201 géneros, 181 verificados en EN y 144 en ES)*
 - [ ] Árbol de parentesco con escala temporal (§11.2): topología de Open Tree of Life (F11) o, si falta, clasificación de PBDB; rangos temporales de PBDB
 - [x] DAG mensual real en Airflow *(2026-11-02, en verde en local: refresco de fuentes → catálogo → descarga de GBIF (reutilizada) → job de Spark en Docker (14 s) → build → web; el extracto solo cambia si cambian sus filas, sea cual sea el motor)*
 - [ ] Documento de fase (`docs/fases/fase-3.md`)
@@ -601,7 +601,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | GBIF: especímenes fósiles procesados | 932.494 procesados → 138.388 reconciliados con 1.739 géneros, de 78 instituciones | 2026-11-02 |
 | Benchmark Spark vs DuckDB: tiempo, memoria | 932.494 filas: DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB (local, 16 hilos); código 124 vs 242 líneas | 2026-11-02 |
 | Clasificador de noticias: precisión / recall (baseline vs LLM) | — | — |
-| Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies) | 2026-11-02 |
+| Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies, Groq) · géneros con Qwen 3.5 9B local: EN 90 % · ES 72 % (201 géneros, primer lote) | 2026-11-03 |
 | Hechos extraídos que pasan la comprobación (%) | 78 % (1685 de 2158) | 2026-11-02 |
 
 ---
@@ -765,6 +765,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-03 | v20: Fase 3, hito 6 empezado: fichas narrativas de los géneros con artículo en Wikipedia, en lotes nocturnos con la GPU local (los artículos más largos primero). El wikitext de los géneros va a la caché local, no a `data`: cada hecho cita la revisión (`oldid`). Primer lote: 201 géneros en ~7,5 h (137 s por género; GPU a 72 °C de media). Lectura manual: el contenido es fiel; el español arrastra calcos que las verificaciones no ven, de ahí nuevas reglas en los prompts (`write-en-v6`, `adapt-es-v4`, `review-es-v3`), que reescriben esas fichas en el próximo lote. Una respuesta cortada en la extracción se repite en dos mitades | Revisión del primer lote |
 | 2026-11-02 | v19: Fase 3, hito 5 (rama `fase-3`). Descarga de GBIF (F3 verificada; A11 cerrada): fósiles de cordados sin mamíferos ni tortugas (932.494 registros, DOI 10.15468/dl.8v87yz), pues el árbol de GBIF no tiene los clados de §4 y el filtro fino lo hace la reconciliación. El mismo job en DuckDB y en PySpark (especificación única; extractos idénticos con datos reales) y el **benchmark**: DuckDB gana a este volumen (0,9 s frente a 13,7 s). Mapa de hallazgos (SVG propio con Natural Earth, PBDB + GBIF; sin las coordenadas que GBIF marca como erróneas) y museos en cada ficha; cita del DOI en «Fuentes y licencias». DAG mensual con la descarga y Spark; la imagen de Airflow lleva Java | Plan de H5 |
 | 2026-11-02 | v18: Fase 3, hito 3 (rama `fase-3`). Activados los reptiles marinos y los peces fósiles: páginas anuales de reptiles y paleoictiología (solo las secciones del alcance; mosasaurios entre los escamosos), seed de peces destacados, raíces de bloque en Wikidata, Paleozoico (Ordovícico–Pérmico y sus pisos en español), grupos nuevos, la columna «Location» de las tablas de peces es el país, estudios listados en dos páginas fusionados, homónimos entre bloques. La regla de alcance vive en un solo sitio (`paleo/scope.py`, aplicada al parsear): ninguna ingesta ni el LLM gastan peticiones o cuota en taxones fuera de §4 (de 259 especies nuevas de las tres páginas, 114 en alcance). Robustez: un fallo de Wikidata o de un lote de Commons ya no detiene la ingesta (se reintenta en la siguiente ejecución); el registro fósil usa las épocas de las edades en Ma cuando PBDB no da el nombre del intervalo | Plan de H3 |
 | 2026-11-02 | v17: Fase 3, hito 2 (rama `fase-3`). Índices por grupo, época y país; ocurrencias de PBDB (países de 2.780 géneros, base del mapa); artículos de Wikipedia de los géneros **verificados** con Wikidata (P842 + ascendencia P171: el elemento de la polilla *Coloradia* lleva por error el ID de PBDB del dinosaurio) y su imagen principal libre como imagen de la ficha; siluetas de PhyloPic de todos los géneros con un tope diario; índice del buscador compacto (2,2 MB → 0,9 MB); traducción de subpisos («Campaniense superior»); el comprobador detecta fichas huérfanas y webs vacías; nueva fuente F13 (Wikidata) | Plan de H2 |

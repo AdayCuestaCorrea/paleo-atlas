@@ -17,7 +17,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
-from paleo.llm import LLM
+from paleo.llm import LLM, LLMOutputError
 from paleo.narrative.checks import check_fact, normalize
 from paleo.narrative.sources import Chunk, taxon_key
 from paleo.store import _atomic_write
@@ -102,37 +102,47 @@ def extract_facts(
     private_quotes: dict[str, str] = {}
     seen: set[str] = set()
 
-    for batch in _batches(chunks):
-        result = llm.complete_json(
-            system, _user_message(taxon, batch), Extraction, max_tokens=3_000
-        )
-        for fact in result.facts:
-            chunk = by_id.get(fact.chunk_id)
-            reason = (
-                "unknown chunk id"
-                if chunk is None or chunk not in batch
-                else check_fact(fact.statement, fact.quote, chunk.text)
+    def answer(batch: list[Chunk]) -> list[tuple[ExtractedFact, list[Chunk]]]:
+        """Facts of one batch; an answer cut short (too many facts for the token cap,
+        even after the retry with more tokens) is asked again in two halves."""
+        try:
+            result = llm.complete_json(
+                system, _user_message(taxon, batch), Extraction, max_tokens=3_000
             )
-            key = normalize(fact.statement)
-            if reason is None and key in seen:
-                reason = "duplicate"
-            if reason:
-                rejected.append({**fact.model_dump(), "reason": reason})
-                continue
-            seen.add(key)
-            fact_id = f"F{len(accepted) + 1:03d}"
-            record = {
-                "fact_id": fact_id,
-                "statement": fact.statement,
-                "category": fact.category,
-                "chunk_id": fact.chunk_id,
-                "lang": chunk.lang,
-                "quote": fact.quote if chunk.public_quote else None,
-                "quote_sha": hashlib.sha256(fact.quote.encode("utf-8")).hexdigest()[:16],
-            }
-            if not chunk.public_quote:
-                private_quotes[fact_id] = fact.quote
-            accepted.append(record)
+        except LLMOutputError:
+            if len(batch) == 1:
+                raise
+            half = len(batch) // 2
+            return answer(batch[:half]) + answer(batch[half:])
+        return [(fact, batch) for fact in result.facts]
+
+    for fact, batch in (pair for b in _batches(chunks) for pair in answer(b)):
+        chunk = by_id.get(fact.chunk_id)
+        reason = (
+            "unknown chunk id"
+            if chunk is None or chunk not in batch
+            else check_fact(fact.statement, fact.quote, chunk.text)
+        )
+        key = normalize(fact.statement)
+        if reason is None and key in seen:
+            reason = "duplicate"
+        if reason:
+            rejected.append({**fact.model_dump(), "reason": reason})
+            continue
+        seen.add(key)
+        fact_id = f"F{len(accepted) + 1:03d}"
+        record = {
+            "fact_id": fact_id,
+            "statement": fact.statement,
+            "category": fact.category,
+            "chunk_id": fact.chunk_id,
+            "lang": chunk.lang,
+            "quote": fact.quote if chunk.public_quote else None,
+            "quote_sha": hashlib.sha256(fact.quote.encode("utf-8")).hexdigest()[:16],
+        }
+        if not chunk.public_quote:
+            private_quotes[fact_id] = fact.quote
+        accepted.append(record)
 
     key = taxon_key(taxon)
     out = {

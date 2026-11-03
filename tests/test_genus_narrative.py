@@ -42,7 +42,7 @@ def test_genus_texts_are_stored_and_a_page_without_content_is_asked_alone(tmp_pa
     asked: list = []
     titles = {"Testosaurus": ("Testosaurus", "Testosaurus"), "Hugeosaurus": ("Hugeosaurus", None)}
     with make_client(transport=httpx.MockTransport(wiki_handler(asked))) as client:
-        r = ga.ingest_genus_texts(client, titles, raw_root=tmp_path, today=DAY)
+        r = ga.ingest_genus_texts(client, titles, cache_root=tmp_path, today=DAY)
     assert r.found == {"en": 2, "es": 1}
     assert ("en", ["Hugeosaurus"]) in asked  # retried on its own
     stored = ga.text_store("en", tmp_path).latest("Hugeosaurus")["payload"]
@@ -50,13 +50,13 @@ def test_genus_texts_are_stored_and_a_page_without_content_is_asked_alone(tmp_pa
     # The new taxa's article store is left alone.
     assert not (tmp_path / "wikipedia_articles").exists()
     with make_client(transport=httpx.MockTransport(wiki_handler(asked := []))) as client:
-        again = ga.ingest_genus_texts(client, titles, raw_root=tmp_path, today=DAY)
+        again = ga.ingest_genus_texts(client, titles, cache_root=tmp_path, today=DAY)
     assert again.skipped_fresh == 2 and asked == []
 
 
-def store_genus(raw, genus="Testosaurus", wikitext=WIKITEXT):
+def store_genus(cache, genus="Testosaurus", wikitext=WIKITEXT):
     payload = {"taxon": genus, "title": genus, "found": True, "revid": 7, "wikitext": wikitext}
-    ga.text_store("en", raw).save_if_changed(genus, payload, DAY)
+    ga.text_store("en", cache).save_if_changed(genus, payload, DAY)
 
 
 def store_catalog(raw):
@@ -71,10 +71,12 @@ def store_catalog(raw):
 
 
 def test_genus_chunks_read_the_article_and_the_catalog(tmp_path):
-    raw = tmp_path / "raw"
-    store_genus(raw)
+    raw, cache = tmp_path / "raw", tmp_path / "cache"
+    store_genus(cache)
     store_catalog(raw)
-    chunks = sources.genus_chunks_for("Testosaurus", interim_root=tmp_path, raw_root=raw)
+    chunks = sources.genus_chunks_for(
+        "Testosaurus", interim_root=tmp_path, raw_root=raw, cache_root=cache
+    )
     kinds = [c.source for c in chunks]
     assert kinds.count("wikipedia_article") >= 2 and kinds[-1] == "pbdb"
     pbdb_text = chunks[-1].text
@@ -84,11 +86,13 @@ def test_genus_chunks_read_the_article_and_the_catalog(tmp_path):
 
 
 def test_long_articles_are_capped_from_the_top(tmp_path, monkeypatch):
-    raw = tmp_path / "raw"
+    raw, cache = tmp_path / "raw", tmp_path / "cache"
     sections = "".join(f"\n\n== Part {i} ==\n" + "A sentence about bones. " * 30 for i in range(9))
-    store_genus(raw, wikitext=WIKITEXT + sections)
+    store_genus(cache, wikitext=WIKITEXT + sections)
     monkeypatch.setitem(sources.GENUS_SOURCE_CHARS, "en", 2_000)
-    chunks = sources.genus_chunks_for("Testosaurus", interim_root=tmp_path, raw_root=raw)
+    chunks = sources.genus_chunks_for(
+        "Testosaurus", interim_root=tmp_path, raw_root=raw, cache_root=cache
+    )
     article = [c for c in chunks if c.source == "wikipedia_article"]
     assert sum(len(c.text) for c in article) <= 2_000
     assert "taxobox" in article[0].title and "introduction" in article[1].title
@@ -103,10 +107,10 @@ def test_the_deadline_is_the_next_time_of_day():
 
 def test_queue_puts_long_articles_first_and_leaves_out_new_taxa(tmp_path, monkeypatch):
     monkeypatch.setenv("PALEO_DATA_DIR", str(tmp_path))
-    raw = tmp_path / "raw"
-    store_genus(raw, "Shortus", "short")
-    store_genus(raw, "Longus", "long " * 100)
-    store_genus(raw, "Newus", "new " * 500)
+    cache = tmp_path / "cache"  # where get_paths() puts the cache under PALEO_DATA_DIR
+    store_genus(cache, "Shortus", "short")
+    store_genus(cache, "Longus", "long " * 100)
+    store_genus(cache, "Newus", "new " * 500)
     monkeypatch.setattr(cli, "_new_taxa", lambda only: ["Newus"])
     assert cli.genus_queue() == ["Longus", "Shortus"]
     assert cli.genus_queue(["shortus"]) == ["Shortus"]
@@ -135,3 +139,40 @@ def test_the_batch_skips_finished_pages_before_counting_the_limit(tmp_path, monk
     assert written == ["Btodo", "Dtodo"]  # Adone was up to date; Ctodo failed alone
     assert "Ctodo: skipped (RuntimeError" in result.output
     assert "3 processed, 1 up to date" in result.output
+
+
+def test_an_answer_cut_short_is_asked_again_in_halves(tmp_path):
+    from paleo.llm import LLMOutputError
+    from paleo.narrative.facts import Extraction, extract_facts
+
+    text = "Testosaurus lived in Montana 70 million years ago."
+    chunks = [
+        sources.Chunk(
+            f"testosaurus:enwiki:{i}",
+            "wikipedia_article",
+            "en",
+            "T",
+            "u",
+            "CC BY-SA 4.0",
+            True,
+            text,
+        )
+        for i in (1, 2)
+    ]
+    calls = []
+
+    class FakeLLM:
+        label = "fake"
+
+        def complete_json(self, system, user, schema, max_tokens):
+            ids = [c.chunk_id for c in chunks if c.chunk_id in user]
+            calls.append(ids)
+            if len(ids) > 1:
+                raise LLMOutputError("Unterminated string")
+            fact = {"statement": "It lived in Montana 70 million years ago.", "quote": text,
+                    "category": "time_and_habitat", "chunk_id": ids[0]}  # fmt: skip
+            return Extraction(facts=[fact])
+
+    r = extract_facts(FakeLLM(), "Testosaurus", chunks, derived_root=tmp_path, cache_root=tmp_path)
+    assert calls == [[c.chunk_id for c in chunks], [chunks[0].chunk_id], [chunks[1].chunk_id]]
+    assert r.accepted == 1 and r.rejected == 1  # the second one is a duplicate

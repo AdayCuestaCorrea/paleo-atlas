@@ -385,7 +385,7 @@ def _capped(chunks: list[Chunk], limit: int) -> list[Chunk]:
 
 
 def genus_chunks_for(
-    genus: str, *, interim_root: Path, raw_root: Path | None = None
+    genus: str, *, interim_root: Path, raw_root: Path | None = None, cache_root: Path | None = None
 ) -> list[Chunk]:
     """All citable chunks for a genus page: its Wikipedia articles (capped), its PBDB
     catalog record and the research items of the yearly pages that mention it."""
@@ -393,7 +393,7 @@ def genus_chunks_for(
 
     chunks: list[Chunk] = []
     for lang in articles.LANGUAGES:
-        latest = text_store(lang, raw_root).latest(genus)
+        latest = text_store(lang, cache_root).latest(genus)
         if latest:
             found = article_chunks(genus, lang, latest["payload"])
             chunks.extend(_capped(found, GENUS_SOURCE_CHARS[lang]))

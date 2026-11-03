@@ -231,12 +231,13 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
   border: 0; padding: 0; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh;
   background: rgba(10, 8, 6, 0.92); color: #f3ead9;
 }
+.viewer[open] { display: flex; flex-direction: column; }
 .viewer::backdrop { background: rgba(10, 8, 6, 0.7); }
 .viewer figure {
-  margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center;
-  justify-content: center; padding: 3rem 3.5rem 1rem;
+  margin: 0; flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 3rem 4rem 0.5rem;
 }
-.viewer img { max-width: 100%; max-height: calc(100vh - 7rem); object-fit: contain; background: #f3ead9; }
+.viewer figure > img { max-width: 100%; max-height: calc(100vh - 11rem); object-fit: contain; background: #f3ead9; cursor: pointer; }
 .viewer figcaption { margin-top: 0.75rem; font-size: 0.9rem; text-align: center; }
 .viewer a { color: #f0b37e; }
 .viewer button {
@@ -244,12 +245,19 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
   font-size: 2rem; line-height: 1; width: 2.75rem; height: 2.75rem; border-radius: 50%; cursor: pointer;
 }
 .viewer button:hover, .viewer button:focus-visible { background: rgba(255, 255, 255, 0.25); }
-.viewer__prev { left: 0.75rem; top: 50%; transform: translateY(-50%); }
-.viewer__next { right: 0.75rem; top: 50%; transform: translateY(-50%); }
+/* Previous / next: tall bands along the edges of the screen, not only the arrow. */
+.viewer .viewer__prev, .viewer .viewer__next {
+  top: 3rem; bottom: 6rem; height: auto; width: 4rem; border-radius: 0; background: transparent;
+}
+.viewer .viewer__prev:hover, .viewer .viewer__next:hover,
+.viewer .viewer__prev:focus-visible, .viewer .viewer__next:focus-visible { background: rgba(255, 255, 255, 0.08); }
+.viewer__prev { left: 0; }
+.viewer__next { right: 0; }
 .viewer__close { right: 0.75rem; top: 0.75rem; }
 @media (max-width: 40rem) {
   .viewer figure { padding: 3.5rem 0.5rem 1rem; }
-  .viewer__prev, .viewer__next { top: auto; bottom: 0.75rem; transform: none; }
+  .viewer figure { padding: 3.5rem 0.5rem 0.5rem; }
+  .viewer .viewer__prev, .viewer .viewer__next { width: 2.5rem; }
 }
 
 /* Figures table on "How we assess sources" */
@@ -320,8 +328,11 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
 .strip__item img, .viewer__thumb img { display: block; width: 64px; height: 48px; object-fit: cover; border-radius: 4px; }
 .strip__item { display: block; border: 2px solid transparent; border-radius: 6px; }
 .strip__item:hover, .strip__item:focus-visible { border-color: var(--ochre); }
-.viewer__strip { display: flex; gap: 0.4rem; overflow-x: auto; justify-content: safe center; padding: 0.5rem; margin-top: 0.4rem; }
-.viewer__thumb { flex: none; padding: 0; border: 2px solid transparent; border-radius: 6px; background: none; cursor: pointer; opacity: 0.6; }
-.viewer__thumb.is-current { border-color: var(--ochre); opacity: 1; }
-.viewer__thumb:hover { opacity: 1; }
+.viewer .viewer__thumb {
+  position: static; width: auto; height: auto; font-size: inherit; flex: none; padding: 0;
+  border: 2px solid transparent; border-radius: 6px; background: none; cursor: pointer; opacity: 0.6;
+}
+.viewer__strip { flex: none; display: flex; gap: 0.4rem; overflow-x: auto; justify-content: safe center; padding: 0.5rem; margin-top: 0.4rem; }
+.viewer .viewer__thumb.is-current { border-color: var(--ochre); opacity: 1; background: none; }
+.viewer .viewer__thumb:hover { opacity: 1; background: none; }
 .gallery__caption { color: var(--muted); }

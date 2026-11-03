@@ -24,7 +24,6 @@
       var t = document.createElement("img");
       t.src = a.dataset.thumb || a.dataset.full;
       t.alt = "";
-      t.loading = "lazy";
       b.appendChild(t);
       b.addEventListener("click", function () { show(i); });
       strip.appendChild(b);
@@ -83,6 +82,14 @@
   dialog.querySelector(".viewer__next").addEventListener("click", function () { show(current + 1); });
   dialog.querySelector(".viewer__close").addEventListener("click", function () { dialog.close(); });
   dialog.addEventListener("click", function (ev) { if (ev.target === dialog) dialog.close(); });
+  // A click on the left or right third of the picture moves too.
+  img.addEventListener("click", function (ev) {
+    if (links.length < 2) return;
+    var box = img.getBoundingClientRect();
+    var x = (ev.clientX - box.left) / box.width;
+    if (x < 1 / 3) show(current - 1);
+    else if (x > 2 / 3) show(current + 1);
+  });
   dialog.addEventListener("keydown", function (ev) {
     if (ev.key === "ArrowLeft") show(current - 1);
     if (ev.key === "ArrowRight") show(current + 1);

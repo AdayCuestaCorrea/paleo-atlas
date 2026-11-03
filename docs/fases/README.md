@@ -22,7 +22,7 @@ Cada documento se escribe al cerrar su fase. Va en español primero y en inglés
 |---|---|---|
 | 1 — MVP (arcosaurios, bilingüe) | [fase-1.md](fase-1.md) | Implementada; esperando 2 semanas de ejecución autónoma |
 | 2 — Airflow | [fase-2.md](fase-2.md) | Implementada |
-| 3 — Enciclopedia, ampliación y Spark | — | Se escribe al cerrarla |
+| 3 — Enciclopedia, ampliación y Spark | [fase-3.md](fase-3.md) | En curso: hitos 1–5 y 7 hechos; el 6 (textos de los géneros con la GPU) avanza por lotes |
 | 4 — Portfolio | — | Se escribe al cerrarla |
 | 5 — IA y noticias | — | Se escribe al cerrarla |
 | 6 — Extras | — | Se escribe al cerrarla |

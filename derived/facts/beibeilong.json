@@ -1,0 +1,802 @@
+{
+ "taxon": "Beibeilong",
+ "taxon_key": "beibeilong",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v2",
+ "sources_hash": "5fd6fddfcbabca37",
+ "generated_at": "2026-11-03T06:08:02+00:00",
+ "citations": {
+  "beibeilong:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (History of discovery)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Description)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Skull)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:6": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Postcranial skeleton)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:7": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Eggs)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:8": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:9": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Ontogeny)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Reproduction)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong (Taphonomy)",
+   "url": "https://en.wikipedia.org/wiki/Beibeilong?oldid=1377207671",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (Descubrimiento e investigación)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (Etimología)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Beibeilong sinensis (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Beibeilong_sinensis?oldid=169134997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "beibeilong:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Beibeilong",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=372793",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Beibeilong was named and described in 2017 based on an embryonic skeleton and partial nest found in Henan Province, China, between 1992 and 1993.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "The species was named and described in 2017 through analysis of an embryonic skeleton (nicknamed Baby Louie) and partial nest with large eggs that were discovered in the Gaogou Formation of China (Henan Province) between 1992 and 1993.",
+   "quote_sha": "765bb19fd6d2282e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Beibeilong lived in China during the Late Cretaceous epoch, approximately 96 to 88 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Beibeilong (Chinese: 贝贝龙, ) is a genus of large caenagnathid dinosaurs that lived in China during the Late Cretaceous epoch, about 96 million to 88 million years ago.",
+   "quote_sha": "62c0c788ae38b0c0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus and species Beibeilong sinensis were formally described by Pu and colleagues in 2017.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:enwiki:3",
+   "lang": "en",
+   "quote": "In 2017, the entire specimen was formally described by Pu and colleagues, naming the new genus and species Beibeilong sinensis.",
+   "quote_sha": "3d009fe7b55e4bbe"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The generic name Beibeilong means \"baby dragon\" in Chinese.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:enwiki:3",
+   "lang": "en",
+   "quote": "The generic name, Beibeilong, is derived from the pinyin transliteration for the Chinese 贝贝 () and the word 龙 (), meaning \"baby dragon\".",
+   "quote_sha": "ef6a0fb774327497"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The specific name sinensis refers to China, the country where the species was discovered.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:enwiki:3",
+   "lang": "en",
+   "quote": "The specific name, sinensis, refers to its country of discovery, China (prefix Sino).",
+   "quote_sha": "3814e050702e0993"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Beibeilong was estimated to be about 7.5 meters long and weigh between 1.5 and 2 metric tons.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Beibeilong was a notably large caenagnathid and among the largest oviraptorosaurs, estimated at 7.5 m long (extrapolated from the large embryo and eggs) with a ponderous weight of about 1.5 - 2 MT, based on comparisons with the closely related Gigantoraptor.",
+   "quote_sha": "3247bb014c17fd0e"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Beibeilong had toothless jaws equipped with a horny beak known as a rhamphotheca.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Its jaws—in a similar fashion to most other oviraptorosaurs—were toothless and developed a horny beak (also known as rhamphotheca).",
+   "quote_sha": "f4eb3c3f47a2922c"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Beibeilong is classified as a basal member of the family Caenagnathidae, rather than the oviraptorids.",
+   "category": "classification",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Most of the anatomical traits of Beibeilong are consistent with caenagnathids rather than oviraptorids, another diverse oviraptorosaur family. Within Caenagnathidae it occupies a basal (primitive) position.",
+   "quote_sha": "8ed437ed97674318"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Beibeilong laid large Macroelongatoolithus eggs measuring 40 to 45 cm in length with ruggedly ornamented shells.",
+   "category": "paleobiology",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Beibeilong laid one of the largest known types of dinosaur eggs, Macroelongatoolithus. Its eggs measured around 40 - 45 cm in length and had ruggedly ornamented eggshell surfaces.",
+   "quote_sha": "c58455ad6025beb1"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Researchers suggest that giant caenagnathids like Beibeilong may have sat in the center of their nests to avoid crushing their own large eggs.",
+   "category": "paleobiology",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "Giant caenagnathids (like Beibeilong) may have sat directly in the empty center to avoid egg-crushing because of their massive body dimensions.",
+   "quote_sha": "6004e1767a740aa5"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Beibeilong lived in humid floodplains with rivers in environments ranging from semi-arid to tropical climates.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:2",
+   "lang": "en",
+   "quote": "The paleoenvironments in which Beibeilong lived consisted of relatively mesic (humid, well-watered) floodplains crossed by rivers with semi-arid to tropical climates.",
+   "quote_sha": "68ec501bffb704f3"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Beibeilong was a bipedal dinosaur with well-developed legs.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:4",
+   "lang": "en",
+   "quote": "Like other caenagnathids, Beibeilong would have been bipedal with well-developed legs.",
+   "quote_sha": "dcb59bfc96e41848"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Beibeilong had long fingers on its hands ending in large curved claw bones.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:4",
+   "lang": "en",
+   "quote": "The hands would have developed long fingers that bore large curved unguals (claw bones).",
+   "quote_sha": "52c82df65529c9d3"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "While many oviraptorosaurs had feathers, it is suggested that gigantic species like Beibeilong may have had reduced feather coverage due to their large size.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:4",
+   "lang": "en",
+   "quote": "It is well-known that many oviraptorosaur species had feathers, including caenagnathids such as Apatoraptor. As for gigantic oviraptorosaurs (like Gigantoraptor), it has been suggested that some of this integument was reduced due to their body dimensions.",
+   "quote_sha": "cbd7f0818fad3014"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "The skull of Beibeilong was toothless, lacking the sockets typically found for teeth.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:5",
+   "lang": "en",
+   "quote": "The skull of Beibeilong, like most caenagnathids, was edentulous (toothless) as it lacked alveoli (tooth sockets).",
+   "quote_sha": "a029128741baa2b7"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "The nasal bones of Beibeilong were fused together and formed the nostril openings.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:5",
+   "lang": "en",
+   "quote": "The nasal bones of Beibeilong were coossified together (bone fusion), and were major bones contributing to the naris (nostril) openings.",
+   "quote_sha": "ebee903d53714ddd"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "A unique feature of Beibeilong was a depression on the lacrimal bone that allowed the frontal bone to overlap it.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:5",
+   "lang": "en",
+   "quote": "A small depression on the top border of the posterior process (bony projection pointing backwards) of the lacrimal allowed the frontal bone to overlap, which was unique to Beibeilong.",
+   "quote_sha": "4b0eaf6dbc83226e"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Beibeilong's lower jaw had a short, deep structure with a plate-like tip featuring a downturned sharp edge.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:5",
+   "lang": "en",
+   "quote": "The dentary (front bone of the lower jaw) of Beibeilong was relatively short and deep with proportions similar to that of other caenagnathids (such as Gigantoraptor or Microvenator), and had an overall plate/shovel-like tip with a downturned sharp edge.",
+   "quote_sha": "a2a8a5f1a75756c8"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "The articular bone of Beibeilong extended backward into a retroarticular process with a distinct concave posterior facet.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:5",
+   "lang": "en",
+   "quote": "Distinctively, the articular bone of Beibeilong extended backwards into a retroarticular process that had a characteristic concave posterior facet.",
+   "quote_sha": "46dae65a8fb3d45e"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Some neck vertebrae of Beibeilong possessed large air-filled hollow depressions on their sides.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The centra (vertebral main body) of some cervical vertebrae (neck vertebrae) had large pleurocoels (air-filled hollow depressions) on their sides.",
+   "quote_sha": "3304a8bad317897d"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "The upper neck vertebrae of Beibeilong had low bony spines and appeared X-shaped when viewed from above.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The cervical neural arches (upper, and pointy vertebral region) of Beibeilong had low neural spines (bony spines developing upward from the top surface of the neural arch) and were X-shaped in top view.",
+   "quote_sha": "3f2eb2cd93d23538"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "The fused hip vertebrae of Beibeilong were formed by six individual vertebrae.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The sacrum (hip vertebrae fused into a compact structure) of Beibeilong was formed by six sacral vertebrae.",
+   "quote_sha": "2422649c30685cc4"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Beibeilong had a large pelvic bone where the front expansion was longer than the rear expansion.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The ilium was a large pelvic bone with a gently convex top border, and its preacetabular process (a recurved anterior ilium expansion, also known as \"ala\") was longer than the squared off postacetabular process/blade (posterior ilium expansion), another distinct feature of Beibeilong.",
+   "quote_sha": "41a477f5bd560aa4"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "The shaft of the ischium in Beibeilong was relatively thin and rod-like.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The shaft of the ischium was a relatively skinny and rod-like shaft.",
+   "quote_sha": "96caabbe6f10b764"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "The thigh bone of Beibeilong was robust, slightly bowed, elongated, and larger than the pubis.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The femur (thigh bone) was robust compared to other bones, somewhat bowed, elongated, and slightly larger than the pubis.",
+   "quote_sha": "e10b9f95fcd37954"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Beibeilong thigh bones lacked a ridge-like feature found on the thigh bones of most oviraptorosaurs.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "Unlike most oviraptorosaurs, Beibeilong femora lacked a ridge-like feature extending along the shaft between the lesser trochanter and the lower mid-condyle (rounded region for articulation).",
+   "quote_sha": "0e581df5c2f9a5d0"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "The accessory trochanter on the thigh bone of Beibeilong was poorly developed, a unique trait of the species.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The accessory trochanter of the femur was poorly developed, a unique trait of Beibeilong.",
+   "quote_sha": "2647d82ec6eac13a"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "The shinbone of Beibeilong lacked a distinctive bump found on the shinbones of most oviraptorosaurs.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:6",
+   "lang": "en",
+   "quote": "The tibia (shinbone) lacked the distinctive boss that is present on the lower end of the cnemial crest in most oviraptorosaurs.",
+   "quote_sha": "b5e52949fccd621d"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Beibeilong eggs belong to the oospecies Macroelongatoolithus xixiaensis, which are the largest known type of dinosaur eggs.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:7",
+   "lang": "en",
+   "quote": "The eggs of Beibeilong belong to the oospecies Macroelongatoolithus xixiaensisthe largest known type of dinosaur eggsand, specifically, to giant caenagnathids.",
+   "quote_sha": "a3a48d090bcef12d"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "Beibeilong eggs were very elongated with rounded ends and measured between 40 and 45 cm in length.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:7",
+   "lang": "en",
+   "quote": "They were very elongated with rather rounded poles or ends, and measured between 40 - 45 cm in length.",
+   "quote_sha": "019cf617edbb6280"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "The total thickness of the Beibeilong eggshell varied from 1.7 mm to 2.56 mm.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:7",
+   "lang": "en",
+   "quote": "Total eggshell thickness varied from 1.7 mm to 2.56 mm.",
+   "quote_sha": "3d82192760b4d89a"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "The external surface of Beibeilong eggs had a rough texture composed of scattered nodes forming ridge-like and irregular chain-like structures.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:7",
+   "lang": "en",
+   "quote": "The eggshell of Beibeilong eggs was ornamented on its external surface, characterized by a rugose texture composed of nodes that were both scattered and that formed ridge-like and irregular chain-like structures.",
+   "quote_sha": "e89ebaab17ba677a"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "A complete nest of Beibeilong eggs would have been ring-shaped with an empty center.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:7",
+   "lang": "en",
+   "quote": "Like other Macroelongatoolithus nests, a complete Beibeilong nest would have been ring-shaped with a center devoid of eggs.",
+   "quote_sha": "20e66282707b18d0"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "In 2017, researchers considered Beibeilong to be anatomically similar to but more primitive than Gigantoraptor.",
+   "category": "classification",
+   "chunk_id": "beibeilong:enwiki:8",
+   "lang": "en",
+   "quote": "In 2017, Pu and team considered Beibeilong to have been anatomically similar to, but more basal (primitive) than Gigantoraptor.",
+   "quote_sha": "cd8cd2f3d8650c2a"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "It is debated whether Beibeilong had teeth; some researchers argue for a dietary shift involving lost teeth, while others reject this based on phylogeny suggesting simple dentaries are ancestral.",
+   "category": "debate",
+   "chunk_id": "beibeilong:enwiki:9",
+   "lang": "en",
+   "quote": "Gregory F. Funston and colleagues have rejected Wang and colleagues' hypothesis. They have argued that the phylogeny of Caenagnathidae, along with other primitive oviraptorosaurs such as Avimimus, implies that simple dentaries lacking complex structures (such as vestigial alveoli) are the ancestral condition of caenagnathids.",
+   "quote_sha": "6793560aef9e7670"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "The fossil specimen of Beibeilong includes perinate skeletal remains found alongside 2 to 3 eggs.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:enwiki:10",
+   "lang": "en",
+   "quote": "perinate skeletal remains were found in association with 2–3 eggs in the block specimen.",
+   "quote_sha": "fa2fa35220227242"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "Researchers propose that the adult Beibeilong sat in the center of its egg clutch during incubation.",
+   "category": "paleobiology",
+   "chunk_id": "beibeilong:enwiki:10",
+   "lang": "en",
+   "quote": "the adult would have sat in the center of the clutch, as has been proposed for smaller oviraptorids.",
+   "quote_sha": "5f23f6eec02aca7d"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Due to their large body size, Beibeilong likely sat on the central area of its nest that was devoid of eggs to avoid crushing them.",
+   "category": "paleobiology",
+   "chunk_id": "beibeilong:enwiki:10",
+   "lang": "en",
+   "quote": "gigantic oviraptorosaurs, such as Beibeilong or Gigantoraptor, likely sat on the central area devoid of eggs.",
+   "quote_sha": "eac535710426097e"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "It is debated whether adult oviraptorosaurs found with nests were incubating eggs, laying eggs, or guarding the nest.",
+   "category": "debate",
+   "chunk_id": "beibeilong:enwiki:10",
+   "lang": "en",
+   "quote": "Tzu-Ruei Yang and colleagues have suggested that these nest-adult associations may represent female oviraptorosaurs in—or after—the process of oviposition (laying of eggs), or alternatively that female oviraptorosaurs guarded their nests.",
+   "quote_sha": "c16bb1cbdbbe25f6"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Beibeilong lived during the Late Cretaceous epoch, specifically the Cenomanian to Coniacian ages.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:11",
+   "lang": "en",
+   "quote": "Beibeilong was discovered in the Gaogou Formation, which dates back to the Late Cretaceous epoch, ago (CenomanianConiacian ages).",
+   "quote_sha": "1e5a30f9b8d894ab"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Araucariaceae conifers were largely present in the paleoenvironment of Beibeilong during the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:11",
+   "lang": "en",
+   "quote": "numerous scattered amber remains of conifer origin from Gaogou indicate that Araucariaceae were largely present in the Northern Hemisphere of Asia during the Late Cretaceous, including the paleoenvironments in which Beibeilong lived.",
+   "quote_sha": "c9aa46c982bb7b3c"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "Evidence suggests that large oviraptorosaurs like Beibeilong preferred well-watered habitats over desertic ones.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:11",
+   "lang": "en",
+   "quote": "The repeated presence of giant caenagnathids (such as the Bayan Shireh caenagnathid or Gigantoraptor) in fluvial-based sedimentation of geological formations suggests that these large oviraptorosaurs preferred mesic (well-watered) over xeric (desertic) habitats.",
+   "quote_sha": "e0474d9b089f8402"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "Paleoenvironmental conditions in the Gaogou Formation possibly prevented many fossilized eggs from hatching.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:enwiki:11",
+   "lang": "en",
+   "quote": "Many of the fossilized eggs across this formation were possibly unable to hatch due to the paleoenvironmental conditions.",
+   "quote_sha": "5e864371b43b53d7"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "The skull of the Baby Louie specimen has been damaged due to scavenging and erosion.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:12",
+   "lang": "en",
+   "quote": "Elements like the skull have been damaged due to scavenging and erosion.",
+   "quote_sha": "7e76034efcaf0eb6"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Postmortem scavenging damage by osteophagous or boring insects is found on the lower right leg, ilium, and upper femur of the Baby Louie specimen.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:12",
+   "lang": "en",
+   "quote": "There are indications of postmortem scavenging damage left by either osteophagous or boring insects in bones, including the lower portion of the right leg, the ilium, and the upper end of the femur.",
+   "quote_sha": "0ee7750b0cc45e42"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "Most skeletal elements of the Baby Louie specimen are disarticulated, including the left dentary, neck, abdominal region, and limbs.",
+   "category": "description",
+   "chunk_id": "beibeilong:enwiki:12",
+   "lang": "en",
+   "quote": "Most skeletal elements are disarticulated, such as the left dentary, overall neck, abdominal region, and limb elements.",
+   "quote_sha": "dae82f1d7ff47403"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "The genus Beibeilong was described by Pu et al. in 2017.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Pu et al., 2017",
+   "quote_sha": "6deec0c73c609fe6"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "The species Beibeilong sinensis was described by Pu et al. in 2017.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:1",
+   "lang": "es",
+   "quote": "species_authority: Pu et al., 2017",
+   "quote_sha": "9707d5e29928a1d5"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Beibeilong is classified within the superfamily Caenagnathoidea.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:1",
+   "lang": "es",
+   "quote": "superfamilia: Caenagnathoidea",
+   "quote_sha": "5a0e5af7a8aa56fe"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Beibeilong is classified within the family Caenagnathidae.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Caenagnathidae",
+   "quote_sha": "e1dda61a0b56e003"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Beibeilong eggs are significantly larger than those of oviraptorids and indicate an adult body size comparable to a giant caenagnathid.",
+   "category": "description",
+   "chunk_id": "beibeilong:eswiki:2",
+   "lang": "es",
+   "quote": "Los embriones y huevos de los cenagnátidos y de los oviraptóridos comparten similitudes, aunque los huevos de Beibeilong son significativamente más grandes que de los oviraptóridos e indican un tamaño de cuerpo adulto comparable a un cenagnátido gigantesco.",
+   "quote_sha": "ba6889e34747e25f"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "The skeleton of Beibeilong is only 23 centimeters long, measured from the top of the skull to the base of the tail.",
+   "category": "description",
+   "chunk_id": "beibeilong:eswiki:3",
+   "lang": "es",
+   "quote": "El esqueleto tiene sólo 23 centímetros de largo, medido desde la parte superior del cráneo hasta la base de la cola",
+   "quote_sha": "4234cfb9f820a419"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The size, posture, and other skeletal characteristics indicate that the animal was immature, likely embryonic, at the time of its death.",
+   "category": "description",
+   "chunk_id": "beibeilong:eswiki:3",
+   "lang": "es",
+   "quote": "El tamaño, la postura y otras características del esqueleto indican que el animal era inmaduro, probablemente embrionario, en el momento de su muerte",
+   "quote_sha": "559150afeb70a528"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Beibeilong's chin is turned toward the chest in a posture resembling embryos of dinosaurs, crocodiles, and birds.",
+   "category": "description",
+   "chunk_id": "beibeilong:eswiki:3",
+   "lang": "es",
+   "quote": "El mentón de Beibeilong está vuelto hacia el pecho en una postura que recuerda a los embriones de dinosaurios, cocodrilos y aves",
+   "quote_sha": "97b6780d9aa44c92"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "The skeleton was popularly known as \"Baby Louie\" in recognition of Louie Psihoyos, the photographer of the article.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:eswiki:4",
+   "lang": "es",
+   "quote": "El esqueleto se conoció popularmente como \"Bebé Louie\" en reconocimiento a Louie Psihoyos, el fotógrafo del artículo",
+   "quote_sha": "5aa39c25d54143e9"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "In December 2013, twenty years after the specimen was collected, \"Baby Louie\" found its final home in its province of origin at the Henan Geological Museum.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:eswiki:4",
+   "lang": "es",
+   "quote": "En diciembre de 2013, veinte años después de que el espécimen fuera recogido, \"Bebé Louie\" encontró su hogar final en su provincia de origen en el Museo Geológico de Henan",
+   "quote_sha": "598731e10d78ed65"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "The name derives from Chinese pinyin, where beibei means baby and long means dragon.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:eswiki:5",
+   "lang": "es",
+   "quote": "Se deriva del idioma pinyin chino, beibei es bebé y long significa \"dragón\"",
+   "quote_sha": "7d8d7514a6cbd524"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The species name, sinensis, derives from Latin referring to its discovery in China.",
+   "category": "discovery",
+   "chunk_id": "beibeilong:eswiki:5",
+   "lang": "es",
+   "quote": "El nombre de la especie, sinensis, se deriva del latín que se refiere a su descubrimiento en China",
+   "quote_sha": "176d9ed0eaebf2f0"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Beibeilong sinensis is nested within the family Caenagnathidae.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:6",
+   "lang": "es",
+   "quote": "Beibeilong sinensis, está anidado dentro de Caenagnathidae",
+   "quote_sha": "5988d7a3a8c642b8"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Beibeilong is more basal than Gigantoraptor and is not an embryonic individual of that taxon.",
+   "category": "classification",
+   "chunk_id": "beibeilong:eswiki:6",
+   "lang": "es",
+   "quote": "Beibeilong es más basal que Gigantoraptor y no un individuo embrionario de este taxón",
+   "quote_sha": "39d23557d880f390"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Beibeilong lived from the Cenomanian to the Turonian stages, between 100.5 and 89.8 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "beibeilong:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Turonian (100.5 to 89.8 million years ago)",
+   "quote_sha": "bf6fd94f42018419"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The parent group of Beibeilong is Caenagnathidae.",
+   "category": "classification",
+   "chunk_id": "beibeilong:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Caenagnathidae",
+   "quote_sha": "ee3a25cb1954dba9"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Beibeilong is classified in the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "beibeilong:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "The type species of the genus Beibeilong is Beibeilong sinensis.",
+   "category": "classification",
+   "chunk_id": "beibeilong:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Beibeilong sinensis",
+   "quote_sha": "12459fe870728305"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "It is probable that the embryo was forcibly removed or taken from one of the underlying eggs, given that the skeleton is not preserved inside an egg and its orientation is inconsistent with the eggs.",
+   "category": "debate",
+   "chunk_id": "beibeilong:eswiki:3",
+   "lang": "es",
+   "quote": "Dado que el esqueleto no se conserva dentro de un huevo y que su orientación es inconsistente con la de los huevos, es probable que el embrión haya sido sacado con fuerza o retirado de uno de los huevos subyacentes a su posición actual",
+   "quote_sha": "f361c417446dead7"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "beibeilong:enwiki:5",
+   "statement": "Beibeilong possessed a unique trait of having two long ridge-like structures on the external surface of its maxilla.",
+   "category": "description",
+   "quote": "The maxilla (bone following the premaxilla) was rather short and low, giving form to the antorbital fenestra (hole in the skull behind the nostril opening), and had a pronounced antorbital fossa (depression), which was strongly demarcated by two long ridge-like structures on the external surface of the maxilla, a trait unique to Beibeilong.",
+   "reason": "statement copies the source wording: 'two long ridge-like structures on the external surface'"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:8",
+   "statement": "Beibeilong is classified within the oviraptorosaur family Caenagnathidae in a relatively basal position.",
+   "category": "classification",
+   "quote": "Beibeilong was recovered within the oviraptorosaur family Caenagnathidae in a relatively basal position.",
+   "reason": "statement copies the source wording: 'within the oviraptorosaur family Caenagnathidae in a relatively'"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:9",
+   "statement": "Researchers suggest that caenagnathids experienced a dietary shift as they aged, based on features interpreted as vestigial tooth sockets.",
+   "category": "paleobiology",
+   "quote": "Shuo Wang and colleagues have concluded that caenagnathids experienced a dietary shift as they aged, based on several features in the dentaries (lateral occlusal grooves and ridges on the occlusal surfaces, interpreted as vestigial tooth sockets).",
+   "reason": "statement copies the source wording: 'that caenagnathids experienced a dietary shift as they'"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:10",
+   "statement": "Researchers suggest the Beibeilong nest containing the Baby Louie specimen was in an advanced stage of incubation when it was buried.",
+   "category": "paleobiology",
+   "quote": "Most notably, the team has suggested that the entire Beibeilong nest receoved with Baby Louie was likely in an advanced stage of incubation when it was buried.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:10",
+   "statement": "Nesting traits of Beibeilong suggest that caenagnathids and oviraptorids had comparable nesting behaviors and that these features are ancestral for the superfamily Caenagnathoidea.",
+   "category": "paleobiology",
+   "quote": "These traits indicate that both caenagnathids and oviraptorids probably had fairly comparable nesting behaviours, but also that these features are ancestral for at least the whole Caenagnathoidea.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:11",
+   "statement": "The environment where Beibeilong lived had a dry subtropical or tropical climate.",
+   "category": "time_and_habitat",
+   "quote": "The overall sedimentology across the Gaogou Formation... indicates a dry subtropical or tropical climate during deposition.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:11",
+   "statement": "The specific geological horizon where the Baby Louie specimen was found is interpreted as a flat and wide alluvial fan.",
+   "category": "time_and_habitat",
+   "quote": "The geological horizon in which Baby Louie was found is interpreted as a flat and wide alluvial fan.",
+   "reason": "statement copies the source wording: 'found is interpreted as a flat and wide'"
+  },
+  {
+   "chunk_id": "beibeilong:enwiki:12",
+   "statement": "The Baby Louie specimen was preserved lying outside its parent egg when it was buried.",
+   "category": "description",
+   "quote": "The preservation state of Baby Louie indicates that the embryo was lying outside its parent egg when it was buried.",
+   "reason": "statement copies the source wording: 'lying outside its parent egg when it was'"
+  },
+  {
+   "chunk_id": "beibeilong:eswiki:2",
+   "statement": "Beibeilong sinensis is the only known species in the fossil genus Beibeilong, a caenagnathid oviraptorosaurian dinosaur that lived in Asia during the Late Cretaceous.",
+   "category": "description",
+   "quote": "Beibeilong sinensis (bebé dragón de China) es la única especie conocida del género fósil Beibeilong de dinosaurio oviraptorosauriano cenagnátido que vivió a finales del periodo Cretácico, desde el Cenomaniense hasta el Turoniense, en lo que hoy es Asia.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "beibeilong:eswiki:4",
+   "statement": "In the late 1980s and early 1990s, thousands of eggs were excavated and collected by local farmers from Cretaceous rocks in Henan, China.",
+   "category": "discovery",
+   "quote": "A finales de los años ochenta y a principios de los noventa, miles de huevos fueron excavados y recogidos por unos agricultores locales de las rocas cretácicas de Henan (China)",
+   "reason": "numbers not in the quote: ['1980', '1990']"
+  }
+ ]
+}

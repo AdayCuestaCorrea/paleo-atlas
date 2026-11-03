@@ -1,0 +1,972 @@
+{
+ "taxon": "Oviraptor",
+ "taxon_key": "oviraptor",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v2",
+ "sources_hash": "56dca135ff52b122",
+ "generated_at": "2026-11-03T05:39:42+00:00",
+ "citations": {
+  "oviraptor:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (History of discovery)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Referred specimens)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Description)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:6": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Skull)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:7": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Postcranial skeleton)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:8": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:9": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Feeding)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Reproduction)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Reproduction, part 2)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:enwiki:13": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor (Taphonomy)",
+   "url": "https://en.wikipedia.org/wiki/Oviraptor?oldid=1357658525",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (Descubrimiento e investigación)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Oviraptor philoceratops (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Oviraptor_philoceratops?oldid=168212566",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "oviraptor:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Oviraptor",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38559",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The first Oviraptor remains were collected in 1923 from the Djadokhta Formation in Mongolia during an expedition led by Roy Chapman Andrews.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The first remains were collected from the Djadokhta Formation of Mongolia in 1923 during a paleontological expedition led by Roy Chapman Andrews",
+   "quote_sha": "b427b3cdae15432e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Oviraptor lived in Asia during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Oviraptor (; ) is a genus of oviraptorid dinosaur that lived in Asia during the Late Cretaceous period",
+   "quote_sha": "f9b52b4bbecdb879"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Oviraptor was a small, feathered dinosaur estimated to be 1.6 to 2 meters long and weigh between 33 and 40 kilograms.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Oviraptor was a rather small feathered oviraptorid, estimated at 1.6-2 m long with a weight between 33 - 40 kg",
+   "quote_sha": "8c340a2394ec081c"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Oviraptor had a wide lower jaw, a skull that likely featured a crest, and toothless jaws equipped with a horny beak.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "It had a wide lower jaw with a skull that likely had a crest. Both upper and lower jaws were toothless and developed a horny beak",
+   "quote_sha": "f84a1d0578237226"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Oviraptor had well-developed, elongated arms ending in three fingers with curved claws.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The arms were well-developed and elongated ending in three fingers with curved claws",
+   "quote_sha": "6a1adec73cbd1baf"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Oviraptor had long hindlimbs with four-toed feet where the first toe was reduced.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Like other oviraptorids, Oviraptor had long hindlimbs that had four-toed feet, with the first toe reduced",
+   "quote_sha": "8ea02d2acd72937e"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Oviraptor likely had a short tail ending in a pygostyle that supported large feathers.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The tail was likely not very elongated, and ended in a pygostyle that supported large feathers",
+   "quote_sha": "604c987cb1353fe8"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The first Oviraptor remains were discovered in 1923 at the Bayn Dzak locality (Flaming Cliffs) in the Djadokhta Formation of Mongolia.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "The first remains of Oviraptor were discovered on reddish sandstones of the Late Cretaceous Djadokhta Formation of Mongolia, at the Bayn Dzak locality (also known as Flaming Cliffs), during the Third Central Asiatic expedition in 1923",
+   "quote_sha": "488f09f185c8f7bd"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Henry Fairfield Osborn formally described Oviraptor in 1924.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "These were formally described by the North American paleontologist Henry Fairfield Osborn in 1924",
+   "quote_sha": "879f4a8574272d20"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The type species Oviraptor philoceratops was established based on the holotype specimen AMNH 6517.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "The particular genus Oviraptor was erected with the type species O. philoceratops based on the holotype AMNH 6517",
+   "quote_sha": "c37e07c517ed218e"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Henry Osborn interpreted Oviraptor as an egg-eating dinosaur and named it \"egg seizer\" or \"egg thief\" based on the fossil's association with a nest.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "Osborn interpreted Oviraptor as a dinosaur with egg-eating habits, and explained that the generic name, Oviraptor, is Latin for \"egg seizer\" or \"egg thief\", due to the association of the fossils",
+   "quote_sha": "9f3beb52a98e1435"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The specific name philoceratops means \"fondness for ceratopsian eggs,\" reflecting the initial belief that the nest belonged to a Protoceratops or similar ceratopsian.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "The specific name, philoceratops, is intended as \"fondness for ceratopsian eggs\" which is also given as a result of the initial thought of the nest pertaining to Protoceratops or another ceratopsian",
+   "quote_sha": "8c3c79d5473acf83"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "In 1976, Rinchen Barsbold concluded that Oviraptor was distinct from ornithomimids based on anatomical traits.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "In 1976, the Mongolian paleontologist Rinchen Barsbold noted some inconsistencies regarding the taxonomic placement of Oviraptor and concluded that this taxon was quite distinct from ornithomimids based on anatomical traits",
+   "quote_sha": "c5cbfb21a1af0301"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "Oviraptorids likely brooded and protected their nests by crouching over them.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:3",
+   "lang": "en",
+   "quote": "These findings showed that oviraptorids brooded and protected their nests by crouching on them",
+   "quote_sha": "e035192e7c33049a"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "In 1986, Rinchen Barsbold determined that two specimens previously referred to Oviraptor actually belonged to the new genus Conchoraptor.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:4",
+   "lang": "en",
+   "quote": "In 1986, Barsbold realized that the latter two did not belong to the genus and instead they represented a new oviraptorid: Conchoraptor",
+   "quote_sha": "1ad97121e04be66b"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "In 1981, Rinchen Barsbold referred the well-preserved specimen MPC-D 100/42 from the Djadokhta Formation to Oviraptor.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:4",
+   "lang": "en",
+   "quote": "In 1981, Barsbold referred the specimen MPC-D 100/42 to Oviraptor, a very well-preserved and rather complete individual from the Djadokhta Formation",
+   "quote_sha": "6d5407f03ce7bf9d"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Rinchen Barsbold described the species Oviraptor mongoliensis in 1986 based on specimen MPC-D 100/32a from the Nemegt Formation.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:4",
+   "lang": "en",
+   "quote": "In 1986, Barsbold described a second species of Oviraptor, \"O. mongoliensis\", based on specimen MPC-D 100/32a which hails from the Nemegt Formation",
+   "quote_sha": "eb46311c8c1db957"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "In 1997, Rinchen Barsbold re-examined Oviraptor mongoliensis and determined it belonged to the new genus Rinchenia, though it remained an informal nomen dubium.",
+   "category": "classification",
+   "chunk_id": "oviraptor:enwiki:4",
+   "lang": "en",
+   "quote": "However, a re-examination by Barsbold in 1997 found enough differences in this specimen to name the new genus Rinchenia, but he did not describe it with formality and this new oviraptorid remained as a nomen dubium",
+   "quote_sha": "316020dab59cd9fa"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "In 2018, Mark A. Norell and colleagues reported a new Oviraptor specimen, AMNH 33092, consisting of a tibia and two metatarsals from a juvenile or nestling.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:4",
+   "lang": "en",
+   "quote": "The North American paleontologist Mark A. Norell and colleagues in 2018 reported a new specimen of Oviraptor: AMNH 33092, which is composed of a tibia and two metatarsals of a nestling or very small juvenile",
+   "quote_sha": "e6ea32759054732e"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Oviraptor likely had two well-developed hindlimbs ending in three functional toes, with the first toe being vestigial.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:5",
+   "lang": "en",
+   "quote": "Though the holotype largely lacks the posterior region of the skeleton, it is likely that Oviraptor had two well-developed hindlimbs that ended in three functional toes with the first one being vestigial",
+   "quote_sha": "58e22a8d843b2e55"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Like related oviraptorids, Oviraptor had arms covered in elongated feathers and a tail ending in a pygostyle that supported a fan of feathers.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:5",
+   "lang": "en",
+   "quote": "As evidenced in related oviraptorids, the arms were covered by elongated feathers, and the tail ended in a pygostyle, which is known to support a fan of feathers",
+   "quote_sha": "c447e634c3f8fab8"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "The preserved skull of Oviraptor is deep, shortened, and measures approximately 17.9 cm in length.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:6",
+   "lang": "en",
+   "quote": "The skull of Oviraptor was deep and shortened with large fenestrae (openings) compared to other dinosaurs, and measures about 17.9 cm (7.03125 in) long as preserved.",
+   "quote_sha": "89e8b7a71187eaee"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Although the holotype skull lacks a crest, bone surface evidence suggests Oviraptor likely possessed a well-developed crest supported by nasal and premaxilla bones.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:6",
+   "lang": "en",
+   "quote": "The holotype skull lacks a crest in almost its entirety, however, the top surfaces of the fused parietal and frontal bones indicate that it likely had a well-developed crest, supported by the nasal and premaxilla bones (mainly the latter) of the rostrum.",
+   "quote_sha": "c2989c8b335654b4"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "Oviraptor had toothless jaws terminating in a robust, parrot-like horny beak called a rhamphotheca.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:6",
+   "lang": "en",
+   "quote": "Oviraptor had toothless jaws that ended in a robust, parrot-like rhamphotheca (horny beak).",
+   "quote_sha": "bb9686d67b5a82e3"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "The lower jaw of Oviraptor is a short, deep bone measuring 19.5 cm in length.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:6",
+   "lang": "en",
+   "quote": "As a whole, the lower jaw is a short and deep bone that covers 19.5 cm.",
+   "quote_sha": "e29ec2943388d154"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Oviraptor had three skinny, bird-like fingers, each ending in a side-to-side flattened and recurved claw.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:7",
+   "lang": "en",
+   "quote": "The hand of Oviraptor had three skinny and bird-like fingers with each finger ended in side to side flattened and recurved unguals (claw bone).",
+   "quote_sha": "e94e4ae31cc9cafa"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "A nest associated with Oviraptor preserves elongatoolithid eggs that are approximately 14 cm long.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:7",
+   "lang": "en",
+   "quote": "The nest AMNH 6508 preserves elongatoolithid eggs, with each egg being 14 cm long (some are incomplete).",
+   "quote_sha": "36ae6cec2766dcd0"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "Henry Fairfield Osborn originally classified Oviraptor with ornithomimids because of its toothless beak.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:8",
+   "lang": "en",
+   "quote": "Oviraptor was originally allied with the ornithomimids by Osborn due to its toothless beak.",
+   "quote_sha": "eeafda9124eae73a"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "In 1976, Rinchen Barsbold established the family Oviraptoridae, designating Oviraptor as its type genus.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:8",
+   "lang": "en",
+   "quote": "In 1976, Barsbold erected a new family to contain Oviraptor and its close kin, making Oviraptor the type genus of the Oviraptoridae.",
+   "quote_sha": "fc939ad800b48769"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "In 2002, Clark and colleagues redescribed the holotype skull of Oviraptor, noting its relatively elongated maxilla and dentary.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:8",
+   "lang": "en",
+   "quote": "During the redescription of the holotype skull in 2002 by Clark and colleagues, they noted that Oviraptor had a relatively elongated maxilla and dentary.",
+   "quote_sha": "61d701da8a0e773b"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "In 1977, Rinchen Barsbold proposed that Oviraptor used its robust jaws and beak to crush mollusk shells like clams found in its geological formation.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "In 1977, Barsbold proposed a crushing jaw hypothesis. He argued that the strength of the robust lower jaws and likely rhamphotheca (horny beak) was strong enough to break the shells of mollusks such as clams, which are found in the same geological formation as Oviraptor.",
+   "quote_sha": "3c669a57dedb165c"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "In 1990, David K. Smith rejected the crushing jaw hypothesis, arguing that Oviraptor's jaws preserved shearing surfaces rather than crushing mechanisms.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "In a 1990 conference abstract, David K. Smith presented an osteological reevaluation of Oviraptor where he rejected the statements made by Barsbold. He found no evidence indicating a forelimb specialized in aquatic locomotion, and the jaws, rather than preserve a crushing mechanism, preserve shearing surfaces.",
+   "quote_sha": "9ba40fac71729228"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "In 1995, Mary H. Norell and colleagues found lizard remains in the holotype's body cavity, suggesting Oviraptor was partially carnivorous.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "However, in 1995, Norell and colleagues reported the fragmented remains of a lizard in the body cavity of the holotype specimen, suggesting that Oviraptor was partially carnivorous.",
+   "quote_sha": "08111e8b12a00591"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "Stig Olav K. Jansen suggested Oviraptor was omnivorous, using its beak and forelimbs to catch and tear small prey.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "Jansen suggested that oviraptorids were omnivorous as the sharply developed rhamphotheca together with the prominent forelimbs would have been adapted to catch and tear small prey.",
+   "quote_sha": "9a765cdcaf637b18"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "When described in 1924, Oviraptor was presumed to be ovivorous (egg-eating) based on its discovery at a Protoceratops nest.",
+   "category": "debate",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "When first described in 1924 by Osborn, Oviraptor was originally presumed to have been ovivorous—an organism that has an egg-based diet—based on the association of the holotype with a nest thought to belong to Protoceratops.",
+   "quote_sha": "433b4f671d30503a"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "Rinchen Barsbold suggested Oviraptor had a semiaquatic lifestyle based on its diet and anatomy, a hypothesis later contested by others.",
+   "category": "debate",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "Barsbold also suggested that oviraptorids could have had a semiaquatic life-style based on the mollusk-based diet, the high location of nasal cavities, an augmented musculature of the tail, and the greater size of the first manual digit.",
+   "quote_sha": "35503216593f7fbc"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "Stig Olav K. Jansen considered Oviraptor's lower jaws strong enough to crush eggs, nuts, or hard seeds, suggesting an omnivorous diet.",
+   "category": "debate",
+   "chunk_id": "oviraptor:enwiki:9",
+   "lang": "en",
+   "quote": "However, he considered the lower jaws strong enough to have at least crushed elements like eggs, nuts or other hard seeds.",
+   "quote_sha": "32e401f7f4993cde"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Traits of the Oviraptor skull suggest it belongs near the base of the Oviraptoridae family tree, distinct from more derived members.",
+   "category": "classification",
+   "chunk_id": "oviraptor:enwiki:8",
+   "lang": "en",
+   "quote": "During the redescription of the holotype skull in 2002 by Clark and colleagues, they noted that Oviraptor had a relatively elongated maxilla and dentary. These traits are less pronounced in derived oviraptorids and suggests that Oviraptor belongs to the near base of the Oviraptoridae.",
+   "quote_sha": "5fc8a1685b1e7dda"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "Research since 1994 indicates that oviraptorids were not egg-eaters but instead brooded and cared for their nests.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "Since the description of the embryonic Citipati specimen in 1994, oviraptorids became more understood: instead of having been egg-eating animals, they actually brooded and cared for the nests.",
+   "quote_sha": "00dd6fde185f413f"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Researchers Dong and Currie suggested that a nesting oviraptorid specimen was caught and buried by a sandstorm while incubating eggs.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "Dong and Currie suggested that it was caught and buried by a sandstorm during incubation.",
+   "quote_sha": "a52aa9958420c932"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Dong and Currie ruled out the hypothesis that oviraptorids were egg-thieves because such animals would have consumed or abandoned the nest before burial by a sandstorm.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "They ruled out the possibility of oviraptorids being egg-thieves as they would have either consumed or instinctively abandoned the nest long before it was buried by a sandstorm or another meteorological phenomenon.",
+   "quote_sha": "b9746852dbc92f7d"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "In 2005, Tamaki Sato and colleagues reported an oviraptorid specimen from the Nanxiong Formation that preserved the pelvic region with two eggs inside.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "In 2005, Tamaki Sato and team reported an unusual oviraptorid specimen from the Nanxiong Formation.",
+   "quote_sha": "bb3a2155e794c47c"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "Evidence from egg size and position suggests that oviraptorids had two functional oviducts but typically ovulated only one egg per oviduct.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "The size and position of the eggs suggest that oviraptorids retained two functional oviducts, but had reduced the number of eggs ovulated to one per oviduct.",
+   "quote_sha": "31b9c831f983c960"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "Persons and colleagues (2014) suggested that oviraptorosaurs were secondarily flightless and that tail traits may have been used for courtship displays.",
+   "category": "debate",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "In 2014, W. Scott Persons and colleagues suggested that oviraptorosaurs were secondarily flightless and several of the traits in their tails may indicate a propensity for display behaviour, such as courtship display.",
+   "quote_sha": "60d78b27d701c4f1"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Yang and colleagues (2018) identified cuticle layers on oviraptorid eggshells composed mainly of lipids and hydroxyapatite.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "In 2018, Tzu-Ruei Yang and colleagues identified cuticle layers on several egg-shells of maniraptoran dinosaurs including those of oviraptorids.",
+   "quote_sha": "b26d8f59abdf5e21"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "Yang and colleagues suggested that the lipid-rich cuticle on oviraptorid eggs was an adaptation for hatching success in the arid, caliche-based environments where fossils are found.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:enwiki:10",
+   "lang": "en",
+   "quote": "As most oviraptorid specimens have been found in formations of caliche-based sedimentation, Yang and colleagues suggested that the cuticle-coated eggs would have been a reproductive strategy adapted for enhancing their hatching success in such arid climates and environments.",
+   "quote_sha": "e7ef00aaebd61160"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "Oviraptor is known from the Bayn Dzak locality of the Djadokhta Formation in Mongolia, dating to the Late Cretaceous between 71 and 75 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:enwiki:12",
+   "lang": "en",
+   "quote": "Oviraptor is known from the Bayn Dzak locality of the Djadokhta Formation in Mongolia, a formation that dates back to the Late Cretaceous about 71 million to 75 million years ago.",
+   "quote_sha": "8d7501a5e8bf13a0"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "The Djadokhta landscape featured intermittent streams, seasonal moisture, and was occasionally affected by dust and sandstorms.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:enwiki:12",
+   "lang": "en",
+   "quote": "The semiarid steppe landscape was drained by intermittent streams and was sometimes affected by dust and sandstorms, and moisture was seasonal.",
+   "quote_sha": "09614b41569eb394"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Climate in the region is thought to have shifted to a more humid fluvial environment during the later Campanian and Maastrichtian ages.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:enwiki:12",
+   "lang": "en",
+   "quote": "it is thought that later in the Campanian age and into the Maastrichtian, the climate would shift to the more humid fluvial environment seen in the Nemegt Formation.",
+   "quote_sha": "e24f2630901bc164"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Oviraptor remains come from the Bayn Dzak member of the Djadokhta Formation, which also yielded Bainoceratops, Pinacosaurus, Protoceratops, Saurornithoides, Velociraptor, and Halszkaraptor.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:12",
+   "lang": "en",
+   "quote": "The known remains of Oviraptor have been produced by the Bayn Dzak member, which has also yielded the dinosaurs Bainoceratops, Pinacosaurus, Protoceratops, Saurornithoides, Velociraptor, and Halszkaraptor.",
+   "quote_sha": "5313035d18245c7a"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The Ukhaa Tolgod locality within the Bayn Dzak member has yielded Apsaravis, Byronosaurus, Citipati, Gobipteryx, Khaan, Kol, Shuuvuia, Tsaagan, and Minotaurasaurus.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:12",
+   "lang": "en",
+   "quote": "Further dinosaur fauna from this member includes that of the Ukhaa Tolgod locality, composed of Apsaravis, Byronosaurus, Citipati, Gobipteryx, Khaan, Kol, Shuuvuia, Tsaagan, and Minotaurasaurus.",
+   "quote_sha": "5935c2528f46d3d7"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "The holotype of Oviraptor was likely trapped over a nest during a sandstorm, leading to rapid burial before scavenging or disarticulation could occur.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:enwiki:13",
+   "lang": "en",
+   "quote": "The pose of the holotype of Oviraptor along with the association of eggs, suggest that it was trapped over the nest during a sandstorm, and burial was relatively rapid given that the body had no opportunity to become fully disarticulated or scavenged by predators.",
+   "quote_sha": "c2f44246090ddbf7"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The skull of the Oviraptor holotype became particularly flattened and distorted during fossilization.",
+   "category": "description",
+   "chunk_id": "oviraptor:enwiki:13",
+   "lang": "en",
+   "quote": "Among elements, the skull have become particularly flattened and distorted during the fossilization process.",
+   "quote_sha": "e88fbc777645905b"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "The genus Oviraptor was established by Osborn in 1924.",
+   "category": "classification",
+   "chunk_id": "oviraptor:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Osborn, 1924",
+   "quote_sha": "20090a184a24d2e6"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "The species Oviraptor philoceratops was described by Osborn in 1924.",
+   "category": "classification",
+   "chunk_id": "oviraptor:eswiki:1",
+   "lang": "es",
+   "quote": "species_authority: Osborn, 1924",
+   "quote_sha": "b2e0aa290a5f992c"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Fenestrosaurus philoceratops is a synonym of Oviraptor philoceratops.",
+   "category": "classification",
+   "chunk_id": "oviraptor:eswiki:1",
+   "lang": "es",
+   "quote": "synonyms: \"Fenestrosaurus philoceratops\" Osborn, 1924",
+   "quote_sha": "2a4a49957d7befc5"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Oviraptor philoceratops is the only known species in the extinct genus Oviraptor.",
+   "category": "description",
+   "chunk_id": "oviraptor:eswiki:2",
+   "lang": "es",
+   "quote": "Oviraptor philoceratops es la única especie conocida del género extinto Oviraptor",
+   "quote_sha": "c4383f18a14d3730"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Oviraptor lived during the late Cretaceous period, between 75 and 71 million years ago.",
+   "category": "description",
+   "chunk_id": "oviraptor:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales de la época Cretácico Tardío, entre 75 a 71 millones de años",
+   "quote_sha": "f9de608e3c4e8abb"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Oviraptor lived in what is now Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:eswiki:2",
+   "lang": "es",
+   "quote": "en lo que hoy es Asia",
+   "quote_sha": "3a495e7adaf2e575"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Despite its name meaning 'egg thief', there is no evidence that Oviraptor ate eggs.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:eswiki:2",
+   "lang": "es",
+   "quote": "Al contrario de lo que el nombre sugiere, no hay pruebas de que Oviraptor se alimentara de huevos",
+   "quote_sha": "bacc15ac30ed3b72"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Oviraptor was a non-avian dinosaur similar to birds, measuring about 1.7 meters long, 0.70 meters high, and weighing 25 kilograms.",
+   "category": "description",
+   "chunk_id": "oviraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Oviraptor era un dinosaurio no aviano similar a las aves, que medía alrededor de 1,7metros de largo, 0,70de alto y de peso 25kilogramos",
+   "quote_sha": "e98f6b9ade91bb74"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The first Oviraptor remains were found in Omnogov, Mongolia, in the Djadokhta Formation during an American Museum of Natural History expedition in 1924.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:eswiki:4",
+   "lang": "es",
+   "quote": "Los restos del primer Oviraptor fueron encontrados en Omnogov, Mongolia en la Formación Djadochta, durante una expedición del Museo Americano de Historia Natural, en 1924",
+   "quote_sha": "60f7c388491e414c"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Remains of a second possible specimen come from Bayan Mandahu, Inner Mongolia, China.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:eswiki:4",
+   "lang": "es",
+   "quote": "Los restos de un segundo posible ejemplar provienen de la Mongolia Interior, China de un área llamada Bayan Mandahu",
+   "quote_sha": "9031c70a94aae827"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "In 1976, Barsbold referred six additional specimens to the genus Oviraptor.",
+   "category": "discovery",
+   "chunk_id": "oviraptor:eswiki:4",
+   "lang": "es",
+   "quote": "En 1976, Barsbold refirió seis especímenes adicionales al género Oviraptor",
+   "quote_sha": "aa34b5ee790e1157"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "Osborn placed Oviraptor near the ornithomimids due to its lack of teeth.",
+   "category": "classification",
+   "chunk_id": "oviraptor:eswiki:5",
+   "lang": "es",
+   "quote": "Oviraptor fue ubicado por Osborn junto a los ornitomímidos, debido a su falta de dientes",
+   "quote_sha": "b34d7a6851d92e81"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "In 1976, Rinchen Barsbold created a new family containing Oviraptor and its close relatives, designating Oviraptor as the type genus for the family Oviraptoridae.",
+   "category": "classification",
+   "chunk_id": "oviraptor:eswiki:5",
+   "lang": "es",
+   "quote": "En 1976, Rinchen Barsbold creó una nueva familia que contenía a Oviraptor y a sus parientes cercanos, concibiendo a partir del género Oviraptor el género tipo para la familia Oviraptoridae",
+   "quote_sha": "622f7c834513dbaf"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "The parent group of Oviraptor is Oviraptoridae.",
+   "category": "classification",
+   "chunk_id": "oviraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Oviraptoridae",
+   "quote_sha": "1009166079f38ac4"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Oviraptor is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "oviraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The time range for Oviraptor is from the Coniacian to the Campanian stages, between 89.8 and 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "oviraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Coniacian to Campanian (89.8 to 72.2 million years ago)",
+   "quote_sha": "75aa07788e559fa6"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The only Oviraptor philoceratops skeleton preserved remains of a lizard in the stomach region, implying the species was at least partially carnivorous.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:eswiki:7",
+   "lang": "es",
+   "quote": "El único esqueleto de Oviraptor philoceratops conservó los restos de un lagarto en la región de la cavidad del estómago, lo que implica que la especie era al menos parcialmente carnívora",
+   "quote_sha": "91a688ea937a09ee"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "In 1977, Barsbold argued that the jaw strength of Oviraptor would have allowed it to open mollusk shells like oysters.",
+   "category": "debate",
+   "chunk_id": "oviraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Ya en 1977, Barsbold argumentaba que la fuerza de las mandíbulas del Oviraptor le hubieran permitido abrir las conchas de los moluscos como las actuales ostras",
+   "quote_sha": "7bf9c2bcb8f686ce"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "The popular representation of Oviraptor with a high crest actually belongs to Citipati, a close relative.",
+   "category": "description",
+   "chunk_id": "oviraptor:eswiki:2",
+   "lang": "es",
+   "quote": "La popular representación de Oviraptor, con una cresta alta, pertenece realmente a Citipati, un pariente cercano",
+   "quote_sha": "dbd04d105c1e1693"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Given the high degree of anatomical similarity between these species and Oviraptor, it is highly probable that Oviraptor also had feathers.",
+   "category": "paleobiology",
+   "chunk_id": "oviraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Dado el alto grado de similitud anatómica entre estas especies y Oviraptor, es altamente probable que este último también tuviese plumas",
+   "quote_sha": "5961999e28869489"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "oviraptor:enwiki:2",
+   "statement": "Henry Fairfield Osborn named the genus Oviraptor and its type species Oviraptor philoceratops in 1924.",
+   "category": "discovery",
+   "quote": "in the following year the genus and type species Oviraptor philoceratops were named by Henry Fairfield Osborn",
+   "reason": "numbers not in the quote: ['1924']"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:3",
+   "statement": "The holotype specimen was found lying over a nest of approximately 15 eggs, catalogued as AMNH 6508.",
+   "category": "discovery",
+   "quote": "Accordingly, this specimen was found lying over a nest of approximately 15 eggs—a nest that has been catalogued as AMNH 6508",
+   "reason": "statement copies the source wording: 'specimen was found lying over a nest of'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:3",
+   "statement": "Rinchen Barsbold erected the family Oviraptoridae to include Oviraptor and its close relatives in 1976.",
+   "category": "classification",
+   "quote": "Under this consideration, he erected the Oviraptoridae to contain Oviraptor and close relatives",
+   "reason": "numbers not in the quote: ['1976']"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:3",
+   "statement": "It is debated whether Oviraptor was an egg thief; however, 1990s discoveries of oviraptorids brooding nests suggest the initial interpretation of egg-stealing habits was incorrect.",
+   "category": "debate",
+   "quote": "However, in the 1990s, the discovery of numerous nesting and nestling oviraptorid specimens proved that Osborn was correct in his caution regarding the name of Oviraptor",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:4",
+   "statement": "It is debated whether the tall-crested specimen MPC-D 100/42 belongs to Oviraptor; some researchers suggest it may represent a second species of Citipati or an entirely new genus.",
+   "category": "debate",
+   "quote": "This conception was refuted by James M. Clark and colleagues in 2002, who noted that this tall-crested specimen has more features of the skull in common with Citipati than it does with Oviraptor—which in fact, does not preserve a crest—and it may represent a second species of the former, or, an entire new genus",
+   "reason": "numbers not in the quote: ['100', '42']"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:7",
+   "statement": "Oviraptor's furcula is distinct from other oviraptorids because it features a midline keel on the anterior surface of the hypocleidium.",
+   "category": "description",
+   "quote": "The furcula of Oviraptor is very distinct from other oviraptorids in having a midline keel on the anterior surface of the hypocleidium−a downwards directed projection at the center of the furcula.",
+   "reason": "statement copies the source wording: 'a midline keel on the anterior surface of'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:7",
+   "statement": "The scapula of Oviraptor is slightly bowed and measures 23 cm in length.",
+   "category": "description",
+   "quote": "The scapula is slightly bowed and measures 23 cm in length.",
+   "reason": "statement copies the source wording: 'is slightly bowed and measures 23 cm in'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:9",
+   "statement": "In 2010, Longrich and colleagues rejected the shell-crushing hypothesis and concluded that plant material formed the bulk of the Oviraptor diet based on cranial similarities to herbivores.",
+   "category": "paleobiology",
+   "quote": "Longrich and colleagues in 2010 also rejected a durophagous (animals that practise shell-crushing) hypothesis... the team also found that oviraptorids and dicynodonts share cranial features... Modern animals with jaws that resemble those of oviraptorids include parrots and tortoises... Longrich and colleagues concluded that due to the similarities between oviraptorids and herbivorous animals, the bulk of their diet would most likely have been formed by plant material.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:9",
+   "statement": "In 2018, Gregory F. Funston and colleagues supported the crushing jaw hypothesis, noting the strong, nipping bite similar to parrots.",
+   "category": "paleobiology",
+   "quote": "In 2018 however, Funston and colleagues supported the crushing jaw hypothesis. They pointed out that the stocky rostrum and robust lower jaws of oviraptorids suggest, in fact, a strong and nipping bite, which is rather similar to those of parrots.",
+   "reason": "statement copies the source wording: 'Funston and colleagues supported the crushing jaw hypothesis'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:10",
+   "statement": "The holotype of Oviraptor was likely a sexually mature individual that died while incubating a nest containing eggs.",
+   "category": "paleobiology",
+   "quote": "This specimen showed that the holotype of Oviraptor was likely a sexually mature individual that perished incubating the associated nest with eggs.",
+   "reason": "statement copies the source wording: 'holotype of Oviraptor was likely a sexually mature'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:10",
+   "statement": "In 1996, Dong and Currie described a new nesting oviraptorid specimen found in the Bayan Mandahu Formation.",
+   "category": "paleobiology",
+   "quote": "In 1996, Dong and Currie described a new nesting oviraptorid specimen from the Bayan Mandahu Formation.",
+   "reason": "statement copies the source wording: 'Dong and Currie described a new nesting oviraptorid'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:10",
+   "statement": "Hopp and Orsen (2004) suggested that oviraptorids likely possessed long pennaceous feathers and a full feather covering in life.",
+   "category": "paleobiology",
+   "quote": "Hopp and Orsen indicated that long pennaceous feathers and a feather covering were most likely present in life.",
+   "reason": "numbers not in the quote: ['2004']"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:10",
+   "statement": "Hopp and Orsen proposed that the elongation of wings and tail feathers in oviraptorids evolved primarily for brooding to protect eggs and hatchlings.",
+   "category": "paleobiology",
+   "quote": "Based on the forelimb position of nesting oviraptorids, Hopp and Orsen proposed brooding as the ancestral reason behind wing and tail feather elongation.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:10",
+   "statement": "Varricchio and colleagues (2008) noted that the large clutch sizes of oviraptorids resemble those of modern birds with polygamous mating and extensive male parental care.",
+   "category": "paleobiology",
+   "quote": "David J. Varricchio and colleagues in 2008 found that the relatively large egg clutch-size of oviraptorids and troodontids is most similar to those of modern birds that practice polygamous mating and extensive male parental care.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:11",
+   "statement": "In 2019, Yang and colleagues re-evaluated the hypothesis of thermoregulatory contact incubation using complete oviraptorid nests from the Nanxiong Formation.",
+   "category": "paleobiology",
+   "quote": "In 2019 Yang and colleagues re-evaluated the hypothesis of thermoregulatory contact incubation using complete oviraptorid nests from the Nanxiong Formation.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:11",
+   "statement": "Yang and colleagues (2019) noted that adult oviraptorid specimens found with nests might represent females laying eggs rather than incubating them.",
+   "category": "paleobiology",
+   "quote": "They noted that adult oviraptorid specimens in association with nest were not necessarily incubating the eggs as they could represent a female in the process of laying eggs.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:11",
+   "statement": "Yang and colleagues concluded that the multi-ring arrangement of oviraptorid clutches prevented sufficient heat transfer from the parent to inner eggs.",
+   "category": "paleobiology",
+   "quote": "the multi-ring clutch prevented sufficient heat transfer from the parent to the inner rings of eggs.",
+   "reason": "statement copies the source wording: 'prevented sufficient heat transfer from the parent to'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:11",
+   "statement": "It remains undetermined whether the juvenile Oviraptor specimen AMNH 33092 hatched from the nest associated with the holotype.",
+   "category": "debate",
+   "quote": "However, the team was unable to determinate if the juvenile Oviraptor AMNH 33092 had hatched from the nest associated with the holotype.",
+   "reason": "statement copies the source wording: 'hatched from the nest associated with the holotype'"
+  },
+  {
+   "chunk_id": "oviraptor:enwiki:12",
+   "statement": "The Djadokhta Formation represents a semiarid environment with sand dunes and alluvial settings similar to the modern Gobi Desert.",
+   "category": "time_and_habitat",
+   "quote": "The paleoenvironment of the Djadokhta Formation is interpreted as having a semiarid climate, with sand dune and alluvial settings similar to the modern Gobi Desert.",
+   "reason": "statement copies the source wording: 'and alluvial settings similar to the modern Gobi'"
+  },
+  {
+   "chunk_id": "oviraptor:eswiki:3",
+   "statement": "Oviraptor is known from a single partial skeleton, specimen number AMNH 6517.",
+   "category": "description",
+   "quote": "Oviraptor se conoce por un solo esqueleto parcial, número de espécimen AMNH6517",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:eswiki:4",
+   "statement": "The species name philoceratops means 'lover of ceratopsians'.",
+   "category": "discovery",
+   "quote": "El nombre de la especie philoceratops que significa 'amante de cerátopos'",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "oviraptor:eswiki:3",
+   "statement": "H. F. Osborn proposed that the toothless beak was a tool for breaking eggs, but this interpretation is currently debated.",
+   "category": "debate",
+   "quote": "La idea de las mandíbulas aplastadoras fue propuesta por H. F. Osborn, que creía que la falta de dientes del ejemplar original... constituían una herramienta para romper huevos, pero esta interpretación está siendo discutida",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

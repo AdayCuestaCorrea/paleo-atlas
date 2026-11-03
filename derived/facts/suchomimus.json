@@ -1,0 +1,792 @@
+{
+ "taxon": "Suchomimus",
+ "taxon_key": "suchomimus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v2",
+ "sources_hash": "ac903f55e6407b21",
+ "generated_at": "2026-11-03T05:05:38+00:00",
+ "citations": {
+  "suchomimus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Suggested synonymy with Baryonyx and Cristatusaurus)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Description)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:6": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Skull)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:7": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Postcranial skeleton)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:8": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:9": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Evolution)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Palaeobiology)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus (Palaeoecology)",
+   "url": "https://en.wikipedia.org/wiki/Suchomimus?oldid=1381162775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus tenerensis (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Suchomimus_tenerensis?oldid=164227775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus tenerensis (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Suchomimus_tenerensis?oldid=164227775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus tenerensis (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Suchomimus_tenerensis?oldid=164227775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus tenerensis (Cráneo)",
+   "url": "https://es.wikipedia.org/wiki/Suchomimus_tenerensis?oldid=164227775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Suchomimus tenerensis (Esqueleto postcraneal)",
+   "url": "https://es.wikipedia.org/wiki/Suchomimus_tenerensis?oldid=164227775",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "suchomimus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Suchomimus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53367",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Suchomimus lived during the Early Cretaceous period, specifically the Aptian to Albian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "suchomimus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Cretaceous (Aptian-Albian), ~",
+   "quote_sha": "43493076c5e58b77"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species, S. tenerensis, was described in 1998 by Paul Sereno and colleagues based on fossils found in the Elrhaz Formation.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:2",
+   "lang": "en",
+   "quote": "The only known species is S. tenerensis, originally described in 1998 by paleontologist Paul Sereno and colleagues from several fossils discovered one year earlier in the Elrhaz Formation.",
+   "quote_sha": "d7b1c5b154fe96c6"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The specific name 'tenerensis' refers to the Ténéré Desert where the fossils were discovered.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:2",
+   "lang": "en",
+   "quote": "The animal's generic name, which means \"crocodile mimic\", alludes to its elongated skull and piscivorous adaptations, while the specific name refers to the Ténéré Desert, where the fossils were discovered.",
+   "quote_sha": "bfc8805125420fa8"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Suchomimus had an elongated, low, and narrow skull that resembled that of crocodilians.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:2",
+   "lang": "en",
+   "quote": "As its generic name suggests, the animal's skull was elongated, low, and narrow, resembling that of crocodilians.",
+   "quote_sha": "24934c4e71418db8"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Suchomimus had a relatively short neck and powerfully built forelimbs with a large curved claw on each thumb.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:2",
+   "lang": "en",
+   "quote": "The neck of Suchomimus was relatively short, while its powerfully built forelimbs bore a large, curved claw on each thumb.",
+   "quote_sha": "f5ce41eafbd11405"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "A low dorsal sail ran along the midline of its back, constructed from long neural spines.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:2",
+   "lang": "en",
+   "quote": "Along the midline of the animal's back ran a low dorsal sail, built from the long neural spines of its vertebrae.",
+   "quote_sha": "65ee84ac0283123b"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Suchomimus tenerensis was formally named and described in a study published in Science Magazine on November 13, 1998.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:3",
+   "lang": "en",
+   "quote": "On 13 November 1998, the Science Magazine published a study led by Sereno, formally naming and describing the new genus and species Suchomimus tenerensis based on the fossils discovered during the expedition.",
+   "quote_sha": "92d923aa9bacdecd"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "All known fossil specimens are housed in the collections of the Musée National Boubou Hama in Niamey.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:3",
+   "lang": "en",
+   "quote": "All known fossil specimens were recovered from the Elrhaz Formation and are now housed in the paleontological collections of the Musée National Boubou Hama in Niamey.",
+   "quote_sha": "6542332e263c1fe4"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The holotype, catalogued as MNN GDF500, is a partial skeleton that lacks the skull.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype, catalogued as MNN GDF500, consists of a partial skeleton lacking the skull.",
+   "quote_sha": "b67f9dd05fa2d2e0"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Cristatusaurus lapparenti was named by Philippe Taquet and Dale A. Russell more than two months before Suchomimus tenerensis was formally described.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:4",
+   "lang": "en",
+   "quote": "More than two months before S. tenerensis was formally described in the scientific literature, French paleontologist Philippe Taquet and his Canadian colleague Dale A. Russell named another spinosaurid from the Elrhaz Formation, Cristatusaurus lapparenti, based on fragments of jaws and vertebrae.",
+   "quote_sha": "4f163b62b3e67ad3"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "A 2017 review by Carlos Roberto A. Candeiro and colleagues stated the debate over Suchomimus and Baryonyx is more semantic than scientific, noting they are generally agreed to be distinct related genera.",
+   "category": "debate",
+   "chunk_id": "suchomimus:enwiki:4",
+   "lang": "en",
+   "quote": "A 2017 review paper by the Brazilian palaeontologist Carlos Roberto A. Candeiro and colleagues stated that this debate was more in the realm of semantics than science, as it is generally agreed that Suchomimus and Baryonyx are distinct, related genera.",
+   "quote_sha": "f297b7ade65ba4e3"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Historical estimates placed Suchomimus at 9.5 to 11 meters in length and 2.5 to 3.8 metric tons in weight.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:5",
+   "lang": "en",
+   "quote": "The size of Suchomimus was historically estimated at 9.5 – 11 m in length, with a weight of 2.5 - 3.8 MT.",
+   "quote_sha": "70ce6d8d38ff17ed"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "In 2007, François Therrien and Donald M. Henderson proposed a 10.3-meter-long Suchomimus weighed over 5.2 metric tons, though they noted this might overestimate spinosaurid sizes.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:5",
+   "lang": "en",
+   "quote": "In 2007, Canadian paleontologists François Therrien and Donald M. Henderson proposed that a 10.3 m long Suchomimus would have weighed more than 5.2 MT based on their ratio between skull length and body length; however, they noted that they might have overestimated the size of spinosaurids (i.e., Suchomimus and Baryonyx).",
+   "quote_sha": "e99ec2a00e307a5f"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "The skull of Suchomimus is estimated to be about 1.2 meters long.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:6",
+   "lang": "en",
+   "quote": "The skull of Suchomimus is estimated at around 1.2 m in length.",
+   "quote_sha": "c326b2664d8e2293"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "Suchomimus had approximately 122 conical teeth that were slightly curved backward, had fine serrations, and wrinkled enamel.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:6",
+   "lang": "en",
+   "quote": "The jaws had about 122 conical teeth, pointed but not very sharp and curving slightly backwards, with fine serrations and wrinkled enamel.",
+   "quote_sha": "830f2b953115d32b"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "The tip of Suchomimus's snout featured a 'terminal rosette' of longer teeth, with seven on each side of the upper and lower jaws.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:6",
+   "lang": "en",
+   "quote": "The tip of the snout was enlarged sideways and carried a \"terminal rosette\" of longer teeth, seven per side in the premaxillae and about the same number in the corresponding part of the lower jaw.",
+   "quote_sha": "f295180c7e1bb3f6"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "The upper jaw of Suchomimus had a prominent downward kink behind the snout tip, where the maxilla held the longest teeth in the skull.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:6",
+   "lang": "en",
+   "quote": "The upper jaw had a prominent kink just behind the rosette, protruding downwards; this convexly curved part of the maxilla had the longest teeth of the entire skull.",
+   "quote_sha": "c7e92ecf301dc623"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Unlike most theropods, Suchomimus had nostrils retracted further back on the skull, positioned behind the premaxillary teeth.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:6",
+   "lang": "en",
+   "quote": "The nostrils, unlike in most theropods, were retracted further back on the skull and behind the premaxillary teeth.",
+   "quote_sha": "8d278c5c88ed4931"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "Suchomimus had significantly extended, blade-shaped neural spines on its vertebrae that were elongated toward the rear.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:7",
+   "lang": "en",
+   "quote": "Suchomimus had significantly extended neural spines—blade-shaped upward extensions on the vertebrae—which were elongated at the rear back.",
+   "quote_sha": "e66b8dc994806d2e"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "The V-shaped furcula of Suchomimus indicates it had a high and narrow trunk.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:7",
+   "lang": "en",
+   "quote": "The furcula was V-shaped and indicates a high and narrow trunk.",
+   "quote_sha": "35bf87a398c0d462"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Suchomimus had a well-developed ulna with an enormous olecranon, an exceptional trait also shared with Baryonyx.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:7",
+   "lang": "en",
+   "quote": "The ulna of the lower arm was well-developed with an enormous olecranon (upper process set-off from the shaft), an exceptional trait shared with Baryonyx.",
+   "quote_sha": "48b6e0ddd05c9c7c"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "Suchomimus had a high ilium and a pubis with a wide front surface and a flattened, rectangular lower end, differing from the boot shape seen in other theropods.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:7",
+   "lang": "en",
+   "quote": "In the pelvis, the ilium (main hip bone) was high. The pubis (pubic bone) had a front surface that was wider than the side surface, and its forward-facing lower end was flattened and rectangular, with a brief flange along the midline, in contrast to the expanded boot shape it had in other theropods.",
+   "quote_sha": "0ff8a676bdba37d6"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "The femur of the holotype Suchomimus was straight, robust, and measured 107 cm in length.",
+   "category": "description",
+   "chunk_id": "suchomimus:enwiki:7",
+   "lang": "en",
+   "quote": "The femur (thighbone) was straight and robust, with a length of 107 cm in the holotype.",
+   "quote_sha": "384634fbc2c0a72e"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "In its original description, Suchomimus was placed within Spinosauridae and assigned to the subfamily Baryonychinae.",
+   "category": "classification",
+   "chunk_id": "suchomimus:enwiki:8",
+   "lang": "en",
+   "quote": "The authors placed Suchomimus within Spinosauridae and named two subfamilies within this clade, Baryonychinae (all spinosaurids more closely related to Baryonyx) and Spinosaurinae (all spinosaurids closer to Spinosaurus), with Suchomimus assigned to the former.",
+   "quote_sha": "cf7f7b71ce1a7917"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "In 2021, American paleontologist Chris T. Barker and colleagues established the tribe Ceratosuchopsini within Baryonychinae, which includes Ceratosuchops, Riparovenator, and Suchomimus.",
+   "category": "classification",
+   "chunk_id": "suchomimus:enwiki:8",
+   "lang": "en",
+   "quote": "Although not ruling out this possibility, American paleontologist Chris T. Barker and his colleagues established in 2021 a new tribe within the Baryonychinae, named Ceratosuchopsini, a clade that includes Ceratosuchops, Riparovenator, and Suchomimus.",
+   "quote_sha": "6bf42ad1d22169f8"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Suchomimus was originally described in 1998 by Sereno and colleagues, who identified unique traits including expanded neural spines and a boss on the humerus.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:enwiki:8",
+   "lang": "en",
+   "quote": "In their original 1998 description of Suchomimus, Sereno and colleagues identified several autapomorphies (unique derived traits) distinguishing it from other theropods: its expanded rear dorsal, sacral, and front caudal neural spines, the robust upper corners of the humerus, and the boss above the humerus' condyle that contacted its hook-shaped radius.",
+   "quote_sha": "5184584b86dd32c1"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "In 2010, British paleontologist Roger Benson considered the superfamily Spinosauroidea a junior synonym of Megalosauroidea.",
+   "category": "debate",
+   "chunk_id": "suchomimus:enwiki:8",
+   "lang": "en",
+   "quote": "in 2010, the British palaeontologist Roger Benson considered this a junior synonym of Megalosauroidea (an older name).",
+   "quote_sha": "23fe57c4ab5d0ac6"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "Suchomimus is classified within the family Spinosauridae.",
+   "category": "classification",
+   "chunk_id": "suchomimus:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Spinosauridae",
+   "quote_sha": "c83899b32a1b6bf7"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Suchomimus belongs to the subfamily Baryonychinae.",
+   "category": "classification",
+   "chunk_id": "suchomimus:eswiki:1",
+   "lang": "es",
+   "quote": "subfamilia: Baryonychinae",
+   "quote_sha": "a05899750ef8bdbf"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "Suchomimus was named and described by paleontologist Paul Sereno and colleagues in 1998.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:eswiki:2",
+   "lang": "es",
+   "quote": "Fue nombrado y descrito por el paleontólogo Paul Sereno y colegas en 1998",
+   "quote_sha": "905069e2fbe74bbd"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "Suchomimus lived during the mid-Cretaceous period, approximately 125 to 112 million years ago, in the Aptian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "suchomimus:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a mediados del período Cretácico, hace aproximadamente 125 a 112 millones de años, en el Aptiense",
+   "quote_sha": "b2915857bb6f6059"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "Suchomimus lived in what is now Africa.",
+   "category": "time_and_habitat",
+   "chunk_id": "suchomimus:eswiki:2",
+   "lang": "es",
+   "quote": "en lo que hoy es África",
+   "quote_sha": "2dadaabc65898e9a"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "Suchomimus has an elongated and shallow skull similar to that of a crocodile, which inspired its generic name.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:2",
+   "lang": "es",
+   "quote": "El cráneo alargado y poco profundo de Suchomimus, similar al de un cocodrilo, le otorga su nombre genérico",
+   "quote_sha": "ca27b541e4cbe67d"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "The specific name S. tenerensis refers to the Teneré Desert, the locality where the first remains were found.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:eswiki:2",
+   "lang": "es",
+   "quote": "el nombre específico S. tenerensis alude a la localidad donde fueron encontrados sus primeros restos, el desierto de Teneré",
+   "quote_sha": "cd29e99b32b3a78a"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "Isotopic geochemical evidence supports a semi-aquatic foraging habit for Suchomimus.",
+   "category": "paleobiology",
+   "chunk_id": "suchomimus:enwiki:10",
+   "lang": "en",
+   "quote": "Isotopic geochemical lines of evidence also support a semi-aquatic foraging habit for Suchomimus",
+   "quote_sha": "82fa1560696086fe"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "Milner suggested in 2003 that spinosaurids originated in Laurasia during the Jurassic and dispersed into Gondwana via the Iberian land bridge.",
+   "category": "debate",
+   "chunk_id": "suchomimus:enwiki:9",
+   "lang": "en",
+   "quote": "Milner suggested in 2003 that spinosaurids originated in Laurasia during the Jurassic and dispersed via the Iberian land bridge into Gondwana",
+   "quote_sha": "9d0a536a32d01efe"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "The direction of dispersal between Europe and Africa for spinosaurids is still unknown.",
+   "category": "debate",
+   "chunk_id": "suchomimus:enwiki:9",
+   "lang": "en",
+   "quote": "The direction of the dispersal between Europe and Africa is still unknown",
+   "quote_sha": "d01849c55ed554c6"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "The initial estimate for the length of the Suchomimus type specimen was between 10.3 and 11 meters, with a weight estimated between 2.7 and 5.2 tonnes.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:eswiki:3",
+   "lang": "es",
+   "quote": "La longitud del espécimen tipo de Suchomimus, un subadulto, se estimó inicialmente entre 10,3 a 11 metros, con un peso estimado de entre 2,7 y 5,2 toneladas.",
+   "quote_sha": "a6e630f9f687d33e"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "In 2010, Gregory S. Paul provided lower estimates of 9.5 meters in length and 2.5 tonnes in weight.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:eswiki:3",
+   "lang": "es",
+   "quote": "Gregory S. Paul, sin embargo, dio estimaciones más bajas de 9,5 metros y 2,5 toneladas en 2010.",
+   "quote_sha": "b26a7afa71fb505a"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "A 2020 study adjusted the body mass of the holotype to 3.26 tonnes based on femoral circumference.",
+   "category": "discovery",
+   "chunk_id": "suchomimus:eswiki:3",
+   "lang": "es",
+   "quote": "un estudio de 2020 moderó la masa corporal del holotipo en 3,26 toneladas en función de la circunferencia femoral.",
+   "quote_sha": "f83a9bcb753b2cc2"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Unlike other giant theropods, Suchomimus had a very long and low snout and narrow jaws formed by the forward expansion of premaxillae, frontal bones, and the posterior ramus of the maxillae.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:4",
+   "lang": "es",
+   "quote": "A diferencia de otros terópodos gigantes tenía un hocico muy largo y bajo, y quijadas estrechas formadas por una expansión hacia adelante de los premaxilares, huesos frontales del hocico y la rama trasera de los maxilares, hueso principal de la mandíbula superior.",
+   "quote_sha": "4947ac0ac764fac9"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "The jaws were studded with about 120 teeth that were not very sharp, slightly curved backward, and had fine striations and rough enamel.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:4",
+   "lang": "es",
+   "quote": "Las mandíbulas estaban tachonadas con unos 120 dientes no muy agudos y curvados levemente hacia atrás, con finas estrías y esmalte rugoso.",
+   "quote_sha": "bc833a2ffab3346f"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "The snout tip was bulbous and carried a rosette of longer teeth than the rest, with seven on each side of the premaxillae and approximately the same number on the corresponding part of the lower jaw.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:4",
+   "lang": "es",
+   "quote": "La extremidad del hocico era abultada y llevaba un rosetón de dientes más largos que el resto, siete por lado en los premaxilares y aproximadamente el mismo número en la parte correspondiente de la mandíbula inferior.",
+   "quote_sha": "e8e1a1a3e67dd2a6"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "Further back, there were at least 22 teeth on each side of the upper jaw in the maxilla, while the entire side of the lower jaw had 32 teeth in the dentary bone.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:4",
+   "lang": "es",
+   "quote": "Más atrás, había al menos 22 dientes por lado de la mandíbula superior en el maxilar superior, mientras que todo el lado de la mandíbula inferior llevaba 32 dientes en el hueso dentario.",
+   "quote_sha": "98ca7a2b67910e1c"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "The nasal openings, unlike in most theropods, were retracted further back in the skull and behind the premaxillary teeth.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:4",
+   "lang": "es",
+   "quote": "Las fosas nasales, a diferencia de la mayoría de los terópodos, estaban retraídas más atrás en el cráneo y detrás de los dientes premaxilares.",
+   "quote_sha": "7940b1d202a09122"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "Suchomimus had approximately 16 dorsal vertebrae.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:5",
+   "lang": "es",
+   "quote": "Había alrededor de 16 vértebras dorsales.",
+   "quote_sha": "29e4247043c4b4fd"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "The arm musculature drove considerable-sized hand claws, with the first digit being the largest at 19 centimeters in length.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:5",
+   "lang": "es",
+   "quote": "La musculatura del brazo impulsaba garras de mano de tamaño considerables, siendo la del primer dedo la más grande con una longitud de 19 centímetros.",
+   "quote_sha": "d8a42cf3c4e47648"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "The femur was straight and robust, measuring 107 centimeters in length in the holotype.",
+   "category": "description",
+   "chunk_id": "suchomimus:eswiki:5",
+   "lang": "es",
+   "quote": "El fémur, el hueso del muslo, era recto y robusto, con una longitud de 107 centímetros en el holotipo.",
+   "quote_sha": "896c83ec54613f3a"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Researchers generally view Suchomimus as a large creature that usually fed on fish and walked through the Sahara over 100 million years ago when it was a swampy paradise.",
+   "category": "paleobiology",
+   "chunk_id": "suchomimus:eswiki:3",
+   "lang": "es",
+   "quote": "La impresión general que plantean los investigadores es la de una criatura de gran porte, que se alimentaba usualmente de peces, y que hace más de 100 millones de años deambulaba por el Sáhara cuando este era un vergel pantanoso.",
+   "quote_sha": "d3487148acfbbf5d"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Suchomimus lived from the Aptian to the Albian stages, between 121.4 and 100.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "suchomimus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Albian (121.4 to 100.5 million years ago)",
+   "quote_sha": "b4a748b7a96c701a"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Suchomimus belongs to the parent group Ceratosuchopsini.",
+   "category": "classification",
+   "chunk_id": "suchomimus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ceratosuchopsini",
+   "quote_sha": "49804ceac737e080"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Suchomimus is classified in the family Spinosauridae.",
+   "category": "classification",
+   "chunk_id": "suchomimus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Spinosauridae",
+   "quote_sha": "301b864d963be756"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Suchomimus is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "suchomimus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "suchomimus:enwiki:2",
+   "statement": "The snout tip flared laterally to form a rosette, and the jaws contained numerous finely serrated conical teeth with the largest near the front.",
+   "category": "description",
+   "quote": "The tip of the snout flared laterally to form a rosette, and the jaws bore numerous finely serrated conical teeth, with the largest ones positioned near the front.",
+   "reason": "statement copies the source wording: 'flared laterally to form a rosette and the'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:2",
+   "statement": "Cranial and limb features indicate Suchomimus was a primarily piscivorous predator adapted for hunting in shallow waters.",
+   "category": "paleobiology",
+   "quote": "Its cranial and limb features indicate that it was a primarily piscivorous predator adapted for hunting in shallow waters.",
+   "reason": "statement copies the source wording: 'was a primarily piscivorous predator adapted for hunting'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:3",
+   "statement": "On December 4, 1997, David Varricchio discovered a large thumb claw of a massive theropod exposed on the surface.",
+   "category": "discovery",
+   "quote": "On 4 December, team member David Varricchio discovered a large thumb claw belonging to a massive theropod dinosaur, remarkably well exposed on the surface.",
+   "reason": "numbers not in the quote: ['1997']"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:3",
+   "statement": "The holotype includes neck ribs, parts of dorsal vertebrae, dorsal ribs, gastralia, sacral vertebrae, parts of caudal vertebrae, chevrons, a scapula, a coracoid, a partial forelimb, most of the pelvis, and parts of a hindlimb.",
+   "category": "description",
+   "quote": "It contains three neck ribs, parts of fourteen dorsal (back) vertebrae, ten dorsal ribs, gastralia (or \"belly ribs\"), pieces of three sacral vertebrae, parts of twelve caudal (tail) vertebrae, chevrons (bones that form the underside of the tail), a scapula (shoulder blade), a coracoid, a partial forelimb, most of the pelvis (hip bone), and parts of a hindlimb.",
+   "reason": "statement copies the source wording: 'a coracoid a partial forelimb most of the'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:4",
+   "statement": "In 2002, Hans-Dieter Sues and colleagues suggested Suchomimus tenerensis should be renamed Baryonyx tenerensis and considered identical to Cristatusaurus.",
+   "category": "debate",
+   "quote": "In 2002, American paleontologist Hans-Dieter Sues and colleagues concluded that S. tenerensis was sufficiently similar to B. walkeri to be placed within the same genus, renamed as Baryonyx tenerensis, and that it was likely identical to Cristatusaurus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:4",
+   "statement": "Subsequent studies have continued to treat Suchomimus and Baryonyx as separate genera.",
+   "category": "debate",
+   "quote": "Nevertheless, subsequent studies have continued to treat Suchomimus and Baryonyx as separate genera.",
+   "reason": "statement copies the source wording: 'Subsequent studies have continued to treat Suchomimus and'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:4",
+   "statement": "Cristatusaurus is generally regarded as a likely senior synonym of Suchomimus due to shared stratigraphic origins and lack of distinct anatomical differences.",
+   "category": "debate",
+   "quote": "This taxon is generally regarded as a likely senior synonym of Suchomimus, as both originate from the same stratigraphic units and show no sufficiently distinct anatomical differences to justify a clear separation between them.",
+   "reason": "statement copies the source wording: 'is generally regarded as a likely senior synonym'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:5",
+   "statement": "A 2025 study by Matthew Dempsey and colleagues suggested a body weight of 5.3 metric tons for the holotype.",
+   "category": "description",
+   "quote": "A 2025 study led by the British paleontologist by Matthew Dempsey and colleagues suggested a body weight of 5.3 MT for the holotype.",
+   "reason": "statement copies the source wording: 'Matthew Dempsey and colleagues suggested a body weight'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:6",
+   "statement": "Suchomimus possessed a crocodilian-like skull characterized by a long, low snout and narrow jaws.",
+   "category": "description",
+   "quote": "Unlike most large theropod dinosaurs, Suchomimus had a very crocodilian-like skull, with a long, low snout and narrow jaws formed by a forward expansion of the premaxillae and the hind branch of the maxillae.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:6",
+   "statement": "Suchomimus had greatly elongated and narrow lower jaws that formed a rigid structure to resist twisting forces.",
+   "category": "description",
+   "quote": "The lower jaws were greatly elongated and narrow, forming a rigid structure as their dentaries touched each other at the midline, reinforcing the mandible against torsional forces.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:7",
+   "statement": "Researchers suggest Suchomimus may have supported a low skin crest or sail that was highest over its hips and extended further back than that of Spinosaurus.",
+   "category": "description",
+   "quote": "The spines may have held up some kind of low crest or sail of skin that was highest over its hips, lower and extending further to the back than that of Spinosaurus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:7",
+   "statement": "The humerus of Suchomimus had a boss above the condyle that contacted its hook-shaped radius.",
+   "category": "description",
+   "quote": "The humerus had a boss (bone overgrowth) above the condyle that contacted its hook-shaped radius (forearm bone).",
+   "reason": "statement copies the source wording: 'above the condyle that contacted its hook-shaped radius'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:7",
+   "statement": "The astragalus in Suchomimus's ankle had an ascending process taller than that of Allosaurus.",
+   "category": "description",
+   "quote": "In the ankle, the astragalus had an ascending process taller than that of Allosaurus.",
+   "reason": "statement copies the source wording: 'had an ascending process taller than that of'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:8",
+   "statement": "In 2017, Brazilian paleontologists questioned the monophyly of Baryonychinae, suggesting South American spinosaurids represent intermediate forms between Baryonychinae and Spinosaurinae.",
+   "category": "classification",
+   "quote": "In 2017, Brazilian paleontologists Marcos Sales and Cesar Schultz have questioned the monophyly of Baryonychinae (meaning it might be an unnatural group), stating that the South American spinosaurids Angaturama and Irritator represent intermediate forms between Baryonychinae and Spinosaurinae.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:11",
+   "statement": "Suchomimus lived in present-day Niger during the late Aptian to early Albian stages of the Early Cretaceous, 112 million years ago.",
+   "category": "time_and_habitat",
+   "quote": "Suchomimus lived in what is now Niger, during the late Aptian to early Albian stages of the Early Cretaceous, 112 million years ago",
+   "reason": "statement copies the source wording: 'during the late Aptian to early Albian stages'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:10",
+   "statement": "Researchers suggest Suchomimus had a fish-eating diet based on its elongated jaws, spoon-shaped terminal rosette, and long teeth similar to piscivorous crocodilians.",
+   "category": "paleobiology",
+   "quote": "Sereno and colleagues suggested the same dietary preference for Suchomimus, based on its elongated jaws, spoon-shaped terminal rosette, and long teeth reminiscent of those of piscivorous crocodilians",
+   "reason": "statement copies the source wording: 'based on its elongated jaws spoon-shaped terminal rosette'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:10",
+   "statement": "Suchomimus was adapted to hunting in shallow water due to its hollow bones.",
+   "category": "paleobiology",
+   "quote": "Suchomimus itself was more adapted to a life hunting in shallow water due to its hollow bones",
+   "reason": "statement copies the source wording: 'hunting in shallow water due to its hollow'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:10",
+   "statement": "The function of the robust forelimbs and giant claws of spinosaurids remains a debated topic.",
+   "category": "debate",
+   "quote": "The use of the robust forelimbs and giant claws of spinosaurs remains a debated topic",
+   "reason": "statement copies the source wording: 'of the robust forelimbs and giant claws of'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:10",
+   "statement": "A 2022 study revealed that spinosaurids had ecologically disparate lifestyles based on bone density comparisons.",
+   "category": "paleobiology",
+   "quote": "In 2022 study comparing the bone densities of Suchomimus, Baryonyx, and Spinosaurus reveals that spinosaurids had ecologically disparate lifestyles",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:11",
+   "statement": "The habitat of Suchomimus consisted of extensive freshwater floodplains and fast-moving rivers with a tropical climate that likely experienced seasonal dry periods.",
+   "category": "time_and_habitat",
+   "quote": "The sediment layers of the formation have been interpreted as an inland habitat of extensive freshwater floodplains and fast-moving rivers, with a tropical climate that likely experienced seasonal dry periods",
+   "reason": "statement copies the source wording: 'of extensive freshwater floodplains and fast-moving rivers with'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:9",
+   "statement": "Unlike crocodiles, the post-cranial skeletons of baryonychine spinosaurids do not appear to have aquatic adaptations.",
+   "category": "paleobiology",
+   "quote": "Unlike crocodiles, the post-cranial skeletons of baryonychine spinosaurids do not appear to have aquatic adaptations",
+   "reason": "statement copies the source wording: 'Unlike crocodiles the post-cranial skeletons of baryonychine spinosaurids'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:9",
+   "statement": "Sereno and colleagues proposed in 1998 that the large thumb-claw and robust forelimbs of spinosaurids evolved in the Middle Jurassic before skull elongation and fish-eating adaptations.",
+   "category": "debate",
+   "quote": "Sereno and colleagues proposed in 1998 that the large thumb-claw and robust forelimbs of spinosaurids evolved in the Middle Jurassic, before the elongation of the skull and other adaptations related to fish-eating",
+   "reason": "statement copies the source wording: 'colleagues proposed in 1998 that the large thumb-claw'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:9",
+   "statement": "Buffetaut and Ouaja suggested in 2002 that baryonychines could be the ancestors of spinosaurines that replaced them in Africa.",
+   "category": "debate",
+   "quote": "In 2002, Buffetaut and Ouaja also suggested that baryonychines could be the ancestors of spinosaurines, which appear to have replaced the former in Africa",
+   "reason": "statement copies the source wording: 'that baryonychines could be the ancestors of spinosaurines'"
+  },
+  {
+   "chunk_id": "suchomimus:enwiki:9",
+   "statement": "Barker and colleagues found support in 2021 for a European origin of spinosaurids with expansion to Asia and Gondwana during the first half of the Early Cretaceous.",
+   "category": "debate",
+   "quote": "In 2021, Barker and colleagues found support for a European origin for spinosaurids in 2021, with an expansion to Asia and Gondwana during the first half of the Early Cretaceous",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:eswiki:4",
+   "statement": "The external nostrils were long, narrow, and placed horizontally.",
+   "category": "description",
+   "quote": "Las narinas externas eran largas, estrechas y colocadas horizontalmente.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "suchomimus:eswiki:5",
+   "statement": "The neural spines may have supported a low crest or skin sail that was higher over the hips, lower, and extended further toward the back than that of Spinosaurus.",
+   "category": "description",
+   "quote": "Las espinas pueden haber sostenido una especie de cresta baja o vela de piel que estaba más alta sobre sus caderas, más baja y extendiéndose más hacia la espalda que la de Spinosaurus.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

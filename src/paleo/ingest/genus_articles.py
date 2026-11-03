@@ -246,3 +246,80 @@ def lead_images(raw_root: Path | None = None) -> list[str]:
         if image and image.lower().rsplit(".", 1)[-1] in PICTURE_EXTENSIONS:
             files.add(image)
     return sorted(files)
+
+
+# --- Article text of the genera, for the narrative pages (Phase 3, H6) ----------------
+
+TEXT_BATCH = 20  # long articles: smaller batches keep the response under the API size cap
+TEXT_REFRESH_DAYS = 30
+
+
+@dataclass(frozen=True)
+class GenusTextsResult:
+    genera: int
+    skipped_fresh: int
+    found: dict[str, int]
+    new_versions: int
+
+
+def text_store(lang: str, raw_root: Path | None = None) -> RawStore:
+    """Wikitext of the genus articles, apart from the new taxa's (raw/wikipedia_articles):
+    the image and new-taxa steps read that store and must not change."""
+    return RawStore("wikimedia", f"genus_text_{lang}", raw_root=raw_root)
+
+
+def verified_titles(warehouse: Path) -> dict[str, tuple[str, str | None]]:
+    """Genus -> (EN title, ES title) of the articles that int_genus_wikipedia accepted."""
+    import duckdb
+
+    con = duckdb.connect(str(warehouse), read_only=True)
+    try:
+        rows = con.execute(
+            "select taxon_name, wikipedia_article, wikipedia_article_es from main.dim_taxon "
+            "where page_type = 'genus' and wikipedia_article is not null order by 1"
+        ).fetchall()
+    finally:
+        con.close()
+    return {name: (en, es) for name, en, es in rows}
+
+
+def _fetch_texts(client: httpx.Client, lang: str, titles: list[str]) -> dict[str, dict]:
+    from paleo.ingest.articles import fetch_articles
+
+    out = fetch_articles(client, lang, titles)
+    # A page left without content (response size cap) is asked again on its own.
+    for title in [t for t, a in out.items() if not a["found"]]:
+        out[title] = fetch_articles(client, lang, [title])[title]
+    return out
+
+
+def ingest_genus_texts(
+    client: httpx.Client,
+    titles: dict[str, tuple[str, str | None]],
+    *,
+    raw_root: Path | None = None,
+    refresh: bool = False,
+    today: dt.date | None = None,
+) -> GenusTextsResult:
+    """Store the EN (and ES) wikitext of each genus article, keyed by genus name."""
+    stores = {lang: text_store(lang, raw_root) for lang in ("en", "es")}
+    pending = [
+        g for g in titles if refresh or not stores["en"].is_fresh(g, TEXT_REFRESH_DAYS, today)
+    ]
+    found = {"en": 0, "es": 0}
+    new_versions = 0
+    for lang, index in (("en", 0), ("es", 1)):
+        todo = [g for g in pending if titles[g][index]]
+        for batch in _batches(todo, TEXT_BATCH):
+            try:
+                by_title = _fetch_texts(client, lang, [titles[g][index] for g in batch])
+            except HttpError as exc:
+                log.warning("%s texts of %d genera failed: %s", lang, len(batch), exc)
+                continue
+            for genus in batch:
+                article = by_title[titles[genus][index]]
+                saved = stores[lang].save_if_changed(genus, {"taxon": genus, **article}, today)
+                new_versions += saved.created
+                found[lang] += article["found"]
+            stores[lang].flush()
+    return GenusTextsResult(len(titles), len(titles) - len(pending), found, new_versions)

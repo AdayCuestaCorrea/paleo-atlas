@@ -319,3 +319,87 @@ def chunks_for(
     chunks.extend(crossref_chunks(taxon, doi, raw_root, cache_root))
     chunks.extend(research_chunks(taxon, interim_root))
     return chunks
+
+
+# --- Genera of the encyclopedia (Phase 3, H6) -----------------------------------------
+
+# Per language, characters of article text a genus page reads at most (taxobox, lead and
+# the first sections, in that order): the long articles (Tyrannosaurus) would otherwise
+# take an hour of local GPU each, and the writer uses 24 facts at most anyway.
+GENUS_SOURCE_CHARS = {"en": 30_000, "es": 10_000}
+
+
+def catalog_index(raw_root: Path | None) -> dict[str, dict[str, Any]]:
+    key = str(raw_root)
+    if key not in _CATALOGS:
+        catalog = pbdb.catalog_store(raw_root)
+        index: dict[str, dict[str, Any]] = {}
+        for clade in pbdb.scope_clades():
+            latest = catalog.latest(clade.pbdb_base_name)
+            for r in (latest or {}).get("payload", {}).get("records", []):
+                index.setdefault(r.get("taxon_name") or "", r)
+        _CATALOGS[key] = index
+    return _CATALOGS[key]
+
+
+_CATALOGS: dict[str, dict[str, dict[str, Any]]] = {}
+
+
+def catalog_chunk(genus: str, raw_root: Path | None) -> Chunk | None:
+    """The genus in the PBDB catalog of its clade (CC BY), as text."""
+    r = catalog_index(raw_root).get(genus)
+    if r is None:
+        return None
+    lines = [
+        f"PBDB name: {r.get('taxon_name')} (genus), {r.get('taxon_attr', '')}",
+        f"Parent group: {r.get('parent_name')}",
+        f"Family: {r.get('family')}",
+        f"Class: {r.get('class')}",
+        f"Type species: {r.get('type_taxon')}",
+        f"Time range: {r.get('early_interval')} to "
+        f"{r.get('late_interval') or r.get('early_interval')} "
+        f"({r.get('firstapp_max_ma')} to {r.get('lastapp_min_ma')} million years ago)",
+        f"Fossil occurrences recorded: {r.get('n_occs')}",
+    ]
+    text = "\n".join(line for line in lines if "None" not in line and "NO_" not in line)
+    return Chunk(
+        f"{taxon_key(genus)}:pbdb:1",
+        "pbdb",
+        "en",
+        f"Paleobiology Database: {r.get('taxon_name')}",
+        f"https://paleobiodb.org/classic/checkTaxonInfo?taxon_no={r.get('taxon_no')}",
+        "CC BY 4.0",
+        True,
+        text,
+    )
+
+
+def _capped(chunks: list[Chunk], limit: int) -> list[Chunk]:
+    out, used = [], 0
+    for c in chunks:
+        if used + len(c.text) > limit and out:
+            break
+        out.append(c)
+        used += len(c.text)
+    return out
+
+
+def genus_chunks_for(
+    genus: str, *, interim_root: Path, raw_root: Path | None = None
+) -> list[Chunk]:
+    """All citable chunks for a genus page: its Wikipedia articles (capped), its PBDB
+    catalog record and the research items of the yearly pages that mention it."""
+    from paleo.ingest.genus_articles import text_store
+
+    chunks: list[Chunk] = []
+    for lang in articles.LANGUAGES:
+        latest = text_store(lang, raw_root).latest(genus)
+        if latest:
+            found = article_chunks(genus, lang, latest["payload"])
+            chunks.extend(_capped(found, GENUS_SOURCE_CHARS[lang]))
+    if not chunks:
+        raise LookupError(f"{genus!r} has no stored Wikipedia article")
+    if c := catalog_chunk(genus, raw_root):
+        chunks.append(c)
+    chunks.extend(research_chunks(genus, interim_root))
+    return chunks

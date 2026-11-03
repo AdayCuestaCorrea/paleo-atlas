@@ -145,6 +145,21 @@ def ingest_images(refresh: Refresh = False) -> None:
     )
 
 
+@ingest_app.command("genus-texts")
+def ingest_genus_texts(refresh: Refresh = False) -> None:
+    """Wikitext (EN and ES) of the verified genus articles, for the narrative pages."""
+    from paleo.ingest import genus_articles
+
+    paths = get_paths()
+    titles = genus_articles.verified_titles(paths.warehouse)
+    with make_client() as client:
+        r = genus_articles.ingest_genus_texts(client, titles, raw_root=paths.raw, refresh=refresh)
+    typer.echo(
+        f"Genus texts: {r.genera} genera, {r.skipped_fresh} fresh, {r.found['en']} EN and "
+        f"{r.found['es']} ES found, {r.new_versions} new versions"
+    )
+
+
 @ingest_app.command("articles")
 def ingest_articles(refresh: Refresh = False) -> None:
     """Wikipedia articles (EN and, when it exists, ES) of the new taxa, and the
@@ -181,14 +196,14 @@ DEFAULT_MODELS = {
 }
 
 
-def _new_taxa(only: list[str] | None, limit: int | None) -> list[str]:
+def _new_taxa(only: list[str] | None) -> list[str]:
     from paleo.ingest.articles import new_taxa_titles
 
     names = sorted(new_taxa_titles(get_paths().interim))
     if only:
         wanted = {o.lower() for o in only}
         names = [n for n in names if n.lower() in wanted or n.lower().replace(" ", "-") in wanted]
-    return names[:limit] if limit else names
+    return names
 
 
 def _scientific_names() -> set[str]:
@@ -196,13 +211,51 @@ def _scientific_names() -> set[str]:
 
     paths = get_paths()
     taxa = pbdb_ingest.store(paths.raw)
-    names = set(_new_taxa(None, None))
+    names = set(_new_taxa(None))
     for key in taxa.stored_keys():
         latest = taxa.latest(key)
         if latest and latest["payload"]["found"]:
             names.update(r.get("taxon_name", "") for r in latest["payload"]["records"])
     # Genus names (capitalized): they must survive the Spanish adaptation untouched.
     return {word for name in names for word in name.split() if word[:1].isupper()}
+
+
+def _facts_unchanged(taxon: str, chunks: list) -> bool:
+    from paleo.narrative.facts import sources_hash
+    from paleo.narrative.sources import taxon_key
+
+    existing = get_paths().data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
+    return existing.exists() and json.loads(existing.read_text("utf-8"))[
+        "sources_hash"
+    ] == sources_hash(chunks)
+
+
+def _extract_one(llm, taxon: str, chunks: list) -> str:
+    """Facts of one taxon (raises QuotaExhausted / LLMOutputError to the batch)."""
+    from paleo.narrative.facts import extract_facts
+
+    paths = get_paths()
+    r = extract_facts(
+        llm, taxon, chunks, derived_root=paths.data / "derived", cache_root=paths.data / "cache"
+    )
+    return f"{r.accepted} facts accepted, {r.rejected} rejected"
+
+
+def _write_one(llm, taxon: str, chunks: list, names: set[str]) -> dict[str, str]:
+    """EN text and ES adaptation of one taxon; echoes the result, returns lang -> status."""
+    from paleo.narrative.sources import taxon_key
+    from paleo.narrative.write import write_page
+
+    paths = get_paths()
+    facts_path = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
+    r = write_page(
+        llm, facts_path, chunks, derived_root=paths.data / "derived", scientific_names=names
+    )
+    typer.echo(f"{taxon}: {r.status} {r.words}" + (f" review={r.review}" if r.review else ""))
+    for lang, problems in r.problems.items():
+        for problem in problems[:5]:
+            typer.echo(f"   [{lang}] {problem}")
+    return r.status
 
 
 @app.command()
@@ -215,22 +268,21 @@ def facts(
 ) -> None:
     """Extract checkable facts for new taxa (writes data/derived/facts)."""
     from paleo.llm import LLM, LLMOutputError, QuotaExhausted
-    from paleo.narrative.facts import extract_facts, sources_hash
-    from paleo.narrative.sources import chunks_for, taxon_key
+    from paleo.narrative.sources import chunks_for
 
     paths = get_paths()
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
-    for taxon in _new_taxa(only, limit):
+    done = 0
+    for taxon in _new_taxa(only):
+        if limit is not None and done >= limit:  # counted after skipping the up-to-date ones
+            break
         chunks = chunks_for(
             taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
         )
-        existing = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
-        unchanged = existing.exists() and json.loads(existing.read_text("utf-8"))[
-            "sources_hash"
-        ] == sources_hash(chunks)
-        if unchanged and not force:
+        if _facts_unchanged(taxon, chunks) and not force:
             typer.echo(f"{taxon}: up to date")
             continue
+        done += 1
         study = next((c.doi for c in chunks if c.chunk_id.endswith(":study:1")), None)
         if study:
             with make_client() as client:
@@ -242,20 +294,13 @@ def facts(
                         cache_root=paths.data / "cache",
                     )
         try:
-            r = extract_facts(
-                llm,
-                taxon,
-                chunks,
-                derived_root=paths.data / "derived",
-                cache_root=paths.data / "cache",
-            )
+            typer.echo(f"{taxon}: {_extract_one(llm, taxon, chunks)}")
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
             break
         except LLMOutputError as exc:  # one bad answer must not stop the batch
             typer.echo(f"{taxon}: skipped, invalid model output ({exc})")
             continue
-        typer.echo(f"{taxon}: {r.accepted} facts accepted, {r.rejected} rejected")
     typer.echo(f"{llm.label}: {llm.stats}")
 
 
@@ -270,12 +315,15 @@ def write(
     """Write and check the EN text and its ES adaptation (writes data/derived/texts)."""
     from paleo.llm import LLM, LLMOutputError, QuotaExhausted
     from paleo.narrative.sources import chunks_for, taxon_key
-    from paleo.narrative.write import is_up_to_date, write_page
+    from paleo.narrative.write import is_up_to_date
 
     paths = get_paths()
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
     names = _scientific_names()
-    for taxon in _new_taxa(only, limit):
+    done = 0
+    for taxon in _new_taxa(only):
+        if limit is not None and done >= limit:  # counted after skipping the up-to-date ones
+            break
         facts_path = paths.data / "derived" / "facts" / f"{taxon_key(taxon)}.json"
         if not facts_path.exists():
             typer.echo(f"{taxon}: no facts yet (run `paleo facts`)")
@@ -283,23 +331,18 @@ def write(
         if not force and is_up_to_date(facts_path, paths.data / "derived"):
             typer.echo(f"{taxon}: up to date")
             continue
+        done += 1
         chunks = chunks_for(
             taxon, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
         )
         try:
-            r = write_page(
-                llm, facts_path, chunks, derived_root=paths.data / "derived", scientific_names=names
-            )
+            _write_one(llm, taxon, chunks, names)
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc}); remaining taxa stay pending.")
             break
         except LLMOutputError as exc:  # one bad answer must not stop the batch
             typer.echo(f"{taxon}: skipped, invalid model output ({exc})")
             continue
-        typer.echo(f"{taxon}: {r.status} {r.words}" + (f" review={r.review}" if r.review else ""))
-        for lang, problems in r.problems.items():
-            for problem in problems[:5]:
-                typer.echo(f"   [{lang}] {problem}")
     typer.echo(f"{llm.label}: {llm.stats}")
 
 
@@ -326,6 +369,102 @@ def titles(provider: Provider = "ollama", model: Model = None, limit: Limit = No
         f"{r.total} titles: {r.up_to_date} up to date, {r.translated} translated, "
         f"{r.rejected} rejected"
     )
+    typer.echo(f"{llm.label}: {llm.stats}")
+
+
+Until = Annotated[
+    str | None, typer.Option(help="Start no new taxon after this local time (HH:MM).")
+]
+
+
+def _deadline(until: str | None, now: dt.datetime) -> dt.datetime | None:
+    """The next ``until`` (HH:MM) after ``now``: 07:45 at 23:00 means tomorrow morning."""
+    if not until:
+        return None
+    hour, minute = (int(x) for x in until.split(":"))
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    return target if target > now else target + dt.timedelta(days=1)
+
+
+def genus_queue(only: list[str] | None = None) -> list[str]:
+    """Genera with a stored article, longest EN article first (a proxy for the best
+    known), leaving out those that already have a page as a new taxon."""
+    from paleo.ingest.genus_articles import text_store
+    from paleo.narrative.sources import taxon_key
+
+    paths = get_paths()
+    new = {taxon_key(n) for n in _new_taxa(None)}
+    store = text_store("en", paths.raw)
+    sizes = {}
+    for genus in store.stored_keys():
+        payload = (store.latest(genus) or {}).get("payload", {})
+        if payload.get("found") and taxon_key(genus) not in new:
+            sizes[genus] = len(payload.get("wikitext") or "")
+    if only:
+        wanted = {o.lower() for o in only}
+        sizes = {g: n for g, n in sizes.items() if g.lower() in wanted}
+    return sorted(sizes, key=lambda g: (-sizes[g], g))
+
+
+@app.command()
+def narrate(
+    scope: Annotated[str, typer.Option(help="Which pages: genera.")] = "genera",
+    provider: Provider = "ollama",
+    model: Model = None,
+    only: Only = None,
+    limit: Limit = None,
+    until: Until = None,
+    force: Force = False,
+) -> None:
+    """Facts, EN text and ES adaptation, one genus page at a time (Phase 3 batches on
+    the local GPU). Resumable: pages whose sources, facts and prompts did not change
+    are skipped and do not count towards --limit."""
+    import time
+
+    from paleo.llm import LLM, QuotaExhausted
+    from paleo.narrative.sources import catalog_index, genus_chunks_for, taxon_key
+    from paleo.narrative.write import is_up_to_date
+
+    if scope != "genera":
+        raise typer.BadParameter("only --scope genera for now (new taxa: `paleo facts/write`)")
+    paths = get_paths()
+    deadline = _deadline(until, dt.datetime.now())
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    names = _scientific_names() | {
+        word for name in catalog_index(paths.raw) for word in name.split() if word[:1].isupper()
+    }
+    queue = genus_queue(only)
+    done = skipped = 0
+    statuses: dict[str, int] = {}
+    typer.echo(f"{len(queue)} genera with an article; deadline {deadline or 'none'}")
+    for genus in queue:
+        if limit is not None and done >= limit:
+            break
+        if deadline and dt.datetime.now() >= deadline:
+            typer.echo(f"Deadline {until} reached; the rest stay pending.")
+            break
+        chunks = genus_chunks_for(genus, interim_root=paths.interim, raw_root=paths.raw)
+        facts_path = paths.data / "derived" / "facts" / f"{taxon_key(genus)}.json"
+        fresh_facts = _facts_unchanged(genus, chunks)
+        if not force and fresh_facts and is_up_to_date(facts_path, paths.data / "derived"):
+            skipped += 1
+            continue
+        done += 1
+        start = time.monotonic()
+        try:
+            if force or not fresh_facts:
+                typer.echo(f"{genus}: {_extract_one(llm, genus, chunks)}")
+            status = _write_one(llm, genus, chunks, names)
+            for lang, state in status.items():
+                statuses[f"{lang}:{state}"] = statuses.get(f"{lang}:{state}", 0) + 1
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc}); the rest stay pending.")
+            break
+        except Exception as exc:  # a night batch: one bad genus never stops the others
+            typer.echo(f"{genus}: skipped ({type(exc).__name__}: {str(exc)[:200]})")
+            statuses["skipped"] = statuses.get("skipped", 0) + 1
+        typer.echo(f"{genus}: {time.monotonic() - start:.0f} s [{done}]", err=False)
+    typer.echo(f"Done: {done} processed, {skipped} up to date, {statuses}")
     typer.echo(f"{llm.label}: {llm.stats}")
 
 

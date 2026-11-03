@@ -16,6 +16,7 @@ choice of the best image per taxon happen in dbt, where they are tested.
 from __future__ import annotations
 
 import datetime as dt
+import logging
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass
@@ -38,6 +39,11 @@ COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 PHYLOPIC_API = "https://api.phylopic.org"
 PHYLOPIC_ACCEPT = "application/vnd.phylopic.v2+json"
 COMMONS_BATCH = 50
+# Only pictures: a PDF, a video or a DjVu in a table's "Images" column is not one, and
+# asking Commons for its thumbnail (iiurlwidth) fails the whole batch.
+IMAGE_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".svg", ".tif", ".tiff", ".webp")
+
+log = logging.getLogger(__name__)
 REFRESH_DAYS = 7
 
 
@@ -61,10 +67,14 @@ def phylopic_store(raw_root: Path | None = None) -> RawStore:
 # --------------------------------------------------------------------------- inputs
 
 
+def is_picture(file: str) -> bool:
+    return file.lower().endswith(IMAGE_EXTENSIONS)
+
+
 def commons_files(interim_root: Path) -> list[str]:
-    """File names from the "Images" column of the new-taxa tables."""
+    """Picture file names from the "Images" column of the new-taxa tables."""
     files = {f.strip() for row in latest_rows(interim_root, "new_taxa") for f in row["images"]}
-    return sorted(f for f in files if f)
+    return sorted(f for f in files if f and is_picture(f))
 
 
 def phylopic_queries(interim_root: Path, raw_root: Path | None = None) -> list[str]:
@@ -364,6 +374,22 @@ def fetch_phylopic(client: httpx.Client, name: str, build: int) -> dict[str, Any
 # --------------------------------------------------------------------------- entry
 
 
+def _fetch_commons_resilient(client: httpx.Client, files: list[str]) -> dict[str, dict[str, Any]]:
+    """One request per batch; if Commons rejects it, each file alone, so one odd file
+    never costs the others. A file that still fails is skipped (retried next run)."""
+    try:
+        return fetch_commons(client, files)
+    except HttpError as exc:
+        if len(files) == 1:
+            log.warning("Commons metadata of %s failed: %s", files[0], exc)
+            return {}
+        log.warning("Commons batch of %d files failed, asking one by one: %s", len(files), exc)
+    out: dict[str, dict[str, Any]] = {}
+    for file in files:
+        out.update(_fetch_commons_resilient(client, [file]))
+    return out
+
+
 def _batches(items: list[str], size: int) -> Iterable[list[str]]:
     for i in range(0, len(items), size):
         yield items[i : i + size]
@@ -402,10 +428,10 @@ def ingest_images(
     files = [
         f
         for f in sorted(set(commons_files(interim_root)) | gallery_files)
-        if refresh or not commons.is_fresh(f, REFRESH_DAYS, today)
+        if is_picture(f) and (refresh or not commons.is_fresh(f, REFRESH_DAYS, today))
     ]
     for batch in _batches(files, COMMONS_BATCH):
-        for file, payload in fetch_commons(client, batch).items():
+        for file, payload in _fetch_commons_resilient(client, batch).items():
             new_versions += commons.save_if_changed(file, payload, today).created
     commons.flush()
 

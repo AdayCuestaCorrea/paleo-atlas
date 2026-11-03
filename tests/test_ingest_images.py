@@ -196,3 +196,27 @@ def test_known_species_fall_back_to_the_genus_category():
         assert images.fetch_category_files(client, "Testosaurus rex", genus_fallback=True) == [
             "Testosaurus skeleton.jpg"  # not the other species
         ]
+
+
+def test_only_pictures_are_asked_for():
+    assert images.is_picture("Skull.JPG") and images.is_picture("map.svg")
+    assert not images.is_picture("10_24072_pcjournal_804.pdf")
+    assert not images.is_picture("walk.webm")
+
+
+def test_a_file_commons_rejects_does_not_cost_the_rest_of_its_batch():
+    asked = []
+
+    def handler(request):
+        titles = request.url.params["titles"].split("|")
+        asked.append(titles)
+        if "File:Odd.png" in titles:  # Commons rejects any request that includes it
+            return httpx.Response(200, json={"error": {"code": "urlparamnormal", "info": "x"}})
+        pages = [{"title": t, "missing": True} for t in titles]
+        return httpx.Response(200, json={"query": {"pages": pages}})
+
+    with make_client(httpx.MockTransport(handler)) as client:
+        out = images._fetch_commons_resilient(client, ["A.png", "Odd.png", "B.png"])
+    assert set(out) == {"A.png", "B.png"}  # the odd one is skipped, the others kept
+    assert asked[0] == ["File:A.png", "File:Odd.png", "File:B.png"]
+    assert sorted(asked[1:]) == [["File:A.png"], ["File:B.png"], ["File:Odd.png"]]

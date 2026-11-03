@@ -277,7 +277,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 **Terminado cuando:** los DAGs producen exactamente el mismo resultado que los workflows de Actions.
 
 ### Fase 3 — Enciclopedia, ampliación y Spark
-- [ ] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(arcosaurios hechos: 3.040 géneros, una descarga mensual por clado del seed; reptiles marinos y peces al activar sus filas)*
+- [x] Ingesta completa desde PBDB de todos los grupos de §4 (no solo taxones nuevos) *(una descarga mensual por clado del seed; 2026-11-03: 3.071 géneros de arcosaurios, 360 de reptiles marinos y 1.356 de peces)*
 - [x] Ampliación del seed de alcance: reptiles marinos y peces fósiles (§4) *(358 géneros de reptiles marinos y 1.353 de peces; de sus páginas anuales solo entran las secciones del alcance)*
 - [x] Reconstruir el historial hacia atrás: opiniones taxonómicas de PBDB + páginas anuales de Wikipedia de años anteriores (§9) *(2026-11-03: 19.354 eventos de 1758 a 2025 en 4.808 fichas; 4.741 de los 4.751 géneros tienen «Historia anterior»)*
 - [x] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes *(fósiles de cordados sin mamíferos ni tortugas: 932.494 registros, DOI [10.15468/dl.8v87yz](https://doi.org/10.15468/dl.8v87yz); `paleo gbif extract` reutiliza una descarga de menos de 28 días)*
@@ -296,7 +296,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Fase 4 — Portfolio
 - [ ] README bilingüe completo (§20)
-- [ ] ADRs D1–D10
+- [x] ADRs D1–D10 *(2026-11-03, adelantados en la rama `fase-3`: [`docs/adr/`](docs/adr/README.md))*
 - [ ] Interview pack: one-pager, vídeo de 2 min, postmortem
 - [ ] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17
 - [ ] Enlace en LinkedIn y en el perfil de GitHub
@@ -770,6 +770,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-03 | v23: ADRs D1–D10 en `docs/adr/` (adelantados de la Fase 4): contexto, decisión, alternativas, consecuencias y pruebas con cifras reales; las decisiones matizadas después llevan una sección «Revisión» (D3, D5, D7, D9). Marcada la ingesta completa de PBDB de la Fase 3 (los tres bloques en el catálogo) | Petición del usuario |
 | 2026-11-03 | v22: Fase 3, hito 7: clasificación completa y árbol de parentesco. Los clados por encima del género se descargan de PBDB una vez al mes por bloque (2.724), con un cierre recursivo en dbt (`int_genus_lineage`) y un mart del vecindario (`fct_taxon_neighborhood`, con test unitario). **Topología solo de PBDB** (decisión del usuario): Open Tree of Life reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético. El árbol es un SVG estático por nivel, con la escala de periodos | Plan de H7 aprobado |
 | 2026-11-03 | v21: Fase 3, hito 4: historial hacia atrás. **Opiniones taxonómicas de PBDB** (unas 121.000, una descarga al mes por bloque, más las referencias que se citan): un evento la primera vez que un nombre cambia de estado (sinónimo de X, *nomen dubium*, sustituido por X, trasladado al género X), más la revalidación cuando la clasificación actual de PBDB lo vuelve a aceptar; un «belongs to» repetido nunca es evento (los autores discrepan durante décadas: *Brontosaurus*). **Páginas anuales de años anteriores** (45 páginas, carpeta aparte `wikipedia_past`): solo dan eventos, nunca páginas, textos, búsquedas de PBDB o de Crossref. Lo antiguo se marca `origin = backfill`: no entra en «Última hora» ni en los resúmenes semanales, y sus ~7.600 estudios no se comprueban en Crossref (estado `unchecked`, sin distintivo; cruzarlos con Retraction Watch queda en el backlog). Las fuentes de las fichas narrativas no cambian | Plan de H4 aprobado |
 | 2026-11-03 | v20: Fase 3, hito 6 empezado: fichas narrativas de los géneros con artículo en Wikipedia, en lotes nocturnos con la GPU local (los artículos más largos primero). El wikitext de los géneros va a la caché local, no a `data`: cada hecho cita la revisión (`oldid`). Primer lote: 201 géneros en ~7,5 h (137 s por género; GPU a 72 °C de media). Lectura manual: el contenido es fiel; el español arrastra calcos que las verificaciones no ven, de ahí nuevas reglas en los prompts (`write-en-v6`, `adapt-es-v4`, `review-es-v3`), que reescriben esas fichas en el próximo lote. Una respuesta cortada en la extracción se repite en dos mitades | Revisión del primer lote |

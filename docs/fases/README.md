@@ -12,7 +12,7 @@ Un documento por fase terminada que explica **por qué** se hizo así, no solo *
 |---|---|
 | [`ALCANCE.md`](../../ALCANCE.md) | **Fuente de verdad** de qué se hace, con fases, casillas, decisiones y registro de cambios |
 | `docs/fases/fase-N.md` (este directorio) | La explicación de cada fase: porqué, conceptos, funcionamiento, comprobación y lecciones |
-| `docs/adr/` *(Fase 4)* | Una página por decisión de arquitectura (D1–D10), en formato breve |
+| [`docs/adr/`](../adr/README.md) | Una página por decisión de arquitectura (D1–D10), en formato breve |
 
 Si algo de aquí contradice a `ALCANCE.md`, manda `ALCANCE.md` y este documento está desfasado.
 

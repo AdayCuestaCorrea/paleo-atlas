@@ -329,3 +329,11 @@ def test_a_few_failed_sentences_are_left_out_but_not_many():
     assert [t for t, _, _ in _salvage(sentences, report({4}))] == ["S0", "S1", "S2", "S3", "S5"]
     assert _salvage(sentences, report({0, 1, 2, 3})) is None  # too many: the page fails
     assert _salvage(sentences, report({1}, ["too long"])) is None  # text-level problem
+
+
+def test_padded_fact_ids_are_read_as_the_real_ones():
+    from paleo.narrative.write import _canonical_id
+
+    assert _canonical_id("F0113") == "F113"
+    assert _canonical_id("F013") == "F013" and _canonical_id("F7") == "F007"
+    assert _canonical_id("note") == "note"

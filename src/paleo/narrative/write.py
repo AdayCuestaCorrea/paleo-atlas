@@ -10,6 +10,7 @@ from __future__ import annotations
 import datetime as dt
 import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Literal
@@ -169,6 +170,13 @@ def _tidy(text: str) -> str:
     return " ".join(text.translate(_SPACES).split())
 
 
+def _canonical_id(fact_id: str) -> str:
+    """ "F0113" -> "F113": with more than 99 facts the model sometimes pads the id like
+    the two-digit ones ("F013"). Ids are F + at least three digits."""
+    m = re.fullmatch(r"F0*(\d+)", fact_id.strip())
+    return f"F{int(m.group(1)):03d}" if m else fact_id
+
+
 def _flatten(text: WrittenText) -> list[tuple[str, list[str], str]]:
     """(sentence, fact_ids, section) in the canonical section order."""
     order = {name: i for i, name in enumerate(SECTION_ORDER)}
@@ -180,7 +188,7 @@ def _flatten(text: WrittenText) -> list[tuple[str, list[str], str]]:
             name = section.section
             if name == "paleobiology" and s.topic in PALEO_TOPICS:
                 name = f"{name}:{s.topic}"
-            out.append((_tidy(s.text), s.fact_ids, name))
+            out.append((_tidy(s.text), [_canonical_id(i) for i in s.fact_ids], name))
     return out
 
 

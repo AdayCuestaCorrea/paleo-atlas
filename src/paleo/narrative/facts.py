@@ -7,6 +7,7 @@ counted. Quotes from copyrighted abstracts are kept only in the local cache.
 
 from __future__ import annotations
 
+import dataclasses
 import datetime as dt
 import hashlib
 import json
@@ -117,7 +118,15 @@ def extract_facts(
             )
         except LLMOutputError:
             if len(batch) == 1:
-                raise
+                # One long chunk with too many facts: ask for each half of its text
+                # (same chunk id: the quotes are still checked against the whole chunk).
+                text = batch[0].text
+                cut = text.rfind(". ", 0, len(text) // 2 + 1) + 1 or len(text) // 2
+                if cut < 200 or len(text) - cut < 200:
+                    raise
+                first = dataclasses.replace(batch[0], text=text[:cut])
+                second = dataclasses.replace(batch[0], text=text[cut:].lstrip())
+                return answer([first]) + answer([second])
             half = len(batch) // 2
             return answer(batch[:half]) + answer(batch[half:])
         return [(fact, batch) for fact in result.facts]
@@ -126,7 +135,7 @@ def extract_facts(
         chunk = by_id.get(fact.chunk_id)
         reason = (
             "unknown chunk id"
-            if chunk is None or chunk not in batch
+            if chunk is None or chunk.chunk_id not in {c.chunk_id for c in batch}
             else check_fact(fact.statement, fact.quote, chunk.text)
         )
         key = normalize(fact.statement)

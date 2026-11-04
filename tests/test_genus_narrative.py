@@ -198,3 +198,33 @@ def test_a_long_article_reads_every_section_opening_and_skips_popular_culture(
     short = [sources.Chunk(str(i), "wikipedia_article", "en", f"T (S{i})", "u", "x", True, "abc")
              for i in range(3)]  # fmt: skip
     assert sources._capped(short, 5_000) == short
+
+
+def test_one_long_chunk_cut_short_is_asked_again_by_halves(tmp_path):
+    from paleo.llm import LLMOutputError
+    from paleo.narrative.facts import Extraction, extract_facts
+
+    first = "Testosaurus lived in Montana 70 million years ago. " * 6
+    second = "Its teeth were serrated like a steak knife for meat. " * 6
+    chunk = sources.Chunk("t:enwiki:1", "wikipedia_article", "en", "T", "u", "CC BY-SA 4.0",
+                          True, first + second)  # fmt: skip
+    asked = []
+
+    class FakeLLM:
+        label = "fake"
+
+        def complete_json(self, system, user, schema, max_tokens):
+            asked.append(len(user))
+            if first.strip() in user and second.strip() in user:
+                raise LLMOutputError("Unterminated string")  # the whole chunk: too long
+            quote = (
+                "lived in Montana 70 million years ago"
+                if "Montana" in user
+                else ("serrated like a steak knife")
+            )
+            fact = {"statement": f"It {quote}.", "quote": quote, "category": "description",
+                    "chunk_id": "t:enwiki:1"}  # fmt: skip
+            return Extraction(facts=[fact])
+
+    r = extract_facts(FakeLLM(), "Testosaurus", [chunk], derived_root=tmp_path, cache_root=tmp_path)
+    assert len(asked) == 3 and r.accepted == 2  # whole chunk, then each half

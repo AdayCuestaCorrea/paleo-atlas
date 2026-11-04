@@ -435,6 +435,9 @@ def narrate(
     limit: Limit = None,
     until: Until = None,
     force: Force = False,
+    retry_failed: Annotated[
+        bool, typer.Option(help="Write again the pages whose last text failed its checks.")
+    ] = False,
 ) -> None:
     """Facts, EN text and ES adaptation, one genus page at a time (Phase 3 batches on
     the local GPU). Resumable: pages whose sources, facts and prompts did not change
@@ -468,7 +471,16 @@ def narrate(
         )
         facts_path = paths.data / "derived" / "facts" / f"{taxon_key(genus)}.json"
         fresh_facts = _facts_unchanged(genus, chunks)
-        if not force and fresh_facts and is_up_to_date(facts_path, paths.data / "derived"):
+        failed = retry_failed and any(
+            (paths.data / "derived" / "texts_review" / f"{taxon_key(genus)}.{lang}.json").exists()
+            for lang in ("en", "es")
+        )
+        if (
+            not force
+            and not failed
+            and fresh_facts
+            and is_up_to_date(facts_path, paths.data / "derived")
+        ):
             skipped += 1
             continue
         done += 1

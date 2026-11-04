@@ -4,39 +4,66 @@
  "lang": "es",
  "status": "failed",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "56f8a15e92fc6449",
- "generated_at": "2026-11-03T01:17:15+00:00",
- "word_count": 459,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "d84a5ed65a86472f",
+ "generated_at": "2026-11-04T02:18:09+00:00",
+ "word_count": 608,
  "problems": [
-  "sentence 13: numbers differ (['20'] vs [])"
+  "sentence 21: numbers differ (['20'] vs [])",
+  "sentence 25: scientific names lost ['Carcharodon']",
+  "sentence 7 ('Las huellas fósiles sugieren que Carcharodontosaurus podía c'): copies 8+ words from a source: '8,5 m s alrededor de 30 km h'",
+  "sentence 19 ('Larsson determinó que la proporción entre el volumen cerebra'): copies 8+ words from a source: 'Carcharodontosaurus era típica de un reptil no aviar'"
  ],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "Carcharodontosaurus saharicus alcanzó una longitud de aproximadamente 12 metros y un peso comprendido entre 5 y 7 toneladas métricas, situándolo entre los terópodos más grandes conocidos.",
+     "text": "Carcharodontosaurus saharicus alcanzaba una longitud de unos 12 metros y pesaba entre 5 y 7 toneladas métricas, lo que lo convierte en uno de los terópodos más grandes conocidos.",
      "fact_ids": [
-      "F003"
+      "F006",
+      "F043"
      ]
     },
     {
-     "text": "Sus mandíbulas albergaban dientes afilados, curvados hacia atrás y con serraciones, similares a los del gran tiburón blanco, característica que inspiró el nombre del género.",
+     "text": "El cráneo neotipo completo de esta especie mediría 1,6 metros, un tamaño comparable a los más grandes de Tyrannosaurus.",
      "fact_ids": [
-      "F004"
+      "F049"
      ]
     },
     {
-     "text": "El animal poseía uno de los cráneos más grandes observados en animales terrestres, con una longitud de aproximadamente 1,60 metros.",
+     "text": "Era un terópodo robusto caracterizado por patas delanteras pequeñas, una cola alargada y un cuello corto.",
      "fact_ids": [
-      "F059"
+      "F067"
      ]
     },
     {
-     "text": "Estos dientes serrados funcionaban para desgarrar la carne, provocando que la presa sangrara hasta morir.",
+     "text": "El animal poseía dientes únicos, finos y en forma de hoja, que lo distinguían entre los allosáuridos.",
      "fact_ids": [
-      "F060"
+      "F083"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Un artículo de 2022 estimó la fuerza de mordida anterior de Carcharodontosaurus saharicus en 11 312 newtons y la posterior en 25 449 newtons.",
+     "fact_ids": [
+      "F086"
+     ]
+    },
+    {
+     "text": "Un estudio de Donald Henderson sugiere que Carcharodontosaurus podía levantar físicamente animales de hasta 424 kilogramos con sus mandíbulas.",
+     "fact_ids": [
+      "F107"
+     ]
+    },
+    {
+     "text": "Las huellas fósiles sugieren que Carcharodontosaurus podía correr a velocidades de 8,5 m/s (alrededor de 30 km/h), aunque esta estimación es ahora controvertida.",
+     "fact_ids": [
+      "F105"
      ]
     }
    ]
@@ -45,27 +72,22 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Un esqueleto parcial fue descubierto en Egipto en 1914 por equipos que trabajaban para Ernst Stromer, quien informó formalmente del hallazgo en 1931.",
+     "text": "El género fue descrito por primera vez en 1925 por Charles Depéret y Justin Savornin basándose en dos dientes fósiles perdidos encontrados en Argelia.",
      "fact_ids": [
-      "F002"
+      "F002",
+      "F011"
      ]
     },
     {
-     "text": "Este esqueleto parcial fue encontrado por primera vez cerca de Ain Gedid, Egipto, en abril de 1914 por Richard Markgraf.",
+     "text": "El paleontólogo francés René Lavocat sugirió por primera vez la presencia de Carcharodontosaurus en la Formación Douira Inferior en 1954 basándose en fósiles fragmentarios.",
      "fact_ids": [
-      "F007"
+      "F025"
      ]
     },
     {
-     "text": "Por separado, dos dientes fueron hallados en 1924 en cortes de pared cerca de Timimún, en la Argelia francesa.",
+     "text": "En 2025, el espécimen principal fue redescrito como el holotipo de un género distinto llamado Tameryraptor.",
      "fact_ids": [
-      "F005"
-     ]
-    },
-    {
-     "text": "En 1925, Depéret y Savornin describieron estos dientes como una nueva especie, Megalosaurus saharicus.",
-     "fact_ids": [
-      "F006"
+      "F015"
      ]
     }
    ]
@@ -74,16 +96,67 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Carcharodontosaurus fue uno de los dinosaurios carnívoros más grandes conocidos y compartió su territorio y época con Spinosaurus, otro gran dinosaurio carnívoro.",
+     "text": "La subfamilia Carcharodontosaurinae, que contiene a Carcharodontosaurus, probablemente estuvo restringida al continente sur de Gondwana, donde probablemente actuaba como depredador ápice.",
      "fact_ids": [
-      "F057"
-     ]
+      "F082"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "Las estimaciones sobre la longitud y el peso de C. saharicus oscilan entre 12 y 12,5 metros y 6 toneladas, respectivamente.",
+     "text": "Carcharodontosaurus tenía una alta tasa de reemplazo dental, permitiendo que los dientes dañados fueran reemplazados fácilmente, a diferencia de los mamíferos actuales que rompen huesos.",
      "fact_ids": [
-      "F058"
-     ]
+      "F084"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "La menor fuerza de mordida de Carcharodontosaurus en comparación con Tyrannosaurus implica que probablemente no se alimentaba de huesos.",
+     "fact_ids": [
+      "F087"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Los análisis isotópicos sugieren que Carcharodontosaurus era más terrestre que el Spinosaurus contemporáneo, que perseguía hábitos semiacuáticos.",
+     "fact_ids": [
+      "F089"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "El cráneo neotipo de Carcharodontosaurus saharicus conserva patologías, incluyendo signos de mordeduras, infecciones y fracturas.",
+     "fact_ids": [
+      "F093"
+     ],
+     "topic": "health"
+    },
+    {
+     "text": "Un estudio posterior identificó una proyección ósea inusual en la nasal de Carcharodontosaurus saharicus como una posible marca de mordedura.",
+     "fact_ids": [
+      "F094"
+     ],
+     "topic": "health"
+    },
+    {
+     "text": "Daniel Chure sugirió que la estantería ósea por encima de la órbita de Carcharodontosaurus se utilizaba para luchas de cabezadas.",
+     "fact_ids": [
+      "F091"
+     ],
+     "topic": "behavior"
+    },
+    {
+     "text": "El cerebro de C. saharicus habría sido generalmente similar al del dinosaurio relacionado Allosaurus fragilis.",
+     "fact_ids": [
+      "F139"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Larsson determinó que la proporción entre el volumen cerebral y el total del encéfalo en Carcharodontosaurus era típica de un reptil no aviar.",
+     "fact_ids": [
+      "F140"
+     ],
+     "topic": "locomotion_senses"
     }
    ]
   },
@@ -91,27 +164,21 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El género Carcharodontosaurus fue establecido por Ernst Stromer en 1931.",
-     "fact_ids": [
-      "F001"
-     ]
-    },
-    {
      "text": "Carcharodontosaurus es el género tipo de la familia Carcharodontosauridae y de la subfamilia Carcharodontosaurinae.",
      "fact_ids": [
-      "F047"
+      "F071"
      ]
     },
     {
-     "text": "La familia Carcharodontosauridae fue creada originalmente por Stromer para Carcharodontosaurus y Bahariasaurus, aunque el nombre no se utilizó hasta finales del siglo XX.",
+     "text": "El clado Carcharodontosauridae fue creado originalmente por Stromer para Carcharodontosaurus y Bahariasaurus, pero el nombre no se utilizó hasta finales del siglo XX.",
      "fact_ids": [
-      "F048"
+      "F072"
      ]
     },
     {
-     "text": "Thomas R. Holtz y sus colegas definieron el grupo Carcharodontosauridae en 2004 como todos los allosáuridos más emparentados con Carcharodontosaurus que con Allosaurus o Sinraptor.",
+     "text": "Carcharodontosaurus está más estrechamente relacionado con Tyrannotitan que con Giganotosaurus y Mapusaurus.",
      "fact_ids": [
-      "F049"
+      "F132"
      ]
     }
    ]
@@ -120,27 +187,27 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Los fósiles de Carcharodontosaurus abarcan desde el Cretácico Inferior hasta el Cretácico Superior.",
+     "text": "Carcharodontosaurus vivió en el noroeste de África entre hace 100 y 94 millones de años durante la etapa Cenomaniense del Cretácico Superior.",
      "fact_ids": [
-      "F055"
+      "F001"
      ]
     },
     {
-     "text": "Carcharodontosaurus vivió en el medio del periodo Cretácico, hace aproximadamente 100 millones de años, entre las etapas Albiana y Cenomaniense, extendiéndose unos pocos miles de años hacia el Turoniense temprano, en lo que hoy es África.",
+     "text": "El cráneo tipo fue encontrado en rocas de edad Cenomaniense de la Formación Douira Inferior en Errachidia, sureste de Marruecos.",
      "fact_ids": [
-      "F056"
+      "F024"
      ]
     },
     {
-     "text": "El cráneo tipo fue hallado en rocas de edad Cenomaniense de la Formación Douira Inferior en el sureste de Marruecos.",
+     "text": "Los carcharodontosaurinos se han encontrado desde el Jurásico Superior hasta el Cretácico Medio en todos los continentes excepto en la Antártida.",
      "fact_ids": [
-      "F015"
+      "F079"
      ]
     },
     {
-     "text": "Fósiles de C. iguidensis fueron encontrados en la Formación Echkar cerca de Iguidí, Níger.",
+     "text": "Este grupo de grandes dinosaurios depredadores fue uno de los mayores cazadores del Mesozoico, dominando los continentes sur desde el Albiano hasta el Cenomaniense antes de ser reemplazados por abelisáuridos al final del Cretácico.",
      "fact_ids": [
-      "F020"
+      "F142"
      ]
     }
    ]
@@ -149,27 +216,21 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Muchos fósiles de expediciones francesas en el norte de África fueron asignados a Carcharodontosaurus basándose en información limitada, una clasificación que ahora se cuestiona.",
+     "text": "Muchos fósiles de expediciones francesas en África del Norte fueron asignados a Carcharodontosaurus basándose en información limitada, aunque muchos ahora pertenecen a otros géneros.",
      "fact_ids": [
-      "F010"
+      "F017"
      ]
     },
     {
-     "text": "Un estudio de 2012 sugiere que todos los dientes aislados previamente asignados a Carcharodontosaurus del norte de África son indeterminados debido a la presencia de otros géneros en la región.",
+     "text": "Un estudio de 2016 sugirió que el material no holotipo asignado a C. iguidensis en realidad pertenece a Sigilmassasaurus y un taxón no relacionado, limitando la especie a su holotipo.",
      "fact_ids": [
-      "F011"
+      "F030"
      ]
     },
     {
-     "text": "Se debate si los fósiles postcraneales de la Formación Elrhaz pertenecen a Carcharodontosaurus o a un taxón diferente, ya que el postorbital se asemeja al de Acrocanthosaurus.",
+     "text": "El diente español asignado a Carcharodontosaurus carece de características típicas de los carcharodontosaurinos y se parece más a otros allosáuridos.",
      "fact_ids": [
-      "F012"
-     ]
-    },
-    {
-     "text": "Dientes de la Formación Gara Samani fueron identificados como Carcharodontosaurus, pero podrían pertenecer en su lugar a abelisáuridos.",
-     "fact_ids": [
-      "F013"
+      "F037"
      ]
     }
    ]

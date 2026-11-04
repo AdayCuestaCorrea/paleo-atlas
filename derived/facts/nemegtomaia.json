@@ -2,9 +2,9 @@
  "taxon": "Nemegtomaia",
  "taxon_key": "nemegtomaia",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "a4b4b2687327acab",
- "generated_at": "2026-11-03T05:23:49+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "118428d668288aae",
+ "generated_at": "2026-11-04T07:33:23+00:00",
  "citations": {
   "nemegtomaia:enwiki:1": {
    "source": "wikipedia_article",
@@ -97,6 +97,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "nemegtomaia:enwiki:14": {
+   "source": "wikipedia_article",
+   "title": "Nemegtomaia (Taphonomy)",
+   "url": "https://en.wikipedia.org/wiki/Nemegtomaia?oldid=1374607236",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "nemegtomaia:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Nemegtomaia barsboldi (taxobox)",
@@ -114,6 +121,27 @@
   "nemegtomaia:eswiki:3": {
    "source": "wikipedia_article",
    "title": "Nemegtomaia barsboldi (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Nemegtomaia_barsboldi?oldid=171113778",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nemegtomaia:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Nemegtomaia barsboldi (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Nemegtomaia_barsboldi?oldid=171113778",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nemegtomaia:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Nemegtomaia barsboldi (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Nemegtomaia_barsboldi?oldid=171113778",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nemegtomaia:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Nemegtomaia barsboldi (Dieta)",
    "url": "https://es.wikipedia.org/wiki/Nemegtomaia_barsboldi?oldid=171113778",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -138,16 +166,16 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The type species, Nemegtomaia barsboldi, was originally described by Lü and colleagues in 2004.",
+   "statement": "The type species of the genus is Nemegtomaia barsboldi.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:1",
    "lang": "en",
-   "quote": "type_species_authority: (Lü et al., 2004)",
-   "quote_sha": "ef9ff62d409131c8"
+   "quote": "type_species: Nemegtomaia barsboldi",
+   "quote_sha": "2d4df114f05343d9"
   },
   {
    "fact_id": "F003",
-   "statement": "Nemegtomaia lived in what is now Mongolia during the Late Cretaceous Period, approximately 72 to 70 million years ago.",
+   "statement": "Nemegtomaia lived in what is now Mongolia during the Late Cretaceous, approximately 72 to 70 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
@@ -156,25 +184,43 @@
   },
   {
    "fact_id": "F004",
-   "statement": "The first specimen of Nemegtomaia was discovered in 1996.",
+   "statement": "The first specimen of Nemegtomaia was discovered in 1996 and formally named in 2004.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
-   "quote": "The first specimen was found in 1996",
-   "quote_sha": "df6d22f41fcf9582"
+   "quote": "The first specimen was found in 1996, and became the basis of the new genus and species N. barsboldi in 2004.",
+   "quote_sha": "ff675f55d28574c7"
   },
   {
    "fact_id": "F005",
-   "statement": "Two additional specimens of Nemegtomaia were discovered in 2007.",
+   "statement": "The original genus name Nemegtia was replaced by Nemegtomaia in 2005 because the former name was already in use.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
-   "quote": "Two more specimens were found in 2007",
-   "quote_sha": "657c17093f3d0b41"
+   "quote": "The original genus name was Nemegtia, but this was changed to Nemegtomaia in 2005, as the former name was preoccupied.",
+   "quote_sha": "8974a9b74247f015"
   },
   {
    "fact_id": "F006",
-   "statement": "Nemegtomaia is estimated to have been about 2 meters (7 feet) long and weighed 40 kilograms (85 pounds).",
+   "statement": "The name Nemegtomaia means \"good mother of the Nemegt,\" referencing the genus's association with egg-brooding behavior.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:enwiki:2",
+   "lang": "en",
+   "quote": "The first part of the generic name refers to the Nemegt Basin, where the animal was found, and the second part means \"good mother\", in reference to the fact that oviraptorids are known to have brooded their eggs.",
+   "quote_sha": "c3971b160428873c"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The species name barsboldi honors the paleontologist Rinchen Barsbold.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:enwiki:2",
+   "lang": "en",
+   "quote": "The specific name honours the palaeontologist Rinchen Barsbold.",
+   "quote_sha": "9fe0424391b787bf"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Nemegtomaia was estimated to be about 2 meters (7 feet) long and weigh 40 kilograms (85 pounds).",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
@@ -182,7 +228,7 @@
    "quote_sha": "5dc96343b91f7d3c"
   },
   {
-   "fact_id": "F007",
+   "fact_id": "F009",
    "statement": "As an oviraptorosaur, Nemegtomaia would have been covered in feathers.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:2",
@@ -191,8 +237,8 @@
    "quote_sha": "09e991845876d81d"
   },
   {
-   "fact_id": "F008",
-   "statement": "Nemegtomaia had a deep, narrow, and short skull featuring an arched crest.",
+   "fact_id": "F010",
+   "statement": "Nemegtomaia had a deep, narrow, short skull featuring an arched crest.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
@@ -200,7 +246,7 @@
    "quote_sha": "18a30ddeb535aa35"
   },
   {
-   "fact_id": "F009",
+   "fact_id": "F011",
    "statement": "Nemegtomaia had three fingers, with the first being the largest and bearing a strong claw.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:2",
@@ -209,7 +255,7 @@
    "quote_sha": "41496d39e11fecce"
   },
   {
-   "fact_id": "F010",
+   "fact_id": "F012",
    "statement": "The eggs associated with the nesting specimen were estimated to be 5 to 6 cm wide and 14 to 16 cm long when intact.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:2",
@@ -218,7 +264,16 @@
    "quote_sha": "4c2ffb01a9fee5b7"
   },
   {
-   "fact_id": "F011",
+   "fact_id": "F013",
+   "statement": "Evidence suggests Nemegtomaia preferred to nest near streams to access soft, sandy substrate and food.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:2",
+   "lang": "en",
+   "quote": "The specimen was found in a stratigraphic area that indicates Nemegtomaia preferred nesting near streams that would provide soft, sandy substrate and food.",
+   "quote_sha": "4c5d7e652bcb6cb9"
+  },
+  {
+   "fact_id": "F014",
    "statement": "Damage on the nesting specimen's skeleton indicates it was scavenged by skin beetles.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:2",
@@ -227,7 +282,7 @@
    "quote_sha": "4c345e708ddc26de"
   },
   {
-   "fact_id": "F012",
+   "fact_id": "F015",
    "statement": "The diet of oviraptorids is uncertain, though their skulls resemble those of known or suspected herbivores.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:2",
@@ -236,8 +291,8 @@
    "quote_sha": "43e0e013defd24c7"
   },
   {
-   "fact_id": "F013",
-   "statement": "Nemegtomaia fossils are found in the Nemegt and Baruungoyot formations, which represent both humid and arid environments that coexisted.",
+   "fact_id": "F016",
+   "statement": "Nemegtomaia fossils are found in the Nemegt and Baruungoyot formations, representing environments that included both humid and arid conditions.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:2",
    "lang": "en",
@@ -245,8 +300,8 @@
    "quote_sha": "d220c63f1d2eff96"
   },
   {
-   "fact_id": "F014",
-   "statement": "In 1996, Yoshitsugu Kobayashi found an incomplete oviraptorid skeleton in the Nemegt Formation of the Gobi Desert in southwestern Mongolia.",
+   "fact_id": "F017",
+   "statement": "Yoshitsugu Kobayashi discovered an incomplete oviraptorid skeleton in the Nemegt Formation of the Gobi Desert in 1996.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:3",
    "lang": "en",
@@ -254,7 +309,7 @@
    "quote_sha": "371e6ecf1d2cae58"
   },
   {
-   "fact_id": "F015",
+   "fact_id": "F018",
    "statement": "In 2002, Lü Junchang and colleagues described the first specimen as an uncertain species of the genus Ingenia.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:3",
@@ -263,8 +318,8 @@
    "quote_sha": "c95f25ab9e81ca08"
   },
   {
-   "fact_id": "F016",
-   "statement": "In 2004, Lü and colleagues designated the skeleton as the holotype for the new species Nemegtia barsboldi.",
+   "fact_id": "F019",
+   "statement": "In 2004, Lü and colleagues designated the specimen as the holotype for the new species Nemegtia barsboldi.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:3",
    "lang": "en",
@@ -272,8 +327,8 @@
    "quote_sha": "7c8db22f8071c82d"
   },
   {
-   "fact_id": "F017",
-   "statement": "In 2005, researchers discovered that the name Nemegtia was preoccupied by a genus of freshwater seed shrimp described in 1978.",
+   "fact_id": "F020",
+   "statement": "In 2005, researchers realized the name Nemegtia was preoccupied by a genus of freshwater seed shrimp described in 1978.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:3",
    "lang": "en",
@@ -281,8 +336,8 @@
    "quote_sha": "26fc0aa1fd3e49b7"
   },
   {
-   "fact_id": "F018",
-   "statement": "Two new specimens were found in 2007 and formally described by Federico Fanti and colleagues in 2013.",
+   "fact_id": "F021",
+   "statement": "Two new specimens of Nemegtomaia were discovered in 2007 and formally described in 2013.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:4",
    "lang": "en",
@@ -290,26 +345,35 @@
    "quote_sha": "bfd2143bb8327ed7"
   },
   {
-   "fact_id": "F019",
-   "statement": "The first of the new specimens, nicknamed \"Mary\", was found by Federico Fanti in the Baruungoyot Formation.",
+   "fact_id": "F022",
+   "statement": "The second specimen was found by Nicholas R. Longrich in the Nemegt Formation and includes hands, partial limbs, ribs, and a partial pelvis.",
    "category": "discovery",
    "chunk_id": "nemegtomaia:enwiki:4",
    "lang": "en",
-   "quote": "The first specimen, MPC-D 107/15, was found by Fanti (who nicknamed it \"Mary\") in the Baruungoyot Formation",
-   "quote_sha": "8bb7c61eaf7caee9"
+   "quote": "The second specimen, MPC-D 107/16, was found by the palaeontologist Nicholas R. Longrich in the Nemegt Formation, and consists of the hands, a partial left ulna and radius, ribs, a partial pelvis, and both femora.",
+   "quote_sha": "2464c2583d1ac59e"
   },
   {
-   "fact_id": "F020",
-   "statement": "The second new specimen was discovered by Nicholas R. Longrich in the Nemegt Formation.",
-   "category": "discovery",
+   "fact_id": "F023",
+   "statement": "The first new specimen was found less than 500 meters from the holotype and was assigned to Nemegtomaia based on similar anatomy and location.",
+   "category": "description",
    "chunk_id": "nemegtomaia:enwiki:4",
    "lang": "en",
-   "quote": "The second specimen, MPC-D 107/16, was found by the palaeontologist Nicholas R. Longrich in the Nemegt Formation",
-   "quote_sha": "39a91f31f575c8ce"
+   "quote": "This specimen was found less than 500 m (1640 ft) from the holotype, and was of the same size; it was assigned to Nemegtomaia due to its similar anatomical features and geographical proximity.",
+   "quote_sha": "8214e9c6a080c19b"
   },
   {
-   "fact_id": "F021",
-   "statement": "Nemegtomaia had a well-developed crest formed mainly by the premaxilla bones of the snout.",
+   "fact_id": "F024",
+   "statement": "While lacking unique single features, the combination of a crest, enlarged first finger, and eight sacral vertebrae is unique to Nemegtomaia.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:enwiki:5",
+   "lang": "en",
+   "quote": "Though Nemegtomaia does not possess any single feature that distinguishes it from other oviraptorids (autapomorphies), the combination of a crest, an enlarged first finger, and a high number of sacral vertebrae (eight), is unique to this taxon.",
+   "quote_sha": "4a7f72051b5a18ac"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "Nemegtomaia possessed a well-developed crest formed primarily by the premaxilla bones of its snout.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:6",
    "lang": "en",
@@ -317,8 +381,8 @@
    "quote_sha": "8caa2eb456d8b5ef"
   },
   {
-   "fact_id": "F022",
-   "statement": "The diameter of the eye opening was 52 mm (2 in), making the eyes appear large due to the short skull.",
+   "fact_id": "F026",
+   "statement": "The eye opening of Nemegtomaia measured 52 mm or 2 inches, making the eyes appear large relative to the short skull.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:6",
    "lang": "en",
@@ -326,7 +390,7 @@
    "quote_sha": "6379022a959c3acd"
   },
   {
-   "fact_id": "F023",
+   "fact_id": "F027",
    "statement": "Nemegtomaia had toothless jaws with a short snout featuring a deep, robust, parrot-like beak.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:6",
@@ -335,8 +399,8 @@
    "quote_sha": "fadaa7e0245f9b11"
   },
   {
-   "fact_id": "F024",
-   "statement": "Small openings on the snout suggest the presence of a keratinous bill.",
+   "fact_id": "F028",
+   "statement": "Small openings on the front of the snout likely served as nutrient channels and indicate the presence of a keratinous bill.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:6",
    "lang": "en",
@@ -344,8 +408,8 @@
    "quote_sha": "16cb4235f15f5576"
   },
   {
-   "fact_id": "F025",
-   "statement": "The lower jaw was short, deep, and convex, reaching 153 mm (6 in) in length.",
+   "fact_id": "F029",
+   "statement": "The lower jaw of Nemegtomaia was short, deep, and convex, reaching 153 mm or 6 inches in length.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:6",
    "lang": "en",
@@ -353,8 +417,8 @@
    "quote_sha": "376cb56e03ce3cd4"
   },
   {
-   "fact_id": "F026",
-   "statement": "The shoulder blade of Nemegtomaia was approximately 185 mm (7 in) long.",
+   "fact_id": "F030",
+   "statement": "The shoulder blade of Nemegtomaia appears to have been 185 mm or 7 inches in total length.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:7",
    "lang": "en",
@@ -362,8 +426,8 @@
    "quote_sha": "ce6a17717c2b1315"
   },
   {
-   "fact_id": "F027",
-   "statement": "The upper arm bone had a bird-like depression and measured 152 mm (6 in) in length.",
+   "fact_id": "F031",
+   "statement": "The upper arm bone had a bird-like depression but was atypical for oviraptorosaurs, measuring 152 mm or 6 inches long.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:7",
    "lang": "en",
@@ -371,17 +435,8 @@
    "quote_sha": "8bce2997036d94c1"
   },
   {
-   "fact_id": "F028",
-   "statement": "The first finger was large, had a strong claw, and was more massive than the other two fingers.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:enwiki:7",
-   "lang": "en",
-   "quote": "The first finger was relatively large and had a strong ungual (claw bone), and was more massive than the two other fingers.",
-   "quote_sha": "905bab7d90222db7"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "The thigh bone was estimated to be 286 mm (11 in) long, while the lower leg bone was 317 mm (12 in) long.",
+   "fact_id": "F032",
+   "statement": "The thigh bone was estimated to be 286 mm or 11 inches long, while the lower leg bone was 317 mm or 12 inches long.",
    "category": "description",
    "chunk_id": "nemegtomaia:enwiki:7",
    "lang": "en",
@@ -389,17 +444,8 @@
    "quote_sha": "deb26ad079c184a1"
   },
   {
-   "fact_id": "F030",
-   "statement": "In 2004, Lü and colleagues classified Nemegtomaia as an advanced oviraptorosaur most closely related to Citipati.",
-   "category": "classification",
-   "chunk_id": "nemegtomaia:enwiki:8",
-   "lang": "en",
-   "quote": "In their 2004 phylogenetic analysis, Lü and colleagues classified Nemegtomaia as a derived (or \"advanced\") oviraptorosaur, and found it to be most closely related to the genus Citipati.",
-   "quote_sha": "7846f71de082edf9"
-  },
-  {
-   "fact_id": "F031",
-   "statement": "In 2010, Longrich and colleagues placed Nemegtomaia in the family Oviraptoridae and subfamily Ingeniinae, noting it was the only member of that subfamily with a prominent crest.",
+   "fact_id": "F033",
+   "statement": "In 2010, Longrich and colleagues classified Nemegtomaia in the family Oviraptoridae and subfamily Ingeniinae, noting it was the only member of that subfamily with a prominent crest.",
    "category": "classification",
    "chunk_id": "nemegtomaia:enwiki:8",
    "lang": "en",
@@ -407,17 +453,8 @@
    "quote_sha": "1241c663a56e1d29"
   },
   {
-   "fact_id": "F032",
-   "statement": "Longrich and colleagues suggested that the crest might have evolved or disappeared multiple times among oviraptorids, or that Nemegtomaia may not belong to the subfamily Ingeniinae.",
-   "category": "classification",
-   "chunk_id": "nemegtomaia:enwiki:8",
-   "lang": "en",
-   "quote": "Longrich and colleagues suggested that the presence of a crest on Nemegtomaia makes it possible that this feature evolved or disappeared several times among oviraptorids, or that the animal may not have been an ingeniine.",
-   "quote_sha": "294c7185398ca03b"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "In 2012, Fanti and colleagues classified Nemegtomaia as a derived member of Ingeniinae closest to Heyuannia based on hand proportions.",
+   "fact_id": "F034",
+   "statement": "In 2012, Fanti and colleagues placed Nemegtomaia in Ingeniinae as a derived member closest to Heyuannia based on hand proportions.",
    "category": "classification",
    "chunk_id": "nemegtomaia:enwiki:8",
    "lang": "en",
@@ -425,8 +462,8 @@
    "quote_sha": "3a15a64320bccdca"
   },
   {
-   "fact_id": "F034",
-   "statement": "The subfamily name Ingeniinae has been replaced by Heyuanninae due to nomenclatural preoccupation.",
+   "fact_id": "F035",
+   "statement": "The subfamily name Ingeniinae has been replaced by Heyuanninae because the name Ingenia was preoccupied.",
    "category": "classification",
    "chunk_id": "nemegtomaia:enwiki:8",
    "lang": "en",
@@ -434,17 +471,8 @@
    "quote_sha": "fe20b5a5020ac0ce"
   },
   {
-   "fact_id": "F035",
-   "statement": "Oviraptorosaurs, including Nemegtomaia, are known from Asia and North America and date to the Campanian-Maastrichtian ages of the Cretaceous period.",
-   "category": "time_and_habitat",
-   "chunk_id": "nemegtomaia:enwiki:9",
-   "lang": "en",
-   "quote": "Oviraptorosaurs are known from Asia (where they may have originated) and North America, and are mainly known from deposits that date from the Campanian-Maastrichtian ages of the Cretaceous period.",
-   "quote_sha": "28c22320c2bd9ea0"
-  },
-  {
    "fact_id": "F036",
-   "statement": "The family Oviraptoridae, to which Nemegtomaia belongs, consists of small members known exclusively from the Upper Cretaceous of Asia, particularly the Gobi Desert.",
+   "statement": "The family Oviraptoridae, to which Nemegtomaia belongs, is exclusively known from the Upper Cretaceous of Asia, with most genera found in the Gobi Desert of Mongolia and China.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:9",
    "lang": "en",
@@ -453,26 +481,26 @@
   },
   {
    "fact_id": "F037",
-   "statement": "Oviraptorosaurs are thought to have been feathered but flightless.",
-   "category": "paleobiology",
-   "chunk_id": "nemegtomaia:enwiki:9",
-   "lang": "en",
-   "quote": "Though they are all thought to have been feathered, they appear to have been flightless.",
-   "quote_sha": "1b996605ec8f3dfd"
-  },
-  {
-   "fact_id": "F038",
-   "statement": "Gregory S. Paul suggested that crestless oviraptorids were juveniles or females of crested species, implying the number of genera in the group was exaggerated.",
+   "statement": "Gregory S. Paul suggested in 2010 that crestless oviraptorids were juveniles or females of crested species, implying the number of genera in the group was exaggerated.",
    "category": "debate",
    "chunk_id": "nemegtomaia:enwiki:8",
    "lang": "en",
-   "quote": "Gregory S. Paul suggested that crestless oviraptorids were either the juveniles or females of otherwise crested species, and that the number of genera in the group was therefore exaggerated.",
-   "quote_sha": "1cb6bc5e0c185c33"
+   "quote": "In 2010, the palaeontologist Gregory S. Paul suggested that crestless oviraptorids were either the juveniles or females of otherwise crested species, and that the number of genera in the group was therefore exaggerated.",
+   "quote_sha": "1e24332cd7b71ecc"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Other researchers argue that dromaeosaurs and troodontids are most closely related to birds, placing oviraptorosaurs outside this group.",
+   "category": "debate",
+   "chunk_id": "nemegtomaia:enwiki:9",
+   "lang": "en",
+   "quote": "Other researchers have instead found dromaeosaurs and troodontids to be most closely related to birds, together forming the group Paraves; oviraptorosaurs, therizinosaurs, and alvarezsaurs are just outside this group.",
+   "quote_sha": "5ad9c0a03e60b624"
   },
   {
    "fact_id": "F039",
-   "statement": "The Nemegtomaia specimen MPC-D 107/15 was discovered in a brooding posture with its feet in the center of a ring of eggs and arms folded over them.",
-   "category": "paleobiology",
+   "statement": "A fossil of Nemegtomaia was discovered in a brooding posture over a nest containing eggs.",
+   "category": "curiosities",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
    "quote": "The Nemegtomaia specimen MPC-D 107/15 was found associated with a nest with eggs; its feet were placed in the centre of what was probably a ring of eggs, with the arms folded across the tops of the eggs on each side of the body",
@@ -480,8 +508,8 @@
   },
   {
    "fact_id": "F040",
-   "statement": "The preserved portion of the Nemegtomaia nest measured approximately 90 cm wide and 100 cm long.",
-   "category": "paleobiology",
+   "statement": "The fossilized nest associated with the Nemegtomaia specimen measures approximately 90 cm wide and 100 cm long.",
+   "category": "curiosities",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
    "quote": "The collected part of the nest is about 90 cm (35 in) wide and 100 cm (30 in) long",
@@ -489,7 +517,7 @@
   },
   {
    "fact_id": "F041",
-   "statement": "Seven distinct eggs and fragments were found in the Nemegtomaia nest, located under the skeleton or in the lower layer.",
+   "statement": "Seven distinct eggs and fragments were found within the nest, some located beneath the skeleton's skull and limbs.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -498,7 +526,7 @@
   },
   {
    "fact_id": "F042",
-   "statement": "Oviraptorid eggs, including those associated with Nemegtomaia, average about 17 cm in length.",
+   "statement": "Eggs of the Oviraptoridae family, including those of Nemegtomaia, average about 17 cm in length.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -507,16 +535,16 @@
   },
   {
    "fact_id": "F043",
-   "statement": "Eggs found with Nemegtomaia are similar to those from Mongolia and are classified in the egg family Elongatoolithidae.",
+   "statement": "Researchers suggest the eggs in the Nemegtomaia nest were likely displaced by burial, wind, sandstorms, or predators.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
-   "quote": "The eggs are nearly identical to some that have previously been found in Mongolia, and have therefore been assigned to the oofamily (egg-taxon family) Elongatoolithidae",
-   "quote_sha": "c70de8f0063f4567"
+   "quote": "The eggs of MPC-D 107/15 were therefore most likely displaced during burial, or by external factors, such as strong winds, sandstorms, or predators",
+   "quote_sha": "11ff2060b5e7fd14"
   },
   {
    "fact_id": "F044",
-   "statement": "No complete eggs or embryos were preserved in the Nemegtomaia nest, preventing full analysis of egg size, shape, number, or arrangement.",
+   "statement": "No complete eggs or embryos were preserved in the nest, preventing full reconstruction of the clutch.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -525,7 +553,7 @@
   },
   {
    "fact_id": "F045",
-   "statement": "Researchers suggest the original nest likely had two layers of eggs beneath the body with no eggs in the center.",
+   "statement": "Evidence suggests the original nest likely had two layers of eggs beneath the parent, with no eggs in the center.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -538,12 +566,21 @@
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
-   "quote": "The nesting specimen was found in a stratigraphic area indicating that oviraptorids preferred nesting near streams that provided soft, sandy substrate and food in environments that were otherwise xeric (receiving a small amount of moisture)",
-   "quote_sha": "484952d79c6fa362"
+   "quote": "The nesting specimen was found in a stratigraphic area indicating that oviraptorids preferred nesting near streams that provided soft, sandy substrate and food in environments that were otherwise xeric",
+   "quote_sha": "cecf438fd22ea5b4"
   },
   {
    "fact_id": "F047",
-   "statement": "Some researchers propose that tail feathers in oviraptorosaurs evolved to shade and protect eggs in the nest.",
+   "statement": "Brooding positions found in many oviraptorids suggest they may have incubated eggs for over 40 days with limited food.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:10",
+   "lang": "en",
+   "quote": "Many oviraptorids have been found in brooding positions, indicating they may have brooded for relatively long periods, similar to modern birds such as the ostrich, emu, and black-breasted buzzard, which brood for more than 40 days with a limited supply of sustenance",
+   "quote_sha": "f9771d08eee303c3"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Researchers suggest tail feathers in oviraptorosaurs evolved to shade and protect eggs in the nest.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -551,8 +588,17 @@
    "quote_sha": "6c4f8d587ed98f26"
   },
   {
-   "fact_id": "F048",
-   "statement": "Researchers suggest the cuticle coating on oviraptorid eggs helped enhance reproductive success in variable nesting environments.",
+   "fact_id": "F049",
+   "statement": "The reduction of the second finger in heyuannine oviraptorids is hypothesized to be related to supporting long wing feathers used for egg protection.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:10",
+   "lang": "en",
+   "quote": "That the second finger of heyuannine oviraptorids was reduced in size compared to the robust first finger may be explained by a change in function; it may be related to the presence of long wing feathers that were attached to the second finger",
+   "quote_sha": "846ab5dbcdf69720"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Researchers suggest cuticle layers on oviraptorid eggs were an adaptation for reproductive success in variable environments.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -560,7 +606,7 @@
    "quote_sha": "e9eb59940e994872"
   },
   {
-   "fact_id": "F049",
+   "fact_id": "F051",
    "statement": "Studies suggest multiple individuals may have gathered eggs in a single nest to be guarded by one individual, possibly a male.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
@@ -569,8 +615,8 @@
    "quote_sha": "6385006901a51076"
   },
   {
-   "fact_id": "F050",
-   "statement": "David J. Varricchio and colleagues found in 2010 that oviraptorid clutch sizes resemble those of modern archosaurs with polygamous mating and extensive male parental care.",
+   "fact_id": "F052",
+   "statement": "In 2010, David J. Varricchio and colleagues noted that oviraptorid clutch sizes resemble those of modern archosaurs with polygamous mating and extensive male parental care.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -578,8 +624,8 @@
    "quote_sha": "3d0b45f0e47b7e9d"
   },
   {
-   "fact_id": "F051",
-   "statement": "W. Scott Persons and colleagues suggested in 2013 that feather-fans on oviraptorosaur tails were used for intraspecific communication like courtship rituals.",
+   "fact_id": "F053",
+   "statement": "In 2013, W. Scott Persons and colleagues suggested that feather-fans on oviraptorosaur tails were used for intraspecific communication like courtship.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:10",
    "lang": "en",
@@ -587,17 +633,17 @@
    "quote_sha": "6d059298f0c04ab3"
   },
   {
-   "fact_id": "F052",
-   "statement": "In 2026, Chun-Yu Su and colleagues conducted an experiment to test if oviraptorids used thermoregulatory contact incubation.",
-   "category": "paleobiology",
+   "fact_id": "F054",
+   "statement": "In 2026, Chun-Yu Su and colleagues conducted an experiment to test if oviraptorids used body heat for incubation.",
+   "category": "curiosities",
    "chunk_id": "nemegtomaia:enwiki:11",
    "lang": "en",
    "quote": "The palaeontologist Chun-Yu Su and colleagues devised an experiment to evaluate whether oviraptorids employed thermoregulatory contact incubation to provide heat for embryonic development in 2026",
    "quote_sha": "864d3363681068d7"
   },
   {
-   "fact_id": "F053",
-   "statement": "Experiments showed that partial egg coverage in oviraptorid nests led to temperature differences and lower incubation efficiency compared to modern birds.",
+   "fact_id": "F055",
+   "statement": "Experiments showed that oviraptorid brooding would result in uneven temperatures and lower incubation efficiency compared to modern birds.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:11",
    "lang": "en",
@@ -605,8 +651,8 @@
    "quote_sha": "390c75cd31c1e19d"
   },
   {
-   "fact_id": "F054",
-   "statement": "Researchers concluded that oviraptorids likely co-regulated incubation using environmental and solar heat rather than body contact.",
+   "fact_id": "F056",
+   "statement": "Researchers concluded that oviraptorids likely co-regulated incubation using environmental and solar heat rather than body heat alone.",
    "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:11",
    "lang": "en",
@@ -614,53 +660,62 @@
    "quote_sha": "cb00b09edf25f654"
   },
   {
-   "fact_id": "F055",
-   "statement": "It is debated whether oviraptorids had temperature-dependent sex determination, as temperature differences in nests might have skewed sex ratios.",
-   "category": "debate",
+   "fact_id": "F057",
+   "statement": "Temperature differences in oviraptorid nests suggest they did not use temperature-dependent sex determination.",
+   "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:11",
    "lang": "en",
    "quote": "The large difference between incubation temperatures in the two oviraptorids suggests they did not have temperature-dependent sex determination (which is used by for example crocodiles), as the sex-ratios would be skewed",
    "quote_sha": "fbffbd069a20f0a7"
   },
   {
-   "fact_id": "F056",
-   "statement": "Research published in 2010 suggested that the jaws of oviraptorids, including Nemegtomaia, shared features with herbivorous animals.",
-   "category": "debate",
+   "fact_id": "F058",
+   "statement": "Research in 2010 suggested that the jaws of oviraptorids, including Nemegtomaia, shared structural similarities with herbivorous animals like dicynodonts.",
+   "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:12",
    "lang": "en",
-   "quote": "In 2010 Longrich and colleagues found that oviraptorid jaws had features similar to those seen in herbivorous tetrapods",
-   "quote_sha": "b307e228d42eaa7c"
+   "quote": "In 2010 Longrich and colleagues found that oviraptorid jaws had features similar to those seen in herbivorous tetrapods (four-limbed animals), especially those of dicynodonts, an extinct group of synapsid stem-mammals.",
+   "quote_sha": "07362dc0b6e1ee71"
   },
   {
-   "fact_id": "F057",
-   "statement": "A 2017 study proposed that the parrot-like jaws of oviraptorids might indicate a diet consisting of fruits, nuts, and seeds.",
-   "category": "debate",
+   "fact_id": "F059",
+   "statement": "In 2017, researchers proposed that the parrot-like jaws of oviraptorids might indicate a diet including fruits, nuts, and seeds.",
+   "category": "paleobiology",
    "chunk_id": "nemegtomaia:enwiki:12",
    "lang": "en",
    "quote": "In 2017, the palaeontologist Gregory F. Funston and colleagues suggested that the parrot-like jaws of oviraptorids may indicate a frugivorous diet that incorporated nuts and seeds.",
    "quote_sha": "746ea9283b8f12df"
   },
   {
-   "fact_id": "F058",
-   "statement": "While R. Barsbold suggested in 1977 that oviraptorids ate molluscs, later research rejected the idea that they crushed shells.",
-   "category": "debate",
-   "chunk_id": "nemegtomaia:enwiki:12",
-   "lang": "en",
-   "quote": "In 1977 Barsbold suggested that oviraptorids fed on molluscs, but Longrich and colleagues rejected the idea that they practised shell-crushing altogether",
-   "quote_sha": "8a26ebc126d5ccb2"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "In 2004, Lü and colleagues hypothesized that the skull bones of Nemegtomaia were movable relative to each other.",
-   "category": "debate",
-   "chunk_id": "nemegtomaia:enwiki:12",
-   "lang": "en",
-   "quote": "In 2004 Lü and colleagues proposed that the articulation between the quadrate and quadratojugal bones in the skull of Nemegtomaia suggested that these bones were movable in relation to each other",
-   "quote_sha": "fb71a36228b8a921"
-  },
-  {
    "fact_id": "F060",
-   "statement": "A 2015 study concluded that Nemegtomaia likely did not possess bird-like skull mobility because its quadrate bone was immobile.",
+   "statement": "It is hypothesized that oviraptorid jaws were adapted for processing dry vegetation, though this cannot be confirmed due to a lack of knowledge about the ancient flora.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:12",
+   "lang": "en",
+   "quote": "The jaws of oviraptorids may have been specialised for processing food, such as xerophytic vegetation (adapted for environments with little water), that would have grown in their environment, but this is not possible to demonstrate, as little is known about the flora of the area at the time.",
+   "quote_sha": "bfb5b8d7b63aa15a"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "While the forelimbs of some oviraptorids resemble those of modern insect-eaters, their jaw morphology suggests they were not insectivorous.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:12",
+   "lang": "en",
+   "quote": "Longrich and colleagues pointed out that the robust forelimbs and enlargement of a single finger in heyuannine oviraptorids is similar to that seen in modern animals that eat ants and termites, such as anteaters and pangolins, but the morphology of heyuannine jaws does not support them being insectivorous.",
+   "quote_sha": "57d801fb31eaa6d0"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "In 2004, researchers proposed that the skull bones of Nemegtomaia were movable, potentially affecting jaw function.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:12",
+   "lang": "en",
+   "quote": "In 2004 Lü and colleagues proposed that the articulation between the quadrate and quadratojugal bones in the skull of Nemegtomaia suggested that these bones were movable in relation to each other, which would have affected how the jaws functioned.",
+   "quote_sha": "6a40f431ea6535a5"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "A 2015 study found it unlikely that Nemegtomaia possessed bird-like skull mobility because the quadrate bone was immobile.",
    "category": "debate",
    "chunk_id": "nemegtomaia:enwiki:12",
    "lang": "en",
@@ -668,7 +723,7 @@
    "quote_sha": "c68ec54a8a2f0a46"
   },
   {
-   "fact_id": "F061",
+   "fact_id": "F064",
    "statement": "Nemegtomaia lived approximately 70 million years ago during the Late Cretaceous period, specifically the upper Campanian to lower Maastrichtian ages.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:13",
@@ -677,17 +732,17 @@
    "quote_sha": "090470f771d0010e"
   },
   {
-   "fact_id": "F062",
-   "statement": "Nemegtomaia fossils are found in formations representing both humid river environments and arid or semi-arid environments.",
+   "fact_id": "F065",
+   "statement": "Nemegtomaia inhabited environments ranging from humid river systems to arid, wind-swept areas, as evidenced by the different rock formations where fossils were found.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:13",
    "lang": "en",
-   "quote": "The rock facies of the Nemegt Formation are thought to represent a humid, fluvial (associated with rivers and streams) environment, whereas those of the Baruungoyot Formation are thought to represent an arid or semi-arid environment",
-   "quote_sha": "f7ac07fa99ab2fd2"
+   "quote": "The rock facies of the Nemegt Formation are thought to represent a humid, fluvial (associated with rivers and streams) environment, whereas those of the Baruungoyot Formation are thought to represent an arid or semi-arid environment, with aeolian (affected by wind) beds.",
+   "quote_sha": "e2c72660a89bd3df"
   },
   {
-   "fact_id": "F063",
-   "statement": "The environment of the Nemegt Formation where Nemegtomaia lived has been compared to the modern Okavango Delta in Botswana.",
+   "fact_id": "F066",
+   "statement": "The habitat of the Nemegt Formation has been compared to the modern Okavango Delta in Botswana.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:enwiki:13",
    "lang": "en",
@@ -695,44 +750,296 @@
    "quote_sha": "1a572d6502c8c767"
   },
   {
-   "fact_id": "F064",
-   "statement": "The genus Nemegtomaia was originally named Nemegtia by Lü and colleagues in 2004.",
-   "category": "classification",
-   "chunk_id": "nemegtomaia:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Lü et al., 2004 [originalmente Nemegtia, preocupado]",
-   "quote_sha": "2b20ecccbc8f93af"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "The species Nemegtomaia barsboldi was described by Lü and colleagues in 2004.",
-   "category": "classification",
-   "chunk_id": "nemegtomaia:eswiki:1",
-   "lang": "es",
-   "quote": "species_authority: Lü et al., 2004",
-   "quote_sha": "60a77b6a4fe6ff15"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Nemegtomaia is classified as a member of the oviraptorid subfamily Heyuanninae.",
-   "category": "classification",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "Nemegtomaia está clasificada como miembro de la subfamilia de oviraptóridos Heyuanninae",
-   "quote_sha": "c69552aaee8a2409"
-  },
-  {
    "fact_id": "F067",
-   "statement": "Nemegtomaia lived during the late Cretaceous period, approximately 70 million years ago in the Maastrichtian stage, in what is now Asia.",
-   "category": "time_and_habitat",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 millones de años, en el Maastrichtiense, en lo que hoy es Asia",
-   "quote_sha": "d326a24a5f191984"
+   "statement": "The rivers of the Nemegt Formation supported diverse aquatic life including molluscs, fish, turtles, and the crocodylomorph Shamosuchus.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:13",
+   "lang": "en",
+   "quote": "The habitats in and around the Nemegt rivers provided a home for a wide array of organisms. Aquatic animals include molluscs, fish, turtles, and the crocodylomorph Shamosuchus.",
+   "quote_sha": "f03188b49947c8e3"
   },
   {
    "fact_id": "F068",
-   "statement": "The time range for Nemegtomaia spans from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.",
+   "statement": "The Nemegt Formation contained herbivorous dinosaurs such as the ankylosaurid Tarchia, the pachycephalosaur Prenocephale, hadrosaurs like Saurolophus, and sauropods like Nemegtosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:13",
+   "lang": "en",
+   "quote": "Herbivorous dinosaurs of the Nemegt Formation include ankylosaurids such as Tarchia, the pachycephalosaurian Prenocephale, hadrosaurids such as Saurolophus and Barsboldia, and sauropods such as Nemegtosaurus, and Opisthocoelicaudia.",
+   "quote_sha": "28fd1b0b52b284f3"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The Nemegt Formation also hosted various theropods including tyrannosauroids like Tarbosaurus, troodontids like Borogovia, therizinosaurs like Therizinosaurus, and ornithomimosaurians like Gallimimus.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:13",
+   "lang": "en",
+   "quote": "Other theropods include tyrannosauroids such as Tarbosaurus, Alioramus, and Bagaraatan, troodontids such as Borogovia, Tochisaurus, and Saurornithoides, therizinosaurs such as Therizinosaurus, and ornithomimosaurians such as Deinocheirus, Anserimimus, and Gallimimus.",
+   "quote_sha": "326cac9d4b1c8ec3"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "In 2016, researchers suggested that oviraptorids preferred drier environments while their relatives, caenagnathids, preferred riverine environments.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:13",
+   "lang": "en",
+   "quote": "In 2016 the Japanese palaeontologist Takanobu Tsuihiji and colleagues suggested that oviraptorids may have preferred drier environments, while caenagnathids preferred fluvial environments, based on the type of formations they have been found in.",
+   "quote_sha": "b8c80c60e112a264"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Research suggests that oviraptorids occupied both dry and wet environments but were more common in dry areas, potentially coexisting with other oviraptorosaurs through dietary niche partitioning.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:enwiki:13",
+   "lang": "en",
+   "quote": "Funston and colleagues suggested that oviraptorids were found in both xeric and mesic environments (but were more abundant in the former), whereas the other oviraptorosaur groups avoided the xeric environments, and that the coexistence of the families can be explained by niche partitioning in diet.",
+   "quote_sha": "68af986027c8df6f"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "The fossil specimen of Nemegtomaia was preserved in sediment deposited by a sandstorm or dune shift.",
+   "category": "curiosities",
+   "chunk_id": "nemegtomaia:enwiki:14",
+   "lang": "en",
+   "quote": "The specimen is preserved in facies that are thought to have been deposited through a sandstorm or dune-shift.",
+   "quote_sha": "71b93097074087f4"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Evidence of borings and burrows in the Nemegtomaia fossil indicates it was scavenged by colonies of skin beetles and possibly other insects.",
+   "category": "curiosities",
+   "chunk_id": "nemegtomaia:enwiki:14",
+   "lang": "en",
+   "quote": "Borings in the bones, burrows, and reworked sediments (perhaps caused by the construction of pupal chambers) in the specimen indicate it was scavenged upon by colonies of skin beetles (Dermestidae) and perhaps other scavenging insects.",
+   "quote_sha": "94e43caaf53faaf8"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Tunnels found in the nest area under the neck and skull of the Nemegtomaia specimen suggest insect activity, yet no eggs were found in those specific areas.",
+   "category": "curiosities",
+   "chunk_id": "nemegtomaia:enwiki:14",
+   "lang": "en",
+   "quote": "There are also tunnels in the nest under the neck and skull, and no egg remains have been found in parts with such traces.",
+   "quote_sha": "31e38918d2232ef9"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "The first specimen was found in 1996 and served as the basis for the new genus and species N. barsboldi in 2004.",
+   "category": "discovery",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "El primer espécimen se encontró en 1996 y se convirtió en la base del nuevo género y especie N. barsboldi en 2004.",
+   "quote_sha": "485b6aa132204c04"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "It lived during the late Cretaceous period, approximately 70 million years ago in the Maastrichtian, in what is now Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 millones de años, en el Maastrichtiense, en lo que hoy es Asia.",
+   "quote_sha": "c1943da0bab9014f"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "Nemegtomaia is estimated to have been around 2 meters in length and weighed 40 kilograms.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Se estima que la Nemegtomaia medía alrededor de 2 metros de longitud y pesaba 40 kilogramos.",
+   "quote_sha": "7052d66ebd7f82f7"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "As an oviraptorosaurian, it would have been feathered.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Como un oviraptorosauriano, habría sido emplumado.",
+   "quote_sha": "9a7a8ee3723ba642"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "It had a deep, narrow, and short skull with an arched crest.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Tenía un cráneo profundo, estrecho y corto, con una cresta arqueada.",
+   "quote_sha": "e7df54e164e2c332"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "It had no teeth, a short snout with a beak similar to a parrot, and a pair of tooth-like projections on the palate.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "No tenía dientes, tenía un hocico corto con un pico similar a un loro y un par de proyecciones similares a dientes en el paladar.",
+   "quote_sha": "9c8559d9fbb1ab65"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "It had three fingers, with the first being larger and possessing a strong claw.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Tenía tres dedos, el primero era más grande y tenía una garra fuerte.",
+   "quote_sha": "2e66c2833ff3e973"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "The skull was deep, narrow, and short compared to the rest of the body, reaching 179 millimeters in length.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "El cráneo de Nemegtomaia era profundo, estrecho y corto, en comparación con el resto del cuerpo y alcanzaba 179 milímetros de longitud.",
+   "quote_sha": "fe942e78e5d4479d"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "The eye orbit diameter was 52 millimeters, making the eyes appear large due to the small skull size.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "El diámetro de la órbita ocular fue de 52 milímetros, los ojos se veían grandes debido a lo pequeño del cráneo.",
+   "quote_sha": "22306ba9b25a74d6"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "The jaws had no teeth, and like other oviraptorid dinosaurs, it had a short snout with a deep, robust beak somewhat similar to a parrot.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "Las mandíbulas de Nemegtomaia no tenían dientes, y al igual que otros dinosaurios oviraptóridos, tenía un hocico corto con un pico profundo, robusto y algo parecido a un loro.",
+   "quote_sha": "0a167c43056a77b0"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "The nesting specimen was positioned on top of what was likely a ring of eggs, with its arms crossed over them.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "El espécimen de Nemegtomaia anidado se colocó encima de lo que probablemente era un anillo de huevos, con los brazos cruzados sobre ellos.",
+   "quote_sha": "356edc7430903528"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "None of the eggs are complete, but they are estimated to be 5 to 6 centimeters wide and 14 to 16 centimeters long when intact.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Ninguno de los huevos está completo, pero se estima que tienen 5 a 6 centímetros de ancho y 14 a 16 centímetros de largo cuando están intactos.",
+   "quote_sha": "41f8dc34711a0ac7"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "The skeleton of the nesting specimen has damage indicating it was eaten by skin beetles.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "El esqueleto del espécimen de anidación tiene daños que indican que fue comido por escarabajos de la piel.",
+   "quote_sha": "2e0eb1341ab85790"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "Nemegtomaia may have protected its eggs by covering them with its tail and wing feathers.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Nemegtomaia puede haber protegido sus huevos cubriéndolos con sus plumas de cola y alas.",
+   "quote_sha": "daee2b746fb9e4ed"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "The scapula appears to have been 185 millimeters in total length.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "La escápula parece haber sido de 185 milímetros de longitud total.",
+   "quote_sha": "2827a33937e7eb16"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "The humerus had a fossa in a position similar to modern birds but atypical among oviraptorosaurians, and appears to have measured 152 millimeters in length.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "El húmero tenía una fosa en una posición similar a las aves modernas, pero atípica entre los oviraptorosaurianos, y parece haber medido 152 milímetros de largo.",
+   "quote_sha": "36410585bfd2d6a4"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "The femur was 286 millimeters long and the tibia of the lower leg was 317 millimeters long.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "El fémur tenía 286 milímetros de largo y la tibia de la parte inferior de la pierna 317 milímetros de largo.",
+   "quote_sha": "1e953a20032e988f"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "The lower jaw was short and deep, with a convex lower surface, and reached 153 millimeters in length.",
+   "category": "description",
+   "chunk_id": "nemegtomaia:eswiki:3",
+   "lang": "es",
+   "quote": "La mandíbula inferior era corta y profunda, con una superficie inferior convexa y alcanzaba 153 milímetros de longitud.",
+   "quote_sha": "f72d95a143bf7d92"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "Although Nemegtomaia has been used to suggest that oviraptorosaurs were non-flying birds, the clade is generally considered a group of non-avian dinosaurs.",
+   "category": "debate",
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "lang": "es",
+   "quote": "Aunque Nemegtomaia se ha utilizado para sugerir que los oviraptorosaurianos fueron pájaros no voladores, el clado generalmente se considera un grupo de dinosaurios no aviarios.",
+   "quote_sha": "1a8f446ff0ed37db"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "In 2010, researchers classified Nemegtomaia as a member of the Oviraptoridae family within the subfamily Ingeniinae.",
+   "category": "classification",
+   "chunk_id": "nemegtomaia:eswiki:5",
+   "lang": "es",
+   "quote": "En 2010, Longrich y sus colegas determinaron que Nemegtomaia pertenecía a la familia Oviraptoridae, como parte de la subfamilia Ingeniinae",
+   "quote_sha": "b2eb38c6c6cea013"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "In 2010, paleontologist Gregory S. Paul hypothesized that crested-less oviraptorids were juveniles or females of crested species.",
+   "category": "classification",
+   "chunk_id": "nemegtomaia:eswiki:5",
+   "lang": "es",
+   "quote": "En 2010, el paleontólogo estadounidense Gregory S. Paul sugirió que los oviraptóridos sin cresta eran juveniles o hembras de especies con crestas",
+   "quote_sha": "56b032aabf43869e"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "In 2016, Gregory S. Paul listed Nemegtomaia as \"Conchoraptor (=Nemegtomaia) barsboldi\".",
+   "category": "classification",
+   "chunk_id": "nemegtomaia:eswiki:5",
+   "lang": "es",
+   "quote": "En 2016 lo enumeró como \"Conchoraptor (=Nemegtomaia) barsboldi\"",
+   "quote_sha": "5d586f40470654e0"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "Researchers suggested that while crests are usually associated with Oviraptorinae, the trait might correlate with size and maturity in Ingeniinae.",
+   "category": "classification",
+   "chunk_id": "nemegtomaia:eswiki:5",
+   "lang": "es",
+   "quote": "Afirmaron que, aunque la presencia de crestas generalmente se asocia con Oviraptorinae en lugar de Ingeniinae, la característica puede estar correlacionada con el tamaño y la madurez",
+   "quote_sha": "ba57c9ce29ca188a"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "The subfamily name Ingeniinae was replaced by Heyuanninae because the name Ingenia was already occupied.",
+   "category": "classification",
+   "chunk_id": "nemegtomaia:eswiki:6",
+   "lang": "es",
+   "quote": "El nombre de la subfamilia Ingeniinae ha sido reemplazado por el nombre Heyuanninae, ya que Ingenia estaba ocupada",
+   "quote_sha": "43a4b38e27a36c8e"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "Nemegtomaia lived from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "nemegtomaia:pbdb:1",
    "lang": "en",
@@ -740,205 +1047,120 @@
    "quote_sha": "c5801ed7c899e141"
   },
   {
-   "fact_id": "F069",
-   "statement": "The first specimen of Nemegtomaia was found in 1996 and served as the basis for the new genus and species N. barsboldi in 2004.",
-   "category": "discovery",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "El primer espécimen se encontró en 1996 y se convirtió en la base del nuevo género y especie N. barsboldi en 2004",
-   "quote_sha": "df61d74b072025bd"
-  },
-  {
-   "fact_id": "F070",
-   "statement": "The original genus name was Nemegtia, but it was changed to Nemegtomaia in 2005 because the former name was already occupied.",
-   "category": "discovery",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "El nombre original del género era Nemegtia, pero se cambió a Nemegtomaia en 2005, ya que el nombre anterior estaba ocupado",
-   "quote_sha": "2407ec958db736e0"
-  },
-  {
-   "fact_id": "F071",
-   "statement": "The specific name barsboldi honors the paleontologist Rinchen Barsbold.",
-   "category": "discovery",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "El nombre específico honra al paleontólogo Rinchen Barsbold",
-   "quote_sha": "929e9f144fbe2ec6"
-  },
-  {
-   "fact_id": "F072",
-   "statement": "Two additional specimens were found in 2007.",
-   "category": "discovery",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "Se encontraron dos especímenes más en 2007",
-   "quote_sha": "0a61ac82fc896b79"
-  },
-  {
-   "fact_id": "F073",
-   "statement": "Nemegtomaia is estimated to have been around 2 meters in length and weighed 40 kilograms.",
+   "fact_id": "F100",
+   "statement": "Nemegtomaia is distinguished by a unique combination of a crest, an enlarged first toe, and eight sacral vertebrae.",
    "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
+   "chunk_id": "nemegtomaia:eswiki:5",
    "lang": "es",
-   "quote": "Se estima que la Nemegtomaia medía alrededor de 2 metros de longitud y pesaba 40 kilogramos",
-   "quote_sha": "d4e075ef9469084e"
+   "quote": "Aunque Nemegtomaia no posee ninguna característica única que lo distinga de otros oviraptóridos, autapomorfias, la combinación de una cresta, un primer dedo agrandado y una gran cantidad de vértebras sacras, ocho, es exclusiva de este taxón",
+   "quote_sha": "3052a1ba4f4ced38"
   },
   {
-   "fact_id": "F074",
-   "statement": "As an oviraptorosaurian, Nemegtomaia would have been feathered.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "Como un oviraptorosauriano, habría sido emplumado",
-   "quote_sha": "7d76fa90eeef55c4"
-  },
-  {
-   "fact_id": "F075",
-   "statement": "Nemegtomaia had a deep, narrow, and short skull with an arched crest.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "Tenía un cráneo profundo, estrecho y corto, con una cresta arqueada",
-   "quote_sha": "5cc1fc85fdd30765"
-  },
-  {
-   "fact_id": "F076",
-   "statement": "Nemegtomaia had no teeth, possessing a short snout with a beak similar to a parrot's.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "No tenía dientes, tenía un hocico corto con un pico similar a un loro",
-   "quote_sha": "417b71fc491c5a31"
-  },
-  {
-   "fact_id": "F077",
-   "statement": "Nemegtomaia had three fingers, with the first being larger and possessing a strong claw.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "Tenía tres dedos, el primero era más grande y tenía una garra fuerte",
-   "quote_sha": "080f57425fcf5929"
-  },
-  {
-   "fact_id": "F078",
-   "statement": "Nemegtomaia is the only known member of the Heyuanninae group to possess a cranial crest.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "es el único miembro conocido de este grupo con una cresta craneal",
-   "quote_sha": "5ebbaeaa2264673e"
-  },
-  {
-   "fact_id": "F079",
-   "statement": "The skull of Nemegtomaia was deep, narrow, and short compared to the rest of the body, reaching a length of 179 millimeters.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:3",
-   "lang": "es",
-   "quote": "El cráneo de Nemegtomaia era profundo, estrecho y corto, en comparación con el resto del cuerpo y alcanzaba 179 milímetros de longitud",
-   "quote_sha": "6e7a3aa3b2e49fd6"
-  },
-  {
-   "fact_id": "F080",
-   "statement": "Nemegtomaia had a well-developed crest formed by the nasal and premaxillary bones, primarily the latter of the snout.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:3",
-   "lang": "es",
-   "quote": "Tenía una cresta bien desarrollada, formada por los huesos nasales y premaxilares, principalmente el último, del hocico",
-   "quote_sha": "32c93eb18e6754fb"
-  },
-  {
-   "fact_id": "F081",
-   "statement": "Nemegtomaia's jaws had no teeth, and like other oviraptorid dinosaurs, it had a short snout with a deep, robust beak somewhat resembling a parrot's.",
-   "category": "description",
-   "chunk_id": "nemegtomaia:eswiki:3",
-   "lang": "es",
-   "quote": "Las mandíbulas de Nemegtomaia no tenían dientes, y al igual que otros dinosaurios oviraptóridos, tenía un hocico corto con un pico profundo, robusto y algo parecido a un loro",
-   "quote_sha": "1c6b6b8f1f889f7f"
-  },
-  {
-   "fact_id": "F082",
-   "statement": "The nested Nemegtomaia specimen was positioned atop what was likely a ring of eggs, with its arms crossed over them.",
+   "fact_id": "F101",
+   "statement": "Researchers concluded that most of the oviraptorid diet likely consisted of plant matter due to similarities with herbivores.",
    "category": "paleobiology",
-   "chunk_id": "nemegtomaia:eswiki:2",
+   "chunk_id": "nemegtomaia:eswiki:11",
    "lang": "es",
-   "quote": "El espécimen de Nemegtomaia anidado se colocó encima de lo que probablemente era un anillo de huevos, con los brazos cruzados sobre ellos",
-   "quote_sha": "3a6f61249b1782af"
+   "quote": "Longrich y sus colegas concluyeron que debido a las similitudes entre los oviraptóridos y los animales herbívoros, la mayor parte de su dieta probablemente se habría formado por materia vegetal",
+   "quote_sha": "dcb4a4e5bfe0f08f"
   },
   {
-   "fact_id": "F083",
-   "statement": "Nemegtomaia may have protected its eggs by covering them with its tail and wing feathers.",
+   "fact_id": "F102",
+   "statement": "In 2017, Gregory F. Funston and colleagues suggested that parrot-like oviraptorid jaws may indicate a frugivorous diet including nuts and seeds.",
    "category": "paleobiology",
-   "chunk_id": "nemegtomaia:eswiki:2",
+   "chunk_id": "nemegtomaia:eswiki:11",
    "lang": "es",
-   "quote": "Nemegtomaia puede haber protegido sus huevos cubriéndolos con sus plumas de cola y alas",
-   "quote_sha": "af2df398c8fa8e2c"
+   "quote": "En 2017, el paleontólogo canadiense Gregory F. Funston y sus colegas sugirieron que las mandíbulas de los oviraptóridos en forma de loro pueden indicar una dieta frugívoro que incorpora nueces y semillas",
+   "quote_sha": "6665bf065d852649"
   },
   {
-   "fact_id": "F084",
-   "statement": "The diet of oviraptorids is uncertain, but their skulls are more similar to other animals known or believed to be herbivores.",
-   "category": "paleobiology",
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "lang": "es",
-   "quote": "La dieta de los oviraptóridos es incierta, pero sus cráneos son más similares a otros animales que se sabe o se cree que han sido herbívoros",
-   "quote_sha": "257aa0ba2836a21b"
-  },
-  {
-   "fact_id": "F085",
-   "statement": "Although Nemegtomaia has been used to suggest that oviraptorosaurs were non-flying birds, the clade is generally considered a group of non-avian dinosaurs.",
+   "fact_id": "F103",
+   "statement": "While Barsbold suggested oviraptorids ate mollusks in 1977, later researchers rejected the idea that they crushed shells.",
    "category": "debate",
-   "chunk_id": "nemegtomaia:eswiki:2",
+   "chunk_id": "nemegtomaia:eswiki:11",
    "lang": "es",
-   "quote": "Aunque Nemegtomaia se ha utilizado para sugerir que los oviraptorosaurianos fueron pájaros no voladores, el clado generalmente se considera un grupo de dinosaurios no aviarios",
-   "quote_sha": "15b463ebdf809d28"
+   "quote": "En 1977, Barsbold sugirió que los oviraptóridos se alimentaban de moluscos, pero Longrich y sus colegas rechazaron la idea de que practicaran la trituración de conchas",
+   "quote_sha": "a56519a7f599fcc5"
+  },
+  {
+   "fact_id": "F104",
+   "statement": "In 2004, Lü and colleagues proposed that the square and quadratojugal bones in the Nemegtomaia skull were mobile relative to each other.",
+   "category": "paleobiology",
+   "chunk_id": "nemegtomaia:eswiki:11",
+   "lang": "es",
+   "quote": "En 2004, Lü y sus colegas propusieron que la articulación entre los huesos cuadrado y cuadratoyugal en el cráneo de Nemegtomaia sugirió que estos huesos eran móviles entre sí",
+   "quote_sha": "5f00bef236dccc8d"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "In 2015, Christophe Hendrickx and colleagues found it unlikely that Nemegtomaia had bird-like cranial kinesis because the quadrate bone was immobile.",
+   "category": "debate",
+   "chunk_id": "nemegtomaia:eswiki:11",
+   "lang": "es",
+   "quote": "En 2015, el paleontólogo belga Christophe Hendrickx y sus colegas encontraron que era poco probable que Nemegtomaia y otros oviraptóridos tuvieran cinesis parecida a un pájaro en sus cráneos, debido a que el hueso cuadrado está inmóvil",
+   "quote_sha": "67e26991cbb21282"
   }
  ],
  "rejected": [
   {
    "chunk_id": "nemegtomaia:enwiki:2",
-   "statement": "Nemegtomaia was toothless, possessed a short snout with a parrot-like beak, and had tooth-like projections on its palate.",
+   "statement": "Nemegtomaia was toothless, possessing a short snout with a parrot-like beak and tooth-like projections on its palate.",
    "category": "description",
    "quote": "It was toothless, had a short snout with a parrot-like beak, and a pair of tooth-like projections on its palate.",
    "reason": "statement copies the source wording: 'a short snout with a parrot-like beak and'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:2",
-   "statement": "Nemegtomaia is classified within the oviraptorid subfamily Heyuanninae and is the only known member of this group with a cranial crest.",
+   "statement": "Nemegtomaia belongs to the oviraptorid subfamily Heyuanninae and is the only known member of that group with a cranial crest.",
    "category": "classification",
    "quote": "Nemegtomaia is classified as a member of the oviraptorid subfamily Heyuanninae, and is the only known member of this group with a cranial crest.",
    "reason": "statement copies the source wording: 'oviraptorid subfamily Heyuanninae and is the only known'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:2",
-   "statement": "A nesting specimen of Nemegtomaia was found positioned on top of a ring of eggs with its arms folded across them.",
+   "statement": "A nesting specimen of Nemegtomaia was found positioned on top of a ring of eggs with its arms folded over them.",
    "category": "paleobiology",
    "quote": "The nesting Nemegtomaia specimen was placed on top of what was probably a ring of eggs, with its arms folded across them.",
    "reason": "statement copies the source wording: 'a ring of eggs with its arms folded'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:2",
-   "statement": "Researchers suggest Nemegtomaia may have protected its eggs by covering them with its tail and wing feathers.",
+   "statement": "Researchers suggest Nemegtomaia may have protected its eggs by covering them with tail and wing feathers.",
    "category": "paleobiology",
    "quote": "Nemegtomaia may have protected its eggs by covering them with its tail and wing feathers.",
    "reason": "statement copies the source wording: 'Nemegtomaia may have protected its eggs by covering'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:3",
-   "statement": "The name Nemegtomaia was proposed in 2005, combining \"Nemegt\" with the Greek word \"maia\" meaning \"good mother\".",
+   "statement": "The name Nemegtomaia was proposed in 2005 to reference egg-brooding behavior, even though no nest or eggs were yet found with the species.",
    "category": "discovery",
-   "quote": "They proposed instead the new genus name Nemegtomaia (\"maia\" means \"good mother\" in Greek, and the full name means \"good mother of the Nemegt\")",
-   "reason": "numbers not in the quote: ['2005']"
+   "quote": "They proposed instead the new genus name Nemegtomaia... making reference to the then-recent discovery that oviraptorids brooded eggs rather than stealing them, though no trace of a nest or eggs had yet been found associated with Nemegtomaia itself.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "nemegtomaia:enwiki:5",
-   "statement": "While lacking unique single features, the combination of a crest, an enlarged first finger, and eight sacral vertebrae is unique to Nemegtomaia.",
+   "chunk_id": "nemegtomaia:enwiki:4",
+   "statement": "The first new specimen, nicknamed \"Mary,\" was found in the Baruungoyot Formation and includes a nest with the presumed parent on top.",
+   "category": "discovery",
+   "quote": "The first specimen, MPC-D 107/15, was found by Fanti (who nicknamed it \"Mary\") in the Baruungoyot Formation, and consists of a nest with the presumed parent on top.",
+   "reason": "statement copies the source wording: 'a nest with the presumed parent on top'"
+  },
+  {
+   "chunk_id": "nemegtomaia:enwiki:4",
+   "statement": "The nesting specimen was excavated from a vertical cliff under difficult conditions involving heavy rain and collapsing sandstone.",
+   "category": "discovery",
+   "quote": "The specimen was excavated from a vertical cliff under \"difficult circumstances\", including heavy rain and collapsing sandstone blocks.",
+   "reason": "statement copies the source wording: 'specimen was excavated from a vertical cliff under'"
+  },
+  {
+   "chunk_id": "nemegtomaia:enwiki:4",
+   "statement": "The second new specimen was 35% smaller than the others but was assigned to Nemegtomaia due to similar hand characteristics.",
    "category": "description",
-   "quote": "Though Nemegtomaia does not possess any single feature that distinguishes it from other oviraptorids (autapomorphies), the combination of a crest, an enlarged first finger, and a high number of sacral vertebrae (eight), is unique to this taxon.",
-   "reason": "statement copies the source wording: 'the combination of a crest an enlarged first'"
+   "quote": "The second specimen... was 35% smaller than the others, and was assigned to Nemegtomaia due to its hands having the same characteristics as those of specimen MPC-D 107/15.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:6",
-   "statement": "The skull of Nemegtomaia was deep, narrow, and short, measuring 179 mm (7 in) in length.",
+   "statement": "The skull of Nemegtomaia was deep, narrow, and short, measuring 179 mm or 7 inches in length.",
    "category": "description",
    "quote": "The skull of Nemegtomaia was deep, narrow, and short (compared to the rest of the body), and reached 179 mm (7 in) in length.",
    "reason": "statement copies the source wording: 'skull of Nemegtomaia was deep narrow and short'"
@@ -951,18 +1173,18 @@
    "reason": "statement copies the source wording: \"front margin of the holotype's crest formed an\""
   },
   {
-   "chunk_id": "nemegtomaia:enwiki:6",
-   "statement": "Nemegtomaia was distinct from other oviraptorids because its frontal bone was about 25% the length of the parietal bone.",
+   "chunk_id": "nemegtomaia:enwiki:7",
+   "statement": "The neural spines of the neck vertebrae were short, and the neural arches had an X-shaped appearance.",
    "category": "description",
-   "quote": "Nemegtomaia was distinct from other oviraptorids in that the frontal bone on the midline of the skull was about 25% the length of the parietal bone from front to back.",
-   "reason": "statement copies the source wording: 'about 25 the length of the parietal bone'"
+   "quote": "The neural spines of the neck (cervical) vertebrae were short, and the neural arches had an x-shaped appearance.",
+   "reason": "statement copies the source wording: 'vertebrae were short and the neural arches had'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:7",
-   "statement": "The lower arm bone was straight, oval in cross-section, and may have been 144 mm (5 in) long.",
+   "statement": "The first finger was relatively large with a strong claw bone and was more massive than the other two fingers.",
    "category": "description",
-   "quote": "The radius of the lower arm was straight, oval in cross-section, and may have been 144 mm (5 in) long.",
-   "reason": "statement copies the source wording: 'was straight oval in cross-section and may have'"
+   "quote": "The first finger was relatively large and had a strong ungual (claw bone), and was more massive than the two other fingers.",
+   "reason": "statement copies the source wording: 'claw bone and was more massive than the'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:9",
@@ -972,38 +1194,59 @@
    "reason": "statement copies the source wording: 'were at least partially herbivorous and brooded their'"
   },
   {
-   "chunk_id": "nemegtomaia:enwiki:9",
-   "statement": "Lü and colleagues (2002) concluded that oviraptorosaurs were flightless birds rather than non-avian dinosaurs, a view debated by other researchers who place them outside the bird-closely-related group Paraves.",
+   "chunk_id": "nemegtomaia:enwiki:8",
+   "statement": "Researchers suggest that the crest on Nemegtomaia implies the feature evolved or disappeared multiple times among oviraptorids, or that the animal may not belong to the subfamily Ingeniinae.",
    "category": "debate",
-   "quote": "In 2002 Lü and colleagues used the then unnamed Nemegtomaia to show similarities between birds and oviraptorosaurs, and found the latter group to be closer to birds than to bird-like dinosaurs such as dromaeosaurs. They therefore concluded that oviraptorosaurs were flightless birds rather than non-avian dinosaurs, and noted that the boundary between birds and dinosaurs was becoming more and more difficult to delineate.",
+   "quote": "Longrich and colleagues suggested that the presence of a crest on Nemegtomaia makes it possible that this feature evolved or disappeared several times among oviraptorids, or that the animal may not have been an ingeniine.",
+   "reason": "statement copies the source wording: 'times among oviraptorids or that the animal may'"
+  },
+  {
+   "chunk_id": "nemegtomaia:enwiki:9",
+   "statement": "Some researchers concluded that oviraptorosaurs were flightless birds rather than non-avian dinosaurs, noting the difficulty in delineating the boundary between birds and dinosaurs.",
+   "category": "debate",
+   "quote": "They therefore concluded that oviraptorosaurs were flightless birds rather than non-avian dinosaurs, and noted that the boundary between birds and dinosaurs was becoming more and more difficult to delineate.",
    "reason": "statement copies the source wording: 'concluded that oviraptorosaurs were flightless birds rather than'"
   },
   {
    "chunk_id": "nemegtomaia:enwiki:10",
-   "statement": "In 2018, Tzu-Ruei Yang and colleagues identified cuticle layers on the eggshells of oviraptorids like Nemegtomaia.",
+   "statement": "In 2018, Tzu-Ruei Yang and colleagues identified cuticle layers on the eggshells of oviraptorids.",
    "category": "paleobiology",
    "quote": "In 2018, the palaeontologist Tzu-Ruei Yang and colleagues identified cuticle layers on egg-shells of maniraptoran dinosaurs, including oviraptorids",
    "reason": "statement copies the source wording: 'Tzu-Ruei Yang and colleagues identified cuticle layers on'"
   },
   {
+   "chunk_id": "nemegtomaia:enwiki:12",
+   "statement": "A 2010 study concluded that the majority of the oviraptorid diet likely consisted of plant matter based on jaw similarities to herbivores.",
+   "category": "paleobiology",
+   "quote": "Longrich and colleagues concluded that due to the similarities between oviraptorids and herbivorous animals, the bulk of their diet would most likely have been formed by plant matter.",
+   "reason": "numbers not in the quote: ['2010']"
+  },
+  {
+   "chunk_id": "nemegtomaia:enwiki:12",
+   "statement": "There is a scientific debate regarding whether oviraptorids fed on molluscs, with some researchers rejecting the shell-crushing hypothesis in favor of shearing tough plant material.",
+   "category": "debate",
+   "quote": "In 1977 Barsbold suggested that oviraptorids fed on molluscs, but Longrich and colleagues rejected the idea that they practised shell-crushing altogether.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
    "chunk_id": "nemegtomaia:eswiki:2",
-   "statement": "Nemegtomaia is the only known species of the extinct genus Nemegtomaia, a theropod dinosaur belonging to the oviraptorid family.",
+   "statement": "Two additional specimens were found in 2007, one of which was discovered on top of a nest with eggs.",
+   "category": "discovery",
+   "quote": "Se encontraron dos especímenes más en 2007, uno de los cuales se encontró en la parte superior de un nido con huevos.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "statement": "The diet of oviraptorids is uncertain, but their skulls are more similar to other animals known or believed to have been herbivores.",
+   "category": "paleobiology",
+   "quote": "La dieta de los oviraptóridos es incierta, pero sus cráneos son más similares a otros animales que se sabe o se cree que han sido herbívoros.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "nemegtomaia:eswiki:2",
+   "statement": "Nemegtomaia is classified as a member of the oviraptorid subfamily Heyuanninae and is the only known member of this group with a cranial crest.",
    "category": "classification",
-   "quote": "Nemegtomaia es la única especie conocida del género extinto Nemegtomaia de dinosaurio terópodo ovirraptórido",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "statement": "Nemegtomaia was found in the Nemegt Basin.",
-   "category": "time_and_habitat",
-   "quote": "Se encontraron en la cuenca de Nemegt",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "nemegtomaia:eswiki:2",
-   "statement": "Nemegtomaia is known from the Nemegt and Baruun Goyot formations.",
-   "category": "time_and_habitat",
-   "quote": "Nemegtomaia es conocida por las formaciones Nemegt y Baruun Goyot",
+   "quote": "Nemegtomaia está clasificada como miembro de la subfamilia de oviraptóridos Heyuanninae, y es el único miembro conocido de este grupo con una cresta craneal.",
    "reason": "quote not found verbatim in the source"
   }
  ]

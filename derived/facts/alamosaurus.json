@@ -2,9 +2,9 @@
  "taxon": "Alamosaurus",
  "taxon_key": "alamosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "94cc11ea6e309de5",
- "generated_at": "2026-11-03T05:17:03+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "720c2968ade8a58f",
+ "generated_at": "2026-11-04T07:24:50+00:00",
  "citations": {
   "alamosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -83,6 +83,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "alamosaurus:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Alamosaurus sanjuanensis (Significado del nombre)",
+   "url": "https://es.wikipedia.org/wiki/Alamosaurus_sanjuanensis?oldid=166421441",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "alamosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Alamosaurus",
@@ -94,7 +101,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus is named Alamosaurus.",
+   "statement": "Alamosaurus is a genus of dinosaur.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:1",
    "lang": "en",
@@ -103,16 +110,7 @@
   },
   {
    "fact_id": "F002",
-   "statement": "Alamosaurus was described by Gilmore in 1922.",
-   "category": "classification",
-   "chunk_id": "alamosaurus:enwiki:1",
-   "lang": "en",
-   "quote": "authority: Gilmore, 1922",
-   "quote_sha": "325c4af61c7ce79a"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "The type species of the genus is Alamosaurus sanjuanensis.",
+   "statement": "The type species of the genus Alamosaurus is Alamosaurus sanjuanensis.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:1",
    "lang": "en",
@@ -120,17 +118,26 @@
    "quote_sha": "1d8f21f63518e6ff"
   },
   {
-   "fact_id": "F004",
-   "statement": "Alamosaurus is a genus of titanosaurian sauropod dinosaurs meaning \"Ojo Alamo lizard\".",
-   "category": "description",
-   "chunk_id": "alamosaurus:enwiki:2",
+   "fact_id": "F003",
+   "statement": "Alamosaurus was described by Charles Whitney Gilmore in 1922.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:1",
    "lang": "en",
-   "quote": "Alamosaurus (; meaning \"Ojo Alamo lizard\") is a genus of titanosaurian sauropod dinosaurs",
-   "quote_sha": "a2d35082f07a7bc5"
+   "quote": "authority: Gilmore, 1922",
+   "quote_sha": "325c4af61c7ce79a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Alamosaurus lived during the Late Cretaceous period, specifically the Maastrichtian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Cretaceous (Maastrichtian)",
+   "quote_sha": "5afcfd366a94517e"
   },
   {
    "fact_id": "F005",
-   "statement": "Alamosaurus lived in southwestern North America during the Maastrichtian age of the Late Cretaceous period.",
+   "statement": "Alamosaurus fossils are found in what is now southwestern North America.",
    "category": "time_and_habitat",
    "chunk_id": "alamosaurus:enwiki:2",
    "lang": "en",
@@ -139,7 +146,7 @@
   },
   {
    "fact_id": "F006",
-   "statement": "Alamosaurus is one of the few sauropods known to have lived in North America following a 30-million-year gap in the fossil record.",
+   "statement": "Alamosaurus is one of the few sauropods known to have lived in North America after a 30-million-year gap in the fossil record.",
    "category": "paleobiology",
    "chunk_id": "alamosaurus:enwiki:2",
    "lang": "en",
@@ -148,25 +155,34 @@
   },
   {
    "fact_id": "F007",
-   "statement": "Some specimens suggest that Alamosaurus may have been larger than the standard estimates.",
-   "category": "debate",
+   "statement": "Researchers suggest Alamosaurus likely migrated to North America from either South America or Asia.",
+   "category": "paleobiology",
    "chunk_id": "alamosaurus:enwiki:2",
    "lang": "en",
-   "quote": "though some specimens indicate a larger body size",
-   "quote_sha": "4adb6afff375261a"
+   "quote": "probably represents an immigrant from South America or Asia",
+   "quote_sha": "1daec040975ba609"
   },
   {
    "fact_id": "F008",
-   "statement": "The holotype of Alamosaurus was discovered in June 1921 in New Mexico by Gilmore, Reeside, and Sternberg.",
-   "category": "discovery",
-   "chunk_id": "alamosaurus:enwiki:3",
+   "statement": "Adult Alamosaurus measured approximately 26 meters in length, 5 meters tall at the shoulder, and weighed between 30 and 35 tonnes.",
+   "category": "description",
+   "chunk_id": "alamosaurus:enwiki:2",
    "lang": "en",
-   "quote": "The holotype was discovered in June 1921 by Charles Whitney Gilmore, John Bernard Reeside, and Charles Hazelius Sternberg at the Barrel Springs Arroyo in the Naashoibito Member of the Ojo Alamo Formation (or Kirtland Formation under a different definition) of New Mexico",
-   "quote_sha": "43120c7dc4cc7a34"
+   "quote": "Adults would have measured around 26 m long, 5 m tall at the shoulder and weighed up to 30 - 35 t",
+   "quote_sha": "7ebddf7400fdb822"
   },
   {
    "fact_id": "F009",
-   "statement": "Gilmore described the holotype (a left scapula) and paratype (a right ischium) in 1922.",
+   "statement": "The holotype of Alamosaurus was discovered in June 1921 by Gilmore, Reeside, and Sternberg in New Mexico.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype was discovered in June 1921 by Charles Whitney Gilmore, John Bernard Reeside, and Charles Hazelius Sternberg at the Barrel Springs Arroyo in the Naashoibito Member of the Ojo Alamo Formation",
+   "quote_sha": "8a84e7bf20f13844"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Gilmore originally described the holotype as a left scapula and the paratype as a right ischium in 1922.",
    "category": "discovery",
    "chunk_id": "alamosaurus:enwiki:3",
    "lang": "en",
@@ -174,7 +190,43 @@
    "quote_sha": "c102ca6ed98df823"
   },
   {
-   "fact_id": "F010",
+   "fact_id": "F011",
+   "statement": "The name Alamosaurus is not derived from the Alamo mission or battle in San Antonio, Texas.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "the dinosaur is not named after the Alamo in San Antonio, Texas, or the battle that was fought there",
+   "quote_sha": "a7d9a3518ca5d55b"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The name Alamosaurus is derived from the Ojo Alamo geologic formation where the fossils were found.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Instead, the name Alamosaurus comes from Ojo Alamo, the geologic formation in which it was found",
+   "quote_sha": "91e352ddc99f0873"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "The word 'alamo' is Spanish for 'poplar' and refers to a local subspecies of cottonwood tree.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The term alamo itself is a Spanish word meaning \"poplar\" and is used for the local subspecies of cottonwood tree",
+   "quote_sha": "1704e06ae6237a40"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "The species name sanjuanensis refers to San Juan County, New Mexico, where the first remains were discovered.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "There is only one species in the genus, Alamosaurus sanjuanensis, which is named after San Juan County, New Mexico, where the first remains were found",
+   "quote_sha": "55f9d22e30dda710"
+  },
+  {
+   "fact_id": "F015",
    "statement": "Gilmore posthumously described specimen USNM 15560 in 1946, which was found in Utah in 1937.",
    "category": "discovery",
    "chunk_id": "alamosaurus:enwiki:3",
@@ -183,8 +235,8 @@
    "quote_sha": "eb3da969d4352c99"
   },
   {
-   "fact_id": "F011",
-   "statement": "In 2025, Gregory S. Paul reclassified USNM 15560 as the holotype of the new species Utetitan zellaguymondeweyae.",
+   "fact_id": "F016",
+   "statement": "In 2025, Gregory S. Paul reclassified USNM 15560 as the holotype of the new genus Utetitan.",
    "category": "discovery",
    "chunk_id": "alamosaurus:enwiki:3",
    "lang": "en",
@@ -192,35 +244,35 @@
    "quote_sha": "fe1a4f4e5e6d161c"
   },
   {
-   "fact_id": "F012",
-   "statement": "Fossils of an unknown titanosaur related to Alamosaurus have been found in northeastern Chihuahua, Mexico.",
-   "category": "discovery",
+   "fact_id": "F017",
+   "statement": "The Perot Museum's Alamosaurus mount is a composite reconstruction based on multiple titanosaur specimens.",
+   "category": "description",
    "chunk_id": "alamosaurus:enwiki:3",
    "lang": "en",
-   "quote": "Fossils of an unknown titanosaur closely related to Alamosaurus have been collected from northeastern Chihuahua, Mexico",
-   "quote_sha": "4a18913d50d9c3dd"
+   "quote": "The restored Alamosaurus skeletal mount at the Perot Museum was based on a composite of several titanosaur specimens found in Late Cretaceous rocks of North America",
+   "quote_sha": "134a2d7588ee026e"
   },
   {
-   "fact_id": "F013",
-   "statement": "Although no skull has been found, rod-shaped teeth associated with Alamosaurus skeletons likely belonged to the animal.",
-   "category": "paleobiology",
+   "fact_id": "F018",
+   "statement": "Alamosaurus was a large, four-legged herbivore with a long neck, long tail, and partial bony armor.",
+   "category": "description",
    "chunk_id": "alamosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Though no skull has ever been found, rod-shaped teeth have been found with Alamosaurus skeletons and probably belonged to this dinosaur",
-   "quote_sha": "3ebd485968d00102"
+   "quote": "Alamosaurus was a gigantic quadrupedal herbivore with a long neck, a long tail, relatively long limbs and a body partly covered with bony armor",
+   "quote_sha": "64f8f4f8e3ca7e99"
   },
   {
-   "fact_id": "F014",
-   "statement": "Alamosaurus uniquely possessed pneumatised ribs extending for two-thirds of their length among titanosaurs.",
-   "category": "paleobiology",
+   "fact_id": "F019",
+   "statement": "Alamosaurus uniquely possesses pneumatic ribs extending for two-thirds of their length among titanosaurs.",
+   "category": "description",
    "chunk_id": "alamosaurus:enwiki:4",
    "lang": "en",
    "quote": "Uniquely among titanosaurs, the ribs of Alamosaurus are pneumatised for two-thirds of the rib length",
    "quote_sha": "39403d1b82de77d6"
   },
   {
-   "fact_id": "F015",
-   "statement": "Trackways indicate Alamosaurus walked slowly at speeds between 3.2 and 4 km/h without dragging its tail.",
+   "fact_id": "F020",
+   "statement": "Trackway evidence indicates Alamosaurus walked slowly at 3.2 to 4 km/h without dragging its tail.",
    "category": "paleobiology",
    "chunk_id": "alamosaurus:enwiki:4",
    "lang": "en",
@@ -228,17 +280,35 @@
    "quote_sha": "1fdcb0fe25e9225a"
   },
   {
-   "fact_id": "F016",
-   "statement": "Thomas Holtz hypothesized that the maximum length could be 30 meters or more and weight 72.5 to 80 tonnes.",
-   "category": "debate",
+   "fact_id": "F021",
+   "statement": "Studies estimate Alamosaurus growth lines formed between 4 and 12 years, with a maximum lifespan of 55 years.",
+   "category": "paleobiology",
    "chunk_id": "alamosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Thomas Holtz proposed a maximum length of around 30 m or more and an approximate weight of 72.5–80 tonnes (80–88 short tons) or more",
-   "quote_sha": "f772a8c5c983b570"
+   "quote": "Lehman and Woodward estimated that the growth lines of Alamosaurus were drawn at 4–12 years, and the maximum age of Alamosaurus was 55 years for the age at 90% of the mass",
+   "quote_sha": "3e4b43f28a5fa095"
   },
   {
-   "fact_id": "F017",
-   "statement": "Scott Hartman estimates Alamosaurus at 28-30 meters based on a tibia, but notes scientists are unsure if that tibia belongs to Alamosaurus or a new species.",
+   "fact_id": "F022",
+   "statement": "It is debated whether fossils from formations like the North Horn, Black Peaks, and Javelina belong to Alamosaurus or a distinct genus.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "though these specimens may represent a distinct genus",
+   "quote_sha": "da67ae0ce6fd5976"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "A 2025 study proposed that USNM 15560 belongs to a new genus, Utetitan, rather than Alamosaurus.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "In 2025, Gregory S. Paul assigned USNM 15560 as the holotype of the new taxon Utetitan zellaguymondeweyae",
+   "quote_sha": "fe1a4f4e5e6d161c"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "Scientists debate whether a massive tibia found in the North Horn Formation belongs to Alamosaurus or a new sauropod species.",
    "category": "debate",
    "chunk_id": "alamosaurus:enwiki:4",
    "lang": "en",
@@ -246,16 +316,7 @@
    "quote_sha": "2f506a33deb253ab"
   },
   {
-   "fact_id": "F018",
-   "statement": "It is debated whether fossils from formations like the North Horn, Black Peaks, and Javelina belong to Alamosaurus or a distinct genus.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Fossils recovered from other Maastrichtian formations have also been referred to Alamosaurus, like the North Horn Formation of Utah, the Black Peaks and the Javelina Formations of Texas, though these specimens may represent a distinct genus",
-   "quote_sha": "fe4082af44cb1479"
-  },
-  {
-   "fact_id": "F019",
+   "fact_id": "F025",
    "statement": "Friedrich von Huene classified Alamosaurus within the family Titanosauridae in 1927.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:5",
@@ -264,8 +325,8 @@
    "quote_sha": "5fcc9ba321b2f18d"
   },
   {
-   "fact_id": "F020",
-   "statement": "Some phylogenetic analyses place Alamosaurus in the subgroup Opisthocoelicaudiinae within the family Saltasauridae, uniting it with Opisthocoelicaudia.",
+   "fact_id": "F026",
+   "statement": "Some phylogenetic analyses group Alamosaurus with Opisthocoelicaudia in the subgroup Opisthocoelicaudiinae of Saltasauridae.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:5",
    "lang": "en",
@@ -273,8 +334,8 @@
    "quote_sha": "7678001ce473276f"
   },
   {
-   "fact_id": "F021",
-   "statement": "A competing analysis identifies Alamosaurus as a sister taxon to Pellegrinisaurus, placing both genera outside the family Saltasauridae.",
+   "fact_id": "F027",
+   "statement": "Other studies place Alamosaurus as a sister taxon to Pellegrinisaurus, outside the family Saltasauridae.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:5",
    "lang": "en",
@@ -282,16 +343,34 @@
    "quote_sha": "84154bd7392a6aa4"
   },
   {
-   "fact_id": "F022",
-   "statement": "Phylogenetic analyses have recovered Alamosaurus in varying positions, including as an opisthocoelicaudiine, a saltasaurine, or entirely outside Saltasauridae.",
+   "fact_id": "F028",
+   "statement": "A 2022 analysis by Navarro and colleagues recovered Alamosaurus as a member of Saltasauridae, specifically as the sister taxon to Baurutitan.",
    "category": "classification",
    "chunk_id": "alamosaurus:enwiki:5",
    "lang": "en",
-   "quote": "The position of Alamosaurus recovered by phylogenetic analyses varies.",
-   "quote_sha": "50e0105d4a3a5dcd"
+   "quote": "In 2022, Navarro and colleagues included Alamosaurus in their phylogenetic analysis of titanosaurs. Their results placed BIBE 45854, a series of neck vertebrae traditionally assigned to Alamosaurus, in a position distantly related to Alamosaurus itself; the vertebrae were recovered within the Lognkosauria, while Alamosaurus was recovered as a member of the Saltasauridae, as the sister taxon to Baurutitan:",
+   "quote_sha": "4d6aa24d26ee5d90"
   },
   {
-   "fact_id": "F023",
+   "fact_id": "F029",
+   "statement": "The earliest fossils of Alamosaurus date to around 70 million years ago, and it became the dominant large herbivore in southern Laramidia.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The earliest fossils of Alamosaurus date to the Maastrichtian age, around 70 million years ago, and it rapidly became the dominant large herbivore of southern Laramidia.",
+   "quote_sha": "4a0a374af0a3d5ad"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "A third hypothesis proposes that Alamosaurus originated in Asia rather than South America.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "A third option is that, as in the austral immigrant scenario, Alamosaurus is not native to North America, but originated in Asia instead of South America.",
+   "quote_sha": "47c274f9b52ac12c"
+  },
+  {
+   "fact_id": "F031",
    "statement": "Alamosaurus fossils are notably found in the Naashoibito Member of the Ojo Alamo Formation, dated to approximately 66.87 million and 66.38 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "alamosaurus:enwiki:6",
@@ -300,71 +379,35 @@
    "quote_sha": "d25f0cdcd231a29d"
   },
   {
-   "fact_id": "F024",
-   "statement": "Thomas M. Lehman describes the Late Cretaceous fauna in southern North America, dominated by Alamosaurus and Quetzalcoatlus, as representing semi-arid inland plains with a superficially 'Jurassic' aspect.",
+   "fact_id": "F032",
+   "statement": "The Alamosaurus fauna is dated to the latest Maastrichtian age.",
    "category": "time_and_habitat",
    "chunk_id": "alamosaurus:enwiki:6",
    "lang": "en",
-   "quote": "In the south of Late Cretaceous North America, the transition from the Edmontonian to the Lancian faunal stages is even more dramatic than it was in the north. Thomas M. Lehman describes it as \"the abrupt reemergence of a fauna with a superficially 'Jurassic' aspect. These faunas are dominated by Alamosaurus and feature abundant Quetzalcoatlus in Texas. The Alamosaurus-Quetzalcoatlus association probably represent semi-arid inland plains.",
-   "quote_sha": "9c7c759d37559278"
+   "quote": "The Alamosaurus fauna can be dated to the latest Maastrichtian age.",
+   "quote_sha": "5cc5edd72220e44f"
   },
   {
-   "fact_id": "F025",
-   "statement": "Fossils of Alamosaurus found in the Evanston Formation in Wyoming indicate it shared its environment with Triceratops.",
-   "category": "time_and_habitat",
+   "fact_id": "F033",
+   "statement": "The association of Alamosaurus and Quetzalcoatlus likely inhabited semi-arid inland plains.",
+   "category": "paleobiology",
+   "chunk_id": "alamosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The Alamosaurus-Quetzalcoatlus association probably represent semi-arid inland plains.",
+   "quote_sha": "0cf74b949ced36cc"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "Fossils of Alamosaurus from the Evanston Formation in Wyoming indicate it shared its environment with Triceratops.",
+   "category": "paleobiology",
    "chunk_id": "alamosaurus:enwiki:6",
    "lang": "en",
    "quote": "Fossils of Alamosaurus unearthed in the Evanston Formation in Wyoming indicate it shared its environment with Triceratops.",
    "quote_sha": "d1e2353f45edf6d6"
   },
   {
-   "fact_id": "F026",
-   "statement": "The 'austral immigrant' hypothesis, suggesting Alamosaurus descended from South American titanosaurs, is challenged by the possibility that Maastrichtian routes between continents consisted of separate islands hindering dispersal.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "The austral immigrant hypothesis has been challenged on the grounds that the routes connecting North and South America during the Maastrichtian may have consisted of separate islands, which would have presented challenges to the dispersal of titanosaurs.",
-   "quote_sha": "c52cb83cc2084d04"
-  },
-  {
-   "fact_id": "F027",
-   "statement": "The 'inland herbivore' scenario suggests titanosaurs were present in North America throughout the Late Cretaceous but were rarely preserved in upland environments they favored, rather than being truly absent.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "A second scenario, termed the \"inland herbivore\" scenario, suggests that titanosaurs were present in North America throughout the Late Cretaceous and that their apparent absence reflects the relative rarity of fossil sites preserving the upland environments that titanosaurs favored, rather than their true absence from the continent.",
-   "quote_sha": "a979aa8de9665936"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "A third hypothesis proposes that Alamosaurus originated in Asia rather than South America, despite many dinosaurs crossing between the continents via the Bering land bridge.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "A third option is that, as in the austral immigrant scenario, Alamosaurus is not native to North America, but originated in Asia instead of South America.",
-   "quote_sha": "47c274f9b52ac12c"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "It is debated whether an Asian origin is viable because sauropods were poorly adapted for the high-latitude, inhospitable environment of Beringia.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "Though many dinosaurs crossed between Asia and North America across the Bering land bridge, sauropods were poorly adapted for high-latitude environments and Beringia would have been an inhospitable environment for titanosaurs.",
-   "quote_sha": "cd78d7a5395fd669"
-  },
-  {
-   "fact_id": "F030",
-   "statement": "While origins are debated, several studies favor a South American origin, with Chiarenza et al. (2022) regarding it as the only viable origin for Alamosaurus.",
-   "category": "debate",
-   "chunk_id": "alamosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "Overall, a South American origin has been favored by several studies and Chiarenza et al. (2022) regarded it as \"the only viable origin\" for Alamosaurus.",
-   "quote_sha": "25110561bdac206b"
-  },
-  {
-   "fact_id": "F031",
-   "statement": "Definitive specimens of Alamosaurus sanjuanensis come from the Ojo Alamo Formation.",
+   "fact_id": "F035",
+   "statement": "Definitive fossils of Alamosaurus sanjuanensis come from the Ojo Alamo Formation.",
    "category": "discovery",
    "chunk_id": "alamosaurus:enwiki:7",
    "lang": "en",
@@ -372,7 +415,7 @@
    "quote_sha": "1852b2560279e03d"
   },
   {
-   "fact_id": "F032",
+   "fact_id": "F036",
    "statement": "Specimens previously attributed to Alamosaurus from the North Horn, Black Peaks, and Javelina Formations were reassigned to the genus Utetitan in 2025.",
    "category": "discovery",
    "chunk_id": "alamosaurus:enwiki:7",
@@ -381,25 +424,7 @@
    "quote_sha": "d270a7d0ace282d0"
   },
   {
-   "fact_id": "F033",
-   "statement": "Alamosaurus lived during the Late Cretaceous.",
-   "category": "time_and_habitat",
-   "chunk_id": "alamosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Cretácico superior",
-   "quote_sha": "68069888dfff619a"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "Alamosaurus lived approximately 70 to 66 million years ago during the Late Maastrichtian stage of the Late Cretaceous in what is now North America.",
-   "category": "time_and_habitat",
-   "chunk_id": "alamosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 y 66 millones de años, a fines del Maastrichtiense, en lo que hoy es Norteamérica.",
-   "quote_sha": "9dddacb0201d4c7a"
-  },
-  {
-   "fact_id": "F035",
+   "fact_id": "F037",
    "statement": "The genus Alamosaurus was named by Gilmore in 1922.",
    "category": "classification",
    "chunk_id": "alamosaurus:eswiki:1",
@@ -408,7 +433,7 @@
    "quote_sha": "afd406406b99ab43"
   },
   {
-   "fact_id": "F036",
+   "fact_id": "F038",
    "statement": "The species Alamosaurus sanjuanensis was named by Gilmore in 1922.",
    "category": "classification",
    "chunk_id": "alamosaurus:eswiki:1",
@@ -417,17 +442,44 @@
    "quote_sha": "a45f54361f5bd9b6"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F039",
+   "statement": "Alamosaurus lived during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "fossil_range: Cretácico superior",
+   "quote_sha": "68069888dfff619a"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Alamosaurus lived approximately 70 to 66 million years ago during the late Maastrichtian stage of the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 y 66 millones de años, a fines del Maastrichtiense",
+   "quote_sha": "bbcc924982149ffd"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Alamosaurus lived in what is now North America.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "en lo que hoy es Norteamérica",
+   "quote_sha": "ffcc0479e0f0065b"
+  },
+  {
+   "fact_id": "F042",
    "statement": "Alamosaurus is the only described North American titanosaur from the Late Cretaceous.",
-   "category": "classification",
+   "category": "description",
    "chunk_id": "alamosaurus:eswiki:2",
    "lang": "es",
    "quote": "Es el único titanosauriano norteamericano descrito de finales del Cretácico",
    "quote_sha": "6b054bb923fcc255"
   },
   {
-   "fact_id": "F038",
-   "statement": "Adult Alamosaurus are estimated to have been about 26 meters long, 5 meters high at the shoulders, and weighed up to 30 to 35 tonnes.",
+   "fact_id": "F043",
+   "statement": "Adult Alamosaurus are estimated to have reached about 26 meters in length, 5 meters in height at the shoulders, and weighed up to 30 to 35 tonnes.",
    "category": "description",
    "chunk_id": "alamosaurus:eswiki:2",
    "lang": "es",
@@ -435,8 +487,17 @@
    "quote_sha": "099f26da0a8063a8"
   },
   {
-   "fact_id": "F039",
-   "statement": "Alamosaurus had a small head supported by a long, robust neck, a broad and sturdy torso, cylindrical legs for weight support, and a relatively slender tail for balance and locomotion coordination.",
+   "fact_id": "F044",
+   "statement": "Fossils found near the K/T boundary make Alamosaurus one of the last recorded titanosaurians before the mass extinction event.",
+   "category": "curiosities",
+   "chunk_id": "alamosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Sus restos han sido hallados en formaciones rocosas muy cercanas al Límite K/T, por lo que fue uno de los últimos titanosaurios registrados hasta el suceso de la extinción masiva del Cretácico-Paleógeno",
+   "quote_sha": "af8be5cca458e866"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Alamosaurus had a small head supported by a long, robust neck, a broad and bulky torso, cylindrical legs for weight support, and a relatively slender tail for balance and locomotion.",
    "category": "description",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
@@ -444,8 +505,8 @@
    "quote_sha": "ff730248118de3b7"
   },
   {
-   "fact_id": "F040",
-   "statement": "Alamosaurus generally resembled Brachiosaurus more than Diplodocus.",
+   "fact_id": "F046",
+   "statement": "The general appearance of Alamosaurus resembles Brachiosaurus more than Diplodocus.",
    "category": "description",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
@@ -453,35 +514,53 @@
    "quote_sha": "ff46d7e727006ef9"
   },
   {
-   "fact_id": "F041",
+   "fact_id": "F047",
    "statement": "Alamosaurus was a giant quadrupedal herbivore with long necks and tails and relatively long legs.",
-   "category": "paleobiology",
+   "category": "description",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
    "quote": "Alamosaurus fue un herbívoro cuadrúpedo gigante con un cuello y colas largos y patas relativamente también largas.",
    "quote_sha": "786008b149ce5798"
   },
   {
-   "fact_id": "F042",
-   "statement": "Although no skull has been found, stick-shaped teeth associated with Alamosaurus skeletons likely belong to this dinosaur.",
+   "fact_id": "F048",
+   "statement": "Alamosaurus is known for having multiple specimens preserved in various states of completeness, which is uncommon for large titanosaurians.",
+   "category": "curiosities",
+   "chunk_id": "alamosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Alamosaurus es conocido por restos de varios especímenes en diferentes estados de preservación, situación no muy común en titanosaurios de mediano y gran tamaño.",
+   "quote_sha": "91790244e3a0b450"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Partial adult skeletons suggest Alamosaurus measured between 20 and 24 meters long, 12 meters high to the head, and weighed between 32.7 and 50 tonnes.",
    "category": "description",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Aunque ningún cráneo ha sido encontrado, los dientes en forma de bastoncillos se han encontrado asociados a esqueletos de Alamosaurus y probablemente pertenecía a este dinosaurio.",
-   "quote_sha": "251afba5306b8f3a"
+   "quote": "Varias muestras adultas, conocidas por esqueletos parciales, se estiman que midieron entre 20 y 24 metros de longitud, 12 m de altura hasta la cabeza y entre 32,7 y 50 toneladas de peso.",
+   "quote_sha": "2184d43139ebc60e"
   },
   {
-   "fact_id": "F043",
-   "statement": "The presence of osteoderms distributed along the back of Alamosaurus has been recently confirmed, serving as defensive armor against predators.",
-   "category": "description",
+   "fact_id": "F050",
+   "statement": "Thomas Holtz proposed that the largest adults could have reached over 30 meters in length and weighed between 72.5 and 80 tonnes or more.",
+   "category": "curiosities",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "la presencia de osteodermos fueron confirmados en este género recientemente, estructura orgánica distribuida a lo largo y ancho del dorso del animal, muy útil como armadura defensiva ante el ataque de depredadores.",
-   "quote_sha": "05427177b99b4da5"
+   "quote": "Thomas Holtz propuso una longitud máxima de alrededor de 30 metros o más y un peso aproximado de 72,5 a 80 toneladas o más.",
+   "quote_sha": "7aac51fdeed00094"
   },
   {
-   "fact_id": "F044",
-   "statement": "Scientists have not yet agreed on whether a massive tibia found in the region belongs to Alamosaurus or to a completely new sauropod species.",
+   "fact_id": "F051",
+   "statement": "Exceptional fragmentary remains found in Chihuahua, Mexico, include a broken tibia estimated at 165 cm long, attributed to Alamosaurus.",
+   "category": "curiosities",
+   "chunk_id": "alamosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "También se han hallado restos fragmentarios, de tamaños excepcionales, en Chihuahua, México, que se atribuyen al género Alamosaurus, los vestigios corresponderían a una tibia rota estimada en 165 cm de largo.",
+   "quote_sha": "b50690129c9fd7e0"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Scientists have not yet agreed on whether the massive tibia found in Mexico belongs to Alamosaurus or a completely new sauropod species.",
    "category": "debate",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
@@ -489,44 +568,53 @@
    "quote_sha": "fa460585124d3c67"
   },
   {
-   "fact_id": "F045",
-   "statement": "Scott Hartman estimates Alamosaurus was 28 to 30 meters long and weighed as much as massive titanosaurs like Argentinosaurus and Puertasaurus, but notes uncertainty regarding the origin of the massive tibia used for this estimate.",
-   "category": "debate",
+   "fact_id": "F053",
+   "statement": "Although no skull has been found, stick-shaped teeth associated with Alamosaurus skeletons likely belonged to this dinosaur.",
+   "category": "description",
    "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Scott Hartman estima que Alamosaurus, basándose en una enorme tibia incompleta que probablemente se refiere a este, es ligeramente más corto, de 28 a 30 metros, e igual en peso a otros titanosaurios masivos, como Argentinosaurus y Puertasaurus, aunque afirma que los científicos no saben si la enorme tibia pertenece a un Alamosaurus o a una especie completamente nueva de saurópodo.",
-   "quote_sha": "8019cd20f77d1d0e"
+   "quote": "Aunque ningún cráneo ha sido encontrado, los dientes en forma de bastoncillos se han encontrado asociados a esqueletos de Alamosaurus y probablemente pertenecía a este dinosaurio.",
+   "quote_sha": "251afba5306b8f3a"
   },
   {
-   "fact_id": "F046",
-   "statement": "The holotype USNM 10486 was discovered in June 1921 in the Kirtland Formation of New Mexico by Charles Whitney Gilmore, John Bernard Reeside, and Charles Hazelius Sternberg.",
-   "category": "discovery",
-   "chunk_id": "alamosaurus:eswiki:4",
+   "fact_id": "F054",
+   "statement": "Alamosaurus had lateral fossae in its vertebrae resembling shallow depressions.",
+   "category": "description",
+   "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "El holotipo, USNM 10486, fue descubierto en la Formación Kirtland de Nuevo México en junio de 1921 por Charles Whitney Gilmore , John Bernard Reeside y Charles Hazelius Sternberg",
-   "quote_sha": "ea8461281fe5ff8e"
+   "quote": "Alamosaurus tenía fosas laterales en las vértebras que se parecen a depresiones poco profundas.",
+   "quote_sha": "0a1908d5b764d24f"
   },
   {
-   "fact_id": "F047",
-   "statement": "Remains of Alamosaurus have been discovered throughout the North American southwest.",
-   "category": "discovery",
-   "chunk_id": "alamosaurus:eswiki:4",
+   "fact_id": "F055",
+   "statement": "The presence of osteoderms was recently confirmed in Alamosaurus, forming an organic armor distributed across its back useful for defense against predators.",
+   "category": "description",
+   "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Los restos de Alamosaurus se han descubierto por todo el sudoeste norteamericano",
-   "quote_sha": "86aa0ecc21085246"
+   "quote": "la presencia de osteodermos fueron confirmados en este género recientemente, estructura orgánica distribuida a lo largo y ancho del dorso del animal, muy útil como armadura defensiva ante el ataque de depredadores.",
+   "quote_sha": "05427177b99b4da5"
   },
   {
-   "fact_id": "F048",
-   "statement": "Alamosaurus fossils have been found in Maastrichtian formations including the North Horn Formation in Utah and the Picos Negros, El Picacho, and Javelina Formations in Texas.",
-   "category": "discovery",
-   "chunk_id": "alamosaurus:eswiki:4",
+   "fact_id": "F056",
+   "statement": "Alamosaurus had more robust radius bones than Venenosaurus.",
+   "category": "description",
+   "chunk_id": "alamosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Huesos de Alamosaurus ha sido encontrado en otras formaciones del Maastrichtiano, como en la Formación North Horn de Utah y en la Formación Picos Negros, Formación El Picacho y Formación Javelina de Texas",
-   "quote_sha": "00264a0f5250f866"
+   "quote": "Alamosaurus tenía radios más robustos que los de Venenosaurus.",
+   "quote_sha": "854421570fc01534"
   },
   {
-   "fact_id": "F049",
-   "statement": "In 1946, a more complete skeleton was found in Utah consisting of a complete tail, a complete right forelimb except for the foot tip, and both ischia.",
+   "fact_id": "F057",
+   "statement": "A possible specimen of Alamosaurus coexisted with dinosaurs such as Tyrannosaurus mcraeensis and Sierraceratops from the McRae Group.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "A possible specimen of the genus identified as Alamosaurus sp. or cf. Alamosaurus coexisted with dinosaurs such as Tyrannosaurus mcraeensis and Sierraceratops from the McRae Group.",
+   "quote_sha": "13da0f10ce410204"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "In 1946, a more complete skeleton was found in Utah, consisting of a complete tail, a complete right forelimb except for the foot tip, and both ischia.",
    "category": "discovery",
    "chunk_id": "alamosaurus:eswiki:4",
    "lang": "es",
@@ -534,17 +622,8 @@
    "quote_sha": "527da08b9f8c40a4"
   },
   {
-   "fact_id": "F050",
-   "statement": "The most complete known specimen is a recently discovered juvenile skeleton in Texas that allowed for accurate estimates of length and mass.",
-   "category": "discovery",
-   "chunk_id": "alamosaurus:eswiki:4",
-   "lang": "es",
-   "quote": "El espécimen más completo conocido es un esqueleto juvenil recientemente descubierto en Texas, que permitió estimaciones correctas de la longitud y masa",
-   "quote_sha": "24ff8768af522327"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "In 2015, it was confirmed that a previously described specimen included osteoderms, marking the first confirmation of their presence in Alamosaurus.",
+   "fact_id": "F059",
+   "statement": "In 2015, it was confirmed that a previously described specimen included osteoderms, marking the first confirmation that these structures were present in Alamosaurus.",
    "category": "discovery",
    "chunk_id": "alamosaurus:eswiki:4",
    "lang": "es",
@@ -552,8 +631,62 @@
    "quote_sha": "d0070f53ad901a4e"
   },
   {
-   "fact_id": "F052",
-   "statement": "Alamosaurus belongs to the parent group Saltasaurinae.",
+   "fact_id": "F060",
+   "statement": "Fossils of Alamosaurus have been found in formations dating from approximately 74 million years ago to the end of the Cretaceous, 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Estas formaciones de hace aproximadamente 74 millones hasta el final del Cretácico hace 66 millones de años",
+   "quote_sha": "e9de9c6f87513042"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "The fauna associated with Alamosaurus appears to have existed between 70 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "La fauna asociada a Alamosaurus parece haber durado entre 70 a 66 millones de años",
+   "quote_sha": "afec2eccd4b92f4c"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "Alamosaurus belongs to the Macronaria group of Sauropoda, a classification that explains its robust anatomy, forelimbs higher than hindlimbs, and a tail slightly smaller relative to the rest of the body.",
+   "category": "classification",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Pertenece al grupo Macronaria de Sauropoda, clasificación taxonómica que explica su anatomía robusta, extremidades delanteras más altas que las traseras y una cola ligeramente más pequeña en relación con el resto del cuerpo",
+   "quote_sha": "97e52b61059524ed"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "In 1927, Friedrich von Huene classified Alamosaurus within the Titanosauridae family.",
+   "category": "classification",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "En 1927 Friedrich von Huene lo colocó en el Titanosauridae",
+   "quote_sha": "384c94bf7354ccaa"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "An important analysis united Alamosaurus with Opisthocoelicaudia in the subfamily Opisthocoelicaudiinae of the family Saltasauridae.",
+   "category": "classification",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Un análisis importante une a Alamosaurus con Opisthocoelicaudia en una subfamilia Opisthocoelicaudiinae de la familia Saltasauridae",
+   "quote_sha": "7ebb1031b95d6373"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "A recently published analysis by Anthony Fiorillo & Ron Tykoski et al. indicates that Alamosaurus was a sister taxon to Lognkosauria and therefore close to dinosaurs such as Futalognkosaurus and Mendozasaurus outside of Saltasauridae.",
+   "category": "classification",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Un análisis recientemente publicado Anthony Fiorillo & Ron Tykoski et al indica que Alamosaurus era un taxón hermano a la Lognkosauria y por lo tanto cercano a dinosaurios tales como Futalognkosaurus y Mendozasaurus por fuera de saltasauridae",
+   "quote_sha": "60c5bcaa845783e6"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The parent group of Alamosaurus is Saltasaurinae.",
    "category": "classification",
    "chunk_id": "alamosaurus:pbdb:1",
    "lang": "en",
@@ -561,8 +694,8 @@
    "quote_sha": "494c2f998c67ca11"
   },
   {
-   "fact_id": "F053",
-   "statement": "Alamosaurus is classified in the family Saltasauridae.",
+   "fact_id": "F067",
+   "statement": "Alamosaurus belongs to the family Saltasauridae.",
    "category": "classification",
    "chunk_id": "alamosaurus:pbdb:1",
    "lang": "en",
@@ -570,7 +703,7 @@
    "quote_sha": "694c87543cfe3717"
   },
   {
-   "fact_id": "F054",
+   "fact_id": "F068",
    "statement": "Alamosaurus is classified in the class Saurischia.",
    "category": "classification",
    "chunk_id": "alamosaurus:pbdb:1",
@@ -579,92 +712,155 @@
    "quote_sha": "8e64a48e9ac37acb"
   },
   {
-   "fact_id": "F055",
-   "statement": "The time range for Alamosaurus is from the Campanian to the Maastrichtian, spanning from 83.6 to 66 million years ago.",
+   "fact_id": "F069",
+   "statement": "Alamosaurus lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "alamosaurus:pbdb:1",
    "lang": "en",
    "quote": "Time range: Campanian to Maastrichtian (83.6 to 66 million years ago)",
    "quote_sha": "c5801ed7c899e141"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The most complete known specimen is a recently discovered juvenile skeleton in Texas, which allowed for accurate estimates of length and mass.",
+   "category": "description",
+   "chunk_id": "alamosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "El espécimen más completo conocido es un esqueleto juvenil recientemente descubierto en Texas, que permitió estimaciones correctas de la longitud y masa",
+   "quote_sha": "24ff8768af522327"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "The genus and species were named by Smithsonian paleontologist Charles W. Gilmore in 1922.",
+   "category": "discovery",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "El género y la especie fueron nombrados por el paleontólogo del Smithsoniano, Charles W. Gilmore en 1922",
+   "quote_sha": "a398dfa8b1aae140"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "The term 'Alamo' refers to the fast-growing tree common in the area, and the suffix 'saurus' derives from the Greek 'saura', meaning 'lizard', a common suffix in dinosaur names.",
+   "category": "description",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "El término Álamo en sí mismo hace referencia al árbol de crecimiento rápido, común en la zona y el término saurus se deriva del saura, σαυρα, griego para \" lagarto\" y es el sufijo más común usado en nombres de dinosaurios",
+   "quote_sha": "b21daf4134829085"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "The Alamosaurus-Quetzalcoatlus association likely represents inland semi-arid plains.",
+   "category": "time_and_habitat",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "La asociación Alamosaurus-Quetzalcoatlus probablemente representa planicies semiáridas de tierra adentro",
+   "quote_sha": "7e6d759ac2937647"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "The matter is complicated further as some researchers reject the name Titanosauridae and replace it with Saltasauridae.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "El asunto se complica aún más por algunos investigadores rechazan el nombre Titanosauridae y lo reemplazan con Saltasauridae",
+   "quote_sha": "0dd1ddbd2a2463a3"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "The position of Alamosaurus recovered by phylogenetic analyses varies; it has been recovered as an opisthocoelicaudiine, saltasaurinae, or outside Saltasauridae.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "La posición de Alamosaurus recovered by phylogenetic analyses varies. Alamosaurus ha sido recuperada como un opisthocoelicaudiine, saltasaurinae, o fuera de Saltasauridae",
+   "quote_sha": "9179e12c2b4bd238"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "The same study also suggests that the ancestors of Alamosaurus originated in South America rather than Asia.",
+   "category": "debate",
+   "chunk_id": "alamosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "El mismo estudio también sugiere que los ancestros Alamosaurus 'procedían de América del Sur, en lugar de Asia",
+   "quote_sha": "13b0d32088a70f5a"
   }
  ],
  "rejected": [
   {
    "chunk_id": "alamosaurus:enwiki:2",
-   "statement": "Adult Alamosaurus measured approximately 26 meters long, 5 meters tall at the shoulder, and weighed up to 30 to 35 tonnes.",
-   "category": "paleobiology",
-   "quote": "Adults would have measured around 26 m long, 5 m tall at the shoulder and weighed up to 30 - 35 t",
-   "reason": "statement copies the source wording: 'tall at the shoulder and weighed up to'"
-  },
-  {
-   "chunk_id": "alamosaurus:enwiki:4",
-   "statement": "Alamosaurus was a gigantic quadrupedal herbivore with a long neck, tail, limbs, and partial bony armor.",
-   "category": "description",
-   "quote": "Alamosaurus was a gigantic quadrupedal herbivore with a long neck, a long tail, relatively long limbs and a body partly covered with bony armor",
-   "reason": "statement copies the source wording: 'was a gigantic quadrupedal herbivore with a long'"
+   "statement": "Evidence suggests Alamosaurus could have reached sizes comparable to Argentinosaurus and Puertasaurus, making it the largest known dinosaur from North America.",
+   "category": "curiosities",
+   "quote": "Isolated vertebrae and limb bones suggest that it could have reached sizes comparable to Argentinosaurus and Puertasaurus, which would make it the absolute largest dinosaur known from North America",
+   "reason": "statement copies the source wording: 'could have reached sizes comparable to Argentinosaurus and'"
   },
   {
    "chunk_id": "alamosaurus:enwiki:5",
-   "statement": "Alamosaurus is considered an advanced and derived member of the group Titanosauria, though its specific relationships within the group remain uncertain.",
-   "category": "classification",
-   "quote": "Alamosaurus was, in any case, an advanced and derived member of the group Titanosauria, but its relationships within that group are far from certain.",
-   "reason": "statement copies the source wording: 'an advanced and derived member of the group'"
-  },
-  {
-   "chunk_id": "alamosaurus:enwiki:5",
-   "statement": "A 2016 analysis by Anthony Fiorillo and Ron Tykoski suggests Alamosaurus is a sister taxon to Lognkosauria (including Futalognkosaurus and Mendozasaurus) and lies outside Saltasauridae.",
+   "statement": "A 2016 analysis by Anthony Fiorillo and Ron Tykoski suggested Alamosaurus was a sister taxon to Lognkosauria, placing it outside Saltasauridae.",
    "category": "classification",
    "quote": "An analysis published in 2016 by Anthony Fiorillo and Ron Tykoski indicates that Alamosaurus was a sister taxon to Lognkosauria and therefore to species such as Futalognkosaurus and Mendozasaurus, laying outside Saltasauridae.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "alamosaurus:enwiki:5",
-   "statement": "A 2022 analysis by Navarro and colleagues recovered Alamosaurus as a member of Saltasauridae, sister to Baurutitan, while a series of neck vertebrae (BIBE 45854) traditionally assigned to it was placed distantly within Lognkosauria.",
-   "category": "classification",
-   "quote": "In 2022, Navarro and colleagues included Alamosaurus in their phylogenetic analysis of titanosaurs. Their results placed BIBE 45854, a series of neck vertebrae traditionally assigned to Alamosaurus, in a position distantly related to Alamosaurus itself; the vertebrae were recovered within the Lognkosauria, while Alamosaurus was recovered as a member of the Saltasauridae, as the sister taxon to Baurutitan.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "alamosaurus:enwiki:6",
-   "statement": "Alamosaurus is the only known sauropod to have lived in North America following a nearly 30-million-year hiatus where no definite sauropod fossils are known.",
+   "statement": "Alamosaurus is the only known sauropod to have lived in North America following a nearly 30-million-year gap with no other definite sauropod fossils.",
    "category": "time_and_habitat",
    "quote": "Alamosaurus is the only known sauropod to have lived in North America after the sauropod hiatus, a nearly 30-million-year interval for which no definite sauropod fossils are known from the continent.",
    "reason": "statement copies the source wording: 'Alamosaurus is the only known sauropod to have'"
   },
   {
    "chunk_id": "alamosaurus:enwiki:6",
-   "statement": "The earliest fossils of Alamosaurus date to around 70 million years ago in the Maastrichtian age, when it became the dominant large herbivore of southern Laramidia.",
-   "category": "time_and_habitat",
-   "quote": "The earliest fossils of Alamosaurus date to the Maastrichtian age, around 70 million years ago, and it rapidly became the dominant large herbivore of southern Laramidia.",
-   "reason": "statement copies the source wording: 'became the dominant large herbivore of southern Laramidia'"
-  },
-  {
-   "chunk_id": "alamosaurus:enwiki:6",
-   "statement": "The Alamosaurus fauna is dated to the latest Maastrichtian age, with a maximum depositional age of approximately 66.4 million years ago.",
-   "category": "time_and_habitat",
-   "quote": "The Alamosaurus fauna can be dated to the latest Maastrichtian age.",
-   "reason": "numbers not in the quote: ['66.4']"
-  },
-  {
-   "chunk_id": "alamosaurus:enwiki:6",
-   "statement": "The origins of Alamosaurus are highly controversial, with three main hypotheses proposed regarding its evolutionary history.",
+   "statement": "The origins of Alamosaurus are highly controversial, with three main hypotheses proposed regarding its ancestry.",
    "category": "debate",
    "quote": "The origins of Alamosaurus are highly controversial, with three hypotheses that have been proposed.",
    "reason": "statement copies the source wording: 'The origins of Alamosaurus are highly controversial with'"
   },
   {
-   "chunk_id": "alamosaurus:eswiki:2",
-   "statement": "Some specimens suggest that Alamosaurus may have been larger than the standard estimates.",
-   "category": "description",
-   "quote": "aunque algunos especímenes indican un tamaño corporal mayor",
-   "reason": "duplicate"
+   "chunk_id": "alamosaurus:enwiki:6",
+   "statement": "The 'austral immigrant' hypothesis suggests Alamosaurus descended from South American titanosaurs.",
+   "category": "debate",
+   "quote": "The first of these, which has been termed the 'austral immigrant' scenario, proposes that Alamosaurus is descended from South American titanosaurs.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "alamosaurus:enwiki:6",
+   "statement": "The 'inland herbivore' scenario suggests titanosaurs were present in North America throughout the Late Cretaceous but their fossils are rare due to the environments they favored.",
+   "category": "debate",
+   "quote": "A second scenario, termed the 'inland herbivore' scenario, suggests that titanosaurs were present in North America throughout the Late Cretaceous and that their apparent absence reflects the relative rarity of fossil sites preserving the upland environments that titanosaurs favored, rather than their true absence from the continent.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "alamosaurus:enwiki:6",
+   "statement": "Several studies, including Chiarenza et al. (2022), favor a South American origin for Alamosaurus, considering it the only viable hypothesis.",
+   "category": "debate",
+   "quote": "Overall, a South American origin has been favored by several studies and Chiarenza et al. (2022) regarded it as 'the only viable origin' for Alamosaurus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "alamosaurus:enwiki:7",
+   "statement": "Specimens possibly belonging to or similar to Tyrannosaurus rex and Torosaurus utahensis were discovered in the Javelina Formation.",
+   "category": "time_and_habitat",
+   "quote": "Specimens possibly belonging to or similar to Tyrannosaurus rex and Torosaurus utahensis have been discovered from the Javelina Formation",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "alamosaurus:enwiki:7",
+   "statement": "Contemporary archosaurs in the Ojo Alamo Formation included the oviraptorosaur Ojoraptorsaurus, the dromaeosaurid Dineobellator, the armored nodosaurid Glyptodontopelta, and the ceratopsid Ojoceratops.",
+   "category": "time_and_habitat",
+   "quote": "Contemporary archosaurs in the Ojo Alamo Formation include the potentially dubious oviraptorosaur Ojoraptorsaurus, the dromaeosaurid Dineobellator, the armored nodosaurid Glyptodontopelta, and the chasmosaurine ceratopsid Ojoceratops.",
+   "reason": "statement copies the source wording: 'oviraptorosaur Ojoraptorsaurus the dromaeosaurid Dineobellator the armored nodosaurid'"
+  },
+  {
+   "chunk_id": "alamosaurus:enwiki:7",
+   "statement": "Non-archosaurian taxa sharing the environment with Alamosaurus included various species of fish, rays, amphibians, lizards, turtles, and multituberculates.",
+   "category": "time_and_habitat",
+   "quote": "Non-archosaurian taxa that shared the same environment with Alamosaurus include various species of fish, rays, amphibians, lizards, turtles and multituberculates.",
+   "reason": "statement copies the source wording: 'various species of fish rays amphibians lizards turtles'"
   },
   {
    "chunk_id": "alamosaurus:eswiki:4",
-   "statement": "Alamosaurus lived during the Maastrichtian stage of the Late Cretaceous, approximately 74 to 66 million years ago.",
-   "category": "time_and_habitat",
-   "quote": "que se depositara durante el Maastrichtiano durante el Cretácico superior conocido como la \"Pizarra de Kirtland\" . Huesos de Alamosaurus ha sido encontrado en otras formaciones del Maastrichtiano",
-   "reason": "numbers not in the quote: ['66', '74']"
+   "statement": "The holotype specimen USNM 10486 was discovered in June 1921 in the Kirtland Formation of New Mexico by Charles Whitney Gilmore, John Bernard Reeside, and Charles Hazelius Sternberg.",
+   "category": "discovery",
+   "quote": "El holotipo, USNM 10486, fue descubierto en la Formación Kirtland de Nuevo México en junio de 1921 por Charles Whitney Gilmore, John Bernard Reeside y Charles Hazelius Sternberg",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

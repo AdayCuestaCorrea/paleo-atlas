@@ -2,9 +2,9 @@
  "taxon": "Stegoceras",
  "taxon_key": "stegoceras",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "45e96702b24bf34b",
- "generated_at": "2026-11-03T01:42:22+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "00bafc456d0e0996",
+ "generated_at": "2026-11-04T02:57:23+00:00",
  "citations": {
   "stegoceras:enwiki:1": {
    "source": "wikipedia_article",
@@ -76,6 +76,62 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "stegoceras:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Feeding mechanics)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Nasal passages)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:13": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Ontogenetic changes)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:14": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Dome function)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:15": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Combat)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:16": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Combat, part 2)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:17": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Other suggested functions)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:enwiki:18": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (Palaeoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Stegoceras?oldid=1372733957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "stegoceras:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Stegoceras (introduction)",
@@ -93,6 +149,13 @@
   "stegoceras:eswiki:3": {
    "source": "wikipedia_article",
    "title": "Stegoceras (introduction, part 3)",
+   "url": "https://es.wikipedia.org/wiki/Stegoceras?oldid=171176153",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stegoceras:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Stegoceras (introduction, part 4)",
    "url": "https://es.wikipedia.org/wiki/Stegoceras?oldid=171176153",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -115,15 +178,6 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The type species of the genus Stegoceras is Stegoceras validum.",
-   "category": "classification",
-   "chunk_id": "stegoceras:enwiki:1",
-   "lang": "en",
-   "quote": "type_species: Stegoceras validum",
-   "quote_sha": "959a23daaafba7ae"
-  },
-  {
-   "fact_id": "F002",
    "statement": "Stegoceras lived in North America during the Late Cretaceous period, approximately 77.5 to 74 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "stegoceras:enwiki:2",
@@ -132,13 +186,22 @@
    "quote_sha": "f12d068cdd291915"
   },
   {
-   "fact_id": "F003",
-   "statement": "The first specimens of Stegoceras were found in Alberta, Canada, and described in 1902.",
+   "fact_id": "F002",
+   "statement": "The first specimens of Stegoceras were described in 1902 from Alberta, Canada, establishing the type species Stegoceras validum.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:2",
    "lang": "en",
    "quote": "The first specimens from Alberta, Canada, were described in 1902, and the type species Stegoceras validum was based on these remains.",
    "quote_sha": "1fccc0c9cc242ae5"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The name Stegoceras means \"horn roof\" and the specific name validum means \"strong\".",
+   "category": "description",
+   "chunk_id": "stegoceras:enwiki:2",
+   "lang": "en",
+   "quote": "The generic name means \"horn roof\", and the specific name means \"strong\".",
+   "quote_sha": "a51483e8a1f90fe3"
   },
   {
    "fact_id": "F004",
@@ -151,7 +214,16 @@
   },
   {
    "fact_id": "F005",
-   "statement": "Researchers suggest that the skull of Stegoceras was flat in juveniles and developed a dome shape as the animal aged.",
+   "statement": "Stegoceras had a roughly triangular skull with a short snout and a thick, broad, relatively smooth dome on top.",
+   "category": "description",
+   "chunk_id": "stegoceras:enwiki:2",
+   "lang": "en",
+   "quote": "The skull was roughly triangular with a short snout, and had a thick, broad, and relatively smooth dome on the top.",
+   "quote_sha": "1b7b6d27f2cb37d0"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Researchers believe Stegoceras skulls were flat in juveniles and developed into domes as the animals aged.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:2",
    "lang": "en",
@@ -159,8 +231,8 @@
    "quote_sha": "71f19a9f105137ad"
   },
   {
-   "fact_id": "F006",
-   "statement": "Stegoceras was likely herbivorous and probably possessed a good sense of smell.",
+   "fact_id": "F007",
+   "statement": "Stegoceras was likely a herbivore with a good sense of smell.",
    "category": "paleobiology",
    "chunk_id": "stegoceras:enwiki:2",
    "lang": "en",
@@ -168,8 +240,8 @@
    "quote_sha": "0e8f7b773f49fca9"
   },
   {
-   "fact_id": "F007",
-   "statement": "The function of the skull dome in Stegoceras is debated, with theories including combat, sexual display, or species recognition.",
+   "fact_id": "F008",
+   "statement": "The function of the Stegoceras dome is debated, with theories ranging from combat and sexual display to species recognition.",
    "category": "debate",
    "chunk_id": "stegoceras:enwiki:2",
    "lang": "en",
@@ -177,8 +249,8 @@
    "quote_sha": "3a895589a8a6f75c"
   },
   {
-   "fact_id": "F008",
-   "statement": "The first remains of Stegoceras were collected by Lawrence Lambe from the Belly River Group in Alberta, Canada.",
+   "fact_id": "F009",
+   "statement": "Lawrence Lambe collected the first known remains of Stegoceras from the Belly River Group in Alberta, Canada.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:3",
    "lang": "en",
@@ -186,17 +258,8 @@
    "quote_sha": "153ea02e30a251a0"
   },
   {
-   "fact_id": "F009",
-   "statement": "Initial specimens included partial skull domes collected in 1898 and 1901, now housed in the Canadian Museum of Nature.",
-   "category": "discovery",
-   "chunk_id": "stegoceras:enwiki:3",
-   "lang": "en",
-   "quote": "These remains consisted of two partial skull domes (specimens CMN 515 and CMN 1423 in the Canadian Museum of Nature) from two animals of different sizes collected in 1898, and a third partial dome (CMN 1594) collected in 1901.",
-   "quote_sha": "714e279b3da52e7a"
-  },
-  {
    "fact_id": "F010",
-   "statement": "Lawrence Lambe described and named the genus Stegoceras and the species Stegoceras validus in 1902 based on these specimens.",
+   "statement": "Lawrence Lambe named the genus and species Stegoceras validus in 1902 based on initial specimens.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:3",
    "lang": "en",
@@ -205,7 +268,7 @@
   },
   {
    "fact_id": "F011",
-   "statement": "John Bell Hatcher designated specimen CMN 515 as the lectotype for Stegoceras validus in 1907.",
+   "statement": "John Bell Hatcher designated specimen CMN 515 as the lectotype for Stegoceras validum in 1907.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:3",
    "lang": "en",
@@ -214,25 +277,25 @@
   },
   {
    "fact_id": "F012",
-   "statement": "Early researchers debated whether Stegoceras belonged to the ceratopsian or stegosaurian groups.",
-   "category": "debate",
+   "statement": "Franz Nopcsa suggested in 1903 that the domes were frontal and nasal bones forming a single unpaired horn.",
+   "category": "discovery",
    "chunk_id": "stegoceras:enwiki:3",
    "lang": "en",
-   "quote": "At this time, there was still uncertainty over which group of dinosaur Stegoceras belonged to, with both ceratopsians (horned dinosaurs) and stegosaurs (plated dinosaurs) as contenders.",
-   "quote_sha": "c76b8e12a1d09d1a"
+   "quote": "In 1903, palaeontologist Franz Nopcsa von Felső-Szilvás suggested that the fragmentary domes of Stegoceras were in fact frontal and nasal bones, and that the animal would therefore have had a single, unpaired horn.",
+   "quote_sha": "86c989509224d92e"
   },
   {
    "fact_id": "F013",
-   "statement": "The complete skull specimen UALVP 2 was discovered by George F. Sternberg in 1926 in the Belly River Group.",
+   "statement": "In 1918, Lambe named the species S. brevis based on specimen CMN 1423, which he had previously included in S. validus.",
    "category": "discovery",
-   "chunk_id": "stegoceras:enwiki:4",
+   "chunk_id": "stegoceras:enwiki:3",
    "lang": "en",
-   "quote": "It was discovered in the Belly River Group by the American palaeontologist George F. Sternberg in 1926, and catalogued as specimen UALVP 2 in the University of Alberta Laboratory for Vertebrate Palaeontology.",
-   "quote_sha": "6d459c15aceaf725"
+   "quote": "In 1918, Lambe assigned another dome (CMN 138) to S. validus, and named a new species, S. brevis, based on specimen CMN 1423 (which he originally included in S. validus).",
+   "quote_sha": "e466a1a52ef28851"
   },
   {
    "fact_id": "F014",
-   "statement": "Franz Nopcsa doubted the association of the skull and skeleton, suggesting they belonged to different animals.",
+   "statement": "Nopcsa doubted the association of the skull and skeleton, suggesting the skull belonged to a nodosaur and the skeleton to an ornithopod.",
    "category": "debate",
    "chunk_id": "stegoceras:enwiki:4",
    "lang": "en",
@@ -241,7 +304,34 @@
   },
   {
    "fact_id": "F015",
-   "statement": "Stegoceras validum is known from the Dinosaur Park and Oldman Formations, while S. novomexicanum is known from the Fruitland and Kirtland Formations.",
+   "statement": "Charles M. Sternberg demonstrated dental differences in 1945, suggesting Troodon was a theropod and dome-headed dinosaurs formed their own family.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:4",
+   "lang": "en",
+   "quote": "In 1945, after examining casts of T. formosus and S. validus teeth, palaeontologist Charles M. Sternberg demonstrated differences between the two, and instead suggested that Troodon was a theropod dinosaur, and that the dome-headed dinosaurs should be placed in their own family.",
+   "quote_sha": "a13cbb21807b23b5"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "Pachycephalosaurs, including Stegoceras, are grouped with horned ceratopsians in the clade Marginocephalia.",
+   "category": "classification",
+   "chunk_id": "stegoceras:enwiki:2",
+   "lang": "en",
+   "quote": "Pachycephalosaurs are today grouped with the horned ceratopsians in the group Marginocephalia.",
+   "quote_sha": "484278063064d00d"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Stegoceras is considered a basal or primitive member of the pachycephalosaur family.",
+   "category": "classification",
+   "chunk_id": "stegoceras:enwiki:2",
+   "lang": "en",
+   "quote": "Stegoceras itself has been considered basal (or \"primitive\") compared to other pachycephalosaurs.",
+   "quote_sha": "db27ea8b05aaac61"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "S. validum fossils are found in the Dinosaur Park and Oldman Formations, while S. novomexicanum is found in the Fruitland and Kirtland Formations.",
    "category": "time_and_habitat",
    "chunk_id": "stegoceras:enwiki:2",
    "lang": "en",
@@ -249,7 +339,7 @@
    "quote_sha": "67401b8f91ee7165"
   },
   {
-   "fact_id": "F016",
+   "fact_id": "F019",
    "statement": "The species S. novomexicanum is debated and may not belong to the genus Stegoceras.",
    "category": "debate",
    "chunk_id": "stegoceras:enwiki:2",
@@ -258,7 +348,7 @@
    "quote_sha": "c90a7bde1861163b"
   },
   {
-   "fact_id": "F017",
+   "fact_id": "F020",
    "statement": "The specific name of S. browni honors Brown, who discovered the holotype specimen AMNH 5450 in Alberta.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:5",
@@ -267,26 +357,26 @@
    "quote_sha": "6c6c76b59ad1b00c"
   },
   {
-   "fact_id": "F018",
-   "statement": "In 1983, Galton and Hans-Dieter Sues transferred S. browni to the separate genus Ornatotholus.",
+   "fact_id": "F021",
+   "statement": "In 1983, Galton and Hans-Dieter Sues reclassified S. browni into the genus Ornatotholus, viewing it as the first known American \"flat-headed\" pachycephalosaur.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:5",
    "lang": "en",
-   "quote": "In 1983, Galton and Hans-Dieter Sues moved S. browni to its own genus, Ornatotholus",
-   "quote_sha": "06a56f0c66efbfd8"
+   "quote": "In 1983, Galton and Hans-Dieter Sues moved S. browni to its own genus, Ornatotholus (ornatus is Latin for \"adorned\" and tholus for \"dome\"), and considered it the first known American member of a group of \"flat-headed\" pachycephalosaurs, previously known from Asia.",
+   "quote_sha": "e498b8d17fbe831a"
   },
   {
-   "fact_id": "F019",
-   "statement": "In 2000, Robert M. Sullivan assigned S. edmontonensis and S. brevis to the genus Prenocephale.",
+   "fact_id": "F022",
+   "statement": "In 2000, Robert M. Sullivan moved several species to the genus Prenocephale and considered S. bexelli a dubious name because its holotype was incomplete and possibly lost.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:5",
    "lang": "en",
-   "quote": "In 2000, palaeontologist Robert M. Sullivan assigned S. edmontonensis and S. brevis to the genus Prenocephale",
-   "quote_sha": "b236cdfc23507c18"
+   "quote": "In 2000, palaeontologist Robert M. Sullivan assigned S. edmontonensis and S. brevis to the genus Prenocephale (until then only known from the Mongolian species P. prenes), and found it more likely that S. bexelli belonged to Prenocephale than to Stegoceras, but considered it a nomen dubium (dubious name, without distinguishing characters) due to its incompleteness, and noted its holotype specimen appeared to be lost.",
+   "quote_sha": "b8a059e7e865ac4d"
   },
   {
-   "fact_id": "F020",
-   "statement": "In 2003, Thomas E. Williamson and Thomas Carr considered Ornatotholus a dubious name or possibly a juvenile Stegoceras.",
+   "fact_id": "F023",
+   "statement": "In 2003, Williamson and Carr debated whether Ornatotholus was a dubious name or simply a juvenile Stegoceras.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:5",
    "lang": "en",
@@ -294,35 +384,80 @@
    "quote_sha": "34102c935161ff6d"
   },
   {
-   "fact_id": "F021",
-   "statement": "In 2021, Evans and colleagues transferred S. bexelli to the genus Sinocephale.",
+   "fact_id": "F024",
+   "statement": "In 2003, Robert M. Sullivan synonymized Ornatotholus with Stegoceras and created the new genera Colepiocephale and Hanssuesia for other species.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:5",
    "lang": "en",
-   "quote": "S. bexelli to Sinocephale in 2021 by Evans and colleagues.",
-   "quote_sha": "dd20aa21c14bb930"
+   "quote": "In a 2003 revision of Stegoceras, Sullivan agreed that Ornatotholus was a junior synonym of Stegoceras, moved S. lambei to the new genus Colepiocephale, and S. sternbergi to the new genus Hanssuesia, named after Sues.",
+   "quote_sha": "da762172d337dd26"
   },
   {
-   "fact_id": "F022",
-   "statement": "In 2002, Williamson and Carr described a dome from the San Juan Basin, New Mexico (specimen NMMNH P-33983), considering it a juvenile pachycephalosaur of uncertain species.",
+   "fact_id": "F025",
+   "statement": "The specimen UALVP 2 remains the most complete Stegoceras known and forms the basis for most scientific understanding of the genus.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:5",
+   "lang": "en",
+   "quote": "UALVP 2 is still the most complete specimen of Stegoceras, upon which most scientific understanding of the genus is based.",
+   "quote_sha": "dfa5033f465fdd7e"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "In 2016 and 2021, researchers moved S. brevis to the genus Foraminacephale and S. bexelli to the genus Sinocephale.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:5",
+   "lang": "en",
+   "quote": "S. brevis was moved to the new genus Foraminacephale in 2016 by Ryan K. Schott Schott and David C. Evans, and S. bexelli to Sinocephale in 2021 by Evans and colleagues.",
+   "quote_sha": "e9f68a67270667c8"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "In 2023, Aaron D. Dyer and colleagues used synchrotron data to find no significant differences between Gravitholus and Hanssuesia skulls and those of S. validum.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:5",
+   "lang": "en",
+   "quote": "In 2023, palaeontologist Aaron D. Dyer and colleagues analysed sutures and individual elements in the skulls of Gravitholus and Hanssuesia, the former based on synchrotron data, and found no significant distinction between them and Stegoceras validum.",
+   "quote_sha": "5bcfbd2026eee8a2"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "Dyer and colleagues considered Gravitholus and Hanssuesia to be juvenile stages of Stegoceras, with Gravitholus representing the end of growth.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:5",
+   "lang": "en",
+   "quote": "They considered both as junior synonyms, with Gravitholus representing the end-stage in the growth of Stegoceras.",
+   "quote_sha": "284de5e94b053feb"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "In 2002, Williamson and Carr described a dome from New Mexico as a juvenile pachycephalosaur of uncertain species, possibly Sphaerotholus goodwini.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:6",
    "lang": "en",
-   "quote": "In 2002, Williamson and Carr described a dome (specimen NMMNH P-33983 in the New Mexico Museum of Natural History and Science) from the San Juan Basin, New Mexico, which they considered a juvenile pachycephalosaur of uncertain species",
-   "quote_sha": "2e5446b0852f10a4"
+   "quote": "In 2002, Williamson and Carr described a dome (specimen NMMNH P-33983 in the New Mexico Museum of Natural History and Science) from the San Juan Basin, New Mexico, which they considered a juvenile pachycephalosaur of uncertain species (though perhaps Sphaerotholus goodwini).",
+   "quote_sha": "23abfb9a17688713"
   },
   {
-   "fact_id": "F023",
-   "statement": "In 2011, Steven E. Jasinski and Sullivan considered the New Mexico dome an adult and designated it the holotype of the new species Stegoceras novomexicanum.",
+   "fact_id": "F030",
+   "statement": "In 2006, Sullivan and Spencer G. Lucas identified the New Mexico dome as a juvenile S. validum, suggesting a much wider range for the species.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:6",
    "lang": "en",
-   "quote": "In 2011, palaeontologist Steven E. Jasinski and Sullivan considered the specimen an adult, and made it the holotype of the new species Stegoceras novomexicanum",
-   "quote_sha": "317262ac9da1a319"
+   "quote": "In 2006, Sullivan and Spencer G. Lucas considered it a juvenile S. validum, which would expand the range of the species considerably.",
+   "quote_sha": "03f810cb5dea36b4"
   },
   {
-   "fact_id": "F024",
-   "statement": "In 2016, Williamson and Stephen L. Brusatte restudied the S. novomexicanum holotype and found all involved specimens were juveniles, with paratypes belonging to a different taxon.",
+   "fact_id": "F031",
+   "statement": "In 2011, Jasinski and Sullivan reclassified the New Mexico dome as an adult and named it the holotype of the new species Stegoceras novomexicanum.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:6",
+   "lang": "en",
+   "quote": "In 2011, palaeontologist Steven E. Jasinski and Sullivan considered the specimen an adult, and made it the holotype of the new species Stegoceras novomexicanum, with two other specimens (SMP VP-2555 and SMP VP-2790) as paratypes.",
+   "quote_sha": "7ff5ec46b65f4299"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "In 2016, Williamson and Stephen L. Brusatte found that the paratypes of S. novomexicanum did not match the holotype and that all specimens were juveniles.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:6",
    "lang": "en",
@@ -330,8 +465,8 @@
    "quote_sha": "8224e39d7d558fff"
   },
   {
-   "fact_id": "F025",
-   "statement": "In 2024, Steven L. Wick and Thomas M. Lehman described a juvenile Stegoceras specimen from the Aguja Formation of Texas based on morphometric analyses.",
+   "fact_id": "F033",
+   "statement": "In 2024, Steven L. Wick and Thomas M. Lehman described a juvenile Stegoceras specimen from the Aguja Formation of Texas.",
    "category": "discovery",
    "chunk_id": "stegoceras:enwiki:6",
    "lang": "en",
@@ -339,8 +474,8 @@
    "quote_sha": "3b55e8821d8e76c4"
   },
   {
-   "fact_id": "F026",
-   "statement": "Stegoceras is estimated to have been about 2 to 2.5 meters long, comparable to the size of a goat.",
+   "fact_id": "F034",
+   "statement": "Stegoceras was estimated to be about 2 to 2.5 meters long, roughly the size of a goat.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:7",
    "lang": "en",
@@ -348,8 +483,8 @@
    "quote_sha": "c9c5705c2cb786e6"
   },
   {
-   "fact_id": "F027",
-   "statement": "The weight of Stegoceras has been estimated to be between 10 and 40 kilograms.",
+   "fact_id": "F035",
+   "statement": "The weight of Stegoceras has been estimated to range from 10 to 40 kilograms.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:7",
    "lang": "en",
@@ -357,43 +492,25 @@
    "quote_sha": "5caca7d55523e49b"
   },
   {
-   "fact_id": "F028",
-   "statement": "In 1974, Teresa Maryańska and Halszka Osmólska concluded that the gastralia of Stegoceras were ossified tendons based on similar structures found in Homalocephale.",
-   "category": "debate",
-   "chunk_id": "stegoceras:enwiki:5",
-   "lang": "en",
-   "quote": "In 1974, palaeontologists Teresa Maryańska and Halszka Osmólska concluded that the \"gastralia\" of Stegoceras were ossified tendons, after identifying such structures in the tail of the pachycephalosaur Homalocephale.",
-   "quote_sha": "6750956997f15cff"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "In 2016, Jasinski and Sullivan defended the validity of S. novomexicanum by presenting additional diagnostic features in the holotype despite agreeing some traits indicated a sub-adult stage.",
-   "category": "debate",
-   "chunk_id": "stegoceras:enwiki:6",
-   "lang": "en",
-   "quote": "In 2016, Jasinski and Sullivan defended the validity of S. novomexicanum; they agreed that some features used to diagnose the species were indicative of a sub-adult stage, but presented additional diagnostic features in the holotype that distinguish the species.",
-   "quote_sha": "cae66d92d9cbf831"
-  },
-  {
-   "fact_id": "F030",
-   "statement": "Dyer and colleagues suggested the S. novomexicanum holotype might be an immature Sphaerotholus goodwini because its unique traits disappeared during growth in S. validum.",
-   "category": "debate",
-   "chunk_id": "stegoceras:enwiki:6",
-   "lang": "en",
-   "quote": "Dyer and colleagues found that the S. novomexicanum holotype could be an immature Sphaerotholus goodwini, because the proposed unique traits of S. novomexicanum disappeared through ontogeny in S. validum.",
-   "quote_sha": "2e17da8aa4b2f3fc"
-  },
-  {
-   "fact_id": "F031",
-   "statement": "The skull of Stegoceras was roughly triangular in side view with a relatively short snout.",
+   "fact_id": "F036",
+   "statement": "Stegoceras was considered small to medium-sized compared to other pachycephalosaurs.",
    "category": "description",
-   "chunk_id": "stegoceras:enwiki:8",
+   "chunk_id": "stegoceras:enwiki:7",
    "lang": "en",
-   "quote": "The skull of Stegoceras was roughly triangular in shape when viewed from the side, with a relatively short snout.",
-   "quote_sha": "6c62d5a530a2b9ee"
+   "quote": "Stegoceras was small to medium in size compared to other pachycephalosaurs.",
+   "quote_sha": "107010d6c6a3ac11"
   },
   {
-   "fact_id": "F032",
+   "fact_id": "F037",
+   "statement": "It is debated whether S. novomexicanum was smaller than S. validum, as the status of its known specimens as adults or juveniles remains uncertain.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:7",
+   "lang": "en",
+   "quote": "S. novomexicanum appears to have been smaller than S. validum, but it is disputed whether the known specimens (incomplete skulls) are adults or juveniles.",
+   "quote_sha": "5734e910664dd92c"
+  },
+  {
+   "fact_id": "F038",
    "statement": "The frontoparietal dome was broad with a relatively smooth surface, except for wrinkled sides.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
@@ -402,17 +519,8 @@
    "quote_sha": "e70e0aad00de90ba"
   },
   {
-   "fact_id": "F033",
-   "statement": "The large squamosal bone was not part of the dome, had a swollen back, and featured irregular tubercles and a row of nodes ending in small horns.",
-   "category": "description",
-   "chunk_id": "stegoceras:enwiki:8",
-   "lang": "en",
-   "quote": "The squamosal was large, not part of the dome, and the back part was swollen. It was ornamented by irregularly spaced tubercles (or round outgrowths), and a row of nodes (knobs) extended along its upper edges, ending in a pointed tubercle (or small horn) on each side at the back of the skull.",
-   "quote_sha": "acc4ccbad91db2dd"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "Much of the skull, excluding the upper dome surface, was ornamented with nodes arranged in rows.",
+   "fact_id": "F039",
+   "statement": "Much of the skull, except the upper dome surface, was ornamented with nodes arranged in rows.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
    "lang": "en",
@@ -420,17 +528,8 @@
    "quote_sha": "f07a1950e3dc55ab"
   },
   {
-   "fact_id": "F035",
-   "statement": "The maxilla had foramina corresponding to tooth positions that served as passages for erupting replacement teeth.",
-   "category": "description",
-   "chunk_id": "stegoceras:enwiki:8",
-   "lang": "en",
-   "quote": "The maxilla had a series of foramina that corresponded with each tooth position there, and these functioned as passages for erupting replacement teeth.",
-   "quote_sha": "5c4c10a6c6638fc6"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "Stegoceras had heterodont (differentiated) and thecodont (socketed) teeth.",
+   "fact_id": "F040",
+   "statement": "Stegoceras possessed differentiated teeth that were set in sockets.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
    "lang": "en",
@@ -438,7 +537,7 @@
    "quote_sha": "9aec45cdae5fe9ba"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F041",
    "statement": "The front edges of the tooth crowns bore eight denticles, while the back edge bore nine to eleven.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
@@ -447,17 +546,17 @@
    "quote_sha": "01a2ed4c3cc0a096"
   },
   {
-   "fact_id": "F038",
-   "statement": "Stegoceras skulls are distinguished by a pronounced parietosquamosal shelf, incipient doming that increases with age, inflated nasal bones, and specific tubercle and node ornamentation.",
+   "fact_id": "F042",
+   "statement": "Like other pachycephalosaurs, Stegoceras would have had a small beak.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
    "lang": "en",
-   "quote": "The skull of Stegoceras can be distinguished from those of other pachycephalosaurs by features such as its pronounced parietosquamosal shelf (though this became smaller with age), the \"incipient\" doming of its frontopariental (though the doming increased with age), its inflated nasal bones, its ornamentation of tubercles on the sides and back of the squamosal bones, rows of up to six tubercles on the upper side of each squamosal, and up to two nodes on the backwards projection of the parietal.",
-   "quote_sha": "be4a0bcd02598b0a"
+   "quote": "Like other pachycephalosaurs, it would have had a small beak.",
+   "quote_sha": "cc15e1d5d685ac7e"
   },
   {
-   "fact_id": "F039",
-   "statement": "Stegoceras is distinct for its lack of nasal ornamentation and a reduced diastema.",
+   "fact_id": "F043",
+   "statement": "Stegoceras is distinct for its lack of nasal ornamentation and a reduced gap between the front teeth.",
    "category": "description",
    "chunk_id": "stegoceras:enwiki:8",
    "lang": "en",
@@ -465,71 +564,44 @@
    "quote_sha": "a645324bfa4697b5"
   },
   {
-   "fact_id": "F040",
-   "statement": "S. novomexicanum differs from S. validum in having a more reduced and triangular parietal extension, larger supratemporal fenestrae, and roughly parallel suture contacts.",
+   "fact_id": "F044",
+   "statement": "The vertebral column was very rigid due to articulations that prevented sideways movement and was strengthened by ossified tendons.",
    "category": "description",
-   "chunk_id": "stegoceras:enwiki:8",
-   "lang": "en",
-   "quote": "The skull of S. novomexicanum can be distinguished from that of S. validum in features such as the backwards extension of the parietal bone being more reduced and triangular, having larger supratemporal fenestrae (though this may be due to the possible juvenile status of the specimens), and having roughly parallel suture contacts between the squamosal and parietal.",
-   "quote_sha": "9877578c274a31f8"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "Like other pachycephalosaurs, Stegoceras would have had a small beak.",
-   "category": "paleobiology",
-   "chunk_id": "stegoceras:enwiki:8",
-   "lang": "en",
-   "quote": "Like other pachycephalosaurs, it would have had a small beak.",
-   "quote_sha": "cc15e1d5d685ac7e"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "The articulation between successive dorsal vertebrae prevented sideways movement, making the vertebral column very rigid and strengthened by ossified tendons.",
-   "category": "paleobiology",
    "chunk_id": "stegoceras:enwiki:9",
    "lang": "en",
    "quote": "The articulation between the zygagophyses (articular processes) of successive dorsal (back) vertebrae appears to have prevented sideways movement of the vertebral column, which made it very rigid, and it was further strengthened by ossified tendons.",
    "quote_sha": "5afdce9d74cb4b94"
   },
   {
-   "fact_id": "F043",
-   "statement": "The scapula was longer than the humerus, with a slender, narrow, and slightly twisted blade following the rib contour.",
-   "category": "paleobiology",
+   "fact_id": "F045",
+   "statement": "The tail contained unique myorhabdoi structures found only in pachycephalosaurs among four-limbed animals, which may have stiffened the tail.",
+   "category": "description",
+   "chunk_id": "stegoceras:enwiki:9",
+   "lang": "en",
+   "quote": "Such structures are called myorhabdoi, and are otherwise only known in teleost fish; the feature is unique to pachycephalosaurs among tetrapod (four-limbed) animals, and may have functioned in stiffening the tail.",
+   "quote_sha": "2e0278ed4830620c"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "The shoulder blade was longer than the upper arm bone, slender, narrow, and slightly twisted.",
+   "category": "description",
    "chunk_id": "stegoceras:enwiki:9",
    "lang": "en",
    "quote": "The scapula (shoulder blade) was longer than the humerus (upper arm bone); its blade was slender and narrow, and slightly twisted, following the contour of the ribs.",
    "quote_sha": "aa28244747f67c6c"
   },
   {
-   "fact_id": "F044",
-   "statement": "The humerus had a slender shaft that was slightly twisted along its length and slightly bowed.",
-   "category": "paleobiology",
-   "chunk_id": "stegoceras:enwiki:9",
-   "lang": "en",
-   "quote": "The humerus had a slender shaft, was slightly twisted along its length, and was slightly bowed.",
-   "quote_sha": "adbc52ae443d274b"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Though incomplete, Stegoceras limbs were likely like other pachycephalosaurs, having five-fingered hands and four toes.",
-   "category": "paleobiology",
+   "fact_id": "F047",
+   "statement": "Stegoceras likely had five-fingered hands and four toes, similar to other pachycephalosaurs.",
+   "category": "description",
    "chunk_id": "stegoceras:enwiki:9",
    "lang": "en",
    "quote": "Though the limbs of Stegoceras are not completely known, they were most likely like other pachycephalosaurs in having five-fingered hands and four toes.",
    "quote_sha": "b637c3e0cd7763b5"
   },
   {
-   "fact_id": "F046",
-   "statement": "It is debated whether larger supratemporal fenestrae in S. novomexicanum are a species trait or due to juvenile status.",
-   "category": "debate",
-   "chunk_id": "stegoceras:enwiki:8",
-   "lang": "en",
-   "quote": "having larger supratemporal fenestrae (though this may be due to the possible juvenile status of the specimens)",
-   "quote_sha": "1376351ba316f427"
-  },
-  {
-   "fact_id": "F047",
-   "statement": "In 1978, Dong Zhiming classified Stegoceras within the family Pachycephalosauridae, which included dome-headed pachycephalosaurs.",
+   "fact_id": "F048",
+   "statement": "In 1978, Stegoceras was placed in the family Pachycephalosauridae by Dong Zhiming.",
    "category": "classification",
    "chunk_id": "stegoceras:enwiki:10",
    "lang": "en",
@@ -537,8 +609,8 @@
    "quote_sha": "575f5c4dd7f87a8f"
   },
   {
-   "fact_id": "F048",
-   "statement": "In 1986, Paul Sereno grouped pachycephalosaurs like Stegoceras with ceratopsians into the suborder Marginocephalia based on cranial similarities.",
+   "fact_id": "F049",
+   "statement": "In 1986, Paul Sereno grouped Stegoceras with ceratopsians in the suborder Marginocephalia based on skull features.",
    "category": "classification",
    "chunk_id": "stegoceras:enwiki:10",
    "lang": "en",
@@ -546,8 +618,8 @@
    "quote_sha": "f68803c9b4c12d18"
   },
   {
-   "fact_id": "F049",
-   "statement": "A 2003 study by Sullivan suggested that Stegoceras was more primitive than fully-domed members of the subfamily Pachycephalosaurinae.",
+   "fact_id": "F050",
+   "statement": "In 2003, researchers determined that Stegoceras is more primitive than fully-domed pachycephalosaurs.",
    "category": "classification",
    "chunk_id": "stegoceras:enwiki:10",
    "lang": "en",
@@ -555,17 +627,314 @@
    "quote_sha": "5e852efd1359bac1"
   },
   {
-   "fact_id": "F050",
-   "statement": "A 2013 analysis by Evans et al. proposed that flat-headed pachycephalosaurs were more closely related to fully-domed taxa than to Stegoceras, suggesting flat heads might represent juveniles.",
-   "category": "classification",
+   "fact_id": "F051",
+   "statement": "It is debated whether the flat-headed condition in some pachycephalosaurs represents a juvenile trait or an advanced derived feature rather than sexual dimorphism.",
+   "category": "debate",
    "chunk_id": "stegoceras:enwiki:10",
    "lang": "en",
-   "quote": "A 2013 phylogenetic analysis by Evans and colleagues found that some flat-headed pachycephalosaur genera were more closely related to \"fully\" domed taxa than to the \"incompletely\" domed Stegoceras",
-   "quote_sha": "7218f35a91d5ab2a"
+   "quote": "The dome-headed/flat-headed division of the pachycephalosaurs was abandoned in the following years, as flat heads were considered paedomorphic (juvenile-like) or derived (\"advanced\") traits in most revisions, but not a sexually dimorphic trait",
+   "quote_sha": "3f2118ae99d3bd71"
   },
   {
-   "fact_id": "F051",
-   "statement": "The first remains of Stegoceras were found in Alberta, Canada, in 1902, forming the basis for the description of the type species Stegoceras validum.",
+   "fact_id": "F052",
+   "statement": "A 2016 study by Schott and colleagues placed Stegoceras within the family Pachycephalosauridae.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:10",
+   "lang": "en",
+   "quote": "The cladogram below shows the placement of Stegoceras within Pachycephalosauridae according to Schott and colleagues, 2016:",
+   "quote_sha": "ce6d0d58a6d1e35a"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "In 2021, researchers found that Stegoceras teeth were statistically distinct from those of Thescelosaurus despite both having heterodont dentition.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:11",
+   "lang": "en",
+   "quote": "In 2021, palaeontologist Michael N. Hudgins and colleagues examined the teeth of Stegoceras and Thescelosaurus and found that while both had heterodont teeth, they could be statistically distinguished from each other",
+   "quote_sha": "9326cd1246deda19"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "In 2026, researchers found that the skull dome of Stegoceras limited jaw muscle movement and constrained its feeding style.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:11",
+   "lang": "en",
+   "quote": "In 2026, palaeontologists Louis-Philippe Bateman and Hans C.E. Larsson examined the feeding performance in pachycephalosaurs using Stegoceras as a model, and found that the presence of their domes limited the space and movement of their jaw muscles",
+   "quote_sha": "92c9bd0a363c60b7"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Researchers concluded that the skull dome of Stegoceras constrained its evolution to an ancestral, low-fiber herbivorous diet and may have been a social display structure.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:11",
+   "lang": "en",
+   "quote": "They concluded that the dome constrained pachycephalosaurs to a more plesiomorphic (ancestral) dentition with a low-fiber herbivorous niche, and that it was an example of a sociosecual display structure constraining evolution of feeding traits",
+   "quote_sha": "d9507f682fa9c06e"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "In 2014, Jason M. Bourke and colleagues proposed that Stegoceras possessed cartilaginous nasal turbinates to direct airflow to its olfactory region.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:12",
+   "lang": "en",
+   "quote": "In 2014, Jason M. Bourke and colleagues found that Stegoceras would have needed cartilaginous nasal turbinates in the front of the nasal passages for airflow to reach the olfactory region",
+   "quote_sha": "636d7de6c729d3ce"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Researchers suggest that nasal turbinates in Stegoceras helped cool arterial blood flowing to the brain.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:12",
+   "lang": "en",
+   "quote": "The blood vessel system in the passages also suggest that the turbinates served to cool down warm arterial blood from the body that was heading to the brain",
+   "quote_sha": "6148c93419a7d6f0"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The oldest known pachycephalosaurs, such as Acrotholus, lived about 84 million years ago during the Late Cretaceous.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:enwiki:10",
+   "lang": "en",
+   "quote": "The oldest known members of the group (such as Acrotholus) are \"fully domed\" and known from the Santonian stage of the Late Cretaceous period (about 84 million years ago)",
+   "quote_sha": "7e767c43bd0557b8"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Stegoceras lived about 77 million years ago during the Middle Campanian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "stegoceras:enwiki:10",
+   "lang": "en",
+   "quote": "This is before the supposedly more primitive Stegoceras from the Middle Campanian (77 million years ago) and Homalocephale from the Early Maastrichtian (70 million years ago)",
+   "quote_sha": "33a49c225c2b1d36"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Pachycephalosaurs, including Stegoceras, are found in both North America and Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "stegoceras:enwiki:10",
+   "lang": "en",
+   "quote": "Pachycephalosaurs appear abruptly in the fossil record, and are present in both North America and Asia",
+   "quote_sha": "af0d826a34c0770f"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Researchers Brown and Schlaikjer hypothesized that the variation in dome size represented sexual dimorphism, with flat-headed specimens being female Stegoceras.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:13",
+   "lang": "en",
+   "quote": "Brown and Schlaikjer suggested that there was sexual dimorphism in the degree of doming, and hypothesized that flat-headed specimens such as AMNH 5450 (Ornatotholus) represented the female morph of Stegoceras.",
+   "quote_sha": "f3a46021407f7723"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "Williamson and Carr (2003) proposed a growth series where Ornatotholus represented the juvenile stage of Stegoceras validum.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:13",
+   "lang": "en",
+   "quote": "In 2003, Williamson and Carr published a hypothetical growth series of S. validum, showing Ornatotholus as the juvenile stage.",
+   "quote_sha": "c531343e9a1579ff"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "A 2011 study by Schott and colleagues found that ornamentation on the parietosquamosal shelf remained consistent during growth while vascularity in the domes decreased as size increased.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:13",
+   "lang": "en",
+   "quote": "In 2011, Schott and colleagues made a more comprehensive analysis of cranial dome ontogeny in S. validum. The study found that the parietosquamosal shelf conserved the arrangement of ornamentation throughout growth, and that vascularity of the frontoparietal domes decreased with size.",
+   "quote_sha": "21b2b4c774affca4"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "A 2012 study by Schott and Evans concluded that variability in the number and shape of nodes on the squamosal shelf was due to individual variation rather than ontogeny.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:13",
+   "lang": "en",
+   "quote": "A 2012 study by Schott and Evans found that the number and shape of the individual nodes on the squamosal shelf of the examined S. validum skulls varied considerably, and that this variability does not seem to correlate with ontogenic changes, but was due to individual variation.",
+   "quote_sha": "8149b68e9dd8375d"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The function of the Stegoceras dome is debated, with interpretations ranging from a weapon for intra-specific combat to a structure for sexual display or species recognition.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:14",
+   "lang": "en",
+   "quote": "The function of pachycephalosaur domes has been debated, and Stegoceras has been used as a model for experimentation in various studies. The dome has mainly been interpreted as a weapon used in intra-specific combat, a sexual display structure, or a means for species recognition.",
+   "quote_sha": "c46f3bd477ed4ff2"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Palaeontologist Edwin Colbert first suggested in 1955 that Stegoceras domed skulls were used for head-butting.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "The hypothesis that the domed skulls of Stegoceras and other pachycephalosaurs were used for butting heads was first suggested by palaeontologist Edwin Colbert in 1955.",
+   "quote_sha": "33765b99ebbdf98d"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "Galton argued that the dome could function as a battering-ram if the skull was held vertically perpendicular to the neck to transmit force without dislocation.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "Galton suggested that when Stegoceras held its skull vertically, perpendicular to the neck, force would be transmitted from the skull, with little chance of it being dislocated, and the dome could therefore be used as a battering-ram.",
+   "quote_sha": "11309e6617c10cfb"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "In 1978, Sues supported the head-butting hypothesis based on plexi-glass models showing the anatomy could transmit dome-to-dome impact stress.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "In 1978, Sues agreed with Galton that the anatomy of pachycephalosaurs was consistent with transmitting dome-to-dome impact stress, based on tests with plexi-glass models.",
+   "quote_sha": "eda5ebe588585b8c"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Kenneth Carpenter (1997) argued that the curved posture of the neck and back made horizontal head-butting physically impossible for Stegoceras.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "In 1997, palaeontologist Kenneth Carpenter pointed out that the dorsal vertebrae from the back of the pachycephalosaur Homalocephale show that the back curved downwards just before the neck (which was not preserved), and unless the neck curved upwards, the head would point to the ground.",
+   "quote_sha": "576aba7770bbd743"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Carpenter proposed that Stegoceras used its dome for flank-butting, where animals stood parallel and struck the sides of opponents.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "Because of the problems he found with the head-butting hypothesis, Carpenter instead suggested the domes were adaptations for flank-butting (as seen in some large African mammals); he imagined that two animals would stand parallel, facing each other or the same direction, and direct blows to the side of the opponent.",
+   "quote_sha": "d95b0e4b0846b7e7"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Carpenter suggested Stegoceras engaged in threat displays by bobbing heads to show dome size before delivering blows until one opponent submitted.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:15",
+   "lang": "en",
+   "quote": "Carpenter suggested that the pachycephalosaurs would have first engaged in threat display by bobbing and presenting their heads to show the size of their domes (intimidation), and thereafter delivered blows to each other, until one opponent signalled submission.",
+   "quote_sha": "403ee4f84df2371c"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Stegoceras possessed a skull shape similar to bighorn sheep, featuring cancellous bone that protected the brain.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:16",
+   "lang": "en",
+   "quote": "Stegoceras and Prenocephale both had skull shapes similar to the bighorn sheep with cancellous bone protecting the brain.",
+   "quote_sha": "595edc63718d9a7d"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "The concentration of trauma lesions at the top of the dome supports the hypothesis that Stegoceras engaged in head-butting behavior.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:16",
+   "lang": "en",
+   "quote": "The distribution of lesions in these animals tended to concentrate at the top of the dome, which supports head-butting behaviour.",
+   "quote_sha": "9637614263d94f80"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Research indicates that while Stegoceras forelimb musculature was conservative compared to early bipedal saurischians, its pelvic and hindlimb musculature was more derived due to skeletal peculiarities.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:16",
+   "lang": "en",
+   "quote": "They found that the musculature of the forelimbs was conservative, particularly compared to those of early bipedal saurischian dinosaurs, but the pelvic and hindlimb musculature was instead more derived, due to peculiarities of the skeleton.",
+   "quote_sha": "98c9d14366444752"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "In 1998, Goodwin and colleagues argued that the lack of sinuses and the honeycomb-like vascular bone structure made the dome ill-suited for head-butting, risking fractures in adjacent bones.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:17",
+   "lang": "en",
+   "quote": "In 1998, Goodwin and colleagues considered the lack of sinuses in the skull of Stegoceras and the \"honeycomb\"-like network of vascular bone in the dome ill-suited for head-butting, and pointed out that the bones adjacent to the dome risked fracture during such contact.",
+   "quote_sha": "8d3bba3b43bc1407"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "A 2004 study by Goodwin and colleagues found that dome vascularity decreased with age, a pattern they argued was inconsistent with functions in head-butting or heat-exchange.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:17",
+   "lang": "en",
+   "quote": "In 2004, Goodwin and colleagues studied the cranial histology of pachycephalosaurs, and found that the vascularity (including the trabeculae) of the domes decreased with age, which they found inconsistent with a function in either head-butting or heat-exchange.",
+   "quote_sha": "5dfd382f8240902b"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "In 2011, Padian and Horner proposed that bizarre dinosaur structures like domes were primarily for species recognition, dismissing other explanations as unsupported.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:17",
+   "lang": "en",
+   "quote": "In 2011, palaeontologists Kevin Padian and John R. Horner proposed that \"bizarre structures\" in dinosaurs in general (including domes, frills, horns, and crests) were primarily used for species recognition, and dismissed other explanations as unsupported by evidence.",
+   "quote_sha": "58d1c356f00fe426"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "A 2023 study found that Stegoceras specimens varied in frontonasal boss thickness, with the tallest bosses showing the most bone pathologies, suggesting the variation represents intersexual differences.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:17",
+   "lang": "en",
+   "quote": "Dyer and colleagues found in 2023 that Stegoceras specimens differed in the thickness of the frontonasal boss, and that skulls with the most bone pathologies were those with the tallest bosses, which they considered indication that variation in boss thickness represents intersexual variation.",
+   "quote_sha": "8ca85f1ed1d87d46"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Horner and colleagues stated in 2023 that the early development of domes and ornamentation in Stegoceras indicates they were used for visual communication to allow juveniles and adults to recognize one another.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:17",
+   "lang": "en",
+   "quote": "In 2023, Horner and colleagues stated that since the dome and associated ornamentation of Stegoceras and the ornamentation of Pachycephalosaurus developed early in life, this indicates they were used for visual communication, so that juveniles could recognise other juveniles and adults other adults.",
+   "quote_sha": "4bef9489671ce45f"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "Stegoceras validum lived between 77.5 and 75 million years ago in Alberta, Canada, within the Dinosaur Park and Oldman Formations.",
+   "category": "time_and_habitat",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "S. validum is known from the late Late Cretaceous Belly River Group (the Canadian equivalent to the Judith River Group in the US), and specimens have been recovered from the Dinosaur Park Formation (late Campanian, 76.5 to 75 mya) in Dinosaur Provincial Park (including the lectotype specimen), and the Oldman Formation (middle Campanian, 77.5 to 76.5 mya) of Alberta, Canada.",
+   "quote_sha": "4c3f0ff91cc34b62"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "Stegoceras novomexicanum lived approximately 75 to 74 million years ago in New Mexico.",
+   "category": "time_and_habitat",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "S. novomexicanum is known from the Fruitland (late Campanian, about 75 mya) and lower Kirtland Formation (late Campanian, about 74 mya) of New Mexico",
+   "quote_sha": "0ddb1c71fb29e5b1"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "The environment of the Dinosaur Park Formation was a low-relief landscape of rivers and floodplains that became increasingly swampy and influenced by marine conditions.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "The Dinosaur Park Formation is interpreted as a low-relief setting of rivers and floodplains that became more swampy and influenced by marine conditions over time as the Western Interior Seaway transgressed westward.",
+   "quote_sha": "3836454e1bcf8d79"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "The climate in the Dinosaur Park Formation was warmer than modern Alberta, lacking frost but featuring distinct wet and dry seasons.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "The climate was warmer than present-day Alberta, without frost, but with wetter and drier seasons.",
+   "quote_sha": "83042f8edefcc032"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Conifers formed the dominant canopy, while ferns, tree ferns, and flowering plants made up the understory in the Dinosaur Park Formation.",
+   "category": "paleobiology",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "Conifers were apparently the dominant canopy plants, with an understory of ferns, tree ferns, and angiosperms.",
+   "quote_sha": "5656f945eae8c844"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "The first remains of Stegoceras were discovered in Alberta, Canada, in 1902, forming the basis for the description of the type species S. validum.",
    "category": "discovery",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
@@ -573,25 +942,16 @@
    "quote_sha": "520c9dd41800efdf"
   },
   {
-   "fact_id": "F052",
-   "statement": "The species Stegoceras novomexicanum was named in 2011 based on fossils discovered in New Mexico.",
-   "category": "discovery",
+   "fact_id": "F086",
+   "statement": "The genus Stegoceras was named by Lambe in 1902.",
+   "category": "classification",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
-   "quote": "Actualmente sólo cuenta con la especie tipo y Stegoceras novomexicanum, nombrado en 2011 a partir de fósiles encontrados en Nuevo México.",
-   "quote_sha": "8e591dc4e180e3f4"
+   "quote": "genus_authority = Lambe, 1902",
+   "quote_sha": "d72a0261240bad40"
   },
   {
-   "fact_id": "F053",
-   "statement": "Stegoceras lived during the Late Cretaceous period, approximately 78 to 74 million years ago, in what is now North America.",
-   "category": "time_and_habitat",
-   "chunk_id": "stegoceras:eswiki:1",
-   "lang": "es",
-   "quote": "Stegoceras' es un género de dinosaurios marginocéfalos paquicefalosáuridos, que vivieron a finales del período Cretácico, hace aproximadamente ente 78 a 74millones de años, durante el Campaniense, en lo que hoy es Norteamérica.",
-   "quote_sha": "243551b7bbc80b37"
-  },
-  {
-   "fact_id": "F054",
+   "fact_id": "F087",
    "statement": "Stegoceras was a small bipedal dinosaur measuring approximately 2 to 2.5 meters in length and weighing between 10 and 40 kilograms.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:1",
@@ -600,8 +960,8 @@
    "quote_sha": "7b9247b17ae00d72"
   },
   {
-   "fact_id": "F055",
-   "statement": "The skull of Stegoceras was roughly triangular with a short snout and featured a thick, wide, and relatively smooth dome on top.",
+   "fact_id": "F088",
+   "statement": "The skull was roughly triangular with a short snout and featured a thick, wide, and relatively smooth dome on top.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
@@ -609,8 +969,8 @@
    "quote_sha": "ccb9eb9e498a1bf1"
   },
   {
-   "fact_id": "F056",
-   "statement": "The back of the Stegoceras skull had a thick shelf above the occiput and a thick crest over the eyes.",
+   "fact_id": "F089",
+   "statement": "The back of the skull had a thick shelf over the occiput and a thick crest over the eyes.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
@@ -618,8 +978,26 @@
    "quote_sha": "b3553808bf8253b0"
   },
   {
-   "fact_id": "F057",
-   "statement": "Stegoceras had small, serrated teeth.",
+   "fact_id": "F090",
+   "statement": "Much of the skull was decorated with tubercles and nodules arranged in rows, with the largest forming small horns on the shelf.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:1",
+   "lang": "es",
+   "quote": "Gran parte del cráneo estaba adornado con tubérculos y nódulos, muchos en filas y los más grandes formaban pequeños cuernos en el estante.",
+   "quote_sha": "6a8d75892a65a983"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "It is believed that the skull was flat in young animals and developed into a dome as they aged.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:1",
+   "lang": "es",
+   "quote": "Se cree que el cráneo era plano en los animales jóvenes y que se convirtió en una cúpula con la edad.",
+   "quote_sha": "37a98e278e1da9d8"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "The teeth were small and serrated.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
@@ -627,26 +1005,35 @@
    "quote_sha": "0382f71ab1f44202"
   },
   {
-   "fact_id": "F058",
-   "statement": "It is believed that the Stegoceras skull was flat in young animals and developed into a dome as they aged.",
-   "category": "paleobiology",
+   "fact_id": "F093",
+   "statement": "It possessed a rigid vertebral column and a stiff tail.",
+   "category": "description",
    "chunk_id": "stegoceras:eswiki:1",
    "lang": "es",
-   "quote": "Se cree que el cráneo era plano en los animales jóvenes y que se convirtió en una cúpula con la edad.",
-   "quote_sha": "37a98e278e1da9d8"
+   "quote": "Tenía una columna vertebral rígida y una cola rígida.",
+   "quote_sha": "de83ef428dc62d37"
   },
   {
-   "fact_id": "F059",
-   "statement": "The division of pachycephalosaurs into dome-headed and flat-headed groups was abandoned as flat heads were considered either juvenile-like or advanced traits rather than sexually dimorphic ones.",
+   "fact_id": "F094",
+   "statement": "It has traditionally been suggested that pachycephalosaurs inhabited mountain environments, with skull wear attributed to being rolled by water from upland areas, a theory reinforced by comparisons with bighorn sheep.",
    "category": "debate",
-   "chunk_id": "stegoceras:enwiki:10",
+   "chunk_id": "stegoceras:enwiki:18",
    "lang": "en",
-   "quote": "The dome-headed/flat-headed division of the pachycephalosaurs was abandoned in the following years, as flat heads were considered paedomorphic (juvenile-like) or derived (\"advanced\") traits in most revisions, but not a sexually dimorphic trait.",
-   "quote_sha": "14a73e703b540e80"
+   "quote": "It has traditionally been suggested that pachycehalosaurs inhabited mountain environments; wear of their skulls was supposedly a result of them having been rolled by water from upland areas, and comparisons with bighorn sheep reinforced the theory.",
+   "quote_sha": "b1505d93b557a41c"
   },
   {
-   "fact_id": "F060",
-   "statement": "A complete skull with associated skeletal parts of Stegoceras was described in 1924.",
+   "fact_id": "F095",
+   "statement": "In 2014, Jordan C. Mallon and Evans disputed the mountain habitat theory, arguing that skull wear and locations were inconsistent with water transport, and instead proposed that North American pachycephalosaurs lived in alluvial and coastal plain environments.",
+   "category": "debate",
+   "chunk_id": "stegoceras:enwiki:18",
+   "lang": "en",
+   "quote": "In 2014, Jordan C. Mallon and Evans disputed this idea, as the wear and original locations of the skulls is not consistent with having been transported in such a way, and they instead proposed that North American pachycephalosaurs inhabited alluvial (associated with water) and coastal plain environments.",
+   "quote_sha": "d070ec61152ab099"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "A complete skull with associated skeletal parts was described in 1924.",
    "category": "discovery",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
@@ -654,8 +1041,8 @@
    "quote_sha": "73755feef48ad806"
   },
   {
-   "fact_id": "F061",
-   "statement": "Pachycephalosaurs are grouped today with horned ceratopsians in the group Marginocephalia.",
+   "fact_id": "F097",
+   "statement": "Pachycephalosaurs are grouped today with horned ceratopsians in the clade Marginocephalia.",
    "category": "classification",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
@@ -663,25 +1050,16 @@
    "quote_sha": "008f36c6545f8c6e"
   },
   {
-   "fact_id": "F062",
-   "statement": "Stegoceras has been considered basal compared to other pachycephalosaurs.",
-   "category": "classification",
-   "chunk_id": "stegoceras:eswiki:2",
-   "lang": "es",
-   "quote": "El propio Stegoceras se ha considerado basal en comparación con otros paquicefalosáuridos",
-   "quote_sha": "23339f58824f7943"
-  },
-  {
-   "fact_id": "F063",
+   "fact_id": "F098",
    "statement": "Stegoceras was a herbivore and likely had a good sense of smell.",
-   "category": "paleobiology",
+   "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
    "quote": "Stegoceras era herbívoro, y probablemente tenía un buen sentido del olfato",
    "quote_sha": "873cc775d7efaa9f"
   },
   {
-   "fact_id": "F064",
+   "fact_id": "F099",
    "statement": "The function of the dome is debated, with competing theories including intraspecific combat, head-to-head or head-to-flank fighting, sexual display, or species recognition.",
    "category": "debate",
    "chunk_id": "stegoceras:eswiki:2",
@@ -690,25 +1068,16 @@
    "quote_sha": "7494b28b77fe41e7"
   },
   {
-   "fact_id": "F065",
-   "statement": "S. validum is known from the Dinosaur Park Formation and the Oldman Formation.",
+   "fact_id": "F100",
+   "statement": "S. validum is known from the Dinosaur Park and Oldman Formations, while S. novomexicanum is from the Fruitland and Kirtland Formations.",
    "category": "time_and_habitat",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
-   "quote": "S. validum se conoce de la Formación Dinosaur Park y la Formación Oldman",
-   "quote_sha": "5b7d3ef7e1c469b1"
+   "quote": "S. validum se conoce de la Formación Dinosaur Park y la Formación Oldman , mientras que S. novomexicanum es de la Formación Fruitland y Kirtland",
+   "quote_sha": "4dc55bbf76d25e2a"
   },
   {
-   "fact_id": "F066",
-   "statement": "S. novomexicanum is from the Fruitland Formation and the Kirtland Formation.",
-   "category": "time_and_habitat",
-   "chunk_id": "stegoceras:eswiki:2",
-   "lang": "es",
-   "quote": "S. novomexicanum es de la Formación Fruitland y Kirtland",
-   "quote_sha": "05ab563fcc6f0baf"
-  },
-  {
-   "fact_id": "F067",
+   "fact_id": "F101",
    "statement": "The UALVP 2 specimen of S. validum is the most complete Stegoceras individual known to date.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -717,8 +1086,8 @@
    "quote_sha": "f5c5644b1e36693f"
   },
   {
-   "fact_id": "F068",
-   "statement": "Its length is estimated at approximately 2 to 2.5 meters, comparable to the size of a goat.",
+   "fact_id": "F102",
+   "statement": "Its estimated length was approximately 2 to 2.5 meters, comparable to the size of a goat.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
@@ -726,7 +1095,7 @@
    "quote_sha": "d18763b5f728b28a"
   },
   {
-   "fact_id": "F069",
+   "fact_id": "F103",
    "statement": "Its weight has been estimated at around 10 to 40 kilograms.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -735,25 +1104,16 @@
    "quote_sha": "62fd2d6dea816ba6"
   },
   {
-   "fact_id": "F070",
-   "statement": "S. novomexicanum appears to have been smaller than S. validum, but it is debated whether the known specimens, which are incomplete skulls, are adults or juveniles.",
+   "fact_id": "F104",
+   "statement": "Stegoceras is one of the most known North American pachycephalosaurs and one of the few known from postcranial remains.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
-   "quote": "S.novomexicanum parece haber sido más pequeño que S.validum, pero se discute si los especímenes conocidos, cráneos incompletos, son adultos o juveniles",
-   "quote_sha": "030ea9bc177e3ee6"
+   "quote": "Stegoceras es uno de los paquicefalosáuridos norteamericanos más conocidos y uno de los pocos conocidos a partir de restos poscraneales",
+   "quote_sha": "ea3eef32d1206383"
   },
   {
-   "fact_id": "F071",
-   "statement": "The Stegoceras skull had an approximately triangular shape when viewed from the side, with a relatively short snout.",
-   "category": "description",
-   "chunk_id": "stegoceras:eswiki:2",
-   "lang": "es",
-   "quote": "El cráneo de Stegoceras tenía una forma aproximadamente triangular visto desde un lado, con un hocico relativamente corto",
-   "quote_sha": "2b1e879d56062980"
-  },
-  {
-   "fact_id": "F072",
+   "fact_id": "F105",
    "statement": "The frontal and parietal bones were very thick and formed an elevated dome.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -762,7 +1122,7 @@
    "quote_sha": "60e881d22e69ddaf"
   },
   {
-   "fact_id": "F073",
+   "fact_id": "F106",
    "statement": "The suture between these two elements was obliterated, only slightly visible in some specimens, and they are collectively called \"frontoparietals\".",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -771,16 +1131,7 @@
    "quote_sha": "3b60143715a039de"
   },
   {
-   "fact_id": "F074",
-   "statement": "The frontoparietal dome was wide and had a relatively smooth surface, with only the sides being rough.",
-   "category": "description",
-   "chunk_id": "stegoceras:eswiki:2",
-   "lang": "es",
-   "quote": "La cúpula frontoparietal era ancha y tenía una superficie relativamente lisa, con solo los lados rugosos",
-   "quote_sha": "56673d7778681240"
-  },
-  {
-   "fact_id": "F075",
+   "fact_id": "F107",
    "statement": "The squamosal bone was large, did not form part of the dome, and the posterior part was swollen.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -789,25 +1140,25 @@
    "quote_sha": "bc70c464126e12e2"
   },
   {
-   "fact_id": "F076",
-   "statement": "It was adorned with irregularly spaced tubercles, and a row of nodules or protuberances extended along its upper edges.",
+   "fact_id": "F108",
+   "statement": "It was adorned with irregularly spaced tubercles, and a row of nodules or protuberances extended along its upper edges, ending in a pointed tubercle or small horn on each side at the back of the skull.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
-   "quote": "Estaba adornado con tubérculos espaciados irregularmente y una fila de nódulos o protuberancias se extendía a lo largo de sus bordes superiores",
-   "quote_sha": "1ff99a2eb2a15f83"
+   "quote": "Estaba adornado con tubérculos espaciados irregularmente y una fila de nódulos o protuberancias se extendía a lo largo de sus bordes superiores, terminando en un tubérculo puntiagudo o pequeño cuerno a cada lado en la parte posterior del cráneo",
+   "quote_sha": "386ee70c9da2d8fb"
   },
   {
-   "fact_id": "F077",
-   "statement": "Except for the upper surface of the dome, much of the skull was adorned with nodules.",
+   "fact_id": "F109",
+   "statement": "Except for the upper surface of the dome, most of the skull was adorned with nodules, many arranged in rows.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
    "lang": "es",
-   "quote": "Excepto por la superficie superior de la cúpula, gran parte del cráneo estaba adornado con nódulos",
-   "quote_sha": "56e1e6e40edd7a7b"
+   "quote": "Excepto por la superficie superior de la cúpula, gran parte del cráneo estaba adornado con nódulos, muchos dispuestos en filas",
+   "quote_sha": "43295195db681c8e"
   },
   {
-   "fact_id": "F078",
+   "fact_id": "F110",
    "statement": "The large orbit had the shape of an imperfect ellipse, with the longest axis from front to back, and was oriented to the side and slightly forward.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -816,7 +1167,7 @@
    "quote_sha": "f67f88d7d0a21110"
   },
   {
-   "fact_id": "F079",
+   "fact_id": "F111",
    "statement": "The lacrimal bone formed the lower front margin of the orbit, and its surface had rows of ornamentation in the shape of nodes.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:2",
@@ -825,7 +1176,25 @@
    "quote_sha": "2b5d2a45f7ac68a6"
   },
   {
-   "fact_id": "F080",
+   "fact_id": "F112",
+   "statement": "The prefrontal and palpebral bones were fused and formed a thick crest above the orbit.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:2",
+   "lang": "es",
+   "quote": "Los huesos prefrontal y palpebral estaban fusionados y formaban una cresta gruesa por encima de la órbita",
+   "quote_sha": "f6617ae7e4b96a98"
+  },
+  {
+   "fact_id": "F113",
+   "statement": "The relatively large jugal bone formed the lower margin of the orbit, extending far forward and downward toward the jaw joint.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:2",
+   "lang": "es",
+   "quote": "El hueso yugal relativamente grande formaba el margen inferior de la órbita, extendiéndose mucho hacia adelante y hacia abajo, hacia la articulación de la mandíbula",
+   "quote_sha": "d39011ff2089fd2b"
+  },
+  {
+   "fact_id": "F114",
    "statement": "The nasal openings were large and oriented toward the front.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
@@ -834,7 +1203,7 @@
    "quote_sha": "572f5ad54d29e034"
   },
   {
-   "fact_id": "F081",
+   "fact_id": "F115",
    "statement": "The nasal bone was thick, strongly sculpted, and had a convex profile.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
@@ -843,17 +1212,17 @@
    "quote_sha": "254becefa8fccec5"
   },
   {
-   "fact_id": "F082",
-   "statement": "The maxilla was short and deep, and probably contained a sinus.",
+   "fact_id": "F116",
+   "statement": "There was a small foramen in the suture between the premaxillae that led to the nasal cavity and was possibly connected to the Jacobson organ, a sense of smell organ.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
    "lang": "es",
-   "quote": "El maxilar era corto y profundo, y probablemente contenía un seno",
-   "quote_sha": "70c39dfcf0d5876f"
+   "quote": "Había un pequeño foramen en la sutura entre los premaxilares, que conducía a la cavidad nasal y posiblemente estaba conectado al órgano de Jacobson, un órgano del sentido del olfato",
+   "quote_sha": "a4192421a80c7896"
   },
   {
-   "fact_id": "F083",
-   "statement": "Stegoceras had teeth that were heterodont (different from each other) and thecodont (set in sockets).",
+   "fact_id": "F117",
+   "statement": "Stegoceras had teeth that were heterodont, different from each other, and thecodont, placed in alveoli.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
    "lang": "es",
@@ -861,7 +1230,7 @@
    "quote_sha": "bbf80238dceadce2"
   },
   {
-   "fact_id": "F084",
+   "fact_id": "F118",
    "statement": "On each side, the most complete specimen, UALVP 2, had three teeth in the premaxilla, sixteen in the maxilla (both part of the upper jaw), and seventeen in the dentary of the lower jaw.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
@@ -870,17 +1239,17 @@
    "quote_sha": "ffa067bed3606535"
   },
   {
-   "fact_id": "F085",
-   "statement": "The premaxillary teeth were separated from those behind the maxilla by a small diastema, or gap.",
+   "fact_id": "F119",
+   "statement": "The premaxillary teeth were separated from those behind the maxilla by a small diastema (space), and the two rows in the premaxilla were separated by a toothless space at the front.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
    "lang": "es",
-   "quote": "Los dientes del premaxilar estaban separados de los que estaban detrás del maxilar por una pequeña diastema, espacio",
-   "quote_sha": "b77d6c2315b7f19f"
+   "quote": "Los dientes del premaxilar estaban separados de los que estaban detrás del maxilar por una pequeña diastema, espacio, y las dos filas en el premaxilar estaban separadas por un espacio desdentado en el frente",
+   "quote_sha": "7fc0c574e0b12778"
   },
   {
-   "fact_id": "F086",
-   "statement": "The front lower jaw teeth were larger than those of the upper jaw.",
+   "fact_id": "F120",
+   "statement": "The front teeth of the lower maxilla were larger than those of the upper maxilla.",
    "category": "description",
    "chunk_id": "stegoceras:eswiki:3",
    "lang": "es",
@@ -888,17 +1257,98 @@
    "quote_sha": "2b57af96851afb9a"
   },
   {
-   "fact_id": "F087",
-   "statement": "The genus Stegoceras was named by Lambe in 1902.",
-   "category": "classification",
-   "chunk_id": "stegoceras:pbdb:1",
-   "lang": "en",
-   "quote": "PBDB name: Stegoceras (genus), Lambe 1902",
-   "quote_sha": "7e27bbc9559b6501"
+   "fact_id": "F121",
+   "statement": "The front edges of the crowns had eight denticles, and the rear edge had nine to eleven.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:3",
+   "lang": "es",
+   "quote": "Los bordes delanteros de las coronas tenían ocho dentículos y el borde trasero tenía de nueve a once",
+   "quote_sha": "2d1b92a04bebf2e6"
   },
   {
-   "fact_id": "F088",
-   "statement": "The parent group of Stegoceras is Eupachycephalosauria.",
+   "fact_id": "F122",
+   "statement": "The teeth in the rear of the upper jaw, maxilla, and lower jaw were triangular in lateral view and compressed in frontal view.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:3",
+   "lang": "es",
+   "quote": "Los dientes en la parte posterior de la mandíbula superior, el maxilar, e inferior eran triangulares en vista lateral y comprimidos en vista frontal",
+   "quote_sha": "600132257bae3aec"
+  },
+  {
+   "fact_id": "F123",
+   "statement": "The skull of Stegoceras is distinguished by a prominent parieto-squamosal projection that became smaller with age, an incipient frontal parietal dome that increased in size with age, inflated nasal bones, and ornamentation of tubercles on the sides and tops of the squamosal bones.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "El cráneo de Stegoceras se puede distinguir de los de otros paquicefalosáuridos por características tales como su saliente parietoescamosal pronunciada, aunque se hizo más pequeño con la edad, la cúpula \"incipiente\" de su frontoparental, aunque la cúpula aumentó con la edad, sus huesos nasales inflados, su ornamentación de tubérculos en los costados y dorso de los huesos escamosos, hileras de hasta seis tubérculos en la cara superior de cada escamoso, y hasta dos nódulos en la retroproyección del parietal.",
+   "quote_sha": "c91291f3bd0992b0"
+  },
+  {
+   "fact_id": "F124",
+   "statement": "The incomplete vertebral column of Stegoceras appears to have been very rigid due to articulations between zygapophyses that prevented lateral movement, further strengthened by ossified tendons.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "La columna vertebral de Stegoceras se conoce de forma incompleta. La articulación entre las cigofisis, procesos articulares, de las vértebras dorsales de la espalda posterior sucesivas parece haber impedido el movimiento lateral de la columna vertebral, lo que la hizo muy rígida, y fue fortalecida aún más por los tendones osificados.",
+   "quote_sha": "c596057a086fcbe0"
+  },
+  {
+   "fact_id": "F125",
+   "statement": "Based on its position in Homalocephale, ossified tendons found with UALVP2 likely formed an intricate \"caudal basket\" in the tail consisting of parallel rows where the ends of each tendon contacted the next successively.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "Basado en su posición en Homalocephale, los tendones osificados encontrados con UALVP2 habrían formado una intrincada \"canasta caudal\" en la cola, que consiste en filas paralelas, con los extremos de cada tendón en contacto con el siguiente sucesivamente.",
+   "quote_sha": "f0067171edc493fa"
+  },
+  {
+   "fact_id": "F126",
+   "statement": "The femur was thin and curved inward, the tibia was thin and twisted, and the fibula was thin and wide at the upper end.",
+   "category": "description",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "El fémur, hueso del muslo, era delgado y curvado hacia adentro, la tibia era delgada y torcida, y el peroné era delgado y ancho en el extremo superior.",
+   "quote_sha": "9b627a8d8b46c751"
+  },
+  {
+   "fact_id": "F127",
+   "statement": "The first known remains of Stegoceras were collected by Canadian paleontologist Lawrence Lambe from the Belly River Group in the Red Deer River district of Alberta, Canada.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "Los primeros restos conocidos de Stegoceras fueron recolectados por el paleontólogo canadiense Lawrence Lambe del Grupo Belly River, en el distrito Río Red Deer de Alberta, Canadá.",
+   "quote_sha": "44d0bb61b5fa751f"
+  },
+  {
+   "fact_id": "F128",
+   "statement": "Based on these specimens, Lambe described and named the new monotypic genus and species Stegoceras validum in 1902.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "Con base en estos especímenes, Lambe describió y denominó al nuevo género y especie monotípica Stegoceras validus en 1902.",
+   "quote_sha": "f2f238df80df988c"
+  },
+  {
+   "fact_id": "F129",
+   "statement": "The generic name Stegoceras comes from the Greek stegè, meaning \"roof\", and keras, meaning \"horn\".",
+   "category": "discovery",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "El nombre genérico `Stegoceras proviene del griego stegè, στέγη, que significa \"techo\" y keras, κέρας, que significa \"cuerno\".",
+   "quote_sha": "2c9cabe383649364"
+  },
+  {
+   "fact_id": "F130",
+   "statement": "The specific name S. validus means \"strong\" in Latin, possibly referring to the thick roof of the skull.",
+   "category": "discovery",
+   "chunk_id": "stegoceras:eswiki:4",
+   "lang": "es",
+   "quote": "El nombre específico S. validus significa \"fuerte\" en latín, posiblemente en referencia al grueso techo del cráneo.",
+   "quote_sha": "f4381a12a25fba16"
+  },
+  {
+   "fact_id": "F131",
+   "statement": "Stegoceras belongs to the parent group Eupachycephalosauria.",
    "category": "classification",
    "chunk_id": "stegoceras:pbdb:1",
    "lang": "en",
@@ -906,8 +1356,8 @@
    "quote_sha": "bde5e55a46805c82"
   },
   {
-   "fact_id": "F089",
-   "statement": "Stegoceras belongs to the class Ornithischia.",
+   "fact_id": "F132",
+   "statement": "Stegoceras is classified in the class Ornithischia.",
    "category": "classification",
    "chunk_id": "stegoceras:pbdb:1",
    "lang": "en",
@@ -915,67 +1365,49 @@
    "quote_sha": "57c7a44935709d4b"
   },
   {
-   "fact_id": "F090",
-   "statement": "The type species of Stegoceras is Stegoceras validum.",
-   "category": "classification",
-   "chunk_id": "stegoceras:pbdb:1",
-   "lang": "en",
-   "quote": "Type species: Stegoceras validum",
-   "quote_sha": "65b4937f56c73819"
-  },
-  {
-   "fact_id": "F091",
+   "fact_id": "F133",
    "statement": "Stegoceras lived from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "stegoceras:pbdb:1",
    "lang": "en",
    "quote": "Time range: Campanian to Maastrichtian (83.6 to 66 million years ago)",
    "quote_sha": "c5801ed7c899e141"
-  },
-  {
-   "fact_id": "F092",
-   "statement": "Bateman & Larsson (2026) found that the feeding performance of S. validum was more similar to basal ornithischians and ornithopods than to Psittacosaurus lujiatunensis.",
-   "category": "paleobiology",
-   "chunk_id": "stegoceras:research:1",
-   "lang": "en",
-   "quote": "Bateman & Larsson (2026) compare the cranial musculature and likely feeding performance of Stegoceras validum and other ornithischians, providing evidence of greater similarity of the feeding performance of S. validum to those of basal ornithischians and ornithopods than to that of Psittacosaurus lujiatunensis",
-   "quote_sha": "c5a961a1514194ea"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "stegoceras:enwiki:1",
-   "statement": "The genus Stegoceras was described by Lambe in 1902.",
-   "category": "classification",
-   "quote": "taxon: Stegoceras",
-   "reason": "numbers not in the quote: ['1902']"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:2",
-   "statement": "The skull of Stegoceras was roughly triangular with a short snout and a thick, broad, relatively smooth dome on top.",
-   "category": "description",
-   "quote": "The skull was roughly triangular with a short snout, and had a thick, broad, and relatively smooth dome on the top.",
-   "reason": "statement copies the source wording: 'was roughly triangular with a short snout and'"
-  },
-  {
    "chunk_id": "stegoceras:enwiki:3",
-   "statement": "A complete skull of Stegoceras validus with associated postcranial remains was described by Charles W. Gilmore in 1924.",
+   "statement": "Lambe classified Stegoceras within Stegosauria in a new family called Psalisauridae in 1918.",
    "category": "discovery",
-   "quote": "In 1924, palaeontologist Charles W. Gilmore described a complete skull of S. validus with associated postcranial remains, by then the most complete remains of a dome-headed dinosaur.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "By this time, he considered these animals as members of Stegosauria (then composed of both families of armoured dinosaurs, Stegosauridae and Ankylosauridae), in a new family he called Psalisauridae (named for the vaulted or dome-shaped skull roof).",
+   "reason": "numbers not in the quote: ['1918']"
   },
   {
    "chunk_id": "stegoceras:enwiki:4",
-   "statement": "Charles W. Gilmore initially considered Stegoceras an invalid synonym of Troodon and renamed the species in 1924.",
+   "statement": "Charles W. Gilmore described the most complete remains of a dome-headed dinosaur, a complete skull of S. validus, in 1924.",
+   "category": "discovery",
+   "quote": "In 1924, palaeontologist Charles W. Gilmore described a complete skull of S. validus with associated postcranial remains, by then the most complete remains of a dome-headed dinosaur.",
+   "reason": "statement copies the source wording: 'the most complete remains of a dome-headed dinosaur'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:4",
+   "statement": "George F. Sternberg discovered specimen UALVP 2 in 1926, which Gilmore used to describe S. validus in 1924.",
+   "category": "discovery",
+   "quote": "It was discovered in the Belly River Group by the American palaeontologist George F. Sternberg in 1926, and catalogued as specimen UALVP 2 in the University of Alberta Laboratory for Vertebrate Palaeontology.",
+   "reason": "numbers not in the quote: ['1924']"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:4",
+   "statement": "Charles W. Gilmore considered Stegoceras a synonym of Troodon and renamed S. validus as T. validus in 1924.",
    "category": "debate",
    "quote": "Therefore, Gilmore considered Stegoceras an invalid junior synonym of Troodon, thereby renaming S. validus into T. validus, and suggested that even the two species might be the same.",
    "reason": "numbers not in the quote: ['1924']"
   },
   {
    "chunk_id": "stegoceras:enwiki:4",
-   "statement": "Charles M. Sternberg named the family Pachycephalosauridae in 1945, considering it more descriptive than the previous name.",
-   "category": "paleobiology",
-   "quote": "Though Stegoceras was the first member of this family to be named, Sternberg named the group Pachycephalosauridae after the second genus, as he found that name (meaning \"thick head lizard\") more descriptive.",
+   "statement": "Charles M. Sternberg named the species S. lambei in 1945 based on a specimen previously assigned to S. validus.",
+   "category": "classification",
+   "quote": "He also considered T. sternbergi and T. edmontonensis members of Stegoceras, found S. brevis valid, and named a new species, S. lambei, based on a specimen formerly assigned to S. validus.",
    "reason": "numbers not in the quote: ['1945']"
   },
   {
@@ -987,24 +1419,17 @@
   },
   {
    "chunk_id": "stegoceras:enwiki:5",
-   "statement": "In 2003, Robert M. Sullivan agreed Ornatotholus was a junior synonym of Stegoceras, while moving S. lambei to the genus Colepiocephale and S. sternbergi to the genus Hanssuesia.",
+   "statement": "In 1987, Sues and Galton corrected the specific name of the main species from validus to validum, a change now standard in scientific literature.",
    "category": "discovery",
-   "quote": "In 2003, Sullivan agreed that Ornatotholus was a junior synonym of Stegoceras, moved S. lambei to the new genus Colepiocephale, and S. sternbergi to the new genus Hanssuesia",
+   "quote": "In 1987 review of the pachycephalosaurs, Sues and Galton emended the specific name validus to validum, which has subsequently been used in the scientific literature.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "stegoceras:enwiki:5",
-   "statement": "In 2016, Ryan K. Schott and David C. Evans transferred S. brevis to the new genus Foraminacephale.",
+   "statement": "By 2003, dozens of specimens were assigned to S. validum, many of which were too incomplete to be confidently identified as Stegoceras.",
    "category": "discovery",
-   "quote": "In 2016, Ryan K. Schott Schott and David C. Evans moved S. brevis to the new genus Foraminacephale",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:5",
-   "statement": "In 2023, Aaron D. Dyer and colleagues found no significant distinction between the skulls of Gravitholus and Hanssuesia and S. validum, considering them junior synonyms.",
-   "category": "discovery",
-   "quote": "In 2023, palaeontologist Aaron D. Dyer and colleagues analysed sutures and individual elements in the skulls of Gravitholus and Hanssuesia... and found no significant distinction between them and Stegoceras validum.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "By this time, dozens of specimens had been assigned to S. validum, including many domes too incomplete to be identified as Stegoceras with certainty.",
+   "reason": "numbers not in the quote: ['2003']"
   },
   {
    "chunk_id": "stegoceras:enwiki:7",
@@ -1014,32 +1439,11 @@
    "reason": "statement copies the source wording: 'Stegoceras is one of the most completely known'"
   },
   {
-   "chunk_id": "stegoceras:enwiki:7",
-   "statement": "Stegoceras was small to medium in size compared to other pachycephalosaurs.",
+   "chunk_id": "stegoceras:enwiki:8",
+   "statement": "The skull of Stegoceras was roughly triangular in shape with a relatively short snout.",
    "category": "description",
-   "quote": "Stegoceras was small to medium in size compared to other pachycephalosaurs.",
-   "reason": "statement copies the source wording: 'Stegoceras was small to medium in size compared'"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:5",
-   "statement": "In 2000, Robert M. Sullivan considered S. bexelli more likely to belong to Prenocephale than Stegoceras but treated it as a dubious name due to incompleteness and a lost holotype.",
-   "category": "debate",
-   "quote": "In 2000, palaeontologist Robert M. Sullivan... found it more likely that S. bexelli belonged to Prenocephale than to Stegoceras, but considered it a nomen dubium (dubious name, without distinguishing characters) due to its incompleteness, and noted its holotype specimen appeared to be lost.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:6",
-   "statement": "In 2024, researchers considered a Texas specimen a possible new southern Stegoceras species but not S. novomexicanum, concluding it was too dissimilar to other Stegoceras specimens to be referable to the genus.",
-   "category": "debate",
-   "quote": "In 2024... They considered it a possible representative of a new southern species of Stegoceras, but not S. novomexicanum, since the study concluded it was very dissimilar from other Stegoceras specimens and therefore probably not referable to Stegoceras.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:6",
-   "statement": "It is disputed whether the known specimens of S. novomexicanum are adults or juveniles, though it appears smaller than S. validum.",
-   "category": "debate",
-   "quote": "S. novomexicanum appears to have been smaller than S. validum, but it is disputed whether the known specimens (incomplete skulls) are adults or juveniles.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "The skull of Stegoceras was roughly triangular in shape when viewed from the side, with a relatively short snout.",
+   "reason": "statement copies the source wording: 'skull of Stegoceras was roughly triangular in shape'"
   },
   {
    "chunk_id": "stegoceras:enwiki:8",
@@ -1050,38 +1454,31 @@
   },
   {
    "chunk_id": "stegoceras:enwiki:8",
-   "statement": "The large orbit was shaped like an imperfect ellipse with its longest axis front-to-back and faced sideways and slightly forward.",
+   "statement": "The large squamosal bone was not part of the dome, featured irregular tubercles, and ended in a small horn on each side at the back of the skull.",
+   "category": "description",
+   "quote": "The squamosal was large, not part of the dome, and the back part was swollen. It was ornamented by irregularly spaced tubercles (or round outgrowths), and a row of nodes (knobs) extended along its upper edges, ending in a pointed tubercle (or small horn) on each side at the back of the skull.",
+   "reason": "statement copies the source wording: 'small horn on each side at the back'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:8",
+   "statement": "The large eye socket was shaped like an imperfect ellipse and faced to the side and slightly forward.",
    "category": "description",
    "quote": "The large orbit was shaped like an imperfect ellipse (with the longest axis from front to back), and faced to the side and slightly forward.",
-   "reason": "statement copies the source wording: 'The large orbit was shaped like an imperfect'"
+   "reason": "statement copies the source wording: 'and faced to the side and slightly forward'"
   },
   {
    "chunk_id": "stegoceras:enwiki:8",
-   "statement": "The supratemporal fenestra on the top back of the skull was very reduced in size due to the thickening of the frontoparietal bone.",
-   "category": "description",
-   "quote": "The supratemporal fenestra on the top back of the skull was very reduced in size, due to the thickening of the frontoparietal.",
-   "reason": "statement copies the source wording: 'The supratemporal fenestra on the top back of'"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:8",
-   "statement": "The thick, heavily sculpted nasal bone had a convex profile and formed a shield on the middle top of the skull with the frontal bone.",
+   "statement": "The thick, heavily sculpted nasal bone formed a shield on the middle top of the skull together with the frontal bone.",
    "category": "description",
    "quote": "The nasal bone was thick, heavily sculpted, and had a convex profile. It formed a boss (shield) on the middle top of the skull together with the frontal bone.",
    "reason": "statement copies the source wording: 'shield on the middle top of the skull'"
   },
   {
    "chunk_id": "stegoceras:enwiki:8",
-   "statement": "The tooth-bearing part of the lower jaw was long, while the part behind it was rather short.",
-   "category": "description",
-   "quote": "The tooth-bearing part of the lower jaw was long, with the part behind being rather short.",
-   "reason": "statement copies the source wording: 'The tooth-bearing part of the lower jaw was'"
-  },
-  {
-   "chunk_id": "stegoceras:enwiki:8",
-   "statement": "The most complete specimen (UALVP 2) had three teeth in the premaxilla, sixteen in the maxilla, and seventeen in the dentary on each side.",
+   "statement": "The most complete specimen had three teeth in the premaxilla, sixteen in the maxilla, and seventeen in the lower jaw dentary.",
    "category": "description",
    "quote": "On each side, the most complete specimen (UALVP 2) had three teeth in the premaxilla, sixteen in the maxilla (both part of the upper jaw), and seventeen in the dentary of the lower jaw.",
-   "reason": "statement copies the source wording: 'The most complete specimen UALVP 2 had three'"
+   "reason": "statement copies the source wording: 'had three teeth in the premaxilla sixteen in'"
   },
   {
    "chunk_id": "stegoceras:enwiki:8",
@@ -1091,45 +1488,94 @@
    "reason": "statement copies the source wording: 'The front teeth in the lower jaw were'"
   },
   {
-   "chunk_id": "stegoceras:enwiki:9",
-   "statement": "Based on Homalocephale, the ossified tendons in UALVP 2 likely formed an intricate \"caudal basket\" in the tail with parallel rows.",
-   "category": "paleobiology",
-   "quote": "Based on their position in Homalocephale, the ossified tendons found with UALVP 2 would have formed an intricate \"caudal basket\" in the tail, consisting of parallel rows, with the extremities of each tendon contacting the next successively.",
-   "reason": "statement copies the source wording: 'formed an intricate caudal basket in the tail'"
+   "chunk_id": "stegoceras:enwiki:8",
+   "statement": "Stegoceras skulls are distinguished by a pronounced parietosquamosal shelf, incipient doming, inflated nasal bones, and rows of up to six tubercles on the squamosal bones.",
+   "category": "description",
+   "quote": "The skull of Stegoceras can be distinguished from those of other pachycephalosaurs by features such as its pronounced parietosquamosal shelf (though this became smaller with age), the \"incipient\" doming of its frontopariental (though the doming increased with age), its inflated nasal bones, its ornamentation of tubercles on the sides and back of the squamosal bones, rows of up to six tubercles on the upper side of each squamosal, and up to two nodes on the backwards projection of the parietal.",
+   "reason": "statement copies the source wording: 'rows of up to six tubercles on the'"
   },
   {
    "chunk_id": "stegoceras:enwiki:9",
    "statement": "The radius was more robust than the ulna, which is an unusual trait.",
-   "category": "paleobiology",
+   "category": "description",
    "quote": "The radius was more robust than the ulna, which is unusual.",
    "reason": "statement copies the source wording: 'The radius was more robust than the ulna'"
   },
   {
    "chunk_id": "stegoceras:enwiki:9",
-   "statement": "The pelvic girdle was very broad for a bipedal archosaur and became wider towards the hind part.",
-   "category": "paleobiology",
+   "statement": "The pelvic girdle was very broad for a bipedal archosaur and widened towards the hind part.",
+   "category": "description",
    "quote": "When seen from above, the pelvic girdle was very broad for a bipedal archosaur, and became wider towards the hind part.",
    "reason": "statement copies the source wording: 'The pelvic girdle was very broad for a'"
   },
   {
    "chunk_id": "stegoceras:enwiki:9",
-   "statement": "The femur was slender and inwards curved, the tibia was slender and twisted, and the fibula was slender and wide at the upper end.",
-   "category": "paleobiology",
+   "statement": "The thigh bone was slender and inwards curved, the tibia was slender and twisted, and the fibula was wide at the upper end.",
+   "category": "description",
    "quote": "The femur (thigh bone) was slender and inwards curved, the tibia was slender and twisted, and the fibula was slender and wide at the upper end.",
-   "reason": "statement copies the source wording: 'was slender and inwards curved the tibia was'"
+   "reason": "statement copies the source wording: 'thigh bone was slender and inwards curved the'"
   },
   {
-   "chunk_id": "stegoceras:enwiki:10",
-   "statement": "It is debated whether the domed skull of pachycephalosaurs represents a homoplastic trait resulting from convergent evolution.",
+   "chunk_id": "stegoceras:enwiki:11",
+   "statement": "Stegoceras likely ate a mixed diet of leaves, seeds, fruit, and insects due to its sharp, serrated teeth.",
+   "category": "paleobiology",
+   "quote": "It is assumed that their sharp, serrated teeth were ideally suited for a mixed diet of leaves, seeds, fruit and insects",
+   "reason": "statement copies the source wording: 'a mixed diet of leaves seeds fruit and'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:11",
+   "statement": "Stegoceras was an indiscriminate bulk-feeder that cropped large amounts of vegetation due to its broad snout and uniform teeth.",
+   "category": "paleobiology",
+   "quote": "Due to its broad rostrum and more uniform teeth, Stegoceras was an indiscriminate bulk-feeder that cropped large amounts of vegetation",
+   "reason": "statement copies the source wording: 'Stegoceras was an indiscriminate bulk-feeder that cropped large'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:12",
+   "statement": "In 1989, Emily B. Griffin determined that Stegoceras had a keen sense of smell based on large olfactory bulbs in its brain.",
+   "category": "paleobiology",
+   "quote": "In 1989, Emily B. Griffin found that Stegoceras and other pachycephalosaurs had a good sense of smell (olfaction), based on the study of cranial endocasts that showed large olfactory bulbs in the brain",
+   "reason": "statement copies the source wording: 'that Stegoceras had a keen sense of smell'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:13",
+   "statement": "In 1998, Goodwin and colleagues proposed that dome inflation was an ontogenetic feature linked to age, supported by histological evidence of vascular, fast-growing bone.",
    "category": "debate",
-   "quote": "The dome of the skull may be a homoplastic trait (a form of convergent evolution).",
+   "quote": "In 1998, Goodwin and colleagues instead proposed that the inflation of the dome was an ontogenetic feature that changed with age, based on a histological study of an S. validum skull that showed the dome consisted of vascular, fast-growing bone.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "stegoceras:research:1",
-   "statement": "Researchers interpret their findings as indicating that the evolution of cranial domes in pachycephalosaurs constrained the evolution of their jaw musculature and feeding performance.",
+   "chunk_id": "stegoceras:enwiki:16",
+   "statement": "Lesions interpreted as trauma infections were found on 22% of sampled pachycephalosaur skulls, a frequency consistent across genera but absent in flat-headed specimens interpreted as juveniles or females.",
+   "category": "curiosities",
+   "quote": "Lesions were found on 22% of sampled pachycephalosaur skulls (a frequency consistent across genera), but were absent from flat-headed specimens (which have been interpreted as juveniles or females), which is consistent with use in intra-specific combat (for territory or mates).",
+   "reason": "statement copies the source wording: 'were found on 22 of sampled pachycephalosaur skulls'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:16",
+   "statement": "In 2022, researchers reconstructed the limb musculature of Stegoceras in 3D using the very complete UALVP 2 specimen as a basis.",
+   "category": "paleobiology",
+   "quote": "Bryan R. S. Moore and colleagues examined and reconstructed the limb musculature of Stegoceras in 3D in 2022, using the very complete UALVP 2 specimen as basis.",
+   "reason": "statement copies the source wording: 'using the very complete UALVP 2 specimen as'"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:17",
+   "statement": "Knell and Sampson argued in 2011 that while species recognition might be a secondary function, sexual selection via display or combat was a more likely explanation for bizarre structures due to their high developmental cost and high variability within species.",
    "category": "debate",
-   "quote": "interpret their findings as indicating that evolution of cranial domes of pachycephalosaurs constrained the evolution of their jaw musculature and their feeding performance",
+   "quote": "In a response to Padian and Horner the same year, Rob J. Knell and Scott D. Sampson argued that species recognition was not unlikely as a secondary function for \"bizarre structures\" in dinosaurs, but that sexual selection (used in display or combat to compete for mates) was a more likely explanation, due to the high cost of developing them, and because such structures appear to be highly variable within species.",
+   "reason": "numbers not in the quote: ['2011']"
+  },
+  {
+   "chunk_id": "stegoceras:enwiki:17",
+   "statement": "In 2013, Hone and Naish criticized the species recognition hypothesis, arguing no extant animals use such structures primarily for that purpose and that mutual sexual selection was a possibility ignored by earlier researchers.",
+   "category": "debate",
+   "quote": "In 2013, the British palaeontologists David E. Hone and Darren Naish criticized the \"species recognition hypothesis\", and argued that no extant animals use such structures primarily for species recognition, and that Padian and Horner had ignored the possibility of mutual sexual selection (where both sexes are ornamented).",
+   "reason": "statement copies the source wording: 'no extant animals use such structures primarily for'"
+  },
+  {
+   "chunk_id": "stegoceras:research:1",
+   "statement": "Research by Bateman & Larsson (2026) suggests that the evolution of cranial domes in pachycephalosaurs constrained the evolution of their jaw musculature and feeding performance, making S. validum more similar to basal ornithischians and ornithopods than to Psittacosaurus lujiatunensis.",
+   "category": "paleobiology",
+   "quote": "Bateman & Larsson (2026) compare the cranial musculature and likely feeding performance of Stegoceras validum and other ornithischians, providing evidence of greater similarity of the feeding performance of S. validum to those of basal ornithischians and ornithopods than to that of Psittacosaurus lujiatunensis, and interpret their findings as indicating that evolution of cranial domes of pachycephalosaurs constrained the evolution of their jaw musculature and their feeding performance.",
    "reason": "statement copies the source wording: 'pachycephalosaurs constrained the evolution of their jaw musculature'"
   }
  ]

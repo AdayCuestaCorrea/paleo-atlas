@@ -2,9 +2,9 @@
  "taxon": "Styracosaurus",
  "taxon_key": "styracosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "ab7e5282f6b0a370",
- "generated_at": "2026-11-03T04:26:35+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e1ae4157fe50527d",
+ "generated_at": "2026-11-04T06:26:03+00:00",
  "citations": {
   "styracosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -118,6 +118,41 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "styracosaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Styracosaurus albertensis (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Styracosaurus_albertensis?oldid=173738545",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "styracosaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Styracosaurus albertensis (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Styracosaurus_albertensis?oldid=173738545",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "styracosaurus:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Styracosaurus albertensis (Dentición y dieta)",
+   "url": "https://es.wikipedia.org/wiki/Styracosaurus_albertensis?oldid=173738545",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "styracosaurus:eswiki:12": {
+   "source": "wikipedia_article",
+   "title": "Styracosaurus albertensis (Cuernos y gola nucal)",
+   "url": "https://es.wikipedia.org/wiki/Styracosaurus_albertensis?oldid=173738545",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "styracosaurus:eswiki:13": {
+   "source": "wikipedia_article",
+   "title": "Styracosaurus albertensis (Paleoecología)",
+   "url": "https://es.wikipedia.org/wiki/Styracosaurus_albertensis?oldid=173738545",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "styracosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Styracosaurus",
@@ -129,34 +164,25 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus Rubeosaurus was proposed as a synonym for Styracosaurus by McDonald and Horner in 2010.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:enwiki:1",
+   "statement": "The name Styracosaurus means \"spiked lizard\" derived from Ancient Greek words for a spike and a lizard.",
+   "category": "description",
+   "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
-   "quote": "synonyms: *RubeosaurusMcDonald & Horner, 2010",
-   "quote_sha": "87f33e7b3827e76b"
+   "quote": "Styracosaurus ( ; meaning \"spiked lizard\" from the Ancient Greek styrax/στύραξ \"spike at the butt-end of a spear-shaft\" and sauros/σαῦρος \"lizard\")",
+   "quote_sha": "8502ffdfbe93d0b7"
   },
   {
    "fact_id": "F002",
-   "statement": "Styracosaurus was named by Lawrence Lambe in 1913.",
-   "category": "discovery",
+   "statement": "Styracosaurus possessed four to six long spikes on its neck frill, cheek horns, and a single nose horn that could reach 60 cm in length and 15 cm in width.",
+   "category": "description",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Named by Lawrence Lambe in 1913",
-   "quote_sha": "7da0ac6470f85072"
+   "quote": "It had four to six long parietal spikes extending from its neck frill, a smaller jugal horn on each of its cheeks, and a single horn protruding from its nose, which may have been up to 60 cm long and 15 cm wide.",
+   "quote_sha": "c76b5e385a798198"
   },
   {
    "fact_id": "F003",
-   "statement": "Styracosaurus fossils date to the Campanian stage of the Late Cretaceous.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:1",
-   "lang": "en",
-   "quote": "fossil_range: Late Cretaceous (Campanian)",
-   "quote_sha": "02155ae069672edb"
-  },
-  {
-   "fact_id": "F004",
-   "statement": "Styracosaurus reached lengths of 5 to 5.5 meters and weighed between 1.8 and 2.7 metric tons.",
+   "statement": "This dinosaur grew to lengths between 5 and 5.5 meters and weighed approximately 1.8 to 2.7 metric tons.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
@@ -164,8 +190,8 @@
    "quote_sha": "eadb245ec2e27270"
   },
   {
-   "fact_id": "F005",
-   "statement": "Styracosaurus stood approximately 1.8 meters tall.",
+   "fact_id": "F004",
+   "statement": "Styracosaurus stood about 1.8 meters tall at the shoulder.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
@@ -173,17 +199,17 @@
    "quote_sha": "5bf426706d3b1f76"
   },
   {
-   "fact_id": "F006",
-   "statement": "Styracosaurus had a relatively short tail.",
-   "category": "paleobiology",
+   "fact_id": "F005",
+   "statement": "The dinosaur had a relatively short tail.",
+   "category": "description",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
    "quote": "Its tail was rather short.",
    "quote_sha": "f0ca483389e577de"
   },
   {
-   "fact_id": "F007",
-   "statement": "Styracosaurus had a beak and shearing cheek teeth in continuous dental batteries, indicating a diet of sliced plants.",
+   "fact_id": "F006",
+   "statement": "Its skull featured a beak and shearing cheek teeth in continuous dental batteries, indicating a diet of sliced plants.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
@@ -191,8 +217,8 @@
    "quote_sha": "7663f0ed5742f604"
   },
   {
-   "fact_id": "F008",
-   "statement": "Styracosaurus likely lived in large herds, a behavior suggested by bone bed discoveries.",
+   "fact_id": "F007",
+   "statement": "Evidence from bone beds suggests Styracosaurus may have lived in large herds like other ceratopsians.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
@@ -200,17 +226,44 @@
    "quote_sha": "32dc9c22aa0dadb6"
   },
   {
-   "fact_id": "F009",
-   "statement": "The first Styracosaurus fossil was discovered in the summer of 1913 by Charles H. Sternberg.",
+   "fact_id": "F008",
+   "statement": "The genus was named by Lawrence Lambe in 1913.",
    "category": "discovery",
-   "chunk_id": "styracosaurus:enwiki:3",
+   "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
-   "quote": "The first fossil of Styracosaurus was discovered in the summer of 1913 by American palaeontologist Charles H. Sternberg",
-   "quote_sha": "ce09e2257c1547fb"
+   "quote": "Named by Lawrence Lambe in 1913",
+   "quote_sha": "7da0ac6470f85072"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Styracosaurus is classified as a member of the subfamily Centrosaurinae.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Styracosaurus is a member of the Centrosaurinae.",
+   "quote_sha": "12257184d3019fa0"
   },
   {
    "fact_id": "F010",
-   "statement": "The first skull was found on the southwest bank of the Red Deer River, about 12 miles below the mouth of Berry Creek, in the Belly River Formation.",
+   "statement": "This extinct herbivorous dinosaur lived during the Campanian stage of the Late Cretaceous in North America.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Styracosaurus ( ; meaning \"spiked lizard\" from the Ancient Greek styrax/στύραξ \"spike at the butt-end of a spear-shaft\" and sauros/σαῦρος \"lizard\") is an extinct genus of herbivorous dinosaur from the Late Cretaceous (Campanian stage) of North America.",
+   "quote_sha": "144ee71bb049ce0c"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The first fossil was discovered in the summer of 1913 by Charles H. Sternberg during a Geological Survey of Canada expedition along the Red Deer River.",
+   "category": "discovery",
+   "chunk_id": "styracosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The first fossil of Styracosaurus was discovered in the summer of 1913 by American palaeontologist Charles H. Sternberg as part of an expedition of the Geological Survey of Canada along the Red Deer River.",
+   "quote_sha": "c29947e111520644"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The initial skull discovery occurred on the southwest bank of the Red Deer River, approximately 12 miles below the mouth of Berry Creek in the Belly River Formation.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -218,8 +271,8 @@
    "quote_sha": "f4614a2c3aa9a6b1"
   },
   {
-   "fact_id": "F011",
-   "statement": "Lawrence Lambe described the first skull as the holotype of Styracosaurus albertensis in 1913.",
+   "fact_id": "F013",
+   "statement": "Lawrence Lambe described the mostly complete skull found by Sternberg in 1913 as the holotype of Styracosaurus albertensis.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -227,17 +280,8 @@
    "quote_sha": "3d983abe32963c22"
   },
   {
-   "fact_id": "F012",
-   "statement": "Levi Sternberg excavated the mandible and skeleton of the type individual in 1935 for the Royal Ontario Museum.",
-   "category": "discovery",
-   "chunk_id": "styracosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1935, the quarry was revisited by Levi Sternberg, son of Charles H., in part of a field crew of the Royal Ontario Museum, where the mandible and largely complete skeleton of the same individual were excavated.",
-   "quote_sha": "73f9d6355fd33e0f"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "The original quarry is now located within Dinosaur Provincial Park in the Dinosaur Park Formation.",
+   "fact_id": "F014",
+   "statement": "The site where the original fossils were found is now located within Dinosaur Provincial Park in the Dinosaur Park Formation.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -245,8 +289,8 @@
    "quote_sha": "4ac208cf45838080"
   },
   {
-   "fact_id": "F014",
-   "statement": "The Canadian Museum of Nature acquired the reunited type skeleton in 1955, cataloging it as CMN 344.",
+   "fact_id": "F015",
+   "statement": "In 1955, the Canadian Museum of Nature acquired the mandible and skeleton, reuniting the full type specimen which is now cataloged as CMN 344.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -254,8 +298,8 @@
    "quote_sha": "b47fa8a11dab9c83"
   },
   {
-   "fact_id": "F015",
-   "statement": "Barnum Brown collected a Styracosaurus specimen in 1915 from the middle fork of Sand Creek, 12 miles downstream of Steveville.",
+   "fact_id": "F016",
+   "statement": "Barnum Brown collected another specimen in 1915 from the middle fork of Sand Creek, 12 miles downstream of Steveville.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -263,17 +307,17 @@
    "quote_sha": "41b07029b03dc6bc"
   },
   {
-   "fact_id": "F016",
-   "statement": "Barnum Brown and Erich Maren Schlaikjer named the species S. parksi in 1937 based on a specimen collected by Brown.",
+   "fact_id": "F017",
+   "statement": "The species name S. parksi honors the Canadian palaeontologist William Parks, who assisted in comparing the new specimen with S. albertensis.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
-   "quote": "Brown and American palaeontologist Erich Maren Schlaikjer reidentified it as a nearly complete skeleton and partial skull of a new species of Styracosaurus, which they described and named S. parksi in 1937.",
-   "quote_sha": "88626447dba67a3c"
+   "quote": "The species name was in honour of the late Canadian palaeontologist William Parks, who helped Brown and Schlaijker compare their specimen with the skeleton of S. albertensis that was at the time at the University of Toronto.",
+   "quote_sha": "f68e0218cd2a4bbf"
   },
   {
-   "fact_id": "F017",
-   "statement": "The locality of the S. parksi specimen was relocated in 2006 by Darren Tanke in the upper Dinosaur Park Formation.",
+   "fact_id": "F018",
+   "statement": "The specific locality where S. parksi was found was relocated in 2006 by Darren Tanke in the upper Dinosaur Park Formation.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
@@ -281,53 +325,26 @@
    "quote_sha": "320bb0239ea50dd9"
   },
   {
-   "fact_id": "F018",
-   "statement": "A nearly complete skull and skeleton were found in 1989 at Sage Creek, about 130 km southeast of the holotype.",
-   "category": "discovery",
-   "chunk_id": "styracosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "A nearly complete skull and skeleton (TMP 1989.97.1) was found in 1989 at Sage Creek only 10 m below the prairie level in the coulee, but approximately 130 km southeast of the holotype",
-   "quote_sha": "e487d19b2ebed76e"
-  },
-  {
    "fact_id": "F019",
-   "statement": "A nearly complete skull and partial skeleton were discovered in August 2008 and collected in August 2009 by the Royal Tyrrell Museum crew in Princess Coulee.",
+   "statement": "A nearly complete skull and skeleton of S. albertensis was found in 1989 at Sage Creek, about 130 km southeast of the holotype, making it the only definitive specimen of that species outside Dinosaur Provincial Park.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
-   "quote": "Another nearly complete skull and partial skeleton (TMP 2009.80.1) was discovered in August 2008 and collected in August 2009 by the crew of the Royal Tyrrell Museum in the central fork of Princess Coulee just south of Dinosaur Provincial Park.",
-   "quote_sha": "d488f130131e00e1"
+   "quote": "A nearly complete skull and skeleton (TMP 1989.97.1) was found in 1989 at Sage Creek only 10 m below the prairie level in the coulee, but approximately 130 km southeast of the holotype and the only definitive specimen of Styracosaurus albertensis from outside Dinosaur Provincial Park.",
+   "quote_sha": "6c54abb9160eb037"
   },
   {
    "fact_id": "F020",
-   "statement": "A large Styracosaurus skeleton was found in May 2015 along Matzhiwin Creek near Duchess, Alberta, by the University of Alberta.",
+   "statement": "A large Styracosaurus skeleton was found in May 2015 near Duchess, Alberta, and excavated over three years by the University of Alberta.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:3",
    "lang": "en",
-   "quote": "In May 2015 a skeleton of a large Styracosaurus was found along Matzhiwin Creek near the town of Duchess, Alberta around 18 km west of Dinosaur Provincial Park by the University of Alberta",
-   "quote_sha": "ebb499d234e0fdd5"
+   "quote": "In May 2015 a skeleton of a large Styracosaurus was found along Matzhiwin Creek near the town of Duchess, Alberta around 18 km west of Dinosaur Provincial Park by the University of Alberta and excavated over three years.",
+   "quote_sha": "cc1620787d380bf1"
   },
   {
    "fact_id": "F021",
-   "statement": "The skull of the Duchess specimen was described in 2020, while the skeleton remains under preparation.",
-   "category": "discovery",
-   "chunk_id": "styracosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The skull of the specimen (UALVP 55900) was described in 2020 but the skeleton remains under preparation",
-   "quote_sha": "ca241ba7598f5975"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "The function of Styracosaurus horns and frills has been debated for many years.",
-   "category": "debate",
-   "chunk_id": "styracosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The function or functions of the horns and frills have been debated for many years.",
-   "quote_sha": "7e92e1b6c8f098a3"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "The classification of S. ovatus is debated, having been moved to Rubeosaurus in 2010 but potentially returned to Styracosaurus or considered a separate genus again since 2020.",
+   "statement": "The classification of S. ovatus is debated, having been moved to Rubeosaurus in 2010 but considered again as a species of Styracosaurus or even S. albertensis since 2020.",
    "category": "debate",
    "chunk_id": "styracosaurus:enwiki:2",
    "lang": "en",
@@ -335,8 +352,8 @@
    "quote_sha": "2a104bfdc52eb1ea"
   },
   {
-   "fact_id": "F024",
-   "statement": "Styracosaurus albertensis was approximately 5.5 to 5.8 meters long and stood about 1.65 meters high at the hips.",
+   "fact_id": "F022",
+   "statement": "Styracosaurus albertensis measured approximately 5.5 to 5.8 meters in length and stood about 1.65 meters high at the hips.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
@@ -344,17 +361,17 @@
    "quote_sha": "eb9eaf086d9d28d9"
   },
   {
-   "fact_id": "F025",
-   "statement": "Barnum Brown and his team collected a nearly complete articulated skeleton of Styracosaurus in 1915 while working for the American Museum of Natural History.",
-   "category": "discovery",
+   "fact_id": "F023",
+   "statement": "Evidence suggests the frill of the holotype specimen broke during the animal's life and was shortened by approximately 6 centimeters.",
+   "category": "curiosities",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Barnum Brown and crew, working for the American Museum of Natural History in New York, collected a nearly complete articulated skeleton with a partial skull in 1915.",
-   "quote_sha": "47927208af783dd5"
+   "quote": "It appears that the frill suffered a break at this point in life and was shortened by about 6 cm.",
+   "quote_sha": "4372c324c1eab1cf"
   },
   {
-   "fact_id": "F026",
-   "statement": "Fossils of Styracosaurus were found in the Dinosaur Park Formation near Steveville, Alberta.",
+   "fact_id": "F024",
+   "statement": "Fossils of Styracosaurus have been found in the Dinosaur Park Formation near Steveville, Alberta.",
    "category": "time_and_habitat",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
@@ -362,8 +379,8 @@
    "quote_sha": "52df219ce3d97d38"
   },
   {
-   "fact_id": "F027",
-   "statement": "Darren Tanke of the Royal Tyrrell Museum relocated the site of the S. parksi fossils in the summer of 2006.",
+   "fact_id": "F025",
+   "statement": "Darren Tanke of the Royal Tyrrell Museum relocated the lost site of S. parksi in the summer of 2006.",
    "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
@@ -371,22 +388,40 @@
    "quote_sha": "9b88642097d09ab1"
   },
   {
-   "fact_id": "F028",
-   "statement": "The species Styracosaurus parksi is now accepted as a specimen of Styracosaurus albertensis.",
-   "category": "classification",
+   "fact_id": "F026",
+   "statement": "Specimens initially described as S. parksi were distinguished from S. albertensis by having a different cheekbone shape and smaller tail vertebrae.",
+   "category": "description",
+   "chunk_id": "styracosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Among the differences between the specimens cited by Brown and Schlaikjer were a cheekbone quite different from that of S. albertensis, and smaller tail vertebrae.",
+   "quote_sha": "bc823f4345a15628"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "The species S. parksi is now generally accepted as a specimen of S. albertensis.",
+   "category": "debate",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
    "quote": "It is now accepted as a specimen of S. albertensis.",
    "quote_sha": "90957554917f88db"
   },
   {
-   "fact_id": "F029",
-   "statement": "Several species previously assigned to Styracosaurus have been reassigned to other genera.",
-   "category": "classification",
+   "fact_id": "F028",
+   "statement": "Pieces of the skull originally found in 1915 were later discovered in the quarry, evidently abandoned by the initial collecting crew.",
+   "category": "discovery",
    "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Several other species which were assigned to Styracosaurus have since been assigned to other genera.",
-   "quote_sha": "6aaa88daaa9c1678"
+   "quote": "Pieces of the skull, evidently abandoned by the 1915 crew, were found in the quarry.",
+   "quote_sha": "706ee75d530189eb"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Bonebed 42 contains numerous skull fragments, including horncores, jaws, and frill pieces.",
+   "category": "description",
+   "chunk_id": "styracosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Bonebed 42 is known to contain numerous pieces of skulls such as horncores, jaws and frill pieces.",
+   "quote_sha": "d2f919198841118f"
   },
   {
    "fact_id": "F030",
@@ -399,15 +434,24 @@
   },
   {
    "fact_id": "F031",
-   "statement": "Styracosaurus ovatus was described by Gilmore in 1930 based on a partial parietal bone from the Two Medicine Formation of Montana.",
+   "statement": "The informal name S. makeli, mentioned by Stephen and Sylvia Czerkas in 1990, is an early name for the genus Einiosaurus.",
    "category": "classification",
-   "chunk_id": "styracosaurus:enwiki:5",
+   "chunk_id": "styracosaurus:enwiki:4",
    "lang": "en",
-   "quote": "A species, Styracosaurus ovatus, from the Two Medicine Formation of Montana, was described by Gilmore in 1930, named for a partial parietal under the accession number USNM 11869.",
-   "quote_sha": "2688c58ed47a4cc7"
+   "quote": "\"S. makeli\", mentioned informally by amateur paleontologists Stephen and Sylvia Czerkas in 1990 in a caption to an illustration, is an early name for Einiosaurus.",
+   "quote_sha": "bc07b598dc15fa53"
   },
   {
    "fact_id": "F032",
+   "statement": "S. borealis was an early informal name for S. parksi.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "\"S. borealis\" is an early informal name for S. parksi.",
+   "quote_sha": "d78173a3a8d01d96"
+  },
+  {
+   "fact_id": "F033",
    "statement": "Unlike S. albertensis, the longest parietal spikes of S. ovatus converge towards their tips rather than projecting parallel behind the frill.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:5",
@@ -416,8 +460,8 @@
    "quote_sha": "9f5fdfb70bc927ea"
   },
   {
-   "fact_id": "F033",
-   "statement": "The parietal spikes of S. ovatus are much shorter than those of S. albertensis, with the longest measuring only 295 mm.",
+   "fact_id": "F034",
+   "statement": "The spikes of S. ovatus were much shorter than those of S. albertensis, with the longest measuring only 295 millimeters.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:5",
    "lang": "en",
@@ -425,8 +469,8 @@
    "quote_sha": "69446c3758fa2ab2"
   },
   {
-   "fact_id": "F034",
-   "statement": "McDonald and Horner reclassified S. ovatus into the new genus Rubeosaurus.",
+   "fact_id": "F035",
+   "statement": "McDonald and Horner reclassified S. ovatus into the new genus Rubeosaurus based on phylogenetic analysis.",
    "category": "classification",
    "chunk_id": "styracosaurus:enwiki:5",
    "lang": "en",
@@ -434,8 +478,17 @@
    "quote_sha": "8755855ce22994ac"
   },
   {
-   "fact_id": "F035",
-   "statement": "Robert Holmes and colleagues considered S. ovatus to be a junior synonym of S. albertensis.",
+   "fact_id": "F036",
+   "statement": "A 2020 study by Robert Holmes and colleagues found that the type specimen of Rubeosaurus ovatus falls within the morphological variation of S. albertensis.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Robert Holmes and colleagues in 2020 found that USNM 11869, the type specimen of Rubeosaurus ovatus, fell within the variation seen in other specimens from the older deposits of the Dinosaur Park Formation S. albertensis is known from.",
+   "quote_sha": "4bb3618c44e758c8"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "Holmes and colleagues considered S. ovatus to be a junior synonym of S. albertensis.",
    "category": "debate",
    "chunk_id": "styracosaurus:enwiki:5",
    "lang": "en",
@@ -443,17 +496,26 @@
    "quote_sha": "40e9c35f89a6f12c"
   },
   {
-   "fact_id": "F036",
-   "statement": "John Wilson and colleagues advised retaining S. ovatus as a separate species of Styracosaurus, possibly directly descended from S. albertensis.",
-   "category": "debate",
+   "fact_id": "F038",
+   "statement": "Wilson and colleagues advised retaining S. ovatus as a separate species of Styracosaurus, likely directly descended from S. albertensis.",
+   "category": "classification",
    "chunk_id": "styracosaurus:enwiki:5",
    "lang": "en",
    "quote": "Wilson and colleagues advised that S. ovatus was retained as a separate, probably directly descended from S. albertensis, species of Styracosaurus.",
    "quote_sha": "67088365138b4874"
   },
   {
-   "fact_id": "F037",
-   "statement": "Adult Styracosaurus measured approximately 5 to 5.5 meters in length and weighed between 1.8 and 2.7 metric tons.",
+   "fact_id": "F039",
+   "statement": "The specimen USNM 14768 was considered too immature to be diagnostic, limiting the species S. ovatus to its holotype USNM 11869.",
+   "category": "description",
+   "chunk_id": "styracosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "The immature specimen USNM 14768, referred to S. ovatus by McDonald et al. in 2011, was considered too immature to be diagnostic, and thus S. ovatus was limited to its holotype USNM 11869.",
+   "quote_sha": "e373c36097870759"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Adult Styracosaurus measured between 5 and 5.5 meters in length and weighed between 1.8 and 2.7 metric tons.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -461,8 +523,8 @@
    "quote_sha": "7ce3876e849cd11e"
   },
   {
-   "fact_id": "F038",
-   "statement": "The skull of Styracosaurus featured a large nostril, a tall straight nasal horn, and a neck frill topped with at least four large spikes.",
+   "fact_id": "F041",
+   "statement": "Styracosaurus possessed a massive skull featuring a tall straight nasal horn and a neck frill adorned with at least four large spikes.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -470,8 +532,8 @@
    "quote_sha": "064290095d119833"
   },
   {
-   "fact_id": "F039",
-   "statement": "The four longest spikes on the neck frill of Styracosaurus were 50 to 55 centimeters long, similar in length to the nasal horn.",
+   "fact_id": "F042",
+   "statement": "The four longest spikes on the neck frill of Styracosaurus were 50 to 55 centimeters long, similar in size to its nasal horn.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -479,8 +541,8 @@
    "quote_sha": "53c52c5cfcd881a8"
   },
   {
-   "fact_id": "F040",
-   "statement": "Lambe estimated the nasal horn of the type specimen to be 57 centimeters long, though the tip was not preserved.",
+   "fact_id": "F043",
+   "statement": "Lambe estimated the nasal horn of the type specimen to be 57 centimeters long, though the actual tip was missing from the fossil.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -488,8 +550,8 @@
    "quote_sha": "8802ce7eb5cf516a"
   },
   {
-   "fact_id": "F041",
-   "statement": "Subadult Styracosaurus possessed modest pyramid-shaped brow horns that were replaced by pits in adults.",
+   "fact_id": "F044",
+   "statement": "Subadult Styracosaurus had modest pyramid-shaped brow horns that were replaced by pits in adults.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -497,7 +559,7 @@
    "quote_sha": "2f692f61848bcc2e"
   },
   {
-   "fact_id": "F042",
+   "fact_id": "F045",
    "statement": "Styracosaurus had a toothless beak at the front of its mouth.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
@@ -506,7 +568,16 @@
    "quote_sha": "7ea2c56fb8666e79"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F046",
+   "statement": "Styracosaurus had powerful shoulders that may have been used in combat with other individuals of its species.",
+   "category": "description",
+   "chunk_id": "styracosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "It had powerful shoulders which may have been useful in intraspecies combat.",
+   "quote_sha": "41b503e14c5ded40"
+  },
+  {
+   "fact_id": "F047",
    "statement": "Each toe of Styracosaurus ended in a hoof-like claw sheathed in horn.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
@@ -515,8 +586,8 @@
    "quote_sha": "740e81fc0d603a1c"
   },
   {
-   "fact_id": "F044",
-   "statement": "Recent research suggests that Styracosaurus likely held its legs in an intermediate crouched position rather than sprawled or directly underneath its body.",
+   "fact_id": "F048",
+   "statement": "Recent research suggests that Styracosaurus likely held its legs in an intermediate crouched position rather than sprawling or standing straight.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:6",
    "lang": "en",
@@ -524,53 +595,26 @@
    "quote_sha": "59029e6d6930bd68"
   },
   {
-   "fact_id": "F045",
-   "statement": "Styracosaurus is classified as a member of the subfamily Centrosaurinae.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "Styracosaurus is a member of the Centrosaurinae.",
-   "quote_sha": "12257184d3019fa0"
-  },
-  {
-   "fact_id": "F046",
+   "fact_id": "F049",
    "statement": "There is significant debate regarding the validity of certain centrosaurine genera, including whether Centrosaurus and Monoclonius are distinct genera, undiagnosable, or represent sexual dimorphism.",
-   "category": "classification",
+   "category": "debate",
    "chunk_id": "styracosaurus:enwiki:7",
    "lang": "en",
    "quote": "Because of the variation between species and even individual specimens of centrosaurines, there has been much debate over which genera and species are valid, particularly whether Centrosaurus and/or Monoclonius are valid genera, undiagnosable, or possibly members of the opposite sex.",
    "quote_sha": "ed11167de15dcd07"
   },
   {
-   "fact_id": "F047",
-   "statement": "In 1996, Peter Dodson argued that sufficient variation existed to classify Centrosaurus, Styracosaurus, and Monoclonius as separate genera, noting Styracosaurus was more similar to Centrosaurus.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "In 1996, Peter Dodson found enough variation between Centrosaurus, Styracosaurus, and Monoclonius to warrant separate genera, and that Styracosaurus resembled Centrosaurus more closely than either resembled Monoclonius.",
-   "quote_sha": "7c9e80e656120a18"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "Most researchers do not accept Monoclonius nasicornis as a female Styracosaurus but consider it a synonym of Centrosaurus apertus.",
-   "category": "classification",
+   "fact_id": "F050",
+   "statement": "Most researchers do not accept Monoclonius nasicornis as a female Styracosaurus, considering it instead a synonym of Centrosaurus apertus.",
+   "category": "debate",
    "chunk_id": "styracosaurus:enwiki:7",
    "lang": "en",
    "quote": "However, most other researchers have not accepted Monoclonius nasicornis as a female Styracosaurus, instead regarding it as a synonym of Centrosaurus apertus.",
    "quote_sha": "b3643dbd22f39e07"
   },
   {
-   "fact_id": "F049",
-   "statement": "It has been suggested that Styracosaurus albertensis evolved directly from Centrosaurus and subsequently into the later species Rubeosaurus ovatus.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "It has been suggested that Styracosaurus albertensis is a direct descendant of Centrosaurus (C. apertus or C. nasicornis), and that it in turn evolved directly into the slightly later species Rubeosaurus ovatus.",
-   "quote_sha": "0d951256eb943b05"
-  },
-  {
-   "fact_id": "F050",
-   "statement": "A bone bed containing Styracosaurus remains is known from the Dinosaur Park Formation of Alberta.",
+   "fact_id": "F051",
+   "statement": "A bone bed containing Styracosaurus remains has been discovered in the Dinosaur Park Formation of Alberta.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:9",
    "lang": "en",
@@ -578,8 +622,8 @@
    "quote_sha": "8b5f10f9a3c8200b"
   },
   {
-   "fact_id": "F051",
-   "statement": "Researchers suggest the mass death of Styracosaurus at the Dinosaur Park Formation site may have resulted from non-herding animals gathering at a waterhole during a drought in a seasonal, semi-arid environment.",
+   "fact_id": "F052",
+   "statement": "Researchers suggest the mass death of Styracosaurus at the Dinosaur Park Formation site may have occurred when non-herding animals gathered around a waterhole during a drought in a seasonal, semi-arid environment.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:9",
    "lang": "en",
@@ -587,7 +631,7 @@
    "quote_sha": "fae80e140049ef2a"
   },
   {
-   "fact_id": "F052",
+   "fact_id": "F053",
    "statement": "Paleontologists Gregory Paul and Per Christiansen proposed that Styracosaurus could run faster than an elephant based on trackway evidence lacking sprawling forelimb signs.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:9",
@@ -596,7 +640,7 @@
    "quote_sha": "8dfee2d8a844c7ab"
   },
   {
-   "fact_id": "F053",
+   "fact_id": "F054",
    "statement": "Styracosaurus were herbivores that likely fed mostly on low-growing vegetation due to the position of their heads.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:10",
@@ -605,8 +649,8 @@
    "quote_sha": "9d55b430da6d1986"
   },
   {
-   "fact_id": "F054",
-   "statement": "Styracosaurus may have been capable of knocking down taller plants using their horns, beak, and body mass.",
+   "fact_id": "F055",
+   "statement": "Styracosaurus may have been capable of knocking down taller plants using their horns, beak, and large body size.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:10",
    "lang": "en",
@@ -614,8 +658,17 @@
    "quote_sha": "cb0b3e7083cc8b73"
   },
   {
-   "fact_id": "F055",
-   "statement": "Unlike hadrosaurids, the teeth of Styracosaurus were adapted for slicing rather than grinding.",
+   "fact_id": "F056",
+   "statement": "Styracosaurus had teeth arranged in batteries where older upper teeth were continually replaced by newer ones underneath.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Ceratopsid teeth, including those of Styracosaurus, were arranged in groups called batteries. Older teeth on top were continually replaced by the teeth underneath them.",
+   "quote_sha": "6e515775f94a9058"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Unlike hadrosaurids, the dental batteries of Styracosaurus were adapted for slicing rather than grinding food.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:enwiki:10",
    "lang": "en",
@@ -623,7 +676,7 @@
    "quote_sha": "2811dfcf2872efe3"
   },
   {
-   "fact_id": "F056",
+   "fact_id": "F058",
    "statement": "There is a debate regarding the specific diet of Styracosaurus, with some scientists suggesting they ate palms and cycads while others propose ferns.",
    "category": "debate",
    "chunk_id": "styracosaurus:enwiki:10",
@@ -632,8 +685,8 @@
    "quote_sha": "511d45c881458a5a"
   },
   {
-   "fact_id": "F057",
-   "statement": "Peter Dodson has proposed that Late Cretaceous ceratopsians like Styracosaurus may have knocked down angiosperm trees to shear off leaves and twigs.",
+   "fact_id": "F059",
+   "statement": "Peter Dodson proposed that Late Cretaceous ceratopsians like Styracosaurus may have knocked down angiosperm trees to shear off leaves and twigs.",
    "category": "debate",
    "chunk_id": "styracosaurus:enwiki:10",
    "lang": "en",
@@ -641,7 +694,25 @@
    "quote_sha": "c1dcc63ecb985d80"
   },
   {
-   "fact_id": "F058",
+   "fact_id": "F060",
+   "statement": "Evidence suggests that the lineage leading to Styracosaurus originated in Asia during the Jurassic, with true horned ceratopsians appearing in North America by the early Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "These new discoveries have been important in illuminating the origins of horned dinosaurs in general, and suggest that the group originated during the Jurassic in Asia, with the appearance of true horned ceratopsians occurring by the beginning of the late Cretaceous in North America.",
+   "quote_sha": "59725a32325f7d9e"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Fossil evidence suggests Styracosaurus displaced its relative Centrosaurus as environmental conditions changed over time.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Styracosaurus is known from a higher position in the formation (relating specifically to its own genus) than the closely related Centrosaurus, suggesting that Styracosaurus displaced Centrosaurus as the environment changed over time and/or dimension.",
+   "quote_sha": "d7c1b5050f00e272"
+  },
+  {
+   "fact_id": "F062",
    "statement": "Styracosaurus possessed large nasal horns and frills that were among the most distinctive facial features of all dinosaurs.",
    "category": "description",
    "chunk_id": "styracosaurus:enwiki:11",
@@ -650,7 +721,7 @@
    "quote_sha": "0fc33fce340dc898"
   },
   {
-   "fact_id": "F059",
+   "fact_id": "F063",
    "statement": "The function of Styracosaurus horns and frills has been debated since the discovery of the first horned dinosaurs.",
    "category": "debate",
    "chunk_id": "styracosaurus:enwiki:11",
@@ -659,53 +730,71 @@
    "quote_sha": "a48c1d485cc59d30"
   },
   {
-   "fact_id": "F060",
-   "statement": "A skull discovered in 2015 suggested that individual variation was likely common within the Styracosaurus genus.",
-   "category": "discovery",
+   "fact_id": "F064",
+   "statement": "Researchers long believed Styracosaurus used its frills and horns for defense against large predatory dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "It was long believed that ceratopsians like Styracosaurus used their frills and horns in defence against the large predatory dinosaurs of the time.",
+   "quote_sha": "2bb961a669894c86"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "A 2006 study found no evidence that skull damage in ceratopsians was caused by horn thrust injuries during combat.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "a 2006 study found no evidence for horn thrust injuries causing these forms of damage",
+   "quote_sha": "2b7e4df5f5f3856f"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The large frill of Styracosaurus may have helped regulate body temperature by increasing surface area, similar to elephant ears.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The large frill on Styracosaurus and related genera also may have helped to increase body area to regulate body temperature, like the ears of the modern elephant.",
+   "quote_sha": "04a4365a14e75244"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "The extravagant variation in ceratopsid frills suggests that visual display is the primary function of these structures.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "This observation is highly suggestive of what is now believed to be the primary function, display.",
+   "quote_sha": "621ac58a5a129bcd"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Marked differences in horned dinosaur adornments suggest visual displays were important for courtship or social behavior.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "Evidence that visual display was important, either in courtship or in other social behavior, can be seen in the fact that horned dinosaurs differ markedly in their adornments, making each species highly distinctive.",
+   "quote_sha": "dabbb71d8c116903"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The hypothesis that exaggerated dinosaur structures were used for species identification is questioned because this function is rare in modern tetrapods.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The use of the exaggerated structures in dinosaurs as species identification has been questioned, as no such function exists in vast majority of modern species of tetrapods",
+   "quote_sha": "c567d8683bdaa1bb"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "A 2015 skull discovery suggests that individual variation in Styracosaurus horn asymmetry was likely commonplace.",
+   "category": "curiosities",
    "chunk_id": "styracosaurus:enwiki:11",
    "lang": "en",
    "quote": "A skull discovered in 2015 from a Styracosaurus indicates that individual variation was likely commonplace in the genus.",
    "quote_sha": "d2c5ccc436221f26"
   },
   {
-   "fact_id": "F061",
-   "statement": "Styracosaurus fossils are known from the Dinosaur Park Formation.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:12",
-   "lang": "en",
-   "quote": "Styracosaurus is known from the Dinosaur Park Formation",
-   "quote_sha": "0d434d113bfbca4a"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "The Dinosaur Park Formation environment was a low-relief area of rivers and floodplains that became swampier and influenced by marine conditions as the Western Interior Seaway expanded.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:12",
-   "lang": "en",
-   "quote": "The Dinosaur Park Formation is interpreted as a low-relief setting of rivers and floodplains that became more swampy and influenced by marine conditions over time as the Western Interior Seaway transgressed westward.",
-   "quote_sha": "3836454e1bcf8d79"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "The climate where Styracosaurus lived was warmer than modern Alberta, without frost, but featured wetter and drier seasons.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:12",
-   "lang": "en",
-   "quote": "The climate was warmer than present-day Alberta, without frost, but with wetter and drier seasons.",
-   "quote_sha": "83042f8edefcc032"
-  },
-  {
-   "fact_id": "F064",
-   "statement": "Styracosaurus ovatus lived alongside diverse fauna including ornithopods, hadrosaurids, other centrosaurines, leptoceratopsids, ankylosaurs, the tyrannosaurid Daspletosaurus, and smaller theropods in the Two Medicine Formation.",
-   "category": "time_and_habitat",
-   "chunk_id": "styracosaurus:enwiki:12",
-   "lang": "en",
-   "quote": "In the Two Medicine Formation, dinosaurs that lived alongside Styracosaurus ovatus included the basal ornithopod Orodromeus, hadrosaurids (such as Hypacrosaurus, Maiasaura, and Prosaurolophus), the centrosaurines Brachyceratops and Einiosaurus, the leptoceratopsid Cerasinops, the ankylosaurs Edmontonia and Euoplocephalus, the tyrannosaurid Daspletosaurus (which appears to have been a specialist of preying on ceratopsians), as well as the smaller theropods Bambiraptor, Chirostenotes, Troodon, and Avisaurus.",
-   "quote_sha": "cb2eba8de1b1c395"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "The genus Styracosaurus was named by Lambe in 1913.",
+   "fact_id": "F071",
+   "statement": "The genus Styracosaurus was named by Lawrence Lambe in 1913.",
    "category": "classification",
    "chunk_id": "styracosaurus:eswiki:1",
    "lang": "es",
@@ -713,8 +802,8 @@
    "quote_sha": "7acbcad85acaa062"
   },
   {
-   "fact_id": "F066",
-   "statement": "The species Styracosaurus albertensis was named by Lambe in 1913.",
+   "fact_id": "F072",
+   "statement": "The species Styracosaurus albertensis was named by Lawrence Lambe in 1913.",
    "category": "classification",
    "chunk_id": "styracosaurus:eswiki:1",
    "lang": "es",
@@ -722,17 +811,17 @@
    "quote_sha": "dcbf983d8bae99b2"
   },
   {
-   "fact_id": "F067",
-   "statement": "Styracosaurus has had several synonyms including Centrosaurus nasicornis, Monoclonius nasicornis, Styracosaurus parksi, Styracosaurus ovatus, and Rubeosaurus ovatus.",
+   "fact_id": "F073",
+   "statement": "Centrosaurus nasicornis is listed as a synonym for Styracosaurus.",
    "category": "classification",
    "chunk_id": "styracosaurus:eswiki:1",
    "lang": "es",
-   "quote": "synonyms: Centrosaurus nasicornis Brown, 1917 Centrosaurus nasicornus Brown, 1917 Monoclonius nasicornis Brown, 1917 Monoclonius nasicornus Brown, 1917 Styracosaurus parksi Brown & Schlaikjer, 1937 Styracosaurus ovatus Gilmore, 1930? Rubeosaurus ovatus McDonald & Horner, 2010?",
-   "quote_sha": "12ae182e87e3fc7d"
+   "quote": "synonyms: Centrosaurus nasicornis Brown, 1917",
+   "quote_sha": "45d401962d33141f"
   },
   {
-   "fact_id": "F068",
-   "statement": "Styracosaurus lived during the late Cretaceous period, approximately 75 million years ago in the Campanian stage, in what is now North America.",
+   "fact_id": "F074",
+   "statement": "Styracosaurus lived during the Late Cretaceous, approximately 75 million years ago in the Campanian stage, in what is now North America.",
    "category": "time_and_habitat",
    "chunk_id": "styracosaurus:eswiki:2",
    "lang": "es",
@@ -740,8 +829,8 @@
    "quote_sha": "c30d077edb45bc09"
   },
   {
-   "fact_id": "F069",
-   "statement": "Styracosaurus was relatively large, measuring 5.5 meters in length, 1.8 meters in height, and weighing 2.4 tons.",
+   "fact_id": "F075",
+   "statement": "Styracosaurus was relatively large, reaching 5.5 meters in length, 1.8 meters in height, and weighing 2.4 tons.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:2",
    "lang": "es",
@@ -749,16 +838,7 @@
    "quote_sha": "1fc11ca3017f5a74"
   },
   {
-   "fact_id": "F070",
-   "statement": "Styracosaurus had robust legs, a bulky body, and a short tail.",
-   "category": "paleobiology",
-   "chunk_id": "styracosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Poseía patas robustas, un cuerpo voluminoso y cola corta.",
-   "quote_sha": "13d5a9fa64cf2b31"
-  },
-  {
-   "fact_id": "F071",
+   "fact_id": "F076",
    "statement": "Styracosaurus had a beak and cutting molars arranged in continuous dental batteries, suggesting it cut plants.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:eswiki:2",
@@ -767,8 +847,8 @@
    "quote_sha": "4726d81e6d943888"
   },
   {
-   "fact_id": "F072",
-   "statement": "Styracosaurus's most notable feature was a cranial shield with four to six long parietal spikes extending from the neck, two jugal horns under its eyes, and one horn over its snout.",
+   "fact_id": "F077",
+   "statement": "Styracosaurus featured a notable cranial shield with four to six long parietal spikes extending from the neck, two jugal horns under the eyes, and one horn on the snout.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:2",
    "lang": "es",
@@ -776,17 +856,17 @@
    "quote_sha": "f8cb7904868e9512"
   },
   {
-   "fact_id": "F073",
-   "statement": "The cranial shield of Styracosaurus could reach 60 centimeters in length and 15 centimeters in width.",
-   "category": "paleobiology",
+   "fact_id": "F078",
+   "statement": "The nasal horn of Styracosaurus could reach 60 centimeters in length and 15 centimeters in width.",
+   "category": "curiosities",
    "chunk_id": "styracosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Este llegaba alcanzar 60 centímetros de largo y 15 de ancho.",
-   "quote_sha": "2621302e9e17fb44"
+   "quote": "este llegaba alcanzar 60 centímetros de largo y 15 de ancho.",
+   "quote_sha": "9816c19b53c9a7a7"
   },
   {
-   "fact_id": "F074",
-   "statement": "The discovery of 100 individuals at an Arizona site suggests that Styracosaurus lived in herds like other ceratopsians.",
+   "fact_id": "F079",
+   "statement": "The discovery of 100 individuals at an Arizona site indicates that Styracosaurus lived in herds like other ceratopsians.",
    "category": "paleobiology",
    "chunk_id": "styracosaurus:eswiki:2",
    "lang": "es",
@@ -794,7 +874,61 @@
    "quote_sha": "d634347c9bf54858"
   },
   {
-   "fact_id": "F075",
+   "fact_id": "F080",
+   "statement": "Styracosaurus fossils are known from the Dinosaur Park Formation.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "Styracosaurus is known from the Dinosaur Park Formation",
+   "quote_sha": "0d434d113bfbca4a"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "The Dinosaur Park Formation was a low-relief environment of rivers and floodplains that became swampy and influenced by marine conditions as the Western Interior Seaway expanded.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "The Dinosaur Park Formation is interpreted as a low-relief setting of rivers and floodplains that became more swampy and influenced by marine conditions over time as the Western Interior Seaway transgressed westward.",
+   "quote_sha": "3836454e1bcf8d79"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "The climate in the Dinosaur Park Formation was warmer than modern Alberta, without frost, but featured wetter and drier seasons.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "The climate was warmer than present-day Alberta, without frost, but with wetter and drier seasons.",
+   "quote_sha": "83042f8edefcc032"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Styracosaurus ovatus lived alongside diverse fauna including hadrosaurids, centrosaurines, ankylosaurs, and the tyrannosaurid Daspletosaurus, which appears to have specialized in preying on ceratopsians.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "In the Two Medicine Formation, dinosaurs that lived alongside Styracosaurus ovatus included the basal ornithopod Orodromeus, hadrosaurids (such as Hypacrosaurus, Maiasaura, and Prosaurolophus), the centrosaurines Brachyceratops and Einiosaurus, the leptoceratopsid Cerasinops, the ankylosaurs Edmontonia and Euoplocephalus, the tyrannosaurid Daspletosaurus (which appears to have been a specialist of preying on ceratopsians), as well as the smaller theropods Bambiraptor, Chirostenotes, Troodon, and Avisaurus.",
+   "quote_sha": "cb2eba8de1b1c395"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Styracosaurus is a ceratopsian dinosaur belonging to the subfamily Centrosaurinae and the tribe Centrosaurini.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Styracosaurus es un dinosaurio ceratópsido, miembro de la subfamilia Centrosaurinae y es originalmente también de pertenecen del su propia verdadera tribu que es Centrosaurini.",
+   "quote_sha": "596d8b521c4ef744"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "The species S. ovatus, named in 1930 by Charles Gilmore, was reassigned to the genus Rubeosaurus in 2010 by Andrew McDonald and Jack Horner, though it is now reconsidered as potentially belonging to Styracosaurus or S. albertensis.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Una segunda especie, S. ovatus, nombrada en 1930 por Charles Gilmore, fue reasignada a un nuevo género, Rubeosaurus, por Andrew McDonald y Jack Horner en 2010, aunque recientemente se ha considerado nuevamente que puede ser una especie de Styracosaurus o incluso un espécimen de S. albertensis.",
+   "quote_sha": "1752990c4efd746e"
+  },
+  {
+   "fact_id": "F086",
    "statement": "Adult Styracosaurus measured approximately 5.5 meters in length and weighed about 2.7 tons.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
@@ -803,8 +937,8 @@
    "quote_sha": "edd006fe89e38555"
   },
   {
-   "fact_id": "F076",
-   "statement": "The skull was large and massive, featuring a large snout, a large high nasal horn, and a frill topped with at least four long spikes.",
+   "fact_id": "F087",
+   "statement": "The skull was large and massive, featuring a large snout, a high nasal horn, and a frill topped with at least four long spikes.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
    "lang": "es",
@@ -812,8 +946,8 @@
    "quote_sha": "6993e7b8e3617f93"
   },
   {
-   "fact_id": "F077",
-   "statement": "The neck spikes were comparable in length to the nasal horn, measuring between 50 and 55 centimeters long.",
+   "fact_id": "F088",
+   "statement": "Each of the neck spikes was comparable in length to the nasal horn, measuring between 50 and 55 centimeters long.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
    "lang": "es",
@@ -821,7 +955,7 @@
    "quote_sha": "a74b0de3a8e73ddf"
   },
   {
-   "fact_id": "F078",
+   "fact_id": "F089",
    "statement": "The nasal horn is estimated to be 57 centimeters long in the holotype specimen, though it is only partially complete.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
@@ -830,7 +964,7 @@
    "quote_sha": "e2e592a8f8a797fe"
   },
   {
-   "fact_id": "F079",
+   "fact_id": "F090",
    "statement": "Small pyramid-shaped brow horns were present in subadults but were replaced by pits in adults.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
@@ -839,7 +973,7 @@
    "quote_sha": "156e763b47605a15"
   },
   {
-   "fact_id": "F080",
+   "fact_id": "F091",
    "statement": "The front of the mouth had a toothless beak.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
@@ -848,7 +982,7 @@
    "quote_sha": "813c43f0ad4bfba0"
   },
   {
-   "fact_id": "F081",
+   "fact_id": "F092",
    "statement": "The robust body of Styracosaurus resembles that of rhinoceroses.",
    "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
@@ -857,34 +991,25 @@
    "quote_sha": "40c26af3d87cc1fd"
   },
   {
-   "fact_id": "F082",
+   "fact_id": "F093",
    "statement": "Each toe had a shape and structure similar to the hooves of modern ungulates, covered in keratin.",
-   "category": "paleobiology",
+   "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
    "lang": "es",
    "quote": "Cada dedo del pie tenía una forma y estructura similar al de los cascos de los ungulados modernos, forrado en queratina.",
    "quote_sha": "6d259b12679ddd90"
   },
   {
-   "fact_id": "F083",
-   "statement": "Recent work has proposed an intermediate crouched posture as the most likely stance for Styracosaurus.",
-   "category": "paleobiology",
+   "fact_id": "F094",
+   "statement": "Recent work proposes an intermediate crouched posture as the most likely stance for Styracosaurus.",
+   "category": "description",
    "chunk_id": "styracosaurus:eswiki:3",
    "lang": "es",
    "quote": "El trabajo más reciente ha propuesto una posición agachada intermedia como muy probable.",
    "quote_sha": "919b232ec07e4d64"
   },
   {
-   "fact_id": "F084",
-   "statement": "Paleontologists Gregory S. Paul and Per Christiansen proposed that large ceratopsians like Styracosaurus could walk faster than an elephant, based on trackways showing no signs of front limb extension.",
-   "category": "paleobiology",
-   "chunk_id": "styracosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Los paleontólogos Gregory S. Paul y Per Christiansen del Museo Zoológico de la Universidad de Copenhague en Dinamarca propusieron que los ceratopsianos grandes tales como Styracosaurus podían caminar más rápidamente que un elefante, basado en las posibles huellas de un ceratopsianos, el cual no exhibe muestras signos de esxteción de los miembros delanteros.",
-   "quote_sha": "1e6d8bdb0c9166bc"
-  },
-  {
-   "fact_id": "F085",
+   "fact_id": "F095",
    "statement": "The first fossil remains of Styracosaurus were collected in Alberta, Canada, by C.M. Sternberg from the Dinosaur Park Formation and named by Lawrence Lambe in 1913.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
@@ -893,7 +1018,7 @@
    "quote_sha": "3e1d70497f6c57b5"
   },
   {
-   "fact_id": "F086",
+   "fact_id": "F096",
    "statement": "The generic name is formed from the Greek words styrax, meaning 'spike' or 'thorn', and sauros, meaning 'lizard'.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
@@ -902,7 +1027,7 @@
    "quote_sha": "4fa4e69ed585bd23"
   },
   {
-   "fact_id": "F087",
+   "fact_id": "F097",
    "statement": "The specific epithet refers to the Latinized toponym of the Canadian province where the fossils were found, Alberta.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
@@ -911,7 +1036,7 @@
    "quote_sha": "a1c6770df5265744"
   },
   {
-   "fact_id": "F088",
+   "fact_id": "F098",
    "statement": "In the summer of 2006, Darren Tanke of the Tyrrell Museum in Drumheller, Alberta, rediscovered the original lost site of S. parksi.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
@@ -920,7 +1045,7 @@
    "quote_sha": "3c74b41c84d3e302"
   },
   {
-   "fact_id": "F089",
+   "fact_id": "F099",
    "statement": "Pieces of the skull, evidently abandoned by the 1915 team, were found at the site.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
@@ -929,8 +1054,8 @@
    "quote_sha": "cac0ce1383e6a524"
   },
   {
-   "fact_id": "F090",
-   "statement": "At least one confirmed site, site 42, exists in the Dinosaur Provincial Park.",
+   "fact_id": "F100",
+   "statement": "At least one confirmed site, site 42, exists in the Provincial Dinosaur Park.",
    "category": "discovery",
    "chunk_id": "styracosaurus:eswiki:4",
    "lang": "es",
@@ -938,35 +1063,206 @@
    "quote_sha": "71ac0046c0564642"
   },
   {
-   "fact_id": "F091",
-   "statement": "Styracosaurus belongs to the parent group Centrosaurini.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Centrosaurini",
-   "quote_sha": "d86f1618ddf0fea1"
+   "fact_id": "F101",
+   "statement": "S. sphenocerus, described by Edward Drinker Cope in 1890 as a species of Monoclonius based on a nasal bone, was attributed to the straight nasal horn of a Styracosaurus in 1915.",
+   "category": "discovery",
+   "chunk_id": "styracosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "S. sphenocerus, descrita por Edward Drinker Cope en 1890 como una especie de Monoclonius y basada en un hueso nasal, fue atribuido al cuerno recto de la nariz de un Styracosaurus, en 1915.",
+   "quote_sha": "69af1e8a594b7cad"
   },
   {
-   "fact_id": "F092",
-   "statement": "Styracosaurus is classified in the family Ceratopsidae.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Ceratopsidae",
-   "quote_sha": "de2d49fa33ecb4c4"
+   "fact_id": "F102",
+   "statement": "\"S. makeli\", mentioned informally by amateur paleontologists Stephen and Sylvia Czerkas in 1990 via a photo and illustration, is an early name for Einiosaurus.",
+   "category": "discovery",
+   "chunk_id": "styracosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "\"S. makeli\", mencionada informalmente por los paleontólogos amateurs Stephen y Sylvia Czerkas en 1990 por una foto e ilustración, es un nombre temprano para Einiosaurus.",
+   "quote_sha": "8d0ebedcd30245cd"
   },
   {
-   "fact_id": "F093",
-   "statement": "Styracosaurus belongs to the class Ornithischia.",
-   "category": "classification",
-   "chunk_id": "styracosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Ornithischia",
-   "quote_sha": "57c7a44935709d4b"
+   "fact_id": "F103",
+   "statement": "\"S. borealis\" is the informal name for S. parksi.",
+   "category": "discovery",
+   "chunk_id": "styracosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "\"S. borealis\" es el nombre informal para S. parksi.",
+   "quote_sha": "d3d372278cfd4e1a"
   },
   {
-   "fact_id": "F094",
-   "statement": "Styracosaurus lived during the Campanian stage, from 83.6 to 72.2 million years ago.",
+   "fact_id": "F104",
+   "statement": "Styracosaurus is known from a higher position in the formation than the closely related Centrosaurus, suggesting it was displaced by Centrosaurus when the environment changed in time and/or dimension.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Styracosaurus se conoce de una posición más alta en la formación, que se relaciona específicamente con su propio género, que el estrechamente vinculado Centrosaurus, sugiriendo que Styracosaurus fue desplazado por el Centrosaurus cuando el ambiente cambió en un cierto tiempo y/o dimensión.",
+   "quote_sha": "5745c97ba18a7225"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "A bone bed composed of Styracosaurus remains is known from the Dinosaur Park Formation of Alberta, halfway up the formation.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Un lecho de huesos compuesto por restos de Styracosaurus es conocido de la Formación Dinosaur Park de Alberta, a medio camino de la parte superior de la formación.",
+   "quote_sha": "cc1286b98c37ff80"
+  },
+  {
+   "fact_id": "F106",
+   "statement": "These mass deaths may have resulted from gathering solitary animals around a water hole during a drought, with evidence suggesting the environment may have been seasonal and semi-arid.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Estas muertes en masa pudieron haber sido también un resultado de reunir a animales solitarios alrededor de un hoyo de agua en un período de sequía, con evidencia que sugiere el ambiente pudo haber sido estacional y semiárido.",
+   "quote_sha": "d50cfe04b8c24f4f"
+  },
+  {
+   "fact_id": "F107",
+   "statement": "Styracosaurus were herbivorous dinosaurs that likely fed on low vegetation due to the head position.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Los Styracosaurus fueron dinosaurios herbívoros, que se alimentaban probablemente de la vegetación baja debido a la posición de la cabeza.",
+   "quote_sha": "cc89e8c57671702b"
+  },
+  {
+   "fact_id": "F108",
+   "statement": "However, they may have been able to knock down taller plants with their horns, beak, and robust body.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Pudieron, sin embargo, haber podido derribado plantas más altas con sus cuernos, pico, y cuerpo robusto.",
+   "quote_sha": "6a7c7bfa906afd2a"
+  },
+  {
+   "fact_id": "F109",
+   "statement": "The jaws ended with a deep, narrow beak, believed to be better for stripping and defoliating than for biting.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Las quijadas terminaban con un pico profundo, estrecho, que se cree que habría sido mejor para arrnacar y deshojar que para morder.",
+   "quote_sha": "2cbe481e61f8ac94"
+  },
+  {
+   "fact_id": "F110",
+   "statement": "The teeth of ceratopsians, including styracosaurians, were arranged in what have been called dental batteries.",
+   "category": "paleobiology",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Los dientes de los ceratópsidos, incluidos los de los estiracosaurios, se disponían en lo que se han llamado baterías dentales.",
+   "quote_sha": "7ee91b7ee534e4a9"
+  },
+  {
+   "fact_id": "F111",
+   "statement": "Some researchers have suggested that styracosaurians ate palms and cycads, while others propose they fed on ferns.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Algunos investigadores han sugerido que los estiracosaurios comían palmas y cycas, mientras que otros proponen que se alimentaban de helechos.",
+   "quote_sha": "2b8885489228c70a"
+  },
+  {
+   "fact_id": "F112",
+   "statement": "Dodson has proposed that Late Cretaceous ceratopsians may have knocked down angiosperm trees and then eaten the leaves and branches.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Dodson ha propuesto que los ceratopsianos de finales del Cretácico pudieron haber derribado árboles de angiospermas y entonces comido de las hojas y de las ramas.",
+   "quote_sha": "564f62853e4965fc"
+  },
+  {
+   "fact_id": "F113",
+   "statement": "Paleontologists Gregory S. Paul and Per Christiansen proposed that large ceratopsians like Styracosaurus could walk faster than an elephant, based on possible tracks showing no signs of forelimb extension.",
+   "category": "curiosities",
+   "chunk_id": "styracosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los paleontólogos Gregory S. Paul y Per Christiansen del Museo Zoológico de la Universidad de Copenhague en Dinamarca propusieron que los ceratopsianos grandes tales como Styracosaurus podían caminar más rápidamente que un elefante, basado en las posibles huellas de un ceratopsianos, el cual no exhibe muestras signos de esxteción de los miembros delanteros.",
+   "quote_sha": "1e6d8bdb0c9166bc"
+  },
+  {
+   "fact_id": "F114",
+   "statement": "Styracosaurus is distinguished by a long nasal horn and a large nuchal frill, which are the most distinctive facial ornaments of all dinosaurs.",
+   "category": "description",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "El largo cuerno nasal y la gola nucal de los estiracosaurios son el más distintivo adorno facial de todos los dinosaurios.",
+   "quote_sha": "d1ebf13de0e440a4"
+  },
+  {
+   "fact_id": "F115",
+   "statement": "The function of the nuchal frill in Styracosaurus has been debated since the first horned dinosaur was discovered.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "Su función ha sido objeto de debate desde que el primer dinosaurio con cuerno ha sido encontrado.",
+   "quote_sha": "2da2407abee2d065"
+  },
+  {
+   "fact_id": "F116",
+   "statement": "R.S. Lull originally proposed that the nuchal frills of ceratopsians served as anchor points for powerful jaw muscles.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "A principios del R. S. Lull propuso que las golas nucales de los ceratópsidos servián de anclaje a los poderosos músculos de las mandíbulas.",
+   "quote_sha": "45ba07cf69efbbc2"
+  },
+  {
+   "fact_id": "F117",
+   "statement": "C.A. Forster found no evidence of large muscle insertions on the nuchal frill bones, challenging the muscle anchor hypothesis.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "C.A. Forster, sin embargo no encontró evidencia de grandes inserciones musculares en los huesos de la gola nucal.",
+   "quote_sha": "a98bc03dcbaac15b"
+  },
+  {
+   "fact_id": "F118",
+   "statement": "Researchers suggest that bone resorption or unknown bone diseases, rather than combat, caused the damage patterns seen on Styracosaurus skulls.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "En lugar, la resorción del hueso no patológico o las enfermedades desconocidas del hueso, se sugiere como causas.",
+   "quote_sha": "ffe87c2fc0e38233"
+  },
+  {
+   "fact_id": "F119",
+   "statement": "It is hypothesized that the large nuchal frill of Styracosaurus may have helped with thermoregulation by increasing surface area, similar to elephant ears.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "La gran gola nucal vista en los estiracosaurios y sus parientes tal vez haya ayudado a incrementar el área corporal ayudando a la termorregulación, lcomo las orejas de los modernos elefantes.",
+   "quote_sha": "efe94556e4a72506"
+  },
+  {
+   "fact_id": "F120",
+   "statement": "The diversity of frill shapes suggests that the primary function of the nuchal frill in Styracosaurus was species recognition and display.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "Esta diversidad de formas y arreglos hace pensar que la principal función era la exhibición y reconocimiento entre especies.",
+   "quote_sha": "2cff831894995d4e"
+  },
+  {
+   "fact_id": "F121",
+   "statement": "In 1961, Davitashvili proposed that the nuchal frill was used in courtship displays.",
+   "category": "debate",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "La teoría de que la gola nucal sea usada en la exhibición durante el cortejo fue propuesta en 1961 por Davitashvili.",
+   "quote_sha": "7a4e9e95c3ee9b74"
+  },
+  {
+   "fact_id": "F122",
+   "statement": "A skull discovered in 2015 indicates that individual variation, such as asymmetrical horns, was common in the Styracosaurus genus.",
+   "category": "description",
+   "chunk_id": "styracosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "Un cráneo descubierto en 2015 de un Styracosaurus indica que la variación individual probablemente era un lugar común en el género.",
+   "quote_sha": "587185f220e2aa2d"
+  },
+  {
+   "fact_id": "F123",
+   "statement": "Styracosaurus lived during the Campanian stage, between 83.6 and 72.2 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "styracosaurus:pbdb:1",
    "lang": "en",
@@ -974,77 +1270,201 @@
    "quote_sha": "ad61ec998840c2d9"
   },
   {
-   "fact_id": "F095",
-   "statement": "It is hoped that more pieces will be found, perhaps enough to authorize a redescription of the skull and to test if S. albertensis and S. parksi are synonyms.",
-   "category": "debate",
-   "chunk_id": "styracosaurus:eswiki:4",
+   "fact_id": "F124",
+   "statement": "Styracosaurus belongs to the subfamily Centrosaurini.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Centrosaurini",
+   "quote_sha": "d86f1618ddf0fea1"
+  },
+  {
+   "fact_id": "F125",
+   "statement": "Styracosaurus is classified within the family Ceratopsidae.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Ceratopsidae",
+   "quote_sha": "de2d49fa33ecb4c4"
+  },
+  {
+   "fact_id": "F126",
+   "statement": "Styracosaurus is a member of the class Ornithischia.",
+   "category": "classification",
+   "chunk_id": "styracosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Ornithischia",
+   "quote_sha": "57c7a44935709d4b"
+  },
+  {
+   "fact_id": "F127",
+   "statement": "The Dinosaur Park Formation represents a low-relief environment of rivers and floodplains that became increasingly swampy and influenced by marine conditions over time.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:eswiki:13",
    "lang": "es",
-   "quote": "Se espera que más pedazos seán encontrados, quizá los suficientes para autorizar una redescripción del cráneo y la prueba si S. albertensis y S. parksi son sinónimos.",
-   "quote_sha": "60e67e09bb61ba57"
+   "quote": "La Formación Dinosaur Park se interpreta como un entorno de bajo relieve de ríos y llanuras aluviales que se volvieron más pantanosos e influenciados por las condiciones marinas con el tiempo",
+   "quote_sha": "aa1a1effac4ded79"
+  },
+  {
+   "fact_id": "F128",
+   "statement": "The climate in the Dinosaur Park Formation was warmer than modern Alberta, without frosts, but with distinct wet and dry seasons.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "El clima era más cálido que el actual Alberta, sin heladas, pero con estaciones más húmedas y secas.",
+   "quote_sha": "465f0f4bbdbc7daa"
+  },
+  {
+   "fact_id": "F129",
+   "statement": "The vegetation in the Styracosaurus habitat likely consisted of a coniferous canopy with an understory of ferns, tree ferns, and angiosperms.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "Aparentemente, las coníferas eran las plantas dominantes del dosel, con un sotobosque de helechos, helechos arborescentes y angiospermas.",
+   "quote_sha": "84015c1d12ee2ed2"
+  },
+  {
+   "fact_id": "F130",
+   "statement": "Styracosaurus lived alongside a diverse fauna including other ceratopsians like Centrosaurus and Chasmosaurus, duck-billed dinosaurs like Prosaurolophus and Parasaurolophus, tyrannosaurids like Gorgosaurus and Daspletosaurus, and armored dinosaurs like Edmontonia and Euoplocephalus.",
+   "category": "time_and_habitat",
+   "chunk_id": "styracosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "era miembro de una fauna diversa y bien documentada de animales prehistóricos que incluía parientes con cuernos como Centrosaurus y Chasmosaurus , dinosaurio de picos de pato como Prosaurolophus, Lambeosaurus, Gryposaurus , Corythosaurus y Parasaurolophus, tiranosáuridos Gorgosaurus , Daspletosaurus y los dinosaurios acorazados Edmontonia y Euoplocephalus.",
+   "quote_sha": "6ced38138328f426"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "styracosaurus:enwiki:2",
-   "statement": "The type species of Styracosaurus is Styracosaurus albertensis.",
+   "chunk_id": "styracosaurus:enwiki:3",
+   "statement": "Levi Sternberg revisited the quarry in 1935 with the Royal Ontario Museum to excavate the mandible and largely complete skeleton of the original individual.",
    "category": "discovery",
-   "quote": "type_species: Styracosaurus albertensis",
-   "reason": "quote not found verbatim in the source"
+   "quote": "In 1935, the quarry was revisited by Levi Sternberg, son of Charles H., in part of a field crew of the Royal Ontario Museum, where the mandible and largely complete skeleton of the same individual were excavated.",
+   "reason": "statement copies the source wording: 'the mandible and largely complete skeleton of the'"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:3",
+   "statement": "Barnum Brown and Erich Maren Schlaikjer identified the 1915 specimen as a new species, Styracosaurus parksi, which they named in 1937.",
+   "category": "discovery",
+   "quote": "Brown and American palaeontologist Erich Maren Schlaikjer reidentified it as a nearly complete skeleton and partial skull of a new species of Styracosaurus, which they described and named S. parksi in 1937.",
+   "reason": "numbers not in the quote: ['1915']"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:3",
+   "statement": "A specimen discovered in 2008 is notable for being the smallest and likely youngest known Styracosaurus with a nearly complete skull.",
+   "category": "discovery",
+   "quote": "It is notable as the smallest and likely youngest known Styracosaurus with a nearly complete skull.",
+   "reason": "numbers not in the quote: ['2008']"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:3",
+   "statement": "The skull of the 2015 Duchess specimen was described in 2020, though the skeleton is still under preparation.",
+   "category": "discovery",
+   "quote": "The skull of the specimen (UALVP 55900) was described in 2020 but the skeleton remains under preparation and while the locality was lower in elevation than all other Styracosaurus this is from a regional dip in the formation.",
+   "reason": "numbers not in the quote: ['2015']"
   },
   {
    "chunk_id": "styracosaurus:enwiki:2",
-   "statement": "The type species Styracosaurus albertensis was described by Lambe in 1913.",
-   "category": "discovery",
-   "quote": "authority: Lambe, 1913",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "styracosaurus:enwiki:2",
-   "statement": "Styracosaurus possessed four to six long parietal spikes, smaller jugal horns on its cheeks, and a single nose horn up to 60 cm long and 15 cm wide.",
-   "category": "time_and_habitat",
-   "quote": "It had four to six long parietal spikes extending from its neck frill, a smaller jugal horn on each of its cheeks, and a single horn protruding from its nose, which may have been up to 60 cm long and 15 cm wide.",
-   "reason": "statement copies the source wording: 'up to 60 cm long and 15 cm'"
+   "statement": "The specific functions of the horns and frills have been a subject of debate for many years.",
+   "category": "debate",
+   "quote": "The function or functions of the horns and frills have been debated for many years.",
+   "reason": "statement copies the source wording: 'functions of the horns and frills have been'"
   },
   {
    "chunk_id": "styracosaurus:enwiki:4",
-   "statement": "In one specimen of S. albertensis, the smallest frill spike on the left side is partially overlapped at its base by the adjacent spike.",
+   "statement": "In the holotype skull, the smallest frill spike on the left side is partially overlapped at its base by the adjacent spike.",
    "category": "description",
    "quote": "An unusual feature of this first skull is that the smallest frill spike on the left side is partially overlapped at its base by the next spike.",
    "reason": "statement copies the source wording: 'the smallest frill spike on the left side'"
   },
   {
+   "chunk_id": "styracosaurus:enwiki:4",
+   "statement": "Barnum Brown and his team collected a nearly complete articulated skeleton with a partial skull in 1915 for the American Museum of Natural History.",
+   "category": "discovery",
+   "quote": "Barnum Brown and crew, working for the American Museum of Natural History in New York, collected a nearly complete articulated skeleton with a partial skull in 1915.",
+   "reason": "statement copies the source wording: 'collected a nearly complete articulated skeleton with a'"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:4",
+   "statement": "At least one confirmed bone bed, known as bonebed 42, in Dinosaur Provincial Park has been explored for Styracosaurus fossils.",
+   "category": "discovery",
+   "quote": "At least one confirmed bone bed (bonebed 42) in Dinosaur Provincial Park has also been explored.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:4",
+   "statement": "The specimen described as S. parksi featured a more robust jaw, a shorter dentary, and a frill with a different shape compared to the type species.",
+   "category": "description",
+   "quote": "S. parksi also had a more robust jaw, a shorter dentary, and the frill differed in shape from the type species.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
    "chunk_id": "styracosaurus:enwiki:5",
-   "statement": "The specimen MOR 492 was moved into its own taxon, Stellasaurus ancellae.",
+   "statement": "S. ovatus may have had only two sets of spikes on each side of the frill, whereas S. albertensis had three.",
+   "category": "description",
+   "quote": "There also may only have been two sets of spikes on each side of the frill, instead of three.",
+   "reason": "statement copies the source wording: 'two sets of spikes on each side of'"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:5",
+   "statement": "Wilson and colleagues suggested that the new taxon Stellasaurus ancellae may be ancestral to later forms, implying gradual evolution through anagenesis explains intermediate morphologies in the Two Medicine Formation.",
+   "category": "debate",
+   "quote": "Wilson and colleagues also suggested that the new taxon may have been ancestral to the later forms it was found related to, suggesting gradual evolution through anagenesis could be the reason for the intermediate morphologies of many specimens and species found in the Two Medicine Formation, possibly also including S. ovatus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "styracosaurus:enwiki:7",
+   "statement": "Styracosaurus is classified as a member of the subfamily Centrosaurinae.",
    "category": "classification",
-   "quote": "MOR 492 was moved into its own taxon, Stellasaurus ancellae.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Styracosaurus is a member of the Centrosaurinae.",
+   "reason": "duplicate"
   },
   {
-   "chunk_id": "styracosaurus:enwiki:5",
-   "statement": "Wilson and colleagues suggested that gradual evolution through anagenesis might explain the intermediate morphologies found in the Two Medicine Formation, possibly including S. ovatus.",
+   "chunk_id": "styracosaurus:enwiki:8",
+   "statement": "The evolutionary lineage of Styracosaurus may not be a simple straight line, as a pachyrhinosaur-like species has been found living at the same time and place.",
    "category": "debate",
-   "quote": "Wilson and colleagues suggested that the new taxon may have been ancestral to the later forms it was found related to, suggesting gradual evolution through anagenesis could be the reason for the intermediate morphologies of many specimens and species found in the Two Medicine Formation, possibly also including S. ovatus.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "styracosaurus:enwiki:11",
-   "statement": "A 2015 study suggested that the genus Rubeosaurus might be synonymous with Styracosaurus.",
-   "category": "debate",
-   "quote": "The study carried out may also indicate that the genus Rubeosaurus may be synonymous with Styracosaurus as a result.",
-   "reason": "numbers not in the quote: ['2015']"
+   "quote": "However, the lineage may not be a simple, straight line, as a pachyrhinosaur-like species has been reported from the same time and place as Styracosaurus albertensis.",
+   "reason": "statement copies the source wording: 'may not be a simple straight line as'"
   },
   {
    "chunk_id": "styracosaurus:enwiki:12",
-   "statement": "Conifers were the dominant canopy plants in Styracosaurus habitat, with an understory of ferns, tree ferns, and angiosperms.",
+   "statement": "Conifers were the dominant canopy plants in the Styracosaurus habitat, with an understory of ferns, tree ferns, and angiosperms.",
    "category": "time_and_habitat",
    "quote": "Conifers were apparently the dominant canopy plants, with an understory of ferns, tree ferns, and angiosperms.",
    "reason": "statement copies the source wording: 'with an understory of ferns tree ferns and'"
   },
   {
-   "chunk_id": "styracosaurus:eswiki:3",
-   "statement": "Styracosaurus had a relatively short tail.",
+   "chunk_id": "styracosaurus:eswiki:11",
+   "statement": "Unlike hadrosaurids, which also had dental batteries, ceratopsid teeth sliced but did not grind.",
    "category": "paleobiology",
-   "quote": "Styracosaurus tenía una cola relativamente corta.",
+   "quote": "A diferencia de los hadrosáurido s, que también tenía baterías dentales, los dientes del ceratopsido rebanaban pero no molían.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "styracosaurus:eswiki:12",
+   "statement": "A recent study comparing cranial injury rates suggests that while Triceratops used its frill as a protective shield, Centrosaurus (a close relative of Styracosaurus) likely used its ornamentation primarily for visual display rather than physical combat.",
+   "category": "curiosities",
+   "quote": "Un estudio más reciente comparó las tasas de incidencia de lesiones craneales en Triceratops y Centrosaurus y mostró que estas eran consistentes con Triceratops usando sus cuernos en combate y adaptando el volante como una estructura protectora, mientras que las tasas de patología más bajas en Centrosaurus pueden indicar visual en lugar de físico uso de ornamentación craneal.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "styracosaurus:eswiki:12",
+   "statement": "For a long time, it was believed that Styracosaurus used its nuchal frill and horns for defense against large predators, but a 2006 study found no evidence of combat-related injuries on the horns.",
+   "category": "debate",
+   "quote": "Por mucho tiempo se creyó que los estiracosaurios y otros dinosaurios con cuernos usaban sus golas nucales y cuernos en defensa contra los grandes dinosaurios cazadores de tiempo.",
+   "reason": "numbers not in the quote: ['2006']"
+  },
+  {
+   "chunk_id": "styracosaurus:eswiki:12",
+   "statement": "The asymmetrical nature of the horns in the 2015 Styracosaurus specimen is comparable to the asymmetrical antlers found in modern deer.",
+   "category": "description",
+   "quote": "La naturaleza asimétrica de los cuernos del espécimen se ha comparado con la de los ciervos, que a menudo tienen astas asimétricas en varios individuos.",
+   "reason": "numbers not in the quote: ['2015']"
+  },
+  {
+   "chunk_id": "styracosaurus:eswiki:13",
+   "statement": "Styracosaurus fossils are known from the Dinosaur Park Formation.",
+   "category": "time_and_habitat",
+   "quote": "Styracosaurus se conoce de la Formación Dinosaur Park",
    "reason": "duplicate"
   }
  ]

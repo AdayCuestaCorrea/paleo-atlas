@@ -2,9 +2,9 @@
  "taxon": "Carcharodontosaurus",
  "taxon_key": "carcharodontosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "07e9e6454fb68ed2",
- "generated_at": "2026-11-03T01:16:41+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c8178e151cceeae5",
+ "generated_at": "2026-11-04T02:16:36+00:00",
  "citations": {
   "carcharodontosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -69,6 +69,20 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "carcharodontosaurus:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Carcharodontosaurus (Cranium and teeth, part 3)",
+   "url": "https://en.wikipedia.org/wiki/Carcharodontosaurus?oldid=1380320007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "carcharodontosaurus:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Carcharodontosaurus (Cranium and teeth, part 4)",
+   "url": "https://en.wikipedia.org/wiki/Carcharodontosaurus?oldid=1380320007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "carcharodontosaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Carcharodontosaurus (taxobox)",
@@ -118,6 +132,20 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "carcharodontosaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Carcharodontosaurus (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Carcharodontosaurus?oldid=174408836",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "carcharodontosaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Carcharodontosaurus (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Carcharodontosaurus?oldid=174408836",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "carcharodontosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Carcharodontosaurus",
@@ -129,16 +157,25 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus Carcharodontosaurus was established by Ernst Stromer in 1931.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:enwiki:1",
+   "statement": "Carcharodontosaurus lived in Northwest Africa between 100 and 94 million years ago during the Cenomanian stage of the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
    "lang": "en",
-   "quote": "authority: Stromer, 1931",
-   "quote_sha": "c54d65a4949aae2a"
+   "quote": "Carcharodontosaurus (; \"shark-toothed lizard\") is a genus of large theropod dinosaur that lived in Northwest Africa from about 100 to 94 million years ago during the Cenomanian age of the late Cretaceous period.",
+   "quote_sha": "0013b89e9c268d03"
   },
   {
    "fact_id": "F002",
-   "statement": "A partial skeleton was discovered in Egypt in 1914 by crews working for Ernst Stromer, who reported the find in 1931.",
+   "statement": "The genus was first described in 1925 by Charles Depéret and Justin Savornin based on two lost fossil teeth found in Algeria.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The genus was first described in 1925 by French paleontologists Charles Depéret and Justin Savornin as Megalosaurus saharicus, based on two fossil teeth discovered in Algeria, which are now lost.",
+   "quote_sha": "970aa47de64d028c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A partial skeleton was discovered in Egypt in 1914 by crews working for Ernst Stromer, who officially reported the find in 1931.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:2",
    "lang": "en",
@@ -146,8 +183,26 @@
    "quote_sha": "2f45aa2bcfe728e1"
   },
   {
-   "fact_id": "F003",
-   "statement": "C. saharicus reached approximately 12 meters in length and 5 to 7 metric tons in body mass, making it one of the largest known theropods.",
+   "fact_id": "F004",
+   "statement": "The Egyptian skeleton, destroyed in World War II, was redescribed in 2025 as a distinct genus named Tameryraptor based on historical photographs.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Although the Egyptian skeleton was destroyed during World War II, it was redescribed as a closely related but distinct genus, Tameryraptor, based on historical photographs in 2025.",
+   "quote_sha": "fe0b61ee1e8bd46c"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "A large incomplete skull found in Morocco in 1995 was officially designated as the neotype for C. saharicus in 2007.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "In 1995, a large incomplete skull attributed to C. saharicus was discovered in the Kem Kem Beds of Morocco, which was officially proposed as the neotype (specimen the species is based on) in 2007.",
+   "quote_sha": "fda0d4e1c6df1ea1"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "C. saharicus grew to about 12 meters in length and weighed between 5 and 7 metric tons, making it one of the largest known theropods.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:2",
    "lang": "en",
@@ -155,8 +210,17 @@
    "quote_sha": "6868c1a503548fa9"
   },
   {
-   "fact_id": "F004",
-   "statement": "Its jaws contained sharp, recurved, and serrated teeth resembling those of the great white shark, which inspired the genus name.",
+   "fact_id": "F007",
+   "statement": "Carcharodontosaurus possessed a large, lightly built skull featuring a triangular snout.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It had a large, lightly built skull with a triangular snout.",
+   "quote_sha": "7f0c37c8e0384133"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Its jaws contained sharp, recurved, and serrated teeth that closely resemble those of the great white shark, inspiring the genus name.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:2",
    "lang": "en",
@@ -164,7 +228,25 @@
    "quote_sha": "1821d56d76142363"
   },
   {
-   "fact_id": "F005",
+   "fact_id": "F009",
+   "statement": "The cranium was lightened by expanded depressions and holes in the bone, making it more fragile than the skulls of tyrannosaurids.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Though giant, its cranium was made lighter by greatly expanded fossae (depressions in bone) and fenestrae (holes in the skull), but this made the cranium more fragile than that of tyrannosaurids.",
+   "quote_sha": "4139ff8968de272d"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "During its time, North Africa was covered in mangrove forests and wetlands, supporting high diversity of fish, crocodyliforms, and pterosaurs.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "North Africa at the time was blanketed in mangrove forests and wetlands, creating a hotspot of fish, crocodyliforms, and pterosaur diversity.",
+   "quote_sha": "cb051d704f892657"
+  },
+  {
+   "fact_id": "F011",
    "statement": "Two teeth were unearthed in 1924 from wall cuts near Timimoun in French Algeria.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:3",
@@ -173,8 +255,8 @@
    "quote_sha": "60e457ab517afa62"
   },
   {
-   "fact_id": "F006",
-   "statement": "In 1925, Depéret and Savornin described the teeth as a new species, Megalosaurus saharicus.",
+   "fact_id": "F012",
+   "statement": "In 1925, Depéret and Savornin described the teeth as a new theropod species named Megalosaurus saharicus.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:3",
    "lang": "en",
@@ -182,8 +264,8 @@
    "quote_sha": "a09de9d7ca4591c7"
   },
   {
-   "fact_id": "F007",
-   "statement": "A partial skeleton was first found near Ain Gedid, Egypt, in April 1914 by Richard Markgraf.",
+   "fact_id": "F013",
+   "statement": "A partial skeleton was first found near Ain Gedid, Egypt, in April 1914 by Austro-Hungarian paleontologist Richard Markgraf.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:3",
    "lang": "en",
@@ -191,7 +273,7 @@
    "quote_sha": "5f9150edd914267b"
   },
   {
-   "fact_id": "F008",
+   "fact_id": "F014",
    "statement": "The skeleton was transported to Munich in 1922 and described by Stromer in 1931.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:3",
@@ -200,8 +282,8 @@
    "quote_sha": "31a1ef19db38a390"
   },
   {
-   "fact_id": "F009",
-   "statement": "In 2025, the main skeleton was redescribed as the holotype of a distinct genus, Tameryraptor.",
+   "fact_id": "F015",
+   "statement": "In 2025, the main specimen was redescribed as the holotype of a distinct genus named Tameryraptor.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:4",
    "lang": "en",
@@ -209,8 +291,17 @@
    "quote_sha": "833e78d334cc0775"
   },
   {
-   "fact_id": "F010",
-   "statement": "Many fossils from French expeditions in North Africa were assigned to Carcharodontosaurus based on limited information, a classification now questioned.",
+   "fact_id": "F016",
+   "statement": "Dozens of isolated teeth and bones from Morocco, Tunisia, Algeria, and Niger were assigned to Carcharodontosaurus because it was the only known carcharodontosaurid from the region at the time.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Dozens of isolated teeth and bones were assigned to Carcharodontosaurus from sites across North Africa including in Morocco, Tunisia, Algeria, and Niger, as it was the only carcharodontosaurid known from the region at the time.",
+   "quote_sha": "8f4c7a50c97f1aa5"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Many fossils from French expeditions in North Africa were assigned to Carcharodontosaurus based on limited information, though many now belong to other genera.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:4",
    "lang": "en",
@@ -218,8 +309,8 @@
    "quote_sha": "931312809dad0ddb"
   },
   {
-   "fact_id": "F011",
-   "statement": "A 2012 study suggests all isolated teeth previously assigned to Carcharodontosaurus from North Africa are indeterminate due to the presence of other genera in the region.",
+   "fact_id": "F018",
+   "statement": "A 2012 study suggests that isolated teeth previously assigned to Carcharodontosaurus from North Africa are now considered indeterminate due to the presence of other similar genera in the region.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:4",
    "lang": "en",
@@ -227,35 +318,53 @@
    "quote_sha": "aac8417eaecdd24d"
   },
   {
-   "fact_id": "F012",
-   "statement": "It is debated whether postcranial fossils from the Elrhaz Formation belong to Carcharodontosaurus or a different taxon, as the postorbital resembles Acrocanthosaurus.",
-   "category": "debate",
+   "fact_id": "F019",
+   "statement": "In 1960, Albert-Félix de Lapparent assigned fossils from several North African formations to Carcharodontosaurus without detailed taxonomic reasoning.",
+   "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:4",
    "lang": "en",
-   "quote": "French paleontologist Philippe Taquet noted that the postorbital was similar to that of Acrocanthosaurus, another carcharodontosaurid, suggesting it may be from Carcharodontosaurus however the postcranial fossils could belong to a different taxon.",
-   "quote_sha": "d10228f46de3df43"
+   "quote": "In 1960, French paleontologist Albert-Félix de Lapparent assigned teeth and bones from outcrops of the Continental intercalaire, Echkar Formation, and Irhazer Shale in North Africa to Carcharodontosaurus, however they were assigned to the genus without detailed taxonomic discussion or reasoning.",
+   "quote_sha": "b962b74651848005"
   },
   {
-   "fact_id": "F013",
-   "statement": "Teeth from the Gara Samani Formation were identified as Carcharodontosaurus but may instead belong to abelisaurids.",
-   "category": "debate",
+   "fact_id": "F020",
+   "statement": "In 1976, a postorbital bone and other remains were found in the Elrhaz Formation of northern Niger and assigned to the genus.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "In 1976, a postorbital (skull bone forming right side of orbit) and several postcranial remains assigned to the genus were found in the Elrhaz Formation of northern Niger.",
+   "quote_sha": "2aac952c9201f712"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Some fossils were misidentified, such as a toe bone likely from a spinosaurid and tail vertebrae possibly from a sauropod, which were incorrectly assigned to Carcharodontosaurus.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Some of the fossils were misidentified, such an isolated pedal phalanx (toe bone) from the Echkar Formation was assigned to Carcharodontosaurus by Lapparent (1960), but it likely is from a spinosaurid instead, and several caudal (tail) vertebrae that may belong to a sauropod.",
+   "quote_sha": "3c1be7d634f6fc93"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "Teeth and a tail vertebra from the Chenini Formation of Tunisia were assigned to Carcharodontosaurus but are now labeled as indeterminate carcharodontosaurids.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Teeth and a caudal vertebra from the Chenini Formation of southern Tunisia have been assigned to Carcharodontosaurus, though these fossils are now labeled Carcharodontosauridae indet.",
+   "quote_sha": "f745f55dd1fafbbb"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Teeth from the Gara Samani Formation were identified as Carcharodontosaurus but may actually belong to abelisaurids.",
+   "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:4",
    "lang": "en",
    "quote": "Additionally, from the Gara Samani Formation, previously a part of the Continental intercalaire, have been identified as Carcharodontosaurus teeth, however they may belong to abelisaurids instead.",
    "quote_sha": "1477280aa5a337f0"
   },
   {
-   "fact_id": "F014",
-   "statement": "An incomplete skull of Carcharodontosaurus was discovered in 1995 by American paleontologist Paul Sereno.",
-   "category": "discovery",
-   "chunk_id": "carcharodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "Few discoveries of Carcharodontosaurus attributed material were made until 1995 when American paleontologist Paul Sereno found an incomplete skull during an expedition embarked on by the University of Chicago.",
-   "quote_sha": "4a6e9a51ab0d238b"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "The type skull was found in Cenomanian-aged rocks of the Lower Douira Formation in southeastern Morocco.",
+   "fact_id": "F024",
+   "statement": "The type skull was found in Cenomanian-aged rocks of the Lower Douira Formation in Errachidia, southeastern Morocco.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -263,8 +372,8 @@
    "quote_sha": "44dfe012ded40ccf"
   },
   {
-   "fact_id": "F016",
-   "statement": "The presence of Carcharodontosaurus in the Kem Kem Beds was first suggested in 1954 by René Lavocat based on fragmentary fossils.",
+   "fact_id": "F025",
+   "statement": "French paleontologist René Lavocat first suggested the presence of Carcharodontosaurus in the formation in 1954 based on fragmentary fossils.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -272,8 +381,8 @@
    "quote_sha": "c26dca24d3bf2995"
   },
   {
-   "fact_id": "F017",
-   "statement": "The skull catalogued as SGM-Din 1 was initially described in 1996 by Sereno and colleagues in the journal Science.",
+   "fact_id": "F026",
+   "statement": "The skull, catalogued as SGM-Din 1, was initially described in 1996 by Sereno and colleagues in the journal Science.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -281,8 +390,8 @@
    "quote_sha": "6fcc409e4b4d4c57"
   },
   {
-   "fact_id": "F018",
-   "statement": "In 2007, specimen SGM-Din 1 was proposed as the neotype of C. saharicus because the original lectotype teeth were lost.",
+   "fact_id": "F027",
+   "statement": "In 2007, the skull SGM-Din 1 was officially proposed as the neotype of C. saharicus because the original lectotype teeth were lost.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -290,8 +399,8 @@
    "quote_sha": "8ec231e82239d93b"
   },
   {
-   "fact_id": "F019",
-   "statement": "The species C. iguidensis was described in 2007 by Steve Brusatte and Paul Sereno.",
+   "fact_id": "F028",
+   "statement": "The species C. iguidensis was described in 2007 by American paleontologists Steve Brusatte and Paul Sereno.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -299,8 +408,8 @@
    "quote_sha": "1e0a641d21a49b8c"
   },
   {
-   "fact_id": "F020",
-   "statement": "Fossils of C. iguidensis were found in the Echkar Formation near Iguidi, Niger.",
+   "fact_id": "F029",
+   "statement": "Fossils of C. iguidensis were uncovered in the Echkar Formation at Iguidi, Niger.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -308,8 +417,8 @@
    "quote_sha": "2d50d6aff347cf94"
   },
   {
-   "fact_id": "F021",
-   "statement": "A 2016 study suggested that most material assigned to C. iguidensis actually belongs to other genera, leaving only the holotype valid.",
+   "fact_id": "F030",
+   "statement": "A 2016 study suggested that non-holotypic material assigned to C. iguidensis actually belongs to Sigilmassasaurus and an unrelated taxon, limiting the species to its holotype.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -317,8 +426,8 @@
    "quote_sha": "5c00228d2a1aa5b2"
   },
   {
-   "fact_id": "F022",
-   "statement": "A 2025 study proposed that C. iguidensis represents a distinct genus separate from C. saharicus.",
+   "fact_id": "F031",
+   "statement": "A 2025 presentation suggested that C. iguidensis represents a distinct genus separate from C. saharicus based on anatomical, phylogenetic, and biogeographic differences.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -326,8 +435,8 @@
    "quote_sha": "ec1ef2f0781fb6a6"
   },
   {
-   "fact_id": "F023",
-   "statement": "The validity of the genus Sauroniops is debated, with some researchers considering it a synonym of C. saharicus or a dubious taxon.",
+   "fact_id": "F032",
+   "statement": "The validity of the genus Sauroniops is debated, with some researchers considering it dubious or a synonym of C. saharicus.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -335,17 +444,26 @@
    "quote_sha": "52107397c940c2d4"
   },
   {
-   "fact_id": "F024",
-   "statement": "Giganotosaurus was synonymized with Carcharodontosaurus in 1998 and 2010, but this classification has not been accepted by subsequent authors.",
+   "fact_id": "F033",
+   "statement": "In 2015, a large dorsal vertebra from the Kem Kem Beds was informally named \"Osteoporosia gigantea\" as a potential new megaraptoran or carcharodontosaurid.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "In 2015, a large neural arch (projection of bone at the top of a vertebra) of a dorsal vertebra from the Kem Kem Beds was informally described as belonging to a new genus and species of megaraptoran or carcharodontosaurid dubbed \"Osteoporosia gigantea\".",
+   "quote_sha": "5c1c927ff67d8aac"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "Researchers suggest that the specimen informally named \"Osteoporosia gigantea\" may actually belong to C. saharicus or Sauroniops rather than being a distinct large genus.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
-   "quote": "The South American genus Giganotosaurus was synonymized with Carcharodontosaurus in 1998 by Brazilian author Silvério Domingues Figueiredo and in 2010 by American paleontologist Gregory S. Paul, but no authors have since followed this assessment.",
-   "quote_sha": "83b69be443100442"
+   "quote": "However, it was much smaller than proposed and may belong to C. saharicus or Sauroniops based on its carcharodontosaurid traits and origin.",
+   "quote_sha": "f5cbef36e18b478c"
   },
   {
-   "fact_id": "F025",
-   "statement": "French geologist Hugues Faure collected isolated Carcharodontosaurus-like teeth from the Akarazeras site in the Farak Formation.",
+   "fact_id": "F035",
+   "statement": "French geologist Hugues Faure collected isolated teeth resembling Carcharodontosaurus from the Akarazeras site in the Farak Formation.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:5",
    "lang": "en",
@@ -353,7 +471,7 @@
    "quote_sha": "6c5abfef330bd6c6"
   },
   {
-   "fact_id": "F026",
+   "fact_id": "F036",
    "statement": "A maxillary tooth from the Villar del Arzobispo Formation in Spain was assigned to Carcharodontosaurus in 1966.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:6",
@@ -362,8 +480,8 @@
    "quote_sha": "d6ee20d88d918d7c"
   },
   {
-   "fact_id": "F027",
-   "statement": "The Spanish tooth assigned to Carcharodontosaurus lacks typical carcharodontosaurid traits and resembles other allosauroids.",
+   "fact_id": "F037",
+   "statement": "The Spanish tooth assigned to Carcharodontosaurus lacks typical carcharodontosaurid traits and resembles other allosauroids instead.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:6",
    "lang": "en",
@@ -371,35 +489,53 @@
    "quote_sha": "19b4fa8e6c401d4b"
   },
   {
-   "fact_id": "F028",
-   "statement": "Teeth from Brazil have been placed in Carcharodontosaurus, but this assignment is disputed due to geographic origin and lack of diagnostic features.",
+   "fact_id": "F038",
+   "statement": "Teeth from the Gokwe Formation in Zimbabwe were described in 1970 as similar to those of Carcharodontosaurus.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "In a 1970 study, teeth deriving from the Gokwe Formation of Zimbabwe were described as being similar to those of Carcharodontosaurus.",
+   "quote_sha": "f6f5642129b8e6a8"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "Later studies determined that the Zimbabwean teeth previously compared to Carcharodontosaurus are indeterminate.",
    "category": "debate",
+   "chunk_id": "carcharodontosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "However, later studies have found these teeth to be indeterminate.",
+   "quote_sha": "58a4e5b09d6a0a4f"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Teeth from Brazil's Alcantara Formation and Itapecuru Group have been placed in Carcharodontosaurus, though this is disputed due to geographic origin and lack of diagnostic features.",
+   "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:6",
    "lang": "en",
    "quote": "Teeth from the Alcantara Formation and the Itapecuru Group of Brazil have placed in Carcharodontosaurus, but this has been disputed based on its geographic origin and lack of diagnostic features.",
    "quote_sha": "2e03c5e35b6ab624"
   },
   {
-   "fact_id": "F029",
-   "statement": "Fossils from the Wadi Milk Formation in Sudan were once compared to Carcharodontosaurus but are now considered indeterminate carcharodontosaurids.",
-   "category": "debate",
-   "chunk_id": "carcharodontosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "Several vertebral centra (base of vertebrae), a tarsal (bone in the heel), a metatarsal (foot/ankle bone), and a pedal phalanx from Wadi Milk Formation of Sudan were compared Carcharodontosaurus, but were now considered to be indeterminate carcharodontosaurids, some of which are similar to the genus.",
-   "quote_sha": "184dea5a2a51a66a"
-  },
-  {
-   "fact_id": "F030",
-   "statement": "Fossils from the Quseir Formation in Egypt have been tentatively assigned to both Spinosaurus and Carcharodontosaurus but remain classified as indeterminate.",
-   "category": "debate",
+   "fact_id": "F041",
+   "statement": "Fossils from the Campanian Quseir Formation in western Egypt have been tentatively assigned to both Spinosaurus and Carcharodontosaurus but remain classified as indeterminate due to lack of detailed description.",
+   "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:6",
    "lang": "en",
    "quote": "Fossils from the Campanian Quseir Formation of western Egypt have been tentatively assigned to Spinosaurus and Carcharodontosaurus, but these specimens were never described in detail and thus classified as indeterminate.",
    "quote_sha": "c4bb400d976a98ef"
   },
   {
-   "fact_id": "F031",
-   "statement": "The neotype of Carcharodontosaurus saharicus was estimated to be 12 to 12.5 meters long and weigh 5 to 7 metric tons.",
+   "fact_id": "F042",
+   "statement": "Stromer originally estimated Carcharodontosaurus saharicus to be 8 to 9 meters long based on specimen SNSB-BSPG 1922 X 46, which is now known as Tameryraptor.",
+   "category": "discovery",
+   "chunk_id": "carcharodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "Stromer hypothesized that C. saharicus was around the same size as the tyrannosaurid Gorgosaurus, which placed it at around 8 - 9 m long, based on his specimen SNSB-BSPG 1922 X 46 (now Tameryraptor).",
+   "quote_sha": "15a5a8f4c0cc44a3"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "The neotype specimen of Carcharodontosaurus saharicus was estimated to be 12 to 12.5 meters long and weigh between 5 and 7 metric tons.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:7",
    "lang": "en",
@@ -407,8 +543,8 @@
    "quote_sha": "6ab7bd135351fd33"
   },
   {
-   "fact_id": "F032",
-   "statement": "Carcharodontosaurus iguidensis reached a maximum length of 10 meters and a body mass of 4 metric tons.",
+   "fact_id": "F044",
+   "statement": "Carcharodontosaurus iguidensis was smaller than C. saharicus, reaching only 10 meters in length and 4 metric tons in body mass.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:7",
    "lang": "en",
@@ -416,80 +552,8 @@
    "quote_sha": "5eb590621076f0bd"
   },
   {
-   "fact_id": "F033",
-   "statement": "In 1996, Paul Sereno and colleagues estimated the skull of Carcharodontosaurus saharicus to be 1.60 meters long.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "In 1996, Paul Sereno and colleagues estimated the skull of C. saharicus to be 1.60 m",
-   "quote_sha": "7d623feef58671e8"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "In 2007, François Therrien and Donald M. Henderson estimated Carcharodontosaurus to be 13.3 meters long and 15.1 metric tons in weight.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "In 2007, Canadian researcher François Therrien and American researcher Donald M. Henderson found that Giganotosaurus would have approached 13 m in length and 13.8 MT in weight, while Carcharodontosaurus would have approached 13.3 m in length and 15.1 MT in weight",
-   "quote_sha": "75e6a4d388d8b911"
-  },
-  {
-   "fact_id": "F035",
-   "statement": "The neotype skull of Carcharodontosaurus saharicus would measure 1.6 meters when complete.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "The neotype skull of C. saharicus would measure 1.6 m when complete",
-   "quote_sha": "396a0be996efc4cb"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "Sculpted exteriors on the maxillae are a diagnostic trait unique to the genus Carcharodontosaurus.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Carcharodontosaurus skull has sculpted exteriors on its maxillae, which is a trait unique to the genus.",
-   "quote_sha": "3471722349e3475e"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "There are 14 tooth sockets present in each maxilla of Carcharodontosaurus saharicus.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "14 teeth sockets are present in each maxilla.",
-   "quote_sha": "277d397b9e48f5b2"
-  },
-  {
-   "fact_id": "F038",
-   "statement": "A recent estimate suggests Carcharodontosaurus had a total of 62 teeth: 30 in the dentary, 8 in the premaxilla, and 24 in the maxilla.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Estimations of the tooth count of Carcharodontosaurus vary, but a recent estimate of 30 dentary, 8 premaxillary, and 24 maxillary teeth for a total of 62 teeth was made.",
-   "quote_sha": "179562848feaa681"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "Carcharodontosaurus saharicus had over 18 to 20 serrations per centimeter of tooth edge, while C. iguidensis had up to 32 per centimeter.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Serrations are numerous on the anterior and posterior margins, with over 18 to 20 serrations per centimetre of edge in C. saharicus and up to 32 per centimetre in C. iguidensis.",
-   "quote_sha": "dfdec3f947bdd890"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "The teeth of Carcharodontosaurus are straight and spindle-shaped in cross-section.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "The teeth are straight and spindle-shaped in cross-section.",
-   "quote_sha": "9d3766bcb5f88ec3"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "Since the mid-1990s, there has been a debate among researchers regarding whether Tyrannosaurus, Carcharodontosaurus, Giganotosaurus, or Spinosaurus was the largest theropod dinosaur.",
+   "fact_id": "F045",
+   "statement": "Since the mid-1990s, paleontologists have debated whether Tyrannosaurus, Carcharodontosaurus, Giganotosaurus, or Spinosaurus was the largest theropod dinosaur.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:7",
    "lang": "en",
@@ -497,16 +561,196 @@
    "quote_sha": "c366c4b277908a39"
   },
   {
-   "fact_id": "F042",
-   "statement": "Paul Sereno and Rodolfo Coria agreed that settling the size contest between Carcharodontosaurus and Giganotosaurus was difficult and less important than studying other aspects of these dinosaurs.",
-   "category": "debate",
+   "fact_id": "F046",
+   "statement": "In 1996, Paul Sereno and colleagues estimated the skull of Carcharodontosaurus saharicus to be 1.60 meters long, similar to Giganotosaurus and possibly longer than the Tyrannosaurus specimen \"Sue\".",
+   "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:7",
    "lang": "en",
-   "quote": "Sereno countered that it would be difficult to determine a size range for a species based on few, incomplete specimens, and both paleontologists agreed that other aspects of these dinosaurs were more important than settling the \"size contest\".",
-   "quote_sha": "184794afaa15f1b3"
+   "quote": "In 1996, Paul Sereno and colleagues estimated the skull of C. saharicus to be 1.60 m, similar in size to that of Giganotosaurus and possibly longer than that of the Tyrannosaurus specimen \"Sue\".",
+   "quote_sha": "d7444849ba150454"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F047",
+   "statement": "A 2012 study by Matthew Carrano and colleagues estimated the skull length of Carcharodontosaurus saharicus at 1.42 meters, which is slightly longer than the largest Tyrannosaurus individuals.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "A later study by American paleontologist Matthew Carrano and colleagues in 2012 estimated the skull length of C. saharicus to be 1.42 m long, still slightly longer than that of the largest Tyrannosaurus individuals.",
+   "quote_sha": "708d68ccd532448e"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "A 2007 study by François Therrien and Donald M. Henderson estimated Carcharodontosaurus at 13.3 meters long and 15.1 metric tons, surpassing both Tyrannosaurus and Giganotosaurus.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "In 2007, Canadian researcher François Therrien and American researcher Donald M. Henderson found that Giganotosaurus would have approached 13 m in length and 13.8 MT in weight, while Carcharodontosaurus would have approached 13.3 m in length and 15.1 MT in weight (surpassing both Tyrannosaurus and Giganotosaurus).",
+   "quote_sha": "de75ab9ce02a0566"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "The complete neotype skull of Carcharodontosaurus saharicus would measure 1.6 meters, comparable to the largest Tyrannosaurus skulls.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The neotype skull of C. saharicus would measure 1.6 m when complete, around the same size as the largest Tyrannosaurus skulls.",
+   "quote_sha": "c974d58f29f56324"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Carcharodontosaurid skulls are generally more slender and lightly built than the robust skulls of later tyrannosaurids, which evolved adaptations for crushing.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Skulls of carcharodontosaurids tend to be more slender and lightly built than those of later tyrannosaurids, which have robust builds and adaptations for crushing.",
+   "quote_sha": "072c31c17117169e"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The Carcharodontosaurus skull was lighter than tyrannosaurid skulls, featuring an antorbital fenestra that made up over 30% of the total skull length and was surrounded by fossae in the maxillae, nasals, jugals, and lacrimals.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Its skull was lighter than that of tyrannosaurids, with the antorbital fenestra composing over 30% of the total skull length as well as being surrounded by fossae in the maxillae, nasals (nose bone), jugals (cheekbone), and lacrimals (front orbit bone).",
+   "quote_sha": "7548d845754cd52a"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "The nasal bone of Carcharodontosaurus was elongated with a rugose surface likely covered by keratin sheaths, forming a horn-like structure similar to Ceratosaurus.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Akin to other genera, its nasal is elongated and its exposed side is covered in a rugose surface. These bumps were likely extended by keratin sheaths, creating a horn-like structure as in Ceratosaurus.",
+   "quote_sha": "4049b1e1008341f2"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The lacrimal bone of Carcharodontosaurus also featured rugosity that would have been lengthened by keratin, forming a similar horn-like element.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "A similar rugosity is found on the lacrimal which would also be lengthened by keratin, forming a similar element.",
+   "quote_sha": "832c0fb796b8505c"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Sculpted exteriors on the maxillae are a unique diagnostic trait of the Carcharodontosaurus genus.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Carcharodontosaurus skull has sculpted exteriors on its maxillae, which is a trait unique to the genus.",
+   "quote_sha": "3471722349e3475e"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "The lower jaw articulation in Carcharodontosaurus was positioned farther back behind the occipital condyle compared to other theropods.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The lower jaw articulation was placed farther back behind the occipital condyle (where the neck is attached to the skull) compared to other theropods.",
+   "quote_sha": "d54da785dcabbd51"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Carcharodontosaurus saharicus possessed a prominent nuchal crest that overhung the skull roof.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "C. saharicus has a much more prominent nuchal crest, which overhangs the skull roof.",
+   "quote_sha": "ea533c35057adfed"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Two dentary fragments assigned to Carcharodontosaurus saharicus by Ibrahim and colleagues in 2020 feature deep and expanded tooth sockets, traits common in large theropods.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Two dentary (lower jaw bone) fragments which were assigned to C. saharicus by Ibrahim and colleagues in 2020 have deep and expanded alveoli (tooth sockets), traits found in other large theropods.",
+   "quote_sha": "aff5fd5ad8986d60"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Carcharodontosaurus teeth had numerous serrations, with 18 to 20 per centimeter in C. saharicus and up to 32 per centimeter in C. iguidensis.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Serrations are numerous on the anterior and posterior margins, with over 18 to 20 serrations per centimetre of edge in C. saharicus and up to 32 per centimetre in C. iguidensis.",
+   "quote_sha": "dfdec3f947bdd890"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Carcharodontosaurus teeth were straight and spindle-shaped in cross-section.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The teeth are straight and spindle-shaped in cross-section.",
+   "quote_sha": "9d3766bcb5f88ec3"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Teeth toward the back of the Carcharodontosaurus mouth were more recurved than those at the front.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "However, dentition towards the back of the mouth became more recurved than those towards the front of the mouth.",
+   "quote_sha": "4d81873877f3e7e2"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Bowed enamel wrinkles were present on both sides of the Carcharodontosaurus tooth crowns, curving toward the serrations to form a band-shape along the ends.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Bowed enamel wrinkles are present on both dorsoventral sides of the crowns. These wrinkles curve towards the marginal serrations, composing a band-shape along the ends.",
+   "quote_sha": "d5fa7b9f7c8b6e29"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The midbrain of Carcharodontosaurus saharicus was angled downwards at a 45-degree angle toward the rear of the animal.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The midbrain is angled downwards at a 45-degree angle and towards the rear of the animal.",
+   "quote_sha": "d9a0bfac52967d7a"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The hindbrain of Carcharodontosaurus saharicus was roughly parallel to the forebrain and formed a 40-degree angle with the midbrain.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The hindbrain, which is roughly parallel to the forebrain and forms a roughly 40-degree angle with the midbrain.",
+   "quote_sha": "573706b5b2045cf6"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "Hans Larsson found that the ratio of cerebrum to total brain volume in Carcharodontosaurus was typical for a non-avian reptile.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Larsson found that the ratio of the cerebrum to the volume of the brain overall in Carcharodontosaurus was typical for a non-avian reptile.",
+   "quote_sha": "c21250a3f41d2d4e"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "Carcharodontosaurus possessed a large optic nerve.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Carcharodontosaurus also had a large optic nerve.",
+   "quote_sha": "1e68df20a79f4357"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The three semicircular canals of the Carcharodontosaurus saharicus inner ear had a subtriangular outline when viewed from the side.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The three semicircular canals of the inner ear of Carcharodontosaurus saharicus—when viewed from the side—had a subtriangular outline.",
+   "quote_sha": "a41053d6a8be5735"
+  },
+  {
+   "fact_id": "F067",
    "statement": "Carcharodontosaurus was a robust theropod with small forelimbs, an elongated tail, and a short neck.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:9",
@@ -515,17 +759,17 @@
    "quote_sha": "aa161257796ed76c"
   },
   {
-   "fact_id": "F044",
+   "fact_id": "F068",
    "statement": "Canadian researcher Dale A. Russell assigned a single cervical vertebra to the genus Carcharodontosaurus in 1996.",
-   "category": "description",
+   "category": "discovery",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
    "quote": "A single cervical vertebra was assigned to the genus by Canadian researcher Dale A. Russell in 1996.",
    "quote_sha": "cc248ca2dfac5598"
   },
   {
-   "fact_id": "F045",
-   "statement": "The preserved length of the cervical vertebra assigned to Carcharodontosaurus by Russell is 148 mm.",
+   "fact_id": "F069",
+   "statement": "The preserved length of the single cervical vertebra assigned to Carcharodontosaurus is 148 mm.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
@@ -533,16 +777,16 @@
    "quote_sha": "6103f39e3282ba77"
   },
   {
-   "fact_id": "F046",
-   "statement": "Cau and colleagues tentatively assigned another incomplete cervical vertebra to Carcharodontosaurus in 2025 based on its stratigraphic and geographic position.",
+   "fact_id": "F070",
+   "statement": "The cervical vertebra of Carcharodontosaurus lacks keels, which may be because it is an anterior cervical vertebra.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
-   "quote": "Another incomplete cervical vertebra was tentatively assigned to the genus by Cau and colleagues (2025) on the basis of its stratigraphic and geographic position.",
-   "quote_sha": "b8bcc5d9c732a444"
+   "quote": "The centrum however lacks the keels observed in other carcharodontosaurids, possibly due to it being an anterior cervical vertebra.",
+   "quote_sha": "382fa9c2dc5071a6"
   },
   {
-   "fact_id": "F047",
+   "fact_id": "F071",
    "statement": "Carcharodontosaurus is the type genus of the family Carcharodontosauridae and the subfamily Carcharodontosaurinae.",
    "category": "classification",
    "chunk_id": "carcharodontosaurus:enwiki:9",
@@ -551,8 +795,8 @@
    "quote_sha": "62dc2281f9064e0e"
   },
   {
-   "fact_id": "F048",
-   "statement": "The family Carcharodontosauridae was originally created by Stromer for Carcharodontosaurus and Bahariasaurus, but the name was not used until the late 20th century.",
+   "fact_id": "F072",
+   "statement": "The clade Carcharodontosauridae was originally created by Stromer for Carcharodontosaurus and Bahariasaurus, but the name was not used until the late 20th century.",
    "category": "classification",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
@@ -560,8 +804,17 @@
    "quote_sha": "8270362699082a94"
   },
   {
-   "fact_id": "F049",
-   "statement": "Thomas R. Holtz and colleagues defined the group Carcharodontosauridae in 2004 as all allosauroids closer to Carcharodontosaurus than to Allosaurus or Sinraptor.",
+   "fact_id": "F073",
+   "statement": "Between the 1950s and the 1980s, Carcharodontosaurus was classified within the family Megalosauridae.",
+   "category": "classification",
+   "chunk_id": "carcharodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "From the 1950s to the 1980s, Carcharodontosaurus was classified as a member of Megalosauridae, another family of carnivorous theropods, alongside theropods like Antrodemus/Allosaurus, Megalosaurus, and Eustreptospondylus.",
+   "quote_sha": "a020ca46afa34785"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "In 2004, Thomas R. Holtz and colleagues defined Carcharodontosauridae as all allosauroids more closely related to Carcharodontosaurus than to Allosaurus or Sinraptor.",
    "category": "classification",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
@@ -569,152 +822,8 @@
    "quote_sha": "dcd0922acd6bb6f5"
   },
   {
-   "fact_id": "F050",
-   "statement": "Kellermann, Cuesta, and Rauhut suggested in 2025 that C. iguidensis belongs to a different genus because it is a non-carcharodontosaurine member of Carcharodontosauridae outside the genus Carcharodontosaurus.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "In the phylogenetic analyses of their 2025 paper, Kellermann, Cuesta and Rauhut recovered C. iguidensis as a non-carcharodontosaurine member of the Carcharodontosauridae outside the genus Carcharodontosaurus, suggesting that this species belongs to a different genus.",
-   "quote_sha": "63077332d2111238"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "The genus Carcharodontosaurus was named by Stromer in 1931.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Stromer, 1931",
-   "quote_sha": "6226a920d81c059d"
-  },
-  {
-   "fact_id": "F052",
-   "statement": "The type species of the genus Carcharodontosaurus is Carcharodontosaurus saharicus.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "type_species: Carcharodontosaurus saharicus",
-   "quote_sha": "590bf2b97d56da9d"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "The type species Carcharodontosaurus saharicus was named by Depéret and Savornin in 1927.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "type_species_authority: Depéret & Savornin, 1927",
-   "quote_sha": "0aabe6c06cc3c28c"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "Carcharodontosaurus iguidensis was named by Brusatte and Sereno in 2007.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "subdivision: Carcharodontosaurus iguidensis Brusatte & Sereno, 2007",
-   "quote_sha": "3983c473cdf6630f"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "Carcharodontosaurus fossils range from the Early to Late Cretaceous.",
-   "category": "time_and_habitat",
-   "chunk_id": "carcharodontosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Cretácico Inferior-Superior",
-   "quote_sha": "a2d492083a7dc36a"
-  },
-  {
-   "fact_id": "F056",
-   "statement": "Carcharodontosaurus lived in the middle of the Cretaceous period, approximately 100 million years ago, between the Albian and Cenomanian stages, extending a few thousand years into the early Turonian, in what is now Africa.",
-   "category": "time_and_habitat",
-   "chunk_id": "carcharodontosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "que vivieron a mediados del período Cretácico, hace aproximadamente entre 100 million years ago, entre el Albianense y Cenomaniense llegando unos pocos miles de años hasta inicios del Turoniense, en lo que hoy es África.",
-   "quote_sha": "1791150eb79ef2d6"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "Carcharodontosaurus was one of the largest known predatory dinosaurs and shared its territory and time with Spinosaurus, another large carnivorous dinosaur.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Es uno de los mayores dinosaurios predadores que se conocen, y compartió el mismo territorio y la misma época con Spinosaurus, otro dinosaurio carnívoro de gran tamaño.",
-   "quote_sha": "670121e0e67ecc7a"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "Estimates for the length and weight of C. saharicus range from 12 to 12.5 meters and 6 tons, respectively.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Las diferentes estimaciones de longitud y peso de la especie C. saharicus oscilan entre 12 a 12.5 metros de longitud y entre las 6 toneladas de peso.",
-   "quote_sha": "4132fd7b9136ab1c"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "Carcharodontosaurus had one of the largest skulls observed in terrestrial animals, approximately 1.60 meters long.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Tenía uno de los mayores cráneos de los observados hasta ahora en animales terrestres, de aproximadamente 1,60 metros de largo",
-   "quote_sha": "6cb40eda676c7de4"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "Carcharodontosaurus had serrated teeth similar to those of sharks, which functioned to tear flesh, causing prey to bleed out.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Carcharodontosaurus tenía mandíbulas llenas de aserrados dientes parecidos a los de los tiburones (de ahí su nombre «lagarto con dientes de tiburón»), que tenían la función de desgarrar carne, por lo que sus presas morían desangradas",
-   "quote_sha": "6b51f049c8828ec3"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "Fossil tracks suggest Carcharodontosaurus could run at speeds up to 8.5 m/s (around 30 km/h), though this estimate is now debated.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Tenían como todo Carnosauria unas largas y musculosas patas traseras, y rastros fosilizados indican que podían correr hasta 8,5 m/s (alrededor de 30 km/h), aunque ahora dicha estimación es objeto de controversia.",
-   "quote_sha": "5ff00818c620f4b6"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "Despite its size, the bite force of Carcharodontosaurus was not very high, being easily surpassed by Tyrannosaurus rex and slightly by Giganotosaurus, but similar to or greater than that of Spinosaurus.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "A pesar del tamaño del animal, la fuerza mandibular de Carcharodontosaurus no era muy alta, siendo superada fácilmente por Tyrannosaurus rex y ligeramente por Giganotosaurus pero similar o mayor a la de Spinosaurus.",
-   "quote_sha": "4d73a8a5acada490"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "A study by Donald Henderson suggests Carcharodontosaurus could physically lift animals weighing up to 424 kilograms with its jaws.",
-   "category": "paleobiology",
-   "chunk_id": "carcharodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Un estudio realizado por Donald Henderson, conservador de dinosaurios en el Museo Tyrrell, sugiere que Carcharodontosaurus fue capaz de levantar físicamente con sus mandíbulas animales que pesaban un máximo de 424 kilogramos.",
-   "quote_sha": "83d5234a880ea6ec"
-  },
-  {
-   "fact_id": "F064",
-   "statement": "The description of other North African carcharodontosaurids like Tameryraptor and Sauroniops has questioned the assignment of remains lacking overlap with the C. saharicus neotype to Carcharodontosaurus.",
-   "category": "debate",
-   "chunk_id": "carcharodontosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "However, the description of other carcharodontosaurids from North Africa such as Tameryraptor and Sauroniops has put into question the referral of carcharodontosaurid remains that lack overlap with the C. saharicus neotype.",
-   "quote_sha": "0990cf1efc3944d9"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "Oliver Rauhut's 1995 analysis of Carcharodontosaurus systematics was based on material now assigned to Tameryraptor.",
-   "category": "debate",
-   "chunk_id": "carcharodontosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "In a 1995 paper, German researcher Oliver Rauhut analyzed the systematics of Carcharodontosaurus—though this was based on the material now assigned to Tameryraptor—and Bahariasaurus.",
-   "quote_sha": "b783a27e642fb1ca"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Later studies have not supported Rauhut's conclusions, suggesting Bahariasaurus is a ceratosaur, \"A.\" tendagurensis is an indeterminate tetanuran, and \"M.\" ingens is possibly a species of Torvosaurus.",
+   "fact_id": "F075",
+   "statement": "Later studies suggest that Bahariasaurus is a ceratosaur, \"Allosaurus\" tendagurensis is an indeterminate tetanuran, and \"Megalosaurus\" ingens may be a species of Torvosaurus, contradicting earlier hypotheses about Carcharodontosauridae origins.",
    "category": "debate",
    "chunk_id": "carcharodontosaurus:enwiki:9",
    "lang": "en",
@@ -722,7 +831,367 @@
    "quote_sha": "72278881b294a2aa"
   },
   {
-   "fact_id": "F067",
+   "fact_id": "F076",
+   "statement": "A 2025 analysis by Kellermann, Cuesta, and Rauhut suggests that C. iguidensis belongs to a different genus because it is a non-carcharodontosaurine member of Carcharodontosauridae.",
+   "category": "debate",
+   "chunk_id": "carcharodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "In the phylogenetic analyses of their 2025 paper, Kellermann, Cuesta and Rauhut recovered C. iguidensis as a non-carcharodontosaurine member of the Carcharodontosauridae outside the genus Carcharodontosaurus, suggesting that this species belongs to a different genus.",
+   "quote_sha": "63077332d2111238"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "Kellermann, Cuesta, and Rauhut named a new clade, Carcharodontosauriformes, to group carcharodontosaurids and metriacanthosaurids as sister taxa based on 2025 analyses.",
+   "category": "classification",
+   "chunk_id": "carcharodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "The 2025 analyses of Kellermann, Cuesta and Rauhut found support for a sister taxon relationship of carcharodontosaurids and metriacanthosaurids, which the authors named as a new clade, Carcharodontosauriformes.",
+   "quote_sha": "e0ad747d07fa5989"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "Carcharodontosaurus is less well-known than other carcharodontosaurids like Meraxes and Giganotosaurus, which have nearly complete skeletons.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Carcharodontosaurus is less well-known than most other carcharodontosaurids, with Meraxes and Giganotosaurus represented by nearly complete skeletons.",
+   "quote_sha": "a462e23c75725015"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Carcharodontosaurians have been found from the Late Jurassic to the Mid-Cretaceous on every continent except Antarctica.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Carcharodontosaurians have been recognized from the Late Jurassic to the Mid-Cretaceous of every continent except Antarctica.",
+   "quote_sha": "77b1f720406c897b"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "Research indicates that carcharodontosaurids, including Carcharodontosaurus, had a transcontinental distribution across Africa, North America, and South America by the Early Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Sereno and colleagues found that the presence of carcharodontosaurids in Africa (Carcharodontosaurus), North America (Acrocanthosaurus), and South America (Giganotosaurus), showed the group had a transcontinental distribution by the Early Cretaceous period.",
+   "quote_sha": "901a54da3ff4d92b"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "Historical views suggested that the Cretaceous world was biogeographically separated, with Africa dominated by carcharodontosaurids.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Previously, it was thought that the Cretaceous world was biogeographically separated, with the northern continents being dominated by tyrannosaurids, South America by abelisaurids, and Africa by carcharodontosaurids.",
+   "quote_sha": "1497b54059bf5fc4"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "The subfamily Carcharodontosaurinae, containing Carcharodontosaurus, was likely restricted to the southern continent of Gondwana, where it probably served as an apex predator.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "The subfamily Carcharodontosaurinae, in which Carcharodontosaurus belongs, appears to have been restricted to the southern continent of Gondwana (formed by South America and Africa), where they were probably the apex predators.",
+   "quote_sha": "9c9e11cebde55b3a"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Carcharodontosaurus possessed uniquely thin and blade-like teeth that were distinct among allosauroids.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "The dentition of allosauroids is distinct, with carcharodontosaurid teeth being uniquely thin and blade-like.",
+   "quote_sha": "6446f9a2c0843c9d"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Carcharodontosaurus had a high tooth replacement rate, allowing damaged teeth to be replaced easily, unlike extant bone-crushing mammals.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Carcharodontosaurus also had a high tooth replacement rate, meaning that damaged teeth could be replaced easily in contrast to extant bone-crushing mammals who spend much of their energy maintaining their teeth.",
+   "quote_sha": "d5133604a2ab4380"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "A 2015 study analyzed the teeth of Carcharodontosaurus, Tyrannosaurus, and other dinosaurs using X-ray microscopy.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In a 2015 study on dinosaur tooth function, teeth of Carcharodontosaurus, Tyrannosaurus, and a variety of other dinosaurs were analyzed by X-ray microscopy.",
+   "quote_sha": "c3d9f7c53aec20d9"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "A 2022 paper estimated the anterior bite force of Carcharodontosaurus saharicus at 11,312 newtons and the posterior bite force at 25,449 newtons.",
+   "category": "curiosities",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "The anterior bite force of C. saharicus was estimated in a 2022 paper to be 11,312 newtons while the posterior bite force was 25,449 newtons.",
+   "quote_sha": "1a3037a0bb502442"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "The lower bite force of Carcharodontosaurus compared to Tyrannosaurus implies that it likely did not eat bones.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "This is much lower than that of Tyrannosaurus, implying that it did not eat bones.",
+   "quote_sha": "84958392d6667f64"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "Spinosaurus and Suchomimus experienced greater skull stress than Carcharodontosaurus, suggesting they could only consume light, small prey, whereas Carcharodontosaurus could bite larger items while sustaining stress.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "However, Spinosaurus and Suchomimus experienced even greater values of stress meaning that they could only consume light, small prey instead of larger items, which the stronger skull of Carcharodontosaurus could bite while sustaining the stress.",
+   "quote_sha": "2c2306a730ebce2f"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Isotopic analyses suggest Carcharodontosaurus was more terrestrial than the contemporary Spinosaurus, which pursued semi-aquatic habits.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Isotopic analyses of the teeth of C. saharicus have found δ18O values that are higher than that of the contemporary Spinosaurus, suggesting the latter pursued semi-aquatic habits whereas Carcharodontosaurus was more terrestrial.",
+   "quote_sha": "5acfa35b3cbd558e"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Isotopic evidence suggests Carcharodontosaurus was a homeotherm with endotherm-like thermophysiology, accumulating most of its oxygen from drinking water rather than being in water.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Carcharodontosaurus was also a homeotherm with an endotherm-like thermophysiology as inferred by these isotopes meaning that most of its oxygen was accumulated by drinking water rather than being in it.",
+   "quote_sha": "05f0907e64392b4e"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Daniel Chure suggested that the bony shelf above Carcharodontosaurus's orbit was used for head-butting fights.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "In his study, Chure recounted the idea that the horns of Carnotaurus were used for \"head-butting fights\" and suggested that theropods with bony shelves above their orbits, like Carcharodontosaurus, did the same.",
+   "quote_sha": "b44e96222b34f5a4"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "Carcharodontosaurus likely functioned as an ambush predator, similar to crocodiles.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The range of vision seen in these allosauroids is comparable to that of crocodiles, suggesting that they were ambush predators.",
+   "quote_sha": "192f1214fd505999"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "The neotype skull of Carcharodontosaurus saharicus preserves pathologies including signs of biting, infection, and breaks.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The neotype skull of C. saharicus is one of many allosauroid individuals to preserve pathologies, with signs of biting, infection, and breaks observed in Allosaurus and Acrocanthosaurus among others.",
+   "quote_sha": "840187afebd70492"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "A later study identified an unusual bony projection on the nasal of Carcharodontosaurus saharicus as a potential bite mark.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "This skull bears a circular puncture wound in the nasal and an unusual bony projection coming from the nasal's antorbital rim, which a later study stated could be a bite mark.",
+   "quote_sha": "3aa52bc7c26713de"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Carcharodontosaurus was described by Stromer in 1931.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Stromer, 1931",
+   "quote_sha": "6226a920d81c059d"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "The type species Carcharodontosaurus saharicus was named by Depéret and Savornin in 1927.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "type_species_authority: Depéret & Savornin, 1927",
+   "quote_sha": "0aabe6c06cc3c28c"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "The species Carcharodontosaurus iguidensis was described by Brusatte and Sereno in 2007.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "subdivision: Carcharodontosaurus iguidensis Brusatte & Sereno, 2007",
+   "quote_sha": "3983c473cdf6630f"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "Carcharodontosaurus lived during the mid-Cretaceous, approximately 100 million years ago, from the Albian to early Turonian stages in what is now Africa.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Carcharodontosaurus (lat. «lagarto con dientes de tiburón») es un género de dinosaurios terópodos carcarodontosáuridos, que vivieron a mediados del período Cretácico, hace aproximadamente entre 100 million years ago, entre el Albianense y Cenomaniense llegando unos pocos miles de años hasta inicios del Turoniense, en lo que hoy es África.",
+   "quote_sha": "ae2c8736f4b533c6"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "Carcharodontosaurus shared its territory and time with Spinosaurus, another large carnivorous dinosaur.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Es uno de los mayores dinosaurios predadores que se conocen, y compartió el mismo territorio y la misma época con Spinosaurus, otro dinosaurio carnívoro de gran tamaño.",
+   "quote_sha": "670121e0e67ecc7a"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "Specimens of Carcharodontosaurus discovered to date are estimated to belong to two distinct species: C. saharicus and C. iguidensis.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "En la actualidad se estima que los especímenes descubiertos hasta la fecha pertecenen a dos especies distintas: C. saharicus y C. iguidensis.",
+   "quote_sha": "c692bac048de41b0"
+  },
+  {
+   "fact_id": "F101",
+   "statement": "Estimates for Carcharodontosaurus saharicus range from 12 to 12.5 meters in length and 6 tons in weight.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Las diferentes estimaciones de longitud y peso de la especie C. saharicus oscilan entre 12 a 12.5 metros de longitud y entre las 6 toneladas de peso.",
+   "quote_sha": "4132fd7b9136ab1c"
+  },
+  {
+   "fact_id": "F102",
+   "statement": "Carcharodontosaurus had one of the largest skulls observed in terrestrial animals, approximately 1.60 meters long.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Tenía uno de los mayores cráneos de los observados hasta ahora en animales terrestres, de aproximadamente 1,60 metros de largo",
+   "quote_sha": "6cb40eda676c7de4"
+  },
+  {
+   "fact_id": "F103",
+   "statement": "Carcharodontosaurus had serrated, shark-like teeth used for tearing flesh, causing prey to bleed out.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Carcharodontosaurus tenía mandíbulas llenas de aserrados dientes parecidos a los de los tiburones (de ahí su nombre «lagarto con dientes de tiburón»), que tenían la función de desgarrar carne, por lo que sus presas morían desangradas",
+   "quote_sha": "6b51f049c8828ec3"
+  },
+  {
+   "fact_id": "F104",
+   "statement": "Carcharodontosaurus had front claws like butcher's hooks used to hold victims while they were torn apart by its jaws.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "además sus patas delanteras tenían garras afiladas como garfios de carnicero para sostener a sus víctimas mientras las destrozaba con sus mandíbulas.",
+   "quote_sha": "9176f5dad72732c5"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "Fossilized tracks suggest Carcharodontosaurus could run at speeds of 8.5 m/s (around 30 km/h), though this estimate is now controversial.",
+   "category": "curiosities",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Tenían como todo Carnosauria unas largas y musculosas patas traseras, y rastros fosilizados indican que podían correr hasta 8,5 m/s (alrededor de 30 km/h), aunque ahora dicha estimación es objeto de controversia.",
+   "quote_sha": "5ff00818c620f4b6"
+  },
+  {
+   "fact_id": "F106",
+   "statement": "Despite its size, the bite force of Carcharodontosaurus was not very high, surpassed easily by Tyrannosaurus rex and slightly by Giganotosaurus.",
+   "category": "curiosities",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "A pesar del tamaño del animal, la fuerza mandibular de Carcharodontosaurus no era muy alta, siendo superada fácilmente por Tyrannosaurus rex y ligeramente por Giganotosaurus pero similar o mayor a la de Spinosaurus.",
+   "quote_sha": "4d73a8a5acada490"
+  },
+  {
+   "fact_id": "F107",
+   "statement": "A study by Donald Henderson suggests Carcharodontosaurus could physically lift animals weighing up to 424 kilograms with its jaws.",
+   "category": "curiosities",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Un estudio realizado por Donald Henderson, conservador de dinosaurios en el Museo Tyrrell, sugiere que Carcharodontosaurus fue capaz de levantar físicamente con sus mandíbulas animales que pesaban un máximo de 424 kilogramos.",
+   "quote_sha": "83d5234a880ea6ec"
+  },
+  {
+   "fact_id": "F108",
+   "statement": "Gregory S. Paul estimated Carcharodontosaurus iguidensis measured 10 meters in length and weighed 4 tons.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Gregory S. Paul estima que C. iguidensis medía 10 metros de largo y pesaba 4 toneladas.",
+   "quote_sha": "7f1bc586c403dfc2"
+  },
+  {
+   "fact_id": "F109",
+   "statement": "The SGM-Din 1 skull specimen of C. saharicus has a circular puncture wound in the nasal and an abnormal bony projection on the antorbital rim.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El espécimen SGM-Din 1, un cráneo de C. saharicus, tiene una herida punzante circular en el nasal y «una proyección anormal del hueso en el borde anteorbital».",
+   "quote_sha": "6190151e205958f1"
+  },
+  {
+   "fact_id": "F110",
+   "statement": "Carcharodontosaurus fossils are known from several Cretaceous sites across North Africa.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "Fossils of Carcharodontosaurus are known from several Cretaceous-age sites across North Africa, similar to the ranges of Spinosaurus and Deltadromeus.",
+   "quote_sha": "cc15e7bb598ba0cf"
+  },
+  {
+   "fact_id": "F111",
+   "statement": "During the Cretaceous, North Africa bordered the Tethys Sea, creating a mangrove-dominated coastal environment with vast tidal flats and waterways.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "North Africa during this period bordered the Tethys Sea, which transformed the region into a mangrove-dominated coastal environment filled with vast tidal flats and waterways.",
+   "quote_sha": "fc4d735c7de3c875"
+  },
+  {
+   "fact_id": "F112",
+   "statement": "Isotopic evidence indicates that carcharodontosaurids and ceratosaurs consumed sizable terrestrial animals in the Kem Kem Beds and Elrhaz Formation.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "Isotopic evidence supports this, which found greater quantities of sizable, terrestrial animals in the diets of carcharodontosaurids and ceratosaurs from both the Kem Kem Beds and Elrhaz Formation.",
+   "quote_sha": "0da0170f7b72b300"
+  },
+  {
+   "fact_id": "F113",
+   "statement": "Carcharodontosaurus coexisted with the sauropod Rebbachisaurus in the Kem Kem Beds.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "It also coexisted with the sauropod Rebbachisaurus which is found in the Kem Kem Beds.",
+   "quote_sha": "d9fc07471564abd8"
+  },
+  {
+   "fact_id": "F114",
+   "statement": "A tooth found alongside the holotype of Paralititan was assigned to cf. Carcharodontosaurus by Joshua Smith and colleagues in 2001.",
+   "category": "time_and_habitat",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "A tooth found alongside the holotype of the sauropod Paralititan was assigned to cf. Carcharodontosaurus by American paleontologist Joshua Smith and colleagues in 2001.",
+   "quote_sha": "3a5dac312abec8eb"
+  },
+  {
+   "fact_id": "F115",
+   "statement": "Fossils in the Bahariya Formation were reassigned to Tameryraptor, though the specific tooth assigned to cf. Carcharodontosaurus has not received further attention.",
+   "category": "debate",
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "These fossils were unearthed in a site in the Bahariya Formation, where all fossils of Carcharodontosaurus were reassigned to Tameryraptor, however this tooth specifically has not received further attention.",
+   "quote_sha": "ce27d115239a5be0"
+  },
+  {
+   "fact_id": "F116",
    "statement": "Carcharodontosaurus was discovered by French paleontologists Charles Depéret and Justin Savornin.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
@@ -731,8 +1200,8 @@
    "quote_sha": "c45195c9f2789bf9"
   },
   {
-   "fact_id": "F068",
-   "statement": "The discovery took place in North Africa in 1924.",
+   "fact_id": "F117",
+   "statement": "The discovery of Carcharodontosaurus took place in North Africa in 1924.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -740,8 +1209,8 @@
    "quote_sha": "e49cff54d1d0d2c9"
   },
   {
-   "fact_id": "F069",
-   "statement": "German paleontologist Ernst Stromer von Reichenbach described partial remains of a skull and parts of the skeleton in 1931.",
+   "fact_id": "F118",
+   "statement": "German paleontologist Ernst Stromer von Reichenbach described partial remains of a skull and skeleton in 1931.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -749,17 +1218,8 @@
    "quote_sha": "493ead84040fb450"
   },
   {
-   "fact_id": "F070",
-   "statement": "The remains consisted of a partial skull, teeth, vertebrae, claw bones, and classified hip and hind leg bones.",
-   "category": "discovery",
-   "chunk_id": "carcharodontosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "Los restos consistían en un cráneo parcial, dientes, vértebras, huesos de una garra y también los huesos clasificados de la cadera y de una pata trasera.",
-   "quote_sha": "91b3ff4d725b9021"
-  },
-  {
-   "fact_id": "F071",
-   "statement": "The first discovered Carcharodontosaurus fossil was destroyed in Allied bombing raids on Germany during World War II.",
+   "fact_id": "F119",
+   "statement": "The first Carcharodontosaurus fossil discovered was destroyed in Allied bombing raids on Germany during World War II.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -767,8 +1227,8 @@
    "quote_sha": "c4d94e16b697438c"
   },
   {
-   "fact_id": "F072",
-   "statement": "A more complete new skull was found in the Kem Kem Formation of Morocco during an expedition led by paleontologist Paul Sereno in 1995.",
+   "fact_id": "F120",
+   "statement": "A more complete skull was found in the Kem Kem Formation of Morocco during an expedition led by Paul Sereno in 1995.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -776,8 +1236,8 @@
    "quote_sha": "c113edd91ba956e7"
   },
   {
-   "fact_id": "F073",
-   "statement": "This new specimen of C. saharicus is the largest found of its species and genus, with a skull measuring 1.6 meters in length.",
+   "fact_id": "F121",
+   "statement": "The new specimen of C. saharicus is the largest found of its species and genus, with a skull measuring 1.6 meters long.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -785,17 +1245,17 @@
    "quote_sha": "c80f9ae7664de6f3"
   },
   {
-   "fact_id": "F074",
-   "statement": "Its estimated size was between 12 and 12.8 meters in length and about 6.2 tons in weight.",
+   "fact_id": "F122",
+   "statement": "The largest known specimen is estimated to be between 12 and 12.8 meters long and weigh about 6.2 tons.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
-   "quote": "se estima que su tamaño fue de entre 12 y 12,8 metros de longitud y su peso en unas 6,2 toneladas.",
-   "quote_sha": "69a479a93fd9c402"
+   "quote": "se estima que su tamaño fue de entre 12 y 12,8 metros de longitud y su peso en unas 6,2 toneladas",
+   "quote_sha": "db4eb79f521564be"
   },
   {
-   "fact_id": "F075",
-   "statement": "Sereno and Stephen Brusatte reported a second species found in Niger in 2005, named C. iguidensis in 2007, which differs in some aspects of the maxilla and skull base.",
+   "fact_id": "F123",
+   "statement": "A second species, C. iguidensis, was reported in 2005 and formally named in 2007 based on fossils found in Niger.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -803,8 +1263,8 @@
    "quote_sha": "92423e1cec4c850b"
   },
   {
-   "fact_id": "F076",
-   "statement": "Gregory S. Paul estimates that C. iguidensis measured 10 meters in length and weighed 4 tons.",
+   "fact_id": "F124",
+   "statement": "Gregory S. Paul estimates that C. iguidensis was 10 meters long and weighed 4 tons.",
    "category": "discovery",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
@@ -812,26 +1272,26 @@
    "quote_sha": "7f1bc586c403dfc2"
   },
   {
-   "fact_id": "F077",
-   "statement": "Remains were found in Cenomanian rocks of the Baharija Formation in Egypt.",
+   "fact_id": "F125",
+   "statement": "Fossils of Carcharodontosaurus have been found in Cenomanian rocks of the Baharija Formation in Egypt.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:eswiki:5",
    "lang": "es",
-   "quote": "provenientes de rocas del Cenomaniano de la formación Baharija de Egipto",
-   "quote_sha": "741601ef7e8d0f2f"
+   "quote": "Los restos parciales de un cráneo y partes del esqueleto provenientes de rocas del Cenomaniano de la formación Baharija de Egipto",
+   "quote_sha": "de4256e7ee24022f"
   },
   {
-   "fact_id": "F078",
-   "statement": "Remains and teeth assigned to C. saharicus have been found in much of Africa.",
+   "fact_id": "F126",
+   "statement": "Remains and teeth of C. saharicus have been found in various locations across Africa, including Egypt, Morocco, Tunisia, Libya, Algeria, and Niger.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:eswiki:6",
    "lang": "es",
-   "quote": "Restos y dientes asignados a C. saharicus han sido encontrados en gran parte de África",
-   "quote_sha": "007c1445a305ac66"
+   "quote": "Restos y dientes asignados a C. saharicus han sido encontrados en gran parte de África: en la formación Baharija, en la localidad de Marsa Matruh, en Egipto, en la formación Tegana, en Ksar-es-Souk, Marruecos, en la formación Chenini, en Túnez, en Gharyan, Libia, en la formación Kem Kem de Argelia, valiatos de Adrar, Tamanrasset y Ouargla, y en Agadez, Níger.",
+   "quote_sha": "bef1b8edc714481e"
   },
   {
-   "fact_id": "F079",
-   "statement": "Remains of C. iguidensis have only been found so far in the Echkar Formation, west of the In Abangharit oasis, in the Iguidi area of Niger.",
+   "fact_id": "F127",
+   "statement": "Remains of C. iguidensis have only been found in the Echkar Formation in the Iguidi area of Niger.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:eswiki:6",
    "lang": "es",
@@ -839,62 +1299,8 @@
    "quote_sha": "0638d6dd6071cde9"
   },
   {
-   "fact_id": "F080",
-   "statement": "Originally, in 1925, Depéret and Savornin attributed the binomial name Megalosaurus saharicus to their specimen.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "Originalmente, en 1925, Depéret y Savornin atribuyeron a su espécimen el nombre binominal Megalosaurus saharicus",
-   "quote_sha": "438446ded66614fc"
-  },
-  {
-   "fact_id": "F081",
-   "statement": "The specimen was later attributed by the same authors to the genus Dryptosaurus.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "Más tarde fue atribuido por los mismos autores al género Dryptosaurus.",
-   "quote_sha": "2162bbda659d1c6f"
-  },
-  {
-   "fact_id": "F082",
-   "statement": "Stromer decided to keep the species name but deemed it necessary to erect a new genus (Carcharodontosaurus saharicus) due to its strong resemblance to the teeth of the shark genus Carcharodon.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "Stromer a conservar el nombre de la especie pero estimando necesario erigir un nuevo género (Carcharodontosaurus saharicus) por su fuerte parecido con los dientes de los tiburones del género Carcharodon",
-   "quote_sha": "2cc5886e44e51ba6"
-  },
-  {
-   "fact_id": "F083",
-   "statement": "The parent group of Carcharodontosaurus is Carcharodontosauridae.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Carcharodontosauridae",
-   "quote_sha": "9be5d27d977d995d"
-  },
-  {
-   "fact_id": "F084",
-   "statement": "The family of Carcharodontosaurus is Carcharodontosauridae.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Carcharodontosauridae",
-   "quote_sha": "176185cf554ddb1e"
-  },
-  {
-   "fact_id": "F085",
-   "statement": "Carcharodontosaurus is classified in the class Reptilia.",
-   "category": "classification",
-   "chunk_id": "carcharodontosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Reptilia",
-   "quote_sha": "cdcaa2922520f735"
-  },
-  {
-   "fact_id": "F086",
-   "statement": "The time range for Carcharodontosaurus is from the Berriasian to the Campanian (143.1 to 72.2 million years ago).",
+   "fact_id": "F128",
+   "statement": "Carcharodontosaurus lived from the Berriasian to the Campanian stages, between 143.1 and 72.2 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "carcharodontosaurus:pbdb:1",
    "lang": "en",
@@ -902,17 +1308,62 @@
    "quote_sha": "6e3592ad0acca737"
   },
   {
-   "fact_id": "F087",
-   "statement": "In 2001, Hans C. E. Larsson published a description of the inner ear and endocranium of C. saharicus.",
+   "fact_id": "F129",
+   "statement": "The name Carcharodontosaurus comes from Greek words meaning 'sharp tooth' and 'lizard', referencing the shark genus Carcharodon.",
    "category": "description",
-   "chunk_id": "carcharodontosaurus:eswiki:4",
+   "chunk_id": "carcharodontosaurus:eswiki:7",
    "lang": "es",
-   "quote": "En 2001, Hans C. E. Larsson publicó una descripción del oído interno y el endocráneo de C. saharicus.",
-   "quote_sha": "a1d6a7aced75f2b6"
+   "quote": "El nombre Carcharodontosaurus proviene del antiguo griego καρχαρο karcharo que significa “afilado” y οδοντο odonto “diente”, que a su vez es el nombre de un género de tiburones Carcharodon, y σαυρος sauros, “lagarto”.",
+   "quote_sha": "39bb2167b43fa0ba"
   },
   {
-   "fact_id": "F088",
-   "statement": "The midbrain is inclined downward at an angle of 45 degrees and toward the rear of the animal.",
+   "fact_id": "F130",
+   "statement": "The species name was chosen because the teeth strongly resemble those of the shark genus Carcharodon.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Los dientes de este nuevo hallazgo coinciden con los característicos de los descritos por Depéret y Savornin, lo que llevó a Stromer a conservar el nombre de la especie pero estimando necesario erigir un nuevo género (Carcharodontosaurus saharicus) por su fuerte parecido con los dientes de los tiburones del género Carcharodon",
+   "quote_sha": "31ace3459cf3e46f"
+  },
+  {
+   "fact_id": "F131",
+   "statement": "Carcharodontosaurus is an advanced Carnosauria included in the family Carcharodontosauridae.",
+   "category": "description",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Carcharodontosaurus es un Carnosauria avanzado, que se incluye dentro de la familia Carcharodontosauridae",
+   "quote_sha": "c208c3b243a6a9af"
+  },
+  {
+   "fact_id": "F132",
+   "statement": "Carcharodontosaurus is more closely related to Tyrannotitan than to Giganotosaurus and Mapusaurus.",
+   "category": "classification",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "más cercano al Tyrannotitan, que al Giganotosaurus y Mapusaurus",
+   "quote_sha": "1025189dbbe5d56a"
+  },
+  {
+   "fact_id": "F133",
+   "statement": "In 2013, Novas et al. classified Carcharodontosaurus within the new subfamily Carcharodontosaurinae.",
+   "category": "classification",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "En 2013, una revisión hecha por Novas et al., clasificó a Carcharodontosaurus dentro de una nueva subfamilia llamada Carcharodontosaurinae.",
+   "quote_sha": "30f1badd1832729a"
+  },
+  {
+   "fact_id": "F134",
+   "statement": "Carcharodontosaurus, Tyrannotitan, Mapusaurus, and Giganotosaurus are the only genera included in the subfamily Carcharodontosaurinae.",
+   "category": "classification",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Por lo tanto, Carcharodontosaurus, Tyrannotitan, Mapusaurus y Giganotosaurus son los únicos géneros incluidos en esta subfamilia.",
+   "quote_sha": "aa8b140bc3da030c"
+  },
+  {
+   "fact_id": "F135",
+   "statement": "The midbrain of C. saharicus is inclined downward at an angle of 45 degrees toward the rear of the animal.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:eswiki:4",
    "lang": "es",
@@ -920,26 +1371,8 @@
    "quote_sha": "90be4040a05dafd6"
   },
   {
-   "fact_id": "F089",
-   "statement": "The hindbrain is roughly parallel to the forebrain and forms an angle of approximately 40 degrees with the midbrain.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:eswiki:4",
-   "lang": "es",
-   "quote": "El cerebro posterior, que es más o menos paralelo al prosencéfalo y forma un ángulo de aproximadamente 40 grados con el mesencéfalo.",
-   "quote_sha": "2a0384832d7ed335"
-  },
-  {
-   "fact_id": "F090",
-   "statement": "Larsson found that the relationship between the brain and total encephalic volume in Carcharodontosaurus was typical of a non-avian reptile.",
-   "category": "description",
-   "chunk_id": "carcharodontosaurus:eswiki:4",
-   "lang": "es",
-   "quote": "Larsson encontró que la relación entre el cerebro y el volumen total del encefálo en Carcharodontosaurus era típica de un reptil no aviar.",
-   "quote_sha": "79b345d810d71683"
-  },
-  {
-   "fact_id": "F091",
-   "statement": "Carcharodontosaurus also had a large optic nerve.",
+   "fact_id": "F136",
+   "statement": "Carcharodontosaurus had a large optic nerve.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:eswiki:4",
    "lang": "es",
@@ -947,8 +1380,8 @@
    "quote_sha": "56ae87d7b15a8342"
   },
   {
-   "fact_id": "F092",
-   "statement": "The three semicircular canals of the inner ear of C. saharicus, viewed from the side, had a subtriangular outline.",
+   "fact_id": "F137",
+   "statement": "The three semicircular canals of the inner ear in C. saharicus had a subtriangular outline when viewed from the side.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:eswiki:4",
    "lang": "es",
@@ -956,7 +1389,7 @@
    "quote_sha": "ec6efe013fbc8250"
   },
   {
-   "fact_id": "F093",
+   "fact_id": "F138",
    "statement": "This subtriangular inner ear configuration is present in Allosaurus, lizards, and turtles, but not in birds.",
    "category": "description",
    "chunk_id": "carcharodontosaurus:eswiki:4",
@@ -965,143 +1398,170 @@
    "quote_sha": "a4580ae9ea278253"
   },
   {
-   "fact_id": "F094",
-   "statement": "The semicircular canals were actually very linear, which explains the pointed silhouette.",
-   "category": "description",
+   "fact_id": "F139",
+   "statement": "The brain of C. saharicus would generally have been similar to that of the related dinosaur Allosaurus fragilis.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "En general, el cerebro de C. saharicus habría sido similar al de un dinosaurio relacionado, Allosaurus fragilis.",
+   "quote_sha": "3a1f11a409c68d8b"
+  },
+  {
+   "fact_id": "F140",
+   "statement": "Larsson found that the ratio of brain to total encephalon volume in Carcharodontosaurus was typical of a non-avian reptile.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Larsson encontró que la relación entre el cerebro y el volumen total del encefálo en Carcharodontosaurus era típica de un reptil no aviar.",
+   "quote_sha": "79b345d810d71683"
+  },
+  {
+   "fact_id": "F141",
+   "statement": "The semicircular canals were very linear, which explains the pointed silhouette of the inner ear.",
+   "category": "paleobiology",
    "chunk_id": "carcharodontosaurus:eswiki:4",
    "lang": "es",
    "quote": "Los canales semicirculares eran en realidad muy lineales, lo que explica la silueta puntiaguda.",
    "quote_sha": "3a9f9cf85fedad49"
   },
   {
-   "fact_id": "F095",
-   "statement": "It is debated whether this new specimen of C. saharicus is the largest found of its species and genus, as it is stated as a fact in the source but implies a comparison with previous incomplete knowledge.",
-   "category": "debate",
-   "chunk_id": "carcharodontosaurus:eswiki:5",
+   "fact_id": "F142",
+   "statement": "This group of large predatory dinosaurs was one of the greatest hunters of the Mesozoic, dominating southern continents from the Albian to the Cenomanian before being replaced by abelisaurids at the end of the Cretaceous.",
+   "category": "paleobiology",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
    "lang": "es",
-   "quote": "Este nuevo espécimen de C. saharicus es el más grande hallado de su especie y género",
-   "quote_sha": "1d571e23688dc0f6"
+   "quote": "Este grupo de grandes dinosaurios predadores fue uno de los mayores cazadores del Mesozoico, dominaron los continentes sureños desde el Albiense (Eocarcharia) al Cenomaniense (Giganotosaurus), para ser remplazados a finales del Cretácico por los abelisáuridos.",
+   "quote_sha": "c88e53d7147d7568"
+  },
+  {
+   "fact_id": "F143",
+   "statement": "Brusatte and Sereno observed that Giganotosaurus has identical teeth to C. saharicus, making the original Megalosaurus saharicus specimens indeterminate.",
+   "category": "debate",
+   "chunk_id": "carcharodontosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Brusatte y Sereno observaron que Giganotosaurus tiene dientes idénticos a C. saharicus, así los especímenes originales de Megalosaurus saharicus son indeterminados.",
+   "quote_sha": "b27fdd19797c02b3"
   }
  ],
  "rejected": [
   {
    "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "Carcharodontosaurus lived in Northwest Africa between 100 and 94 million years ago during the Cenomanian age of the Late Cretaceous.",
-   "category": "time_and_habitat",
-   "quote": "Carcharodontosaurus (; \"shark-toothed lizard\") is a genus of large theropod dinosaur that lived in Northwest Africa from about 100 to 94 million years ago during the Cenomanian age of the late Cretaceous period.",
-   "reason": "statement copies the source wording: '94 million years ago during the Cenomanian age'"
-  },
-  {
-   "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "The genus was originally described in 1925 by Charles Depéret and Justin Savornin as Megalosaurus saharicus based on two fossil teeth found in Algeria that are now lost.",
-   "category": "discovery",
-   "quote": "The genus was first described in 1925 by French paleontologists Charles Depéret and Justin Savornin as Megalosaurus saharicus, based on two fossil teeth discovered in Algeria, which are now lost.",
-   "reason": "statement copies the source wording: 'as Megalosaurus saharicus based on two fossil teeth'"
-  },
-  {
-   "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "A large incomplete skull attributed to C. saharicus was discovered in the Kem Kem Beds of Morocco in 1995 and proposed as the neotype in 2007.",
-   "category": "discovery",
-   "quote": "In 1995, a large incomplete skull attributed to C. saharicus was discovered in the Kem Kem Beds of Morocco, which was officially proposed as the neotype (specimen the species is based on) in 2007.",
-   "reason": "statement copies the source wording: 'A large incomplete skull attributed to C saharicus'"
-  },
-  {
-   "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "Fossils from the Farak Formation of Niger were named C. iguidensis in 2007, though it is debated whether this belongs to a different genus.",
+   "statement": "Fossils from the Farak Formation of Niger were named C. iguidensis in 2007, though researchers debate if it belongs to a different genus.",
    "category": "discovery",
    "quote": "In the same year, fossils unearthed from the Farak Formation of Niger were described and named as another species, C. iguidensis, though this taxon might belong to a different genus.",
    "reason": "numbers not in the quote: ['2007']"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "Carcharodontosaurus had a large, lightly built skull with a triangular snout.",
-   "category": "description",
-   "quote": "It had a large, lightly built skull with a triangular snout.",
-   "reason": "statement copies the source wording: 'had a large lightly built skull with a'"
-  },
-  {
-   "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "Studies suggest Carcharodontosaurus had a relatively low bite force compared to other large theropods.",
+   "statement": "Studies suggest Carcharodontosaurus had a relatively low bite force compared to other large theropod dinosaurs.",
    "category": "paleobiology",
    "quote": "Studies of the bite force and tooth anatomy of Carcharodontosaurus suggest a relatively low bite force compared to other large theropods.",
    "reason": "statement copies the source wording: 'a relatively low bite force compared to other'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:2",
-   "statement": "It is thought to have had small forelimbs, powerful hind limbs, and a long tail used for balance.",
-   "category": "paleobiology",
+   "statement": "The animal is thought to have had small forelimbs, powerful hind limbs, and a long tail used for balance.",
+   "category": "description",
    "quote": "Although the skeleton is incompletely known, it is thought to have had small forelimbs, powerful hind limbs, and a long tail that provided balance.",
-   "reason": "statement copies the source wording: 'It is thought to have had small forelimbs'"
+   "reason": "statement copies the source wording: 'is thought to have had small forelimbs powerful'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:3",
-   "statement": "The main skeleton was destroyed during a British bombing raid on Munich on April 24/25, 1944.",
+   "statement": "The specific name saharicus refers to the Sahara Desert where the original teeth were found.",
+   "category": "discovery",
+   "quote": "The specific name saharicus refers to the Sahara Desert where the teeth had been found.",
+   "reason": "statement copies the source wording: 'The specific name saharicus refers to the Sahara'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:3",
+   "statement": "The main skeleton and other material were destroyed during a British bombing raid on Munich on April 24/25, 1944.",
    "category": "discovery",
    "quote": "World War II broke out in 1939, leading SNSB-BSPG 1922 X 46 and other material from Bahariya to be destroyed during a British bombing raid on Munich during the night of April 24/25, 1944.",
    "reason": "statement copies the source wording: 'destroyed during a British bombing raid on Munich'"
   },
   {
+   "chunk_id": "carcharodontosaurus:enwiki:3",
+   "statement": "An endocast of the braincase was made and survived the war, serving as the only remaining part of the original specimen.",
+   "category": "discovery",
+   "quote": "An endocast (cast of the interior of the braincase) was made and survived the war, being the only remaining relic of the specimen.",
+   "reason": "statement copies the source wording: 'the braincase was made and survived the war'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:4",
+   "statement": "Philippe Taquet noted the postorbital resembled that of Acrocanthosaurus, suggesting it might be Carcharodontosaurus, but the postcranial fossils could belong to a different taxon.",
+   "category": "debate",
+   "quote": "French paleontologist Philippe Taquet noted that the postorbital was similar to that of Acrocanthosaurus, another carcharodontosaurid, suggesting it may be from Carcharodontosaurus however the postcranial fossils could belong to a different taxon.",
+   "reason": "statement copies the source wording: 'the postcranial fossils could belong to a different'"
+  },
+  {
    "chunk_id": "carcharodontosaurus:enwiki:5",
-   "statement": "In 2026, researchers reported finding an associated partial skull and skeleton of Carcharodontosaurus in the Farak Formation in northern Niger.",
+   "statement": "An incomplete skull of Carcharodontosaurus was discovered in 1995 by American paleontologist Paul Sereno during an expedition led by the University of Chicago.",
+   "category": "discovery",
+   "quote": "Few discoveries of Carcharodontosaurus attributed material were made until 1995 when American paleontologist Paul Sereno found an incomplete skull during an expedition embarked by the University of Chicago.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:5",
+   "statement": "In 2026, Sereno and colleagues reported finding an associated partial skull and skeleton of Carcharodontosaurus sp. in the Cenomanian-aged Farak Formation in northern Niger.",
    "category": "discovery",
    "quote": "In 2026, Sereno and colleagues mentioned the discovery of an associated partial skull and skeleton of Carcharodontosaurus sp. in siltstone strata of the Farak Formation, a Cenomanian-aged fossil formation located in northern Niger.",
    "reason": "statement copies the source wording: 'an associated partial skull and skeleton of Carcharodontosaurus'"
   },
   {
-   "chunk_id": "carcharodontosaurus:enwiki:7",
-   "statement": "The specimen SNSB-BSPG 1922 X 46 (now Tameryraptor) was approximately 15% smaller than the neotype of Carcharodontosaurus saharicus.",
-   "category": "description",
-   "quote": "This individual was around 15% smaller than the neotype.",
-   "reason": "numbers not in the quote: ['1922', '46']"
-  },
-  {
-   "chunk_id": "carcharodontosaurus:enwiki:7",
-   "statement": "In 2012, Matthew Carrano and colleagues estimated the skull length of Carcharodontosaurus saharicus to be 1.42 meters.",
-   "category": "description",
-   "quote": "In 2012, American paleontologist Matthew Carrano and colleagues estimated the skull length of C. saharicus to be 1.42 m long",
+   "chunk_id": "carcharodontosaurus:enwiki:6",
+   "statement": "Various bones from the Wadi Milk Formation in Sudan were once compared to Carcharodontosaurus but are now considered indeterminate carcharosaurids.",
+   "category": "discovery",
+   "quote": "Several vertebral centra (base of vertebrae), a tarsal (bone in the heel), a metatarsal (foot/ankle bone), and a pedal phalanx from Wadi Milk Formation of Sudan were compared Carcharodontosaurus, but were now considered to be indeterminate carcharosaurids, some of which are similar to the genus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:7",
-   "statement": "In 2022, Canale and colleagues estimated the skull length of Carcharodontosaurus saharicus at 1.4 to 1.6 meters based on comparisons with Meraxes.",
+   "statement": "Carcharodontosaurus saharicus is considered one of the largest known theropod dinosaurs and one of the largest terrestrial carnivores.",
+   "category": "curiosities",
+   "quote": "This makes Carcharodontosaurus saharicus one of the largest known theropod dinosaurs and one of the largest terrestrial carnivores.",
+   "reason": "statement copies the source wording: 'one of the largest known theropod dinosaurs and'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:7",
+   "statement": "In 2022, Canale and colleagues estimated the skull length of Carcharodontosaurus saharicus at 1.4 to 1.6 meters based on extrapolations from the relative Meraxes.",
    "category": "description",
    "quote": "In 2022,Canale and colleagues estimated the skull length of C.saharicus at 1.4-1.6 m in length,based off extrapolations from the more complete relative Meraxes.",
    "reason": "statement copies the source wording: '2022 Canale and colleagues estimated the skull length'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The neotype cranium of Carcharodontosaurus saharicus tapers towards the front in side view, creating a triangular outline.",
+   "statement": "The neotype cranium of Carcharodontosaurus saharicus tapers toward the front in side view, creating a triangular outline.",
    "category": "description",
    "quote": "The neotype cranium tapers towards the front in side view creating a triangular outline.",
-   "reason": "statement copies the source wording: 'tapers towards the front in side view creating'"
+   "reason": "statement copies the source wording: 'the front in side view creating a triangular'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The skull of Carcharodontosaurus saharicus was lighter than that of tyrannosaurids, with the antorbital fenestra composing over 30% of the total skull length.",
+   "statement": "Recent estimates suggest Carcharodontosaurus had a total of 62 teeth, comprising 30 dentary, 8 premaxillary, and 24 maxillary teeth.",
    "category": "description",
-   "quote": "Its skull was lighter than that of tyrannosaurids, with the antorbital fenestra composing over 30% of the total skull length",
-   "reason": "statement copies the source wording: 'lighter than that of tyrannosaurids with the antorbital'"
+   "quote": "Estimations of the tooth count of Carcharodontosaurus vary, but a recent estimate of 30 dentary, 8 premaxillary, and 24 maxillary teeth for a total of 62 teeth was made.",
+   "reason": "statement copies the source wording: '30 dentary 8 premaxillary and 24 maxillary teeth'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The nasal bone of Carcharodontosaurus saharicus is elongated and its exposed side is covered in a rugose surface.",
+   "statement": "Carcharodontosaurus teeth are among the largest of any dinosaur group, with the lectotype maxillary tooth measuring 6.5 cm tall, 1.5 cm thick, and 3.2 cm wide.",
    "category": "description",
-   "quote": "Its nasal is elongated and its exposed side is covered in a rugose surface.",
-   "reason": "statement copies the source wording: 'is elongated and its exposed side is covered'"
+   "quote": "Carcharodontosaurus teeth are some of the largest of any dinosaur group, with the lectotype maxillary tooth being 6.5 cm tall, 1.5 cm thick, and 3.2 cm wide.",
+   "reason": "statement copies the source wording: 'the largest of any dinosaur group with the'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The lower jaw articulation of Carcharodontosaurus saharicus was placed farther back behind the occipital condyle compared to other theropods.",
+   "statement": "Despite their large size, Carcharodontosaurus teeth were extremely thin, with most being under or around one centimeter thick.",
    "category": "description",
-   "quote": "The lower jaw articulation was placed farther back behind the occipital condyle (where the neck is attached to the skull) compared to other theropods.",
-   "reason": "statement copies the source wording: 'was placed farther back behind the occipital condyle'"
+   "quote": "However, they are extremely thin, with most being under or around a centimetre thick.",
+   "reason": "statement copies the source wording: 'extremely thin with most being under or around'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The lectotype maxillary tooth of Carcharodontosaurus was 6.5 cm tall, 1.5 cm thick, and 3.2 cm wide.",
+   "statement": "Carcharodontosaurus and Giganotosaurus possess some of the most exaggerated enamel wrinkles of any theropod, particularly near the tooth serrations.",
    "category": "description",
-   "quote": "The lectotype maxillary tooth being 6.5 cm tall, 1.5 cm thick, and 3.2 cm wide.",
-   "reason": "statement copies the source wording: '6.5 cm tall 1.5 cm thick and 3.2'"
+   "quote": "Carcharodontosaurus and Giganotosaurus have some of the most exaggerated enamel wrinkles of any theropod, especially on parts of the teeth near the serrations.",
+   "reason": "statement copies the source wording: 'some of the most exaggerated enamel wrinkles of'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
@@ -1119,45 +1579,108 @@
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The midbrain of Carcharodontosaurus saharicus is angled downwards at a 45-degree angle towards the rear of the animal.",
+   "statement": "The subtriangular inner-ear configuration found in Carcharodontosaurus is present in Allosaurus, lizards, and turtles, but not in birds.",
    "category": "description",
-   "quote": "The midbrain is angled downwards at a 45-degree angle and towards the rear of the animal.",
-   "reason": "statement copies the source wording: 'is angled downwards at a 45 degree angle'"
+   "quote": "This subtriangular inner-ear configuration is present in Allosaurus, lizards, and turtles, but not in birds.",
+   "reason": "statement copies the source wording: 'is present in Allosaurus lizards and turtles but'"
   },
   {
    "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "The hindbrain of Carcharodontosaurus saharicus is roughly parallel to the forebrain and forms a 40-degree angle with the midbrain.",
+   "statement": "The semicircular canals of Carcharodontosaurus were very linear, which explains the pointed silhouette of the inner ear.",
    "category": "description",
-   "quote": "The hindbrain, which is roughly parallel to the forebrain and forms a roughly 40-degree angle with the midbrain.",
-   "reason": "statement copies the source wording: 'is roughly parallel to the forebrain and forms'"
+   "quote": "The semi-\"circular\" canals themselves were very linear, which explains the pointed silhouette.",
+   "reason": "statement copies the source wording: 'were very linear which explains the pointed silhouette'"
   },
   {
-   "chunk_id": "carcharodontosaurus:enwiki:8",
-   "statement": "When viewed from the side, the three semicircular canals of the inner ear of Carcharodontosaurus saharicus had a subtriangular outline.",
-   "category": "description",
-   "quote": "The three semicircular canals of the inner ear of Carcharodontosaurus saharicus—when viewed from the side—had a subtriangular outline.",
-   "reason": "statement copies the source wording: 'the three semicircular canals of the inner ear'"
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "Argentine paleontologists Rodolfo Coria and Leonardo Salgado proposed that the convergent evolution of gigantism in theropods might be linked to shared environmental conditions.",
+   "category": "discovery",
+   "quote": "Evolution Argentine paleontologists Rodolfo Coria and Leonardo Salgado suggested that the convergent evolution of gigantism in theropods could have been linked to common conditions in their environments or ecosystems.",
+   "reason": "statement copies the source wording: 'that the convergent evolution of gigantism in theropods'"
   },
   {
-   "chunk_id": "carcharodontosaurus:enwiki:7",
-   "statement": "In 1997, Rodolfo Coria estimated Giganotosaurus to be larger than Carcharodontosaurus based on new material.",
-   "category": "debate",
-   "quote": "In 1997, Argentine paleontologist Rodolfo Coria estimated Giganotosaurus to have been 13.7 to 14.3 m long and weighing 8 - 10 MT based on new material, larger than Carcharodontosaurus.",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "The South American tribe Giganotosaurini may have been separated from African relatives through vicariance when Gondwana broke up during the Aptian–Albian ages of the Early Cretaceous.",
+   "category": "paleobiology",
+   "quote": "The South American tribe Giganotosaurini may have been separated from their African relatives through vicariance, when Gondwana broke up during the Aptian–Albian ages of the Early Cretaceous.",
+   "reason": "statement copies the source wording: 'South American tribe Giganotosaurini may have been separated'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "American paleontologists Donald Henderson and Robert Nicholls conducted a biomechanical analysis of Carcharodontosaurus lifting capabilities in 2015 using 3D models.",
+   "category": "paleobiology",
+   "quote": "American paleontologists Donald Henderson and Robert Nicholls in 2015. The authors used 3D models of the animal as well as a subadult sauropod Limaysaurus...",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "carcharodontosaurus:enwiki:9",
-   "statement": "Cau and Paterna argued for the removal of C. iguidensis from the genus Carcharodontosaurus based on their analysis of large Cretaceous theropods from Africa.",
-   "category": "debate",
-   "quote": "Similar results were recovered by Cau and Paterna in their analysis of large Cretaceous theropods from Africa, who also argued for the removal of C. iguidensis from the genus.",
-   "reason": "statement copies the source wording: 'their analysis of large Cretaceous theropods from Africa'"
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "A 2015 study found that an adult Carcharodontosaurus saharicus could hold a maximum of 424 kg, which is half the weight of an adult Limaysaurus.",
+   "category": "curiosities",
+   "quote": "Henderson and Nicholls' study found that an adult C. saharicus could hold a maximum of 424 kg, half the weight of an adult Limaysaurus.",
+   "reason": "numbers not in the quote: ['2015']"
   },
   {
-   "chunk_id": "carcharodontosaurus:eswiki:4",
-   "statement": "The name Carcharodontosaurus comes from ancient Greek karcharo meaning 'sharp' and odonto meaning 'tooth', which is the name of a shark genus Carcharodon, and sauros meaning 'lizard'.",
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "Two adult Carcharodontosaurus saharicus could together lift as much as 850 kg.",
+   "category": "curiosities",
+   "quote": "However, two C. saharicus adults could together lift as much as 850 kg.",
+   "reason": "statement copies the source wording: 'could together lift as much as 850 kg'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "X-ray microscopy revealed that Carcharodontosaurus enamel had cracked enamel tufts near the dentinoenamel junction, a trait that may have provided damage resistance similar to humans.",
+   "category": "paleobiology",
+   "quote": "The internal microstructures of Carcharodontosaurus enamel were shown to have cracked enamel tufts near the dentinoenamel junction, a trait that may have made the teeth more damage resistant and crack shielding, similar to that of humans.",
+   "reason": "statement copies the source wording: 'cracked enamel tufts near the dentinoenamel junction a'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "Studies reported that carcharodontosaurids had much lower bite forces than Tyrannosaurus despite being in the same size class.",
+   "category": "paleobiology",
+   "quote": "Studies reported that carcharodontosaurids had much lower bite forces than Tyrannosaurus despite being in the same size class.",
+   "reason": "statement copies the source wording: 'Studies reported that carcharodontosaurids had much lower bite'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "Finite element analysis recovered great amounts of stress in the posterior part of the cranium near the quadrate in Carcharodontosaurus, Spinosaurus, and Acrocanthosaurus.",
+   "category": "paleobiology",
+   "quote": "Great amounts of stress were recovered in the posterior part of the cranium near the quadrate in Carcharodontosaurus, Spinosaurus, and Acrocanthosaurus.",
+   "reason": "statement copies the source wording: 'in the posterior part of the cranium near'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:10",
+   "statement": "The taphonomy of Carcharodontosaurus teeth supports the idea that it was terrestrial, as they are more often found in land terrains than aquatic ones.",
+   "category": "paleobiology",
+   "quote": "This is further supported by the taphonomy of C. saharicus teeth, which are more often found in land terrains than aquatic ones.",
+   "reason": "statement copies the source wording: 'are more often found in land terrains than'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "statement": "Carcharodontosaurus has a large, split orbit created by an anterior projection of the postorbital bone.",
    "category": "description",
-   "quote": "El nombre Carcharodontosaurus proviene del antiguo griego καρχαρο karcharo que significa “afilado” y οδοντο odonto “diente”, que a su vez es el nombre de un género de tiburones Carcharodon, y σαυρος sauros, “lagarto”.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "In Carcharodontosaurus, Abelisaurus, and some other theropods, this is created by an anterior projection of the postorbital bone into the orbit.",
+   "reason": "statement copies the source wording: 'created by an anterior projection of the postorbital'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "statement": "A 2006 study by Kent Stevens deduced that Carcharodontosaurus had limited binocular vision due to its large, elongated rostrum.",
+   "category": "description",
+   "quote": "By applying modified perimetry to models of these dinosaurs' heads, Stevens deduced that the binocular vision of Carcharodontosaurus was limited, a side effect of its large, elongated rostrum.",
+   "reason": "numbers not in the quote: ['2006']"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "statement": "Carcharodontosaurus may have habitually held its head at a downward 40° angle to achieve maximum binocular vision.",
+   "category": "description",
+   "quote": "Its greatest degree of binocular vision was at higher elevations, suggesting that Carcharodontosaurus may have habitually held its head at a downward 40° angle with its eyes facing up accordingly to achieve maximum binocular vision.",
+   "reason": "statement copies the source wording: 'Carcharodontosaurus may have habitually held its head at'"
+  },
+  {
+   "chunk_id": "carcharodontosaurus:enwiki:11",
+   "statement": "Daniel Chure suggested that orbit size may indicate niche partitioning, with large-headed theropods like Carcharodontosaurus being diurnal.",
+   "category": "debate",
+   "quote": "Chure went on to suggest that the orbit size may indicate niche partitioning, with large-headed theropods like Carcharodontosaurus being diurnal whereas smaller forms like Stenonychosaurus were nocturnal or crepuscular.",
+   "reason": "statement copies the source wording: 'orbit size may indicate niche partitioning with large-headed'"
   }
  ]
 }

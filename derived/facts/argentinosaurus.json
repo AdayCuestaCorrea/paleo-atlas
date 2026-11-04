@@ -2,9 +2,9 @@
  "taxon": "Argentinosaurus",
  "taxon_key": "argentinosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "8ccac0fb10e8a8cb",
- "generated_at": "2026-11-03T03:50:36+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "76a4182f9f506242",
+ "generated_at": "2026-11-04T05:44:34+00:00",
  "citations": {
   "argentinosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -104,6 +104,34 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "argentinosaurus:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Argentinosaurus huinculensis (Comparación con otros saurópodos)",
+   "url": "https://es.wikipedia.org/wiki/Argentinosaurus_huinculensis?oldid=175980692",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "argentinosaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Argentinosaurus huinculensis (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Argentinosaurus_huinculensis?oldid=175980692",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "argentinosaurus:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Argentinosaurus huinculensis (Alimentación y digestión)",
+   "url": "https://es.wikipedia.org/wiki/Argentinosaurus_huinculensis?oldid=175980692",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "argentinosaurus:eswiki:12": {
+   "source": "wikipedia_article",
+   "title": "Argentinosaurus huinculensis (Crecimiento y patrones de reproducción)",
+   "url": "https://es.wikipedia.org/wiki/Argentinosaurus_huinculensis?oldid=175980692",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "argentinosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Argentinosaurus",
@@ -115,169 +143,151 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The animal is classified under the genus Argentinosaurus.",
-   "category": "classification",
+   "statement": "Argentinosaurus lived during the Early Cretaceous period, specifically the Albian stage.",
+   "category": "time_and_habitat",
    "chunk_id": "argentinosaurus:enwiki:1",
    "lang": "en",
-   "quote": "taxon: Argentinosaurus",
-   "quote_sha": "bc516583088c5673"
+   "quote": "fossil_range: Early Cretaceous (Albian),",
+   "quote_sha": "041e961b537ece44"
   },
   {
    "fact_id": "F002",
-   "statement": "The genus was described by Bonaparte and Coria in 1993.",
-   "category": "classification",
-   "chunk_id": "argentinosaurus:enwiki:1",
+   "statement": "The first bone of Argentinosaurus was discovered in 1987 by a farmer near Plaza Huincul, Argentina.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "authority: Bonaparte & Coria, 1993",
-   "quote_sha": "3b7f18e689227105"
+   "quote": "The first Argentinosaurus bone was discovered in 1987 by a farmer on his farm near the city of Plaza Huincul.",
+   "quote_sha": "ba7cf937e72bb799"
   },
   {
    "fact_id": "F003",
-   "statement": "The type species of the genus is Argentinosaurus huinculensis.",
-   "category": "classification",
-   "chunk_id": "argentinosaurus:enwiki:1",
+   "statement": "A scientific excavation led by José Bonaparte in 1989 yielded back vertebrae and parts of a sacrum from the site.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "type_species: Argentinosaurus huinculensis",
-   "quote_sha": "3ea1b8797ea89442"
+   "quote": "A scientific excavation of the site led by the Argentine palaeontologist José Bonaparte was conducted in 1989, yielding several back vertebrae and parts of a sacrum",
+   "quote_sha": "f51b1b5ef100b87a"
   },
   {
    "fact_id": "F004",
-   "statement": "Argentinosaurus is a genus of giant sauropod dinosaur meaning \"lizard from Argentina\".",
-   "category": "description",
+   "statement": "Argentinosaurus was formally named by José Bonaparte and Rodolfo Coria in 1993.",
+   "category": "discovery",
    "chunk_id": "argentinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Argentinosaurus (meaning \"lizard from Argentina\") is a genus of giant sauropod dinosaur",
-   "quote_sha": "20415712ee38c21d"
+   "quote": "Argentinosaurus was named by Bonaparte and the Argentine palaeontologist Rodolfo Coria in 1993",
+   "quote_sha": "965e833b64d79f15"
   },
   {
    "fact_id": "F005",
-   "statement": "Estimates suggest the animal measured 30 to 35 meters long and weighed 65 to 80 tonnes.",
-   "category": "description",
-   "chunk_id": "argentinosaurus:enwiki:2",
+   "statement": "Guillermo Heredia discovered the first bone, now identified as a fibula, in 1987 on his farm 8 km east of Plaza Huincul in Neuquén Province.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:enwiki:3",
    "lang": "en",
-   "quote": "measuring 30 - 35 m long and weighing 65 - 80 t",
-   "quote_sha": "955ce916f3c0cc1a"
+   "quote": "The first Argentinosaurus bone, which is now thought to be a fibula (calf bone), was discovered in 1987 by Guillermo Heredia on his farm \"Las Overas\" about 8 km east of Plaza Huincul, in Neuquén Province, Argentina.",
+   "quote_sha": "9ac8417ee5b42b8f"
   },
   {
    "fact_id": "F006",
-   "statement": "The first bone was discovered in 1987 by a farmer near Plaza Huincul.",
+   "statement": "The holotype specimen of Argentinosaurus huinculensis is catalogued as MCF-PVPH 1.",
    "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:2",
+   "chunk_id": "argentinosaurus:enwiki:3",
    "lang": "en",
-   "quote": "The first Argentinosaurus bone was discovered in 1987 by a farmer on his farm near the city of Plaza Huincul",
-   "quote_sha": "ac352be961dc4aa7"
+   "quote": "The individual, which later became the holotype of Argentinosaurus huinculensis, is catalogued under the specimen number MCF-PVPH 1.",
+   "quote_sha": "d57b91ce5bc19e74"
   },
   {
    "fact_id": "F007",
-   "statement": "A scientific excavation led by José Bonaparte took place in 1989.",
+   "statement": "In 1996, a complete but deformed femur from the same locality was assigned to the genus and exhibited at the Museo Carmen Funes.",
    "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:2",
+   "chunk_id": "argentinosaurus:enwiki:3",
    "lang": "en",
-   "quote": "A scientific excavation of the site led by the Argentine palaeontologist José Bonaparte was conducted in 1989",
-   "quote_sha": "0e82b81b8ca1e049"
+   "quote": "In 1996, Bonaparte referred (assigned) a complete femur (thigh bone) from the same locality to the genus, which was put on exhibit at the Museo Carmen Funes.",
+   "quote_sha": "f21a9355047de522"
   },
   {
    "fact_id": "F008",
-   "statement": "The first bone, now identified as a fibula, was discovered in 1987 by Guillermo Heredia.",
+   "statement": "As of 2019, it remained uncertain whether the additional femora found in the region actually belonged to Argentinosaurus.",
    "category": "discovery",
    "chunk_id": "argentinosaurus:enwiki:3",
    "lang": "en",
-   "quote": "The first Argentinosaurus bone, which is now thought to be a fibula (calf bone), was discovered in 1987 by Guillermo Heredia",
-   "quote_sha": "9f21ee2151c99f60"
+   "quote": "As of 2019, however, it was still uncertain whether any of these femora belonged to Argentinosaurus.",
+   "quote_sha": "0bea9f531759420e"
   },
   {
    "fact_id": "F009",
-   "statement": "The discovery site was located about 8 km east of Plaza Huincul in Neuquén Province, Argentina.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "about 8 km east of Plaza Huincul, in Neuquén Province, Argentina",
-   "quote_sha": "2dc05aa043fffff6"
-  },
-  {
-   "fact_id": "F010",
-   "statement": "The formal description was published in 1993 by Bonaparte and Rodolfo Coria.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The formal description was published in 1993 by Bonaparte and the Argentine palaeontologist Rodolfo Coria",
-   "quote_sha": "66753960b0f5c35c"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "The limb bone found in 1987 was originally described as a tibia but was reidentified as a left fibula in 2004 by Mazzetta and colleagues.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Bonaparte and Coria described the limb bone discovered in 1987 as an eroded tibia (shin bone), although the Uruguayan palaeontologist Gerardo Mazzetta and colleagues reidentified this bone as a left fibula in 2004",
-   "quote_sha": "f621cd71f0e9bbc1"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "In 1996, Bonaparte assigned a complete femur from the same locality to the genus.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1996, Bonaparte referred (assigned) a complete femur (thigh bone) from the same locality to the genus",
-   "quote_sha": "2a2516756cb6dd2d"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "As of 2019, it remained uncertain whether the femora found belonged to Argentinosaurus.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "As of 2019, however, it was still uncertain whether any of these femora belonged to Argentinosaurus",
-   "quote_sha": "69f8fc0391b20539"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "Fossils were recovered from the Huincul Formation, deposited in the Albian stage.",
-   "category": "time_and_habitat",
-   "chunk_id": "argentinosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The fossils of Argentinosaurus were recovered from the Huincul Formation, which was deposited in the Albian stage",
-   "quote_sha": "258df6683401e69f"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "The fragmentary nature of the remains makes interpreting the animal difficult.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The fragmentary nature of Argentinosaurus remains makes their interpretation difficult",
-   "quote_sha": "01af8ab4f5bf5124"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "There is disagreement over whether Argentinosaurus was the largest known titanosaur.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "there is disagreement over whether it was the largest known titanosaur",
-   "quote_sha": "c630c4777a75aa0b"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "In 2019, Paul found Patagotitan to be smaller than Argentinosaurus.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "However, Paul found Patagotitan to be smaller than Argentinosaurus in 2019",
-   "quote_sha": "342c45dd3170265b"
-  },
-  {
-   "fact_id": "F018",
-   "statement": "The animal was a member of Titanosauria, the dominant sauropod group during the Cretaceous.",
+   "statement": "Despite being known only from fragmentary remains, Argentinosaurus is estimated to have been 30 to 35 meters long and weighed 65 to 80 tonnes.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "It was a member of Titanosauria, the dominant group of sauropods during the Cretaceous",
-   "quote_sha": "6f0bc5b523cdfc54"
+   "quote": "Although it is only known from fragmentary remains, Argentinosaurus was one of the largest known land animals of all time, measuring 30 - 35 m long and weighing 65 - 80 t.",
+   "quote_sha": "0b62dfa120acc12c"
   },
   {
-   "fact_id": "F019",
-   "statement": "A reconstructed dorsal vertebra of Argentinosaurus is 159 cm high and 129 cm wide.",
+   "fact_id": "F010",
+   "statement": "Argentinosaurus is classified as a member of Titanosauria, the dominant sauropod group during the Cretaceous.",
+   "category": "classification",
+   "chunk_id": "argentinosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It was a member of Titanosauria, the dominant group of sauropods during the Cretaceous.",
+   "quote_sha": "9f9fd344b13377a0"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The fragmentary nature of the remains makes interpreting the anatomy of Argentinosaurus difficult.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The fragmentary nature of Argentinosaurus remains makes their interpretation difficult.",
+   "quote_sha": "bb434c47acd7b89b"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "In 2023, Paul and Larramendi proposed that the holotype of Argentinosaurus weighed a maximum of 75 to 80 metric tonnes.",
+   "category": "curiosities",
+   "chunk_id": "argentinosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "In 2023, Paul and Larramendi proposed that the holotype would have weighed between 75 - 80 MT at maximum.",
+   "quote_sha": "9c217de917208a1b"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "There is an ongoing debate among scientists regarding whether Argentinosaurus was the largest known titanosaur.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "While Argentinosaurus was definitely a massive animal, there is disagreement over whether it was the largest known titanosaur.",
+   "quote_sha": "d5efd8faa576a7d4"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "In 2017, Carballido and colleagues argued that Argentinosaurus was smaller than Patagotitan based on vertebral measurements.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "In 2017, Carballido and colleagues considered Argentinosaurus to be smaller than Patagotitan, since the latter had a greater area enclosed by the neural spine, diapophyses, and parapophyses of its anterior dorsal vertebrae.",
+   "quote_sha": "ebc0dd598aeee6cd"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "In 2019, Paul countered that Argentinosaurus was larger than Patagotitan because of its considerably longer dorsal column.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "However, Paul found Patagotitan to be smaller than Argentinosaurus in 2019, due to the latter's dorsal column being considerably longer.",
+   "quote_sha": "9426e6b0e6fcc752"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "It is debated whether other sauropods like Maraapunisaurus or giant mamenchisaurids might have exceeded Argentinosaurus in size, though evidence for them is scant.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Even if Argentinosaurus was the largest-known titanosaur, other sauropods including Maraapunisaurus and a giant mamenchisaurid, may have been larger, although these are only known from very scant remains.",
+   "quote_sha": "37821d6a0ee30c9c"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "A reconstructed dorsal vertebra of Argentinosaurus is 159 cm tall and 129 cm wide.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:5",
    "lang": "en",
@@ -285,7 +295,7 @@
    "quote_sha": "61b173591cf29acf"
   },
   {
-   "fact_id": "F020",
+   "fact_id": "F018",
    "statement": "The centra of Argentinosaurus dorsal vertebrae can be up to 57 cm wide.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -294,7 +304,7 @@
    "quote_sha": "1f85facd5fd3cd65"
   },
   {
-   "fact_id": "F021",
+   "fact_id": "F019",
    "statement": "The dorsal vertebrae of Argentinosaurus were opisthocoelous, meaning they were concave at the rear.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -303,7 +313,7 @@
    "quote_sha": "d0956911f601e4dc"
   },
   {
-   "fact_id": "F022",
+   "fact_id": "F020",
    "statement": "The dorsal ribs of Argentinosaurus were tubular and cylindrical, unlike those of other titanosaurs.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -312,7 +322,7 @@
    "quote_sha": "9e92b91d69465f15"
   },
   {
-   "fact_id": "F023",
+   "fact_id": "F021",
    "statement": "Argentinosaurus likely had six sacral vertebrae, similar to many other titanosaurs.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -321,7 +331,7 @@
    "quote_sha": "36be1eb6f787b866"
   },
   {
-   "fact_id": "F024",
+   "fact_id": "F022",
    "statement": "The complete femur assigned to Argentinosaurus is 2.5 meters long.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:6",
@@ -330,7 +340,16 @@
    "quote_sha": "95480dbb1113e4a1"
   },
   {
-   "fact_id": "F025",
+   "fact_id": "F023",
+   "statement": "The femoral shaft of Argentinosaurus has a circumference of about 1.18 meters at its narrowest point.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The femoral shaft has a circumference of about 1.18 m at its narrowest part",
+   "quote_sha": "2529e84ed0f39f4f"
+  },
+  {
+   "fact_id": "F024",
    "statement": "Mazzetta and colleagues estimated the original length of the Argentinosaurus femur at 2.557 meters.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:6",
@@ -339,7 +358,7 @@
    "quote_sha": "f94fc288152ed176"
   },
   {
-   "fact_id": "F026",
+   "fact_id": "F025",
    "statement": "In 2019, Paul estimated the original length of the Argentinosaurus femur at 2.575 meters.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:6",
@@ -348,16 +367,70 @@
    "quote_sha": "abee971c177aa864"
   },
   {
-   "fact_id": "F027",
-   "statement": "The holotype specimen preserves a slender bone 1.55 meters long, originally thought to be a tibia but now identified as a fibula.",
+   "fact_id": "F026",
+   "statement": "When a slender bone from the Argentinosaurus holotype was identified as a tibia, it was thought to have a short cnemial crest.",
    "category": "description",
    "chunk_id": "argentinosaurus:enwiki:6",
    "lang": "en",
-   "quote": "it preserves a slender fibula (originally interpreted as a tibia) that is 1.55 m in length",
-   "quote_sha": "414aad9f84d33f92"
+   "quote": "When it was identified as a tibia, it was thought to have a comparatively short cnemial crest",
+   "quote_sha": "75d800ee8ab01818"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "The slender bone from the Argentinosaurus holotype lacks tibia proportions and details but resembles sauropod fibulae.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "this bone lacks both the proportions and anatomical details of a tibia, while being similar in shape to other sauropod fibulae",
+   "quote_sha": "ec6cc9dfa469bb3b"
   },
   {
    "fact_id": "F028",
+   "statement": "Bonaparte and Coria described Argentinosaurus in 1993 and noted its ribs were hollow.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Bonaparte and Coria, in their 1993 description, noted the ribs were hollow",
+   "quote_sha": "a143292f3372efd0"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "In 1993, two articulated vertebrae were thought to be from the rear of the dorsal column, but later studies interpreted them as the sixth and seventh vertebrae.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "In 1993, two articulated (still connected) vertebrae were thought to be of the rear part of the dorsal column but are interpreted as the sixth and seventh vertebrae in the two later studies",
+   "quote_sha": "daf616acc1f78c22"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "One vertebra has been interpreted as the first, fifth, or third vertebra in different studies.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "One vertebra was interpreted by these studies as the first, fifth or third",
+   "quote_sha": "f7b09d0099255854"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "The presence of hyposphene-hypantrum articulations in Argentinosaurus is a contentious issue.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Another contentious issue is the presence of hyposphene-hypantrum articulations, accessory joints between vertebrae that were located below the main articular processes",
+   "quote_sha": "32981b72c0a2d75a"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "Some authors argue that articular structures seen in Argentinosaurus are actually thickened vertebral laminae rather than true hyposphene-hypantrum articulations.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Other authors argued most titanosaur genera lacked hyposphene-hypantrum articulations and that the articular structures seen in Epachthosaurus and Argentinosaurus are thickened vertebral laminae (ridges)",
+   "quote_sha": "b5c162b173a0634d"
+  },
+  {
+   "fact_id": "F033",
    "statement": "Bonaparte and Coria proposed the family Andesauridae for Argentinosaurus, Andesaurus, and Epachthosaurus.",
    "category": "classification",
    "chunk_id": "argentinosaurus:enwiki:7",
@@ -366,8 +439,17 @@
    "quote_sha": "2ac353fa111ecc34"
   },
   {
-   "fact_id": "F029",
-   "statement": "A 2003 study by Jeffrey Wilson and Paul Upchurch declared both Titanosauridae and Andesauridae invalid.",
+   "fact_id": "F034",
+   "statement": "The families Titanosauridae and Andesauridae were united into the higher group Titanosauria.",
+   "category": "classification",
+   "chunk_id": "argentinosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "Both families were united into a new, higher group called Titanosauria",
+   "quote_sha": "881270658c7ac1cd"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "A 2003 study found both Titanosauridae and Andesauridae to be invalid families.",
    "category": "classification",
    "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
@@ -375,160 +457,79 @@
    "quote_sha": "a8d251ddf6d89fb7"
   },
   {
-   "fact_id": "F030",
-   "statement": "A 2017 study by Carballido and colleagues classified Argentinosaurus as a member of Lognkosauria.",
+   "fact_id": "F036",
+   "statement": "In 2004, Upchurch and colleagues introduced the group Lithostrotia for more derived members of Titanosauria.",
    "category": "classification",
    "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
-   "quote": "A 2017 study by Carballido and colleagues recovered Argentinosaurus as a member of Lognkosauria",
-   "quote_sha": "42716e67ef280d7a"
+   "quote": "In 2004, Upchurch and colleagues introduced a new group called Lithostrotia that included the more derived (evolved) members of Titanosauria",
+   "quote_sha": "1521fb2d3fb2313f"
   },
   {
-   "fact_id": "F031",
-   "statement": "A 2018 study by Hesham Sallam and colleagues found conflicting phylogenetic positions for Argentinosaurus, placing it either as a basal titanosaur or as a sister taxon to Epachthosaurus.",
+   "fact_id": "F037",
+   "statement": "In 2007, Calvo and colleagues named the clade Lognkosauria, which includes Futalognkosaurus and Mendozasaurus.",
    "category": "classification",
    "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
-   "quote": "Another 2018 study by Hesham Sallam and colleagues found two different phylogenetic positions for Argentinosaurus",
-   "quote_sha": "0305247e3ba09c64"
+   "quote": "In 2007, Calvo and colleagues named Futalognkosaurus; they found it to form a clade with Mendozasaurus and named it Lognkosauria",
+   "quote_sha": "632d7dbe701329eb"
   },
   {
-   "fact_id": "F032",
-   "statement": "Some authors argue that the hollow dorsal ribs of Argentinosaurus may be due to post-mortem erosion rather than being naturally hollow.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:enwiki:5",
+   "fact_id": "F038",
+   "statement": "A 2017 study recovered Argentinosaurus as a member of Lognkosauria and the sister taxon of Patagotitan.",
+   "category": "classification",
+   "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
-   "quote": "later authors argued this hollowing could also have been due to erosion after the death of the individual",
-   "quote_sha": "cf225ee822d08a69"
+   "quote": "A 2017 study by Carballido and colleagues recovered Argentinosaurus as a member of Lognkosauria and the sister taxon of Patagotitan",
+   "quote_sha": "12987a478d810aef"
   },
   {
-   "fact_id": "F033",
-   "statement": "It is debated whether the structures interpreted as hyposphene-hypantrum articulations in Argentinosaurus are actually thickened vertebral laminae.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:enwiki:5",
+   "fact_id": "F039",
+   "statement": "In 2019, Julian Silva Junior and colleagues found Argentinosaurus to belong to Lognkosauria again.",
+   "category": "classification",
+   "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
-   "quote": "Other authors argued most titanosaur genera lacked hyposphene-hypantrum articulations and that the articular structures seen in Epachthosaurus and Argentinosaurus are thickened vertebral laminae (ridges)",
-   "quote_sha": "b5c162b173a0634d"
+   "quote": "In 2019, Julian Silva Junior and colleagues found Argentinosaurus to belong to Lognkosauria once again",
+   "quote_sha": "fc0417bd9f90ac1c"
   },
   {
-   "fact_id": "F034",
-   "statement": "A 2019 study by González Riga and colleagues placed Argentinosaurus in Lognkosauria, which they grouped with Rinconsauria in a new clade named Colossosauria.",
-   "category": "debate",
+   "fact_id": "F040",
+   "statement": "A 2019 study found Argentinosaurus in Lognkosauria, which forms a larger clade with Rinconsauria named Colossosauria.",
+   "category": "classification",
    "chunk_id": "argentinosaurus:enwiki:7",
    "lang": "en",
    "quote": "Another 2019 study by González Riga and colleagues also found Argentinosaurus to belong to Lognkosauria; they found this group to form a larger clade with Rinconsauria within Titanosauria, which they named Colossosauria",
    "quote_sha": "dd294e071df428af"
   },
   {
-   "fact_id": "F035",
-   "statement": "Guillermo Heredia discovered the bone remains of Argentinosaurus near Plaza Huincul in Argentine Patagonia.",
-   "category": "discovery",
-   "chunk_id": "argentinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Sus vestigios óseos fueron descubiertos por Guillermo Heredia, en una estancia rural cerca de Plaza Huincul, en la Patagonia argentina.",
-   "quote_sha": "ac9a3e31476a1523"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "Intermediate estimates suggest Argentinosaurus was 33 to 36 meters long and weighed 70 to 80 tonnes.",
-   "category": "description",
-   "chunk_id": "argentinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "De entre las diferentes estimaciones propuestas, un margen intermedio y probable estima a Argentinosaurus con 33-36 m de longitud y una masa corporal de 70-80 toneladas",
-   "quote_sha": "1ab509f30b48610a"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "Various studies have estimated Argentinosaurus to be between 30 and 39.7 meters long and weigh between 55 and 90 tonnes.",
-   "category": "description",
-   "chunk_id": "argentinosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Diferentes estudios, a lo largo de los años, han estimado su tamaño en un rango de entre 30 a 39,7 m de longitud, con un peso de 55 a 90 tn",
-   "quote_sha": "60fd9e982b8e3d4d"
-  },
-  {
-   "fact_id": "F038",
-   "statement": "Argentinosaurus could reach a height of more than 16 meters when its neck was raised.",
-   "category": "description",
-   "chunk_id": "argentinosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "y una altura de más de 16 metros al erguir el cuello",
-   "quote_sha": "754552296f3d4950"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "In 2016, Mark Hallett and Matthew Wedel estimated that Argentinosaurus eggs were likely only 1 liter in volume.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 2016, Mark Hallett and Matthew Wedel stated that the eggs of Argentinosaurus were probably only 1 L in volume",
-   "quote_sha": "0130b78982db417d"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "Hallett and Wedel estimated that a newly hatched Argentinosaurus was no longer than 1 meter and did not weigh more than 5 kilograms.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "and that a hatched Argentinosaurus was no longer than 1 m and not heavier than 5 kg",
-   "quote_sha": "951f1e5b86c3d029"
-  },
-  {
    "fact_id": "F041",
-   "statement": "It is suggested that Argentinosaurus may have been preyed upon by Mapusaurus, one of the largest known theropods.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Argentinosaurus might have been preyed on by Mapusaurus, which is among the largest theropods known",
-   "quote_sha": "f784ef9cc230155a"
+   "statement": "Argentinosaurus lived in what is now South America.",
+   "category": "time_and_habitat",
+   "chunk_id": "argentinosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "en lo que hoy es Sudamérica",
+   "quote_sha": "599b80c3627840da"
   },
   {
    "fact_id": "F042",
-   "statement": "Earlier research suggested the age of the deposits containing Argentinosaurus ranged from the Cenomanian–Turonian to the Early Turonian–Late Santonian.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Earlier findings suggested a Cenomanian–Turonian age, or possibly an Early Turonian to Late Santonian age",
-   "quote_sha": "a9e1d3800b370d27"
+   "statement": "Fossil remains of Argentinosaurus were discovered by Guillermo Heredia on a rural estate near Plaza Huincul in Argentine Patagonia.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Sus vestigios óseos fueron descubiertos por Guillermo Heredia, en una estancia rural cerca de Plaza Huincul, en la Patagonia argentina",
+   "quote_sha": "3cc69dc87f1dba39"
   },
   {
    "fact_id": "F043",
-   "statement": "The Huincul Formation, where Argentinosaurus fossils were found, consists of fine-to-medium grain yellowish and greenish sandstones, some containing volcanic ash.",
-   "category": "time_and_habitat",
-   "chunk_id": "argentinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "The Huincul Formation is composed of yellowish and greenish sandstones of fine-to-medium grain, some of which are tuffaceous",
-   "quote_sha": "5781bc938b51c153"
+   "statement": "The fossil material is now housed at the Museo Carmen Funes and the Museo de La Plata.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "El material se encuentra ahora bajo el resguardo del Museo Carmen Funes y del Museo de La Plata",
+   "quote_sha": "59e3d46ff3e92b2c"
   },
   {
    "fact_id": "F044",
-   "statement": "Fossilized pollen from the Huincul Formation indicates a diverse plant environment included hornworts, ferns, gymnosperms, and angiosperms.",
-   "category": "time_and_habitat",
-   "chunk_id": "argentinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Fossilised pollen indicates a wide variety of plants were present in the Huincul Formation",
-   "quote_sha": "4df07d8f8f8733b9"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "The Huincul Formation contains fossils of other sauropods, including the titanosaur Choconsaurus and rebbachisaurids like Cathartesaura and Limaysaurus.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "In addition to Argentinosaurus, the sauropods of the Huincul Formation are represented by another titanosaur, Choconsaurus, and several rebbachisaurids including Cathartesaura, Limaysaurus, and some unnamed species",
-   "quote_sha": "6aa20ee14f32b4c7"
-  },
-  {
-   "fact_id": "F046",
-   "statement": "The Huincul Formation has yielded theropod fossils including Mapusaurus, Skorpiovenator, Huinculsaurus, Overoraptor, Aoniraptor, and Gualicho.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Theropods including carcharodontosaurids such as Mapusaurus, abelisaurids including Skorpiovenator, Ilokelesia, and Tralkasaurus, noasaurids such as Huinculsaurus, paravians such as Overoraptor, and other theropods such as Aoniraptor and Gualicho have also been discovered there",
-   "quote_sha": "bdcb816869edb775"
-  },
-  {
-   "fact_id": "F047",
    "statement": "The genus Argentinosaurus was named by Bonaparte and Coria in 1993.",
    "category": "classification",
    "chunk_id": "argentinosaurus:eswiki:1",
@@ -537,7 +538,7 @@
    "quote_sha": "ab5c9e81f795745e"
   },
   {
-   "fact_id": "F048",
+   "fact_id": "F045",
    "statement": "The species A. huinculensis was named by Bonaparte and Coria in 1993.",
    "category": "classification",
    "chunk_id": "argentinosaurus:eswiki:1",
@@ -546,8 +547,8 @@
    "quote_sha": "c8a130fd46c8b66f"
   },
   {
-   "fact_id": "F049",
-   "statement": "Argentinosaurus is classified within the family Lognkosauria.",
+   "fact_id": "F046",
+   "statement": "Argentinosaurus belongs to the family Lognkosauria.",
    "category": "classification",
    "chunk_id": "argentinosaurus:eswiki:1",
    "lang": "es",
@@ -555,35 +556,179 @@
    "quote_sha": "a2c3c3da5efe269c"
   },
   {
-   "fact_id": "F050",
-   "statement": "Argentinosaurus likely had a small head relative to its body, equipped with simple, long, thin, tubular teeth.",
+   "fact_id": "F047",
+   "statement": "Intermediate estimates suggest Argentinosaurus was 33 to 36 meters long and weighed 70 to 80 tonnes.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "un margen intermedio y probable estima a Argentinosaurus con 33-36 m de longitud y una masa corporal de 70-80 toneladas",
+   "quote_sha": "54a63c260b598193"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Various studies have estimated Argentinosaurus to be between 30 and 39.7 meters long and weigh between 55 and 90 tonnes.",
    "category": "description",
    "chunk_id": "argentinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Argentinosaurus debió tener una cabeza bastante pequeña en proporción a su cuerpo, provista de simples pero largas coronas dentarias, delgadas y en forma de tubo",
-   "quote_sha": "ad7db59589d519d4"
+   "quote": "Diferentes estudios, a lo largo de los años, han estimado su tamaño en un rango de entre 30 a 39,7 m de longitud, con un peso de 55 a 90 tn",
+   "quote_sha": "60fd9e982b8e3d4d"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Argentinosaurus could reach a height of more than 16 meters when stretching its neck upward.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "y una altura de más de 16 metros al erguir el cuello",
+   "quote_sha": "754552296f3d4950"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Argentinosaurus had simple, long, thin, tube-shaped dental batteries adapted for cutting vegetation.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "provista de simples pero largas coronas dentarias, delgadas y en forma de tubo",
+   "quote_sha": "4c8daadae6529859"
   },
   {
    "fact_id": "F051",
-   "statement": "Sauropods, including Argentinosaurus, were oviparous, meaning they laid eggs.",
-   "category": "paleobiology",
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Sauropods were oviparous (egg-laying)",
-   "quote_sha": "00123c4cc546da0d"
+   "statement": "Argentinosaurus had a robust, muscular torso supported by four massive, cylindrical legs.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Su torso debió haber sido robusto y musculoso, para alojar sus enormes órganos internos, y sostenido por cuatro patas macizas y cilíndricas",
+   "quote_sha": "9c5fa8d68efa4a9c"
   },
   {
    "fact_id": "F052",
-   "statement": "Very little of Argentinosaurus has been recovered, including only some vertebrae, a fibula, fragmentary ribs, and the sacrum.",
-   "category": "discovery",
+   "statement": "In 2016, Mark Hallett and Matthew Wedel estimated that Argentinosaurus eggs were likely only 1 liter in volume.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "In 2016, Mark Hallett and Matthew Wedel stated that the eggs of Argentinosaurus were probably only 1 L in volume",
+   "quote_sha": "0130b78982db417d"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Hallett and Wedel estimated that a newly hatched Argentinosaurus was no longer than 1 meter and weighed no more than 5 kilograms.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "and that a hatched Argentinosaurus was no longer than 1 m and not heavier than 5 kg",
+   "quote_sha": "951f1e5b86c3d029"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Argentinosaurus may have been preyed upon by Mapusaurus, one of the largest known theropods.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Argentinosaurus might have been preyed on by Mapusaurus, which is among the largest theropods known",
+   "quote_sha": "f784ef9cc230155a"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Mapusaurus fossils found together suggest it may have hunted in packs to take down large prey like Argentinosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Mapusaurus is known from at least seven individuals found together, raising the possibility that this theropod hunted in packs to bring down large prey including Argentinosaurus",
+   "quote_sha": "82090e895d95fbd9"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "The Huincul Formation consists of yellowish and greenish fine-to-medium grain sandstones, some containing volcanic ash.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "The Huincul Formation is composed of yellowish and greenish sandstones of fine-to-medium grain, some of which are tuffaceous",
+   "quote_sha": "5781bc938b51c153"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "The deposits containing Argentinosaurus were laid down during the Lower Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "These deposits were laid down during the Lower Cretaceous",
+   "quote_sha": "76272b7c1ce60efd"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Fossilized pollen indicates a wide variety of plants, including ferns, gymnosperms, and angiosperms, lived in the Huincul Formation environment.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Fossilised pollen indicates a wide variety of plants were present in the Huincul Formation",
+   "quote_sha": "4df07d8f8f8733b9"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Other sauropods found in the same formation include the titanosaur Choconsaurus and rebbachisaurids like Cathartesaura and Limaysaurus.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "In addition to Argentinosaurus, the sauropods of the Huincul Formation are represented by another titanosaur, Choconsaurus, and several rebbachisaurids including Cathartesaura, Limaysaurus, and some unnamed species",
+   "quote_sha": "6aa20ee14f32b4c7"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Theropods discovered in the same formation include Mapusaurus, Skorpiovenator, Huinculsaurus, Overoraptor, Aoniraptor, and Gualicho.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Theropods including carcharodontosaurids such as Mapusaurus, abelisaurids including Skorpiovenator, Ilokelesia, and Tralkasaurus, noasaurids such as Huinculsaurus, paravians such as Overoraptor, and other theropods such as Aoniraptor and Gualicho have also been discovered there",
+   "quote_sha": "bdcb816869edb775"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Computer simulations determined that Argentinosaurus walked using a gait close to a pace, where limbs on the same side moved simultaneously.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The optimal gait found by the algorithms was close to a pace (forelimb and hind limb on the same side of the body move simultaneously)",
+   "quote_sha": "61cb1d0b3a610c11"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The computer model estimated a top speed of just over 2 meters per second (7.2 km/h or 5 mph) for Argentinosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The model reached a top speed of just over 2 m/s (7.2 km/h, 5 mph)",
+   "quote_sha": "d23a9974ac3b8b2b"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Researchers cautioned that the computer model of Argentinosaurus is not fully realistic and too simplistic.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The authors of the study cautioned the model is not fully realistic and too simplistic, and that it could be improved in many areas",
+   "quote_sha": "54bc232dad99f72e"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "It is suggested that Argentinosaurus might have been preyed on by Mapusaurus.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Argentinosaurus might have been preyed on by Mapusaurus",
+   "quote_sha": "9e08cb1ab0136fa3"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "Fossil remains of Argentinosaurus are very incomplete, consisting of only a few vertebrae, a fibula, fragmentary ribs, and the sacrum.",
+   "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
    "quote": "No se ha recuperado mucho de Argentinosaurus, apenas algunas vértebras, un peroné, costillas fragmentarias y el sacro.",
    "quote_sha": "07fecab05e0dccc9"
   },
   {
-   "fact_id": "F053",
-   "statement": "Six dorsal vertebrae were described in detail, with the largest reaching 1.59 meters in height and 1.29 meters in width.",
+   "fact_id": "F066",
+   "statement": "Six dorsal vertebrae were described in detail, with the largest measuring 1.59 meters high and 1.29 meters wide.",
    "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
@@ -591,88 +736,187 @@
    "quote_sha": "ad96a91135a5a05d"
   },
   {
-   "fact_id": "F054",
-   "statement": "An incomplete femur, cataloged as MLP-DP 46-VIII-21-3, found near the excavation site is attributed to the same specimen.",
+   "fact_id": "F067",
+   "statement": "The sacral bone tissue displays large macrocysts separated by very thin bone laminae.",
    "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Un fémur incompleto, MLP-DP 46-VIII-21-3, hallado no lejos de la zona de la excavación, se atribuye al mismo espécimen.",
-   "quote_sha": "972b6ace199a64c3"
+   "quote": "El tejido óseo del sacro exhibe además macroceldas de gran tamaño y separadas entre sí por láminas óseas muy delgadas.",
+   "quote_sha": "d20e71f2a72e23f9"
   },
   {
-   "fact_id": "F055",
-   "statement": "The original authors estimated the femur's total length was no less than 240 cm.",
-   "category": "discovery",
+   "fact_id": "F068",
+   "statement": "Because relatives possessed defensive osteoderms on their backs, researchers hypothesize that Argentinosaurus may have had similar structures.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Los parientes de esta criatura presentaban placas óseas en la espalda, llamadas osteodermos, que funcionaban como una armadura defensiva, por eso se piensa que Argentinosaurus también podía tener estas estructuras.",
+   "quote_sha": "41e987f4af098dcd"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "An incomplete femur attributed to the same specimen measures approximately 1.18 meters.",
+   "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Este eje femoral es de alrededor de 1,18 metros.",
+   "quote_sha": "8f1e1b05a5c41a84"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The original authors estimated the total length of the femur to be no less than 240 centimeters.",
+   "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
    "quote": "Según los autores originales su tamaño no debió ser menor a los 240 cm.",
    "quote_sha": "5ab7b7521c2f631d"
   },
   {
-   "fact_id": "F056",
-   "statement": "In 1996, paleontologist José Bonaparte estimated the femur length at 250 cm.",
-   "category": "discovery",
+   "fact_id": "F071",
+   "statement": "In 1996, paleontologist José Bonaparte estimated the femur length at 250 centimeters.",
+   "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
    "quote": "Posteriormente en 1996, fue el paleontólogo José Bonaparte quien estimó al fémur en 250 cm de largo.",
    "quote_sha": "417c59491d9e109f"
   },
   {
-   "fact_id": "F057",
-   "statement": "Mazzetta and colleagues estimated the femur length at 255.7 cm.",
-   "category": "discovery",
+   "fact_id": "F072",
+   "statement": "Mazzetta and colleagues estimated the femur length at 255.7 centimeters.",
+   "category": "description",
    "chunk_id": "argentinosaurus:eswiki:4",
    "lang": "es",
    "quote": "Similar al tamaño calculado por Mazzetta et al., quienes lo estimaron en 255,7 cm de longitud.",
    "quote_sha": "ae5a4bc242aa8fdd"
   },
   {
-   "fact_id": "F058",
-   "statement": "An early reconstruction by Gregory S. Paul estimated Argentinosaurus at 30 to 35 meters long and weighing 80 to 100 tons.",
+   "fact_id": "F073",
+   "statement": "The fused sacral vertebrae measure 1.2 meters in total and anatomical features confirm the absence of a sixth vertebra.",
    "category": "description",
+   "chunk_id": "argentinosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Juntos el fósil mide 1,2 m; y a raíz de sus características anatómicas, se demuestra la falta de una sexta.",
+   "quote_sha": "7f13fb08f4377a26"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "An early reconstruction by Gregory S. Paul estimated Argentinosaurus to be between 30 and 35 meters long and weigh between 80 and 100 tons.",
+   "category": "curiosities",
    "chunk_id": "argentinosaurus:eswiki:5",
    "lang": "es",
    "quote": "Una temprana reconstrucción de Gregory S. Paul estimó que Argentinosaurus midió entre 30 y 35 metros de longitud y que pesó de 80 a 100 toneladas.",
    "quote_sha": "18633fdcada45514"
   },
   {
-   "fact_id": "F059",
-   "statement": "A publication in Current Science later suggested a maximum estimate of 45 meters in length and 100 tons in weight.",
-   "category": "description",
+   "fact_id": "F075",
+   "statement": "A later publication in Current Science proposed a maximum estimate of 45 meters in length and 100 tons in weight.",
+   "category": "curiosities",
    "chunk_id": "argentinosaurus:eswiki:5",
    "lang": "es",
    "quote": "Unos años más tarde, en una publicación de la revista Current Science, se le apunta con un estimado, máximo y liberal, de 45 metros y 100 toneladas de peso.",
    "quote_sha": "22c44e5f91482912"
   },
   {
-   "fact_id": "F060",
-   "statement": "In 2006, Kenneth Carpenter estimated Argentinosaurus at 30 meters long based on the most complete Saltasaurus specimen.",
-   "category": "description",
-   "chunk_id": "argentinosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "En 2006 Kenneth Carpenter se basa en el más completo espécimen de Saltasaurus como una guía para estimar a Argentinosaurus en 30 metros de largo.",
-   "quote_sha": "d471b5d716564a6b"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "Mazzetta and colleagues used femur regression equations to estimate an average weight of 73 tons, with a possible range of 60 to 88 tons.",
-   "category": "description",
+   "fact_id": "F076",
+   "statement": "Mazzetta and colleagues used regression equations based on femur anatomy to estimate an average weight of 73 tons, with a possible range of 60 to 88 tons.",
+   "category": "curiosities",
    "chunk_id": "argentinosaurus:eswiki:5",
    "lang": "es",
    "quote": "Mazzetta y colaboradores utilizan ecuaciones de regresión, con datos extraídos de la anatomía del fémur (hueso clave en el soporte del peso del animal), y promedian un peso estimado de 73 toneladas, y ofrecen un amplio rango que va de 60 a 88 toneladas como su posible masa corporal.",
    "quote_sha": "33cc75445dea856b"
   },
   {
-   "fact_id": "F062",
-   "statement": "In 2008, Jorge Calvo and colleagues estimated Argentinosaurus at 33 meters long.",
-   "category": "description",
+   "fact_id": "F077",
+   "statement": "In 2008, Jorge Calvo and colleagues revised titanosaur size estimates, calculating Argentinosaurus to be 33 meters long.",
+   "category": "curiosities",
    "chunk_id": "argentinosaurus:eswiki:5",
    "lang": "es",
    "quote": "En 2008, Jorge Calvo y colegas realizan una revisión de los tamaños estimados de titanosaurios, calculando a Argentinosaurus con 33 metros de largo.",
    "quote_sha": "6cc0255a59423d59"
   },
   {
-   "fact_id": "F063",
+   "fact_id": "F078",
+   "statement": "A volumetric reconstruction displayed at the Carmen Funes Municipal Museum depicts the animal as 39.7 meters long, 7.3 meters high at the shoulders, and weighing 83.2 tons.",
+   "category": "curiosities",
+   "chunk_id": "argentinosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Una reconstrucción de su esqueleto, montado y expuesto en el Museo municipal Carmen Funes, muestra al coloso titanosaurio con 39,7 metros de longitud, una altura de 7,3 metros hasta la zona de los hombros y una masa corporal de 83,2 toneladas, a partir de una estimación volumétrica.",
+   "quote_sha": "5e941dcc5751e37d"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "In 2023, Gregory Paul and Asier Larramendi updated their reconstruction to estimate a mass of 75–80 tons, using new anatomical data from close relatives Dreadnoughtus and Patagotitan.",
+   "category": "curiosities",
+   "chunk_id": "argentinosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "En 2023, Gregory Paul, con Asier Larramendi, actualizaron su reconstrucción de Argentinosaurus y estimaron su masa corporal en 75-80 t; al utilizar la nueva información anatómica proporcionada por Dreadnoughtus y Patagotitan; que son parientes cercanos.",
+   "quote_sha": "963bc6dbde20b7bb"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "Because the only known specimen is very incompletely preserved, it is impossible to guarantee an exact estimate of its body dimensions until better-preserved specimens are found.",
+   "category": "debate",
+   "chunk_id": "argentinosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Debido al muy incompleto estado de preservación del único espécimen conocido, simplemente no es posible asegurar un estimado exacto de sus dimensiones corporales, hasta un futuro hallazgo de ejemplares mejor preservados.",
+   "quote_sha": "b725e14057224420"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "Argentinosaurus is estimated to have measured 31 to 37 meters in length and weighed 51 to 77 tonnes, making it a strong contender for the title of the largest land animal ever known.",
+   "category": "curiosities",
+   "chunk_id": "argentinosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "De momento, sus fósiles han dado estimados que lo vuelven como un fuerte rival para el título del mayor animal terrestre conocido de todos los tiempos, este mediría 31- 37 metros y pesaría unos 51-77 toneladas.",
+   "quote_sha": "4aee74690f151d0e"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "Approximately 70% of the Argentinosaurus skeleton has been found, providing greater accuracy and reliability for its size estimates compared to other giant dinosaurs known from fragmentary remains.",
+   "category": "curiosities",
+   "chunk_id": "argentinosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "a este titanosaurio se le halló el 70% del esqueleto aproximadamente, lo que otorga mayor exactitud y fiabilidad a los cálculos de sus dimensiones.",
+   "quote_sha": "efa2f3b3e0e99a9c"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Argentinosaurus used its long neck to reach high trees like Araucaria or to browse low-lying vegetation such as ferns and shrubs on the ground.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "Utilizaba su largo cuello para alcanzar las palmeras y coníferas de gran altura como la araucaria, o barrer el suelo en busca de helechos y otros arbustos de baja estatura.",
+   "quote_sha": "f102351818ac331d"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Inside its stomach, Argentinosaurus likely ground and crushed vegetation using smooth stones known as gastroliths, as it did not chew its food.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:eswiki:11",
+   "lang": "es",
+   "quote": "En el interior del éste, la vegetación habría sido molida y destrozada por piedras lisas conocidas como gastrolitos.",
+   "quote_sha": "53f5e99f95a319e1"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "It is believed that only a very small number of baby Argentinosaurus would survive to reach adulthood.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "Se cree que solo un grupo muy pequeño de crías sobrevivirían hasta llegar a la edad adulta.",
+   "quote_sha": "df0d114729d8e0b1"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "Argentinosaurus likely traveled in herds of just over a dozen individuals, including juveniles.",
+   "category": "paleobiology",
+   "chunk_id": "argentinosaurus:eswiki:12",
+   "lang": "es",
+   "quote": "Argentinosaurus probablemente viajaba en manadas de poco más que una docena de individuos, incluidos los menores de edad.",
+   "quote_sha": "cffb579f9f5a1e0c"
+  },
+  {
+   "fact_id": "F087",
    "statement": "Argentinosaurus belongs to the parent group Eutitanosauria.",
    "category": "classification",
    "chunk_id": "argentinosaurus:pbdb:1",
@@ -681,8 +925,8 @@
    "quote_sha": "b6c1bcd0d1889849"
   },
   {
-   "fact_id": "F064",
-   "statement": "Argentinosaurus is classified in the class Saurischia.",
+   "fact_id": "F088",
+   "statement": "Argentinosaurus is classified within the class Saurischia.",
    "category": "classification",
    "chunk_id": "argentinosaurus:pbdb:1",
    "lang": "en",
@@ -690,8 +934,8 @@
    "quote_sha": "8e64a48e9ac37acb"
   },
   {
-   "fact_id": "F065",
-   "statement": "Argentinosaurus lived during the Albian stage, between 110.1 and 106.3 million years ago.",
+   "fact_id": "F089",
+   "statement": "Argentinosaurus lived during the Albian stage of the Cretaceous Period, between 110.1 and 106.3 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "argentinosaurus:pbdb:1",
    "lang": "en",
@@ -699,43 +943,43 @@
    "quote_sha": "34a18ace6010e110"
   },
   {
-   "fact_id": "F066",
-   "statement": "Because the only known specimen is very incompletely preserved, an exact estimate of its body dimensions cannot be confirmed until better-preserved specimens are found.",
-   "category": "debate",
-   "chunk_id": "argentinosaurus:eswiki:5",
+   "fact_id": "F090",
+   "statement": "A more complete giant titanosaur was discovered in Chubut Province, Argentina, in 2014 and identified as Patagotitan mayorum in 2017, challenging Argentinosaurus for the largest land animal title.",
+   "category": "discovery",
+   "chunk_id": "argentinosaurus:eswiki:6",
    "lang": "es",
-   "quote": "Debido al muy incompleto estado de preservación del único espécimen conocido, simplemente no es posible asegurar un estimado exacto de sus dimensiones corporales, hasta un futuro hallazgo de ejemplares mejor preservados.",
-   "quote_sha": "b725e14057224420"
+   "quote": "Se dio a conocer, el año 2014, el descubrimiento de un nuevo titanosaurio gigante mucho más completo hallado en la Provincia del Chubut, Argentina. En 2017, se identificó como Patagotitan mayorum.",
+   "quote_sha": "a0498a7dc472c6be"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "argentinosaurus:enwiki:2",
-   "statement": "The animal lived during the Early Cretaceous period in what is now Argentina.",
-   "category": "time_and_habitat",
-   "quote": "lived during the Early Cretaceous period in what is now Argentina",
-   "reason": "statement copies the source wording: 'lived during the Early Cretaceous period in what'"
+   "chunk_id": "argentinosaurus:enwiki:3",
+   "statement": "Paleontologists used pneumatic hammers to separate the fossils from the very hard rock in which they were encased.",
+   "category": "discovery",
+   "quote": "Separating fossils from the very hard rock in which the bones were encased required the use of pneumatic hammers.",
+   "reason": "statement copies the source wording: 'fossils from the very hard rock in which'"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:2",
-   "statement": "A computer model estimated a maximum speed of 7.2 km/h (5 mph) using a pace gait.",
+   "statement": "Computer modeling suggests Argentinosaurus moved at a maximum speed of 7.2 km/h (5 mph) using a pace gait.",
    "category": "paleobiology",
-   "quote": "A computer model of the skeleton and muscles estimated this dinosaur had a maximum speed of 7.2 km/h (5 mph) with a pace",
+   "quote": "A computer model of the skeleton and muscles estimated this dinosaur had a maximum speed of 7.2 km/h (5 mph) with a pace, a gait where the fore and hind limb of the same side of the body move simultaneously.",
    "reason": "statement copies the source wording: 'a maximum speed of 7.2 km h 5'"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:4",
-   "statement": "In 2017, Carballido and colleagues considered Argentinosaurus to be smaller than Patagotitan.",
-   "category": "debate",
-   "quote": "In 2017, Carballido and colleagues considered Argentinosaurus to be smaller than Patagotitan",
-   "reason": "statement copies the source wording: 'and colleagues considered Argentinosaurus to be smaller than'"
+   "statement": "Argentinosaurus is among the largest known land animals, though its exact size is hard to determine due to incomplete remains.",
+   "category": "description",
+   "quote": "Argentinosaurus is among the largest known land animals, although its exact size is difficult to estimate because of the incompleteness of its remains.",
+   "reason": "statement copies the source wording: 'Argentinosaurus is among the largest known land animals'"
   },
   {
-   "chunk_id": "argentinosaurus:enwiki:4",
-   "statement": "In 2016, Gonzáles Riga and colleagues estimated a mass of 96.4 t based on an isolated femur, though it is uncertain if that femur belongs to Argentinosaurus.",
-   "category": "debate",
-   "quote": "In 2016, using equations that estimate body mass based on the circumference of the humerus and femur of quadrupedal animals, Bernardo Gonzáles Riga and colleagues estimated a mass of 96.4 t based on an isolated femur; it is uncertain whether this femur actually belongs to Argentinosaurus",
-   "reason": "statement copies the source wording: 'and colleagues estimated a mass of 96.4 t'"
+   "chunk_id": "argentinosaurus:enwiki:2",
+   "statement": "The name Argentinosaurus means \"Argentine lizard,\" and the species name huinculensis refers to the town of Plaza Huincul.",
+   "category": "description",
+   "quote": "The generic name means \"Argentine lizard\", while the specific name refers to the town Plaza Huincul.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -745,11 +989,18 @@
    "reason": "statement copies the source wording: 'Paul estimated the total length of the dorsal'"
   },
   {
-   "chunk_id": "argentinosaurus:enwiki:7",
-   "statement": "Argentinosaurus was classified as a basal (primitive) titanosaurian, outside the group Lithostrotia.",
-   "category": "classification",
-   "quote": "Argentinosaurus was classified outside this group and thus as a more basal (primitive) titanosaurian",
-   "reason": "quote not found verbatim in the source"
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "statement": "Argentinosaurus vertebrae were internally lightened by a complex pattern of numerous air-filled chambers.",
+   "category": "description",
+   "quote": "The vertebrae were internally lightened by a complex pattern of numerous air-filled chambers",
+   "reason": "statement copies the source wording: 'vertebrae were internally lightened by a complex pattern'"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:5",
+   "statement": "Very large cavities measuring 4 to 6 cm were present in both the dorsal and sacral vertebrae of Argentinosaurus.",
+   "category": "description",
+   "quote": "In both the dorsal and sacral vertebrae, very large cavities measuring 4 to 6 cm were present",
+   "reason": "statement copies the source wording: 'Very large cavities measuring 4 to 6 cm'"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:5",
@@ -759,18 +1010,53 @@
    "reason": "statement copies the source wording: 'The original position of the known dorsal vertebrae'"
   },
   {
+   "chunk_id": "argentinosaurus:enwiki:7",
+   "statement": "Argentinosaurus was classified outside Lithostrotia as a more basal titanosaurian.",
+   "category": "classification",
+   "quote": "Argentinosaurus was classified outside this group and thus as a more basal (primitive) titanosaurian",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:7",
+   "statement": "A 2018 study found two different phylogenetic positions for Argentinosaurus based on two data sets.",
+   "category": "classification",
+   "quote": "Another 2018 study by Hesham Sallam and colleagues found two different phylogenetic positions for Argentinosaurus based on two data sets",
+   "reason": "statement copies the source wording: 'found two different phylogenetic positions for Argentinosaurus based'"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:7",
+   "statement": "A 2018 study did not recover Argentinosaurus as a lognkosaurian but as either a basal titanosaur or a sister taxon of Epachthosaurus.",
+   "category": "classification",
+   "quote": "They did not recover it as a lognkosaurian but as either a basal titanosaur or a sister taxon of the more derived Epachthosaurus",
+   "reason": "numbers not in the quote: ['2018']"
+  },
+  {
    "chunk_id": "argentinosaurus:eswiki:2",
-   "statement": "Argentinosaurus lived during the Late Cretaceous, specifically the Cenomanian stage, between 96 and 92 million years ago.",
+   "statement": "Argentinosaurus lived during the Late Cretaceous period, between 96 and 92 million years ago.",
    "category": "time_and_habitat",
-   "quote": "Argentinosaurus huinculensis ... vivió a mediados del período Cretácico Superior, entre 96 a 92 millones de años, en el Cenomaniense",
+   "quote": "Argentinosaurus huinculensis... vivió a mediados del período Cretácico Superior, entre 96 a 92 millones de años",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:8",
-   "statement": "Hallett and Wedel estimated that Argentinosaurus reached sexual maturity at 8 to 10 years, physical maturity at 20 years, and had a lifespan of 30 years.",
+   "statement": "Hallett and Wedel estimated that Argentinosaurus reached sexual maturity at 8–10 years, physical maturity at 20 years, and had a lifespan of about 30 years.",
    "category": "paleobiology",
    "quote": "Hallett and Wedel estimated that Argentinosaurus reached sexual maturity at 8–10 years and physical maturity at 20 years, with a lifespan estimated at 30 years",
    "reason": "statement copies the source wording: 'and Wedel estimated that Argentinosaurus reached sexual maturity'"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "statement": "The geological deposits represent the drainage system of a braided river.",
+   "category": "paleobiology",
+   "quote": "The deposits represent the drainage system of a braided river",
+   "reason": "statement copies the source wording: 'deposits represent the drainage system of a braided'"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:9",
+   "statement": "Several iguanodonts are also present in the Huincul Formation.",
+   "category": "paleobiology",
+   "quote": "Several iguanodonts are also present in the Huincul Formation",
+   "reason": "statement copies the source wording: 'Several iguanodonts are also present in the Huincul'"
   },
   {
    "chunk_id": "argentinosaurus:enwiki:8",
@@ -781,9 +1067,16 @@
   },
   {
    "chunk_id": "argentinosaurus:enwiki:8",
-   "statement": "A 2013 computer model estimated that Argentinosaurus could reach a top speed of just over 2 meters per second (7.2 km/h or 5 mph).",
+   "statement": "The computer model was based on a laser scan of a mounted skeleton at the Museo Carmen Funes.",
    "category": "paleobiology",
-   "quote": "The model reached a top speed of just over 2 m/s (7.2 km/h, 5 mph)",
+   "quote": "The computer model was based on a laser scan of a mounted skeletal reconstruction on display at the Museo Carmen Funes",
+   "reason": "statement copies the source wording: 'The computer model was based on a laser'"
+  },
+  {
+   "chunk_id": "argentinosaurus:enwiki:8",
+   "statement": "The computer model of Argentinosaurus used in the 2013 study had a mass of 83 tonnes.",
+   "category": "paleobiology",
+   "quote": "the final model had a mass of 83 t",
    "reason": "numbers not in the quote: ['2013']"
   },
   {
@@ -794,38 +1087,24 @@
    "reason": "statement copies the source wording: 'A 2025 study estimated that Argentinosaurus may have'"
   },
   {
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "statement": "Researchers concluded that due to its giant size, Argentinosaurus reached a functional limit for terrestrial vertebrates.",
-   "category": "paleobiology",
-   "quote": "The authors concluded with its giant size, Argentinosaurus reached a functional limit",
-   "reason": "statement copies the source wording: 'its giant size Argentinosaurus reached a functional limit'"
-  },
-  {
-   "chunk_id": "argentinosaurus:enwiki:8",
-   "statement": "Authors of the 2013 study cautioned that their computer model was not fully realistic and too simplistic.",
-   "category": "debate",
-   "quote": "The authors of the study cautioned the model is not fully realistic and too simplistic, and that it could be improved in many areas",
-   "reason": "numbers not in the quote: ['2013']"
+   "chunk_id": "argentinosaurus:eswiki:4",
+   "statement": "The fossil bones feature highly developed transverse processes, which served to anchor ribs and massive muscles.",
+   "category": "description",
+   "quote": "Estos huesos fósiles presentan unas estructuras similares a crestas o prolongaciones laterales, llamadas apófisis transversas, muy desarrolladas; necesarias para insertar adecuadamente las costillas y los músculos masivos.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "argentinosaurus:eswiki:4",
-   "statement": "A well-preserved right fibula measuring 1.55 meters in length was found.",
+   "statement": "A well-preserved right fibula measuring 1.55 meters in length was recovered.",
    "category": "description",
    "quote": "Otro fósil en muy buen estado de preservación era su peroné derecho, de 1,55 metros de largo.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "argentinosaurus:eswiki:4",
-   "statement": "Eroded sacral vertebrae confirm the presence of five fused vertebrae measuring a total of 1.2 meters.",
-   "category": "description",
-   "quote": "Los cuerpos vertebrales del sacro también fueron hallados, se encuentran bastante erosionados y deteriorados, pero confirman la presencia de cinco vértebras fusionadas, juntos el fósil mide 1,2 m.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "argentinosaurus:eswiki:5",
-   "statement": "In 2023, Gregory Paul and Asier Larramendi updated their reconstruction, estimating the body mass at 75 to 80 tons.",
-   "category": "description",
-   "quote": "En 2023, Gregory Paul, con Asier Larramendi, actualizaron su reconstrucción de Argentinosaurus y estimaron su masa corporal en 75-80 t.",
+   "chunk_id": "argentinosaurus:eswiki:12",
+   "statement": "Studies suggest that baby Argentinosaurus had to grow 25,000 times their birth size to reach adult dimensions.",
+   "category": "paleobiology",
+   "quote": "Los estudios demuestran que las crías de Argentinosaurus habrían tenido que crecer 25.000 veces su tamaño de nacimiento antes de alcanzar las dimensiones de un adulto.",
    "reason": "quote not found verbatim in the source"
   }
  ]

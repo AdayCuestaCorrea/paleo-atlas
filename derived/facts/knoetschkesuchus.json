@@ -2,9 +2,9 @@
  "taxon": "Knoetschkesuchus",
  "taxon_key": "knoetschkesuchus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "51bd2c912408e188",
- "generated_at": "2026-11-03T05:11:49+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "de91e0f96f13cee9",
+ "generated_at": "2026-11-04T07:19:57+00:00",
  "citations": {
   "knoetschkesuchus:enwiki:1": {
    "source": "wikipedia_article",
@@ -153,6 +153,34 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "knoetschkesuchus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Knoetschkesuchus (Paladar y neurocráneo)",
+   "url": "https://es.wikipedia.org/wiki/Knoetschkesuchus?oldid=155329094",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "knoetschkesuchus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Knoetschkesuchus (Mandìbula)",
+   "url": "https://es.wikipedia.org/wiki/Knoetschkesuchus?oldid=155329094",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "knoetschkesuchus:eswiki:10": {
+   "source": "wikipedia_article",
+   "title": "Knoetschkesuchus (Dientes)",
+   "url": "https://es.wikipedia.org/wiki/Knoetschkesuchus?oldid=155329094",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "knoetschkesuchus:eswiki:12": {
+   "source": "wikipedia_article",
+   "title": "Knoetschkesuchus (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Knoetschkesuchus?oldid=155329094",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "knoetschkesuchus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Knoetschkesuchus",
@@ -164,25 +192,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus Knoetschkesuchus was described by Schwarz and colleagues in 2017.",
-   "category": "classification",
-   "chunk_id": "knoetschkesuchus:enwiki:1",
-   "lang": "en",
-   "quote": "authority: Schwarz et al., 2017",
-   "quote_sha": "5586750555eacd19"
-  },
-  {
-   "fact_id": "F002",
-   "statement": "The genus contains two species: the type species K. langenbergensis and K. guimarotae, which was originally classified as Theriosuchus guimarotae.",
-   "category": "classification",
-   "chunk_id": "knoetschkesuchus:enwiki:1",
-   "lang": "en",
-   "quote": "subdivision: K. langenbergensis Schwarz et al., 2017 (type) K. guimarotae (Schwarz & Salisbury, 2005) (originally Theriosuchus guimarotae)",
-   "quote_sha": "83ce95c61a073e69"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "Knoetschkesuchus is a small atoposaurid crocodylomorph found in the Late Jurassic of Germany and Portugal.",
+   "statement": "Knoetschkesuchus is a small atoposaurid crocodylomorph that lived during the Late Jurassic in Germany and Portugal.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:2",
    "lang": "en",
@@ -190,13 +200,31 @@
    "quote_sha": "b63bec1eb63ec29d"
   },
   {
-   "fact_id": "F004",
+   "fact_id": "F002",
+   "statement": "Knoetschkesuchus was a small, short-snouted crocodilian measuring approximately 55 cm in length.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Knoetschkesuchus was a small and short-snouted crocodilian, measuring about 55 cm in length",
+   "quote_sha": "fc2b7bd6d5736e46"
+  },
+  {
+   "fact_id": "F003",
    "statement": "Knoetschkesuchus primarily fed on small prey such as invertebrates, amphibians, and mammals.",
    "category": "paleobiology",
    "chunk_id": "knoetschkesuchus:enwiki:2",
    "lang": "en",
-   "quote": "that primarily fed on small prey, including invertebrates, amphibians, and mammals.",
-   "quote_sha": "4d18415b0e5989f3"
+   "quote": "that primarily fed on small prey, including invertebrates, amphibians, and mammals",
+   "quote_sha": "6e6af1884ebfef0f"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species Knoetschkesuchus guimarotae was named based on over 400 specimens, including several partial skeletons.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:2",
+   "lang": "en",
+   "quote": "K. guimarotae, named from over 400 specimens including several partial skeletons",
+   "quote_sha": "4eaa080252f0b9c1"
   },
   {
    "fact_id": "F005",
@@ -204,12 +232,21 @@
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:2",
    "lang": "en",
-   "quote": "Knoetschkesuchus only has two distinct types of teeth, lacking the leaf-shaped teeth seen in other atoposaurids.",
-   "quote_sha": "6c2bc97addc4a782"
+   "quote": "Knoetschkesuchus only has two distinct types of teeth, lacking the leaf-shaped teeth seen in other atoposaurids",
+   "quote_sha": "2292861f89ef07dd"
   },
   {
    "fact_id": "F006",
-   "statement": "The deposits containing K. langenbergensis date to the Upper Kimmeridgian stage of the Jurassic.",
+   "statement": "Fossils of Knoetschkesuchus langenbergensis were found in the Langenberg Quarry in the Harz Mountains near Goslar, Lower Saxony, Germany.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:3",
+   "lang": "en",
+   "quote": "located within the Langenberg Quarry in the Harz Mountains near Goslar, Lower Saxony, Germany",
+   "quote_sha": "9e45e6b03f482ba9"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The deposits containing Knoetschkesuchus langenbergensis fossils date to the Upper Kimmeridgian stage of the Jurassic.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:3",
    "lang": "en",
@@ -217,52 +254,70 @@
    "quote_sha": "8bdd8b635483bf0a"
   },
   {
-   "fact_id": "F007",
-   "statement": "The species K. guimarotae originates from the Guimarota quarry near Leiria, Portugal.",
-   "category": "discovery",
-   "chunk_id": "knoetschkesuchus:enwiki:4",
-   "lang": "en",
-   "quote": "K. guimarotae originates from the lignite layers of the Guimarota quarry, located near Leiria, Portugal.",
-   "quote_sha": "1d096a3f41be85a4"
-  },
-  {
    "fact_id": "F008",
-   "statement": "The Guimarota strata containing K. guimarotae have been dated to the Kimmeridgian based on fossil ostracods.",
-   "category": "time_and_habitat",
-   "chunk_id": "knoetschkesuchus:enwiki:4",
+   "statement": "Knoetschkesuchus langenbergensis was described in a 2017 paper by Daniela Schwarz, Maik Raddatz, and Oliver Wings.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:3",
    "lang": "en",
-   "quote": "which has been dated to the Kimmeridgian on the basis of fossil ostracods.",
-   "quote_sha": "4f56f31b50cc75cc"
+   "quote": "described in a 2017 paper published by Daniela Schwarz, Maik Raddatz, and Oliver Wings",
+   "quote_sha": "023c00dfd1094cec"
   },
   {
    "fact_id": "F009",
-   "statement": "K. guimarotae measures a maximum of 55 cm in length, consistent with other small Atoposauridae.",
-   "category": "description",
-   "chunk_id": "knoetschkesuchus:enwiki:5",
+   "statement": "The genus name Knoetschkesuchus honors Nils Knötschke, a researcher at the Dinosaurier-Freilichtmuseum Münchehagen responsible for the Langenberg Quarry specimens.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:3",
    "lang": "en",
-   "quote": "As with other members of the Atoposauridae, Knoetschkesuchus is very small, with K. guimarotae measuring only 55 cm long at maximum.",
-   "quote_sha": "b54854816d087e51"
+   "quote": "The genus name Knoetschkesuchus combines the family name of Nils Knötschke, a researcher at the DFMMh who was responsible for the collection, curation, and preparation of Langenberg Quarry specimens",
+   "quote_sha": "1adc4fb5b212c342"
   },
   {
    "fact_id": "F010",
+   "statement": "Knoetschkesuchus guimarotae originates from the lignite layers of the Guimarota quarry near Leiria, Portugal.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:4",
+   "lang": "en",
+   "quote": "K. guimarotae originates from the lignite layers of the Guimarota quarry, located near Leiria, Portugal",
+   "quote_sha": "e247d2cf28aee127"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The Guimarota strata containing K. guimarotae fossils have been dated to the Kimmeridgian based on fossil ostracods.",
+   "category": "time_and_habitat",
+   "chunk_id": "knoetschkesuchus:enwiki:4",
+   "lang": "en",
+   "quote": "which has been dated to the Kimmeridgian on the basis of fossil ostracods",
+   "quote_sha": "2f023f9863134ec5"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Some specimens of K. guimarotae show marks of scavenging.",
+   "category": "paleobiology",
+   "chunk_id": "knoetschkesuchus:enwiki:4",
+   "lang": "en",
+   "quote": "Some specimens show the marks of scavenging",
+   "quote_sha": "a2c330f07ce0b484"
+  },
+  {
+   "fact_id": "F013",
    "statement": "Both species of Knoetschkesuchus were quadrupedal with long and slender limbs.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:5",
    "lang": "en",
-   "quote": "Typical of the group, both species were quadrupedal, bearing long and slender limbs.",
-   "quote_sha": "e08591d216f752b6"
+   "quote": "Typical of the group, both species were quadrupedal, bearing long and slender limbs",
+   "quote_sha": "ccdbc7cbff378d7d"
   },
   {
-   "fact_id": "F011",
-   "statement": "Both species have two rows of bony, rectangular osteoderms on their backs that are wider than they are long.",
+   "fact_id": "F014",
+   "statement": "Each osteoderm of Knoetschkesuchus bears a longitudinal keel, which is less developed in K. langenbergensis than in K. guimarotae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:5",
    "lang": "en",
-   "quote": "The backs of both of the known species are covered with two rows of bony rectangular osteoderms, centred at the midline, that are wider than they are long.",
-   "quote_sha": "20a98cf6f3a98a2d"
+   "quote": "Each osteoderm bears a keel running longitudinally, although the keels are less-developed in K. langenbergensis",
+   "quote_sha": "9ad20f3b03422c0e"
   },
   {
-   "fact_id": "F012",
+   "fact_id": "F015",
    "statement": "The skull of Knoetschkesuchus is relatively short, with the snout comprising 47% of skull length in K. langenbergensis and 42% in K. guimarotae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:6",
@@ -271,26 +326,44 @@
    "quote_sha": "b56c7e32364febbf"
   },
   {
-   "fact_id": "F013",
-   "statement": "The short snouts of Knoetschkesuchus allow them to be classified as brevirostrine crocodilians.",
+   "fact_id": "F016",
+   "statement": "The short snout of Knoetschkesuchus allows it to be classified as a brevirostrine crocodilian.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:6",
    "lang": "en",
-   "quote": "which allows them to be classified as brevirostrine crocodilians.",
-   "quote_sha": "0b6935851180bdd8"
+   "quote": "which allows them to be classified as brevirostrine crocodilians",
+   "quote_sha": "863f82b4131ad8de"
   },
   {
-   "fact_id": "F014",
-   "statement": "The antorbital fenestra is small (9% the length of the eye socket) and its presence is unique to Knoetschkesuchus among atoposaurids.",
+   "fact_id": "F017",
+   "statement": "The oval-shaped antorbital fenestra in Knoetschkesuchus is small, measuring only 9% of the eye socket's length.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:7",
    "lang": "en",
-   "quote": "The oval-shaped antorbital fenestra is small, being only 9% the length of the eye socket; its presence is unique to both species of the genus among atoposaurids.",
-   "quote_sha": "8488e6631f3b14b1"
+   "quote": "The oval-shaped antorbital fenestra is small, being only 9% the length of the eye socket",
+   "quote_sha": "2efbdabf04c93e2f"
   },
   {
-   "fact_id": "F015",
-   "statement": "In Knoetschkesuchus, the pterygoid bone on the bottom of the skull is approximately twice as wide as it is long.",
+   "fact_id": "F018",
+   "statement": "The presence of the antorbital fenestra is unique to both species of Knoetschkesuchus among atoposaurids.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:enwiki:7",
+   "lang": "en",
+   "quote": "its presence is unique to both species of the genus among atoposaurids",
+   "quote_sha": "5fa7c64040da5c51"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "Both species of Knoetschkesuchus were formerly classified as belonging to the genus Theriosuchus.",
+   "category": "classification",
+   "chunk_id": "knoetschkesuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Both species were formerly recognized as belonging to Theriosuchus",
+   "quote_sha": "d5336233224dd8e1"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "The pterygoid bone at the bottom of the Knoetschkesuchus skull is approximately twice as wide as it is long.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:8",
    "lang": "en",
@@ -298,34 +371,34 @@
    "quote_sha": "5fc9476a608830e9"
   },
   {
-   "fact_id": "F016",
-   "statement": "Unlike Theriosuchus, the choanae in Knoetschkesuchus are not embedded in a wide bowl-like depression.",
+   "fact_id": "F021",
+   "statement": "A ridge formed by a projection on the front of the pterygoid bone has furrow-like depressions on either side that contain the choanae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:8",
    "lang": "en",
-   "quote": "In Theriosuchus, unlike Knoetschkesuchus, the choanae are embedded in a wider bowl-like depression.",
-   "quote_sha": "df2baeb482ece23a"
+   "quote": "At the front of the pterygoid is a small projection that extends backwards to form a ridge, on either side of which is a furrow-like depression (the choanal groove) containing the choanae.",
+   "quote_sha": "c72e3d3fb2484df9"
   },
   {
-   "fact_id": "F017",
-   "statement": "In K. langenbergensis, the convexity found on the bottom of the jaw in K. guimarotae is replaced by a concavity.",
+   "fact_id": "F022",
+   "statement": "When viewed from the side, the basisphenoid bone resembles a triangular hatchet in shape.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:enwiki:8",
+   "lang": "en",
+   "quote": "The basisphenoid resembles a triangular hatchet in shape when viewed from the side.",
+   "quote_sha": "7e66db82ef2f213d"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "The side of the dentary bone is pitted, with the pits being much denser in K. langenbergensis than in K. guimarotae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:9",
    "lang": "en",
-   "quote": "The latter convexity is replaced by a concavity in K. langenbergensis.",
-   "quote_sha": "4597d91e30b62d86"
+   "quote": "The side of the dentary is pitted, albeit much more densely so in K. langenbergensis.",
+   "quote_sha": "0e7f9246a3b832d8"
   },
   {
-   "fact_id": "F018",
-   "statement": "The oval-shaped external mandibular fenestra is a feature unique to the genus Knoetschkesuchus among atoposaurids.",
-   "category": "description",
-   "chunk_id": "knoetschkesuchus:enwiki:9",
-   "lang": "en",
-   "quote": "The presence of the oval-shaped external mandibular fenestra is unique to the genus among atoposaurids.",
-   "quote_sha": "df1ece40612fbdb1"
-  },
-  {
-   "fact_id": "F019",
+   "fact_id": "F024",
    "statement": "Both species of Knoetschkesuchus possess only two distinct types of teeth, a trait unique among atoposaurids.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:10",
@@ -334,8 +407,8 @@
    "quote_sha": "d1994ada57f32b64"
   },
   {
-   "fact_id": "F020",
-   "statement": "Both species of Knoetschkesuchus have five premaxillary teeth, with the fourth being about one-third larger than the others.",
+   "fact_id": "F025",
+   "statement": "Both species have five premaxillary teeth, with the fourth being about one-third larger than the others.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:10",
    "lang": "en",
@@ -343,8 +416,8 @@
    "quote_sha": "bbef5b91d0addda2"
   },
   {
-   "fact_id": "F021",
-   "statement": "The maxilla of K. langenbergensis has 12 distinct tooth sockets.",
+   "fact_id": "F026",
+   "statement": "The maxilla has 12 distinct sockets in K. langenbergensis.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:10",
    "lang": "en",
@@ -352,8 +425,8 @@
    "quote_sha": "1a3a8c020f8c9e74"
   },
   {
-   "fact_id": "F022",
-   "statement": "The dentary of K. langenbergensis exhibits 21 teeth, while K. guimarotae has at least 20.",
+   "fact_id": "F027",
+   "statement": "The dentary exhibits 21 teeth in K. langenbergensis and at least 20 in K. guimarotae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:enwiki:10",
    "lang": "en",
@@ -361,8 +434,8 @@
    "quote_sha": "4ae744884a12d12d"
   },
   {
-   "fact_id": "F023",
-   "statement": "Specimens of K. langenbergensis were preliminarily described in a 2006 paper by Hans-Volker Karl et al. and initially referred to the genus Theriosuchus.",
+   "fact_id": "F028",
+   "statement": "Specimens of K. langenbergensis were first preliminarily described in a 2006 paper by Hans-Volker Karl et al. and initially referred to the genus Theriosuchus.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:enwiki:11",
    "lang": "en",
@@ -370,8 +443,17 @@
    "quote_sha": "89093dff2ff6f95e"
   },
   {
-   "fact_id": "F024",
-   "statement": "Phylogenetic analyses consistently show that Atoposauridae, represented by Knoetschkesuchus, Theriosuchus, and Alligatorium, forms a monophyletic clade.",
+   "fact_id": "F029",
+   "statement": "In 2016, Mark Young et al. criticized previous diagnoses of Theriosuchus, noting that many characters were widely distributed among Atoposauridae, difficult to assess, or not present at all.",
+   "category": "discovery",
+   "chunk_id": "knoetschkesuchus:enwiki:11",
+   "lang": "en",
+   "quote": "In 2016 Mark Young et al. criticized these diagnoses, noting that many characters were either more widely distributed among the Atoposauridae, difficult to assess, or—in the case of the latter diagnosis—not present at all.",
+   "quote_sha": "f9c4dcf0164e3368"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "Phylogenetic analysis consistently found that Atoposauridae, represented by Knoetschkesuchus, Theriosuchus, and Alligatorium, forms a monophyletic clade.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:enwiki:11",
    "lang": "en",
@@ -379,26 +461,8 @@
    "quote_sha": "e7155433998dd0c1"
   },
   {
-   "fact_id": "F025",
-   "statement": "Phylogenetic analysis strongly supports a close relationship between K. langenbergensis and K. guimarotae, excluding other Theriosuchus species, as evidence for their separation into the genus Knoetschkesuchus.",
-   "category": "classification",
-   "chunk_id": "knoetschkesuchus:enwiki:11",
-   "lang": "en",
-   "quote": "Within this clade, a close relationship between K. langenbergensis and K. guimarotae, excluding other Theriosuchus species, was strongly supported, providing further evidence of these two species forming a separate genus.",
-   "quote_sha": "c75e8225d18ce994"
-  },
-  {
-   "fact_id": "F026",
-   "statement": "Researchers noted that the nasal bones completely divide the nostrils in Knoetschkesuchus, a trait not seen in the genus Theriosuchus, suggesting a distinction between them.",
-   "category": "debate",
-   "chunk_id": "knoetschkesuchus:enwiki:11",
-   "lang": "en",
-   "quote": "However, they noted that the nasals essentially completely divide the nostrils to the exclusion of other bones, which is not seen in the genus of Theriosuchus.",
-   "quote_sha": "f12cec236d73e9d6"
-  },
-  {
-   "fact_id": "F027",
-   "statement": "Schwarz et al. cited the fact that K. langenbergensis differs in four out of nine traits from the Theriosuchus diagnosis as a basis for separating it into the genus Knoetschkesuchus and revising the diagnosis.",
+   "fact_id": "F031",
+   "statement": "K. langenbergensis differs from the proposed Theriosuchus diagnosis in four out of nine traits, a difference cited by Schwarz et al. as the basis for separating Knoetschkesuchus into its own genus.",
    "category": "debate",
    "chunk_id": "knoetschkesuchus:enwiki:11",
    "lang": "en",
@@ -406,8 +470,8 @@
    "quote_sha": "d8933b0848e17664"
   },
   {
-   "fact_id": "F028",
-   "statement": "Knoetschkesuchus was relatively small and likely fed on invertebrates and possibly small vertebrates such as amphibians and mammals.",
+   "fact_id": "F032",
+   "statement": "Knoetschkesuchus was a small predator that primarily ate invertebrates and possibly small vertebrates like amphibians and mammals.",
    "category": "paleobiology",
    "chunk_id": "knoetschkesuchus:enwiki:12",
    "lang": "en",
@@ -415,7 +479,7 @@
    "quote_sha": "d58c1ea1ff65dc37"
   },
   {
-   "fact_id": "F029",
+   "fact_id": "F033",
    "statement": "During the Kimmeridgian, Europe consisted of scattered archipelagos surrounded by the shallow inland Tethys Ocean.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:12",
@@ -424,8 +488,8 @@
    "quote_sha": "9f9f3ff643c535c2"
   },
   {
-   "fact_id": "F030",
-   "statement": "The Langenberg Quarry containing K. langenbergensis is part of the Lower Saxony Basin, associated with the Rhenisch, Bohemian, and London-Brabant Massifs.",
+   "fact_id": "F034",
+   "statement": "The Langenberg Quarry where K. langenbergensis was found is located in the Lower Saxony Basin, associated with the Rhenisch, Bohemian, and London-Brabant Massifs.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:13",
    "lang": "en",
@@ -433,8 +497,8 @@
    "quote_sha": "672a07cc4842c71e"
   },
   {
-   "fact_id": "F031",
-   "statement": "Although the Langenberg Quarry environment was shallow marine during the Kimmeridgian, K. langenbergensis was likely not marine as fossils were transported from surrounding islands.",
+   "fact_id": "F035",
+   "statement": "Although the Langenberg Quarry was a shallow marine environment during the Kimmeridgian, K. langenbergensis was likely not marine because its fossils were transported from nearby islands.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:13",
    "lang": "en",
@@ -442,8 +506,8 @@
    "quote_sha": "cb696d724ed49f25"
   },
   {
-   "fact_id": "F032",
-   "statement": "The Guimarota locality where K. guimarotae is found is located in the eastern Lusitanian Basin, part of the Iberian Meseta.",
+   "fact_id": "F036",
+   "statement": "The Guimarota locality where K. guimarotae was found is in the eastern Lusitanian Basin, part of the Iberian Meseta.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:14",
    "lang": "en",
@@ -451,7 +515,7 @@
    "quote_sha": "bac0b4ca42cecb78"
   },
   {
-   "fact_id": "F033",
+   "fact_id": "F037",
    "statement": "Two species of Knoetschkesuchus are known: K. langenbergensis described by Schwartz et al. in 2017, and K. guimarotae originally classified as Theriosuchus guimarotae.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:eswiki:2",
@@ -460,8 +524,8 @@
    "quote_sha": "b4bfbaf6ad568ed7"
   },
   {
-   "fact_id": "F034",
-   "statement": "Specimens of K. langenbergensis include the holotype DFMMh/FV 200, a juvenile skull DFMMh/FV 605, an isolated angular bone DFMMh/FV 261, an isolated left dentary DFMMh/FV 790.12, an isolated femur DFMMh/FV 279, an isolated metatarsal DFMMh/FV 790.11, and a partial skeleton with osteoderms, vertebrae, and ribs DFMMh/FV 325.",
+   "fact_id": "F038",
+   "statement": "The fossils of K. langenbergensis include a partial adult skeleton with a skull, a complete juvenile skull, an isolated angular bone, an isolated left dentary, an isolated femur, an isolated metatarsal, and a partial skeleton with osteoderms, vertebrae, and ribs.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:eswiki:3",
    "lang": "es",
@@ -469,16 +533,16 @@
    "quote_sha": "704c8956df997073"
   },
   {
-   "fact_id": "F035",
-   "statement": "K. langenbergensis specimens were examined using a stereo microscope and described in 2017 by Daniela Schwarz, Maik Raddatz, and Oliver Wings.",
+   "fact_id": "F039",
+   "statement": "Knoetschkesuchus specimens are housed at the Dinosaurier-Freilichtmuseum Münchehagen in Rehburg-Loccum, Germany.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:eswiki:3",
    "lang": "es",
-   "quote": "Se practicaron exámenes con un estéreo microscopio en los especímenes, los cuales fueron descritos en 2017 en un artículo publicado por Daniela Schwarz, Maik Raddatz y Oliver Wings.",
-   "quote_sha": "ec56e40467179c9a"
+   "quote": "Los especímenes pertenecientes a Knoetschkesuchus son alojados en el Dinosaurier-Freilichtmuseum Münchehagen (por ello son etiquetados con la sigla DFMMh/FV) en Rehburg-Loccum, Alemania.",
+   "quote_sha": "c310041e5d11bc0a"
   },
   {
-   "fact_id": "F036",
+   "fact_id": "F040",
    "statement": "The genus Knoetschkesuchus was established by Schwarz et al. in 2017.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:eswiki:1",
@@ -487,7 +551,7 @@
    "quote_sha": "80860a7b37f323ce"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F041",
    "statement": "The type species of the genus Knoetschkesuchus is K. langenbergensis.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:eswiki:1",
@@ -496,8 +560,8 @@
    "quote_sha": "46f8bc906cbf3c8c"
   },
   {
-   "fact_id": "F038",
-   "statement": "The species K. guimarotae was originally named Theriosuchus guimarotae by Schwarz & Salisbury in 2005.",
+   "fact_id": "F042",
+   "statement": "The two species of Knoetschkesuchus are K. langenbergensis and K. guimarotae, the latter originally named Theriosuchus guimarotae.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:eswiki:1",
    "lang": "es",
@@ -505,8 +569,8 @@
    "quote_sha": "ae042aebb6f3154f"
   },
   {
-   "fact_id": "F039",
-   "statement": "Knoetschkesuchus is an extinct eusuchian atoposaurid crocodyliform that lived during the Late Jurassic in Germany and Portugal.",
+   "fact_id": "F043",
+   "statement": "Knoetschkesuchus is an extinct atoposaurid eusuchian crocodyliform that lived during the Late Jurassic in Germany and Portugal.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:eswiki:2",
    "lang": "es",
@@ -514,8 +578,8 @@
    "quote_sha": "51fc7f7c56962060"
   },
   {
-   "fact_id": "F040",
-   "statement": "Both species of Knoetschkesuchus functioned as small predators ecologically partitioned from other crocodilians, likely originating through dispersal over larger landmasses.",
+   "fact_id": "F044",
+   "statement": "Both species of Knoetschkesuchus functioned as small predators ecologically distinct from other contemporary crocodilians, likely originating through dispersal over larger landmasses.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:enwiki:12",
    "lang": "en",
@@ -523,8 +587,8 @@
    "quote_sha": "cc94bfbff7043cb6"
   },
   {
-   "fact_id": "F041",
-   "statement": "Some researchers previously attributed specimens of K. langenbergensis to another species of Theriosuchus, T. pusillus.",
+   "fact_id": "F045",
+   "statement": "Some researchers have attributed specimens assigned to K. langenbergensis to another species of Theriosuchus, T. pusillus.",
    "category": "debate",
    "chunk_id": "knoetschkesuchus:eswiki:2",
    "lang": "es",
@@ -532,8 +596,8 @@
    "quote_sha": "09d6cc39da8567cb"
   },
   {
-   "fact_id": "F042",
-   "statement": "Researchers Schwarz and colleagues assigned the species K. guimarotae to the genus Knoetschkesuchus, though it was originally classified as a species of Theriosuchus.",
+   "fact_id": "F046",
+   "statement": "Researchers Schwarz and colleagues assigned the species K. guimarotae to the genus Knoetschkesuchus, noting it was originally classified as a species of Theriosuchus.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:eswiki:4",
    "lang": "es",
@@ -541,7 +605,7 @@
    "quote_sha": "5f261b0b05848b28"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F047",
    "statement": "The species K. guimarotae originates from lignite layers found in the Guimarota quarry near Leiría, Portugal.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:eswiki:4",
@@ -550,8 +614,8 @@
    "quote_sha": "6adf4b1db3231e3a"
   },
   {
-   "fact_id": "F044",
-   "statement": "The geological formations containing K. guimarotae are dated to the Kimmeridgian stage based on fossil ostracods.",
+   "fact_id": "F048",
+   "statement": "The geological formations containing K. guimarotae have been dated to the Kimmeridgian stage based on fossil ostracods.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:eswiki:4",
    "lang": "es",
@@ -559,8 +623,8 @@
    "quote_sha": "95ce03e5c6002a95"
   },
   {
-   "fact_id": "F045",
-   "statement": "Fossils of K. guimarotae are housed at the Free University of Berlin's Institute of Geosciences.",
+   "fact_id": "F049",
+   "statement": "Fossils of K. guimarotae are housed at the Institute of Geosciences of the Free University of Berlin.",
    "category": "discovery",
    "chunk_id": "knoetschkesuchus:eswiki:4",
    "lang": "es",
@@ -568,16 +632,7 @@
    "quote_sha": "b7573bceb408e7aa"
   },
   {
-   "fact_id": "F046",
-   "statement": "In addition to the type specimen, nearly 400 additional specimens of K. guimarotae are known.",
-   "category": "discovery",
-   "chunk_id": "knoetschkesuchus:eswiki:4",
-   "lang": "es",
-   "quote": "Aparte del espécimen tipo IPFUB Gui Croc 7308 - el cual consiste de un cráneo parcial con mandíbulas, una vértebra del sacro, y dos osteodermos - se conocen cerca de 400 especímenes adicionales",
-   "quote_sha": "7a9e40eedb5dcfda"
-  },
-  {
-   "fact_id": "F047",
+   "fact_id": "F050",
    "statement": "Some specimens show evidence of having been scavenged by other animals.",
    "category": "paleobiology",
    "chunk_id": "knoetschkesuchus:eswiki:4",
@@ -586,8 +641,8 @@
    "quote_sha": "301ea0d4f6ebe7ef"
   },
   {
-   "fact_id": "F048",
-   "statement": "The species K. guimarotae was very small, reaching a maximum length of 55 centimeters.",
+   "fact_id": "F051",
+   "statement": "K. guimarotae was very small, reaching a maximum length of only 55 centimeters.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:5",
    "lang": "es",
@@ -595,8 +650,8 @@
    "quote_sha": "cff07877beb038a6"
   },
   {
-   "fact_id": "F049",
-   "statement": "The backs of both species are covered with two rows of rectangular bony osteoderms that are wider than they are long.",
+   "fact_id": "F052",
+   "statement": "The backs of both species were covered with two rows of rectangular bony osteoderms that were wider than they were long.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:5",
    "lang": "es",
@@ -604,8 +659,8 @@
    "quote_sha": "d7402e1fa91540cd"
   },
   {
-   "fact_id": "F050",
-   "statement": "Each osteoderm bears a longitudinal keel, though these keels are less developed in K. langenbergensis.",
+   "fact_id": "F053",
+   "statement": "Each osteoderm carried a longitudinal keel, though these keels were less developed in K. langenbergensis.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:5",
    "lang": "es",
@@ -613,8 +668,8 @@
    "quote_sha": "5448e63f528d6b8c"
   },
   {
-   "fact_id": "F051",
-   "statement": "In K. guimarotae, tail osteoderms had high, sharp keels, were longer than wide near the tail's end, and were domed.",
+   "fact_id": "F054",
+   "statement": "In K. guimarotae, tail osteoderms had high, sharp keels and were longer than wide, unlike other osteoderms, and were domed.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:5",
    "lang": "es",
@@ -622,17 +677,8 @@
    "quote_sha": "12e904fc7460b653"
   },
   {
-   "fact_id": "F052",
-   "statement": "The vertebrae of K. guimarotae were amphicoelous, meaning they were concave at both ends.",
-   "category": "description",
-   "chunk_id": "knoetschkesuchus:eswiki:5",
-   "lang": "es",
-   "quote": "Las vértebras de K. guimarotae eran anficélicas, es decir cóncavas en ambos extremos",
-   "quote_sha": "8bd5233b53ef1f19"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "The skull of Knoetschkesuchus was relatively short, with the snout comprising 47% of the cranial length in K. langenbergensis and 42% in K. guimarotae.",
+   "fact_id": "F055",
+   "statement": "The skull was relatively short, with the snout comprising 47% of the cranial length in K. langenbergensis and 42% in K. guimarotae.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:6",
    "lang": "es",
@@ -640,17 +686,8 @@
    "quote_sha": "404f7b36c5079e70"
   },
   {
-   "fact_id": "F054",
-   "statement": "Two undulations run along the side of the snout, one small on the premaxilla and one larger and wider on the maxilla.",
-   "category": "description",
-   "chunk_id": "knoetschkesuchus:eswiki:6",
-   "lang": "es",
-   "quote": "A lo largo del costado del hocico hay dos ondulaciones, una pequeña en el premaxilar y una mayor y más ancha en el maxilar",
-   "quote_sha": "df02289cc7714dd7"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "In K. guimarotae, the upward-facing nostrils are clearly separated by the nasals, whereas this separation is unclear in K. langenbergensis.",
+   "fact_id": "F056",
+   "statement": "The upward-facing nostrils were clearly separated by the nasals in K. guimarotae, but this separation is unclear in K. langenbergensis.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:6",
    "lang": "es",
@@ -658,17 +695,17 @@
    "quote_sha": "fb97caa4a2d1798b"
   },
   {
-   "fact_id": "F056",
-   "statement": "The oval preorbital fenestra is very small, measuring only 9% of the length of the eye orbit.",
+   "fact_id": "F057",
+   "statement": "The oval anteorbital fenestra was very small, only 9% of the eye orbit length, and its presence in both species is a unique trait among atoposaurids.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:7",
    "lang": "es",
-   "quote": "La fenestra anteorbital en forma de óvalo es muy pequeña, con solo el 9% de la longitud de la órbita ocular",
-   "quote_sha": "6fcfb05e63a8de09"
+   "quote": "La fenestra anteorbital en forma de óvalo es muy pequeña, con solo el 9% de la longitud de la órbita ocular; su presencia en ambas especies del género es un rasgo único entre los atoposáuridos.",
+   "quote_sha": "7c3398dd8c111a14"
   },
   {
-   "fact_id": "F057",
-   "statement": "The eye orbit is large and oval, being 54% longer than it is high.",
+   "fact_id": "F058",
+   "statement": "The eye orbit was large and oval, being 54% longer than it was high.",
    "category": "description",
    "chunk_id": "knoetschkesuchus:eswiki:7",
    "lang": "es",
@@ -676,8 +713,107 @@
    "quote_sha": "bf83cbf179d04f24"
   },
   {
-   "fact_id": "F058",
-   "statement": "Knoetschkesuchus belongs to the parent group Atoposauridae.",
+   "fact_id": "F059",
+   "statement": "The postorbital had two rami joining in a slight curve, separated by an angle of 130 degrees in K. langenbergensis.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:7",
+   "lang": "es",
+   "quote": "El postorbital tiene dos ramos que se unen en una discreta curva, separados por un ángulo de 130° en K. langenbergensis.",
+   "quote_sha": "1f656beee49e179b"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "In the lower skull region, the pterygoid was nearly twice as wide as it was long.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:8",
+   "lang": "es",
+   "quote": "En la zona inferior del cráneo, el pterigoideo es cerca del doble de ancho que de largo.",
+   "quote_sha": "803aa125ea177170"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "In the related genus Theriosuchus, the choanae were immersed in a wide depression resembling a bowl.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:8",
+   "lang": "es",
+   "quote": "En Theriosuchus, las coanas se hallan inmersas en una depresión ancha que recuerda un cuenco.",
+   "quote_sha": "94f8a6a9a3ad2f6f"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "In K. guimarotae, the two halves of the dentary diverge at an angle of 20 degrees near the front and widen to 40 degrees further back.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:9",
+   "lang": "es",
+   "quote": "En K. guimarotae, las dos mitades del dentario divergen la una de la otra en un ángulo de 20° cerca del frente, y pasa a ser de 40° más hacia atrás.",
+   "quote_sha": "5a7979d69a7a4e71"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The presence of an oval-shaped external mandibular fenestra is a unique characteristic of this genus among atoposaurids.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:9",
+   "lang": "es",
+   "quote": "La presencia de la fenestra mandibular externa en forma de óvalo es una particularidad de este género entre los atoposáuridos.",
+   "quote_sha": "e236a64582b99c04"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "Both species of Knoetschkesuchus possess two types of teeth, a trait unique among atoposaurids.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "lang": "es",
+   "quote": "Ambas especies de Knoetschkesuchus tienen dos tipos de dientes, algo único entre los atoposáuridos.",
+   "quote_sha": "0b8ae68cc1eb34ad"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The first type of teeth found near the front of the jaw consists of conical pieces that are slightly constricted at the base and gently curved inward.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "lang": "es",
+   "quote": "El primer tipo de dientes, hallado cerca del frente de la mandíbula, corresponde a piezas cónicas, apenas constreñidas en la base, y levemente curvadas hacia adentro.",
+   "quote_sha": "c4dba9c8dcc3139e"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The pseudocanine teeth, which are the fourth and fifth maxillary teeth, are elongated (nearly double the size of other maxillary teeth), sharper, and more compressed at the base.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "lang": "es",
+   "quote": "Los dientes pseudocaniniformes, los cuales son el cuarto y quinto dientes maxilares, están alargados (con cerca del doble del tamaño de los otros dientes maxilares), más aguzados, y más comprimidos en la base.",
+   "quote_sha": "25885f3617baa13a"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "In K. guimarotae all tooth tips are sharp, whereas in K. langenbergensis they gradually become blunter.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "lang": "es",
+   "quote": "En K. guimarotae todas las puntas son afiladas, pero en K. langenbergensis estas se vuelven gradualmente más romas.",
+   "quote_sha": "60dc5dd7b848558c"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "In total, K. guimarotae had at least 15 maxillary teeth, while K. langenbergensis had 17 or 18.",
+   "category": "description",
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "lang": "es",
+   "quote": "En total, K. guimarotae tenía al menos 15 dientes maxilares, y K. langenbergensis 17 o 18.",
+   "quote_sha": "1d834a86c006edea"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Being relatively small, Knoetschkesuchus likely fed primarily on invertebrates and possibly small vertebrates, including amphibians and mammals.",
+   "category": "paleobiology",
+   "chunk_id": "knoetschkesuchus:eswiki:12",
+   "lang": "es",
+   "quote": "Al ser relativamente pequeño, Knoetschkesuchus se debió de haber alimentado principalmente de invertebrados y posiblemente pequeños vertebrados (incluyendo anfibios y mamíferos).",
+   "quote_sha": "ce5d400a139aa911"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The parent group of Knoetschkesuchus is the family Atoposauridae.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:pbdb:1",
    "lang": "en",
@@ -685,17 +821,8 @@
    "quote_sha": "e495a0a9289e1fc3"
   },
   {
-   "fact_id": "F059",
-   "statement": "Knoetschkesuchus is classified in the family Atoposauridae.",
-   "category": "classification",
-   "chunk_id": "knoetschkesuchus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Atoposauridae",
-   "quote_sha": "0f82f7df797c13f9"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "Knoetschkesuchus is classified in the class Reptilia.",
+   "fact_id": "F071",
+   "statement": "Knoetschkesuchus is classified within the class Reptilia.",
    "category": "classification",
    "chunk_id": "knoetschkesuchus:pbdb:1",
    "lang": "en",
@@ -703,8 +830,8 @@
    "quote_sha": "cdcaa2922520f735"
   },
   {
-   "fact_id": "F061",
-   "statement": "Knoetschkesuchus lived from the Kimmeridgian to the Tithonian stages, between 154.8 and 145.06 million years ago.",
+   "fact_id": "F072",
+   "statement": "Knoetschkesuchus lived during the Kimmeridgian to Tithonian stages, between 154.8 and 145.06 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "knoetschkesuchus:pbdb:1",
    "lang": "en",
@@ -715,66 +842,87 @@
  "rejected": [
   {
    "chunk_id": "knoetschkesuchus:enwiki:2",
-   "statement": "Knoetschkesuchus was a small, short-snouted crocodilian measuring about 55 cm in length.",
-   "category": "description",
-   "quote": "Knoetschkesuchus was a small and short-snouted crocodilian, measuring about 55 cm in length",
-   "reason": "statement copies the source wording: 'short-snouted crocodilian measuring about 55 cm in length'"
+   "statement": "The species Knoetschkesuchus langenbergensis was described by Schwarz and colleagues in 2017 based on two partial skeletons and various isolated bones.",
+   "category": "discovery",
+   "quote": "described by Schwarz and colleagues in 2017 based on two partial skeletons and various isolated bones",
+   "reason": "statement copies the source wording: 'and colleagues in 2017 based on two partial'"
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:2",
-   "statement": "Distinguishing traits of Knoetschkesuchus include a relatively wide skull and the presence of antorbital and mandibular fenestrae in all life stages.",
+   "statement": "Knoetschkesuchus is characterized by a relatively wide skull and the presence of antorbital and mandibular fenestrae in all life stages.",
    "category": "description",
-   "quote": "Other distinguishing traits include the relatively wide skull, and the presence of the antorbital and mandibular fenestrae in all life stages.",
+   "quote": "Other distinguishing traits include the relatively wide skull, and the presence of the antorbital and mandibular fenestrae in all life stages",
    "reason": "statement copies the source wording: 'antorbital and mandibular fenestrae in all life stages'"
   },
   {
-   "chunk_id": "knoetschkesuchus:enwiki:3",
-   "statement": "The type species K. langenbergensis was discovered in the Langenberg Quarry in the Harz Mountains near Goslar, Lower Saxony, Germany.",
-   "category": "discovery",
-   "quote": "The material of the type species of Knoetschkesuchus, K. langenbergensis, comes from a marly limestone bed... located within the Langenberg Quarry in the Harz Mountains near Goslar, Lower Saxony, Germany.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "knoetschkesuchus:enwiki:3",
-   "statement": "The specimens of K. langenbergensis were described in a 2017 paper by Daniela Schwarz, Maik Raddatz, and Oliver Wings.",
-   "category": "discovery",
-   "quote": "Stereo microscopy was used to examine the specimens, which were described in a 2017 paper published by Daniela Schwarz, Maik Raddatz, and Oliver Wings.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "knoetschkesuchus:enwiki:3",
-   "statement": "The genus name Knoetschkesuchus honors researcher Nils Knötschke and uses the crocodilian suffix 'suchus'.",
-   "category": "discovery",
-   "quote": "The genus name Knoetschkesuchus combines the family name of Nils Knötschke... with the common crocodilian suffix suchus",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "knoetschkesuchus:enwiki:4",
-   "statement": "Over 400 specimens of K. guimarotae are known, including the type specimen IPFUB Gui Croc 7308.",
-   "category": "discovery",
-   "quote": "Alongside the type specimen IPFUB Gui Croc 7308... over 400 additional specimens are known",
-   "reason": "quote not found verbatim in the source"
+   "chunk_id": "knoetschkesuchus:enwiki:5",
+   "statement": "The backs of both Knoetschkesuchus species are covered with two rows of bony, rectangular osteoderms centered at the midline that are wider than they are long.",
+   "category": "description",
+   "quote": "The backs of both of the known species are covered with two rows of bony rectangular osteoderms, centred at the midline, that are wider than they are long",
+   "reason": "statement copies the source wording: 'species are covered with two rows of bony'"
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:7",
    "statement": "The eye socket of Knoetschkesuchus is large and oval, being 54% longer than it is tall.",
    "category": "description",
-   "quote": "The eye socket is large and oval, being 54% longer than it is tall.",
+   "quote": "The eye socket is large and oval, being 54% longer than it is tall",
    "reason": "statement copies the source wording: 'is large and oval being 54 longer than'"
   },
   {
+   "chunk_id": "knoetschkesuchus:enwiki:7",
+   "statement": "In K. langenbergensis, the postorbital bone bears two branches that join with a gentle curve separated by an angle of 130°.",
+   "category": "description",
+   "quote": "The postorbital bears two branches that join with a gentle curve, separated by an angle of 130° in K. langenbergensis",
+   "reason": "statement copies the source wording: 'bears two branches that join with a gentle'"
+  },
+  {
    "chunk_id": "knoetschkesuchus:enwiki:8",
-   "statement": "In both Knoetschkesuchus species, the ectopterygoid bone extends forward from the pterygoid and is constricted near the middle to form an hourglass-like shape.",
+   "statement": "The ectopterygoid bone extends forward from the pterygoid and is constricted near the middle to form an hourglass-like shape in both Knoetschkesuchus species.",
    "category": "description",
    "quote": "Extending forward from either side of the pterygoid is the ectopterygoid; in both species, this bone is constricted near the middle to form an hourglass-like shape.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:9",
-   "statement": "In K. guimarotae, the two halves of the dentary diverge at an angle of 20° near the front and 40° near the back.",
+   "statement": "In K. guimarotae, the two halves of the dentary diverge at an angle of 20 degrees near the front and 40 degrees near the back.",
    "category": "description",
    "quote": "In K. guimarotae, the two halves of the dentary diverge from each other at an angle of 20° near the front, then 40° near the back.",
    "reason": "statement copies the source wording: 'guimarotae the two halves of the dentary diverge'"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:enwiki:9",
+   "statement": "Near the back of the dentary in both species, the pits are replaced by longitudinal grooves.",
+   "category": "description",
+   "quote": "Near the back of the dentary in both species, the pits are replaced by longitudinal grooves.",
+   "reason": "statement copies the source wording: 'the back of the dentary in both species'"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:enwiki:9",
+   "statement": "The presence of an oval-shaped external mandibular fenestra is unique to the genus Knoetschkesuchus among atoposaurids.",
+   "category": "description",
+   "quote": "The presence of the oval-shaped external mandibular fenestra is unique to the genus among atoposaurids.",
+   "reason": "statement copies the source wording: 'oval-shaped external mandibular fenestra is unique to the'"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:enwiki:10",
+   "statement": "The first type of teeth found near the front of the jaw are conical, slightly constricted at the base, and curved slightly inwards.",
+   "category": "description",
+   "quote": "The first type of teeth, found near the front of the jaw, are conical, slightly constricted at the base, and curved slightly inwards.",
+   "reason": "statement copies the source wording: 'The first type of teeth found near the'"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:enwiki:10",
+   "statement": "The fourth and fifth maxillary teeth are enlarged pseudocaniniform teeth that are about twice the size of other maxillary teeth, more pointed, and more constricted at the base.",
+   "category": "description",
+   "quote": "A subtype is represented by the canine-like or pseudocaniniform teeth. They are the fourth and fifth maxillary teeth, and are enlarged (about twice the size of the other maxillary teeth), more pointed, and more constricted at the base.",
+   "reason": "statement copies the source wording: 'other maxillary teeth more pointed and more constricted'"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:enwiki:10",
+   "statement": "The second type of teeth, making up the rest of the dentition, are shaped like thin lanceheads with a wide base and a narrower tip.",
+   "category": "description",
+   "quote": "The second type of teeth, which constitutes the rest of the teeth, are shaped like thin lanceheads, with a wide base and a narrower tip.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:10",
@@ -785,31 +933,52 @@
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:11",
-   "statement": "Schwarz et al. described K. langenbergensis in 2017 using a revised 2015 phylogenetic dataset by Alan Turner that included K. langenbergensis and T. grandinaris.",
-   "category": "discovery",
-   "quote": "In the 2017 description of K. langenbergensis, Schwarz et al. used the 2015 phylogenetic dataset of Alan Turner, which was revised to remove irrelevant characteristics, add K. langenbergensis and T. grandinaris, and correct flaws in the coded traits of K. guimarotae.",
-   "reason": "quote not found verbatim in the source"
+   "statement": "Schwarz et al. identified seven traits that unite K. langenbergensis and K. guimarotae and separate them from other species referred to Theriosuchus.",
+   "category": "classification",
+   "quote": "According to Schwarz et al., seven traits unite K. langenbergensis and K. guimarotae, and separate them from other species referred to Theriosuchus.",
+   "reason": "statement copies the source wording: 'K guimarotae and separate them from other species'"
   },
   {
    "chunk_id": "knoetschkesuchus:enwiki:14",
-   "statement": "The Guimarota strata were deposited in a brackish lagoon that periodically received both freshwater and saltwater influxes.",
+   "statement": "The Guimarota strata were deposited in a brackish lagoon that periodically received both freshwater and saltwater.",
    "category": "time_and_habitat",
    "quote": "The vertebrate-bearing Guimarota-strata was deposited in a brackish lagoon that periodically received both freshwater and saltwater influxes.",
    "reason": "statement copies the source wording: 'deposited in a brackish lagoon that periodically received'"
   },
   {
    "chunk_id": "knoetschkesuchus:eswiki:3",
-   "statement": "The genus name Knoetschkesuchus combines the surname of Nils Knötschke, who collected and prepared specimens, with the Greek suffix suchus meaning crocodile.",
+   "statement": "The genus name Knoetschkesuchus combines the surname of Nils Knötschke, who collected and prepared the Langenberg Quarry specimens, with the Greek suffix suchus meaning crocodile.",
    "category": "discovery",
    "quote": "El nombre del género, Knoetschkesuchus combina el apellido de Nils Knötschke, un investigador del DFMMh quien fue responsable de la recolección, curación y preparación de los especímenes de la Cantera Langenberg, junto con el sufijo suchus, proveniente del griego souchos (cocodrilo), el cual es comúnmente usado en los nombres de crocodilomorfos.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "knoetschkesuchus:pbdb:1",
-   "statement": "The type species of the genus Knoetschkesuchus is K. langenbergensis.",
-   "category": "classification",
-   "quote": "Type species: Knoetschkesuchus langenbergensis",
-   "reason": "duplicate"
+   "chunk_id": "knoetschkesuchus:eswiki:4",
+   "statement": "Besides the type specimen, nearly 400 additional specimens of K. guimarotae are known.",
+   "category": "discovery",
+   "quote": "Aparte del espécimen tipo IPFUB Gui Croc 7308 - el cual consiste de un cráneo parcial con mandíbulas, una vértebra del sacro, y dos osteodermos - se conocen cerca de 400 especímenes adicionales.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:eswiki:5",
+   "statement": "The vertebrae of K. guimarotae were amphicoelous, meaning they were concave at both ends.",
+   "category": "description",
+   "quote": "Las vértebras de K. guimarotae eran anficélicas, es decir cóncavas en ambos extremos.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:eswiki:6",
+   "statement": "Two undulations ran along the side of the snout: a small one in the premaxilla and a larger, wider one in the maxilla.",
+   "category": "description",
+   "quote": "A lo largo del costado del hocico hay dos ondulaciones, una pequeña en el premaxilar y una mayor y más ancha en el maxilar.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "knoetschkesuchus:eswiki:10",
+   "statement": "The second type of teeth, making up the rest of the dentition, are lanceolate in shape with a wide base and a narrower tip.",
+   "category": "description",
+   "quote": "El segundo tipo de dientes, que constituye el resto de piezas dentales, tienen forma lanceolada, con una base ancha y una punta más estrecha.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

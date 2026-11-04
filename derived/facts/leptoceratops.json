@@ -2,9 +2,9 @@
  "taxon": "Leptoceratops",
  "taxon_key": "leptoceratops",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "a6cf6964a23ed01f",
- "generated_at": "2026-11-03T03:57:25+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "0a721b201a863f6a",
+ "generated_at": "2026-11-04T05:53:49+00:00",
  "citations": {
   "leptoceratops:enwiki:1": {
    "source": "wikipedia_article",
@@ -76,6 +76,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "leptoceratops:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Leptoceratops (Palaeoecology)",
+   "url": "https://en.wikipedia.org/wiki/Leptoceratops?oldid=1318877276",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "leptoceratops:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Leptoceratops gracilis (taxobox)",
@@ -136,25 +143,16 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Leptoceratops is a genus of ceratopsian dinosaur.",
-   "category": "classification",
+   "statement": "Leptoceratops lived during the Late Cretaceous period, specifically the Maastrichtian age.",
+   "category": "time_and_habitat",
    "chunk_id": "leptoceratops:enwiki:1",
    "lang": "en",
-   "quote": "genus: Leptoceratops",
-   "quote_sha": "40aefb078170aa7b"
+   "quote": "fossil_range: Late Cretaceous (Maastrichtian),",
+   "quote_sha": "a34e63a2bd362888"
   },
   {
    "fact_id": "F002",
-   "statement": "The type species of the genus is Leptoceratops gracilis.",
-   "category": "classification",
-   "chunk_id": "leptoceratops:enwiki:1",
-   "lang": "en",
-   "quote": "species: gracilis",
-   "quote_sha": "cd4de54d0f7383e7"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "The genus Leptoceratops was named by Barnum Brown in 1914.",
+   "statement": "The genus Leptoceratops was first described by Barnum Brown in 1914.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:1",
    "lang": "en",
@@ -162,134 +160,197 @@
    "quote_sha": "e1d5bfc5cdfda89e"
   },
   {
-   "fact_id": "F004",
-   "statement": "Leptoceratops lived during the Late Cretaceous period, specifically the Maastrichtian age.",
-   "category": "time_and_habitat",
+   "fact_id": "F003",
+   "statement": "The type species of the genus is Leptoceratops gracilis.",
+   "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:1",
    "lang": "en",
-   "quote": "fossil_range: Late Cretaceous (Maastrichtian)",
-   "quote_sha": "5afcfd366a94517e"
+   "quote": "species: gracilis",
+   "quote_sha": "cd4de54d0f7383e7"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Leptoceratops was first discovered in Alberta in 1910 and named in 1914 by Barnum Brown.",
+   "category": "discovery",
+   "chunk_id": "leptoceratops:enwiki:2",
+   "lang": "en",
+   "quote": "First found in Alberta in 1910, the type species Leptoceratops gracilis was named in 1914 by Barnum Brown",
+   "quote_sha": "a1693eae140b8df5"
   },
   {
    "fact_id": "F005",
-   "statement": "Leptoceratops was first discovered in Alberta in 1910.",
+   "statement": "Charles M. Sternberg uncovered three additional skeletons of Leptoceratops in the Scollard Formation in 1947.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "First found in Alberta in 1910",
-   "quote_sha": "7fc7ebce46fcf800"
+   "quote": "Additional specimens found in the Scollard include one complete and two mostly complete skeletons together, uncovered in 1947 by Charles M. Sternberg.",
+   "quote_sha": "620193e9cb9172a0"
   },
   {
    "fact_id": "F006",
-   "statement": "Barnum Brown named the type species Leptoceratops gracilis in 1914 based on remains from the Scollard Formation of Alberta.",
-   "category": "discovery",
+   "statement": "Leptoceratops had a very large head with a strong jaw but lacked horns and possessed only a very reduced frill.",
+   "category": "description",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "named in 1914 by Barnum Brown for a partial skull and skeleton of two individuals found in the Scollard Formation of Alberta",
-   "quote_sha": "f0b1e6640881da13"
+   "quote": "The head is very large with a strong jaw, but lacks horns and has a very reduced frill.",
+   "quote_sha": "864f14109b931480"
   },
   {
    "fact_id": "F007",
-   "statement": "Charles M. Sternberg uncovered additional Leptoceratops skeletons in the Scollard Formation in 1947.",
-   "category": "discovery",
+   "statement": "Leptoceratops was approximately 2 meters long and possessed a mix of primitive and derived ceratopsian features.",
+   "category": "description",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "Additional specimens found in the Scollard include one complete and two mostly complete skeletons together, uncovered in 1947 by Charles M. Sternberg",
-   "quote_sha": "3f0c644e107f3170"
+   "quote": "which has a mixture of primitive and derived ceratopsian features and is around 2 m long.",
+   "quote_sha": "57c8e9c4066e72f1"
   },
   {
    "fact_id": "F008",
-   "statement": "New specimens of Leptoceratops gracilis have been found in the Hell Creek Formation of Montana and the Lance Formation of Wyoming.",
-   "category": "discovery",
+   "statement": "Leptoceratops likely moved bipedally at high speeds and quadrupedally when moving slowly.",
+   "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "new specimens of L. gracilis include bonebed remains from the Hell Creek Formation of Montana and a partial skeleton from the Lance Formation of Wyoming",
-   "quote_sha": "35eb464627f2cf52"
+   "quote": "Leptoceratops was likely bipedal when moving at speed and quadrupedal when moving slowly.",
+   "quote_sha": "a6b554a7b910f2ca"
   },
   {
    "fact_id": "F009",
-   "statement": "Leptoceratops was approximately 2 meters long.",
-   "category": "description",
+   "statement": "Leptoceratops had unique teeth among dinosaurs that showed wear patterns driven by a mammal-like jaw rotation during chewing.",
+   "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "is around 2 m long",
-   "quote_sha": "ec3a6751eb17d8aa"
+   "quote": "The teeth of Leptoceratops are unique among dinosaurs, showing tooth wear in a fashion that must have been driven by mammal-like rotation of the jaw while chewing.",
+   "quote_sha": "6ac4b6d553e75149"
   },
   {
    "fact_id": "F010",
-   "statement": "Leptoceratops had a large head with a strong jaw, but it lacked horns and had a very reduced frill.",
-   "category": "description",
+   "statement": "Leptoceratops had an efficient bite capable of processing various food types including angiosperms, conifers, and cycads.",
+   "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "The head is very large with a strong jaw, but lacks horns and has a very reduced frill",
-   "quote_sha": "a8d1b533edf45798"
+   "quote": "This, along with the handling of stress in the jaws, show that Leptoceratops had an efficient bite allowing it to be adaptable to different food types, such as the angiosperms, conifers, or cycads found in its environment.",
+   "quote_sha": "eca36d7143dd27b3"
   },
   {
    "fact_id": "F011",
-   "statement": "Leptoceratops had unique teeth that showed wear patterns driven by a mammal-like jaw rotation while chewing.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:2",
-   "lang": "en",
-   "quote": "The teeth of Leptoceratops are unique among dinosaurs, showing tooth wear in a fashion that must have been driven by mammal-like rotation of the jaw while chewing",
-   "quote_sha": "6bd58bf3dcadb766"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "Leptoceratops had an efficient bite that allowed it to eat various plants including angiosperms, conifers, and cycads.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:2",
-   "lang": "en",
-   "quote": "allowing it to be adaptable to different food types, such as the angiosperms, conifers, or cycads found in its environment",
-   "quote_sha": "7cabd1fac4300e31"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "Leptoceratops lived in a semi-humid floodplain environment with braided streams and small forests.",
+   "statement": "Leptoceratops inhabited a semi-humid floodplain environment with braided streams and small-treed forests.",
    "category": "time_and_habitat",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "The environment inhabited by Leptoceratops was a semi-humid floodplain region with regular braided streams and small-treed forests",
-   "quote_sha": "3b636a9bc82088d8"
+   "quote": "The environment inhabited by Leptoceratops was a semi-humid floodplain region with regular braided streams and small-treed forests.",
+   "quote_sha": "7c69d0be889dbfe2"
   },
   {
-   "fact_id": "F014",
+   "fact_id": "F012",
    "statement": "It is possible that Leptoceratops dug and lived in multi-generational burrows.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:2",
    "lang": "en",
-   "quote": "It is possible that within these environments, Leptoceratops dug and lived in multi-generational burrows",
-   "quote_sha": "3e2c4f4fb9ee761c"
+   "quote": "It is possible that within these environments, Leptoceratops dug and lived in multi-generational burrows.",
+   "quote_sha": "3a4e932c8b3bc0c5"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Two ceratopsian specimens were discovered in 1910 along the Red Deer River in Alberta by an American Museum of Natural History expedition.",
+   "category": "discovery",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "lang": "en",
+   "quote": "A 1910 expedition by the American Museum of Natural History (AMNH) discovered two ceratopsian specimens from the Maastrichtian age of the Cretaceous along the Red Deer River in Alberta, Canada.",
+   "quote_sha": "66ed5d58ae28805e"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "In 2013, nine specimens of Leptoceratops were found in the lower portion of the Scollard Formation, dating to approximately 65.5 to 66.1 million years ago.",
+   "category": "discovery",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "lang": "en",
+   "quote": "Within the Scollard Formation, Leptoceratops was known in 2013 from nine specimens found in the lower portion, with an estimated range of 65.5-66.1 million years old (0.5 my older with recalibration).",
+   "quote_sha": "fbaaae22a9d07785"
   },
   {
    "fact_id": "F015",
-   "statement": "A 1910 AMNH expedition discovered two ceratopsian specimens along the Red Deer River in Alberta, Canada.",
+   "statement": "Barnum Brown collected an additional specimen of Leptoceratops from the St. Mary River Formation of Montana in 1916.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:3",
    "lang": "en",
-   "quote": "A 1910 expedition by the American Museum of Natural History (AMNH) discovered two ceratopsian specimens from the Maastrichtian age of the Cretaceous along the Red Deer River in Alberta, Canada",
-   "quote_sha": "3a571ed14a2b38b4"
+   "quote": "In 1916, Brown collected an additional specimen, AMNH 5464, from the St. Mary River Formation of Montana.",
+   "quote_sha": "67633d0a2e7eba0d"
   },
   {
    "fact_id": "F016",
-   "statement": "The name Leptoceratops translates to 'slender small horn face', derived from Greek words for 'small' and 'horned face'.",
+   "statement": "Charles M. Sternberg established the genus Montanoceratops in 1951 to separate it from Leptoceratops.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:3",
    "lang": "en",
-   "quote": "The name translates as \"slender small horn face\", with the generic name derived from the Ancient Greek word leptos, 'small', and Ceratops, 'horned face'",
-   "quote_sha": "efd48c7a49ae0537"
+   "quote": "Sternberg named Montanoceratops in 1951.",
+   "quote_sha": "df9493633caac757"
   },
   {
    "fact_id": "F017",
-   "statement": "Charles M. Sternberg described three additional Leptoceratops skeletons from the Edmonton Formation in 1951.",
+   "statement": "Michael Ramus discovered a Leptoceratops locality in the Lance Formation of Wyoming in 1962.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:3",
    "lang": "en",
-   "quote": "Sternberg described three additional skeletons of Leptoceratops from the Edmonton Formation in 1951, including one complete individual",
-   "quote_sha": "776d3674f0d6e5a4"
+   "quote": "A Leptoceratops locality was found in 1962 within the Lance Formation of Wyoming by Michael Ramus, where a single individual was collected.",
+   "quote_sha": "47556a5d8ca08c80"
   },
   {
    "fact_id": "F018",
-   "statement": "Newer geological studies separated the Edmonton Formation into the Edmonton Group, with Leptoceratops known from the Scollard Formation.",
+   "statement": "John Ostrom described a Leptoceratops skeleton from Wyoming in 1978, noting its similarity to specimens from Alberta.",
+   "category": "discovery",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "lang": "en",
+   "quote": "Described in 1978 by American palaeontologist John Ostrom, the skeleton is very similar to the material assigned to Leptoceratops from Alberta",
+   "quote_sha": "4aae0d787af6fde9"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "Leptoceratops is the namesake genus of the family Leptoceratopsidae.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:enwiki:2",
+   "lang": "en",
+   "quote": "Together with related taxa, Leptoceratops is the eponymous genus of the family Leptoceratopsidae.",
+   "quote_sha": "589d33e41fb7b028"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Leptoceratops possessed high-spined tail vertebrae, though not as pronounced as those of Montanoceratops.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:2",
+   "lang": "en",
+   "quote": "The vertebrae of the tail were high-spined, though not as high as those of its relative Montanoceratops",
+   "quote_sha": "8eaeec5c16eb6280"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Leptoceratops had robustly built forelimbs and hindlimbs.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:2",
+   "lang": "en",
+   "quote": "The forelimbs and hindlimbs are robustly built",
+   "quote_sha": "ff1c7c6985b9b9ac"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "The pectoral and pelvic girdle bones of Leptoceratops were slender and resembled those of earlier ceratopsians.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:2",
+   "lang": "en",
+   "quote": "The pectoral and pelvis girdle bones were slender and more like earlier ceratopsians.",
+   "quote_sha": "81366c762ce2ef76"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Specimens CMN 8888 and 8887 were found 50 feet above the base of the Upper Edmonton member, with CMN 8889 located an additional 5 feet above them.",
+   "category": "discovery",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "lang": "en",
+   "quote": "CMN 8888 and 8887 were 50 ft above the base of the Upper Edmonton member, and CMN 8889 was an additional 5 ft above them.",
+   "quote_sha": "1ed42759c3f3e121"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "Newer geological studies have separated the Edmonton Formation into the Edmonton Group, with Leptoceratops known from the uppermost formation, the Scollard.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:3",
    "lang": "en",
@@ -297,89 +358,26 @@
    "quote_sha": "9b8b218abebfd6aa"
   },
   {
-   "fact_id": "F019",
-   "statement": "In 2013, nine Leptoceratops specimens from the Scollard Formation were dated to an estimated range of 65.5 to 66.1 million years ago.",
-   "category": "time_and_habitat",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "Within the Scollard Formation, Leptoceratops was known in 2013 from nine specimens found in the lower portion, with an estimated range of 65.5-66.1 million years old (0.5 my older with recalibration)",
-   "quote_sha": "3741b8e623b2bc43"
-  },
-  {
-   "fact_id": "F020",
-   "statement": "Barnum Brown collected a Leptoceratops specimen from the St. Mary River Formation of Montana in 1916.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "In 1916, Brown collected an additional specimen, AMNH 5464, from the St. Mary River Formation of Montana",
-   "quote_sha": "ea87969d7ca061ea"
-  },
-  {
-   "fact_id": "F021",
-   "statement": "Barnum Brown and Erich M. Schlaijker initially concluded that Leptoceratops and Protoceratops should be united in the family Protoceratopsidae.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "Brown and Schlaijker concluded that Leptoceratops was a very close relative of Protoceratops, and that both genera should be united within the family Protoceratopsidae",
-   "quote_sha": "c7f2052e2a27c71f"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "Comparisons later showed that the Montana specimen (L. cerorhynchus) should be placed in its own genus, Montanoceratops.",
-   "category": "debate",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "Comparisons between the St. Mary River specimen and the skeletons collected by Sternberg in Alberta showed that L. cerorhynchus should be given its own genus, which Sternberg named Montanoceratops in 1951",
-   "quote_sha": "2a94941d28269e9c"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "Charles W. Gilmore led USGS expeditions to the Two Medicine Formation of Montana in 1913, 1928, and 1935.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "American palaeontologist Charles W. Gilmore led three expeditions of the United States Geological Survey to the Two Medicine Formation of Montana in 1913, 1928 and 1935",
-   "quote_sha": "dae9cf7c5b51bd3f"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "Specimens from the Two Medicine Formation were removed from Leptoceratops in 1951 and later referred to the genus Cerasinops in 2007.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "These specimens were later removed from Leptoceratops by Sternberg in 1951, and then later referred to its close relative Cerasinops when it was named in 2007",
-   "quote_sha": "cf479617d2fd2ef0"
-  },
-  {
    "fact_id": "F025",
-   "statement": "Michael Ramus found a Leptoceratops locality in the Lance Formation of Wyoming in 1962.",
+   "statement": "In 2004, Chinnery questioned the assignment of specimen YPM VPPU 018133 to Leptoceratops due to jugal similarities with Prenoceratops and potential locality issues.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:3",
    "lang": "en",
-   "quote": "A Leptoceratops locality was found in 1962 within the Lance Formation of Wyoming by Michael Ramus",
-   "quote_sha": "cd179c8c40473f08"
+   "quote": "The assignment of YPM VPPU 018133 to Leptoceratops was questioned by Chinnery in 2004, as the jugal is similar to that described for Prenoceratops and the locality may be part of the Meeteetse Formation instead.",
+   "quote_sha": "a91a2d9bbb47dc55"
   },
   {
    "fact_id": "F026",
-   "statement": "The Wyoming specimen from the Lance Formation was described by John Ostrom in 1978.",
+   "statement": "Leptoceratops was first discovered in 1992 in the Hell Creek Formation of Montana by Brig Konecke.",
    "category": "discovery",
-   "chunk_id": "leptoceratops:enwiki:3",
+   "chunk_id": "leptoceratops:enwiki:4",
    "lang": "en",
-   "quote": "Described in 1978 by American palaeontologist John Ostrom",
-   "quote_sha": "96d4e92b59134038"
+   "quote": "Leptoceratops was first found in the Hell Creek Formation of Montana, equivalent in age to the Scollard and Lance Formations of Alberta and Wyoming, in 1992 with the discovery of a rear part of a skull by Brig Konecke.",
+   "quote_sha": "6a02ed967781f67a"
   },
   {
    "fact_id": "F027",
-   "statement": "The assignment of a Wyoming specimen to Leptoceratops was questioned in 2004 due to similarities with Prenoceratops and potential misidentification of the geological formation.",
-   "category": "debate",
-   "chunk_id": "leptoceratops:enwiki:3",
-   "lang": "en",
-   "quote": "The assignment of YPM VPPU 018133 to Leptoceratops was questioned by Chinnery in 2004, as the jugal is similar to that described for Prenoceratops and the locality may be part of the Meeteetse Formation instead",
-   "quote_sha": "12310c505a117e4a"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "The holotype skull (UWGM-200) was prepared in 1998 and revealed the first complete braincase described for the species.",
+   "statement": "The holotype skull (UWGM-200) was prepared in 1998 and contains the first complete braincase described for the genus.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:4",
    "lang": "en",
@@ -387,17 +385,17 @@
    "quote_sha": "22ae90d7b89b0a30"
   },
   {
-   "fact_id": "F029",
-   "statement": "The specimen TMP 95.12.6 was redescribed in 2012 as the separate genus Unescoceratops.",
+   "fact_id": "F028",
+   "statement": "A dentary bone found in 1995 in Alberta was initially identified as Leptoceratops but is now classified as the separate genus Unescoceratops.",
    "category": "discovery",
    "chunk_id": "leptoceratops:enwiki:4",
    "lang": "en",
-   "quote": "Additional descriptions of other new leptoceratopsids following 1998 led Ryan, Currie and colleagues to redescribe TMP 95.12.6 in 2012 as the new taxon Unescoceratops.",
-   "quote_sha": "885bc094de641cce"
+   "quote": "An isolated dentary of a protoceratopsian, TMP 95.12.6, was found in 1995 by Canadian palaeontologist Philip J. Currie in the middle Dinosaur Park Formation of Alberta, which is middle Campanian in age.",
+   "quote_sha": "56519da3ad19766c"
   },
   {
-   "fact_id": "F030",
-   "statement": "Leptoceratops is characterized by a large head, minimal frill, a forward center of mass suggesting quadrupedalism, and an increased number of vertebrae before the pelvis.",
+   "fact_id": "F029",
+   "statement": "Leptoceratops is characterized by a large head, a minimal frill, and a body structure suggesting it was primarily quadrupedal.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:5",
    "lang": "en",
@@ -405,7 +403,7 @@
    "quote_sha": "89b11e56a361b231"
   },
   {
-   "fact_id": "F031",
+   "fact_id": "F030",
    "statement": "A reconstructed complete skeleton of Leptoceratops measures approximately 1.81 meters in length.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:5",
@@ -414,17 +412,17 @@
    "quote_sha": "44f42a3880293032"
   },
   {
-   "fact_id": "F032",
-   "statement": "The largest individuals of Leptoceratops were estimated to be around 2 meters long and weigh 100 kilograms.",
-   "category": "description",
+   "fact_id": "F031",
+   "statement": "The largest known individuals of Leptoceratops reached about 2 meters in length and weighed 100 kilograms.",
+   "category": "curiosities",
    "chunk_id": "leptoceratops:enwiki:5",
    "lang": "en",
    "quote": "The largest individuals of Leptoceratops were likely around 2 m long and weighed 100 kg.",
    "quote_sha": "2a3230b3f8df97d8"
   },
   {
-   "fact_id": "F033",
-   "statement": "The Leptoceratops skull is lower and longer than Protoceratops and uniquely lacks a crest that would form a prominent frill.",
+   "fact_id": "F032",
+   "statement": "Leptoceratops skulls are lower and longer than Protoceratops and uniquely lack a crest at the back of the skull.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:6",
    "lang": "en",
@@ -432,8 +430,17 @@
    "quote_sha": "19ad965fe48ee983"
   },
   {
+   "fact_id": "F033",
+   "statement": "Complete Leptoceratops skulls range from 330 mm to 450 mm in length, with corresponding mandibles measuring 275 mm to 345 mm.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:6",
+   "lang": "en",
+   "quote": "The complete skulls known range from 450 mm long in CMN 8889 to 330 mm long in CMN 8887, with respective mandibles 345 mm and 275 mm long.",
+   "quote_sha": "0f2ae7da293e5779"
+  },
+  {
    "fact_id": "F034",
-   "statement": "Leptoceratops lacks nasal and postorbital horns, unlike more derived ceratopsians.",
+   "statement": "Leptoceratops lacks nasal and postorbital horns, distinguishing it from more derived ceratopsians.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:6",
    "lang": "en",
@@ -442,17 +449,17 @@
   },
   {
    "fact_id": "F035",
-   "statement": "Leptoceratops possesses 17 teeth in both the upper and lower jaws.",
-   "category": "description",
+   "statement": "A large ridge on the maxilla suggests Leptoceratops had a muscled cheek pouch to help shred large amounts of vegetation.",
+   "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:6",
    "lang": "en",
-   "quote": "There are 17 teeth in both the maxilla and dentary.",
-   "quote_sha": "b9d0e8b39ffa290d"
+   "quote": "There is a large ridge above the teeth on the maxilla, which would have supported a large muscled cheek pouch to assist in shredding large amounts of vegetation.",
+   "quote_sha": "18e6558e7ef604f1"
   },
   {
    "fact_id": "F036",
-   "statement": "Leptoceratops teeth exhibit a unique tooth-on-tooth wear pattern shared only with Udanoceratops and Archaeoceratops.",
-   "category": "description",
+   "statement": "Leptoceratops teeth exhibit a unique type of tooth-on-tooth wear shared only with Udanoceratops and Archaeoceratops.",
+   "category": "paleobiology",
    "chunk_id": "leptoceratops:enwiki:6",
    "lang": "en",
    "quote": "The teeth in Leptoceratops are some of the most distinct in Ceratopsia, showing a unique type of tooth-on-tooth wear only shared with taxa such as Udanoceratops and Archaeoceratops.",
@@ -460,8 +467,8 @@
   },
   {
    "fact_id": "F037",
-   "statement": "Leptoceratops has the largest single-rooted teeth of any ceratopsian, whereas ceratopsids possess double-rooted teeth.",
-   "category": "description",
+   "statement": "Leptoceratops possesses the largest single-rooted teeth of any ceratopsian, whereas ceratopsids have split, double-rooted teeth.",
+   "category": "curiosities",
    "chunk_id": "leptoceratops:enwiki:6",
    "lang": "en",
    "quote": "Leptoceratops teeth are also the largest in absolute size of any ceratopsian with single-rooted teeth; the tooth roots of ceratopsids are split to be double-rooted.",
@@ -469,7 +476,7 @@
   },
   {
    "fact_id": "F038",
-   "statement": "Specimens of Leptoceratops were found in the middle Hell Creek Formation, located 75 meters below the Cretaceous-Paleogene boundary.",
+   "statement": "Fossil material of Leptoceratops was found 75 meters below the Cretaceous-Paleogene boundary in the middle Hell Creek Formation.",
    "category": "time_and_habitat",
    "chunk_id": "leptoceratops:enwiki:4",
    "lang": "en",
@@ -478,24 +485,15 @@
   },
   {
    "fact_id": "F039",
-   "statement": "A large ridge above the maxillary teeth suggests Leptoceratops had a muscled cheek pouch to assist in shredding vegetation.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:6",
+   "statement": "The related fossil TMP 95.12.6, originally thought to be Leptoceratops, dates to the middle Campanian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "leptoceratops:enwiki:4",
    "lang": "en",
-   "quote": "There is a large ridge above the teeth on the maxilla, which would have supported a large muscled cheek pouch to assist in shredding large amounts of vegetation.",
-   "quote_sha": "18e6558e7ef604f1"
+   "quote": "An isolated dentary of a protoceratopsian, TMP 95.12.6, was found in 1995 by Canadian palaeontologist Philip J. Currie in the middle Dinosaur Park Formation of Alberta, which is middle Campanian in age.",
+   "quote_sha": "56519da3ad19766c"
   },
   {
    "fact_id": "F040",
-   "statement": "The wide mandibles and lowered articular surface of Leptoceratops indicate a feeding adaptation where all teeth contact simultaneously during jaw closure.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:6",
-   "lang": "en",
-   "quote": "When articulated, the mandibles of Leptoceratops are similar to other basal neoceratopsians in being very wide with a lowered articular surface for the skull, reflective of different feeding adaptations during the evolution of ceratopsians where the closing of the jaws brings all the teeth into contact at the same time.",
-   "quote_sha": "73a7cc621cfd4f26"
-  },
-  {
-   "fact_id": "F041",
    "statement": "Complete vertebral columns in Leptoceratops specimens CMN 8888 and CMN 8887 measure 1.66 meters and 1.35 meters in length respectively.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
@@ -504,8 +502,8 @@
    "quote_sha": "28eb00b1c1a99d36"
   },
   {
-   "fact_id": "F042",
-   "statement": "The number of caudal vertebrae in Leptoceratops varies by specimen, ranging from 38 to 49.",
+   "fact_id": "F041",
+   "statement": "The number of tail vertebrae in Leptoceratops varies by specimen, ranging from 38 to 49.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
    "lang": "en",
@@ -513,17 +511,8 @@
    "quote_sha": "9b5fcdeac3b0e4e8"
   },
   {
-   "fact_id": "F043",
-   "statement": "In Leptoceratops, the first three cervical vertebrae do not fuse into a synsacrum until the animal reaches adulthood.",
-   "category": "description",
-   "chunk_id": "leptoceratops:enwiki:7",
-   "lang": "en",
-   "quote": "The first three cervicals are not fused together into a syncervical until adulthood",
-   "quote_sha": "e0109443dffbe763"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "Humeri lengths in Leptoceratops specimens vary, measuring 290 mm in AMNH 5205, 242 mm in CMN 8889, 255 mm in CMN 8888, and 185 mm in CMN 8887.",
+   "fact_id": "F042",
+   "statement": "Humerus lengths in Leptoceratops specimens range from 185 mm to 290 mm.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
    "lang": "en",
@@ -531,8 +520,8 @@
    "quote_sha": "9c1cac45b6b5df20"
   },
   {
-   "fact_id": "F045",
-   "statement": "Femur lengths in Leptoceratops specimens range from 230 mm to over 257 mm across different individuals.",
+   "fact_id": "F043",
+   "statement": "Femur lengths in Leptoceratops specimens range from 230 mm to over 270 mm.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
    "lang": "en",
@@ -540,8 +529,17 @@
    "quote_sha": "700098acb3b5c9e7"
   },
   {
-   "fact_id": "F046",
-   "statement": "The hand (manus) of Leptoceratops has a phalangeal formula of 2-3-4-3-1.",
+   "fact_id": "F044",
+   "statement": "Leptoceratops had a complete hand with two rows of wrist bones and three toes equipped with hooves.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The hand is complete, displaying two rows of carpals, and three digits with hooves on the first three",
+   "quote_sha": "c5e8c0cbbfae56dc"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "The finger bone arrangement in the Leptoceratops hand follows the formula 2-3-4-3-1.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
    "lang": "en",
@@ -549,8 +547,8 @@
    "quote_sha": "4b021eda13de7965"
   },
   {
-   "fact_id": "F047",
-   "statement": "The foot (pes) of Leptoceratops has a phalangeal formula of 2-3-4-5-0.",
+   "fact_id": "F046",
+   "statement": "The foot bone arrangement in Leptoceratops follows the formula 2-3-4-5-0.",
    "category": "description",
    "chunk_id": "leptoceratops:enwiki:7",
    "lang": "en",
@@ -558,8 +556,89 @@
    "quote_sha": "df33e4111ef16df3"
   },
   {
+   "fact_id": "F047",
+   "statement": "The first three neck vertebrae in Leptoceratops do not fuse until adulthood, a trait considered more primitive than in Protoceratops and other ceratopsids.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The first three cervicals are not fused together into a syncervical until adulthood, which is distinctly more primitive than Protoceratops and ceratopsids",
+   "quote_sha": "9a5a08d40e98369c"
+  },
+  {
    "fact_id": "F048",
-   "statement": "American paleontologist Alfred Romer placed Leptoceratops in the family Leptoceratopsidae in 1927.",
+   "statement": "The shoulder blade of Leptoceratops is slender and similar to Protoceratops but lacks the diagonal ridge found in other ceratopsian genera.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The scapula is more slender than in ceratopsids but similar to Protoceratops while lacking the ridge that extends diagonally across the scapular blade found in the other genera",
+   "quote_sha": "7f745baf6098e91f"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "The arm bones of Leptoceratops show an intermediate build between the slender bones of Protoceratops and the robust bones of ceratopsids.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The humerus, radius, and ulna are intermediate between Protoceratops, where they are more slender, and ceratopsids, where they are more robust",
+   "quote_sha": "80e99bf34bb2a501"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "The hip bone of Leptoceratops is primitive, resembling Protoceratops but thinner and lacking the marginal expansion seen in later ceratopsians.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The ilium of Leptoceratops is primitive for a ceratopsian, being similar to Protoceratops but thinner and without any expansion of its margin found in later ceratopsians",
+   "quote_sha": "1a9f5ed7891bdba5"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The pubic bone in Leptoceratops is proportionally smaller than in Protoceratops, with a posterior process measuring only 50 mm in length.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The pubis is similar but proportionally smaller than in Protoceratops, with a short and narrow anterior process and a curved and tapered posterior process that is only 50 mm in length",
+   "quote_sha": "bcf8cc3db42fc508"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "The ischium in Leptoceratops resembles that of Protoceratops but lacks expansion at the end or an internal groove near the base.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The ischium is also similar to that of Protoceratops, but does not show any expansion towards its end or internal groove near the base",
+   "quote_sha": "d0366c116be4d5c1"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Leptoceratops had four fully developed clawed toes, with the first slightly outturned, and a fifth toe reduced to a splint-like bone.",
+   "category": "description",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "The first four digits are fully developed and bear claws, with the first being slightly outturned from the rest, while the fifth digit is reduced to just a splint-like metatarsal",
+   "quote_sha": "4e19f03e78b9088a"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Leptoceratops was originally classified as a primitive ceratopsian outside the family Ceratopsidae.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:enwiki:8",
+   "lang": "en",
+   "quote": "Leptoceratops was first named as a primitive member of Ceratopsia outside the family Ceratopsidae",
+   "quote_sha": "f6b85572d1fdcba7"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Franz Nopcsa classified Leptoceratops within the family Ceratopsidae and created the subfamily Leptoceratopsinae for it.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:enwiki:8",
+   "lang": "en",
+   "quote": "Hungarian palaeontologist Franz Nopcsa, who instead placed Leptoceratops within Ceratopsidae and in its own subfamily, Leptoceratopsinae",
+   "quote_sha": "bfcacea4ad4ad240"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Alfred Romer established the family Leptoceratopsidae in 1927 and placed Leptoceratops within it.",
    "category": "classification",
    "chunk_id": "leptoceratops:enwiki:8",
    "lang": "en",
@@ -567,26 +646,179 @@
    "quote_sha": "ecc5c57c85ba3a8e"
   },
   {
-   "fact_id": "F049",
-   "statement": "Phylogenetic analyses of Leptoceratops have resulted in unresolved relationships within the strict consensus of Leptoceratopsidae.",
-   "category": "debate",
+   "fact_id": "F057",
+   "statement": "Leptoceratops and Montanoceratops were later included within the family Protoceratopsidae based on new material.",
+   "category": "classification",
    "chunk_id": "leptoceratops:enwiki:8",
    "lang": "en",
-   "quote": "While there were many unresolved areas of the strict consensus, including all of Leptoceratopsidae, a single most parsimonious tree was found",
-   "quote_sha": "30472bb5dd9571cb"
+   "quote": "The two genera, as well as Montanoceratops after its separation, were included within Protoceratopsidae",
+   "quote_sha": "ca269c60297c34de"
   },
   {
-   "fact_id": "F050",
-   "statement": "The inclusion of new taxa like Ferrisaurus and Gremlin has contributed to a lack of resolution regarding leptoceratopsid relationships due to fragmentary fossil evidence.",
-   "category": "debate",
+   "fact_id": "F058",
+   "statement": "Paul C. Sereno suggested in 1986 that the traditional family Protoceratopsidae is paraphyletic.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:enwiki:8",
+   "lang": "en",
+   "quote": "American palaeontologist Paul C. Sereno suggested in 1986 that Protoceratopsidae as traditionally used is paraphyletic",
+   "quote_sha": "d527909424917f0a"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "The name Leptoceratopsidae was adopted for a group of diverse early ceratopsians from the Late Cretaceous.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:enwiki:8",
+   "lang": "en",
+   "quote": "the name Leptoceratopsidae adopted for the group, which soon included a diverse variety of early ceratopsians from the Late Cretaceous",
+   "quote_sha": "f6da9a92a6509f85"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Recent analyses added Ferrisaurus and Gremlin to Leptoceratopsidae, but relationships within the group remain unresolved due to fragmentary fossils.",
+   "category": "classification",
    "chunk_id": "leptoceratops:enwiki:8",
    "lang": "en",
    "quote": "Further phylogenetic analysis added the new leptoceratopsid taxa Ferrisaurus and Gremlin, but the inclusion of these taxa and the fragmentary nature of many early ceratopsians resulted in a lack of resolution of leptoceratopsid relationships",
    "quote_sha": "d75f4e3315f7f8a8"
   },
   {
-   "fact_id": "F051",
-   "statement": "Leptoceratops was discovered in 1910 and described the following year by Barnum Brown in the Red Deer River Valley, Alberta, Canada.",
+   "fact_id": "F061",
+   "statement": "It is debated whether Leptoceratops is unrelated to other forms, belongs within Protoceratopsidae, or forms a clade with genera like Montanoceratops and Udanoceratops.",
+   "category": "debate",
+   "chunk_id": "leptoceratops:enwiki:8",
+   "lang": "en",
+   "quote": "where Leptoceratops was either unrelated to other forms, within Protoceratopsidae, or outside Protoceratopsidae but forming a clade with taxa like Montanoceratops, Udanoceratops, or Asiaceratops",
+   "quote_sha": "3e5571d27b3abe90"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "When first described, the tail neural spines of Leptoceratops were the longest known for any ceratopsian.",
+   "category": "curiosities",
+   "chunk_id": "leptoceratops:enwiki:7",
+   "lang": "en",
+   "quote": "when Leptoceratops was first described, they were the longest of any ceratopsian known at that time",
+   "quote_sha": "ea58cfb86c8bc604"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Leptoceratops was traditionally assumed to be a quadruped.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "Traditionally, Leptoceratops has been assumed to be quadrupedal.",
+   "quote_sha": "85f70273562f2c85"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "Leptoceratops had forelimbs long enough to reach the ground upright, enabling a quadrupedal posture.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "The forelimbs of Leptoceratops are long enough to reach the ground upright, allowing for quadrupedality.",
+   "quote_sha": "a400256b8f79f2cf"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "Leptoceratops lacked opposable digits for one-handed grasping but could hold objects with two hands while moving bipedally.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "Leptoceratops lacks opposable digits to allow for one-handed prehension, but would have been able to hold with two hands when moving bipedally.",
+   "quote_sha": "9440db79e82202ce"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Fossils from the Hell Creek Formation suggest that Leptoceratops was capable of scratch-digging or burrowing.",
+   "category": "curiosities",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "Scratch-digging is also believed to have been possible in Leptoceratops based on its forelimb anatomy, which is supported by fossils from the Hell Creek Formation suggesting burrowing.",
+   "quote_sha": "9525ea1724c49404"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "In 2019, researchers proposed that Leptoceratops bonebeds represent adults buried during burrow collapses in multi-generational burrows.",
+   "category": "curiosities",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "Denver Fowler and colleagues presented in 2019 the belief that the sites instead represent adults buried during burrow collapses in a multi-generational burrow.",
+   "quote_sha": "14dc1d06cf75aa76"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "The fused cervical vertebrae (syncervical) in Leptoceratops likely evolved for digging rather than supporting a large head or combat.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:9",
+   "lang": "en",
+   "quote": "The evolution of the syncervical in small-bodied neoceratopsians shows that it was likely not an adaptation for a large head or intraspecific combat.",
+   "quote_sha": "649febaedba6b4f5"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Leptoceratops was a herbivore.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:10",
+   "lang": "en",
+   "quote": "Leptoceratops, like other ceratopsians, would have been a herbivore.",
+   "quote_sha": "e7a47aec91c07bd0"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Leptoceratops had a unique arcing bite path that created curved wear patterns on its teeth, differing from other neoceratopsians.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:10",
+   "lang": "en",
+   "quote": "The unique wear pattern on teeth of Leptoceratops is inconsistent with the standard chewing of neoceratopsians, indicating that the bite included an arcing path to create the curved tooth wear seen.",
+   "quote_sha": "f954e827a2d9aefa"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Leptoceratops possessed a mammal-like orbital jaw motion during chewing, a trait unique among dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:10",
+   "lang": "en",
+   "quote": "The mastication of Leptoceratops is different from all other dinosaurs, with the jaw undergoing an orbital motion that is mammal-like, despite the very large differences in jaw joint anatomy between Leptoceratops and analogous mammals.",
+   "quote_sha": "ae7f69950aaf07ef"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Leptoceratops fossils from the Hell Creek Formation date from approximately 67.20 million years ago to the end of the Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "leptoceratops:enwiki:11",
+   "lang": "en",
+   "quote": "The Hell Creek Formation in contrast lasts from earlier in the Maastrichtian, approximately 67.20 mya, to the end.",
+   "quote_sha": "269dea9048b2cc78"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "The formations containing Leptoceratops fossils consist largely of sandstone and mudstone attributed to floodplain environments.",
+   "category": "time_and_habitat",
+   "chunk_id": "leptoceratops:enwiki:11",
+   "lang": "en",
+   "quote": "These formations are composed largely of sandstone and mudstone, which have been attributed to floodplain environments.",
+   "quote_sha": "c0c83ae18fa51cfc"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "It is debated whether Leptoceratops was as ecologically restricted to cool environments as previously thought, given its presence in coastal plain formations.",
+   "category": "debate",
+   "chunk_id": "leptoceratops:enwiki:11",
+   "lang": "en",
+   "quote": "With the Triceratops/Edmontosaurus fauna being from coastal plains, Leptoceratops is not as ecologically restricted as previously thought.",
+   "quote_sha": "7118dc98c4b4c9a0"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "By the time of the Hell Creek Formation, the landscape where Leptoceratops lived was dominated by angiosperms in a forest of small trees.",
+   "category": "paleobiology",
+   "chunk_id": "leptoceratops:enwiki:11",
+   "lang": "en",
+   "quote": "by the time of the Hell Creek angiosperms were dominant in a forested landscape of small trees.",
+   "quote_sha": "e0335992b6f90c3a"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Leptoceratops was discovered in 1910 and described the following year by Barnum Brown in the Red Deer River Valley of Alberta, Canada.",
    "category": "discovery",
    "chunk_id": "leptoceratops:eswiki:4",
    "lang": "es",
@@ -594,17 +826,17 @@
    "quote_sha": "3d00bea382f82422"
   },
   {
-   "fact_id": "F052",
-   "statement": "Additional material was found in 1978 in the Bighorn Bed north of Wyoming.",
+   "fact_id": "F077",
+   "statement": "A later discovery by C. M. Sternberg in 1947 included a complete fossil, whereas the original specimen lacked part of the head.",
    "category": "discovery",
    "chunk_id": "leptoceratops:eswiki:4",
    "lang": "es",
-   "quote": "Además se ha encontrado más material en 1978 en el Lecho Bighorn al norte de Wyoming.",
-   "quote_sha": "3e2a214a134ed7d9"
+   "quote": "Al primer espécimen le faltaba parte de la cabeza, pero un descubrimiento posterior de C. M. Sternberg en 1947, incluía un fósil completo.",
+   "quote_sha": "223a8baee689a09d"
   },
   {
-   "fact_id": "F053",
-   "statement": "Leptoceratops lived during the Late Cretaceous, approximately 68.8 to 66 million years ago in the Maastrichtian, in what is now North America.",
+   "fact_id": "F078",
+   "statement": "Leptoceratops lived during the late Cretaceous period, approximately 68.8 to 66 million years ago in the Maastrichtian stage, in what is now North America.",
    "category": "time_and_habitat",
    "chunk_id": "leptoceratops:eswiki:2",
    "lang": "es",
@@ -612,16 +844,7 @@
    "quote_sha": "a4193bbcb98253a5"
   },
   {
-   "fact_id": "F054",
-   "statement": "Leptoceratops measured between 1.2 and 2.7 meters in length and weighed between 67 and 200 kilograms.",
-   "category": "description",
-   "chunk_id": "leptoceratops:eswiki:3",
-   "lang": "es",
-   "quote": "Leptoceratops medía entre 1,2 a 2,7 metros de largo y pesaba entre 67 a 200 kilogramos.",
-   "quote_sha": "7e20e9997780a66e"
-  },
-  {
-   "fact_id": "F055",
+   "fact_id": "F079",
    "statement": "Leptoceratops was a small dinosaur with short arms and long legs, suggesting it could likely run upright.",
    "category": "description",
    "chunk_id": "leptoceratops:eswiki:3",
@@ -630,53 +853,35 @@
    "quote_sha": "16f16eabe7632cae"
   },
   {
-   "fact_id": "F056",
-   "statement": "Leptoceratops was a herbivore, like other ceratopsians.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:10",
-   "lang": "en",
-   "quote": "Leptoceratops, like other ceratopsians, would have been a herbivore.",
-   "quote_sha": "e7a47aec91c07bd0"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "The unique wear pattern on Leptoceratops teeth indicates its bite included an arcing path to create curved tooth wear, inconsistent with standard neoceratopsian chewing.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:10",
-   "lang": "en",
-   "quote": "The unique wear pattern on teeth of Leptoceratops is inconsistent with the standard chewing of neoceratopsians, indicating that the bite included an arcing path to create the curved tooth wear seen.",
-   "quote_sha": "f954e827a2d9aefa"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "The mastication of Leptoceratops is unique among dinosaurs, featuring a jaw orbital motion that is mammal-like despite significant differences in jaw joint anatomy.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:enwiki:10",
-   "lang": "en",
-   "quote": "The mastication of Leptoceratops is different from all other dinosaurs, with the jaw undergoing an orbital motion that is mammal-like, despite the very large differences in jaw joint anatomy between Leptoceratops and analogous mammals.",
-   "quote_sha": "ae7f69950aaf07ef"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "Although traditionally linked to Protoceratopsidae, Leptoceratops is now placed in its own family, Leptoceratopsidae, alongside dinosaurs such as Udanoceratops and Prenoceratops.",
-   "category": "classification",
-   "chunk_id": "leptoceratops:eswiki:5",
+   "fact_id": "F080",
+   "statement": "Leptoceratops measured between 1.2 and 2.7 meters in length and weighed between 67 and 200 kilograms.",
+   "category": "description",
+   "chunk_id": "leptoceratops:eswiki:3",
    "lang": "es",
-   "quote": "Aunque tradicionalmente se vínculo con Protoceratopsidae , ahora se ubica en su propia familia, Leptoceratopsidae, junto con dinosaurios como Udanoceratops y Prenoceratops.",
-   "quote_sha": "fed18f4ed2802a86"
+   "quote": "Leptoceratops medía entre 1,2 a 2,7 metros de largo y pesaba entre 67 a 200 kilogramos.",
+   "quote_sha": "7e20e9997780a66e"
   },
   {
-   "fact_id": "F060",
-   "statement": "The relationships of Leptoceratops with other ceratopsians are not entirely clear; while most studies suggest it is outside Protoceratopsidae and Ceratopsidae, some studies suggest it may be allied with Ceratopsidae.",
-   "category": "debate",
-   "chunk_id": "leptoceratops:eswiki:5",
+   "fact_id": "F081",
+   "statement": "The skull was low and showed no traces of horns, unlike its relatives.",
+   "category": "description",
+   "chunk_id": "leptoceratops:eswiki:3",
    "lang": "es",
-   "quote": "Las relaciones de Leptoceratops con otros ceratópsidos no están del todo claras. Aunque la mayoría de los estudios sugieren que se encuentran fuera de los protoceratópsidos y ceratópsidos, algunos estudios sugieren que pueden estar aliados con Ceratopsidae.",
-   "quote_sha": "7f3b56f7e38ab9dc"
+   "quote": "El cráneo era bajo y no presenta rastros de cuernos, al contrario de sus parientes.",
+   "quote_sha": "4beaaf01b9eb445a"
   },
   {
-   "fact_id": "F061",
-   "statement": "Leptoceratops was likely a herbivore like other ceratopsians.",
+   "fact_id": "F082",
+   "statement": "Leptoceratops had a small frill on the back of its head, a clearly primitive form.",
+   "category": "description",
+   "chunk_id": "leptoceratops:eswiki:3",
+   "lang": "es",
+   "quote": "Leptoceratops tenía un pequeño collar en el dorso de la cabeza, una forma claramente primitiva.",
+   "quote_sha": "a7b59a8cf0d0bdf5"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Like other ceratopsians, Leptoceratops was likely a herbivore.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:eswiki:7",
    "lang": "es",
@@ -684,16 +889,16 @@
    "quote_sha": "f373523b156d416b"
   },
   {
-   "fact_id": "F062",
-   "statement": "Leptoceratops had relatively short and deep jaws with powerful muscles that gave it a strong bite.",
+   "fact_id": "F084",
+   "statement": "Mandibular muscles likely inserted onto the large parietosquamosal frill, giving Leptoceratops a powerful bite.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:eswiki:7",
    "lang": "es",
-   "quote": "Las mandíbulas eran relativamente cortas y profundas, y los músculos de la mandíbula se habrían insertado sobre el gran volante parietoesquamo, dando a Leptoceratops una potente mordida.",
-   "quote_sha": "65dd05b1d16c7eaf"
+   "quote": "Los músculos de la mandíbula se habrían insertado sobre el gran volante parietoesquamo, dando a Leptoceratops una potente mordida.",
+   "quote_sha": "c660c3763cdb275a"
   },
   {
-   "fact_id": "F063",
+   "fact_id": "F085",
    "statement": "Leptoceratops chewed using a combination of shearing and crushing.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:eswiki:7",
@@ -702,8 +907,8 @@
    "quote_sha": "d8190de3ee0368e7"
   },
   {
-   "fact_id": "F064",
-   "statement": "Leptoceratops could likely chew extremely tough plant material due to its teeth and strong jaws.",
+   "fact_id": "F086",
+   "statement": "Between its tooth shearing and crushing action and powerful jaws, Leptoceratops could likely chew extremely tough plant matter.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:eswiki:7",
    "lang": "es",
@@ -711,197 +916,161 @@
    "quote_sha": "d670cd91ea965ee5"
   },
   {
-   "fact_id": "F065",
-   "statement": "Leptoceratops was likely a low browser due to its small size and quadrupedal posture.",
+   "fact_id": "F087",
+   "statement": "Although traditionally linked to Protoceratopsidae, Leptoceratops is now placed in its own family, Leptoceratopsidae, alongside dinosaurs like Udanoceratops and Prenoceratops.",
+   "category": "classification",
+   "chunk_id": "leptoceratops:eswiki:5",
+   "lang": "es",
+   "quote": "Aunque tradicionalmente se vínculo con Protoceratopsidae , ahora se ubica en su propia familia, Leptoceratopsidae, junto con dinosaurios como Udanoceratops y Prenoceratops.",
+   "quote_sha": "fed18f4ed2802a86"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "While most studies suggest Leptoceratops is outside Protoceratopsidae and Ceratopsidae, some studies suggest it may be allied with Ceratopsidae.",
+   "category": "debate",
+   "chunk_id": "leptoceratops:eswiki:5",
+   "lang": "es",
+   "quote": "Aunque la mayoría de los estudios sugieren que se encuentran fuera de los protoceratópsidos y ceratópsidos, algunos estudios sugieren que pueden estar aliados con Ceratopsidae.",
+   "quote_sha": "b414fca9fa6ff0a8"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Remains have been found throughout western North America, including the Scollard Formation in Alberta, Canada, and the Lance Formation in Wyoming, USA.",
+   "category": "time_and_habitat",
+   "chunk_id": "leptoceratops:eswiki:4",
+   "lang": "es",
+   "quote": "Sus restos se han encontrado en todo el oeste norteamericano, en la Formación Scollard de Alberta, Canadá y en la Formación Lance de Wyoming en los Estados Unidos.",
+   "quote_sha": "0e1e59a75c9aceb2"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Given its small size and quadrupedal posture, Leptoceratops would likely have been a low browser.",
    "category": "paleobiology",
    "chunk_id": "leptoceratops:eswiki:7",
    "lang": "es",
    "quote": "Dado su pequeño tamaño y su posición cuadrúpeda, Leptoceratops habría sido un ramoreador bajo.",
    "quote_sha": "ddf26cdfcc0f5bf7"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Flowering plants were the most diverse during Leptoceratops's time, though ferns and conifers may have been more numerous.",
-   "category": "paleobiology",
-   "chunk_id": "leptoceratops:eswiki:7",
-   "lang": "es",
-   "quote": "Las plantas con flores fueron las plantas más diversas en su época, aunque los helechos y las coníferas pueden haber sido más comunes en términos de números.",
-   "quote_sha": "701bac3614d4092a"
-  },
-  {
-   "fact_id": "F067",
-   "statement": "The parent group of Leptoceratops is Leptoceratopsidae.",
-   "category": "classification",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Leptoceratopsidae",
-   "quote_sha": "e48fe5fa140d46d1"
-  },
-  {
-   "fact_id": "F068",
-   "statement": "Leptoceratops belongs to the family Leptoceratopsidae.",
-   "category": "classification",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Leptoceratopsidae",
-   "quote_sha": "0a2358393caf3a02"
-  },
-  {
-   "fact_id": "F069",
-   "statement": "Leptoceratops is classified in the class Ornithischia.",
-   "category": "classification",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Ornithischia",
-   "quote_sha": "57c7a44935709d4b"
-  },
-  {
-   "fact_id": "F070",
-   "statement": "Leptoceratops lived during the Maastrichtian stage, from 72.2 to 66 million years ago.",
-   "category": "time_and_habitat",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
-   "quote_sha": "8c03278f69290924"
-  },
-  {
-   "fact_id": "F071",
-   "statement": "The genus Leptoceratops was named by Brown in 1914.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "PBDB name: Leptoceratops (genus), Brown 1914",
-   "quote_sha": "23bdf5421fc50446"
-  },
-  {
-   "fact_id": "F072",
-   "statement": "There are 8 recorded fossil occurrences of Leptoceratops in the Paleobiology Database.",
-   "category": "discovery",
-   "chunk_id": "leptoceratops:pbdb:1",
-   "lang": "en",
-   "quote": "Fossil occurrences recorded: 8",
-   "quote_sha": "58af2f9aecfc954f"
   }
  ],
  "rejected": [
   {
    "chunk_id": "leptoceratops:enwiki:2",
-   "statement": "Leptoceratops was likely bipedal when moving at speed and quadrupedal when moving slowly.",
-   "category": "paleobiology",
-   "quote": "Leptoceratops was likely bipedal when moving at speed and quadrupedal when moving slowly",
-   "reason": "statement copies the source wording: 'Leptoceratops was likely bipedal when moving at speed'"
+   "statement": "Leptoceratops is a ceratopsian dinosaur that lived in North America during the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "quote": "Leptoceratops is a genus of ceratopsian dinosaur from the Late Cretaceous of North America.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "leptoceratops:enwiki:3",
    "statement": "A partial skull found in 1910 was designated the holotype for Leptoceratops gracilis and described by Barnum Brown in 1914.",
    "category": "discovery",
-   "quote": "One of these individuals preserves a partial skull and was designated as the holotype of the new taxon Leptoceratops gracilis when it was described in 1914 by American palaeontologist Barnum Brown",
+   "quote": "One of these individuals preserves a partial skull and was designated as the holotype of the new taxon Leptoceratops gracilis when it was described in 1914 by American palaeontologist Barnum Brown.",
    "reason": "numbers not in the quote: ['1910']"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:4",
-   "statement": "Leptoceratops was first discovered in 1992 in the Hell Creek Formation of Montana by Brig Konecke.",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "statement": "The name Leptoceratops translates to 'slender small horn face', derived from Greek words for 'small' and 'horned face', though the original author did not explain the etymology.",
    "category": "discovery",
-   "quote": "Leptoceratops was first found in the Hell Creek Formation of Montana... in 1992 with the discovery of a rear part of a skull by Brig Konecke.",
+   "quote": "The name translates as 'slender small horn face', with the generic name derived from the Ancient Greek word leptos, 'small', and Ceratops, 'horned face', though Brown did not explain its etymology.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:4",
-   "statement": "An isolated dentary (TMP 95.12.6) was found in 1995 in Alberta by Philip J. Currie and initially described as Leptoceratops sp. in 1998.",
+   "chunk_id": "leptoceratops:enwiki:3",
+   "statement": "Charles M. Sternberg described three additional skeletons of Leptoceratops from the Edmonton Formation in 1951.",
    "category": "discovery",
-   "quote": "An isolated dentary of a protoceratopsian, TMP 95.12.6, was found in 1995 by Canadian palaeontologist Philip J. Currie in the middle Dinosaur Park Formation of Alberta...",
+   "quote": "Sternberg described three additional skeletons of Leptoceratops from the Edmonton Formation in 1951, including one complete individual.",
+   "reason": "statement copies the source wording: 'Sternberg described three additional skeletons of Leptoceratops from'"
+  },
+  {
+   "chunk_id": "leptoceratops:enwiki:3",
+   "statement": "The additional skeletons described by Sternberg were discovered at the end of the 1947 field season.",
+   "category": "discovery",
+   "quote": "These specimens were discovered towards the end of the 1947 field season",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:6",
-   "statement": "Complete skulls of Leptoceratops range from 330 mm to 450 mm in length.",
-   "category": "description",
-   "quote": "The complete skulls known range from 450 mm long in CMN 8889 to 330 mm long in CMN 8887...",
-   "reason": "quote not found verbatim in the source"
+   "chunk_id": "leptoceratops:enwiki:3",
+   "statement": "Barnum Brown and Erich M. Schlaijker described a specimen collected in 1916 as a new species, Leptoceratops cerorhynchus, in 1942.",
+   "category": "discovery",
+   "quote": "Differences in the skull from the first Leptoceratops specimens lead Brown and Erich M. Schlaijker to describe the specimen in 1942 as a new species, Leptoceratops cerorhynchus.",
+   "reason": "numbers not in the quote: ['1916']"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:6",
-   "statement": "The palpebral bone in Leptoceratops is small and loosely positioned within the eye socket.",
-   "category": "description",
-   "quote": "The palpebral bone, which forms an eyebrow in ornithischians, is only small and loosely positioned within the eye socket.",
-   "reason": "statement copies the source wording: 'small and loosely positioned within the eye socket'"
+   "chunk_id": "leptoceratops:enwiki:3",
+   "statement": "The holotype specimen preserves parts of the skull and jaws, a complete right forelimb, partial hindlimbs, 24 caudal vertebrae, and two other isolated vertebrae.",
+   "category": "discovery",
+   "quote": "The specimen preserves parts of the skull and jaws, a complete right forelimb, partial hindlimbs, a series of 24 caudal vertebrae, as well as two other isolated vertebrae.",
+   "reason": "statement copies the source wording: 'specimen preserves parts of the skull and jaws'"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:6",
-   "statement": "The parietal bones in Leptoceratops are reduced and solid, unlike the elongated frill-bearing bones in Protoceratops.",
-   "category": "description",
-   "quote": "The parietal bones of the rear skull... are reduced and solid in Leptoceratops.",
+   "chunk_id": "leptoceratops:enwiki:4",
+   "statement": "Michael J. Ryan and Philip J. Currie initially described a 1995 Alberta fossil as Leptoceratops in 1998, though it is significantly older than other known specimens.",
+   "category": "discovery",
+   "quote": "It was first described as Leptoceratops sp. by Michael J. Ryan and Currie in 1998 despite being substantially older than other Leptoceratops material then known.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "leptoceratops:enwiki:4",
-   "statement": "The specimen TMP 95.12.6, originally attributed to Leptoceratops, was found in the middle Campanian-aged Dinosaur Park Formation of Alberta.",
-   "category": "time_and_habitat",
-   "quote": "An isolated dentary of a protoceratopsian, TMP 95.12.6, was found... in the middle Dinosaur Park Formation of Alberta, which is middle Campanian in age.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "leptoceratops:enwiki:4",
-   "statement": "Researchers initially described TMP 95.12.6 as Leptoceratops sp. despite it being substantially older than other known material of the species.",
-   "category": "debate",
-   "quote": "It was first described as Leptoceratops sp. by Michael J. Ryan and Currie in 1998 despite being substantially older than other Leptoceratops material then known...",
-   "reason": "quote not found verbatim in the source"
+   "statement": "In 2012, researchers redescribed the 1995 Alberta fossil as the new species Unescoceratops after further study of related genera.",
+   "category": "discovery",
+   "quote": "Additional descriptions of other new leptoceratopsids following 1998 led Ryan, Currie and colleagues to redescribe TMP 95.12.6 in 2012 as the new taxon Unescoceratops.",
+   "reason": "numbers not in the quote: ['1995']"
   },
   {
    "chunk_id": "leptoceratops:enwiki:7",
-   "statement": "Neural spines on the caudal vertebrae of Leptoceratops are elongate, reaching two to four times the height of the centrum.",
+   "statement": "Neural spines on the tail vertebrae of Leptoceratops are very long, reaching two to four times the height of the vertebral body.",
    "category": "description",
    "quote": "The neural spines of the caudal vertebrae are very elongate, reaching two to four times the height of the centrum",
-   "reason": "statement copies the source wording: 'elongate reaching two to four times the height'"
+   "reason": "statement copies the source wording: 'reaching two to four times the height of'"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:8",
-   "statement": "Leptoceratops was originally classified as a primitive member of Ceratopsia outside the family Ceratopsidae.",
-   "category": "classification",
-   "quote": "Leptoceratops was first named as a primitive member of Ceratopsia outside the family Ceratopsidae",
-   "reason": "statement copies the source wording: 'a primitive member of Ceratopsia outside the family'"
-  },
-  {
-   "chunk_id": "leptoceratops:enwiki:8",
-   "statement": "The family name Leptoceratopsidae was adopted to include a diverse variety of early ceratopsians from the Late Cretaceous.",
-   "category": "classification",
-   "quote": "the name Leptoceratopsidae adopted for the group, which soon included a diverse variety of early ceratopsians from the Late Cretaceous",
-   "reason": "statement copies the source wording: 'a diverse variety of early ceratopsians from the'"
+   "chunk_id": "leptoceratops:enwiki:7",
+   "statement": "In Leptoceratops, the femur is always slightly shorter than the tibia, a proportion different from that of heavier ceratopsids.",
+   "category": "description",
+   "quote": "The femur is always slightly shorter than the tibia, which is unlike the heavier ceratopsids",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "leptoceratops:enwiki:9",
-   "statement": "The forelimbs of Leptoceratops are long enough to reach the ground when upright, allowing for a quadrupedal posture.",
+   "statement": "Leptoceratops could likely move bipedally at high speeds but would revert to quadrupedality when moving slowly.",
    "category": "paleobiology",
-   "quote": "The forelimbs of Leptoceratops are long enough to reach the ground upright, allowing for quadrupedality.",
-   "reason": "statement copies the source wording: 'The forelimbs of Leptoceratops are long enough to'"
+   "quote": "Proportions of the fore and hindlimbs suggest that both Leptoceratops and Protoceratops could have been bipedal when moving at high speeds but reverted to quadrupedality when moving slowly.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:9",
-   "statement": "Fore and hindlimb proportions suggest Leptoceratops could have been bipedal at high speeds but reverted to quadrupedality when moving slowly, tending to be slightly more bipedal than Protoceratops.",
+   "chunk_id": "leptoceratops:enwiki:10",
+   "statement": "Leptoceratops had efficient bites that allowed it to adapt to various food types.",
    "category": "paleobiology",
-   "quote": "Proportions of the fore and hindlimbs suggest that both Leptoceratops and Protoceratops could have been bipedal when moving at high speeds but reverted to quadrupedality when moving slowly, with Leptoceratops tending to be slightly more bipedal than Protoceratops.",
-   "reason": "statement copies the source wording: 'at high speeds but reverted to quadrupedality when'"
+   "quote": "Biomechanical studies of the jaws of ceratopsians have also identified that Leptoceratops, as well as other leptoceratopsids, had efficient bites allowing them to be adaptable to different food types.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:9",
-   "statement": "Scratch-digging is believed to have been possible in Leptoceratops based on its forelimb anatomy, supported by fossils from the Hell Creek Formation suggesting burrowing.",
-   "category": "paleobiology",
-   "quote": "Scratch-digging is also believed to have been possible in Leptoceratops based on its forelimb anatomy, which is supported by fossils from the Hell Creek Formation suggesting burrowing.",
-   "reason": "statement copies the source wording: 'believed to have been possible in Leptoceratops based'"
+   "chunk_id": "leptoceratops:enwiki:11",
+   "statement": "Leptoceratops was once used as an indicator of faunal provinciality during the late Maastrichtian in North America.",
+   "category": "time_and_habitat",
+   "quote": "Leptoceratops has been used as an indicator of faunal provinciality during the late Maastrichtian of North America.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:9",
-   "statement": "Originally thought to represent a miring event, three fossil bonebeds in the Hell Creek Formation were reinterpreted in 2019 by Denver Fowler and colleagues as adults buried during burrow collapses in a multi-generational burrow.",
-   "category": "paleobiology",
-   "quote": "Originally believed to represent a miring event, Denver Fowler and colleagues presented in 2019 the belief that the sites instead represent adults buried during burrow collapses in a multi-generational burrow.",
-   "reason": "statement copies the source wording: 'adults buried during burrow collapses in a multi-generational'"
+   "chunk_id": "leptoceratops:enwiki:11",
+   "statement": "Leptoceratops fossils from the Scollard Formation date from 66.88 million years ago until the end of the Cretaceous at 66.043 million years ago.",
+   "category": "time_and_habitat",
+   "quote": "The Scollard Formation from which Leptoceratops is known was deposited from 66.88 million years ago until the end of the Maastrichtian and Cretaceous at 66.043 mya.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "leptoceratops:enwiki:9",
-   "statement": "Fossorial behavior has been hypothesized for small ceratopsians including Leptoceratops, but further evidence is needed to understand the origins of their syncervicals.",
-   "category": "paleobiology",
-   "quote": "Fossorial behaviour has been hypothesised in small ceratopsians including Leptoceratops, but further evidence is needed to understand the origins of the syncervicals of ceratopsians.",
-   "reason": "statement copies the source wording: 'small ceratopsians including Leptoceratops but further evidence is'"
+   "chunk_id": "leptoceratops:enwiki:11",
+   "statement": "The environments where Leptoceratops lived at the end of the Cretaceous were intermediate between semi-arid and humid.",
+   "category": "time_and_habitat",
+   "quote": "Palaeoenvironments of the Scollard and Hell Creek formation show that the very end of the Cretaceous was intermediate between semi-arid and humid.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "leptoceratops:eswiki:4",
+   "statement": "It is the first named small ceratopsian.",
+   "category": "curiosities",
+   "quote": "Es el primer pequeño ceratopsio nombrado.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

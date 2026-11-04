@@ -2,9 +2,9 @@
  "taxon": "Heterodontosaurus",
  "taxon_key": "heterodontosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "3d2a95d87e453c1a",
- "generated_at": "2026-11-03T03:28:49+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ffef8cacf3f080f5",
+ "generated_at": "2026-11-04T05:19:02+00:00",
  "citations": {
   "heterodontosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -69,6 +69,27 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "heterodontosaurus:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Heterodontosaurus (Locomotion, metabolism and breathing)",
+   "url": "https://en.wikipedia.org/wiki/Heterodontosaurus?oldid=1374727390",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "heterodontosaurus:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Heterodontosaurus (Growth and proposed sexual dimorphism)",
+   "url": "https://en.wikipedia.org/wiki/Heterodontosaurus?oldid=1374727390",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "heterodontosaurus:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Heterodontosaurus (Palaeoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Heterodontosaurus?oldid=1374727390",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "heterodontosaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Heterodontosaurus tucki (taxobox)",
@@ -86,6 +107,20 @@
   "heterodontosaurus:eswiki:3": {
    "source": "wikipedia_article",
    "title": "Heterodontosaurus tucki (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Heterodontosaurus_tucki?oldid=167286070",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "heterodontosaurus:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Heterodontosaurus tucki (Cráneo y la dentadura)",
+   "url": "https://es.wikipedia.org/wiki/Heterodontosaurus_tucki?oldid=167286070",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "heterodontosaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Heterodontosaurus tucki (El crecimiento y la ontogenia)",
    "url": "https://es.wikipedia.org/wiki/Heterodontosaurus_tucki?oldid=167286070",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -137,7 +172,16 @@
   },
   {
    "fact_id": "F005",
-   "statement": "The front of the jaws of Heterodontosaurus was covered by a horny beak.",
+   "statement": "The skull of Heterodontosaurus was elongated, narrow, and triangular in side view.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The skull was elongated, narrow, and triangular when viewed from the side.",
+   "quote_sha": "c8ca282da4e7783e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The front of Heterodontosaurus jaws was covered by a horny beak.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:2",
    "lang": "en",
@@ -145,16 +189,16 @@
    "quote_sha": "149a7cb0943b8e09"
   },
   {
-   "fact_id": "F006",
-   "statement": "Heterodontosaurus had three types of teeth, including small incisor-like teeth and long canine-like tusks in the upper jaw.",
+   "fact_id": "F007",
+   "statement": "Heterodontosaurus possessed three types of teeth: small incisor-like teeth, long canine-like tusks, and chisel-like cheek teeth separated by a gap.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:2",
    "lang": "en",
-   "quote": "It had three types of teeth; in the upper jaw, small, incisor-like teeth were followed by long, canine-like tusks.",
-   "quote_sha": "82acc5c135f0ec2a"
+   "quote": "It had three types of teeth; in the upper jaw, small, incisor-like teeth were followed by long, canine-like tusks. A gap divided the tusks from the chisel-like cheek-teeth.",
+   "quote_sha": "9353d294f4ee77fe"
   },
   {
-   "fact_id": "F007",
+   "fact_id": "F008",
    "statement": "Heterodontosaurus had a short body and a long tail.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:2",
@@ -163,7 +207,7 @@
    "quote_sha": "e2434a98b66deafb"
   },
   {
-   "fact_id": "F008",
+   "fact_id": "F009",
    "statement": "Heterodontosaurus had long, robust five-fingered forelimbs and long, slender hindlimbs with four toes.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:2",
@@ -172,8 +216,26 @@
    "quote_sha": "f4c5f2537fcdfc25"
   },
   {
-   "fact_id": "F009",
-   "statement": "The holotype specimen of Heterodontosaurus tucki was discovered during a British–South African expedition in 1961–1962.",
+   "fact_id": "F010",
+   "statement": "Heterodontosaurus is now considered to have been bipedal, although it was previously thought to be capable of quadrupedal movement.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Though it was formerly thought to have been capable of quadrupedal locomotion, it is now thought to have been bipedal.",
+   "quote_sha": "90474268f8ada92a"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Unlike its relatives, Heterodontosaurus experienced sporadic rather than continuous tooth replacement.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Tooth replacement was sporadic and not continuous, unlike its relatives.",
+   "quote_sha": "d2fd1458f4b963bf"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The holotype specimen of Heterodontosaurus tucki was discovered during a British-South African expedition in 1961–1962.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
@@ -181,8 +243,8 @@
    "quote_sha": "780f3afd53a8c12c"
   },
   {
-   "fact_id": "F010",
-   "statement": "The holotype was excavated at the Tyinindini locality in the Cape Province of South Africa at an altitude of about 1890 meters.",
+   "fact_id": "F013",
+   "statement": "The holotype was excavated at an altitude of about 1890 meters at the Tyinindini locality in the Cape Province of South Africa.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
@@ -190,7 +252,7 @@
    "quote_sha": "b48e9f40720b9498"
   },
   {
-   "fact_id": "F011",
+   "fact_id": "F014",
    "statement": "Heterodontosaurus was scientifically described and named in 1962 by Alfred Walter Crompton and Alan J. Charig.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
@@ -199,8 +261,17 @@
    "quote_sha": "72714632e8f16193"
   },
   {
-   "fact_id": "F012",
-   "statement": "A second specimen was discovered in 1966 at the Voyizane locality in the Elliot Formation of the Stormberg Group, 1,770 meters above sea level.",
+   "fact_id": "F015",
+   "statement": "The genus name refers to the animal's different-shaped teeth, while the species name honors George C. Tuck, who supported the expedition.",
+   "category": "discovery",
+   "chunk_id": "heterodontosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The genus name refers to the different-shaped teeth, and the specific name honors George C. Tuck, a director of Austin Motor Company, who supported the expedition.",
+   "quote_sha": "457753bccab65aa5"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "A second specimen was discovered in 1966 at the Voyizane locality in the Elliot Formation, 1,770 meters above sea level on Krommespruit Mountain.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
@@ -208,8 +279,8 @@
    "quote_sha": "e63fa8763801c2de"
   },
   {
-   "fact_id": "F013",
-   "statement": "The second specimen included the skull and skeleton preserved in articulation with little displacement or distortion.",
+   "fact_id": "F017",
+   "statement": "The second specimen preserved the skull and skeleton in articulation with little displacement or distortion.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
@@ -217,26 +288,8 @@
    "quote_sha": "25d618390def0aed"
   },
   {
-   "fact_id": "F014",
-   "statement": "The postcranial skeleton of the second specimen was briefly described in 1976 by Albert Santa Luca, Crompton, and Charig.",
-   "category": "discovery",
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The postcranial skeleton was briefly described by palaeontologists Albert Santa Luca, Crompton and Charig in 1976.",
-   "quote_sha": "c69023cad7224cc3"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "The skeleton of the second specimen was fully described in 1980.",
-   "category": "discovery",
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The skeleton was fully described in 1980.",
-   "quote_sha": "8eb2ca031ef63ce6"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "The skull of Heterodontosaurus was fully described in 2011 by David B. Norman and colleagues.",
+   "fact_id": "F018",
+   "statement": "The skull of Heterodontosaurus was not fully described until 2011 by David B. Norman and colleagues.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
@@ -244,61 +297,16 @@
    "quote_sha": "9f4a997b5cf05d0e"
   },
   {
-   "fact_id": "F017",
-   "statement": "A partial snout found in 1975 was originally thought to belong to Massospondylus but was reclassified as Heterodontosaurus in 2011.",
+   "fact_id": "F019",
+   "statement": "A very complete specimen was found in 2005 near Grahamstown in the Eastern Cape Province, though the surrounding rocks were too hard to remove fully.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
-   "quote": "A partial snout (NM QR 1788) found in 1975 on Tushielaw Farm south of Voyizane was thought to belong to Massospondylus until 2011, when it was reclassified as Heterodontosaurus.",
-   "quote_sha": "a88f3bb3e2a99b76"
-  },
-  {
-   "fact_id": "F018",
-   "statement": "In 1970, Richard A. Thulborn suggested that Heterodontosaurus was a junior synonym of the genus Lycorhinus.",
-   "category": "debate",
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1970, palaeontologist Richard A. Thulborn suggested that Heterodontosaurus was a junior synonym of the genus Lycorhinus, which was named in 1924 with the species L. angustidens, also from a specimen discovered in South Africa.",
-   "quote_sha": "eca782057d0a6ab5"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "Thulborn reclassified the type species as Lycorhinus tucki, arguing for distinctness based on tooth differences and stratigraphy.",
-   "category": "debate",
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "He reclassified the type species as a member of the older genus, as the new combination Lycorhinus tucki, which he considered distinct due to slight differences in its teeth and its stratigraphy.",
-   "quote_sha": "20afbf615727b790"
+   "quote": "In 2005, a new Heterodontosaurus specimen (AM 4766) was found in a streambed near Grahamstown in the Eastern Cape Province; it was very complete, but the rocks around it were too hard to fully remove.",
+   "quote_sha": "88053b3202dcb51c"
   },
   {
    "fact_id": "F020",
-   "statement": "In 1974, Charig and Crompton agreed Heterodontosaurus and Lycorhinus belonged to the same family but disagreed on whether they were similar enough to be in the same genus.",
-   "category": "debate",
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1974, Charig and Crompton agreed that Heterodontosaurus and Lycorhinus belonged in the same family, Heterodontosauridae, but disagreed that they were similar enough to be considered congeneric.",
-   "quote_sha": "a7614e59c73ea15d"
-  },
-  {
-   "fact_id": "F021",
-   "statement": "Heterodontosaurus is now thought to have been bipedal, whereas it was formerly believed to be capable of quadrupedal locomotion.",
-   "category": "paleobiology",
-   "chunk_id": "heterodontosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Though it was formerly thought to have been capable of quadrupedal locomotion, it is now thought to have been bipedal.",
-   "quote_sha": "90474268f8ada92a"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "Heterodontosaurus exhibited sporadic tooth replacement rather than continuous replacement, unlike its relatives.",
-   "category": "paleobiology",
-   "chunk_id": "heterodontosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Tooth replacement was sporadic and not continuous, unlike its relatives.",
-   "quote_sha": "d2fd1458f4b963bf"
-  },
-  {
-   "fact_id": "F023",
    "statement": "Heterodontosaurus is the namesake and best-known member of the family Heterodontosauridae.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:enwiki:2",
@@ -307,34 +315,25 @@
    "quote_sha": "e2bd86ac02f8beab"
   },
   {
-   "fact_id": "F024",
-   "statement": "The genus name Heterodontosaurus means \"different toothed lizard\", referring to its unusual heterodont dentition.",
-   "category": "discovery",
-   "chunk_id": "heterodontosaurus:enwiki:2",
+   "fact_id": "F021",
+   "statement": "In 1970, Richard A. Thulborn suggested that Heterodontosaurus was a junior synonym of the genus Lycorhinus.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
-   "quote": "the genus name means \"different toothed lizard\", in reference to its unusual, heterodont dentition",
-   "quote_sha": "92fbd10b6e88a41c"
+   "quote": "In 1970, palaeontologist Richard A. Thulborn suggested that Heterodontosaurus was a junior synonym of the genus Lycorhinus, which was named in 1924 with the species L. angustidens, also from a specimen discovered in South Africa.",
+   "quote_sha": "eca782057d0a6ab5"
   },
   {
-   "fact_id": "F025",
-   "statement": "The specific name tucki honors G. C. Tuck, who supported the discoverers.",
-   "category": "discovery",
-   "chunk_id": "heterodontosaurus:enwiki:2",
+   "fact_id": "F022",
+   "statement": "In 1974, Charig and Crompton agreed that Heterodontosaurus and Lycorhinus belonged to the same family but disagreed on whether they were similar enough to be in the same genus.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:3",
    "lang": "en",
-   "quote": "the specific name honours G. C. Tuck, who supported the discoverers.",
-   "quote_sha": "0fc7eb8e828b7e0b"
+   "quote": "In 1974, Charig and Crompton agreed that Heterodontosaurus and Lycorhinus belonged in the same family, Heterodontosauridae, but disagreed that they were similar enough to be considered congeneric.",
+   "quote_sha": "a7614e59c73ea15d"
   },
   {
-   "fact_id": "F026",
-   "statement": "Heterodontosaurus was a small dinosaur.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "Heterodontosaurus was a small dinosaur.",
-   "quote_sha": "b84a8a658403b4b6"
-  },
-  {
-   "fact_id": "F027",
+   "fact_id": "F023",
    "statement": "The most complete skeleton of Heterodontosaurus measured approximately 1.18 meters in length.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
@@ -343,7 +342,7 @@
    "quote_sha": "e4c289d63224c31c"
   },
   {
-   "fact_id": "F028",
+   "fact_id": "F024",
    "statement": "Studies have estimated the weight of Heterodontosaurus at 1.8 kg, 2.59 kg, and 3.4 kg.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
@@ -352,7 +351,7 @@
    "quote_sha": "55c9eb3e21a8aac3"
   },
   {
-   "fact_id": "F029",
+   "fact_id": "F025",
    "statement": "An incomplete skull specimen suggests Heterodontosaurus could have reached a length of 1.75 meters and a mass of nearly 10 kilograms.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
@@ -361,8 +360,8 @@
    "quote_sha": "6e97b3bed39a522b"
   },
   {
-   "fact_id": "F030",
-   "statement": "The size of Heterodontosaurus has been compared to that of a turkey.",
+   "fact_id": "F026",
+   "statement": "Heterodontosaurus is often compared in size to a turkey.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
    "lang": "en",
@@ -370,17 +369,17 @@
    "quote_sha": "5d4f2f7618e6d3c0"
   },
   {
-   "fact_id": "F031",
-   "statement": "Following the discovery of filamentous integuments on Tianyulong in 2009, Heterodontosaurus has been depicted with similar structures in publications by Gregory S. Paul and Paul Sereno.",
+   "fact_id": "F027",
+   "statement": "Paleontologist Paul Sereno suggested that Heterodontosaurus may have resembled a nimble, two-legged porcupine.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Following the description of the related Tianyulong in 2009, which was preserved with hundreds of long, filamentous integuments (sometimes compared to bristles) from neck to tail, Heterodontosaurus has also been depicted with such structures, for example in publications by the palaeontologists Gregory S. Paul and Paul Sereno.",
-   "quote_sha": "6883f308f8ddf4ab"
+   "quote": "Sereno has stated that a heterodontosaur may have looked like a \"nimble two-legged porcupine\" in life.",
+   "quote_sha": "55297003517df489"
   },
   {
-   "fact_id": "F032",
-   "statement": "A restoration by Paul Sereno included a hypothetical display structure on the snout above the nasal fossa.",
+   "fact_id": "F028",
+   "statement": "A restoration by Paul Sereno includes a hypothetical display structure on the snout above the nasal fossa.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:4",
    "lang": "en",
@@ -388,7 +387,7 @@
    "quote_sha": "3b8f31216ec33721"
   },
   {
-   "fact_id": "F033",
+   "fact_id": "F029",
    "statement": "The two most complete skulls of Heterodontosaurus measured 108 mm and 121 mm in length.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
@@ -397,8 +396,8 @@
    "quote_sha": "8922ed7cbd8da44f"
   },
   {
-   "fact_id": "F034",
-   "statement": "The skull of Heterodontosaurus was elongated, narrow, and triangular, sloping down from the sagittal crest to the snout tip.",
+   "fact_id": "F030",
+   "statement": "The skull was elongated, narrow, and triangular, sloping down from the sagittal crest to the snout tip.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -406,26 +405,8 @@
    "quote_sha": "1fb52240fb590b5d"
   },
   {
-   "fact_id": "F035",
-   "statement": "The back of the Heterodontosaurus skull ended in a hook-like shape offset to the quadrate bone.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "The back of the skull ended in a hook-like shape, which was offset to the quadrate bone.",
-   "quote_sha": "9d8f84b5699560d6"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "Heterodontosaurus had a large, circular eye opening with a spur-like bone protruding into the upper part of the orbit.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "The orbit (eye opening) was large and circular, and a large spur-like bone, the palpebral, protruded backwards into the upper part of the opening.",
-   "quote_sha": "4e6d86c0de04b31a"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "A horn-like structure projected sideways from the jugal bone below the eye socket in Heterodontosaurus.",
+   "fact_id": "F031",
+   "statement": "A horn-like structure projected sideways from the jugal bone below the eye socket.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -433,8 +414,8 @@
    "quote_sha": "eb7982fab630aa66"
   },
   {
-   "fact_id": "F038",
-   "statement": "The front of the jaws in Heterodontosaurus was covered by a toothless keratinous beak.",
+   "fact_id": "F032",
+   "statement": "The front of the jaws was covered by a toothless keratinous beak.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -442,35 +423,8 @@
    "quote_sha": "887f920221d2a818"
   },
   {
-   "fact_id": "F039",
-   "statement": "Heterodontosaurus possessed different-shaped teeth, a feature known as heterodonty that is mainly associated with mammals.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "An unusual feature of the skull was the different-shaped teeth (heterodonty) for which the genus is named, which is otherwise mainly known from mammals.",
-   "quote_sha": "eaabee950e89f019"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "Unlike most dinosaurs and reptiles, Heterodontosaurus had three different types of teeth.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "Most dinosaurs (and indeed most reptiles) have a single type of tooth in their jaws, but Heterodontosaurus had three.",
-   "quote_sha": "52cec9fd66f41095"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "The first two upper teeth of Heterodontosaurus were small and cone-shaped, while the third formed prominent, canine-like tusks.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "The first two upper teeth were small and cone-shaped (comparable to incisors), while the third on each side was much enlarged, forming prominent, canine-like tusks.",
-   "quote_sha": "ee08d74f03e67fa7"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "The canine teeth of Heterodontosaurus had fine serrations along the back edge, with only the lower ones serrated at the front.",
+   "fact_id": "F033",
+   "statement": "The upper canines had fine serrations on the back edge, while the lower canines were serrated at the front.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -478,8 +432,17 @@
    "quote_sha": "a8ac09aef84f1cd7"
   },
   {
-   "fact_id": "F043",
-   "statement": "The inset upper and lower teeth rows of Heterodontosaurus created a cheek-recess also found in other ornithischians.",
+   "fact_id": "F034",
+   "statement": "Eleven tall, chisel-like cheek-teeth lined each side of the upper jaw, separated from the canines by a large gap.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Eleven tall and chisel-like cheek-teeth lined each side of the posterior parts of the upper jaw, which were separated from the canines by a large diastema (gap).",
+   "quote_sha": "9ca3b538e1582c59"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "The inset upper and lower teeth rows created a cheek-recess similar to other ornithischians.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -487,17 +450,8 @@
    "quote_sha": "d084f9dbc3eae4e8"
   },
   {
-   "fact_id": "F044",
-   "statement": "It is debated whether the size difference between Heterodontosaurus specimens reflects variability within a species, sexual dimorphism, or the existence of two separate species.",
-   "category": "debate",
-   "chunk_id": "heterodontosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "The reason for the size difference between the two specimens is unclear, and might reflect variability within a single species, sexual dimorphism, or the presence of two separate species.",
-   "quote_sha": "46ef63ab1b6e3baa"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Researchers suggest that basal ornithischians like Heterodontosaurus may have had lip-like structures similar to lizards rather than bridging skin between the jaws.",
+   "fact_id": "F036",
+   "statement": "Researchers suggest Heterodontosaurus may have had lip-like structures rather than bridging skin between the jaws.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:5",
    "lang": "en",
@@ -505,17 +459,26 @@
    "quote_sha": "dcde205bb865debc"
   },
   {
-   "fact_id": "F046",
-   "statement": "The trunk of Heterodontosaurus was short, containing 12 dorsal vertebrae and 6 fused sacral vertebrae.",
+   "fact_id": "F037",
+   "statement": "The function of the nasal fossa or sulcus above the snout is unknown.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "A depression above the snout has been termed the \"nasal fossa\" or \"sulcus\". A similar fossa is also seen in Tianyulong, Agilisaurus, and Eoraptor, but its function is unknown.",
+   "quote_sha": "a932d0a9970c88e1"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Heterodontosaurus had a neck made of nine vertebrae that formed an S-shaped curve.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
-   "quote": "The trunk was short, consisting of 12 dorsal and 6 fused sacral vertebrae.",
-   "quote_sha": "8fd44fbe6cceff18"
+   "quote": "The neck consisted of nine cervical vertebrae, which would have formed an S-shaped curve, as indicated by the shape of the vertebral bodies in the side view of the skeleton.",
+   "quote_sha": "c2c0c187ab96861f"
   },
   {
-   "fact_id": "F047",
-   "statement": "Heterodontosaurus had a long tail estimated to contain between 34 and 37 vertebrae.",
+   "fact_id": "F039",
+   "statement": "The tail of Heterodontosaurus was long relative to its body and likely contained between 34 and 37 vertebrae.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -523,7 +486,7 @@
    "quote_sha": "c504dbd3a5a799f3"
   },
   {
-   "fact_id": "F048",
+   "fact_id": "F040",
    "statement": "Ossified tendons stiffened the dorsal spine of Heterodontosaurus starting from the fourth vertebra.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
@@ -532,8 +495,8 @@
    "quote_sha": "5e894a7b234cf8d2"
   },
   {
-   "fact_id": "F049",
-   "statement": "Heterodontosaurus possessed a suprascapula capping the shoulder blade, a feature otherwise known only in the dinosaur Parksosaurus.",
+   "fact_id": "F041",
+   "statement": "Heterodontosaurus possessed a suprascapula bone on its shoulder blade, a feature otherwise known only in the dinosaur Parksosaurus.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -541,8 +504,17 @@
    "quote_sha": "3b55d6ddb6ad384b"
   },
   {
-   "fact_id": "F050",
-   "statement": "The gastralia of Heterodontosaurus were arranged in two lengthwise rows, each with about nine elements.",
+   "fact_id": "F042",
+   "statement": "Heterodontosaurus is the only known ornithischian dinosaur that possessed gastralia, bony elements located within the skin.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "Heterodontosaurus is the only known ornithischian that possessed gastralia (bony elements within the skin between the sternal plates and the pubis of the pelvis).",
+   "quote_sha": "b3fa16e4accb5bf6"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "The gastralia of Heterodontosaurus were arranged in two rows, with each row containing approximately nine elements.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -550,8 +522,8 @@
    "quote_sha": "640772523a1e74a5"
   },
   {
-   "fact_id": "F051",
-   "statement": "The forelimbs of Heterodontosaurus were robust and measured 70% of the length of the hind limbs.",
+   "fact_id": "F044",
+   "statement": "The forelimbs of Heterodontosaurus were robust and measured 70% of the length of its hind limbs.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -559,8 +531,8 @@
    "quote_sha": "8c9e39d637a766bb"
   },
   {
-   "fact_id": "F052",
-   "statement": "Heterodontosaurus had a large hand nearly as long as the humerus, equipped with five grasping fingers.",
+   "fact_id": "F045",
+   "statement": "Heterodontosaurus had a large hand nearly as long as its upper arm bone, equipped with five grasping fingers.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -568,8 +540,17 @@
    "quote_sha": "55b398905be59403"
   },
   {
-   "fact_id": "F053",
-   "statement": "The phalangeal formula of the hand in Heterodontosaurus was 2-3-4-3-2.",
+   "fact_id": "F046",
+   "statement": "The first three fingers of Heterodontosaurus ended in large and strong claws.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The first three fingers ended in large and strong claws.",
+   "quote_sha": "33488d5c501daefa"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "The finger bone arrangement of Heterodontosaurus followed the formula 2-3-4-3-2.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -577,8 +558,8 @@
    "quote_sha": "e5aed57365efaf8f"
   },
   {
-   "fact_id": "F054",
-   "statement": "Heterodontosaurus had long, slender hindlimbs ending in four toes, with the first toe (hallux) not touching the ground.",
+   "fact_id": "F048",
+   "statement": "Heterodontosaurus had long, slender hindlimbs ending in four toes, with the first toe not touching the ground.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -586,8 +567,17 @@
    "quote_sha": "db1a6d5d06fe6e84"
   },
   {
-   "fact_id": "F055",
-   "statement": "The tibiotarsus of Heterodontosaurus was approximately 30% longer than the femur.",
+   "fact_id": "F049",
+   "statement": "Uniquely among ornithischians, Heterodontosaurus had fused leg and foot bones, including a tibiotarsus and a tarsometatarsus.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "Uniquely for ornithischians, several bones of the leg and foot were fused: the tibia and fibula were fused with upper tarsal bones (astragalus and calcaneus), forming a tibiotarsus, while the lower tarsal bones were fused with the metatarsal bones, forming a tarsometatarsus.",
+   "quote_sha": "fccff90d197e6afc"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "The tibiotarsus of Heterodontosaurus was approximately 30% longer than its femur.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -595,8 +585,8 @@
    "quote_sha": "994c1af929b6a6b4"
   },
   {
-   "fact_id": "F056",
-   "statement": "The toe bones of Heterodontosaurus ended in claw-like unguals rather than the hoof-like structures found in more advanced ornithischians.",
+   "fact_id": "F051",
+   "statement": "The toe bones of Heterodontosaurus were claw-like rather than hoof-like like those of more advanced ornithischians.",
    "category": "description",
    "chunk_id": "heterodontosaurus:enwiki:6",
    "lang": "en",
@@ -604,17 +594,44 @@
    "quote_sha": "c24e1a8743411fbd"
   },
   {
-   "fact_id": "F057",
-   "statement": "Palaeontologists Alfred Romer and Oskar Kuhn independently named the family Heterodontosauridae in 1966 to include Heterodontosaurus and Lycorhinus.",
-   "category": "classification",
+   "fact_id": "F052",
+   "statement": "Heterodontosaurus was first described in 1962 as a primitive member of the order Ornithischia.",
+   "category": "discovery",
+   "chunk_id": "heterodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "When it was described in 1962, Heterodontosaurus was classified as a primitive member of Ornithischia, one of the two main orders of Dinosauria (the other being Saurischia).",
+   "quote_sha": "f21f1b52e32bdaff"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The family Heterodontosauridae was named in 1966 by Alfred Romer and Oskar Kuhn to include Heterodontosaurus and Lycorhinus.",
+   "category": "discovery",
    "chunk_id": "heterodontosaurus:enwiki:7",
    "lang": "en",
    "quote": "The palaeontologists Alfred Romer and Oskar Kuhn independently named the family Heterodontosauridae in 1966 as a family of ornithischian dinosaurs including Heterodontosaurus and Lycorhinus.",
    "quote_sha": "83f38ec653bb5a86"
   },
   {
-   "fact_id": "F058",
-   "statement": "Heterodontosaurids lived from the Late Triassic to the Early Cretaceous, existing for at least 100 million years.",
+   "fact_id": "F054",
+   "statement": "Sereno defined Heterodontosauridae as a clade in 1998 and 2005 based on skull features like few premaxillary teeth, caniniform teeth, and a jugal horn.",
+   "category": "classification",
+   "chunk_id": "heterodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "Heterodontosauridae was defined as a clade by Sereno in 1998 and 2005, and the group shares skull features such as three or fewer teeth in each premaxilla, caniniform teeth followed by a diastema, and a jugal horn below the eye.",
+   "quote_sha": "07297863cfe1b468"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "In 2006, Xu Xing and colleagues named the clade Heterodontosauriformes to include Heterodontosauridae and Marginocephalia.",
+   "category": "classification",
+   "chunk_id": "heterodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "In 2006, palaeontologist Xu Xing and colleagues named the clade Heterodontosauriformes, which included Heterodontosauridae and Marginocephalia, since some features earlier only known from heterodontosaurs were also seen in the basal ceratopsian genus Yinlong.",
+   "quote_sha": "283ff3524b787bf0"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Heterodontosaurids existed from the Late Triassic to the Early Cretaceous, spanning at least 100 million years.",
    "category": "time_and_habitat",
    "chunk_id": "heterodontosaurus:enwiki:7",
    "lang": "en",
@@ -622,8 +639,8 @@
    "quote_sha": "c62ca8a6d60c90ac"
   },
   {
-   "fact_id": "F059",
-   "statement": "Heterodontosaurids are known from Africa, Eurasia, and the Americas, though most fossils come from southern Africa.",
+   "fact_id": "F057",
+   "statement": "Heterodontosaurids are known from Africa, Eurasia, and the Americas, with most fossils found in southern Africa.",
    "category": "time_and_habitat",
    "chunk_id": "heterodontosaurus:enwiki:7",
    "lang": "en",
@@ -631,17 +648,17 @@
    "quote_sha": "d405093af341fa05"
   },
   {
-   "fact_id": "F060",
-   "statement": "Some scientists dispute that Heterodontosaurus's hand pattern indicates a primitive relationship with saurischians, suggesting instead that similarities arose from convergent evolution.",
-   "category": "debate",
+   "fact_id": "F058",
+   "statement": "The unique teeth and jaws of heterodontosaurines were specialized for processing plant material with a sophistication comparable to later ornithischians.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:7",
    "lang": "en",
-   "quote": "This was disputed by some scientists who believed the two groups had instead evolved independently from \"thecodontian\" archosaur ancestors, and that their similarities were due to convergent evolution.",
-   "quote_sha": "a8c6de29502d0127"
+   "quote": "The unique tooth and jaw features of heterodontosaurines appear to be specialisations for effectively processing plant material, and their level of sophistication is comparable to that of later ornithischians.",
+   "quote_sha": "f77ba1d9ca5ec8d5"
   },
   {
-   "fact_id": "F061",
-   "statement": "In 2017, Matthew G. Baron and colleagues suggested grouping ornithischians with theropods in the clade Ornithoscelida based on similarities between Heterodontosaurus and Eoraptor.",
+   "fact_id": "F059",
+   "statement": "In 2017, Matthew G. Baron and colleagues suggested grouping ornithischians with theropods in Ornithoscelida based on similarities between Heterodontosaurus and Eoraptor.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:7",
    "lang": "en",
@@ -649,7 +666,16 @@
    "quote_sha": "c96db2b26d91b9b8"
   },
   {
-   "fact_id": "F062",
+   "fact_id": "F060",
+   "statement": "In 2020, Paul-Emile Dieudonné and colleagues proposed that Heterodontosauridae were basal members of Pachycephalosauria rather than a distinct natural group.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "In 2020, palaeontologist Paul-Emile Dieudonné and colleagues suggested that members of Heterodontosauridae were basal marginocephalians not forming their own natural group, instead progressively leading to Pachycephalosauria, and were therefore basal members of that group.",
+   "quote_sha": "cb313118e1b26924"
+  },
+  {
+   "fact_id": "F061",
    "statement": "Heterodontosaurus is commonly considered a herbivorous dinosaur.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:8",
@@ -658,8 +684,8 @@
    "quote_sha": "d7e82ede4d504e21"
   },
   {
-   "fact_id": "F063",
-   "statement": "In 1974, Thulborn suggested that the tusks were used for combat, display, or defense rather than feeding.",
+   "fact_id": "F062",
+   "statement": "In 1974, Thulborn suggested the tusks were likely used for combat, display, or defense rather than feeding.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -667,8 +693,8 @@
    "quote_sha": "99e313a0d5ec3436"
   },
   {
-   "fact_id": "F064",
-   "statement": "In 2000, Paul Barrett proposed that Heterodontosaurus may have been an occasional carnivore based on tooth and tusk serration.",
+   "fact_id": "F063",
+   "statement": "In 2000, Paul Barrett proposed that Heterodontosaurus may have been an occasional carnivore based on its tooth shape and serrated tusks.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -676,8 +702,8 @@
    "quote_sha": "b903d7977c402231"
   },
   {
-   "fact_id": "F065",
-   "statement": "In 2008, Butler and colleagues argued that enlarged tusks were not a sign of sexual dimorphism because they developed early in life.",
+   "fact_id": "F064",
+   "statement": "In 2008, Butler and colleagues argued that the tusks grew early in development and thus were not a sign of sexual dimorphism.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -685,8 +711,8 @@
    "quote_sha": "29fbb9921ea4b607"
   },
   {
-   "fact_id": "F066",
-   "statement": "In 2011, Norman and colleagues noted that Heterodontosaurus had long arms with large, curved claws capable of seizing small prey.",
+   "fact_id": "F065",
+   "statement": "Heterodontosaurus possessed long arms with large, curved claws that could help it seize small prey.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -694,8 +720,17 @@
    "quote_sha": "c5ba335fcd698274"
   },
   {
+   "fact_id": "F066",
+   "statement": "If an omnivore, Heterodontosaurus would have had an advantage during dry seasons when plant food was scarce.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "As an omnivore, Heterodontosaurus would have had a significant selection advantage during the dry season when vegetation was scarce.",
+   "quote_sha": "4ab41d5f66080933"
+  },
+  {
    "fact_id": "F067",
-   "statement": "In 2012, Sereno argued that skull and dentition features indicate a diet that was purely or mostly herbivorous.",
+   "statement": "In 2012, Sereno argued that skull and tooth features indicate Heterodontosaurus was primarily or exclusively herbivorous.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -704,7 +739,7 @@
   },
   {
    "fact_id": "F068",
-   "statement": "Heterodontosaurus had enlarged jaw muscles and a jaw joint positioned below the teeth.",
+   "statement": "Heterodontosaurus had enlarged jaw muscles and a jaw joint positioned below the teeth to allow for an even bite along the tooth row.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -713,7 +748,7 @@
   },
   {
    "fact_id": "F069",
-   "statement": "A 2016 study found that the bite force of Heterodontosaurus was comparable to that of Scelidosaurus.",
+   "statement": "A 2016 study found the bite force of Heterodontosaurus was comparable to that of the dinosaur Scelidosaurus.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:8",
    "lang": "en",
@@ -722,6 +757,15 @@
   },
   {
    "fact_id": "F070",
+   "statement": "Butler and colleagues suggested Heterodontosaurus specialized in tough plants, while later relatives likely had a more generalized diet including invertebrates.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:8",
+   "lang": "en",
+   "quote": "Butler and colleagues suggested that the feeding apparatus of Heterodontosaurus was specialised to process tough plant material, and that late-surviving members of the family (Fruitadens, Tianyulong and Echinodon) probably showed a more generalised diet including both plants and invertebrates.",
+   "quote_sha": "a2d0c7e83e4a7c72"
+  },
+  {
+   "fact_id": "F071",
    "statement": "There is significant controversy regarding whether Heterodontosaurus exhibited continuous tooth replacement like other dinosaurs.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:9",
@@ -730,35 +774,44 @@
    "quote_sha": "dfcad48e27dd3f02"
   },
   {
-   "fact_id": "F071",
-   "statement": "In 1980, Hopson challenged Thulborn's conclusions about tooth replacement and jaw movement.",
-   "category": "debate",
-   "chunk_id": "heterodontosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "A comprehensive analysis conducted in 1980 by Hopson questioned Thulborn's ideas.",
-   "quote_sha": "a34bd6c4fd359dbc"
-  },
-  {
    "fact_id": "F072",
-   "statement": "Hopson demonstrated that tooth wear patterns indicated vertical and lateral jaw movements instead of back-and-forth movements.",
-   "category": "debate",
+   "statement": "In 1974 and 1978, Thulborn found no evidence of continuous tooth replacement in known skulls, suggesting teeth formed simultaneously.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
-   "quote": "Hopson showed that the wear facet patterns on the teeth in fact indicate vertical and lateral rather than back and forth jaw movements.",
-   "quote_sha": "471fb8602470463a"
+   "quote": "In 1974 and 1978, Thulborn found that the skulls known at that time lacked any indications of continuous tooth replacement: The cheek teeth of the known skulls are worn uniformly, indicating that they formed simultaneously.",
+   "quote_sha": "de5d00d840250cb2"
   },
   {
    "fact_id": "F073",
-   "statement": "Hopson argued that variable tooth wear indicated continuous tooth replacement.",
-   "category": "debate",
+   "statement": "Thulborn hypothesized that complete tooth replacement occurred only during aestivation, a period when the animal did not feed.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
-   "quote": "Hopson demonstrated variability in the degree of tooth wear, indicating continuous tooth replacement.",
-   "quote_sha": "c6af46b96025e76d"
+   "quote": "Such a complete replacement could only have been possible within phases of aestivation, when the animal did not feed.",
+   "quote_sha": "40d2e169e5c32129"
   },
   {
    "fact_id": "F074",
-   "statement": "Hopson rejected Thulborn's hypothesis that tooth replacement occurred during aestivation due to a lack of evidence.",
+   "statement": "Thulborn's aestivation hypothesis fits the supposed desert-like habitat of Heterodontosaurus with its hot, dry seasons.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Aestivation also complies with the supposed habitat of the animals, which would have been desert-like, including hot dry seasons when food was scarce.",
+   "quote_sha": "10b9b5aaa9b70849"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Hopson demonstrated variable tooth wear, suggesting continuous tooth replacement occurred in Heterodontosaurus.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Furthermore, Hopson demonstrated variability in the degree of tooth wear, indicating continuous tooth replacement.",
+   "quote_sha": "f54d945ccc73a883"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Hopson rejected Thulborn's aestivation hypothesis because there was insufficient evidence to support it.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
@@ -766,44 +819,161 @@
    "quote_sha": "5a0bf2d01462887a"
   },
   {
-   "fact_id": "F075",
-   "statement": "In 2006, Butler and colleagues used CT scans on juvenile skull SAM-PK-K10487 to study tooth replacement.",
-   "category": "discovery",
+   "fact_id": "F077",
+   "statement": "In 2006, Butler and colleagues used CT scans on juvenile skull SAM-PK-K10487 to study tooth development.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
    "quote": "In 2006, Butler and colleagues conducted computer tomography scans of the juvenile skull SAM-PK-K10487.",
    "quote_sha": "2e55a06bb8ab490d"
   },
   {
-   "fact_id": "F076",
-   "statement": "Unerupted replacement teeth were first discovered in 2011 in specimen SAM-PK-K1334 described by Norman and colleagues.",
-   "category": "discovery",
+   "fact_id": "F078",
+   "statement": "Surprisingly, Butler and colleagues found unerupted replacement teeth in a juvenile skull, indicating early tooth replacement.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "To the surprise of these researchers, replacement teeth yet to erupt were present even in this early ontogenetic stage.",
+   "quote_sha": "a6281cfbd092652b"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Butler and colleagues concluded that tooth replacement in Heterodontosaurus was more sporadic than in related dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "In conclusion, Butler and colleagues suggested that tooth replacement in Heterodontosaurus must have been more sporadic than in related dinosaurs.",
+   "quote_sha": "741a6eeb7e115160"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "Unerupted replacement teeth were not found in Heterodontosaurus until 2011, when Norman and colleagues described specimen SAM-PK-K1334.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
    "quote": "Unerupted replacement teeth in Heterodontosaurus were not discovered until 2011, when Norman and colleagues described the upper jaw of specimen SAM-PK-K1334.",
    "quote_sha": "ede02ee56c10ca78"
   },
   {
-   "fact_id": "F077",
-   "statement": "A juvenile skull AMNH 24000 described by Sereno in 2012 also contained unerupted replacement teeth.",
-   "category": "discovery",
+   "fact_id": "F081",
+   "statement": "A juvenile skull described by Sereno in 2012 also contained unerupted replacement teeth.",
+   "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
    "quote": "Another juvenile skull (AMNH 24000) described by Sereno in 2012 also yielded unerupted replacement teeth.",
    "quote_sha": "963641c96740f367"
   },
   {
-   "fact_id": "F078",
-   "statement": "The unerupted replacement teeth in Heterodontosaurus are triangular in lateral view, typical of basal ornithischians.",
+   "fact_id": "F082",
+   "statement": "Discoveries show that tooth replacement in Heterodontosaurus was episodic rather than continuous like in other heterodontosaurids.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:enwiki:9",
    "lang": "en",
-   "quote": "The unerupted teeth are triangular in lateral view, which is the typical tooth morphology in basal ornithischians.",
-   "quote_sha": "14a2d8100a7272df"
+   "quote": "As shown by these discoveries, tooth replacement in Heterodontosaurus was episodical and not continuous as in other heterodontosaurids.",
+   "quote_sha": "d06904d0ab7e869b"
   },
   {
-   "fact_id": "F079",
-   "statement": "The genus Heterodontosaurus was established by Charning and Crompton in 1962.",
+   "fact_id": "F083",
+   "statement": "In 1980, Santa Luca described features of the forelimb implying strong arm musculature in Heterodontosaurus.",
+   "category": "discovery",
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In 1980, Santa Luca described several features of the forelimb that are also present in recent quadrupedal animals and imply a strong arm musculature",
+   "quote_sha": "6c70a9b090db29c1"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Santa Luca proposed that Heterodontosaurus moved quadrupedally when slow but could switch to a faster bipedal run.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "According to Santa Luca, Heterodontosaurus was quadrupedal when moving slowly but was able to switch to a much faster, bipedal run",
+   "quote_sha": "6bd6f91452521693"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "Researchers suggest the robust arms of Heterodontosaurus were adapted for foraging, possibly by digging up roots and breaking insect nests.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "The anatomical evidence suggested by Santa Luca was identified as adaptations for foraging; the robust and strong arms might have been used for digging up roots and breaking open insect nests",
+   "quote_sha": "c8bb739f3599f94b"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "A 2009 study by Herman Pontzer and colleagues indicated Heterodontosaurus was endothermic because its aerobic endurance exceeded that of cold-blooded animals.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In a 2009 study, Herman Pontzer and colleagues calculated the aerobic endurance of various dinosaurs. Even at moderate running speeds, Heterodontosaurus would have exceeded the maximum aerobic capabilities possible for an ectotherm (cold-blooded) animal, indicating endothermy in this genus",
+   "quote_sha": "e1d0d7c1b4c36e02"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "In 2021, Viktor Radermacher and colleagues argued based on specimen AM 4766 that the breathing system of ornithischians like Heterodontosaurus differed drastically from other dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Based on synchrotron data of a well-preserved Heterodontosaurus specimen (AM 4766), Viktor Radermacher and colleagues, in 2021, argued that the breathing system of ornithischians drastically differed from that of other dinosaurs",
+   "quote_sha": "93727d4b3f21d62a"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "A juvenile Heterodontosaurus skull measured 45 mm, suggesting a total body length of 450 mm if adult proportions applied.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The length of the juvenile skull was suggested to be 45 mm. Assuming similar body proportions as adult individuals, the body length of this juvenile would have been 450 mm",
+   "quote_sha": "1f98e6d46d40d07b"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "In 1974, Thulborn hypothesized that large tusks in heterodontosaurids were secondary sex characteristics present only in adult males.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "In 1974, Thulborn suggested that the large tusks of heterodontosaurids represented a secondary sex characteristic. According to this theory, only adult male individuals would have possessed fully developed tusks",
+   "quote_sha": "c93919d850364049"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "In 2006, Richard Butler and colleagues questioned the sexual dimorphism hypothesis, noting that a juvenile skull possessed tusks.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "This hypothesis was questioned by palaeontologist Richard Butler and colleagues in 2006, who argued that the juvenile skull SAM-PK-K10487 possessed tusks despite its early developmental state",
+   "quote_sha": "98a1883e6db4062e"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Heterodontosaurus fossils are found in the Upper Elliot and Clarens Formations of the Karoo Supergroup, dating to the Lower Jurassic (Hettangian and Sinemurian ages) around 200–190 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "heterodontosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "Heterodontosaurus is known from fossils found in formations of the Karoo Supergroup, including the Upper Elliot Formation and the Clarens Formation, which date to the Hettangian and Sinemurian ages of the Lower Jurassic, around 200–190 million years ago",
+   "quote_sha": "8e10c08767e2f0b6"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "Heterodontosaurus was originally thought to be from the Upper Triassic period before being re-dated to the Jurassic.",
+   "category": "time_and_habitat",
+   "chunk_id": "heterodontosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "Originally, Heterodontosaurus was thought to be from the Upper Triassic period",
+   "quote_sha": "3845f513ccc48d4e"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "Researchers suggest Heterodontosaurus specialized in tough plant material due to its dentition, while the related Abrictosaurus likely ate softer vegetation.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:enwiki:12",
+   "lang": "en",
+   "quote": "With its highly specialised dentition, Heterodontosaurus might have been specialised for tough plant material, while the less specialised Abrictosaurus might have predominantly consumed softer vegetation",
+   "quote_sha": "9e9740291d02a5e2"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "The genus Heterodontosaurus was named by Charning and Crompton in 1962.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:eswiki:1",
    "lang": "es",
@@ -811,8 +981,8 @@
    "quote_sha": "462c233a7fbb567c"
   },
   {
-   "fact_id": "F080",
-   "statement": "The species H. tucki was described by Charning and Crompton in 1962.",
+   "fact_id": "F095",
+   "statement": "The species Heterodontosaurus tucki was named by Charning and Crompton in 1962.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:eswiki:1",
    "lang": "es",
@@ -820,8 +990,8 @@
    "quote_sha": "df1f43f8a9ad4454"
   },
   {
-   "fact_id": "F081",
-   "statement": "Lycorhinus tucki, described by Thulborn in 1970, is a synonym of Heterodontosaurus tucki.",
+   "fact_id": "F096",
+   "statement": "Lycorhinus tucki is a synonym for Heterodontosaurus tucki, originally described by Thulborn in 1970.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:eswiki:1",
    "lang": "es",
@@ -829,17 +999,17 @@
    "quote_sha": "09e9cf4e908c47a4"
   },
   {
-   "fact_id": "F082",
-   "statement": "Heterodontosaurus lived during the Early Jurassic period.",
+   "fact_id": "F097",
+   "statement": "Heterodontosaurus lived during the Early Jurassic period, approximately 200 to 190 million years ago, in what is now Africa.",
    "category": "time_and_habitat",
-   "chunk_id": "heterodontosaurus:eswiki:1",
+   "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
-   "quote": "fossil_range: Jurásico Inferior",
-   "quote_sha": "66dc39eec2b3a8b5"
+   "quote": "Heterodontosaurus tucki es la única especie conocida del género extinto Heterodontosaurus (gr. \"lagarto de dientes diferentes\") de dinosaurio neornitisquio heterodontosáurido que vivió a principios del período Jurásico, hace aproximadamente entre 200 a 190 millones de años, en el Sinemuriano, en lo que hoy es África.",
+   "quote_sha": "31863179a5e75078"
   },
   {
-   "fact_id": "F083",
-   "statement": "Alan Charing and Alfred Crompton discovered the remains of Heterodontosaurus in a mountainous escarpment in South Africa during the 1960s.",
+   "fact_id": "F098",
+   "statement": "Paleontologists Alan Charig and Alfred Crompton discovered the remains of Heterodontosaurus in the 1960s in a mountainous area of South Africa.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -847,8 +1017,8 @@
    "quote_sha": "5464eea26a93397e"
   },
   {
-   "fact_id": "F084",
-   "statement": "Fossils of Heterodontosaurus were found in the Upper Elliot Formation and the Clarence Formation.",
+   "fact_id": "F099",
+   "statement": "The fossils of Heterodontosaurus were found in the Upper Elliot Formation and the Clarence Formation.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -856,8 +1026,8 @@
    "quote_sha": "7dcbf4767907be62"
   },
   {
-   "fact_id": "F085",
-   "statement": "Heterodontosaurus was a small dinosaur, reaching lengths between 1.20 and possibly 1.75 meters and weighing between 2 and 10 kilograms.",
+   "fact_id": "F100",
+   "statement": "Heterodontosaurus was a small dinosaur that grew between 1.20 and possibly 1.75 meters long and weighed between 2 and 10 kilograms.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -865,7 +1035,7 @@
    "quote_sha": "9d1ba674d6b784a8"
   },
   {
-   "fact_id": "F086",
+   "fact_id": "F101",
    "statement": "Heterodontosaurus had long, relatively robust five-fingered forelimbs and long, thin four-fingered hindlimbs.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:2",
@@ -874,7 +1044,7 @@
    "quote_sha": "68be20ac4466c4b6"
   },
   {
-   "fact_id": "F087",
+   "fact_id": "F102",
    "statement": "The skull of Heterodontosaurus was elongated, narrow, and triangular when viewed from the side.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:2",
@@ -883,16 +1053,34 @@
    "quote_sha": "d6ffa82e03570fe4"
   },
   {
-   "fact_id": "F088",
-   "statement": "Heterodontosaurus had three types of teeth in its upper jaw: small incisor-like teeth, followed by long canine-like fangs, separated from chisel-shaped teeth by a gap.",
+   "fact_id": "F103",
+   "statement": "The front of the jaws of Heterodontosaurus was covered by a horny beak.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Tenía tres tipos de dientes, en la mandíbula superior, los dientes pequeños, como incisivos, seguidos por largos colmillos, como caninos. Una brecha dividía los colmillos de los dientes con forma de cincel.",
-   "quote_sha": "44aeff2fd42001ec"
+   "quote": "La parte frontal de las mandíbulas estaba cubierta por un pico córneo.",
+   "quote_sha": "2609b5cf902b2c3d"
   },
   {
-   "fact_id": "F089",
+   "fact_id": "F104",
+   "statement": "Heterodontosaurus had three types of teeth in its upper jaw: small incisor-like teeth followed by long canine-like fangs.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Tenía tres tipos de dientes, en la mandíbula superior, los dientes pequeños, como incisivos, seguidos por largos colmillos, como caninos.",
+   "quote_sha": "9995784800d23c55"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "A gap separated the fangs from the chisel-shaped teeth in Heterodontosaurus.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Una brecha dividía los colmillos de los dientes con forma de cincel.",
+   "quote_sha": "1a2ebf4debc9bff3"
+  },
+  {
+   "fact_id": "F106",
    "statement": "While previously thought to be quadrupedal, Heterodontosaurus is now believed to have been bipedal.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:eswiki:2",
@@ -901,8 +1089,8 @@
    "quote_sha": "85f2953f0e631d84"
   },
   {
-   "fact_id": "F090",
-   "statement": "Unlike its relatives, Heterodontosaurus had sporadic rather than continuous tooth replacement.",
+   "fact_id": "F107",
+   "statement": "Heterodontosaurus had sporadic, non-continuous tooth replacement, unlike its relatives.",
    "category": "paleobiology",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -910,8 +1098,8 @@
    "quote_sha": "9c662eff70529adb"
   },
   {
-   "fact_id": "F091",
-   "statement": "The most complete skeleton of Heterodontosaurus, specimen SAM-PK-K1332, belonged to an animal measuring approximately 1.18 meters in length.",
+   "fact_id": "F108",
+   "statement": "The most complete skeleton of Heterodontosaurus, SAM-PK-K1332, belonged to an animal measuring approximately 1.18 meters in length.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -919,8 +1107,8 @@
    "quote_sha": "25f1b96f483a5f51"
   },
   {
-   "fact_id": "F092",
-   "statement": "The weight of the most complete Heterodontosaurus specimen has been estimated to vary between 1.8, 2.59, and 3.4 kilograms in separate studies.",
+   "fact_id": "F109",
+   "statement": "The weight of the most complete Heterodontosaurus specimen was estimated to vary between 1.8, 2.59, and 3.4 kilograms in separate studies.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -928,8 +1116,8 @@
    "quote_sha": "3598ac8fce44192b"
   },
   {
-   "fact_id": "F093",
-   "statement": "A second, incomplete skull specimen suggests Heterodontosaurus could have grown up to 1.75 meters in length and nearly 10 kilograms in mass.",
+   "fact_id": "F110",
+   "statement": "A second specimen with an incomplete skull suggests Heterodontosaurus could have grown up to 1.75 meters long and nearly 10 kilograms in mass.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -937,8 +1125,17 @@
    "quote_sha": "81bde16b95bda0ea"
   },
   {
-   "fact_id": "F094",
-   "statement": "Heterodontosaurus teeth came in three shapes: small and sharp, long and curved canine-like teeth possibly present only in males, and molar-like teeth.",
+   "fact_id": "F111",
+   "statement": "The size of Heterodontosaurus has been compared to that of a turkey.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El tamaño de este dinosaurio ha sido comparado con el de un pavo.",
+   "quote_sha": "f0d1aaca3a3c8870"
+  },
+  {
+   "fact_id": "F112",
+   "statement": "Heterodontosaurus teeth came in three forms: small and sharp, long and curved canine-like teeth possibly present only in males, and molariform or molar teeth.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -946,7 +1143,7 @@
    "quote_sha": "abff748627bc32f9"
   },
   {
-   "fact_id": "F095",
+   "fact_id": "F113",
    "statement": "Heterodontosaurus had a beak at the front of its jaw and small teeth behind it likely used for cutting leaves and shoots.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -955,7 +1152,7 @@
    "quote_sha": "fedbd3e6a3aa44e0"
   },
   {
-   "fact_id": "F096",
+   "fact_id": "F114",
    "statement": "The fused ankle structure of Heterodontosaurus resembles that of birds.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -964,7 +1161,7 @@
    "quote_sha": "6bdec6a4b51b4091"
   },
   {
-   "fact_id": "F097",
+   "fact_id": "F115",
    "statement": "Heterodontosaurus had tiny wrist bones, making the wrist functional and versatile, possibly used for grasping and pulling leaves.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -973,34 +1170,43 @@
    "quote_sha": "1a527a1c9866abe0"
   },
   {
-   "fact_id": "F098",
-   "statement": "The neck of Heterodontosaurus consisted of 9 cervical vertebrae that likely formed an S-curve.",
+   "fact_id": "F116",
+   "statement": "Each hand of Heterodontosaurus had five fingers, two of which were opposable.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
-   "quote": "El cuello consistía en 9 vértebras cervicales , que habrían formado una curva en forma de S, como lo indica la forma de los cuerpos vertebrales en la vista lateral del esqueleto.",
-   "quote_sha": "c510e7ecf756f32b"
+   "quote": "Cada mano tenía 5 dedos, dos de ellos oponibles.",
+   "quote_sha": "31069d0280d620d4"
   },
   {
-   "fact_id": "F099",
-   "statement": "The spine of Heterodontosaurus was rigidified by ossified tendons starting from the fourth dorsal vertebra, a feature likely helping to counteract stress during bipedal locomotion.",
+   "fact_id": "F117",
+   "statement": "The first three fingers of Heterodontosaurus ended in large, strong claws.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
-   "quote": "La espina dorsal estaba rígida por tendones osificados, comenzando por la cuarta vértebra dorsal. Esta característica está presente en muchos otros dinosaurios ornitisquios y probablemente contrarrestó el estrés causado por las fuerzas de flexión que actúan sobre la columna vertebral durante la locomoción bípeda.",
-   "quote_sha": "be3edfbd8ad6b3af"
+   "quote": "Los primeros tres dedos terminaron en garras grandes y fuertes.",
+   "quote_sha": "27247a628411fa59"
   },
   {
-   "fact_id": "F100",
-   "statement": "Unlike many other ornithischians, the tail of Heterodontosaurus lacked ossified tendons and was likely flexible.",
+   "fact_id": "F118",
+   "statement": "The fourth and fifth fingers of Heterodontosaurus were strongly reduced and possibly vestigial.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
-   "quote": "En contraste con muchos otros ornitisquios, la cola de Heterodontosaurus carecía de tendones osificados, y por lo tanto era probablemente flexible.",
-   "quote_sha": "d78a6fefe6e5048a"
+   "quote": "Los dedos cuarto y quinto fueron fuertemente reducidos, y posiblemente vestigiales.",
+   "quote_sha": "203e4136eb19b8b6"
   },
   {
-   "fact_id": "F101",
+   "fact_id": "F119",
+   "statement": "The phalangeal formula of Heterodontosaurus, indicating the number of finger bones from the first digit, is 2-3-4-3-2.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La fórmula falangeal, que indica el número de huesos de los dedos en cada dedo a partir del primero, es de 2-3-4-3-2.",
+   "quote_sha": "9b1ce92648918f14"
+  },
+  {
+   "fact_id": "F120",
    "statement": "The forelimbs of Heterodontosaurus were robust and proportionally long, measuring 70% of the length of the hindlimbs.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -1009,7 +1215,16 @@
    "quote_sha": "aeb2eb8a4359dbbd"
   },
   {
-   "fact_id": "F102",
+   "fact_id": "F121",
+   "statement": "The radius of the forearm of Heterodontosaurus measured 70% of the length of the humerus.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El radio del antebrazo mide el 70% de la longitud del húmero, el hueso del antebrazo.",
+   "quote_sha": "666aeae452922dbe"
+  },
+  {
+   "fact_id": "F122",
    "statement": "The hand of Heterodontosaurus was large, nearly as long as the humerus, and had five grasping fingers.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -1018,17 +1233,17 @@
    "quote_sha": "9051d7d739a87bde"
   },
   {
-   "fact_id": "F103",
-   "statement": "The first three fingers of Heterodontosaurus ended in large, strong claws, while the fourth and fifth fingers were strongly reduced and possibly vestigial.",
+   "fact_id": "F123",
+   "statement": "In Heterodontosaurus, the second finger was the longest, followed by the third and the first finger, the thumb.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Los primeros tres dedos terminaron en garras grandes y fuertes. Los dedos cuarto y quinto fueron fuertemente reducidos, y posiblemente vestigiales.",
-   "quote_sha": "09eb97be78c1098c"
+   "quote": "El segundo dedo fue el más largo, seguido del tercero y el primer dedo, el pulgar.",
+   "quote_sha": "12bcb459484eb14f"
   },
   {
-   "fact_id": "F104",
-   "statement": "The hind legs of Heterodontosaurus were long and thin, ending in four toes, the first of which, the hallux, did not touch the ground.",
+   "fact_id": "F124",
+   "statement": "The hind legs of Heterodontosaurus were long, thin, and ended in four toes, the first of which, the hallux, did not touch the ground.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -1036,8 +1251,8 @@
    "quote_sha": "c50b467d76fc9142"
   },
   {
-   "fact_id": "F105",
-   "statement": "Unique among ornithischians, several leg and foot bones of Heterodontosaurus were fused, including the tibia and fibula fusing with upper tarsal bones to form a tibiotarsus, and lower tarsal bones fusing with metatarsals to form a tarsometatarsus.",
+   "fact_id": "F125",
+   "statement": "Unique among ornithischians, several leg and foot bones of Heterodontosaurus fused: the tibia and fibula fused with upper tarsal bones to form a tibiotarsus, while lower tarsal bones fused with metatarsals to form a tarsometatarsus.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -1045,7 +1260,16 @@
    "quote_sha": "264005fb8998ca82"
   },
   {
-   "fact_id": "F106",
+   "fact_id": "F126",
+   "statement": "The tibiotarsus of Heterodontosaurus was approximately 30% longer than the femur.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El tibiotarso era aproximadamente un 30% más largo que el fémur.",
+   "quote_sha": "4181610a30a718d5"
+  },
+  {
+   "fact_id": "F127",
    "statement": "The ungual bones of the feet of Heterodontosaurus were like claws, not hooves like in more advanced ornithischians.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
@@ -1054,17 +1278,8 @@
    "quote_sha": "6f467235a4100bd2"
   },
   {
-   "fact_id": "F107",
-   "statement": "Following the description of Tianyulong in 2009, Heterodontosaurus has also been described as having long, filamentous structures from neck to tail, sometimes compared to quills.",
-   "category": "description",
-   "chunk_id": "heterodontosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Siguiendo la descripción del relacionado Tianyulong en 2009, que se conservó con cientos de estructuras largas y filamentosas a veces comparadas con cerdas desde el cuello hasta la cola, Heterodontosaurus también se ha descrito con tales estructuras, por ejemplo en publicaciones del paleontólogo estadounidense Gregory S. Paul y Paul Sereno .",
-   "quote_sha": "19a1839f3452b3fc"
-  },
-  {
-   "fact_id": "F108",
-   "statement": "Paul Sereno has stated that a living Heterodontosaurus may have looked like an \"agile two-legged porcupine.\"",
+   "fact_id": "F128",
+   "statement": "Paul Sereno has stated that a Heterodontosaurus may have looked like an \"agile two-legged porcupine\" in life.",
    "category": "description",
    "chunk_id": "heterodontosaurus:eswiki:3",
    "lang": "es",
@@ -1072,25 +1287,88 @@
    "quote_sha": "2e23e3c02af4d415"
   },
   {
-   "fact_id": "F109",
-   "statement": "Heterodontosaurus tucki is the only known species of the extinct genus Heterodontosaurus, a heterodontosaurid neornithischian dinosaur.",
+   "fact_id": "F129",
+   "statement": "The restoration published by Sereno also presented a hypothetical display structure located on the snout, above the nasal fossa depression.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La restauración publicada por Sereno también presentó una estructura de exhibición hipotética ubicada en el hocico, sobre la depresión de la fosa nasal.",
+   "quote_sha": "3141e68dbf2c4663"
+  },
+  {
+   "fact_id": "F130",
+   "statement": "The neck of Heterodontosaurus consisted of 9 cervical vertebrae that would have formed an S-shaped curve.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El cuello consistía en 9 vértebras cervicales , que habrían formado una curva en forma de S, como lo indica la forma de los cuerpos vertebrales en la vista lateral del esqueleto.",
+   "quote_sha": "c510e7ecf756f32b"
+  },
+  {
+   "fact_id": "F131",
+   "statement": "The vertebral bodies of the anterior cervical vertebrae of Heterodontosaurus were parallelogram-shaped, the middle ones were rectangular, and the posterior ones were trapezoidal.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los cuerpos vertebrales de las vértebras cervicales anteriores tienen forma de paralelogramo, las del medio son rectangulares y los de la parte posterior muestran una forma trapezoidal.",
+   "quote_sha": "cc8e2f7b271bcef0"
+  },
+  {
+   "fact_id": "F132",
+   "statement": "The trunk of Heterodontosaurus was short and consisted of 12 dorsal vertebrae and 6 fused sacral vertebrae.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El tronco era corto y consistía de 12 vértebras dorsales y 6 sacras fusionadas.",
+   "quote_sha": "4edda0008477a8e1"
+  },
+  {
+   "fact_id": "F133",
+   "statement": "The tail of Heterodontosaurus was long compared to the body and likely consisted of 34 to 37 caudal vertebrae, though known incompletely.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La cola era larga en comparación con el cuerpo, aunque se conoce de forma incompleta, probablemente consistía de 34 a 37 vértebras caudales.",
+   "quote_sha": "18a3379e14854857"
+  },
+  {
+   "fact_id": "F134",
+   "statement": "The spine of Heterodontosaurus was rigid due to ossified tendons, starting from the fourth dorsal vertebra.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La espina dorsal estaba rígida por tendones osificados, comenzando por la cuarta vértebra dorsal.",
+   "quote_sha": "d92dbb1642e4febd"
+  },
+  {
+   "fact_id": "F135",
+   "statement": "This feature is present in many other ornithischian dinosaurs and likely counteracted stress caused by bending forces acting on the spine during bipedal locomotion.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Esta característica está presente en muchos otros dinosaurios ornitisquios y probablemente contrarrestó el estrés causado por las fuerzas de flexión que actúan sobre la columna vertebral durante la locomoción bípeda.",
+   "quote_sha": "9e6eca8e93462296"
+  },
+  {
+   "fact_id": "F136",
+   "statement": "In contrast to many other ornithischians, the tail of Heterodontosaurus lacked ossified tendons and was therefore likely flexible.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "En contraste con muchos otros ornitisquios, la cola de Heterodontosaurus carecía de tendones osificados, y por lo tanto era probablemente flexible.",
+   "quote_sha": "d78a6fefe6e5048a"
+  },
+  {
+   "fact_id": "F137",
+   "statement": "Heterodontosaurus is the type and most well-known member of the family Heterodontosauridae.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Heterodontosaurus tucki es la única especie conocida del género extinto Heterodontosaurus (gr. \"lagarto de dientes diferentes\") de dinosaurio neornitisquio heterodontosáurido",
-   "quote_sha": "7e7315c08525ed90"
+   "quote": "Heterodontosaurus es el miembro que le da nombre y más conocido de la familia Heterodontosauridae.",
+   "quote_sha": "151b674d9e3016e7"
   },
   {
-   "fact_id": "F110",
-   "statement": "The family Heterodontosauridae is considered one of the most primitive or basal groups within the order of ornithischian dinosaurs.",
-   "category": "classification",
-   "chunk_id": "heterodontosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Esta familia es considerada uno de los grupos más primitivos o basales dentro del orden de los dinosaurios ornitisquios .",
-   "quote_sha": "7df9929ff7ad2e3d"
-  },
-  {
-   "fact_id": "F111",
+   "fact_id": "F138",
    "statement": "Many paleontologists still consider Heterodontosaurus an ornithopod, although the theory of classifying it within ceratopsians is increasingly accepted.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:eswiki:2",
@@ -1099,8 +1377,8 @@
    "quote_sha": "878e59fec5277b4c"
   },
   {
-   "fact_id": "F112",
-   "statement": "It is hypothesized that heterodontosauriforms may have given rise to marginocephalians, possibly explaining the transitional characteristics of Yinlong.",
+   "fact_id": "F139",
+   "statement": "It is also believed that heterodontosauriforms may have given rise to marginocephalians, which could explain the transitional characteristics of Yinlong.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -1108,8 +1386,17 @@
    "quote_sha": "a660702e291ef01f"
   },
   {
-   "fact_id": "F113",
-   "statement": "Based on anatomy and physiology, Heterodontosaurus is considered a ceratopsian and distinct from ornithopods, despite ongoing debate.",
+   "fact_id": "F140",
+   "statement": "This theory posits that Yinlong could be an evolutionary link between the two taxa and that the heterodontosaurian was effectively an ornithopod whose family was the link that gave rise to marginocephalians.",
+   "category": "debate",
+   "chunk_id": "heterodontosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Esta teoría postula que el Yinlong puede ser un nexo evolutivo entre ambos taxones y que el heterodontosaurio efectivamente es un ornitópodo cuya familia fue el nexo que dio origen a los marginocéfalos.",
+   "quote_sha": "274bccacb4be5a28"
+  },
+  {
+   "fact_id": "F141",
+   "statement": "Based on both theories, these dinosaurs are considered ceratopsians because their anatomy and physiology correspond to this group and diverge from ornithopods.",
    "category": "debate",
    "chunk_id": "heterodontosaurus:eswiki:2",
    "lang": "es",
@@ -1117,17 +1404,134 @@
    "quote_sha": "87c4845b2963d85b"
   },
   {
-   "fact_id": "F114",
-   "statement": "The genus Heterodontosaurus was named by Crompton and Charig in 1962.",
-   "category": "discovery",
-   "chunk_id": "heterodontosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "PBDB name: Heterodontosaurus (genus), Crompton and Charig 1962",
-   "quote_sha": "7ad50e4b6ef25ecd"
+   "fact_id": "F142",
+   "statement": "Heterodontosaurus had a small but robust skull.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "El cráneo de Heterodontosaurus era pequeño pero robusto.",
+   "quote_sha": "ed17430860e3aa9b"
   },
   {
-   "fact_id": "F115",
-   "statement": "Heterodontosaurus belongs to the subfamily Heterodontosaurinae.",
+   "fact_id": "F143",
+   "statement": "The two most complete skulls measure 108 mm and 121 mm in length.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Los dos cráneos más completos miden 108 milímetros, el del espécimen holotipo SAM-PK-K337 y 121 milímetros el del espécimen SAM-PK-K1332, de longitud.",
+   "quote_sha": "40a360d2e8375bdc"
+  },
+  {
+   "fact_id": "F144",
+   "statement": "The genus name refers to the unusual heterodont dentition found in the skull, a trait usually associated with mammals.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Una característica inusual del cráneo fueron los dientes de forma diferente heterodoncia para los cuales se nombra el género, que de otra manera se conoce principalmente de los mamíferos.",
+   "quote_sha": "3739a55aa70a1838"
+  },
+  {
+   "fact_id": "F145",
+   "statement": "Unlike most dinosaurs and reptiles which have one tooth type, Heterodontosaurus possessed three different types of teeth.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "La mayoría de los dinosaurios y de hecho la mayoría de los reptiles tienen un solo tipo de diente en sus mandíbulas, pero Heterodontosaurus tenía tres.",
+   "quote_sha": "b527864beecf7031"
+  },
+  {
+   "fact_id": "F146",
+   "statement": "The snout tip lacked teeth, while the posterior part of the upper premaxilla had three teeth on each side.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "La punta de pico del hocico no tenía dientes, mientras que la parte posterior de la premaxilar en la mandíbula superior tenía tres dientes en cada lado.",
+   "quote_sha": "9bf39720cdfbfdb6"
+  },
+  {
+   "fact_id": "F147",
+   "statement": "The first two upper teeth were small and cone-shaped like incisors, while the third on each side was large and formed prominent tusk-like canines.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Los dos primeros dientes superiores eran pequeñas y en forma de cono, comparable a incisivos, mientras que el tercero en cada lado era mucho grande, formando prominentes, caninos tipo colmillos.",
+   "quote_sha": "8a5d3ff641241796"
+  },
+  {
+   "fact_id": "F148",
+   "statement": "Eleven high, chisel-shaped molar teeth were aligned on each side of the posterior upper jaw, separated from the canines by a large gap.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Once dientes molares altos y con forma de cincel se alinearon a cada lado de las partes posteriores de la mandíbula superior, que se separaron de los caninos por un gran diastema.",
+   "quote_sha": "c30a3b725f4abaf1"
+  },
+  {
+   "fact_id": "F149",
+   "statement": "The front of the jaws was covered by a toothless keratinous beak or rhamphotheca.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "La parte frontal de las mandíbulas estaba cubierta por un pico queratínico sin dientes o rhamphotheca.",
+   "quote_sha": "15576fa5c5500a21"
+  },
+  {
+   "fact_id": "F150",
+   "statement": "The jugal bone formed a \"blade\" that created a groove with a tab on the pterygoid bone to guide the movement of the lower jaw.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "El hueso yugal también formó una \"cuchilla\" que creó una ranura junto con una pestaña en el hueso pterigoideo, para guiar el movimiento de la mandíbula inferior.",
+   "quote_sha": "01a420ba3a1740cd"
+  },
+  {
+   "fact_id": "F151",
+   "statement": "The left and right upper temporal fossae were separated by the sagittal crest, which likely provided lateral attachment surfaces for jaw muscles in the living animal.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Las fosas temporales superiores izquierda y derecha estaban separadas por la cresta sagital, que habría proporcionado superficies de unión laterales para la musculatura de la mandíbula en el animal vivo.",
+   "quote_sha": "b55764b2ea34ee7e"
+  },
+  {
+   "fact_id": "F152",
+   "statement": "In the juvenile skull SAM-PK-K10487, the eye sockets became proportionally smaller as the animal grew, while the snout became longer and contained additional teeth.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Como lo muestra el cráneo juvenil SAM-PK-K10487, las cuencas de los ojos se hicieron proporcionalmente más pequeñas a medida que el animal crecía, y el hocico se hizo más largo y contenía dientes adicionales.",
+   "quote_sha": "8eb55df0a2b8e790"
+  },
+  {
+   "fact_id": "F153",
+   "statement": "The juvenile skull length was suggested to be 45 mm.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Se sugirió que la longitud del cráneo juvenil era de 45 milímetros.",
+   "quote_sha": "53b684f645fc65f3"
+  },
+  {
+   "fact_id": "F154",
+   "statement": "Assuming body proportions similar to adults, the juvenile's body length would have been 450 mm.",
+   "category": "description",
+   "chunk_id": "heterodontosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Suponiendo proporciones corporales similares a las de los adultos, la longitud corporal de este juvenil habría sido de 450 milímetros.",
+   "quote_sha": "94ab8b33f2c02f15"
+  },
+  {
+   "fact_id": "F155",
+   "statement": "The teeth had a thick enamel layer on the inner side, were adapted for wear (hypsodonty), and had long roots firmly embedded in their sockets.",
+   "category": "paleobiology",
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Estos dientes tenían una capa gruesa de esmalte en el lado interno y estaban adaptados para el desgaste, hipsodoncia y tenían largas raíces, firmemente incrustadas en sus cuencas.",
+   "quote_sha": "423ecc81da4c172d"
+  },
+  {
+   "fact_id": "F156",
+   "statement": "Heterodontosaurus belongs to the parent group Heterodontosaurinae.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:pbdb:1",
    "lang": "en",
@@ -1135,8 +1539,8 @@
    "quote_sha": "b4f631bb9a8421f7"
   },
   {
-   "fact_id": "F116",
-   "statement": "Heterodontosaurus is classified within the family Heterodontosauridae.",
+   "fact_id": "F157",
+   "statement": "Heterodontosaurus is classified in the family Heterodontosauridae.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:pbdb:1",
    "lang": "en",
@@ -1144,8 +1548,8 @@
    "quote_sha": "abdb7a5298a1c2b9"
   },
   {
-   "fact_id": "F117",
-   "statement": "Heterodontosaurus is a member of the dinosaur class Ornithischia.",
+   "fact_id": "F158",
+   "statement": "Heterodontosaurus is a member of the class Ornithischia.",
    "category": "classification",
    "chunk_id": "heterodontosaurus:pbdb:1",
    "lang": "en",
@@ -1153,7 +1557,7 @@
    "quote_sha": "57c7a44935709d4b"
   },
   {
-   "fact_id": "F118",
+   "fact_id": "F159",
    "statement": "Heterodontosaurus lived during the Hettangian to Pliensbachian stages, from 201.4 to 184.2 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "heterodontosaurus:pbdb:1",
@@ -1162,8 +1566,17 @@
    "quote_sha": "1db6441fa2190b3f"
   },
   {
-   "fact_id": "F119",
-   "statement": "There are seven recorded fossil occurrences of Heterodontosaurus.",
+   "fact_id": "F160",
+   "statement": "The genus Heterodontosaurus was named by Crompton and Charig in 1962.",
+   "category": "discovery",
+   "chunk_id": "heterodontosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "PBDB name: Heterodontosaurus (genus), Crompton and Charig 1962",
+   "quote_sha": "7ad50e4b6ef25ecd"
+  },
+  {
+   "fact_id": "F161",
+   "statement": "There are 7 recorded fossil occurrences of Heterodontosaurus.",
    "category": "discovery",
    "chunk_id": "heterodontosaurus:pbdb:1",
    "lang": "en",
@@ -1174,59 +1587,24 @@
  "rejected": [
   {
    "chunk_id": "heterodontosaurus:enwiki:2",
-   "statement": "The skull of Heterodontosaurus was elongated, narrow, and triangular when viewed from the side.",
-   "category": "description",
-   "quote": "The skull was elongated, narrow, and triangular when viewed from the side.",
-   "reason": "statement copies the source wording: 'was elongated narrow and triangular when viewed from'"
+   "statement": "Despite its large tusks, Heterodontosaurus is believed to have been herbivorous or at least omnivorous.",
+   "category": "paleobiology",
+   "quote": "In spite of the large tusks, Heterodontosaurus is thought to have been herbivorous, or at least omnivorous.",
+   "reason": "statement copies the source wording: 'to have been herbivorous or at least omnivorous'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "The holotype specimen consists of a crushed but nearly complete skull, while associated postcranial remains mentioned originally were not located by 2011.",
+   "statement": "Specimen SAM-PK-K1332 is the most complete heterodontosaurid skeleton described to date.",
    "category": "discovery",
-   "quote": "The specimen consists of a crushed but nearly complete skull; associated postcranial remains mentioned in the original description could not be located in 2011.",
-   "reason": "statement copies the source wording: 'specimen consists of a crushed but nearly complete'"
+   "quote": "SAM-PK-K1332 is the most complete heterodontosaurid skeleton described to date.",
+   "reason": "statement copies the source wording: 'SAM-PK-K 1332 is the most complete heterodontosaurid skeleton'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "Robert Broom discovered a partial skull possibly from the Clarens Formation in 1913, which was sold to the American Museum of Natural History.",
-   "category": "discovery",
-   "quote": "The palaeontologist Robert Broom discovered a partial skull, possibly in the Clarens Formation of South Africa, which was sold to the American Museum of Natural History in 1913.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "The specimen AMNH 24000 was first identified as a sub-adult Heterodontosaurus by Sereno in a 2012 monograph.",
-   "category": "discovery",
-   "quote": "This specimen (AMNH 24000) was first identified as belonging to a sub-adult Heterodontosaurus by Sereno, who reported it in a 2012 monograph about the Heterodontosauridae.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "A new specimen was found in 2005 in a streambed near Grahamstown in the Eastern Cape Province.",
-   "category": "discovery",
-   "quote": "In 2005, a new Heterodontosaurus specimen (AM 4766) was found in a streambed near Grahamstown in the Eastern Cape Province.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "The 2005 specimen was scanned at the European Synchrotron Radiation Facility in 2016, with some research results published in 2021.",
+   "statement": "The 2005 specimen was scanned at the European Synchrotron Radiation Facility in 2016 to reveal its skeleton, with some research results published in 2021.",
    "category": "discovery",
    "quote": "The specimen was therefore scanned at the European Synchrotron Radiation Facility in 2016, to help reveal the skeleton, and aid in research of its anatomy and lifestyle, some of which was published in 2021.",
    "reason": "numbers not in the quote: ['2005']"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:3",
-   "statement": "In 2014, Galton suggested that a partial postcranial skeleton might belong to the related genus Pegomastax instead of Heterodontosaurus.",
-   "category": "debate",
-   "quote": "However, in 2014, Galton suggested it might belong to the related genus Pegomastax instead, which was named by Sereno based on a partial skull from the same locality.",
-   "reason": "statement copies the source wording: 'might belong to the related genus Pegomastax instead'"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:2",
-   "statement": "Despite its large tusks, Heterodontosaurus is thought to have been herbivorous or at least omnivorous.",
-   "category": "paleobiology",
-   "quote": "In spite of the large tusks, Heterodontosaurus is thought to have been herbivorous, or at least omnivorous.",
-   "reason": "statement copies the source wording: 'large tusks Heterodontosaurus is thought to have been'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:2",
@@ -1236,52 +1614,66 @@
    "reason": "statement copies the source wording: 'their closest affinities within the group are debated'"
   },
   {
+   "chunk_id": "heterodontosaurus:enwiki:3",
+   "statement": "In 2014, Galton suggested that a partial postcranial skeleton might belong to the related genus Pegomastax instead of Heterodontosaurus.",
+   "category": "debate",
+   "quote": "However, in 2014, Galton suggested it might belong to the related genus Pegomastax instead, which was named by Sereno based on a partial skull from the same locality.",
+   "reason": "statement copies the source wording: 'might belong to the related genus Pegomastax instead'"
+  },
+  {
    "chunk_id": "heterodontosaurus:enwiki:4",
-   "statement": "Heterodontosaurus was among the largest known members of the family Heterodontosauridae.",
+   "statement": "Heterodontosaurus was one of the largest known members of the family Heterodontosauridae.",
    "category": "description",
    "quote": "Heterodontosaurus was amongst the largest known members of the family Heterodontosauridae.",
    "reason": "statement copies the source wording: 'the largest known members of the family Heterodontosauridae'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:4",
-   "statement": "Paul Sereno suggested that Heterodontosaurus may have looked like a nimble two-legged porcupine in life.",
+   "statement": "Some reconstructions depict Heterodontosaurus with long, filamentous integumentary structures similar to bristles.",
    "category": "description",
-   "quote": "Sereno has stated that a heterodontosaur may have looked like a \"nimble two-legged porcupine\" in life.",
-   "reason": "statement copies the source wording: 'may have looked like a nimble two-legged porcupine'"
+   "quote": "Heterodontosaurus has also been depicted with such structures [long, filamentous integuments], for example in publications by the palaeontologists Gregory S. Paul and Paul Sereno.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:5",
-   "statement": "The skull of Heterodontosaurus was small but robustly built.",
+   "statement": "The back of the skull ended in a hook-like shape offset from the quadrate bone.",
    "category": "description",
-   "quote": "The skull of Heterodontosaurus was small but robustly built.",
-   "reason": "statement copies the source wording: 'The skull of Heterodontosaurus was small but robustly'"
+   "quote": "The back of the skull ended in a hook-like shape, which was offset to the quadrate bone.",
+   "reason": "statement copies the source wording: 'back of the skull ended in a hook-like'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:5",
-   "statement": "The snout tip of Heterodontosaurus was toothless, while the hind part of the upper jaw had three teeth on each side.",
+   "statement": "The snout tip was toothless, while the hind part of the upper jaw had three teeth on each side.",
    "category": "description",
    "quote": "The beaked tip of the snout was toothless, whereas the hind part of the premaxilla in the upper jaw had three teeth on each side.",
    "reason": "statement copies the source wording: 'the upper jaw had three teeth on each'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:5",
-   "statement": "Eleven tall, chisel-like cheek-teeth lined each side of the posterior upper jaw, separated from the canines by a large gap.",
+   "statement": "The first two upper teeth were small and cone-shaped, while the third formed prominent, canine-like tusks.",
    "category": "description",
-   "quote": "Eleven tall and chisel-like cheek-teeth lined each side of the posterior parts of the upper jaw, which were separated from the canines by a large diastema (gap).",
-   "reason": "statement copies the source wording: 'chisel-like cheek-teeth lined each side of the posterior'"
+   "quote": "The first two upper teeth were small and cone-shaped (comparable to incisors), while the third on each side was much enlarged, forming prominent, canine-like tusks.",
+   "reason": "statement copies the source wording: 'The first two upper teeth were small and'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:5",
-   "statement": "The cheek-teeth of Heterodontosaurus had a heavy inner enamel coat, were adapted for wear, and had long roots firmly embedded in their sockets.",
+   "statement": "The cheek-teeth had a heavy inner enamel coat, were adapted for wear, and had long roots firmly embedded in their sockets.",
    "category": "description",
    "quote": "These teeth had a heavy coat of enamel on the inwards side, and were adapted for wear (hypsodonty), and they had long roots, firmly embedded in their sockets.",
    "reason": "statement copies the source wording: 'had long roots firmly embedded in their sockets'"
   },
   {
-   "chunk_id": "heterodontosaurus:enwiki:6",
-   "statement": "Heterodontosaurus had a neck made of nine vertebrae that formed an S-shaped curve.",
+   "chunk_id": "heterodontosaurus:enwiki:5",
+   "statement": "As enamel thinned on the outer tooth surface, a thick band of wear-resistant dentine formed the cutting crest of the occlusal surface.",
    "category": "description",
-   "quote": "The neck consisted of nine cervical vertebrae, which would have formed an S-shaped curve.",
+   "quote": "But while the enamel thinned out towards the outer surface of the teeth, a thick band of wear-resistant dentine arose concurrently with the thinning enamel, and formed the cutting crest of the occlusal surface, a roletypically filled by enamel.",
+   "reason": "statement copies the source wording: 'formed the cutting crest of the occlusal surface'"
+  },
+  {
+   "chunk_id": "heterodontosaurus:enwiki:5",
+   "statement": "The reason for the size difference between specimens is unclear and might reflect species variability, sexual dimorphism, or two separate species.",
+   "category": "debate",
+   "quote": "The reason for the size difference between the two specimens is unclear, and might reflect variability within a single species, sexual dimorphism, or the presence of two separate species.",
    "reason": "quote not found verbatim in the source"
   },
   {
@@ -1292,94 +1684,38 @@
    "reason": "statement copies the source wording: 'many other ornithischians the tail of Heterodontosaurus lacked'"
   },
   {
-   "chunk_id": "heterodontosaurus:enwiki:6",
-   "statement": "Heterodontosaurus had well-developed sternal plates in its chest region that resembled those of theropods.",
-   "category": "description",
-   "quote": "In the chest region, Heterodontosaurus possessed a well-developed pair of sternal plates that resembled those of theropods.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:6",
-   "statement": "The connection between Heterodontosaurus's sternal ribs and rib cage was moveable, allowing the body to expand during breathing.",
-   "category": "description",
-   "quote": "In contrast to other ornithischians, this connection was moveable, allowing the body to expand during breathing.",
-   "reason": "statement copies the source wording: 'was moveable allowing the body to expand during'"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:6",
-   "statement": "Heterodontosaurus is the only known ornithischian dinosaur that possessed gastralia, bony elements within the skin.",
-   "category": "description",
-   "quote": "Heterodontosaurus is the only known ornithischian that possessed gastralia (bony elements within the skin between the sternal plates and the pubis of the pelvis).",
-   "reason": "statement copies the source wording: 'that possessed gastralia bony elements within the skin'"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:6",
-   "statement": "Uniquely among ornithischians, Heterodontosaurus had fused leg bones, including a tibiotarsus formed by the fusion of the tibia, fibula, and upper tarsal bones.",
-   "category": "description",
-   "quote": "Uniquely for ornithischians, several bones of the leg and foot were fused: the tibia and fibula were fused with upper tarsal bones (astragalus and calcaneus), forming a tibiotarsus.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "heterodontosaurus:enwiki:7",
-   "statement": "Heterodontosaurus was first described in 1962 as a primitive member of the order Ornithischia.",
-   "category": "discovery",
-   "quote": "When it was described in 1962, Heterodontosaurus was classified as a primitive member of Ornithischia.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:7",
-   "statement": "The clade Heterodontosauridae was formally defined by Sereno in 1998 and 2005.",
+   "statement": "Despite many genera being assigned to Heterodontosauridae, Heterodontosaurus remains the most completely known genus and serves as the primary reference for the group.",
    "category": "classification",
-   "quote": "Heterodontosauridae was defined as a clade by Sereno in 1998 and 2005.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:7",
-   "statement": "In 2006, Xu Xing and colleagues named the clade Heterodontosauriformes, which included Heterodontosauridae and Marginocephalia.",
-   "category": "classification",
-   "quote": "In 2006, palaeontologist Xu Xing and colleagues named the clade Heterodontosauriformes, which included Heterodontosauridae and Marginocephalia.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:7",
-   "statement": "The unique tooth and jaw features of heterodontosaurines suggest they were specialized for processing plant material.",
-   "category": "paleobiology",
-   "quote": "The unique tooth and jaw features of heterodontosaurines appear to be specialisations for effectively processing plant material.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "heterodontosaurus:enwiki:7",
-   "statement": "In 2020, Paul-Emile Dieudonné and colleagues proposed that Heterodontosauridae were basal members of Marginocephalia leading to Pachycephalosauria rather than forming their own distinct group.",
-   "category": "debate",
-   "quote": "In 2020, palaeontologist Paul-Emile Dieudonné and colleagues suggested that members of Heterodontosauridae were basal marginocephalians not forming their own natural group, instead progressively leading to Pachycephalosauria.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Many genera have been referred to Heterodontosauridae since the family was erected, yet Heterodontosaurus remains the most completely known genus, and has functioned as the primary reference point for the group in the palaeontological literature.",
+   "reason": "statement copies the source wording: 'Heterodontosaurus remains the most completely known genus and'"
   },
   {
    "chunk_id": "heterodontosaurus:enwiki:9",
-   "statement": "In 1974 and 1978, Thulborn found no evidence of continuous tooth replacement in known Heterodontosaurus skulls.",
-   "category": "discovery",
-   "quote": "In 1974 and 1978, Thulborn found that the skulls known at that time lacked any indications of continuous tooth replacement.",
+   "statement": "Thulborn concluded that Heterodontosaurus replaced its entire set of teeth at once on a regular schedule.",
+   "category": "paleobiology",
+   "quote": "These observations led Thulborn to conclude that Heterodontosaurus must have replaced its entire set of teeth at once on a regular basis.",
+   "reason": "statement copies the source wording: 'replaced its entire set of teeth at once'"
+  },
+  {
+   "chunk_id": "heterodontosaurus:enwiki:9",
+   "statement": "In 1980, Hopson challenged Thulborn by showing wear patterns indicated vertical and lateral jaw movements instead of back-and-forth.",
+   "category": "debate",
+   "quote": "In 1980, Hopson showed that the wear facet patterns on the teeth in fact indicate vertical and lateral rather than back and forth jaw movements.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "heterodontosaurus:eswiki:2",
-   "statement": "Heterodontosaurus lived during the Early Jurassic period, approximately 200 to 190 million years ago, in what is now Africa.",
-   "category": "time_and_habitat",
-   "quote": "Heterodontosaurus tucki es la única especie conocida del género extinto Heterodontosaurus ... que vivió a principios del período Jurásico, hace aproximadamente entre 200 a 190 millones de años, en el Sinemuriano, en lo que hoy es África.",
-   "reason": "quote not found verbatim in the source"
+   "chunk_id": "heterodontosaurus:enwiki:10",
+   "statement": "Heterodontosaurus had an incipient anterior pubic process and reduced gastralia, suggesting its pelvis was involved in breathing while chest contraction became less important.",
+   "category": "paleobiology",
+   "quote": "Heterodontosaurus had an incipient APP, and its gastralia were reduced compared to non-ornithischian dinosaurs, suggesting that the pelvis was already involved in breathing while chest contraction became less important",
+   "reason": "statement copies the source wording: 'involved in breathing while chest contraction became less'"
   },
   {
    "chunk_id": "heterodontosaurus:eswiki:2",
    "statement": "Heterodontosaurus had a short body and a long tail.",
    "category": "description",
    "quote": "El cuerpo era corto con una cola larga.",
-   "reason": "duplicate"
-  },
-  {
-   "chunk_id": "heterodontosaurus:eswiki:2",
-   "statement": "The front of the jaws of Heterodontosaurus was covered by a horny beak.",
-   "category": "description",
-   "quote": "La parte frontal de las mandíbulas estaba cubierta por un pico córneo.",
    "reason": "duplicate"
   },
   {
@@ -1391,10 +1727,31 @@
   },
   {
    "chunk_id": "heterodontosaurus:eswiki:3",
-   "statement": "The size of Heterodontosaurus has been compared to that of a turkey.",
+   "statement": "Following the description of the related Tianyulong in 2009, Heterodontosaurus has also been described as having long, filamentous structures from neck to tail, sometimes compared to quills.",
    "category": "description",
-   "quote": "El tamaño de este dinosaurio ha sido comparado con el de un pavo.",
-   "reason": "duplicate"
+   "quote": "Siguiendo la descripción del relacionado Tianyulong en 2009, que se conservó con cientos de estructuras largas y filamentosas a veces comparadas con cerdas desde el cuello hasta la cola, Heterodontosaurus también se ha descrito con tales estructuras, por ejemplo en publicaciones del paleontólogo estadounidense Gregory S. Paul y Paul Sereno.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "heterodontosaurus:eswiki:2",
+   "statement": "The family Heterodontosauridae is considered one of the most primitive or basal groups within the order of ornithischian dinosaurs.",
+   "category": "classification",
+   "quote": "Esta familia es considerada uno de los grupos más primitivos o basales dentro del orden de los dinosaurios ornitisquios.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "heterodontosaurus:eswiki:2",
+   "statement": "At least four other heterodontosaurid genera are known from the same geological formations as Heterodontosaurus.",
+   "category": "paleobiology",
+   "quote": "Al menos otros cuatro géneros heterodontosáuridos son conocidos de las mismas formaciones geológicas que Heterodontosaurus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "heterodontosaurus:eswiki:4",
+   "statement": "Since tooth morphology did not change with age, it indicates that juveniles had the same diet as adults.",
+   "category": "paleobiology",
+   "quote": "La morfología de los dientes no cambió con la edad, lo que indica que la dieta de los juveniles es la misma que la de los adultos.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

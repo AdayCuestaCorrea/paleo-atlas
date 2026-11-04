@@ -2,9 +2,9 @@
  "taxon": "Limusaurus",
  "taxon_key": "limusaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "ddf6f8ae314e3536",
- "generated_at": "2026-11-03T03:34:45+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "653bc7a8c0d5b99f",
+ "generated_at": "2026-11-04T05:28:09+00:00",
  "citations": {
   "limusaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -90,6 +90,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "limusaurus:enwiki:13": {
+   "source": "wikipedia_article",
+   "title": "Limusaurus (Taphonomy)",
+   "url": "https://en.wikipedia.org/wiki/Limusaurus?oldid=1375068945",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "limusaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Limusaurus inextricabilis (taxobox)",
@@ -118,6 +125,20 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "limusaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Limusaurus inextricabilis (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Limusaurus_inextricabilis?oldid=173694001",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "limusaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Limusaurus inextricabilis (Alimentación y dieta)",
+   "url": "https://es.wikipedia.org/wiki/Limusaurus_inextricabilis?oldid=173694001",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "limusaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Limusaurus",
@@ -138,7 +159,7 @@
   },
   {
    "fact_id": "F002",
-   "statement": "Limusaurus underwent a drastic transformation as it aged, losing its juvenile teeth and replacing them with a beak in adulthood.",
+   "statement": "Limusaurus underwent a drastic transformation as it aged, losing its juvenile teeth and developing a beak as an adult.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:2",
    "lang": "en",
@@ -156,34 +177,16 @@
   },
   {
    "fact_id": "F004",
-   "statement": "Limusaurus inextricabilis was named and described in 2009 by paleontologist Xu Xing and colleagues.",
+   "statement": "Limusaurus shares convergent features with later ornithomimid theropods and earlier non-dinosaurian shuvosaurids.",
    "category": "discovery",
-   "chunk_id": "limusaurus:enwiki:3",
+   "chunk_id": "limusaurus:enwiki:2",
    "lang": "en",
-   "quote": "In 2009, the small ceratosaur was described by paleontologist Xu Xing and colleagues, who named it Limusaurus inextricabilis.",
-   "quote_sha": "6e3d7e44904b03a8"
+   "quote": "Several of these features were convergently similar to the later ornithomimid theropods as well as the earlier non-dinosaurian shuvosaurids.",
+   "quote_sha": "9a5916dd94c9531e"
   },
   {
    "fact_id": "F005",
-   "statement": "The name Limusaurus inextricabilis means \"impossible to extricate mud lizard,\" referring to the hypothesis that the specimens died after being mired in mud.",
-   "category": "discovery",
-   "chunk_id": "limusaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The genus name consists of the words limus, Latin for \"mud\" or \"mire\", and saurus, Greek for \"lizard\", and the species name means \"impossible to extricate\"; both names refer to how these specimens appear to have died after being mired.",
-   "quote_sha": "f8d0160dd3733af4"
-  },
-  {
-   "fact_id": "F006",
-   "statement": "Seventeen additional specimens of Limusaurus were described in 2017 by Shuo Wang and colleagues from the same excavation blocks as the original 2009 discovery.",
-   "category": "discovery",
-   "chunk_id": "limusaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Seventeen additional Limusaurus specimens were described by paleontologist Shuo Wang and colleagues in 2017, excavated from the same blocks as those described in 2009.",
-   "quote_sha": "ae7b19a946197576"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "Limusaurus was the first known Ceratosaurian from Asia and belongs to the family Noasauridae, closely related to Elaphrosaurus.",
+   "statement": "Limusaurus was the first known ceratosaur from Asia and belongs to the family Noasauridae, closely related to Elaphrosaurus.",
    "category": "classification",
    "chunk_id": "limusaurus:enwiki:2",
    "lang": "en",
@@ -191,16 +194,43 @@
    "quote_sha": "a4f8514aedae9808"
   },
   {
-   "fact_id": "F008",
-   "statement": "The holotype of Limusaurus is estimated to be about 1.7 meters long and weigh 15 kilograms.",
-   "category": "description",
-   "chunk_id": "limusaurus:enwiki:4",
+   "fact_id": "F006",
+   "statement": "Paleontologist Xu Xing and colleagues described and named Limusaurus inextricabilis in 2009.",
+   "category": "discovery",
+   "chunk_id": "limusaurus:enwiki:3",
    "lang": "en",
-   "quote": "The holotype (which was originally considered an adult based on the level of fusion of its bones, but later as a subadult when analyzed along with other specimens) is estimated to have been about 1.7 m in length and the weight of the animal has been estimated at 15 kg.",
-   "quote_sha": "911633a084269b99"
+   "quote": "In 2009, the small ceratosaur was described by paleontologist Xu Xing and colleagues, who named it Limusaurus inextricabilis.",
+   "quote_sha": "6e3d7e44904b03a8"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The name Limusaurus inextricabilis means \"mud lizard impossible to extricate,\" referring to the hypothesis that the specimens died after being stuck in mud.",
+   "category": "discovery",
+   "chunk_id": "limusaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The genus name consists of the words limus, Latin for \"mud\" or \"mire\", and saurus, Greek for \"lizard\", and the species name means \"impossible to extricate\"; both names refer to how these specimens appear to have died after being mired.",
+   "quote_sha": "f8d0160dd3733af4"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Seventeen additional specimens of Limusaurus were described in 2017 by Shuo Wang and colleagues from the same fossil blocks as the original 2009 discovery.",
+   "category": "discovery",
+   "chunk_id": "limusaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Seventeen additional Limusaurus specimens were described by paleontologist Shuo Wang and colleagues in 2017, excavated from the same blocks as those described in 2009.",
+   "quote_sha": "ae7b19a946197576"
   },
   {
    "fact_id": "F009",
+   "statement": "Toothless adults and toothed juveniles of Limusaurus were initially thought to be different species but were later identified as the same species.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The toothless adults and toothed juveniles were initially thought to be different kinds of dinosaurs, and were studied separately, until it was realized they represent the same species.",
+   "quote_sha": "91ed765f1c7efe1a"
+  },
+  {
+   "fact_id": "F010",
    "statement": "One adult specimen of Limusaurus is estimated to be 15% larger than the holotype.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:4",
@@ -209,17 +239,26 @@
    "quote_sha": "ccbcd260e7f57157"
   },
   {
-   "fact_id": "F010",
-   "statement": "While Limusaurus may have had feathers, there is no direct evidence for this, though it has sometimes been depicted with them.",
-   "category": "debate",
+   "fact_id": "F011",
+   "statement": "Although Limusaurus may have had feathers, there is no direct fossil evidence confirming this.",
+   "category": "description",
    "chunk_id": "limusaurus:enwiki:4",
    "lang": "en",
    "quote": "While Limusaurus has sometimes been depicted with feathers and may have had them, there is no direct evidence of such structures.",
    "quote_sha": "33e3669a6f78edd8"
   },
   {
-   "fact_id": "F011",
-   "statement": "Limusaurus had an elongated neck with long cervical vertebrae similar to Elaphrosaurus.",
+   "fact_id": "F012",
+   "statement": "The pattern of digit reduction in Limusaurus supports a contested hypothesis regarding the evolution of the three-fingered hand in tetanuran theropods and birds.",
+   "category": "debate",
+   "chunk_id": "limusaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The pattern of digit reduction in Limusaurus has been used to support the hypothesis that the three-fingered hand of tetanuran theropods is the result of the loss of the first and fifth digits from the ancestral five-fingered theropod hand, a contested hypothesis which is relevant to the evolution of birds.",
+   "quote_sha": "80da60c4a29a81dd"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Limusaurus possessed an elongated neck with long cervical vertebrae similar to those of Elaphrosaurus.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -227,8 +266,8 @@
    "quote_sha": "68ef7503fafd5b36"
   },
   {
-   "fact_id": "F012",
-   "statement": "The scapula of Limusaurus had a distinctive prominent ridge at its front edge.",
+   "fact_id": "F014",
+   "statement": "The shoulder blade of Limusaurus featured a distinctive prominent ridge along its front edge.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -236,8 +275,8 @@
    "quote_sha": "00ba0d40c1aa3edd"
   },
   {
-   "fact_id": "F013",
-   "statement": "Limusaurus possessed a sternum fused into a single large continuous plate, a trait evolved independently in coelurosaurs.",
+   "fact_id": "F015",
+   "statement": "Limusaurus had a sternum fused into a single large continuous plate, a trait that evolved independently in coelurosaurs.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -245,8 +284,8 @@
    "quote_sha": "9c664f96d47a185c"
   },
   {
-   "fact_id": "F014",
-   "statement": "Limusaurus had a furcula, a feature previously unknown among ceratosaurians.",
+   "fact_id": "F016",
+   "statement": "Limusaurus possessed a furcula, or wishbone, which was previously unknown among ceratosaurians.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -254,8 +293,8 @@
    "quote_sha": "4098e422d9e277f1"
   },
   {
-   "fact_id": "F015",
-   "statement": "Limusaurus had three fingers, uniquely lacking the first finger entirely and having a first metacarpal shorter than the others.",
+   "fact_id": "F017",
+   "statement": "Limusaurus had only three fingers, uniquely missing the first finger entirely, with the first metacarpal shorter than the others.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -263,7 +302,7 @@
    "quote_sha": "db90b251adf16312"
   },
   {
-   "fact_id": "F016",
+   "fact_id": "F018",
    "statement": "The second metacarpal of Limusaurus was more robust than the other metacarpals, a distinctive feature of the genus.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
@@ -272,8 +311,8 @@
    "quote_sha": "6aeea27a3de00385"
   },
   {
-   "fact_id": "F017",
-   "statement": "Limusaurus had three phalanges on both the second and third fingers, whereas other early theropods typically had four on the third.",
+   "fact_id": "F019",
+   "statement": "Limusaurus had three phalanges on both the second and third fingers, whereas other early theropods typically had four on the third finger.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -281,17 +320,8 @@
    "quote_sha": "2fb14b7d9045f7ff"
   },
   {
-   "fact_id": "F018",
-   "statement": "Limusaurus had unique foot anatomy where the three weight-bearing metatarsals were arranged in an arc and the fourth metatarsal adhered tightly to the third.",
-   "category": "description",
-   "chunk_id": "limusaurus:enwiki:6",
-   "lang": "en",
-   "quote": "The metatarsals of the three weight-bearing toes were arranged in an arc, with the fourth metatarsal straight and adhering tightly to the third for its entire length; these features are unique to Limusaurus.",
-   "quote_sha": "5a4aa3b82deb93a1"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "Limusaurus had leg proportions adapted for running, with the tibiotarsus 1.2 times and the foot 1.3 times the length of the femur.",
+   "fact_id": "F020",
+   "statement": "Limusaurus had legs adapted for running, with the tibiotarsus 1.2 times and the foot 1.3 times the length of the femur.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
    "lang": "en",
@@ -299,7 +329,7 @@
    "quote_sha": "4f0c559ba4307c1d"
   },
   {
-   "fact_id": "F020",
+   "fact_id": "F021",
    "statement": "The legs of Limusaurus were 1.8 times the length of its torso.",
    "category": "description",
    "chunk_id": "limusaurus:enwiki:6",
@@ -308,7 +338,16 @@
    "quote_sha": "fbf25bcff89fbb48"
   },
   {
-   "fact_id": "F021",
+   "fact_id": "F022",
+   "statement": "The finger claw bones of Limusaurus were short, stout, expanded at the base, and featured two grooves on their sides.",
+   "category": "description",
+   "chunk_id": "limusaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The unguals (claw bones) of the fingers were short, stout, and expanded at their base. They had two grooves on their sides, a feature also found in Masiakasaurus.",
+   "quote_sha": "7b92fb6f4a5a91b6"
+  },
+  {
+   "fact_id": "F023",
    "statement": "Xu and colleagues classified Limusaurus as a basal member of Ceratosauria in 2009.",
    "category": "classification",
    "chunk_id": "limusaurus:enwiki:7",
@@ -317,7 +356,7 @@
    "quote_sha": "bbc3505a3534a8fd"
   },
   {
-   "fact_id": "F022",
+   "fact_id": "F024",
    "statement": "A 2016 study by Rauhut and Carrano placed Limusaurus within the abelisauroid family Noasauridae.",
    "category": "classification",
    "chunk_id": "limusaurus:enwiki:7",
@@ -326,8 +365,8 @@
    "quote_sha": "acca288c9050eb31"
   },
   {
-   "fact_id": "F023",
-   "statement": "Baiano and colleagues found in 2020 that Limusaurus formed a clade with Elaphrosaurus and Huinculsaurus.",
+   "fact_id": "F025",
+   "statement": "Baiano and colleagues found in 2020 that Limusaurus formed a clade with Elaphrosaurus and the genus Huinculsaurus.",
    "category": "classification",
    "chunk_id": "limusaurus:enwiki:7",
    "lang": "en",
@@ -335,7 +374,7 @@
    "quote_sha": "bc3b798905e8d796"
   },
   {
-   "fact_id": "F024",
+   "fact_id": "F026",
    "statement": "Limusaurus lived during the Oxfordian stage of the Jurassic period, approximately 161 to 157 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:enwiki:7",
@@ -344,17 +383,17 @@
    "quote_sha": "73f5476ebdd75cff"
   },
   {
-   "fact_id": "F025",
-   "statement": "A 2010 study by Ezcurra and colleagues debated placing Limusaurus in the derived group Abelisauroidea within Ceratosauria.",
-   "category": "debate",
+   "fact_id": "F027",
+   "statement": "Limusaurus is considered the earliest known toothless theropod and the only non-bird theropod with strong bilateral reduction of its digits.",
+   "category": "curiosities",
    "chunk_id": "limusaurus:enwiki:7",
    "lang": "en",
-   "quote": "A 2010 study by paleontologist Martin Ezcurra and colleagues placed them in the more derived group Abelisauroidea within Ceratosauria.",
-   "quote_sha": "9edb2a9acd956de0"
+   "quote": "Biologist Josef Stiegler and colleagues stated in a 2014 conference abstract that Limusaurus is the earliest known toothless theropod, as well as the only non-bird theropod known to have had strong bilateral reduction of its digits (as the outer fingers were reduced in size).",
+   "quote_sha": "fa893338b5468f3d"
   },
   {
-   "fact_id": "F026",
-   "statement": "Wang and colleagues studied Limusaurus in 2017 to analyze extreme anatomical changes that occurred with growth.",
+   "fact_id": "F028",
+   "statement": "Studies indicate that Limusaurus underwent extreme anatomical changes during growth, with juvenile specimens grouping separately from adults.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:7",
    "lang": "en",
@@ -362,17 +401,8 @@
    "quote_sha": "daab992959b949fb"
   },
   {
-   "fact_id": "F027",
-   "statement": "Juvenile Limusaurus specimens grouped separately from adults, indicating significant anatomical changes through growth.",
-   "category": "paleobiology",
-   "chunk_id": "limusaurus:enwiki:7",
-   "lang": "en",
-   "quote": "All the juvenile Limusaurus specimens grouped together to the exclusion of adult specimens, showing that their anatomy changed significantly through growth.",
-   "quote_sha": "7bbcdc589b6f6f25"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "Researchers initially used Limusaurus to support the Bilateral Digit Reduction hypothesis regarding theropod hand evolution.",
+   "fact_id": "F029",
+   "statement": "Researchers initially used Limusaurus to support the Bilateral Digit Reduction hypothesis regarding the evolution of bird hands.",
    "category": "debate",
    "chunk_id": "limusaurus:enwiki:8",
    "lang": "en",
@@ -380,8 +410,8 @@
    "quote_sha": "d6cdbc06ed663115"
   },
   {
-   "fact_id": "F029",
-   "statement": "A 2016 analysis suggests the digit reduction in Limusaurus was a developmental anomaly specific to ceratosaurians rather than a pattern shared with tetanurans.",
+   "fact_id": "F030",
+   "statement": "A 2016 analysis suggests the reduced digits in Limusaurus were caused by a specific developmental anomaly unique to ceratosaurians rather than a shared evolutionary trait with birds.",
    "category": "debate",
    "chunk_id": "limusaurus:enwiki:8",
    "lang": "en",
@@ -389,17 +419,8 @@
    "quote_sha": "9ce693a04672bada"
   },
   {
-   "fact_id": "F030",
-   "statement": "In 2013, researchers proposed that the different digit reduction patterns in ceratosaurians and tetanurans are linked to differences in forelimb function.",
-   "category": "debate",
-   "chunk_id": "limusaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Xu and biologist Susan Mackem stated in 2013 that the divergent developmental pathways of ceratosaurians and tetanurans are associated with a difference in forelimb function",
-   "quote_sha": "9f5d12a373477ea4"
-  },
-  {
    "fact_id": "F031",
-   "statement": "Limusaurus specimens exhibit 78 distinct anatomical changes associated with growth.",
+   "statement": "Fossil specimens of Limusaurus exhibit 78 distinct anatomical changes associated with growth.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:9",
    "lang": "en",
@@ -408,8 +429,8 @@
   },
   {
    "fact_id": "F032",
-   "statement": "Limusaurus underwent a complete loss of teeth as it grew from juvenile to adult stages.",
-   "category": "paleobiology",
+   "statement": "Limusaurus is notable for completely losing its teeth as it matured from juvenile to adult stages.",
+   "category": "description",
    "chunk_id": "limusaurus:enwiki:9",
    "lang": "en",
    "quote": "The most obvious change that happened during the growth of Limusaurus was the complete loss of teeth from juveniles to adults",
@@ -417,12 +438,12 @@
   },
   {
    "fact_id": "F033",
-   "statement": "Subadult and adult Limusaurus specimens older than one year lacked all teeth.",
-   "category": "paleobiology",
+   "statement": "Limusaurus ranks among the very few known jawed vertebrates to completely lose its teeth during its lifetime.",
+   "category": "curiosities",
    "chunk_id": "limusaurus:enwiki:9",
    "lang": "en",
-   "quote": "In subadult and adult specimens older than one year, all the teeth were missing",
-   "quote_sha": "e628e941eac06c5e"
+   "quote": "Limusaurus is one of the few known jawed vertebrates where teeth are completely lost during growth",
+   "quote_sha": "c2e3cdda0a55d788"
   },
   {
    "fact_id": "F034",
@@ -435,7 +456,7 @@
   },
   {
    "fact_id": "F035",
-   "statement": "The fibrolamellar bone tissue of Limusaurus indicates that the animal grew quickly.",
+   "statement": "The fibrolamellar bone structure of Limusaurus indicates that the animal grew rapidly.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:9",
    "lang": "en",
@@ -444,24 +465,15 @@
   },
   {
    "fact_id": "F036",
-   "statement": "The loss of teeth with age in Limusaurus represents the most extreme case of changing tooth morphology with age recorded among dinosaurs.",
-   "category": "paleobiology",
+   "statement": "All teeth were missing in Limusaurus specimens that were older than one year.",
+   "category": "description",
    "chunk_id": "limusaurus:enwiki:9",
    "lang": "en",
-   "quote": "The loss of teeth with age in Limusaurus is the most extreme case of tooth morphology changing with age recorded among dinosaurs",
-   "quote_sha": "72608d301a8b24a7"
+   "quote": "In subadult and adult specimens older than one year, all the teeth were missing",
+   "quote_sha": "e628e941eac06c5e"
   },
   {
    "fact_id": "F037",
-   "statement": "The replacement of teeth by a beak during Limusaurus growth suggests that beaks in theropods may have evolved heterochronically.",
-   "category": "paleobiology",
-   "chunk_id": "limusaurus:enwiki:9",
-   "lang": "en",
-   "quote": "The replacement of teeth by a beak through the growth of Limusaurus suggests that beaks in other lineages of theropods, and indeed beaked animals in general, may have evolved heterochronically",
-   "quote_sha": "4c261c970bf8f005"
-  },
-  {
-   "fact_id": "F038",
    "statement": "Researchers Xu and colleagues interpreted the small head, toothless jaws, and long neck of Limusaurus as adaptations for a herbivorous diet in 2009.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:10",
@@ -470,8 +482,8 @@
    "quote_sha": "cd36111bb6e70e87"
   },
   {
-   "fact_id": "F039",
-   "statement": "Wang and colleagues noted that adult Limusaurus specimens possess gastroliths, which are larger and more numerous in older adults than in younger ones.",
+   "fact_id": "F038",
+   "statement": "Adult Limusaurus specimens contained gastroliths, which were larger and more numerous in older adults than in younger ones.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:10",
    "lang": "en",
@@ -479,8 +491,8 @@
    "quote_sha": "d22d91fc212f1304"
   },
   {
-   "fact_id": "F040",
-   "statement": "Isotope analysis confirmed that adult Limusaurus specimens consistently match the chemical signatures of other herbivorous dinosaurs.",
+   "fact_id": "F039",
+   "statement": "Isotope analysis confirmed that adult Limusaurus had diets matching those of other herbivorous dinosaurs.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:10",
    "lang": "en",
@@ -488,8 +500,8 @@
    "quote_sha": "0c1a0756fb906f23"
   },
   {
-   "fact_id": "F041",
-   "statement": "Isotope analysis suggests that juvenile Limusaurus were likely omnivorous but switched to a strict herbivorous diet as they matured.",
+   "fact_id": "F040",
+   "statement": "Isotopic evidence suggests juvenile Limusaurus were likely omnivorous before switching to a strict herbivorous diet as adults.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:10",
    "lang": "en",
@@ -497,8 +509,8 @@
    "quote_sha": "5fab1fd20d48fc46"
   },
   {
-   "fact_id": "F042",
-   "statement": "Paleontologists Eberth and colleagues suggested that Limusaurus likely lived in groups based on evidence of rapid, successive burials and high abundance.",
+   "fact_id": "F041",
+   "statement": "Paleontologists suggested that Limusaurus likely lived in groups based on the abundance of fossils and evidence of rapid burial.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:11",
    "lang": "en",
@@ -506,8 +518,8 @@
    "quote_sha": "dbf25468f853292c"
   },
   {
-   "fact_id": "F043",
-   "statement": "Paleontologist Rafael Delcourt agreed in 2018 that the discovery of multiple Limusaurus specimens in assemblages suggests these small ceratosaurs lived in groups.",
+   "fact_id": "F042",
+   "statement": "In 2018, paleontologist Rafael Delcourt agreed that the multiple-specimen assemblages of Limusaurus suggest these small ceratosaurs lived in groups.",
    "category": "paleobiology",
    "chunk_id": "limusaurus:enwiki:11",
    "lang": "en",
@@ -515,8 +527,8 @@
    "quote_sha": "f3efc4514a15350c"
   },
   {
-   "fact_id": "F044",
-   "statement": "Limusaurus fossils are found in the Shishugou Formation, which dates to the Late Jurassic, approximately 161 to 157 million years ago.",
+   "fact_id": "F043",
+   "statement": "Limusaurus lived during the Late Jurassic, approximately 161 to 157 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:enwiki:12",
    "lang": "en",
@@ -524,8 +536,8 @@
    "quote_sha": "00fd773a841a9006"
   },
   {
-   "fact_id": "F045",
-   "statement": "Limusaurus inhabited diverse environments within the Shishugou Formation, including alluvial fans, plains, streams, wetlands, and shallow lakes.",
+   "fact_id": "F044",
+   "statement": "Limusaurus fossils are found in environments ranging from alluvial fans and plains to streams, wetlands, and shallow lakes.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:enwiki:12",
    "lang": "en",
@@ -533,8 +545,8 @@
    "quote_sha": "dee10ed6a653067a"
   },
   {
-   "fact_id": "F046",
-   "statement": "The climate during the time of Limusaurus was likely highly seasonal with warm, wet summers and dry winters due to monsoonal influences.",
+   "fact_id": "F045",
+   "statement": "The climate where Limusaurus lived was likely highly seasonal with warm, wet summers and dry winters due to monsoonal influences.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:enwiki:12",
    "lang": "en",
@@ -542,8 +554,8 @@
    "quote_sha": "aa0e5fbd992daf7a"
   },
   {
-   "fact_id": "F047",
-   "statement": "The environment of Limusaurus was a richly forested area dominated by Araucaria trees, with undergrowth consisting of various ferns, horsetails, and shrubs.",
+   "fact_id": "F046",
+   "statement": "The environment supported a rich forest dominated by Araucaria trees, with undergrowth consisting of ferns, horsetails, and shrubs.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:enwiki:12",
    "lang": "en",
@@ -551,8 +563,62 @@
    "quote_sha": "2d7f8bf62dddd026"
   },
   {
+   "fact_id": "F047",
+   "statement": "The ecosystem where Limusaurus lived contained more than 35 vertebrate species, including at least 14 dinosaur species.",
+   "category": "time_and_habitat",
+   "chunk_id": "limusaurus:enwiki:12",
+   "lang": "en",
+   "quote": "More than 35 species of vertebrates are known from fossils, including at least 14 dinosaur species.",
+   "quote_sha": "cd1050ca08b9efc9"
+  },
+  {
    "fact_id": "F048",
-   "statement": "The genus Limusaurus was described by Xu and colleagues in 2009.",
+   "statement": "Large numbers of Limusaurus fossils in the mud pits likely result from the tendency of small animals to get trapped in mud.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:enwiki:13",
+   "lang": "en",
+   "quote": "The size of these assemblages can be attributed to the tendency of smaller animals to become trapped in mud.",
+   "quote_sha": "f71a441fcaeae68f"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Evidence suggests one Limusaurus carcass was pushed to the bottom of a pit by the trampling of another animal trapped later.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:enwiki:13",
+   "lang": "en",
+   "quote": "The neck and tail of one specimen are bent upwards, suggesting that the carcass was pushed down towards the bottom of the pit by trampling of another animal that became trapped at a later time.",
+   "quote_sha": "e7bfa935b2d93a30"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Limusaurus specimens typically show flexed hind limbs, indicating they died in a resting pose within the mud pits.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:enwiki:13",
+   "lang": "en",
+   "quote": "Specimens typically show flexed hind limbs, indicating that the individuals died in a resting pose within the pits.",
+   "quote_sha": "e178ed45c41628c9"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Researchers speculate that Guanlong specimens found in the pits may have been scavenging on trapped Limusaurus before becoming trapped themselves.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:enwiki:13",
+   "lang": "en",
+   "quote": "Eberth and colleagues speculated that the two Guanlong specimens preserved at the top of pit TBB2002 could have been scavenging on the mired carcasses before getting mired themselves.",
+   "quote_sha": "206446c3f2e740f3"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Limusaurus lived during the Early Jurassic, approximately 161 to 155 million years ago, in what is now Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "limusaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Limusaurus inextricabilis es la única especie conocida del género extinto Limusaurus (\"lagarto del lodo\") de dinosaurio terópodo ceratosauriano, que vivió a principios del período Jurásico, hace aproximadamente 161 a 155 millones de años, en el Oxfordiense , en lo que es hoy Asia.",
+   "quote_sha": "fe22b03019e54624"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The genus Limusaurus was named by Xu and colleagues in 2009.",
    "category": "classification",
    "chunk_id": "limusaurus:eswiki:1",
    "lang": "es",
@@ -560,8 +626,8 @@
    "quote_sha": "b5f8507674c92d0b"
   },
   {
-   "fact_id": "F049",
-   "statement": "The species Limusaurus inextricabilis was described by Xu and colleagues in 2009.",
+   "fact_id": "F054",
+   "statement": "The species Limusaurus inextricabilis was named by Xu and colleagues in 2009.",
    "category": "classification",
    "chunk_id": "limusaurus:eswiki:1",
    "lang": "es",
@@ -569,152 +635,314 @@
    "quote_sha": "79480bfcd4d811f9"
   },
   {
-   "fact_id": "F050",
-   "statement": "Limusaurus inextricabilis is the only known species in the extinct genus Limusaurus.",
-   "category": "classification",
-   "chunk_id": "limusaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Limusaurus inextricabilis es la única especie conocida del género extinto Limusaurus",
-   "quote_sha": "25b4aa23cecc27af"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "Limusaurus lived during the early Jurassic period, approximately 161 to 155 million years ago, in what is now Asia.",
-   "category": "time_and_habitat",
-   "chunk_id": "limusaurus:eswiki:2",
-   "lang": "es",
-   "quote": "que vivió a principios del período Jurásico, hace aproximadamente 161 a 155 millones de años, en el Oxfordiense , en lo que es hoy Asia.",
-   "quote_sha": "7e119cb30fb4e420"
-  },
-  {
-   "fact_id": "F052",
-   "statement": "Limusaurus was a small, slender animal with a long neck and long legs.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Limusaurus era un animal pequeño y delgado con un cuello y patas largos",
-   "quote_sha": "41d3e9edd7bbe57d"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "The animal measured approximately 1.7 meters in length and weighed 15 kilograms.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "medía aproximadamente 1.7 metros de longitud y 15 kilogramos de peso",
-   "quote_sha": "377a84c52261080f"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "Its jaws possessed a beak that covered the tip of the jaw.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "sus mandíbulas tenían un pico que cubría la punta de la mandíbula",
-   "quote_sha": "efb86b56c6e57540"
-  },
-  {
    "fact_id": "F055",
-   "statement": "Juveniles had teeth, with 9 on each side of the upper jaw and 12 on each side of the lower jaw.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:3",
+   "statement": "Limusaurus is classified within the family Noasauridae.",
+   "category": "classification",
+   "chunk_id": "limusaurus:eswiki:1",
    "lang": "es",
-   "quote": "Los juveniles tenían dientes, 9 en cada lado de la mandíbula superior y 12 en cada lado de la inferior",
-   "quote_sha": "8a938cf13df79b91"
+   "quote": "familia: Noasauridae",
+   "quote_sha": "7d279506fdc24e84"
   },
   {
    "fact_id": "F056",
+   "statement": "Limusaurus belongs to the suborder Theropoda.",
+   "category": "classification",
+   "chunk_id": "limusaurus:eswiki:1",
+   "lang": "es",
+   "quote": "subordo: Theropoda",
+   "quote_sha": "afe1cb973843b122"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Limusaurus is classified within the infraorder Ceratosauria.",
+   "category": "classification",
+   "chunk_id": "limusaurus:eswiki:1",
+   "lang": "es",
+   "quote": "infraordo: Ceratosauria",
+   "quote_sha": "8ccc11104594188e"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Limusaurus inextricabilis is the only known species in the extinct genus Limusaurus, meaning \"mud lizard\".",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Limusaurus inextricabilis es la única especie conocida del género extinto Limusaurus (\"lagarto del lodo\")",
+   "quote_sha": "15cd289e26e489dd"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Limusaurus lived during the Oxfordian stage of the Jurassic period.",
+   "category": "time_and_habitat",
+   "chunk_id": "limusaurus:eswiki:2",
+   "lang": "es",
+   "quote": "en el Oxfordiense",
+   "quote_sha": "b643af5e7cbab895"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "The skull was short, about half the length of the femur, and its jaws had a beak covering the tip of the mandible, a feature previously unknown in non-avian theropods.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El cráneo era corto de aproximadamente la mitad de la longitud del fémur y sus mandíbulas tenían un pico que cubría la punta de la mandíbula, una característica que antes no se conocía en los no celurosaurios",
+   "quote_sha": "82a688563ccd8c99"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Juveniles had 9 teeth on each side of the upper jaw and 12 on each side of the lower jaw, which were gradually lost as they grew and disappeared in adulthood.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los juveniles tenían dientes, 9 en cada lado de la mandíbula superior y 12 en cada lado de la inferior, que se perdieron gradualmente a medida que crecían, desapareciendo en la edad adulta.",
+   "quote_sha": "df9e46b786982579"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The jaw fenestra was quite large, accounting for 40% of the total length of the lower jaw.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La fenestra, abertura, de la mandíbula era bastante grande, con un 40% de la longitud de toda la mandíbula inferior.",
+   "quote_sha": "826c4654afa57199"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The arms and hands of Limusaurus were considerably reduced, even more so than in Ceratosaurus.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los brazos y las manos de Limusaurus se redujeron considerablemente, incluso más que el de Ceratosaurus.",
+   "quote_sha": "68e2390c72b565b5"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "The first finger was smaller than the others and completely lacked phalanges.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El primer dedo era más pequeño que los otros dedos y carecía por completo de falanges.",
+   "quote_sha": "8970600229ccf528"
+  },
+  {
+   "fact_id": "F065",
    "statement": "The claws were short, robust, and expanded at their base.",
    "category": "description",
    "chunk_id": "limusaurus:eswiki:3",
    "lang": "es",
-   "quote": "Las garras eran cortas, robustas y expandidas en su base",
-   "quote_sha": "86335c36e310d9d0"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "The first toe of each foot, or hallux, was extremely reduced, measuring only 17% of the length of the third metatarsian.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "El primer dedo de cada pie, o el hallux, se redujo extremadamente, siendo solo el 17% de la longitud del tercer metatarsiano",
-   "quote_sha": "8a62ffcf63e49908"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "The presence of gastroliths in both specimens and a toothless beak suggest a herbivorous diet.",
-   "category": "paleobiology",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "La presencia de gastrolitos de ambos especímenes y la presencia de un pico sin dientes serían indicativos de una dieta herbívora",
-   "quote_sha": "d688e131f860d116"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "The legs of Limusaurus had proportions well adapted for running.",
-   "category": "paleobiology",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Las patas del Limusaurus tenían proporciones bien adaptadas para correr",
-   "quote_sha": "4d47bd6909679786"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "The first finger was smaller than the others and completely lacked phalanges.",
-   "category": "paleobiology",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "El primer dedo era más pequeño que los otros dedos y carecía por completo de falanges",
-   "quote_sha": "6004209003e842fc"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "Limusaurus is a very basal ceratosaurian that retains four fingers on the hand, digits I–II-III-IV.",
-   "category": "description",
-   "chunk_id": "limusaurus:eswiki:4",
-   "lang": "es",
-   "quote": "Limusaurus es un ceratosauriano muy básico que retiene los cuatro dedos en la mano, dígitos I–II-III-IV",
-   "quote_sha": "1c7304e3334b503f"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "It is possible that bilateral digit reduction occurred only in Ceratosauria and not in Tetanurae.",
-   "category": "debate",
-   "chunk_id": "limusaurus:eswiki:4",
-   "lang": "es",
-   "quote": "Es posible que la RBD haya ocurrido sólo en Ceratosauria y no en Tetanurae",
-   "quote_sha": "09651bf3b5deecf2"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "It is plausible that ceratosaurians underwent bilateral digit reduction independently of tetanurans.",
-   "category": "debate",
-   "chunk_id": "limusaurus:eswiki:4",
-   "lang": "es",
-   "quote": "Es plausible que los ceratosaurios se sometieron a RBD independientemente de los tetanuranos",
-   "quote_sha": "ddcf111af0cbd19b"
-  },
-  {
-   "fact_id": "F064",
-   "statement": "The shortening, mesomelia, and loss of hypophalangia in the forelimb of Limusaurus is likely the result of a developmental anomaly.",
-   "category": "debate",
-   "chunk_id": "limusaurus:eswiki:4",
-   "lang": "es",
-   "quote": "el acortamiento, mesomelia y la pérdida de dígitos hipofallangia en la extremidad anterior de Limusaurus es probablemente el resultado de una anomalía del desarrollo",
-   "quote_sha": "7e7a585c4a203670"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "It is the first defined ceratosaurian discovered from East Asia and one of the earliest.",
-   "category": "discovery",
-   "chunk_id": "limusaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Es el primer ceratosauriano definido del este de Asia que se descubriera y de uno de los más tempranos",
-   "quote_sha": "e62010b88102fd62"
+   "quote": "Las garras eran cortas, robustas y expandidas en su base.",
+   "quote_sha": "f4a8742b5662e68d"
   },
   {
    "fact_id": "F066",
-   "statement": "Limusaurus belongs to the subfamily Elaphrosaurinae.",
+   "statement": "The sternum fused into a single, large, continuous plate, representing an evolutionary convergence with coelurosaurs.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El esternón se fusionó en una placa única, grande y continua, otra característica que representa la convergencia evolutiva sobre los celurosaurios.",
+   "quote_sha": "eb7bb6ac4fca9f9a"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "It possesses a furcula or wishbone, which was previously unknown among ceratosaurians.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "También posee una furcula o espoleta, que antes era desconocida entre los ceratosaurianos.",
+   "quote_sha": "54cc0d3ef3280df9"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "The scapula had a prominent crest on its front end, and the \"boot\" of the pubis pointed backward in a hook shape with a crest on each side.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La escápula tenía una cresta prominente en su extremo frontal, y la \"bota\" del pubis apuntaba hacia atrás en forma de gancho y tenía una cresta a cada lado.",
+   "quote_sha": "6bf2f1766d32d1b0"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The legs had proportions well adapted for running, with the lower leg portions much longer than the femur; the tibiotarsus was 1.2 times the length of the femur, and the foot was 1.3 times the length of the femur.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Las patas del Limusaurus tenían proporciones bien adaptadas para correr, con las porciones inferiores de la pierna mucho más largas que el fémur, el tibiotarso, la fusión de la tibia y los huesos del tarso, era 1.2 veces la longitud del fémur, y el pie era 1.3 veces la longitud del fémur.",
+   "quote_sha": "82b32db0186645b1"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The first toe of each foot, or hallux, was extremely reduced, being only 17% of the length of the third metatarsal.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "El primer dedo de cada pie, o el hallux, se redujo extremadamente, siendo solo el 17% de la longitud del tercer metatarsiano.",
+   "quote_sha": "bb1a2895246b93da"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "The presence of gastroliths in both specimens and a toothless beak suggest a herbivorous diet, making it the most basal theropod to show this type of diet.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "La presencia de gastrolitos de ambos especímenes y la presencia de un pico sin dientes serían indicativos de una dieta herbívora, haciéndolo el más basal de los terópodos en mostrar este tipo de dieta.",
+   "quote_sha": "233fa559b2c08802"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Limusaurus is a very basal ceratosaurian that retains four fingers in the hand (digits I–II-III-IV), with digit I strongly reduced.",
+   "category": "description",
+   "chunk_id": "limusaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Limusaurus es un ceratosauriano muy básico que retiene los cuatro dedos en la mano, dígitos I–II-III-IV, estando el dígito I fuertemente reducido.",
+   "quote_sha": "66c1b25a79735381"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "It is possible that bilateral digit reduction (RBD) occurred only in Ceratosauria and not in Tetanurae.",
+   "category": "debate",
+   "chunk_id": "limusaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Es posible que la RBD haya ocurrido sólo en Ceratosauria y no en Tetanurae.",
+   "quote_sha": "a703619b40d53b31"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "It is the first defined ceratosaurian discovered from East Asia and one of the earliest.",
+   "category": "curiosities",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Es el primer ceratosauriano definido del este de Asia que se descubriera y de uno de los más tempranos.",
+   "quote_sha": "bbba23780f687147"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Its discovery demonstrates that Asian dinosaur fauna was less endemic during the Middle to Late Jurassic than thought and suggests a possible land connection between Asia and other continents during that period.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Su descubrimiento demuestra que la fauna dinosauriana asiática era menos endémica durante el Jurásico medio a tardío de lo que se pensó y sugiere una posible conexión terrestre entre Asia y otros continentes durante ese período.",
+   "quote_sha": "e1a75e8e04711398"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Histological analysis of growth lines in Limusaurus tibiae indicates the animal reached skeletal maturity at 6 years of age.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "El análisis histológico de las líneas de crecimiento detenido dentro de las tibias de las diversas etapas ontogenéticas de Limusaurus indica que el animal estaba esqueléticamente maduro a los 6 años de edad.",
+   "quote_sha": "c546f267d3a5c175"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "Specimens of Limusaurus show 78 distinct anatomical changes that occurred as the animals grew.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Los especímenes de Limusaurus muestran 78 cambios anatómicos diferentes que ocurrieron a medida que los animales crecieron.",
+   "quote_sha": "7e83d5e18bfc7744"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "The most obvious change during Limusaurus growth is the complete loss of teeth from juveniles to adults.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "El cambio más obvio que ocurrió durante el crecimiento de Limusaurus es la pérdida completa de dientes de juveniles a adultos.",
+   "quote_sha": "743b7c0e529940a8"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Juvenile Limusaurus began with a total of 42 teeth: one in the premaxilla, eight in the maxilla, and eleven in the lower jaw.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Los juveniles comenzaron con un diente en la premaxila, ocho en el maxilar y once en la mandíbula inferior, 42 dientes en total.",
+   "quote_sha": "6c5bc2455ff22189"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "All teeth are missing in subadult and adult Limusaurus specimens older than one year of age.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "En especímenes subadultos y adultos mayores de un año de edad, faltan todos los dientes.",
+   "quote_sha": "9071b9f23cf9b122"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "The loss of teeth with age in Limusaurus represents the most extreme case of age-related dental morphology change among dinosaurs.",
+   "category": "curiosities",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "La pérdida de dientes con la edad en Limusaurus es el caso más extremo de morfología dental que cambia con la edad entre los dinosaurios.",
+   "quote_sha": "0b6567bccd1dfe80"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "Limusaurus is one of the few known vertebrates with jaws where teeth are lost completely during ontogeny, alongside species like bearded rockfish, rockfish, several gars, and the platypus.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "La pérdida de dientes con la edad en Limusaurus es el caso más extremo de morfología dental que cambia con la edad entre los dinosaurios. De hecho, Limusaurus es uno de los pocos vertebrados con mandíbula conocidos donde los dientes se pierden por completo durante la ontogenia, los otros son el salmonete barbado y el Salmonete de roca, varios coridoras y el ornitorrinco.",
+   "quote_sha": "886ddb3fe0394f91"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Researchers suggest the temporary interruption in tooth replacement in Limusaurus is likely due to the regression of tooth buds, similar to the veiled chameleon.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:8",
+   "lang": "es",
+   "quote": "La interrupción temporal en el reemplazo de dientes probablemente se deba a la regresión de las yemas de los dientes, como en el camaleón velado.",
+   "quote_sha": "65f07aa41bf42815"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "Adult Limusaurus specimens show herbivory-associated morphological traits shared with other herbivorous theropod groups like Ornithomimosauria, Therizinosauria, Oviraptorosauria, Alvarezsauroidea, and the troodontid Jinfengopteryx.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Los especímenes adultos de Limusaurus muestran rasgos morfológicos asociados con la herbivoría que se comparten con otros grupos de terópodos herbívoros, como Ornithomimosauria, Therizinosauria , Oviraptorosauria y Alvarezsauroidea, junto con el trodóntido Jinfengopteryx.",
+   "quote_sha": "e56afdc5d1e66803"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "Adult Limusaurus samples are characterized by the presence of gastroliths, with older adults having larger and more numerous gastroliths than younger adults.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:9",
+   "lang": "es",
+   "quote": "En particular, las muestras de adultos se caracterizan por la presencia de cálculos estomacales, gastrolitos, con adultos mayores que tienen gastrolitos más grandes y numerosos que los adultos más jóvenes.",
+   "quote_sha": "55158c1c08587eba"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "The increase in gastrolith quantity in older adults may indicate that the intestinal capacity to finely process plant matter increases with age.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:9",
+   "lang": "es",
+   "quote": "El aumento de la cantidad de gastrolitos en los adultos mayores puede ser indicativo de que la capacidad intestinal de procesar finamente la materia vegetal aumenta con la edad.",
+   "quote_sha": "a591e095ee46081a"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "Isotope analysis shows that adult Limusaurus consistently matches the isotopic signatures of other herbivorous dinosaurs, while juveniles and subadults vary significantly in their signatures.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Un análisis de isótopos de los especímenes disponibles de Limusaurus también mostraron que los adultos coinciden consistentemente con las firmas isotópicas de otros dinosaurios herbívoros, sin embargo, en el mismo análisis, se encontró que los juveniles y los subadultos varían mucho en sus firmas isotópicas.",
+   "quote_sha": "ac4ed0176be1c66f"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "This indicates that juveniles were likely omnivores but shifted to strict herbivory as they aged.",
+   "category": "paleobiology",
+   "chunk_id": "limusaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Esto indica que los juveniles probablemente eran omnívoros, pero cambiaron a una estricta herbivoría a medida que envejecían.",
+   "quote_sha": "a51f2a523940c8e9"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Limusaurus belongs to the parent group Elaphrosaurinae.",
    "category": "classification",
    "chunk_id": "limusaurus:pbdb:1",
    "lang": "en",
@@ -722,8 +950,8 @@
    "quote_sha": "09f18e87da3a436b"
   },
   {
-   "fact_id": "F067",
-   "statement": "Limusaurus is classified within the family Noasauridae.",
+   "fact_id": "F090",
+   "statement": "Limusaurus is classified in the family Noasauridae.",
    "category": "classification",
    "chunk_id": "limusaurus:pbdb:1",
    "lang": "en",
@@ -731,16 +959,7 @@
    "quote_sha": "26fbecceff086ff9"
   },
   {
-   "fact_id": "F068",
-   "statement": "Limusaurus is a reptile.",
-   "category": "classification",
-   "chunk_id": "limusaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Reptilia",
-   "quote_sha": "cdcaa2922520f735"
-  },
-  {
-   "fact_id": "F069",
+   "fact_id": "F091",
    "statement": "Limusaurus lived during the Oxfordian stage, between 161.5 and 154.8 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "limusaurus:pbdb:1",
@@ -749,8 +968,17 @@
    "quote_sha": "b1eac0eeb4eb63ca"
   },
   {
-   "fact_id": "F070",
-   "statement": "There are three recorded fossil occurrences of Limusaurus.",
+   "fact_id": "F092",
+   "statement": "The genus Limusaurus was named by Xu et al. in 2009.",
+   "category": "discovery",
+   "chunk_id": "limusaurus:pbdb:1",
+   "lang": "en",
+   "quote": "PBDB name: Limusaurus (genus), Xu et al. 2009",
+   "quote_sha": "f7c97e71611c1598"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "There are 3 recorded fossil occurrences of Limusaurus.",
    "category": "discovery",
    "chunk_id": "limusaurus:pbdb:1",
    "lang": "en",
@@ -768,87 +996,101 @@
   },
   {
    "chunk_id": "limusaurus:enwiki:2",
-   "statement": "Limusaurus was a small, slender animal about 1.7 meters long and 15 kilograms in weight, featuring a long neck and legs but very small forelimbs with reduced first and fourth fingers.",
+   "statement": "Limusaurus was a small, slender animal measuring about 1.7 meters in length and weighing 15 kilograms, with a long neck and legs but very small forelimbs.",
    "category": "description",
    "quote": "Limusaurus was a small, slender animal, about 1.7 m in length and 15 kg in weight, which had a long neck and legs but very small forelimbs (with reduced first and fourth fingers).",
-   "reason": "statement copies the source wording: 'Limusaurus was a small slender animal about 1.7'"
-  },
-  {
-   "chunk_id": "limusaurus:enwiki:3",
-   "statement": "Because many specimens were found together, it is possible that Limusaurus lived in groups.",
-   "category": "paleobiology",
-   "quote": "Since many specimens were found together, it is possible Limusaurus lived in groups.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "limusaurus:enwiki:2",
-   "statement": "Specimens of Limusaurus appear to have been mired in mud pits created by the footprints of giant sauropod dinosaurs.",
-   "category": "paleobiology",
-   "quote": "Specimens of Limusaurus (along with other small animals) appear to have been mired in mud pits created by the footprints of giant sauropod dinosaurs.",
-   "reason": "statement copies the source wording: 'appear to have been mired in mud pits'"
+   "reason": "statement copies the source wording: 'a long neck and legs but very small'"
   },
   {
    "chunk_id": "limusaurus:enwiki:5",
-   "statement": "The skull of Limusaurus was relatively tall and short, approximately half the length of the femur.",
-   "category": "description",
-   "quote": "The skull of Limusaurus was relatively tall and short, roughly half the length of the femur (upper thigh bone).",
-   "reason": "statement copies the source wording: 'skull of Limusaurus was relatively tall and short'"
-  },
-  {
-   "chunk_id": "limusaurus:enwiki:5",
-   "statement": "The tip of the jaws of Limusaurus was covered by a beak, a feature previously unknown in non-coelurosaurian theropods.",
+   "statement": "Limusaurus possessed a beak at the tip of its jaws, a feature previously unknown in non-coelurosaurian theropods.",
    "category": "description",
    "quote": "The tip of its jaws was covered by a beak, a feature that was previously unknown in non-coelurosaurian theropods like Limusaurus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "limusaurus:enwiki:5",
-   "statement": "In Limusaurus, the mandibular fenestra was especially large, accounting for 40% of the length of the entire lower jaw.",
+   "statement": "The mandibular fenestra in Limusaurus was exceptionally large, accounting for 40% of the lower jaw's length.",
    "category": "description",
    "quote": "In Limusaurus, [the mandibular fenestra] was especially large, accounting for 40% of the length of the entire lower jaw, a distinguishing feature of the genus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "limusaurus:enwiki:5",
-   "statement": "Juvenile Limusaurus had nine teeth on each side of the upper jaw and twelve on each side of the lower jaw, which were gradually lost and disappeared by adulthood.",
+   "statement": "Juvenile Limusaurus had nine teeth on each side of the upper jaw and twelve on each side of the lower jaw, which were gradually lost until adulthood.",
    "category": "paleobiology",
    "quote": "Juveniles had nine teeth in each side of the upper jaw and twelve in each side of the lower; they were gradually lost as they grew, disappearing by adulthood.",
    "reason": "statement copies the source wording: 'each side of the upper jaw and twelve'"
   },
   {
-   "chunk_id": "limusaurus:enwiki:2",
-   "statement": "The pattern of digit reduction in Limusaurus supports a contested hypothesis that the three-fingered hand of tetanuran theropods evolved from the loss of the first and fifth digits of the ancestral five-fingered hand.",
-   "category": "debate",
-   "quote": "The pattern of digit reduction in Limusaurus has been used to support the hypothesis that the three-fingered hand of tetanuran theropods is the result of the loss of the first and fifth digits from the ancestral five-fingered theropod hand, a contested hypothesis which is relevant to the evolution of birds.",
-   "reason": "statement copies the source wording: 'hypothesis that the three-fingered hand of tetanuran theropods'"
+   "chunk_id": "limusaurus:enwiki:6",
+   "statement": "In Limusaurus, the radius was longer than the ulna, and the olecranon process on the ulna was absent.",
+   "category": "description",
+   "quote": "In the forearm, the radius was longer than the ulna, and the olecranon process, a bony extension on the upper end of the ulna that served for muscle attachment, was absent in Limusaurus.",
+   "reason": "statement copies the source wording: 'the radius was longer than the ulna and'"
   },
   {
    "chunk_id": "limusaurus:enwiki:6",
-   "statement": "The hallux of Limusaurus was reduced to only 17% the length of the third metatarsal, a unique feature.",
+   "statement": "The hallux of Limusaurus was highly reduced, measuring only 17% the length of the third metatarsal.",
    "category": "description",
    "quote": "The hallux (the first toe or dewclaw) was reduced, being only 17% the length of the third metatarsal, another unique feature.",
    "reason": "statement copies the source wording: 'only 17 the length of the third metatarsal'"
   },
   {
+   "chunk_id": "limusaurus:enwiki:6",
+   "statement": "Limusaurus uniquely had its three weight-bearing metatarsals arranged in an arc with the fourth metatarsal straight and tightly adhering to the third.",
+   "category": "description",
+   "quote": "The metatarsals of the three weight-bearing toes were arranged in an arc, with the fourth metatarsal straight and adhering tightly to the third for its entire length; these features are unique to Limusaurus.",
+   "reason": "statement copies the source wording: 'arranged in an arc with the fourth metatarsal'"
+  },
+  {
    "chunk_id": "limusaurus:enwiki:7",
-   "statement": "Stiegler and colleagues suggested in 2014 that Limusaurus is the earliest known toothless theropod and the only non-bird theropod with strong bilateral digit reduction.",
-   "category": "paleobiology",
-   "quote": "Biologist Josef Stiegler and colleagues stated in a 2014 conference abstract that Limusaurus is the earliest known toothless theropod, as well as the only non-bird theropod known to have had strong bilateral reduction of its digits (as the outer fingers were reduced in size).",
-   "reason": "statement copies the source wording: 'that Limusaurus is the earliest known toothless theropod'"
+   "statement": "Limusaurus formed the clade Elaphrosaurinae with Elaphrosaurus and an unnamed taxon, though Elaphrosaurus and the unnamed taxon were closer to each other than to Limusaurus.",
+   "category": "classification",
+   "quote": "Together with an as-of-yet unnamed taxon represented by specimen CCG 20011, and not included in other analyses, the two taxa formed the clade Elaphrosaurinae; Elaphrosaurus and CCG 20011 were closer to each other than to Limusaurus within this group.",
+   "reason": "statement copies the source wording: 'were closer to each other than to Limusaurus'"
   },
   {
-   "chunk_id": "limusaurus:enwiki:9",
-   "statement": "Juvenile Limusaurus possessed at least 42 teeth, including one in each premaxilla, eight in each maxilla, and at least twelve in each half of the lower jaw.",
-   "category": "paleobiology",
-   "quote": "Juveniles began with one tooth in each premaxilla, eight in each maxilla, and at least twelve in each half of the lower jaw (at least 42 teeth in total)",
-   "reason": "statement copies the source wording: 'in each premaxilla eight in each maxilla and'"
+   "chunk_id": "limusaurus:enwiki:7",
+   "statement": "The discovery of Limusaurus suggests a possible land connection between Asia and other continents during the Middle to Late Jurassic period.",
+   "category": "curiosities",
+   "quote": "According to Xu and colleagues, its discovery shows that the Asian dinosaur fauna was less endemic during the Middle to Late Jurassic period than previously thought, and suggests a possible land connection between Asia and other continents during that period.",
+   "reason": "statement copies the source wording: 'suggests a possible land connection between Asia and'"
   },
   {
-   "chunk_id": "limusaurus:pbdb:1",
-   "statement": "The genus Limusaurus was described by Xu and colleagues in 2009.",
-   "category": "discovery",
-   "quote": "Xu et al. 2009",
-   "reason": "duplicate"
+   "chunk_id": "limusaurus:enwiki:13",
+   "statement": "Fossils of Limusaurus were found in large groups trapped in mud pits known as dinosaur death pits.",
+   "category": "curiosities",
+   "quote": "The known fossil material of Limusaurus consists of large assemblages of individuals mired in mud pits, which were also referred to as \"dinosaur death pits\" in the 2010 article by Eberth and colleagues.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "limusaurus:enwiki:13",
+   "statement": "The mud pits containing Limusaurus contained tan-colored silty claystone with abundant plant fragments and root traces.",
+   "category": "paleobiology",
+   "quote": "The mud pits themselves show a tan-colored, silty to sandy claystone with abundant plant fragments and root traces.",
+   "reason": "statement copies the source wording: 'claystone with abundant plant fragments and root traces'"
+  },
+  {
+   "chunk_id": "limusaurus:enwiki:13",
+   "statement": "The mud pits are interpreted as footprints of giant sauropods like Mamenchisaurus sinocanadorum, which caused soil liquefaction that trapped smaller animals.",
+   "category": "paleobiology",
+   "quote": "The deformation structures and the consistent size of the pits suggest that they represent the footprints of giant sauropods such as Mamenchisaurus sinocanadorum.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "limusaurus:eswiki:3",
+   "statement": "Limusaurus was a small, slender animal with a long neck and legs, measuring about 1.7 meters in length and weighing 15 kilograms.",
+   "category": "description",
+   "quote": "Limusaurus era un animal pequeño y delgado con un cuello y patas largas, estas último tenían 1,8 veces la longitud del torso, medía aproximadamente 1.7 metros de longitud y 15 kilogramos de peso.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "limusaurus:eswiki:4",
+   "statement": "It is plausible that ceratosaurians underwent RBD independently of tetanurans, and therefore it is not related to the topic of avian digit homology.",
+   "category": "debate",
+   "quote": "Es plausible que los ceratosaurios se sometieron a RBD independientemente de los tetanuranos, y por tanto no tiene relación con el tema de la homología de los dígitos aviarios.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

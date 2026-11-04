@@ -2,9 +2,9 @@
  "taxon": "Carnotaurus",
  "taxon_key": "carnotaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "1be81211689bc3a8",
- "generated_at": "2026-11-03T02:59:43+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "6164aea6d14e3d72",
+ "generated_at": "2026-11-04T04:39:33+00:00",
  "citations": {
   "carnotaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -97,6 +97,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "carnotaurus:enwiki:14": {
+   "source": "wikipedia_article",
+   "title": "Carnotaurus (Age and paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Carnotaurus?oldid=1377148885",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "carnotaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Carnotaurus sastrei (taxobox)",
@@ -118,9 +125,30 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
-  "carnotaurus:eswiki:4": {
+  "carnotaurus:eswiki:7": {
    "source": "wikipedia_article",
-   "title": "Carnotaurus sastrei (Cabeza)",
+   "title": "Carnotaurus sastrei (Piel)",
+   "url": "https://es.wikipedia.org/wiki/Carnotaurus_sastrei?oldid=175153620",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "carnotaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Carnotaurus sastrei (Brazos)",
+   "url": "https://es.wikipedia.org/wiki/Carnotaurus_sastrei?oldid=175153620",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "carnotaurus:eswiki:13": {
+   "source": "wikipedia_article",
+   "title": "Carnotaurus sastrei (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Carnotaurus_sastrei?oldid=175153620",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "carnotaurus:eswiki:15": {
+   "source": "wikipedia_article",
+   "title": "Carnotaurus sastrei (Cinética del cráneo y mordida)",
    "url": "https://es.wikipedia.org/wiki/Carnotaurus_sastrei?oldid=175153620",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -152,24 +180,6 @@
   },
   {
    "fact_id": "F002",
-   "statement": "Carnotaurus is classified as a derived member of the Abelisauridae family.",
-   "category": "classification",
-   "chunk_id": "carnotaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Carnotaurus is a derived member of the Abelisauridae, a group of large theropods that occupied the large predatorial niche in the southern landmasses of Gondwana during the late Cretaceous.",
-   "quote_sha": "6518489cc1733441"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "Carnotaurus is often considered part of the Brachyrostra clade, a group of short-snouted theropods restricted to South America.",
-   "category": "classification",
-   "chunk_id": "carnotaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Within the Abelisauridae, the genus is often considered a member of the Brachyrostra, a clade of short-snouted forms restricted to South America.",
-   "quote_sha": "29279b4dff5ea838"
-  },
-  {
-   "fact_id": "F004",
    "statement": "The holotype skeleton of Carnotaurus was discovered in 1984 in the Chubut Province of Argentina within the La Colonia Formation.",
    "category": "discovery",
    "chunk_id": "carnotaurus:enwiki:2",
@@ -178,7 +188,7 @@
    "quote_sha": "d581fac9e9a1db87"
   },
   {
-   "fact_id": "F005",
+   "fact_id": "F003",
    "statement": "The only known skeleton of Carnotaurus was unearthed in 1984 by an expedition led by paleontologist José Bonaparte.",
    "category": "discovery",
    "chunk_id": "carnotaurus:enwiki:3",
@@ -187,8 +197,8 @@
    "quote_sha": "dd5a69ee1c18c8d0"
   },
   {
-   "fact_id": "F006",
-   "statement": "José Bonaparte described Carnotaurus sastrei as a new genus and species in 1985.",
+   "fact_id": "F004",
+   "statement": "José Bonaparte named the genus and species Carnotaurus sastrei in 1985 based on a brief description of the skull and lower jaw.",
    "category": "discovery",
    "chunk_id": "carnotaurus:enwiki:3",
    "lang": "en",
@@ -196,16 +206,7 @@
    "quote_sha": "9a3984d6da2a366f"
   },
   {
-   "fact_id": "F007",
-   "statement": "The Carnotaurus skeleton was found on the \"Pocho Sastre\" farm near Bajada Moreno in the Telsen Department of Chubut Province, Argentina.",
-   "category": "discovery",
-   "chunk_id": "carnotaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The skeleton was collected on a farm named \"Pocho Sastre\" near Bajada Moreno in the Telsen Department of Chubut Province, Argentina.",
-   "quote_sha": "8f7aaab892371b50"
-  },
-  {
-   "fact_id": "F008",
+   "fact_id": "F005",
    "statement": "The name Carnotaurus translates to \"meat-eating bull,\" referencing the animal's bull-like horns.",
    "category": "discovery",
    "chunk_id": "carnotaurus:enwiki:3",
@@ -214,8 +215,35 @@
    "quote_sha": "87e66eb936fdbc39"
   },
   {
+   "fact_id": "F006",
+   "statement": "The species name sastrei honors Angel Sastre, the ranch owner where the fossil was discovered.",
+   "category": "discovery",
+   "chunk_id": "carnotaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The specific name sastrei honors Angel Sastre, the owner of the ranch where the skeleton was found.",
+   "quote_sha": "3b22ba411f4e2efc"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "A comprehensive description of the entire Carnotaurus skeleton was published in 1990.",
+   "category": "discovery",
+   "chunk_id": "carnotaurus:enwiki:3",
+   "lang": "en",
+   "quote": "A comprehensive description of the whole skeleton followed in 1990.",
+   "quote_sha": "debbcf36711da27f"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Carnotaurus was a lightly built, bipedal predator that measured between 7.5 and 8 meters in length and weighed between 1.3 and 2.1 metric tons.",
+   "category": "description",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Carnotaurus was a lightly built, bipedal predator, measuring 7.5 to 8 m in length and weighing 1.3 - 2.1 MT.",
+   "quote_sha": "6f81bd9c9e0f827e"
+  },
+  {
    "fact_id": "F009",
-   "statement": "Carnotaurus possessed two thick horns above its eyes and a very deep skull resting on a muscular neck.",
+   "statement": "Carnotaurus possessed two thick horns above its eyes, a feature unique among all known carnivorous dinosaurs, and a deep skull supported by a muscular neck.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:2",
    "lang": "en",
@@ -224,7 +252,7 @@
   },
   {
    "fact_id": "F010",
-   "statement": "Large bumps lined the sides of the Carnotaurus, interrupting the scale mosaic, and there is no evidence of feathers.",
+   "statement": "The skin pattern included large bumps lining the sides of the animal, and there is no evidence of feathers.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:2",
    "lang": "en",
@@ -233,34 +261,7 @@
   },
   {
    "fact_id": "F011",
-   "statement": "Researchers suggest the horns and muscular neck of Carnotaurus may have been used for fighting other individuals of its species.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The distinctive horns and the muscular neck may have been used in fighting others of its species.",
-   "quote_sha": "7362c9d6467a51a8"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "Studies suggest rivaling Carnotaurus individuals may have fought using quick head blows, slow skull pushes, or head-on ramming with horns acting as shock absorbers.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:2",
-   "lang": "en",
-   "quote": "According to separate studies, rivaling individuals may have combated each other with quick head blows, by slow pushes with the upper sides of their skulls, or by ramming each other head-on, using their horns as shock absorbers.",
-   "quote_sha": "dac478a6295e8ef8"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "The diet of Carnotaurus is debated; some studies suggest it hunted large prey like sauropods, while others indicate it preyed mainly on small animals.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The feeding habits of Carnotaurus remain unclear: some studies suggested the animal was able to hunt down very large prey such as sauropods, while other studies found it preyed mainly on relatively small animals.",
-   "quote_sha": "de729a262bdf02ab"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "The single known individual of Carnotaurus was approximately 7.5 to 8 meters long, making it one of the largest abelisaurids.",
+   "statement": "At 7.5 to 8 meters long, the known individual of Carnotaurus represents one of the largest abelisaurids.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:4",
    "lang": "en",
@@ -268,17 +269,8 @@
    "quote_sha": "e5d8d3dbbe2b4109"
   },
   {
-   "fact_id": "F015",
-   "statement": "Estimates for the mass of Carnotaurus vary across studies, ranging from 1,306 kg to 2,100 kg depending on the method used.",
-   "category": "description",
-   "chunk_id": "carnotaurus:enwiki:4",
-   "lang": "en",
-   "quote": "Its mass is estimated to have been 1,350 kg, 1,500 kg, 2,000 kg, 2,100 kg, and 1,306 - 1743 kg in separate studies that used different estimation methods.",
-   "quote_sha": "c2b19e36dd8ee93f"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "The left femur of the known Carnotaurus individual measures 103 cm in length with an average diameter of only 11 cm.",
+   "fact_id": "F012",
+   "statement": "The left femur of the known specimen measures 103 cm in length but has an average diameter of only 11 cm.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:4",
    "lang": "en",
@@ -286,8 +278,53 @@
    "quote_sha": "2a355541250c1d58"
   },
   {
+   "fact_id": "F013",
+   "statement": "Researchers suggest the distinctive horns and muscular neck of Carnotaurus may have been used in intraspecific fighting.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The distinctive horns and the muscular neck may have been used in fighting others of its species.",
+   "quote_sha": "7362c9d6467a51a8"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "Studies propose that rivaling Carnotaurus individuals may have fought using quick head blows, slow skull pushes, or head-on ramming with horns acting as shock absorbers.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "According to separate studies, rivaling individuals may have combated each other with quick head blows, by slow pushes with the upper sides of their skulls, or by ramming each other head-on, using their horns as shock absorbers.",
+   "quote_sha": "dac478a6295e8ef8"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "The diet of Carnotaurus is debated; some studies suggest it hunted large prey like sauropods, while others indicate it primarily ate smaller animals.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The feeding habits of Carnotaurus remain unclear: some studies suggested the animal was able to hunt down very large prey such as sauropods, while other studies found it preyed mainly on relatively small animals.",
+   "quote_sha": "de729a262bdf02ab"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "Carnotaurus is a derived member of the Abelisauridae family, a group of large theropods that dominated predatory niches in southern Gondwana during the late Cretaceous.",
+   "category": "classification",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Carnotaurus is a derived member of the Abelisauridae, a group of large theropods that occupied the large predatorial niche in the southern landmasses of Gondwana during the late Cretaceous.",
+   "quote_sha": "6518489cc1733441"
+  },
+  {
    "fact_id": "F017",
-   "statement": "The Carnotaurus skull measured 59.6 cm in length and was proportionally shorter and deeper than in other large carnivorous dinosaurs.",
+   "statement": "Within the Abelisauridae, Carnotaurus is often classified as a member of the Brachyrostra clade, which consists of short-snouted forms restricted to South America.",
+   "category": "classification",
+   "chunk_id": "carnotaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Within the Abelisauridae, the genus is often considered a member of the Brachyrostra, a clade of short-snouted forms restricted to South America.",
+   "quote_sha": "29279b4dff5ea838"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Carnotaurus had a skull measuring 59.6 cm in length that was proportionally shorter and deeper than any other large carnivorous dinosaur.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:5",
    "lang": "en",
@@ -295,8 +332,17 @@
    "quote_sha": "3ec2b30e71168ec0"
   },
   {
-   "fact_id": "F018",
-   "statement": "In 2020, Cerroni and colleagues argued that the keratinous sheaths on the horns were not greatly longer than the bony cores.",
+   "fact_id": "F019",
+   "statement": "Carnotaurus possessed a prominent pair of horns that protruded obliquely above its eyes.",
+   "category": "description",
+   "chunk_id": "carnotaurus:enwiki:5",
+   "lang": "en",
+   "quote": "A prominent pair of horns protruded obliquely above the eyes.",
+   "quote_sha": "8efbc38eb6dc22b9"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "In 2020, Cerroni and colleagues agreed the horns supported keratinous sheaths but argued these sheaths were not much longer than the bony cores.",
    "category": "debate",
    "chunk_id": "carnotaurus:enwiki:5",
    "lang": "en",
@@ -304,8 +350,8 @@
    "quote_sha": "afbc2edb3ba8eb77"
   },
   {
-   "fact_id": "F019",
-   "statement": "The Carnotaurus had four premaxillary and twelve maxillary teeth on each side of the upper jaw and fifteen dentary teeth per side on the lower jaw.",
+   "fact_id": "F021",
+   "statement": "Carnotaurus had four premaxillary and twelve maxillary teeth on each side of the upper jaw and fifteen dentary teeth on each side of the lower jaw.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:5",
    "lang": "en",
@@ -313,8 +359,8 @@
    "quote_sha": "324e5213e551aa91"
   },
   {
-   "fact_id": "F020",
-   "statement": "Replacement teeth in the Carnotaurus had low, flattened crowns that were closely spaced and inclined forward at approximately 45 degrees.",
+   "fact_id": "F022",
+   "statement": "Carnotaurus's replacement teeth had low, flattened crowns that were closely spaced and inclined forward at approximately 45 degrees.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:5",
    "lang": "en",
@@ -322,8 +368,17 @@
    "quote_sha": "b9c679fda9b3a5e0"
   },
   {
-   "fact_id": "F021",
-   "statement": "The Carnotaurus neck was nearly straight and unusually wide, especially at its base, unlike the S-curve seen in other theropods.",
+   "fact_id": "F023",
+   "statement": "Carnotaurus is the only known non-avian theropod dinosaur from which a basihyal bone has been found.",
+   "category": "description",
+   "chunk_id": "carnotaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Carnotaurus is the only known non-avian theropod from which a basihyal is known.",
+   "quote_sha": "df6abe70a9451253"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "Carnotaurus had a neck that was nearly straight and unusually wide, especially at its base, unlike the S-curve seen in other theropods.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:6",
    "lang": "en",
@@ -331,8 +386,17 @@
    "quote_sha": "047cc93eac5572ee"
   },
   {
-   "fact_id": "F022",
-   "statement": "The Carnotaurus hand lacked carpalia, causing the metacarpals to articulate directly with the forearm.",
+   "fact_id": "F025",
+   "statement": "Carnotaurus's forearm was only one-quarter the size of its upper arm.",
+   "category": "description",
+   "chunk_id": "carnotaurus:enwiki:7",
+   "lang": "en",
+   "quote": "The forearm was only a quarter the size of the upper arm.",
+   "quote_sha": "480fa75ca55df224"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Carnotaurus lacked carpalia in its hand, causing the metacarpals to articulate directly with the forearm.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:7",
    "lang": "en",
@@ -340,26 +404,26 @@
    "quote_sha": "5550c5654f52844b"
   },
   {
-   "fact_id": "F023",
-   "statement": "A 2009 study suggests that abelisaurid arms were vestigial, with nerve fibers reduced to an extent similar to modern emus and kiwis.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:enwiki:7",
-   "lang": "en",
-   "quote": "A 2009 study suggests that the arms were vestigial in abelisaurids, because nerve fibers responsible for stimulus transmission were reduced to an extent seen in today's emus and kiwis, which also have vestigial forelimbs.",
-   "quote_sha": "61c9a4a33aba805b"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "Carnotaurus is the first theropod dinosaur known to have significant fossil skin impressions.",
-   "category": "description",
+   "fact_id": "F027",
+   "statement": "Carnotaurus is the first known theropod dinosaur to have a significant number of fossil skin impressions found on its skeleton.",
+   "category": "curiosities",
    "chunk_id": "carnotaurus:enwiki:8",
    "lang": "en",
    "quote": "Carnotaurus was the first theropod dinosaur discovered with a significant number of fossil skin impressions.",
    "quote_sha": "693cd64f7f21c858"
   },
   {
-   "fact_id": "F025",
-   "statement": "There is no evidence that Carnotaurus had feathers.",
+   "fact_id": "F028",
+   "statement": "The skin of Carnotaurus consisted of a mosaic of polygonal, non-overlapping scales that were approximately 5 to 12 millimeters in diameter.",
+   "category": "description",
+   "chunk_id": "carnotaurus:enwiki:8",
+   "lang": "en",
+   "quote": "The skin was built up of a mosaic of polygonal, non-overlapping scales measuring approximately 5–12 mm in diameter.",
+   "quote_sha": "770716999520f002"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "There is no fossil evidence indicating that Carnotaurus had feathers.",
    "category": "description",
    "chunk_id": "carnotaurus:enwiki:8",
    "lang": "en",
@@ -367,26 +431,26 @@
    "quote_sha": "efc9624c8ed1559c"
   },
   {
-   "fact_id": "F026",
-   "statement": "The sides and front of the Carnotaurus snout show a scaly covering possibly similar to flat scales found in modern crocodilians.",
-   "category": "description",
+   "fact_id": "F030",
+   "statement": "Studies published in 2021 suggest that the larger feature scales on Carnotaurus were randomly distributed along the body rather than arranged in discrete rows as previously depicted.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:8",
    "lang": "en",
-   "quote": "A hummocky surface with grooves, pits, and small openings is found on the sides and front of the snout and indicates a scaly covering, possibly with flat scales as in today's crocodilians.",
-   "quote_sha": "eb2dd7fd1d1082a8"
+   "quote": "More recent studies of the skin of Carnotaurus published in 2021 suggest that previous depictions of the scales on the body are inaccurate, and the larger feature scales were randomly distributed along the body, not distributed in discrete rows like in older artistic depictions and illustrations.",
+   "quote_sha": "aaa6408a7f2428f9"
   },
   {
-   "fact_id": "F027",
-   "statement": "Evidence suggests a row of large scales probably surrounded the eye of Carnotaurus.",
-   "category": "description",
+   "fact_id": "F031",
+   "statement": "Researchers suggest that the variation in scale size on Carnotaurus may have helped regulate body heat through thermoregulation.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:8",
    "lang": "en",
-   "quote": "A row of large scales did probably surround the eye, as indicated by a hummocky surface with longitudinal grooves on the lacrimal and postorbital bones.",
-   "quote_sha": "2360702f9bbb2b47"
+   "quote": "This scale differentiation may have been related to regulating body heat and shedding excess heat via thermoregulation due to its large body size and active lifestyle.",
+   "quote_sha": "af1ddd955748aeff"
   },
   {
-   "fact_id": "F028",
-   "statement": "Carnotaurus is a well-understood genus within the family Abelisauridae, which was restricted to the supercontinent Gondwana.",
+   "fact_id": "F032",
+   "statement": "Carnotaurus is a well-understood genus within the family Abelisauridae, which was restricted to the southern supercontinent Gondwana.",
    "category": "classification",
    "chunk_id": "carnotaurus:enwiki:9",
    "lang": "en",
@@ -394,16 +458,7 @@
    "quote_sha": "d9139307c6f82991"
   },
   {
-   "fact_id": "F029",
-   "statement": "In 2009, Juan Canale and colleagues created the clade Brachyrostra to include Carnotaurus but exclude Majungasaurus.",
-   "category": "classification",
-   "chunk_id": "carnotaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Juan Canale and colleagues, in 2009, erected the new clade Brachyrostra to include Carnotaurus but not Majungasaurus",
-   "quote_sha": "dd0a6dea818bfa0d"
-  },
-  {
-   "fact_id": "F030",
+   "fact_id": "F033",
    "statement": "A 2024 study identified Carnotaurini as a valid clade containing Carnotaurus, Aucasaurus, Niebla, and Koleken.",
    "category": "classification",
    "chunk_id": "carnotaurus:enwiki:9",
@@ -412,89 +467,71 @@
    "quote_sha": "87d7210753055d01"
   },
   {
-   "fact_id": "F031",
-   "statement": "Paleontologists do not universally accept the subgroups Carnotaurinae and Carnotaurini.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Paleontologists do not universally accept these groups.",
-   "quote_sha": "01a6c39ed4d937df"
-  },
-  {
-   "fact_id": "F032",
-   "statement": "The specific function of the horns on Carnotaurus is not entirely clear.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:enwiki:10",
-   "lang": "en",
-   "quote": "The use of these horns is not entirely clear.",
-   "quote_sha": "4f8049cc97f7ac39"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "Greg Paul proposed in 1988 that the horns were used as butting weapons, noting the small eye sockets would protect the eyes during combat.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:enwiki:10",
-   "lang": "en",
-   "quote": "Greg Paul (1988) proposed that the horns were butting weapons and that the small orbita would have minimized the possibility of hurting the eyes while fighting.",
-   "quote_sha": "cd2386ce20b0c5e7"
-  },
-  {
    "fact_id": "F034",
-   "statement": "Gerardo Mazzetta and colleagues suggested in 1998 that Carnotaurus used its horns like rams, calculating its neck could withstand head-on collisions at speeds of 5.7 m/s.",
+   "statement": "The function of Carnotaurus's horns is debated, with theories ranging from fighting conspecifics or killing prey to display for courtship or species recognition.",
    "category": "debate",
+   "chunk_id": "carnotaurus:enwiki:10",
+   "lang": "en",
+   "quote": "The use of these horns is not entirely clear. Several interpretations have revolved around use in fighting conspecifics or in killing prey, though a use in display for courtship or recognition of members of the same species is possible as well.",
+   "quote_sha": "ceb29173a526ff86"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "In 1998, researchers suggested Carnotaurus used its horns for ramming, calculating its neck muscles could withstand collisions at speeds of 5.7 meters per second.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:10",
    "lang": "en",
    "quote": "Gerardo Mazzetta and colleagues (1998) suggested that Carnotaurus used its horns in a way similar to rams. They calculated that the neck musculature was strong enough to absorb the force of two individuals colliding with their heads frontally at a speed of 5.7 m/s each.",
    "quote_sha": "9ae576cc8efee923"
   },
   {
-   "fact_id": "F035",
-   "statement": "Fernando Novas interpreted several skeletal features in 2009 as adaptations for delivering head blows.",
+   "fact_id": "F036",
+   "statement": "Fernando Novas suggested in 2009 that Carnotaurus's short skull and muscular neck were adaptations for delivering quick, strong head blows.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:10",
    "lang": "en",
-   "quote": "Fernando Novas (2009) interpreted several skeletal features as adaptations for delivering blows with the head.",
-   "quote_sha": "b7e294f9e74c6e81"
+   "quote": "Fernando Novas (2009) interpreted several skeletal features as adaptations for delivering blows with the head. He suggested that the shortness of the skull might have made head movements quicker by reducing the moment of inertia, while the muscular neck would have allowed strong head blows.",
+   "quote_sha": "f0639cea1da73663"
   },
   {
-   "fact_id": "F036",
-   "statement": "Rafael Delcourt suggested in 2018 that the horns could have been used for slow headbutting/shoving like marine iguanas or for striking necks/flanks like giraffes.",
+   "fact_id": "F037",
+   "statement": "Some studies propose that Carnotaurus rivals engaged in slow pushing matches rather than rapid headbutting.",
    "category": "debate",
+   "chunk_id": "carnotaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Other studies suggest that rivaling Carnotaurus did not deliver rapid head blows, but pushed slowly against each other with the upper sides of their skulls.",
+   "quote_sha": "122b90d4c98abc18"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "In 2009, researchers argued that Carnotaurus's horns functioned to distribute compression forces to protect the brain during impacts.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Mazzetta and colleagues, in 2009, argued that the horns may have been a device for the distribution of compression forces without damage to the brain.",
+   "quote_sha": "367cb3248663f09d"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "In 2018, Rafael Delcourt suggested Carnotaurus's horns were used for either slow shoving or striking the neck and flanks of opponents.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:10",
    "lang": "en",
    "quote": "Rafael Delcourt, in 2018, suggested that the horns could have been used either in slow headbutting and shoving, as seen in the modern marine iguana, or in blows to the opponent's neck and flanks, as seen in the modern giraffe.",
    "quote_sha": "4436f4b768f9b5aa"
   },
   {
-   "fact_id": "F037",
-   "statement": "Studies published in 2021 suggest that larger feature scales on Carnotaurus were randomly distributed rather than in discrete rows as previously depicted.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:enwiki:8",
-   "lang": "en",
-   "quote": "More recent studies of the skin of Carnotaurus published in 2021 suggest that previous depictions of the scales on the body are inaccurate, and the larger feature scales were randomly distributed along the body, not distributed in discrete rows like in older artistic depictions and illustrations.",
-   "quote_sha": "aaa6408a7f2428f9"
-  },
-  {
-   "fact_id": "F038",
-   "statement": "The variation in scale size on Carnotaurus may have helped regulate body heat due to its large size and active lifestyle.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:8",
-   "lang": "en",
-   "quote": "This scale differentiation may have been related to regulating body heat and shedding excess heat via thermoregulation due to its large body size and active lifestyle.",
-   "quote_sha": "af1ddd955748aeff"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "Analyses by Mazzetta and colleagues in 1998, 2004, and 2009 suggest Carnotaurus was capable of quick but not strong bites.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:11",
-   "lang": "en",
-   "quote": "Analyses of the jaw structure of Carnotaurus by Mazzetta and colleagues, in 1998, 2004, and 2009, suggest that the animal was capable of quick bites, but not strong ones.",
-   "quote_sha": "51aff747cc39f86a"
-  },
-  {
    "fact_id": "F040",
-   "statement": "Mazzetta and colleagues estimated Carnotaurus had a bite force of around 3,341 newtons in 2009.",
+   "statement": "In 1998, researchers proposed that Carnotaurus might have used its horns to injure or kill small prey.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Gerardo Mazzetta and colleagues (1998) propose that the horns might also have been used to injure or kill small prey.",
+   "quote_sha": "733a0f55a1b2b823"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "A 2009 study estimated the bite force of Carnotaurus at approximately 3,341 newtons.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:11",
    "lang": "en",
@@ -502,17 +539,35 @@
    "quote_sha": "ae8837880e595e02"
   },
   {
-   "fact_id": "F041",
-   "statement": "The posterior bite force of Carnotaurus was estimated at 7,172 newtons.",
+   "fact_id": "F042",
+   "statement": "A 2022 study estimated the anterior bite force of Carnotaurus at around 3,392 newtons, slightly higher than a previous estimate.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:11",
    "lang": "en",
-   "quote": "The posterior bite force at the back of the jaws meanwhile, was estimated at 7,172 newtons.",
-   "quote_sha": "1ce608b31d9f90a5"
+   "quote": "A 2022 study estimating bite force for 33 different dinosaurs suggests that the bite force in Carnotaurus was around 3,392 newtons at the anterior portion of the jaws; slightly higher than the previous estimate.",
+   "quote_sha": "0b9cbcdb4bd4dc50"
   },
   {
-   "fact_id": "F042",
-   "statement": "Cerroni and colleagues (2020) argued that Carnotaurus skull flexibility was restricted to the lower jaw with little to no skull kinesis.",
+   "fact_id": "F043",
+   "statement": "François Therrien and colleagues (2005) questioned earlier interpretations, suggesting Carnotaurus had a bite force twice that of the American alligator.",
+   "category": "debate",
+   "chunk_id": "carnotaurus:enwiki:11",
+   "lang": "en",
+   "quote": "This interpretation was questioned by François Therrien and colleagues (2005), who found that the biting force of Carnotaurus was twice that of the American alligator, which may have the strongest bite of any living tetrapod.",
+   "quote_sha": "8166500f369b8475"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "Analyses comparing Carnotaurus to modern Komodo dragons suggest its jaws were adapted for delivering slashing wounds to large prey rather than catching small prey with high precision.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:11",
+   "lang": "en",
+   "quote": "These researchers also noted analogies with modern Komodo dragons: the flexural strength of the lower jaw decreases towards the tip linearly, indicating that the jaws were not suited for high precision catching of small prey but for delivering slashing wounds to weaken big prey.",
+   "quote_sha": "01fd29db799fea36"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Cerroni and colleagues (2020) debated the extent of skull flexibility, arguing that while the lower jaw was flexible, the skull itself had little to no kinesis due to a thickened roof and ossified joints.",
    "category": "debate",
    "chunk_id": "carnotaurus:enwiki:11",
    "lang": "en",
@@ -520,26 +575,35 @@
    "quote_sha": "b82e64a3a9e7221c"
   },
   {
-   "fact_id": "F043",
-   "statement": "Robert Bakker (1998) found Carnotaurus mainly fed on very large prey, especially sauropods.",
-   "category": "debate",
+   "fact_id": "F046",
+   "statement": "Robert Bakker (1998) proposed that Carnotaurus primarily hunted very large prey, specifically sauropods.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:11",
    "lang": "en",
    "quote": "Robert Bakker (1998) found that Carnotaurus mainly fed upon very large prey, especially sauropods.",
    "quote_sha": "a705d8f5076808fc"
   },
   {
-   "fact_id": "F044",
-   "statement": "Mazzetta and colleagues (1998, 1999) presumed Carnotaurus was a swift runner based on thigh bone adaptations.",
+   "fact_id": "F047",
+   "statement": "Robert Bakker noted that Carnotaurus possessed skull adaptations like a short snout and strong occiput that had independently evolved in Allosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:11",
+   "lang": "en",
+   "quote": "As he noted, several adaptations of the skull—the short snout, the relatively small teeth and the strong back of the skull (occiput)—had independently evolved in Allosaurus.",
+   "quote_sha": "4e5c4cf19cee94cd"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Calculations suggest the caudofemoralis muscle in Carnotaurus had a mass of 111 to 137 kg per leg.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:12",
    "lang": "en",
-   "quote": "Mazzetta and colleagues (1998, 1999) presumed that Carnotaurus was a swift runner, arguing that the thigh bone was adapted to withstand high bending moments while running.",
-   "quote_sha": "ecad86737bf16d70"
+   "quote": "The muscle mass was calculated at 111 to 137 kg per leg.",
+   "quote_sha": "84688391d6f44c36"
   },
   {
-   "fact_id": "F045",
-   "statement": "Carnotaurus likely had diminished ability to make tight turns because its hip and tail had to move simultaneously.",
+   "fact_id": "F049",
+   "statement": "Carnotaurus likely had diminished ability to make tight turns because its stiff tail and hip had to move simultaneously.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:12",
    "lang": "en",
@@ -547,8 +611,8 @@
    "quote_sha": "93c2dd815ebe4141"
   },
   {
-   "fact_id": "F046",
-   "statement": "The endocranial cavity volume of Carnotaurus was 168.8 cm³.",
+   "fact_id": "F050",
+   "statement": "CT scans revealed the endocranial cavity of Carnotaurus had a volume of 168.8 cm³.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:13",
    "lang": "en",
@@ -556,8 +620,17 @@
    "quote_sha": "43736c40eb8378d9"
   },
   {
-   "fact_id": "F047",
-   "statement": "Carnotaurus had an encephalization quotient larger than Majungasaurus but smaller than tyrannosaurids.",
+   "fact_id": "F051",
+   "statement": "Researchers estimated Carnotaurus brain size as either 50% or 37% of its endocranial cavity volume.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:enwiki:13",
+   "lang": "en",
+   "quote": "The authors used two different brain size estimates, assuming a brain size of 50% and 37% of the endocranial cavity, respectively.",
+   "quote_sha": "8d696fb22dd11d12"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Carnotaurus had a reptile encephalization quotient larger than its relative Majungasaurus but smaller than that of tyrannosaurids.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:13",
    "lang": "en",
@@ -565,8 +638,8 @@
    "quote_sha": "af8e0fa19b4232c2"
   },
   {
-   "fact_id": "F048",
-   "statement": "Carnotaurus had large olfactory bulbs and relatively small optic lobes.",
+   "fact_id": "F053",
+   "statement": "Carnotaurus possessed large olfactory bulbs and relatively small optic lobes, suggesting a keen sense of smell compared to sight.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:13",
    "lang": "en",
@@ -574,35 +647,53 @@
    "quote_sha": "0c60be41867e927f"
   },
   {
-   "fact_id": "F049",
-   "statement": "Cerroni and Paulina-Carabajal hypothesized Carnotaurus relied more on smell than other abelisaurids.",
+   "fact_id": "F054",
+   "statement": "The estimated hearing range of Carnotaurus was below 3 kHz.",
    "category": "paleobiology",
    "chunk_id": "carnotaurus:enwiki:13",
    "lang": "en",
-   "quote": "As hypothesized by Cerroni and Paulina-Carabajal, this downward-curvature, together with the large size of the bulbs, might indicate that Carnotaurus relied more on the sense of smell than other abelisaurids.",
-   "quote_sha": "8ae93a951fe5e5ab"
+   "quote": "The hearing range was estimated to be below 3 kHz.",
+   "quote_sha": "a9dd3010e8f3adc1"
   },
   {
-   "fact_id": "F050",
-   "statement": "Hearing in Carnotaurus might have been poorly developed, indicated by a short inner ear lagena.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:enwiki:13",
-   "lang": "en",
-   "quote": "Hearing might have been poorly developed in Carnotaurus and other abelisaurids, as indicated by the short lagena of the inner ear.",
-   "quote_sha": "513304fad25d026d"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "Carnotaurus lived during the Late Cretaceous.",
+   "fact_id": "F055",
+   "statement": "Carnotaurus fossils date to the Maastrichtian to lower Danian ages, approximately 69 to 64 million years ago.",
    "category": "time_and_habitat",
-   "chunk_id": "carnotaurus:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Cretácico superior",
-   "quote_sha": "68069888dfff619a"
+   "chunk_id": "carnotaurus:enwiki:14",
+   "lang": "en",
+   "quote": "Later, they were realized to pertain to the much younger La Colonia Formation, which, according to a 2021 study, dates to the Maastrichtian to lower Danian ages around 69–64 million years ago.",
+   "quote_sha": "861d28c145264d40"
   },
   {
-   "fact_id": "F052",
-   "statement": "The genus Carnotaurus was described by Bonaparte in 1985.",
+   "fact_id": "F056",
+   "statement": "Carnotaurus is known to be the latest South American abelisaurid.",
+   "category": "time_and_habitat",
+   "chunk_id": "carnotaurus:enwiki:14",
+   "lang": "en",
+   "quote": "Carnotaurus was the latest South American abelisaurid known.",
+   "quote_sha": "12fc701a94e0877e"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Fossils of Carnotaurus were found in the La Colonia Formation, exposed on the southern slope of the North Patagonian Massif.",
+   "category": "time_and_habitat",
+   "chunk_id": "carnotaurus:enwiki:14",
+   "lang": "en",
+   "quote": "The La Colonia Formation is exposed over the southern slope of the North Patagonian Massif.",
+   "quote_sha": "afb6933f0790c6b4"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The environment where Carnotaurus lived likely consisted of estuaries, tidal flats, or coastal plains.",
+   "category": "time_and_habitat",
+   "chunk_id": "carnotaurus:enwiki:14",
+   "lang": "en",
+   "quote": "This part likely represents the deposits of an environment of estuaries, tidal flats or coastal plains.",
+   "quote_sha": "b2c8fcff835914ee"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "The genus Carnotaurus was named by Bonaparte in 1985.",
    "category": "classification",
    "chunk_id": "carnotaurus:eswiki:1",
    "lang": "es",
@@ -610,8 +701,8 @@
    "quote_sha": "5b60f8621f8d440e"
   },
   {
-   "fact_id": "F053",
-   "statement": "The species C. sastrei was described by Bonaparte in 1985.",
+   "fact_id": "F060",
+   "statement": "The species Carnotaurus sastrei was named by Bonaparte in 1985.",
    "category": "classification",
    "chunk_id": "carnotaurus:eswiki:1",
    "lang": "es",
@@ -619,134 +710,188 @@
    "quote_sha": "942f3c1141c5655f"
   },
   {
-   "fact_id": "F054",
-   "statement": "The species name 'sastrei' honors Anselmo Sastre, the owner of the estancia where the fossil was found.",
-   "category": "discovery",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Carnotaurus sastrei (lat. \"toro carnívoro de Anselmo Sastre\")",
-   "quote_sha": "f6e2fa5e8df27189"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "Carnotaurus lived during the Late Cretaceous, approximately 72 to 69.9 million years ago, in the Maastrichtian stage.",
-   "category": "time_and_habitat",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Vivió en el Cretácico superior, hace aproximadamente entre 72 y 69,9 millones de años, durante el Maastrichtiense",
-   "quote_sha": "833a9ad228edf498"
-  },
-  {
-   "fact_id": "F056",
-   "statement": "Carnotaurus lived in what is now South America.",
-   "category": "time_and_habitat",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "en lo que hoy es Sudamérica",
-   "quote_sha": "599b80c3627840da"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "Carnotaurus is the only known species in the extinct genus Carnotaurus, a theropod dinosaur of the family Abelisauridae.",
-   "category": "classification",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "es la única especie conocida del género extinto Carnotaurus de dinosaurio terópodo de la familia Abelisauridae",
-   "quote_sha": "5bc577d5703e969d"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "Carnotaurus is notable for having two small horns above its eyes on its small head.",
-   "category": "description",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Lo más notable de este dinosaurio son sus dos pequeños cuernos sobre los ojos en su pequeña cabeza",
-   "quote_sha": "8bdf5a170e20c017"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "Skin impressions of Carnotaurus revealed small osteoderms, or bony shields.",
-   "category": "description",
-   "chunk_id": "carnotaurus:eswiki:2",
-   "lang": "es",
-   "quote": "También se hallaron impresiones de la piel que presentaban pequeños osteodermos, escudos óseos",
-   "quote_sha": "21a3a796a4f0e5cc"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "Studies estimate the weight of Carnotaurus to be between 1,350 and 2,100 kg.",
-   "category": "description",
-   "chunk_id": "carnotaurus:eswiki:3",
-   "lang": "es",
-   "quote": "pesaba según los estudios entre 1350 y 2100kg",
-   "quote_sha": "f56952c2c5d41c2a"
-  },
-  {
    "fact_id": "F061",
-   "statement": "Distinctive features of Carnotaurus include two thick horns above the eyes.",
+   "statement": "Carnotaurus sastrei is the only known species of the extinct genus Carnotaurus, a theropod dinosaur belonging to the family Abelisauridae.",
    "category": "description",
-   "chunk_id": "carnotaurus:eswiki:3",
+   "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "dos cuernos gruesos sobre los ojos",
-   "quote_sha": "d6ea3760b228237f"
+   "quote": "Carnotaurus sastrei (lat. \"toro carnívoro de Anselmo Sastre\"), o carnotauro en castellano, es la única especie conocida del género extinto Carnotaurus de dinosaurio terópodo de la familia Abelisauridae.",
+   "quote_sha": "893d58acd7d7a83c"
   },
   {
    "fact_id": "F062",
-   "statement": "The skull of Carnotaurus measured 59.6 centimeters in length.",
-   "category": "description",
-   "chunk_id": "carnotaurus:eswiki:4",
+   "statement": "Carnotaurus lived during the Late Cretaceous, approximately 72 to 69.9 million years ago in the Maastrichtian stage, in what is now South America.",
+   "category": "time_and_habitat",
+   "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "El cráneo, que mide 59,6 cm de longitud",
-   "quote_sha": "1e679b2a38d4c5dc"
+   "quote": "Vivió en el Cretácico superior, hace aproximadamente entre 72 y 69,9 millones de años, durante el Maastrichtiense, en lo que hoy es Sudamérica.",
+   "quote_sha": "8000bd945cf22fc9"
   },
   {
    "fact_id": "F063",
-   "statement": "A pair of prominent horns protruded obliquely above the eyes of Carnotaurus.",
+   "statement": "Carnotaurus is notable for having two small horns above its eyes, making it the first known carnivorous dinosaur with well-formed and defined horns.",
    "category": "description",
-   "chunk_id": "carnotaurus:eswiki:4",
+   "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "Un par de prominentes cuernos sobresalían oblicuamente por encima de los ojos",
-   "quote_sha": "fffdd138020b6359"
+   "quote": "Lo más notable de este dinosaurio son sus dos pequeños cuernos sobre los ojos en su pequeña cabeza, siendo el primer carnívoro que mostrara cuernos bien formados y definidos.",
+   "quote_sha": "b5cb6f4bb7e14242"
   },
   {
    "fact_id": "F064",
-   "statement": "Carnotaurus reached a height of 3.5 meters and a length of 7.6 meters.",
-   "category": "paleobiology",
+   "statement": "Fossil skin impressions of Carnotaurus revealed small osteoderms, or bony shields.",
+   "category": "description",
    "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "Llegó a medir 3,5 m de altura y 7,6 m de longitúd",
-   "quote_sha": "f743101f9bb68757"
+   "quote": "También se hallaron impresiones de la piel que presentaban pequeños osteodermos, escudos óseos.",
+   "quote_sha": "337efff488cd0ef9"
   },
   {
    "fact_id": "F065",
-   "statement": "Carnotaurus could run at an approximate speed of 56 km/h.",
-   "category": "paleobiology",
+   "statement": "The species name \"sastrei\" honors Anselmo Sastre, the owner of the estancia where the first and only specimen was found in Chubut, Argentina.",
+   "category": "discovery",
    "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "alcanzando aproximadamente una velocidad de 56 km/h a la hora de correr",
-   "quote_sha": "498edf27a8e6862a"
+   "quote": "El nombre de la especie \"sastrei\" le fue otorgado en honor a Anselmo Sastre, dueño de la estancia (Pocho Sastre) en el departamento de Telsen, provincia Chubut, Argentina, donde fue hallado el primer y único espécimen.",
+   "quote_sha": "cda35ea461825b56"
   },
   {
    "fact_id": "F066",
-   "statement": "The massive snout of Carnotaurus suggests it had large olfactory organs.",
+   "statement": "While Carnotaurus's diet is not fully clear, some studies of its skull morphology suggest it was capable of hunting large prey like sauropods.",
    "category": "paleobiology",
-   "chunk_id": "carnotaurus:eswiki:4",
+   "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "El masivo hocico sugiere que habrían presentado órganos olfativos de gran tamaño",
-   "quote_sha": "579084da67b49ebf"
+   "quote": "Los hábitos alimentarios de Carnotaurus aún no están claros del todo para los investigadores, aunque algunos estudios de la morfología craneal sugieren que el animal era capaz de cazar presas muy grandes, como los saurópodos.",
+   "quote_sha": "c8f19dc5855210b9"
   },
   {
    "fact_id": "F067",
-   "statement": "There is a debate regarding the diet of Carnotaurus; some studies suggest it hunted large prey like sauropods, while others indicate it primarily ate relatively small animals.",
-   "category": "debate",
+   "statement": "Other studies suggest Carnotaurus primarily fed on relatively small animals.",
+   "category": "paleobiology",
    "chunk_id": "carnotaurus:eswiki:2",
    "lang": "es",
-   "quote": "Los hábitos alimentarios de Carnotaurus aún no están claros del todo para los investigadores, aunque algunos estudios de la morfología craneal sugieren que el animal era capaz de cazar presas muy grandes, como los saurópodos. Otros estudios encontraron que se alimentaba principalmente de animales relativamente pequeños.",
-   "quote_sha": "9fc618eeba91f1d1"
+   "quote": "Otros estudios encontraron que se alimentaba principalmente de animales relativamente pequeños.",
+   "quote_sha": "9f7bd77d52f8f033"
   },
   {
    "fact_id": "F068",
-   "statement": "The parent group of the genus Carnotaurus is Furileusauria.",
+   "statement": "Carnotaurus was highly adapted for running and was possibly one of the fastest large theropods, reaching speeds of approximately 56 km/h.",
+   "category": "curiosities",
+   "chunk_id": "carnotaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Lo que sí se sabe es que Carnotaurus se adaptaba muy bien para correr y fue posiblemente uno de los terópodos más rápidos de gran tamaño, alcanzando aproximadamente una velocidad de 56 km/h a la hora de correr.",
+   "quote_sha": "02b091b81c2d891d"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The most distinctive features of Carnotaurus are two thick horns above the eyes and extremely reduced, atrophied forelimbs with four fingers.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Las características más distintivas del Carnotaurus son dos cuernos gruesos sobre los ojos y unos miembros delanteros extremadamente reducidos y atrofiados, provistos de cuatro dedos.",
+   "quote_sha": "af2087904893929a"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Carnotaurus was the first theropod dinosaur discovered with complete fossil skin impressions.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:7",
+   "lang": "es",
+   "quote": "Carnotaurus fue el primer dinosaurio terópodo descubierto con impresiones completas de piel fósil.",
+   "quote_sha": "253f4f7e09ea9c8e"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Carnotaurus skin was embedded with small osteoderms arranged in barrel-like columns parallel to the body's central axis.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:7",
+   "lang": "es",
+   "quote": "La piel está incrustada por pequeños osteodermos, delineados en columnas de barriles paralelos al eje central del cuerpo.",
+   "quote_sha": "01ede4db74255934"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Uniquely among theropods, Carnotaurus had osteoderms along the sides of its neck, back, and tail in irregular rows.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:7",
+   "lang": "es",
+   "quote": "De manera única para los terópodos, tenía osteodermos, escudos óseos, a lo largo de los lados del cuello, la espalda y la cola en filas irregulares.",
+   "quote_sha": "7f3521a90a20a7d3"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Stephen Czerkas suggests these osteoderms may have protected the animal's sides during fights with conspecifics or other theropods, noting similar structures in modern iguanas provide limited combat protection.",
+   "category": "debate",
+   "chunk_id": "carnotaurus:eswiki:7",
+   "lang": "es",
+   "quote": "Stephen Czerkas sugiere que estas estructuras podrían proteger los lados del animal mientras luchaba contra miembros de su misma especie u otros terópodos, con el argumento de que las estructuras similares se pueden encontrar en el cuello de la moderna iguana, donde proporcionan una protección limitada en el combate.",
+   "quote_sha": "50184d65030424fa"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Carnotaurus had four fingers on each hand, a primitive trait compared to the Tyrannosaurus.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Sus extremidades anteriores eran más cortas en comparación con las del Tyrannosaurus, con cuatro dedos en cada mano, cosa considerada un rasgo primitivo entre los dinosaurios.",
+   "quote_sha": "95f2357ddfd5db0b"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Carnotaurus lacked a wrist bone, allowing its metacarpals to articulate directly with the forearm.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "lang": "es",
+   "quote": "No había carpo en la mano, de modo que los metacarpianos articulaban directamente con el antebrazo.",
+   "quote_sha": "f158a3bff3b17c15"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Researchers believe the fourth finger, which was spur-like, was used to hold onto prey.",
+   "category": "description",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Se cree que este último era usado para sujetar a las presas.",
+   "quote_sha": "b34ec94a04bce538"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "Analysis by Mazzetta et al. suggests Carnotaurus was capable of rapid but not strong bites.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "El análisis del diseño de la mandíbula de Carnotaurus por Mazzetta et al. sugiere que el animal era capaz de mordidas rápidas, pero no fuertes.",
+   "quote_sha": "9c323b24aad8e557"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "Researchers observed a high degree of skull flexibility in Carnotaurus, particularly in the lower jaw, similar to modern snakes.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "Además, estos investigadores observaron un alto grado de flexibilidad del cráneo, especialmente en la mandíbula inferior, algo similar a las serpientes modernas.",
+   "quote_sha": "10df0832a767757b"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Robert Bakker argued that Carnotaurus primarily fed on very large prey, especially sauropods.",
+   "category": "debate",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "Por otro lado, Robert Bakker encontró que el Carnotaurus se alimentaba principalmente de presas muy grandes, especialmente de saurópodos.",
+   "quote_sha": "2dfb39999d0c93f6"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "In 2020, Cerroni and colleagues argued that skull flexibility was restricted to the lower jaw, suggesting the rest of the skull had little to no movement.",
+   "category": "debate",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "Cerroni y sus colegas, en 2020, argumentaron que la flexibilidad estaba restringida a la mandíbula inferior, mientras que el techo del cráneo engrosado y la osificación de varias articulaciones craneales sugieren que el cráneo tenía poca o ninguna cinesis.",
+   "quote_sha": "ec55e2bf9369dc40"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "Carnotaurus belongs to the parent group Furileusauria.",
    "category": "classification",
    "chunk_id": "carnotaurus:pbdb:1",
    "lang": "en",
@@ -754,8 +899,8 @@
    "quote_sha": "73e33ead2f17e898"
   },
   {
-   "fact_id": "F069",
-   "statement": "Carnotaurus belongs to the family Abelisauridae.",
+   "fact_id": "F082",
+   "statement": "Carnotaurus is classified in the family Abelisauridae.",
    "category": "classification",
    "chunk_id": "carnotaurus:pbdb:1",
    "lang": "en",
@@ -763,17 +908,8 @@
    "quote_sha": "a3eedd4ac93b605c"
   },
   {
-   "fact_id": "F070",
-   "statement": "Carnotaurus is classified under the class Reptilia.",
-   "category": "classification",
-   "chunk_id": "carnotaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Reptilia",
-   "quote_sha": "cdcaa2922520f735"
-  },
-  {
-   "fact_id": "F071",
-   "statement": "The time range for Carnotaurus is the Maastrichtian, from 72.2 to 66 million years ago.",
+   "fact_id": "F083",
+   "statement": "Carnotaurus lived during the Maastrichtian stage, from 72.2 to 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "carnotaurus:pbdb:1",
    "lang": "en",
@@ -781,39 +917,34 @@
    "quote_sha": "8c03278f69290924"
   },
   {
-   "fact_id": "F072",
-   "statement": "A 2026 study by Rowe, Cerroni, and Rayfield examined the mechanical performance of the skulls of Carnotaurus and other large abelisaurs.",
-   "category": "paleobiology",
-   "chunk_id": "carnotaurus:research:1",
-   "lang": "en",
-   "quote": "Rowe, Cerroni & Rayfield (2026) study mechanical performance of skulls of Ceratosaurus, Masiakasaurus, Carnotaurus and Majungasaurus",
-   "quote_sha": "0d8628e0495ba2b5"
+   "fact_id": "F084",
+   "statement": "Carnotaurus had a safety factor of 92, suggesting its skull was over-engineered compared to the forces generated by its bite.",
+   "category": "curiosities",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "Existe una gran diferencia entre la máxima fuerza que resiste y la generada por una mordida. Esto le da un factor de seguridad de 92, que sugiere que el cráneo de Carnotaurus podría haber estado sobrediseñado.",
+   "quote_sha": "f3238dd6e2f4a1a3"
   },
   {
-   "fact_id": "F073",
-   "statement": "Researchers suggest that the skull adaptations of abelisaurs like Carnotaurus indicate a similarity in ecological roles between abelisaurs and tyrannosaurs.",
-   "category": "debate",
-   "chunk_id": "carnotaurus:research:1",
-   "lang": "en",
-   "quote": "suggestive of similarity of ecological roles of abelisaurs and tyrannosaurs",
-   "quote_sha": "831128334b174e48"
+   "fact_id": "F085",
+   "statement": "The horns and strong fusion between frontal and parietal bones suggest the skull was designed to resist high compressive loads.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "La presencia de cuernos y la fuerte fusión observada entre los huesos frontales y parietales sugieren que este sector del cráneo presenta un diseño para resistir elevadas cargas compresivas.",
+   "quote_sha": "bfa7d0af35d715ed"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "Carnotaurus likely used its jaw movement, tooth design, and neck muscles to cut and tear large food chunks to swallow without chewing.",
+   "category": "paleobiology",
+   "chunk_id": "carnotaurus:eswiki:15",
+   "lang": "es",
+   "quote": "El gran rango de movimientos y el apropiado diseño de sus dientes, conjuntamente con la fuerza originada por su musculatura del cráneo y del cuello, le habrían permitido a Carnotaurus cortar y desgarrar grandes trozos de alimento que tragaría sin masticar.",
+   "quote_sha": "c461ca570db58d45"
   }
  ],
  "rejected": [
-  {
-   "chunk_id": "carnotaurus:enwiki:3",
-   "statement": "The species name sastrei honors Angel Sastre, the owner of the ranch where the fossil was discovered.",
-   "category": "discovery",
-   "quote": "The specific name sastrei honors Angel Sastre, the owner of the ranch where the skeleton was found.",
-   "reason": "statement copies the source wording: 'name sastrei honors Angel Sastre the owner of'"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:2",
-   "statement": "Carnotaurus was a lightly built, bipedal predator measuring between 7.5 and 8 meters in length and weighing between 1.3 and 2.1 metric tons.",
-   "category": "description",
-   "quote": "Carnotaurus was a lightly built, bipedal predator, measuring 7.5 to 8 m in length and weighing 1.3 - 2.1 MT.",
-   "reason": "statement copies the source wording: 'Carnotaurus was a lightly built bipedal predator measuring'"
-  },
   {
    "chunk_id": "carnotaurus:enwiki:2",
    "statement": "Carnotaurus is characterized by small, vestigial forelimbs and long, slender hind limbs.",
@@ -823,220 +954,199 @@
   },
   {
    "chunk_id": "carnotaurus:enwiki:2",
-   "statement": "Skin impressions on the Carnotaurus skeleton show a mosaic of small, non-overlapping scales approximately 5 mm in diameter.",
+   "statement": "Extensive skin impressions on the skeleton reveal a mosaic of small, non-overlapping scales approximately 5 millimeters in diameter.",
    "category": "description",
    "quote": "The skeleton is preserved with extensive skin impressions, showing a mosaic of small, non-overlapping scales approximately 5 mm in diameter.",
    "reason": "statement copies the source wording: 'a mosaic of small non-overlapping scales approximately 5'"
   },
   {
    "chunk_id": "carnotaurus:enwiki:5",
-   "statement": "A prominent pair of horns protruded obliquely above the eyes of the Carnotaurus.",
-   "category": "description",
-   "quote": "A prominent pair of horns protruded obliquely above the eyes.",
-   "reason": "statement copies the source wording: 'A prominent pair of horns protruded obliquely above'"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:5",
-   "statement": "The bony cores of the horns on the Carnotaurus measured 15 cm in length.",
+   "statement": "The bony cores of Carnotaurus's horns measured 15 cm in length.",
    "category": "description",
    "quote": "These horns... measured 15 cm in length.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "carnotaurus:enwiki:5",
-   "statement": "In 1990, Bonaparte suggested that the horns likely formed the bony cores of much longer keratinous sheaths.",
+   "statement": "In 1990, Bonaparte suggested that Carnotaurus's horns likely formed the bony cores of much longer keratinous sheaths.",
    "category": "debate",
    "quote": "Bonaparte, in 1990, suggested that these horns would probably have formed the bony cores of much longer keratinous sheaths.",
    "reason": "statement copies the source wording: 'formed the bony cores of much longer keratinous'"
   },
   {
-   "chunk_id": "carnotaurus:enwiki:5",
-   "statement": "The Carnotaurus is the only known non-avian theropod from which a basihyal bone has been found.",
-   "category": "description",
-   "quote": "Carnotaurus is the only known non-avian theropod from which a basihyal is known.",
-   "reason": "statement copies the source wording: 'Carnotaurus is the only known non-avian theropod from'"
-  },
-  {
    "chunk_id": "carnotaurus:enwiki:6",
-   "statement": "The Carnotaurus vertebral column consisted of ten cervical, twelve dorsal, six fused sacral, and an unknown number of caudal vertebrae.",
-   "category": "description",
-   "quote": "The vertebral column consisted of ten cervical (neck), twelve dorsal, six fused sacral and an unknown number of caudal (tail) vertebrae.",
-   "reason": "statement copies the source wording: 'twelve dorsal six fused sacral and an unknown'"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:6",
-   "statement": "The top of the Carnotaurus neck vertebrae featured a double row of enlarged, upwardly directed bony processes called epipophyses that created a smooth trough.",
+   "statement": "The top of Carnotaurus's neck vertebrae featured a double row of enlarged, upwardly directed bony processes called epipophyses that created a smooth trough.",
    "category": "description",
    "quote": "The top of the neck's spinal column featured a double row of enlarged, upwardly directed bony processes called epipophyses, creating a smooth trough on the top of the neck vertebrae.",
    "reason": "statement copies the source wording: 'featured a double row of enlarged upwardly directed'"
   },
   {
+   "chunk_id": "carnotaurus:enwiki:6",
+   "statement": "Carnotaurus's tail featured a double row of highly modified caudal ribs that protruded upwards in a V-shape when viewed from the front.",
+   "category": "description",
+   "quote": "A similar double row was also present in the tail, formed there by highly modified caudal ribs, in front view protruding upwards in a V-shape.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
    "chunk_id": "carnotaurus:enwiki:7",
-   "statement": "The forelimbs of the Carnotaurus were proportionally shorter than in any other large carnivorous dinosaurs, including tyrannosaurids.",
+   "statement": "Carnotaurus had forelimbs that were proportionally shorter than in any other large carnivorous dinosaurs, including tyrannosaurids.",
    "category": "description",
    "quote": "The forelimbs were proportionally shorter than in any other large carnivorous dinosaurs, including tyrannosaurids.",
    "reason": "statement copies the source wording: 'were proportionally shorter than in any other large'"
   },
   {
    "chunk_id": "carnotaurus:enwiki:7",
-   "statement": "The Carnotaurus forearm was only a quarter the size of its upper arm.",
-   "category": "description",
-   "quote": "The forearm was only a quarter the size of the upper arm.",
-   "reason": "statement copies the source wording: 'forearm was only a quarter the size of'"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:7",
-   "statement": "The Carnotaurus hand had four basic digits, with only the middle two ending in finger bones and the fourth consisting of a single splint-like metacarpal that may have been an external spur.",
+   "statement": "Carnotaurus's hand had four basic digits, with only the middle two ending in finger bones and the fourth consisting of a single splint-like metacarpal that may have been an external spur.",
    "category": "description",
    "quote": "The hand showed four basic digits, though apparently only the middle two of these ended in finger bones, while the fourth consisted of a single splint-like metacarpal that may have represented an external 'spur'.",
    "reason": "statement copies the source wording: 'of a single splint-like metacarpal that may have'"
   },
   {
-   "chunk_id": "carnotaurus:enwiki:8",
-   "statement": "The skin of Carnotaurus consisted of a mosaic of polygonal, non-overlapping scales measuring 5 to 12 mm in diameter.",
+   "chunk_id": "carnotaurus:enwiki:7",
+   "statement": "Carnotaurus's fingers were fused and immobile and may have lacked claws.",
    "category": "description",
-   "quote": "The skin was built up of a mosaic of polygonal, non-overlapping scales measuring approximately 5–12 mm in diameter.",
-   "reason": "statement copies the source wording: 'of a mosaic of polygonal non-overlapping scales measuring'"
+   "quote": "The fingers themselves were fused and immobile, and may have lacked claws.",
+   "reason": "statement copies the source wording: 'were fused and immobile and may have lacked'"
+  },
+  {
+   "chunk_id": "carnotaurus:enwiki:7",
+   "statement": "A 2009 study suggests Carnotaurus's arms were vestigial because nerve fibers for stimulus transmission were reduced to an extent similar to modern emus and kiwis.",
+   "category": "debate",
+   "quote": "A 2009 study suggests that the arms were vestigial in abelisaurids, because nerve fibers responsible for stimulus transmission were reduced to an extent seen in today's emus and kiwis, which also have vestigial forelimbs.",
+   "reason": "statement copies the source wording: 'for stimulus transmission were reduced to an extent'"
   },
   {
    "chunk_id": "carnotaurus:enwiki:8",
-   "statement": "Carnotaurus had larger bump-like structures on its neck, back, and tail that were 4 to 5 cm in diameter and up to 5 cm in height.",
-   "category": "description",
-   "quote": "Larger bump-like structures were distributed over the sides of the neck, back and tail in irregular rows. These bumps were 4 to 5 cm in diameter and up to 5 cm in height",
-   "reason": "statement copies the source wording: 'cm in diameter and up to 5 cm'"
+   "statement": "Carnotaurus had large bump-like structures on its neck, back, and tail that were 4 to 5 centimeters in diameter and up to 5 centimeters in height.",
+   "category": "curiosities",
+   "quote": "Larger bump-like structures were distributed over the sides of the neck, back and tail in irregular rows. These bumps were 4 to 5 cm in diameter and up to 5 cm in height.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "carnotaurus:enwiki:9",
-   "statement": "Cladistic analyses consistently show Carnotaurus as one of the most derived members of the Abelisauridae family.",
+   "statement": "Despite debates within the family, cladistic analyses consistently show Carnotaurus as one of the most derived members of the Abelisauridae.",
    "category": "classification",
    "quote": "Though relationships within the Abelisauridae are debated, Carnotaurus is consistently shown to be one of the most derived members of the family by cladistical analyses.",
    "reason": "statement copies the source wording: 'one of the most derived members of the'"
   },
   {
-   "chunk_id": "carnotaurus:enwiki:9",
-   "statement": "A 2008 review suggested that Carnotaurus was not closely related to Aucasaurus or Majungasaurus and proposed Ilokelesia as its sister taxon instead.",
-   "category": "debate",
-   "quote": "A 2008 review, in contrast, suggested that Carnotaurus was not closely related to either genus, and instead proposed Ilokelesia as its sister taxon.",
-   "reason": "statement copies the source wording: 'suggested that Carnotaurus was not closely related to'"
-  },
-  {
    "chunk_id": "carnotaurus:enwiki:10",
-   "statement": "Carnotaurus is the only known carnivorous bipedal animal with a pair of horns on its frontal bone.",
-   "category": "paleobiology",
+   "statement": "Carnotaurus is the only known carnivorous bipedal animal that possesses a pair of horns on its frontal bone.",
+   "category": "description",
    "quote": "Carnotaurus is the only known carnivorous bipedal animal with a pair of horns on the frontal bone.",
    "reason": "statement copies the source wording: 'Carnotaurus is the only known carnivorous bipedal animal'"
   },
   {
-   "chunk_id": "carnotaurus:enwiki:10",
-   "statement": "Some studies suggest Carnotaurus rivals pushed slowly against each other with the upper sides of their skulls rather than delivering rapid head blows.",
-   "category": "debate",
-   "quote": "Other studies suggest that rivaling Carnotaurus did not deliver rapid head blows, but pushed slowly against each other with the upper sides of their skulls.",
-   "reason": "statement copies the source wording: 'pushed slowly against each other with the upper'"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:10",
-   "statement": "Gerardo Mazzetta and colleagues proposed in 1998 that the horns might have been used to injure or kill small prey.",
-   "category": "debate",
-   "quote": "Gerardo Mazzetta and colleagues (1998) propose that the horns might also have been used to injure or kill small prey.",
-   "reason": "statement copies the source wording: 'have been used to injure or kill small'"
-  },
-  {
    "chunk_id": "carnotaurus:enwiki:11",
-   "statement": "A 2022 study suggests Carnotaurus had an anterior bite force of around 3,392 newtons.",
+   "statement": "A 2022 study estimated the posterior bite force of Carnotaurus at 7,172 newtons.",
    "category": "paleobiology",
-   "quote": "A 2022 study estimating bite force for 33 different dinosaurs suggests that the bite force in Carnotaurus was around 3,392 newtons at the anterior portion of the jaws.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:11",
-   "statement": "François Therrien and colleagues (2005) questioned earlier interpretations, finding Carnotaurus had a bite force twice that of an American alligator.",
-   "category": "debate",
-   "quote": "This interpretation was questioned by François Therrien and colleagues (2005), who found that the biting force of Carnotaurus was twice that of the American alligator.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:11",
-   "statement": "Therrien and colleagues (2005) argued Carnotaurus jaws were suited for slashing wounds to weaken large prey rather than catching small prey.",
-   "category": "debate",
-   "quote": "These researchers also noted analogies with modern Komodo dragons: the flexural strength of the lower jaw decreases towards the tip linearly, indicating that the jaws were not suited for high precision catching of small prey but for delivering slashing wounds to weaken big prey.",
-   "reason": "numbers not in the quote: ['2005']"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:11",
-   "statement": "Therrien and colleagues (2005) concluded Carnotaurus mainly preyed on large animals, possibly via ambush.",
-   "category": "debate",
-   "quote": "As a consequence, according to this study, Carnotaurus must have mainly preyed upon large animals, possibly by ambush.",
-   "reason": "numbers not in the quote: ['2005']"
-  },
-  {
-   "chunk_id": "carnotaurus:enwiki:11",
-   "statement": "Bakker (1998) suggested Carnotaurus used its upper jaw like a serrated club to weaken large sauropods.",
-   "category": "paleobiology",
-   "quote": "These features suggest that the upper jaw was used like a serrated club to inflict wounds; big sauropods would have been weakened by repeated attacks.",
-   "reason": "numbers not in the quote: ['1998']"
+   "quote": "The posterior bite force at the back of the jaws meanwhile, was estimated at 7,172 newtons.",
+   "reason": "numbers not in the quote: ['2022']"
   },
   {
    "chunk_id": "carnotaurus:enwiki:12",
-   "statement": "Based on muscle mass calculations, Carnotaurus could have been one of the fastest large theropods.",
+   "statement": "Based on its massive caudofemoralis muscle, Carnotaurus could have been one of the fastest large theropods.",
    "category": "paleobiology",
    "quote": "Therefore, Carnotaurus could have been one of the fastest large theropods.",
    "reason": "statement copies the source wording: 'Carnotaurus could have been one of the fastest'"
   },
   {
-   "chunk_id": "carnotaurus:eswiki:2",
-   "statement": "The only known specimen of Carnotaurus was found in the Telsen department, Chubut province, Argentina.",
-   "category": "discovery",
-   "quote": "el primer y único espécimen [fue hallado] en el departamento de Telsen, provincia Chubut, Argentina",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "carnotaurus:eswiki:3",
-   "statement": "Carnotaurus was a medium-to-large theropod with a light build, measuring between 8 and 9 meters in length and about 3.5 meters in height.",
+   "statement": "Carnotaurus was a medium to large theropod with a light build, measuring between 8 and 9 meters in length, about 3.5 meters in height, and weighing between 1,350 and 2,100 kg.",
    "category": "description",
-   "quote": "Carnotaurus era un terópodo de tamaño medio a grande, pero de constitución ligera, de entre ocho y nueve metros de longitud, alrededor de 3,5 de altura",
+   "quote": "Carnotaurus era un terópodo de tamaño medio a grande, pero de constitución ligera, de entre ocho y nueve metros de longitud, alrededor de 3,5 de altura, y pesaba según los estudios entre 1350 y 2100kg.",
    "reason": "numbers not in the quote: ['8', '9']"
   },
   {
    "chunk_id": "carnotaurus:eswiki:3",
-   "statement": "Carnotaurus had a very small head relative to other predators of its size, measuring around 60 centimeters in length.",
+   "statement": "Carnotaurus had a very small head compared to other predators of its size, measuring around 60 centimeters in length.",
    "category": "description",
-   "quote": "Su cabeza era muy pequeña en comparación con las de los otros predadores de su tamaño; alrededor de sesenta centímetros de largo",
+   "quote": "Su cabeza era muy pequeña en comparación con las de los otros predadores de su tamaño; alrededor de sesenta centímetros de largo.",
    "reason": "numbers not in the quote: ['60']"
   },
   {
    "chunk_id": "carnotaurus:eswiki:3",
-   "statement": "Carnotaurus possessed extremely reduced and atrophied forelimbs with only four fingers.",
+   "statement": "The left femur of Carnotaurus measures 103 cm in length but has an average diameter of only 11 cm.",
    "category": "description",
-   "quote": "Los miembros delanteros extremadamente reducidos y atrofiados, provistos de cuatro dedos",
-   "reason": "quote not found verbatim in the source"
+   "quote": "El hueso del muslo izquierdo mide 103 cm de longitud, pero muestra un diámetro promedio de solo once centímetros.",
+   "reason": "numbers not in the quote: ['11']"
   },
   {
-   "chunk_id": "carnotaurus:eswiki:4",
-   "statement": "The horns of Carnotaurus measured 15 centimeters in length.",
+   "chunk_id": "carnotaurus:eswiki:7",
+   "statement": "These osteoderms were cone-shaped prominences about 5 cm in diameter that increased in size near the spine, giving the animal a crocodile-like appearance and suggesting rough, thick skin.",
    "category": "description",
-   "quote": "Estos cuernos... medían quince cm de longitud",
+   "quote": "Estos tienen forma de prominencias cónicas de unos cinco centímetros de diámetro, que aumentan en tamaño al acercarse a la línea central de la espalda, lo que le otorga un aspecto del estilo de un cocodrilo actual, y sugiere que el Carnotaurus presentaba una piel áspera y gruesa.",
+   "reason": "numbers not in the quote: ['5']"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:7",
+   "statement": "The skin consisted of a mosaic of non-overlapping polygonal scales measuring approximately 5 mm in diameter.",
+   "category": "description",
+   "quote": "La piel estaba constituida por un mosaico de escamas poligonales, que no se superponen entre sí y miden aproximadamente cinco mm de diámetro.",
+   "reason": "numbers not in the quote: ['5']"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "Carnotaurus was distinguished from other abelisaurids by having proportionally shorter and sturdier front legs.",
+   "category": "description",
+   "quote": "Carnotaurus se diferenciaba de todos los demás abelisáuridos en tener patas delanteras proporcionalmente más cortas y robustas.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "carnotaurus:eswiki:2",
-   "statement": "The left femur of Carnotaurus measured 103 cm in length with an average diameter of only 11 cm.",
-   "category": "paleobiology",
-   "quote": "El hueso del muslo izquierdo mide 103 cm de longitud, pero muestra un diámetro promedio de solo once centímetros",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "The proportion of Carnotaurus's upper limbs to its lower limbs was 14%.",
+   "category": "description",
+   "quote": "La proporción de los miembros superiores del Carnotaurus con respecto de los inferiores es del 14 %.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "carnotaurus:eswiki:4",
-   "statement": "The small eyes of Carnotaurus faced forward, a feature unusual for dinosaurs.",
-   "category": "paleobiology",
-   "quote": "Los pequeños ojos de Carnotaurus... miraban hacia el frente, algo que es inusual en un dinosaurio",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "Carnotaurus arm bones measured 285 mm for the humerus, 73 mm for the radius, and 37 mm for the metacarpal.",
+   "category": "description",
+   "quote": "Las medidas de los huesos del brazo eran de 285 milímetros el húmero, 73 mm el radio y 37 mm el metacarpo.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "carnotaurus:research:1",
-   "statement": "The 2026 study reported evidence that the skulls of large abelisaurs, including Carnotaurus, were adapted to resist loads generated during feeding.",
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "In Carnotaurus, the humerus represented 72% of the arm length, the radius 19%, and the metacarpal only 9%.",
+   "category": "description",
+   "quote": "En proporción, el húmero representaba el 72 %, el radio el 19 % y el metacarpo solo el 9 %.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "Some researchers suggest Carnotaurus's arm bones rotated 180 degrees, leaving the palms facing outward.",
+   "category": "description",
+   "quote": "Se ha sugerido otra extraña adaptación en los miembros superiores; según algunos investigadores, los huesos del brazo giraban 180°, dejando las palmas de las manos hacia fuera.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:8",
+   "statement": "A 2009 study suggests Carnotaurus arms were vestigial, as nerve fibers for movement were reduced to a degree seen in modern emus and kiwis.",
+   "category": "description",
+   "quote": "Un estudio de 2009 sugiere que los brazos eran vestigiales en abelisáuridos, porque las fibras nerviosas responsables de la transmisión de estímulos nerviosos se redujeron en un grado visto hoy en emúes y kiwis.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:15",
+   "statement": "The estimated maximum muscular bite force at Carnotaurus's posterior teeth was 3341 Newtons.",
    "category": "paleobiology",
-   "quote": "report evidence of adaptations of skulls of large abelisaurs to resist feeding-induced loads",
-   "reason": "numbers not in the quote: ['2026']"
+   "quote": "La fuerza de mordida de origen muscular máxima estimada en los dientes posteriores es de 3341 N.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carnotaurus:eswiki:15",
+   "statement": "François Therrien et al. questioned the small-prey hypothesis, finding Carnotaurus's bite force was twice that of the American crocodile.",
+   "category": "debate",
+   "quote": "La interpretación de cazador de presas pequeñas fue cuestionada por François Therrien et al., quienes encontraron que la fuerza de mordida de Carnotaurus era dos veces mayor que la del cocodrilo americano.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "carnotaurus:pbdb:1",
+   "statement": "The genus Carnotaurus was named by Bonaparte in 1985.",
+   "category": "classification",
+   "quote": "PBDB name: Carnotaurus (genus), Bonaparte 1985",
+   "reason": "duplicate"
   }
  ]
 }

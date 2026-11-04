@@ -2,9 +2,9 @@
  "taxon": "Velociraptor",
  "taxon_key": "velociraptor",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "70131142ff420c45",
- "generated_at": "2026-11-03T02:36:15+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3a2593fdbb2f743f",
+ "generated_at": "2026-11-04T04:10:04+00:00",
  "citations": {
   "velociraptor:enwiki:1": {
    "source": "wikipedia_article",
@@ -111,6 +111,27 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "velociraptor:enwiki:16": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Bayan Mandahu Formation)",
+   "url": "https://en.wikipedia.org/wiki/Velociraptor?oldid=1371049913",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:enwiki:17": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Djadochta Formation)",
+   "url": "https://en.wikipedia.org/wiki/Velociraptor?oldid=1371049913",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:enwiki:18": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Cultural significance)",
+   "url": "https://en.wikipedia.org/wiki/Velociraptor?oldid=1371049913",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "velociraptor:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Velociraptor (taxobox)",
@@ -146,6 +167,48 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "velociraptor:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Esqueleto axial)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:eswiki:13": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Comportamiento carroñero)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:eswiki:14": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Sentidos)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:eswiki:16": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Alimentación)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "velociraptor:eswiki:18": {
+   "source": "wikipedia_article",
+   "title": "Velociraptor (Patología)",
+   "url": "https://es.wikipedia.org/wiki/Velociraptor?oldid=175632123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "velociraptor:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Velociraptor",
@@ -157,16 +220,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The animal is classified under the genus Velociraptor.",
-   "category": "classification",
-   "chunk_id": "velociraptor:enwiki:1",
-   "lang": "en",
-   "quote": "taxon: Velociraptor",
-   "quote_sha": "5f04b29c0ca9e86a"
-  },
-  {
-   "fact_id": "F002",
-   "statement": "The genus Velociraptor was described by Henry Fairfield Osborn in 1924.",
+   "statement": "The genus Velociraptor was formally described by Henry Fairfield Osborn in 1924.",
    "category": "discovery",
    "chunk_id": "velociraptor:enwiki:1",
    "lang": "en",
@@ -174,197 +228,125 @@
    "quote_sha": "1b96ec2a2a1f1ed6"
   },
   {
-   "fact_id": "F003",
+   "fact_id": "F002",
    "statement": "Velociraptor lived in Asia during the Late Cretaceous epoch, approximately 75 to 71 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "velociraptor:enwiki:2",
    "lang": "en",
-   "quote": "lived in Asia during the Late Cretaceous epoch, about 75 million to 71 million years ago (Mya)",
-   "quote_sha": "59e461defa593b08"
+   "quote": "Velociraptor (; ) is a genus of small dromaeosaurid dinosaurs that lived in Asia during the Late Cretaceous epoch, about 75 million to 71 million years ago (Mya).",
+   "quote_sha": "8db246091a284fb0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Velociraptor was a small dinosaur measuring between 1.5 and 2.07 meters in length and weighing between 14.1 and 19.7 kilograms.",
+   "category": "description",
+   "chunk_id": "velociraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Smaller than other dromaeosaurids like Deinonychus and Achillobator, Velociraptor was about 1.5 - 2.07 m long with a body mass of around 14.1 - 19.7 kg.",
+   "quote_sha": "ca4610e201415577"
   },
   {
    "fact_id": "F004",
-   "statement": "The type species of the genus is Velociraptor mongoliensis, which was named and described in 1924.",
-   "category": "discovery",
+   "statement": "Velociraptor was a bipedal, feathered carnivore featuring a long tail and enlarged sickle-shaped claws on its hind feet used for tackling prey.",
+   "category": "description",
    "chunk_id": "velociraptor:enwiki:2",
    "lang": "en",
-   "quote": "The type species is V. mongoliensis, named and described in 1924",
-   "quote_sha": "fef8e7b8db24b8b5"
+   "quote": "It was a bipedal, feathered carnivore with a long tail and an enlarged sickle-shaped claw on each hindfoot, which is thought to have been used to tackle and restrain prey.",
+   "quote_sha": "2e3db50b10df7257"
   },
   {
    "fact_id": "F005",
-   "statement": "Fossils of Velociraptor mongoliensis have been found in the Djadochta Formation in Mongolia.",
-   "category": "discovery",
+   "statement": "Velociraptor is distinguished from other dromaeosaurids by its long, low skull and upturned snout.",
+   "category": "description",
    "chunk_id": "velociraptor:enwiki:2",
    "lang": "en",
-   "quote": "Fossils of this species have been discovered in the Djadochta Formation, Mongolia",
-   "quote_sha": "0af9ae7ac0f940e5"
+   "quote": "Velociraptor can be distinguished from other dromaeosaurids by its long and low skull, with an upturned snout.",
+   "quote_sha": "1355e6cbd6d696bf"
   },
   {
    "fact_id": "F006",
-   "statement": "The species Velociraptor osmolskae was named in 2008 based on skull material from the Bayan Mandahu Formation in China.",
+   "statement": "The first known Velociraptor fossil, a crushed complete skull with a manual claw, was discovered by Peter Kaisen on August 11, 1923, in the Gobi Desert.",
    "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:2",
+   "chunk_id": "velociraptor:enwiki:3",
    "lang": "en",
-   "quote": "A second species, V. osmolskae, was named in 2008 for skull material from the Bayan Mandahu Formation, China",
-   "quote_sha": "9a523f1251631238"
+   "quote": "During an American Museum of Natural History expedition to the Flaming Cliffs (Bayn Dzak or Bayanzag) of the Djadochta Formation, Gobi Desert, on 11 August 1923, Peter Kaisen discovered the first Velociraptor fossil known to science—a crushed but complete skull, associated with one manual claw and adjoining phalanges (AMNH 6515).",
+   "quote_sha": "ee085951b4e5905c"
   },
   {
    "fact_id": "F007",
-   "statement": "In 1924, Henry Fairfield Osborn designated the skull and part of the hand as the type specimen for the new genus Velociraptor.",
+   "statement": "The famous \"Fighting Dinosaurs\" specimen was discovered by a Polish-Mongolian team in 1971.",
    "category": "discovery",
    "chunk_id": "velociraptor:enwiki:3",
    "lang": "en",
-   "quote": "In 1924, museum president Henry Fairfield Osborn designated the skull and part of the manus as the type specimen of his new genus, Velociraptor",
-   "quote_sha": "a5704179d3d3dcda"
+   "quote": "The most famous is part of the \"Fighting Dinosaurs\" specimen (MPC-D 100/25; formerly IGM, GIN, or GI SPS), discovered by a Polish-Mongolian team in 1971.",
+   "quote_sha": "082998e64d549461"
   },
   {
    "fact_id": "F008",
-   "statement": "Osborn named the type species Velociraptor mongoliensis after Mongolia, the country where the fossils were found.",
+   "statement": "A complete juvenile skeleton including a skull was reported by Rinchen Barsbold and Halszka Osmólska in 1999.",
    "category": "discovery",
    "chunk_id": "velociraptor:enwiki:3",
    "lang": "en",
-   "quote": "Osborn named the type species V. mongoliensis after its country of origin",
-   "quote_sha": "0f3502dea2d77d09"
+   "quote": "In 1999, Rinchen Barsbold and Halszka Osmólska reported a juvenile Velociraptor specimen (GIN or IGM 100/2000), represented by a complete skeleton including the skull of a young individual.",
+   "quote_sha": "c814ab86e90226d9"
   },
   {
    "fact_id": "F009",
-   "statement": "The famous \"Fighting Dinosaurs\" specimen (MPC-D 100/25) was discovered by a Polish-Mongolian team in 1971.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:3",
+   "statement": "The species Velociraptor osmolskae was named by Pascal Godefroit and colleagues in 2008.",
+   "category": "classification",
+   "chunk_id": "velociraptor:enwiki:4",
    "lang": "en",
-   "quote": "The most famous is part of the \"Fighting Dinosaurs\" specimen (MPC-D 100/25; formerly IGM, GIN, or GI SPS), discovered by a Polish-Mongolian team in 1971",
-   "quote_sha": "a158f91c4536a6b5"
+   "quote": "Pascal Godefroit and colleagues named these bones V. osmolskae (for Polish paleontologist Halszka Osmólska) in 2008.",
+   "quote_sha": "a3b8a46a2f0588b9"
   },
   {
    "fact_id": "F010",
-   "statement": "Specimen MPC-D 100/980 was nicknamed \"Ichabodcraniosaurus\" because it was a fairly complete skeleton found without its skull.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:3",
-   "lang": "en",
-   "quote": "One such specimen, MPC-D 100/980, was nicknamed \"Ichabodcraniosaurus\" by Norell's team because the fairly complete specimen was found without its skull",
-   "quote_sha": "22e23e860583f949"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "In 1999, Rinchen Barsbold and Halszka Osmólska reported a juvenile Velociraptor specimen (GIN or IGM 100/2000) consisting of a complete skeleton with a skull.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:3",
-   "lang": "en",
-   "quote": "In 1999, Rinchen Barsbold and Halszka Osmólska reported a juvenile Velociraptor specimen (GIN or IGM 100/2000), represented by a complete skeleton including the skull of a young individual",
-   "quote_sha": "3be0b64dd4369ef3"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "The juvenile specimen was found at the Tugriken Shireh locality in the Djadochta Formation during Mongolian-Japanese expeditions.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:3",
-   "lang": "en",
-   "quote": "It was found at the Tugriken Shireh locality of the Djadochta Formation during the context of the Mongolian-Japanese Palaeontological Expeditions",
-   "quote_sha": "ce4544bd3bc96483"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "Pascal Godefroit and colleagues named the bones V. osmolskae in 2008, honoring Polish paleontologist Halszka Osmólska.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:4",
-   "lang": "en",
-   "quote": "Pascal Godefroit and colleagues named these bones V. osmolskae (for Polish paleontologist Halszka Osmólska) in 2008",
-   "quote_sha": "eab3f533d6e28c27"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "In 1997, Mark A. Norell and Peter J. Makovicky described specimens MPC-D 100/985 and MPC-D 100/986 as V. mongoliensis, collected in 1993 from the Tugrik Shireh and Chimney Buttes localities respectively.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:4",
-   "lang": "en",
-   "quote": "Paleontologists Mark A. Norell and Peter J. Makovicky in 1997 described new and well preserved specimens of V. mongoliensis, namely MPC-D 100/985 collected from the Tugrik Shireh locality in 1993, and MPC-D 100/986 collected in 1993 from the Chimney Buttes locality",
-   "quote_sha": "76ec98fb3c62e54d"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "Specimen MPC-D 100/982 was referred to V. mongoliensis based on skull similarities, though differences in the pelvic region were noted compared to other specimens.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:4",
-   "lang": "en",
-   "quote": "MPC-D 100/982 was partially described and figured, and referred to V. mongoliensis mainly based on cranial similarities with the holotype skull, although they stated that differences were present between the pelvic region of this specimen and other Velociraptor specimens",
-   "quote_sha": "5f86d651461705ff"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "In his 2020 master thesis, Mark J. Powers fully described MPC-D 100/982 and concluded it represents a new and third species of Velociraptor.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:4",
-   "lang": "en",
-   "quote": "Mark J. Powers in his 2020 master thesis fully described MPC-D 100/982, which he concluded to represent a new and third species of Velociraptor",
-   "quote_sha": "48ed87fb7875b071"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "In 2021, Powers and colleagues used Principal Component Analysis to find that MPC-D 100/982 falls outside the variability of V. mongoliensis, arguing for its status as a distinct species.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:enwiki:4",
-   "lang": "en",
-   "quote": "In 2021 Powers with team used Principal Component Analysis to separate dromaeosaurid maxillae, most notably finding that MPC-D 100/982 falls outside the instraspecific variability of V. mongoliensis, arguing for a distinct species",
-   "quote_sha": "49b8b4a2bffbb5d9"
-  },
-  {
-   "fact_id": "F018",
-   "statement": "Velociraptor was about 1.5 to 2.07 meters long with a body mass of approximately 14.1 to 19.7 kilograms.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:2",
-   "lang": "en",
-   "quote": "Smaller than other dromaeosaurids like Deinonychus and Achillobator, Velociraptor was about 1.5 - 2.07 m long with a body mass of around 14.1 - 19.7 kg",
-   "quote_sha": "2fa8e027f75879e1"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "Velociraptor is distinguished from other dromaeosaurids by its long, low skull with an upturned snout.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:2",
-   "lang": "en",
-   "quote": "Velociraptor can be distinguished from other dromaeosaurids by its long and low skull, with an upturned snout",
-   "quote_sha": "594ba0aa83bc61bf"
-  },
-  {
-   "fact_id": "F020",
-   "statement": "Adult Velociraptor measured between 1.5 and 2.07 meters long, about 0.5 meters high at the hips, and weighed approximately 14.1 to 19.7 kilograms.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:5",
-   "lang": "en",
-   "quote": "Velociraptor was a small to medium-sized dromaeosaurid, with adults measuring between 1.5 - 2.07 m long, approximately 0.5 m high at the hips, and weighing about 14.1 - 19.7 kg",
-   "quote_sha": "bfb93920f974be01"
-  },
-  {
-   "fact_id": "F021",
-   "statement": "Some estimates suggest Velociraptor may have reached lengths of about 2.5 meters and weighed up to 28 kilograms.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:5",
-   "lang": "en",
-   "quote": "Some estimates suggest that Velociraptor may have been larger, possibly reaching lengths of about 2.5 m (8 ft) and weighing up to 28 kg (60 lb)",
-   "quote_sha": "c6b0b443c51a7971"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "Prominent quill knobs indicating feather attachment have been reported from the ulna of a Velociraptor specimen (IGM 100/981) estimated to be 1.5 meters long and 15 kilograms in weight.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:5",
-   "lang": "en",
-   "quote": "Prominent quill knobs—attachment site of \"wing\" feathers and direct indicator of a feather covering—have been reported from the ulna of a single Velociraptor specimen (IGM 100/981), which represents an animal of estimated 1.5 m long and 15 kg in weight",
-   "quote_sha": "738ae93d2630de04"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "A 2013 study suggested that V. osmolskae might not belong to the genus Velociraptor because phylogenetic analysis placed it closer to Linheraptor, making the genus paraphyletic, requiring reassessment.",
+   "statement": "It is debated whether Velociraptor osmolskae belongs to the genus Velociraptor, as a 2013 study suggested it is closer to Linheraptor and may make the genus paraphyletic.",
    "category": "debate",
    "chunk_id": "velociraptor:enwiki:4",
    "lang": "en",
-   "quote": "However, the 2013 study noted that while \"the elongate shape of the maxilla in V. osmolskae is similar to that of V. mongoliensis,\" phylogenetic analysis found it to be closer to Linheraptor, making the genus paraphyletic; thus, V. osmolskae might not actually belong to the genus Velociraptor and requires reassessment",
-   "quote_sha": "bb3afd67b1d42b6a"
+   "quote": "However, the 2013 study noted that while \"the elongate shape of the maxilla in V. osmolskae is similar to that of V. mongoliensis,\" phylogenetic analysis found it to be closer to Linheraptor, making the genus paraphyletic; thus, V. osmolskae might not actually belong to the genus Velociraptor and requires reassessment.",
+   "quote_sha": "3db6cfcb45c50e87"
   },
   {
-   "fact_id": "F024",
-   "statement": "The skull of Velociraptor was elongated and could reach a length of 23 cm.",
+   "fact_id": "F011",
+   "statement": "Mark J. Powers concluded in 2020 that specimen MPC-D 100/982 represents a new and third species of Velociraptor.",
+   "category": "debate",
+   "chunk_id": "velociraptor:enwiki:4",
+   "lang": "en",
+   "quote": "Mark J. Powers in his 2020 master thesis fully described MPC-D 100/982, which he concluded to represent a new and third species of Velociraptor.",
+   "quote_sha": "fb68159cb5954ce3"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Some estimates suggest Velociraptor could have reached lengths of about 2.5 meters and weighed up to 28 kilograms.",
+   "category": "description",
+   "chunk_id": "velociraptor:enwiki:5",
+   "lang": "en",
+   "quote": "Some estimates suggest that Velociraptor may have been larger, possibly reaching lengths of about 2.5 m (8 ft) and weighing up to 28 kg (60 lb).",
+   "quote_sha": "0c73c81381ece914"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Quill knobs indicating a feather covering have been reported on the ulna of a Velociraptor specimen estimated to be 1.5 meters long and 15 kilograms in weight.",
+   "category": "description",
+   "chunk_id": "velociraptor:enwiki:5",
+   "lang": "en",
+   "quote": "Prominent quill knobs—attachment site of \"wing\" feathers and direct indicator of a feather covering—have been reported from the ulna of a single Velociraptor specimen (IGM 100/981), which represents an animal of estimated 1.5 m long and 15 kg in weight.",
+   "quote_sha": "b21d9de4b345870c"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "Velociraptor is classified as a genus of small dromaeosaurid dinosaurs.",
+   "category": "classification",
+   "chunk_id": "velociraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Velociraptor (; ) is a genus of small dromaeosaurid dinosaurs",
+   "quote_sha": "30ec5ee5a84eb0e5"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "The skull of Velociraptor was elongated and could reach a length of 23 centimeters.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
    "lang": "en",
@@ -372,7 +354,7 @@
    "quote_sha": "5d91eed73ec64416"
   },
   {
-   "fact_id": "F025",
+   "fact_id": "F016",
    "statement": "The snout made up about 60% of the skull length and was narrow, formed primarily by the nasal, premaxilla, and maxilla bones.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
@@ -381,7 +363,7 @@
    "quote_sha": "7d4f72fe267d31e2"
   },
   {
-   "fact_id": "F026",
+   "fact_id": "F017",
    "statement": "The premaxilla was the frontmost bone of the skull and was longer than it was tall.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
@@ -390,7 +372,7 @@
    "quote_sha": "7f43bf22d722df02"
   },
   {
-   "fact_id": "F027",
+   "fact_id": "F018",
    "statement": "The maxilla was nearly triangular and was the largest bone element of the snout.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
@@ -399,8 +381,17 @@
    "quote_sha": "3c82e582c090c743"
   },
   {
-   "fact_id": "F028",
-   "statement": "The premaxilla held 4 teeth sockets while the maxilla held 11.",
+   "fact_id": "F019",
+   "statement": "Both the premaxilla and maxilla possessed multiple tooth sockets on their lower surfaces.",
+   "category": "description",
+   "chunk_id": "velociraptor:enwiki:6",
+   "lang": "en",
+   "quote": "Both premaxilla and maxilla had several alveoli (tooth sockets) on their bottom surfaces.",
+   "quote_sha": "a8c2c08e5a15ca7b"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "The premaxilla held four teeth while the maxilla held eleven teeth.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
    "lang": "en",
@@ -408,8 +399,8 @@
    "quote_sha": "c8fb53b21643e4da"
   },
   {
-   "fact_id": "F029",
-   "statement": "The dentary bone contained between 14 and 15 tooth sockets.",
+   "fact_id": "F021",
+   "statement": "The lower jaw dentary contained between 14 and 15 tooth sockets.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
    "lang": "en",
@@ -417,17 +408,17 @@
    "quote_sha": "6a381c5be9308093"
   },
   {
-   "fact_id": "F030",
-   "statement": "Maxillary teeth were slender and recurved, with the lower edge being more strongly serrated than the upper edge.",
+   "fact_id": "F022",
+   "statement": "Velociraptor's teeth were mostly uniform in shape but featured serrations that were sharper on the back edge than the front.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:6",
    "lang": "en",
-   "quote": "The maxillary teeth were more slender, recurved, and most notably, the lower end was strongly more serrated than the upper one.",
-   "quote_sha": "ade2abc50e388c89"
+   "quote": "The teeth of Velociraptor were fairly homodont (equal in shape) and had several denticles (serrations), each more strongly serrated on the back edge than the front.",
+   "quote_sha": "664d018f0140807b"
   },
   {
-   "fact_id": "F031",
-   "statement": "Velociraptor had a large hand with three elongated fingers ending in strongly curved claws similar in construction to modern bird wing bones.",
+   "fact_id": "F023",
+   "statement": "Velociraptor had a large hand with three long fingers ending in curved claws that were structurally similar to modern bird wing bones.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
@@ -435,8 +426,8 @@
    "quote_sha": "2a818a46900ad45c"
   },
   {
-   "fact_id": "F032",
-   "statement": "The second finger was the longest of the three, while the first was the shortest.",
+   "fact_id": "F024",
+   "statement": "The middle finger was the longest digit, while the first finger was the shortest.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
@@ -444,8 +435,8 @@
    "quote_sha": "ab42cb99834a239a"
   },
   {
-   "fact_id": "F033",
-   "statement": "Wrist bone structure prevented the wrist from turning inward, forcing the hand to be held with the palm facing inward rather than downward.",
+   "fact_id": "F025",
+   "statement": "Velociraptor's wrist bones prevented the hand from turning downward, forcing it to be held with the palm facing inward.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
@@ -453,17 +444,8 @@
    "quote_sha": "2888bbbf81f72a8e"
   },
   {
-   "fact_id": "F034",
-   "statement": "The first toe was a small dewclaw, similar to other theropods.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:7",
-   "lang": "en",
-   "quote": "The first digit, as in other theropods, was a small dewclaw.",
-   "quote_sha": "a1fe974e4e64c438"
-  },
-  {
-   "fact_id": "F035",
-   "statement": "The second toe was highly modified and held off the ground, causing Velociraptor to walk on its third and fourth toes.",
+   "fact_id": "F026",
+   "statement": "Velociraptor walked on its third and fourth toes because its famous second toe was held retracted off the ground.",
    "category": "description",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
@@ -471,44 +453,26 @@
    "quote_sha": "0ca64aa9f6d5a640"
   },
   {
-   "fact_id": "F036",
-   "statement": "The second toe bore a large, sickle-shaped claw typical of dromaeosaurids and troodontids.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:7",
-   "lang": "en",
-   "quote": "It bore a relatively large, sickle-shaped claw, typical of dromaeosaurid and troodontid dinosaurs.",
-   "quote_sha": "acec1468c117d7ee"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "The enlarged sickle claw could grow to over 6.5 cm in length and was likely used to restrain prey.",
-   "category": "description",
+   "fact_id": "F027",
+   "statement": "The enlarged sickle claw on the second toe could grow to over 6.5 centimeters in length and was likely used to restrain prey.",
+   "category": "curiosities",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
    "quote": "This enlarged claw, which could grow to over 6.5 cm long around its outer edge, was most likely a predatory device used to restrain struggling prey.",
    "quote_sha": "8f80516dcf91c966"
   },
   {
-   "fact_id": "F038",
-   "statement": "Prezygapophyses on the tail were once thought to stiffen the entire tail into a single rod-like unit.",
-   "category": "description",
+   "fact_id": "F028",
+   "statement": "While it was once believed that Velociraptor's tail was stiff and rod-like, fossil evidence of an S-shaped tail suggests it had significant horizontal flexibility.",
+   "category": "debate",
    "chunk_id": "velociraptor:enwiki:7",
    "lang": "en",
-   "quote": "These were once thought to fully stiffen the tail, forcing the entire tail to act as a single rod-like unit.",
-   "quote_sha": "df39eedff0ab358f"
+   "quote": "These were once thought to fully stiffen the tail, forcing the entire tail to act as a single rod-like unit. However, at least one specimen has preserved a series of intact tail vertebrae curved sideways into an S-shape, suggesting that there was considerably more horizontal flexibility than once thought.",
+   "quote_sha": "ab644bf30a354ecc"
   },
   {
-   "fact_id": "F039",
-   "statement": "A specimen with tail vertebrae curved into an S-shape suggests the tail had more horizontal flexibility than previously thought.",
-   "category": "description",
-   "chunk_id": "velociraptor:enwiki:7",
-   "lang": "en",
-   "quote": "However, at least one specimen has preserved a series of intact tail vertebrae curved sideways into an S-shape, suggesting that there was considerably more horizontal flexibility than once thought.",
-   "quote_sha": "21253032a3f85431"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "Velociraptor belongs to the group Eudromaeosauria, a subgroup of the family Dromaeosauridae.",
+   "fact_id": "F029",
+   "statement": "Velociraptor belongs to the group Eudromaeosauria, which is a subgroup of the family Dromaeosauridae.",
    "category": "classification",
    "chunk_id": "velociraptor:enwiki:8",
    "lang": "en",
@@ -516,8 +480,8 @@
    "quote_sha": "ce74570fe9b0957e"
   },
   {
-   "fact_id": "F041",
-   "statement": "Velociraptor is often classified within its own subfamily, Velociraptorinae.",
+   "fact_id": "F030",
+   "statement": "Velociraptor is frequently classified within its own subfamily known as Velociraptorinae.",
    "category": "classification",
    "chunk_id": "velociraptor:enwiki:8",
    "lang": "en",
@@ -525,8 +489,26 @@
    "quote_sha": "6bafff29f320af12"
   },
   {
-   "fact_id": "F042",
-   "statement": "Some authors have classified all dromaeosaurids, including Velociraptor, in the family Archaeopterygidae, implying they are flightless birds.",
+   "fact_id": "F031",
+   "statement": "Some 2010s studies suggest that Velociraptorinae is not a distinct group but a paraphyletic grade that gave rise to Dromaeosaurinae.",
+   "category": "classification",
+   "chunk_id": "velociraptor:enwiki:8",
+   "lang": "en",
+   "quote": "Several studies published during the 2010s, including expanded versions of the analyses that found support for Velociraptorinae, have failed to resolve it as a distinct group, but rather have suggested it is a paraphyletic grade which gave rise to the Dromaeosaurinae.",
+   "quote_sha": "cef65b215486aee5"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "Velociraptor was first described in 1924 and was initially classified in the family Megalosauridae.",
+   "category": "discovery",
+   "chunk_id": "velociraptor:enwiki:8",
+   "lang": "en",
+   "quote": "When first described in 1924, Velociraptor was placed in the family Megalosauridae, as was the case with most carnivorous dinosaurs at the time",
+   "quote_sha": "7a8c426ab19ff174"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "Some authors have classified all dromaeosaurids, including Velociraptor, in the family Archaeopterygidae, effectively making them flightless birds.",
    "category": "classification",
    "chunk_id": "velociraptor:enwiki:8",
    "lang": "en",
@@ -534,7 +516,7 @@
    "quote_sha": "5abc623ade018f4e"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F034",
    "statement": "Several studies suggest that V. osmolskae is distantly related to V. mongoliensis.",
    "category": "debate",
    "chunk_id": "velociraptor:enwiki:8",
@@ -543,35 +525,26 @@
    "quote_sha": "6dc5f1e8060216a4"
   },
   {
-   "fact_id": "F044",
-   "statement": "Studies from the 2010s suggest Velociraptorinae may not be a distinct group but rather a paraphyletic grade leading to Dromaeosaurinae.",
-   "category": "debate",
-   "chunk_id": "velociraptor:enwiki:8",
-   "lang": "en",
-   "quote": "Several studies published during the 2010s, including expanded versions of the analyses that found support for Velociraptorinae, have failed to resolve it as a distinct group, but rather have suggested it is a paraphyletic grade which gave rise to the Dromaeosaurinae.",
-   "quote_sha": "cef65b215486aee5"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "In 2007, researchers found six quill knobs on the ulna of a Velociraptor specimen from the Djadochta Formation, indicating the presence of feathers.",
-   "category": "description",
+   "fact_id": "F035",
+   "statement": "In 2007, researchers found six quill knobs on the ulna of a Velociraptor fossil from the Djadochta Formation, indicating the presence of feathers.",
+   "category": "curiosities",
    "chunk_id": "velociraptor:enwiki:9",
    "lang": "en",
    "quote": "In 2007 Alan H. Turner and colleagues reported the presence of six quill knobs in the ulna of a referred Velociraptor specimen (IGM 100/981) from the Ukhaa Tolgod locality of the Djadochta Formation.",
    "quote_sha": "e9db22b29fbba316"
   },
   {
-   "fact_id": "F046",
-   "statement": "Researchers suggest that feathers on Velociraptor argue against the theory that large flightless maniraptorans lost feathers because of their size.",
-   "category": "description",
+   "fact_id": "F036",
+   "statement": "The presence of feathers on Velociraptor suggests that larger flightless maniraptorans did not lose feathers secondarily because of their size.",
+   "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:9",
    "lang": "en",
    "quote": "Turner and colleagues interpreted the presence of feathers on Velociraptor as evidence against the idea that the larger, flightless maniraptorans lost their feathers secondarily due to larger body size.",
    "quote_sha": "dd1c489a04f5b597"
   },
   {
-   "fact_id": "F047",
-   "statement": "Velociraptor feathers may have served functions such as display, nest brooding, or aiding movement on slopes.",
+   "fact_id": "F037",
+   "statement": "Velociraptor feathers may have been used for display, nest brooding, or to aid in running up slopes.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:9",
    "lang": "en",
@@ -579,16 +552,7 @@
    "quote_sha": "256a6e231f8e8e6f"
   },
   {
-   "fact_id": "F048",
-   "statement": "It is debated whether a specific dromaeosaurid specimen from Ukhaa Tolgod should be classified as Velociraptor.",
-   "category": "debate",
-   "chunk_id": "velociraptor:enwiki:9",
-   "lang": "en",
-   "quote": "Napoli and team have noted that the referral of this specimen to Velociraptor is currently subject to reexamination.",
-   "quote_sha": "4b2dbe7b275a5df1"
-  },
-  {
-   "fact_id": "F049",
+   "fact_id": "F038",
    "statement": "Velociraptor could hear sound frequencies between 2,368 and 3,965 Hz, aiding in prey tracking.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:10",
@@ -597,8 +561,8 @@
    "quote_sha": "14f24de668b3d29f"
   },
   {
-   "fact_id": "F050",
-   "statement": "Velociraptor was an opportunistic predator that sometimes scavenged carrion, especially during droughts or if the animal was in poor health.",
+   "fact_id": "F039",
+   "statement": "Velociraptor was an opportunistic predator that sometimes scavenged carrion during droughts, famine, or when in poor health.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:10",
    "lang": "en",
@@ -606,44 +570,35 @@
    "quote_sha": "661184e01cd2d8ed"
   },
   {
-   "fact_id": "F051",
-   "statement": "Velociraptor and relatives had elongated snouts adapted for picking up small, fast prey.",
+   "fact_id": "F040",
+   "statement": "Velociraptor had a bite force of 304 N, which is lower than that of Dromaeosaurus (885 N) and Deinonychus (706 N).",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:11",
    "lang": "en",
-   "quote": "They found the maxilla to be a reliable reference when inferring the shape of the premaxilla and overall snout. For instance, most Asian species have elongated snouts based on the maxilla (namely velociraptorines), indicating a selective feeding in Velociraptor and relatives, such as picking up small, fast prey.",
-   "quote_sha": "81bf8b5ffaf29371"
+   "quote": "Among studied taxa, Velociraptor was scored with a bite force of 304 N, which was lower than that of other dromaeosaurids such as Dromaeosaurus (885 N) or Deinonychus (706 N).",
+   "quote_sha": "a3478d912f0bec48"
   },
   {
-   "fact_id": "F052",
-   "statement": "In 2022, a study estimated Velociraptor's bite force at 304 N, which is lower than that of Dromaeosaurus (885 N) and Deinonychus (706 N).",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:11",
-   "lang": "en",
-   "quote": "Manabu Sakamoto in 2022 performed a Bayesian phylogenetic predictive modelling framework for estimating jaw muscle parameters and bite forces of several extinct archosaurs, based on skull widths and phylogenetic relationships between groups. Among studied taxa, Velociraptor was scored with a bite force of 304 N, which was lower than that of other dromaeosaurids such as Dromaeosaurus (885 N) or Deinonychus (706 N).",
-   "quote_sha": "235bb3bdb98eb480"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "A 1971 fossil specimen preserves a Velociraptor mongoliensis fighting a Protoceratops andrewsi, providing direct evidence of predatory behavior.",
-   "category": "paleobiology",
+   "fact_id": "F041",
+   "statement": "A 1971 fossil specimen shows a Velociraptor and a Protoceratops locked in combat, providing direct evidence of their predatory behavior.",
+   "category": "curiosities",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
    "quote": "The \"Fighting Dinosaurs\" specimen, found in 1971, preserves a Velociraptor mongoliensis and Protoceratops andrewsi in combat and provides direct evidence of predatory behavior.",
    "quote_sha": "e14fdc46b7679841"
   },
   {
-   "fact_id": "F054",
-   "statement": "The \"Fighting Dinosaurs\" specimen is believed to have been buried rapidly by sand from a collapsing dune or sandstorm.",
+   "fact_id": "F042",
+   "statement": "The \"Fighting Dinosaurs\" fossil is now thought to result from rapid burial by sand from a collapsing dune or sandstorm, rather than drowning.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
-   "quote": "However, as the animals were preserved in ancient sand dune deposits, it is now thought that the animals were buried in sand, either from a collapsing dune or in a sandstorm.",
-   "quote_sha": "843685fa9fa2f9c2"
+   "quote": "When originally reported, it was hypothesized that the two animals drowned. However, as the animals were preserved in ancient sand dune deposits, it is now thought that the animals were buried in sand, either from a collapsing dune or in a sandstorm.",
+   "quote_sha": "6faf37da0348341c"
   },
   {
-   "fact_id": "F055",
-   "statement": "Comparisons of scleral rings suggest Velociraptor may have been nocturnal, implying the \"Fighting Dinosaurs\" encounter occurred at twilight or in low light.",
+   "fact_id": "F043",
+   "statement": "Scleral ring comparisons suggest Velociraptor was likely nocturnal, implying the \"Fighting Dinosaurs\" encounter occurred at twilight or in low light.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -651,26 +606,8 @@
    "quote_sha": "db096f204b441972"
   },
   {
-   "fact_id": "F056",
-   "statement": "The sickle claw on the second digit of dromaeosaurids was traditionally thought to be used for slashing and disemboweling prey.",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:12",
-   "lang": "en",
-   "quote": "The distinctive claw, on the second digit of dromaeosaurids, has traditionally been depicted as a slashing weapon; its assumed use being to cut and disembowel prey.",
-   "quote_sha": "336153f7804bab68"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "In the \"Fighting Dinosaurs\" fossil, the Velociraptor's sickle claw is embedded in the prey's throat while the prey's beak clamps the attacker's forelimb.",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:12",
-   "lang": "en",
-   "quote": "In the \"Fighting Dinosaurs\" specimen, the Velociraptor lies underneath, with one of its sickle claws apparently embedded in the throat of its prey, while the beak of Protoceratops is clamped down upon the right forelimb of its attacker.",
-   "quote_sha": "b9bf121166d5519a"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "Evidence suggests Velociraptor used its sickle claw to pierce vital throat organs rather than slashing the abdomen.",
+   "fact_id": "F044",
+   "statement": "The \"Fighting Dinosaurs\" fossil suggests Velociraptor used its sickle claw to pierce vital throat organs rather than slash the abdomen.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -678,8 +615,8 @@
    "quote_sha": "6cb99a553c2a76af"
   },
   {
-   "fact_id": "F059",
-   "statement": "The preserved bony core of the Velociraptor claw had a rounded inner edge, suggesting it was not suited for cutting or slashing.",
+   "fact_id": "F045",
+   "statement": "The preserved bony core of Velociraptor's sickle claw has a rounded inner edge, suggesting it was not designed for slashing.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -687,8 +624,8 @@
    "quote_sha": "67cc02f1f34384d2"
   },
   {
-   "fact_id": "F060",
-   "statement": "A 2005 BBC documentary test showed that a Velociraptor-like sickle claw could penetrate but not tear open a simulated abdominal wall, challenging the slashing hypothesis.",
+   "fact_id": "F046",
+   "statement": "A 2005 BBC experiment showed that a replica Velociraptor claw could penetrate but not tear open a pork belly, challenging the slashing hypothesis.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -696,26 +633,17 @@
    "quote_sha": "2500ab18eba79b38"
   },
   {
-   "fact_id": "F061",
-   "statement": "The only solid evidence for social behavior in dromaeosaurids is a Chinese trackway showing six individuals moving together.",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:12",
-   "lang": "en",
-   "quote": "However, the only solid evidence for social behavior of any kind among dromaeosaurids comes from a Chinese trackway which shows six individuals of a large species moving as a group.",
-   "quote_sha": "d08feef7ff4a20df"
-  },
-  {
-   "fact_id": "F062",
+   "fact_id": "F047",
    "statement": "Despite popular depictions, there is no specific fossil evidence that Velociraptor hunted in packs.",
-   "category": "paleobiology",
+   "category": "debate",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
-   "quote": "Therefore, while Velociraptor is commonly depicted as a pack hunter, as in Jurassic Park, there is only limited fossil evidence to support this theory for dromaeosaurids in general and none specific to Velociraptor itself.",
-   "quote_sha": "7060961baa2cf562"
+   "quote": "Although many isolated fossils of Velociraptor have been found in Mongolia, none were closely associated with other individuals. Therefore, while Velociraptor is commonly depicted as a pack hunter, as in Jurassic Park, there is only limited fossil evidence to support this theory for dromaeosaurids in general and none specific to Velociraptor itself.",
+   "quote_sha": "7021f7df8fdd1adb"
   },
   {
-   "fact_id": "F063",
-   "statement": "In 2011, researchers proposed the \"raptor prey restraint\" model, suggesting dromaeosaurs pinned prey with their body weight and sickle claws before feeding.",
+   "fact_id": "F048",
+   "statement": "In 2011, researchers proposed the \"raptor prey restraint\" model, suggesting Velociraptor killed prey by pinning it with its body weight and sickle claws, similar to eagles.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -723,26 +651,8 @@
    "quote_sha": "a0b9d24a2cf3a9f3"
   },
   {
-   "fact_id": "F064",
-   "statement": "The RPR model proposes that dromaeosaurs fed on living prey, causing death through blood loss and organ failure.",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:12",
-   "lang": "en",
-   "quote": "These researchers proposed that, like accipitrids, the dromaeosaur would then begin to feed on the animal while it was still alive, and prey death would eventually result from blood loss and organ failure.",
-   "quote_sha": "fac4243834634fd9"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "Fowler found dromaeosaur feet and legs resemble eagles and hawks due to an enlarged second claw and grasping motion.",
-   "category": "paleobiology",
-   "chunk_id": "velociraptor:enwiki:12",
-   "lang": "en",
-   "quote": "Fowler found that the feet and legs of dromaeosaurs most closely resemble those of eagles and hawks, especially in terms of having an enlarged second claw and a similar range of grasping motion.",
-   "quote_sha": "ff32b7da082fd0fa"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Velociraptor arms, likely feathered, may have acted as stabilizers for balance while pinning prey, aided by a stiff tail.",
+   "fact_id": "F049",
+   "statement": "Velociraptor's feathered arms may have acted as stabilizers for balance while pinning prey, aided by a stiff tail.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -750,8 +660,8 @@
    "quote_sha": "63e3dd6abe989b35"
   },
   {
-   "fact_id": "F067",
-   "statement": "Researchers suggest Velociraptor's weak jaws were used for sawing bites to finish off prey pinned by its limbs.",
+   "fact_id": "F050",
+   "statement": "Velociraptor's weak jaws may have been used for sawing bites to finish off prey pinned by its claws, similar to a Komodo dragon.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:12",
    "lang": "en",
@@ -759,8 +669,26 @@
    "quote_sha": "30499e0ecd06dd3a"
   },
   {
-   "fact_id": "F068",
-   "statement": "It is theorized that high bite force resistance in Velociraptor was an adaptation for scavenging rather than active predation.",
+   "fact_id": "F051",
+   "statement": "In 2010, researchers published findings from a 2008 discovery of Velociraptor teeth found near a Protoceratops jaw with bite marks in the Bayan Mandahu Formation.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:enwiki:13",
+   "lang": "en",
+   "quote": "In 2010, Hone and colleagues published a paper on their 2008 discovery of shed teeth of what they believed to be a Velociraptor near a tooth-marked jaw bone of what they believed to be a Protoceratops in the Bayan Mandahu Formation.",
+   "quote_sha": "48391b0c151b638a"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Researchers concluded that a specific fossil find represented late-stage scavenging of a Protoceratops carcass by a Velociraptor.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:enwiki:13",
+   "lang": "en",
+   "quote": "The authors concluded that the find represented \"late-stage carcass consumption by Velociraptor\" as the predator would have eaten other parts of a freshly killed Protoceratops before biting in the jaw area.",
+   "quote_sha": "e7ddefbc8014a2e2"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Researchers theorize that Velociraptor's high bite force resistance was an adaptation for scavenging rather than active predation.",
    "category": "debate",
    "chunk_id": "velociraptor:enwiki:13",
    "lang": "en",
@@ -768,8 +696,8 @@
    "quote_sha": "ff4508e4986c62f3"
   },
   {
-   "fact_id": "F069",
-   "statement": "Velociraptor was warm-blooded to some degree due to its high energy requirements for hunting.",
+   "fact_id": "F054",
+   "statement": "Velociraptor was warm-blooded to some degree due to the high energy requirements of hunting.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:14",
    "lang": "en",
@@ -777,8 +705,8 @@
    "quote_sha": "6cf3f7e083bb4f64"
   },
   {
-   "fact_id": "F070",
-   "statement": "Bone growth rates suggest Velociraptor had a more moderate metabolism compared to most modern warm-blooded mammals and birds.",
+   "fact_id": "F055",
+   "statement": "Bone growth rates suggest Velociraptor had a more moderate metabolism than most modern warm-blooded mammals and birds.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:14",
    "lang": "en",
@@ -786,17 +714,17 @@
    "quote_sha": "fb9299f7bbaccda4"
   },
   {
-   "fact_id": "F071",
-   "statement": "Researchers suggest that Velociraptor may not have possessed a fully developed nasal thermoregulation apparatus like modern endothermic animals.",
+   "fact_id": "F056",
+   "statement": "Analysis of nasal cavity size suggests Velociraptor had less developed nasal thermoregulation than modern warm-blooded animals.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:14",
    "lang": "en",
-   "quote": "Tada with team suggested that Velociraptor and most other non-avian dinosaurs may not have possessed a fully or well-developed nasal thermoregulation apparatus as modern endothermic animals do.",
-   "quote_sha": "743ec24e898178de"
+   "quote": "They found that the size of the nasal cavity relative to the head size of extant endotherms is larger than those of extant ectotherms, and among taxa, Velociraptor was recovered below the extant endotherms level by reconstructing its nasal respiratory cavity.",
+   "quote_sha": "72ac781e0706341b"
   },
   {
-   "fact_id": "F072",
-   "statement": "In 1995, researchers reported a Velociraptor skull with punctures matching the spacing and size of Velociraptor teeth.",
+   "fact_id": "F057",
+   "statement": "In 1995, researchers reported a Velociraptor skull with puncture wounds matching the spacing and size of Velociraptor teeth, suggesting an intraspecific fight.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:15",
    "lang": "en",
@@ -804,17 +732,17 @@
    "quote_sha": "ea5fedf43709159b"
   },
   {
-   "fact_id": "F073",
-   "statement": "Researchers suggested that a wound on a Velociraptor skull was likely inflicted by another Velociraptor during an intraspecific fight.",
+   "fact_id": "F058",
+   "statement": "The lack of healing around bite wounds on a specific Velociraptor skull suggests it was killed by another Velociraptor.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:15",
    "lang": "en",
-   "quote": "They suggested that the wound was likely inflicted by another Velociraptor during a fight within the species.",
-   "quote_sha": "71c4c7dabcfe3e08"
+   "quote": "Because its bone structure shows no sign of healing near the bite wounds and the overall specimen was not scavenged, this individual was likely killed by this fatal wound.",
+   "quote_sha": "73c0c3af6eeb4654"
   },
   {
-   "fact_id": "F074",
-   "statement": "In 2012, researchers reported an injured sub-adult Velociraptor specimen found with pterosaur bones in its stomach and a broken rib showing signs of healing.",
+   "fact_id": "F059",
+   "statement": "In 2012, researchers reported a sub-adult Velociraptor specimen with a broken rib and pterosaur bones in its stomach, indicating it died shortly after sustaining the injury.",
    "category": "paleobiology",
    "chunk_id": "velociraptor:enwiki:15",
    "lang": "en",
@@ -822,44 +750,80 @@
    "quote_sha": "922fef35a7c71b09"
   },
   {
-   "fact_id": "F075",
-   "statement": "Velociraptor lived during the Late Cretaceous period.",
+   "fact_id": "F060",
+   "statement": "Velociraptor osmolskae lived alongside various species including Pinacosaurus, Linhenykus, Linheraptor, Machairasaurus, Bagaceratops, and others in the Bayan Mandahu Formation.",
    "category": "time_and_habitat",
-   "chunk_id": "velociraptor:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Cretácico Superior",
-   "quote_sha": "7f9883698ead51b2"
+   "chunk_id": "velociraptor:enwiki:16",
+   "lang": "en",
+   "quote": "V. osmolskae lived alongside the ankylosaurid Pinacosaurus mephistocephalus; alvarezsaurid Linhenykus; closely related dromaeosaurid Linheraptor; oviraptorids Machairasaurus and Wulatelong; protoceratopsids Bagaceratops and Protoceratops hellenikorhinus; and troodontids Linhevenator, Papiliovenator, and Philovenator.",
+   "quote_sha": "190d94f2c56c2831"
   },
   {
-   "fact_id": "F076",
-   "statement": "Velociraptor lived between 75 and 71 million years ago during the Campanian stage of the Late Cretaceous in what is now Asia.",
+   "fact_id": "F061",
+   "statement": "Specimens of Velociraptor mongoliensis have been recovered from the Djadochta Formation in the Mongolian province of Ömnögovi.",
    "category": "time_and_habitat",
+   "chunk_id": "velociraptor:enwiki:17",
+   "lang": "en",
+   "quote": "Known specimens of Velociraptor mongoliensis have been recovered from the Djadochta Formation (also spelled Djadokhta), in the Mongolian province of Ömnögovi.",
+   "quote_sha": "506b2550bff63ec4"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The Djadochta Formation dates to the Campanian stage, between 75 and 71 million years ago, during the Late Cretaceous epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "velociraptor:enwiki:17",
+   "lang": "en",
+   "quote": "This geological formation is estimated to date back to the Campanian stage (between 75 million and 71 million years ago) of the Late Cretaceous epoch.",
+   "quote_sha": "79aea78e2ed4f74f"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The Djadochta Formation was deposited by wind processes in an arid environment with sand dunes and intermittent streams under a semi-arid climate.",
+   "category": "time_and_habitat",
+   "chunk_id": "velociraptor:enwiki:17",
+   "lang": "en",
+   "quote": "The abundant sediments—sands, sandstones, or caliche—of the Djadochta Formation were deposited by eolian (wind) processes in arid settings with fields of sand dunes and only intermittent streams, as indicated by very sparse fluvial (river-deposited) sedimentation, under a semi-arid climate.",
+   "quote_sha": "5bac95b82166ab48"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "The type specimen of Velociraptor mongoliensis was found at the Flaming Cliffs, while the \"Fighting Dinosaurs\" were found at the Tugrik Shire locality.",
+   "category": "time_and_habitat",
+   "chunk_id": "velociraptor:enwiki:17",
+   "lang": "en",
+   "quote": "The type specimen was discovered at the Flaming Cliffs site (sublocality of the larger Bayn Dzak locality/region), while the \"Fighting Dinosaurs\" were found at the Tugrik Shire locality (also known as Tugrugeen Shireh and many other spellings).",
+   "quote_sha": "70fc609b06cf958d"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "A Velociraptor skeleton found in Utah was five-and-a-half-feet tall, which was larger than the species depicted in the Jurassic Park films.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:enwiki:18",
+   "lang": "en",
+   "quote": "Later, after we had designed and built the raptor, there was a discovery of a raptor skeleton in Utah, which they labeled 'super-slasher.' They had uncovered the largest Velociraptor to date and it measured five-and-a-half-feet tall, just like ours.",
+   "quote_sha": "fa68d0b40717e0bc"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The male Velociraptor in Jurassic Park III had quill-like structures on its head and neck that did not resemble the actual feathers of the animal.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:enwiki:18",
+   "lang": "en",
+   "quote": "For Jurassic Park III, the male Velociraptor was given quill-like structures along the back of the head and neck, but these structures do not resemble the feathers that Velociraptor would have had in reality due to reasons of continuity.",
+   "quote_sha": "a825e91152b6ec7e"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "Velociraptor is a genus of two known dromaeosaurid theropod dinosaurs that lived between 75 and 71 million years ago during the Campanian stage in what is now Asia.",
+   "category": "description",
    "chunk_id": "velociraptor:eswiki:2",
    "lang": "es",
    "quote": "Velociraptor (lat. 'ladrón veloz') es un género con dos especies conocidas de dinosaurios terópodos dromeosáuridos que vivieron hacia finales del período Cretácico, hace de 75 a 71 millones de años, durante el Campaniaense, en lo que es hoy Asia.",
    "quote_sha": "88cae344024ced59"
   },
   {
-   "fact_id": "F077",
-   "statement": "Velociraptor was a bipedal carnivore with a long rigid tail, characteristic feathers, and a large sickle-shaped claw on each foot likely used for killing prey.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:2",
-   "lang": "es",
-   "quote": "Fue un carnívoro bípedo, con una cola larga y rígida, con plumas características y una uña grande con forma de hoz en cada pata, que probablemente le facilitaba el matar a sus presas.",
-   "quote_sha": "262ae9b4ca05a4ac"
-  },
-  {
-   "fact_id": "F078",
-   "statement": "Unlike other dromaeosaurids, Velociraptor had a low elongated skull and a flat snout directed upward.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:2",
-   "lang": "es",
-   "quote": "A diferencia de otros dromeosáuridos, Velociraptor poseía un cráneo bajo y alargado, y un hocico chato, dirigido hacia arriba.",
-   "quote_sha": "85cb3f6f364474b3"
-  },
-  {
-   "fact_id": "F079",
-   "statement": "Velociraptor was approximately the size of a turkey, much smaller than the two-meter, ninety-kilogram dinosaurs depicted in novels and films, and more similar in size to Deinonychus.",
+   "fact_id": "F068",
+   "statement": "Velociraptor was about the size of a turkey, much smaller than the two-meter-tall, ninety-kilogram dinosaurs shown in novels and films.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:2",
    "lang": "es",
@@ -867,8 +831,17 @@
    "quote_sha": "deaf85aa70c4c07d"
   },
   {
-   "fact_id": "F080",
-   "statement": "Velociraptor size ranged from 1.5 to 2.07 meters in length with a body mass between 15 and 18.3 kilograms.",
+   "fact_id": "F069",
+   "statement": "A famous fossil specimen shows a Velociraptor engaged in a battle with a Protoceratops.",
+   "category": "description",
+   "chunk_id": "velociraptor:eswiki:2",
+   "lang": "es",
+   "quote": "Un espécimen particularmente famoso es el que muestra a un Velociraptor enzarzado en una batalla con un Protoceratops.",
+   "quote_sha": "ffc05dbe46b9579c"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The size range of Velociraptor varies from 1.5 to 2.07 meters in length, with a body mass between 15 and 18.3 kilograms.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:3",
    "lang": "es",
@@ -876,8 +849,8 @@
    "quote_sha": "edb4d3466ecafacd"
   },
   {
-   "fact_id": "F081",
-   "statement": "Velociraptor may have been covered in feathers, including complex feathers on its forearms similar to modern bird wing feathers.",
+   "fact_id": "F071",
+   "statement": "Velociraptor may have been covered in feathers, including complex feathers on its forearms similar to the flight feathers of modern birds.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:3",
    "lang": "es",
@@ -885,7 +858,7 @@
    "quote_sha": "e178e0ab873cc5dd"
   },
   {
-   "fact_id": "F082",
+   "fact_id": "F072",
    "statement": "The genus Velociraptor was named by Osborn in 1924.",
    "category": "classification",
    "chunk_id": "velociraptor:eswiki:1",
@@ -894,8 +867,8 @@
    "quote_sha": "20090a184a24d2e6"
   },
   {
-   "fact_id": "F083",
-   "statement": "The type species of Velociraptor is Velociraptor mongoliensis.",
+   "fact_id": "F073",
+   "statement": "The type species of the genus Velociraptor is Velociraptor mongoliensis.",
    "category": "classification",
    "chunk_id": "velociraptor:eswiki:1",
    "lang": "es",
@@ -903,8 +876,8 @@
    "quote_sha": "16ca9737be958ddf"
   },
   {
-   "fact_id": "F084",
-   "statement": "Velociraptor osmolskae was described by Godefroit et al. in 2008.",
+   "fact_id": "F074",
+   "statement": "A second species, Velociraptor osmolskae, was described by Godefroit et al. in 2008.",
    "category": "classification",
    "chunk_id": "velociraptor:eswiki:1",
    "lang": "es",
@@ -912,43 +885,34 @@
    "quote_sha": "56508132661f14da"
   },
   {
-   "fact_id": "F085",
-   "statement": "Velociraptor is a genus of two known species of dromaeosaurid theropod dinosaurs.",
+   "fact_id": "F075",
+   "statement": "Synonyms for Velociraptor include Ovoraptor (Osborn, 1924), Veiociraptor (Barsbold, 1983), and Velociraptoe (Dong, 1977).",
    "category": "classification",
+   "chunk_id": "velociraptor:eswiki:1",
+   "lang": "es",
+   "quote": "synonyms: Ovoraptor Osborn, 1924 Veiociraptor Barsbold, 1983 Velociraptoe Dong, 1977",
+   "quote_sha": "7863e619f5818d16"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Fossils of Velociraptor mongoliensis have been found in Central Asia in Mongolia, while a second species, Velociraptor osmolskae, was named in 2008 from cranial material found in Inner Mongolia, China.",
+   "category": "time_and_habitat",
    "chunk_id": "velociraptor:eswiki:2",
    "lang": "es",
-   "quote": "Velociraptor (lat. 'ladrón veloz') es un género con dos especies conocidas de dinosaurios terópodos dromeosáuridos",
-   "quote_sha": "37cc03557cd0ce1a"
+   "quote": "Durante mucho tiempo solo se ha reconocido una especie, Velociraptor mongoliensis, cuyos fósiles se han hallado en Asia Central, en Mongolia, pero una segunda especie, Velociraptor osmolskae, fue nombrada en 2008 a partir de material craneal procedente de Mongolia Interior, en China.",
+   "quote_sha": "ae56b3607b9de7d2"
   },
   {
-   "fact_id": "F086",
-   "statement": "A second species, Velociraptor osmolskae, was named in 2008 based on cranial material from Inner Mongolia, China.",
-   "category": "classification",
+   "fact_id": "F077",
+   "statement": "At least a dozen Velociraptor skeletons have been unearthed, which is the largest number discovered for any dromaeosaurid.",
+   "category": "paleobiology",
    "chunk_id": "velociraptor:eswiki:2",
    "lang": "es",
-   "quote": "una segunda especie, Velociraptor osmolskae, fue nombrada en 2008 a partir de material craneal procedente de Mongolia Interior, en China.",
-   "quote_sha": "72d3c21fdb8f586a"
+   "quote": "con no menos de una docena de esqueletos fósiles desenterrados, la mayor cantidad descubierta de un dromeosáurido.",
+   "quote_sha": "eca8e1bf3499aedd"
   },
   {
-   "fact_id": "F087",
-   "statement": "A particularly famous specimen shows a Velociraptor engaged in a battle with a Protoceratops.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:2",
-   "lang": "es",
-   "quote": "Un espécimen particularmente famoso es el que muestra a un Velociraptor enzarzado en una batalla con un Protoceratops.",
-   "quote_sha": "ffc05dbe46b9579c"
-  },
-  {
-   "fact_id": "F088",
-   "statement": "The snout occupied about 60% of the total skull length and was notably narrow, formed mainly by the nasal, premaxilla, and maxilla bones.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:4",
-   "lang": "es",
-   "quote": "El hocico, que ocupaba alrededor del 60 % de la longitud total del cráneo, era notablemente estrecho y estaba formado principalmente por los huesos nasal, premaxilar y maxilar.",
-   "quote_sha": "79033cbf0901a80b"
-  },
-  {
-   "fact_id": "F089",
+   "fact_id": "F078",
    "statement": "The premaxilla was the most anterior bone of the skull and was longer than it was tall.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
@@ -957,8 +921,8 @@
    "quote_sha": "e9c350ca94e9a0a3"
   },
   {
-   "fact_id": "F090",
-   "statement": "The maxilla was nearly triangular in shape and was the largest element of the snout.",
+   "fact_id": "F079",
+   "statement": "The maxilla was almost triangular in shape and was the largest element of the snout.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
    "lang": "es",
@@ -966,44 +930,8 @@
    "quote_sha": "9a8752fd736fb192"
   },
   {
-   "fact_id": "F091",
-   "statement": "The lacrimal bone was T-shaped with a main body that was thin and delicate.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:4",
-   "lang": "es",
-   "quote": "El lagrimal era un hueso en forma de T y su cuerpo principal era delgado y delicado.",
-   "quote_sha": "246f5d3e67904574"
-  },
-  {
-   "fact_id": "F092",
-   "statement": "The eye socket, formed by the lacrimal, jugal, frontal, and postorbital bones, was large, nearly circular, and longer than it was tall.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:4",
-   "lang": "es",
-   "quote": "La órbita o fenestra orbital, la cavidad del ojo, formada por el lagrimal, el yugal, el frontal y el postorbitario, era grande y de forma casi circular, siendo más larga que alta.",
-   "quote_sha": "750ab8dc6113f453"
-  },
-  {
-   "fact_id": "F093",
-   "statement": "The most posterior bone was the occipital, projecting into a rounded, bulbous occipital condyle that met the first neck vertebra.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:4",
-   "lang": "es",
-   "quote": "El hueso más posterior era el hueso occipital y su proyección el cóndilo occipital, una protuberancia redondeada y bulbosa que se encuentra con la primera vértebra del cuello.",
-   "quote_sha": "8e67eebca58b7974"
-  },
-  {
-   "fact_id": "F094",
-   "statement": "The dentary was a very long, weakly curved, and narrow bone that developed several alveoli on its upper surface.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:4",
-   "lang": "es",
-   "quote": "El dentario era un elemento muy largo, débilmente curvado y estrecho que desarrollaba varios alvéolos en su superficie superior.",
-   "quote_sha": "92ddaa5324282911"
-  },
-  {
-   "fact_id": "F095",
-   "statement": "The premaxilla had four alveoli for four teeth, while the maxilla had eleven alveoli.",
+   "fact_id": "F080",
+   "statement": "The premaxilla had four tooth sockets for four teeth, while the maxilla had eleven sockets for eleven teeth.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
    "lang": "es",
@@ -1011,8 +939,8 @@
    "quote_sha": "07aa04d3fca9f533"
   },
   {
-   "fact_id": "F096",
-   "statement": "Between fourteen and fifteen alveoli were present in the dentary.",
+   "fact_id": "F081",
+   "statement": "The dentary bone contained between fourteen and fifteen tooth sockets.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
    "lang": "es",
@@ -1020,8 +948,8 @@
    "quote_sha": "e397f402ca046e09"
   },
   {
-   "fact_id": "F097",
-   "statement": "Velociraptor teeth were fairly homodont (similar in shape) and had denticles that were serrated more on the rear edge than the front.",
+   "fact_id": "F082",
+   "statement": "Velociraptor's teeth were mostly homodont (similar in shape) and had serrations that were more pronounced on the back edge than the front.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
    "lang": "es",
@@ -1029,8 +957,8 @@
    "quote_sha": "e357141211258d4e"
   },
   {
-   "fact_id": "F098",
-   "statement": "Maxillary teeth were thinner and recurved, with the lower edge significantly more serrated than the upper, possibly an adaptation to capture and hold fast prey.",
+   "fact_id": "F083",
+   "statement": "The upper jaw teeth were thinner and curved backward, with the lower edge significantly more serrated than the upper, possibly an adaptation to capture and hold fast-moving prey.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:4",
    "lang": "es",
@@ -1038,17 +966,8 @@
    "quote_sha": "af9e9c1297739bae"
   },
   {
-   "fact_id": "F099",
-   "statement": "Like other dromaeosaurids, Velociraptor had a large hand with three elongated fingers ending in strongly curved claw bones similar in construction and flexibility to modern bird wing bones.",
-   "category": "description",
-   "chunk_id": "velociraptor:eswiki:5",
-   "lang": "es",
-   "quote": "Velociraptor, al igual que otros dromeosáuridos, tenía una mano grande con tres dedos alargados que terminaban en unguales fuertemente curvados, huesos de garras, que eran similares en construcción y flexibilidad a los huesos de las alas de las aves modernas.",
-   "quote_sha": "9dd135c90a739cd8"
-  },
-  {
-   "fact_id": "F100",
-   "statement": "The second digit was the longest of the three, while the first was the shortest.",
+   "fact_id": "F084",
+   "statement": "The second finger was the longest of the three, while the first finger was the shortest.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:5",
    "lang": "es",
@@ -1056,8 +975,8 @@
    "quote_sha": "edfe783eb10d4c6f"
   },
   {
-   "fact_id": "F101",
-   "statement": "The carpal bone structure prevented wrist pronation and forced the palm surface to face inward medially rather than downward.",
+   "fact_id": "F085",
+   "statement": "The wrist bone structure prevented the wrist from pronating, forcing the palm to face inward rather than downward.",
    "category": "description",
    "chunk_id": "velociraptor:eswiki:5",
    "lang": "es",
@@ -1065,8 +984,143 @@
    "quote_sha": "c0ed26e42beb3b0c"
   },
   {
-   "fact_id": "F102",
-   "statement": "Velociraptor belongs to the parent group Velociraptorinae.",
+   "fact_id": "F086",
+   "statement": "Velociraptor's tail was rigid, featuring long bony projections called zygapophyses on top of each vertebra and ossified tendons underneath.",
+   "category": "description",
+   "chunk_id": "velociraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La cola de Velociraptor era rígida, con largas proyecciones óseas, zigoapófisis, en la parte superior de cada vértebra y con tendones osificados bajo ella.",
+   "quote_sha": "ca07dbd6d9b996e9"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "The rigidity allowed the tail to act as a single bar-like unit, preventing vertical movement between vertebrae.",
+   "category": "description",
+   "chunk_id": "velociraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La rigidez reforzaba toda la cola permitiendo que actuara como una unidad con forma de barra, previniendo movimientos verticales entre las vértebras.",
+   "quote_sha": "c05c5ba15cecf95e"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "At least one specimen preserves a series of intact tail vertebrae in an 'S' curve, suggesting considerable horizontal flexibility.",
+   "category": "description",
+   "chunk_id": "velociraptor:eswiki:7",
+   "lang": "es",
+   "quote": "Sin embargo, por lo menos un espécimen preserva una serie de vértebras caudales intactas en una curva con forma de 'S', sugiriendo que hubo una considerable flexibilidad horizontal.",
+   "quote_sha": "e656a9437b482015"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "These tail adaptations likely provided balance and stability when turning, especially at high speeds.",
+   "category": "description",
+   "chunk_id": "velociraptor:eswiki:7",
+   "lang": "es",
+   "quote": "Estas adaptaciones de la cola probablemente aportan equilibrio y estabilidad al girar, especialmente a altas velocidades.",
+   "quote_sha": "8e087b946df684e9"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "In 2010, Hone et al. published findings from 2008 regarding isolated teeth considered to be from Velociraptor alongside bite marks on a Protoceratops bone in the Bayan Mandahu Formation.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:13",
+   "lang": "es",
+   "quote": "En 2010 Hone et al. publicaron un artículo sobre su descubrimiento de 2008 de dientes aislados que consideraron de Velociraptor junto a unas marcas de mordida en el hueso de un supuesto Protoceratops en la formación Bayan Mandahu.",
+   "quote_sha": "dea20e032e3c308a"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "The authors concluded the finding represented the final stage of carcass consumption by Velociraptor, after the predator had eaten other parts of a recently dead Protoceratops before biting the jaw area.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:13",
+   "lang": "es",
+   "quote": "Los autores concluyeron que el hallazgo representaba «la última etapa de consumo del cadáver por parte del Velociraptor», ya cuando el depredador se había comido otras partes de un Protoceratops recién muerto, antes de morder en el área de la mandíbula.",
+   "quote_sha": "1f58485041ad1fd1"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "In 2012, Hone and colleagues published an article describing a Velociraptor specimen with a long bone from an azhdarchid pterosaur in its throat.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:13",
+   "lang": "es",
+   "quote": "En 2012 Hone y colaboradores publicaron un artículo que describía un espécimen de Velociraptor con un hueso largo de un pterosaurio azdárquido en su garganta.",
+   "quote_sha": "5d9cc03b66157be7"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "This finding was interpreted as evidence of scavenging behavior.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:13",
+   "lang": "es",
+   "quote": "Este hallazgo fue interpretado como una prueba de comportamiento carroñero.",
+   "quote_sha": "2fe2249c600317cc"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Fossil evidence suggests Velociraptor was an opportunistic and active predator that also scavenged during droughts, famines, illness, or depending on the animal's age.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:14",
+   "lang": "es",
+   "quote": "La evidencia fósil sugiere que Velociraptor comiendo carroña también indica que era un animal oportunista y activamente depredador, que se alimentaba de carroña en tiempos de sequía o hambruna, si tenía problemas de salud o según la edad del animal.",
+   "quote_sha": "40d352d9bcbba9ae"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "A 2021 phylogenetic analysis by James G. Napoli and his team during the description of Kuru showed the position of Velociraptor within Eudromaeosauria.",
+   "category": "classification",
+   "chunk_id": "velociraptor:eswiki:11",
+   "lang": "es",
+   "quote": "A continuación, se muestran los resultados de la filogenia de Eudromaeosauria basado en el análisis filogenético realizado por James G. Napoli y su equipo en 2021 durante la descripción de Kuru, que muestra la posición de Velociraptor.",
+   "quote_sha": "d4fd769678cc1814"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "Velociraptor had an elongated snout indicating a selective feeding strategy of picking up small, fast prey.",
+   "category": "paleobiology",
+   "chunk_id": "velociraptor:eswiki:16",
+   "lang": "es",
+   "quote": "la mayoría de las especies asiáticas tienen hocicos alargados basados en el maxilar, es decir, velociraptorinos, lo que indica una alimentación selectiva en Velociraptor y parientes, como recoger presas pequeñas y rápidas",
+   "quote_sha": "db8e5152077d5a6a"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "A 1995 study reported a Velociraptor skull with two parallel rows of small holes in the frontal bones matching the size and spacing of Velociraptor teeth, suggesting a bite wound from another individual.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:eswiki:18",
+   "lang": "es",
+   "quote": "En 1995, Norell y sus colegas informaron de un cráneo de Velociraptor mongoliensis que tiene dos hileras paralelas de pequeñas perforaciones en sus huesos frontales que, tras un examen más detenido, encajan con el tamaño y espacio de los dientes de Velociraptor",
+   "quote_sha": "876ac567d939ba8b"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "Fossil evidence shows that a bite wound on a Velociraptor skull did not heal, suggesting the injury likely caused the animal's death.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:eswiki:18",
+   "lang": "es",
+   "quote": "De hecho, dado que el hueso fósil no muestra signos de haberse sanado en torno a las heridas de mordidas, esta lesión probablemente lo mató",
+   "quote_sha": "83a981a348766e97"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "The fossil specimen MPC-D 100/976, found at Tugrik Shireh, is known as the 'Fighting Dinosaurs' specimen.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:eswiki:18",
+   "lang": "es",
+   "quote": "En 2001, Molnar y su equipo observaron que este espécimen es MPC-D 100/976, procedente de la localidad de Tugrik Shireh, que también ha aportado el espécimen «Fighting Dinosaurs»",
+   "quote_sha": "8a75b67feabc162f"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "A 2012 study found a subadult Velociraptor specimen (MPC-D 100/54) with healed rib injuries and pterosaur bones in its stomach, suggesting it died shortly after recovering from an injury.",
+   "category": "curiosities",
+   "chunk_id": "velociraptor:eswiki:18",
+   "lang": "es",
+   "quote": "En 2012, David Hone y su equipo informaron que otro espécimen de Velociraptor lesionado, MPC-D 100/54, aproximadamente un individuo subadulto, que se encontró con los huesos de un pterosaurio azdárquido dentro de su cavidad estomacal, estaba cargando o recuperándose de una lesión sufrida en una costilla",
+   "quote_sha": "44ae6912b2685c2d"
+  },
+  {
+   "fact_id": "F101",
+   "statement": "Velociraptor belongs to the subfamily Velociraptorinae.",
    "category": "classification",
    "chunk_id": "velociraptor:pbdb:1",
    "lang": "en",
@@ -1074,7 +1128,7 @@
    "quote_sha": "9e22fb24c7aa9c3d"
   },
   {
-   "fact_id": "F103",
+   "fact_id": "F102",
    "statement": "Velociraptor is classified in the family Dromaeosauridae.",
    "category": "classification",
    "chunk_id": "velociraptor:pbdb:1",
@@ -1083,8 +1137,8 @@
    "quote_sha": "7383c0e366cf101e"
   },
   {
-   "fact_id": "F104",
-   "statement": "Velociraptor is classified in the class Reptilia.",
+   "fact_id": "F103",
+   "statement": "Velociraptor is classified as a reptile.",
    "category": "classification",
    "chunk_id": "velociraptor:pbdb:1",
    "lang": "en",
@@ -1092,73 +1146,22 @@
    "quote_sha": "cdcaa2922520f735"
   },
   {
-   "fact_id": "F105",
+   "fact_id": "F104",
    "statement": "Velociraptor lived from the Coniacian to the Maastrichtian, between 89.8 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "velociraptor:pbdb:1",
    "lang": "en",
    "quote": "Time range: Coniacian to Maastrichtian (89.8 to 66 million years ago)",
    "quote_sha": "bea4ca52b69efe59"
-  },
-  {
-   "fact_id": "F106",
-   "statement": "There are 20 recorded fossil occurrences of Velociraptor in the Paleobiology Database.",
-   "category": "discovery",
-   "chunk_id": "velociraptor:pbdb:1",
-   "lang": "en",
-   "quote": "Fossil occurrences recorded: 20",
-   "quote_sha": "e17fa5dd622fd387"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "velociraptor:enwiki:3",
-   "statement": "The first known Velociraptor fossil, a crushed complete skull with a manual claw and phalanges (specimen AMNH 6515), was discovered by Peter Kaisen on August 11, 1923.",
-   "category": "discovery",
-   "quote": "Peter Kaisen discovered the first Velociraptor fossil known to science—a crushed but complete skull, associated with one manual claw and adjoining phalanges (AMNH 6515)",
-   "reason": "numbers not in the quote: ['11', '1923']"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:3",
-   "statement": "A joint Chinese-Canadian team discovered Velociraptor remains in northern China between 1988 and 1990.",
-   "category": "discovery",
-   "quote": "Between 1988 and 1990, a joint Chinese-Canadian team discovered Velociraptor remains in northern China",
-   "reason": "statement copies the source wording: 'A joint Chinese-Canadian team discovered Velociraptor remains in'"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:4",
-   "statement": "Maxillae and a lacrimal bone recovered in 1999 from the Bayan Mandahu Formation by Sino-Belgian expeditions belong to Velociraptor but not to the type species V. mongoliensis.",
-   "category": "discovery",
-   "quote": "Maxillae and a lacrimal... recovered from the Bayan Mandahu Formation in 1999 by the Sino-Belgian Dinosaur Expeditions were found to pertain to Velociraptor, but not to the type species V. mongoliensis",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:4",
-   "statement": "Specimen MPC-D 100/982 was discovered and collected in 1995 at the \"Volcano\" sub-locality of Bayn Dzak.",
-   "category": "discovery",
-   "quote": "This relatively well-preserved specimen including the skull was discovered and collected in 1995 at the Bayn Dzak locality (specifically at the \"Volcano\" sub-locality)",
-   "reason": "numbers not in the quote: ['100', '982']"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:2",
-   "statement": "Velociraptor was a bipedal, feathered carnivore with a long tail and enlarged sickle-shaped claws on its hind feet used for tackling prey.",
+   "chunk_id": "velociraptor:enwiki:7",
+   "statement": "Bony projections on the tail vertebrae began at the tenth vertebra and extended forward to brace four to ten additional vertebrae.",
    "category": "description",
-   "quote": "It was a bipedal, feathered carnivore with a long tail and an enlarged sickle-shaped claw on each hindfoot, which is thought to have been used to tackle and restrain prey",
-   "reason": "statement copies the source wording: 'was a bipedal feathered carnivore with a long'"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:5",
-   "statement": "The referral of the specimen with quill knobs to Velociraptor may require reevaluation pending further study, as the specimen number was corrected to IGM 100/3503.",
-   "category": "debate",
-   "quote": "However, the specimen number has been corrected to IGM 100/3503 and its referral to Velociraptor may require reevaluation, pending further study",
-   "reason": "statement copies the source wording: 'to Velociraptor may require reevaluation pending further study'"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:8",
-   "statement": "When first described in 1924, Velociraptor was classified in the family Megalosauridae.",
-   "category": "classification",
-   "quote": "When first described in 1924, Velociraptor was placed in the family Megalosauridae, as was the case with most carnivorous dinosaurs at the time.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "The prezygapophyses began on the tenth tail (caudal) vertebra and extended forward to brace four to ten additional vertebrae, depending on position in the tail.",
+   "reason": "statement copies the source wording: 'vertebra and extended forward to brace four to'"
   },
   {
    "chunk_id": "velociraptor:enwiki:8",
@@ -1169,49 +1172,70 @@
   },
   {
    "chunk_id": "velociraptor:enwiki:9",
-   "statement": "The presence of quill knobs in Velociraptor suggests its ancestors could fly, implying Velociraptor was secondarily flightless.",
-   "category": "description",
+   "statement": "Quill knobs found in Velociraptor suggest its ancestors could fly, implying Velociraptor was secondarily flightless.",
+   "category": "paleobiology",
    "quote": "Furthermore, they noted that quill knobs are almost never found in flightless bird species today, and that their presence in Velociraptor (presumed to have been flightless due to its relatively large size and short forelimbs) is evidence that the ancestors of dromaeosaurids could fly.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "velociraptor:enwiki:13",
-   "statement": "In 2008, researchers discovered shed teeth of a Velociraptor near a tooth-marked jaw bone of a Protoceratops in the Bayan Mandahu Formation.",
-   "category": "discovery",
-   "quote": "In 2010, Hone and colleagues published a paper on their 2008 discovery of shed teeth of what they believed to be a Velociraptor near a tooth-marked jaw bone of what they believed to be a Protoceratops in the Bayan Mandahu Formation.",
-   "reason": "statement copies the source wording: 'a Velociraptor near a tooth-marked jaw bone of'"
-  },
-  {
-   "chunk_id": "velociraptor:enwiki:13",
-   "statement": "Researchers concluded that a fossil find represented late-stage carcass consumption by Velociraptor.",
+   "chunk_id": "velociraptor:enwiki:12",
+   "statement": "In the \"Fighting Dinosaurs\" fossil, the Velociraptor's sickle claw is embedded in the Protoceratops's throat while the herbivore's beak clamps the raptor's forelimb.",
    "category": "paleobiology",
-   "quote": "The authors concluded that the find represented 'late-stage carcass consumption by Velociraptor' as the predator would have eaten other parts of a freshly killed Protoceratops before biting in the jaw area.",
+   "quote": "In the \"Fighting Dinosaurs\" specimen, the Velociraptor lies underneath, with one of its sickle claws apparently embedded in the throat of its prey, while the beak of Protoceratops is clamped down upon the right forelimb of the attacker.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "velociraptor:enwiki:13",
-   "statement": "A 2012 study described a Velociraptor specimen containing a long bone of an azhdarchid pterosaur in its gut.",
+   "statement": "A 2012 study described a Velociraptor specimen containing a long bone of an azhdarchid pterosaur in its gut, interpreted as evidence of scavenging behavior.",
    "category": "paleobiology",
    "quote": "In 2012, Hone and colleagues published a paper that described a Velociraptor specimen with a long bone of an azhdarchid pterosaur in its gut.",
    "reason": "statement copies the source wording: 'a long bone of an azhdarchid pterosaur in'"
   },
   {
+   "chunk_id": "velociraptor:enwiki:13",
+   "statement": "A 2024 study found that Velociraptor had high bite force resistance compared to larger dromaeosaurids like Deinonychus and Dromaeosaurus.",
+   "category": "paleobiology",
+   "quote": "In a 2024 study by Tse, Miller, and Pittman et al., focusing on the skull morphology and bite forces of various dromaeosaurids, it was discovered that Velociraptor had high bite force resistance compared to other dromaeosaurids such as Dromaeosaurus itself and Deinonychus, the latter of which was much larger.",
+   "reason": "statement copies the source wording: 'that Velociraptor had high bite force resistance compared'"
+  },
+  {
+   "chunk_id": "velociraptor:enwiki:14",
+   "statement": "In 2023, a team led by Seishiro Tada examined nasal cavities to evaluate the thermoregulatory physiology of non-avian dinosaurs.",
+   "category": "paleobiology",
+   "quote": "In 2023, Seishiro Tada and team examined the nasal cavities of ectotherm (cold-blooded) or endotherm (warm-blooded) species, in order to evaluate the thermoregulatory physiology of non-avian dinosaurs compared to these groups.",
+   "reason": "statement copies the source wording: 'to evaluate the thermoregulatory physiology of non-avian dinosaurs'"
+  },
+  {
+   "chunk_id": "velociraptor:enwiki:17",
+   "statement": "It is concluded that many specimens, including Velociraptor, were buried alive during powerful sand-bearing events common to the region.",
+   "category": "paleobiology",
+   "quote": "Based on deposits (such as structureless sandstones), it has been concluded that a large number of specimens were buried alive during powerful sand-bearing events, common to these paleoenvironments.",
+   "reason": "statement copies the source wording: 'were buried alive during powerful sand-bearing events common'"
+  },
+  {
+   "chunk_id": "velociraptor:enwiki:18",
+   "statement": "The Velociraptors depicted in the 1993 film Jurassic Park were modeled after the dinosaur Deinonychus rather than the actual Velociraptor.",
+   "category": "curiosities",
+   "quote": "The \"raptors\" portrayed in Jurassic Park were actually modeled after the closely related dromaeosaurid Deinonychus.",
+   "reason": "numbers not in the quote: ['1993']"
+  },
+  {
    "chunk_id": "velociraptor:eswiki:2",
-   "statement": "Velociraptor was smaller than other dromaeosaurids like Deinonychus and Achillobator but shared many anatomical traits with them.",
+   "statement": "Velociraptor was a small, bipedal carnivore with a long rigid tail, characteristic feathers, and a large sickle-shaped claw on each foot that likely helped it kill prey.",
    "category": "description",
-   "quote": "Aunque más pequeño que otros dromeosáuridos como Deinonychus y Achillobator, Velociraptor tenía muchos rasgos anatómicossimilares a ellos.",
+   "quote": "Aunque más pequeño que otros dromeosáuridos como Deinonychus y Achillobator, Velociraptor tenía muchos rasgos anatómicossimilares a ellos. Fue un carnívoro bípedo, con una cola larga y rígida, con plumas características y una uña grande con forma de hoz en cada pata, que probablemente le facilitaba el matar a sus presas.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "velociraptor:eswiki:3",
-   "statement": "Adult Velociraptor averaged 1.8 meters in length, 0.5 meters in height at the hip, and weighed about 15 kilograms.",
+   "statement": "Adult Velociraptors averaged a length of 1.8 meters, a height of 0.5 meters at the hip, and weighed about 15 kilograms.",
    "category": "description",
    "quote": "Para ser un dromeosáurido, Velociraptor era relativamente pequeño, más pequeño que Deinonychus antirrhopus y Achillobator; los adultos alcanzaban en promedio una longitud de 1.8 m, y 0.5 m de altura a la cadera, pesando cerca de quince kilogramos.",
    "reason": "numbers not in the quote: ['15']"
   },
   {
    "chunk_id": "velociraptor:eswiki:3",
-   "statement": "Prominent insertion points for wing feathers and direct indicators of feather cover were reported on the ulna of a single Velociraptor specimen approximately 1.5 meters long and weighing 15 kilograms.",
+   "statement": "Prominent insertion points on the forearm, possible attachment sites for wing feathers, and direct indicators of feather cover have been reported on the ulna of a single Velociraptor specimen, IGM 100/981, representing an animal about 1.5 meters long and 15 kilograms in weight.",
    "category": "description",
    "quote": "Prominentes puntos de inserción en los antebrazos, posibles sitios de unión de las plumas del «ala» e indicadores directos de una cubierta de plumas, se han informado del cúbito de un solo espécimen de Velociraptor, IGM 100/981, que representa un animal de aproximadamente 1.5 m de largo y quince kilogramos de peso.",
    "reason": "numbers not in the quote: ['15']"
@@ -1225,15 +1249,29 @@
   },
   {
    "chunk_id": "velociraptor:eswiki:4",
-   "statement": "The quadratojugal bone was crucial for articulation with the lower jaw.",
+   "statement": "The snout of Velociraptor occupied about 60% of the total skull length and was notably narrow.",
    "category": "description",
-   "quote": "El cuadratoyugal fue de gran importancia para la articulación con la mandíbula inferior.",
+   "quote": "El hocico, que ocupaba alrededor del 60 % de la longitud total del cráneo, era notablemente estrecho.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "velociraptor:eswiki:5",
+   "statement": "Velociraptor had a large hand with three elongated fingers ending in strongly curved claws, similar to modern bird wings.",
+   "category": "description",
+   "quote": "Velociraptor, al igual que otros dromeosáuridos, tenía una mano grande con tres dedos alargados que terminaban en unguales fuertemente curvados.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "velociraptor:eswiki:14",
+   "statement": "Examinations of the inner ear indicate Velociraptor could detect and hear a wide range of sound frequencies between 2368 and 3965 Hz.",
+   "category": "paleobiology",
+   "quote": "Los exámenes del endocráneo de Velociraptor indican que pudo detectar y escuchar una amplia gama de frecuencias de sonido, 2368–3965 Hz.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "velociraptor:pbdb:1",
    "statement": "The genus Velociraptor was named by Osborn in 1924.",
-   "category": "discovery",
+   "category": "classification",
    "quote": "PBDB name: Velociraptor (genus), Osborn 1924",
    "reason": "duplicate"
   }

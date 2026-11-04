@@ -2,9 +2,9 @@
  "taxon": "Phosphatodraco",
  "taxon_key": "phosphatodraco",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "9b39f0ef4c61c70d",
- "generated_at": "2026-11-03T05:03:44+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a8ccf7b83f828d38",
+ "generated_at": "2026-11-04T07:10:14+00:00",
  "citations": {
   "phosphatodraco:enwiki:1": {
    "source": "wikipedia_article",
@@ -76,6 +76,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "phosphatodraco:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Phosphatodraco (Paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Phosphatodraco?oldid=1341946880",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "phosphatodraco:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Phosphatodraco (taxobox)",
@@ -101,7 +108,43 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "A specimen of five cervical vertebrae was discovered in 2000 in the Ouled Abdoun Phosphatic Basin.",
+   "statement": "The animal is classified under the genus Phosphatodraco.",
+   "category": "classification",
+   "chunk_id": "phosphatodraco:enwiki:1",
+   "lang": "en",
+   "quote": "taxon: Phosphatodraco",
+   "quote_sha": "0c67ec04df2a39e9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus and species Phosphatodraco mauritanicus were described by Pereda-Suberbiola and colleagues in 2003.",
+   "category": "discovery",
+   "chunk_id": "phosphatodraco:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Pereda-Suberbiola et al., 2003",
+   "quote_sha": "a16fcbfbfad0e5bf"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Phosphatodraco lived during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "phosphatodraco:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Cretaceous,",
+   "quote_sha": "cd43b061a39a58fb"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Phosphatodraco was an azhdarchid pterosaur that lived in what is now Morocco during the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "phosphatodraco:enwiki:2",
+   "lang": "en",
+   "quote": "Phosphatodraco is a genus of azhdarchid pterosaur that lived during the Late Cretaceous of what is now Morocco.",
+   "quote_sha": "257da9a320c3fd0f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "A specimen consisting of five cervical vertebrae was discovered in the Ouled Abdoun Phosphatic Basin in 2000.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:2",
    "lang": "en",
@@ -109,25 +152,16 @@
    "quote_sha": "fd504116c966fcd0"
   },
   {
-   "fact_id": "F002",
-   "statement": "The specimen was designated the holotype for the new species Phosphatodraco mauritanicus in 2003.",
-   "category": "discovery",
+   "fact_id": "F006",
+   "statement": "Phosphatodraco is distinguished by a very elongated C8 (or C7) vertebra that is 50% longer than the C5 and a prominent neural spine almost as tall as the centrum.",
+   "category": "description",
    "chunk_id": "phosphatodraco:enwiki:2",
    "lang": "en",
-   "quote": "The specimen was made the holotype of the new genus and species Phosphatodraco mauritanicus in 2003",
-   "quote_sha": "c0cc601f1a3ed7ed"
+   "quote": "Phosphatodraco is mainly distinguished by its C8 (or C7) vertebra being very elongated, 50% longer than the C5, and in having a prominent neural spine that is almost as tall as the centrum",
+   "quote_sha": "745c31ff21e3866f"
   },
   {
-   "fact_id": "F003",
-   "statement": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa.",
-   "category": "discovery",
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "lang": "en",
-   "quote": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa",
-   "quote_sha": "03bf558f70cecd4b"
-  },
-  {
-   "fact_id": "F004",
+   "fact_id": "F007",
    "statement": "Pterosaur fossils were found in 2000 by the Office Chérifien des Phosphates near Khouribga in central Morocco.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
@@ -136,17 +170,17 @@
    "quote_sha": "7c9564b2f4d7dd03"
   },
   {
-   "fact_id": "F005",
-   "statement": "The holotype specimen OCP DEK/GE 111 consists of five disarticulated cervical vertebrae and an indeterminate bone.",
+   "fact_id": "F008",
+   "statement": "During preparation of the specimen, fossil remains of fish and mosasaurs were found in association.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
    "lang": "en",
-   "quote": "The pterosaur material, catalogued as specimen OCP DEK/GE 111, consists of five disarticulated but closely associated cervical (neck) vertebrae and an indeterminate bone",
-   "quote_sha": "517e814de620a643"
+   "quote": "During mechanical preparation of the specimen fossil remains of other animals were also found in association, including of several types of fish and mosasaurs.",
+   "quote_sha": "d47c3c2345203dcb"
   },
   {
-   "fact_id": "F006",
-   "statement": "Paleontologist Xabier Pereda-Suberbiola and colleagues designated the specimen as the holotype in 2003.",
+   "fact_id": "F009",
+   "statement": "Paleontologist Xabier Pereda-Suberbiola and colleagues designated the specimen as the holotype of Phosphatodraco mauritanicus in 2003.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
    "lang": "en",
@@ -154,17 +188,35 @@
    "quote_sha": "df89344c35d4e646"
   },
   {
-   "fact_id": "F007",
-   "statement": "In 2020, Claudio Labita and David M. Martill described an articulated wing specimen (FSAC CP 251) assigned to the genus Tethydraco.",
+   "fact_id": "F010",
+   "statement": "At the time of its description, Phosphatodraco was one of the few known azhdarchids with a relatively complete neck and one of the last known pterosaurs.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
    "lang": "en",
-   "quote": "In 2020 paleontologists Claudio Labita and David M. Martill described an articulated (where the bones are connected as in life) pterosaur wing from \"couche III\" (specimen FSAC CP 251, bought from fossil dealers), which they assigned to Tethydraco",
-   "quote_sha": "574fb4ef17c783aa"
+   "quote": "At the time it was described, it was one of the only known azhdarchids preserving a relatively complete neck (the others being Zhejiangopterus and Quetzalcoatlus), and was one of the last known pterosaurs.",
+   "quote_sha": "171c94753e980587"
   },
   {
-   "fact_id": "F008",
-   "statement": "In 2022, Alexandra E. Fernandes and colleagues recovered Tethydraco as a pteranodontian based on similarities with the humerus of Epapatelo.",
+   "fact_id": "F011",
+   "statement": "In 2020, Claudio Labita and David M. Martill described an articulated pterosaur wing (specimen FSAC CP 251) assigned to Tethydraco, a genus originally described in 2018 based on a humerus.",
+   "category": "discovery",
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "lang": "en",
+   "quote": "In 2020 paleontologists Claudio Labita and David M. Martill described an articulated (where the bones are connected as in life) pterosaur wing from \"couche III\" (specimen FSAC CP 251, bought from fossil dealers), which they assigned to Tethydraco, a genus also described by Longrich and colleagues in 2018 based on a humerus (upper arm bone).",
+   "quote_sha": "eeef65cb3d4c488a"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Labita and Martill concluded that Tethydraco was an azhdarchid and possibly represented the wing elements of Phosphatodraco.",
+   "category": "discovery",
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "lang": "en",
+   "quote": "Tethydraco was originally considered a pteranodontid, but Labita and Martill concluded it was an azhdarchid, and that it possibly represented the wing elements of Phosphatodraco.",
+   "quote_sha": "a87eb710e0f519b3"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "In 2022, Alexandra E. Fernandes and colleagues recovered Tethydraco as a pteranodontian based on similarities between its humerus and that of Epapatelo.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
    "lang": "en",
@@ -172,8 +224,8 @@
    "quote_sha": "b814f2c2846e84da"
   },
   {
-   "fact_id": "F009",
-   "statement": "In 2023, Adele Pentland and Stephen Poropat noted that the deltopectoral crest of specimen FSAC CP 251 is consistent with Azhdarchidae but differs from the Tethydraco holotype.",
+   "fact_id": "F014",
+   "statement": "In 2023, Adele Pentland and Stephen Poropat noted that the deltopectoral crest of FSAC CP 251 is consistent with Azhdarchidae but differs from the Tethydraco holotype.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:enwiki:3",
    "lang": "en",
@@ -181,53 +233,26 @@
    "quote_sha": "f7328223e980b645"
   },
   {
-   "fact_id": "F010",
-   "statement": "It is debated whether azhdarchids like Phosphatodraco were skim-feeders in coastal waters or foraged terrestrially like storks.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "lang": "en",
-   "quote": "Azhdarchids have historically been considered skim-feeders that caught prey from water in coastal settings, but it has since been suggested that the context in which their fossils are found and their morphology – such as their long, stiffened necks (informed by for example the neck of Phosphatodraco) – is more consistent with them having foraged terrestrially like storks or ground hornbills, but this is still debated.",
-   "quote_sha": "0c1cca60800a94bd"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "The presence of Phosphatodraco in the late Maastrichtian suggests that pterosaur extinction happened abruptly around 66 million years ago.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "lang": "en",
-   "quote": "Although pterosaurs were thought to have declined in diversity towards the time of their extinction 66 million years ago, the diversity in taxa, including Phosphatodraco, in the Ouled Abdoun Basin, which dates to the late Maastrichtian, right before the Cretaceous-Paleogene extinction event, indicates their extinction happened abruptly.",
-   "quote_sha": "a986864b2e31c460"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "Phosphatodraco lived during the Late Cretaceous in what is now Morocco.",
-   "category": "time_and_habitat",
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "lang": "en",
-   "quote": "Phosphatodraco is a genus of azhdarchid pterosaur that lived during the Late Cretaceous of what is now Morocco.",
-   "quote_sha": "257da9a320c3fd0f"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "Phosphatodraco is classified as a genus of azhdarchid pterosaur.",
-   "category": "classification",
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "lang": "en",
-   "quote": "Phosphatodraco is a genus of azhdarchid pterosaur",
-   "quote_sha": "7359a15cfd242435"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "There is a debate over the vertebral order of the holotype, with some researchers identifying them as C5–C9 and others as C3–C8.",
+   "fact_id": "F015",
+   "statement": "There is controversy over the order of the fragmentary holotype cervical vertebrae.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:2",
    "lang": "en",
-   "quote": "Due to the fragmentary nature of the holotype cervical vertebrae, there has been controversy over their order. The describers considered them as cervicals (abbreviated as C) C5–C9 in the series, the first preserved vertebra (C5) being broken in two, but others consider them C3–C8, C3 and C4 being two different vertebrae.",
-   "quote_sha": "318ee6f9c451cf2a"
+   "quote": "Due to the fragmentary nature of the holotype cervical vertebrae, there has been controversy over their order.",
+   "quote_sha": "f924896af8f23341"
   },
   {
-   "fact_id": "F015",
-   "statement": "The debate over vertebral order affects the estimated wingspan, which is considered to be either 5 meters or 4 meters depending on the interpretation.",
+   "fact_id": "F016",
+   "statement": "Describers considered the vertebrae as C5–C9, while others argue they are C3–C8 with C3 and C4 being distinct vertebrae.",
+   "category": "debate",
+   "chunk_id": "phosphatodraco:enwiki:2",
+   "lang": "en",
+   "quote": "The describers considered them as cervicals (abbreviated as C) C5–C9 in the series, the first preserved vertebra (C5) being broken in two, but others consider them C3–C8, C3 and C4 being two different vertebrae.",
+   "quote_sha": "d65eff6c07b89357"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "The interpretation of the vertebrae affects the estimated size, with describers suggesting a 5 m wingspan versus an alternate interpretation of 4 m.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:2",
    "lang": "en",
@@ -235,26 +260,44 @@
    "quote_sha": "433baf4c7bc79dfe"
   },
   {
-   "fact_id": "F016",
-   "statement": "There is a debate regarding the classification of Tethydraco, with some studies supporting pteranodontian affinity while others suggest azhdarchid characteristics.",
-   "category": "debate",
-   "chunk_id": "phosphatodraco:enwiki:3",
+   "fact_id": "F018",
+   "statement": "It is debated whether azhdarchids like Phosphatodraco were skim-feeders in coastal waters or terrestrial foragers like storks or ground hornbills.",
+   "category": "paleobiology",
+   "chunk_id": "phosphatodraco:enwiki:2",
    "lang": "en",
-   "quote": "In 2022 paleontologist Alexandra E. Fernandes and colleagues noted similarities between the humerus of Epapatelo and Tethydraco, and recovered Tethydraco as a pteranodontian. In 2023 paleontologists Adele Pentland and Stephen Poropat noted that while the hatchet-shaped deltopectoral crest of FSAC CP 251 is consistent with Azhdarchidae, it differs from the shape of the Tethydraco holotype.",
-   "quote_sha": "5f16e107b263b230"
+   "quote": "Azhdarchids have historically been considered skim-feeders that caught prey from water in coastal settings, but it has since been suggested that the context in which their fossils are found and their morphology – such as their long, stiffened necks (informed by for example the neck of Phosphatodraco) – is more consistent with them having foraged terrestrially like storks or ground hornbills, but this is still debated.",
+   "quote_sha": "0c1cca60800a94bd"
   },
   {
-   "fact_id": "F017",
-   "statement": "Kellner's reinterpretation proposed that the order of the vertebrae should be shifted to C3 through C8.",
+   "fact_id": "F019",
+   "statement": "The diversity of pterosaurs including Phosphatodraco in the late Maastrichtian suggests their extinction happened abruptly 66 million years ago.",
+   "category": "paleobiology",
+   "chunk_id": "phosphatodraco:enwiki:2",
+   "lang": "en",
+   "quote": "Although pterosaurs were thought to have declined in diversity towards the time of their extinction 66 million years ago, the diversity in taxa, including Phosphatodraco, in the Ouled Abdoun Basin, which dates to the late Maastrichtian, right before the Cretaceous-Paleogene extinction event, indicates their extinction happened abruptly.",
+   "quote_sha": "a986864b2e31c460"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Researchers originally interpreted the five preserved neck vertebrae of Phosphatodraco as vertebrae C5 through C9.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:4",
    "lang": "en",
-   "quote": "This would shift the order of the vertebrae to C3–C8",
-   "quote_sha": "0051ecd02db8a3a8"
+   "quote": "Pereda-Suberbiola and colleagues originally interpreted the five preserved cervical vertebrae of Phosphatodraco as cervicals C5–C9.",
+   "quote_sha": "6adb9371847cf637"
   },
   {
-   "fact_id": "F018",
-   "statement": "In 2014, Alexander Averianov disagreed with Kellner's reinterpretation and considered the original description of the cervical vertebrae accurate.",
+   "fact_id": "F021",
+   "statement": "Paleontologist Alexander Kellner suggested in 2007 that the original interpretation of Phosphatodraco's vertebrae might have been affected by taphonomy.",
+   "category": "debate",
+   "chunk_id": "phosphatodraco:enwiki:4",
+   "lang": "en",
+   "quote": "In 2007 paleontologist Alexander W. A. Kellner and colleagues noted that Phosphatodraco was one of the most interesting azhdarchids found in Africa, but used cautious language about the original interpretation of the vertebrae.",
+   "quote_sha": "071ea748d5040fca"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "Paleontologist Alexander Averianov disagreed with Kellner's reinterpretation of the neck vertebrae in 2014, arguing the original description was accurate.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:4",
    "lang": "en",
@@ -262,8 +305,8 @@
    "quote_sha": "aef7826fa2b7ee4f"
   },
   {
-   "fact_id": "F019",
-   "statement": "In 2017, Darren Naish and Mark P. Witton followed Kellner's interpretation of the vertebrae order.",
+   "fact_id": "F023",
+   "statement": "Paleontologists Darren Naish and Mark Witton followed Kellner's reinterpretation of the vertebrae order in 2017.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:4",
    "lang": "en",
@@ -271,17 +314,17 @@
    "quote_sha": "16de39eb34579257"
   },
   {
-   "fact_id": "F020",
-   "statement": "In 2021, Rubi V. Pêgas and colleagues followed Kellner's interpretation of the vertebrae order.",
+   "fact_id": "F024",
+   "statement": "In 2019, Alexandru Solomon and colleagues noted that even if the reinterpretation of the vertebrae order was correct, the damaged specimen could not be compared with the single known cervical vertebra of the genus Albadraco.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:4",
    "lang": "en",
-   "quote": "Paleontologist Rubi V. Pêgas and colleagues also followed Kellner's order in 2021.",
-   "quote_sha": "6866196f1083259d"
+   "quote": "Though the palaeontologist Alexandru A. Solomon and colleagues noted the suggested change in interpretation of the holotype order in 2019, they stated that even if the reinterpretation was correct, the specimen was too damaged for comparison with the single known cervical vertebra of their new genus Albadraco.",
+   "quote_sha": "daeb26432c83fa7d"
   },
   {
-   "fact_id": "F021",
-   "statement": "In 2003, Pereda-Suberbiola and colleagues estimated Phosphatodraco had a wingspan close to 5 meters and called it a large azhdarchid pterosaur.",
+   "fact_id": "F025",
+   "statement": "In 2003, Pereda-Suberbiola and colleagues estimated Phosphatodraco had a wingspan of approximately 5 meters, describing it as a large azhdarchid pterosaur.",
    "category": "description",
    "chunk_id": "phosphatodraco:enwiki:5",
    "lang": "en",
@@ -289,8 +332,17 @@
    "quote_sha": "919be1b606d8c0ef"
   },
   {
-   "fact_id": "F022",
-   "statement": "In 2017, Naish and Witton listed a neck length of 865 mm and a wingspan of 4 meters for Phosphatodraco.",
+   "fact_id": "F026",
+   "statement": "Mark Witton grouped Phosphatodraco with midsized azhdarchids in 2013 based on size estimates.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:5",
+   "lang": "en",
+   "quote": "Witton grouped Phosphatodraco with \"midsized\" azhdarchids based on this size estimate in 2013.",
+   "quote_sha": "4276c36eea4a09f4"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "Following Kellner's interpretation, Naish and Witton listed a neck length of 865 mm and a wingspan of 4 meters for Phosphatodraco in 2017.",
    "category": "description",
    "chunk_id": "phosphatodraco:enwiki:5",
    "lang": "en",
@@ -298,7 +350,7 @@
    "quote_sha": "2db58545d0681d22"
   },
   {
-   "fact_id": "F023",
+   "fact_id": "F028",
    "statement": "Phosphatodraco was covered with hair-like pycnofibers.",
    "category": "description",
    "chunk_id": "phosphatodraco:enwiki:5",
@@ -307,71 +359,71 @@
    "quote_sha": "5b05e9bf273c3566"
   },
   {
-   "fact_id": "F024",
-   "statement": "Researchers Pereda-Suberbiola and colleagues identified the preserved vertebrae of Phosphatodraco as the fifth through ninth cervical vertebrae (C5–C9).",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "lang": "en",
-   "quote": "Pereda-Suberbiola and colleagues considered the preserved vertebrae to be C5–C9 of the series in their description",
-   "quote_sha": "5d2e4b51def1f4f2"
-  },
-  {
-   "fact_id": "F025",
-   "statement": "The five preserved cervical vertebrae possess hollow centra with a cortical bone layer approximately 1 mm thick.",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "lang": "en",
-   "quote": "The five preserved cervical vertebrae have hollow centra and their cortical bone (the outer, thick layer) is about 1 mm thick",
-   "quote_sha": "3dd9756a004bc70a"
-  },
-  {
-   "fact_id": "F026",
-   "statement": "The frontmost preserved vertebra, identified as C5 by Pereda-Suberbiola (or C3–C4 by Kellner), was estimated to be about 300 mm long when complete.",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "lang": "en",
-   "quote": "the longest being the frontmost of those preserved, a C5 broken in two according to Pereda-Suberbiola and colleagues (C3–C4 according to Kellner), which they estimated to have been about 300 mm long when complete",
-   "quote_sha": "832718ed663663dc"
-  },
-  {
-   "fact_id": "F027",
-   "statement": "The C6 vertebra is the best-preserved specimen and measures about 225 mm in length.",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "lang": "en",
-   "quote": "The C6 (Kellner's C5) is the best-preserved of the vertebrae, and is shorter than the preceding C5, about 225 mm long",
-   "quote_sha": "5720f85a6374f67e"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "The C6 vertebra is distorted such that its front part is visible from a lower side view and its hind part from a left side view.",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "lang": "en",
-   "quote": "The C6 (Kellner's C5) is the best-preserved of the vertebrae, and is shorter than the preceding C5, about 225 mm long. It is distorted so that the front part is visible in lower side view, and the hind part is visible in left side view.",
-   "quote_sha": "c606d420a3a16bae"
-  },
-  {
    "fact_id": "F029",
-   "statement": "The C6 vertebra has a procoelous centrum, horn-like prezygapophyses, and prezygapophyses that are nearly concave and parallel when viewed from below.",
+   "statement": "Azhdarchids like Phosphatodraco had proportionally long necks and skeletons filled with air sacs that lightened them.",
    "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
+   "chunk_id": "phosphatodraco:enwiki:5",
    "lang": "en",
-   "quote": "The C6 (Kellner's C5) is the best-preserved of the vertebrae, and is shorter than the preceding C5, about 225 mm long. It is distorted so that the front part is visible in lower side view, and the hind part is visible in left side view. Its centrum is procoelous (concave at the front surface), its prezygapophyses are horn-like, and nearly concave and parallel when seen from below.",
-   "quote_sha": "3fd80bfdadb835ce"
+   "quote": "Azhdarchids had necks that were proportionally longer than those of other pterosaurs, and their vertebral column and much of the rest of the skeleton was pneumatized (filled with air-sacs that lightened it).",
+   "quote_sha": "9f4c111e082d5d76"
   },
   {
    "fact_id": "F030",
-   "statement": "The C7 vertebra is visible in bottom view, missing its hind part, with a preserved length of 190 mm and a complete length estimated to be the same or shorter than the preceding C6.",
+   "statement": "Azhdarchids had small but robust body skeletons with solidly built upper arm bones.",
    "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:6",
+   "chunk_id": "phosphatodraco:enwiki:5",
    "lang": "en",
-   "quote": "The following C7 vertebra (Kellner's C6) is visible in bottom view, is missing the hind part, the preserved part being 190 mm long, and the complete length perhaps being the same or shorter as the preceding C6.",
-   "quote_sha": "fa016748c953ec9d"
+   "quote": "The body skeleton of azhdarchids was small but robust, and their upper arm bones were solidly built.",
+   "quote_sha": "9979d3102cd03591"
   },
   {
    "fact_id": "F031",
-   "statement": "The C8 vertebra is visible in side view, missing part of the front, with a very elongated centrum measuring 150 mm.",
+   "statement": "Azhdarchids had the largest wing-metacarpals among pterosaurs, which were the longest bones in their wings, while their wing-fingers were relatively short.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:5",
+   "lang": "en",
+   "quote": "Their wing-metacarpals (the hand bones that connect with the fingers) were relatively the largest among pterosaurs, and the longest bones in the wings; their wing-fingers (which supported the wing-membranes) were relatively short.",
+   "quote_sha": "878b42411adfdd93"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "Kellner's reinterpretation shifted the order of Phosphatodraco's vertebrae to C3 through C8.",
+   "category": "time_and_habitat",
+   "chunk_id": "phosphatodraco:enwiki:4",
+   "lang": "en",
+   "quote": "Kellner suggested in 2010 that interpretation of the holotype specimen had been affected by taphonomy (changes during decay and fossilisation); he instead proposed that the element originally described as a fifth cervical vertebra was actually the third and fourth vertebrae which had been compressed together, giving the impression that they were a single vertebra broken in the middle. This would shift the order of the vertebrae to C3–C8",
+   "quote_sha": "82fd1a77fc128d34"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "The preserved cervical vertebrae of Phosphatodraco have hollow centers with an outer bone layer approximately 1 millimeter thick.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:6",
+   "lang": "en",
+   "quote": "The five preserved cervical vertebrae have hollow centra and their cortical bone (the outer, thick layer) is about 1 mm thick.",
+   "quote_sha": "3af49de98b6fc674"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "The longest preserved cervical vertebra, identified as C5 by Pereda-Suberbiola, was estimated to be about 300 millimeters long when complete.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:6",
+   "lang": "en",
+   "quote": "The longest being the frontmost of those preserved, a C5 broken in two according to Pereda-Suberbiola and colleagues (C3–C4 according to Kellner), which they estimated to have been about 300 mm long when complete.",
+   "quote_sha": "c4202d14c2bd7f42"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "The sixth cervical vertebra is the best-preserved specimen and measures about 225 millimeters in length.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:6",
+   "lang": "en",
+   "quote": "The C6 (Kellner's C5) is the best-preserved of the vertebrae, and is shorter than the preceding C5, about 225 mm long.",
+   "quote_sha": "96429d9b02f3ad93"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "The eighth cervical vertebra has a very elongated centrum measuring 150 millimeters, despite missing part of its front section.",
    "category": "description",
    "chunk_id": "phosphatodraco:enwiki:6",
    "lang": "en",
@@ -379,8 +431,17 @@
    "quote_sha": "fcfbbfae0f8f4e64"
   },
   {
-   "fact_id": "F032",
-   "statement": "The last preserved vertebra, identified as C9 by Pereda-Suberbiola (or C8 by Kellner), is visible in hind view and has a preserved height of 75 mm.",
+   "fact_id": "F037",
+   "statement": "The eighth vertebra features a tall neural spine that is 40 millimeters high, nearly matching the 45-millimeter height of the centrum.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:6",
+   "lang": "en",
+   "quote": "The most notable feature of this vertebra is its tall neural spine, which is placed at its hindmost part. The neural spine is 40 mm high measured from the upper surface of the postzygapophys to the top, almost the same height as the centrum, which is 45 mm.",
+   "quote_sha": "0ab8b1dce9144dc3"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "The ninth cervical vertebra has a preserved section that is 75 millimeters high.",
    "category": "description",
    "chunk_id": "phosphatodraco:enwiki:7",
    "lang": "en",
@@ -388,17 +449,8 @@
    "quote_sha": "dc0554b543cbec27"
   },
   {
-   "fact_id": "F033",
-   "statement": "Although no cervical ribs are preserved, the development of transverse processes on the last vertebra suggests the animal likely possessed ribs.",
-   "category": "description",
-   "chunk_id": "phosphatodraco:enwiki:7",
-   "lang": "en",
-   "quote": "Though none of the vertebrae preserve cervical ribs, the development of the transverse processes of the last vertebra indicates that it probably had ribs.",
-   "quote_sha": "2ac31b766d1ddd77"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "Pereda-Suberbiola and colleagues hypothesized that the C8–C9 vertebrae might be cervicalized dorsal vertebrae incorporated into the neck.",
+   "fact_id": "F039",
+   "statement": "Researchers suggest that the last two vertebrae might be dorsal vertebrae that have been incorporated into the neck, a phenomenon known as cervicalization.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:7",
    "lang": "en",
@@ -406,8 +458,26 @@
    "quote_sha": "20e74c05b1c44b7d"
   },
   {
-   "fact_id": "F035",
-   "statement": "A 2018 phylogenetic analysis by Longrich and colleagues identified Phosphatodraco as an azhdarchid and the sister taxon of Aralazhdarcho from Kazakhstan.",
+   "fact_id": "F040",
+   "statement": "Although no cervical ribs are preserved, the structure of the transverse processes suggests the animal likely possessed ribs.",
+   "category": "description",
+   "chunk_id": "phosphatodraco:enwiki:7",
+   "lang": "en",
+   "quote": "Though none of the vertebrae preserve cervical ribs, the development of the transverse processes of the last vertebra indicates that it probably had ribs.",
+   "quote_sha": "2ac31b766d1ddd77"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "In 2003, researchers classified Phosphatodraco as an azhdarchid based on elongated cervical vertebrae with low or absent neural spines and specific skull features similar to Quetzalcoatlus and Azhdarcho.",
+   "category": "classification",
+   "chunk_id": "phosphatodraco:enwiki:8",
+   "lang": "en",
+   "quote": "In their 2003 description Pereda-Suberbiola and colleagues considered Phosphatodraco a member of Azhdarchidae based on features such as its mid-series cervical vertebrae being elongated, with low vestigial (almost evolutionarily lost) or absent neural spines, the presence of prezygapophyseal tubercles, a pair of lower sulci near the prezygapophyses, and the lack of oval pneumatic foramina on the lower surfaces of the centra.",
+   "quote_sha": "4fc0d307b2952196"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "A 2018 study found Phosphatodraco to be an azhdarchid and the closest relative to Aralazhdarcho from Kazakhstan.",
    "category": "classification",
    "chunk_id": "phosphatodraco:enwiki:8",
    "lang": "en",
@@ -415,8 +485,17 @@
    "quote_sha": "48625469fd601fe1"
   },
   {
-   "fact_id": "F036",
-   "statement": "In 2022, Leonardo Ortiz David and colleagues found Phosphatodraco and Aralazhdarcho as sister taxa outside the Quetzalcoatlinae subclade, forming a basal clade with Eurazhdarcho within Azhdarchidae.",
+   "fact_id": "F043",
+   "statement": "In 2021, Brian Andres identified Phosphatodraco and Aralazhdarcho as sister taxa within the azhdarchid subclade Quetzalcoatlinae, supported by reduced pneumatic foramina.",
+   "category": "classification",
+   "chunk_id": "phosphatodraco:enwiki:8",
+   "lang": "en",
+   "quote": "In 2021 American paleontologist Brian Andres also found Phosphatodraco and Aralazhdarcho to be sister taxa, supported by the reduction of pneumatic foramina on the side of the neural canal. This clade was recovered as part of the azhdarchid subclade Quetzalcoatlinae.",
+   "quote_sha": "99f2e9e7b9f2b685"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "A 2022 study by Leonardo Ortiz David and colleagues placed Phosphatodraco and Aralazhdarcho as sister taxa outside the Quetzalcoatlinae subclade, forming a basal group with Eurazhdarcho.",
    "category": "classification",
    "chunk_id": "phosphatodraco:enwiki:8",
    "lang": "en",
@@ -424,8 +503,8 @@
    "quote_sha": "7e02e5f33c349fbf"
   },
   {
-   "fact_id": "F037",
-   "statement": "In 2025, Pêgas and colleagues named the clade Phosphatodraconia to include Phosphatodraco, Aralazhdarcho, Eurazhdarcho, and Wellnhopterus, based on shared cervical vertebra features.",
+   "fact_id": "F045",
+   "statement": "In 2025, a new clade named Phosphatodraconia was defined to include Phosphatodraco, Aralazhdarcho, Eurazhdarcho, and Wellnhopterus based on shared cervical vertebra features.",
    "category": "classification",
    "chunk_id": "phosphatodraco:enwiki:8",
    "lang": "en",
@@ -433,8 +512,8 @@
    "quote_sha": "7b34ce9fbc04025d"
   },
   {
-   "fact_id": "F038",
-   "statement": "Witton and Naish argued that azhdarchids likely inhabited inland environments because over half of their fossils come from fluvial or alluvial deposits and their morphology suggested terrestrial foraging rather than wading, despite having small, slender feet with pads.",
+   "fact_id": "F046",
+   "statement": "Witton and Naish argued that azhdarchids like Phosphatodraco likely inhabited inland environments and acted as terrestrial stalkers, despite their small, pad-footed feet being unsuited for wading.",
    "category": "paleobiology",
    "chunk_id": "phosphatodraco:enwiki:9",
    "lang": "en",
@@ -442,8 +521,8 @@
    "quote_sha": "b992db85c474cfcd"
   },
   {
-   "fact_id": "F039",
-   "statement": "Witton suggested in 2013 that azhdarchids could stride through vegetated areas with long limbs and downturned jaws to reach the ground, using their long, stiffened necks to scan for and grab small animals and fruit.",
+   "fact_id": "F047",
+   "statement": "Witton suggested in 2013 that azhdarchids strided through vegetation using long limbs and stiffened necks to spot and grab small animals or fruit from the ground.",
    "category": "paleobiology",
    "chunk_id": "phosphatodraco:enwiki:9",
    "lang": "en",
@@ -451,62 +530,35 @@
    "quote_sha": "b412e8b6270a95c0"
   },
   {
-   "fact_id": "F040",
-   "statement": "In 2021, Labita and Martill proposed that azhdarchids were associated with aquatic environments like rivers, lakes, and offshore settings rather than terrestrial ones, noting that fossils including those of Phosphatodraco came from marine strata.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:9",
-   "lang": "en",
-   "quote": "In their 2021 study that reinterpreted Tethydraco as an azhdarchid, and possibly the same as Phosphatodraco, Labita and Martill noted that azhdarchids might have been less terrestrial than suggested by Witton and Naish, since the Moroccan fossils were from marine strata, as was Arambourgiania from the phosphates of Jordan. They noted that no azhdarchids had been found in truly terrestrial strata, and proposed they could instead have been associated with aquatic environments, such as rivers, lakes, marine and off-shore settings.",
-   "quote_sha": "d059cfd875b9d2a1"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "Historically, most researchers considered azhdarchids to be skim-feeders in coastal settings that trawled their lower jaws through water to catch surface prey, similar to skimmers and terns.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:9",
-   "lang": "en",
-   "quote": "In 2008 Witton and Naish pointed out that although azhdarchids have historically been considered to have been scavengers, probers of sediment, swimmers, waders, aerial predators, or stork-like generalists, most researchers until that point had considered them to have been skim-feeders living in coastal settings, which fed by trawling their lower jaws through water while flying and catching prey from the surface (like skimmers and some terns).",
-   "quote_sha": "e11cb7020fdbffbd"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "Witton and Naish noted that azhdarchids lacked the sideways compressed lower jaws and shock-absorbing adaptations of skim-feeders, having instead almost triangular jaw cross-sections.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:9",
-   "lang": "en",
-   "quote": "Witton and Naish noted that evidence for this mode of feeding lacked support from azhdarchid anatomy and functional morphology; they lacked cranial features such as sideways compressed lower jaws and the shock-absorbing adaptations required, and their jaws instead appear to have been almost triangular in cross-section, unlike those of skim-feeders and probers.",
-   "quote_sha": "4c861130fa591450"
-  },
-  {
-   "fact_id": "F043",
-   "statement": "Witton and Naish suggested that the generalist lifestyle of azhdarchids, including Phosphatodraco, explains their survival until the late Maastrichtian, unlike other pterosaur lineages that went extinct earlier.",
-   "category": "paleobiology",
-   "chunk_id": "phosphatodraco:enwiki:9",
-   "lang": "en",
-   "quote": "Witton and Naish suggested that their more generalist lifestyle could explain the group's resilience compared to other pterosaur lineages, which were not thought to have survived until the late Maastrichtian like the azhdarchids did (pterosaurs went extinct along with the non-bird dinosaurs during the Cretaceous-Paleogene extinction event 66 million years ago).",
-   "quote_sha": "9d9f486b671805b5"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "It is debated whether azhdarchids were primarily terrestrial or aquatic; Labita and Martill (2021) argue for aquatic associations based on marine strata fossils, while Witton and Naish argue for terrestrial habits based on inland deposits.",
+   "fact_id": "F048",
+   "statement": "It is debated whether azhdarchids were terrestrial stalkers or aquatic foragers, as some researchers point to marine fossil contexts and the lack of finds in truly terrestrial strata.",
    "category": "debate",
    "chunk_id": "phosphatodraco:enwiki:9",
    "lang": "en",
-   "quote": "In their 2021 study that reinterpreted Tethydraco as an azhdarchid, and possibly the same as Phosphatodraco, Labita and Martill noted that azhdarchids might have been less terrestrial than suggested by Witton and Naish, since the Moroccan fossils were from marine strata, as was Arambourgiania from the phosphates of Jordan.",
-   "quote_sha": "01c1337df7c5270e"
+   "quote": "Labita and Martill noted that azhdarchids might have been less terrestrial than suggested by Witton and Naish, since the Moroccan fossils were from marine strata, as was Arambourgiania from the phosphates of Jordan. They noted that no azhdarchids had been found in truly terrestrial strata, and proposed they could instead have been associated with aquatic environments, such as rivers, lakes, marine and off-shore settings.",
+   "quote_sha": "2fdfbf1bf003bcd9"
   },
   {
-   "fact_id": "F045",
-   "statement": "It is debated whether pterosaur extinction was gradual or abrupt; Longrich and colleagues suggest the gradual decline is an artifact of poor fossil records, noting that diverse lineages including Phosphatodraco co-existed in the late Maastrichtian of Morocco.",
-   "category": "debate",
+   "fact_id": "F049",
+   "statement": "The Late Cretaceous of Morocco holds the most diverse pterosaur assemblage known, including Phosphatodraco, Pteranodontidae, and Nyctosauridae.",
+   "category": "paleobiology",
    "chunk_id": "phosphatodraco:enwiki:9",
    "lang": "en",
-   "quote": "Pterosaurs are generally thought to have gone gradually extinct by decreasing in diversity towards the end of the Cretaceous, but Longrich and colleagues suggested this impression could be a result of the poor fossil records for pterosaurs (the Signor-Lipps Effect). Since they found multiple lineages (Pteranodontidae, Nyctosauridae, and Azhdarchidae, the latter including Phosphatodraco and others) to have co-existed during the late Maastrichtian of Morocco, this is the most diverse pterosaur assemblage known from the Late Cretaceous.",
-   "quote_sha": "c0e5c8aeaaff8028"
+   "quote": "Since they found multiple lineages (Pteranodontidae, Nyctosauridae, and Azhdarchidae, the latter including Phosphatodraco and others) to have co-existed during the late Maastrichtian of Morocco, this is the most diverse pterosaur assemblage known from the Late Cretaceous.",
+   "quote_sha": "2f1b47275de05d67"
   },
   {
-   "fact_id": "F046",
-   "statement": "The genus Phosphatodraco is based on the holotype specimen OCP DEK/GE 111, which was found in 2000.",
+   "fact_id": "F050",
+   "statement": "Researchers suggest the extinction of pterosaurs was abrupt due to the Chicxulub impact, which allowed birds to rapidly evolve and fill their niches.",
+   "category": "paleobiology",
+   "chunk_id": "phosphatodraco:enwiki:9",
+   "lang": "en",
+   "quote": "To these researchers, this indicated that the extinction of pterosaurs was abrupt instead of gradual, caused by the catastrophic Chicxulub impact. Their extinction freed up more niches that were then filled by birds, which led to their evolutionary radiation in the Early Cenozoic.",
+   "quote_sha": "d7f37d470c3ddcf9"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The genus Phosphatodraco is based on the holotype specimen OCP DEK/GE 111, which was discovered in 2000.",
    "category": "discovery",
    "chunk_id": "phosphatodraco:eswiki:2",
    "lang": "es",
@@ -514,35 +566,17 @@
    "quote_sha": "14e8a62b99e5163c"
   },
   {
-   "fact_id": "F047",
-   "statement": "The name Phosphatodraco means \"phosphate dragon\" in Latin, referencing the phosphates of Morocco where it was found.",
-   "category": "discovery",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "Phosphatodraco (nombre que significa en latín \"dragón de fosfato\", en referencia a los fosfatos de Marruecos, el país en que fue encontrado)",
-   "quote_sha": "a168f30aac0f5d2f"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "Phosphatodraco lived during the Maastrichtian age of the Late Cretaceous in the Oulad Abdoun Phosphatic Basin near Khouribga, central Morocco.",
-   "category": "time_and_habitat",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "de edad del Maastrichtiense (Cretácico Superior) en la Cuenca Fosfática Oulad (o Qualad) Abdoun, Grand Doui, cerca de Khouribga, en el centro de Marruecos",
-   "quote_sha": "aca15562bd37f45c"
-  },
-  {
-   "fact_id": "F049",
+   "fact_id": "F052",
    "statement": "The individual to which the holotype belonged may have had a wingspan of nearly five meters.",
-   "category": "discovery",
+   "category": "description",
    "chunk_id": "phosphatodraco:eswiki:2",
    "lang": "es",
    "quote": "El individuo al cual pertenecían pudo haber tenido una envergadura de cerca de cinco metros",
    "quote_sha": "971bf9ae9a6d6622"
   },
   {
-   "fact_id": "F050",
-   "statement": "Phosphatodraco is unusual among azhdarchids for having elongated vertebrae at the base of the neck, interpreted as modified dorsal vertebrae.",
+   "fact_id": "F053",
+   "statement": "It is unusual among azhdarchids for having elongated vertebrae at the base of the neck, interpreted as modified dorsal vertebrae.",
    "category": "description",
    "chunk_id": "phosphatodraco:eswiki:2",
    "lang": "es",
@@ -550,8 +584,8 @@
    "quote_sha": "09dd232ad3ba48f3"
   },
   {
-   "fact_id": "F051",
-   "statement": "The neck is also one of the most complete known among azhdarchids.",
+   "fact_id": "F054",
+   "statement": "Its neck is also one of the most complete known among azhdarchids.",
    "category": "description",
    "chunk_id": "phosphatodraco:eswiki:2",
    "lang": "es",
@@ -559,44 +593,35 @@
    "quote_sha": "660bffd9ea30fd0d"
   },
   {
-   "fact_id": "F052",
-   "statement": "It was one of the last pterosaurs to live just before the Cretaceous-Paleogene mass extinction ended the group.",
-   "category": "time_and_habitat",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "Fue uno de los últimos pterosaurios que vivió justo antes de que la extinción masiva del Cretácico-Terciario diera fin al grupo",
-   "quote_sha": "48a7f4cf30964396"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "It is the first azhdarchid found in North Africa.",
-   "category": "discovery",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "es el primer azdárquido que se encontró en el África del Norte",
-   "quote_sha": "f847523fb5fa82ce"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "P. mauritanicus is the type species and the only known species.",
-   "category": "classification",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "P. mauritanicus es la especie tipo así como la única conocida",
-   "quote_sha": "16c2ce258d2edca7"
-  },
-  {
    "fact_id": "F055",
-   "statement": "The scientific name of the species refers to Mauretania.",
-   "category": "classification",
-   "chunk_id": "phosphatodraco:eswiki:2",
-   "lang": "es",
-   "quote": "El nombre científico de la especie se refiere a Mauretania",
-   "quote_sha": "f7232a78a6d35ac3"
+   "statement": "Phosphatodraco lived between 72.2 and 66 million years ago during the Maastrichtian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "phosphatodraco:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
+   "quote_sha": "8c03278f69290924"
   },
   {
    "fact_id": "F056",
-   "statement": "The genus was described by Pereda-Suberbiola et al. in 2003.",
+   "statement": "Azhdarchids are the only pterosaur group for which trackways have been identified, such as Haenamichnus from Korea.",
+   "category": "paleobiology",
+   "chunk_id": "phosphatodraco:enwiki:10",
+   "lang": "en",
+   "quote": "Azhdarchids are also the only group of pterosaurs to which trackways have been assigned, such as Haenamichnus from Korea",
+   "quote_sha": "92ee08c01050d113"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Researcher Witton suggested that while azhdarchids could likely launch from water, they were not as proficient swimmers as other pterosaur groups.",
+   "category": "paleobiology",
+   "chunk_id": "phosphatodraco:enwiki:10",
+   "lang": "en",
+   "quote": "According to Witton, their proportions indicate they were not good swimmers on the other hand, and though they could probably launch from water, they were not as good at this as some other pterosaur groups",
+   "quote_sha": "d8f2fbd88e148783"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The genus Phosphatodraco was named by Pereda-Suberbiola and colleagues in 2003.",
    "category": "classification",
    "chunk_id": "phosphatodraco:eswiki:1",
    "lang": "es",
@@ -604,50 +629,67 @@
    "quote_sha": "f46f99088b80b1f3"
   },
   {
-   "fact_id": "F057",
-   "statement": "The time range for Phosphatodraco is from 72.2 to 66 million years ago.",
+   "fact_id": "F059",
+   "statement": "The type species of the genus is Phosphatodraco mauritanicus, also named by Pereda-Suberbiola and colleagues in 2003.",
+   "category": "classification",
+   "chunk_id": "phosphatodraco:eswiki:1",
+   "lang": "es",
+   "quote": "subdivision: P. mauritanicus Pereda-Suberbiola et al., 2003 (especie tipo)",
+   "quote_sha": "670c70e55bb9b2c7"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "The type species for the genus Phosphatodraco is Phosphatodraco mauritanicus.",
    "category": "classification",
    "chunk_id": "phosphatodraco:pbdb:1",
    "lang": "en",
-   "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
-   "quote_sha": "8c03278f69290924"
+   "quote": "Type species: Phosphatodraco mauritanicus",
+   "quote_sha": "8e2bfbc771029cd2"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "The sediments containing Phosphatodraco were deposited in an embayment of the eastern Atlantic Ocean that flooded North Africa during the Late Cretaceous and Early Paleogene.",
+   "category": "time_and_habitat",
+   "chunk_id": "phosphatodraco:enwiki:11",
+   "lang": "en",
+   "quote": "The phosphates were deposited in an embayment of the eastern Atlantic Ocean that flooded North Africa during the Late Cretaceous and Early Paleogene",
+   "quote_sha": "6fb1aa163fa740c4"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "Phosphatodraco was one of the last pterosaurs to live just before the Cretaceous-Paleogene mass extinction ended the group.",
+   "category": "curiosities",
+   "chunk_id": "phosphatodraco:eswiki:2",
+   "lang": "es",
+   "quote": "Fue uno de los últimos pterosaurios que vivió justo antes de que la extinción masiva del Cretácico-Terciario diera fin al grupo",
+   "quote_sha": "48a7f4cf30964396"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "It is debated whether azhdarchids were adapted solely for soaring or if their musculature allowed them to flap their wings like swans and geese.",
+   "category": "debate",
+   "chunk_id": "phosphatodraco:enwiki:10",
+   "lang": "en",
+   "quote": "Witton summarized ideas about azhdarchid flight abilities in 2013, and noted they had generally been considered adapted for soaring, although some have found it possible their musculature allowed flapping flight like in swans and geese",
+   "quote_sha": "1aca087ebce22c98"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "It is debated whether the pteranodontid Tethydraco from the same basin is the same animal as Phosphatodraco.",
+   "category": "debate",
+   "chunk_id": "phosphatodraco:enwiki:11",
+   "lang": "en",
+   "quote": "Other contemporary pterosaurs from the Ouled Abdoun Basin include the pteranodontid Tethydraco (if it is not the same animal as Phosphatodraco)",
+   "quote_sha": "c969475d9d448774"
   }
  ],
  "rejected": [
   {
    "chunk_id": "phosphatodraco:enwiki:2",
-   "statement": "Researchers have suggested that fossils of the pterosaur Tethydraco represent wing elements of Phosphatodraco.",
+   "statement": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa and the second pterosaur genus described from Morocco.",
    "category": "discovery",
-   "quote": "it has been suggested that fossils of the pterosaur Tethydraco represent wing elements of Phosphatodraco",
-   "reason": "statement copies the source wording: 'suggested that fossils of the pterosaur Tethydraco represent'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:3",
-   "statement": "Phosphatodraco was the first known member of the family Azhdarchidae from the Late Cretaceous of North Africa.",
-   "category": "discovery",
-   "quote": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa (and thus the first known member of the family Azhdarchidae of this age from the region)",
-   "reason": "statement copies the source wording: 'the first known member of the family Azhdarchidae'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:3",
-   "statement": "In 2018, Nicholas R. Longrich and colleagues reported additional pterosaur fossils from the \"couche III\" layer collected between 2015 and 2017.",
-   "category": "discovery",
-   "quote": "In 2018 paleontologist Nicholas R. Longrich and colleagues reported pterosaur fossils collected from \"couche III\" in cooperation with the Moroccan fossil industry the previous three years",
-   "reason": "numbers not in the quote: ['2015', '2017']"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "statement": "Phosphatodraco is a genus of azhdarchid pterosaur that lived in what is now Morocco.",
-   "category": "description",
-   "quote": "Phosphatodraco is a genus of azhdarchid pterosaur that lived during the Late Cretaceous of what is now Morocco.",
-   "reason": "statement copies the source wording: 'is a genus of azhdarchid pterosaur that lived'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "statement": "Phosphatodraco is distinguished by its C8 (or C7) vertebra being very elongated, 50% longer than the C5.",
-   "category": "description",
-   "quote": "Phosphatodraco is mainly distinguished by its C8 (or C7) vertebra being very elongated, 50% longer than the C5",
-   "reason": "statement copies the source wording: '8 or C 7 vertebra being very elongated'"
+   "quote": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa, and the second pterosaur genus described from Morocco.",
+   "reason": "statement copies the source wording: 'North Africa and the second pterosaur genus described'"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:2",
@@ -657,193 +699,130 @@
    "reason": "statement copies the source wording: 'had a proportionally long neck small body and'"
   },
   {
-   "chunk_id": "phosphatodraco:enwiki:2",
-   "statement": "The closest relatives of Phosphatodraco appear to have been Aralazhdarcho and Eurazhdarcho.",
-   "category": "classification",
-   "quote": "The closest relatives of Phosphatodraco appear to have been Aralazhdarcho and Eurazhdarcho.",
-   "reason": "statement copies the source wording: 'The closest relatives of Phosphatodraco appear to have'"
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "The holotype specimen OCP DEK/GE 111 consists of five disarticulated but closely associated cervical vertebrae and an indeterminate bone likely from a single individual.",
+   "category": "discovery",
+   "quote": "The pterosaur material, catalogued as specimen OCP DEK/GE 111, consists of five disarticulated but closely associated cervical (neck) vertebrae and an indeterminate bone, most likely belonging to a single individual.",
+   "reason": "statement copies the source wording: 'DEK GE 111 consists of five disarticulated but'"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "The fossil block containing the bones is 98 cm long and 34 cm wide.",
+   "category": "discovery",
+   "quote": "The block containing the bones is 98 cm long and 34 cm wide.",
+   "reason": "statement copies the source wording: 'block containing the bones is 98 cm long'"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa and only the second pterosaur genus described from Morocco.",
+   "category": "discovery",
+   "quote": "Phosphatodraco was the first Late Cretaceous pterosaur known from North Africa (and thus the first known member of the family Azhdarchidae of this age from the region), and only the second pterosaur genus described from Morocco (the first being Siroccopteryx).",
+   "reason": "statement copies the source wording: 'and only the second pterosaur genus described from'"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "In 2018, Nicholas R. Longrich and colleagues reported pterosaur fossils from \"couche III\" collected in cooperation with the Moroccan fossil industry over the previous three years.",
+   "category": "discovery",
+   "quote": "In 2018 paleontologist Nicholas R. Longrich and colleagues reported pterosaur fossils collected from \"couche III\" in cooperation with the Moroccan fossil industry the previous three years",
+   "reason": "statement copies the source wording: 'Nicholas R Longrich and colleagues reported pterosaur fossils'"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "The 2018 collection was the largest and most diverse of pterosaurs from the Maastrichtian age and included two cervical vertebrae assigned to Phosphatodraco based on similarity to the holotype.",
+   "category": "discovery",
+   "quote": "At the time, the collection was the largest and most diverse collection of pterosaurs from the Maastrichtian age of the Late Cretaceous, and included two cervical vertebrae they assigned to Phosphatodraco, based on similarity with the holotype in size and proportions.",
+   "reason": "numbers not in the quote: ['2018']"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "Specimen FSAC-OB 12 was identified as a C5 vertebra, while FSAC-OB 13 was identified only as a cervical vertebra.",
+   "category": "discovery",
+   "quote": "One of the vertebrae, specimen FSAC-OB 12, was identified as a C5 (though stated in the description to be similar to C6 of the holotype); the other, FSAC-OB 13, was identified only as a cervical vertebra.",
+   "reason": "statement copies the source wording: '13 was identified only as a cervical vertebra'"
+  },
+  {
+   "chunk_id": "phosphatodraco:enwiki:3",
+   "statement": "The cervical ribs of specimen FSAC-OB 12 had not fused to the centrum, suggesting the animal may not have been completely mature.",
+   "category": "discovery",
+   "quote": "The cervical ribs (ribs of the neck vertebrae) of FSAC-OB 12 do not appear to have yet fused to the centrum (the main part of the vertebra), so the animal may not have been completely mature.",
+   "reason": "statement copies the source wording: 'the animal may not have been completely mature'"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:4",
-   "statement": "Pereda-Suberbiola and colleagues originally interpreted the five preserved cervical vertebrae of Phosphatodraco as vertebrae C5 through C9.",
+   "statement": "Kellner proposed in 2010 that the element originally described as the fifth cervical vertebra was actually the third and fourth vertebrae compressed together.",
    "category": "debate",
-   "quote": "Pereda-Suberbiola and colleagues originally interpreted the five preserved cervical vertebrae of Phosphatodraco as cervicals C5–C9.",
-   "reason": "statement copies the source wording: 'Pereda-Suberbiola and colleagues originally interpreted the five preserved'"
+   "quote": "he instead proposed that the element originally described as a fifth cervical vertebra was actually the third and fourth vertebrae which had been compressed together, giving the impression that they were a single vertebra broken in the middle.",
+   "reason": "numbers not in the quote: ['2010']"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:4",
-   "statement": "In 2007, Alexander W. A. Kellner and colleagues noted that Phosphatodraco was one of the most interesting azhdarchids found in Africa.",
+   "statement": "A 2015 study by Mátyás Vremir and colleagues described the issue of Phosphatodraco's vertebrae order as controversial and noted the specimen was too crushed for proper comparison.",
    "category": "debate",
-   "quote": "In 2007 paleontologist Alexander W. A. Kellner and colleagues noted that Phosphatodraco was one of the most interesting azhdarchids found in Africa, but used cautious language about the original interpretation of the vertebrae.",
-   "reason": "statement copies the source wording: 'Phosphatodraco was one of the most interesting azhdarchids'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:4",
-   "statement": "In 2010, Kellner suggested that the element originally described as a fifth cervical vertebra was actually the third and fourth vertebrae compressed together due to taphonomy.",
-   "category": "debate",
-   "quote": "Kellner suggested in 2010 that interpretation of the holotype specimen had been affected by taphonomy (changes during decay and fossilisation); he instead proposed that the element originally described as a fifth cervical vertebra was actually the third and fourth vertebrae which had been compressed together, giving the impression that they were a single vertebra broken in the middle.",
-   "reason": "statement copies the source wording: 'that the element originally described as a fifth'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:4",
-   "statement": "In 2015, Mátyás Vremir and colleagues described the issue as controversial and considered the specimen too crushed for proper comparison.",
-   "category": "debate",
-   "quote": "A 2015 article by paleontologist Mátyás Vremir and colleagues called the issue \"controversial\" and considered the specimen too crushed for proper comparison",
-   "reason": "statement copies the source wording: 'controversial and considered the specimen too crushed for'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:4",
-   "statement": "In 2019, Alexandru A. Solomon and colleagues noted the suggested change in interpretation but stated the specimen was too damaged for comparison with Albadraco.",
-   "category": "debate",
-   "quote": "Though the palaeontologist Alexandru A. Solomon and colleagues noted the suggested change in interpretation of the holotype order in 2019, they stated that even if the reinterpretation was correct, the specimen was too damaged for comparison with the single known cervical vertebra of their new genus Albadraco.",
-   "reason": "statement copies the source wording: 'A Solomon and colleagues noted the suggested change'"
+   "quote": "A 2015 article by paleontologist Mátyás Vremir and colleagues called the issue \"controversial\" and considered the specimen too crushed for proper comparison.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:5",
-   "statement": "In 2013, Witton grouped Phosphatodraco with midsized azhdarchids based on the 2003 size estimate.",
+   "statement": "Phosphatodraco is larger than azhdarchids like Zhejiangopterus and Montanazhdarcho and comparable in size to the smaller species of Quetzalcoatlus.",
    "category": "description",
-   "quote": "Witton grouped Phosphatodraco with \"midsized\" azhdarchids based on this size estimate in 2013.",
-   "reason": "numbers not in the quote: ['2003']"
+   "quote": "This is larger than azhdarchids such as Zhejiangopterus and Montanazhdarcho, and comparable to the smaller species of Quetzalcoatlus, Q. lawsoni.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:5",
-   "statement": "In 2010, Kellner suggested the original size estimate was too large based on his reinterpretation of the neck vertebra order.",
-   "category": "debate",
+   "statement": "In 2010, Kellner suggested the original size estimate for Phosphatodraco was too large based on his reinterpretation of the neck vertebrae.",
+   "category": "description",
    "quote": "In 2010 Kellner suggested this size estimate too large, based on his reinterpretation of the neck vertebra order.",
    "reason": "statement copies the source wording: 'too large based on his reinterpretation of the'"
   },
   {
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "It is debated whether the preserved vertebrae represent C3–C8 instead of C5–C9, which would make the original diagnostic features potentially inaccurate.",
-   "category": "debate",
-   "quote": "if Kellner's suggestion that the series actually represents vertebrae C3–C8 is correct, the diagnostic features listed by Pereda-Suberbiola and colleagues may possibly be inaccurate",
-   "reason": "numbers not in the quote: ['5', '9']"
+   "chunk_id": "phosphatodraco:enwiki:5",
+   "statement": "The combination of long wing-metacarpals and legs made azhdarchids relatively taller when standing than other pterosaurs, although their feet were narrow and short.",
+   "category": "description",
+   "quote": "Combined, the long-wing metacarpals and legs made azhdarchids relatively taller when standing than other pterosaurs, though their feet were narrow and short.",
+   "reason": "statement copies the source wording: 'and legs made azhdarchids relatively taller when standing'"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "The ratio of maximum vertebral length to the front width between prezygapophyses is approximately 4.3 in C5 and 4.1 in C6.",
+   "statement": "The hindmost cervical vertebra of Phosphatodraco is distinguished by being 50% longer than the fifth vertebra and having a prominent neural spine that is nearly as tall as the vertebra itself.",
    "category": "description",
-   "quote": "Phosphatodraco is also distinct in that the ratio between the maximum length of the vertebrae and the front width between prezygapophyses of the middle cervical vertebrae is about 4.3 in C5 and 4.1 in C6",
+   "quote": "Pereda-Suberbiola and colleagues found Phosphatodraco to differ from other azhdarchids in that the hindmost vertebra, C8 in their order, is very elongated, 50% longer than C5, and has a prominent neural spine that is almost as tall as the centrum, truncated in a square shape at the top, and located far back.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "The front cotyle of the C6 vertebra appears to be twice as wide as high, ovoid in shape, with a slightly concave upper margin.",
-   "category": "description",
-   "quote": "The front cotyle (the concave front end of the centrum) is distorted, but it appears to be twice as wide as high, ovoid (or egg-shaped), and with a slightly concave upper margin.",
-   "reason": "numbers not in the quote: ['6']"
+   "statement": "There is a debate regarding the specific vertebrae preserved, with Kellner suggesting the series represents C3–C8 rather than C5–C9, which would alter the interpretation of the diagnostic features.",
+   "category": "debate",
+   "quote": "Note that if Kellner's suggestion that the series actually represents vertebrae C3–C8 is correct, the diagnostic features listed by Pereda-Suberbiola and colleagues may possibly be inaccurate, and the following description would refer to different vertebrae in the series.",
+   "reason": "numbers not in the quote: ['5', '9']"
   },
   {
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "The C8 vertebra features a tall neural spine placed at the hindmost part, measuring 40 mm in height, nearly matching the 45 mm height of the centrum.",
-   "category": "description",
-   "quote": "The most notable feature of this vertebra is its tall neural spine, which is placed at its hindmost part. The neural spine is 40 mm high measured from the upper surface of the postzygapophys to the top, almost the same height as the centrum, which is 45 mm.",
-   "reason": "numbers not in the quote: ['8']"
+   "chunk_id": "phosphatodraco:eswiki:2",
+   "statement": "Phosphatodraco is the first azhdarchid pterosaur discovered in North Africa.",
+   "category": "discovery",
+   "quote": "Phosphatodraco es el primer azdárquido que se encontró en el África del Norte",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "The neural spine of the C8 vertebra has front and hind margins that are vertically parallel, with a top that is truncated in a square shape perpendicular to the side edges.",
-   "category": "description",
-   "quote": "The front and hind margins of the neural spine are vertically parallel to each other, and its top is truncated in a square shape, and perpendicular to the side edges.",
-   "reason": "numbers not in the quote: ['8']"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:6",
-   "statement": "The C8 vertebra is similar to that of Quetzalcoatlus in having a square-topped neural spine, but differs in the spine being placed much further back.",
-   "category": "description",
-   "quote": "It is similar to the same vertebra of Quetzalcoatlus in that the neural spine is square on top, but differs in being placed so far back.",
-   "reason": "numbers not in the quote: ['8']"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:7",
-   "statement": "The neural canal of the C9 vertebra is small, nearly circular, and about 22 mm in diameter, with no nearby pneumatic foramina.",
-   "category": "description",
-   "quote": "The neural canal is small and nearly circular, is about 22 mm in diameter, and there are no pneumatic foramina near it.",
-   "reason": "numbers not in the quote: ['9']"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:7",
-   "statement": "The total number of cervical vertebrae in pterosaurs varies between seven and nine, with the first dorsal vertebra connecting to the sternum.",
-   "category": "paleobiology",
-   "quote": "The total number of cervical vertebrae in pterosaurs varies between seven and nine, and the first dorsal vertebra is considered to be the first one that connects with the sternum (breast bone).",
-   "reason": "statement copies the source wording: 'The total number of cervical vertebrae in pterosaurs'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:7",
-   "statement": "Early pterosaurs like Rhamphorhynchus had eight cervical vertebrae with ribs on at least C3–C8, whereas later pterodactyloids had seven vertebrae and no ribs.",
-   "category": "paleobiology",
-   "quote": "Early pterosaurs like Rhamphorhynchus had eight cervical vertebrae with cervical ribs on at least C3–C8; later pterodactyloids had seven vertebrae and no ribs.",
-   "reason": "statement copies the source wording: 'Early pterosaurs like Rhamphorhynchus had eight cervical vertebrae'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:7",
-   "statement": "In later pterodactyloid groups, nine cervical vertebrae are present, including two cervicalized dorsals, and adults possess a notarium, a structure of fused vertebrae in the shoulder region also seen in birds.",
-   "category": "paleobiology",
-   "quote": "In later pterdactyloid groups, nine cervical vertebrae are present, two of them being cervicalized dorsals, and adults have a notarium (a structure consisting of fused vertebrae in the shoulder region, also seen in birds).",
-   "reason": "statement copies the source wording: 'of fused vertebrae in the shoulder region also'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:8",
-   "statement": "In 2003, Pereda-Suberbiola and colleagues classified Phosphatodraco as an azhdarchid based on elongated mid-series cervical vertebrae with low or absent neural spines, prezygapophyseal tubercles, lower sulci near the prezygapophyses, and a lack of oval pneumatic foramina on the lower centra surfaces.",
-   "category": "classification",
-   "quote": "In their 2003 description Pereda-Suberbiola and colleagues considered Phosphatodraco a member of Azhdarchidae based on features such as its mid-series cervical vertebrae being elongated, with low vestigial (almost evolutionarily lost) or absent neural spines, the presence of prezygapophyseal tubercles, a pair of lower sulci near the prezygapophyses, and the lack of oval pneumatic foramina on the lower surfaces of the centra.",
-   "reason": "statement copies the source wording: 'lack of oval pneumatic foramina on the lower'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:8",
-   "statement": "In 2021, Brian Andres recovered Phosphatodraco and Aralazhdarcho as sister taxa within the azhdarchid subclade Quetzalcoatlinae, supported by reduced pneumatic foramina on the side of the neural canal.",
-   "category": "classification",
-   "quote": "In 2021 American paleontologist Brian Andres also found Phosphatodraco and Aralazhdarcho to be sister taxa, supported by the reduction of pneumatic foramina on the side of the neural canal. This clade was recovered as part of the azhdarchid subclade Quetzalcoatlinae.",
-   "reason": "statement copies the source wording: 'pneumatic foramina on the side of the neural'"
+   "chunk_id": "phosphatodraco:eswiki:2",
+   "statement": "Phosphatodraco is an azhdarchid pterodactyloid pterosaur from the Late Cretaceous (Maastrichtian) found in the Oulad Abdoun Basin near Khouribga, central Morocco.",
+   "category": "time_and_habitat",
+   "quote": "Phosphatodraco es un género de pterosaurio pterodactiloide azdárquidos de edad del Maastrichtiense (Cretácico Superior) en la Cuenca Fosfática Oulad (o Qualad) Abdoun, Grand Doui, cerca de Khouribga, en el centro de Marruecos",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "Researchers suggest their short and potentially broad wings may have been suited for flying in terrestrial environments.",
-   "category": "paleobiology",
-   "quote": "Their short and potentially broad wings may have been suited for flying in terrestrial environments",
-   "reason": "statement copies the source wording: 'their short and potentially broad wings may have'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "Studies indicate azhdarchids would have been able to fly for long distances and probably fast.",
-   "category": "paleobiology",
-   "quote": "Studies of azhdarchid flight abilities indicate they would have been able to fly for long and probably fast",
-   "reason": "statement copies the source wording: 'would have been able to fly for long'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "Azhdarchids are the only group of pterosaurs to which trackways have been assigned.",
-   "category": "paleobiology",
-   "quote": "Azhdarchids are also the only group of pterosaurs to which trackways have been assigned",
-   "reason": "statement copies the source wording: 'the only group of pterosaurs to which trackways'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "Trackways show that azhdarchids walked with their limbs held directly underneath their body.",
+   "statement": "Fossil trackways indicate that azhdarchids walked with their limbs held directly underneath their bodies.",
    "category": "paleobiology",
    "quote": "One long trackway of this kind shows that azhdarchids walked with their limbs held directly underneath their body",
    "reason": "statement copies the source wording: 'that azhdarchids walked with their limbs held directly'"
   },
   {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "According to Witton, their proportions indicate they were not good swimmers.",
+   "chunk_id": "phosphatodraco:enwiki:11",
+   "statement": "In 2018, Longrich and colleagues suggested that despite the marine nature of the fossil assemblage, the presence of terrestrial dinosaurs and azhdarchids indicates the coast was nearby.",
    "category": "paleobiology",
-   "quote": "According to Witton, their proportions indicate they were not good swimmers on the other hand",
-   "reason": "statement copies the source wording: 'According to Witton their proportions indicate they were'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "It is debated whether their musculature allowed flapping flight like in swans and geese.",
-   "category": "debate",
-   "quote": "although some have found it possible their musculature allowed flapping flight like in swans and geese",
-   "reason": "statement copies the source wording: 'their musculature allowed flapping flight like in swans'"
-  },
-  {
-   "chunk_id": "phosphatodraco:enwiki:10",
-   "statement": "Albatross-like soaring has been suggested, but Witton considered this unlikely due to the terrestrial bias of their fossils and adaptations for ground foraging.",
-   "category": "debate",
-   "quote": "Albatross-like soaring has also been suggested, but Witton thought this unlikely due to the supposed terrestrial bias of their fossils and adaptations for foraging on the ground",
-   "reason": "statement copies the source wording: 'terrestrial bias of their fossils and adaptations for'"
+   "quote": "Longrich and colleagues suggested in 2018 that, although the fauna was overwhelmingly marine, the presence of terrestrial dinosaurs and azhdarchids indicates the coast was nearby",
+   "reason": "statement copies the source wording: 'the presence of terrestrial dinosaurs and azhdarchids indicates'"
   }
  ]
 }

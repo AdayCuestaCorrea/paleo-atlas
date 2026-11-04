@@ -2,9 +2,9 @@
  "taxon": "Gallimimus",
  "taxon_key": "gallimimus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "421f849c0a34059d",
- "generated_at": "2026-11-03T02:57:44+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c2502c605e502cda",
+ "generated_at": "2026-11-04T04:36:28+00:00",
  "citations": {
   "gallimimus:enwiki:1": {
    "source": "wikipedia_article",
@@ -69,6 +69,41 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "gallimimus:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus (Feeding and diet)",
+   "url": "https://en.wikipedia.org/wiki/Gallimimus?oldid=1381031574",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gallimimus:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus (Feeding and diet, part 2)",
+   "url": "https://en.wikipedia.org/wiki/Gallimimus?oldid=1381031574",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gallimimus:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus (Development)",
+   "url": "https://en.wikipedia.org/wiki/Gallimimus?oldid=1381031574",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gallimimus:enwiki:13": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus (Palaeoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Gallimimus?oldid=1381031574",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gallimimus:enwiki:14": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus (Cultural significance)",
+   "url": "https://en.wikipedia.org/wiki/Gallimimus?oldid=1381031574",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "gallimimus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Gallimimus bullatus (taxobox)",
@@ -97,6 +132,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "gallimimus:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Gallimimus bullatus (Esqueleto postcraneal)",
+   "url": "https://es.wikipedia.org/wiki/Gallimimus_bullatus?oldid=175469296",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "gallimimus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Gallimimus",
@@ -108,43 +150,16 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Gallimimus is a genus of dinosaur.",
-   "category": "classification",
+   "statement": "The genus Gallimimus was named by Osmólska and colleagues in 1972.",
+   "category": "discovery",
    "chunk_id": "gallimimus:enwiki:1",
    "lang": "en",
-   "quote": "genus: Gallimimus",
-   "quote_sha": "1a584e8f7de6d7e4"
+   "quote": "Osmólska et al., 1972",
+   "quote_sha": "e76c9d893731b2ed"
   },
   {
    "fact_id": "F002",
-   "statement": "The type species of the genus Gallimimus is Gallimimus bullatus.",
-   "category": "classification",
-   "chunk_id": "gallimimus:enwiki:1",
-   "lang": "en",
-   "quote": "species: bullatus",
-   "quote_sha": "5417ebd8e44a7aa9"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "Gallimimus was described by Osmólska and colleagues in 1972.",
-   "category": "classification",
-   "chunk_id": "gallimimus:enwiki:1",
-   "lang": "en",
-   "quote": "authority: Osmólska et al., 1972",
-   "quote_sha": "bcb71a7671bd842b"
-  },
-  {
-   "fact_id": "F004",
-   "statement": "Ornithomimus bullatus is a synonym of Gallimimus bullatus.",
-   "category": "classification",
-   "chunk_id": "gallimimus:enwiki:1",
-   "lang": "en",
-   "quote": "synonyms: *Ornithomimus bullatus Paul, 1988",
-   "quote_sha": "57d5c139ee90e0aa"
-  },
-  {
-   "fact_id": "F005",
-   "statement": "Fossils of Gallimimus were discovered by Polish-Mongolian expeditions in the Gobi Desert during the 1960s.",
+   "statement": "Fossils of Gallimimus were discovered in the Gobi Desert of Mongolia during the 1960s by Polish-Mongolian expeditions.",
    "category": "discovery",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
@@ -152,134 +167,116 @@
    "quote_sha": "f9800633dc1a7d70"
   },
   {
-   "fact_id": "F006",
-   "statement": "A large skeleton found in the region became the holotype for Gallimimus bullatus in 1972.",
+   "fact_id": "F003",
+   "statement": "A large skeleton found in the Gobi Desert was designated the holotype for Gallimimus bullatus in 1972.",
    "category": "discovery",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "a large skeleton discovered in this region was made the holotype specimen of the new genus and species Gallimimus bullatus in 1972.",
-   "quote_sha": "da50efe6fc3779bc"
+   "quote": "a large skeleton discovered in this region was made the holotype specimen of the new genus and species Gallimimus bullatus in 1972",
+   "quote_sha": "37c52d3863978a8f"
   },
   {
-   "fact_id": "F007",
-   "statement": "Gallimimus is the largest known member of the ornithomimid group.",
+   "fact_id": "F004",
+   "statement": "The name Gallimimus means \"chicken mimic\" because its neck vertebrae resemble those of chickens.",
    "category": "description",
+   "chunk_id": "gallimimus:enwiki:2",
+   "lang": "en",
+   "quote": "The generic name means \"chicken mimic\", referring to the similarities between its neck vertebrae and those of the Galliformes",
+   "quote_sha": "cc4df9dc59264266"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Gallimimus is the largest known member of the ornithomimid group of dinosaurs.",
+   "category": "curiosities",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
    "quote": "Gallimimus is the largest known ornithomimid",
    "quote_sha": "e48ace9c10f7ea53"
   },
   {
-   "fact_id": "F008",
+   "fact_id": "F006",
    "statement": "Adult Gallimimus measured about 6 meters in length, 1.9 meters in height at the hip, and weighed between 400 and 490 kilograms.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "adults were about 6 m long, 1.9 m tall at the hip and weighed about 400 - 490 kg.",
-   "quote_sha": "58bc74131e30ad00"
+   "quote": "adults were about 6 m long, 1.9 m tall at the hip and weighed about 400 - 490 kg",
+   "quote_sha": "830a188d0d83c03f"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Gallimimus was toothless, possessing a horny beak and a delicate lower jaw.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:2",
+   "lang": "en",
+   "quote": "Gallimimus was toothless with a keratinous (horny) beak, and had a delicate lower jaw",
+   "quote_sha": "95d8629a82d724dd"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Many of Gallimimus's vertebrae were pneumatic, containing air-filled openings.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:2",
+   "lang": "en",
+   "quote": "Many of the vertebrae had openings that indicate they were pneumatic (air-filled)",
+   "quote_sha": "e0ddd157ebc2ff67"
   },
   {
    "fact_id": "F009",
-   "statement": "It is highly likely that Gallimimus had feathers, based on evidence from its relative Ornithomimus.",
+   "statement": "Gallimimus had hands with three digits and curved claws, which were proportionally the shortest among ornithomimosaurs.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "As evidenced by its relative Ornithomimus, it is highly likely it would have had feathers.",
-   "quote_sha": "5ea933a9a6392d57"
+   "quote": "The hands were proportionally the shortest of any ornithomimosaur and each had three digits with curved claws",
+   "quote_sha": "c44fdc194e72e3b0"
   },
   {
    "fact_id": "F010",
-   "statement": "Gallimimus had a small, light head with large eyes facing to the sides.",
-   "category": "description",
+   "statement": "Gallimimus was a fast-running animal estimated to reach speeds of 42 to 56 km/h (29 to 34 mph) to escape predators.",
+   "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "The head was small and light with large eyes that faced to the sides.",
-   "quote_sha": "bb9224de4512abf9"
+   "quote": "As an ornithomimid, Gallimimus would have been a fleet (or cursorial) animal, using its speed to escape predators; its speed has been estimated at 42–56 km/h (29–34 mph)",
+   "quote_sha": "a2317636ff52b1ba"
   },
   {
    "fact_id": "F011",
-   "statement": "Gallimimus was toothless, possessed a keratinous beak, and had a delicate lower jaw.",
-   "category": "description",
+   "statement": "Evidence from a bone bed suggests Gallimimus may have lived in groups.",
+   "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "Gallimimus was toothless with a keratinous (horny) beak, and had a delicate lower jaw.",
-   "quote_sha": "9d214ede449001ae"
+   "quote": "Gallimimus may have lived in groups, based on the discovery of several specimens preserved in a bone bed",
+   "quote_sha": "db98f66a7bcb5358"
   },
   {
    "fact_id": "F012",
-   "statement": "Many vertebrae of Gallimimus had openings indicating they were pneumatic or air-filled.",
-   "category": "description",
+   "statement": "There is an ongoing debate regarding the diet of Gallimimus, with theories ranging from carnivory to herbivory and filter-feeding.",
+   "category": "debate",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "Many of the vertebrae had openings that indicate they were pneumatic (air-filled).",
-   "quote_sha": "1c43d89d38b0c8de"
+   "quote": "Various theories have been proposed regarding the diet of Gallimimus and other ornithomimids",
+   "quote_sha": "21fdda2ab0c8b6ad"
   },
   {
    "fact_id": "F013",
-   "statement": "Gallimimus had a neck that was proportionally long relative to its trunk.",
-   "category": "description",
+   "statement": "It is debated whether structures in Gallimimus's beak were used for water filter-feeding or for processing tough plant material.",
+   "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "The neck was proportionally long in relation to the trunk.",
-   "quote_sha": "d8728d3f436eda9d"
+   "quote": "It has also been suggested that it used small columnar structures in its beak for filter-feeding in water, though these structures may instead have been ridges used for feeding on tough plant material, indicative of a herbivorous diet",
+   "quote_sha": "7b2c1abad3c0f7d0"
   },
   {
    "fact_id": "F014",
-   "statement": "Gallimimus had hands that were proportionally the shortest among ornithomimosaurs, with three digits each bearing curved claws.",
-   "category": "description",
-   "chunk_id": "gallimimus:enwiki:2",
-   "lang": "en",
-   "quote": "The hands were proportionally the shortest of any ornithomimosaur and each had three digits with curved claws.",
-   "quote_sha": "faaeb61fe2e4be35"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "Gallimimus was a fast-running animal that used its speed to escape predators.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:enwiki:2",
-   "lang": "en",
-   "quote": "As an ornithomimid, Gallimimus would have been a fleet (or cursorial) animal, using its speed to escape predators",
-   "quote_sha": "8b71fbfd0e4310b7"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "The estimated running speed of Gallimimus was between 42 and 56 kilometers per hour.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:enwiki:2",
-   "lang": "en",
-   "quote": "its speed has been estimated at 42–56 km/h (29–34 mph).",
-   "quote_sha": "2a4bd2f0ab8b11da"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "Gallimimus may have lived in groups, a hypothesis based on the discovery of multiple specimens in a bone bed.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:enwiki:2",
-   "lang": "en",
-   "quote": "Gallimimus may have lived in groups, based on the discovery of several specimens preserved in a bone bed.",
-   "quote_sha": "caeeb7c25a87062f"
-  },
-  {
-   "fact_id": "F018",
-   "statement": "It is debated whether Gallimimus used beak structures for filter-feeding in water or for feeding on tough plant material as a herbivore.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:enwiki:2",
-   "lang": "en",
-   "quote": "It has also been suggested that it used small columnar structures in its beak for filter-feeding in water, though these structures may instead have been ridges used for feeding on tough plant material, indicative of a herbivorous diet.",
-   "quote_sha": "d6e617847046c6ce"
-  },
-  {
-   "fact_id": "F019",
    "statement": "Polish-Mongolian paleontological expeditions to the Gobi Desert were organized between 1963 and 1965.",
    "category": "discovery",
    "chunk_id": "gallimimus:enwiki:3",
    "lang": "en",
-   "quote": "Between 1963 and 1965, the Polish Academy of Sciences and the Mongolian Academy of Sciences organised the Polish-Mongolian palaeontological expeditions to the Gobi Desert of Mongolia.",
-   "quote_sha": "66cceb47aa98a45d"
+   "quote": "Between 1963 and 1965, the Polish Academy of Sciences and the Mongolian Academy of Sciences organised the Polish-Mongolian palaeontological expeditions to the Gobi Desert of Mongolia",
+   "quote_sha": "6419d51a8194ca2f"
   },
   {
-   "fact_id": "F020",
-   "statement": "The largest skeleton, which later became the holotype of Gallimimus bullatus, was discovered by Zofia Kielan-Jaworowska in 1964.",
+   "fact_id": "F015",
+   "statement": "The holotype skeleton of Gallimimus bullatus was discovered by Zofia Kielan-Jaworowska in Tsaagan Khushuu in 1964.",
    "category": "discovery",
    "chunk_id": "gallimimus:enwiki:3",
    "lang": "en",
@@ -287,89 +284,116 @@
    "quote_sha": "9f4fd060b0ac5bd1"
   },
   {
-   "fact_id": "F021",
-   "statement": "Gallimimus bullatus was named in 1972 by Halszka Osmólska, Ewa Roniewicz, and Rinchen Barsbold.",
+   "fact_id": "F016",
+   "statement": "A small Gallimimus skeleton lacking forelimbs was found in 1967 in Bugeen Tsav by a Mongolian expedition.",
    "category": "discovery",
    "chunk_id": "gallimimus:enwiki:3",
    "lang": "en",
-   "quote": "In 1972, palaeontologists Halszka Osmólska, Ewa Roniewicz and Rinchen Barsbold named the new genus and species Gallimimus bullatus",
-   "quote_sha": "ae6017a921aaa4b3"
+   "quote": "A small skeleton without forelimbs was discovered in 1967 by the Mongolian palaeontological expedition in Bugeen Tsav outside the Nemegt Basin",
+   "quote_sha": "198e17ae5d46f486"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "At the time of its naming, twenty-five specimens of Gallimimus were known, including nine represented only by single bones.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:enwiki:3",
+   "lang": "en",
+   "quote": "Osmólska and colleagues listed twenty-five known specimens in all, nine of which were only represented by single bones",
+   "quote_sha": "758fd348fc9e5c8d"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Several Gallimimus specimens have been looted due to fossil poaching, a serious problem in 21st-century Mongolia.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:enwiki:3",
+   "lang": "en",
+   "quote": "Fossil poaching has become a serious problem in Mongolia in the 21st century, and several Gallimimus specimens have been looted",
+   "quote_sha": "40f6d3be6e2ee0a0"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "A fossil trackway associated with a clenched Gallimimus foot was reported in 2017 based on a discovery made in 2009.",
+   "category": "curiosities",
+   "chunk_id": "gallimimus:enwiki:3",
+   "lang": "en",
+   "quote": "In 2017, Hang-Jae Lee and colleagues reported a fossil trackway discovered in 2009 associated with a clenched Gallimimus foot (specimen MPC-D100F/17)",
+   "quote_sha": "9e5ad6ca99644b4e"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "A slab containing two Gallimimus specimens was repatriated to Mongolia in 2014 after being smuggled to the United States.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:enwiki:3",
+   "lang": "en",
+   "quote": "In 2014, a slab with two Gallimimus specimens was repatriated to Mongolia along with other dinosaur skeletons, after having been smuggled to the US",
+   "quote_sha": "661dbd8bef2af39e"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Gallimimus belongs to the family Ornithomimidae, which is part of the group Ornithomimosauria.",
+   "category": "classification",
+   "chunk_id": "gallimimus:enwiki:2",
+   "lang": "en",
+   "quote": "The family Ornithomimidae is part of the group Ornithomimosauria",
+   "quote_sha": "6b6d173dc2499291"
   },
   {
    "fact_id": "F022",
-   "statement": "At the time of description, twenty-five specimens of Gallimimus were known, nine of which consisted of single bones.",
-   "category": "discovery",
-   "chunk_id": "gallimimus:enwiki:3",
+   "statement": "Based on its relative Ornithomimus, it is highly likely that Gallimimus had feathers.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:2",
    "lang": "en",
-   "quote": "Osmólska and colleagues listed twenty-five known specimens in all, nine of which were only represented by single bones.",
-   "quote_sha": "80fcc98685abf895"
+   "quote": "As evidenced by its relative Ornithomimus, it is highly likely it would have had feathers",
+   "quote_sha": "1e305653f520944e"
   },
   {
    "fact_id": "F023",
-   "statement": "A slab containing two Gallimimus specimens was repatriated to Mongolia in 2014 after being smuggled to the US.",
+   "statement": "In 1988, Gregory S. Paul reclassified the species as Ornithomimus bullatus based on skull similarities among ornithomimids.",
    "category": "discovery",
-   "chunk_id": "gallimimus:enwiki:3",
-   "lang": "en",
-   "quote": "In 2014, a slab with two Gallimimus specimens was repatriated to Mongolia along with other dinosaur skeletons, after having been smuggled to the US.",
-   "quote_sha": "91ecd959131dbe8d"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "In 2017, a fossil trackway associated with a Gallimimus foot was reported, having been discovered in 2009.",
-   "category": "discovery",
-   "chunk_id": "gallimimus:enwiki:3",
-   "lang": "en",
-   "quote": "In 2017, Hang-Jae Lee and colleagues reported a fossil trackway discovered in 2009 associated with a clenched Gallimimus foot (specimen MPC-D100F/17).",
-   "quote_sha": "28e96bd2639b0272"
-  },
-  {
-   "fact_id": "F025",
-   "statement": "In 1988, Gregory S. Paul moved most ornithomimid species into the genus Ornithomimus, creating the combination O. bullatus.",
-   "category": "debate",
    "chunk_id": "gallimimus:enwiki:4",
    "lang": "en",
    "quote": "In 1988, the palaeontologist Gregory S. Paul concluded that the skulls of ornithomimids were more similar to each other than previously thought and moved most species into the same genus, Ornithomimus, resulting in the new combination O. bullatus.",
    "quote_sha": "8f8981a0dd74ad45"
   },
   {
-   "fact_id": "F026",
+   "fact_id": "F024",
    "statement": "Gregory S. Paul later listed the species as Gallimimus (or Struthiomimus) bullatus in 2010 before reverting to Gallimimus in 2016.",
-   "category": "debate",
+   "category": "discovery",
    "chunk_id": "gallimimus:enwiki:4",
    "lang": "en",
    "quote": "In 2010, he instead listed it as \"Gallimimus (or Struthiomimus) bullatus\", but returned to using only the genus name Gallimimus in 2016.",
    "quote_sha": "4bd342d175593226"
   },
   {
-   "fact_id": "F027",
-   "statement": "Most other paleontologists have kept the species involved in separate genera rather than grouping them under Ornithomimus.",
-   "category": "debate",
+   "fact_id": "F025",
+   "statement": "In 2000, Philip J. Currie proposed that Anserimimus was a junior synonym of Gallimimus, a claim dismissed by Kobayashi and Barsbold due to observed differences.",
+   "category": "discovery",
    "chunk_id": "gallimimus:enwiki:4",
    "lang": "en",
-   "quote": "The species involved have generally been kept in separate genera by other writers.",
-   "quote_sha": "9f2f101ce6a33f3f"
+   "quote": "In 2000, the palaeontologist Philip J. Currie proposed that Anserimimus, which is only known from one skeleton from Mongolia, was a junior synonym of Gallimimus, but this was dismissed by Kobayashi and Barsbold, who pointed out several differences between the two.",
+   "quote_sha": "a9bcd161c8458014"
   },
   {
-   "fact_id": "F028",
+   "fact_id": "F026",
    "statement": "Barsbold noted morphological variation among newer Gallimimus specimens, but this observation has never been published.",
-   "category": "debate",
+   "category": "discovery",
    "chunk_id": "gallimimus:enwiki:4",
    "lang": "en",
    "quote": "Barsbold noted some morphological variation among newer Gallimimus specimens, though this has never been published.",
    "quote_sha": "b09d00ba6c8f660b"
   },
   {
-   "fact_id": "F029",
-   "statement": "In 2006, Yoshitsugu Kobayashi and Barsbold proposed that a nearly complete skeleton informally named Gallimimus mongoliensis probably belongs to a different genus.",
-   "category": "debate",
+   "fact_id": "F027",
+   "statement": "In 2006, Kobayashi and Barsbold proposed that the nearly complete skeleton IGM 100/14, informally called Gallimimus mongoliensis, likely belongs to a different genus due to specific differences.",
+   "category": "discovery",
    "chunk_id": "gallimimus:enwiki:4",
    "lang": "en",
-   "quote": "Yoshitsugu Kobayashi and Barsbold proposed in 2006 that it probably belongs to a different genus.",
-   "quote_sha": "00c1ec8b22d313f4"
+   "quote": "Barsbold informally referred to a nearly complete skeleton (IGM 100/14) as \"Gallimimus mongoliensis\", but since it differs from Gallimimus in some details, Yoshitsugu Kobayashi and Barsbold proposed in 2006 that it probably belongs to a different genus.",
+   "quote_sha": "3452a25c8f865e02"
   },
   {
-   "fact_id": "F030",
-   "statement": "The adult holotype of Gallimimus was about 6 meters long, 1.9 meters tall at the hip, with a 330 mm skull and a 660 mm femur.",
+   "fact_id": "F028",
+   "statement": "The adult holotype specimen IGM 100/11 was approximately 6 meters long, 1.9 meters tall at the hip, with a 330 mm skull and a 660 mm femur.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:5",
    "lang": "en",
@@ -377,7 +401,7 @@
    "quote_sha": "d802b964015b8ff2"
   },
   {
-   "fact_id": "F031",
+   "fact_id": "F029",
    "statement": "The adult Gallimimus would have weighed between 400 and 490 kg.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:5",
@@ -386,8 +410,8 @@
    "quote_sha": "7f0e032a1db5cd3d"
   },
   {
-   "fact_id": "F032",
-   "statement": "A juvenile Gallimimus specimen was about 2.15 meters long, 0.79 meters tall at the hip, and weighed between 26 and 30.2 kg.",
+   "fact_id": "F030",
+   "statement": "A juvenile specimen, ZPAL MgD-I/94, measured about 2.15 meters in length, 0.79 meters in height at the hip, and weighed between 26 and 30.2 kg.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:5",
    "lang": "en",
@@ -395,8 +419,8 @@
    "quote_sha": "7e4e027d805afd67"
   },
   {
-   "fact_id": "F033",
-   "statement": "Evidence from related Ornithomimus suggests Gallimimus was feathered and had wing-like structures indicated by quill-knobs on the ulna bone.",
+   "fact_id": "F031",
+   "statement": "Evidence from related Ornithomimus fossils indicates that adult Gallimimus were feathered and possessed wing-like structures, shown by quill-knobs on the ulna bone.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:5",
    "lang": "en",
@@ -404,8 +428,8 @@
    "quote_sha": "8072a017a197cf6a"
   },
   {
-   "fact_id": "F034",
-   "statement": "Gallimimus had a long skull with a gently convex sloping upper profile on its snout, longer than in other ornithomimids.",
+   "fact_id": "F032",
+   "statement": "Gallimimus had a long skull compared to other ornithomimids due to its snout length, featuring a gently convex sloping upper profile.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:6",
    "lang": "en",
@@ -413,8 +437,8 @@
    "quote_sha": "07b05f8dd875b903"
   },
   {
-   "fact_id": "F035",
-   "statement": "Viewed from above, the Gallimimus snout was spoon-shaped and U-shaped at the tip, unlike the V-shaped snouts of North American ornithomimids.",
+   "fact_id": "F033",
+   "statement": "Viewed from above, the Gallimimus snout was almost spatulate, broad, and rounded at the tip, contrasting with the acute, V-shaped snouts of North American ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:6",
    "lang": "en",
@@ -422,7 +446,7 @@
    "quote_sha": "b31f33afa9146eca"
   },
   {
-   "fact_id": "F036",
+   "fact_id": "F034",
    "statement": "The orbits of Gallimimus were large and faced sideways, similar to other ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:6",
@@ -431,7 +455,16 @@
    "quote_sha": "135d20709a6191d0"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F035",
+   "statement": "The delicate lower jaw of Gallimimus consisted of thin bones, being slender and shallow at the front and deepening towards the rear.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:6",
+   "lang": "en",
+   "quote": "The delicate lower jaw, consisting of thin bones, was slender and shallow at the front, deepening towards the rear.",
+   "quote_sha": "dff34db2e8727674"
+  },
+  {
+   "fact_id": "F036",
    "statement": "The front of the Gallimimus mandible was shovel-like, creating a gap between the jaw tips when shut.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:6",
@@ -440,17 +473,8 @@
    "quote_sha": "f7bd90f4c22f1ef0"
   },
   {
-   "fact_id": "F038",
-   "statement": "The shovel-like shape of the Gallimimus beak was similar to that of a common seagull.",
-   "category": "description",
-   "chunk_id": "gallimimus:enwiki:6",
-   "lang": "en",
-   "quote": "The shovel-like shape was similar to that of the common seagull, and the lower beak may have had a shape similar to that of this bird.",
-   "quote_sha": "05690feaee376a2e"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "The jaws of Gallimimus were toothless and covered in a keratinous rhamphotheca (horny beak) at the front.",
+   "fact_id": "F037",
+   "statement": "The jaws of Gallimimus were toothless, with the front part covered in a keratinous rhamphotheca, or horny beak, during life.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:6",
    "lang": "en",
@@ -458,17 +482,8 @@
    "quote_sha": "8d471aebc45a2c99"
   },
   {
-   "fact_id": "F040",
-   "statement": "The inner side of the Gallimimus beak had small, tightly packed columnar structures that were longest at the front and shortened towards the back.",
-   "category": "description",
-   "chunk_id": "gallimimus:enwiki:6",
-   "lang": "en",
-   "quote": "The inner side of the beak had small, tightly packed and evenly spaced columnar structures (their exact nature is debated), which were longest at the front and shortening towards the back.",
-   "quote_sha": "8d80ee4728ceb6fb"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "Gallimimus possessed 64 to 66 vertebrae in its spine, which is fewer than in other ornithomimids.",
+   "fact_id": "F038",
+   "statement": "Gallimimus possessed 64 to 66 vertebrae in its spine, a count lower than that of other ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:7",
    "lang": "en",
@@ -476,7 +491,7 @@
    "quote_sha": "30adec812788f4a0"
   },
   {
-   "fact_id": "F042",
+   "fact_id": "F039",
    "statement": "Gallimimus had a neck that was proportionally longer relative to its trunk compared to other ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:7",
@@ -485,8 +500,17 @@
    "quote_sha": "974c2348005533a5"
   },
   {
-   "fact_id": "F043",
-   "statement": "Gallimimus had three similarly developed fingers, where the first was the strongest, the third the weakest, and the second the longest.",
+   "fact_id": "F040",
+   "statement": "The sacrum of Gallimimus was composed of five sacral vertebrae of approximately equal length.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:7",
+   "lang": "en",
+   "quote": "The sacrum (fused vertebrae between the pelvic bones) consisted of five sacral vertebrae which were about equal in length.",
+   "quote_sha": "24a371e98f51cb73"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Gallimimus had three similarly developed fingers where the first was the strongest, the third the weakest, and the second the longest.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:7",
    "lang": "en",
@@ -494,17 +518,8 @@
    "quote_sha": "dd7d6235ad96750b"
   },
   {
-   "fact_id": "F044",
-   "statement": "Gallimimus lacked a hallux, or dewclaw, which is the first toe found in most other theropods.",
-   "category": "description",
-   "chunk_id": "gallimimus:enwiki:7",
-   "lang": "en",
-   "quote": "The foot had no hallux (or dewclaw, the first toe of most other theropods).",
-   "quote_sha": "6913c6e7d4d6fb30"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Gallimimus possessed an arctometatarsalian foot structure where the lower half of the third metatarsal narrowed and wedged between the second and fourth metatarsals.",
+   "fact_id": "F042",
+   "statement": "Gallimimus possessed an arctometatarsalian foot structure where the lower half of the third metatarsal wedged between the other two, narrowing abruptly at mid-length.",
    "category": "description",
    "chunk_id": "gallimimus:enwiki:7",
    "lang": "en",
@@ -512,8 +527,17 @@
    "quote_sha": "a59f8dcde04593e8"
   },
   {
-   "fact_id": "F046",
-   "statement": "Barsbold established the new group Ornithomimosauria in 1976 to include the family Ornithomimidae.",
+   "fact_id": "F043",
+   "statement": "Like other ornithomimids, Gallimimus lacked a hallux, or dewclaw, on its foot.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:7",
+   "lang": "en",
+   "quote": "As in other ornithomimids, the foot had no hallux (or dewclaw, the first toe of most other theropods).",
+   "quote_sha": "909eed859519896d"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "In 1976, Barsbold established the new group Ornithomimosauria to contain the family Ornithomimidae.",
    "category": "classification",
    "chunk_id": "gallimimus:enwiki:8",
    "lang": "en",
@@ -521,7 +545,7 @@
    "quote_sha": "c91ecd3735d62067"
   },
   {
-   "fact_id": "F047",
+   "fact_id": "F045",
    "statement": "Gallimimus belonged to the clade Maniraptoriformes within coelurosaurian theropods, a group that also includes modern birds.",
    "category": "classification",
    "chunk_id": "gallimimus:enwiki:8",
@@ -530,44 +554,107 @@
    "quote_sha": "e8dac0f90747f5b6"
   },
   {
-   "fact_id": "F048",
-   "statement": "Gallimimus and related ornithomimosaurs lived during the Late Cretaceous period.",
+   "fact_id": "F046",
+   "statement": "After the separation of Europe from Asia by the Turgai Strait, ornithomimosaurs like Gallimimus were largely restricted to Asia and North America.",
    "category": "time_and_habitat",
    "chunk_id": "gallimimus:enwiki:8",
    "lang": "en",
-   "quote": "The group must have dispersed once or twice from Asia to North America across Beringia to account for the Late Cretaceous genera found there.",
-   "quote_sha": "d2af58d35cb10c77"
+   "quote": "As seen in some other dinosaur groups, ornithomimosaurs were largely restricted to Asia and North America after Europe was separated from Asia by the Turgai Strait.",
+   "quote_sha": "a1ad34c3b39f48cb"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "In 1994, Thomas R. Holtz named the clade Bullatosauria, which included ornithomimosaurs and troodontids, based on the specific name Gallimimus bullatus and a shared bulbous capsule on the parasphenoid.",
+   "category": "classification",
+   "chunk_id": "gallimimus:enwiki:8",
+   "lang": "en",
+   "quote": "In 1994, the palaeontologist Thomas R. Holtz grouped ornithomimosaurs and troodontids in a clade, based on shared features such as the presence of a bulbous capsule on the parasphenoid. He named the clade Bullatosauria, based on the specific name of Gallimimus bullatus, which was also in reference to the capsule.",
+   "quote_sha": "779f9c531cc86802"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Gallimimus held its neck at an oblique angle of 35 degrees.",
+   "category": "description",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "The cervical vertebrae of Gallimimus indicate that it held its neck obliquely, declining upwards at an angle of 35 degrees.",
+   "quote_sha": "39241c6c401ec144"
   },
   {
    "fact_id": "F049",
-   "statement": "It is debated whether the classification of Asian ornithomimids into the same families as North American relatives is appropriate, as these categories were more inclusive than those used for modern birds.",
-   "category": "debate",
-   "chunk_id": "gallimimus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1975, Kielan-Jaworowska stated that though many dinosaurs from Asia were placed in the same families as North American relatives, this category of classification tended to be more inclusive than was used for modern birds.",
-   "quote_sha": "93db546811a65312"
-  },
-  {
-   "fact_id": "F050",
-   "statement": "Osmólska and colleagues found that the hands of Gallimimus were not prehensile and the thumb was not opposable.",
-   "category": "paleobiology",
+   "statement": "Gallimimus had non-prehensile hands with a non-opposable thumb.",
+   "category": "description",
    "chunk_id": "gallimimus:enwiki:9",
    "lang": "en",
    "quote": "Osmólska and colleagues found that the hands of Gallimimus were not prehensile (or capable of grasping), and that the thumb was not opposable.",
    "quote_sha": "68d1061ef5d5dd64"
   },
   {
-   "fact_id": "F051",
-   "statement": "Dale Russell suggested in 1972 that ornithomimids like Gallimimus were very fleet or cursorial animals.",
+   "fact_id": "F050",
+   "statement": "Researchers suggested Gallimimus had weak arms compared to other ornithomimosaurs like Deinocheirus.",
    "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:9",
    "lang": "en",
-   "quote": "They agreed with the interpretations of ornithomimid biology by palaeontologist Dale Russell from earlier in 1972, including that they would have been very fleet (or cursorial) animals",
-   "quote_sha": "def5cccf54fa70c2"
+   "quote": "They also suggested that the arms were weak compared to, for example, those of the ornithomimosaur Deinocheirus.",
+   "quote_sha": "0de378580f5a41ae"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Paleontologist Dale Russell suggested in 1972 that Gallimimus was a fast, cursorial animal that used speed to escape predators.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "They agreed with the interpretations of ornithomimid biology by palaeontologist Dale Russell from earlier in 1972, including that they would have been very fleet (or cursorial) animals, although less agile than large, modern ground birds, and would have used their speed to escape predators.",
+   "quote_sha": "bc7755695bf06048"
   },
   {
    "fact_id": "F052",
-   "statement": "Paul suggested that the relatively short tails and missing halluxes of ornithomimids were adaptations for speed.",
+   "statement": "Dale Russell suggested Gallimimus possessed vision and intelligence comparable to modern ratite birds.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "Russell also suggested that they had a good sense of vision and intelligence comparable to that of modern ratite birds.",
+   "quote_sha": "231227b5c78d3e0a"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Richard A. Thulborn estimated in 1982 that Gallimimus could run at speeds between 42 and 56 km/h.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "In 1982, palaeontologist Richard A. Thulborn estimated that Gallimimus could have run at speeds of 42–56 km/h (29–34 mph).",
+   "quote_sha": "fa44b4ee12335549"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Thulborn noted that Gallimimus was likely slower than ostriches (70–80 km/h) because its arms and tail added weight.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "He found that ornithomimids would not have been as fast as ostriches, which can reach 70–80 km/h (43–49 mph), in part due to their arms and tails increasing their weight.",
+   "quote_sha": "f144aee52c259c11"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Paul suggested in 1988 that Gallimimus had flattened eyeballs with minimal mobility, requiring head movement to see.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "In 1988, Paul suggested that the eyeballs of ornithomimids were flattened and had minimal mobility within the sockets, necessitating movement of the head to view objects.",
+   "quote_sha": "cbb37faa505e3b1f"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Paul suggested Gallimimus's sideways-facing eyes provided limited binocular vision but improved the ability to see predators behind them.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "Since their eyes faced more sideways than in some other bird-like theropods, their binocular vision would have been more limited, which is an adaptation in some animals that improves their ability to see predators behind them.",
+   "quote_sha": "4731bac56f1a1daf"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Paul considered Gallimimus's short tails and missing halluxes to be adaptations for speed.",
    "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:9",
    "lang": "en",
@@ -575,8 +662,35 @@
    "quote_sha": "06fdb65a0260a177"
   },
   {
-   "fact_id": "F053",
-   "statement": "The simultaneous death of Gallimimus individuals may indicate that the species was gregarious or lived in groups.",
+   "fact_id": "F058",
+   "statement": "Paul suggested Gallimimus could defend itself by pecking and kicking but mainly relied on speed to escape.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "He suggested that they could have defended themselves by pecking and kicking, but would have mainly relied on their speed for escape.",
+   "quote_sha": "5b7f7e1f97f007d5"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Akinobu Watanabe and colleagues found in 2015 that Gallimimus had the most pneumatized skeleton among ornithomimosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "In 2015, Akinobu Watanabe and colleagues found that together with Deinocheirus and Archaeornithomimus, Gallimimus had the most pneumatised skeleton among ornithomimosaurs.",
+   "quote_sha": "c9cffb8f9c49b526"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "The function of pneumatization in Gallimimus is debated, with hypotheses including mass reduction, high metabolism, balance, or thermoregulation.",
+   "category": "debate",
+   "chunk_id": "gallimimus:enwiki:9",
+   "lang": "en",
+   "quote": "Pneumatisation is thought to be advantageous for flight in modern birds, but its function in non-avian dinosaurs is not known with certainty.",
+   "quote_sha": "3c26bab6b8b7a59d"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "The simultaneous death of Gallimimus individuals suggests they may have lived in groups.",
    "category": "paleobiology",
    "chunk_id": "gallimimus:enwiki:9",
    "lang": "en",
@@ -584,53 +698,197 @@
    "quote_sha": "6d3e3b85a5675565"
   },
   {
-   "fact_id": "F054",
-   "statement": "The genus Gallimimus was described by Osmólska, Roniewics & Barsbold in 1972.",
-   "category": "classification",
-   "chunk_id": "gallimimus:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Osmólska, Roniewics & Barsbold, 1972",
-   "quote_sha": "a7751518aa70b315"
+   "fact_id": "F062",
+   "statement": "Researchers suggest Gallimimus had a highly mobile front neck and rigid hind neck, similar to chickens, which likely aided in locating ground prey.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "Osmólska and colleagues pointed out that the front part of the neck of Gallimimus would have been very mobile (the hind part was more rigid), the neural arches in the vertebrae of that region being similar to chicken and other Galliformes, indicating similar feeding habits.",
+   "quote_sha": "ad0bfec8db4fd94e"
   },
   {
-   "fact_id": "F055",
-   "statement": "The species Gallimimus bullatus was described by Osmólska, Roniewics & Barsbold in 1972.",
-   "category": "classification",
-   "chunk_id": "gallimimus:eswiki:1",
-   "lang": "es",
-   "quote": "species_authority: Osmólska, Roniewics & Barsbold, 1972",
-   "quote_sha": "f0e75add0bd596cb"
+   "fact_id": "F063",
+   "statement": "The beak of Gallimimus resembled that of a duck or goose, and it likely swallowed small living prey whole.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "They found the beak of Gallimimus similar to that of a duck or goose, and that it would have fed on small, living prey which it swallowed whole.",
+   "quote_sha": "960fe5c8316ba223"
   },
   {
-   "fact_id": "F056",
-   "statement": "\"Sanchusaurus\" Hisa, 1988 is a synonym of Gallimimus bullatus.",
-   "category": "classification",
-   "chunk_id": "gallimimus:eswiki:1",
-   "lang": "es",
-   "quote": "synonyms: * \"Sanchusaurus\" Hisa, 1988",
-   "quote_sha": "6b17fd4f6bc37a41"
+   "fact_id": "F064",
+   "statement": "Paleontologists assumed all ornithomimids shared similar feeding habits, comparing their beaks to those of insectivorous birds.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "They assumed that all ornithomimids had similar feeding habits, and pointed out that Russel had compared the beaks of ornithomimids with those of insectivorous birds.",
+   "quote_sha": "c4cbae5bd38ff754"
   },
   {
-   "fact_id": "F057",
-   "statement": "Gallimimus lived during the late Cretaceous, approximately 70 million years ago in the Maastrichtian, in what is now Asia.",
+   "fact_id": "F065",
+   "statement": "Osmólska and colleagues proposed that Gallimimus could perform cranial kinesis, allowing skull bones to move relative to each other.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "Osmólska and colleagues suggested that Gallimimus was capable of cranial kinesis (due to the seemingly loose connection between some of the bones at the back of the skull), a feature which allows individual bones of the skull to move in relation to each other.",
+   "quote_sha": "ae2293eac09eae5f"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Researchers proposed Gallimimus used its short forelimbs for raking or digging to access food rather than bringing food to its mouth.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "They also proposed that it did not use its short handed forelimbs for bringing food to the mouth, but for raking or digging in the ground to access food.",
+   "quote_sha": "06978705de9cdb09"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "In 2001, Norell, Makovicky, and Currie reported a Gallimimus skull (IGM 100/1133) preserving soft tissue structures on the beak.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "In 2001, palaeontologists Mark A. Norell, Makovicky, and Currie reported a Gallimimus skull (IGM 100/1133) and an Ornithomimus skull that preserved soft tissue structures on the beak.",
+   "quote_sha": "74cdf49d068662ac"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Columnar structures inside the Gallimimus beak were similar to lamellae in anseriform birds, used for manipulating food, filter-feeding, and cutting plants.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "The inner side of the Gallimimus beak had columnar structures that the authors found similar to the lamellae in the beaks of anseriform birds, which use these for manipulating food, straining sediments, filter-feeding by segregating food items from other material, and for cutting plants while grazing.",
+   "quote_sha": "b4e7222c07cb7e20"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "In 2005, Paul Barrett argued that Gallimimus beak structures were likely rigid ridges like those in turtles and hadrosaurs rather than flexible filter-feeding bristles.",
+   "category": "debate",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "In 2005, palaeontologist Paul Barrett pointed out that the lamella-like structures of Gallimimus did not appear to have been flexible bristles like those of filter-feeding birds (as there is no indication of these structures overlapping or being collapsed), but were instead more akin to the thin, regularly spaced vertical ridges in the beaks of turtles and hadrosaurid dinosaurs.",
+   "quote_sha": "7943e27834c563a1"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Barrett suggested the beak ridges indicated Gallimimus was a herbivore feeding on high-fibre material.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "Barrett suggested that the ridges in the beak of Gallimimus represented a natural cast of the internal surface of the beak, indicating that the animal was a herbivore that fed on material high in fibre.",
+   "quote_sha": "347ff87555eeeca7"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "In 2007, Espen M. Knutsen noted ornithomimid beak shapes were consistent with omnivory or high-fibre herbivory.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:10",
+   "lang": "en",
+   "quote": "In 2007, palaeontologist Espen M. Knutsen wrote that the beak shape of ornithomimids, when compared to those of modern birds, was consistent with omnivory or high-fibre herbivory.",
+   "quote_sha": "185f3c50ee3ec6ca"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "In 2019, Button and Zanno found herbivorous dinosaurs fed either by gut processing (gracile skulls, low bite force) or mouth processing (extensive processing features).",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:11",
+   "lang": "en",
+   "quote": "David J. Button and Zanno found in 2019 herbivorous dinosaurs mainly followed two distinct modes of feeding, either processing food in the gut—characterized by gracile skulls and low bite forces—or the mouth, characterized by features associated with extensive processing.",
+   "quote_sha": "468a505c4eb50955"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Button and Zanno suggested Gallimimus and deinocheirids separately invaded herbivorous niches, convergently achieving large sizes.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:11",
+   "lang": "en",
+   "quote": "These researchers suggested that ornithomimid ornithomimosaurians such as Gallimimus and deinocheirids had invaded these niches separately, convergently achieving relatively large sizes.",
+   "quote_sha": "c2f34ff608aa5b52"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Gallimimus skulls changed during growth, with the rear and orbits shrinking while the snout lengthened, similar to modern crocodiles.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:12",
+   "lang": "en",
+   "quote": "The shape and proportions of the skull changed significantly during growth. The rear of the skull and the orbits decreased in size, whereas the snout became relatively longer; similar changes occur in modern crocodiles.",
+   "quote_sha": "cbea72d3ce27ffec"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "In 2012, Zelenitsky and colleagues concluded adult ornithomimosaur arm structures were likely secondary sexual characteristics used for courtship, display, or brooding.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:12",
+   "lang": "en",
+   "quote": "In 2012, palaeontologist Darla K. Zelenitsky and colleagues concluded that, since adult ornithomimosaurs had wing-like structures on their arms whereas juveniles did not (as evidenced by specimens of Ornithomimus), these structures were originally secondary sexual characteristics, which could have been used for reproductive behaviour such as courtship, display, and brooding.",
+   "quote_sha": "445c8fcb48e1b282"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "In 1987, Pawlicki and Bolechała found age-related differences in calcium and phosphorus content in Gallimimus bones.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:12",
+   "lang": "en",
+   "quote": "A 1987 study by the biologists Roman Pawlicki and P. Bolechała showed age-related differences in the content of calcium and phosphorus (important components in the formation of bone) of Gallimimus specimens.",
+   "quote_sha": "70b09cf4c56c90e8"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "In 1991, Pawlicki and Bolechała reported older Gallimimus individuals had higher lead and iron levels in their bones than younger ones.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:12",
+   "lang": "en",
+   "quote": "In 1991, they reported that the bones of old individuals contained the highest amounts of lead and iron, while those in younger animals were lower.",
+   "quote_sha": "4093abd7feb06224"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "In 2000, Rensberger and Watabe found Gallimimus bone histology resembled birds more than mammals, unlike ornithischian dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:12",
+   "lang": "en",
+   "quote": "A study of the bone histology of various dinosaurs in 2000, by biologists John M. Rensberger and Mahito Watabe, revealed that the canaliculi (channels which connect bone cells) and collagen fibre bundles of Gallimimus and other ornithomimids were more akin to those in birds than mammals, unlike those of ornithischian dinosaurs, which were more similar to mammals.",
+   "quote_sha": "f9767635c059bf20"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "Gallimimus lived about 70 million years ago during the early Maastrichtian stage of the Late Cretaceous.",
    "category": "time_and_habitat",
-   "chunk_id": "gallimimus:eswiki:2",
-   "lang": "es",
-   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 millones de años en el Maastrichtiense, en lo que hoy es Asia.",
-   "quote_sha": "3490427e58a3f7e1"
+   "chunk_id": "gallimimus:enwiki:13",
+   "lang": "en",
+   "quote": "This geologic formation has never been dated radiometrically, but the fauna present in the fossil record indicate it was probably deposited during the early Maastrichtian stage, at the end of the Late Cretaceous about 70 million years ago.",
+   "quote_sha": "c2a8caf72fd087f4"
   },
   {
-   "fact_id": "F058",
-   "statement": "Gallimimus fossils were found in the Nemegt Formation in Mongolia.",
-   "category": "discovery",
-   "chunk_id": "gallimimus:eswiki:2",
-   "lang": "es",
-   "quote": "Fue hallado en la Formación Nemegt, en Mongolia.",
-   "quote_sha": "a102aa912e726880"
+   "fact_id": "F080",
+   "statement": "Gallimimus fossils have been found in the Nemegt Formation in the Gobi Desert of southern Mongolia.",
+   "category": "time_and_habitat",
+   "chunk_id": "gallimimus:enwiki:13",
+   "lang": "en",
+   "quote": "Gallimimus is known from the Nemegt Formation in the Gobi Desert of southern Mongolia.",
+   "quote_sha": "2a498b0eea3770e7"
   },
   {
-   "fact_id": "F059",
-   "statement": "Gallimimus resembled an ostrich due to its long neck and toothless beak.",
+   "fact_id": "F081",
+   "statement": "The habitat of Gallimimus experienced a humid climate with periodic droughts, evidenced by river channels and caliche deposits.",
+   "category": "time_and_habitat",
+   "chunk_id": "gallimimus:enwiki:13",
+   "lang": "en",
+   "quote": "Large river channels and soil deposits are evidence of a significantly more humid climate than those found in the older Barun Goyot and Djadochta formations, although caliche deposits indicate that periodic droughts occurred.",
+   "quote_sha": "bf7d3ae068975ef2"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "Gallimimus was adapted for running due to its light build and long hind legs.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:2",
+   "lang": "es",
+   "quote": "Debido a su constitución ligera y sus largas patas traseras, este dinosaurio estaba adaptado para la carrera.",
+   "quote_sha": "8fbb5227b2ed7cef"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Gallimimus resembled an ostrich with a long neck and a toothless beak.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:2",
    "lang": "es",
@@ -638,8 +896,116 @@
    "quote_sha": "9d74f5ba88b16837"
   },
   {
-   "fact_id": "F060",
-   "statement": "The adult holotype specimen IGM 100/11 was approximately 6 meters long and 1.9 meters high at the hip.",
+   "fact_id": "F084",
+   "statement": "Gallimimus used its long tail to maintain balance while moving.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:2",
+   "lang": "es",
+   "quote": "Su larga cola le servía para mantener el equilibrio al avanzar.",
+   "quote_sha": "9a29d2f803c2045c"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "The genus Gallimimus was described by Osmólska, Roniewics, and Barsbold in 1972.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Osmólska, Roniewics & Barsbold, 1972",
+   "quote_sha": "a7751518aa70b315"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "The type locality for Gallimimus is the Nemegt Formation in Mongolia.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:eswiki:2",
+   "lang": "es",
+   "quote": "Fue hallado en la Formación Nemegt, en Mongolia.",
+   "quote_sha": "a102aa912e726880"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "Gallimimus is classified within the infraorder Ornithomimosauria.",
+   "category": "classification",
+   "chunk_id": "gallimimus:eswiki:1",
+   "lang": "es",
+   "quote": "infraordo: Ornithomimosauria",
+   "quote_sha": "c3a6a0f15c271f5a"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "Gallimimus belongs to the family Ornithomimidae.",
+   "category": "classification",
+   "chunk_id": "gallimimus:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Ornithomimidae",
+   "quote_sha": "bc4a20bdb8402dbe"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "The species Gallimimus bullatus is the only known species in the genus Gallimimus.",
+   "category": "classification",
+   "chunk_id": "gallimimus:eswiki:1",
+   "lang": "es",
+   "quote": "genus: Gallimimus",
+   "quote_sha": "1a584e8f7de6d7e4"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Gallimimus was featured in the 1993 movie Jurassic Park directed by Steven Spielberg.",
+   "category": "curiosities",
+   "chunk_id": "gallimimus:enwiki:14",
+   "lang": "en",
+   "quote": "Gallimimus was featured in the 1993 movie Jurassic Park by director Steven Spielberg",
+   "quote_sha": "e068c01365510a81"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "The Gallimimus in Jurassic Park were animated using footage of ostriches and herding gazelles as references.",
+   "category": "curiosities",
+   "chunk_id": "gallimimus:enwiki:14",
+   "lang": "en",
+   "quote": "The Gallimimus were animated by tracing frames from footage of ostriches, and footage of herding gazelles was also referenced.",
+   "quote_sha": "f4fa3de8e65896b3"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "It has been claimed that the Lark Quarry tracks in Queensland, Australia, inspired the Gallimimus stampede scene in Jurassic Park, though this is contested.",
+   "category": "curiosities",
+   "chunk_id": "gallimimus:enwiki:14",
+   "lang": "en",
+   "quote": "It has been claimed that the Lark Quarry tracks (one of the world's largest concentrations of dinosaur tracks) in Queensland, Australia, served as inspiration and \"scientific underpinning\" for the Gallimimus stampede scene in Jurassic Park",
+   "quote_sha": "9f1ffb645c34aac6"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "Gallimimus was the most common ornithomimosaur found in the Nemegt Formation.",
+   "category": "paleobiology",
+   "chunk_id": "gallimimus:enwiki:13",
+   "lang": "en",
+   "quote": "Gallimimus is the most common member of the group in the Nemegt.",
+   "quote_sha": "3ff343a1d9796a38"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "It is debated whether the Lark Quarry tracks represent a dinosaur stampede caused by a theropod or a herbivore, and whether they inspired the Jurassic Park scene.",
+   "category": "debate",
+   "chunk_id": "gallimimus:enwiki:14",
+   "lang": "en",
+   "quote": "The idea that the tracks represent a stampede has since been contested (the \"theropod\" may instead have been a herbivore similar to Muttaburrasaurus), and a consultant to Jurassic Park has denied the tracks served as inspiration for the movie.",
+   "quote_sha": "813d842daa82ab6e"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Gallimimus is the largest known member of the family Ornithomimidae.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Gallimimus es el miembro más grande conocido de la familia Ornithomimidae.",
+   "quote_sha": "7960e60690af8d6a"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "The adult holotype specimen was approximately 6 meters long and 1.9 meters tall at the hip.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
@@ -647,17 +1013,8 @@
    "quote_sha": "11f7c38b6280c000"
   },
   {
-   "fact_id": "F061",
-   "statement": "The skull of the holotype was 330 millimeters long and the femur was 660 millimeters long.",
-   "category": "description",
-   "chunk_id": "gallimimus:eswiki:3",
-   "lang": "es",
-   "quote": "Su cráneo tenía 330 milímetros de largo y el fémur, hueso del muslo, tenía 660 milímetros.",
-   "quote_sha": "2d93222e3b91fc47"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "The adult holotype of Gallimimus would have weighed approximately 440 kilograms.",
+   "fact_id": "F097",
+   "statement": "The adult holotype would have weighed approximately 440 kilograms.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
@@ -665,8 +1022,8 @@
    "quote_sha": "212aa576f4212130"
   },
   {
-   "fact_id": "F063",
-   "statement": "Based on relative fossils, ornithomimids like Gallimimus had feathers and adults carried wing-like structures indicated by knobs on the ulna.",
+   "fact_id": "F098",
+   "statement": "Based on relative fossils, ornithomimids had feathers and adults carried wing-like structures, evidenced by knobs on the ulna indicating where feathers attached.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
@@ -674,8 +1031,17 @@
    "quote_sha": "5a22e05ba50d75a9"
   },
   {
-   "fact_id": "F064",
-   "statement": "A diagnostic character of Gallimimus is its short hands compared to the humerus when compared to other ornithomimids.",
+   "fact_id": "F099",
+   "statement": "Gallimimus resembled modern ostriches with a small head, large eyes, long neck, small forelimbs, strong running legs, and a long tail.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Gallimimus era en apariencia similar a los actuales avestruces, cabeza pequeña, grandes ojos, cuello largo, miembros anteriores pequeños, fuertes patas para correr y una larga cola.",
+   "quote_sha": "24f774752445029f"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "A diagnostic feature of Gallimimus is its short hands compared to the humerus when compared to other ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
@@ -683,35 +1049,89 @@
    "quote_sha": "d545a08dd61834dc"
   },
   {
-   "fact_id": "F065",
-   "statement": "Some experts suggest Gallimimus claws may have been used to dig for eggs, roots, and tubers.",
-   "category": "paleobiology",
+   "fact_id": "F101",
+   "statement": "Its forelimbs were relatively short compared to the hind limbs and ended with three claws on each hand.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Sus patas delanteras eran relativamente cortas comparadas con las traseras, y estaban rematados con tres garras en cada mano.",
+   "quote_sha": "43a77617ccbbb6a7"
+  },
+  {
+   "fact_id": "F102",
+   "statement": "Some experts suggest the claws may have been used to dig in the earth to obtain eggs, roots, and tubers for food.",
+   "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
    "quote": "Algunos expertos han dado utilidad a las garras del Gallimimus aventurando que pudieron servirle para escarbar en la tierra y conseguir así huevos, raíces y tubérculos con los que alimentarse.",
    "quote_sha": "8b3342cab639d602"
   },
   {
-   "fact_id": "F066",
+   "fact_id": "F103",
+   "statement": "The tail was used as a counterbalance.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "La cola era utilizada como contrapeso.",
+   "quote_sha": "ce18f6b15d4b6394"
+  },
+  {
+   "fact_id": "F104",
+   "statement": "The eyes were located on the sides of its head, meaning it did not possess binocular vision.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Los ojos estaban situados a los lados de su cabeza, significando que no poseía la visión binocular.",
+   "quote_sha": "16cd30517f1749fc"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "Like most modern birds, it had hollow bones.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Como la mayoría de los pájaros modernos, tenía huesos huecos.",
+   "quote_sha": "597dfeb94e8b5ec2"
+  },
+  {
+   "fact_id": "F106",
+   "statement": "Gallimimus had adaptations suggesting good running ability, including long limbs, a long tibia and metatarsus, and short foot digits.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Gallimimus tenía un número de adaptaciones que sugieren buena capacidad para correr, miembros largos, con una tibia y metatarso largos y los dedos del pie cortos.",
+   "quote_sha": "5ab6182f8f574cd8"
+  },
+  {
+   "fact_id": "F107",
+   "statement": "A fossilized beak present in a Gallimimus skull was bordered by a beak interpreted as part of a filtering mechanism like that of ducks.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Un pico fosilizado presente en un cráneo de Gallimimus estaba bordeado de un pico que se ha interpretado como parte de un mecanismo de filtrado como los de los patos.",
+   "quote_sha": "26656e0bb7c73912"
+  },
+  {
+   "fact_id": "F108",
    "statement": "It is more probable that Gallimimus was an omnivore, using its beak for plants and capturing small animals.",
-   "category": "paleobiology",
+   "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
    "quote": "Parece más probable que Gallimimus fuese un omnívoro, usando su pico en las plantas y la captura de pequeños animales.",
    "quote_sha": "b5fa99f380148177"
   },
   {
-   "fact_id": "F067",
-   "statement": "It has been speculated that Gallimimus may have fed on insects, small worms, and supplemented its diet with plants and eggs.",
-   "category": "paleobiology",
+   "fact_id": "F109",
+   "statement": "Speculation on its diet suggests it may have fed on insects and small worms, complementing its insectivorous diet with some plants and eggs.",
+   "category": "description",
    "chunk_id": "gallimimus:eswiki:3",
    "lang": "es",
    "quote": "Sobre el Gallimimus se ha especulado sobre su dieta, sugiriendo que pudo haberse alimentado de insectos y de pequeños gusanos y pudo complementar su dieta insectívora con algunas plantas y huevos.",
    "quote_sha": "5ed89f0f97928350"
   },
   {
-   "fact_id": "F068",
-   "statement": "The head of Gallimimus was very small and light compared to its vertebral column.",
+   "fact_id": "F110",
+   "statement": "The head of Gallimimus was very small and light compared to the vertebral column.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
@@ -719,26 +1139,26 @@
    "quote_sha": "285e4219dbfccca6"
   },
   {
-   "fact_id": "F069",
-   "statement": "Due to the length of its beak, the skull of Gallimimus was long compared to other ornithomimids.",
+   "fact_id": "F111",
+   "statement": "Due to the length of its snout, the skull was long compared to other ornithomimids and the snout had a slightly inclined upper profile.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
-   "quote": "Debido a la longitud de su hocico, el cráneo era largo comparado con otros ornitomímidos",
-   "quote_sha": "05c17683769ca5c5"
+   "quote": "Debido a la longitud de su hocico, el cráneo era largo comparado con otros ornitomímidos y el hocico tenía un perfil superior ligeramente inclinado.",
+   "quote_sha": "d01271beae12de5b"
   },
   {
-   "fact_id": "F070",
-   "statement": "Viewed from above, the beak of Gallimimus was almost spatulate, spoon-shaped, wide, and rounded at the tip.",
+   "fact_id": "F112",
+   "statement": "Viewed from above, the snout was almost spatulate, spoon-shaped, wide and rounded at the tip in a U-shape, whereas it was acute or V-shaped in North American ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
-   "quote": "Visto desde arriba, el hocico era casi espatulado, en forma de cuchara, ancho y redondeado en la punta",
-   "quote_sha": "9305b4936a0c6556"
+   "quote": "Visto desde arriba, el hocico era casi espatulado, en forma de cuchara, ancho y redondeado en la punta , en forma de U, mientras que era agudo o en forma de V en los ornitomímidos norteamericanos.",
+   "quote_sha": "ee54aacb773b781b"
   },
   {
-   "fact_id": "F071",
-   "statement": "The eye sockets of Gallimimus were large and oriented to the sides, similar to other ornithomimids.",
+   "fact_id": "F113",
+   "statement": "The eye sockets were large and oriented to the sides, as in other ornithomimids.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
@@ -746,35 +1166,206 @@
    "quote_sha": "d30c9d812a3d8c52"
   },
   {
-   "fact_id": "F072",
-   "statement": "The internal nostrils of Gallimimus were large and positioned far back on the palate.",
+   "fact_id": "F114",
+   "statement": "The delicate lower jaw, formed by thin bones, was thin and shallow in the front, deepening towards the back.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
-   "quote": "Las narinas internas, aberturas internas para el pasaje nasal, eran grandes y estaban colocadas muy atrás en el paladar",
-   "quote_sha": "54ae131a613d37e2"
+   "quote": "La delicada mandíbula inferior, formada por huesos delgados, era delgada y poco profunda en la parte delantera, profundizándose hacia la parte posterior.",
+   "quote_sha": "c4a2fdf526728f7c"
   },
   {
-   "fact_id": "F073",
-   "statement": "The inner side of the beak had small, tightly packed, and uniformly spaced columnar structures.",
+   "fact_id": "F115",
+   "statement": "The front of the jaw was shovel-shaped, resulting in a gap between the jaw tips when closed.",
    "category": "description",
    "chunk_id": "gallimimus:eswiki:4",
    "lang": "es",
-   "quote": "El lado interno del pico tenía estructuras columnares pequeñas, apretadas y espaciadas uniformemente",
-   "quote_sha": "990a792fe54036e2"
+   "quote": "La parte frontal de la mandíbula tenía forma de pala, lo que resultaba en un espacio entre las puntas de las mandíbulas cuando se cerraba.",
+   "quote_sha": "34fed3464807290f"
   },
   {
-   "fact_id": "F074",
-   "statement": "The genus Gallimimus was named by Osmólska and colleagues in 1972.",
-   "category": "discovery",
-   "chunk_id": "gallimimus:pbdb:1",
-   "lang": "en",
-   "quote": "PBDB name: Gallimimus (genus), Osmólska et al. 1972",
-   "quote_sha": "09c68e376f66fb22"
+   "fact_id": "F116",
+   "statement": "The jaws of Gallimimus were toothless, without teeth, and the front would have been covered by a horny beak in life.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:4",
+   "lang": "es",
+   "quote": "Las mandíbulas de Gallimimus estaban desdentadas, sin dientes y la parte frontal se habría cubierto de un pico córneo en vida.",
+   "quote_sha": "592061490c11744e"
   },
   {
-   "fact_id": "F075",
-   "statement": "Gallimimus belongs to the family Ornithomimidae.",
+   "fact_id": "F117",
+   "statement": "The inner side of the beak had small, tight, uniformly spaced columnar structures, the exact nature of which is debated, being longer in the front and shortened towards the back.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:4",
+   "lang": "es",
+   "quote": "El lado interno del pico tenía estructuras columnares pequeñas, apretadas y espaciadas uniformemente, se discute su naturaleza exacta, que eran más largas en la parte delantera y acortadas hacia la parte posterior.",
+   "quote_sha": "4a6301dd1541b108"
+  },
+  {
+   "fact_id": "F118",
+   "statement": "In comparison, a juvenile specimen was approximately 2.15 meters long, 0.79 meters tall at the hip, and weighed around 26 kilograms.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "En comparación, un espécimen juvenil, ZPAL MgD-I / 94 tenía aproximadamente 2,15 metros de largo, 0,79 metros de altura en la cadera y pesaba alrededor de 26 kilogramos.",
+   "quote_sha": "2d89ad025c475a8b"
+  },
+  {
+   "fact_id": "F119",
+   "statement": "Its skull was 330 millimeters long and the femur, thigh bone, was 660 millimeters long.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "Su cráneo tenía 330 milímetros de largo y el fémur, hueso del muslo, tenía 660 milímetros.",
+   "quote_sha": "2d93222e3b91fc47"
+  },
+  {
+   "fact_id": "F120",
+   "statement": "In the Mongolian form, the dorsal neural arches of the sacral vertebrae do not fuse completely even in mature specimens, in contrast to those observed in Ornithomimus and Struthiomimus.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:3",
+   "lang": "es",
+   "quote": "en la forma mongol los arcos neurales dorsales de las vértebras sacras no se funden totalmente incluso en especímenes maduros, en contraste con esos observados en Ornithomimus y Struthiomimus.",
+   "quote_sha": "ca05b6089f73392e"
+  },
+  {
+   "fact_id": "F121",
+   "statement": "Gallimimus had 64 to 66 vertebrae in its spine, which is fewer than other ornithomimids.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "Gallimimus tenía 64–66 vértebras en su columna vertebral , menos que otros ornitomímidos.",
+   "quote_sha": "349fd709372f0100"
+  },
+  {
+   "fact_id": "F122",
+   "statement": "Many of Gallimimus's vertebrae had pneumatic foramina, suggesting they were invaded by air sacs.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "Muchos de los centros tenían forámenes, aberturas que también se han llamado pleurocoelos y, por lo tanto, probablemente eran neumáticas, con sus cámaras huecas invadidas por sacos de aire.",
+   "quote_sha": "3ca2c11727292585"
+  },
+  {
+   "fact_id": "F123",
+   "statement": "Gallimimus's neck consisted of 10 long and wide cervical vertebrae, except for the atlas.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "El cuello consistía en 10 vértebras cervicales, todas largas y anchas, excepto el atlas, la primera vértebra que se conecta con la parte posterior del cráneo.",
+   "quote_sha": "420649388b2a0042"
+  },
+  {
+   "fact_id": "F124",
+   "statement": "Gallimimus's neck was proportionally longer relative to its trunk than in other ornithomimids.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "El cuello parece haber sido proporcionalmente más largo en relación con el tronco que en otros ornitomímidos.",
+   "quote_sha": "dbcf10380e6a903e"
+  },
+  {
+   "fact_id": "F125",
+   "statement": "Gallimimus had 13 dorsal vertebrae with short, reel-shaped centers that became deeper and longer toward the rear.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "La espalda de Gallimimus tenía 13 vértebras dorsales, con centros en forma de carrete que eran cortos, pero tendían a ser más profundos y más largos hacia la espalda.",
+   "quote_sha": "5623b2cce8dfd035"
+  },
+  {
+   "fact_id": "F126",
+   "statement": "Gallimimus's sacrum consisted of five sacral vertebrae of approximately equal length.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "El sacro, las vértebras fusionadas entre los huesos de la pelvis, consistía en cinco vértebras sacras que eran aproximadamente iguales en longitud.",
+   "quote_sha": "d7448fba747e6a18"
+  },
+  {
+   "fact_id": "F127",
+   "statement": "Gallimimus's tail had 36 to 39 caudal vertebrae, with reel-shaped centers at the front and nearly triangular, elongated ones at the back.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "La cola tenía 36–39 vértebras caudales, con los centros de los de la parte frontal en forma de carrete, mientras que las de la parte posterior eran casi triangulares y alargados.",
+   "quote_sha": "c05b9184e98f7677"
+  },
+  {
+   "fact_id": "F128",
+   "statement": "The neural spines on Gallimimus's tail were high and flat but decreased in size toward the rear, forming a crest.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "Las espinas neurales aquí eran altas y planas, pero disminuían hacia atrás, donde se hacían como una cresta.",
+   "quote_sha": "147c4f7e9fd30443"
+  },
+  {
+   "fact_id": "F129",
+   "statement": "Gallimimus's scapula was short, curved, thin at the front, and thick at the back.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "La escápula era corta y curvada, delgada en la parte delantera y gruesa en la parte posterior.",
+   "quote_sha": "ae2c8dccf1dc048a"
+  },
+  {
+   "fact_id": "F130",
+   "statement": "Gallimimus's humerus was long, twisted, and had an almost circular cross-section.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "El húmero, el hueso del brazo superior, que tenía una sección transversal casi circular, era largo y retorcido.",
+   "quote_sha": "4213267d5e4fc347"
+  },
+  {
+   "fact_id": "F131",
+   "statement": "Gallimimus's deltopectoral crest on the humerus was comparatively small, providing little surface area for attaching upper arm muscles.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "La cresta deltopectoral en la parte frontal superior del húmero era comparativamente pequeña y, por lo tanto, proporcionaba poca superficie para unir los músculos de la parte superior del brazo.",
+   "quote_sha": "2c07693094561084"
+  },
+  {
+   "fact_id": "F132",
+   "statement": "Gallimimus had three fingers that developed similarly; the first (thumb) was the strongest, the third the weakest, and the second the longest.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "Tenía tres dedos, que se desarrollaron de manera similar; el primero' el \"pulgar\", fue el más fuerte, el tercero fue el más débil y el segundo fue el más largo.",
+   "quote_sha": "ab9515f50f1db780"
+  },
+  {
+   "fact_id": "F133",
+   "statement": "Gallimimus's claw bones were strong and slightly curved, with the first claw being more curved and laterally compressed with a deep groove on each side.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "Los unguales, los huesos de garras, eran fuertes, algo curvados, el del primer dedo era más curvo y comprimidos lateralmente con un surco profundo en cada lado.",
+   "quote_sha": "47d5fdf6bbedd419"
+  },
+  {
+   "fact_id": "F134",
+   "statement": "The ratio of forearm to arm in Gallimimus reached 66%, whereas in American forms it varied from 70% to as high as 91% in Dromiceiomimus.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "El cociente del antebrazo con el brazo alcanza el 66% en Gallimimus, mientras que en las formas americanas varía del 70% a incluso el 91% en Dromiceiomimus.",
+   "quote_sha": "07e382cd9592b1e3"
+  },
+  {
+   "fact_id": "F135",
+   "statement": "In Gallimimus, the ratio of dorsal to caudal vertebrae was 85%, which is higher than in other genera like Struthiomimus, where it is approximately 76%.",
+   "category": "description",
+   "chunk_id": "gallimimus:eswiki:5",
+   "lang": "es",
+   "quote": "En Gallimimus el cociente de las vértebras dorsales con las caudales del 85% es mayor que en otros géneros, en Struthiomimus, por ejemplo, este cociente es el aproximadamente 76%.",
+   "quote_sha": "2f64f0363e2cc646"
+  },
+  {
+   "fact_id": "F136",
+   "statement": "Gallimimus belongs to the parent group Ornithomimidae.",
    "category": "classification",
    "chunk_id": "gallimimus:pbdb:1",
    "lang": "en",
@@ -782,8 +1373,17 @@
    "quote_sha": "8024a66c6f85ac08"
   },
   {
-   "fact_id": "F076",
-   "statement": "Gallimimus is classified within the class Reptilia.",
+   "fact_id": "F137",
+   "statement": "Gallimimus is classified in the family Ornithomimidae.",
+   "category": "classification",
+   "chunk_id": "gallimimus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Ornithomimidae",
+   "quote_sha": "6e97af55a4f5ed54"
+  },
+  {
+   "fact_id": "F138",
+   "statement": "Gallimimus is classified under the class Reptilia.",
    "category": "classification",
    "chunk_id": "gallimimus:pbdb:1",
    "lang": "en",
@@ -791,7 +1391,7 @@
    "quote_sha": "cdcaa2922520f735"
   },
   {
-   "fact_id": "F077",
+   "fact_id": "F139",
    "statement": "Gallimimus lived from the Turonian to the Maastrichtian stages, between 93.9 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "gallimimus:pbdb:1",
@@ -800,61 +1400,43 @@
    "quote_sha": "aa715367f8caeeee"
   },
   {
-   "fact_id": "F078",
-   "statement": "The skull of Gallimimus was proportionally larger in juvenile specimens.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:eswiki:4",
-   "lang": "es",
-   "quote": "El cráneo también fue proporcionalmente más grande en los ejemplares más jóvenes.",
-   "quote_sha": "c1320b2bbb2577dd"
-  },
-  {
-   "fact_id": "F079",
-   "statement": "The shape and proportions of the Gallimimus skull changed significantly during growth.",
-   "category": "paleobiology",
-   "chunk_id": "gallimimus:eswiki:4",
-   "lang": "es",
-   "quote": "La forma y las proporciones del cráneo cambiaron significativamente durante el crecimiento.",
-   "quote_sha": "c0cb84ce9e88e3ba"
-  },
-  {
-   "fact_id": "F080",
-   "statement": "The exact nature of the columnar structures on the inner side of the Gallimimus beak is debated.",
-   "category": "debate",
-   "chunk_id": "gallimimus:eswiki:4",
-   "lang": "es",
-   "quote": "se discute su naturaleza exacta",
-   "quote_sha": "ce1b783e71d3b9ee"
+   "fact_id": "F140",
+   "statement": "There are 30 recorded fossil occurrences of Gallimimus in the Paleobiology Database.",
+   "category": "discovery",
+   "chunk_id": "gallimimus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 30",
+   "quote_sha": "25ed2740b81c4191"
   }
  ],
  "rejected": [
   {
    "chunk_id": "gallimimus:enwiki:2",
+   "statement": "The species name bullatus refers to a bulbous structure at the base of the skull, resembling a golden capsule worn by Roman youth.",
+   "category": "description",
+   "quote": "The specific name is derived from bulla, a golden capsule worn by Roman youth, in reference to a bulbous structure at the base of the skull of Gallimimus",
+   "reason": "statement copies the source wording: 'bulbous structure at the base of the skull'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:2",
+   "statement": "Researchers suggest Gallimimus may have possessed good vision and intelligence comparable to ratite birds.",
+   "category": "paleobiology",
+   "quote": "It may have had good vision and intelligence comparable to ratite birds",
+   "reason": "statement copies the source wording: 'good vision and intelligence comparable to ratite birds'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:2",
    "statement": "Gallimimus lived in what is now Mongolia during the Late Cretaceous period.",
    "category": "time_and_habitat",
-   "quote": "Gallimimus ( ) is a genus of theropod dinosaur that lived in what is now Mongolia during the Late Cretaceous period.",
+   "quote": "Gallimimus ( ) is a genus of theropod dinosaur that lived in what is now Mongolia during the Late Cretaceous period",
    "reason": "statement copies the source wording: 'lived in what is now Mongolia during the'"
   },
   {
-   "chunk_id": "gallimimus:enwiki:2",
-   "statement": "It is suggested that Gallimimus had good vision and intelligence comparable to ratite birds.",
-   "category": "paleobiology",
-   "quote": "It may have had good vision and intelligence comparable to ratite birds.",
-   "reason": "statement copies the source wording: 'had good vision and intelligence comparable to ratite'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:2",
-   "statement": "There are various theories regarding the diet of Gallimimus and other ornithomimids.",
-   "category": "debate",
-   "quote": "Various theories have been proposed regarding the diet of Gallimimus and other ornithomimids.",
-   "reason": "statement copies the source wording: 'regarding the diet of Gallimimus and other ornithomimids'"
-  },
-  {
    "chunk_id": "gallimimus:enwiki:4",
-   "statement": "Philip J. Currie proposed in 2000 that Anserimimus was a junior synonym of Gallimimus, but this was dismissed by Kobayashi and Barsbold due to observed differences.",
-   "category": "debate",
-   "quote": "In 2000, the palaeontologist Philip J. Currie proposed that Anserimimus, which is only known from one skeleton from Mongolia, was a junior synonym of Gallimimus, but this was dismissed by Kobayashi and Barsbold, who pointed out several differences between the two.",
-   "reason": "statement copies the source wording: 'junior synonym of Gallimimus but this was dismissed'"
+   "statement": "In 1990, Dong Zhiming and colleagues assigned an ornithomimid vertebra from Japan, informally named Sanchusaurus, to Gallimimus sp. of uncertain species.",
+   "category": "discovery",
+   "quote": "An ornithomimid vertebra from Japan informally named \"Sanchusaurus\" was reported in a 1988 magazine, but was assigned to Gallimimus sp. (of uncertain species) by the palaeontologist Dong Zhiming and colleagues in 1990.",
+   "reason": "statement copies the source wording: 'an ornithomimid vertebra from Japan informally named Sanchusaurus'"
   },
   {
    "chunk_id": "gallimimus:enwiki:5",
@@ -865,52 +1447,24 @@
   },
   {
    "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The head of Gallimimus was very small and light compared to its vertebral column.",
+   "statement": "The head of Gallimimus was very small and light relative to its vertebral column.",
    "category": "description",
    "quote": "The head of Gallimimus was very small and light compared to the vertebral column.",
    "reason": "statement copies the source wording: 'head of Gallimimus was very small and light'"
   },
   {
    "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The side profile of the Gallimimus snout did not narrow towards the front, and the lower front margin of the premaxilla rose upwards rather than being horizontal.",
+   "statement": "The side profile of the Gallimimus snout did not narrow towards the front half, and the lower front margin of the premaxilla rose upwards rather than being horizontal.",
    "category": "description",
    "quote": "The side profile of the snout differed from other ornithomimids in not narrowing towards its front half, and the lower front margin of the premaxilla at the front of the upper jaw rose upwards, instead of being horizontal.",
-   "reason": "statement copies the source wording: 'and the lower front margin of the premaxilla'"
+   "reason": "statement copies the source wording: 'front half and the lower front margin of'"
   },
   {
    "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The temporal region of the Gallimimus skull was deep, and its infratemporal fenestra was nearly triangular and smaller than that of Struthiomimus.",
+   "statement": "The inner side of the Gallimimus beak had small, tightly packed, evenly spaced columnar structures whose exact nature is debated, with the longest at the front and shortening towards the back.",
    "category": "description",
-   "quote": "The temporal region at the side of the skull behind the eyes was deep, and the infratemporal fenestra (the lower opening behind the orbit) was nearly triangular and smaller than that of the related Struthiomimus.",
-   "reason": "statement copies the source wording: 'was nearly triangular and smaller than that of'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:6",
-   "statement": "Gallimimus had deep muscle scars on the back part of the skull roof along the parietal bone.",
-   "category": "description",
-   "quote": "It had deep muscle scars at the back part of the skull roof, along the parietal bone.",
-   "reason": "statement copies the source wording: 'the back part of the skull roof along'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The parasphenoid bone in Gallimimus was thin-walled, hollow, and formed a pear-shaped, bulbous structure.",
-   "category": "description",
-   "quote": "The parasphenoid (a bone of the braincase, at the underside of the skull's base) was thin-walled, hollow and formed a pear-shaped, bulbous structure.",
-   "reason": "statement copies the source wording: 'was thin-walled hollow and formed a pear-shaped bulbous'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The internal nares of Gallimimus were large and placed far back on the palate due to an extensive secondary palate common to ornithomimids.",
-   "category": "description",
-   "quote": "The internal nares (internal openings for the nasal passage) were large and placed far back on the palate, due to the presence of an extensive secondary palate, which was common to ornithomimids.",
-   "reason": "statement copies the source wording: 'were large and placed far back on the'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:6",
-   "statement": "The lower jaw of Gallimimus consisted of thin bones, was slender and shallow at the front, and deepened towards the rear.",
-   "category": "description",
-   "quote": "The delicate lower jaw, consisting of thin bones, was slender and shallow at the front, deepening towards the rear.",
-   "reason": "statement copies the source wording: 'of thin bones was slender and shallow at'"
+   "quote": "The inner side of the beak had small, tightly packed and evenly spaced columnar structures (their exact nature is debated), which were longest at the front and shortening towards the back.",
+   "reason": "statement copies the source wording: 'longest at the front and shortening towards the'"
   },
   {
    "chunk_id": "gallimimus:enwiki:7",
@@ -928,13 +1482,6 @@
   },
   {
    "chunk_id": "gallimimus:enwiki:7",
-   "statement": "The sacrum of Gallimimus was composed of five sacral vertebrae of approximately equal length.",
-   "category": "description",
-   "quote": "The sacrum consisted of five sacral vertebrae which were about equal in length.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:7",
    "statement": "Gallimimus had between 36 and 39 vertebrae in its tail.",
    "category": "description",
    "quote": "The tail had 36–39 caudal vertebrae.",
@@ -942,80 +1489,94 @@
   },
   {
    "chunk_id": "gallimimus:enwiki:7",
-   "statement": "Gallimimus had the smallest ratio of hand length to upper arm length among all ornithomimosaurs.",
+   "statement": "Gallimimus had the smallest ratio of hand length to upper arm length among all ornithomimosaurs, making its hand proportionally short.",
    "category": "description",
-   "quote": "The manus was proportionally short compared to those of other ornithomimosaurs, having the smallest manus to humerus length ratio of any member of the group.",
+   "quote": "The manus (hand) was proportionally short compared to those of other ornithomimosaurs, having the smallest manus to humerus length ratio of any member of the group.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "gallimimus:enwiki:8",
-   "statement": "Osmólska and colleagues classified Gallimimus into the family Ornithomimidae in 1972.",
+   "statement": "In 1972, Osmólska and colleagues classified Gallimimus in the family Ornithomimidae, identifying the North American Struthiomimus as its closest relative.",
    "category": "classification",
-   "quote": "Osmólska and colleagues assigned Gallimimus to the family Ornithomimidae in 1972.",
+   "quote": "Osmólska and colleagues assigned Gallimimus to the family Ornithomimidae in 1972, with the North American Struthiomimus as the closest relative.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "gallimimus:enwiki:8",
-   "statement": "Research in 2003 identified Anserimimus as the sister taxon to Gallimimus, forming an advanced clade with North American genera.",
+   "statement": "Research in 2003 by Kobayashi and Jun-Chang Lü identified Anserimimus as the sister taxon to Gallimimus, forming an advanced clade with North American genera.",
    "category": "classification",
    "quote": "In 2003, Kobayashi and Jun-Chang Lü found that Anserimimus was the sister taxon to Gallimimus, both forming a derived (or \"advanced\") clade with North American genera.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "gallimimus:enwiki:8",
-   "statement": "Thomas R. Holtz named the clade Bullatosauria in 1994, grouping ornithomimosaurs and troodontids together based on shared skull features and the specific name of Gallimimus bullatus.",
-   "category": "classification",
-   "quote": "In 1994, the palaeontologist Thomas R. Holtz grouped ornithomimosaurs and troodontids in a clade, based on shared features such as the presence of a bulbous capsule on the parasphenoid. He named the clade Bullatosauria, based on the specific name of Gallimimus bullatus.",
-   "reason": "quote not found verbatim in the source"
+   "statement": "Gallimimus possessed a rounded beak similar to a goose or duck, contrasting with the pointed beaks of North American ornithomimids.",
+   "category": "description",
+   "quote": "She highlighted that while Gallimimus had a rounded beak (similar to a goose or duck), North American ornithomimids had pointed beaks, a difference that would otherwise lead taxonomists to place modern birds in different families.",
+   "reason": "statement copies the source wording: 'a rounded beak similar to a goose or'"
   },
   {
    "chunk_id": "gallimimus:enwiki:9",
-   "statement": "Gallimimus held its neck obliquely, declining upwards at an angle of 35 degrees.",
-   "category": "paleobiology",
-   "quote": "The cervical vertebrae of Gallimimus indicate that it held its neck obliquely, declining upwards at an angle of 35 degrees.",
-   "reason": "statement copies the source wording: 'held its neck obliquely declining upwards at an'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:9",
-   "statement": "Richard A. Thulborn estimated in 1982 that Gallimimus could run at speeds of 42–56 km/h (29–34 mph).",
-   "category": "paleobiology",
-   "quote": "In 1982, palaeontologist Richard A. Thulborn estimated that Gallimimus could have run at speeds of 42–56 km/h (29–34 mph).",
-   "reason": "statement copies the source wording: 'run at speeds of 42 56 km h'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:9",
-   "statement": "Akinobu Watanabe and colleagues found in 2015 that Gallimimus had the most pneumatised skeleton among ornithomimosaurs.",
-   "category": "paleobiology",
-   "quote": "In 2015, Akinobu Watanabe and colleagues found that together with Deinocheirus and Archaeornithomimus, Gallimimus had the most pneumatised skeleton among ornithomimosaurs.",
-   "reason": "statement copies the source wording: 'Gallimimus had the most pneumatised skeleton among ornithomimosaurs'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:9",
-   "statement": "It is debated whether pneumatisation in Gallimimus was used to reduce bone mass, related to high metabolism, balance during locomotion, or thermoregulation.",
-   "category": "debate",
-   "quote": "It has been proposed that pneumatisation was used to reduce the mass of large bones, that it was related to high metabolism, balance during locomotion, or used for thermoregulation.",
-   "reason": "statement copies the source wording: 'related to high metabolism balance during locomotion or'"
-  },
-  {
-   "chunk_id": "gallimimus:enwiki:9",
-   "statement": "Researchers suggested in 2017 that the Gallimimus foot found in 2009 was not made by the same individual that left the associated trackway.",
+   "statement": "Researchers suggested in 2017 that the Gallimimus foot fossil and nearby trackway were not made by the same individual.",
    "category": "paleobiology",
    "quote": "The authors thus suggested that the tracks had been made over an extended amount of time and period of drying, and that probably none of them were produced by the individual that owned the foot.",
-   "reason": "numbers not in the quote: ['2009', '2017']"
+   "reason": "numbers not in the quote: ['2017']"
   },
   {
-   "chunk_id": "gallimimus:eswiki:4",
-   "statement": "The lower jaw of Gallimimus lacked a coronoid process or a supradentary bone.",
-   "category": "description",
-   "quote": "Las mandíbula inferior no tuvo un proceso coronoideo o un hueso supradentario",
+   "chunk_id": "gallimimus:enwiki:10",
+   "statement": "In 2001, Jørn Hurum suggested Gallimimus may have had an opportunistic omnivorous diet similar to seagulls.",
+   "category": "paleobiology",
+   "quote": "Palaeontologist Jørn Hurum suggested in 2001 that due to its similar jaw structure, Gallimimus may have had an opportunistic, omnivorous diet like seagulls.",
+   "reason": "statement copies the source wording: 'Gallimimus may have had an opportunistic omnivorous diet'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:10",
+   "statement": "If the filter-feeding interpretation is correct, Gallimimus would have been one of the largest known terrestrial filter feeders.",
+   "category": "paleobiology",
+   "quote": "Makovicky, Kobayashi, and Currie pointed out that if this interpretation is correct, Gallimimus would have been one of the largest known terrestrial filter feeders.",
+   "reason": "statement copies the source wording: 'interpretation is correct Gallimimus would have been one'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:10",
+   "statement": "Barrett calculated a 440 kg Gallimimus needed 0.07 to 3.34 kg of food daily, finding this unfeasible for a filter-feeding lifestyle.",
+   "category": "paleobiology",
+   "quote": "Barrett also calculated that a 440 kg Gallimimus would have needed between 0.07 and 3.34 kg of food per day, depending on whether it had an endothermic or an ectothermic (warm or cold-blooded) metabolism, an intake which he found to be unfeasible if it was a filter feeder.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "gallimimus:eswiki:4",
-   "statement": "The jaws of Gallimimus were toothless, and the front part was covered by a horny beak in life.",
-   "category": "description",
-   "quote": "Las mandíbula de Gallimimus estaban desdentadas, sin dientes y la parte frontal se habría cubierto de un pico córneo en vida.",
+   "chunk_id": "gallimimus:enwiki:11",
+   "statement": "Button and Zanno cautioned that correlations between herbivory and body mass were not simple and showed no directional trend toward increased mass in the clade.",
+   "category": "paleobiology",
+   "quote": "They cautioned that the correlations between herbivory and body mass were not simple, and that there was no directional trend towards increased mass seen in the clade.",
+   "reason": "statement copies the source wording: 'correlations between herbivory and body mass were not'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:13",
+   "statement": "Gallimimus lived in an environment of river channels, mudflats, shallow lakes, and floodplains similar to the modern Okavango Delta.",
+   "category": "time_and_habitat",
+   "quote": "The rock facies of the Nemegt Formation suggest the presence of river channels, mudflats, shallow lakes and floodplains in an environment similar to the Okavango Delta of present-day Botswana.",
+   "reason": "statement copies the source wording: 'of river channels mudflats shallow lakes and floodplains'"
+  },
+  {
+   "chunk_id": "gallimimus:enwiki:14",
+   "statement": "In Jurassic Park, the Gallimimus herd was depicted moving as a cohesive unit with smaller individuals in the center for protection.",
+   "category": "curiosities",
+   "quote": "The Gallimimus herd was shown moving as a whole, rather than individual animals running around, and the smaller Gallimimus were shown in the middle of the group, as though they were being protected.",
    "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "gallimimus:eswiki:5",
+   "statement": "Gallimimus's hand was proportionally short compared to other ornithomimosaurians, though it had the longest hand-to-humerus ratio of any group member and was otherwise structurally similar.",
+   "category": "description",
+   "quote": "La mano fue proporcionalmente corta en comparación con la de otros ornitomimosaurianos, ya que tenía la relación más larga entre la mano y húmero de cualquier miembro del grupo, pero por demás era similar en su estructura.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "gallimimus:pbdb:1",
+   "statement": "The genus Gallimimus was named by Osmólska and colleagues in 1972.",
+   "category": "discovery",
+   "quote": "PBDB name: Gallimimus (genus), Osmólska et al. 1972",
+   "reason": "duplicate"
   }
  ]
 }

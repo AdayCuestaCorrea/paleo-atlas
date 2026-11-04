@@ -2,9 +2,9 @@
  "taxon": "Albertosaurus",
  "taxon_key": "albertosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "c0a346a83e016cd8",
- "generated_at": "2026-11-03T03:48:27+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "07d1dd9269654882",
+ "generated_at": "2026-11-04T05:41:18+00:00",
  "citations": {
   "albertosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -153,9 +153,30 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
-  "albertosaurus:eswiki:6": {
+  "albertosaurus:eswiki:11": {
    "source": "wikipedia_article",
-   "title": "Albertosaurus sarcophagus (Primeros descubrimientos)",
+   "title": "Albertosaurus sarcophagus (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Albertosaurus_sarcophagus?oldid=174599980",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "albertosaurus:eswiki:12": {
+   "source": "wikipedia_article",
+   "title": "Albertosaurus sarcophagus (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Albertosaurus_sarcophagus?oldid=174599980",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "albertosaurus:eswiki:13": {
+   "source": "wikipedia_article",
+   "title": "Albertosaurus sarcophagus (Patrones de crecimiento)",
+   "url": "https://es.wikipedia.org/wiki/Albertosaurus_sarcophagus?oldid=174599980",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "albertosaurus:eswiki:15": {
+   "source": "wikipedia_article",
+   "title": "Albertosaurus sarcophagus (Comportamiento en manada)",
    "url": "https://es.wikipedia.org/wiki/Albertosaurus_sarcophagus?oldid=174599980",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -178,7 +199,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Albertosaurus lived during the Late Cretaceous period, specifically from the latest Campanian to the early Maastrichtian stages.",
+   "statement": "Albertosaurus lived during the Late Cretaceous period, specifically from the latest Campanian to the early Maastrichtian, with a possible earlier Campanian record.",
    "category": "time_and_habitat",
    "chunk_id": "albertosaurus:enwiki:1",
    "lang": "en",
@@ -200,8 +221,8 @@
    "category": "time_and_habitat",
    "chunk_id": "albertosaurus:enwiki:2",
    "lang": "en",
-   "quote": "lived in northwestern North America",
-   "quote_sha": "b2296c2eb39cf657"
+   "quote": "northwestern North America",
+   "quote_sha": "07404be2edc9cbd4"
   },
   {
    "fact_id": "F004",
@@ -214,6 +235,15 @@
   },
   {
    "fact_id": "F005",
+   "statement": "The discovery of 26 individuals at one site provides evidence that Albertosaurus exhibited gregarious behavior.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The discovery of 26 individuals in one particular site provides evidence of gregarious behavior",
+   "quote_sha": "cb0c9986491dd5d0"
+  },
+  {
+   "fact_id": "F006",
    "statement": "Albertosaurus was named by Henry Fairfield Osborn in 1905.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:3",
@@ -222,8 +252,8 @@
    "quote_sha": "a275ac6082548317"
   },
   {
-   "fact_id": "F006",
-   "statement": "The genus name Albertosaurus refers to the Canadian province of Alberta, where the first remains were discovered in the same year the name was coined.",
+   "fact_id": "F007",
+   "statement": "The genus name Albertosaurus refers to the Canadian province of Alberta, where the first remains were found in the same year the name was coined.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:3",
    "lang": "en",
@@ -231,26 +261,35 @@
    "quote_sha": "2dbe68da36537965"
   },
   {
-   "fact_id": "F007",
-   "statement": "The type species of the genus Albertosaurus is Albertosaurus sarcophagus.",
+   "fact_id": "F008",
+   "statement": "The specific name sarcophagus is derived from the Ancient Greek word meaning \"flesh-eating\".",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:3",
    "lang": "en",
-   "quote": "The type species is Albertosaurus sarcophagus",
-   "quote_sha": "56fcee7d66867084"
-  },
-  {
-   "fact_id": "F008",
-   "statement": "The type specimen of Albertosaurus is a partial skull collected on June 9, 1884.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "The type specimen is a partial skull collected on June 9, 1884",
-   "quote_sha": "a42293027a826111"
+   "quote": "The type species is Albertosaurus sarcophagus and the specific name is derived from the Ancient Greek term σαρκοφάγος (), meaning \"flesh-eating\"",
+   "quote_sha": "9dfa86e3bea9833a"
   },
   {
    "fact_id": "F009",
-   "statement": "Henry Fairfield Osborn assigned the name Albertosaurus sarcophagus to the Horseshoe Canyon skulls in 1905.",
+   "statement": "The type specimen, a partial skull, was collected on June 9, 1884, from the Horseshoe Canyon Formation near the Red Deer River in Alberta.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "The type specimen is a partial skull collected on June 9, 1884, from an outcrop of the Horseshoe Canyon Formation alongside the Red Deer River in Alberta",
+   "quote_sha": "12e6c2b9ae69b173"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The type specimen was recovered by an expedition led by geologist Joseph Burr Tyrrell.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "It was recovered by an expedition of the Geological Survey of Canada, led by the famous geologist Joseph Burr Tyrrell",
+   "quote_sha": "dd95afa702b5edf3"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Henry Fairfield Osborn named the species Albertosaurus sarcophagus in 1905.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:4",
    "lang": "en",
@@ -258,17 +297,17 @@
    "quote_sha": "7aededa539c2ffff"
   },
   {
-   "fact_id": "F010",
-   "statement": "The holotype (CMN 5600) and paratype (CMN 5601) of Albertosaurus are housed in the Canadian Museum of Nature in Ottawa.",
+   "fact_id": "F012",
+   "statement": "In 2010, Thomas Carr confirmed that Albertosaurus is a valid taxon by identifying a unique trait shared by the holotype, paratype, and later finds.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:4",
    "lang": "en",
-   "quote": "Both specimens, the holotype CMN 5600 and the paratype CMN 5601, are stored in the Canadian Museum of Nature in Ottawa",
-   "quote_sha": "7e3ddeb92b7de2cc"
+   "quote": "in 2010, Thomas Carr established that the holotype, the paratype, and comparable later finds all shared a single common unique trait, or autapomorphy",
+   "quote_sha": "8c6c0909276c9c1d"
   },
   {
-   "fact_id": "F011",
-   "statement": "Barnum Brown discovered a large group of Albertosaurus fossils at a quarry near the Red Deer River on August 11, 1910.",
+   "fact_id": "F013",
+   "statement": "Barnum Brown discovered a large group of Albertosaurus remains on August 11, 1910, near the Red Deer River.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:5",
    "lang": "en",
@@ -276,25 +315,16 @@
    "quote_sha": "343030ffbfbb3848"
   },
   {
-   "fact_id": "F012",
-   "statement": "Excavations at the Dry Island bonebed between 1997 and 2005 yielded remains of 13 additional Albertosaurus individuals.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "Further excavation from 1997 to 2005 turned up the remains of 13 more individuals of various ages",
-   "quote_sha": "6e3dc9d2857ccc74"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "A total of 1,128 Albertosaurus bones were recovered from the Dry Island bonebed, representing the largest known concentration of large theropod fossils from the Cretaceous.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "A total of 1,128 Albertosaurus bones had been secured, which is the largest concentration of large theropod fossils known from the Cretaceous",
-   "quote_sha": "1ce9a8cbccc5e91c"
-  },
-  {
    "fact_id": "F014",
+   "statement": "Excavations between 1997 and 2005 uncovered remains of 13 additional individuals, ranging from a two-year-old to an individual estimated at over 10 meters long.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Further excavation from 1997 to 2005 turned up the remains of 13 more individuals of various ages, including a diminutive two-year-old and a very old individual estimated at over 10 m long",
+   "quote_sha": "4d169e8f9ec840d2"
+  },
+  {
+   "fact_id": "F015",
    "statement": "William Parks described the species Albertosaurus arctunguis in 1928.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:6",
@@ -303,17 +333,8 @@
    "quote_sha": "8e5c16dda120a9e8"
   },
   {
-   "fact_id": "F015",
-   "statement": "Since 1970, the species Albertosaurus arctunguis has been considered identical to Albertosaurus sarcophagus.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "this species has been considered identical to A. sarcophagus since 1970",
-   "quote_sha": "2054d14fed6316ff"
-  },
-  {
    "fact_id": "F016",
-   "statement": "The specimen RTMP 81.010.001 was discovered in 1978 by amateur paleontologist Maurice Stefanuk.",
+   "statement": "Specimen RTMP 81.010.001 was discovered in 1978 by amateur paleontologist Maurice Stefanuk.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:6",
    "lang": "en",
@@ -322,7 +343,7 @@
   },
   {
    "fact_id": "F017",
-   "statement": "The specimen RTMP 85.098.001 was found by Maurice Stefanuk on June 16, 1985.",
+   "statement": "Specimen RTMP 85.098.001 was found by Maurice Stefanuk on June 16, 1985.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:6",
    "lang": "en",
@@ -331,16 +352,43 @@
   },
   {
    "fact_id": "F018",
-   "statement": "Indeterminate Albertosaurus fossils have been found in the Corral de Enmedio and Packard Formations of Mexico.",
+   "statement": "Specimen RTMP 86.64.001 was found in December 1985.",
    "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:2",
+   "chunk_id": "albertosaurus:enwiki:6",
    "lang": "en",
-   "quote": "an indeterminate species (\"cf. Albertosaurus sp.\") has been discovered in the Corral de Enmedio and Packard Formations of Mexico",
-   "quote_sha": "b4e0acbbe65009e9"
+   "quote": "RTMP 86.64.001 was found in December 1985",
+   "quote_sha": "97b4014cb5775dc4"
   },
   {
    "fact_id": "F019",
-   "statement": "There is a scientific debate regarding the genus content of Albertosaurus, with some researchers recognizing Gorgosaurus libratus as a distinct species.",
+   "statement": "Specimen RTMP 86.205.001 was found in 1986.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "RTMP 86.205.001 was found in 1986",
+   "quote_sha": "d5cae82f33ab822e"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Specimen RTMP 97.058.0001 was found in 1996.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "RTMP 97.058.0001 was found in 1996",
+   "quote_sha": "e67457fed9251036"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "Two specimens tentatively identified as Albertosaurus have been found in the Packard and Corral de Enmedio Formations in Mexico.",
+   "category": "discovery",
+   "chunk_id": "albertosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "Two specimens from \"cf Albertosaurus \".sp\" have been found in Mexico (Packard Formation and Corral de Enmedio Formation)",
+   "quote_sha": "eb89e8b75e2fd156"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "Scientists disagree on the classification of the genus, with some recognizing Gorgosaurus libratus as a distinct species separate from Albertosaurus.",
    "category": "debate",
    "chunk_id": "albertosaurus:enwiki:2",
    "lang": "en",
@@ -348,8 +396,8 @@
    "quote_sha": "83c867e7d1aadb65"
   },
   {
-   "fact_id": "F020",
-   "statement": "Fossils reported from Montana, New Mexico, Wyoming, and Missouri are debated; they may not belong to Albertosaurus sarcophagus or the genus Albertosaurus at all.",
+   "fact_id": "F023",
+   "statement": "Fossils reported from Montana, New Mexico, Wyoming, and Missouri are doubted to belong to A. sarcophagus and may not belong to the genus Albertosaurus at all.",
    "category": "debate",
    "chunk_id": "albertosaurus:enwiki:6",
    "lang": "en",
@@ -357,26 +405,8 @@
    "quote_sha": "8c68a56a405ed369"
   },
   {
-   "fact_id": "F021",
-   "statement": "The discovery of 26 Albertosaurus individuals at a single site provides evidence of gregarious behavior.",
-   "category": "paleobiology",
-   "chunk_id": "albertosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The discovery of 26 individuals in one particular site provides evidence of gregarious behavior",
-   "quote_sha": "cb0c9986491dd5d0"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "The presence of an enlarged pneumatic opening in the palatine bone is considered a unique trait that validates Albertosaurus as a distinct taxon.",
-   "category": "paleobiology",
-   "chunk_id": "albertosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "The possession of an enlarged pneumatic opening in the back rim of the side of the palatine bone proves that Albertosaurus is a valid taxon",
-   "quote_sha": "a98a6f1b956a7407"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "Charles H. Sternberg recovered an Albertosaurus skeleton from the Dinosaur Park Formation in Alberta in 1913.",
+   "fact_id": "F024",
+   "statement": "Charles H. Sternberg recovered an Albertosaurus skeleton in Alberta in 1913.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:7",
    "lang": "en",
@@ -384,7 +414,7 @@
    "quote_sha": "d5a7126a5658ec8b"
   },
   {
-   "fact_id": "F024",
+   "fact_id": "F025",
    "statement": "Lawrence Lambe originally named the species Gorgosaurus libratus in 1914.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:7",
@@ -393,8 +423,8 @@
    "quote_sha": "fbeaae77dc8ccddd"
   },
   {
-   "fact_id": "F025",
-   "statement": "Dale Russell renamed Gorgosaurus libratus to Albertosaurus libratus in 1970, declaring Gorgosaurus a junior synonym of Albertosaurus.",
+   "fact_id": "F026",
+   "statement": "Dale Russell renamed Gorgosaurus libratus to Albertosaurus libratus in 1970, declaring Gorgosaurus a junior synonym.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:7",
    "lang": "en",
@@ -402,16 +432,16 @@
    "quote_sha": "a63d150e72c9f176"
   },
   {
-   "fact_id": "F026",
-   "statement": "Albertosaurus specimens have been found in Alberta and Montana.",
+   "fact_id": "F027",
+   "statement": "Several Albertosaurus specimens have been recovered from Alaska and New Mexico.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:7",
    "lang": "en",
-   "quote": "Other specimens were later found in Alberta and the US state of Montana.",
-   "quote_sha": "c71d6ec6b58279fd"
+   "quote": "In addition to this, several albertosaurine specimens have been recovered from Alaska and New Mexico.",
+   "quote_sha": "024f7bf20bbc0480"
   },
   {
-   "fact_id": "F027",
+   "fact_id": "F028",
    "statement": "Anatoly Nikolaevich Riabinin named Albertosaurus pericolosus in 1930 based on a Chinese tooth now thought to belong to Tarbosaurus.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:8",
@@ -420,22 +450,13 @@
    "quote_sha": "895a957840b5a192"
   },
   {
-   "fact_id": "F028",
-   "statement": "Gregory S. Paul described Albertosaurus megagracilis in 1988 based on specimen LACM 28345 from the Hell Creek Formation of Montana.",
+   "fact_id": "F029",
+   "statement": "Gregory S. Paul described Albertosaurus megagracilis in 1988 based on specimen LACM 28345 from Montana.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:8",
    "lang": "en",
    "quote": "In 1988, Gregory S. Paul based Albertosaurus megagracilis on a small tyrannosaurid skeleton, specimen LACM 28345, from the Hell Creek Formation of Montana.",
    "quote_sha": "7c42562554c13303"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "Gregory S. Paul renamed Alectrosaurus olseni to Albertosaurus olseni in 1988, a classification that has not gained general acceptance.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1988, Paul renamed Alectrosaurus olseni (Gilmore 1933) into Albertosaurus olseni, but this has found no general acceptance.",
-   "quote_sha": "ea354947ec0b272a"
   },
   {
    "fact_id": "F030",
@@ -448,34 +469,7 @@
   },
   {
    "fact_id": "F031",
-   "statement": "William Diller Matthew renamed Albertosaurus sarcophagus to Deinodon sarcophagus in 1922.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1922, William Diller Matthew renamed A. sarcophagus into Deinodon sarcophagus.",
-   "quote_sha": "5c5f6bd922080acf"
-  },
-  {
-   "fact_id": "F032",
-   "statement": "Oskar Kuhn renamed Albertosaurus arctunguis to Deinodon arctunguis in 1939.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1939, German paleontologist Oskar Kuhn renamed A. arctunguis into Deinodon arctunguis.",
-   "quote_sha": "f998241d665e8815"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "Albertosaurus was a large bipedal predator, though smaller than Tarbosaurus and Tyrannosaurus.",
-   "category": "description",
-   "chunk_id": "albertosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Albertosaurus was a fairly large bipedal predator, but smaller than Tarbosaurus and Tyrannosaurus.",
-   "quote_sha": "a01d7950233a019a"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "Typical adult Albertosaurus measured 8 to 9 meters long and weighed between 1.7 and 3.0 metric tons.",
+   "statement": "Adult Albertosaurus measured up to 8 to 9 meters long and weighed between 1.7 and 3.0 metric tons.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
@@ -483,8 +477,8 @@
    "quote_sha": "5fc3c6757729b56f"
   },
   {
-   "fact_id": "F035",
-   "statement": "Albertosaurus had long legs ending in a four-toed foot with a very short hallux that did not touch the ground.",
+   "fact_id": "F032",
+   "statement": "Albertosaurus had long legs ending in a four-toed foot where the first toe was very short and did not touch the ground.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
@@ -492,8 +486,8 @@
    "quote_sha": "67e77906bd4847ee"
   },
   {
-   "fact_id": "F036",
-   "statement": "Albertosaurus may have been capable of walking speeds between 14 and 21 kilometers per hour.",
+   "fact_id": "F033",
+   "statement": "Albertosaurus could likely walk at speeds between 14 and 21 kilometers per hour.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
@@ -501,17 +495,17 @@
    "quote_sha": "d1fee42901bce3a6"
   },
   {
-   "fact_id": "F037",
-   "statement": "Two skin impressions of Albertosaurus are known, both showing scales.",
+   "fact_id": "F034",
+   "statement": "A skin impression from Albertosaurus found near gastralic ribs indicates it came from the belly.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
-   "quote": "Two skin impressions from Albertosaurus are known, and both show scales.",
-   "quote_sha": "8aecfc34cc335dc1"
+   "quote": "One patch was found associated with some gastralic ribs and the impression of a long, unknown bone, indicating that the patch is from the belly.",
+   "quote_sha": "dd9d3d9f1d966863"
   },
   {
-   "fact_id": "F038",
-   "statement": "Albertosaurus belly scales were pebbly and gradually became larger and somewhat hexagonal in shape.",
+   "fact_id": "F035",
+   "statement": "Albertosaurus belly scales were pebbly and gradually became larger and somewhat hexagonal.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
@@ -519,17 +513,17 @@
    "quote_sha": "55088717637e7418"
   },
   {
-   "fact_id": "F039",
-   "statement": "Albertosaurus is one of only two known theropods with preserved feature scales, which were placed 4.5 centimeters apart.",
-   "category": "description",
+   "fact_id": "F036",
+   "statement": "Albertosaurus is one of only two known theropods, along with Carnotaurus, to have preserved feature scales.",
+   "category": "curiosities",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
-   "quote": "Also preserved are two larger feature scales, placed 4.5 centimeters apart from each other, making Albertosaurus, along with Carnotaurus, the only known theropods with preserved feature scales.",
-   "quote_sha": "ce3710aaacc3e49a"
+   "quote": "making Albertosaurus, along with Carnotaurus, the only known theropods with preserved feature scales.",
+   "quote_sha": "1650e6445007d1a9"
   },
   {
-   "fact_id": "F040",
-   "statement": "Another Albertosaurus skin impression shows small, diamond-shaped scales arranged in rows.",
+   "fact_id": "F037",
+   "statement": "Albertosaurus had small, diamond-shaped scales arranged in rows on an unknown body part.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:9",
    "lang": "en",
@@ -537,7 +531,7 @@
    "quote_sha": "2920ecc3259bdeef"
   },
   {
-   "fact_id": "F041",
+   "fact_id": "F038",
    "statement": "The largest adult Albertosaurus had a massive skull about 1 meter long perched on a short, S-shaped neck.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:10",
@@ -546,8 +540,8 @@
    "quote_sha": "b85d47899244ecb2"
   },
   {
-   "fact_id": "F042",
-   "statement": "The jaws of Albertosaurus contained 58 or more banana-shaped teeth in total.",
+   "fact_id": "F039",
+   "statement": "Albertosaurus long jaws contained 58 or more banana-shaped teeth in total on both sides.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:10",
    "lang": "en",
@@ -555,7 +549,7 @@
    "quote_sha": "ac2367c45bb82052"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F040",
    "statement": "The four premaxillary teeth at the tip of each upper jaw were smaller, closely packed, and D-shaped in cross-section.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:10",
@@ -564,17 +558,17 @@
    "quote_sha": "d9d077c9d305aa69"
   },
   {
-   "fact_id": "F044",
-   "statement": "The maximum bite force of Albertosaurus, measured at the back teeth, reached 3,413 Newtons.",
-   "category": "description",
+   "fact_id": "F041",
+   "statement": "The maximum bite force of Albertosaurus by the back teeth reached 3,413 Newtons.",
+   "category": "curiosities",
    "chunk_id": "albertosaurus:enwiki:10",
    "lang": "en",
-   "quote": "The bite force of Albertosaurus was less formidable, however, with the maximum force, by the back teeth, reaching 3,413 Newtons.",
-   "quote_sha": "3cfdefa53e3a1491"
+   "quote": "the maximum force, by the back teeth, reaching 3,413 Newtons.",
+   "quote_sha": "05789a6e973b1b3b"
   },
   {
-   "fact_id": "F045",
-   "statement": "Short bony crests above the eyes of Albertosaurus may have been brightly colored and used by males for courtship.",
+   "fact_id": "F042",
+   "statement": "Short bony crests above Albertosaurus eyes may have been brightly colored and used by males for courtship.",
    "category": "description",
    "chunk_id": "albertosaurus:enwiki:10",
    "lang": "en",
@@ -582,8 +576,17 @@
    "quote_sha": "afe9aaf866d0390c"
   },
   {
-   "fact_id": "F046",
-   "statement": "William Abler demonstrated that teeth with ampullas are structurally stronger, similar to how drilled holes make plexiglass 25% stronger than bars with only regular incisions.",
+   "fact_id": "F043",
+   "statement": "William Abler observed in 2001 that Albertosaurus tooth serrations ended in a round void called an ampulla.",
+   "category": "description",
+   "chunk_id": "albertosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In 2001, William Abler observed that Albertosaurus tooth serrations resemble a crack in the tooth ending in a round void called an ampulla.",
+   "quote_sha": "2a8291310e068027"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "Experiments showed that teeth with ampullas were more than 25% stronger than those without, similar to engineering techniques used in aircraft.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:10",
    "lang": "en",
@@ -591,7 +594,7 @@
    "quote_sha": "6da176a2a9641794"
   },
   {
-   "fact_id": "F047",
+   "fact_id": "F045",
    "statement": "Albertosaurus belongs to the theropod family Tyrannosauridae and the subfamily Albertosaurinae.",
    "category": "classification",
    "chunk_id": "albertosaurus:enwiki:11",
@@ -600,7 +603,7 @@
    "quote_sha": "2fd053fd3661ba50"
   },
   {
-   "fact_id": "F048",
+   "fact_id": "F046",
    "statement": "The closest relative of Albertosaurus is the slightly older Gorgosaurus libratus.",
    "category": "classification",
    "chunk_id": "albertosaurus:enwiki:11",
@@ -609,62 +612,44 @@
    "quote_sha": "059c49bf7f88d929"
   },
   {
-   "fact_id": "F049",
-   "statement": "Albertosaurus and Gorgosaurus are the only described species in the subfamily Albertosaurinae, though other undescribed species may exist.",
+   "fact_id": "F047",
+   "statement": "Thomas Holtz initially classified Appalachiosaurus as an albertosaurine in 2004, but later placed it outside Tyrannosauridae in agreement with other authors.",
    "category": "classification",
    "chunk_id": "albertosaurus:enwiki:11",
    "lang": "en",
-   "quote": "These two species are the only described albertosaurines, but other undescribed species may exist.",
-   "quote_sha": "bfb41cad39adbd0f"
+   "quote": "Thomas Holtz found Appalachiosaurus to be an albertosaurine in 2004, but his more recent unpublished work places it as a basal eotyrannosaurian just outside of Tyrannosauridae, in agreement with other authors.",
+   "quote_sha": "0bd7998141d847e1"
   },
   {
-   "fact_id": "F050",
-   "statement": "There is a debate among authors regarding whether Albertosaurus and Gorgosaurus should remain separate genera, with most following Philip J. Currie's recommendation to keep them separate but some disagreeing.",
-   "category": "debate",
-   "chunk_id": "albertosaurus:enwiki:7",
+   "fact_id": "F048",
+   "statement": "Albertosaurines like Albertosaurus had slender builds with smaller skulls and longer lower leg and foot bones compared to tyrannosaurines.",
+   "category": "description",
+   "chunk_id": "albertosaurus:enwiki:11",
    "lang": "en",
-   "quote": "Most authors have followed Currie's recommendation, but some have not.",
-   "quote_sha": "7dedb1596eaeca05"
+   "quote": "Compared with the more robust tyrannosaurines, albertosaurines had slender builds, with proportionately smaller skulls and longer bones of the lower legs (tibia) and feet (metatarsals and phalanges).",
+   "quote_sha": "c0b9f287eae06858"
   },
   {
-   "fact_id": "F051",
-   "statement": "It is debated whether Albertosaurus sternbergi is a juvenile Gorgosaurus libratus, identical to Tyrannosaurus, or a separate genus named Nanotyrannus.",
-   "category": "debate",
-   "chunk_id": "albertosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "The former species is today seen as a juvenile form of Gorgosaurus libratus and the latter is seen as either identical to Tyrannosaurus or representing a separate genus, Nanotyrannus.",
-   "quote_sha": "54b76924edaf55b8"
-  },
-  {
-   "fact_id": "F052",
-   "statement": "The classification of Alectrosaurus olseni as Albertosaurus olseni proposed in 1988 has not found general acceptance.",
-   "category": "debate",
-   "chunk_id": "albertosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1988, Paul renamed Alectrosaurus olseni (Gilmore 1933) into Albertosaurus olseni, but this has found no general acceptance.",
-   "quote_sha": "ea354947ec0b272a"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "The youngest known Albertosaurus was a two-year-old individual weighing approximately 50 kilograms and measuring slightly more than 2 meters in length.",
-   "category": "paleobiology",
+   "fact_id": "F049",
+   "statement": "The youngest known Albertosaurus fossil is a two-year-old individual found in the Dry Island bonebed that weighed approximately 50 kilograms and measured slightly over 2 meters in length.",
+   "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:12",
    "lang": "en",
    "quote": "The youngest known Albertosaurus is a two-year-old discovered in the Dry Island bonebed, which would have weighed about 50 kilograms (110 lb) and measured slightly more than 2 m long.",
    "quote_sha": "a5336037849a5515"
   },
   {
-   "fact_id": "F054",
-   "statement": "The oldest and largest known Albertosaurus specimen was 28 years old and measured 10 meters in length.",
-   "category": "paleobiology",
+   "fact_id": "F050",
+   "statement": "A 10-meter-long specimen from the Dry Island bonebed is 28 years old, representing the oldest and largest known Albertosaurus.",
+   "category": "curiosities",
    "chunk_id": "albertosaurus:enwiki:12",
    "lang": "en",
    "quote": "The 10 m specimen from the same quarry is 28 years old, the oldest and largest one known.",
    "quote_sha": "43041a2bd24e8ff9"
   },
   {
-   "fact_id": "F055",
-   "statement": "Based on an adult weight of 1.3 tonnes, the rapid growth phase of Albertosaurus occurred at a rate of 122 kilograms per year.",
+   "fact_id": "F051",
+   "statement": "Based on an estimated adult weight of 1.3 tonnes, the rapid growth phase of Albertosaurus occurred at a rate of 122 kilograms per year.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:12",
    "lang": "en",
@@ -672,8 +657,8 @@
    "quote_sha": "c4b0acd67513fb71"
   },
   {
-   "fact_id": "F056",
-   "statement": "The end of the rapid growth phase in Albertosaurus suggests the onset of sexual maturity, though growth continued at a slower rate for the rest of their lives.",
+   "fact_id": "F052",
+   "statement": "Researchers suggest that the end of Albertosaurus's rapid growth phase indicates the onset of sexual maturity, though growth continued at a slower rate for the rest of their lives.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:12",
    "lang": "en",
@@ -681,8 +666,8 @@
    "quote_sha": "883edbec6d064b07"
   },
   {
-   "fact_id": "F057",
-   "statement": "Most known Albertosaurus individuals were 14 years old or older when they died.",
+   "fact_id": "F053",
+   "statement": "Most known Albertosaurus fossils represent individuals that were at least 14 years old when they died.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:13",
    "lang": "en",
@@ -690,8 +675,17 @@
    "quote_sha": "b9b6690ba6a81b3b"
   },
   {
-   "fact_id": "F058",
-   "statement": "Mortality rates in Albertosaurus doubled at age twelve and again between ages fourteen and sixteen, coinciding with rapid growth and sexual maturity.",
+   "fact_id": "F054",
+   "statement": "By the age of two, juvenile Albertosaurus were larger than any other regional predator besides adults and faster than most of their prey.",
+   "category": "paleobiology",
+   "chunk_id": "albertosaurus:enwiki:13",
+   "lang": "en",
+   "quote": "After just two years, juveniles were larger than any other predator in the region, aside from adult Albertosaurus, and more fleet-footed than most of their prey animals.",
+   "quote_sha": "d54c3d8c83b2ecb9"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Albertosaurus mortality rates reportedly doubled at age twelve and again between ages fourteen and sixteen, coinciding with rapid growth and sexual maturity.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:13",
    "lang": "en",
@@ -699,8 +693,8 @@
    "quote_sha": "ec44569b6eb32dcf"
   },
   {
-   "fact_id": "F059",
-   "statement": "The Dry Island bonebed, discovered by Barnum Brown, contains the remains of 26 Albertosaurus, the highest number of individuals found in one locality for any large Cretaceous theropod.",
+   "fact_id": "F056",
+   "statement": "The Dry Island bonebed, discovered by Barnum Brown, contains 26 Albertosaurus specimens, the largest single assemblage of any large Cretaceous theropod and the second-largest of any large theropod dinosaur.",
    "category": "discovery",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
@@ -708,8 +702,8 @@
    "quote_sha": "09b9a1277755ca2a"
   },
   {
-   "fact_id": "F060",
-   "statement": "The Dry Island bonebed group included one very old adult, eight adults aged 17 to 23, seven sub-adults aged 12 to 16, and six juveniles aged 2 to 11.",
+   "fact_id": "F057",
+   "statement": "The Dry Island bonebed assemblage includes one very old adult, eight adults aged 17 to 23, seven sub-adults aged 12 to 16, and six juveniles aged 2 to 11.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
@@ -717,35 +711,35 @@
    "quote_sha": "f6f5931721b87e0a"
   },
   {
-   "fact_id": "F061",
-   "statement": "Some scientists debate whether the Dry Island bonebed represents pack behavior or if the animals were driven together by environmental factors like drought or flood.",
+   "fact_id": "F058",
+   "statement": "It is debated whether the Dry Island bonebed represents pack behavior or if the animals were driven together by environmental factors like drought or flood.",
    "category": "debate",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
-   "quote": "Other scientists are skeptical, observing that the animals may have been driven together by a drought, flood, or other reasons.",
-   "quote_sha": "a17386f2fbaba0a8"
+   "quote": "Currie claims this as evidence of pack behavior. Other scientists are skeptical, observing that the animals may have been driven together by a drought, flood, or other reasons.",
+   "quote_sha": "e0e10c9b5b0ab462"
   },
   {
-   "fact_id": "F062",
-   "statement": "It is debated whether Albertosaurus social behavior involved pack hunting or mobbing carcasses, where competition led to killing and cannibalism.",
-   "category": "debate",
-   "chunk_id": "albertosaurus:enwiki:14",
-   "lang": "en",
-   "quote": "Others have speculated that, instead of social groups, at least some of these finds represent Komodo dragon-like mobbing of carcasses, where aggressive competition leads to some of the predators being killed and even cannibalized.",
-   "quote_sha": "bc64818a3ca2e11b"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "Evidence of cannibalism in Albertosaurus was reported in 2024 by Coppock and Currie.",
+   "fact_id": "F059",
+   "statement": "In 2024, Coppock and Currie reported evidence of cannibalism in Albertosaurus, citing tooth traces on a pubis that likely belonged to another A. sarcophagus individual.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
-   "quote": "The evidence of cannibalism was later reported in 2024 by Coppock and Currie.",
-   "quote_sha": "1a8d37298b40ccbc"
+   "quote": "The evidence of cannibalism was later reported in 2024 by Coppock and Currie. The evidence consisted of tooth traces found on the medial surface of a pubis attributed to an albertosaurine, which given the lack of other albertosaurine species in the assemblage almost certainly reflected another A. sarcophagus.",
+   "quote_sha": "4109228ad8e1b7e7"
   },
   {
-   "fact_id": "F064",
-   "statement": "Barnum Brown's colleague Currie hypothesized that younger Albertosaurus drove prey toward larger, slower adults in a pack-hunting strategy.",
+   "fact_id": "F060",
+   "statement": "Bite traces found on Albertosaurus fossils show no healing, indicating they are post-mortem feeding marks rather than injuries from combat.",
+   "category": "paleobiology",
+   "chunk_id": "albertosaurus:enwiki:14",
+   "lang": "en",
+   "quote": "These bite traces show no signs of healing and thus strongly indicate that they were made post-mortem and represent feeding marks as opposed to injuries sustained during intraspecific combat.",
+   "quote_sha": "000ee291e3eb708c"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Currie hypothesized that younger Albertosaurus drove prey toward larger, more powerful but slower adults as part of a pack-hunting strategy.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
@@ -753,35 +747,35 @@
    "quote_sha": "68e6ae9871a546ed"
   },
   {
-   "fact_id": "F065",
-   "statement": "In 2010, Currie admitted that while he favored the pack-hunting hypothesis, the Dry Island concentration could have been caused by a slowly rising water level during a flood.",
+   "fact_id": "F062",
+   "statement": "Because behavior preservation in the fossil record is rare, hypotheses about Albertosaurus social behavior cannot be readily tested.",
    "category": "debate",
    "chunk_id": "albertosaurus:enwiki:14",
    "lang": "en",
-   "quote": "In 2010, Currie, though still favouring the hunting pack hypothesis, admitted that the concentration could have been brought about by other causes, such as a slowly rising water level during an extended flood.",
-   "quote_sha": "34ecbe4d445876f0"
+   "quote": "However, as the preservation of behaviour in the fossil record is exceedingly rare, these ideas cannot readily be tested.",
+   "quote_sha": "4564f4d3922572d8"
   },
   {
-   "fact_id": "F066",
-   "statement": "In 2009, researchers hypothesized that smooth-edged holes in Albertosaurus fossil jaws were caused by a bird-like parasite.",
-   "category": "debate",
+   "fact_id": "F063",
+   "statement": "In 2009, researchers hypothesized that smooth-edged holes in Albertosaurus fossil jaws were caused by a bird-like parasite that may have impaired the dinosaur's ability to eat.",
+   "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:15",
    "lang": "en",
    "quote": "In 2009, researchers hypothesized that smooth-edged holes found in the fossil jaws of tyrannosaurid dinosaurs, such as Albertosaurus, were caused by a parasite similar to Trichomonas gallinae, which infects birds.",
    "quote_sha": "aa7164c2b4a61fbd"
   },
   {
-   "fact_id": "F067",
-   "statement": "A 2001 study by Bruce Rothschild found stress fractures in only one of 319 checked Albertosaurus foot bones and none in four hand bones.",
+   "fact_id": "F064",
+   "statement": "The holotype specimen ROM 807 possessed a hole measuring 2.5 by 3.5 cm deep in its iliac blade.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:15",
    "lang": "en",
-   "quote": "In 2001, Bruce Rothschild and others published a study examining evidence for stress fractures and tendon avulsions in theropod dinosaurs and the implications for their behavior. They found that only one of the 319 Albertosaurus foot bones checked for stress fractures actually had them and none of the four hand bones did.",
-   "quote_sha": "e55589d4275d65df"
+   "quote": "ROM 807, the holotype of A. arctunguis (now referred to A. sarcophagus), had a 2.5 by 3.5 cm deep hole in the iliac blade",
+   "quote_sha": "edbad9ac82ddacec"
   },
   {
-   "fact_id": "F068",
-   "statement": "In 1970, Dale Russel reported pathological damage to the humeri of two of five Albertosaurus sarcophagus specimens.",
+   "fact_id": "F065",
+   "statement": "In 1970, Dale Russel reported that two of five Albertosaurus sarcophagus specimens with humeri showed pathological damage.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:enwiki:15",
    "lang": "en",
@@ -789,35 +783,26 @@
    "quote_sha": "29ca44625e570aa7"
   },
   {
-   "fact_id": "F069",
-   "statement": "Three foot phalanges of a Dry Island Albertosaurus assembly show enthesophytes, but their cause remains unknown.",
-   "category": "paleobiology",
-   "chunk_id": "albertosaurus:enwiki:15",
-   "lang": "en",
-   "quote": "On three phalanges of the foot, strange bony spurs that consisted of abnormal ossifications of the tendons, so-called enthesophytes, were present, but their cause is unknown.",
-   "quote_sha": "4292adc6aceedf11"
-  },
-  {
-   "fact_id": "F070",
-   "statement": "Fossils from the Dry Island assembly show broken and healed ribs, a puncture wound on a jaw, and healed and unhealed bite marks.",
-   "category": "paleobiology",
-   "chunk_id": "albertosaurus:enwiki:15",
-   "lang": "en",
-   "quote": "Two ribs and a belly-rib showed signs of breaking and healing. One adult specimen had a left lower jaw showing a puncture wound and both healed and unhealed bite marks.",
-   "quote_sha": "b9250d8e825c9a87"
-  },
-  {
-   "fact_id": "F071",
-   "statement": "Most Albertosaurus sarcophagus fossils come from the upper Horseshoe Canyon Formation in Alberta, dating to the early Maastrichtian (70 to 68 million years ago).",
+   "fact_id": "F066",
+   "statement": "Most Albertosaurus sarcophagus fossils are found in the upper Horseshoe Canyon Formation in Alberta.",
    "category": "time_and_habitat",
    "chunk_id": "albertosaurus:enwiki:16",
    "lang": "en",
-   "quote": "Most fossils of Albertosaurus sarcophagus are known from the upper Horseshoe Canyon Formation in Alberta. These younger units of this geologic formation date to the early Maastrichtian age of the Late Cretaceous period, about 70 to 68 million years ago.",
-   "quote_sha": "8562eeae338f3c91"
+   "quote": "Most fossils of Albertosaurus sarcophagus are known from the upper Horseshoe Canyon Formation in Alberta.",
+   "quote_sha": "5db9577eeee50892"
   },
   {
-   "fact_id": "F072",
-   "statement": "Albertosaurus remains are found in delta and floodplain deposits from the later half of the Horseshoe Canyon times.",
+   "fact_id": "F067",
+   "statement": "Albertosaurus lived during the early Maastrichtian age of the Late Cretaceous, approximately 70 to 68 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:enwiki:16",
+   "lang": "en",
+   "quote": "These younger units of this geologic formation date to the early Maastrichtian age of the Late Cretaceous period, about 70 to 68 million years ago.",
+   "quote_sha": "f9b81c8d2b488243"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Albertosaurus remains are found in river delta and floodplain deposits from the later half of the Horseshoe Canyon times.",
    "category": "time_and_habitat",
    "chunk_id": "albertosaurus:enwiki:16",
    "lang": "en",
@@ -825,35 +810,26 @@
    "quote_sha": "705eb8bde76744c9"
   },
   {
-   "fact_id": "F073",
-   "statement": "Albertosaurus sarcophagus has synonyms including Deinodon sarcophagus (Osborn, 1905) and Albertosaurus arctunguis (Parks, 1928).",
+   "fact_id": "F069",
+   "statement": "Albertosaurus is classified within the subfamily Albertosaurinae.",
    "category": "classification",
    "chunk_id": "albertosaurus:eswiki:1",
    "lang": "es",
-   "quote": "synonyms: Deinodon sarcophagus (Osborn, 1905) Albertosaurus arctunguis Parks, 1928 Deinodon arctunguis (Parks, 1928)",
-   "quote_sha": "cf3a2f0a19812fee"
+   "quote": "subfamilia: Albertosaurinae",
+   "quote_sha": "56f8856e0818b9d4"
   },
   {
-   "fact_id": "F074",
-   "statement": "Albertosaurus sarcophagus lived in western North America during the late Cretaceous, between 71 and 68 million years ago.",
-   "category": "time_and_habitat",
-   "chunk_id": "albertosaurus:eswiki:2",
+   "fact_id": "F070",
+   "statement": "Albertosaurus belongs to the tribe Albertosaurini.",
+   "category": "classification",
+   "chunk_id": "albertosaurus:eswiki:1",
    "lang": "es",
-   "quote": "Albertosaurus sarcophagus (gr., «lagarto de Alberta comedor de carne») es la única especie conocida del género extinto Albertosaurus de dinosaurio terópodo tiranosáurido que vivió en el oeste de América del Norte a finales del período Cretácico, entre 71 y 68 millones de años, a comienzos del Maastrichtiense.",
-   "quote_sha": "1d2e0d8ae0e75b2c"
+   "quote": "tribus: Albertosaurini",
+   "quote_sha": "4505b7eee67c5bf1"
   },
   {
-   "fact_id": "F075",
-   "statement": "There is scientific disagreement regarding whether the genus Albertosaurus represents one or two species.",
-   "category": "debate",
-   "chunk_id": "albertosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Existe cierto desacuerdo en la comunidad científica en cuanto al número de especies representadas en el género, que según el caso serían una o dos.",
-   "quote_sha": "ab71198c360a568c"
-  },
-  {
-   "fact_id": "F076",
-   "statement": "Albertosaurus was a bipedal predator with a large head, jaws with dozens of large teeth, and small two-fingered hands.",
+   "fact_id": "F071",
+   "statement": "As a tyrannosaurid, Albertosaurus was a bipedal predator with a large head, jaws holding dozens of large teeth, and small two-fingered hands.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:2",
    "lang": "es",
@@ -861,8 +837,8 @@
    "quote_sha": "176f568142853d49"
   },
   {
-   "fact_id": "F077",
-   "statement": "Albertosaurus was likely as heavy as a modern black rhinoceros, much smaller than its relative Tyrannosaurus.",
+   "fact_id": "F072",
+   "statement": "Albertosaurus was much smaller than its famous relative Tyrannosaurus, likely weighing as much as a modern black rhinoceros.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:2",
    "lang": "es",
@@ -870,26 +846,17 @@
    "quote_sha": "26d07d110054fe02"
   },
   {
-   "fact_id": "F078",
-   "statement": "Fossils of more than thirty individuals have been discovered, providing detailed anatomical knowledge of Albertosaurus.",
+   "fact_id": "F073",
+   "statement": "The discovery of twenty-six individuals together at one site suggests evidence of group behavior in Albertosaurus.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Han sido descubiertos fósiles de más de treinta individuos, permitiendo a los científicos un conocimiento más detallado de la anatomía de Albertosaurus que la que se tiene de otros tiranosáuridos.",
-   "quote_sha": "f0c00d1d616086d4"
+   "quote": "El hallazgo de veintiséis individuos juntos en un sitio señala evidencia de comportamiento en grupos",
+   "quote_sha": "836ffd1af0add902"
   },
   {
-   "fact_id": "F079",
-   "statement": "The discovery of twenty-six individuals together at one site suggests group behavior and allows developmental biology studies.",
-   "category": "paleobiology",
-   "chunk_id": "albertosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "El hallazgo de veintiséis individuos juntos en un sitio señala evidencia de comportamiento en grupos y permite estudios de su biología del desarrollo, imposibles con animales menos conocidos.",
-   "quote_sha": "167d6ba9abc95bf6"
-  },
-  {
-   "fact_id": "F080",
-   "statement": "Adult Albertosaurus reached approximately nine meters in length, with some older individuals reaching ten meters.",
+   "fact_id": "F074",
+   "statement": "Adult Albertosaurus reached approximately nine meters in length, while some older individuals may have reached ten meters.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:3",
    "lang": "es",
@@ -897,8 +864,8 @@
    "quote_sha": "3e4e3e7beca2940b"
   },
   {
-   "fact_id": "F081",
-   "statement": "Independent estimates suggest an adult Albertosaurus weighed between 1.3 and 1.7 tons, with a maximum of 2.5 tons.",
+   "fact_id": "F075",
+   "statement": "Independent mass estimates suggest an adult Albertosaurus weighed between 1.3 and 1.7 tons, with a maximum of 2.5 tons.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:3",
    "lang": "es",
@@ -906,35 +873,17 @@
    "quote_sha": "32330a44af080bd1"
   },
   {
-   "fact_id": "F082",
-   "statement": "Albertosaurus was bipedal and balanced its heavy head and torso with a long tail.",
-   "category": "description",
-   "chunk_id": "albertosaurus:eswiki:3",
+   "fact_id": "F076",
+   "statement": "There is disagreement in the scientific community regarding the number of species in the genus, with estimates ranging from one to two species.",
+   "category": "debate",
+   "chunk_id": "albertosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Albertosaurus era bípedo y balanceaba su pesada cabeza y tronco con una larga cola.",
-   "quote_sha": "5aa59e97b5f5f641"
+   "quote": "Existe cierto desacuerdo en la comunidad científica en cuanto al número de especies representadas en el género, que según el caso serían una o dos.",
+   "quote_sha": "ab71198c360a568c"
   },
   {
-   "fact_id": "F083",
-   "statement": "Albertosaurus had extremely small forelimbs with only two fingers relative to its body size.",
-   "category": "description",
-   "chunk_id": "albertosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Los miembros delanteros de los tiranosáuridos eran extremadamente pequeños para su tamaño y tenían solamente dos dedos.",
-   "quote_sha": "3f0ee3d472c86f30"
-  },
-  {
-   "fact_id": "F084",
-   "statement": "Albertosaurus had long hind limbs ending in a four-toed foot, with the first toe small and posterior, and the middle toe longer than the others.",
-   "category": "description",
-   "chunk_id": "albertosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Los miembros traseros eran largos y terminaban en un pie de cuatro dedos. El primero de estos dedos era muy pequeño y se ubicaba en la parte posterior, y solo los otros tres se apoyaban en el suelo, con el dedo medio más largo que los demás.",
-   "quote_sha": "992d4cca4d368703"
-  },
-  {
-   "fact_id": "F085",
-   "statement": "The largest adult Albertosaurus skulls were approximately one meter long.",
+   "fact_id": "F077",
+   "statement": "Adult Albertosaurus had a skull approximately one meter long supported by a short S-shaped neck.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:4",
    "lang": "es",
@@ -942,8 +891,8 @@
    "quote_sha": "b21f952a2f0dea3c"
   },
   {
-   "fact_id": "F086",
-   "statement": "Albertosaurus possessed more than sixty slightly curved teeth, a higher count than larger tyrannosaurids.",
+   "fact_id": "F078",
+   "statement": "Albertosaurus possessed more than sixty slightly curved teeth in its long jaws, a higher count than larger tyrannosaurids.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:4",
    "lang": "es",
@@ -951,7 +900,16 @@
    "quote_sha": "209cfbff4c025ad5"
   },
   {
-   "fact_id": "F087",
+   "fact_id": "F079",
+   "statement": "Tyrannosaurids, unlike most theropods, exhibited heterodont dentition where teeth varied in shape based on their position in the mouth.",
+   "category": "description",
+   "chunk_id": "albertosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "A diferencia de la mayoría de terópodos, los tiranosáuridos tenían dentición heterodonta, es decir, los dientes presentaban diferentes formas dependiendo de su posición en la boca.",
+   "quote_sha": "0d23dfd875edecd8"
+  },
+  {
+   "fact_id": "F080",
    "statement": "The premaxillary teeth at the front of the upper jaw were much smaller, compact, and D-shaped in cross-section.",
    "category": "description",
    "chunk_id": "albertosaurus:eswiki:4",
@@ -960,17 +918,17 @@
    "quote_sha": "1eed8d3b92efd8dd"
   },
   {
-   "fact_id": "F088",
-   "statement": "The maximum bite force exerted by the posterior teeth of Albertosaurus reached 3413 newtons.",
-   "category": "paleobiology",
+   "fact_id": "F081",
+   "statement": "The maximum bite force exerted by the posterior teeth of Albertosaurus reached 3,413 newtons.",
+   "category": "curiosities",
    "chunk_id": "albertosaurus:eswiki:4",
    "lang": "es",
    "quote": "La fuerza máxima ejercida por los dientes posteriores llegaba a 3413 newton.",
    "quote_sha": "f0ebda3f2c5c5bfe"
   },
   {
-   "fact_id": "F089",
-   "statement": "In 2001, William Abler observed that the striations on Albertosaurus teeth are so fine they can functionally be considered a crack in the tooth.",
+   "fact_id": "F082",
+   "statement": "In 2001, William Abler observed that the striations on Albertosaurus teeth were so fine they could functionally act as a crack in the tooth.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:eswiki:4",
    "lang": "es",
@@ -978,16 +936,25 @@
    "quote_sha": "c5c087469b61b221"
   },
   {
-   "fact_id": "F090",
-   "statement": "Similar fractures found in ancient predators like phytosaurs and Dimetrodon lacked adaptations to prevent crack propagation, unlike those in tyrannosaurids.",
+   "fact_id": "F083",
+   "statement": "A round hollow space called an ampulla at the base of the tooth striations helped distribute forces over a larger surface area, preventing cracks from propagating through the tooth.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:eswiki:4",
    "lang": "es",
-   "quote": "En un examen de otros depredadores antiguos, como un fitosaurio y en Dimetrodon, se han encontrado de manera similar fracturas como estrías, pero no adaptaciones para la prevención de la propagación de grietas.",
-   "quote_sha": "fa5b7eecc737577b"
+   "quote": "En la base de esta grieta hay un espacio vacío redondo llamado ampolla que funcionaba para distribuir las fuerzas sobre una mayor área de superficie, lo que dificultaba la capacidad de la «grieta» formada por el dentado de propagarse a través del diente.",
+   "quote_sha": "efb06619cb02a274"
   },
   {
-   "fact_id": "F091",
+   "fact_id": "F084",
+   "statement": "Tyrannosaurid teeth were used as anchoring discs to pull meat from a carcass rather than functioning as knives for cutting.",
+   "category": "paleobiology",
+   "chunk_id": "albertosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Los dientes de los tiranosáuridos fueron usados como discos de fijación para tirar de la carne de un cuerpo, en vez de funcionar como cuchillos que efectúan un corte.",
+   "quote_sha": "d9388d63526795e0"
+  },
+  {
+   "fact_id": "F085",
    "statement": "Wear patterns on the teeth suggest that head-shaking behavior may have been involved in tyrannosaurid feeding.",
    "category": "paleobiology",
    "chunk_id": "albertosaurus:eswiki:4",
@@ -996,8 +963,8 @@
    "quote_sha": "e0378b415908fd53"
   },
   {
-   "fact_id": "F092",
-   "statement": "The first Albertosaurus was found by Joseph Burr Tyrrell during geological prospecting in 1884.",
+   "fact_id": "F086",
+   "statement": "The first Albertosaurus was discovered by Joseph Burr Tyrrell during geological prospecting in 1884.",
    "category": "discovery",
    "chunk_id": "albertosaurus:eswiki:5",
    "lang": "es",
@@ -1005,7 +972,7 @@
    "quote_sha": "f38805d570e622af"
   },
   {
-   "fact_id": "F093",
+   "fact_id": "F087",
    "statement": "Albertosaurus was named in 1905 by Henry Fairfield Osborn of the American Museum of Natural History in a brief note at the end of his description of Tyrannosaurus rex.",
    "category": "discovery",
    "chunk_id": "albertosaurus:eswiki:5",
@@ -1014,8 +981,8 @@
    "quote_sha": "fff594529254281d"
   },
   {
-   "fact_id": "F094",
-   "statement": "The name honors Alberta, the Canadian province where the first remains were found.",
+   "fact_id": "F088",
+   "statement": "The name Albertosaurus honors the Canadian province of Alberta, where the first remains were found.",
    "category": "discovery",
    "chunk_id": "albertosaurus:eswiki:5",
    "lang": "es",
@@ -1023,8 +990,8 @@
    "quote_sha": "7f9b5797cb66b7a8"
   },
   {
-   "fact_id": "F095",
-   "statement": "More than thirty specimens of various ages are known.",
+   "fact_id": "F089",
+   "statement": "More than thirty specimens of various ages are known for Albertosaurus.",
    "category": "discovery",
    "chunk_id": "albertosaurus:eswiki:5",
    "lang": "es",
@@ -1032,70 +999,106 @@
    "quote_sha": "c0ae8b74b9d55f63"
   },
   {
-   "fact_id": "F096",
-   "statement": "The type specimen was found on June 9, 1884, and recovered by an expedition of the Geological Survey of Canada led by geologist Joseph Burr Tyrrell.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:eswiki:6",
+   "fact_id": "F090",
+   "statement": "A two-year-old Albertosaurus fossil, the youngest found to date, was discovered at Dry Island weighing approximately fifty kilograms and measuring two meters long.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
    "lang": "es",
-   "quote": "Este espécimen, encontrado el 9 de junio de 1884, fue recuperado por una expedición del Instituto Geológico de Canadá, dirigido por el famoso geólogo Joseph Burr Tyrrell.",
-   "quote_sha": "7256d84c848dde60"
+   "quote": "Recientemente ha sido hallado un fósil de Albertosaurus de dos años de edad, el más joven hallado hasta el momento, en la cama de huesos de Dry Island que ha sido reabierta, que debió pesar cerca de cincuenta kilogramos y medir dos metros de largo.",
+   "quote_sha": "2585b6d000b3ac5c"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "The oldest specimen from the same quarry was approximately twenty-eight years old and about ten meters long.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "Otro espécimen de la misma cantera es el más viejo, de alrededor de veintiocho años de edad y unos diez metros de largo.",
+   "quote_sha": "ab161161d619a57e"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "A twenty-four-year-old specimen in the Tyrrell Museum of Paleontology collection would have weighed approximately 1.14 tons.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "Un espécimen de veinticuatro años de edad de la colección del Museo Tyrrell de Paleontología habría pesado aproximadamente 1,14 toneladas.",
+   "quote_sha": "9d42bd5d136690fe"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "An individual weighing 1.28 tons in the American Museum of Natural History collection was twenty-two years old when it died.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "Otro individuo de 1,28 toneladas, que se encuentra en la colección del Museo Americano de Historia Natural, tenía veintidós años de edad cuando murió.",
+   "quote_sha": "aad0972979d664de"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Albertosaurus appears to reach skeletal maturity at sixteen years of age, which coincided with the end of rapid growth and likely sexual maturity.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "Albertosaurus parece alcanzar la madurez esquelética a los dieciséis años de edad; la misma está marcada por el fin de la fase de rápido crecimiento, que al parecer también era la edad donde alcanzaba su madurez sexual.",
+   "quote_sha": "9ce8beeaf4583aec"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "The growth rate during the rapid growth phase is estimated at an increase of 122 kg per year.",
+   "category": "time_and_habitat",
+   "chunk_id": "albertosaurus:eswiki:13",
+   "lang": "es",
+   "quote": "La tasa de crecimiento durante esta fase se estima en un aumento de 122 kg por año.",
+   "quote_sha": "6c8bac3f6f7c581e"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "Small bony crests above the eyes may have been brightly colored in life and used in courtship to attract mates, though this is a hypothesis.",
+   "category": "debate",
+   "chunk_id": "albertosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Por encima de los ojos tenía pequeñas crestas óseas que pueden haber tenido un color brillante en vida y ser utilizadas en el cortejo para atraer a su pareja.",
+   "quote_sha": "2a8e84685e15db68"
   },
   {
    "fact_id": "F097",
-   "statement": "In 1889, Thomas Chesmer Weston, a colleague of Tyrrell, found an additional smaller incomplete skull and some additional skeletal material at a nearby location.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:eswiki:6",
+   "statement": "This bone bed holds the largest number of individuals found at a single location of any large Cretaceous theropod.",
+   "category": "curiosities",
+   "chunk_id": "albertosaurus:eswiki:15",
    "lang": "es",
-   "quote": "En 1889, el colega de Tyrell Thomas Chesmer Weston encontró un cráneo incompleto adicional más pequeño y algo más de material esquelético en una localización cercana.",
-   "quote_sha": "0d52644eac1e7543"
+   "quote": "la mayor cantidad de individuos encontrados en una localización de cualquier terópodo grande del Cretácico",
+   "quote_sha": "39e63ac3262e0bf8"
   },
   {
    "fact_id": "F098",
-   "statement": "The two skulls were assigned to the species Laelaps incrassatus by Edward Drinker Cope in 1892.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:eswiki:6",
+   "statement": "Currie hypothesized that younger pack members might have driven prey toward larger, stronger, but slower adults.",
+   "category": "paleobiology",
+   "chunk_id": "albertosaurus:eswiki:15",
    "lang": "es",
-   "quote": "Los dos cráneos fueron asignados a la especie Laelaps incrassatus por Edward Drinker Cope en 1892.",
-   "quote_sha": "0f1966bf0c4cc6be"
+   "quote": "Currie sugirió que los miembros más jóvenes de la manada podrían ser los responsables de conducir la presa hacia los adultos, que eran más grandes y fuertes, pero también más lentos",
+   "quote_sha": "7d1fc2a09b35aee0"
   },
   {
    "fact_id": "F099",
-   "statement": "Because D. incrassatus was based only on generic tyrannosaurid teeth, Osborn created the new name Albertosaurus sarcophagus in 1905 for the distinct Horseshoe Canyon skulls.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:eswiki:6",
+   "statement": "The leg proportions of smaller individuals are comparable to ornithomimids, which were likely among the fastest dinosaurs.",
+   "category": "paleobiology",
+   "chunk_id": "albertosaurus:eswiki:15",
    "lang": "es",
-   "quote": "Finalmente, puesto que el D. incrassatus se basaba solamente en dientes genéricos de tiranosáurido que no podían indicar fácilmente su asignación a una especie en particular. Los cráneos del cañón Horseshoe difieren notablemente de los restos de Dryptosaurus aquilunguis, tipo nomenclatural del Dryptosaurus, por lo que Osborn creó el nuevo nombre Albertosaurus sarcophagus para ellos en 1905.",
-   "quote_sha": "aa21844ba8266269"
+   "quote": "Las proporciones de las extremidades inferiores de los individuos más pequeños son comparables con las de los ornitomímidos, los cuales estuvieron probablemente entre los dinosaurios más veloces",
+   "quote_sha": "55e23af89122915c"
   },
   {
    "fact_id": "F100",
-   "statement": "In 2010, Thomas Carr established that the holotype, paratype, and comparable specimens shared a unique autapomorphy, proving Albertosaurus is a valid taxon.",
-   "category": "discovery",
-   "chunk_id": "albertosaurus:eswiki:6",
+   "statement": "Some researchers speculate that instead of social groups, these findings represent a feeding frenzy similar to modern Komodo dragons on dead cattle.",
+   "category": "debate",
+   "chunk_id": "albertosaurus:eswiki:15",
    "lang": "es",
-   "quote": "Sin embargo, en 2010 Thomas Carr estableció que el holotipo, el paratipo y los posteriores ejemplares comparables encontrados compartían un rasgo común único o autapomorfía, la posesión de una abertura neumática amplia en el borde posterior de un lado del hueso palatino, lo que demuestra que Albertosaurus era un taxón válido.",
-   "quote_sha": "64efca837eb37150"
+   "quote": "Otros han especulado que en vez de grupos sociales, por lo menos algunos de estos hallazgos representan un caso de frenesí alimentario similar a los de los dragones de Komodo sobre reses muertas",
+   "quote_sha": "beed804a180af263"
   },
   {
    "fact_id": "F101",
-   "statement": "Albertosaurus belongs to the parent group Albertosaurinae.",
-   "category": "classification",
-   "chunk_id": "albertosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Albertosaurinae",
-   "quote_sha": "97a7b8d63ca33bb6"
-  },
-  {
-   "fact_id": "F102",
-   "statement": "Albertosaurus is classified in the family Tyrannosauridae.",
-   "category": "classification",
-   "chunk_id": "albertosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Tyrannosauridae",
-   "quote_sha": "1b10bd0268c2b179"
-  },
-  {
-   "fact_id": "F103",
    "statement": "Albertosaurus lived from the Santonian to the Maastrichtian, between 85.7 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "albertosaurus:pbdb:1",
@@ -1104,9 +1107,45 @@
    "quote_sha": "975f8d64a4e08b59"
   },
   {
+   "fact_id": "F102",
+   "statement": "Albertosaurus belongs to the parent group Albertosaurinae.",
+   "category": "classification",
+   "chunk_id": "albertosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Albertosaurinae",
+   "quote_sha": "97a7b8d63ca33bb6"
+  },
+  {
+   "fact_id": "F103",
+   "statement": "Albertosaurus is classified in the family Tyrannosauridae.",
+   "category": "classification",
+   "chunk_id": "albertosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Tyrannosauridae",
+   "quote_sha": "1b10bd0268c2b179"
+  },
+  {
    "fact_id": "F104",
-   "statement": "Williams et al. (2026) presented evidence of preserved micro- and nanoscale histological features in bones of Albertosaurus sarcophagus from the Horseshoe Canyon Formation in Alberta, Canada.",
+   "statement": "Albertosaurus is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "albertosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "The genus Albertosaurus was named by Osborn in 1905.",
    "category": "discovery",
+   "chunk_id": "albertosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "PBDB name: Albertosaurus (genus), Osborn 1905",
+   "quote_sha": "d234b016d0738cb9"
+  },
+  {
+   "fact_id": "F106",
+   "statement": "Williams et al. (2026) presented evidence of preserved micro- and nanoscale histological features, including Haversian canals and lacunocanalicular networks, in bones of Albertosaurus sarcophagus from the Horseshoe Canyon Formation in Alberta, Canada.",
+   "category": "paleobiology",
    "chunk_id": "albertosaurus:research:1",
    "lang": "en",
    "quote": "Evidence of preservation of micro- and nanoscale histological features (including Haversian canal and lacunocanalicular network permineralization) in bones of Albertosaurus sarcophagus from the Horseshoe Canyon Formation (Alberta, Canada) is presented by Williams et al. (2026).",
@@ -1116,66 +1155,38 @@
  "rejected": [
   {
    "chunk_id": "albertosaurus:enwiki:2",
-   "statement": "Albertosaurus was a bipedal predator characterized by short arms, two-fingered hands, and a massive head containing dozens of large, sharp teeth.",
+   "statement": "Albertosaurus possessed a massive head with dozens of large, sharp teeth, a strong sense of smell, powerful binocular vision, and a bone-crushing bite force.",
    "category": "description",
-   "quote": "bipedal predator with short arms, two-fingered hands, and a massive head with dozens of large, sharp teeth",
-   "reason": "statement copies the source wording: 'short arms two-fingered hands and a massive head'"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:4",
-   "statement": "The type specimen was collected from the Horseshoe Canyon Formation near the Red Deer River in Alberta.",
-   "category": "discovery",
-   "quote": "collected ... from an outcrop of the Horseshoe Canyon Formation alongside the Red Deer River in Alberta",
-   "reason": "quote not found verbatim in the source"
+   "quote": "massive head with dozens of large, sharp teeth, a strong sense of smell, powerful binocular vision, and a bone crushing bite force",
+   "reason": "statement copies the source wording: 'a massive head with dozens of large sharp'"
   },
   {
    "chunk_id": "albertosaurus:enwiki:2",
-   "statement": "Albertosaurus may have been the apex predator in its local ecosystem.",
-   "category": "paleobiology",
-   "quote": "It may have even been the apex predator in its local ecosystem",
-   "reason": "statement copies the source wording: 'been the apex predator in its local ecosystem'"
+   "statement": "Since its first discovery in 1884, fossils of more than 30 Albertosaurus individuals have been recovered.",
+   "category": "discovery",
+   "quote": "Since the first discovery in 1884, fossils of more than 30 individuals have been recovered",
+   "reason": "statement copies the source wording: 'first discovery in 1884 fossils of more than'"
+  },
+  {
+   "chunk_id": "albertosaurus:enwiki:5",
+   "statement": "Excavations at the Dry Island bonebed secured 1,128 Albertosaurus bones, representing the largest concentration of large theropod fossils known from the Cretaceous.",
+   "category": "discovery",
+   "quote": "A total of 1,128 Albertosaurus bones had been secured, which is the largest concentration of large theropod fossils known from the Cretaceous",
+   "reason": "statement copies the source wording: 'the largest concentration of large theropod fossils known'"
   },
   {
    "chunk_id": "albertosaurus:enwiki:7",
-   "statement": "Including Gorgosaurus in Albertosaurus extended the genus's known time range by several million years and its geographic range southward by hundreds of kilometers.",
+   "statement": "Renaming Gorgosaurus libratus to Albertosaurus libratus extended the genus's known time range by several million years and its geographic range southwards by hundreds of kilometers.",
    "category": "discovery",
    "quote": "The addition extended the temporal range of the genus Albertosaurus earlier by several million years and its geographic range southwards by hundreds of kilometres.",
    "reason": "statement copies the source wording: 'by several million years and its geographic range'"
   },
   {
    "chunk_id": "albertosaurus:enwiki:7",
-   "statement": "Philip J. Currie concluded in 2003 that Albertosaurus and Gorgosaurus are more distinct species than previously believed.",
+   "statement": "Philip J. Currie concluded in 2003 that Albertosaurus and Gorgosaurus were more distinct species than previously believed.",
    "category": "discovery",
-   "quote": "In 2003, Philip J. Currie... came to the conclusion that the two species are more distinct than previously thought.",
+   "quote": "In 2003, Philip J. Currie... compared several tyrannosaurid skulls and came to the conclusion that the two species are more distinct than previously thought.",
    "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:7",
-   "statement": "Several albertosaurine specimens have been recovered from Alaska and New Mexico.",
-   "category": "discovery",
-   "quote": "In addition to this, several albertosaurine specimens have been recovered from Alaska and New Mexico.",
-   "reason": "statement copies the source wording: 'Several albertosaurine specimens have been recovered from Alaska'"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:8",
-   "statement": "Friedrich von Huene renamed Dryptosaurus incrassatus to Albertosaurus incrassatus in 1932.",
-   "category": "discovery",
-   "quote": "In 1932, Friedrich von Huene renamed Dryptosaurus incrassatus... to Albertosaurus incrassatus.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:8",
-   "statement": "Dale Russell renamed Gorgosaurus sternbergi to Albertosaurus sternbergi and Gorgosaurus lancensis to Albertosaurus lancensis in 1970.",
-   "category": "discovery",
-   "quote": "In 1970, Russell also renamed Gorgosaurus sternbergi... into Albertosaurus sternbergi and Gorgosaurus lancensis... into Albertosaurus lancensis.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:9",
-   "statement": "Albertosaurus was a bipedal theropod that balanced its large head and torso with a long, muscular tail.",
-   "category": "description",
-   "quote": "Typical for a theropod, Albertosaurus was bipedal and balanced its large, heavy head and torso with a long, muscular tail.",
-   "reason": "statement copies the source wording: 'head and torso with a long muscular tail'"
   },
   {
    "chunk_id": "albertosaurus:enwiki:10",
@@ -1185,38 +1196,45 @@
    "reason": "statement copies the source wording: 'teeth of different forms depending on their position'"
   },
   {
-   "chunk_id": "albertosaurus:enwiki:10",
-   "statement": "William Abler observed in 2001 that Albertosaurus tooth serrations resemble cracks ending in a round void called an ampulla.",
-   "category": "paleobiology",
-   "quote": "In 2001, William Abler observed that Albertosaurus tooth serrations resemble a crack in the tooth ending in a round void called an ampulla.",
-   "reason": "statement copies the source wording: 'ending in a round void called an ampulla'"
-  },
-  {
-   "chunk_id": "albertosaurus:enwiki:13",
-   "statement": "After just two years of age, juvenile Albertosaurus were larger than any other predator in the region except adults and faster than most of their prey.",
-   "category": "paleobiology",
-   "quote": "After just two years, juveniles were larger than any other predator in the region, aside from adult Albertosaurus, and more fleet-footed than most of their prey animals.",
-   "reason": "statement copies the source wording: 'were larger than any other predator in the'"
-  },
-  {
    "chunk_id": "albertosaurus:enwiki:15",
-   "statement": "The holotype specimen ROM 807 has a 2.5 by 3.5 cm deep hole in the iliac blade, though the original describer did not identify it as pathological.",
+   "statement": "One adult Albertosaurus specimen had a left lower jaw with a puncture wound and both healed and unhealed bite marks.",
    "category": "paleobiology",
-   "quote": "ROM 807, the holotype of A. arctunguis (now referred to A. sarcophagus), had a 2.5 by 3.5 cm deep hole in the iliac blade, although the describer of the species did not recognize this as pathological.",
-   "reason": "statement copies the source wording: 'by 3.5 cm deep hole in the iliac'"
+   "quote": "One adult specimen had a left lower jaw showing a puncture wound and both healed and unhealed bite marks.",
+   "reason": "statement copies the source wording: 'a puncture wound and both healed and unhealed'"
+  },
+  {
+   "chunk_id": "albertosaurus:enwiki:16",
+   "statement": "Adult Albertosaurus were the apex predators in their environment, while juveniles may have occupied intermediate niches.",
+   "category": "time_and_habitat",
+   "quote": "Adult Albertosaurus were the apex predators in their environment, with intermediate niches possibly filled by juvenile Albertosaurus.",
+   "reason": "statement copies the source wording: 'Albertosaurus were the apex predators in their environment'"
   },
   {
    "chunk_id": "albertosaurus:eswiki:3",
-   "statement": "Albertosaurus may have reached speeds of 11 to 13 meters per second, or 40 to 48 km/h.",
-   "category": "paleobiology",
+   "statement": "Albertosaurus may have been capable of reaching speeds of 11 to 13 meters per second, or 40 to 48 km/h.",
+   "category": "description",
    "quote": "Albertosaurus puede haber podido alcanzar velocidades de once a trece metros por segundo, unos cuarenta a cuarenta y ocho km/h.",
    "reason": "numbers not in the quote: ['11', '13', '40', '48']"
   },
   {
-   "chunk_id": "albertosaurus:eswiki:6",
-   "statement": "Lawrence Lambe transferred Laelaps incrassatus to the genus Dryptosaurus, where he described the remains in detail between 1903 and 1904.",
-   "category": "discovery",
-   "quote": "Lawrence Lambe desplazó a Laelaps incrassatus al género Dryptosaurus, donde describió los restos en detalle entre 1903 y 1904.",
+   "chunk_id": "albertosaurus:eswiki:15",
+   "statement": "A bone bed discovered by Barnum Brown contains the remains of between 10 and 26 individuals.",
+   "category": "curiosities",
+   "quote": "La capa de huesos de Albertosaurus descubierta por Barnum Brown y su equipo contiene los restos de entre diez y veintiséis individuos",
+   "reason": "numbers not in the quote: ['10', '26']"
+  },
+  {
+   "chunk_id": "albertosaurus:eswiki:15",
+   "statement": "The group included one large adult, eight adults aged 17 to 23 years, seven sub-adults aged 12 to 16 years, and six juveniles aged 2 to 11 years.",
+   "category": "paleobiology",
+   "quote": "El grupo estaba compuesto por un solo adulto mayor, ocho adultos entre diecisiete y veintitrés años, siete sub-adultos que se encontraban en la fase de crecimiento rápido de entre doce y dieciséis años, y seis ejemplares juveniles de entre dos y once años",
+   "reason": "numbers not in the quote: ['11', '12', '16', '17', '2', '23']"
+  },
+  {
+   "chunk_id": "albertosaurus:eswiki:15",
+   "statement": "Researchers suggest the bone bed indicates pack behavior, but other scientists are skeptical and propose the animals may have gathered due to flooding or other causes.",
+   "category": "debate",
+   "quote": "Currie a la conclusión de que la localidad no fue una «trampa de depredadores»... y que todos los animales hallados murieron al mismo tiempo, proporcionando evidencias de un comportamiento en manada. Otros científicos son escépticos al respecto",
    "reason": "quote not found verbatim in the source"
   }
  ]

@@ -2,9 +2,9 @@
  "taxon": "Panoplosaurus",
  "taxon_key": "panoplosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "91da14a4a1c2bee5",
- "generated_at": "2026-11-03T03:13:57+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "205e716ba5949b4b",
+ "generated_at": "2026-11-04T04:58:48+00:00",
  "citations": {
   "panoplosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -97,6 +97,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "panoplosaurus:enwiki:14": {
+   "source": "wikipedia_article",
+   "title": "Panoplosaurus (Contemporary fauna)",
+   "url": "https://en.wikipedia.org/wiki/Panoplosaurus?oldid=1368886955",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "panoplosaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Panoplosaurus mirus (taxobox)",
@@ -150,16 +157,16 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Panoplosaurus was named by Lawrence Lambe in 1919.",
-   "category": "discovery",
-   "chunk_id": "panoplosaurus:enwiki:1",
+   "statement": "Panoplosaurus lived in Alberta, Canada, during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "panoplosaurus:enwiki:2",
    "lang": "en",
-   "quote": "parent_authority: Lambe, 1919",
-   "quote_sha": "cf3eddb5ffc503b1"
+   "quote": "Panoplosaurus is a genus of armoured dinosaur from the Late Cretaceous of Alberta, Canada.",
+   "quote_sha": "4a99dee1a9efe6d5"
   },
   {
    "fact_id": "F002",
-   "statement": "Panoplosaurus lived during the middle Campanian stage, roughly 76 to 75 million years ago.",
+   "statement": "All known specimens of Panoplosaurus come from the middle Campanian age of the Dinosaur Park Formation, dating to roughly 76 to 75 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "panoplosaurus:enwiki:2",
    "lang": "en",
@@ -168,7 +175,7 @@
   },
   {
    "fact_id": "F003",
-   "statement": "Panoplosaurus was first discovered in 1917 and named in 1919 by Lawrence Lambe, with the name meaning \"well-armoured lizard\".",
+   "statement": "Panoplosaurus was discovered in 1917 and named in 1919 by Lawrence Lambe, who derived the name from the Greek word for \"well-armoured lizard\".",
    "category": "discovery",
    "chunk_id": "panoplosaurus:enwiki:2",
    "lang": "en",
@@ -177,34 +184,7 @@
   },
   {
    "fact_id": "F004",
-   "statement": "Charles M. Sternberg discovered the holotype of Panoplosaurus in 1917 in Quarry 69 of the Belly River Group, 210 feet above sea level.",
-   "category": "discovery",
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1917, Canadian paleontologist Charles M. Sternberg of the Geological Survey of Canada discovered a complete skull and significant amount of the skeleton of an armoured dinosaur in the sandstone layers of Quarry 69 of the Belly River Group, 210 ft above sea level.",
-   "quote_sha": "4b6339372542136d"
-  },
-  {
-   "fact_id": "F005",
-   "statement": "A scapula from the Kirtland Formation in New Mexico was referred to Panoplosaurus in 1981, but it may instead belong to Nodocephalosaurus due to age and location differences, though this remains uncertain.",
-   "category": "discovery",
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "A scapula from the Naashoibito member of the Kirtland Formation in New Mexico was referred to Panoplosaurus in 1981, but as it is from a different age and location from other specimens, may instead represent the ankylosaurid taxon Nodocephalosaurus, although this is uncertain due to lack of overlapping material.",
-   "quote_sha": "de566a877805bc81"
-  },
-  {
-   "fact_id": "F006",
-   "statement": "Panoplosaurus is a genus of armoured dinosaur from the Late Cretaceous of Alberta, Canada.",
-   "category": "description",
-   "chunk_id": "panoplosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Panoplosaurus is a genus of armoured dinosaur from the Late Cretaceous of Alberta, Canada.",
-   "quote_sha": "4a99dee1a9efe6d5"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "Panoplosaurus was a quadrupedal animal roughly 5 meters long and weighing 1600 kilograms.",
+   "statement": "Panoplosaurus was a quadrupedal dinosaur approximately 5 meters long and weighing 1600 kilograms.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:2",
    "lang": "en",
@@ -212,8 +192,89 @@
    "quote_sha": "1e9bf238b59c5421"
   },
   {
+   "fact_id": "F005",
+   "statement": "The skull of Panoplosaurus featured a short, domed snout and bony plates covering the cheeks.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The skull has a short snout, with a very domed surface, and bony plates directly covering the cheek.",
+   "quote_sha": "b26d06624573f390"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Modern phylogenetic analyses place Panoplosaurus in the clade Panoplosaurini, close to Edmontonia and Animantarx, but distinct from Nodosaurus and Struthiosaurus.",
+   "category": "classification",
+   "chunk_id": "panoplosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Following consistent placements in phylogenetic analyses close to Edmontonia and the American taxon Animantarx, Panoplosaurus was placed into the clade Panoplosaurini, related but not close to Nodosaurus or Struthiosaurus, which it was considered close to around when it was named.",
+   "quote_sha": "d1a41a8bc4419981"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "In 1917, Charles M. Sternberg discovered a nearly complete skull and skeleton of Panoplosaurus in Quarry 69 of the Belly River Group, 210 feet above sea level.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "In 1917, Canadian paleontologist Charles M. Sternberg of the Geological Survey of Canada discovered a complete skull and significant amount of the skeleton of an armoured dinosaur in the sandstone layers of Quarry 69 of the Belly River Group, 210 ft above sea level.",
+   "quote_sha": "4b6339372542136d"
+  },
+  {
    "fact_id": "F008",
-   "statement": "A prominent armour plate covering the cheek is present in the type specimen of Panoplosaurus, which may be a unique feature of the taxon or just the individual.",
+   "statement": "The holotype specimen CMN 2759 includes a nearly complete skull, most cervical and front dorsal vertebrae with armor, a majority of the forelimb with three articulated fingers, pelvic fragments, foot bones, and hundreds of osteoderms.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The specimen, designated by the Canadian Museum of Nature accession number CMN 2759, and excavated 2.75 mi south of the mouth of the Little Sandhill tributary of the Red Deer River in Alberta, includes a nearly complete skull in articulation, most or all of the cervical vertebrae and the front dorsal vertebrae, and armour plates covering them, a majority of the disarticulated forelimb and three articulated fingers, a fragment of the pelvis and partial sacrum, a few bones of the foot, and multiple hundreds of osteoderms and dermal ossicles.",
+   "quote_sha": "1b85dac487f2c5f4"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The geological formation containing the holotype was originally called the Belly River beds but is now classified as the upper level of the Dinosaur Park Formation from the late middle Campanian.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "While the beds of discovery of the holotype, CMN 2759, were originally described as the Belly River beds, they are now considered part of the upper level of the Dinosaur Park Formation, pertaining to the late middle Campanian, 75 to 76 million years ago.",
+   "quote_sha": "8ac55e863511e210"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "A scapula from New Mexico was referred to Panoplosaurus in 1981, but it may actually belong to Nodocephalosaurus due to age and location differences, though this remains uncertain.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "A scapula from the Naashoibito member of the Kirtland Formation in New Mexico was referred to Panoplosaurus in 1981, but as it is from a different age and location from other specimens, may instead represent the ankylosaurid taxon Nodocephalosaurus, although this is uncertain due to lack of overlapping material.",
+   "quote_sha": "de566a877805bc81"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "In 2016, researchers Arbour and Currie restricted the genus Panoplosaurus to only the holotype specimen due to uncertainties regarding other referred specimens.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Arbour and Philip J. Currie further restricted Panoplosaurus to just the holotype in 2016, as a result of uncertainties surrounding the referrals of various specimens between it, Edmontonia rugosidens and Edmontonia longiceps, all from the Dinosaur Park Formation and similar deposits.",
+   "quote_sha": "7c31e79738109255"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Panoplosaurus weighed 1600 kg, making it comparable in size to other ankylosaurs from the region and heavier than or equal to its contemporary predators.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Panoplosaurus was a rather large animal at 1600 kg, a comparable size to other ankylosaurs from the same location, and heavier than or approximately equivalent to all predators it coexisted with.",
+   "quote_sha": "212ac7c1606a2747"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Panoplosaurus was about 5 meters long and lacked prominent spikes on its body, unlike many other ankylosaurs.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Panoplosaurus was about 5 m long, and was armoured like most ankylosaurs, but lacked prominent spikes anywhere on its body.",
+   "quote_sha": "83786b3b4f2260bc"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "The type specimen of Panoplosaurus features a prominent armor plate covering the cheek, which may be a unique trait of the species or just an individual characteristic.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:4",
    "lang": "en",
@@ -221,8 +282,26 @@
    "quote_sha": "f6b32226f6683fb5"
   },
   {
-   "fact_id": "F009",
-   "statement": "The skull of Panoplosaurus is broad and depressed, forming a triangular shape at the end of its blunt snout.",
+   "fact_id": "F015",
+   "statement": "It is debated whether Panoplosaurus and Edmontonia are the same taxon, which has complicated interpretations of their distribution and phylogeny.",
+   "category": "debate",
+   "chunk_id": "panoplosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Panoplosaurus has at times been considered the proper name for material otherwise referred to as Edmontonia, complicating its phylogenetic and ecological interpretations, at one point being considered to have existed across Alberta, New Mexico and Texas, with specimens in institutions from Canada and the United States.",
+   "quote_sha": "200792f2267bf07e"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "Researchers disagree on whether certain specimens, such as ROM 1215, belong to Panoplosaurus or Edmontonia, with some studies retaining them in Panoplosaurus and others moving them to Edmontonia.",
+   "category": "debate",
+   "chunk_id": "panoplosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The referral of ROM 1215 to Panoplosaurus was questioned by Coombs in 1990, and Roland A. Gangloff referred it and the Alaskan specimen DPMWA 90–25 to Edmontonia in 1995 based on the anatomy of the lack of diagnostic traits, but Victoria Arbour and colleagues retained ROM 1215 in Panoplosaurus in 2009, limiting the genus to it, the holotype CMN 2759, and specimen AMNH 3072, all from the upper Dinosaur Park Formation.",
+   "quote_sha": "92cbe3cd5b90e3ed"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Panoplosaurus had a broad, depressed skull that narrowed to a blunt, triangular snout.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -230,8 +309,8 @@
    "quote_sha": "fe1dc1c820f00c0e"
   },
   {
-   "fact_id": "F010",
-   "statement": "The skull of Panoplosaurus measures 335 mm in straight-line length but 530 mm across the curved skull roof.",
+   "fact_id": "F018",
+   "statement": "The skull of Panoplosaurus measured 335 mm in straight-line length but 530 mm across the curved roof.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -239,8 +318,8 @@
    "quote_sha": "50ee51d17db1e0d1"
   },
   {
-   "fact_id": "F011",
-   "statement": "The skull of Panoplosaurus reaches a maximum width of 295 mm behind the orbits, giving it a short and broad appearance.",
+   "fact_id": "F019",
+   "statement": "The skull of Panoplosaurus reached a maximum width of 295 mm behind the eye sockets, creating a short and broad profile.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -248,8 +327,8 @@
    "quote_sha": "86a0506d3f707a2f"
   },
   {
-   "fact_id": "F012",
-   "statement": "Panoplosaurus had very small orbits placed far from a squared snout that featured laterally open nostrils.",
+   "fact_id": "F020",
+   "statement": "Panoplosaurus possessed very small eye sockets set far back from a squared snout with laterally open nostrils.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -257,8 +336,8 @@
    "quote_sha": "979892a1939c34fd"
   },
   {
-   "fact_id": "F013",
-   "statement": "Bony plates covered the entire exterior of the Panoplosaurus skull, including large osteoderms on the sides and mandible, small scutes in the nostrils, and small ossicles underneath the head.",
+   "fact_id": "F021",
+   "statement": "The entire exterior of the Panoplosaurus skull was covered in bony plates, including large osteoderms on the sides and mandible, small scutes in the nostrils, and a layer of small ossicles under the head.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -266,8 +345,8 @@
    "quote_sha": "4e9a18067dbad2b7"
   },
   {
-   "fact_id": "F014",
-   "statement": "The occipital of Panoplosaurus faced nearly directly downwards, suggesting the animal held its head with the snout about 20 degrees below the horizontal.",
+   "fact_id": "F022",
+   "statement": "The skull of Panoplosaurus was attached to the neck at an angle that suggests it held its head with the snout about 20 degrees below the horizontal.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -275,8 +354,8 @@
    "quote_sha": "c892f0f62cee97fe"
   },
   {
-   "fact_id": "F015",
-   "statement": "Unlike Edmontonia, the groove separating cranial osteoderms never disappeared in Panoplosaurus, indicating a unique narrow scute across the rear of the skull.",
+   "fact_id": "F023",
+   "statement": "Unlike Edmontonia, Panoplosaurus retained a groove separating cranial osteoderms, indicating a unique narrow scute across the rear of the skull.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -284,8 +363,8 @@
    "quote_sha": "ad250c28165f6dcf"
   },
   {
-   "fact_id": "F016",
-   "statement": "Due to fusion and osteoderm coverage, only the predentary bone of the 310 mm long Panoplosaurus mandible could be identified.",
+   "fact_id": "F024",
+   "statement": "Due to fusion and armor covering, only the predentary bone of the 310 mm long Panoplosaurus mandible could be identified.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -293,8 +372,8 @@
    "quote_sha": "91d79e30e2c1adaf"
   },
   {
-   "fact_id": "F017",
-   "statement": "The horseshoe-shaped predentaries of Panoplosaurus formed a sharp beak that fit within the overhang of the upper jaw premaxillaries.",
+   "fact_id": "F025",
+   "statement": "The horseshoe-shaped predentaries of Panoplosaurus formed a sharp beak that fit within the overhang of the upper jaw.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -302,8 +381,8 @@
    "quote_sha": "2dcf99fa4c33eaa0"
   },
   {
-   "fact_id": "F018",
-   "statement": "Both the predentaries and premaxillaries of Panoplosaurus lacked teeth, a derived feature among nodosaurids.",
+   "fact_id": "F026",
+   "statement": "Panoplosaurus lacked teeth in both the upper and lower snout, a derived trait among nodosaurids.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -311,8 +390,8 @@
    "quote_sha": "723b9d2b632c3c37"
   },
   {
-   "fact_id": "F019",
-   "statement": "Eight maxillary teeth were preserved in Panoplosaurus, though the total count may have been higher, the jaw had limited space for additional teeth.",
+   "fact_id": "F027",
+   "statement": "Eight maxillary teeth were preserved in Panoplosaurus, suggesting the total tooth count was low.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -320,8 +399,8 @@
    "quote_sha": "755b4094d7c43b11"
   },
   {
-   "fact_id": "F020",
-   "statement": "Panoplosaurus teeth resembled those of Edmontonia and Palaeoscincus, featuring a mild crown expansion above the root and denticles with more ridges on the front edge than the rear.",
+   "fact_id": "F028",
+   "statement": "Panoplosaurus teeth featured a mild crown expansion above the root and denticles with more ridges on the front edge than the rear.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:5",
    "lang": "en",
@@ -329,17 +408,8 @@
    "quote_sha": "a0dcbc6735c1b767"
   },
   {
-   "fact_id": "F021",
-   "statement": "The first three cervical vertebrae after the skull were fused into a single ossification in Panoplosaurus, a feature unique to it and Edmontonia among ankylosaurs.",
-   "category": "description",
-   "chunk_id": "panoplosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "The first three cervicals after the skull are fused together into one single ossification, a feature unique to Panoplosaurus and Edmontonia among ankylosaurs.",
-   "quote_sha": "e9941652b53333ed"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "The scapula and coracoid were completely fused in Panoplosaurus, with only a slight thickening indicating the original suture.",
+   "fact_id": "F029",
+   "statement": "The scapula and coracoid bones were completely fused in Panoplosaurus, with only a slight thickening marking the suture.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:6",
    "lang": "en",
@@ -347,8 +417,8 @@
    "quote_sha": "725fe52cc08ff40f"
   },
   {
-   "fact_id": "F023",
-   "statement": "The scapula of Panoplosaurus was 410 mm long and the coracoid was 255 mm long.",
+   "fact_id": "F030",
+   "statement": "The fused scapula and coracoid of Panoplosaurus measured 410 mm and 255 mm in length respectively.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:6",
    "lang": "en",
@@ -356,8 +426,17 @@
    "quote_sha": "9dc6fcca1b940d19"
   },
   {
-   "fact_id": "F024",
-   "statement": "The robust humerus of Panoplosaurus was 430 mm long, suggesting its upper arm was held in a flexed position during life.",
+   "fact_id": "F031",
+   "statement": "The complete fusion of the scapulocoracoid is a unique characteristic of Panoplosaurus.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The complete fusion of the scapulocoracoid is unique to Panoplosaurus.",
+   "quote_sha": "fe87b028dd07b1b9"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "The robust 430 mm humerus of Panoplosaurus suggests its upper arm was held in a flexed position during life.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:6",
    "lang": "en",
@@ -365,8 +444,8 @@
    "quote_sha": "64be40a131fb9396"
   },
   {
-   "fact_id": "F025",
-   "statement": "All ungual bones of Panoplosaurus were hoof-shaped, lacking a point and having a flat bottom.",
+   "fact_id": "F033",
+   "statement": "All claw bones of Panoplosaurus were hoof-shaped, lacking a point and having a flat bottom.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:6",
    "lang": "en",
@@ -374,7 +453,7 @@
    "quote_sha": "850679778ed7ccef"
   },
   {
-   "fact_id": "F026",
+   "fact_id": "F034",
    "statement": "The articulated tibia and fibula of Panoplosaurus measured 385 mm and 310 mm respectively, with the tibia being noticeably longer.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:6",
@@ -383,8 +462,17 @@
    "quote_sha": "3a9407b7ffabe62d"
   },
   {
-   "fact_id": "F027",
-   "statement": "The first category of osteoderms in Panoplosaurus consisted of large, paired elements with a low keel that formed bands around the neck from the head.",
+   "fact_id": "F035",
+   "statement": "The tibia of Panoplosaurus was shorter than its humerus, a trait shared with ankylosaurids but contrasting with Stegosaurus and basal taxa.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "As in ankylosaurids, the tibia of Panoplosaurus was shorter than the humerus, which contrasts with Stegosaurus and basal taxa like Scelidosaurus.",
+   "quote_sha": "7b989b82ff39e816"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "Panoplosaurus had large, paired osteoderms with a low keel that formed bands around the neck extending from the head.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:7",
    "lang": "en",
@@ -392,8 +480,8 @@
    "quote_sha": "3b46c9430fed1571"
   },
   {
-   "fact_id": "F028",
-   "statement": "The second category of osteoderms in Panoplosaurus were slightly smaller, suboval individual elements with a strong keel located from the sides of the neck to the back.",
+   "fact_id": "F037",
+   "statement": "Along the sides of the neck to the back, Panoplosaurus had smaller, suboval osteoderms with a strong keel.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:7",
    "lang": "en",
@@ -401,8 +489,8 @@
    "quote_sha": "4c9be73b5f326aa0"
   },
   {
-   "fact_id": "F029",
-   "statement": "Small, keeled scutes with a thick base formed the fourth osteoderm type in Panoplosaurus, occurring on the underside of the neck base extending to the chin.",
+   "fact_id": "F038",
+   "statement": "Small, keeled scutes with a thick base occurred on the underside of the neck base extending to the chin in Panoplosaurus.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:7",
    "lang": "en",
@@ -410,8 +498,44 @@
    "quote_sha": "226a2ff41f233d70"
   },
   {
-   "fact_id": "F030",
-   "statement": "Carpenter questioned the identification of four sacrals in Panoplosaurus in 1990, noting that Edmontonia has only three true sacrals, though he could not definitively identify the first sacral as a dorsosacral.",
+   "fact_id": "F039",
+   "statement": "Small, irregular, non-keeled scutes were found in Panoplosaurus, possibly from the limbs, though this was not confirmed.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "Small irregular scutes lacking a keel were identified as a sixth form, and were suggested to have been from the limbs, though this was not definitive.",
+   "quote_sha": "7a942854f5696ea5"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "The scutes on the top and sides of the neck in Panoplosaurus were distinct and differed significantly from those in Edmontonia.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "The scutes along the top and sides of the neck in Panoplosaurus are the most distinct form, differing significantly from the corresponding elements in Edmontonia.",
+   "quote_sha": "b9750ddd78d1ef7a"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "It is debated whether the unique short snout of the Panoplosaurus holotype is due to age or sex differences rather than species-specific traits.",
+   "category": "debate",
+   "chunk_id": "panoplosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "As other nodosaurid specimens from the same location that may be referred to Panoplosaurus lack the distinctively short snout of the holotype, it may be that its unique appearance is due to it being a different age or sex than other individuals.",
+   "quote_sha": "b43b2fdaee62e3f2"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "Sternberg identified the ilium support structure of Panoplosaurus in 1921, proposing six vertebrae including four true sacrals.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "Sternberg identified that the ilium of Panoplosaurus was supported by at least six vertebrae in 1921, which he identified as a dorsosacral, four true sacral vertebrae, and a caudosacral.",
+   "quote_sha": "224d6fd38059e895"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "Carpenter questioned Sternberg's 1990 identification of four sacrals in Panoplosaurus, noting Edmontonia has only three, though he could not confirm the first sacral was a dorsosacral.",
    "category": "debate",
    "chunk_id": "panoplosaurus:enwiki:6",
    "lang": "en",
@@ -419,7 +543,7 @@
    "quote_sha": "d8f831de6b631d35"
   },
   {
-   "fact_id": "F031",
+   "fact_id": "F044",
    "statement": "Lambe named the genus Panoplosaurus in 1919.",
    "category": "discovery",
    "chunk_id": "panoplosaurus:enwiki:8",
@@ -428,17 +552,17 @@
    "quote_sha": "bad7eb69ac5fd648"
   },
   {
-   "fact_id": "F032",
+   "fact_id": "F045",
    "statement": "Sternberg classified Panoplosaurus within the family Ankylosauridae in 1921.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
    "lang": "en",
-   "quote": "though it was subsequently specified by Sternberg in 1921 that within Stegosauria it was closest to taxa like Ankylosaurus and Euoplocephalus, and so within Ankylosauridae",
-   "quote_sha": "8a9b7b6413490002"
+   "quote": "it was subsequently specified by Sternberg in 1921 that within Stegosauria it was closest to taxa like Ankylosaurus and Euoplocephalus, and so within Ankylosauridae",
+   "quote_sha": "b16cbcd7483767f3"
   },
   {
-   "fact_id": "F033",
-   "statement": "Sternberg described Edmontonia as a very close relative of Panoplosaurus in 1928.",
+   "fact_id": "F046",
+   "statement": "Sternberg described the genus Edmontonia in 1928 as a close relative of Panoplosaurus.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
    "lang": "en",
@@ -446,7 +570,7 @@
    "quote_sha": "4339edb0c4e4f875"
   },
   {
-   "fact_id": "F034",
+   "fact_id": "F047",
    "statement": "Franz Nopcsa proposed a new classification for Panoplosaurus in 1929 after describing Struthiosaurus.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
@@ -455,16 +579,7 @@
    "quote_sha": "aee4c726d87822ff"
   },
   {
-   "fact_id": "F035",
-   "statement": "Charles W. Gilmore amended Nopcsa's classification of Panoplosaurinae in 1930.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Nopcsa's classification of Panoplosaurinae was amended slightly by Charles W. Gilmore in 1930",
-   "quote_sha": "01e29c0373a9c9d2"
-  },
-  {
-   "fact_id": "F036",
+   "fact_id": "F048",
    "statement": "Loris S. Russell placed Panoplosaurus in the subfamily Edmontoniinae in 1940.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
@@ -473,89 +588,35 @@
    "quote_sha": "685fede381afc133"
   },
   {
-   "fact_id": "F037",
-   "statement": "Evgeny Maleev classified Panoplosaurus in the family Ankylosauridae.",
+   "fact_id": "F049",
+   "statement": "Coombs synonymized Panoplosaurus with Edmontonia, leaving it as the only Late Cretaceous nodosaurid from North America.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
    "lang": "en",
-   "quote": "Evgeny Maleev moved Panoplosaurus into the family Ankylosauridae",
-   "quote_sha": "06e3c49a33acaded"
+   "quote": "Coombs synonymized Panoplosaurus with Edmontonia, making Panoplosaurus the only Late Cretaceous nodosaurid from North America",
+   "quote_sha": "5fb8a6b944187f30"
   },
   {
-   "fact_id": "F038",
-   "statement": "Coombs revised the classification of Ankylosauria in 1978.",
+   "fact_id": "F050",
+   "statement": "Tracy Ford classified Panoplosaurus alone in the subfamily Panoplosaurinae in 2000 based on osteoderm anatomy.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:8",
    "lang": "en",
-   "quote": "Coombs reviewed and revised the classifications of Ankylosauria in 1978",
-   "quote_sha": "30e15952faf9d6e7"
+   "quote": "Tracy Ford published a novel classification of Panoplosaurus in 2000, using osteoderm anatomy to divide Nodosauridae into Nodosaurinae including only Nodosaurus, Sauropeltinae including Sauropelta and Silvisaurus, Edmontoniinae including Edmontonia and a distinct Chassternbergia, and Panoplosaurinae including only Panoplosaurus",
+   "quote_sha": "304390879397a0fd"
   },
   {
-   "fact_id": "F039",
-   "statement": "Paul Sereno revived the subfamily Panoplosaurinae in 1986.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Panoplosaurinae was then revived in 1986 by Paul Sereno",
-   "quote_sha": "0d88754ac8a4ea6a"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "Robert Bakker redescribed Late Cretaceous North American nodosaurid specimens in 1988.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Robert Bakker then redescribed specimens from the Late Cretaceous of North America in 1988",
-   "quote_sha": "100371033e1b2042"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "Carpenter reviewed Late Cretaceous North American nodosaurids in 1990.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Carpenter further reviewed Late Cretaceous North American nodosaurids in 1990",
-   "quote_sha": "6bf9877f990da5f9"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "Sereno modified his classification of Panoplosaurus in 1998.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1998, Sereno modified his earlier position, using the name Nodosaurinae for the group of derived nodosaurids including Panoplosaurus",
-   "quote_sha": "60902800b8e0ed6e"
-  },
-  {
-   "fact_id": "F043",
-   "statement": "Tracy Ford published a new classification of Panoplosaurus in 2000.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Tracy Ford published a novel classification of Panoplosaurus in 2000",
-   "quote_sha": "be825f8f6fd08d0f"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "Yuong-Nam Lee conducted the first phylogenetic analysis including Panoplosaurus in 1996.",
+   "fact_id": "F051",
+   "statement": "A 1996 analysis by Yuong-Nam Lee nested Panoplosaurus mirus next to Edmontonia.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:9",
    "lang": "en",
-   "quote": "The first phylogenetic analysis to include Panoplosaurus was that of Yuong-Nam Lee in 1996",
-   "quote_sha": "ce63b67c3a1e7ab6"
+   "quote": "The first phylogenetic analysis to include Panoplosaurus was that of Yuong-Nam Lee in 1996, where Panoplosaurus mirus, including both CMN 2759 and ROM 1215 nested next to Edmontonia",
+   "quote_sha": "3c7b31f01d3db7ff"
   },
   {
-   "fact_id": "F045",
-   "statement": "Carpenter's 2001 analysis placed Panoplosaurus next to a clade of Sauropelta and Silvisaurus.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "the 2001 analysis of Carpenter instead recovered Edmontonia closest to Animantarx, while Panoplosaurus nested next to a clade of Sauropelta and Silvisaurus",
-   "quote_sha": "484e9c0619801471"
-  },
-  {
-   "fact_id": "F046",
-   "statement": "Hill and colleagues' 2003 analysis resolved Panoplosaurus as the sister taxon to a group of Edmontonia and Animantarx.",
+   "fact_id": "F052",
+   "statement": "A 2003 analysis by Robert Hill and colleagues identified Panoplosaurus as the sister taxon to a group containing Edmontonia and Animantarx.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:9",
    "lang": "en",
@@ -563,26 +624,8 @@
    "quote_sha": "206e1bd3e6fcef2d"
   },
   {
-   "fact_id": "F047",
-   "statement": "Thompson and colleagues combined ankylosaurian analyses in 2012.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Richard Thompson and colleagues in 2012, combining previous ankylosaurian analyses into a single one to analyse both Nodosauridae and Ankylosauridae",
-   "quote_sha": "243ac0898aa0f227"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "Arbour and Currie expanded a phylogenetic analysis in 2016 to include many nodosaurids.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "In 2016, the phylogenetic analysis of Arbour and Currie initially meant to test the relationships of Ankylosauridae was expanded to include many of the nodosaurids known at the time",
-   "quote_sha": "57e8bbf4b9f555d4"
-  },
-  {
-   "fact_id": "F049",
-   "statement": "Madzia and colleagues named the clade uniting Panoplosaurus and related taxa Panoplosaurini.",
+   "fact_id": "F053",
+   "statement": "Madzia and colleagues named the clade uniting Panoplosaurus with taxa closer to it than Nodosaurus or Struthiosaurus as Panoplosaurini.",
    "category": "classification",
    "chunk_id": "panoplosaurus:enwiki:9",
    "lang": "en",
@@ -590,17 +633,8 @@
    "quote_sha": "5334bb3859093b6d"
   },
   {
-   "fact_id": "F050",
-   "statement": "Soto Acuña and colleagues modified the Panoplosaurus phylogeny in 2021 and 2024.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Additional modifications to the analysis were done by Soto Acuña and colleagues in 2021 and 2024",
-   "quote_sha": "7ed52eb2833d0df8"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "The variability of Panoplosaurus teeth implies a less restrictive feeding strategy than a simple soft-food diet.",
+   "fact_id": "F054",
+   "statement": "The variability in Panoplosaurus teeth implies a less restrictive feeding strategy than a simple soft-food diet.",
    "category": "paleobiology",
    "chunk_id": "panoplosaurus:enwiki:10",
    "lang": "en",
@@ -608,7 +642,7 @@
    "quote_sha": "af38726329462613"
   },
   {
-   "fact_id": "F052",
+   "fact_id": "F055",
    "statement": "Microwear on Panoplosaurus teeth indicates a diet of abundant foliage with occasional fruit.",
    "category": "paleobiology",
    "chunk_id": "panoplosaurus:enwiki:10",
@@ -617,8 +651,8 @@
    "quote_sha": "87ee284fe348b519"
   },
   {
-   "fact_id": "F053",
-   "statement": "The presence of gastroliths in Panoplosaurus is uncertain because they were not found in the original specimen material.",
+   "fact_id": "F056",
+   "statement": "It is uncertain whether Panoplosaurus possessed gastroliths, as they were not identified in the original specimen material.",
    "category": "paleobiology",
    "chunk_id": "panoplosaurus:enwiki:10",
    "lang": "en",
@@ -626,8 +660,17 @@
    "quote_sha": "187c2690bd95abd7"
   },
   {
-   "fact_id": "F054",
-   "statement": "The nasal passage of Panoplosaurus loops 360 degrees twice in different planes before reaching the olfactory recess.",
+   "fact_id": "F057",
+   "statement": "Phylogenetic analyses have consistently placed Panoplosaurus in a group with Edmontonia, but its exact position relative to other nodosaurids like Animantarx and Texasetes remains debated.",
+   "category": "debate",
+   "chunk_id": "panoplosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Panoplosaurus was continually found within a group including Edmontonia and also at times Animantarx, Texasetes, Denversaurus (if considered separate from Edmontonia) and Patagopelta",
+   "quote_sha": "b8398c242b54ff15"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Panoplosaurus had a nasal passage that performed two full 360-degree loops in different planes before reaching the olfactory recess.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:11",
    "lang": "en",
@@ -635,17 +678,17 @@
    "quote_sha": "92b185387a47ed3a"
   },
   {
-   "fact_id": "F055",
+   "fact_id": "F059",
    "statement": "Simulations suggest air passing through Panoplosaurus's nasal passages warmed by 17.9 to 18.2 degrees Celsius and became saturated with moisture.",
-   "category": "paleobiology",
+   "category": "description",
    "chunk_id": "panoplosaurus:enwiki:11",
    "lang": "en",
    "quote": "Inflowing air in Panoplosaurus was simulated to undergo a raise of between 17.9 and 18.2 C, primarily in the elongate nasal passage, while saturating the air with moisture.",
    "quote_sha": "14eabae35555e2ca"
   },
   {
-   "fact_id": "F056",
-   "statement": "The brain of Panoplosaurus occupies 33% of the skull's length, which is higher than in other ankylosaurids.",
+   "fact_id": "F060",
+   "statement": "The brain of Panoplosaurus occupied 33% of the skull's length, a proportion higher than in other ankylosaurids.",
    "category": "description",
    "chunk_id": "panoplosaurus:enwiki:11",
    "lang": "en",
@@ -653,8 +696,17 @@
    "quote_sha": "45ddad2b58d39033"
   },
   {
-   "fact_id": "F057",
-   "statement": "The ground in the Panoplosaurus habitat was covered with mosses, lichens, fungi, and decaying plant matter.",
+   "fact_id": "F061",
+   "statement": "River channels in Panoplosaurus's habitat could exceed 200 meters in width and flowed east toward the Bearpaw Sea.",
+   "category": "time_and_habitat",
+   "chunk_id": "panoplosaurus:enwiki:13",
+   "lang": "en",
+   "quote": "Some channel widths may even have exceeded 200 m, flowing east towards the Bearpaw Sea across the coastal plain.",
+   "quote_sha": "6c41b3ec789aee36"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The ground in Panoplosaurus's environment was covered with mosses, lichens, fungi, and decaying plant matter.",
    "category": "time_and_habitat",
    "chunk_id": "panoplosaurus:enwiki:13",
    "lang": "en",
@@ -662,35 +714,17 @@
    "quote_sha": "9d8d346a8474a9f0"
   },
   {
-   "fact_id": "F058",
-   "statement": "The genus Panoplosaurus was named by Lambe in 1919.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Lambe, 1919",
-   "quote_sha": "75002c35d290c9ee"
+   "fact_id": "F063",
+   "statement": "Panoplosaurus lived in a landscape resembling the swampy coastal plains of modern-day Carolina.",
+   "category": "paleobiology",
+   "chunk_id": "panoplosaurus:enwiki:13",
+   "lang": "en",
+   "quote": "The landscape would have resembled the swampy coastal plains of the modern Carolinas.",
+   "quote_sha": "1798e4346079a3ed"
   },
   {
-   "fact_id": "F059",
-   "statement": "The species Panoplosaurus mirus was named by Lambe in 1919.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "species_authority: Lambe, 1919",
-   "quote_sha": "921199b00c1c4155"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "Panoplosaurus mirus is the only known species of the extinct nodosaurid dinosaur Panoplosaurus, which lived during the Campanian stage of the Late Cretaceous, approximately 79 to 73 million years ago, in what is now North America.",
-   "category": "time_and_habitat",
-   "chunk_id": "panoplosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Panoplosaurus mirus es la única especie conocida del género extinto Panoplosaurus (gr. \"lagarto completamente armado\") de dinosaurio tireóforo nodosáurido, que vivió a finales del período Cretácico, hace aproximadamente entre 79 y 73 millones de años, en el Campaniense, en lo que es hoy Norteamérica.",
-   "quote_sha": "42f89e9209628851"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "Panoplosaurus was a compact dinosaur measuring 5 to 7 meters in length, 2 meters in height, and weighing approximately 1.5 to 1.6 tons.",
+   "fact_id": "F064",
+   "statement": "Panoplosaurus was a compact dinosaur measuring 5 to 7 meters in length, 2 meters in height, and weighing approximately 1.5 to 1.6 tonnes.",
    "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
@@ -698,8 +732,17 @@
    "quote_sha": "8061f7ca58d29421"
   },
   {
-   "fact_id": "F062",
-   "statement": "Panoplosaurus's heavy armor consisted of sharp spines along the sides of the neck, shoulders, and sides of the thorax and belly.",
+   "fact_id": "F065",
+   "statement": "Panoplosaurus was heavily armored with transverse bands of studded plates covering its back and tail, but likely lacked the club found in ankylosaurs.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Estaba fuertemente blindado, incluso para los estándares de otros nodosáuridos, probablemente con bandas transversales de placas tachonadas que cubrían su espalda y cola, aunque la cola probablemente carecía del garrote que se encuentra en los anquilosaurios.",
+   "quote_sha": "2d511f12d33df4da"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Its heavy armor consisted of sharp spikes along the sides of the neck, shoulders, and sides of the thorax and belly.",
    "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
@@ -707,8 +750,8 @@
    "quote_sha": "448240f2c11bd7b3"
   },
   {
-   "fact_id": "F063",
-   "statement": "Panoplosaurus had a narrow head with spines over the eyes and a mouth with blade-like teeth for stripping plants, connected to the body by a short neck protected by square plates.",
+   "fact_id": "F067",
+   "statement": "It had a narrow head with eye spikes and a blade-like mouth for stripping plants, connected to the body by a short neck protected by square plates.",
    "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
@@ -716,17 +759,17 @@
    "quote_sha": "a3981350483b3566"
   },
   {
-   "fact_id": "F064",
-   "statement": "Panoplosaurus likely lacked the club found on ankylosaurids.",
+   "fact_id": "F068",
+   "statement": "The head armor fused into a compact helmet-like shield with bulging surfaces, and bony shields were present on the cheeks.",
    "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
-   "quote": "La cola probablemente carecía del garrote que se encuentra en los anquilosaurios.",
-   "quote_sha": "786801016f1f9088"
+   "quote": "La armadura de la cabeza se fundió en un escudo compacto parecido a un casco, estas placas tenían una superficie abultada. También estaban presentes escudos huesudos en las mejillas.",
+   "quote_sha": "00c37e91fc14164f"
   },
   {
-   "fact_id": "F065",
-   "statement": "Panoplosaurus lacked shoulder spikes, which were present in some other nodosaurids.",
+   "fact_id": "F069",
+   "statement": "Unlike some other nodosaurs, Panoplosaurus lacked shoulder spikes.",
    "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
@@ -734,17 +777,35 @@
    "quote_sha": "47a7aec21150af56"
   },
   {
-   "fact_id": "F066",
-   "statement": "Panoplosaurus had particularly strong front legs with large muscle insertions, suggesting it may have been remarkably agile in life and capable of defensive charges like a modern rhinoceros.",
-   "category": "paleobiology",
+   "fact_id": "F070",
+   "statement": "It had a relatively narrow snout, possibly to help pull low plant shoots.",
+   "category": "description",
+   "chunk_id": "panoplosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Este animal tenía un hocico relativamente estrecho, quizás para ayudar a arrancar los brotes de las plantas bajas comían.",
+   "quote_sha": "2b4f78cfdf46b7bf"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Its front legs were particularly strong with large muscle insertions, suggesting it might have been surprisingly agile and capable of defensive charges like a modern rhinoceros.",
+   "category": "description",
    "chunk_id": "panoplosaurus:eswiki:3",
    "lang": "es",
    "quote": "Las patas delanteras eran particularmente fuertes, y tenían grandes inserciones para músculos grandes, que pueden sugerir que el animal habría sido asombrosamente ágil en vida, posiblemente pudiendo hacer cargas de la defensiva como un moderno rinoceronte.",
    "quote_sha": "59a8eda9d0cb6335"
   },
   {
-   "fact_id": "F067",
-   "statement": "The first Panoplosaurus fossil was found in 1917 by Charles M. Sternberg at Quarry 8 near Little Sandhill Creek.",
+   "fact_id": "F072",
+   "statement": "Panoplosaurus lived during the late Cretaceous period, approximately 79 to 73 million years ago in the Campanian stage, in what is now North America.",
+   "category": "time_and_habitat",
+   "chunk_id": "panoplosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales del período Cretácico, hace aproximadamente entre 79 y 73 millones de años, en el Campaniense, en lo que es hoy Norteamérica.",
+   "quote_sha": "1c9b3010a444ce6b"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "The first fossil was found in 1917 by Charles M. Sternberg at Quarry 8 near Little Sandhill Creek.",
    "category": "discovery",
    "chunk_id": "panoplosaurus:eswiki:4",
    "lang": "es",
@@ -752,8 +813,26 @@
    "quote_sha": "cb6faf6927b3993e"
   },
   {
-   "fact_id": "F068",
-   "statement": "The holotype specimen CMN 2759 was discovered in the Dinosaur Park Formation, which dates to the late middle Campanian, 76 million years ago.",
+   "fact_id": "F074",
+   "statement": "The type species Panoplosaurus mirus was named by Lawrence M. Lambe in 1919.",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "La especie tipo Panoplosaurus mirus fue nombrada por Lawrence M. Lambe en 1919.",
+   "quote_sha": "dd1707936e0d9496"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "The generic name derives from the Greek words pan, meaning \"completely,\" and hoplon, meaning \"armor.\"",
+   "category": "discovery",
+   "chunk_id": "panoplosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "El nombre genérico se deriva del griego pan, \"completamente\" y hoplon, \"armadura\".",
+   "quote_sha": "334acca2ec46866e"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "The holotype, CMN 2759, was discovered in the Dinosaur Park Formation dating to the late middle Campanian, approximately 76 million years ago.",
    "category": "discovery",
    "chunk_id": "panoplosaurus:eswiki:4",
    "lang": "es",
@@ -761,8 +840,8 @@
    "quote_sha": "eabea8ab1194f3d9"
   },
   {
-   "fact_id": "F069",
-   "statement": "Two larger specimens, ROM 1215 and RTMP 83.25.2, were found later; they contained skulls and provided information about the shoulder girdle and forelimbs.",
+   "fact_id": "F077",
+   "statement": "Two larger specimens, ROM 1215 and RTMP 83.25.2, were later found, providing information on the shoulder girdle and forelimbs in addition to skulls.",
    "category": "discovery",
    "chunk_id": "panoplosaurus:eswiki:4",
    "lang": "es",
@@ -770,17 +849,17 @@
    "quote_sha": "11d66d6986088761"
   },
   {
-   "fact_id": "F070",
+   "fact_id": "F078",
    "statement": "Specimens of Panoplosaurus have also been reported from the Aguja Formation.",
-   "category": "time_and_habitat",
+   "category": "discovery",
    "chunk_id": "panoplosaurus:eswiki:4",
    "lang": "es",
    "quote": "También se han reportado especímenes de Panoplosaurus de la Formación Aguja.",
    "quote_sha": "88b4efd2d6dd04ec"
   },
   {
-   "fact_id": "F071",
-   "statement": "Panoplosaurus belonged to the family Nodosauridae within the infraorder Ankylosauria of the Thyreophora.",
+   "fact_id": "F079",
+   "statement": "Panoplosaurus belonged to the family Nodosauridae within the suborder Ankylosauria of the Thyreophora.",
    "category": "classification",
    "chunk_id": "panoplosaurus:eswiki:5",
    "lang": "es",
@@ -788,8 +867,8 @@
    "quote_sha": "c8517de7b2fadf02"
   },
   {
-   "fact_id": "F072",
-   "statement": "Originally assigned to Ankylosauridae, Panoplosaurus is now considered a member of Nodosauridae and a close relative of Edmontonia from the same formation.",
+   "fact_id": "F080",
+   "statement": "Originally assigned to Ankylosauridae, Panoplosaurus is now considered a member of Nodosauridae as a close relative of Edmontonia from the same formation.",
    "category": "classification",
    "chunk_id": "panoplosaurus:eswiki:5",
    "lang": "es",
@@ -797,44 +876,8 @@
    "quote_sha": "382f328b978f68f5"
   },
   {
-   "fact_id": "F073",
-   "statement": "In 1971, Walter Coombs referred the species of Edmontonia to a subgenus within Panoplosaurus, creating Panoplosaurus (Edmontonia) longiceps and Panoplosaurus (Edmontonia) rugosidens, but this has not found lasting acceptance.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:eswiki:5",
-   "lang": "es",
-   "quote": "En 1971, Walter Coombs incluso refirió la especie de Edmontonia a un subgénero dentro de Panoplosaurus, creando un Panoplosaurus (Edmontonia) longiceps y un Panoplosaurus (Edmontonia) rugosidens, pero esto no ha encontrado una aceptación duradera.",
-   "quote_sha": "8eff10798d3ebd65"
-  },
-  {
-   "fact_id": "F074",
-   "statement": "The parent group of the genus Panoplosaurus is Nodosauridae.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Nodosauridae",
-   "quote_sha": "86a4b3b580d17218"
-  },
-  {
-   "fact_id": "F075",
-   "statement": "Panoplosaurus is classified in the class Ornithischia.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Ornithischia",
-   "quote_sha": "57c7a44935709d4b"
-  },
-  {
-   "fact_id": "F076",
-   "statement": "The type species of the genus Panoplosaurus is Panoplosaurus mirus.",
-   "category": "classification",
-   "chunk_id": "panoplosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Type species: Panoplosaurus mirus",
-   "quote_sha": "f28160b9bf1cebe2"
-  },
-  {
-   "fact_id": "F077",
-   "statement": "Panoplosaurus lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.",
+   "fact_id": "F081",
+   "statement": "The genus Panoplosaurus existed from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "panoplosaurus:pbdb:1",
    "lang": "en",
@@ -842,220 +885,122 @@
    "quote_sha": "c5801ed7c899e141"
   },
   {
-   "fact_id": "F078",
-   "statement": "There are 15 recorded fossil occurrences of Panoplosaurus.",
-   "category": "discovery",
-   "chunk_id": "panoplosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Fossil occurrences recorded: 15",
-   "quote_sha": "2276c6f343780493"
+   "fact_id": "F082",
+   "statement": "Panoplosaurus mirus is the only known species in the extinct genus Panoplosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "panoplosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Panoplosaurus mirus es la única especie conocida del género extinto Panoplosaurus",
+   "quote_sha": "dc5bcd6dca80984d"
   },
   {
-   "fact_id": "F079",
-   "statement": "New information regarding the internal anatomy of the skull of Panoplosaurus mirus was provided by Livius et al. in 2026.",
-   "category": "paleobiology",
-   "chunk_id": "panoplosaurus:research:1",
-   "lang": "en",
-   "quote": "New information on the internal anatomy of the skull of Panoplosaurus mirus is provided by Livius et al. (2026).",
-   "quote_sha": "1f32f27ed5963003"
+   "fact_id": "F083",
+   "statement": "In 1971, Walter Coombs referred the species Edmontonia to a subgenus within Panoplosaurus, creating Panoplosaurus (Edmontonia) longiceps and Panoplosaurus (Edmontonia) rugosidens, but this has not found lasting acceptance.",
+   "category": "debate",
+   "chunk_id": "panoplosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "En 1971, Walter Coombs incluso refirió la especie de Edmontonia a un subgénero dentro de Panoplosaurus, creando un Panoplosaurus (Edmontonia) longiceps y un Panoplosaurus (Edmontonia) rugosidens, pero esto no ha encontrado una aceptación duradera.",
+   "quote_sha": "8eff10798d3ebd65"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "The holotype specimen of Panoplosaurus is designated as CMN 2759 by the Canadian Museum of Nature.",
-   "category": "discovery",
-   "quote": "The specimen, designated by the Canadian Museum of Nature accession number CMN 2759...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "The holotype of Panoplosaurus was excavated 2.75 miles south of the mouth of the Little Sandhill tributary of the Red Deer River in Alberta.",
-   "category": "discovery",
-   "quote": "...excavated 2.75 mi south of the mouth of the Little Sandhill tributary of the Red Deer River in Alberta...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "Lawrence Lambe named the species Panoplosaurus mirus in a posthumous publication by the Royal Society of Canada.",
-   "category": "discovery",
-   "quote": "Lambe's work was published posthumously by the Royal Society of Canada, where he named the new material as Panoplosaurus mirus...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "The beds containing the holotype are now considered part of the upper level of the Dinosaur Park Formation, dating to 75 to 76 million years ago.",
-   "category": "time_and_habitat",
-   "quote": "...they are now considered part of the upper level of the Dinosaur Park Formation, pertaining to the late middle Campanian, 75 to 76 million years ago.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "In 2016, Victoria Arbour and Philip J. Currie restricted the genus Panoplosaurus to just the holotype due to uncertainties regarding specimen referrals.",
-   "category": "discovery",
-   "quote": "Arbour and Philip J. Currie further restricted Panoplosaurus to just the holotype in 2016, as a result of uncertainties surrounding the referrals of various specimens between it, Edmontonia rugosidens and Edmontonia longiceps...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "The skull of Panoplosaurus had a short snout with a very domed surface and bony plates covering the cheek.",
+   "statement": "Almost the entire body of Panoplosaurus was covered in plates, osteoderms, and scutes of varying sizes, including large elements on the skull and neck, round bones under the chin, and small ossicles filling gaps.",
    "category": "description",
-   "quote": "The skull has a short snout, with a very domed surface, and bony plates directly covering the cheek.",
-   "reason": "statement copies the source wording: 'a short snout with a very domed surface'"
+   "quote": "Almost the entire surface of the body was covered in plates, osteoderms and scutes of varying sizes, ranging from large elements along the skull and neck, to smaller, round bones underneath the chin and body, to small ossicles that filled in the spaces between other, larger osteoderms.",
+   "reason": "statement copies the source wording: 'was covered in plates osteoderms and scutes of'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "The neck of Panoplosaurus had circular groups of plates arranged around its top surface.",
-   "category": "description",
-   "quote": "The neck had circular groups of plates arranged around the top surface...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "The hand of Panoplosaurus may have included only three fingers.",
-   "category": "description",
-   "quote": "...the hand may have only included three fingers.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "Almost the entire body surface of Panoplosaurus was covered in plates, osteoderms, and scutes of varying sizes.",
-   "category": "description",
-   "quote": "Almost the entire surface of the body was covered in plates, osteoderms and scutes of varying sizes...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "Panoplosaurus is placed in the clade Panoplosaurini based on phylogenetic analyses showing it is close to Edmontonia and Animantarx.",
+   "statement": "Panoplosaurus was originally classified as a stegosaur related to Ankylosaurus before ankylosaurs were separated into their own group.",
    "category": "classification",
-   "quote": "Following consistent placements in phylogenetic analyses close to Edmontonia and the American taxon Animantarx, Panoplosaurus was placed into the clade Panoplosaurini...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:4",
-   "statement": "Panoplosaurus weighed 1600 kg, making it comparable to other ankylosaurs from the same location and heavier than or equivalent to its coexisting predators.",
-   "category": "description",
-   "quote": "Panoplosaurus was a rather large animal at 1600 kg, a comparable size to other ankylosaurs from the same location, and heavier than or approximately equivalent to all predators it coexisted with.",
-   "reason": "statement copies the source wording: 'to other ankylosaurs from the same location and'"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:2",
-   "statement": "It has been debated whether Panoplosaurus is the proper name for material previously referred to as Edmontonia, complicating interpretations of its phylogeny and ecology.",
-   "category": "debate",
-   "quote": "Panoplosaurus has at times been considered the proper name for material otherwise referred to as Edmontonia, complicating its phylogenetic and ecological interpretations...",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Panoplosaurus was originally classified as a stegosaur related to the similarly armoured form Ankylosaurus, a group that was later divided with ankylosaurs becoming their own group.",
+   "reason": "statement copies the source wording: 'Panoplosaurus was originally classified as a stegosaur related'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:3",
-   "statement": "The referral of specimen ROM 1215 to Panoplosaurus has been questioned, with some researchers assigning it to Edmontonia due to a lack of diagnostic traits.",
-   "category": "debate",
-   "quote": "The referral of ROM 1215 to Panoplosaurus was questioned by Coombs in 1990, and Roland A. Gangloff referred it and the Alaskan specimen DPMWA 90–25 to Edmontonia in 1995 based on the anatomy of the lack of diagnostic traits...",
-   "reason": "quote not found verbatim in the source"
+   "statement": "Lawrence Lambe named the species Panoplosaurus mirus posthumously in 1919, while Charles M. Sternberg published a supplemental description of the vertebrae and limb material in 1921.",
+   "category": "discovery",
+   "quote": "Lambe's work was published posthumously by the Royal Society of Canada, where he named the new material as Panoplosaurus mirus, and a supplemental description of the vertebrae and limb material, which Lambe had not yet gotten to, was published by Sternberg in 1921.",
+   "reason": "numbers not in the quote: ['1919']"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:6",
-   "statement": "The complete fusion of the scapulocoracoid is unique to Panoplosaurus.",
+   "statement": "The first three cervical vertebrae after the skull were fused into a single bone, a feature unique to Panoplosaurus and Edmontonia among ankylosaurs.",
    "category": "description",
-   "quote": "The complete fusion of the scapulocoracoid is unique to Panoplosaurus.",
-   "reason": "statement copies the source wording: 'The complete fusion of the scapulocoracoid is unique'"
+   "quote": "The first three cervicals after the skull are fused together into one single ossification, a feature unique to Panoplosaurus and Edmontonia among ankylosaurs.",
+   "reason": "statement copies the source wording: 'feature unique to Panoplosaurus and Edmontonia among ankylosaurs'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:6",
-   "statement": "The hand of Panoplosaurus was splayed, featuring two phalanges on the first digit and three on the second and third digits.",
+   "statement": "The hand of Panoplosaurus was splayed with two phalanges on the first digit and three on the second and third digits.",
    "category": "description",
    "quote": "The manus was splayed, with two phalanges on the first digit, and three on the second and third.",
-   "reason": "statement copies the source wording: 'two phalanges on the first digit and three'"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:6",
-   "statement": "Like other ankylosaurids, the tibia of Panoplosaurus was shorter than its humerus, contrasting with Stegosaurus and basal taxa like Scelidosaurus.",
-   "category": "description",
-   "quote": "As in ankylosaurids, the tibia of Panoplosaurus was shorter than the humerus, which contrasts with Stegosaurus and basal taxa like Scelidosaurus.",
-   "reason": "statement copies the source wording: 'ankylosaurids the tibia of Panoplosaurus was shorter than'"
+   "reason": "statement copies the source wording: 'was splayed with two phalanges on the first'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:7",
-   "statement": "Lambe identified seven different categories of osteoderms in his 1919 description of Panoplosaurus.",
+   "statement": "Lambe identified seven distinct categories of osteoderms in his 1919 description of Panoplosaurus.",
    "category": "description",
    "quote": "Lambe identified 7 different categories of osteoderms in his 1919 description of Panoplosaurus.",
-   "reason": "statement copies the source wording: 'different categories of osteoderms in his 1919 description'"
+   "reason": "statement copies the source wording: 'categories of osteoderms in his 1919 description of'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:7",
-   "statement": "Small irregular scutes lacking a keel formed the sixth osteoderm type in Panoplosaurus, which were suggested to be from the limbs, though this was not definitive.",
-   "category": "description",
-   "quote": "Small irregular scutes lacking a keel were identified as a sixth form, and were suggested to have been from the limbs, though this was not definitive.",
-   "reason": "statement copies the source wording: 'from the limbs though this was not definitive'"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:7",
-   "statement": "The scutes along the top and sides of the neck in Panoplosaurus were the most distinct form, differing significantly from those in Edmontonia.",
-   "category": "description",
-   "quote": "The scutes along the top and sides of the neck in Panoplosaurus are the most distinct form, differing significantly from the corresponding elements in Edmontonia.",
-   "reason": "statement copies the source wording: 'The scutes along the top and sides of'"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:7",
-   "statement": "Unlike Edmontonia, Panoplosaurus lacked lateral spines on the rear neck and shoulders.",
+   "statement": "Panoplosaurus lacked the lateral spines on the rear neck and shoulders that are present in Edmontonia.",
    "category": "description",
    "quote": "While Edmontonia possesses lateral spines on the rear neck and shoulders, these are absent in Panoplosaurus.",
    "reason": "statement copies the source wording: 'lateral spines on the rear neck and shoulders'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:5",
-   "statement": "It is debated whether the unique short snout of the Panoplosaurus holotype is due to it being a different age or sex than other individuals from the same location.",
-   "category": "debate",
-   "quote": "As other nodosaurid specimens from the same location that may be referred to Panoplosaurus lack the distinctively short snout of the holotype, it may be that its unique appearance is due to it being a different age or sex than other individuals.",
-   "reason": "statement copies the source wording: 'is due to it being a different age'"
-  },
-  {
-   "chunk_id": "panoplosaurus:enwiki:8",
-   "statement": "Coombs synonymized Panoplosaurus with Edmontonia in 1978.",
-   "category": "classification",
-   "quote": "Coombs synonymized Panoplosaurus with Edmontonia, making Panoplosaurus the only Late Cretaceous nodosaurid from North America",
-   "reason": "numbers not in the quote: ['1978']"
+   "statement": "Lambe described Panoplosaurus and identified seven osteoderm categories in 1919.",
+   "category": "discovery",
+   "quote": "Lambe identified 7 different categories of osteoderms in his 1919 description of Panoplosaurus.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:10",
-   "statement": "Panoplosaurus teeth show a single wear facet that changes from sub-vertical at the snout to nearly horizontal at the back of the mouth.",
+   "statement": "Panoplosaurus teeth show a single wear facet per tooth that changes from sub-vertical at the snout to nearly horizontal at the back of the mouth.",
    "category": "paleobiology",
    "quote": "Nodosaurids normally have oblique wear facets on teeth, in Panoplosaurus having a single wear facet per tooth which changes angulation across the tooth row, going from sub-vertical at the snout to nearly horizontal at the back of the mouth",
    "reason": "statement copies the source wording: 'from sub-vertical at the snout to nearly horizontal'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:11",
-   "statement": "The region of the Panoplosaurus brain dedicated to smell is smaller than expected for an animal of its size.",
-   "category": "paleobiology",
+   "statement": "Panoplosaurus's sinus cavities increased the recovery of lost heat and moisture by over 60%, though less efficiently than those of Euoplocephalus.",
+   "category": "description",
+   "quote": "This is less heat efficient than the more complicated sinuses of Euoplocephalus, but still shows that the sinus cavities of Panoplosaurus increased the recovery of lost heat and moisture by over 60%.",
+   "reason": "statement copies the source wording: 'increased the recovery of lost heat and moisture'"
+  },
+  {
+   "chunk_id": "panoplosaurus:enwiki:11",
+   "statement": "The region of Panoplosaurus's brain dedicated to smell was smaller than expected for an animal of its size.",
+   "category": "description",
    "quote": "However, the size of the region of the brain devoted to the sense of smell is smaller in Panoplosaurus than expected for an animal of its size.",
    "reason": "statement copies the source wording: 'than expected for an animal of its size'"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:12",
-   "statement": "Panoplosaurus fossils are found only in the Dinosaur Park Formation, dated between 76.47 and 74.44 million years ago.",
+   "statement": "Panoplosaurus fossils are restricted to the Dinosaur Park Formation, dated between 76.47 and 74.44 million years ago.",
    "category": "time_and_habitat",
    "quote": "Panoplosaurus is only known from the Dinosaur Park Formation, which has been constrained in age between 76.47 and 74.44 million years ago by radiocarbon dating.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "panoplosaurus:enwiki:12",
-   "statement": "Less than five definitive individuals of Panoplosaurus have been found within a vertical range of 24 to 31 meters in the formation.",
+   "statement": "Fewer than five definitive individuals of Panoplosaurus have been found within a vertical range of 24 to 31 meters above the base of the formation.",
    "category": "time_and_habitat",
    "quote": "Panoplosaurus is known from less than five definitive individuals that have been found within 24 to 31 m above the base of the formation.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "panoplosaurus:enwiki:13",
-   "statement": "The Dinosaur Park Formation was deposited on a low slope during the initial phase of the last major marine transgression of the Western Interior Seaway.",
-   "category": "time_and_habitat",
-   "quote": "The Dinosaur Park Formation was deposited on a low slope during the start of the last major marine transgression of the shallow Western Interior Seaway that spanned central North America.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "panoplosaurus:pbdb:1",
-   "statement": "The genus Panoplosaurus was named by Lambe in 1919.",
+   "chunk_id": "panoplosaurus:eswiki:1",
+   "statement": "Panoplosaurus mirus is the only known species of the extinct genus Panoplosaurus, a nodosaurid thyreophoran dinosaur.",
    "category": "classification",
-   "quote": "PBDB name: Panoplosaurus (genus), Lambe 1919",
-   "reason": "duplicate"
+   "quote": "Panoplosaurus mirus es la única especie conocida del género extinto Panoplosaurus (gr. \"lagarto completamente armado\") de dinosaurio tireóforo nodosáurido",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

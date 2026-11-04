@@ -2,9 +2,9 @@
  "taxon": "Pterodactylus",
  "taxon_key": "pterodactylus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "aee4fab5859222a3",
- "generated_at": "2026-11-03T02:13:22+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "848f24ed6d25ffc5",
+ "generated_at": "2026-11-04T03:44:06+00:00",
  "citations": {
   "pterodactylus:enwiki:1": {
    "source": "wikipedia_article",
@@ -104,6 +104,34 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "pterodactylus:enwiki:15": {
+   "source": "wikipedia_article",
+   "title": "Pterodactylus (List of species)",
+   "url": "https://en.wikipedia.org/wiki/Pterodactylus?oldid=1381772629",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pterodactylus:enwiki:16": {
+   "source": "wikipedia_article",
+   "title": "Pterodactylus (List of species, part 2)",
+   "url": "https://en.wikipedia.org/wiki/Pterodactylus?oldid=1381772629",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pterodactylus:enwiki:17": {
+   "source": "wikipedia_article",
+   "title": "Pterodactylus (List of species, part 3)",
+   "url": "https://en.wikipedia.org/wiki/Pterodactylus?oldid=1381772629",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pterodactylus:enwiki:18": {
+   "source": "wikipedia_article",
+   "title": "Pterodactylus (Cultural significance)",
+   "url": "https://en.wikipedia.org/wiki/Pterodactylus?oldid=1381772629",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "pterodactylus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Pterodactylus (taxobox)",
@@ -146,6 +174,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "pterodactylus:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Pterodactylus (Historia)",
+   "url": "https://es.wikipedia.org/wiki/Pterodactylus?oldid=172974136",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "pterodactylus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Pterodactylus",
@@ -157,7 +192,16 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The type species of the genus Pterodactylus is P. antiquus.",
+   "statement": "The genus Pterodactylus was originally placed under the authority of Bonaparte in 1838.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Bonaparte, 1838",
+   "quote_sha": "dc77fa037a402129"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Ornithocephalus antiquus.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:1",
    "lang": "en",
@@ -165,17 +209,17 @@
    "quote_sha": "7a4024a274a914c1"
   },
   {
-   "fact_id": "F002",
-   "statement": "The genus Pterodactylus was originally described by Georges Cuvier in 1809.",
+   "fact_id": "F003",
+   "statement": "The species P. antiquus was named by Sömmerring in 1812.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:1",
    "lang": "en",
-   "quote": "authority: Cuvier, 1809",
-   "quote_sha": "77fd3b9320c2b48d"
+   "quote": "subdivision: P. antiquus (Sömmerring, 1812)",
+   "quote_sha": "859367efa0a371c7"
   },
   {
-   "fact_id": "F003",
-   "statement": "The name Pterodactylus means 'winged finger' and refers to a genus of extinct pterosaurs.",
+   "fact_id": "F004",
+   "statement": "The name Pterodactylus means 'winged finger' and it is a genus of extinct pterosaurs.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:2",
    "lang": "en",
@@ -183,35 +227,26 @@
    "quote_sha": "eb3e3d8fe1242447"
   },
   {
-   "fact_id": "F004",
-   "statement": "The genus Pterodactylus is thought to contain only one species, P. antiquus.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:2",
-   "lang": "en",
-   "quote": "It is thought to contain only a single species, Pterodactylus antiquus",
-   "quote_sha": "f164a8eeb5d01cf4"
-  },
-  {
    "fact_id": "F005",
-   "statement": "Fossils of Pterodactylus are primarily found in the Solnhofen limestone of Bavaria, Germany.",
+   "statement": "Pterodactylus antiquus is thought to be the only species in the genus and was the first pterosaur identified as a flying reptile.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:2",
    "lang": "en",
-   "quote": "Fossil remains of Pterodactylus have primarily been found in the Solnhofen limestone of Bavaria, Germany",
-   "quote_sha": "af63447c2da58a32"
+   "quote": "It is thought to contain only a single species, Pterodactylus antiquus, which was the first pterosaur to be named and identified as a flying reptile and one of the first prehistoric reptiles ever to be discovered.",
+   "quote_sha": "befd5ccd14420a84"
   },
   {
    "fact_id": "F006",
-   "statement": "Pterodactylus lived during the Late Jurassic period (Tithonian stage), approximately 150.8 to 148.5 million years ago.",
+   "statement": "Fossils of Pterodactylus are primarily found in the Solnhofen limestone of Bavaria, Germany, dating from the Late Jurassic Tithonian stage between 150.8 and 148.5 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "pterodactylus:enwiki:2",
    "lang": "en",
-   "quote": "which dates from the Late Jurassic period (Tithonian stage), about 150.8 to 148.5 million years ago",
-   "quote_sha": "9e4405b94468693a"
+   "quote": "Fossil remains of Pterodactylus have primarily been found in the Solnhofen limestone of Bavaria, Germany, which dates from the Late Jurassic period (Tithonian stage), about 150.8 to 148.5 million years ago.",
+   "quote_sha": "4d8c55061a7b3cfa"
   },
   {
    "fact_id": "F007",
-   "statement": "Pterodactylus was a generalist carnivore that likely ate various invertebrates and vertebrates.",
+   "statement": "Pterodactylus was a generalist carnivore that likely ate a variety of invertebrates and vertebrates.",
    "category": "paleobiology",
    "chunk_id": "pterodactylus:enwiki:2",
    "lang": "en",
@@ -220,25 +255,52 @@
   },
   {
    "fact_id": "F008",
-   "statement": "Pterodactylus was a small pterosaur compared to genera like Pteranodon and Quetzalcoatlus.",
+   "statement": "Pterodactylus was a small pterosaur that lived earlier than the Late Cretaceous genera Pteranodon and Quetzalcoatlus.",
    "category": "description",
    "chunk_id": "pterodactylus:enwiki:2",
    "lang": "en",
-   "quote": "Pterodactylus was a small pterosaur compared to other famous genera such as Pteranodon and Quetzalcoatlus",
-   "quote_sha": "2fe9a0d4f6382c3b"
+   "quote": "Pterodactylus was a small pterosaur compared to other famous genera such as Pteranodon and Quetzalcoatlus, and it also lived earlier, during the Late Jurassic period, while both Pteranodon and Quetzalcoatlus lived during the Late Cretaceous.",
+   "quote_sha": "372aa12fe20012e1"
   },
   {
    "fact_id": "F009",
-   "statement": "The first Pterodactylus specimen was described by Cosimo Alessandro Collini in 1784.",
+   "statement": "The first Pterodactylus specimen was described by Cosimo Alessandro Collini in 1784 from fossils found in the Solnhofen limestone of Bavaria.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:3",
    "lang": "en",
-   "quote": "The first Pterodactylus specimen was described by the Italian scientist Cosimo Alessandro Collini in 1784",
-   "quote_sha": "ba4b174bae3de41f"
+   "quote": "The first Pterodactylus specimen was described by the Italian scientist Cosimo Alessandro Collini in 1784, based on a fossil skeleton that had been unearthed from the Solnhofen limestone of Bavaria.",
+   "quote_sha": "4a136dac3a829c5b"
   },
   {
    "fact_id": "F010",
-   "statement": "In 1809, Cuvier published a description naming the animal Petro-Dactyle, a typo later corrected to Ptéro-Dactyle.",
+   "statement": "Collini speculated the animal might be a sea creature because he believed ocean depths were more likely to hold unknown animals.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:3",
+   "lang": "en",
+   "quote": "He speculated that it may have been a sea creature, not for any anatomical reason, but because he thought the ocean depths were more likely to have housed unknown types of animals.",
+   "quote_sha": "510e416dabce1ff8"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The idea that pterosaurs were aquatic persisted until 1830, when Johann Georg Wagler illustrated Pterodactylus using its wings as flippers.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:3",
+   "lang": "en",
+   "quote": "The idea that pterosaurs were aquatic animals persisted among a minority of scientists as late as 1830, when the German zoologist Johann Georg Wagler published a text on \"amphibians\" which included an illustration of Pterodactylus using its wings as flippers.",
+   "quote_sha": "d7eb7d14d03061a2"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Georges Cuvier first published the idea that the animal was a reptile with wing membranes in December 1800.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:3",
+   "lang": "en",
+   "quote": "Cuvier became the first to publish these ideas in December 1800 in a very short description.",
+   "quote_sha": "42b3b36d125c4340"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Cuvier named the animal Petro-Dactyle in 1809, a typo later corrected to Ptéro-Dactyle.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:3",
    "lang": "en",
@@ -246,17 +308,17 @@
    "quote_sha": "02b91143d3138ad0"
   },
   {
-   "fact_id": "F011",
-   "statement": "In 1812, von Sömmerring published a lecture in which he named the species Ornithocephalus antiquus.",
+   "fact_id": "F014",
+   "statement": "Cuvier refuted the hypothesis by Johann Friedrich Blumenbach that the animal was a shore bird.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:3",
    "lang": "en",
-   "quote": "His lecture was published in 1812, and in it von Sömmerring named the species Ornithocephalus antiquus.",
-   "quote_sha": "220985eac809e48f"
+   "quote": "He also refuted a hypothesis by Johann Friedrich Blumenbach that it would have been a shore bird.",
+   "quote_sha": "e67bdbdd39ee8a93"
   },
   {
-   "fact_id": "F012",
-   "statement": "A second specimen of Pterodactylus was discovered in 1817, also from Solnhofen.",
+   "fact_id": "F015",
+   "statement": "A second specimen of Pterodactylus was discovered in 1817 from Solnhofen.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:3",
    "lang": "en",
@@ -264,269 +326,143 @@
    "quote_sha": "b56d4db10828323b"
   },
   {
-   "fact_id": "F013",
-   "statement": "The generic name was latinized to Pterodactylus by Constantine Samuel Rafinesque in 1815.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:4",
-   "lang": "en",
-   "quote": "In 1815, the generic name Ptéro-Dactyle was latinized to Pterodactylus by Constantine Samuel Rafinesque.",
-   "quote_sha": "6a8c86a382ce9c7b"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "Richard Lydekker designated Pterodactylus antiquus as the type species of the genus in 1888.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:4",
-   "lang": "en",
-   "quote": "In 1888, English naturalist Richard Lydekker designated Pterodactylus antiquus as the type species of Pterodactylus",
-   "quote_sha": "9f2ee181ff49598b"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "Richard Lydekker designated specimen BSP AS.I.739 as the holotype of the genus.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:4",
-   "lang": "en",
-   "quote": "He also designated specimen BSP AS.I.739 as the holotype of the genus.",
-   "quote_sha": "f243769b138d268f"
-  },
-  {
    "fact_id": "F016",
-   "statement": "Modern research has confirmed, refuted, or left disputed various assumptions about pterosaur biology, such as whether they were warm-blooded or furred.",
-   "category": "debate",
-   "chunk_id": "pterodactylus:enwiki:4",
+   "statement": "The adult Pterodactylus antiquus had an estimated wingspan of about 1.04 meters based on an isolated skull.",
+   "category": "description",
+   "chunk_id": "pterodactylus:enwiki:5",
    "lang": "en",
-   "quote": "Some of these elements have been confirmed, some refuted by modern research, while others remain disputed.",
-   "quote_sha": "f55b836d35632fc8"
+   "quote": "Pterodactylus antiquus was a relatively small pterosaur, with an estimated adult wingspan of about 1.04 m, based on the only known adult specimen, which is represented by an isolated skull.",
+   "quote_sha": "c7f7bb89cfa8518b"
   },
   {
    "fact_id": "F017",
-   "statement": "More than 30 fossil specimens of Pterodactylus have been discovered.",
-   "category": "discovery",
+   "statement": "Adult Pterodactylus skulls were long and thin, containing approximately 90 narrow and conical teeth.",
+   "category": "description",
    "chunk_id": "pterodactylus:enwiki:5",
    "lang": "en",
-   "quote": "Pterodactylus is known from over 30 fossil specimens",
-   "quote_sha": "c562be89f5266e6a"
+   "quote": "The skulls of adult Pterodactylus were long and thin, with about 90 narrow and conical teeth.",
+   "quote_sha": "4ab0157adc216743"
   },
   {
    "fact_id": "F018",
-   "statement": "The adult Pterodactylus antiquus had an estimated wingspan of approximately 1.04 meters.",
-   "category": "description",
-   "chunk_id": "pterodactylus:enwiki:5",
-   "lang": "en",
-   "quote": "Pterodactylus antiquus was a relatively small pterosaur, with an estimated adult wingspan of about 1.04 m",
-   "quote_sha": "af4af0ac6192cf39"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "Adult Pterodactylus skulls were long and thin and contained about 90 narrow, conical teeth.",
-   "category": "description",
-   "chunk_id": "pterodactylus:enwiki:5",
-   "lang": "en",
-   "quote": "The skulls of adult Pterodactylus were long and thin, with about 90 narrow and conical teeth",
-   "quote_sha": "9ae5877800d65698"
-  },
-  {
-   "fact_id": "F020",
    "statement": "Pterodactylus is distinguished by having straight skulls and jaws, unlike the upwardly curved jaws of related ctenochasmatids.",
    "category": "description",
    "chunk_id": "pterodactylus:enwiki:5",
    "lang": "en",
-   "quote": "Another autapomorphy that Pterodactylus has is that the skull and jaws were straight",
-   "quote_sha": "6cddf30dd0fe3af6"
+   "quote": "Another autapomorphy that Pterodactylus has is that the skull and jaws were straight, which are unlike the upwardly curved jaws seen in the related ctenochasmatids.",
+   "quote_sha": "550c9adfb0018e1d"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "In adults, the soft tissue crest of Pterodactylus extended from the back edge of the antorbital fenestra to the back of the skull.",
+   "category": "description",
+   "chunk_id": "pterodactylus:enwiki:5",
+   "lang": "en",
+   "quote": "In adult Pterodactylus, this crest extended between the back edge of the antorbital fenestra and the back of the skull.",
+   "quote_sha": "71ee6db6a074efc2"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Solid crests were found only on large, fully adult Pterodactylus, suggesting the crest was a display structure that developed with maturity.",
+   "category": "description",
+   "chunk_id": "pterodactylus:enwiki:5",
+   "lang": "en",
+   "quote": "Solid crests have only been found on large, fully adult specimens of Pterodactylus, indicating that this was a display structure that became larger and more well developed as individuals reached maturity.",
+   "quote_sha": "05a8dca210efe66d"
   },
   {
    "fact_id": "F021",
-   "statement": "Adult Pterodactylus possessed a skull crest that extended from the back edge of the antorbital fenestra to the rear of the skull.",
+   "statement": "Some specimens preserved evidence of a soft tissue extension called an \"occipital lappet\" extending from the back of the skull.",
    "category": "description",
    "chunk_id": "pterodactylus:enwiki:5",
    "lang": "en",
-   "quote": "In adult Pterodactylus, this crest extended between the back edge of the antorbital fenestra and the back of the skull",
-   "quote_sha": "7f976667d2b8a176"
+   "quote": "Several specimens previously referred to P. antiquus preserved evidence of the soft tissue extensions of these crests, including an \"occipital lappet\", a flexible, tab-like structure extending from the back of the skull.",
+   "quote_sha": "6167273e9ecee61d"
   },
   {
    "fact_id": "F022",
-   "statement": "At least one Pterodactylus specimen shows a short bony base for its crest, a feature also found in the related genus Germanodactylus.",
-   "category": "description",
-   "chunk_id": "pterodactylus:enwiki:5",
+   "statement": "Youngest immature P. antiquus specimens had as few as 15 teeth with relatively broad bases.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:enwiki:6",
    "lang": "en",
-   "quote": "In at least one specimen, the crest had a short bony base, also seen in related pterosaurs like Germanodactylus",
-   "quote_sha": "4f4599d81a7d7fd6"
+   "quote": "The youngest immature specimens of Pterodactylus antiquus (alternately interpreted as young specimens of the distinct species P. kochi) have a small number of teeth, as few as 15 in some, and the teeth have a relatively broad base.",
+   "quote_sha": "9ff3c4207af4b12b"
   },
   {
    "fact_id": "F023",
-   "statement": "Solid crests on Pterodactylus skulls are only found on large, fully adult specimens.",
-   "category": "description",
-   "chunk_id": "pterodactylus:enwiki:5",
+   "statement": "Other P. antiquus specimens had narrower and more numerous teeth, up to 90 in some cases.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:enwiki:6",
    "lang": "en",
-   "quote": "Solid crests have only been found on large, fully adult specimens of Pterodactylus",
-   "quote_sha": "0251768384da4bee"
+   "quote": "The teeth of other P. antiquus specimens are both narrower and more numerous (up to 90 teeth are present in several specimens).",
+   "quote_sha": "fceda2ab2d1109d7"
   },
   {
    "fact_id": "F024",
-   "statement": "Two specimens of P. antiquus, including the holotype and the largest known skull (BMMS 7), possess a low bony crest.",
-   "category": "description",
-   "chunk_id": "pterodactylus:enwiki:5",
+   "statement": "A third year class of P. antiquus specimens, including some large ones once assigned to P. kochi, all show signs of immaturity.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:enwiki:6",
    "lang": "en",
-   "quote": "Two specimens of P. antiquus (the holotype specimen BSP AS I 739 and the incomplete skull BMMS 7, the largest known skull of P. antiquus) have a low bony crest on their skulls",
-   "quote_sha": "2a8102ae028d1212"
+   "quote": "A third year class is represented by specimens of the \"traditional\" P. antiquus, as well as a few isolated, large specimens once assigned to P. kochi that overlap P. antiquus in size. However, all specimens in this third year class also show sign of immaturity.",
+   "quote_sha": "b190f7d34849aa97"
   },
   {
    "fact_id": "F025",
-   "statement": "The crest on the Pterodactylus skull was composed mainly of soft tissue.",
+   "statement": "Distinct year classes in P. antiquus fossils suggest the species bred seasonally and grew consistently throughout its life.",
    "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:5",
+   "chunk_id": "pterodactylus:enwiki:7",
    "lang": "en",
-   "quote": "Pterodactylus, like related pterosaurs, had a crest on its skull composed mainly of soft tissues",
-   "quote_sha": "d51a40b4af8a0c5d"
+   "quote": "The distinct year classes of Pterodactylus antiquus specimens show that this species, like the contemporary Rhamphorhynchus muensteri, likely bred seasonally and grew consistently during its lifetime.",
+   "quote_sha": "2e7c52fe2b87bb1d"
   },
   {
    "fact_id": "F026",
-   "statement": "Many specimens previously attributed to P. antiquus based on soft tissue crest features have been reclassified as Aerodactylus scolopaciceps, which may be a junior synonym.",
+   "statement": "The smallest size class of P. antiquus likely consisted of individuals less than one year old that had just begun to fly.",
    "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:5",
+   "chunk_id": "pterodactylus:enwiki:7",
    "lang": "en",
-   "quote": "Most of these specimens have been reclassified in the related species Aerodactylus scolopaciceps, which may however be nothing more than a junior synonym",
-   "quote_sha": "d221d5e7229c8714"
+   "quote": "The smallest size class probably consisted of individuals that had just begun to fly and were less than one year old.",
+   "quote_sha": "6ae2c102215531fd"
   },
   {
    "fact_id": "F027",
-   "statement": "Historically, different growth stages of Pterodactylus were often mistaken for distinct species.",
+   "statement": "The second year class of P. antiquus represented individuals one to two years old, while the rare third year class included specimens over two years old.",
    "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:6",
+   "chunk_id": "pterodactylus:enwiki:7",
    "lang": "en",
-   "quote": "Historically, this has led to various growth stages (including growth stages of related pterosaurs) being mistaken for new species of Pterodactylus",
-   "quote_sha": "cd1fa9f9bcbb15ce"
+   "quote": "The second year class represents individuals one to two years old, and the rare third year class is composed of specimens over two years old.",
+   "quote_sha": "bd29534367991ed8"
   },
   {
    "fact_id": "F028",
-   "statement": "Detailed studies of growth curves suggest that only one valid species, P. antiquus, exists within the genus Pterodactylus.",
+   "statement": "Comparisons of scleral rings suggest P. antiquus may have been diurnal.",
    "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:6",
+   "chunk_id": "pterodactylus:enwiki:8",
    "lang": "en",
-   "quote": "Several detailed studies using various methods to measure growth curves among known specimens have suggested that there is actually only one valid species of Pterodactylus, P. antiquus",
-   "quote_sha": "94adf0998d049df8"
+   "quote": "Comparisons between the scleral rings of Pterodactylus antiquus and modern birds and reptiles suggest that it may have been diurnal.",
+   "quote_sha": "4bfb96fe664a6747"
   },
   {
    "fact_id": "F029",
-   "statement": "The youngest immature specimens of P. antiquus have as few as 15 teeth.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:6",
-   "lang": "en",
-   "quote": "The youngest immature specimens of Pterodactylus antiquus (alternately interpreted as young specimens of the distinct species P. kochi) have a small number of teeth, as few as 15 in some",
-   "quote_sha": "013686ace44b7524"
-  },
-  {
-   "fact_id": "F030",
-   "statement": "Other P. antiquus specimens possess up to 90 teeth that are narrower than those of younger individuals.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:6",
-   "lang": "en",
-   "quote": "The teeth of other P. antiquus specimens are both narrower and more numerous (up to 90 teeth are present in several specimens)",
-   "quote_sha": "a17d1cc280cbaf55"
-  },
-  {
-   "fact_id": "F031",
-   "statement": "Pterodactylus antiquus likely bred seasonally and grew consistently throughout its life, similar to Rhamphorhynchus muensteri.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:7",
-   "lang": "en",
-   "quote": "The distinct year classes of Pterodactylus antiquus specimens show that this species, like the contemporary Rhamphorhynchus muensteri, likely bred seasonally and grew consistently during its lifetime",
-   "quote_sha": "773d758b56d83145"
-  },
-  {
-   "fact_id": "F032",
-   "statement": "The smallest size class of P. antiquus likely consisted of individuals less than one year old who had just begun to fly.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:7",
-   "lang": "en",
-   "quote": "The smallest size class probably consisted of individuals that had just begun to fly and were less than one year old",
-   "quote_sha": "2093df98c613639e"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "The second year class of P. antiquus represents individuals one to two years old, while the rare third year class includes specimens over two years old.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:7",
-   "lang": "en",
-   "quote": "The second year class represents individuals one to two years old, and the rare third year class is composed of specimens over two years old",
-   "quote_sha": "c01e4b1aea5dd1b6"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "The growth pattern of Pterodactylus is similar to that of modern crocodilians rather than modern birds.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:7",
-   "lang": "en",
-   "quote": "This growth pattern is similar to modern crocodilians, rather than the rapid growth of modern birds",
-   "quote_sha": "35b732b2d580f1b8"
-  },
-  {
-   "fact_id": "F035",
-   "statement": "Comparisons of scleral rings suggest that Pterodactylus antiquus may have been diurnal.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:8",
-   "lang": "en",
-   "quote": "Comparisons between the scleral rings of Pterodactylus antiquus and modern birds and reptiles suggest that it may have been diurnal",
-   "quote_sha": "fa0fd4137ab4a33e"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "The potential diurnal nature of Pterodactylus may indicate niche partitioning with nocturnal contemporaries like Ctenochasma and Rhamphorhynchus.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:enwiki:8",
-   "lang": "en",
-   "quote": "This may also indicate niche partitioning with contemporary pterosaurs inferred to be nocturnal, such as Ctenochasma and Rhamphorhynchus",
-   "quote_sha": "781a7479a16930ea"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "The Solnhofen Limestone is a diverse fossil site containing detailed imprints of soft-bodied organisms like jellyfish.",
+   "statement": "The Solnhofen Limestone is a diverse fossil site containing detailed imprints of soft-bodied organisms like jellyfishes.",
    "category": "time_and_habitat",
    "chunk_id": "pterodactylus:enwiki:10",
    "lang": "en",
-   "quote": "The Solnhofen Limestone is a diverse Lagerstätte that contains a wide range of different creatures, including highly detailed fossilized imprints of soft bodied organisms such as jellyfishes",
-   "quote_sha": "4966cfafa0c05136"
+   "quote": "The Solnhofen Limestone is a diverse Lagerstätte that contains a wide range of different creatures, including highly detailed fossilized imprints of soft bodied organisms such as jellyfishes.",
+   "quote_sha": "58eae8ba3be6ae83"
   },
   {
-   "fact_id": "F038",
-   "statement": "Prince Charles Lucien Bonaparte established the family Pterodactylidae for Pterodactylus in 1838.",
-   "category": "classification",
-   "chunk_id": "pterodactylus:enwiki:11",
-   "lang": "en",
-   "quote": "This was emended to the family Pterodactylidae by Prince Charles Lucien Bonaparte in 1838.",
-   "quote_sha": "3551e8bf770762f2"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "The classification of the group containing Pterodactylus has recently been subject to several competing definitions.",
-   "category": "debate",
-   "chunk_id": "pterodactylus:enwiki:11",
-   "lang": "en",
-   "quote": "However, this group has more recently been given several competing definitions.",
-   "quote_sha": "e9ad178dbe557bd0"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "A 2017 analysis by Steven Vidovic and David Martill placed Pterodactylus as a basal member of the suborder Pterodactyloidea.",
-   "category": "classification",
-   "chunk_id": "pterodactylus:enwiki:11",
-   "lang": "en",
-   "quote": "Their conclusion was published in 2017, in which they placed Pterodactylus as a basal member of the suborder Pterodactyloidea.",
-   "quote_sha": "879798a33ba5ae65"
-  },
-  {
-   "fact_id": "F041",
-   "statement": "The earliest reassignment of a pterosaur species to the genus Pterodactylus began in 1825 with the description of Rhamphorhynchus.",
+   "fact_id": "F030",
+   "statement": "In 1846, Hermann von Meyer described the species Pterodactylus gemmingi, a name honoring fossil collector Carl Eming von Gemming.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:12",
    "lang": "en",
-   "quote": "The earliest reassignments of pterosaur species to Pterodactylus started in 1825, with the description of Rhamphorhynchus",
-   "quote_sha": "fb8275ef204acc78"
+   "quote": "In 1846, von Meyer created the new species Pterodactylus gemmingi based on long-tailed remains; the specific name honors the fossil collector Carl Eming von Gemming.",
+   "quote_sha": "58bd2a13b966f8b6"
   },
   {
-   "fact_id": "F042",
-   "statement": "James Scott Bowerbank and Sir Richard Owen discovered many pterosaur specimens near Burham in Kent, England, beginning in 1846.",
+   "fact_id": "F031",
+   "statement": "Starting in 1846, British paleontologists James Scott Bowerbank and Sir Richard Owen discovered numerous pterosaur specimens near Burham in Kent, England.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:12",
    "lang": "en",
@@ -534,161 +470,98 @@
    "quote_sha": "5e33174a650fb68c"
   },
   {
-   "fact_id": "F043",
-   "statement": "James Scott Bowerbank named a pterosaur species Pterodactylus giganteus in 1846.",
+   "fact_id": "F032",
+   "statement": "In 1851, Sir Richard Owen assigned newly found English specimens to the species Pterodactylus compressirostris.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:12",
    "lang": "en",
-   "quote": "the first was named in 1846 as Pterodactylus giganteus",
-   "quote_sha": "e4a62545fca96caa"
+   "quote": "In 1851, Owen named and described new pterosaur specimens that have been found yet again in England. He assigned these specimens to a new species called Pterodactylus compressirostris.",
+   "quote_sha": "f5f615967b544405"
   },
   {
-   "fact_id": "F044",
-   "statement": "James Scott Bowerbank named a pterosaur species Pterodactylus cuvieri in 1851, honoring Georges Cuvier.",
+   "fact_id": "F033",
+   "statement": "In 1859, Sir Richard Owen named Pterodactylus segwickii after British geologist Adam Sedgwick based on a snout fragment from the Cambridge Greensand.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:12",
    "lang": "en",
-   "quote": "the second species was named in 1851 as Pterodactylus cuvieri, in honor of the French scientist Georges Cuvier.",
-   "quote_sha": "e24751f639920bc0"
+   "quote": "In 1859, Owen had found remains the front part of a snout in the Cambridge Greensand, and assigned it into the species Pterodactylus segwickii; in honor of Adam Sedgwick, a British geologist.",
+   "quote_sha": "86b091660926d16a"
   },
   {
-   "fact_id": "F045",
-   "statement": "Reginald Hooley redescribed Pterodactylus compressirostris in 1914 and assigned it to the new genus Lonchodectes.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:12",
-   "lang": "en",
-   "quote": "In 1914 however, paleontologist Reginald Hooley redescribed P. compressirostris, to which he erected the genus Lonchodectes",
-   "quote_sha": "0e1fca4094ce0241"
-  },
-  {
-   "fact_id": "F046",
-   "statement": "Pterodactylus segwickii was reassigned to the genus Camposipterus in 2013.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:12",
-   "lang": "en",
-   "quote": "This species however, was reassigned to the genus Camposipterus in 2013, therefore creating the new combination Camposipterus segwickii.",
-   "quote_sha": "7a23b0b50afe2c47"
-  },
-  {
-   "fact_id": "F047",
-   "statement": "Harry Govier Seeley reassigned Pterodactylus simus to the genus Ornithocheirus in 1861.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:12",
-   "lang": "en",
-   "quote": "Later, in 1861, Owen had uncovered multiple distinctively looking fossil remains yet again in the Cambridge Greensand, these were assigned to a new species named Pterodactylus simus, though the British paleontologist Harry Govier Seeley had created a separate generic name called Ornithocheirus, and reassigned P. simus as the type species, which created the combination Ornithocheirus simus.",
-   "quote_sha": "a1b9a7c4fdc692ee"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "Rigal et al. revised the classification of Pterodactylus sagittirostris in 2017, placing it in the genus Serradraco.",
-   "category": "discovery",
-   "chunk_id": "pterodactylus:enwiki:12",
-   "lang": "en",
-   "quote": "This conclusion was revised by Rigal et al. in 2017, who disagreed with Hooley's reassignment, and therefore created the genus Serradraco, which afterwards resulted in a new combination called S. sagittirostris.",
-   "quote_sha": "00692cb7480b06aa"
-  },
-  {
-   "fact_id": "F049",
-   "statement": "In 1871, paleontologist Othniel Charles Marsh described several toothless pterosaur specimens.",
+   "fact_id": "F034",
+   "statement": "Paleontologist Samuel Wendell Williston discovered the first skull of Pterodactylus and determined that the animal was toothless.",
    "category": "discovery",
    "chunk_id": "pterodactylus:enwiki:13",
    "lang": "en",
-   "quote": "paleontologists such as Othniel Charles Marsh in 1871 for example, described several toothless pterosaur specimens",
-   "quote_sha": "4afdab0237cdb687"
+   "quote": "Paleontologist Samuel Wendell Williston unearthed the first skull of the pterosaur, and found that the animal was toothless",
+   "quote_sha": "548ba6bb0733caac"
   },
   {
-   "fact_id": "F050",
-   "statement": "Studies found that P. elegans was an immature individual of the species Ctenochasma.",
+   "fact_id": "F035",
+   "statement": "Othniel Charles Marsh described several toothless pterosaur specimens in 1871.",
    "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "Othniel Charles Marsh in 1871 for example, described several toothless pterosaur specimens",
+   "quote_sha": "46d6b9fcb7ae0634"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "Edward Drinker Cope assigned two North American pterosaur specimens to the species Ornithochirus umbrosus and Ornithochirus harpyia.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "Edward Drinker Cope also found various pterosaur specimens in North America, he assigned these to two new species known as Ornithochirus umbrosus and Ornithochirus harpyia",
+   "quote_sha": "b9796d94bc250bb7"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "In 1875, Edward Drinker Cope reassigned the species to Pterodactylus umbrosus and Pterodactylus harpyia.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "In 1875 however, Cope reassigned the species O. umbrosus and O. harpyia into Pterodactylus umbrosus and Pterodactylus harpyia",
+   "quote_sha": "152a8d737b62ed2e"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Revisions by Peter Wellnhofer in the 1980s reduced the number of recognized Pterodactylus species to about six.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "Later, in the 1980s, subsequent revisions by Peter Wellnhofer had reduced the number of recognized species to about half a dozen",
+   "quote_sha": "e46f27dd00abc19a"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "Studies found that Pterodactylus elegans was actually an immature individual of the genus Ctenochasma.",
+   "category": "classification",
    "chunk_id": "pterodactylus:enwiki:13",
    "lang": "en",
    "quote": "P. elegans, for example, was found by numerous studies to be an immature Ctenochasma",
    "quote_sha": "22b63a83198d3298"
   },
   {
-   "fact_id": "F051",
-   "statement": "Pterodactylus fossils date to the Titoniense stage of the Late Jurassic.",
-   "category": "time_and_habitat",
-   "chunk_id": "pterodactylus:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Titoniense (Jurásico Superior)",
-   "quote_sha": "107b904fec8c3994"
-  },
-  {
-   "fact_id": "F052",
-   "statement": "Fossils of Pterodactylus have been found primarily in the Solnhofen Limestone of Bavaria, Germany, dating to the Late Jurassic (early Tithonian) between 150.8 and 148.5 million years ago.",
-   "category": "time_and_habitat",
-   "chunk_id": "pterodactylus:eswiki:2",
-   "lang": "es",
-   "quote": "Sus restos fósiles han sido hallados primordialmente en la Caliza de Solnhofen de Baviera, Alemania, que data de finales del período Jurásico (principios del Titoniense), hace entre 150.8-148.5 millones de años",
-   "quote_sha": "471ba7f4873b15c1"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "More fragmentary remains of Pterodactylus have been identified in other parts of Europe and in Africa.",
-   "category": "time_and_habitat",
-   "chunk_id": "pterodactylus:eswiki:2",
-   "lang": "es",
-   "quote": "aunque restos más fragmentarios se han identificado en otras partes de Europa y en África",
-   "quote_sha": "36b9b17229c5607c"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "Pterodactylus was a carnivore that likely hunted fish and other small animals.",
-   "category": "paleobiology",
-   "chunk_id": "pterodactylus:eswiki:2",
-   "lang": "es",
-   "quote": "Era un carnívoro y probablemente cazaba peces y otros animales pequeños",
-   "quote_sha": "b342ee79d9cf2121"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "Like all pterosaurs, the wings of Pterodactylus were formed by a membrane of muscle and skin extending from its elongated fourth finger to its hind limbs.",
-   "category": "description",
-   "chunk_id": "pterodactylus:eswiki:2",
-   "lang": "es",
-   "quote": "Como todos los pterosaurios, las alas de Pterodactylus estaban formadas por una membrana de músculo y piel que se extendía desde su alargado cuarto dedo hasta sus miembros posteriores",
-   "quote_sha": "cf7161f1225cc065"
-  },
-  {
-   "fact_id": "F056",
-   "statement": "The wing membrane was supported internally by collagen fibers and externally by keratinous edges.",
-   "category": "description",
-   "chunk_id": "pterodactylus:eswiki:2",
-   "lang": "es",
-   "quote": "Esta era mantenida internamente por fibras de colágeno y externamente por bordes queratinosos",
-   "quote_sha": "b5ed41f0cc122f39"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "The genus Pterodactylus was named by Cuvier in 1809.",
+   "fact_id": "F040",
+   "statement": "In 2013, Christopher Bennett assigned Pterodactylus micronyx to the genus Aurorazhdarcho.",
    "category": "classification",
-   "chunk_id": "pterodactylus:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Cuvier, 1809",
-   "quote_sha": "9dd101055d8885eb"
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "After additional research in 2013, Bennett assigned it to the genus Aurorazhdarcho",
+   "quote_sha": "5e548c62ad980ccf"
   },
   {
-   "fact_id": "F058",
-   "statement": "The type species of the genus Pterodactylus is Pterodactylus antiquus.",
+   "fact_id": "F041",
+   "statement": "Pterodactylus longicollum was eventually designated as the type species of the separate genus Ardeadactylus.",
    "category": "classification",
-   "chunk_id": "pterodactylus:eswiki:1",
-   "lang": "es",
-   "quote": "type_species: Pterodactylus antiquus",
-   "quote_sha": "abd6323e675cba1d"
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "\"P.\" longicollum was eventually made the type species of a separate genus Ardeadactylus",
+   "quote_sha": "e801c51e00704ff1"
   },
   {
-   "fact_id": "F059",
-   "statement": "The family Pterodactylidae was named by Meyer in 1830.",
-   "category": "classification",
-   "chunk_id": "pterodactylus:eswiki:1",
-   "lang": "es",
-   "quote": "familia_authority: Meyer, 1830",
-   "quote_sha": "0bc0fd3372150760"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "In 1996, Bennett suggested that differences between P. kochi and P. antiquus specimens could be explained by age differences, implying they are the same species.",
+   "fact_id": "F042",
+   "statement": "In 1996, Christopher Bennett suggested that differences between Pterodactylus kochi and P. antiquus were due to age differences, making them the same species.",
    "category": "debate",
    "chunk_id": "pterodactylus:enwiki:14",
    "lang": "en",
@@ -696,17 +569,8 @@
    "quote_sha": "49eaf9a40aa5f8b9"
   },
   {
-   "fact_id": "F061",
-   "statement": "In 2014, Vidovic and Martill challenged the paradigm that P. kochi and P. antiquus were the same species.",
-   "category": "debate",
-   "chunk_id": "pterodactylus:enwiki:14",
-   "lang": "en",
-   "quote": "However, in 2014, two scientists began publishing research that challenged this paradigm",
-   "quote_sha": "894257df9da11f91"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "In 2017, Bennett challenged the hypothesis of three distinct species, arguing that observed differences were not sufficient to distinguish them as separate species.",
+   "fact_id": "F043",
+   "statement": "In 2017, Christopher Bennett argued that the differences identified by Vidovic and Martill were not sufficient to justify separating them into three distinct species.",
    "category": "debate",
    "chunk_id": "pterodactylus:enwiki:14",
    "lang": "en",
@@ -714,80 +578,539 @@
    "quote_sha": "08fa9c52200a5d85"
   },
   {
-   "fact_id": "F063",
-   "statement": "Pterodactylus is known from nearly 30 fossil specimens.",
+   "fact_id": "F044",
+   "statement": "By the early 21st century, Pterodactylus antiquus and P. kochi were the only well-known and well-supported species remaining.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:14",
+   "lang": "en",
+   "quote": "The only well-known and well-supported species left by the first decades of the 21st century were P. antiquus and P. kochi",
+   "quote_sha": "518cfce04ff33a30"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Vidovic and Martill named the new genus Aerodactylus for the species P. scolopaciceps.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:14",
+   "lang": "en",
+   "quote": "They named the new genus Aerodactylus for P. scolopaciceps as well",
+   "quote_sha": "85d511785386d5ca"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "American paleontologist Edward Drinker Cope discovered various pterosaur specimens in North America in 1872.",
    "category": "discovery",
-   "chunk_id": "pterodactylus:eswiki:3",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "In 1872, American paleontologist Edward Drinker Cope also found various pterosaur specimens in North America",
+   "quote_sha": "d59e14d600ef27e7"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "By the 1990s, it was understood that some of the remaining Pterodactylus species were also based on immature individuals.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "lang": "en",
+   "quote": "By the 1990s it was understood that this was even true for part of the remaining species",
+   "quote_sha": "5b013612a4701d55"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Over its 200-year history, Pterodactylus has undergone numerous classification changes, resulting in many synonyms.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:15",
+   "lang": "en",
+   "quote": "During its over-200-year history, the various species of Pterodactylus have gone through a number of changes in classification and thus have acquired a large number of synonyms",
+   "quote_sha": "667626e1e1557b30"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Several species assigned to Pterodactylus are considered nomina dubia because they are based on poor remains that are difficult to classify.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:enwiki:15",
+   "lang": "en",
+   "quote": "Additionally, a number of species assigned to Pterodactylus are based on poor remains that have proven difficult to assign to one species or another and are therefore considered nomina dubia",
+   "quote_sha": "4967330007b30aa7"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "The genus Pterodactylus belongs to the family Pterodactylidae.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:eswiki:1",
    "lang": "es",
-   "quote": "Pterodactylus es conocido a partir de cerca de 30 especímenes fósiles",
-   "quote_sha": "7b3c9e997ecb84c7"
+   "quote": "genus: Pterodactylus",
+   "quote_sha": "ba9dbb8693dfc1c8"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The genus Pterodactylus was established by Cuvier in 1809.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Cuvier, 1809",
+   "quote_sha": "9dd101055d8885eb"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Pterodactylus antiquus is the type species of the genus Pterodactylus.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:eswiki:1",
+   "lang": "es",
+   "quote": "type_species: Pterodactylus antiquus",
+   "quote_sha": "abd6323e675cba1d"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Pterodactylus antiquus was originally named Ornithocephalus antiquus by Sömmerring in 1812.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:eswiki:1",
+   "lang": "es",
+   "quote": "type_species_authority: (Sömmerring, 1812 [originalmente Ornithocephalus antiquus])",
+   "quote_sha": "2e33e4f22e851455"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Fossils of Pterodactylus date to the Tithonian stage of the Late Jurassic.",
+   "category": "time_and_habitat",
+   "chunk_id": "pterodactylus:eswiki:1",
+   "lang": "es",
+   "quote": "fossil_range: Titoniense (Jurásico Superior)",
+   "quote_sha": "107b904fec8c3994"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Pterodactylus antiquus was designated the valid type species for the genus, replacing the obsolete name Ornithocephalus antiquus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus antiquus(Sömmerring)(1812)ValidDesignated as the type species of Pterodactylus, and replacing Ornithocephalus antiquus due to being an obsolete name",
+   "quote_sha": "c24e7a05268e54c8"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "The name Pterodactylus giganteus is considered a nomen dubium and is now a synonym of Rhamphorhynchus muensteri.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus giganteus(Oken)(1819)Nomen dubiumSynonym of Rhamphorhynchus muensteri; reclassified from Ornithocephalus giganteus",
+   "quote_sha": "783324042a6af6cc"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "A 1831 description of Pterodactylus macronyx by Meyer is now considered a synonym of Dorygnathus banthensis.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus macronyxMeyer non Buckland1831 non 1829Synonym of Dorygnathus banthensis",
+   "quote_sha": "29a4370f52226e39"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Pterodactylus muensteri, described by Goldfuss in 1831, is now classified as a synonym of Rhamphorhynchus muensteri.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus muensteri(Goldfuss)(1831)Synonym of Rhamphorhynchus muensteriReclassified from Ornithocephalus muensteri",
+   "quote_sha": "de61bd8cdd4274d2"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Pterodactylus kochi, described by Wagner in 1837, has been reclassified as Diopecephalus kochi.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus kochiWagner1837Reclassified as Diopecephalus kochi",
+   "quote_sha": "16b88ed13ffbc7a7"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Pterodactylus longicaudus, described by Münster in 1839, is now known as Rhamphorhynchus longicaudus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus longicaudusMünster1839Reclassified as Rhamphorhynchus longicaudus",
+   "quote_sha": "7047c6eb43ebb01d"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Pterodactylus cuvieri, described by Bowerbank in 1851, is now classified as Cimoliopterus cuvieri.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus cuvieriBowerbank1851Reclassified as Cimoliopterus cuvieri",
+   "quote_sha": "dc5a46f56b8d4bd4"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "Pterodactylus fittoni, described by Owen in 1859, is a nomen dubium that may belong to Ornithocheirus fittoni, Anhanguera fittoni, or be a synonym of Cimoliopterus cuvieri.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus fittoniOwen1859Nomen dubiumReclassified as either Ornithocheirus fittoni or Anhanguera fittoni; possible synonym of Cimoliopterus cuvieri",
+   "quote_sha": "618cbc0f9a6c8f17"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Pterodactylus elegans, described by Wagner in 1861, is now known as Ctenochasma elegans.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus elegansWagner1861Reclassified as Ctenochasma elegans",
+   "quote_sha": "764da2ce78e7eee8"
   },
   {
    "fact_id": "F064",
+   "statement": "Pterodactylus simus, described by Owen in 1861, is now classified as Ornithocheirus simus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:16",
+   "lang": "en",
+   "quote": "Pterodactylus simusOwen1861Reclassified as Ornithocheirus simus",
+   "quote_sha": "e31197e76500ff21"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "Pterodactylus cristatus, described by Wiman in 1925, is now known as Germanodactylus cristatus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:17",
+   "lang": "en",
+   "quote": "Pterodactylus cristatusWiman1925Reclassified as Germanodactylus cristatus",
+   "quote_sha": "2a9efc99968346b5"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Pterodactylus westmani, described by Wiman in 1925, is considered a synonym of Pterodactylus antiquus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:17",
+   "lang": "en",
+   "quote": "Pterodactylus westmaniWiman1925Synonym of Pterodactylus antiquus",
+   "quote_sha": "9bcde933fd35dfc2"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "Pterodactylus cormoranus, described by Döderlein in 1929, is a synonym of Pterodactylus antiquus.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:17",
+   "lang": "en",
+   "quote": "Pterodactylus cormoranusDöderlein1929Synonym of Pterodactylus antiquus",
+   "quote_sha": "00cd545ec558424a"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Pterodactylus brancai, described by Reck in 1931, is a nomen dubium now classified as Dsungaripterus brancai.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:enwiki:17",
+   "lang": "en",
+   "quote": "Pterodactylus brancaiReck1931Nomen dubiumReclassified as Dsungaripterus brancai",
+   "quote_sha": "794a446c93d42bb7"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The informal term \"pterodactyl\" is often mistakenly used to refer to any pterosaur, but specifically applies to Pterodactylus and the unrelated Pteranodon.",
+   "category": "curiosities",
+   "chunk_id": "pterodactylus:enwiki:18",
+   "lang": "en",
+   "quote": "The informal name \"pterodactyl\" is sometimes used to refer to any kind of animal belonging to the order Pterosauria, though most of the time to Pterodactylus itself and the distantly-related Pteranodon",
+   "quote_sha": "faf1fd46679a9398"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Pterodactylus is popularly known for its elongated head crest and large wings.",
+   "category": "curiosities",
+   "chunk_id": "pterodactylus:enwiki:18",
+   "lang": "en",
+   "quote": "The popular aspect of Pterodactylus consists of an elongated head crest, and potentially large wings.",
+   "quote_sha": "2348d8d6976770c9"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "It is debated whether Pterodactylus possessed a bony crest or a soft-tissue crest, with some studies suggesting it may lack a bony cranial crest entirely.",
+   "category": "debate",
+   "chunk_id": "pterodactylus:enwiki:18",
+   "lang": "en",
+   "quote": "Studies of Pterodactylus, however, conclude that it may even lack a bony cranial crest, though several analysis have proven that Pterodactylus may in fact have a crest made up of soft tissue instead of bone.",
+   "quote_sha": "71bb6bb7b4aee969"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "The flying monsters ridden by the Nazgûl in J.R.R. Tolkien's legendarium were described as looking similarly built to Pterodactylus.",
+   "category": "curiosities",
+   "chunk_id": "pterodactylus:enwiki:18",
+   "lang": "en",
+   "quote": "In this novel, the Nazgûl, introduced as the Black Riders, are nine characters who rode flying monsters that looked similarly built to Pterodactylus.",
+   "quote_sha": "4415c56987d929ac"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Pterodactylus was the first pterosaur to be named and identified as a flying reptile.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:2",
+   "lang": "es",
+   "quote": "Fue el primero en ser nombrado e identificado como un reptil volador.",
+   "quote_sha": "1ba122658323d84e"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Fossils of Pterodactylus are primarily found in the Solnhofen Limestone of Bavaria, Germany, dating to the late Jurassic (early Tithonian) between 150.8 and 148.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "pterodactylus:eswiki:2",
+   "lang": "es",
+   "quote": "Sus restos fósiles han sido hallados primordialmente en la Caliza de Solnhofen de Baviera, Alemania, que data de finales del período Jurásico (principios del Titoniense), hace entre 150.8-148.5 millones de años",
+   "quote_sha": "471ba7f4873b15c1"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Pterodactylus was a carnivore that likely hunted fish and other small animals.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:eswiki:2",
+   "lang": "es",
+   "quote": "Era un carnívoro y probablemente cazaba peces y otros animales pequeños.",
+   "quote_sha": "7b02d32af8dab924"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Like all pterosaurs, Pterodactylus wings were formed by a muscle and skin membrane extending from its elongated fourth finger to its hind limbs.",
+   "category": "description",
+   "chunk_id": "pterodactylus:eswiki:2",
+   "lang": "es",
+   "quote": "Como todos los pterosaurios, las alas de Pterodactylus estaban formadas por una membrana de músculo y piel que se extendía desde su alargado cuarto dedo hasta sus miembros posteriores.",
+   "quote_sha": "672491d6285da78c"
+  },
+  {
+   "fact_id": "F077",
    "statement": "Pterodactylus was a relatively small pterosaur with an estimated adult wingspan of 1.5 meters for P. antiquus.",
    "category": "description",
    "chunk_id": "pterodactylus:eswiki:3",
    "lang": "es",
-   "quote": "Pterodactylus era un pterosaurio relativamente pequeño, con una envergadura adulta estimada en 1.5 metros para P. antiquus",
-   "quote_sha": "77216317ef9e31af"
+   "quote": "Pterodactylus era un pterosaurio relativamente pequeño, con una envergadura adulta estimada en 1.5 metros para P. antiquus.",
+   "quote_sha": "b46eaa9bdb408d7b"
   },
   {
-   "fact_id": "F065",
-   "statement": "Adult Pterodactylus skulls were long and narrow with nearly 90 large conical teeth.",
+   "fact_id": "F078",
+   "statement": "Adult Pterodactylus skulls were long and narrow, featuring nearly 90 large conical teeth.",
    "category": "description",
    "chunk_id": "pterodactylus:eswiki:3",
    "lang": "es",
-   "quote": "Los cráneos de los Pterodactylus adultos eran largos y estrechos con cerca de 90 grandes dientes cónicos",
-   "quote_sha": "399e1a6a9c250999"
+   "quote": "Los cráneos de los Pterodactylus adultos eran largos y estrechos con cerca de 90 grandes dientes cónicos.",
+   "quote_sha": "47479baa44c8d0db"
   },
   {
-   "fact_id": "F066",
-   "statement": "Pterodactylus had a long neck covered in long bristle-like pycnofibers.",
+   "fact_id": "F079",
+   "statement": "Pterodactylus had a long neck covered in long, bristle-like pycnofibers.",
    "category": "description",
    "chunk_id": "pterodactylus:eswiki:3",
    "lang": "es",
-   "quote": "El cuello era largo, y cubierto de largas picnofibras parecidas a cerdas",
-   "quote_sha": "28d993e1271a4c28"
+   "quote": "El cuello era largo, y cubierto de largas picnofibras parecidas a cerdas.",
+   "quote_sha": "f9a132734f85cf32"
   },
   {
-   "fact_id": "F067",
-   "statement": "Pterodactylus, like other pterodactyloids, had a crest on its skull composed mostly of soft tissue.",
+   "fact_id": "F080",
+   "statement": "Crests were only found in fully developed adult specimens, indicating they were display structures that developed upon reaching maturity.",
    "category": "description",
    "chunk_id": "pterodactylus:eswiki:3",
    "lang": "es",
-   "quote": "Pterodactylus, como otros pterodactiloides, tenía una cresta sobre su cráneo compuesta mayormente de tejidos blandos",
-   "quote_sha": "1b76e105a046d9ec"
+   "quote": "Las crestas sólo se han hallado en los especímenes mayores y completamente desarrollados de Pterodactylus, indicando que esta era una estructura de exhibición y sólo se desarrollaba cuando los individuos alcanzaban la madurez.",
+   "quote_sha": "6667c871a0194ce5"
   },
   {
-   "fact_id": "F068",
-   "statement": "Crests have only been found in larger, fully developed specimens of Pterodactylus.",
+   "fact_id": "F081",
+   "statement": "In specimen BMMS 7, the bony crest measured 47.5 millimeters in length (about 24% of the estimated skull length) and had a maximum height of 0.9 millimeters above the orbit.",
    "category": "description",
    "chunk_id": "pterodactylus:eswiki:3",
    "lang": "es",
-   "quote": "Las crestas sólo se han hallado en los especímenes mayores y completamente desarrollados de Pterodactylus",
-   "quote_sha": "605746efa97427b0"
+   "quote": "en BMMS 7 es de 47.5 milímetros de largo (más o menos el 24% de la longitud estimada de ese cráneo) y una altura máxima de 0.9 milímetros sobre la órbita.",
+   "quote_sha": "c697a43d90d977a8"
   },
   {
-   "fact_id": "F069",
-   "statement": "The growth pattern of Pterodactylus is more similar to modern crocodilians than to the rapid growth of modern birds.",
+   "fact_id": "F082",
+   "statement": "Age groups in Pterodactylus antiquus suggest the species likely reproduced seasonally and grew consistently throughout its life, similar to its contemporary Rhamphorhynchus muensteri.",
    "category": "paleobiology",
    "chunk_id": "pterodactylus:eswiki:5",
    "lang": "es",
-   "quote": "Este patrón de crecimiento es más similar al de los crocodilianos modernos, que al rápido crecimiento de las aves modernas",
-   "quote_sha": "42ee7448ce2f7bcf"
+   "quote": "Los distintos grupos por edad de los especímenes de Pterodactylus antiquus muestran que esta especie, como su contemporáneo Rhamphorhynchus muensteri, probablemente se reproducían estacionalmente y crecían de modo consistente durante su vida.",
+   "quote_sha": "41447666615f7a8d"
   },
   {
-   "fact_id": "F070",
-   "statement": "Comparisons of scleral rings suggest Pterodactylus antiquus may have been diurnal.",
+   "fact_id": "F083",
+   "statement": "The smallest size class likely consisted of individuals who had just begun to fly and were less than one year old.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:eswiki:5",
+   "lang": "es",
+   "quote": "La clase de menor tamaño probablemente consistía de individuos que apenas habían empezado a volar y eran de menos de un año de edad.",
+   "quote_sha": "1c69026d30e9b8ec"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "The second age group represented individuals one to two years old, while the rare third group consisted of specimens older than two years.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:eswiki:5",
+   "lang": "es",
+   "quote": "El segundo grupo por edad representa individuos de uno a dos años de edad, y el menos común tercer grupo por edad se compone de especímenes de más de dos años de edad.",
+   "quote_sha": "74c85c8f85100242"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "Comparisons of scleral ring patterns suggest Pterodactylus antiquus may have been diurnal.",
    "category": "paleobiology",
    "chunk_id": "pterodactylus:eswiki:6",
    "lang": "es",
-   "quote": "Las comparaciones hechas entre los anillos escleróticos de Pterodactylus antiquus y las aves y reptiles modernos sugieren que pueden haber sido diurnos",
-   "quote_sha": "d50f07989e6c5f07"
+   "quote": "Las comparaciones hechas entre los anillos escleróticos de Pterodactylus antiquus y las aves y reptiles modernos sugieren que pueden haber sido diurnos.",
+   "quote_sha": "2fdef38b836d7065"
   },
   {
-   "fact_id": "F071",
-   "statement": "Pterodactylus belongs to the parent group Monofenestrata.",
+   "fact_id": "F086",
+   "statement": "This suggests an ecological niche division from contemporary pterosaurs inferred to be nocturnal, such as Ctenochasma and Rhamphorhynchus.",
+   "category": "paleobiology",
+   "chunk_id": "pterodactylus:eswiki:6",
+   "lang": "es",
+   "quote": "Esto puede indicar una división de nichos ecológicos con pterosaurios contemporáneos de los que se infiere que eran nocturnos, como Ctenochasma y Rhamphorhynchus.",
+   "quote_sha": "990f7df3e3e45f42"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "It is debated whether fully adult Pterodactylus specimens are unknown or were mistakenly classified as other genera.",
+   "category": "debate",
+   "chunk_id": "pterodactylus:eswiki:4",
+   "lang": "es",
+   "quote": "Los especímenes de Pterodactylus totalmente adultos aún son desconocidos, o pueden haber sido clasificados erróneamente como otro género.",
+   "quote_sha": "19877964ed736ed8"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "The first specimen of Pterodactylus was described by Italian scientist Cosimo Alessandro Collini in 1784 based on a fossil skeleton unearthed from the Solnhofen Limestone of Bavaria.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "El primer espécimen de Pterodactylus fue descrito por el científico italiano Cosimo Alessandro Collini en 1784, basándose en un esqueleto fósil desenterrado de la Caliza de Solnhofen de Baviera.",
+   "quote_sha": "9caea82d66bc7241"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "The animal now known as Pterodactylus was the first pterosaur to be identified.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "El animal ahora conocido como Pterodactylus fue el primer pterosaurio en ser identificado.",
+   "quote_sha": "c8ef8b2698938140"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Collini did not conclude that the animal was a flying creature.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Collini, sin embargo, no concluyó que se trataba de un animal volador.",
+   "quote_sha": "2f119c247fc15272"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Collini speculated that the animal might have been a marine creature, not for anatomical reasons, but because he believed ocean depths were a more likely home for unknown animal types.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Él especuló que pudo haber sido una criatura marina, no por razones anatómicas, sino porque él pensaba que las profundidades de los océanos eran un hogar más probable para los tipos de animales desconocidos.",
+   "quote_sha": "611b3daadc20100a"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "Franco-German scientist Johann Hermann was the first to establish that Pterodactylus used its elongated fourth finger to support a wing membrane.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Fue el científico franco-alemán Johann Hermann el primero en establecer que Pterodactylus usaba su alargado cuarto dedo para sujetar una membrana alar.",
+   "quote_sha": "a7ede63f1a9f2bf1"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "Hermann sent Cuvier a letter containing his own interpretation of the specimen, which he believed to be a mammal, including the first life reconstruction of a pterosaur.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Hermann envió a Cuvier una carta conteniendo su propia interpretación del espécimen (aunque él no lo había examinado personalmente), el cual él creía que era un mamífero, incluyendo la primera recreación en vida de un pterosaurio.",
+   "quote_sha": "17ebf1ba317877d8"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Hermann reconstructed the animal with wing membranes extending from the elongated fourth finger to the ankle and a coat of hair, although no traces of membranes or hair had been found on this specimen.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Hermann reconstruyó al animal con membranas alares extendiéndose desde el alargado cuarto dedo hasta el tobillo y una cubierta de pelo (en este espécimen no se había descubierto ningún rastro de membranas ni de pelo).",
+   "quote_sha": "fcd8372a85eb8761"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Cuvier agreed with Hermann's interpretation and, at Hermann's suggestion, became the first to publish these ideas in a very brief description in December 1800.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Cuvier estuvo de acuerdo con su interpretación, y por sugerencia de Hermann, Cuvier se convirtió en el primero en publicar estas ideas en diciembre de 1800 en una muy breve descripción.",
+   "quote_sha": "2e8e7e8aa386d4be"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "Cuvier reiterated that \"[It is impossible to doubt that the long finger served to support a membrane that, with the elongation of the anterior limb of this animal, formed a good wing].\"",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Cuvier recalcó que, \"[No es posible dudar de que el largo dedo servía para soportar una membrana que, con el alargamiento de la extremidad anterior de este animal, formaba una buena ala].\"",
+   "quote_sha": "64054730729b3442"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "However, contrary to Hermann, Cuvier was convinced that the animal was a reptile.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Sin embargo, de modo contrario a Hermann, Cuvier estaba convencido de que el animal era un reptil.",
+   "quote_sha": "963bbadf6d7f39e1"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "In 1809 Cuvier published a somewhat longer description, naming the animal, and also refuting Johann Friedrich Blumenbach's hypothesis that it might have been a coastal bird.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "En 1809 Cuvier publicó una descripción algo más larga, nombrando el animal, y también refutando la hipótesis de Johann Friedrich Blumenbach de que pudo haber sido un ave costera.",
+   "quote_sha": "6ee7ee5a5de647da"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "It was not until 1817 that a second specimen of Pterodactylus came to light, again from Solnhofen.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "No fue hasta 1817 que salió a la luz un segundo espécimen de Pterodactylus, de nuevo de Solnhofen.",
+   "quote_sha": "b2719a9273fdcf6b"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "This diminutive specimen was described that year by von Soemmerring as Ornithocephalus brevirostris (due to its short snout, which is now known to be a juvenile trait), and provided a skeleton reconstruction, the first published for any pterosaur.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Este diminuto ejemplar fue ese año descrito por von Soemmerring como Ornithocephalus brevirostris (debido a su corto hocico, que ahora se sabe que es un rasgo juvenil), y proporcionó una reconstrucción del esqueleto, la primera publicada para cualquier pterosaurio.",
+   "quote_sha": "e1a7d435ce607f23"
+  },
+  {
+   "fact_id": "F101",
+   "statement": "However, this reconstruction was quite incorrect, as von Soemmerring confused the long metacarpals with forearm bones, the forearm with the humerus, the upper arm with the sternum, and this sternum in turn with the scapula.",
+   "category": "discovery",
+   "chunk_id": "pterodactylus:eswiki:7",
+   "lang": "es",
+   "quote": "Sin embargo esta era bastante incorrecta, ya que von Soemmerring confundió los largos metacarpos con los huesos del antebrazo, el antebrazo con el húmero, la parte superior del brazo con el esternón y este esternón a su vez con el omóplato.",
+   "quote_sha": "542aacc517f2a3fe"
+  },
+  {
+   "fact_id": "F102",
+   "statement": "The genus Pterodactylus was named by Cuvier in 1809.",
+   "category": "classification",
+   "chunk_id": "pterodactylus:pbdb:1",
+   "lang": "en",
+   "quote": "PBDB name: Pterodactylus (genus), Cuvier 1809",
+   "quote_sha": "5b6c26f673ad5d7c"
+  },
+  {
+   "fact_id": "F103",
+   "statement": "The parent group of Pterodactylus is Monofenestrata.",
    "category": "classification",
    "chunk_id": "pterodactylus:pbdb:1",
    "lang": "en",
@@ -795,8 +1118,8 @@
    "quote_sha": "f1c8e5eda40fb532"
   },
   {
-   "fact_id": "F072",
-   "statement": "Pterodactylus is classified in the class Reptilia.",
+   "fact_id": "F104",
+   "statement": "Pterodactylus is classified in the Class Reptilia.",
    "category": "classification",
    "chunk_id": "pterodactylus:pbdb:1",
    "lang": "en",
@@ -804,8 +1127,8 @@
    "quote_sha": "cdcaa2922520f735"
   },
   {
-   "fact_id": "F073",
-   "statement": "The type species for the genus Pterodactylus is Scaphognathus crassirostris.",
+   "fact_id": "F105",
+   "statement": "The type species of the genus Pterodactylus is Scaphognathus crassirostris.",
    "category": "classification",
    "chunk_id": "pterodactylus:pbdb:1",
    "lang": "en",
@@ -813,7 +1136,7 @@
    "quote_sha": "1fc6d18b97a424d7"
   },
   {
-   "fact_id": "F074",
+   "fact_id": "F106",
    "statement": "Pterodactylus lived from the Hettangian to the Valanginian, between 201.4 and 132.6 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "pterodactylus:pbdb:1",
@@ -822,8 +1145,8 @@
    "quote_sha": "7baeb33c6cbc1449"
   },
   {
-   "fact_id": "F075",
-   "statement": "There are 15 recorded fossil occurrences of Pterodactylus in the Paleobiology Database.",
+   "fact_id": "F107",
+   "statement": "There are 15 recorded fossil occurrences of Pterodactylus.",
    "category": "time_and_habitat",
    "chunk_id": "pterodactylus:pbdb:1",
    "lang": "en",
@@ -834,10 +1157,10 @@
  "rejected": [
   {
    "chunk_id": "pterodactylus:enwiki:2",
-   "statement": "Pterodactylus had wings made of a skin and muscle membrane extending from its elongated fourth finger to its hind limbs.",
+   "statement": "Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs.",
    "category": "description",
    "quote": "Like all pterosaurs, Pterodactylus had wings formed by a skin and muscle membrane stretching from its elongated fourth finger to its hind limbs.",
-   "reason": "statement copies the source wording: 'from its elongated fourth finger to its hind'"
+   "reason": "statement copies the source wording: 'Pterodactylus had wings formed by a skin and'"
   },
   {
    "chunk_id": "pterodactylus:enwiki:2",
@@ -855,157 +1178,213 @@
   },
   {
    "chunk_id": "pterodactylus:enwiki:3",
-   "statement": "Early descriptions debated whether Pterodactylus was a bat or an intermediate form between mammals and birds based on affinity rather than descent.",
-   "category": "debate",
-   "quote": "The animal was described as being both a bat, and a form in between mammals and birds, i.e. not intermediate in descent but in 'affinity' or archetype.",
+   "statement": "In his 1784 description, Collini did not conclude that the specimen was a flying animal.",
+   "category": "discovery",
+   "quote": "In his first description of the Mannheim specimen, Collini did not conclude that it was a flying animal.",
+   "reason": "numbers not in the quote: ['1784']"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:3",
+   "statement": "Johann Hermann was the first to state that Pterodactylus used its long fourth finger to support a wing membrane.",
+   "category": "discovery",
+   "quote": "The German/French scientist Johann Hermann was the one who first stated that Pterodactylus used its long fourth finger to support a wing membrane.",
+   "reason": "statement copies the source wording: 'that Pterodactylus used its long fourth finger to'"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:3",
+   "statement": "Von Sömmerring described a tiny 1817 specimen as Ornithocephalus brevirostris, now understood to be a juvenile.",
+   "category": "discovery",
+   "quote": "This tiny specimen was that year described by von Sömmerring as Ornithocephalus brevirostris, named for its short snout, now understood to be a juvenile character.",
+   "reason": "numbers not in the quote: ['1817']"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:3",
+   "statement": "Constantine Samuel Rafinesque latinized the name Ptéro-Dactyle to Pterodactylus in 1815.",
+   "category": "discovery",
+   "quote": "In 1815, the generic name Ptéro-Dactyle was latinized to Pterodactylus by Constantine Samuel Rafinesque.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:3",
-   "statement": "The 'bat model' for interpreting pterosaurs remained influential for decades after a consensus around 1860 established them as reptiles.",
+   "statement": "Richard Lydekker designated Pterodactylus antiquus as the type species in 1888.",
+   "category": "discovery",
+   "quote": "In 1888, English naturalist Richard Lydekker designated Pterodactylus antiquus as the type species of Pterodactylus, and considered Ornithocephalus antiquus a synonym.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:3",
+   "statement": "Richard Lydekker designated specimen BSP AS.I.739 as the holotype of the genus.",
+   "category": "discovery",
+   "quote": "He also designated specimen BSP AS.I.739 as the holotype of the genus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:3",
+   "statement": "Modern research has confirmed, refuted, or left disputed various assumptions about pterosaur biology such as being quadrupedal, clumsy, furred, warmblooded, or having wing membranes reaching the ankle.",
    "category": "debate",
-   "quote": "Sömmerring did not change his opinion that these forms were bats and this 'bat model' for interpreting pterosaurs would remain influential long after a consensus had been reached around 1860 that they were reptiles.",
+   "quote": "Some of these elements have been confirmed, some refuted by modern research, while others remain disputed.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:5",
-   "statement": "In 2013, researcher S. Christopher Bennett found no evidence supporting the claim that the soft tissue crest of Pterodactylus extended past the back of the skull.",
+   "statement": "A low bony crest on a P. antiquus skull (specimen BMMS 7) was 47.5 mm long and 0.9 mm high above the orbit.",
    "category": "description",
-   "quote": "In 2013, pterosaur researcher S. Christopher Bennett noted that other authors claimed that the soft tissue crest of Pterodactylus extended backward behind the skull; Bennett himself, however, didn't find any evidence for the crest extending past the back of the skull",
-   "reason": "statement copies the source wording: 'that the soft tissue crest of Pterodactylus extended'"
-  },
-  {
-   "chunk_id": "pterodactylus:enwiki:5",
-   "statement": "The bony crest on the BMMS 7 skull is 47.5 mm long and has a maximum height of 0.9 mm above the orbit.",
-   "category": "description",
-   "quote": "in BMMS 7 it is 47.5 mm long (1.87 inches, more or less 24% of the estimated total length of its skull) and has a maximum height of 0.9 mm (0.035 inches) above the orbit",
-   "reason": "statement copies the source wording: 'and has a maximum height of 0.9 mm'"
+   "quote": "Two specimens of P. antiquus... have a low bony crest on their skulls; in BMMS 7 it is 47.5 mm long (1.87 inches, more or less 24% of the estimated total length of its skull) and has a maximum height of 0.9 mm (0.035 inches) above the orbit.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:6",
-   "statement": "Specimens previously classified as juveniles and adults of P. kochi were found to be immature and may belong to a distinct genus.",
+   "statement": "Studies of growth curves suggest there is only one valid species of Pterodactylus, P. antiquus.",
    "category": "paleobiology",
-   "quote": "The first two size groups were once classified as juveniles and adults of the species P. kochi, until further study showed that even the supposed \"adults\" were immature, and possibly belong to a distinct genus",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Several detailed studies using various methods to measure growth curves among known specimens have suggested that there is actually only one valid species of Pterodactylus, P. antiquus.",
+   "reason": "statement copies the source wording: 'only one valid species of Pterodactylus P antiquus'"
   },
   {
    "chunk_id": "pterodactylus:enwiki:9",
-   "statement": "Based on its teeth, Pterodactylus has long been recognized as a carnivore specializing in small animals.",
+   "statement": "Based on its teeth, Pterodactylus is recognized as a carnivore specializing in small animals.",
    "category": "paleobiology",
-   "quote": "Based on the shape, size, and arrangement of its teeth, Pterodactylus has long been recognized as a carnivore specializing in small animals",
-   "reason": "statement copies the source wording: 'its teeth Pterodactylus has long been recognized as'"
+   "quote": "Based on the shape, size, and arrangement of its teeth, Pterodactylus has long been recognized as a carnivore specializing in small animals.",
+   "reason": "statement copies the source wording: 'recognized as a carnivore specializing in small animals'"
   },
   {
    "chunk_id": "pterodactylus:enwiki:9",
-   "statement": "A 2020 study supported the hypothesis that Pterodactylus preyed mainly on invertebrates using a generalist feeding strategy with a relatively high bite force.",
+   "statement": "A 2020 study supported the hypothesis that Pterodactylus preyed mainly on invertebrates with a generalist feeding strategy and relatively high bite force.",
    "category": "paleobiology",
-   "quote": "A 2020 study of pterosaur tooth wear supported the hypothesis that Pterodactylus preyed mainly on invertebrates and had a generalist feeding strategy, indicated by a relatively high bite force",
+   "quote": "A 2020 study of pterosaur tooth wear supported the hypothesis that Pterodactylus preyed mainly on invertebrates and had a generalist feeding strategy, indicated by a relatively high bite force.",
    "reason": "statement copies the source wording: 'supported the hypothesis that Pterodactylus preyed mainly on'"
   },
   {
    "chunk_id": "pterodactylus:enwiki:10",
    "statement": "Pterodactylus specimens have been found mainly in the Solnhofen limestone (Altmühltal Formation) of Bavaria, Germany.",
    "category": "time_and_habitat",
-   "quote": "Specimens of Pterodactylus have been found mainly in the Solnhofen limestone (geologically known as the Altmühltal Formation) of Bavaria, Germany",
+   "quote": "Specimens of Pterodactylus have been found mainly in the Solnhofen limestone (geologically known as the Altmühltal Formation) of Bavaria, Germany.",
    "reason": "statement copies the source wording: 'have been found mainly in the Solnhofen limestone'"
   },
   {
    "chunk_id": "pterodactylus:enwiki:11",
-   "statement": "A 2018 phylogenetic analysis by Longrich, Martill, and Andres placed Pterodactylus within the clade Euctenochasmatia, a position differing from earlier studies.",
-   "category": "debate",
-   "quote": "Unlike the previous results above, they placed Pterodactylus within the clade Euctenochasmatia, resulting in a more derived position.",
-   "reason": "numbers not in the quote: ['2018']"
+   "statement": "In 1838, Prince Charles Lucien Bonaparte established the family Pterodactylidae to contain Pterodactylus and other pterosaurs known at the time.",
+   "category": "classification",
+   "quote": "Prince Charles Lucien Bonaparte emended the group to the family Pterodactylidae in 1838.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:11",
+   "statement": "A 2017 analysis by Steven Vidovic and David Martill classified Pterodactylus as a basal member of the suborder Pterodactyloidea.",
+   "category": "classification",
+   "quote": "In 2017, researchers Steven Vidovic and David Martill placed Pterodactylus as a basal member of the suborder Pterodactyloidea.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:11",
+   "statement": "A 2018 phylogenetic analysis by Longrich, Martill, and Andres placed Pterodactylus within the clade Euctenochasmatia.",
+   "category": "classification",
+   "quote": "A phylogenetic analysis by Longrich, Martill, and Andres in 2018 placed Pterodactylus within the clade Euctenochasmatia.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:12",
-   "statement": "During the first half of the 19th century, Pterodactylus was used as a wastebasket taxon for newly discovered pterosaur species.",
+   "statement": "During the first half of the 19th century, Pterodactylus was used as a wastebasket taxon for any newly discovered pterosaur species.",
    "category": "discovery",
    "quote": "In the first half of the 19th century any new pterosaur species would be named Pterodactylus, which thus became a 'wastebasket taxon'.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:12",
-   "statement": "Hermann von Meyer officially established that the genus Pterodactylus had priority over Ornithocephalus in 1845.",
+   "statement": "In 1845, German paleontologist Hermann von Meyer determined that the genus name Pterodactylus had priority over the previously used name Ornithocephalus.",
    "category": "discovery",
-   "quote": "German paleontologist Hermann von Meyer in 1845 officially emended that the genus Pterodactylus had priority over Ornithocephalus",
-   "reason": "statement copies the source wording: 'that the genus Pterodactylus had priority over Ornithocephalus'"
-  },
-  {
-   "chunk_id": "pterodactylus:enwiki:12",
-   "statement": "Hermann von Meyer erected the genus Rhamphorhynchus in 1847 based on specimens with distinctively long tails.",
-   "category": "discovery",
-   "quote": "Later, in 1847, von Meyer finally erected the generic name Rhamphorhynchus due to the distinctively long tails seen in the specimens found",
+   "quote": "German paleontologist Hermann von Meyer in 1845 officially emended that the genus Pterodactylus had priority over Ornithocephalus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:12",
-   "statement": "A 2013 review reassigned Pterodactylus giganteus to the genus Lonchodraco.",
+   "statement": "In 1847, Hermann von Meyer established the genus Rhamphorhynchus for pterosaurs with distinctively long tails, separating them from Pterodactylus.",
    "category": "discovery",
-   "quote": "P. giganteus was reassigned to a genus called Lonchodraco ('lance dragon'), which resulted in a new combination called L. giganteus",
-   "reason": "numbers not in the quote: ['2013']"
+   "quote": "In 1847, von Meyer finally erected the generic name Rhamphorhynchus due to the distinctively long tails seen in the specimens found.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:12",
-   "statement": "A 2013 review reassigned Pterodactylus cuvieri to the new genus Cimoliopterus.",
+   "statement": "In 1846, James Scott Bowerbank named the species Pterodactylus giganteus, meaning 'the gigantic one' in Latin.",
    "category": "discovery",
-   "quote": "P. cuvieri was reassigned to the new genus Cimoliopterus ('chalk wing'), creating C. cuvieri.",
-   "reason": "numbers not in the quote: ['2013']"
+   "quote": "In 1846, Bowerbank assigned fossil remains to a new species named Pterodactylus giganteus; the specific name means 'the gigantic one' in Latin.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "pterodactylus:enwiki:13",
-   "statement": "Paleontologist Samuel Wendell Williston unearthed the first skull of the pterosaur.",
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "In 1851, James Scott Bowerbank described the species Pterodactylus cuvieri to honor the French scientist Georges Cuvier.",
    "category": "discovery",
-   "quote": "Paleontologist Samuel Wendell Williston unearthed the first skull of the pterosaur",
-   "reason": "statement copies the source wording: 'Williston unearthed the first skull of the pterosaur'"
+   "quote": "In 1851, Bowerbank named a second species Pterodactylus cuvieri, in honor of the French scientist Georges Cuvier.",
+   "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "pterodactylus:enwiki:13",
-   "statement": "P. longicollum was eventually designated as the type species of the separate genus Ardeadactylus.",
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "In 1914, Reginald Hooley moved Pterodactylus compressirostris to the new genus Lonchodectes.",
    "category": "discovery",
-   "quote": "P. longicollum was eventually made the type species of a separate genus Ardeadactylus",
+   "quote": "In 1914, paleontologist Reginald Hooley redescribed P. compressirostris, to which he erected the genus Lonchodectes.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "In 1861, Sir Richard Owen described the species Pterodactylus simus from fossil remains found in the Cambridge Greensand.",
+   "category": "discovery",
+   "quote": "In 1861, Owen had uncovered multiple distinctively looking fossil remains yet again in the Cambridge Greensand, these were assigned to a new species named Pterodactylus simus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "Harry Govier Seeley created the genus Ornithocheirus and reassigned Pterodactylus simus as its type species.",
+   "category": "discovery",
+   "quote": "The British paleontologist Harry Govier Seeley had created a separate generic name called Ornithocheirus, and reassigned P. simus as the type species.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "In 1874, Sir Richard Owen assigned new English specimens to the species Pterodactylus sagittirostris.",
+   "category": "discovery",
+   "quote": "In 1874, further specimens were found in England, again by Owen, these ones were assigned to a new species called Pterodactylus sagittirostris.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:enwiki:12",
+   "statement": "In 2017, Rigal et al. disagreed with Hooley's classification and placed Pterodactylus sagittirostris in the new genus Serradraco.",
+   "category": "discovery",
+   "quote": "This conclusion was revised by Rigal et al. in 2017, who disagreed with Hooley's reassignment, and therefore created the genus Serradraco.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "pterodactylus:enwiki:14",
-   "statement": "Vidovic and Martill concluded in 2014 that P. kochi, P. scolopaciceps, and P. antiquus are three distinct species.",
+   "statement": "In 2014, Steven Vidovic and David Martill challenged the single-species theory, concluding that P. kochi, P. scolopaciceps, and P. antiquus were three distinct species.",
    "category": "debate",
-   "quote": "Steven Vidovic and David Martill concluded that differences between specimens of P. kochi, P. scolopaciceps, and P. antiquus... were significant enough to separate them into three distinct species",
+   "quote": "In 2014, two scientists began publishing research that challenged this paradigm. Steven Vidovic and David Martill concluded that differences between specimens of P. kochi, P. scolopaciceps, and P. antiquus... were significant enough to separate them into three distinct species",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "pterodactylus:eswiki:4",
-   "statement": "Historically, various growth stages of Pterodactylus were mistaken for new species.",
-   "category": "paleobiology",
-   "quote": "Históricamente, esto ha llevado a que varios estadios de crecimiento... hayan sido tomados como nuevas especies de Pterodactylus",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "pterodactylus:eswiki:4",
-   "statement": "Detailed studies have demonstrated that only one valid species of Pterodactylus exists, P. antiquus.",
-   "category": "paleobiology",
-   "quote": "Varios estudios detallados... han demostrado que solo hay una especie válida de Pterodactylus, P. antiquus",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "pterodactylus:eswiki:4",
-   "statement": "Fully adult specimens of Pterodactylus are still unknown or may have been misclassified as another genus.",
-   "category": "paleobiology",
-   "quote": "Los especímenes totalmente adultos aún son desconocidos, o pueden haber sido clasificados erróneamente como otro género",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "pterodactylus:eswiki:5",
-   "statement": "Age groups of Pterodactylus antiquus specimens suggest the species likely reproduced seasonally.",
-   "category": "paleobiology",
-   "quote": "Los distintos grupos por edad de los especímenes de Pterodactylus antiquus muestran que esta especie... probablemente se reproducían estacionalmente",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "pterodactylus:pbdb:1",
-   "statement": "The genus Pterodactylus was named by Cuvier in 1809.",
+   "chunk_id": "pterodactylus:enwiki:13",
+   "statement": "Many species originally assigned to Pterodactylus were later recognized as immature individuals of other species or genera.",
    "category": "classification",
-   "quote": "PBDB name: Pterodactylus (genus), Cuvier 1809",
-   "reason": "duplicate"
+   "quote": "Many species assigned to Pterodactylus had been based on juvenile specimens, and subsequently been recognized as immature individuals of other species or genera",
+   "reason": "statement copies the source wording: 'recognized as immature individuals of other species or'"
+  },
+  {
+   "chunk_id": "pterodactylus:eswiki:3",
+   "statement": "Pterodactylus possessed a cranial crest composed mainly of soft tissue, similar to other pterodactyloids.",
+   "category": "description",
+   "quote": "Pterodactylus, como otros pterodáctiloides, tenía una cresta sobre su cráneo compuesta mayormente de tejidos blandos.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:eswiki:7",
+   "statement": "In March 1800, Hermann alerted French scientist Georges Cuvier to the existence of Collini's fossil.",
+   "category": "discovery",
+   "quote": "En marzo de 1800, Hermann alertó al científico francés Georges Cuvier de la existencia del fósil de Collini...",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pterodactylus:eswiki:7",
+   "statement": "Von Soemmerring did not change his opinion that these forms were bats, and this \"chiropteran model\" for interpreting pterosaurs continued to have influence for a long time after the consensus around 1860 that they were indeed reptiles.",
+   "category": "discovery",
+   "quote": "Von Soemmerring no cambió su opinión acerca de que estas formas eran murciélagos y este \"modelo quiróptero\" para interpretar a los pterosaurios siguió teniendo influencia por mucho tiempo después de que alcanzara hacia 1860 el consenso de que eran efectivamente reptiles.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

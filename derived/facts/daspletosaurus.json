@@ -2,9 +2,9 @@
  "taxon": "Daspletosaurus",
  "taxon_key": "daspletosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "7669ef1c12e55425",
- "generated_at": "2026-11-03T03:08:21+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "0900a430aa6ec566",
+ "generated_at": "2026-11-04T04:50:52+00:00",
  "citations": {
   "daspletosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -160,6 +160,34 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "daspletosaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Daspletosaurus (Primeros estudios)",
+   "url": "https://es.wikipedia.org/wiki/Daspletosaurus?oldid=175653042",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "daspletosaurus:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Daspletosaurus (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Daspletosaurus?oldid=175653042",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "daspletosaurus:eswiki:12": {
+   "source": "wikipedia_article",
+   "title": "Daspletosaurus (Sentidos)",
+   "url": "https://es.wikipedia.org/wiki/Daspletosaurus?oldid=175653042",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "daspletosaurus:eswiki:14": {
+   "source": "wikipedia_article",
+   "title": "Daspletosaurus (Comportamiento social)",
+   "url": "https://es.wikipedia.org/wiki/Daspletosaurus?oldid=175653042",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "daspletosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Daspletosaurus",
@@ -171,8 +199,8 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Daspletosaurus was described by Russell in 1970.",
-   "category": "classification",
+   "statement": "The genus Daspletosaurus was described by Dale Russell in 1970.",
+   "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:1",
    "lang": "en",
    "quote": "authority: Russell, 1970",
@@ -180,8 +208,8 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The type species of Daspletosaurus is Daspletosaurus torosus.",
-   "category": "classification",
+   "statement": "The type species of the genus is Daspletosaurus torosus.",
+   "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:1",
    "lang": "en",
    "quote": "type_species: Daspletosaurus torosus",
@@ -189,17 +217,17 @@
   },
   {
    "fact_id": "F003",
-   "statement": "Three other species have been proposed: D. horneri (Carr et al., 2017), D. degrootorum (Voris et al., 2020), and D. wilsoni (Warshaw & Fowler, 2022).",
-   "category": "classification",
+   "statement": "Daspletosaurus horneri was described by Carr and colleagues in 2017.",
+   "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:1",
    "lang": "en",
-   "quote": "subdivision: *D. horneri Carr et al., 2017 D. degrootorum? Voris et al., 2020 D. wilsoni? Warshaw & Fowler, 2022",
-   "quote_sha": "c185a3d149c7b105"
+   "quote": "subdivision: *D. horneri Carr et al., 2017",
+   "quote_sha": "51c6936e7bd38d2d"
   },
   {
    "fact_id": "F004",
-   "statement": "The genus Thanatotheristes has been suggested as a synonym for Daspletosaurus by Voris et al. in 2020.",
-   "category": "classification",
+   "statement": "Voris and colleagues in 2020 suggested that the genus Thanatotheristes might represent a species of Daspletosaurus.",
+   "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:1",
    "lang": "en",
    "quote": "synonyms: *Thanatotheristes? Voris et al., 2020",
@@ -207,7 +235,34 @@
   },
   {
    "fact_id": "F005",
-   "statement": "The average adult Daspletosaurus measured 8.5 to 9 meters in length and weighed 2 to 3 metric tons.",
+   "statement": "Fossils of the type species Daspletosaurus torosus have been found in Alberta.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils of the earlier type species, D. torosus, have been found in Alberta",
+   "quote_sha": "c2c22fb9e2300185"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Fossils of the species Daspletosaurus horneri have been found in Montana and Alberta.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "fossils of a later species, D. horneri, have been found in Montana and Alberta",
+   "quote_sha": "b97ad1650442b328"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Daspletosaurus wilsoni has been proposed as an intermediate species evolving between D. torosus and D. horneri.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "D. wilsoni has been suggested as an intermediate species between D. torosus and D. horneri",
+   "quote_sha": "e06e15afe65ea3a4"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The average adult Daspletosaurus measured 8.5 to 9 meters in length and weighed between 2 and 3 metric tons.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:2",
    "lang": "en",
@@ -215,16 +270,7 @@
    "quote_sha": "df22b27da7b448eb"
   },
   {
-   "fact_id": "F006",
-   "statement": "Daspletosaurus possessed small forelimbs typical of tyrannosaurids, which were proportionately longer than those in other genera.",
-   "category": "paleobiology",
-   "chunk_id": "daspletosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Daspletosaurus had the small forelimbs typical of tyrannosaurids, although they were proportionately longer than in other genera",
-   "quote_sha": "70aacb00ba05dbe2"
-  },
-  {
-   "fact_id": "F007",
+   "fact_id": "F009",
    "statement": "Daspletosaurus likely preyed on large dinosaurs such as the ceratopsid Centrosaurus and the hadrosaur Hypacrosaurus.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:2",
@@ -233,8 +279,17 @@
    "quote_sha": "1fbfcdaee8cac4b3"
   },
   {
-   "fact_id": "F008",
-   "statement": "The type specimen of Daspletosaurus was discovered in 1921 near Steveville, Alberta, by Charles Mortram Sternberg.",
+   "fact_id": "F010",
+   "statement": "There is some evidence suggesting niche differentiation between Daspletosaurus and the coexisting tyrannosaurid Gorgosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "there is some evidence of niche differentiation between the two",
+   "quote_sha": "0870a3070ec014ad"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The type specimen of Daspletosaurus torosus was discovered in 1921 near Steveville, Alberta, by Charles Mortram Sternberg.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
@@ -242,8 +297,8 @@
    "quote_sha": "1c56cb24e1bd9e43"
   },
   {
-   "fact_id": "F009",
-   "statement": "The type specimen was fully described by Dale Russell in 1970.",
+   "fact_id": "F012",
+   "statement": "The type specimen was not fully described by Dale Russell until 1970.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
@@ -251,17 +306,17 @@
    "quote_sha": "7db41237babef3ae"
   },
   {
-   "fact_id": "F010",
-   "statement": "The known specimens of Daspletosaurus were recovered from the Oldman Formation in the Judith River Group of Alberta.",
+   "fact_id": "F013",
+   "statement": "The specific name torosus is Latin for 'muscular' or 'brawny'.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
-   "quote": "Both specimens were recovered from the Oldman Formation in the Judith River Group of Alberta",
-   "quote_sha": "b1744b4e3fa62fc3"
+   "quote": "The type species is Daspletosaurus torosus, the specific name torosus being Latin for 'muscular' or 'brawny'",
+   "quote_sha": "79d63e1966770ba6"
   },
   {
-   "fact_id": "F011",
-   "statement": "The Oldman Formation, where Daspletosaurus fossils were found, was deposited between about 79.5 and 77 million years ago.",
+   "fact_id": "F014",
+   "statement": "The Oldman Formation, where Daspletosaurus fossils were found, was deposited during the middle Campanian stage from about 79.5 to 77 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
@@ -269,26 +324,26 @@
    "quote_sha": "2c99c2ab185cf2dc"
   },
   {
-   "fact_id": "F012",
-   "statement": "It is debated whether an immature specimen from the Horseshoe Canyon Formation belongs to Daspletosaurus, as thorough re-examination favored its referral to Albertosaurus sarcophagus.",
-   "category": "debate",
+   "fact_id": "F015",
+   "statement": "Dale Russell suggested that an immature Albertosaurus specimen from the Horseshoe Canyon Formation actually belonged to Daspletosaurus.",
+   "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
-   "quote": "This reassignment was not universally accepted, and thorough re-examination of the specimen favored its initial referral to Albertosaurus sarcophagus",
-   "quote_sha": "13fe358bc1bab0a8"
+   "quote": "Dale Russell also suggested that a specimen of an immature Albertosaurus (CMN 11315) from the younger Horseshoe Canyon Formation in Alberta actually belonged to a third specimen of Daspletosaurus",
+   "quote_sha": "13b5c9c631111b73"
   },
   {
-   "fact_id": "F013",
-   "statement": "It is debated whether D. wilsoni is an intermediate species evolving through anagenesis between D. torosus and D. horneri, as further research is needed to confirm this.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:2",
+   "fact_id": "F016",
+   "statement": "Additional maxilla and teeth from an Edmontosaurus-dominated bonebed were mistakenly referred to Daspletosaurus but later confirmed to belong to Albertosaurus.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:enwiki:3",
    "lang": "en",
-   "quote": "D. wilsoni has been suggested as an intermediate species between D. torosus and D. horneri that evolved through anagenesis, though further research may be required to definitively support the theory",
-   "quote_sha": "d6721bb7a137fb65"
+   "quote": "An additional maxilla and various teeth from an Edmontosaurus-dominated bonebed in the Horseshoe Canyon Formation was also mistakenly referred to Daspletosaurus",
+   "quote_sha": "23a0af0f97fbd7d4"
   },
   {
-   "fact_id": "F014",
-   "statement": "A paratype specimen of Daspletosaurus torosus was collected by Barnum Brown in 1913.",
+   "fact_id": "F017",
+   "statement": "Barnum Brown collected a specimen in 1913 that was designated as the paratype of Daspletosaurus torosus.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
@@ -296,62 +351,26 @@
    "quote_sha": "b75238fc1958aa10"
   },
   {
-   "fact_id": "F015",
-   "statement": "Daspletosaurus fossils from the Dinosaur Park Formation date specifically between 75.6 and 75.0 million years ago.",
-   "category": "time_and_habitat",
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "Daspletosaurus fossils are known specifically from the middle to upper section of the formation, between 75.6 and 75.0 million years ago.",
-   "quote_sha": "c4e797d554900003"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "Thomas Carr reassigned specimen FMNH PR308 to Daspletosaurus torosus in 1999 after discovering that many skull features were plaster models.",
-   "category": "discovery",
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "after several skull features were later found to be modeled in plaster, including most of the teeth, the specimen (FMNH PR308) was reassigned to Daspletosaurus torosus by Thomas Carr in 1999.",
-   "quote_sha": "1b54e7c51d7a27f1"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "In 2024, Warshaw and colleagues suggested that Dinosaur Park specimens likely belong to Daspletosaurus wilsoni.",
-   "category": "discovery",
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "In 2024, Warshaw and colleagues suggested that the Dinosaur Park specimens likely belong to D. wilsoni.",
-   "quote_sha": "db8ecb5fab557f66"
-  },
-  {
    "fact_id": "F018",
-   "statement": "A tyrannosaurid specimen from New Mexico reported in 1990 was initially assigned to the genus Aublysodon.",
+   "statement": "A specimen previously labeled as Albertosaurus libratus was reassigned to Daspletosaurus torosus by Thomas Carr in 1999 after plaster modeling on the skull was discovered.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
-   "quote": "A new tyrannosaurid specimen (OMNH 10131), including skull fragments, ribs, and parts of the hindlimb, was reported from New Mexico in 1990 and assigned to the now-defunct genus Aublysodon.",
-   "quote_sha": "20a250197193300d"
+   "quote": "It was mounted for display in Chicago and labeled as Albertosaurus libratus for many years, but after several skull features were later found to be modeled in plaster, including most of the teeth, the specimen (FMNH PR308) was reassigned to Daspletosaurus torosus by Thomas Carr in 1999.",
+   "quote_sha": "1fbcd0c3c3496c33"
   },
   {
    "fact_id": "F019",
-   "statement": "Research in 2010 reclassified a New Mexico tyrannosaurid specimen as a primitive tyrannosauroid in the genus Bistahieversor.",
-   "category": "classification",
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "However, research published in 2010 showed that this species, from the Hunter Wash Member of the Kirtland Formation, is actually a more primitive tyrannosauroid, and was classified in the genus Bistahieversor.",
-   "quote_sha": "da9a6337898c8141"
-  },
-  {
-   "fact_id": "F020",
-   "statement": "Jack Horner and colleagues published a preliminary report in 1992 of a tyrannosaurid from the Two Medicine Formation in Montana.",
+   "statement": "In 2025, researchers referred the Dinosaur Park Formation specimen CMN 350 to the species Daspletosaurus horneri.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
-   "quote": "In 1992, Jack Horner and colleagues published an extremely preliminary report of a tyrannosaurid from the upper parts of the Campanian Two Medicine Formation in Montana",
-   "quote_sha": "fd9f3533230dd162"
+   "quote": "In 2025, Coppock and colleagues referred the Dinosaur Park Formation specimen CMN 350, a partial skull and skeleton with left dentary (TMP 2010.121.0001), to D. horneri.",
+   "quote_sha": "e9b4b656b081652b"
   },
   {
-   "fact_id": "F021",
-   "statement": "The tyrannosaurid taxon from the Two Medicine Formation was named Daspletosaurus horneri in 2017.",
+   "fact_id": "F020",
+   "statement": "The tyrannosaurid from the Two Medicine Formation was formally named Daspletosaurus horneri in 2017.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
@@ -359,8 +378,8 @@
    "quote_sha": "f1978692270a0755"
   },
   {
-   "fact_id": "F022",
-   "statement": "A Daspletosaurus specimen measuring approximately 11 meters long was reported from the Coal Ridge Member of the Judith River Formation in 2009.",
+   "fact_id": "F021",
+   "statement": "A Daspletosaurus specimen from the Coal Ridge Member of the Judith River Formation measuring about 11 meters long was reported in 2009.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
@@ -368,17 +387,8 @@
    "quote_sha": "9de0f59cc2648937"
   },
   {
-   "fact_id": "F023",
-   "statement": "Ethan Warner-Cowgill and colleagues formally described a Daspletosaurus specimen in 2025, supporting the view that it is a distinct species.",
-   "category": "discovery",
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "In 2025, formal description of the specimen led by Ethan Warner-Cowgill concurred with the latter opinion.",
-   "quote_sha": "f2948889a8fb847d"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "A specimen known as \"Sir William\" was excavated between 2002 and 2004 and shows characteristics suggesting a new earlier species of Daspletosaurus.",
+   "fact_id": "F022",
+   "statement": "A specimen known as \"Sir William,\" excavated between 2002 and 2004, shows characteristics suggesting it is an earlier species of Daspletosaurus.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:4",
    "lang": "en",
@@ -386,44 +396,17 @@
    "quote_sha": "6361a2373a39643c"
   },
   {
-   "fact_id": "F025",
-   "statement": "Elías A. Warshaw and Denver W. Fowler described remains BDM 107 as the new species Daspletosaurus wilsoni in 2022.",
+   "fact_id": "F023",
+   "statement": "John Wilson discovered bones of a tyrannosaurid from the \"Jack's B2\" site of the Judith River Formation in 2017.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Elías A. Warshaw and Denver W. Fowler described these remains (BDM 107) in 2022 as belonging to a new species of Daspletosaurus, D. wilsoni.",
-   "quote_sha": "6b9ad2fa55dc9daa"
+   "quote": "In 2017, John Wilson discovered the bones of a tyrannosaurid, including a partial disarticulated skull, cervical, sacral, and caudal vertebrae, and a rib, chevron, and first metatarsal, from the \"Jack's B2\" site of the Judith River Formation.",
+   "quote_sha": "ecaef6bad5168cf6"
   },
   {
-   "fact_id": "F026",
-   "statement": "Daspletosaurus wilsoni is considered a transitional species existing between D. torosus and D. horneri in time.",
-   "category": "paleobiology",
-   "chunk_id": "daspletosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "It represents a transitional species between D. torosus and D. horneri, as it existed between them in time.",
-   "quote_sha": "e319da35168048ce"
-  },
-  {
-   "fact_id": "F027",
-   "statement": "It is debated whether Daspletosaurus species evolved through anagenesis or if D. wilsoni is a junior synonym of D. torosus.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "It has been suggested that the three species may have evolved directly through anagenesis, but this theory was disputed by Scherer and Voiculescu-Holvad (2024) who suggested that D. wilsoni may be a junior synonym of D. torosus",
-   "quote_sha": "e876e80046b89ce6"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "In 2025, researchers suggested that new features found in specimen CMC VP 15826 weaken the hypothesis that D. wilsoni and D. torosus are distinct species.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "In 2025, Warner-Cowgill and colleagues described the largest known specimen of Daspletosaurus, CMC VP 15826 (nicknamed \"Pete III\"), identifying new anatomical features previously unknown from this genus and interpreting these characters as weakening the hypothesis that D. wilsoni and D. torosus are distinct species.",
-   "quote_sha": "6fc9205995fd60c9"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "Adult Daspletosaurus could reach lengths of 8.5 to 9 meters, a hip height of 2.2 meters, and a mass of 2 to 3 metric tons.",
+   "fact_id": "F024",
+   "statement": "Adult Daspletosaurus could reach a length of 8.5 to 9 meters, a hip height of 2.2 meters, and a mass of 2 to 3 metric tons.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:6",
    "lang": "en",
@@ -431,26 +414,17 @@
    "quote_sha": "3b5411d339dc823f"
   },
   {
-   "fact_id": "F030",
-   "statement": "One large specimen suggests Daspletosaurus could reach lengths over 9 meters and weights of 4 to 5 metric tons.",
-   "category": "description",
+   "fact_id": "F025",
+   "statement": "One large specimen suggests Daspletosaurus could reach lengths of over 9 meters, potentially up to 11 meters and 4 to 5 metric tons in weight.",
+   "category": "curiosities",
    "chunk_id": "daspletosaurus:enwiki:6",
    "lang": "en",
    "quote": "However, one large specimen of Daspletosaurus sp. (CMC VP 15826) suggests that the genus could reach lengths of over 9 m, potentially reaching sizes of 11 m in length and 4 - 5 MT in weight.",
    "quote_sha": "4859e078e50c2402"
   },
   {
-   "fact_id": "F031",
-   "statement": "Daspletosaurus had a massive skull reaching more than 1 meter in length.",
-   "category": "description",
-   "chunk_id": "daspletosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "Daspletosaurus had a massive skull that could reach more than 1 m in length.",
-   "quote_sha": "e5367f3c8f90b097"
-  },
-  {
-   "fact_id": "F032",
-   "statement": "The teeth in the premaxilla of Daspletosaurus had a D-shaped cross-section, an example of heterodonty common in tyrannosaurids.",
+   "fact_id": "F026",
+   "statement": "The teeth in the premaxilla of Daspletosaurus had a D-shaped cross-section, a trait of heterodonty common in tyrannosaurids.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:7",
    "lang": "en",
@@ -458,8 +432,17 @@
    "quote_sha": "bc85559171d86b80"
   },
   {
-   "fact_id": "F033",
-   "statement": "Split carinae have been found on the teeth of Daspletosaurus.",
+   "fact_id": "F027",
+   "statement": "Unique skull features of Daspletosaurus included a rough maxilla surface and pronounced crests around the eyes on several bones.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "Unique skull features included the rough outer surface of the maxilla (upper jaw bone) and the pronounced crests around the eyes on the lacrimal, postorbital, and jugal bones.",
+   "quote_sha": "0d136f4be8563916"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "Split carinae, or edges, have been found on the teeth of Daspletosaurus.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:7",
    "lang": "en",
@@ -467,8 +450,8 @@
    "quote_sha": "93ba631f3560ef1d"
   },
   {
-   "fact_id": "F034",
-   "statement": "Daspletosaurus walked on two thick hindlimbs ending in four-toed feet, with the first digit not contacting the ground.",
+   "fact_id": "F029",
+   "statement": "Daspletosaurus walked on two thick hindlimbs ending in four-toed feet, with the first digit not touching the ground.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:8",
    "lang": "en",
@@ -476,8 +459,8 @@
    "quote_sha": "e54e940ad4461437"
   },
   {
-   "fact_id": "F035",
-   "statement": "Daspletosaurus had extremely small forelimbs with only two digits, but possessed the longest forelimbs relative to body size of any tyrannosaurid.",
+   "fact_id": "F030",
+   "statement": "Although its forelimbs were extremely small with only two digits, Daspletosaurus had the longest forelimbs relative to body size of any tyrannosaurid.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:8",
    "lang": "en",
@@ -485,7 +468,7 @@
    "quote_sha": "8847d17d337eac2b"
   },
   {
-   "fact_id": "F036",
+   "fact_id": "F031",
    "statement": "Comparisons of tooth wear suggest Daspletosaurus had lips that protected its teeth from external influences.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:9",
@@ -494,7 +477,43 @@
    "quote_sha": "3ffbc5a32e7dad1b"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F032",
+   "statement": "A skin impression from Daspletosaurus torosus shows small polygonal scales measuring 3 millimeters in diameter.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:enwiki:9",
+   "lang": "en",
+   "quote": "A skin impression from Daspletosaurus torosus has been described, showing small polygonal scales measuring 3 mm in diameter.",
+   "quote_sha": "87263f619fe1ae64"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "Research on a large specimen in 2025 suggested that the distinction between D. wilsoni and D. torosus may be invalid.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "In 2025, Warner-Cowgill and colleagues described the largest known specimen of Daspletosaurus, CMC VP 15826 (nicknamed \"Pete III\"), identifying new anatomical features previously unknown from this genus and interpreting these characters as weakening the hypothesis that D. wilsoni and D. torosus are distinct species.",
+   "quote_sha": "6fc9205995fd60c9"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "In 2024, researchers suggested that Dinosaur Park specimens likely belong to the species D. wilsoni.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "In 2024, Warshaw and colleagues suggested that the Dinosaur Park specimens likely belong to D. wilsoni.",
+   "quote_sha": "db8ecb5fab557f66"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "A 1992 report interpreted a tyrannosaurid from the Two Medicine Formation as a transitional species between Daspletosaurus and Tyrannosaurus.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "In 1992, Jack Horner and colleagues published an extremely preliminary report of a tyrannosaurid from the upper parts of the Campanian Two Medicine Formation in Montana, which was interpreted as a transitional species between Daspletosaurus and the later Tyrannosaurus.",
+   "quote_sha": "9170b8a77b1c4c66"
+  },
+  {
+   "fact_id": "F036",
    "statement": "Daspletosaurus is classified in the subfamily Tyrannosaurinae within the family Tyrannosauridae.",
    "category": "classification",
    "chunk_id": "daspletosaurus:enwiki:10",
@@ -503,17 +522,8 @@
    "quote_sha": "80cf2d8267c904a8"
   },
   {
-   "fact_id": "F038",
-   "statement": "Daspletosaurus belongs to the tribe Daspletosaurini, which also includes the taxon Thanatotheristes.",
-   "category": "classification",
-   "chunk_id": "daspletosaurus:enwiki:10",
-   "lang": "en",
-   "quote": "It further belongs to the tribe Daspletosaurini, consisting of it and the taxon Thanatotheristes.",
-   "quote_sha": "9f4df922d689377a"
-  },
-  {
-   "fact_id": "F039",
-   "statement": "Gregory Paul proposed reassigning Daspletosaurus torosus to the genus Tyrannosaurus, but this classification is not generally accepted.",
+   "fact_id": "F037",
+   "statement": "Gregory Paul proposed reassigning Daspletosaurus torosus to the genus Tyrannosaurus, but this classification is not widely accepted.",
    "category": "debate",
    "chunk_id": "daspletosaurus:enwiki:10",
    "lang": "en",
@@ -521,26 +531,17 @@
    "quote_sha": "98e50b84ed1db5fd"
   },
   {
-   "fact_id": "F040",
-   "statement": "Some researchers suggest that Tarbosaurus and Tyrannosaurus are sister taxa or the same genus, with Daspletosaurus as a more basal relative.",
+   "fact_id": "F038",
+   "statement": "There is a debate regarding Daspletosaurus's closest relatives, with some researchers viewing it as a basal relative to Tarbosaurus and Tyrannosaurus, while others place it closer to Asian tyrannosaurids like Alioramus.",
    "category": "debate",
    "chunk_id": "daspletosaurus:enwiki:10",
    "lang": "en",
-   "quote": "Many researchers believe Tarbosaurus and Tyrannosaurus to be sister taxa or even to be the same genus, with Daspletosaurus a more basal relative.",
-   "quote_sha": "9f4abe5ef676ed40"
+   "quote": "Many researchers believe Tarbosaurus and Tyrannosaurus to be sister taxa or even to be the same genus, with Daspletosaurus a more basal relative. On the other hand, Phil Currie and colleagues find Daspletosaurus to be more closely related to Tarbosaurus and other Asian tyrannosaurids like Alioramus than to the North American Tyrannosaurus.",
+   "quote_sha": "173579bc57f349dc"
   },
   {
-   "fact_id": "F041",
-   "statement": "Phil Currie and colleagues argue that Daspletosaurus is more closely related to Tarbosaurus and Asian tyrannosaurids like Alioramus than to North American Tyrannosaurus.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:10",
-   "lang": "en",
-   "quote": "On the other hand, Phil Currie and colleagues find Daspletosaurus to be more closely related to Tarbosaurus and other Asian tyrannosaurids like Alioramus than to the North American Tyrannosaurus.",
-   "quote_sha": "bd4bd82388d94702"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "Scherer and Voiculescu-Holvad (2024) argued that overlapping stratigraphic ranges suggest Daspletosaurus species were contemporaneous and that anagenesis may not be the main driver of speciation.",
+   "fact_id": "F039",
+   "statement": "In 2024, researchers Scherer and Voiculescu-Holvad argued that overlapping stratigraphic ranges suggest Daspletosaurus species were contemporaneous and that anagenesis may not be the main driver of its evolution.",
    "category": "debate",
    "chunk_id": "daspletosaurus:enwiki:10",
    "lang": "en",
@@ -548,44 +549,17 @@
    "quote_sha": "ccf4ac9cfe4168ab"
   },
   {
-   "fact_id": "F043",
-   "statement": "Scherer and Voiculescu-Holvad suggested that Daspletosaurus wilsoni might be a junior synonym of Daspletosaurus torosus due to a lack of distinguishing characters.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:10",
-   "lang": "en",
-   "quote": "They also suggested that D. wilsoni may be a junior synonym of D. torosus, since there is a near lack of autapomorphic characters that can differentiate this species.",
-   "quote_sha": "b12bb553c0290c3b"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "Warshaw and colleagues (2024) supported the anagenesis theory by validating D. wilsoni as a distinct taxon and reanalyzing previous studies.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:10",
-   "lang": "en",
-   "quote": "In the same year, Warshaw and colleagues supported the anagenesis theory by referring other specimens to D. wilsoni (including the Dinosaur Park specimen) which they considered as a valid taxon, and by reanalysing the previous study of Scherer and Voiculescu-Holvad (2024).",
-   "quote_sha": "4646a6d09b65fd9f"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Warshaw and colleagues proposed that Daspletosaurus is a paraphyletic genus ancestral to Tyrannosaurus.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:enwiki:10",
-   "lang": "en",
-   "quote": "They also recovered the paraphyletic Daspletosaurus at the base of Tyrannosaurini, making the genus ancestral to Tyrannosaurus.",
-   "quote_sha": "e1f62a08d9dcdcea"
-  },
-  {
-   "fact_id": "F046",
+   "fact_id": "F040",
    "statement": "Daspletosaurus horneri likely possessed integumentary sensory organs used for touch, jaw movement modulation, temperature sensing, and prey detection.",
-   "category": "description",
+   "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:11",
    "lang": "en",
    "quote": "There are indications of D. horneri possessing integumentary sensory organs, possibly used in touch, modulation of precise jaw movements, temperature reading, and prey detection.",
    "quote_sha": "6d73c2a2d3abba39"
   },
   {
-   "fact_id": "F047",
-   "statement": "Large flat scales on Daspletosaurus may have protected its snout during prey capture and fights with other individuals.",
+   "fact_id": "F041",
+   "statement": "Large flat scales on Daspletosaurus likely protected its snout during prey capture and fights with other individuals.",
    "category": "description",
    "chunk_id": "daspletosaurus:enwiki:11",
    "lang": "en",
@@ -593,8 +567,8 @@
    "quote_sha": "32ad4703917ca612"
   },
   {
-   "fact_id": "F048",
-   "statement": "A full-grown Daspletosaurus from the Dinosaur Park Formation has tyrannosaur bite marks on its skull.",
+   "fact_id": "F042",
+   "statement": "A full-grown Daspletosaurus fossil from the Dinosaur Park Formation shows bite marks on its skull.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
@@ -602,70 +576,61 @@
    "quote_sha": "20107fe16066f5ef"
   },
   {
-   "fact_id": "F049",
-   "statement": "Darren Tanke and Phil Currie hypothesize that bite marks on Daspletosaurus skulls resulted from intraspecific competition for territory, resources, or social dominance.",
+   "fact_id": "F043",
+   "statement": "Healed bite marks on a Daspletosaurus skull indicate the animal survived an attack.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
-   "quote": "Darren Tanke and Phil Currie hypothesize that the bites are due to intraspecific competition for territory or resources, or for dominance within a social group.",
-   "quote_sha": "46490cc81bb8fe79"
+   "quote": "The bite marks are healed over, indicating that the animal survived the bite.",
+   "quote_sha": "fcc3c5180b651b39"
   },
   {
-   "fact_id": "F050",
-   "statement": "A Daspletosaurus bonebed in Montana contains remains of three individuals: a large adult, a small juvenile, and an intermediate-sized individual.",
+   "fact_id": "F044",
+   "statement": "A bonebed in Montana's Two Medicine Formation contains remains of three Daspletosaurus of varying sizes, suggesting possible social grouping.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
-   "quote": "The bonebed includes the remains of three Daspletosaurus, including a large adult, a small juvenile, and another individual of intermediate size.",
-   "quote_sha": "f3804cf91f62ff49"
+   "quote": "Evidence that Daspletosaurus lived in social groups comes from a bonebed found in the Two Medicine Formation of Montana. The bonebed includes the remains of three Daspletosaurus, including a large adult, a small juvenile, and another individual of intermediate size.",
+   "quote_sha": "435f0bd79c1209d1"
   },
   {
-   "fact_id": "F051",
-   "statement": "Phil Currie speculates that Daspletosaurus formed packs, though this remains uncertain.",
+   "fact_id": "F045",
+   "statement": "Hadrosaur bones found with Daspletosaurus in a Montana bonebed show tooth marks, indicating the tyrannosaurs were feeding on them when they died.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
-   "quote": "Currie speculates that the daspletosaurs formed a pack, although this cannot be stated with certainty.",
-   "quote_sha": "41eb440ada4d938b"
+   "quote": "The hadrosaur remains are scattered and bear numerous marks from tyrannosaur teeth, indicating that the Daspletosaurus were feeding on the hadrosaurs at the time of death.",
+   "quote_sha": "c3688ec8f26b6235"
   },
   {
-   "fact_id": "F052",
-   "statement": "Brian Roach and Daniel Brinkman suggest Daspletosaurus social interactions resembled modern Komodo dragons, involving non-cooperative mobbing and cannibalism, rather than cooperative packs.",
+   "fact_id": "F046",
+   "statement": "While some scientists speculate Daspletosaurus lived in cooperative packs, others argue they likely behaved like Komodo dragons, mobbing carcasses without cooperation and potentially cannibalizing each other.",
    "category": "debate",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
-   "quote": "Other scientists are skeptical of the evidence for social groups in Daspletosaurus and other large theropods; Brian Roach and Daniel Brinkman have suggested that Daspletosaurus social interaction would have more closely resembled the modern Komodo dragon, where non-cooperative individuals mob carcasses, frequently attacking and even cannibalizing each other in the process.",
-   "quote_sha": "0bdde311c31d69b1"
+   "quote": "Currie speculates that the daspletosaurs formed a pack, although this cannot be stated with certainty. Other scientists are skeptical of the evidence for social groups in Daspletosaurus and other large theropods; Brian Roach and Daniel Brinkman have suggested that Daspletosaurus social interaction would have more closely resembled the modern Komodo dragon, where non-cooperative individuals mob carcasses, frequently attacking and even cannibalizing each other in the process.",
+   "quote_sha": "ef87a5a990f0c21c"
   },
   {
-   "fact_id": "F053",
+   "fact_id": "F047",
    "statement": "Evidence of cannibalism in Daspletosaurus was published in 2015.",
-   "category": "paleobiology",
+   "category": "curiosities",
    "chunk_id": "daspletosaurus:enwiki:12",
    "lang": "en",
    "quote": "Evidence of cannibalism in Daspletosaurus was published in 2015.",
    "quote_sha": "793bfa48f66395cf"
   },
   {
-   "fact_id": "F054",
-   "statement": "Daspletosaurus underwent a period of tremendous growth lasting about four years midway through its life.",
+   "fact_id": "F048",
+   "statement": "Researchers hypothesize that low mortality among juvenile Daspletosaurus over a certain size was due to a lack of predation, similar to modern large mammals like elephants.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:13",
    "lang": "en",
-   "quote": "Erickson has shown that after a long time as juveniles, tyrannosaurs underwent tremendous growth spurts for about four years midway through their lives.",
-   "quote_sha": "e921c1882df2ac9e"
+   "quote": "Erickson hypothesized that the difference was due to low mortality among juveniles over a certain size, which is also seen in some modern large mammals like elephants.",
+   "quote_sha": "ab7000556c49c0e0"
   },
   {
-   "fact_id": "F055",
-   "statement": "The maximum growth rate of Daspletosaurus was 180 kilograms per year, based on an adult mass estimate of 1800 kg.",
-   "category": "paleobiology",
-   "chunk_id": "daspletosaurus:enwiki:13",
-   "lang": "en",
-   "quote": "The maximum growth rate in Daspletosaurus was 180 kilograms (400 lb) per year, based on a mass estimate of 1800 kg in adults.",
-   "quote_sha": "fdbe87c2a22876ab"
-  },
-  {
-   "fact_id": "F056",
+   "fact_id": "F049",
    "statement": "All known Daspletosaurus fossils date to the middle to late Campanian stage of the Late Cretaceous, between 78 and 74.4 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "daspletosaurus:enwiki:14",
@@ -674,16 +639,7 @@
    "quote_sha": "588244e9117dd48a"
   },
   {
-   "fact_id": "F057",
-   "statement": "Daspletosaurus torosus likely preyed on hadrosaurs, ceratopsians, pachycephalosaurs, ornithomimids, therizinosaurs, and possibly ankylosaurs.",
-   "category": "paleobiology",
-   "chunk_id": "daspletosaurus:enwiki:14",
-   "lang": "en",
-   "quote": "In the Oldman Formation (the geological equivalent of the Judith River formation), Daspletosaurus torosus could have preyed upon the hadrosaur species Brachylophosaurus canadensis, the ceratopsians Coronosaurus brinkmani and Albertaceratops nesmoi, pachycephalosaurs, ornithomimids, therizinosaurs, and possibly ankylosaurs.",
-   "quote_sha": "642598f0b05433b4"
-  },
-  {
-   "fact_id": "F058",
+   "fact_id": "F050",
    "statement": "Tooth marks on a Saurornitholestes dentary suggest it was bitten by a young Daspletosaurus.",
    "category": "paleobiology",
    "chunk_id": "daspletosaurus:enwiki:14",
@@ -692,8 +648,17 @@
    "quote_sha": "22e679bf832b27ca"
   },
   {
-   "fact_id": "F059",
-   "statement": "Some authors suggest that competition between Daspletosaurus and Gorgosaurus was limited by geographical separation.",
+   "fact_id": "F051",
+   "statement": "Dale Russell hypothesized that Daspletosaurus specialized on better-defended ceratopsids while Gorgosaurus preyed on abundant hadrosaurs to avoid competition.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:enwiki:15",
+   "lang": "en",
+   "quote": "Dale Russell hypothesized that the more lightly built and more common Gorgosaurus may have preyed on the abundant hadrosaurs of the time, while the more robust and less common Daspletosaurus may have specialized on the less prevalent but better-defended ceratopsids, which may have been more difficult to hunt.",
+   "quote_sha": "12068fd436608ee2"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Some authors suggest that competition between Daspletosaurus and Gorgosaurus was limited by geographical separation rather than niche differentiation.",
    "category": "debate",
    "chunk_id": "daspletosaurus:enwiki:15",
    "lang": "en",
@@ -701,7 +666,7 @@
    "quote_sha": "4982915616ce0b76"
   },
   {
-   "fact_id": "F060",
+   "fact_id": "F053",
    "statement": "The genus Daspletosaurus was named by Russell in 1970.",
    "category": "classification",
    "chunk_id": "daspletosaurus:eswiki:1",
@@ -710,8 +675,17 @@
    "quote_sha": "82d7c8f0345ea73b"
   },
   {
-   "fact_id": "F061",
-   "statement": "Daspletosaurus horneri and Daspletosaurus wilsoni are recognized species within the genus.",
+   "fact_id": "F054",
+   "statement": "The type species of Daspletosaurus is Daspletosaurus torosus.",
+   "category": "classification",
+   "chunk_id": "daspletosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "type_species: Daspletosaurus torosus",
+   "quote_sha": "a1e3c36e4be0614e"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Two other species, Daspletosaurus horneri and Daspletosaurus wilsoni, have been described since the type species.",
    "category": "classification",
    "chunk_id": "daspletosaurus:eswiki:1",
    "lang": "es",
@@ -719,7 +693,7 @@
    "quote_sha": "35501f7a1e72af6e"
   },
   {
-   "fact_id": "F062",
+   "fact_id": "F056",
    "statement": "Daspletosaurus is a genus of two known species of tyrannosaurid theropod dinosaurs.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:2",
@@ -728,8 +702,62 @@
    "quote_sha": "93b47d8d9e4c385e"
   },
   {
+   "fact_id": "F057",
+   "statement": "Daspletosaurus lived in North America during the Campanian stage of the late Cretaceous, approximately 77 to 74 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "que vivieron a finales del período Cretácico, hace aproximadamente entre 77 y 74 millones de años, en el Campaniense, en lo que hoy es Norteamérica",
+   "quote_sha": "e18fc0d8f5a23603"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The type species Daspletosaurus torosus was first discovered in Alberta.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Los fósiles de la especie tipo y primera en ser descrita, Daspletosaurus torosus, fueron hallados en Alberta",
+   "quote_sha": "19dc143bd8d85223"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Fossils of the second species, Daspletosaurus horneri, have been found only in Montana.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "mientras que los fósiles de la segunda especie, Daspletosaurus horneri, se han encontrado solo en Montana",
+   "quote_sha": "037fc190f211cad2"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Researchers have debated whether Daspletosaurus wilsoni is a valid intermediate species that evolved via anagenesis.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Una tercera especie, también de Alberta, Daspletosaurus wilsoni se ha suguerido como intermedia entre las dos anteriores que evolucionó mediante anagénesis, pero otros investigadores han cuestionado esta teoría",
+   "quote_sha": "1fe3a0bb74ecddf3"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "It is debated whether the taxon Thanatotheristes represents a species of Daspletosaurus, D. degrootorum, as this has not been widely supported.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Se ha sugerido que el taxón Thanatotheristes representa una especie de Daspletosaurus , D. degrootorum, pero esto no ha sido ampliamente respaldado",
+   "quote_sha": "b7259e9dcf2a3e80"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The largest potential Daspletosaurus specimen was estimated to be around 11 meters long and weigh up to 5 metric tons.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Daspletosaurus era un gran depredador bípedo, y el espécimen potencial más grande medía alrededor de 11 metros de largo y pesaba hasta 5 toneladas métricas",
+   "quote_sha": "f39a5c9877becd30"
+  },
+  {
    "fact_id": "F063",
-   "statement": "Daspletosaurus had the small forelimbs typical of tyrannosaurids, though they were proportionally longer than in other genera.",
+   "statement": "Daspletosaurus possessed the small forelimbs typical of tyrannosaurids, though they were proportionally longer than in other genera.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:2",
    "lang": "es",
@@ -738,33 +766,24 @@
   },
   {
    "fact_id": "F064",
-   "statement": "Daspletosaurus was a large bipedal predator, like most tyrannosaurids.",
-   "category": "description",
+   "statement": "As an apex predator, Daspletosaurus likely hunted large dinosaurs such as the ceratopsid Centrosaurus and the hadrosaurid Hypacrosaurus.",
+   "category": "paleobiology",
    "chunk_id": "daspletosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Como la mayoría de los tiranosáuridos, Daspletosaurus era un gran depredador bípedo",
-   "quote_sha": "b1d2b2ce6c8f49a0"
+   "quote": "Como superdepredador, Daspletosaurus estaba en la cúspide de la cadena alimenticia, cazando probablemente a los dinosaurios grandes como el ceratópsido Centrosaurus y el hadrosáurido Hypacrosaurus",
+   "quote_sha": "1fed503aff454318"
   },
   {
    "fact_id": "F065",
-   "statement": "A potential specimen of Daspletosaurus measured approximately 11 meters in length and weighed up to 5 metric tons.",
-   "category": "description",
+   "statement": "Daspletosaurus coexisted with the tyrannosaurid Gorgosaurus in some areas, though there is evidence of ecological niche differentiation between them.",
+   "category": "paleobiology",
    "chunk_id": "daspletosaurus:eswiki:2",
    "lang": "es",
-   "quote": "el espécimen potencial más grande medía alrededor de 11 metros de largo y pesaba hasta 5 toneladas métricas",
-   "quote_sha": "ed32215c48c9a29c"
+   "quote": "En algunas áreas, Daspletosaurus coexistió junto a otro tiranosáurido, Gorgosaurus, aunque hay cierta evidencia de diferenciación de nicho ecológico entre los dos",
+   "quote_sha": "4c64434d918412d5"
   },
   {
    "fact_id": "F066",
-   "statement": "As a superpredator, Daspletosaurus likely hunted large dinosaurs such as the ceratopsid Centrosaurus and the hadrosaurid Hypacrosaurus.",
-   "category": "description",
-   "chunk_id": "daspletosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Daspletosaurus estaba en la cúspide de la cadena alimenticia, cazando probablemente a los dinosaurios grandes como el ceratópsido Centrosaurus y el hadrosáurido Hypacrosaurus",
-   "quote_sha": "8e95638acea349b2"
-  },
-  {
-   "fact_id": "F067",
    "statement": "An adult Daspletosaurus measured approximately 8 to 9 meters in length with an estimated weight of 2.5 tons.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:3",
@@ -773,17 +792,17 @@
    "quote_sha": "dd643b489d71c903"
   },
   {
-   "fact_id": "F068",
-   "statement": "Estimates for the weight of Daspletosaurus range between 1.8 and 3.8 tons.",
-   "category": "description",
+   "fact_id": "F067",
+   "statement": "A potential D. torosus specimen nicknamed \"Pete III\" suggests the genus could reach nearly 11 meters in length and weigh 5 tons.",
+   "category": "curiosities",
    "chunk_id": "daspletosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Pero se ha estimado un peso que oscila entre 1,8 y 3,8 toneladas",
-   "quote_sha": "cdebe5752dbd611e"
+   "quote": "Sin embargo, hay un espécimen potencial de D. torosus, CMC VP 15826, apodado \"Pete III\", sugiere que el género podría alcanzar longitudes de casi 11 metros y pesar 5 toneladas",
+   "quote_sha": "1bd404da6f4e6041"
   },
   {
-   "fact_id": "F069",
-   "statement": "One of Daspletosaurus's main features was its enormous, heavily built head, which was one meter long.",
+   "fact_id": "F068",
+   "statement": "One of Daspletosaurus's main features was its massive, heavily built head, which was one meter long.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:4",
    "lang": "es",
@@ -791,8 +810,17 @@
    "quote_sha": "b465652ab379640e"
   },
   {
+   "fact_id": "F069",
+   "statement": "The skull was built to absorb the impact of striking prey during an attack.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Esta estaba preparada para absorber el impacto del golpe sobre la presa cuando atacara",
+   "quote_sha": "f312d22c317180a5"
+  },
+  {
    "fact_id": "F070",
-   "statement": "The mouth of Daspletosaurus was crowned with dozens of very long teeth with an oval cross-section.",
+   "statement": "The mouth was crowned by dozens of very long teeth with an oval cross-section.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:4",
    "lang": "es",
@@ -801,24 +829,42 @@
   },
   {
    "fact_id": "F071",
-   "statement": "Divided carinae have been found on the teeth of Daspletosaurus.",
+   "statement": "Unique skull features included a rough external surface on the maxilla and upper jaw bone, and prominent ridges around the eyes on the lacrimal, postorbital, and jugal bones.",
    "category": "description",
+   "chunk_id": "daspletosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Las características únicas del cráneo incluyeron la superficie externa rugosa del maxilar, el hueso de la mandíbula superior y las crestas pronunciadas alrededor de los ojos en los huesos lacrimales, postorbitales y yugales",
+   "quote_sha": "8793cb17ffccaf75"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Divided carinae have been found on the teeth of Daspletosaurus.",
+   "category": "paleobiology",
    "chunk_id": "daspletosaurus:eswiki:4",
    "lang": "es",
    "quote": "Se han encontrado carinas divididas en dientes de Daspletosaurus",
    "quote_sha": "ace0f2c205092f38"
   },
   {
-   "fact_id": "F072",
-   "statement": "Daspletosaurus had a long tail and long hind legs ending in four-toed feet where only three toes touched the ground, with the first digit, the hallux, not contacting the earth.",
+   "fact_id": "F073",
+   "statement": "Daspletosaurus had the reduced small forelimbs typical of tyrannosaurids, though they were proportionally longer than in other genera.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:5",
    "lang": "es",
-   "quote": "Como todos los terópodos, tenía una larga cola, y como poseía largas patas traseras que terminaron en pies de cuatro dedos donde solo tres tocaban el suelo con la punta y el primer dígito, el hallux no entraba en contacto con la tierra",
-   "quote_sha": "2910e4ef7190c3a3"
+   "quote": "Daspletosaurus tenía los pequeños miembros anteriores típicos reducidos de los tiranosáuridos, aunque fueran proporcionalmente más largos que en otros géneros",
+   "quote_sha": "2347648e5ca2d18a"
   },
   {
-   "fact_id": "F073",
+   "fact_id": "F074",
+   "statement": "Its legs ended in three strong toes, and its tail served as a counterbalance to its huge head and torso, placing its center of gravity over the hips.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:eswiki:5",
+   "lang": "es",
+   "quote": "Sus patas terminaban en tres fuertes dedos y la cola le servía de contrapeso a su enorme cabeza y al torso, colocando su centro de gravedad sobre las caderas",
+   "quote_sha": "d5e5c4e453df0de3"
+  },
+  {
+   "fact_id": "F075",
    "statement": "A skin impression of Daspletosaurus torosus shows small polygonal scales measuring 3 mm in diameter.",
    "category": "description",
    "chunk_id": "daspletosaurus:eswiki:6",
@@ -827,8 +873,17 @@
    "quote_sha": "6bf710759a8a456b"
   },
   {
-   "fact_id": "F074",
-   "statement": "The holotype of Daspletosaurus torosus was found in Alberta, Canada, by Charles Mortram Sternberg in 1921 and originally described as Gorgosaurus.",
+   "fact_id": "F076",
+   "statement": "Comparisons of tooth wear suggest Daspletosaurus, like other non-avian theropods, had lips protecting its teeth from external influences.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "De una comparación del grado de desgaste de los dientes de Daspletosaurus con otros animales extintos y existentes, se concluye que Daspletosaurus, así como otros terópodos no aviares, tenían labios que protegían los dientes de influencias externas",
+   "quote_sha": "d7e22c768ee02aaa"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "The holotype was found in Alberta, Canada by Charles Mortram Sternberg in 1921 and originally described under the name Gorgosaurus.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:eswiki:7",
    "lang": "es",
@@ -836,8 +891,8 @@
    "quote_sha": "e3578fc41332bc6c"
   },
   {
-   "fact_id": "F075",
-   "statement": "Dale Russell created the genus Daspletosaurus with a complete description in 1970.",
+   "fact_id": "F078",
+   "statement": "It was not until 1970 that Dale Russell performed a complete description, creating the genus Daspletosaurus.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:eswiki:7",
    "lang": "es",
@@ -845,8 +900,8 @@
    "quote_sha": "c93348934e8c4943"
   },
   {
-   "fact_id": "F076",
-   "statement": "About six specimens of Daspletosaurus are known in total, and apart from the type, only one well-preserved skeleton, RTMP 2001.36.1, was found in 2001.",
+   "fact_id": "F079",
+   "statement": "About six specimens are known in total, and apart from the type, only one well-preserved skeleton, RTMP 2001.36.1, was found in 2001.",
    "category": "discovery",
    "chunk_id": "daspletosaurus:eswiki:7",
    "lang": "es",
@@ -854,17 +909,8 @@
    "quote_sha": "f02fadf5da939b59"
   },
   {
-   "fact_id": "F077",
-   "statement": "Daspletosaurus lived during the late Cretaceous period, approximately 77 to 74 million years ago in the Campanian stage, in what is now North America.",
-   "category": "time_and_habitat",
-   "chunk_id": "daspletosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "que vivieron a finales del período Cretácico, hace aproximadamente entre 77 y 74 millones de años, en el Campaniense, en lo que hoy es Norteamérica",
-   "quote_sha": "e18fc0d8f5a23603"
-  },
-  {
-   "fact_id": "F078",
-   "statement": "The Oldman Formation, where some Daspletosaurus fossils were found, was deposited during the mid-Campanian of the Upper Cretaceous, approximately 77 to 76 million years ago.",
+   "fact_id": "F080",
+   "statement": "The Oldman Formation was deposited during the middle Campanian of the Upper Cretaceous, approximately between 77 and 76 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "daspletosaurus:eswiki:7",
    "lang": "es",
@@ -872,17 +918,134 @@
    "quote_sha": "ec0240b1330f5570"
   },
   {
-   "fact_id": "F079",
-   "statement": "Daspletosaurus is closely related to the larger and more recent tyrannosaurid Tyrannosaurus.",
+   "fact_id": "F081",
+   "statement": "The name Daspletosaurus comes from Greek meaning \"terrible lizard,\" and the type species D. torosus means \"muscular\" in Latin.",
    "category": "classification",
-   "chunk_id": "daspletosaurus:eswiki:2",
+   "chunk_id": "daspletosaurus:eswiki:7",
    "lang": "es",
-   "quote": "Daspletosaurus está estrechamente relacionado con el tiranosáurido Tyrannosaurus, mucho más grande y más reciente",
-   "quote_sha": "e18f3736f4bdcb6d"
+   "quote": "Daspletosaurus, del griego δασπλητo-/daspleto- \"espantoso\" y σαυρος/sauros \"lagarto\". Designando a la especie tipo como D. torosus, del latín para \"musculoso\"",
+   "quote_sha": "9cd367fbd766ffd4"
   },
   {
-   "fact_id": "F080",
-   "statement": "Daspletosaurus belongs to the parent group Daspletosaurini.",
+   "fact_id": "F082",
+   "statement": "Several additional species have been assigned to the genus Daspletosaurus over the years, but none had received a proper description or scientific name by 2007.",
+   "category": "classification",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Dos o tres especies adicionales de han asignado al género Daspletosaurus durante el correr de los años, aunque a la fecha de 2007 ninguna de estas especies habían recibido una descripción apropiada o nombre científico.",
+   "quote_sha": "2ea5af0175c765e9"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Barnum Brown collected a paratype specimen of D. torosus in 1913, which Russell designated alongside the holotype.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Junto con el holotipo, Russell señaló un espécimen recogido por Barnum Brown en 1913 como paratipo de D. torosus.",
+   "quote_sha": "4f9ef65c27f557cb"
+  },
+  {
+   "fact_id": "F084",
+   "statement": "The upper section of the formation where fossils were found was renamed the Dinosaur Park Formation, dating to the middle Campanian between 76.5 and 74 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Esta sección superior desde entonces se ha renombrado como Formación Dinosaur Park, que se data durante el Campaniano medio, entre 76.5 a 74 millones de años.",
+   "quote_sha": "368341a68147f51c"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "Daspletosaurus fossils are specifically known from the middle to upper sections of the Dinosaur Park Formation, dating between 75.6 and 75.0 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Los fósiles de Daspletosaurus son conocidos específicamente de la sección media a superior de esa formación, hace entre 75.6 a 75.0 millones de años.",
+   "quote_sha": "6aed898c3d4dc15f"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "In 1914, Brown collected an almost complete skeleton and skull, which the American Museum of Natural History sold to the Field Museum of Natural History in Chicago forty years later.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "En 1914, Brown recogió un esqueleto y un cráneo casi completos; cuarenta años más tarde el Museo Americano de Historia Natural vendió este espécimen al Museo Field de Historia Natural de Chicago.",
+   "quote_sha": "08fadf8268514d14"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "The specimen was labeled as Albertosaurus libratus for many years until Thomas Carr reassigned it to Daspletosaurus torosus in 1999 after plaster modeling revealed key skull features, including most of the teeth.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Fue montado en para su exhibición en Chicago y se etiquetó como Albertosaurus libratus durante muchos años, pero después de que varias características del cráneo fueran encontradas al ser modelado en yeso, incluyendo la mayor parte de los dientes, el espécimen FMNH PR308 fue reasignado a Daspletosaurus torosus por Thomas Carr en 1999.",
+   "quote_sha": "f02dc9e768596e8d"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "A total of eight specimens have been collected from the Dinosaur Park Formation, most of them within the boundaries of Dinosaur Provincial Park.",
+   "category": "discovery",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Un total de ocho especímenes se han recogido de la Formación Dinosaur Park, la mayor parte de ellos dentro de los límites del Parque Provincial de los Dinosaurios.",
+   "quote_sha": "bf3e430007830cae"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Phil Currie believes that specimens from Dinosaur Provincial Park represent a new species of Daspletosaurus, distinguished by certain skull features, though this remains unconfirmed.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Phil Currie cree que los especímenes del Parque del Dinosaurio representan una nueva especie de Daspletosaurus, diferenciado por ciertas características del cráneo.",
+   "quote_sha": "ed3f7464da1aa827"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "A tyrannosaurid specimen, OMNH 10131, reported from New Mexico in 1990 was initially assigned to the now invalid genus Aublysodon.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Un nuevo espécimen del tiranosáurido, OMNH 10131, incluyendo fragmentos del cráneo, costillas y las partes de una pata, fue reportado de Nuevo México en 1990 y asignado al género ahora inválido Aublysodon.",
+   "quote_sha": "1c9b3a4af5d5734e"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Research published in 2010 showed that this species from the Hunter Wash Member of the Kirtland Formation is actually a more primitive tyrannosauroid, classified in the genus Bistahieversor.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Sin embargo, la investigación publicada en 2010 mostró que esta especie, del Miembro Hunter Wash de la Formación Kirtland, es en realidad un tiranosauroide más primitivo, y fue clasificado en el género Bistahieversor.",
+   "quote_sha": "927dcc10f9aa9761"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "There is no consensus on the age of the Kirtland Formation; some experts claim it dates to the late Campanian, while others suggest a younger age at the beginning of the Maastrichtian.",
+   "category": "time_and_habitat",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "No hay un consenso sobre la edad de la Formación Kirtland, y algunos expertos afirman que data de finales del Campaniano, mientras que otros sugieren una edad más reciente a inicios del Maastrichtiense.",
+   "quote_sha": "933839d7ee9b22b4"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "In 1992, Jack Horner and colleagues published a preliminary report of a tyrannosaurid from the upper Campanian in Montana's Two Medicine Formation, interpreted as a transitional species between Daspletosaurus and later Tyrannosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "En 1992, Jack Horner y colegas publicaron un informe extremadamente preliminar de un tiranosáurido de las partes superiores del Campaniano en la Formación Dos Medicinas en Montana, que fue interpretado como especie transitoria entre Daspletosaurus y el posterior Tyrannosaurus.",
+   "quote_sha": "aa5e1b03394a2e6e"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "This specimen was assigned to Daspletosaurus but lacks a specific species designation.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:8",
+   "lang": "es",
+   "quote": "Este espécimen fue asignado a Daspletosaurus pero no tiene una especie en particular.",
+   "quote_sha": "cf297698d0a46dc6"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Daspletosaurus belongs to the subfamily Daspletosaurini.",
    "category": "classification",
    "chunk_id": "daspletosaurus:pbdb:1",
    "lang": "en",
@@ -890,8 +1053,8 @@
    "quote_sha": "9bf2e9667795c33d"
   },
   {
-   "fact_id": "F081",
-   "statement": "Daspletosaurus is classified in the family Tyrannosauridae.",
+   "fact_id": "F096",
+   "statement": "Daspletosaurus is classified within the family Tyrannosauridae.",
    "category": "classification",
    "chunk_id": "daspletosaurus:pbdb:1",
    "lang": "en",
@@ -899,31 +1062,112 @@
    "quote_sha": "1b10bd0268c2b179"
   },
   {
-   "fact_id": "F082",
-   "statement": "It is debated whether a third species, Daspletosaurus wilsoni, represents an intermediate form that evolved via anagenesis between D. torosus and D. horneri.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Una tercera especie, también de Alberta, Daspletosaurus wilsoni se ha suguerido como intermedia entre las dos anteriores que evolucionó mediante anagénesis, pero otros investigadores han cuestionado esta teoría",
-   "quote_sha": "1fe3a0bb74ecddf3"
+   "fact_id": "F097",
+   "statement": "Daspletosaurus lived from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "daspletosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Maastrichtian (83.6 to 66 million years ago)",
+   "quote_sha": "c5801ed7c899e141"
   },
   {
-   "fact_id": "F083",
-   "statement": "It has been suggested that the taxon Thanatotheristes represents a species of Daspletosaurus, D. degrootorum, but this has not been widely supported.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:eswiki:2",
+   "fact_id": "F098",
+   "statement": "Evidence suggests D. horneri possessed integumentary sensory organs, possibly used for touch, precise jaw movements, temperature sensing, and prey detection.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:12",
    "lang": "es",
-   "quote": "Se ha sugerido que el taxón Thanatotheristes representa una especie de Daspletosaurus , D. degrootorum, pero esto no ha sido ampliamente respaldado",
-   "quote_sha": "b7259e9dcf2a3e80"
+   "quote": "Hay indicios de que D. horneri poseía órganos sensoriales integumentarios, posiblemente usados para tocar, realizar movimientos precisos con la mandíbula, sentir la temperatura, y detectar presas.",
+   "quote_sha": "1e5c9364e4e3c388"
   },
   {
-   "fact_id": "F084",
-   "statement": "There is some evidence suggesting ecological niche differentiation between Daspletosaurus and Gorgosaurus, though they coexisted in some areas.",
-   "category": "debate",
-   "chunk_id": "daspletosaurus:eswiki:2",
+   "fact_id": "F099",
+   "statement": "Large flat scales may have protected the snout during hunting and intraspecific combat.",
+   "category": "description",
+   "chunk_id": "daspletosaurus:eswiki:12",
    "lang": "es",
-   "quote": "hay cierta evidencia de diferenciación de nicho ecológico entre los dos",
-   "quote_sha": "fb1ea13eb17499e2"
+   "quote": "Las grandes escamas planas pueden haber protegido al hocico durante las cacerías y el combate intraespecífico.",
+   "quote_sha": "cf5ea2b793e492b1"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "A juvenile Daspletosaurus specimen from Dinosaur Provincial Park (TMP 94.143.1) shows bite marks on its face inflicted by another tyrannosaurid.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Un espécimen juvenil de la especie de Daspletosaurus del Parque de los Dinosaurios (TMP 94.143.1) muestra marcas de mordeduras en la cara que fueron infligidas por otro tiranosáurido.",
+   "quote_sha": "bb75446bf5a8439a"
+  },
+  {
+   "fact_id": "F101",
+   "statement": "The bite marks are healed, indicating the animal survived the attack.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Las marcas de la mordedura están curadas, indicando que el animal sobrevivió la mordedura.",
+   "quote_sha": "6224109cbabd7eb3"
+  },
+  {
+   "fact_id": "F102",
+   "statement": "A fully grown Daspletosaurus specimen from the same site (TMP 85.62.1) also exhibits tyrannosaurid bite marks, showing that facial attacks were not limited to juveniles.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Un ejemplar del mismo sitio, completamente crecido Daspletosaurus (TMP 85.62.1) también exhibe las marcas de mordeduras de tiranosáurido, demostrando que los ataques a la cara no fueron limitados a animales más jóvenes.",
+   "quote_sha": "bc7601c6d17a3577"
+  },
+  {
+   "fact_id": "F103",
+   "statement": "Darren Tanke and Phil Currie hypothesize that the bite marks result from intraspecific competition for territory or resources, or for dominance within a social group.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Darren Tanke y Phil Currie presumen que las mordeduras son debido a competición intraespecífica por el territorio o recursos, o para la dominación dentro de un grupo social.",
+   "quote_sha": "0ec9bbbc01e7d1e7"
+  },
+  {
+   "fact_id": "F104",
+   "statement": "Evidence suggesting Daspletosaurus lived in social groups comes from a bone bed found in Montana's Two Medicine Formation.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Evidencia de que Daspletosaurus haya vivido en grupos sociales viene de la cama de huesos encontrada en la Formación Dos Medicinas de Montana.",
+   "quote_sha": "077a850a26dc7baf"
+  },
+  {
+   "fact_id": "F105",
+   "statement": "The bone bed includes remains of three Daspletosaurus individuals: a large adult, a small juvenile, and an intermediate-sized individual.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "La cama de huesos incluye los restos de tres Daspletosaurus, incluyendo un adulto grande, un joven pequeño, y otro individuo del tamaño intermedio.",
+   "quote_sha": "4dc1fb37cb1c5570"
+  },
+  {
+   "fact_id": "F106",
+   "statement": "Currie speculates that daspletosaurs formed a hunting group, though this cannot be confirmed with certainty.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Currie especula que los daspletosaurios formaron un grupo de caza, aunque esto no se pueda asegurar con certeza.",
+   "quote_sha": "5ca9a674b80ec217"
+  },
+  {
+   "fact_id": "F107",
+   "statement": "Other scientists are skeptical of the evidence for social groups in Daspletosaurus and other large theropods.",
+   "category": "debate",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Otros científicos son escépticos de la evidencia de grupos sociales en Daspletosaurus y otros terópodos grandes.",
+   "quote_sha": "a2491c65aec3e096"
+  },
+  {
+   "fact_id": "F108",
+   "statement": "Brian Roach and Daniel Brinkman suggest that daspletosaur interactions resembled Komodo dragons, where multiple individuals gather to feed on a carcass without cooperation, often attacking each other and engaging in cannibalism during feeding.",
+   "category": "paleobiology",
+   "chunk_id": "daspletosaurus:eswiki:14",
+   "lang": "es",
+   "quote": "Brian Roach y Daniel Brinkman han sugerido que la interacción entre daspletosaurios se asemejaría más a lo que ocurre entre los dragones de Komodo, donde varios individuos se reúnen para alimentarse de un cadáver pero sin colaborar entre ellos, frecuentemente atacándose y llegando al canibalismo, durante el proceso de alimentación.",
+   "quote_sha": "265ca9115c77ddc0"
   }
  ],
  "rejected": [
@@ -935,8 +1179,50 @@
    "reason": "statement copies the source wording: '79 and 74.4 million years ago during the'"
   },
   {
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "statement": "The taxon Thanatotheristes has been suggested to represent the species Daspletosaurus degrootorum.",
+   "category": "discovery",
+   "quote": "The taxon Thanatotheristes has been suggested to represent a species of Daspletosaurus, D. degrootorum",
+   "reason": "statement copies the source wording: 'The taxon Thanatotheristes has been suggested to represent'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "statement": "Daspletosaurus possessed small forelimbs typical of tyrannosaurids, though they were proportionately longer than in other genera.",
+   "category": "description",
+   "quote": "Daspletosaurus had the small forelimbs typical of tyrannosaurids, although they were proportionately longer than in other genera",
+   "reason": "statement copies the source wording: 'they were proportionately longer than in other genera'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:2",
+   "statement": "Daspletosaurus was an apex predator equipped with dozens of large, sharp teeth.",
+   "category": "paleobiology",
+   "quote": "As an apex predator equipped with dozens of large, sharp teeth, Daspletosaurus was at the top of the food chain",
+   "reason": "statement copies the source wording: 'an apex predator equipped with dozens of large'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:3",
+   "statement": "Aside from the type specimen, there is only one other well-known specimen, RTMP 2001.36.1, a relatively complete skeleton discovered in 2001.",
+   "category": "discovery",
+   "quote": "Aside from the type, there is only one other well-known specimen, RTMP 2001.36.1, a relatively complete skeleton discovered in 2001",
+   "reason": "statement copies the source wording: 'there is only one other well-known specimen RTMP'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:3",
+   "statement": "Both the type specimen and the specimen RTMP 2001.36.1 were recovered from the Oldman Formation in Alberta.",
+   "category": "discovery",
+   "quote": "Both specimens were recovered from the Oldman Formation in the Judith River Group of Alberta",
+   "reason": "numbers not in the quote: ['2001.36.1']"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:3",
+   "statement": "The reassignment of the CMN 11315 specimen to Daspletosaurus was not universally accepted, and re-examination favored its original classification as Albertosaurus sarcophagus.",
+   "category": "debate",
+   "quote": "This reassignment was not universally accepted, and thorough re-examination of the specimen favored its initial referral to Albertosaurus sarcophagus",
+   "reason": "numbers not in the quote: ['11315']"
+  },
+  {
    "chunk_id": "daspletosaurus:enwiki:4",
-   "statement": "The Dinosaur Park Formation, where Daspletosaurus fossils are found, dates to the middle Campanian between 76.5 and 74.8 million years ago.",
+   "statement": "Daspletosaurus fossils from the Dinosaur Park Formation date to the middle Campanian, between 76.5 and 74.8 million years ago.",
    "category": "time_and_habitat",
    "quote": "The Dinosaur Park Formation was formerly known as the Upper Oldman Formation and dates back to the middle Campanian, between 76.5 and 74.8 million years ago.",
    "reason": "statement copies the source wording: 'middle Campanian between 76.5 and 74.8 million years'"
@@ -949,39 +1235,46 @@
    "reason": "statement copies the source wording: 'Brown collected a nearly complete skeleton and skull'"
   },
   {
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "statement": "In 2025, Coppock and colleagues referred specimen CMN 350 to Daspletosaurus horneri.",
+   "chunk_id": "daspletosaurus:enwiki:5",
+   "statement": "Elías A. Warshaw and Denver W. Fowler described remains found in 2017 as a new species, Daspletosaurus wilsoni, in 2022.",
    "category": "discovery",
-   "quote": "In 2025, Coppock and colleagues referred the Dinosaur Park Formation specimen CMN 350... to D. horneri.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "daspletosaurus:enwiki:4",
-   "statement": "A Daspletosaurus specimen from the Upper Two Medicine Formation preserved a juvenile hadrosaur in its abdominal cavity.",
-   "category": "paleobiology",
-   "quote": "A partial skeleton was reported from the Upper Two Medicine in 2001, preserving the remains of a juvenile hadrosaur in its abdominal cavity.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Elías A. Warshaw and Denver W. Fowler described these remains (BDM 107) in 2022 as belonging to a new species of Daspletosaurus, D. wilsoni.",
+   "reason": "numbers not in the quote: ['2017']"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:5",
-   "statement": "John Wilson discovered tyrannosaurid bones at the \"Jack's B2\" site in the Judith River Formation in 2017.",
+   "statement": "Warner-Cowgill and colleagues described the largest known Daspletosaurus specimen, nicknamed \"Pete III,\" in 2025.",
    "category": "discovery",
-   "quote": "In 2017, John Wilson discovered the bones of a tyrannosaurid... from the \"Jack's B2\" site of the Judith River Formation.",
+   "quote": "In 2025, Warner-Cowgill and colleagues described the largest known specimen of Daspletosaurus, CMC VP 15826 (nicknamed \"Pete III\"), identifying new anatomical features previously unknown from this genus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:7",
-   "statement": "Adult Daspletosaurus had approximately 60 long teeth with an oval cross-section rather than a blade-like shape.",
+   "statement": "Daspletosaurus had a massive skull that could reach more than 1 meter in length.",
+   "category": "description",
+   "quote": "Daspletosaurus had a massive skull that could reach more than 1 m in length.",
+   "reason": "statement copies the source wording: 'Daspletosaurus had a massive skull that could reach'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:7",
+   "statement": "An adult Daspletosaurus had about 60 teeth that were very long but oval in cross-section rather than blade-like.",
    "category": "description",
    "quote": "An adult Daspletosaurus was armed with about six dozen teeth that were very long but oval in cross section rather than blade-like.",
    "reason": "numbers not in the quote: ['60']"
   },
   {
-   "chunk_id": "daspletosaurus:enwiki:9",
-   "statement": "A skin impression from Daspletosaurus torosus shows small polygonal scales measuring 3 mm in diameter.",
-   "category": "description",
-   "quote": "A skin impression from Daspletosaurus torosus has been described, showing small polygonal scales measuring 3 mm in diameter.",
-   "reason": "statement copies the source wording: 'small polygonal scales measuring 3 mm in diameter'"
+   "chunk_id": "daspletosaurus:enwiki:5",
+   "statement": "It is debated whether Daspletosaurus species evolved through anagenesis or if D. wilsoni is a junior synonym of D. torosus.",
+   "category": "debate",
+   "quote": "It has been suggested that the three species may have evolved directly through anagenesis, but this theory was disputed by Scherer and Voiculescu-Holvad (2024) who suggested that D. wilsoni may be a junior synonym of D. torosus.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:4",
+   "statement": "Phil Currie believes that Dinosaur Park specimens represent a new species of Daspletosaurus, though it awaits a formal name and description.",
+   "category": "debate",
+   "quote": "Phil Currie believes that the Dinosaur Park specimens represent a new species of Daspletosaurus, distinguished by certain features of the skull.",
+   "reason": "statement copies the source wording: 'Dinosaur Park specimens represent a new species of'"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:10",
@@ -992,31 +1285,31 @@
   },
   {
    "chunk_id": "daspletosaurus:enwiki:10",
-   "statement": "In 2025, Scherer supported the theory that Daspletosaurus evolved through anagenesis after reevaluating the evidence.",
+   "statement": "In 2024, Warshaw and colleagues supported the theory that Daspletosaurus evolved through anagenesis by validating D. wilsoni as a distinct taxon.",
    "category": "debate",
-   "quote": "In 2025, contrary to his initial skepticism, Scherer supported the theory that Daspletosaurus evolved through anagenesis based on his reevaulation of the evidence for anagenesis and cladogenesis in tyrannosaurines.",
-   "reason": "statement copies the source wording: 'Scherer supported the theory that Daspletosaurus evolved through'"
+   "quote": "In the same year, Warshaw and colleagues supported the anagenesis theory by referring other specimens to D. wilsoni (including the Dinosaur Park specimen) which they considered as a valid taxon, and by reanalysing the previous study of Scherer and Voiculescu-Holvad (2024).",
+   "reason": "statement copies the source wording: 'supported the theory that Daspletosaurus evolved through anagenesis'"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:10",
-   "statement": "Scherer (2025) recovered Daspletosaurus as a paraphyletic evolutionary grade within Tyrannosaurinae but not as a direct ancestor of Tyrannosaurini.",
+   "statement": "In 2025, Scherer reversed his earlier stance and supported the theory that Daspletosaurus evolved through anagenesis.",
    "category": "debate",
-   "quote": "He recovered the genus Daspletosaurus as paraphyletic, forming an evolutionary grade within Tyrannosaurinae, but not as a direct ancestor of Tyrannosaurini based on the fragmentary tyrannosaurine specimens probably from the Campanian age, including Tyrannosaurus mcraeensis, which bear strong similarities to Tyrannosaurus.",
-   "reason": "numbers not in the quote: ['2025']"
-  },
-  {
-   "chunk_id": "daspletosaurus:enwiki:12",
-   "statement": "Evidence suggesting Daspletosaurus lived in social groups comes from a bonebed in the Two Medicine Formation of Montana.",
-   "category": "paleobiology",
-   "quote": "Evidence that Daspletosaurus lived in social groups comes from a bonebed found in the Two Medicine Formation of Montana.",
-   "reason": "statement copies the source wording: 'Daspletosaurus lived in social groups comes from a'"
+   "quote": "In 2025, contrary to his initial skepticism, Scherer supported the theory that Daspletosaurus evolved through anagenesis based on his reevaulation of the evidence for anagenesis and cladogenesis in tyrannosaurines.",
+   "reason": "statement copies the source wording: 'supported the theory that Daspletosaurus evolved through anagenesis'"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:13",
-   "statement": "A 2009 study found evidence of Trichomonas gallinae-like infections in the jaws of various Daspletosaurus specimens.",
+   "statement": "Daspletosaurus grew at a maximum rate of 180 kilograms (400 lb) per year, based on an adult mass estimate of 1800 kg.",
    "category": "paleobiology",
+   "quote": "The maximum growth rate in Daspletosaurus was 180 kilograms (400 lb) per year, based on a mass estimate of 1800 kg in adults.",
+   "reason": "statement copies the source wording: '180 kilograms 400 lb per year based on'"
+  },
+  {
+   "chunk_id": "daspletosaurus:enwiki:13",
+   "statement": "A 2009 study found evidence of a Trichomonas gallinae-like infection in the jaws of various Daspletosaurus specimens.",
+   "category": "curiosities",
    "quote": "A 2009 study found evidence of Trichomonas gallinae-like infection in the jaws of various specimens of Daspletosaurus.",
-   "reason": "statement copies the source wording: 'A 2009 study found evidence of Trichomonas gallinae-like'"
+   "reason": "statement copies the source wording: 'Trichomonas gallinae-like infection in the jaws of various'"
   },
   {
    "chunk_id": "daspletosaurus:enwiki:14",
@@ -1026,17 +1319,17 @@
    "reason": "statement copies the source wording: 'Daspletosaurus lived in a vast floodplain along the'"
   },
   {
-   "chunk_id": "daspletosaurus:enwiki:15",
-   "statement": "Dale Russell hypothesized that Daspletosaurus specialized on ceratopsids while Gorgosaurus preyed on hadrosaurs to avoid competition.",
-   "category": "debate",
-   "quote": "Dale Russell hypothesized that the more lightly built and more common Gorgosaurus may have preyed on the abundant hadrosaurs of the time, while the more robust and less common Daspletosaurus may have specialized on the less prevalent but better-defended ceratopsids.",
+   "chunk_id": "daspletosaurus:enwiki:14",
+   "statement": "Daspletosaurus possessed mechanically stronger, higher, and broader muzzles compared to the lower snouts of Gorgosaurus, despite similar tooth strengths.",
+   "category": "paleobiology",
+   "quote": "The higher and broader muzzles of tyrannosaurines like Daspletosaurus are mechanically stronger than the lower snouts of albertosaurines like Gorgosaurus, although tooth strengths are similar between the two groups.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "daspletosaurus:eswiki:1",
-   "statement": "The type species of Daspletosaurus is Daspletosaurus torosus.",
+   "chunk_id": "daspletosaurus:pbdb:1",
+   "statement": "The genus Daspletosaurus was named by Russell in 1970.",
    "category": "classification",
-   "quote": "type_species: Daspletosaurus torosus",
+   "quote": "PBDB name: Daspletosaurus (genus), Russell 1970",
    "reason": "duplicate"
   }
  ]

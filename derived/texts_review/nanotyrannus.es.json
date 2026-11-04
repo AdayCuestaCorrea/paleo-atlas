@@ -4,39 +4,55 @@
  "lang": "es",
  "status": "failed",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "8627ce54a6606e9a",
- "generated_at": "2026-11-03T02:42:26+00:00",
- "word_count": 402,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "c446cb20134a7add",
+ "generated_at": "2026-11-04T04:18:07+00:00",
+ "word_count": 552,
  "problems": [
-  "sentence 24: scientific names lost ['Nanotyrannus']"
+  "sentence 1: numbers differ (['17'] vs ['5.1'])",
+  "sentence 1 ('Nanotyrannus fue un tiranosáurido de tamaño medio que medía '): numbers not in the cited facts: ['5.1']",
+  "sentence 8 ('Los grandes sitios de inserción muscular en la parte posteri'): copies 8+ words from a source: 'de inserción muscular en la parte posterior del'"
  ],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "Nanotyrannus fue un tiranosáurido de tamaño mediano.",
+     "text": "Nanotyrannus fue un tiranosáurido de tamaño medio que medía aproximadamente 5,1 metros de longitud.",
      "fact_ids": [
-      "F045"
+      "F008",
+      "F035"
      ]
     },
     {
-     "text": "Un comunicado de prensa señaló que este animal alcanzaría una longitud de aproximadamente 17 pies y una masa de 1000 libras.",
+     "text": "A diferencia de los cráneos masivos de los tiranosáuridos adultos, este animal poseía un cráneo delgado y bajo, con dientes lisos y de forma de cincel que carecían de serraciones.",
      "fact_ids": [
-      "F046"
+      "F009",
+      "F039",
+      "F040"
      ]
     },
     {
-     "text": "Poseía extremidades anteriores que eran tanto absolutamente como proporcionalmente más grandes que las de sus parientes.",
+     "text": "El holotipo del cráneo, que es el espécimen sobre el que se basa la especie, mide 57,2 cm desde la punta frontal del premaxilar hasta la punta posterior del cuadrado.",
      "fact_ids": [
-      "F015"
+      "F036"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Se han encontrado dientes de múltiples individuos de Nanotyrannus incrustados en los huesos de herbívoros.",
+     "fact_ids": [
+      "F071"
      ]
     },
     {
-     "text": "El resto de sus dientes presentaba serraciones y compresión lateral, una condición denominada zifodontía, que no se observa en los tiranosáuridos.",
+     "text": "El espécimen adulto conocido como Bloody Mary podría haber pesado alrededor de 704 kilogramos.",
      "fact_ids": [
-      "F013"
+      "F066"
      ]
     }
    ]
@@ -45,45 +61,18 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "El género Nanotyrannus fue descrito por Bakker, Williams y Currie en 1988.",
+     "text": "La especie N. lancensis fue descrita por primera vez en 1946 por Charles W. Gilmore como una nueva especie de Gorgosaurus, pero el espécimen tipo es en realidad el cráneo CMNH 7541, recolectado en 1942 por David Hosbrook Dunkle.",
      "fact_ids": [
-      "F002"
+      "F004",
+      "F012",
+      "F074"
      ]
     },
     {
-     "text": "El género recibió este nombre por Bakker, Currie y Williams en 1988.",
+     "text": "El género Nanotyrannus fue nombrado posteriormente por Bakker y sus colaboradores en 1988.",
      "fact_ids": [
-      "F071"
-     ]
-    },
-    {
-     "text": "La especie tipo de Nanotyrannus es Gorgosaurus lancensis.",
-     "fact_ids": [
-      "F003"
-     ]
-    },
-    {
-     "text": "La especie tipo de Nanotyrannus es Nanotyrannus lancensis.",
-     "fact_ids": [
-      "F072"
-     ]
-    },
-    {
-     "text": "Se reconocen actualmente dos especies: N. lancensis, descrita por Gilmore en 1946, y N. lethaeus, descrita por Zanno y Napoli en 2025.",
-     "fact_ids": [
-      "F004"
-     ]
-    },
-    {
-     "text": "Nanotyrannus lethaeus constituye una subdivisión del género descrita por Zanno y Napoli en 2025.",
-     "fact_ids": [
-      "F073"
-     ]
-    },
-    {
-     "text": "Los fósiles de Nanotyrannus se conocen principalmente de la Formación Hell Creek.",
-     "fact_ids": [
-      "F006"
+      "F055",
+      "F090"
      ]
     }
    ]
@@ -92,28 +81,33 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Nanotyrannus presentaba patas más largas que los taxones de su época, lo que sugiere que era un depredador de caza activa.",
+     "text": "Los grandes sitios de inserción muscular en la parte posterior del cráneo sugieren que el animal podía flexionar fuertemente la cabeza de lado a lado.",
      "fact_ids": [
-      "F014"
-     ]
+      "F021"
+     ],
+     "topic": "locomotion_senses"
     },
     {
-     "text": "Bakker sugiere que Nanotyrannus cazaba en manada debido a su peso y construcción corporal.",
+     "text": "Los investigadores sugieren que las extremidades posteriores extremadamente largas indican un estilo de vida adaptado para la depredación por persecución, diferenciándose del estilo de emboscada de los tiranosáuridos, y las puntuaciones de proporción de extremidades cursoriales muestran que estaban más adaptados para correr.",
      "fact_ids": [
-      "F068"
-     ]
+      "F052",
+      "F061"
+     ],
+     "topic": "locomotion_senses"
     },
     {
-     "text": "Se han encontrado dientes de múltiples individuos de Nanotyrannus en huesos de herbívoros.",
+     "text": "Un estudio de 2021 estimó que la fuerza de mordida de los juveniles de Tyrannosaurus, incluido Nanotyrannus Jane, estaba entre 5 269 y 5 641 newtons, lo cual es superior a las estimaciones anteriores.",
      "fact_ids": [
-      "F069"
-     ]
+      "F060"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "Los investigadores concluyeron que el holotipo de N. lancensis pertenecía a un individuo adulto basándose en el análisis de la muestra ósea hioidea.",
+     "text": "Un estudio de 2026 basado en la histología ósea descubrió que las trayectorias de crecimiento de los especímenes de Nanotyrannus no encajaban en el modelo de curva de crecimiento de los adultos de T. rex, sugiriendo una etapa subadulto distinta.",
      "fact_ids": [
-      "F044"
-     ]
+      "F093"
+     ],
+     "topic": "growth"
     }
    ]
   },
@@ -121,15 +115,21 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El género Nanotyrannus fue nombrado por Bakker et al. en 1988.",
+     "text": "Estudios recientes clasifican a Nanotyrannus como un miembro del clado Nanotyrannidae, que es el taxón hermano de Tyrannosauridae.",
      "fact_ids": [
-      "F085"
+      "F054"
      ]
     },
     {
-     "text": "Una hipótesis filogenética sugiere que Nanotyrannus tiene estrechas relaciones con Appalachiosaurus y Dryptosaurus.",
+     "text": "La especie tipo del género Nanotyrannus es Nanotyrannus lancensis.",
      "fact_ids": [
-      "F016"
+      "F056"
+     ]
+    },
+    {
+     "text": "La morfología de Nanotyrannus combina rasgos de tiranosáuridos basales como Moros y Xiongguanlong con los de los tiranosáuridos derivados.",
+     "fact_ids": [
+      "F022"
      ]
     }
    ]
@@ -138,27 +138,23 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Los fósiles de Nanotyrannus datan del Maastrichtiense tardío.",
+     "text": "Los fósiles de Nanotyrannus datan del edad Maastrichtiense tardío, viviendo durante el Cretácico Superior, aproximadamente entre 68 y 66 millones de años atrás.",
      "fact_ids": [
-      "F001"
+      "F001",
+      "F058"
      ]
     },
     {
-     "text": "Los fósiles de Nanotyrannus datan del Cretácico Superior tardío.",
+     "text": "El animal vivía en el oeste de América del Norte en un ambiente cálido, húmedo y pantanoso, con condiciones marítimas a subtropicales.",
      "fact_ids": [
-      "F074"
+      "F002",
+      "F059"
      ]
     },
     {
-     "text": "Nanotyrannus vivió durante el Cretácico Superior tardío, aproximadamente entre 68 y 66 millones de años atrás, en el piso Maastrichtiense en lo que hoy es Norteamérica.",
+     "text": "Se han encontrado fósiles de dientes nanotirannidos, que potencialmente pertenecen a Nanotyrannus, en la Formación Lance.",
      "fact_ids": [
-      "F075"
-     ]
-    },
-    {
-     "text": "Nanotyrannus habitó el oeste de Norteamérica durante la edad Maastrichtiense del Cretácico Superior, aproximadamente hace 67 millones de años.",
-     "fact_ids": [
-      "F005"
+      "F063"
      ]
     }
    ]
@@ -167,21 +163,23 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Muchos investigadores favorecen la identificación del cráneo holotipo como un juvenil de Tyrannosaurus rex, basándose en investigaciones posteriores que indican que pertenecía a un animal inmaduro.",
+     "text": "Muchos investigadores creen que el cráneo original de Nanotyrannus pertenece a un Tyrannosaurus rex inmaduro en lugar de ser una especie distinta, aunque algunos paleontólogos que anteriormente dudaban de Nanotyrannus aceptaron su validez tras el trabajo de Zanno y Napoli, coincidiendo específicamente en que el espécimen Bloody Mary es distinto de Tyrannosaurus rex.",
      "fact_ids": [
-      "F011"
+      "F006",
+      "F034"
      ]
     },
     {
-     "text": "D. Cary Woodruff y sus colegas cuestionaron la metodología empleada por Griffin et al. para la histología ósea hioidea en 2026.",
+     "text": "Algunos científicos argumentan que Nanotyrannus es distinto de Tyrannosaurus porque tiene 15-16 dientes en cada lado de la mandíbula superior y 16-18 en cada lado de la mandíbula inferior, mientras que el adulto de T. rex tiene 11-12 superiores y 12-14 inferiores, aunque se debate si la falta de serraciones en los dientes de Nanotyrannus es un signo de desarrollo juvenil o un rasgo diagnóstico único de la especie.",
      "fact_ids": [
-      "F012"
+      "F025",
+      "F053"
      ]
     },
     {
-     "text": "Se reporta que los especímenes de N. lancensis poseen entre 15 y 16 dientes en la mandíbula superior y entre 16 y 18 en la inferior, mientras que el Tyrannosaurus rex adulto tiene entre 11 y 12 dientes superiores y entre 12 y 14 inferiores.",
+     "text": "Los investigadores señalan que se requieren más pruebas y datos para determinar cuál análisis filogenético de las relaciones de Nanotyrannus es correcto.",
      "fact_ids": [
-      "F029"
+      "F064"
      ]
     }
    ]

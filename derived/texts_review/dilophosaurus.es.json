@@ -4,39 +4,69 @@
  "lang": "es",
  "status": "failed",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "015380c927b4fc92",
- "generated_at": "2026-11-03T00:30:23+00:00",
- "word_count": 433,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "e9a73f8bac5fc712",
+ "generated_at": "2026-11-04T01:02:17+00:00",
+ "word_count": 605,
  "problems": [
-  "sentence 1: scientific names lost ['Dilophosaurus']",
-  "sentence 5: scientific names lost ['Dilophosaurus']",
-  "sentence 6: scientific names lost ['Dilophosaurus']",
-  "sentence 7: scientific names lost ['Dilophosaurus']",
-  "sentence 8: scientific names lost ['Dilophosaurus']",
-  "sentence 9: scientific names lost ['Dilophosaurus']",
-  "sentence 12: scientific names lost ['Dilophosaurus']",
-  "sentence 13: scientific names lost ['Dilophosaurus']",
-  "sentence 14: scientific names lost ['Dilophosaurus']",
-  "sentence 16: scientific names lost ['Dilophosaurus']",
-  "sentence 8 ('El dilofosáurido fue designado como el dinosaurio estatal de'): copies 8+ words from a source: 'fue designado como el dinosaurio estatal de Connecticut'"
+  "sentence 3: numbers differ (['10', '14', '45'] vs [])",
+  "sentence 1 ('Este dinosaurio se reconoce fácilmente por un par de crestas'): copies 8+ words from a source: 'un par de crestas altas delgadas y arqueadas'"
  ],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "El dilofosáurido fue el animal terrestre más grande conocido en Norteamérica durante el Jurásico Inferior, alcanzando aproximadamente 7 metros de longitud y pesando unos 400 kilogramos.",
+     "text": "Este dinosaurio se reconoce fácilmente por un par de crestas altas, delgadas y arqueadas que corrían a lo largo de la parte superior de su cráneo.",
      "fact_ids": [
-      "F006",
-      "F025"
+      "F029"
      ]
     },
     {
-     "text": "Este depredador poseía un cuerpo esbelto y de construcción ligera, junto con un cráneo proporcionalmente grande equipado con dientes largos, curvos, delgados y comprimidos lateralmente.",
+     "text": "Su boca contenía dientes largos, curvos, delgados y comprimidos lateralmente, siendo los de la mandíbula inferior mucho más pequeños que los de la superior.",
      "fact_ids": [
-      "F007",
-      "F008"
+      "F006"
+     ]
+    },
+    {
+     "text": "El esqueleto incluía diez vértebras cervicales, catorce dorsales y cuarenta y cinco caudales que alojaban sacos aéreos.",
+     "fact_ids": [
+      "F040"
+     ]
+    },
+    {
+     "text": "Fue uno de los primeros grandes dinosaurios depredadores, alcanzando una longitud de unos 7 metros y un peso de aproximadamente 400 kilogramos.",
+     "fact_ids": [
+      "F122"
+     ]
+    },
+    {
+     "text": "Aunque era un terópodo de tamaño medio, resultaba pequeño comparado con los depredadores posteriores.",
+     "fact_ids": [
+      "F137"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "La especie pudo haber crecido rápidamente, ganando entre 30 y 35 kilogramos al año durante sus primeras etapas de vida.",
+     "fact_ids": [
+      "F130"
+     ]
+    },
+    {
+     "text": "El holotipo presentaba signos de anomalías del desarrollo y heridas cicatrizadas.",
+     "fact_ids": [
+      "F131"
+     ]
+    },
+    {
+     "text": "En 2017, este animal fue designado dinosaurio estatal de Connecticut.",
+     "fact_ids": [
+      "F136"
      ]
     }
    ]
@@ -45,17 +75,21 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Se hallaron tres esqueletos en el norte de Arizona en 1940, siendo los dos ejemplares mejor conservados recolectados en 1942.",
+     "text": "Se hallaron tres esqueletos en el norte de Arizona en 1940, siendo los dos mejor conservados recogidos en 1942.",
      "fact_ids": [
       "F002"
      ]
     },
     {
-     "text": "Samuel P. Welles nombró inicialmente el ejemplar más completo como *Megalosaurus wetherilli* en 1954, descubrió un esqueleto mayor en 1964 y reclasificó la especie en el nuevo género *Dilophosaurus* en 1970 debido a la presencia de crestas craneales.",
+     "text": "Durante el verano de 1942, el paleontólogo Charles L. Camp dirigió una expedición del UCMP para buscar fósiles en el condado de Navajo.",
      "fact_ids": [
-      "F003",
-      "F004",
-      "F005"
+      "F011"
+     ]
+    },
+    {
+     "text": "El nombre del género, que significa «lagarto de dos crestas», fue acuñado por Welles en 1970.",
+     "fact_ids": [
+      "F019"
      ]
     }
    ]
@@ -64,28 +98,60 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "El dilofosáurido fue probablemente un depredador bípedo activo que podría haber cazado animales grandes, así como animales más pequeños y peces.",
+     "text": "Probablemente fue un depredador bípedo activo que podía cazar animales grandes, pero también se alimentaba de presas más pequeñas y peces.",
      "fact_ids": [
-      "F009"
-     ]
+      "F008"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "La función de las crestas del dilofosáurido es desconocida, aunque probablemente se utilizaron para exhibiciones visuales como el reconocimiento de especies o la selección sexual en lugar de para el combate.",
+     "text": "El investigador Welles concluyó que el animal carecía de una mordida potente debido a una zona débil en el hocico denominada «hueco subnarial».",
      "fact_ids": [
-      "F010"
-     ]
+      "F073"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "El dilofosáurido pudo haber crecido rápidamente, ganando entre 30 y 35 kilogramos al año en sus primeras etapas de vida.",
+     "text": "Welles hipotetizó que la criatura utilizaba los dientes frontales para arrancar y desgarrar, mientras que los posteriores servían para perforar y cortar.",
      "fact_ids": [
-      "F011"
-     ]
+      "F074"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "El dilofosáurido fue designado como el dinosaurio estatal de Connecticut en base a las huellas fósiles halladas en dicha región.",
+     "text": "Poseía potentes y flexibles extremidades anteriores que no se empleaban para caminar.",
      "fact_ids": [
-      "F019"
-     ]
+      "F084"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Las manos podían agarrar, hendir, encontrarse entre sí y alcanzar dos tercios de la altura del cuello.",
+     "fact_ids": [
+      "F085"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "El holotipo mostraba una hendidura en una vértebra cervical posiblemente causada por una lesión, y hoyuelos en el hueso del brazo derecho que podían ser abscesos o artefactos.",
+     "fact_ids": [
+      "F106"
+     ],
+     "topic": "health"
+    },
+    {
+     "text": "Welles concluyó que los especímenes fueron enterrados cerca de sus lugares de muerte con poco transporte, aunque el holotipo presenta signos de perturbación por carroñeros, como vértebras rotas y un cráneo aplastado.",
+     "fact_ids": [
+      "F135"
+     ],
+     "topic": "behavior"
+    },
+    {
+     "text": "Algunos investigadores interpretan una huella de reposo de un terópodo similar a Dilophosaurus como que muestra impresiones de plumas tipo plumón alrededor del vientre y los pies.",
+     "fact_ids": [
+      "F027"
+     ],
+     "topic": "locomotion_senses"
     }
    ]
   },
@@ -93,22 +159,45 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El dilofosáurido pertenece a la superfamilia Coelophysoidea y se considera miembro de la familia Dilophosauridae, aunque esta clasificación es debatida por algunos investigadores.",
+     "text": "En 1970, el paleontólogo Welles revisó su clasificación previa de 1954 del animal como un megalosaurio tras descubrir que poseía crestas.",
      "fact_ids": [
-      "F052",
-      "F017"
+      "F051"
      ]
     },
     {
-     "text": "Marsh y Rowe concluyeron en 2020 que todos los ejemplares conocidos de *Dilophosaurus* pertenecen a un único taxón, atribuyendo las diferencias a la madurez y a la conservación de los restos.",
+     "text": "Para 1974, Welles y Robert A. Long clasificaron a Dilophosaurus como un ceratosáurido.",
      "fact_ids": [
-      "F023"
+      "F052"
      ]
     },
     {
-     "text": "En 1998, Lamanna y sus colaboradores determinaron que *D. sinensis* es idéntico a *Sinosaurus triassicus*, lo que llevó a su reclasificación.",
+     "text": "Marsh y Rowe concluyeron en 2020 que todos los especímenes conocidos de Dilophosaurus pertenecen a un único taxón, explicando las diferencias por la madurez y el estado de conservación.",
      "fact_ids": [
-      "F024"
+      "F022"
+     ]
+    },
+    {
+     "text": "Se debate si Dilophosaurus pertenece a la familia Dilophosauridae junto a Dracovenator, ya que algunos investigadores no apoyan este agrupamiento.",
+     "fact_ids": [
+      "F018"
+     ]
+    },
+    {
+     "text": "Welles nombró la icnoespecie Dilophosauripus williamsi basándose en huellas tridactilas que pudieron haber sido realizadas por Dilophosaurus.",
+     "fact_ids": [
+      "F065"
+     ]
+    },
+    {
+     "text": "En 1996, Morales y Bulkey estimaron que un trazador del icnogénero Eubrontes tendría entre 2,83 y 2,99 metros de altura en cadera, lo que hace improbable que fuera Dilophosaurus, que mide entre 1,50 y 1,75 metros.",
+     "fact_ids": [
+      "F066"
+     ]
+    },
+    {
+     "text": "Gierliński y Sabath argumentaron en 2005 que las trazas que asemejan plumas semiplumas de aves modernas halladas en una huella eran impresiones reales de plumas y no artefactos sedimentológicos, basándose en experimentos que mostraban que los cojines de algas dejan marcas similares.",
+     "fact_ids": [
+      "F068"
      ]
     }
    ]
@@ -117,41 +206,21 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "El dilofosáurido vivió durante el periodo del Jurásico Inferior, específicamente desde los estadios Sinemuriense hasta Toarciense, hace aproximadamente 186 millones de años en lo que hoy es Norteamérica.",
+     "text": "Dilophosaurus vivió durante el Jurásico Inferior, específicamente desde las etapas sinemuriense hasta toarciense.",
      "fact_ids": [
-      "F001",
-      "F018",
-      "F054",
-      "F059"
-     ]
-    }
-   ]
-  },
-  {
-   "section": "debate",
-   "sentences": [
-    {
-     "text": "Los paleontólogos debatieron si el dilofosáurido era un género basal que dio origen a los ceratosaurios y tetanúridos, o si simplemente era un coelofísido de gran tamaño.",
-     "fact_ids": [
-      "F058"
+      "F001"
      ]
     },
     {
-     "text": "Esta estructura craneal llevó a la hipótesis inicial de que el dilofosáurido era un carroñero, con los dientes frontales demasiado débiles para matar y retener presas grandes.",
+     "text": "Vivió durante el Jurásico Inferior, aproximadamente entre 196 y 186 millones de años atrás.",
      "fact_ids": [
-      "F075"
+      "F118"
      ]
     },
     {
-     "text": "En 2017, Wang y sus colegas sugirieron que la especie anteriormente conocida como *D. sinensis* podría ser una especie distinta, *S. sinensis*, a pesar de estar de acuerdo en que pertenece al género *Sinosaurus*.",
+     "text": "El animal es conocido desde la Formación Kayenta y coexistió con dinosaurios como Scutellosaurus y Sarahsaurus.",
      "fact_ids": [
-      "F028"
-     ]
-    },
-    {
-     "text": "Algunos investigadores interpretan las marcas de huellas de un terópodo similar al dilofosáurido como que muestran impresiones de plumas alrededor del vientre y las patas, mientras que otros las interpretan como artefactos sedimentarios, aunque esto no descarta la presencia de plumas.",
-     "fact_ids": [
-      "F076"
+      "F010"
      ]
     }
    ]

@@ -2,9 +2,9 @@
  "taxon": "Therizinosaurus",
  "taxon_key": "therizinosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "f8e75539a5afbb20",
- "generated_at": "2026-11-03T03:22:55+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "9f01704bcca33ab3",
+ "generated_at": "2026-11-04T05:10:33+00:00",
  "citations": {
   "therizinosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -69,6 +69,20 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "therizinosaurus:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Therizinosaurus (Arms and claws function)",
+   "url": "https://en.wikipedia.org/wiki/Therizinosaurus?oldid=1380202211",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "therizinosaurus:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Therizinosaurus (Paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Therizinosaurus?oldid=1380202211",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "therizinosaurus:eswiki:1": {
    "source": "wikipedia_article",
    "title": "Therizinosaurus cheloniformis (taxobox)",
@@ -90,6 +104,27 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "therizinosaurus:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Therizinosaurus cheloniformis (Brazos)",
+   "url": "https://es.wikipedia.org/wiki/Therizinosaurus_cheloniformis?oldid=175596814",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "therizinosaurus:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Therizinosaurus cheloniformis (Patas)",
+   "url": "https://es.wikipedia.org/wiki/Therizinosaurus_cheloniformis?oldid=175596814",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "therizinosaurus:eswiki:11": {
+   "source": "wikipedia_article",
+   "title": "Therizinosaurus cheloniformis (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Therizinosaurus_cheloniformis?oldid=175596814",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "therizinosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Therizinosaurus",
@@ -101,7 +136,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus Therizinosaurus was described by Evgeny Maleev in 1954.",
+   "statement": "The genus Therizinosaurus was scientifically described by Evgeny Maleev in 1954.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:enwiki:1",
    "lang": "en",
@@ -110,21 +145,21 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The type species of the genus is Therizinosaurus cheloniformis.",
-   "category": "discovery",
-   "chunk_id": "therizinosaurus:enwiki:1",
-   "lang": "en",
-   "quote": "type_species: Therizinosaurus cheloniformis",
-   "quote_sha": "be2774ccf0b532b2"
-  },
-  {
-   "fact_id": "F003",
    "statement": "Therizinosaurus lived in Asia during the Late Cretaceous period, approximately 69 to 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
    "quote": "lived in the Maastrichtian age during the Late Cretaceous period in what is now Asia roughly 69-66 million years ago",
    "quote_sha": "1b639ff437a802e6"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The first fossils of Therizinosaurus were discovered in 1948 by a Mongolian expedition in the Gobi Desert.",
+   "category": "discovery",
+   "chunk_id": "therizinosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The first remains of Therizinosaurus were found in 1948 by a Mongolian field expedition in the Gobi Desert",
+   "quote_sha": "89759f58b4d10005"
   },
   {
    "fact_id": "F004",
@@ -137,12 +172,12 @@
   },
   {
    "fact_id": "F005",
-   "statement": "The first remains of Therizinosaurus were discovered in 1948 by a Mongolian expedition in the Gobi Desert.",
-   "category": "discovery",
+   "statement": "The genus Therizinosaurus contains only one species, Therizinosaurus cheloniformis.",
+   "category": "description",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "The first remains of Therizinosaurus were found in 1948 by a Mongolian field expedition in the Gobi Desert",
-   "quote_sha": "89759f58b4d10005"
+   "quote": "It contains a single species, Therizinosaurus cheloniformis",
+   "quote_sha": "b3cb5206fb26710b"
   },
   {
    "fact_id": "F006",
@@ -155,16 +190,7 @@
   },
   {
    "fact_id": "F007",
-   "statement": "The genus Therizinosaurus contains only one known species, Therizinosaurus cheloniformis.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "It contains a single species, Therizinosaurus cheloniformis",
-   "quote_sha": "b3cb5206fb26710b"
-  },
-  {
-   "fact_id": "F008",
-   "statement": "Therizinosaurus had robust forelimbs with three fingers bearing stiffened, elongated claws that curved only at the tips.",
+   "statement": "Therizinosaurus had robust forelimbs with three stiffened, elongated fingers that curved only at the tips.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
@@ -172,26 +198,26 @@
    "quote_sha": "e787f9664c18ff3c"
   },
   {
-   "fact_id": "F009",
-   "statement": "Therizinosaurus possessed the longest known manual claws of any land animal, exceeding 50 cm in length.",
-   "category": "description",
+   "fact_id": "F008",
+   "statement": "Therizinosaurus possessed the longest known manual claw bones of any land animal, exceeding 50 cm in length.",
+   "category": "curiosities",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
    "quote": "Therizinosaurus had the longest known manual unguals of any land animal, reaching above 50 cm in length",
    "quote_sha": "71d226a304f69a66"
   },
   {
-   "fact_id": "F010",
-   "statement": "Therizinosaurus was likely a slow-moving, long-necked browser with a beak and wide torso used for processing food.",
-   "category": "paleobiology",
+   "fact_id": "F009",
+   "statement": "Therizinosaurus hindlimbs ended in four weight-bearing toes, unlike other theropods where the first toe is a reduced dewclaw.",
+   "category": "description",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Like other therizinosaurids, it would have been a slow-moving, long-necked, high browser equipped with a rhamphotheca (beak) and a wide torso for food processing",
-   "quote_sha": "521d62e75b81b015"
+   "quote": "Its hindlimbs ended in four functionally weight-bearing toes differing from other theropod groups in which the first toe was reduced to a dewclaw",
+   "quote_sha": "c148c17c8581e72c"
   },
   {
-   "fact_id": "F011",
-   "statement": "Therizinosaurus is classified within the dinosaur clade Theropoda, specifically as a maniraptoran.",
+   "fact_id": "F010",
+   "statement": "Therizinosaurus is classified within the dinosaur clade Theropoda as a maniraptoran.",
    "category": "classification",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
@@ -199,16 +225,7 @@
    "quote_sha": "08218aa9a416d830"
   },
   {
-   "fact_id": "F012",
-   "statement": "Most scientific analyses recover Therizinosaurus within the family Therizinosauridae.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Therizinosaurus is widely recovered within Therizinosauridae by most analyses",
-   "quote_sha": "2e18e28eec64a596"
-  },
-  {
-   "fact_id": "F013",
+   "fact_id": "F011",
    "statement": "Fossils were unearthed from the Nemegt locality, also known as Nemegt Valley, in Southwestern Mongolia.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:enwiki:3",
@@ -217,35 +234,44 @@
    "quote_sha": "3e9a18d1601178b3"
   },
   {
-   "fact_id": "F014",
-   "statement": "The holotype specimen of Therizinosaurus is labeled with the number PIN 551-483.",
+   "fact_id": "F012",
+   "statement": "The name Therizinosaurus is derived from Greek words meaning 'scythe' and 'lizard'.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:enwiki:3",
    "lang": "en",
-   "quote": "It was labelled under the specimen number PIN 551-483",
-   "quote_sha": "eb8b72ef64053410"
+   "quote": "The generic name, Therizinosaurus, is derived from the Greek θερίζω (therízo, meaning scythe, reap or cut) and σαῦρος (sauros, meaning lizard)",
+   "quote_sha": "32e557db473e00e9"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "The species name cheloniformis means 'turtle-shaped' because the original discoverer thought the remains belonged to a turtle-like reptile.",
+   "category": "discovery",
+   "chunk_id": "therizinosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "the specific name, cheloniformis, is taken from the Greek χελώνη (chelóni, meaning turtle) and Latin formis as the remains were thought to belong to a turtle-like reptile",
+   "quote_sha": "ce06643027df79c1"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "Evgeny Maleev originally named the family Therizinosauridae for the genus.",
+   "category": "discovery",
+   "chunk_id": "therizinosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Maleev also coined a separate family for this new and enigmatic taxon: Therizinosauridae",
+   "quote_sha": "bc33ac47e7135ef8"
   },
   {
    "fact_id": "F015",
-   "statement": "It was initially debated whether Therizinosaurus belonged to a turtle-like reptile, a hypothesis proposed by Maleev.",
-   "category": "debate",
+   "statement": "Therizinosaurus was likely a slow-moving, long-necked browser with a beak and wide torso used for processing food.",
+   "category": "paleobiology",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Maleev thought the remains of Therizinosaurus to belong to a large turtle-like reptile",
-   "quote_sha": "9800627f9d68e2a5"
+   "quote": "Like other therizinosaurids, it would have been a slow-moving, long-necked, high browser equipped with a rhamphotheca (beak) and a wide torso for food processing",
+   "quote_sha": "521d62e75b81b015"
   },
   {
    "fact_id": "F016",
-   "statement": "There was a historical debate regarding the classification of Therizinosaurus, with suggestions ranging from sauropodomorphs and ornithischians to theropods.",
-   "category": "debate",
-   "chunk_id": "therizinosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Later on, with the discovery of more complete relatives, Therizinosaurus and kin were thought to represent some kind of Late Cretaceous sauropodomorphs or transitional ornithischians, even though at some point it was suggested that it may have been a theropod",
-   "quote_sha": "26faec3491d4ee11"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "Therizinosaurus arms were found to be resistant to stress, suggesting they were used for both foraging and self-defense.",
+   "statement": "Therizinosaurus arms were resistant to stress, suggesting they were used for both foraging and self-defense.",
    "category": "paleobiology",
    "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
@@ -253,71 +279,62 @@
    "quote_sha": "14c3a285f3f22cd3"
   },
   {
-   "fact_id": "F018",
-   "statement": "In 1970, Anatoly K. Rozhdestvensky suggested that Therizinosaurus was a theropod rather than a turtle.",
+   "fact_id": "F017",
+   "statement": "It is debated whether Therizinosaurus was a turtle-like reptile, a hypothesis proposed by its original describer Maleev.",
    "category": "debate",
-   "chunk_id": "therizinosaurus:enwiki:3",
+   "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "in 1970, the Russian paleontologist Anatoly K. Rozhdestvensky was one of the first authors to suggest that Therizinosaurus was a theropod and not a turtle",
-   "quote_sha": "39be8047465c9d5a"
+   "quote": "Maleev thought the remains of Therizinosaurus to belong to a large turtle-like reptile, and also named a separate family for the genus: Therizinosauridae",
+   "quote_sha": "027735ce665fb203"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Historical classification of Therizinosaurus has varied, with suggestions ranging from turtle-like reptiles to sauropodomorphs, ornithischians, and theropods.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Later on, with the discovery of more complete relatives, Therizinosaurus and kin were thought to represent some kind of Late Cretaceous sauropodomorphs or transitional ornithischians, even though at some point it was suggested that it may have been a theropod",
+   "quote_sha": "26faec3491d4ee11"
   },
   {
    "fact_id": "F019",
-   "statement": "Rozhdestvensky re-identified some fragments of the holotype as sauropod remains based on their shape.",
+   "statement": "There is a debate regarding the function of Therizinosaurus claws, with some believing they were fragile and used only for pulling vegetation, while evidence suggests they were robust enough for defense.",
    "category": "debate",
-   "chunk_id": "therizinosaurus:enwiki:3",
+   "chunk_id": "therizinosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Rozhdestvensky also illustrated the three holotypic manual unguals and re-identified the metacarpal fragment as a metatarsal bone, and based on the unusual shape of both metatarsal and ribs fragments he listed them as sauropod remains",
-   "quote_sha": "f42b95df07ae98b7"
+   "quote": "It has been believed they would have been relatively fragile. However, Its arms were found to have been particularly resistant to stress",
+   "quote_sha": "0c74a3d77d43cd09"
   },
   {
    "fact_id": "F020",
-   "statement": "An upper portion of a manual ungual was discovered in the Altan Uul locality in 1968 and labeled MPC-D 100/17.",
+   "statement": "Mongolian paleontologist Rinchen Barsbold first described and referred additional specimens to Therizinosaurus in 1976.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:enwiki:4",
    "lang": "en",
-   "quote": "In 1968 prior to Rozhdestvensky, Osmólska and Roniewicz statements, the upper portion of a manual ungual was found in the Altan Uul locality and labeled as MPC-D 100/17 (formerly IGM or GIN).",
-   "quote_sha": "19eb119deee31065"
+   "quote": "All of these specimens were first described and referred to Therizinosaurus by the Mongolian paleontologist Rinchen Barsbold in 1976.",
+   "quote_sha": "3b7bc5162e5977ad"
   },
   {
    "fact_id": "F021",
-   "statement": "A fragmented lower portion of a manual ungual was found at the Hermiin Tsav locality in 1972 and labeled MPC-D 100/16.",
+   "statement": "Mongolian paleontologist Altangerel Perle described new hindlimb remains of Therizinosaurus in 1982.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:enwiki:4",
    "lang": "en",
-   "quote": "In 1972, another fragmented ungual (specimen MPC-D 100/16) was discovered at the Upper White Beds of the Hermiin Tsav locality, only preserving its lower portion.",
-   "quote_sha": "f76c6924c26fb7b0"
+   "quote": "These newer remains were described by the also Mongolian paleontologist Altangerel Perle in 1982.",
+   "quote_sha": "59d5a356a1d118d5"
   },
   {
    "fact_id": "F022",
-   "statement": "A large, complete, and articulated specimen labeled MPC-D 100/15 was collected from the Hermiin Tsav locality in 1973.",
+   "statement": "In 2010, Lindsay E. Zanno considered the referral of specimen MPC-D 100/45 to Therizinosaurus to be likely based on its stratigraphic context and morphology.",
    "category": "discovery",
-   "chunk_id": "therizinosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "During the year 1973, a much more complete, larger, and articulated specimen was collected also from Hermiin Tsav. This specimen was labelled as MPC-D 100/15",
-   "quote_sha": "c7bf501a0eb627f5"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "The specimen MPC-D 100/45 was discovered in 1973 by the Joint Soviet-Mongolian Paleontological Expedition at the Hermiin Tsav locality.",
-   "category": "discovery",
-   "chunk_id": "therizinosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "Also during the year 1973, the specimen MPC-D 100/45 was discovered by the Joint Soviet-Mongolian Paleontological Expedition at the Hermiin Tsav locality.",
-   "quote_sha": "bde774c30b435918"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "Lindsay Zanno argued in 2010 that the hindlimb specimen MPC-D 100/45 likely belongs to Therizinosaurus based on its stratigraphic context and morphology.",
-   "category": "debate",
    "chunk_id": "therizinosaurus:enwiki:4",
    "lang": "en",
    "quote": "In 2010 however, the North American paleontologist Lindsay E. Zanno in her large taxonomic reevaluation of Therizinosauria considered the referral of MPC-D 100/45 to Therizinosaurus to be likely",
    "quote_sha": "6d29534d860c5cfa"
   },
   {
-   "fact_id": "F025",
-   "statement": "Therizinosaurus is estimated to have reached a length of 9 to 10 meters.",
+   "fact_id": "F023",
+   "statement": "Therizinosaurus reached an estimated length of 9 to 10 meters, which is enormous for a maniraptoran dinosaur.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:5",
    "lang": "en",
@@ -325,35 +342,8 @@
    "quote_sha": "1d8c03265783a4d6"
   },
   {
-   "fact_id": "F026",
-   "statement": "Gregory Paul estimated in 2010 that Therizinosaurus weighed around 3 tons.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "In 2010, Gregory S. Paul estimated in his book The Princeton Field Guide to Dinosaurs that the animal weighed around 3 tons.",
-   "quote_sha": "facd0dae21499a4b"
-  },
-  {
-   "fact_id": "F027",
-   "statement": "A subsequent edition of Gregory Paul's guide revised the weight estimate of Therizinosaurus to 5 to 10 tons.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "However, the estimate was revised to 5 to 10 t in a subsequent edition.",
-   "quote_sha": "f17b7c6fd4f968bf"
-  },
-  {
-   "fact_id": "F028",
-   "statement": "Thomas Holtz Jr. claimed in 2012 that Therizinosaurus weighed as much as an elephant.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "In 2012, Thomas R. Holtz Jr. claimed that the animal weighs as much as an elephant.",
-   "quote_sha": "238fc8b3500e2731"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "Lindsay Zanno and Peter Makovicky estimated in 2013 that Therizinosaurus weighed around 6.6 tons.",
+   "fact_id": "F024",
+   "statement": "Lindsay E. Zanno and Peter J. Makovicky estimated Therizinosaurus weighed around 6.6 tons in 2013.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:5",
    "lang": "en",
@@ -361,40 +351,85 @@
    "quote_sha": "fd6b5ee0eb0b5a39"
   },
   {
-   "fact_id": "F030",
-   "statement": "Therizinosaurus likely possessed a heavily pneumatized vertebral column and a robustly built, ophistopubic pelvis.",
+   "fact_id": "F025",
+   "statement": "The claws of Therizinosaurus are considered the longest known from any terrestrial animal.",
+   "category": "curiosities",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "they are considered as the longest known from any terrestrial animal.",
+   "quote_sha": "26fe1bb7086f4f2c"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Therizinosaurus was the largest known maniraptoriform, sharing this record with the contemporaneous ornithomimosaur Deinocheirus.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Other traits that were likely present in Therizinosaurus include a heavily pneumatized (air-filled) vertebral column and a robustly-built, ophistopubic (backwards oriented) pelvis.",
-   "quote_sha": "19a2af53ae9e3669"
+   "quote": "Along with the contemporaneous ornithomimosaur Deinocheirus, it was the largest maniraptoriform.",
+   "quote_sha": "65b1782f99c7bbe3"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "Therizinosaurus had a proportionally small skull with a horny beak situated atop a long neck.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Like other members of its family, Therizinosaurus had a proportionally small skull, bearing a rhamphotheca (horny beak), atop a long neck",
+   "quote_sha": "aeabb9d889c4452c"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "Therizinosaurus possessed a large gut adapted for processing foliage.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "a large gut for foliage processing",
+   "quote_sha": "64310ccf72e392b5"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Therizinosaurus likely had sparse feathering.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "sparse feathering.",
+   "quote_sha": "8c829ed211629f21"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "Senter and James concluded in 2010 that an average Therizinosaurus may have had hindlimbs approximately 3 meters long.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "In 2010, Senter and James used hindlimb length equations to predict the total length of the hindlimbs in Therizinosaurus and Deinocheirus. They concluded that an average Therizinosaurus may have had approximately 3 m long legs.",
+   "quote_sha": "d8226b3d9aa3d75a"
   },
   {
    "fact_id": "F031",
-   "statement": "The unguals of Therizinosaurus are considered the longest known from any terrestrial animal.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:5",
+   "statement": "Lindsay E. Zanno's 2010 reevaluation debated the classification of specimen MPC-D 100/45, ultimately considering its referral to Therizinosaurus likely.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:4",
    "lang": "en",
-   "quote": "These were common among therizinosaurs but particularly large and stiffened in Therizinosaurus, and they are considered as the longest known from any terrestrial animal.",
-   "quote_sha": "402cd0c364419f60"
+   "quote": "In 2010 however, the North American paleontologist Lindsay E. Zanno in her large taxonomic reevaluation of Therizinosauria considered the referral of MPC-D 100/45 to Therizinosaurus to be likely",
+   "quote_sha": "6d29534d860c5cfa"
   },
   {
    "fact_id": "F032",
-   "statement": "The total length of Therizinosaurus forelimbs, including the humerus, radius, and second metacarpal with phalanges, was 2.4 meters.",
+   "statement": "Senter and James used hindlimb length equations in 2010 to predict the total length of hindlimbs in Therizinosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "In 2010, Senter and James used hindlimb length equations to predict the total length of the hindlimbs in Therizinosaurus and Deinocheirus.",
+   "quote_sha": "7a94307e12c6501f"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "The total length of Therizinosaurus arms, including the humerus, radius, and second metacarpal with phalanges, was 2.4 meters.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
    "quote": "The arm of Therizinosaurus covered 2.4 m in total length (humerus, radius and second metacarpal with phalanges lengths).",
    "quote_sha": "1f92e71becd601e9"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "The coracoid bone of Therizinosaurus measured 36 centimeters in length.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "The coracoid measured 36 cm in length.",
-   "quote_sha": "496619df87c90527"
   },
   {
    "fact_id": "F034",
@@ -407,7 +442,16 @@
   },
   {
    "fact_id": "F035",
-   "statement": "The ulna of Therizinosaurus measured 62.02 centimeters in length, with most of its length occupied by a straight shaft.",
+   "statement": "The deltopectoral crest on the Therizinosaurus humerus was exceptionally long and thick, with its top situated about one-third down from the upper end.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:enwiki:6",
+   "lang": "en",
+   "quote": "The deltopectoral crest (deltoid muscle attachment) was particularly long and thick, with its top located approximately 1/3 from the upper end.",
+   "quote_sha": "c361fee16e371a5f"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "The ulna of Therizinosaurus measured 62.02 centimeters, with most of its length forming a straight shaft.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
@@ -415,8 +459,8 @@
    "quote_sha": "b9b843a26811e204"
   },
   {
-   "fact_id": "F036",
-   "statement": "The radius of Therizinosaurus was 55.04 centimeters long and slightly S-curved.",
+   "fact_id": "F037",
+   "statement": "The radius of Therizinosaurus was 55.04 centimeters long and had a slightly S-shaped curve.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
@@ -424,17 +468,8 @@
    "quote_sha": "c426b569981f4480"
   },
   {
-   "fact_id": "F037",
-   "statement": "The first metacarpal of Therizinosaurus was 14.55 centimeters long and more robust than the other metacarpals.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:6",
-   "lang": "en",
-   "quote": "The first metacarpal was 14.55 cm long and was more robust than the others.",
-   "quote_sha": "89baa0eced746a3e"
-  },
-  {
    "fact_id": "F038",
-   "statement": "The second metacarpal of Therizinosaurus measured 28.68 centimeters in length and was the largest of the metacarpals.",
+   "statement": "The second metacarpal of Therizinosaurus was the largest at 28.68 centimeters in length.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
@@ -443,7 +478,7 @@
   },
   {
    "fact_id": "F039",
-   "statement": "The manual claws (unguals) of Therizinosaurus were enormous, estimated to be approximately 52 centimeters in length.",
+   "statement": "The manual claws (unguals) of Therizinosaurus were enormous, with an estimated length of approximately 52 centimeters.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
@@ -452,7 +487,7 @@
   },
   {
    "fact_id": "F040",
-   "statement": "Unlike other therizinosaurs, the manual claws of Therizinosaurus were very straight, compressed laterally, and recurved only at the tips.",
+   "statement": "Unlike other therizinosaurs, the claws of Therizinosaurus were very straight, compressed laterally, and curved only at the tips.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:6",
    "lang": "en",
@@ -461,7 +496,7 @@
   },
   {
    "fact_id": "F041",
-   "statement": "The tibia of Therizinosaurus was stocky and robust, being widest at its lower (distal) end.",
+   "statement": "The tibia of Therizinosaurus was stocky and robust, being widest at its lower end.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:7",
    "lang": "en",
@@ -470,24 +505,15 @@
   },
   {
    "fact_id": "F042",
-   "statement": "The foot of Therizinosaurus was robust and short, similar to sauropodomorphs, and consisted of five metatarsals.",
+   "statement": "The first four metatarsals of Therizinosaurus were functional, resulting in a four-toed condition where all toes were weight-bearing.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:7",
    "lang": "en",
-   "quote": "The pes (foot) was robust and short, almost like that of sauropodomorphs, and consisted of five metatarsals.",
-   "quote_sha": "d0f8e96408c1c366"
+   "quote": "The first four were functional and terminated in weight-bearing digits, hence having a tetradactyl (four-toed) condition.",
+   "quote_sha": "03ff50ce5d0605ad"
   },
   {
    "fact_id": "F043",
-   "statement": "The fifth metatarsal of Therizinosaurus was a highly reduced bone located laterally with no functional significance.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:enwiki:7",
-   "lang": "en",
-   "quote": "The last or fifth metatarsal was highly reduced bone located at the lateral side of the metatarsus and had no functional significance.",
-   "quote_sha": "4ae4a6d75de0f800"
-  },
-  {
-   "fact_id": "F044",
    "statement": "Unlike most theropods, the first toe of Therizinosaurus was functional and weight-bearing, despite being shorter than the other toes.",
    "category": "description",
    "chunk_id": "therizinosaurus:enwiki:7",
@@ -496,8 +522,17 @@
    "quote_sha": "f7626ec05d0c53f1"
   },
   {
+   "fact_id": "F044",
+   "statement": "The foot morphology of Therizinosaurus was unique among theropods, as it was four-toed with a functional first toe, whereas other theropods were typically three-toed with a non-functional first toe.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:enwiki:7",
+   "lang": "en",
+   "quote": "The morphology of the feet of Therizinosaurus and other therizinosaurids was unique among theropods: other theropods were tridactyl (three-toed), and though most retained the first toe, it was reduced to a dewclaw and held off the ground.",
+   "quote_sha": "b0082870efdb2bb7"
+  },
+  {
    "fact_id": "F045",
-   "statement": "The genus was originally assigned to its own family, Therizinosauridae, because it differed significantly from other known taxa.",
+   "statement": "The genus was assigned to its own family, Therizinosauridae, because it differed significantly from other known taxa.",
    "category": "classification",
    "chunk_id": "therizinosaurus:enwiki:8",
    "lang": "en",
@@ -506,34 +541,7 @@
   },
   {
    "fact_id": "F046",
-   "statement": "In 1983, Rinchen Barsbold named the genus Enigmosaurus, a new genus of segnosaur.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1983, Barsbold named a new genus of segnosaur, Enigmosaurus.",
-   "quote_sha": "832a293ea5a6dd87"
-  },
-  {
-   "fact_id": "F047",
-   "statement": "In 1993, Dale Russell and Dong Zhiming questioned the sauropodomorph affinities of segnosaurs following the description of Alxasaurus in 1993.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "With the unexpected discovery of Alxasaurus in 1988, and its description in 1993, the widely accepted sauropodomorph affinities of segnosaurs were questioned by paleontologists Dale Russell and Dong Zhiming.",
-   "quote_sha": "e42593c06b85eda4"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "In 1994, Clark and colleagues found additional theropod traits in the complete skull of Erlikosaurus.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "In 1994, Clark and colleagues redescribed the very complete skull of Erlikosaurus and even more theropod traits were found this time.",
-   "quote_sha": "5efa3c7e4691dc2c"
-  },
-  {
-   "fact_id": "F049",
-   "statement": "In 1997, Dale Russell coined the infraorder Therizinosauria to include all segnosaurs.",
+   "statement": "In 1997, Russell coined the infraorder Therizinosauria to contain all segnosaurs.",
    "category": "classification",
    "chunk_id": "therizinosaurus:enwiki:8",
    "lang": "en",
@@ -541,26 +549,143 @@
    "quote_sha": "296ee6af8934459c"
   },
   {
-   "fact_id": "F050",
-   "statement": "A small, feathered therizinosauroid named Beipiaosaurus was described in 1999 by Xu Xing and colleagues.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:8",
+   "fact_id": "F047",
+   "statement": "Therizinosaurus possessed large, well-developed arms, a robust pelvic girdle suited for sitting, and a robust, shortened hindlimb structure.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:9",
    "lang": "en",
-   "quote": "A small, feathered therizinosauroid from China, Beipiaosaurus, was described in 1999 by Xu Xing and colleagues.",
-   "quote_sha": "951bf57a0a57887b"
+   "quote": "Both genera had large, well-developed, and relatively strong arms; the pelvic girdle was robust and suited for a sitting behavior; and the hindlimb (particularly the foot) structure was robust and shortened.",
+   "quote_sha": "aadaf288c92d0d6f"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Maleev described the genus Therizinosaurus in 1954, initially hypothesizing that its large claws were used to harvest seaweed.",
+   "category": "discovery",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "When the genus was first described by Maleev in 1954, he considered that the unusually large claws were used to harvest seaweed.",
+   "quote_sha": "abc6d9179476f884"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Rozhdestvensky suggested in 1970 that the claws might have been used to open termite mounds or for a fruit-eating diet.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In 1970, Rozhdestvensky re-examined the claws and suggested a possible function specialized in opening termite mounds or a frugivore diet.",
+   "quote_sha": "3486674e1cd19455"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Barsbold proposed in 1976 that the claws were used to impale prey or dig, though he noted they were fragile under impact.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Barsbold in 1976 suggested that the unusual claws of Therizinosaurus may have been employed to impale or dig up loose terrain, however, he pointed out their notorious fragility upon impact.",
+   "quote_sha": "804d0790cf7e7ae7"
   },
   {
    "fact_id": "F051",
-   "statement": "In 2010, Lindsay Zanno performed an extensive revision of therizinosaur taxonomy.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:enwiki:8",
+   "statement": "Nessov suggested in 1995 that the claws served for defense and that juveniles might have used them for climbing like modern sloths.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:10",
    "lang": "en",
-   "quote": "In 2010, Lindsay Zanno revised the taxonomy of therizinosaurs in extensive detail.",
-   "quote_sha": "07abd341e4602800"
+   "quote": "In 1995, Lev A. Nessov suggested the elongated claws were used for defense against predators and juveniles could have used their claws for arboreal locomotion, in a similar way to the modern-day sloths or hoatzin chicks.",
+   "quote_sha": "1b3eff7e1f647c02"
   },
   {
    "fact_id": "F052",
-   "statement": "The genus Therizinosaurus was established by Maleev in 1954.",
+   "statement": "Digital simulations by Lautenschlager indicated that the curved claws of Therizinosaurus were poorly suited for scratching or digging.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Lautenschlager noted the more strongly curved and elongate claws of some therizinosaurian taxa were poorly functional in a scratch/digging fashion, indicating this as the most unlikely function.",
+   "quote_sha": "648883581eec06c0"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Research suggests Therizinosaurus likely used its hands in a hook-and-pull motion to grasp vegetation rather than for digging.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Instead of being used for fossorial behavior, it is more likely that Therizinosaurus make use of its hands in a hook-and-pull fashion to pull or grasp vegetation within reach.",
+   "quote_sha": "d6cadfb5d446cc1b"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "Measurements in 2018 showed that the arm bones of Therizinosaurus were resilient enough to generate significant forces.",
+   "category": "curiosities",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "Scott A. Lee and Zachary Richards in 2018 based on bending resistance measurements of several dinosaur humeri, found the humeri of carnosaur, therizinosaur, and tyrannosaur dinosaurs to be relatively resilient to stress.",
+   "quote_sha": "0c56d3cba3c9d3fb"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "A 2023 study suggests the claws of Therizinosaurus may have been merely decorative and a result of growth rather than having a mechanical function.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:enwiki:10",
+   "lang": "en",
+   "quote": "A 2023 study by Qin, Rayfield, Benton, et al., regarding the claw function in therizinosaurids and alvarezsaurids, which represent the extremes of theropod claw morphology, suggest that there was no mechanical function identifiable for Therizinosaurus, suggesting the claws on its forelimbs were merely decorative rather than functional and a result of peramorphic growth resulting from increased body size.",
+   "quote_sha": "93833a1e9f61fe9c"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "Fossils of Therizinosaurus have been found in the Nemegt Formation of the Gobi Desert.",
+   "category": "time_and_habitat",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The remains of Therizinosaurus have been found in the well-known Nemegt Formation of the Gobi Desert.",
+   "quote_sha": "9a9d6417bbe4a38d"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "The age of the Nemegt Formation is estimated to be Late Campanian to Maastrichtian based on fossil assemblages, despite lacking radiometric dates.",
+   "category": "time_and_habitat",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "Although this formation has never been dated radiometrically because of the discontinuity of exposures and absence of datable volcanic rock facies, the vertebrate fossil assemblage suggests a Maastrichtian stage (and possibly Late Campanian).",
+   "quote_sha": "dfb318520aa65dc9"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The climate where Therizinosaurus lived was temperate with monsoons, temperatures between 7.6 and 8.7 °C, and annual rainfall between 775 and 835 mm.",
+   "category": "time_and_habitat",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The climate of the formation was relatively temperate (mean annual temperatures between 7.6 and 8.7 °C), characterized by monsoons with cold, dry winters and hot, rainy summers with the addition of mean annual precipitations between 775 mmm and 835 mmm, a precipitation that was subject to prominent seasonal fluctuations.",
+   "quote_sha": "bd2cc42a40b75995"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Therizinosaurus lived in environments featuring large rivers and extensive Araucaria forests.",
+   "category": "time_and_habitat",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "They consisted of large meandering and braided rivers with extensive woodlands composed of large, enclosed, canopy-like forests of Araucarias that supported diverse herbivorous dinosaurs like Therizinosaurus.",
+   "quote_sha": "6f6916d9d576ed4b"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Therizinosaurus was one of the tallest dinosaurs in the Nemegt Formation due to its high-browsing lifestyle.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "Due to its prominent height and high-browsing lifestyle, Therizinosaurus was one of the tallest dinosaurs in the Nemegt Formation paleofauna.",
+   "quote_sha": "10c158867b1c6575"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "The elongated claws of Therizinosaurus may have been used for self-defense or to intimidate predators like Tarbosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:enwiki:11",
+   "lang": "en",
+   "quote": "The elongated claws may have been useful for self-defense or to intimidate the predator during this situation.",
+   "quote_sha": "3515067c9ad46031"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The genus Therizinosaurus was named by Maleev in 1954.",
    "category": "classification",
    "chunk_id": "therizinosaurus:eswiki:1",
    "lang": "es",
@@ -568,17 +693,17 @@
    "quote_sha": "832c14ef0328a397"
   },
   {
-   "fact_id": "F053",
-   "statement": "Therizinosaurus lived during the Late Cretaceous period.",
-   "category": "time_and_habitat",
+   "fact_id": "F063",
+   "statement": "The species Therizinosaurus cheloniformis was named by Maleev in 1954.",
+   "category": "classification",
    "chunk_id": "therizinosaurus:eswiki:1",
    "lang": "es",
-   "quote": "fossil_range: Cretácico Superior",
-   "quote_sha": "7f9883698ead51b2"
+   "quote": "species_authority: Maleev, 1954",
+   "quote_sha": "9371b27d21f2d04a"
   },
   {
-   "fact_id": "F054",
-   "statement": "Therizinosaurus belongs to the infraorder Therizinosauria.",
+   "fact_id": "F064",
+   "statement": "Therizinosaurus belongs to the suborder Therizinosauria.",
    "category": "classification",
    "chunk_id": "therizinosaurus:eswiki:1",
    "lang": "es",
@@ -586,8 +711,8 @@
    "quote_sha": "0cf1d1e76e045656"
   },
   {
-   "fact_id": "F055",
-   "statement": "Therizinosaurus is classified within the family Therizinosauridae.",
+   "fact_id": "F065",
+   "statement": "Therizinosaurus is classified in the family Therizinosauridae.",
    "category": "classification",
    "chunk_id": "therizinosaurus:eswiki:1",
    "lang": "es",
@@ -595,148 +720,58 @@
    "quote_sha": "823e110bdca0ee93"
   },
   {
-   "fact_id": "F056",
-   "statement": "Therizinosaurus is classified within the order Saurischia.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "ordo: Saurischia",
-   "quote_sha": "6643985f020f6df7"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "Therizinosaurus is classified within the suborder Theropoda.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "subordo: Theropoda",
-   "quote_sha": "afe1cb973843b122"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "Researchers considered the body plan of Therizinosaurus and Chalicotherium an example of convergent evolution between a mammal and a dinosaur.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "They considered these adaptations to represent an example of convergent evolution—a condition where organisms evolve similar traits without necessarily being related—between extinct mammal and dinosaur genera.",
-   "quote_sha": "06beaec919cb92a0"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "Researchers suggested that Therizinosaurus was a herbivore based on its body plan similarities to known herbivores.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Because the animals with this type of body plan are known to represent herbivores, the authors suggested this lifestyle for Therizinosaurus.",
-   "quote_sha": "224eb1afc27dda4a"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "Therizinosaurus was better suited for pushing large clumps of foliage than hooking branches, due to its long claws.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Whereas Chalicotherium was more suited to hook branches, Therizinosaurus was better at pushing large clumps of foliage because of its long claws.",
-   "quote_sha": "083dff7ad6e80f02"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "It was debated whether segnosaurids were outside the theropod group or represented a different lineage of theropod dinosaurs.",
-   "category": "debate",
-   "chunk_id": "therizinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "He analyzed the pelvis of the new genus and pointed out that segnosaurids were so different from other theropods that they could be outside the group or represent a different lineage of theropod dinosaurs.",
-   "quote_sha": "6f2bc5ec89c04bcb"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "There was a debate regarding the classification of segnosaurs, with some researchers shifting their view towards sauropodomorph affinities.",
-   "category": "debate",
-   "chunk_id": "therizinosaurus:enwiki:8",
-   "lang": "en",
-   "quote": "Consequently, the assignment of segnosaurs started to shift towards sauropodomorphs.",
-   "quote_sha": "162af425512d51b6"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "Therizinosaurus cheloniformis is the only known species of the extinct genus Therizinosaurus, a ceratosaurian therizinosaurid dinosaur.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Therizinosaurus cheloniformis (\"lagarto guadaña con forma de tortuga\") es la única especie conocida del género extinto Therizinosaurus de dinosaurio celurosauriano tericinosáurido",
-   "quote_sha": "0dd8f1a240bed126"
-  },
-  {
-   "fact_id": "F064",
-   "statement": "The species name T. cheloniformis means \"turtle-shaped\" because the fossils were originally thought to belong to a turtle-like creature.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Sus fósiles fueron descubiertos en Mongolia y originalmente se pensó que se trataba de una especie similar a una tortuga, de allí su nombre de especie, T. cheloniformis",
-   "quote_sha": "41f8412112ac0438"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "The first Therizinosaurus fossils were found in 1948 by a Mongolian field expedition in the Gobi Desert and were described by Evgeny Maleev in 1954.",
+   "fact_id": "F066",
+   "statement": "The first Therizinosaurus fossils were discovered in 1948 by a Mongolian field expedition in the Gobi Desert and were described by Evgeny Maleev in 1954.",
    "category": "discovery",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Los primeros restos de Therizinosaurus fueron encontrados en 1948 por una expedición de campo mongola en el desierto de Gobi y descrito más tarde por Evgeny Maleev en 1954",
-   "quote_sha": "35c0781cd5281027"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Therizinosaurus is known from only a few bones, including massive hand claws that gave the genus its name.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Solo conocida por un puñado de huesos, incluyendo gigantescas garras de las manos, de donde proviene su nombre",
-   "quote_sha": "18cb1eb9c34faf1e"
+   "quote": "Los primeros restos de Therizinosaurus fueron encontrados en 1948 por una expedición de campo mongola en el desierto de Gobi y descrito más tarde por Evgeny Maleev en 1954.",
+   "quote_sha": "48011d5d64047dc5"
   },
   {
    "fact_id": "F067",
-   "statement": "Therizinosaurus could grow up to 10 meters long, 5 meters high, and possibly weigh 5 tons.",
-   "category": "description",
+   "statement": "Therizinosaurus lived during the late Cretaceous period, approximately 70 million years ago in the Maastrichtian stage, in what is now Asia.",
+   "category": "time_and_habitat",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Therizinosaurus era un tericinosáurido de gran tamaño que podía crecer hasta 10 metros de largo y 5 de alto, y pesar posiblemente 5 toneladas",
-   "quote_sha": "7111bb29478ff5fd"
+   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 millones de años, en el Maastrichtiense, en lo que hoy es Asia.",
+   "quote_sha": "c1943da0bab9014f"
   },
   {
    "fact_id": "F068",
-   "statement": "Therizinosaurus was likely a high browser with a long, slow neck, a horny beak (ranfoteca), and a wide torso for processing food.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Al igual que otros miembros de su familia, habría sido un ramoneador alto, de cuello largo y lento, equipado con una ranfoteca en su pico córneo, y un torso ancho para el procesamiento de alimentos",
-   "quote_sha": "c1d9bfd7d490b2ab"
-  },
-  {
-   "fact_id": "F069",
-   "statement": "Therizinosaurus had particularly robust forelimbs with three fingers bearing claws that were very rigid, elongated, and had significant curvature only at the tips.",
+   "statement": "Therizinosaurus was a large therizinosaurid that could grow up to 10 meters long, 5 meters high, and possibly weigh 5 tons.",
    "category": "description",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Sus extremidades anteriores eran particularmente robustas y tenían tres dedos que portaban garras que, a diferencia de otros parientes, eran muy rígidas, alargadas y solo tenían curvaturas significativas en las puntas",
-   "quote_sha": "9e6c5750bd0971a9"
+   "quote": "Therizinosaurus era un tericinosáurido de gran tamaño que podía crecer hasta 10 metros de largo y 5 de alto, y pesar posiblemente 5 toneladas.",
+   "quote_sha": "f684d12a77175e4f"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Therizinosaurus had particularly robust forelimbs with three fingers bearing claws that were very rigid, elongated, and had significant curvature only at the tips, unlike other relatives.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Sus extremidades anteriores eran particularmente robustas y tenían tres dedos que portaban garras que, a diferencia de otros parientes, eran muy rígidas, alargadas y solo tenían curvaturas significativas en las puntas.",
+   "quote_sha": "25c7cb0b36933119"
   },
   {
    "fact_id": "F070",
    "statement": "Therizinosaurus possessed the longest known manual claws of any land animal, reaching over 50 centimeters in length.",
-   "category": "description",
+   "category": "curiosities",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Therizinosaurus tenía las garras manuales más largas conocidas de cualquier animal terrestre, alcanzando más de 50 centímetros de longitud",
-   "quote_sha": "4bf6b92c5919bab6"
+   "quote": "Therizinosaurus tenía las garras manuales más largas conocidas de cualquier animal terrestre, alcanzando más de 50 centímetros de longitud.",
+   "quote_sha": "00d1a62eb5820276"
   },
   {
    "fact_id": "F071",
-   "statement": "Therizinosaurus had four functional weight-bearing toes on its feet, unlike other theropod groups where the first toe is reduced to a vestige.",
-   "category": "description",
+   "statement": "Like other family members, Therizinosaurus was likely a high browser with a long, slow neck, equipped with a horny beak (ranfoteca) and a wide torso for food processing.",
+   "category": "paleobiology",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Sus patas traseras terminaban en cuatro dedos funcionales en los pies que soportan peso a diferencia de otros grupos de terópodos en los que el primer dedo del pie se redujo a un vestigio",
-   "quote_sha": "f4e3aab4ec4bbf1b"
+   "quote": "Al igual que otros miembros de su familia, habría sido un ramoneador alto, de cuello largo y lento, equipado con una ranfoteca en su pico córneo, y un torso ancho para el procesamiento de alimentos.",
+   "quote_sha": "4b4f4c0ad5d29cfc"
   },
   {
    "fact_id": "F072",
@@ -744,129 +779,138 @@
    "category": "classification",
    "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Sin embargo, después de años de debate taxonómico, ahora se ubican en uno de los principales clados de dinosaurios, Theropoda, específicamente como maniraptoranos",
-   "quote_sha": "598a9125de9b86d7"
+   "quote": "Sin embargo, después de años de debate taxonómico, ahora se ubican en uno de los principales clados de dinosaurios, Theropoda, específicamente como maniraptoranos.",
+   "quote_sha": "7aa66ef5c020bfb4"
   },
   {
    "fact_id": "F073",
-   "statement": "Therizinosaurus is widely recovered within the family Therizinosauridae in most phylogenetic analyses.",
-   "category": "classification",
-   "chunk_id": "therizinosaurus:eswiki:2",
+   "statement": "These dimensions make Therizinosaurus the largest known therizinosaurid and the largest known maniraptoran.",
+   "category": "curiosities",
+   "chunk_id": "therizinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Therizinosaurus se recupera ampliamente dentro de Therizinosauridae en la mayoría de los análisis",
-   "quote_sha": "f2c12f87f70bcec2"
+   "quote": "Estas dimensiones hacen que Therizinosaurus sea el tericinosáurido más grande conocido y el maniraptorano más grande conocido.",
+   "quote_sha": "622eae7d5c7f2958"
   },
   {
    "fact_id": "F074",
-   "statement": "Therizinosaurus's elongated hand claws were likely used to pull vegetation within reach rather than for active attack or defense due to their fragility.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:eswiki:2",
+   "statement": "Each of Therizinosaurus's arms measured a total of 2.5 meters in length, and its single scythe-shaped claw measured 70 centimeters in its outer curve.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Las garras alargadas de las manos de Therizinosaurus eran más útiles para tirar de la vegetación al alcance de la mano en lugar de ser utilizadas para el ataque activo o la defensa debido a su fragilidad",
-   "quote_sha": "1566c35e428a2cae"
+   "quote": "Cada brazo medía en total 2,5 metros de largo, y su única garra en forma de guadaña medía 70 centímetros en su curva externa.",
+   "quote_sha": "00705d9e4f02ef9a"
   },
   {
    "fact_id": "F075",
-   "statement": "Therizinosaurus was a very tall animal, likely having reduced competition for foliage in its habitat and overcoming predators like Tarbosaurus.",
-   "category": "paleobiology",
-   "chunk_id": "therizinosaurus:eswiki:2",
+   "statement": "That length does not include the horny sheath that must have surrounded the claw, with which it could have reached a length of 1 meter.",
+   "category": "curiosities",
+   "chunk_id": "therizinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Therizinosaurus era un animal muy alto, probablemente teniendo una competencia reducida sobre el follaje en su hábitat y superando a los depredadores como Tarbosaurus",
-   "quote_sha": "f840ad47cc8ba650"
+   "quote": "Esa longitud no incluye la cubierta córnea que debe haber rodeado la garra, con la que pudo llegar a medir 1 metro de largo.",
+   "quote_sha": "f869969d28bbe9f9"
   },
   {
    "fact_id": "F076",
-   "statement": "Therizinosaurus was enormous for a maniraptoran, estimated to reach 9 to 10 meters in length, 4 to 5 meters in height, and weigh between 3 and over 5 tons.",
-   "category": "description",
+   "statement": "The first specimens consisted of large claws found by the Soviet-Mongolian joint expedition of 1948, as well as other parts of Mongolia in 1957, 1959, and 1960 in the Gobi Desert.",
+   "category": "discovery",
    "chunk_id": "therizinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Para los estándares de los maniraptores, Therizinosaurus tenía un tamaño enorme: se estima que alcanzaba de 9 a 10 metros de largo con alturas estimadas de 4 a 5 metros y pesos de 3 toneladas a posiblemente a más de 5 toneladas",
-   "quote_sha": "e2136eb8f4efb4ce"
+   "quote": "Los primeros ejemplares consistían en algunas grandes garras halladas por la expedición conjunta soviético-mongola de 1948, así como en otras partes de Mongolia las posteriores 1957, 1959 y 1960 fueron en el desierto de Gobi.",
+   "quote_sha": "157db9d141def5ec"
   },
   {
    "fact_id": "F077",
-   "statement": "These dimensions make Therizinosaurus the largest known therizinosaurid and the largest known maniraptoran.",
+   "statement": "Therizinosaurus's hind limbs ended in four weight-bearing foot digits, unlike other theropod groups where the first toe reduced to a vestigial digit.",
    "category": "description",
    "chunk_id": "therizinosaurus:eswiki:3",
    "lang": "es",
-   "quote": "Estas dimensiones hacen que Therizinosaurus sea el tericinosáurido más grande conocido y el maniraptorano más grande conocido",
-   "quote_sha": "c6fb57d73f6fc539"
+   "quote": "Sus miembros traseros terminaban en cuatro dedos del pie que sostenían el peso, a diferencia de otros grupos del terópodos, en los cuales el primer dedo del pie se reducía a un dedo vestigial.",
+   "quote_sha": "f1cd0d06a0017779"
   },
   {
    "fact_id": "F078",
-   "statement": "Like other family members, Therizinosaurus had a proportionally small skull with a horny beak over its long neck, a bipedal posture, a large belly for foliage processing, and sparse plumage.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "statement": "Maleev initially thought the Therizinosaurus remains belonged to a large turtle-like reptile and named a separate family for the genus, Therizinosauridae.",
+   "category": "debate",
+   "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Al igual que otros miembros de su familia, Therizinosaurus tenía un cráneo proporcionalmente pequeño con una ranfoteca (pico córneo) sobre su largo cuello; postura bípeda; un vientre grande para el procesamiento de follaje; y plumaje escaso",
-   "quote_sha": "f00c69e48d90b85d"
+   "quote": "Maleev pensó que los restos de Therizinosaurus pertenecían a un gran reptil parecido a una tortuga y también nombró una familia separada para el género, Therizinosauridae.",
+   "quote_sha": "b344f01e14518997"
   },
   {
    "fact_id": "F079",
-   "statement": "Therizinosaurus's forelimbs may have reached 2.5 meters in length.",
-   "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "statement": "Therizinosaurus was a very tall animal, likely having reduced competition for foliage in its habitat and surpassing predators like Tarbosaurus.",
+   "category": "paleobiology",
+   "chunk_id": "therizinosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Sus miembros superiores pudieron haber alcanzado los 2,5 metros de largo",
-   "quote_sha": "2c680934a9cf37e3"
+   "quote": "Therizinosaurus era un animal muy alto, probablemente teniendo una competencia reducida sobre el follaje en su hábitat y superando a los depredadores como Tarbosaurus.",
+   "quote_sha": "f88b278dcba19dfd"
   },
   {
    "fact_id": "F080",
-   "statement": "The most distinctive feature of Therizinosaurus was the presence of gigantic unguals on each of the three fingers of its hands.",
+   "statement": "Therizinosaurus had massive, muscular arms that reached a length of 2.5 meters.",
    "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "chunk_id": "therizinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "La característica más distintiva de Therizinosaurus era la presencia de gigantescos unguales en cada uno de los tres dedos de sus manos",
-   "quote_sha": "54bf1ee75ff80365"
+   "quote": "Los brazos eran macizos, musculosos y muy largos, pues llegaban a medir 2,5 metros.",
+   "quote_sha": "e752f9aa397b726d"
   },
   {
    "fact_id": "F081",
-   "statement": "Each arm measured 2.5 meters in total length, and its single sickle-shaped claw measured 70 centimeters in external curvature.",
+   "statement": "The hands ended in three fingers tipped with unusual, sickle-shaped claws measuring between 60 and 90 centimeters.",
    "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "chunk_id": "therizinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Cada brazo medía en total 2,5 metros de largo, y su única garra en forma de guadaña medía 70 centímetros en su curva externa",
-   "quote_sha": "4ae1d421a95ae437"
+   "quote": "Terminaban en manos de tres dedos rematados por unas garras gigantescas en forma de hoz muy inusuales, pues medían entre 60 y 90 centímetros.",
+   "quote_sha": "61e753d44a3287ce"
   },
   {
    "fact_id": "F082",
-   "statement": "That length does not include the keratinous sheath that likely surrounded the claw, which could have reached 1 meter in length.",
+   "statement": "Researchers suggest the claws were likely used to hold tree branches while feeding.",
    "category": "description",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "chunk_id": "therizinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Esa longitud no incluye la cubierta córnea que debe haber rodeado la garra, con la que pudo llegar a medir 1 metro de largo",
-   "quote_sha": "c6235769937a5281"
+   "quote": "Es probable que las usara para sujetar las ramas de los árboles mientras se alimentaba.",
+   "quote_sha": "efc3f9111fb499d6"
   },
   {
    "fact_id": "F083",
-   "statement": "A pelvis measuring 2.5 meters in width was also found.",
-   "category": "discovery",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "statement": "The humerus was robust and measured 76 centimeters in length.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Se encontró también, con una pelvis de 2,5 metros de ancho",
-   "quote_sha": "05d424c3a440fd46"
+   "quote": "El húmero tenía una construcción robusta y medía 76 centímetros de largo.",
+   "quote_sha": "a0a201169cb5af1b"
   },
   {
    "fact_id": "F084",
-   "statement": "The first specimens consisted of large claws found by the Soviet-Mongolian joint expedition of 1948, while subsequent finds in 1957, 1959, and 1960 were in the Gobi Desert.",
-   "category": "discovery",
-   "chunk_id": "therizinosaurus:eswiki:3",
+   "statement": "A prominent bicep attachment site indicates the animal possessed powerful muscles in life.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Los primeros ejemplares consistían en algunas grandes garras halladas por la expedición conjunta soviético-mongola de 1948, así como en otras partes de Mongolia las posteriores 1957, 1959 y 1960 fueron en el desierto de Gobi",
-   "quote_sha": "18ebc2b8c53b7d00"
+   "quote": "El punto de anclaje para el músculo bíceps estaba desarrollado de manera prominente por un gran tubérculo con una parte superior rechoncha, lo que indica que tenía músculos poderosos en vida.",
+   "quote_sha": "6adfa1be049b4f3b"
   },
   {
    "fact_id": "F085",
-   "statement": "Therizinosaurus lived at the end of the Cretaceous period, approximately 70 million years ago in the Maastrichtian, in what is now Asia.",
-   "category": "time_and_habitat",
-   "chunk_id": "therizinosaurus:eswiki:2",
+   "statement": "Unlike most theropods, the first toe of Therizinosaurus was functional and supported weight despite being shorter than the others.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:6",
    "lang": "es",
-   "quote": "que vivió a finales del período Cretácico, hace aproximadamente 70 millones de años, en el Maastrichtiense, en lo que hoy es Asia",
-   "quote_sha": "d326a24a5f191984"
+   "quote": "A diferencia de la mayoría de los otros grupos de terópodos, el primer dígito del pedal era, aunque más corto que los demás, funcional y soportaba peso.",
+   "quote_sha": "e40a16445243f8eb"
   },
   {
    "fact_id": "F086",
-   "statement": "The parent group of Therizinosaurus is Therizinosauridae.",
+   "statement": "The foot morphology of Therizinosaurus and other therizinosaurs was unique because they had four functional toes, whereas the general theropod formula includes three-toed feet with a reduced first claw.",
+   "category": "description",
+   "chunk_id": "therizinosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "La morfología de los pies de Therizinosaurus y otros tericinosáuridos era única, ya que la fórmula general de los terópodos incluye pies tridáctilos, de tres dedos, en los que el primer dedo se redujo a una garra y se mantuvo alejado del suelo.",
+   "quote_sha": "b06a17cc643e2b65"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "Therizinosaurus belongs to the parent group Therizinosauridae.",
    "category": "classification",
    "chunk_id": "therizinosaurus:pbdb:1",
    "lang": "en",
@@ -874,8 +918,8 @@
    "quote_sha": "1d797710e241c20a"
   },
   {
-   "fact_id": "F087",
-   "statement": "Therizinosaurus belongs to the family Therizinosauridae.",
+   "fact_id": "F088",
+   "statement": "Therizinosaurus is classified within the family Therizinosauridae.",
    "category": "classification",
    "chunk_id": "therizinosaurus:pbdb:1",
    "lang": "en",
@@ -883,8 +927,8 @@
    "quote_sha": "ee2b576193ca6634"
   },
   {
-   "fact_id": "F088",
-   "statement": "Therizinosaurus is classified in the class Reptilia.",
+   "fact_id": "F089",
+   "statement": "Therizinosaurus is classified as a reptile.",
    "category": "classification",
    "chunk_id": "therizinosaurus:pbdb:1",
    "lang": "en",
@@ -892,7 +936,7 @@
    "quote_sha": "cdcaa2922520f735"
   },
   {
-   "fact_id": "F089",
+   "fact_id": "F090",
    "statement": "The type species of the genus Therizinosaurus is Therizinosaurus cheloniformis.",
    "category": "classification",
    "chunk_id": "therizinosaurus:pbdb:1",
@@ -901,122 +945,64 @@
    "quote_sha": "e9210dc44238b9c2"
   },
   {
-   "fact_id": "F090",
-   "statement": "The time range for Therizinosaurus is the Maastrichtian, from 72.2 to 66 million years ago.",
+   "fact_id": "F091",
+   "statement": "Therizinosaurus lived during the Maastrichtian stage, between 72.2 and 66 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "therizinosaurus:pbdb:1",
    "lang": "en",
    "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
    "quote_sha": "8c03278f69290924"
-  },
-  {
-   "fact_id": "F091",
-   "statement": "There are 2 recorded fossil occurrences of Therizinosaurus in the Paleobiology Database.",
-   "category": "discovery",
-   "chunk_id": "therizinosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Fossil occurrences recorded: 2",
-   "quote_sha": "2a7bb9b953123d90"
   }
  ],
  "rejected": [
   {
    "chunk_id": "therizinosaurus:enwiki:2",
-   "statement": "Therizinosaurus is a genus of very large therizinosaurid dinosaurs.",
+   "statement": "Therizinosaurus means 'scythe lizard' and is a genus of very large therizinosaurid dinosaurs.",
    "category": "description",
    "quote": "Therizinosaurus (; meaning 'scythe lizard') is a genus of very large therizinosaurid dinosaurs",
    "reason": "statement copies the source wording: 'is a genus of very large therizinosaurid dinosaurs'"
   },
   {
-   "chunk_id": "therizinosaurus:enwiki:3",
-   "statement": "Evgeny Maleev originally classified Therizinosaurus as a turtle-like reptile and established the family Therizinosauridae for it.",
-   "category": "discovery",
-   "quote": "Maleev thought the remains of Therizinosaurus to belong to a large turtle-like reptile, and also named a separate family for the genus: Therizinosauridae",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "therizinosaurus:enwiki:2",
-   "statement": "The anatomy of Therizinosaurus is cited as an example of convergent evolution with herbivorous mammals like ground sloths.",
+   "statement": "Therizinosaurus anatomy is cited as an example of convergent evolution with herbivorous mammals like ground sloths.",
    "category": "paleobiology",
    "quote": "The unusual arms and body anatomy (extrapolated after relatives) of Therizinosaurus have been cited as an example of convergent evolution with chalicotheriines and other primarily herbivorous mammals like ground sloths",
    "reason": "statement copies the source wording: 'cited as an example of convergent evolution with'"
   },
   {
-   "chunk_id": "therizinosaurus:enwiki:4",
-   "statement": "Rinchen Barsbold described and referred the specimens MPC-D 100/15, 100/16, and 100/17 to Therizinosaurus in 1976.",
-   "category": "discovery",
-   "quote": "All of these specimens were first described and referred to Therizinosaurus by the Mongolian paleontologist Rinchen Barsbold in 1976.",
-   "reason": "numbers not in the quote: ['100', '15', '16', '17']"
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "statement": "The most distinctive feature of Therizinosaurus was the presence of gigantic claws on each of the three digits of its hands.",
+   "category": "curiosities",
+   "quote": "The most distinctive feature of Therizinosaurus was the presence of gigantic unguals on each of the three digits of its hands.",
+   "reason": "statement copies the source wording: 'most distinctive feature of Therizinosaurus was the presence'"
+  },
+  {
+   "chunk_id": "therizinosaurus:enwiki:5",
+   "statement": "Mike Taylor and Matt Wedel suggested in 2013 that Therizinosaurus had a 2.2-meter-long neck, calculated as 2.9 times the size of its 76 cm humerus.",
+   "category": "paleobiology",
+   "quote": "Mike Taylor and Matt Wedel suggested that the whole neck would be 2.9 times the size of the humerus, which was 76 cm, resulting in a 2.2 m long neck based on comparisons with the cervical vertebrae series of Nanshiungosaurus.",
+   "reason": "numbers not in the quote: ['2013']"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:4",
-   "statement": "Altangerel Perle described the hindlimb remains MPC-D 100/45 in 1982.",
-   "category": "discovery",
-   "quote": "These newer remains were described by the also Mongolian paleontologist Altangerel Perle in 1982.",
-   "reason": "numbers not in the quote: ['100', '45']"
-  },
-  {
-   "chunk_id": "therizinosaurus:enwiki:4",
-   "statement": "Barsbold and Maryanska debated whether the hindlimb specimen MPC-D 100/45 should be referred to Therizinosaurus, considering it likely represented a different segnosaurian taxon.",
+   "statement": "Barsbold and Teresa Maryanska debated whether the 1982 hindlimb specimen should be referred to Therizinosaurus, considering it a representative of Segnosauria instead.",
    "category": "debate",
    "quote": "Barsbold and Teresa Maryanska agreed with Perle in that the hindlimb material from Hermiin Tsav he described in 1982 was therizinosaurian... but cast doubt with his referral of it to Therizinosaurus",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "statement": "Therizinosaurus is the largest known therizinosaur and the largest known maniraptoran.",
-   "category": "description",
-   "quote": "These dimensions make Therizinosaurus the largest known therizinosaur and the largest known maniraptoran.",
-   "reason": "statement copies the source wording: 'the largest known therizinosaur and the largest known'"
-  },
-  {
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "statement": "Therizinosaurus had a small skull with a horny beak, a long neck, a semi-erect bipedal gait, a large gut, and sparse feathers.",
-   "category": "description",
-   "quote": "Like other members of its family, Therizinosaurus had a proportionally small skull, bearing a rhamphotheca (horny beak), atop a long neck; a semi-erect, bipedal gait; a large gut for foliage processing; and sparse feathering.",
-   "reason": "statement copies the source wording: 'a long neck a semi-erect bipedal gait a'"
-  },
-  {
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "statement": "Senter and James estimated in 2010 that an average Therizinosaurus had legs approximately 3 meters long.",
-   "category": "description",
-   "quote": "They concluded that an average Therizinosaurus may have had approximately 3 m long legs.",
-   "reason": "numbers not in the quote: ['2010']"
-  },
-  {
-   "chunk_id": "therizinosaurus:enwiki:5",
-   "statement": "The most distinctive feature of Therizinosaurus was the presence of gigantic unguals on each of the three digits of its hands.",
-   "category": "description",
-   "quote": "The most distinctive feature of Therizinosaurus was the presence of gigantic unguals on each of the three digits of its hands.",
-   "reason": "statement copies the source wording: 'most distinctive feature of Therizinosaurus was the presence'"
-  },
-  {
    "chunk_id": "therizinosaurus:enwiki:6",
-   "statement": "The scapula of Therizinosaurus measured 67 centimeters in length and featured a stocky, flattened dorsal blade.",
+   "statement": "The scapula of Therizinosaurus was 67 centimeters long and featured a stocky, flattened dorsal blade.",
    "category": "description",
    "quote": "The scapula measured 67 cm long with a stocky and flattened dorsal blade.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "therizinosaurus:enwiki:6",
-   "statement": "The third metacarpal of Therizinosaurus was 19.16 centimeters long and had a very thin shaft compared to the others.",
-   "category": "description",
-   "quote": "The third metacarpal was 19.16 cm in length and had a very thin shaft compared to the others.",
-   "reason": "statement copies the source wording: 'and had a very thin shaft compared to'"
-  },
-  {
    "chunk_id": "therizinosaurus:enwiki:7",
-   "statement": "The first four metatarsals of Therizinosaurus were functional, terminating in weight-bearing digits, resulting in a four-toed condition.",
+   "statement": "The foot of Therizinosaurus was robust and short, resembling that of sauropodomorphs, and consisted of five metatarsals.",
    "category": "description",
-   "quote": "The first four [metatarsals] were functional and terminated in weight-bearing digits, hence having a tetradactyl (four-toed) condition.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "therizinosaurus:enwiki:7",
-   "statement": "The foot morphology of Therizinosaurus and other therizinosaurids was unique among theropods, as they were four-toed rather than the typical three-toed condition where the first toe is a non-weight-bearing dewclaw.",
-   "category": "description",
-   "quote": "The morphology of the feet of Therizinosaurus and other therizinosaurids was unique among theropods: other theropods were tridactyl (three-toed), and though most retained the first toe, it was reduced to a dewclaw and held off the ground.",
-   "reason": "statement copies the source wording: 'of Therizinosaurus and other therizinosaurids was unique among'"
+   "quote": "The pes (foot) was robust and short, almost like that of sauropodomorphs, and consisted of five metatarsals.",
+   "reason": "statement copies the source wording: 'that of sauropodomorphs and consisted of five metatarsals'"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:8",
@@ -1034,38 +1020,45 @@
   },
   {
    "chunk_id": "therizinosaurus:enwiki:8",
-   "statement": "In 1976, Rinchen Barsbold supported the idea that Therizinosaurus was a theropod based on distinct theropod traits found in specimen MPC-D 100/15.",
+   "statement": "In 1976, Rinchen Barsbold supported the idea that Therizinosaurus was a theropod because specimen MPC-D 100/15 showed distinct theropod traits.",
    "category": "classification",
    "quote": "In 1976, Rinchen Barsbold seconded the notion that Therizinosaurus was a theropod because MPC-D 100/15 had distinct theropod traits.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:8",
-   "statement": "In 1984, Gregory S. Paul proposed that segnosaurs were evolutionary intermediates between sauropodomorphs and ornithischians rather than theropods.",
+   "statement": "In 1993, Dale Russell and Dong Zhiming concluded that therizinosauroids were theropods with unusual features.",
    "category": "classification",
-   "quote": "In 1984, Gregory S. Paul claimed that segnosaurs, rather than being theropods, were instead morphological and evolutionary intermediates between sauropodomorphs and ornithischians.",
+   "quote": "In 1993, Dale Russell and Dong Zhiming concluded that therizinosauroids were theropods with unusual features.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:8",
-   "statement": "In 1990, Rinchen Barsbold and Teresa Maryańska agreed that hindlimb material from Hermiin Tsav referred to Therizinosaurus was segnosaurian due to matching traits.",
+   "statement": "In 1994, Clark and colleagues considered therizinosauroids to be maniraptoran dinosaurs.",
    "category": "classification",
-   "quote": "In 1990, Rinchen Barsbold and Teresa Maryańska agreed in that the hindlimb material from Hermiin Tsav referred to Therizinosaurus in 1982 was segnosaurian since it matched several traits.",
+   "quote": "In 1994, Clark and colleagues... considered therizinosauroids as maniraptoran dinosaurs.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:8",
-   "statement": "In 2019, Hartman and colleagues conducted a large phylogenetic analysis of Therizinosauria using characters from Zanno's 2010 revision.",
+   "statement": "A small, feathered therizinosauroid from China, Beipiaosaurus, was described in 1999 by Xu Xing and colleagues.",
    "category": "classification",
-   "quote": "In 2019, Hartman and colleagues also performed a large phylogenetic analysis of Therizinosauria based on the characters provided by Zanno in her revision.",
-   "reason": "numbers not in the quote: ['2010']"
+   "quote": "A small, feathered therizinosauroid from China, Beipiaosaurus, was described in 1999 by Xu Xing and colleagues.",
+   "reason": "statement copies the source wording: 'small feathered therizinosauroid from China Beipiaosaurus was described'"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:9",
-   "statement": "Russell and Russell reconstructed the feeding behavior of Therizinosaurus as sitting while consuming foliage from large shrubs and trees.",
+   "statement": "Researchers reconstructed the feeding behavior of Therizinosaurus as sitting while consuming foliage from large shrubs and trees.",
    "category": "paleobiology",
    "quote": "Russell and Russell reconstructed the feeding behavior of Therizinosaurus as being able to sit while consuming foliage from large shrubs and trees.",
    "reason": "statement copies the source wording: 'while consuming foliage from large shrubs and trees'"
+  },
+  {
+   "chunk_id": "therizinosaurus:enwiki:9",
+   "statement": "Therizinosaurus was better at pushing large clumps of foliage due to its long claws.",
+   "category": "paleobiology",
+   "quote": "Therizinosaurus was better at pushing large clumps of foliage because of its long claws.",
+   "reason": "statement copies the source wording: 'Therizinosaurus was better at pushing large clumps of'"
   },
   {
    "chunk_id": "therizinosaurus:enwiki:9",
@@ -1073,6 +1066,20 @@
    "category": "paleobiology",
    "quote": "Anthony R. Fiorillo and colleagues in 2018 suggested that Therizinosaurus had a reduced bite force that may have been useful for cropping vegetation or foraging.",
    "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "therizinosaurus:eswiki:3",
+   "statement": "Therizinosaurus's elongated hand claws were more useful for pulling vegetation within reach rather than for active attack or defense due to their fragility, though they may have played a role in intimidation.",
+   "category": "paleobiology",
+   "quote": "Las garras alargadas de las manos de Therizinosaurus eran más útiles para tirar de la vegetación al alcance de la mano en lugar de ser utilizadas para el ataque activo o la defensa debido a su fragilidad, sin embargo, pueden haber tenido algún papel para la intimidación.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "therizinosaurus:pbdb:1",
+   "statement": "The genus Therizinosaurus was named by Maleev in 1954.",
+   "category": "discovery",
+   "quote": "PBDB name: Therizinosaurus (genus), Maleev 1954",
+   "reason": "duplicate"
   }
  ]
 }

@@ -106,35 +106,6 @@
     {% if not text and taxon.page_type == 'known' %}<p class="note">{{ T.known_note }}</p>{% endif %}
   </section>
 
-  {% if gallery %}
-  <section class="block" id="imagenes">
-    <h2>{{ T.gallery_title }}</h2>
-    {% set kinds = gallery | map(attribute='image_kind') | unique | list %}
-    {% if gallery | length >= 6 and kinds | length >= 3 %}
-    <div class="gallery__filters" role="group" aria-label="{{ T.gallery_filter }}">
-      <button type="button" class="chip chip--on" data-kind="" aria-pressed="true">{{ T.search_all }}</button>
-      {% for k in kinds %}<button type="button" class="chip" data-kind="{{ k }}" aria-pressed="false">{{ T['kind_' ~ k] }}</button>{% endfor %}
-    </div>
-    {% endif %}
-    <ul class="gallery">
-      {% for img in gallery %}
-      <li class="gallery__item" data-kind="{{ img.image_kind }}">
-        <figure>
-          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}" data-thumb="{{ img.thumb_url }}"
-             data-caption="{{ T['kind_' ~ img.image_kind] }}{% if img.caption %}: {{ img.caption }}{% endif %} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
-             data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
-            <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
-          </a>
-          <figcaption>
-            <strong>{{ T['kind_' ~ img.image_kind] }}</strong>{% if img.caption %} <span class="gallery__caption"{% if lang != 'en' %} lang="en"{% endif %}>{{ img.caption }}</span>{% endif %}<br>{{ img.author }} ·
-            {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
-          </figcaption>
-        </figure>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
 
   <dialog class="viewer" aria-label="{{ T.enlarge_image }}">
     <figure>
@@ -237,6 +208,36 @@
       </li>
       {% endfor %}
     </ol>
+  </section>
+  {% endif %}
+
+  {% if gallery %}
+  <section class="block" id="imagenes">
+    <h2>{{ T.gallery_title }}</h2>
+    {% set kinds = gallery | map(attribute='image_kind') | unique | list %}
+    {% if gallery | length >= 6 and kinds | length >= 3 %}
+    <div class="gallery__filters" role="group" aria-label="{{ T.gallery_filter }}">
+      <button type="button" class="chip chip--on" data-kind="" aria-pressed="true">{{ T.search_all }}</button>
+      {% for k in kinds %}<button type="button" class="chip" data-kind="{{ k }}" aria-pressed="false">{{ T['kind_' ~ k] }}</button>{% endfor %}
+    </div>
+    {% endif %}
+    <ul class="gallery">
+      {% for img in gallery %}
+      <li class="gallery__item" data-kind="{{ img.image_kind }}">
+        <figure>
+          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}" data-thumb="{{ img.thumb_url }}"
+             data-caption="{{ T['kind_' ~ img.image_kind] }}{% if img.caption %}: {{ img.caption }}{% endif %} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
+             data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
+            <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            <strong>{{ T['kind_' ~ img.image_kind] }}</strong>{% if img.caption %} <span class="gallery__caption"{% if lang != 'en' %} lang="en"{% endif %}>{{ img.caption }}</span>{% endif %}<br>{{ img.author }} ·
+            {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
+          </figcaption>
+        </figure>
+      </li>
+      {% endfor %}
+    </ul>
   </section>
   {% endif %}
 </article>

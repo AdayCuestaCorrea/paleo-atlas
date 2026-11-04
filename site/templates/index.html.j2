@@ -1,35 +1,152 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import card, event %}
+{% from "macros.html.j2" import card, event_compact %}
 {% block content %}
-<section class="hero">
-  <p class="kicker">{{ T.tagline }}</p>
-  <h1>{{ T.site_name }}</h1>
-  <p class="lead">{{ T.lead }}</p>
-  {% if latest_week %}<p><a class="button" href="{{ url('recap', latest_week) }}">{{ T.latest_recap }} · {{ week_label(latest_week) }}</a></p>{% endif %}
-</section>
+<h1 class="visually-hidden">{{ T.site_name }} · {{ T.tagline }}</h1>
 
-<section class="block">
-  <h2>{{ T.latest }}</h2>
-  <p class="muted">{{ T.latest_lead }}</p>
-  <ol class="timeline">
-    {% for e in events %}{{ event(e, T, fmt_date, url, show_taxon=True) }}{% endfor %}
-  </ol>
-</section>
+<div class="home-top">
+  {% if slides %}
+  <section class="feature" data-carousel aria-roledescription="{{ T.carousel }}" aria-label="{{ T.curiosities }}"
+           data-pause="{{ T.carousel_pause }}" data-play="{{ T.carousel_play }}">
+    {% for s in slides %}{% set tx = s.taxon %}
+    <article class="feature__slide{% if loop.first %} is-on{% endif %}" aria-roledescription="{{ T.slide }}"
+             aria-label="{{ t('slide_n', n=loop.index, total=loop.length) }}">
+      <a class="feature__link" href="{{ url('taxon', tx.taxon_key) }}">
+        <img src="{{ thumb(tx.image_url, 960) }}" alt="{{ tx.taxon_name }}"{% if loop.index > 2 %} loading="lazy"{% endif %} decoding="async">
+        <span class="feature__body">
+          <span class="kicker">{% if loop.first %}{{ T.curiosity_of_the_day }} · {{ fmt_date(built_on, 'short') }}{% else %}{{ T.did_you_know }}{% endif %}</span>
+          <span class="feature__quote">{{ prose(s.text[lang], links=False) }}</span>
+          <span class="feature__who"><em>{{ tx.taxon_name }}</em>{% set meta = card_meta(tx) %}{% if meta %} · {{ meta }}{% endif %} · {{ T.read_page }} →</span>
+        </span>
+      </a>
+      <p class="feature__credit">{{ T.image_credit }}: {{ tx.image_author }} ·
+        {% if tx.image_license_url %}<a href="{{ tx.image_license_url }}" rel="license noopener">{{ tx.image_license }}</a>{% else %}{{ tx.image_license }}{% endif %}</p>
+    </article>
+    {% endfor %}
+    <div class="feature__ctrl" hidden>
+      <button type="button" data-prev aria-label="{{ T.carousel_prev }}">‹</button>
+      <button type="button" data-next aria-label="{{ T.carousel_next }}">›</button>
+      <button type="button" data-play aria-label="{{ T.carousel_pause }}">❚❚</button>
+      <span class="bars">{% for s in slides %}<button type="button" class="bar" aria-label="{% if loop.first %}{{ T.curiosity_of_the_day }}{% else %}{{ t('slide_n', n=loop.index, total=loop.length) }}{% endif %}"><i><b></b></i></button>{% endfor %}</span>
+      <span class="feature__count" data-count aria-live="polite">1 / {{ slides | length }}</span>
+    </div>
+  </section>
+  {% endif %}
 
-<section class="block">
-  <h2>{{ t('new_taxa', year=built_on.year) }}</h2>
-  <p class="muted">{{ T.new_taxa_lead }}</p>
-  <div class="grid">
-    {% for taxon in new %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}
+  <aside class="news" aria-labelledby="h-latest">
+    <h2 id="h-latest">{{ T.latest }}{% if latest_week %} <a href="{{ url('recap', latest_week) }}">{{ T.latest_recap }} →</a>{% endif %}</h2>
+    <ol class="news__list">
+      {% for e in events %}{{ event_compact(e, T, fmt_date, url) }}{% endfor %}
+    </ol>
+  </aside>
+</div>
+
+{% set js = {
+  "n_new": T.explore_n_new, "n_new_one": T.explore_n_new_one, "n_all": T.explore_n_all, "n_all_one": T.explore_n_all_one,
+  "tile_new": T.explore_tile_new, "tile_all": T.explore_tile_all,
+  "order_new": T.explore_order_new, "order_all": T.explore_order_all,
+  "remove": T.explore_remove, "clear_all": T.explore_clear_all,
+  "empty_new": T.explore_empty_new, "empty_new_action": T.explore_empty_new_action,
+  "empty_all": T.explore_empty_all, "empty_all_action": T.explore_empty_all_action,
+  "more": T.explore_more, "badge": T.explore_badge, "map_item": T.map_item,
+} %}
+<section class="explore" id="explorar" aria-labelledby="h-explore" data-explore
+         data-index="{{ url('explore_index') }}" data-lang="{{ lang }}">
+  <script type="application/json" data-strings>{{ js | tojson }}</script>
+  <div class="explore__head">
+    <h2 id="h-explore">{{ T.explore_title }}</h2>
+    <div class="scope" role="group" aria-label="{{ T.explore_scope }}" hidden>
+      <button type="button" data-scope="new" aria-pressed="true">{{ t('explore_new', year=built_on.year) }}</button>
+      <button type="button" data-scope="all" aria-pressed="false">{{ T.explore_all }}</button>
+    </div>
   </div>
-</section>
 
-<section class="block">
-  <h2>{{ T.known_taxa }}</h2>
-  <p class="muted">{{ T.known_taxa_lead }}</p>
-  <div class="grid">
-    {% for taxon in known %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}
+  <div class="explore__panels">
+    <div class="panel panel--wide">
+      <h3>{{ T.explore_when }} <span class="note">{{ T.explore_when_hint }}</span></h3>
+      <div class="ribbon">
+        {% for key, en, es, old, young in periods %}
+        {% set name = es if lang == 'es' else en %}
+        {% set n = counts.time[key] %}
+        {% set tag = 'a' if key in indices.periods else 'span' %}
+        <{{ tag }} class="ribbon__seg{% if key in ('ordovician', 'devonian', 'permian', 'triassic') %} ribbon__seg--dark{% endif %}{% if not n %} is-zero{% endif %}"{% if tag == 'a' %} href="{{ url('period_index', key) }}"{% endif %}
+           data-key="{{ key }}" style="--c: var(--p-{{ key }}); --w: {{ [old - young, 18] | max }}"
+           title="{{ name }} · {{ old | round | int }}–{{ young | round | int }} Ma">
+          <b><span class="lbl-long">{{ name }}</span><span class="lbl-short" aria-hidden="true">{{ period_symbols[key] }}</span></b>
+          <span class="ribbon__n lbl-long">{{ count(n) }}</span>
+        </{{ tag }}>
+        {% endfor %}
+      </div>
+      <div class="ribbon__scale" aria-hidden="true"><span>487 Ma</span><span>252 Ma</span><span>66 Ma</span><span>{{ T.today }}</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>{{ T.explore_what }}</h3>
+      {% for block, keys in blocks.items() %}
+      <p class="gblock">{{ T['block_' ~ block] }}</p>
+      <div class="gtiles">
+        {% for g in keys %}
+        {% set pic = group_pictures.get(g) %}
+        {% set n = counts.group[g] %}
+        {% set tag = 'a' if g in indices.groups else 'span' %}
+        <{{ tag }} class="gtile{% if not n %} is-zero{% endif %}"{% if tag == 'a' %} href="{{ url('group_index', g) }}"{% endif %} data-key="{{ g }}"
+           title="{{ T.get('group_note_' ~ g, '') }}{% if pic %}{% if T.get('group_note_' ~ g) %} · {% endif %}{{ pic.taxon_name }} · {{ T.image_credit }}: {{ pic.image_author }}, {{ pic.image_license }}{% endif %}">
+          {% if pic %}<img src="{{ thumb(pic.image_url) }}" alt="" loading="lazy" decoding="async">{% endif %}
+          <span class="gtile__label">{{ terms.group(g, lang, plural=True) or g }}<small>{{ t('explore_tile_new', n=count(n)) }}</small></span>
+        </{{ tag }}>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="panel worldmap">
+      <h3>{{ T.explore_where }}</h3>
+      <div class="mapbox">
+        <svg viewBox="-180 -90 360 180" role="group" aria-label="{{ T.map_home_label }}">
+          <use href="{{ base }}/static/world.svg#land"{% if map_detail %} data-detail="{{ base }}/static/{{ map_detail }}#land"{% endif %} class="land" x="-180" y="-90" width="360" height="180"></use>
+          {% for code, lat, lon in map_countries %}
+          {% set n = counts.place[code] %}
+          {% set name = terms.country_name(code, lang) %}
+          <a href="{{ url('country_index', code) if code in indices.countries else url('encyclopedia') }}" data-code="{{ code }}" data-n="{{ n }}" aria-label="{{ name }}: {{ count(n) }}">
+            <circle cx="{{ lon }}" cy="{{ -lat }}" r="{{ ([1.3, n ** 0.5 * 1.3] | max) if n else 0 }}"><title>{{ name }} · {{ count(n) }}</title></circle>
+          </a>
+          {% endfor %}
+        </svg>
+        <div class="mapctl" hidden>
+          <button type="button" data-zoom="in" aria-label="{{ T.map_zoom_in }}" title="{{ T.map_zoom_in }}">+</button>
+          <button type="button" data-zoom="out" aria-label="{{ T.map_zoom_out }}" title="{{ T.map_zoom_out }}">−</button>
+          <button type="button" data-zoom="world" aria-label="{{ T.region_world }}" title="{{ T.region_world }}">⤢</button>
+        </div>
+        <p class="maphint" hidden>{{ T.map_hint }}</p>
+      </div>
+      <div class="mapfoot" hidden>
+        <div class="regions" role="group" aria-label="{{ T.map_regions }}">
+          {% for key in ['world', 'europe', 'africa', 'asia', 'north_america', 'south_america', 'oceania', 'antarctica'] %}
+          <button type="button" class="chip" data-region="{{ key }}">{{ T['region_' ~ key] }}</button>
+          {% endfor %}
+        </div>
+        <label class="pickc">{{ T.map_pick_country }}
+          <select data-country>
+            <option value="">{{ T.map_all_countries }}</option>
+            {% set options = [] %}{% for code, lat, lon in map_countries %}{% set _ = options.append((terms.country_name(code, lang), code)) %}{% endfor %}
+            {% for name, code in options | sort %}<option value="{{ code }}">{{ name }}</option>{% endfor %}
+          </select>
+        </label>
+      </div>
+      <noscript><p class="note"><a href="{{ url('encyclopedia') }}">{{ T.by_country }}</a></p></noscript>
+    </div>
   </div>
-  <p><a class="button button--ghost" href="{{ url('taxa') }}">{{ T.see_all }} ({{ known_total }})</a></p>
+
+  <div class="explore__summary">
+    <strong data-count aria-live="polite">{{ t('explore_n_new', n=count(new_total)) }}</strong>
+    <span class="chips" data-pills></span>
+    <span class="note" data-order>{{ T.explore_order_new }}</span>
+  </div>
+  <div class="grid explore__results" data-results>
+    {% for taxon in first_new %}{{ card(taxon, lang, T, url, terms) }}{% endfor %}
+  </div>
+  <p class="explore__empty" data-empty hidden></p>
+  <p class="explore__more"><a class="button button--ghost" data-more href="{{ url('taxa') }}">{{ t('explore_see_all_new', n=count(new_total)) }}</a></p>
+  <p class="note">{{ T.explore_source }}</p>
 </section>
+<script src="{{ base }}/static/home.js" defer></script>
 {% endblock %}

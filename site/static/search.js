@@ -109,6 +109,59 @@
     module.exports = { prepare: prepare, search: search, words: words, taxa: function () { return taxa; } };
     return;
   }
+  // The index, downloaded once per page and only when needed.
+  var loading = null;
+  function load(url) {
+    if (!loading) {
+      loading = fetch(url).then(function (r) { return r.json(); }).then(function (index) { prepare(index); });
+    }
+    return loading;
+  }
+  window.PaleoSearch = { load: load, search: search };
+
+  // Suggestions under the search box of the header, on every page.
+  document.querySelectorAll("[data-suggest]").forEach(function (form) {
+    var input = form.querySelector("input[name=q]"), list = form.querySelector(".suggest"), timer = null;
+    function hide() { list.hidden = true; input.setAttribute("aria-expanded", "false"); }
+    input.addEventListener("focus", function () { load(form.dataset.index); });
+    input.addEventListener("input", function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        load(form.dataset.index).then(function () {
+          var q = input.value.trim(), found = q ? search(q) : [];
+          list.replaceChildren();
+          if (!q) { hide(); return; }
+          found.slice(0, 6).forEach(function (r) {
+            var li = document.createElement("li"), a = document.createElement("a");
+            a.href = r.t.u;
+            var img = document.createElement(r.t.img ? "img" : "span");
+            if (r.t.img) { img.src = r.t.img; img.alt = ""; img.loading = "lazy"; if (r.t.sil) img.className = "pic--silhouette"; }
+            var text = document.createElement("span"), name = document.createElement("em"), meta = document.createElement("small");
+            name.textContent = r.t.n; meta.textContent = r.t.meta;
+            text.append(name, meta); a.append(img, text); li.appendChild(a); list.appendChild(li);
+          });
+          var li = document.createElement("li"), all = document.createElement("a");
+          all.className = "suggest__all";
+          all.href = form.action + "?q=" + encodeURIComponent(q);
+          all.textContent = found.length ? form.dataset.all.replace("{n}", found.length) : form.dataset.none;
+          li.appendChild(all); list.appendChild(li);
+          list.hidden = false; input.setAttribute("aria-expanded", "true");
+        });
+      }, 120);
+    });
+    input.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape") hide();
+      if (ev.key === "ArrowDown") { var a = list.querySelector("a"); if (a && !list.hidden) { ev.preventDefault(); a.focus(); } }
+    });
+    list.addEventListener("keydown", function (ev) {
+      var links = Array.prototype.slice.call(list.querySelectorAll("a")), i = links.indexOf(document.activeElement);
+      if (ev.key === "ArrowDown" && i < links.length - 1) { ev.preventDefault(); links[i + 1].focus(); }
+      if (ev.key === "ArrowUp") { ev.preventDefault(); (i > 0 ? links[i - 1] : input).focus(); }
+      if (ev.key === "Escape") { hide(); input.focus(); }
+    });
+    document.addEventListener("click", function (ev) { if (!form.contains(ev.target)) hide(); });
+  });
+
   var root = document.querySelector("[data-search]");
   if (!root) return;
   var input = root.querySelector("input[name=q]");
@@ -214,8 +267,7 @@
     if (ev.key === "ArrowDown" && first) { ev.preventDefault(); first.focus(); }
   });
 
-  fetch(root.dataset.index).then(function (r) { return r.json(); }).then(function (index) {
-    prepare(index);
+  load(root.dataset.index).then(function () {
     var q = new URL(location.href).searchParams.get("q");
     if (q) input.value = q;
     render();

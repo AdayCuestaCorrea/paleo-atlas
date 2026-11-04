@@ -223,6 +223,14 @@ _COUNTRY_CODES = {r["country_code"].lower(): (r["name_en"], r["name_es"]) for r 
 COUNTRIES_ES.update({en: es for en, es in _COUNTRY_CODES.values() if en not in COUNTRIES_ES})
 
 
+_CODES_BY_NAME = {en.lower(): code for code, (en, _) in _COUNTRY_CODES.items()}
+
+
+def country_code(name: str | None) -> str | None:
+    """Lowercase PBDB country code of an English country name, or None."""
+    return _CODES_BY_NAME.get(name.strip().lower()) if name else None
+
+
 def country_name(code: str, lang: str) -> str:
     """Name of a PBDB country code ("ar", "uk", "o2"…) in ``lang``."""
     en, es = _COUNTRY_CODES.get(code.lower(), (code.upper(), code.upper()))

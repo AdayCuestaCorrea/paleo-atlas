@@ -3,7 +3,7 @@
 {% macro image(taxon, T, size="card") -%}
   {%- if taxon.image_url -%}
   <img class="pic pic--{{ size }}{% if taxon.image_source == 'phylopic' %} pic--silhouette{% endif %}"
-       src="{{ taxon.image_url }}" alt="{{ taxon.taxon_name }}" loading="lazy" decoding="async">
+       src="{{ thumb(taxon.image_url) if size == 'card' else taxon.image_url }}" alt="{{ taxon.taxon_name }}" loading="lazy" decoding="async">
   {%- else -%}
   <div class="pic pic--{{ size }} pic--empty" aria-hidden="true">✶</div>
   {%- endif -%}
@@ -83,6 +83,26 @@
     {%- if e.source_title %} · <span class="event__via">{{ T.event_via }} {{ e.source_title }}</span>{% endif -%}
   </span>
   {{ badges(e, T) }}
+</li>
+{%- endmacro %}
+
+{#- A news item for the home page: the animal links to its page, the title to the
+    study itself (its DOI), or to the page's history when there is no DOI. -#}
+{% macro event_compact(e, T, fmt_date, url) -%}
+<li class="news__item">
+  <time datetime="{{ e.event_date.isoformat() }}">{{ fmt_date(e.event_date, 'short') }}</time>
+  <div>
+    <span class="news__type">{{ T['event_' ~ e.event_type] }}</span>
+    {% if e.taxon %}<a class="news__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
+    {% set translated = T.lang == 'es' and e.title_es %}
+    {% set title = e.title_es if translated else e.title %}
+    {% if title %}
+    {% if e.doi %}<a class="news__title" href="https://doi.org/{{ e.doi }}" rel="noopener" title="{{ T.open_study }}"{% if T.lang == 'es' and not translated %} lang="en"{% endif %}>{{ title }}<span class="news__ext" aria-hidden="true"> ↗</span></a>
+    {% elif e.taxon %}<a class="news__title" href="{{ url('taxon', e.taxon.taxon_key) }}#historial"{% if T.lang == 'es' and not translated %} lang="en"{% endif %}>{{ title }}</a>
+    {% else %}<span class="news__title">{{ title }}</span>{% endif %}
+    {% endif %}
+    {% if e.journal %}<cite class="news__journal">{{ e.journal }}</cite>{% endif %}
+  </div>
 </li>
 {%- endmacro %}
 

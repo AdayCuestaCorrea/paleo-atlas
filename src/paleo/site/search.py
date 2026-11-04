@@ -22,6 +22,16 @@ def _both(fn: Callable[[str | None, str], str | None], value: str | None) -> lis
     return [v for v in {value, fn(value, "es"), fn(value, "en")} if v]
 
 
+def card_meta(taxon: dict[str, Any], lang: str) -> str:
+    """The line under a card's name: group · age · first country."""
+    age = terms.age(taxon.get("age_text"), lang) or terms.interval(
+        taxon.get("early_interval"), lang
+    )
+    country = (taxon.get("countries") or [None])[0]
+    values = (terms.group(taxon.get("taxon_group"), lang), age, terms.place(country, lang))
+    return " · ".join(v for v in values if v)
+
+
 def entry(taxon: dict[str, Any], lang: str, url: str) -> dict[str, Any]:
     name = taxon["taxon_name"]
     genus = taxon.get("genus_name") or name.split(" ")[0]
@@ -59,9 +69,6 @@ def entry(taxon: dict[str, Any], lang: str, url: str) -> dict[str, Any]:
             if en in terms.PERIODS and en in taxon["age_text"]
         ]  # fmt: skip
         time += [name for pair in periods for name in pair]
-    age = terms.age(taxon.get("age_text"), lang) or terms.interval(
-        taxon.get("early_interval"), lang
-    )
     country = (taxon.get("countries") or [None])[0]
     return {
         "n": name,
@@ -69,9 +76,7 @@ def entry(taxon: dict[str, Any], lang: str, url: str) -> dict[str, Any]:
         "img": taxon.get("image_url"),
         "sil": taxon.get("image_source") == "phylopic",
         "new": taxon.get("page_type") == "new",
-        "meta": " · ".join(
-            v for v in (terms.group(group_key, lang), age, terms.place(country, lang)) if v
-        ),
+        "meta": card_meta(taxon, lang),
         "f": {k: sorted(set(v)) for k, v in fields.items() if v},
         "facets": {
             "clade": taxon.get("family_name") or taxon.get("order_name"),
@@ -88,6 +93,7 @@ IMAGE_PREFIXES = [
     "https://images.phylopic.org/images/",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/",
     "https://upload.wikimedia.org/wikipedia/commons/",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/",  # appended: older ids stay valid
 ]
 
 

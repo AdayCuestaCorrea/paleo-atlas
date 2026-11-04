@@ -13,8 +13,9 @@ import os
 import re
 import shutil
 import tomllib
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
+from functools import cached_property
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -25,13 +26,14 @@ from markupsafe import Markup, escape
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import terms, tree
+from paleo.site import explore, terms, tree
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.indices import build_indices, unit_key, unit_name
-from paleo.site.search import build_index
+from paleo.site.search import build_index, card_meta
 
 LANGS = ("es", "en")
+HOME_CARDS = 12  # cards the home page draws before the explorer's JS takes over
 I18N_DIR = Path(__file__).parent / "i18n"
 SITE_URL = os.environ.get("PALEO_SITE_URL", "https://adaycuestacorrea.github.io/paleo-atlas")
 
@@ -47,6 +49,7 @@ PATHS = {
         "about": "es/acerca.html",
         "search": "es/buscar.html",
         "search_index": "es/buscar.json",
+        "explore_index": "es/explorar.json",
         "encyclopedia": "es/enciclopedia/index.html",
         "group_index": "es/enciclopedia/grupo/{key}.html",
         "period_index": "es/enciclopedia/epoca/{key}.html",
@@ -63,6 +66,7 @@ PATHS = {
         "about": "en/about.html",
         "search": "en/search.html",
         "search_index": "en/search.json",
+        "explore_index": "en/explore.json",
         "encyclopedia": "en/encyclopedia/index.html",
         "group_index": "en/encyclopedia/group/{key}.html",
         "period_index": "en/encyclopedia/period/{key}.html",
@@ -104,6 +108,14 @@ def md_inline(text: str) -> Markup:
     return Markup(re.sub(r"\*([^*]+)\*", r"<em>\1</em>", escaped))
 
 
+def fmt_count(n: int, lang: str) -> str:
+    """A whole number as each language writes it: 4890 and 10 252 (RAE: no separator
+    with four digits, a narrow space from five), 4,890 and 10,252 in English."""
+    if lang == "en":
+        return f"{n:,}"
+    return f"{n:,}".replace(",", "\u202f") if n >= 10000 else str(n)
+
+
 def fmt_date(value: dt.date | None, lang: str, precision: str = "day") -> str:
     """Format a date with the precision we actually know ("2026", "feb 2026")."""
     if value is None:
@@ -113,6 +125,8 @@ def fmt_date(value: dt.date | None, lang: str, precision: str = "day") -> str:
         return str(value.year)
     if precision == "month":
         return f"{month} {value.year}"
+    if precision == "short":  # day and month, for lists of this year's news
+        return f"{value.day} {month}"
     return f"{value.day} {month} {value.year}"
 
 
@@ -169,6 +183,7 @@ class SiteBuilder:
         self.env.globals["tree_svg"] = tree.svg
         self.env.globals["tree_periods"] = tree.tree_periods
         self.env.globals["terms"] = terms
+        self.env.globals["thumb"] = explore.thumb
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
         # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
         # A species folded into its genus page links there.
@@ -177,7 +192,14 @@ class SiteBuilder:
         }
         self.atlas_genera = {name.split(" ")[0] for name in self.atlas_names}
         self._names = re.compile(r"\b[A-Z][a-z]+(?: [a-z]+)?")
-        groups = list(dict.fromkeys(c.taxon_group for c in scope_clades(enabled_only=False)))
+        clades = scope_clades(enabled_only=False)
+        groups = list(dict.fromkeys(c.taxon_group for c in clades))
+        self.groups = groups
+        # Groups under their block (§4), in the order of the scope seed.
+        self.blocks: dict[str, list[str]] = {}
+        for c in clades:
+            if c.taxon_group not in self.blocks.setdefault(c.block, []):
+                self.blocks[c.block].append(c.taxon_group)
         self.indices = build_indices(data.taxa, groups)
         self.env.globals["indices"] = self.indices
         self.env.globals["unit_name"] = unit_name
@@ -185,14 +207,15 @@ class SiteBuilder:
 
     # ----------------------------------------------------------------- prose
 
-    def prose(self, text: str, lang: str, own_name: str | None) -> Markup:
+    def prose(self, text: str, lang: str, own_name: str | None, links: bool = True) -> Markup:
         """Escape a sentence, italicize scientific names and link them: to their page
-        in the atlas, or to Wikipedia in the page's language."""
+        in the atlas, or to Wikipedia in the page's language (only italics when
+        ``links`` is false, e.g. inside a link)."""
         escaped = html.escape(text)
 
         def link(name: str) -> str:
             key = self.atlas_names.get(name)
-            if name == own_name:
+            if name == own_name or not links:
                 return f"<em>{name}</em>"
             if key:
                 href = self.url(lang, "taxon", key)
@@ -237,6 +260,47 @@ class SiteBuilder:
     def t(self, lang: str, name: str, **kwargs: Any) -> str:
         return self.i18n[lang][name].format(**kwargs)
 
+    # -------------------------------------------------------------- explorer
+
+    @cached_property
+    def explore_entries(self) -> list[dict[str, Any]]:
+        data = self.data
+        curiosities = {
+            k for (k, lang) in data.texts
+            if lang == "es" and any(
+                s["section"] == "curiosities" and s["sentences"]
+                for s in data.texts[(k, lang)]["sections"]
+            )
+        }  # fmt: skip
+        return explore.explore_entries(
+            data.taxa, groups=self.groups, curiosities=curiosities,
+            ranks=explore.new_order(data.taxa, data.all_events()),
+        )  # fmt: skip
+
+    def home_context(self, events: list[dict[str, Any]]) -> dict[str, Any]:
+        data = self.data
+        entries = self.explore_entries
+        new = sorted((e for e in entries if e["flags"] & explore.NEW), key=lambda e: e["rank"])
+        counts = explore.initial_counts(entries)
+        # Every country on the map, biggest first so the small ones are drawn on top.
+        totals = Counter(c for e in entries for c in e["countries"] if c in data.country_centroids)
+        countries = sorted(totals, key=lambda c: (-totals[c], c))
+        return {
+            "slides": explore.pick_curiosities(data.taxa, data.texts, data.built_on),
+            "events": events[:6],
+            "blocks": self.blocks,
+            "group_pictures": explore.group_pictures(data.taxa, data.texts),
+            "periods": explore.PERIODS,
+            "counts": counts,
+            "first_new": [e["taxon"] for e in new[:HOME_CARDS]],
+            "new_total": len(new),
+            "pages_total": len(entries),
+            "map_countries": [(c, *data.country_centroids[c]) for c in countries],
+            # A detailed map (1:50m) for the zoomed in home map, loaded on the first zoom.
+            "map_detail": "world-50m.svg" if (self.static_dir / "world-50m.svg").exists() else None,
+            "period_symbols": explore.PERIOD_SYMBOLS,
+        }
+
     # ----------------------------------------------------------------- pages
 
     def pages(self) -> list[Page]:
@@ -258,13 +322,10 @@ class SiteBuilder:
         idx = self.indices
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []
+        home = self.home_context(events)
         for lang in LANGS:
             common = {"latest_week": week_keys[0] if week_keys else None}
-            out.append(
-                Page(lang, "home", None, "index.html.j2",
-                     {**common, "events": events[:12], "new": new, "known": known[:24],
-                      "known_total": len(known)})
-            )  # fmt: skip
+            out.append(Page(lang, "home", None, "index.html.j2", {**common, **home}))
             out.append(Page(lang, "taxa", None, "taxa.html.j2", {"new": new, "known": known}))
             for taxon in data.taxa:
                 key = taxon["taxon_key"]
@@ -328,12 +389,14 @@ class SiteBuilder:
                 (f"{v:g}".replace(".", ",") if lang == "es" else f"{v:g}") if v is not None else ""
             ),
             week_label=lambda k: week_label(k, lang),
+            count=lambda n: fmt_count(n, lang),
+            card_meta=lambda taxon: card_meta(taxon, lang),
             built_on=self.data.built_on,
             last_checked=self.data.last_checked,
             stats=self.data.stats,
             page_kind=page.kind,
-            prose=lambda text: self.prose(
-                text, lang, (page.context.get("taxon") or {}).get("taxon_name")
+            prose=lambda text, links=True: self.prose(
+                text, lang, (page.context.get("taxon") or {}).get("taxon_name"), links
             ),
             **page.context,
         )
@@ -372,6 +435,13 @@ class SiteBuilder:
             )
             (tmp / self.path(lang, "search_index")).write_text(
                 json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+            )
+            explorer = explore.build_explore(
+                self.explore_entries, lang, lambda key, lang=lang: self.url(lang, "taxon", key),
+                groups=self.groups, centroids=self.data.country_centroids,
+            )  # fmt: skip
+            (tmp / self.path(lang, "explore_index")).write_text(
+                json.dumps(explorer, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
             )
         root_ctx = {"base": self.base, "T": self.i18n}
         (tmp / "index.html").write_text(

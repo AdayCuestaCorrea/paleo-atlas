@@ -176,3 +176,25 @@ def test_an_answer_cut_short_is_asked_again_in_halves(tmp_path):
     r = extract_facts(FakeLLM(), "Testosaurus", chunks, derived_root=tmp_path, cache_root=tmp_path)
     assert calls == [[c.chunk_id for c in chunks], [chunks[0].chunk_id], [chunks[1].chunk_id]]
     assert r.accepted == 1 and r.rejected == 1  # the second one is a duplicate
+
+
+def test_a_long_article_reads_every_section_opening_and_skips_popular_culture(
+    tmp_path, monkeypatch
+):
+    raw, cache = tmp_path / "raw", tmp_path / "cache"
+    filler = "A sentence about the history of research. " * 40
+    body = "".join(f"\n\n== History {i} ==\n" + filler for i in range(6))
+    body += "\n\n== Paleobiology ==\n" + "It had a strong bite force for its size. " * 20
+    body += "\n\n== Cultural significance ==\n" + "It starred in many films and books. " * 20
+    store_genus(cache, wikitext=WIKITEXT + body)
+    monkeypatch.setitem(sources.GENUS_SOURCE_CHARS, "en", 5_000)
+    chunks = sources.genus_chunks_for(
+        "Testosaurus", interim_root=tmp_path, raw_root=raw, cache_root=cache
+    )
+    titles = " ".join(c.title for c in chunks if c.source == "wikipedia_article")
+    assert "Paleobiology" in titles  # read although six history sections come first
+    assert "Cultural significance" not in titles
+    # A short article is kept whole, as before (its sources and facts do not change).
+    short = [sources.Chunk(str(i), "wikipedia_article", "en", f"T (S{i})", "u", "x", True, "abc")
+             for i in range(3)]  # fmt: skip
+    assert sources._capped(short, 5_000) == short

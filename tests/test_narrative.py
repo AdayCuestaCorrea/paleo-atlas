@@ -296,3 +296,36 @@ def test_sources_hash_ignores_private_chunks():
     public = Chunk("t:enwiki:1", "wikipedia_article", "en", "T", None, "CC BY-SA 4.0", True, "x")
     abstract = Chunk("t:abstract:1", "crossref", "en", "T", None, "publisher", False, "y")
     assert sources_hash([public]) == sources_hash([public, abstract])
+
+
+def test_paleobiology_topics_travel_with_the_sentence_and_are_saved_apart(tmp_path):
+    from paleo.narrative import write
+
+    text = write.WrittenText(sections=[
+        write.WrittenSection(section="paleobiology", sentences=[
+            write.WrittenSentence(text="It ate meat.", fact_ids=["F1"], topic="diet"),
+            write.WrittenSentence(text="It grew fast.", fact_ids=["F2"]),
+        ]),
+        write.WrittenSection(section="curiosities", sentences=[
+            write.WrittenSentence(text="Its bite was huge.", fact_ids=["F3"]),
+        ]),
+    ])  # fmt: skip
+    flat = write._flatten(text)
+    assert [s for _, _, s in flat] == ["curiosities", "paleobiology:diet", "paleobiology"]
+
+
+def test_a_few_failed_sentences_are_left_out_but_not_many():
+    from paleo.narrative.checks import SentenceReport, TextReport
+    from paleo.narrative.write import _salvage
+
+    sentences = [(f"S{i}", ["F1"], "description") for i in range(6)]
+
+    def report(failed, text_level=()):
+        return TextReport(
+            [SentenceReport(i, f"S{i}", ["bad"] if i in failed else []) for i in range(6)],
+            list(text_level),
+        )
+
+    assert [t for t, _, _ in _salvage(sentences, report({4}))] == ["S0", "S1", "S2", "S3", "S5"]
+    assert _salvage(sentences, report({0, 1, 2, 3})) is None  # too many: the page fails
+    assert _salvage(sentences, report({1}, ["too long"])) is None  # text-level problem

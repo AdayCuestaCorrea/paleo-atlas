@@ -88,8 +88,14 @@
     {% if text %}
       {% for section in SECTION_ORDER %}
         {% for s in text.sections if s.section == section %}
+          <div class="text-section text-section--{{ section }}">
           <h3>{{ T['section_' ~ section] }}</h3>
-          <p>{% for sentence in s.sentences %}{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>
+          {% for topic, sentences in s.groups %}
+          {% if topic %}<h4>{{ T['topic_' ~ topic] }}</h4>{% endif %}
+          {% if section == 'curiosities' %}<ul class="curiosities">{% for sentence in sentences %}<li>{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %}</li>{% endfor %}</ul>
+          {% else %}<p>{% for sentence in sentences %}{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>{% endif %}
+          {% endfor %}
+          </div>
         {% endfor %}
       {% endfor %}
       <p class="note">{{ T.ai_note }}</p>

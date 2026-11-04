@@ -246,6 +246,27 @@ def _source(number: int, chunks: list[dict[str, Any]], lang: str) -> dict[str, A
     }
 
 
+TOPIC_ORDER = ["diet", "growth", "locomotion_senses", "behavior", "health"]
+MIN_SENTENCES_FOR_TOPICS = 6
+
+
+def groups(sentences: list[dict[str, Any]]) -> list[tuple[str | None, list[dict[str, Any]]]]:
+    """A section's sentences under sub-headings (topic, sentences) when it is long and
+    at least two topics have two sentences each; otherwise one untitled group, so a
+    sparse page never gets headings over single sentences."""
+    by_topic: dict[str | None, list[dict[str, Any]]] = defaultdict(list)
+    for s in sentences:
+        by_topic[s.get("topic") if s.get("topic") in TOPIC_ORDER else None].append(s)
+    rich = [t for t in TOPIC_ORDER if len(by_topic.get(t, [])) >= 2]
+    if len(sentences) < MIN_SENTENCES_FOR_TOPICS or len(rich) < 2:
+        return [(None, sentences)]
+    out: list[tuple[str | None, list[dict[str, Any]]]] = []
+    if by_topic.get(None):
+        out.append((None, by_topic[None]))
+    out += [(t, by_topic[t]) for t in TOPIC_ORDER if by_topic.get(t)]
+    return out
+
+
 def numbered_text(data: SiteData, taxon_key: str, lang: str) -> dict[str, Any] | None:
     """Sections whose sentences carry citation numbers, plus the numbered sources.
 
@@ -274,7 +295,10 @@ def numbered_text(data: SiteData, taxon_key: str, lang: str) -> dict[str, Any] |
                 if citations[chunk] not in chunks_of[work]:
                     chunks_of[work].append(citations[chunk])
                 refs.append(numbers[work])
-            sentences.append({"text": sentence["text"], "refs": sorted(set(refs))})
-        sections.append({"section": section["section"], "sentences": sentences})
+            topic = sentence.get("topic")
+            sentences.append({"text": sentence["text"], "refs": sorted(set(refs)), "topic": topic})
+        sections.append(
+            {"section": section["section"], "sentences": sentences, "groups": groups(sentences)}
+        )
     sources = [_source(numbers[w], chunks_of[w], lang) for w in numbers]
     return {"sections": sections, "sources": sources, "generator": text["generator"]}

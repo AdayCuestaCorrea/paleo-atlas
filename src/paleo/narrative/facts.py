@@ -23,7 +23,13 @@ from paleo.narrative.sources import Chunk, taxon_key
 from paleo.store import _atomic_write
 
 Category = Literal[
-    "description", "discovery", "paleobiology", "classification", "time_and_habitat", "debate"
+    "description",
+    "curiosities",
+    "discovery",
+    "paleobiology",
+    "classification",
+    "time_and_habitat",
+    "debate",
 ]
 BATCH_CHARS = 9_000  # chunks per call, kept well under Groq's 8K tokens/minute with the prompt
 

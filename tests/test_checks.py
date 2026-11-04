@@ -109,7 +109,9 @@ def test_repeating_a_fact_fails():
 
 
 def test_too_long_text_fails():
-    long = " ".join(["word"] * 600)
+    from paleo.narrative.checks import MAX_WORDS
+
+    long = " ".join(["word"] * (MAX_WORDS + 50))
     assert not check_text([(long, ["F1"])], FACTS, []).passed
 
 
@@ -139,3 +141,11 @@ def test_alignment_accepts_higher_clades_written_in_spanish():
     names = {"Vegavis", "Neognathae"}
     english = [("Vegavis belongs to Neognathae.", ["F1"])]
     assert check_alignment(english, ["Vegavis pertenece a las neognatas."], names) == []
+
+
+def test_thousands_with_a_comma_are_flagged_in_spanish():
+    from paleo.narrative.checks import check_alignment
+
+    src = [("The largest weighed about 5,650 kg.", ["F1"])]
+    assert any("thousands" in p for p in check_alignment(src, ["El mayor pesaba 5,650 kg."], set()))
+    assert check_alignment(src, ["El mayor pesaba unos 5650 kg."], set()) == []

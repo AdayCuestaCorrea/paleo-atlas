@@ -326,7 +326,24 @@ def chunks_for(
 # Per language, characters of article text a genus page reads at most (taxobox, lead and
 # the first sections, in that order): the long articles (Tyrannosaurus) would otherwise
 # take an hour of local GPU each, and the writer uses 24 facts at most anyway.
-GENUS_SOURCE_CHARS = {"en": 30_000, "es": 10_000}
+GENUS_SOURCE_CHARS = {"en": 60_000, "es": 15_000}
+# Sections of a long article that say nothing about the animal itself.
+CULTURE_SECTIONS = re.compile(
+    r"cultur|popular|in fiction|in media|paleoart|legacy|ficción|en los medios", re.I
+)
+# In a long article, which sections are read first: what the animal was and how it
+# lived, before the history of research and the debates about doubtful species.
+SECTION_PRIORITY = (
+    re.compile(r"^(taxobox|introduction|introducción)$", re.I),
+    re.compile(r"descri|size|tamaño|skull|cráneo|skeleton|esqueleto|anatom|teeth|dient", re.I),
+    re.compile(
+        r"paleobiol|diet|feed|bite|mordi|hunt|predat|caza|aliment|speed|velocid|locomot|"
+        r"posture|senses|sentid|brain|cerebr|vision|smell|behav|comport|social|growth|"
+        r"crecim|life history|pathol|patolog|injur|parent|nest|egg|huevo|thermo|skin|piel|"
+        r"feather|pluma|arms|brazo|claw|garra|horn|cuerno|frill|gola|armor|armadura",
+        re.I,
+    ),
+)
 
 
 def catalog_index(raw_root: Path | None) -> dict[str, dict[str, Any]]:
@@ -374,14 +391,48 @@ def catalog_chunk(genus: str, raw_root: Path | None) -> Chunk | None:
     )
 
 
+def _section(chunk: Chunk) -> str:
+    """Section label of an article chunk: "T. rex (Diet, part 2)" -> "Diet"."""
+    label = chunk.title[chunk.title.rfind("(") + 1 :].rstrip(")")
+    return label.split(", part ")[0]
+
+
 def _capped(chunks: list[Chunk], limit: int) -> list[Chunk]:
-    out, used = [], 0
-    for c in chunks:
-        if used + len(c.text) > limit and out:
+    """The article's chunks within ``limit`` characters. A short article is kept whole
+    (and unchanged). A long one is shared out by section: the opening of every section
+    first, then the following parts in turns, so Paleobiology (diet, senses, behaviour)
+    is read even when the history and the description alone fill the limit. Popular
+    culture sections are left out."""
+    if sum(len(c.text) for c in chunks) <= limit:
+        return chunks
+    by_section: dict[str, list[tuple[int, Chunk]]] = {}
+    for i, c in enumerate(chunks):
+        if not CULTURE_SECTIONS.search(_section(c)):
+            by_section.setdefault(_section(c), []).append((i, c))
+
+    def priority(label: str) -> int:
+        return next(
+            (n for n, rx in enumerate(SECTION_PRIORITY) if rx.search(label)), len(SECTION_PRIORITY)
+        )
+
+    by_section = dict(sorted(by_section.items(), key=lambda kv: (priority(kv[0]), kv[1][0][0])))
+    chosen: list[tuple[int, Chunk]] = []
+    used, turn = 0, 0
+    while True:
+        added = False
+        for parts in by_section.values():
+            if turn < len(parts):
+                i, c = parts[turn]
+                if used + len(c.text) <= limit:
+                    chosen.append((i, c))
+                    used += len(c.text)
+                    added = True
+        if not added and all(turn >= len(p) for p in by_section.values()):
             break
-        out.append(c)
-        used += len(c.text)
-    return out
+        turn += 1
+        if turn > max(len(p) for p in by_section.values()):
+            break
+    return [c for _, c in sorted(chosen, key=lambda x: x[0])]  # in reading order
 
 
 def genus_chunks_for(

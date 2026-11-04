@@ -12,7 +12,7 @@ import hashlib
 import json
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -24,6 +24,7 @@ from paleo.store import _atomic_write
 
 SECTION_ORDER = [
     "description",
+    "curiosities",
     "discovery",
     "paleobiology",
     "classification",
@@ -32,9 +33,18 @@ SECTION_ORDER = [
 ]
 
 
+# Sub-topics of the paleobiology section: the site gives them headings when the
+# section is long enough (ALCANCE.md §12.1).
+PaleoTopic = Literal["diet", "growth", "locomotion_senses", "behavior", "health"]
+PALEO_TOPICS = list(PaleoTopic.__args__)
+
+
 class WrittenSentence(BaseModel):
     text: str
     fact_ids: list[str] = Field(description="ids of the facts this sentence relies on")
+    topic: PaleoTopic | None = Field(
+        default=None, description="only in the paleobiology section: its sub-topic"
+    )
 
 
 class WrittenSection(BaseModel):
@@ -64,20 +74,52 @@ class WriteResult:
     review: str | None = None  # Spanish grammar pass: accepted | rejected | unchanged
 
 
-MAX_FACTS_FOR_WRITING = 24
+MAX_FACTS_FOR_WRITING = 36
+
+
+# How many of the selected facts each section may take: the living animal
+# (paleobiology, curiosities) gets more room than the history of research.
+SECTION_QUOTA = {
+    "description": 5,
+    "curiosities": 8,
+    "discovery": 3,
+    "paleobiology": 12,
+    "classification": 3,
+    "time_and_habitat": 3,
+    "debate": 3,
+}
+
+
+def _spread(facts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Facts taken in turns from each source chunk, so a section's quota covers the
+    whole source (diet, senses, injuries…) and not only its first paragraph."""
+    by_chunk: dict[str, list[dict[str, Any]]] = {}
+    for f in facts:
+        by_chunk.setdefault(f.get("chunk_id") or "", []).append(f)
+    out: list[dict[str, Any]] = []
+    while any(by_chunk.values()):
+        for queue in by_chunk.values():
+            if queue:
+                out.append(queue.pop(0))
+    return out
 
 
 def select_facts(facts: list[dict[str, Any]], limit: int = MAX_FACTS_FOR_WRITING) -> list[dict]:
-    """At most ``limit`` facts, taken round-robin across sections in source order,
-    so a long article yields a balanced page instead of an overlong one."""
+    """At most ``limit`` facts: each section up to its quota (spread over the source),
+    then whatever is left in turns, so a long article yields a balanced page."""
     by_section: dict[str, list[dict[str, Any]]] = {name: [] for name in SECTION_ORDER}
     for fact in facts:
         by_section.setdefault(fact["category"], []).append(fact)
+    queues = {name: _spread(items) for name, items in by_section.items()}
     chosen: list[dict[str, Any]] = []
-    while len(chosen) < min(limit, len(facts)):
-        for name in by_section:
-            if by_section[name] and len(chosen) < limit:
-                chosen.append(by_section[name].pop(0))
+    for name, queue in queues.items():
+        take = min(SECTION_QUOTA.get(name, 3), len(queue), limit - len(chosen))
+        chosen += queue[:take]
+        del queue[:take]
+    while len(chosen) < min(limit, len(facts)):  # unused quota goes round the sections
+        for queue in queues.values():
+            if queue and len(chosen) < limit:
+                chosen.append(queue.pop(0))
     order = {f["fact_id"]: i for i, f in enumerate(facts)}
     return sorted(chosen, key=lambda f: order[f["fact_id"]])
 
@@ -115,8 +157,8 @@ def is_up_to_date(facts_path: Path, derived_root: Path) -> bool:
 
 
 def target_words(fact_count: int) -> int:
-    """~120 words for a sparse taxon, up to ~450 for a well documented one."""
-    return max(120, min(450, 40 + 10 * fact_count))
+    """~120 words for a sparse taxon, up to ~700 for a well documented one."""
+    return max(120, min(700, 40 + 18 * fact_count))
 
 
 _SPACES = str.maketrans({"\u00a0": " ", "\u202f": " ", "\u2009": " ", "\u2011": "-"})
@@ -132,8 +174,28 @@ def _flatten(text: WrittenText) -> list[tuple[str, list[str], str]]:
     order = {name: i for i, name in enumerate(SECTION_ORDER)}
     out = []
     for section in sorted(text.sections, key=lambda s: order.get(s.section, 99)):
-        out.extend((_tidy(s.text), s.fact_ids, section.section) for s in section.sentences)
+        for s in section.sentences:
+            # "paleobiology:diet": the sub-topic travels with the section (the Spanish
+            # version inherits it from the English sentence); _save splits it.
+            name = section.section
+            if name == "paleobiology" and s.topic in PALEO_TOPICS:
+                name = f"{name}:{s.topic}"
+            out.append((_tidy(s.text), s.fact_ids, name))
     return out
+
+
+MAX_DROPPED_SENTENCES = 3
+
+
+def _salvage(sentences: list, report: TextReport) -> list | None:
+    """The sentences that passed, when only a few failed and the text as a whole has no
+    problem (length…): a long page is not lost for one unsourced number. None when the
+    failures are too many or text-level. What remains is checked again by the caller."""
+    failed = {r.index for r in report.sentences if r.problems}
+    if report.problems or not failed or len(failed) > MAX_DROPPED_SENTENCES:
+        return None
+    kept = [x for i, x in enumerate(sentences) if i not in failed]
+    return kept if len(kept) >= 3 else None
 
 
 def _fact_texts(facts: list[dict[str, Any]]) -> dict[str, str]:
@@ -215,7 +277,9 @@ def _save(
 ) -> None:
     sections: dict[str, list[dict[str, Any]]] = {}
     for text, fact_ids, section in sentences:
-        sections.setdefault(section, []).append({"text": text, "fact_ids": fact_ids})
+        name, _, topic = section.partition(":")
+        sentence = {"text": text, "fact_ids": fact_ids, **({"topic": topic} if topic else {})}
+        sections.setdefault(name, []).append(sentence)
     record = {
         "taxon": taxon,
         "taxon_key": key,
@@ -265,6 +329,10 @@ def write_page(
         if en_report.passed:
             break
         feedback = en_report.summary()
+    if not en_report.passed and (kept := _salvage(en, en_report)) is not None:
+        report = check_text([(t, f) for t, f, _ in kept], fact_texts, sources["en"])
+        if report.passed:  # the failed sentences are left out, the rest is verified
+            en, en_report = kept, report
     en_status = "verified" if en_report.passed else "failed"
     folder = "texts" if en_report.passed else "texts_review"
     _save(
@@ -296,14 +364,28 @@ def write_page(
         return es, report, problems + report.summary()
 
     feedback = None
+    salvaged = False
     for _attempt in range(retries + 1):
         adapted = _adapt_es(llm, taxon, en, feedback)
         es, es_report, problems = check_es(adapted)
         if not problems:
             break
         feedback = problems
+    if (
+        problems
+        and (kept := _salvage(es, es_report)) is not None
+        and not check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
+    ):
+        report = check_text(
+            [(t, f) for t, f, _ in kept], fact_texts, sources["es"], check_names=False
+        )
+        if report.passed:  # aligned, but a few Spanish sentences failed: leave them out
+            es, es_report, problems = kept, report, []
+            salvaged = True
     review = None
-    if not problems:
+    if salvaged:
+        review = "skipped"  # no sentence-by-sentence pass over a shortened text
+    elif not problems:
         # Grammar pass; kept only if the corrected text still passes every check.
         reviewed = _review_es(llm, taxon, en, adapted)
         if reviewed == adapted:

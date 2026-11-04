@@ -25,7 +25,7 @@ from dataclasses import dataclass, field
 N_GRAM = 8  # decision §16: no 8-word run copied from a source
 MIN_ORDINARY_WORDS = 4
 MIN_QUOTE_CHARS = 12
-MAX_WORDS = 520
+MAX_WORDS = 850
 MIN_WORDS = 40
 
 _QUOTES = str.maketrans(
@@ -368,6 +368,13 @@ def check_alignment(
             problems.append(
                 f"sentence {i + 1}: numbers differ "
                 f"({sorted(numbers(src))} vs {sorted(numbers(dst))})"
+            )
+        # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.
+        grouped = {m for m in re.findall(r"\b\d{1,3}(?:,\d{3})+(?!\d)", src)}
+        if comma := sorted(m for m in grouped if m in dst):
+            problems.append(
+                f"sentence {i + 1}: thousands written with a comma {comma} read as decimals "
+                "in Spanish: write them without it (5650) or with a space (12 300)"
             )
         kept = {n for n in scientific_names if n in src}
         if lost := {n for n in kept if n not in dst and not _spanish_clade_in(n, dst)}:

@@ -323,3 +323,17 @@ def test_a_moved_page_redirects_and_is_not_an_orphan_or_a_taxon(tmp_path):
     (tmp_path / "es" / "buscar.json").write_text('{"taxa": [["Tyrannosaurus"]]}')
     report = check_site(tmp_path)
     assert report.passed, report.problems  # not an orphan, not counted as a taxon page
+
+
+def test_paleobiology_gets_sub_headings_only_when_long_enough():
+    from paleo.site.data import groups
+
+    def s(topic):
+        return {"text": "x", "refs": [], "topic": topic}
+
+    rich = [s("diet"), s("diet"), s("growth"), s("growth"), s("behavior"), s(None)]
+    assert [t for t, _ in groups(rich)] == [None, "diet", "growth", "behavior"]
+    short = [s("diet"), s("diet"), s("growth"), s("growth")]  # fewer than 6 sentences
+    assert groups(short) == [(None, short)]
+    one_topic = [s("diet")] * 5 + [s("growth")]  # only one topic with two sentences
+    assert groups(one_topic) == [(None, one_topic)]

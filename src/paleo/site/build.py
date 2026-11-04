@@ -75,6 +75,7 @@ MONTHS = {
 }
 SECTION_ORDER = [
     "description",
+    "curiosities",
     "discovery",
     "paleobiology",
     "classification",

@@ -9,6 +9,8 @@ on:
   schedule:
     # Off the top of the hour, when GitHub delays or drops scheduled runs. The
     # second one is a backup: it does nothing if a run already finished today.
+    # (Edited on 2026-11-04 so GitHub registers the schedule again: no scheduled
+    # run had ever started since the repository was created.)
     - cron: "23 6 * * *" # main run (A6)
     - cron: "47 10 * * *" # backup
   workflow_dispatch:

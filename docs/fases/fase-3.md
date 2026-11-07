@@ -182,7 +182,7 @@ Con una CTE recursiva sobre los enlaces padre-hijo de PBDB: unas 4.750 × 40 fil
 - **El benchmark con 5 y 10 veces el volumen** quedó descartado: confirmaría lo que ya se sabe. Spark se lucirá mejor en un proyecto aparte, con un volumen que lo justifique.
 - **Estudios antiguos sin comprobar:** cruzarlos cada mes con Retraction Watch, sin guardar un registro por DOI (backlog).
 - **Open Tree of Life** podría volver como señal («este género está en el árbol sintético, con N estudios»), no como topología (backlog).
-- **Merge** de `fase-3` y `data-fase-3` a `main` y `data` cuando la Fase 1 cumpla sus 2 semanas autónomas.
+- **Merge** de `fase-3` y `data-fase-3` a `main` y `data`: hecho el 2026-11-07, adelantado por decisión del usuario (antes de que la Fase 1 cumpliera sus 2 semanas autónomas, que cuentan desde entonces), con la lista de abajo.
 
 ### Lista de comprobación del merge (ensayada el 2026-11-03)
 

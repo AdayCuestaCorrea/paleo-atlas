@@ -9,6 +9,13 @@ or not). The LLM's proposal never counts as a label until a person confirms it.
 
 The sample is drawn once (seeded) and saved to ``eval/news/sample.json``, so a
 session can be resumed and the set stays the same.
+
+    uv run python scripts/label_news.py --blind 50
+
+Blind mode: 50 of the articles already labelled (seeded, some of every class the
+person gave), shown WITHOUT the LLM's proposal, saved to ``eval/news/blind_labels.csv``.
+It measures the LLM without anchoring and the person against themselves. In both
+modes the key D marks an answer as doubtful.
 """
 
 # ruff: noqa: E501, RUF001  (the labelling page is inline HTML and Spanish text)
@@ -28,7 +35,8 @@ from paleo.config import get_paths, project_root
 from paleo.news.classify import labels_path, load_labels, stored_articles
 
 EVAL = project_root() / "eval" / "news"
-LABEL_FIELDS = ["key", "category", "taxa", "lang", "outlet", "title", "url", "labelled_at"]
+LABEL_FIELDS = ["key", "category", "unsure", "taxa", "lang", "outlet", "title", "url",
+                "labelled_at"]  # fmt: skip
 PAIR_FIELDS = ["key_a", "key_b", "same_story", "labelled_at"]
 CATEGORIES = ["new_species", "new_fossil", "new_study", "revision", "noise"]
 WORDS = re.compile(r"\w{4,}", re.U)
@@ -57,6 +65,24 @@ def draw_sample(articles: dict, llm: dict, size: int, seed: int = 7) -> list[str
     paleo = sorted(k for k in articles if llm.get(k, {}).get("category") not in (None, "noise"))
     rest = sorted(k for k in articles if k not in paleo)
     keys = paleo + rng.sample(rest, max(0, min(len(rest), size - len(paleo))))
+    rng.shuffle(keys)
+    return keys
+
+
+def draw_blind(first: dict, size: int, seed: int = 11) -> list[str]:
+    """``size`` already labelled articles: an equal share of each class the person gave
+    (all of a class if it has fewer), the rest noise; shuffled."""
+    rng = random.Random(seed)
+    by_class: dict[str, list[str]] = {}
+    for key, row in sorted(first.items()):
+        by_class.setdefault(row["category"], []).append(key)
+    others = [c for c in by_class if c != "noise"]
+    share = size // (len(others) + 1) if others else 0
+    keys = []
+    for c in others:
+        keys += rng.sample(by_class[c], min(share, len(by_class[c])))
+    noise = by_class.get("noise", [])
+    keys += rng.sample(noise, min(len(noise), size - len(keys)))
     rng.shuffle(keys)
     return keys
 
@@ -112,7 +138,7 @@ input{width:100%;box-sizing:border-box;padding:8px 10px;border-radius:8px;border
 <p class="help" id="help"></p></main>
 <script>
 const CATS=[["new_species","Especie nueva"],["new_fossil","Hallazgo"],["new_study","Estudio"],["revision","Revisión"],["noise","Ruido"]];
-let D,mode="items",i=0;
+let D,mode="items",i=0,unsure=false;
 const $=s=>document.querySelector(s),esc=s=>(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 async function load(){D=await (await fetch("/data")).json();i=first();draw()}
 function list(){return mode=="items"?D.sample:D.pairs}
@@ -122,11 +148,11 @@ function art(k){const a=D.articles[k];return `<p class="meta">${esc(a.outlet)} �
 function draw(){
   const L=list(),n=L.filter(done).length;$("#prog").style.width=(100*n/L.length)+"%";$("#count").textContent=`${n} de ${L.length}`;
   if(mode=="items"){
-    const k=L[i],a=D.articles[k],llm=D.llm[k]||{},mine=D.labels[k];
+    const k=L[i],a=D.articles[k],llm=D.llm[k]||{},mine=D.labels[k];unsure=!!(mine&&mine.unsure);
     const taxa=mine?mine.taxa:(llm.taxa||[]).join(", ");
     $("#view").innerHTML=`<div class="card">${art(k)}<div class="cats">${CATS.map((c,j)=>`<button data-c="${c[0]}" class="${llm.category==c[0]?"llm":""} ${mine&&mine.category==c[0]?"mine":""}"><b>${j+1}</b>${c[1]}</button>`).join("")}</div>
-    <p class="help" style="margin-top:12px">Taxones (nombres científicos que nombra, separados por comas)</p><input id="taxa" value="${esc(taxa)}"></div>`;
-    $("#help").innerHTML="<b>1–5</b> elige la categoría y pasa a la siguiente · <b>Intro</b> acepta la propuesta (borde discontinuo) · <b>T</b> edita los taxones (Intro para salir) · <b>←</b>/<b>→</b> moverse";
+    <p class="help" id="doubt" style="margin-top:12px">${unsure?"<b>Marcada como dudosa</b> (D para quitarlo)":""}</p><p class="help" style="margin-top:12px">Taxones (nombres científicos que nombra, separados por comas)</p><input id="taxa" value="${esc(taxa)}"></div>`;
+    $("#help").innerHTML=(D.blind?"<b>A ciegas</b>: sin la propuesta del LLM · ":"")+"<b>1–5</b> elige la categoría y pasa a la siguiente · "+(D.blind?"":"<b>Intro</b> acepta la propuesta (borde discontinuo) · ")+"<b>D</b> marca dudosa (antes de elegir) · <b>T</b> edita los taxones (Intro para salir) · <b>←</b>/<b>→</b> moverse";
     document.querySelectorAll(".cats button").forEach(b=>b.onclick=()=>save(b.dataset.c));
   }else{
     const p=L[i],mine=D.pair_labels[p.join("|")];
@@ -137,7 +163,7 @@ function draw(){
   }
 }
 async function post(body){await fetch("/save",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})}
-async function save(cat){const k=list()[i];const taxa=$("#taxa").value;D.labels[k]={category:cat,taxa};await post({kind:"item",key:k,category:cat,taxa});next()}
+async function save(cat){const k=list()[i];const taxa=$("#taxa").value;D.labels[k]={category:cat,taxa,unsure};await post({kind:"item",key:k,category:cat,taxa,unsure});next()}
 async function savePair(v){const p=list()[i];D.pair_labels[p.join("|")]={same_story:v};await post({kind:"pair",key_a:p[0],key_b:p[1],same_story:v});next()}
 function next(){i=Math.min(i+1,list().length-1);draw()}
 document.addEventListener("keydown",e=>{
@@ -146,13 +172,14 @@ document.addEventListener("keydown",e=>{
   else if(e.key=="ArrowLeft"){i=Math.max(i-1,0);draw()}
   else if(mode=="items"){
     if(e.key>="1"&&e.key<="5")save(CATS[+e.key-1][0]);
-    else if(e.key=="Enter"){const c=(D.labels[list()[i]]||D.llm[list()[i]]||{}).category;if(c)save(c)}
+    else if(e.key=="Enter"){const c=(D.labels[list()[i]]||D.llm[list()[i]]||{}).category;if(c){unsure=unsure||!!(D.labels[list()[i]]||{}).unsure;save(c)}}
     else if(e.key=="t"||e.key=="T"){e.preventDefault();$("#taxa").focus()}
+    else if(e.key=="d"||e.key=="D"){unsure=!unsure;$("#doubt").innerHTML=unsure?"<b>Marcada como dudosa</b> (D para quitarlo)":""}
   }else{if(e.key=="s"||e.key=="S")savePair("yes");else if(e.key=="n"||e.key=="N")savePair("no")}
 });
 $("#tab1").onclick=e=>{e.preventDefault();mode="items";i=first();draw()};
 $("#tab2").onclick=e=>{e.preventDefault();mode="pairs";i=first();draw()};
-load();
+load().then(()=>{if(D.blind)$("#tab2").hidden=true});
 </script></html>"""
 
 
@@ -160,12 +187,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--sample", type=int, default=300)
     parser.add_argument("--port", type=int, default=8769)
+    parser.add_argument("--blind", type=int, default=0, help="Blind sample of this size.")
     args = parser.parse_args()
 
     paths = get_paths()
     articles = stored_articles(paths.raw)
     llm = load_labels(labels_path(paths.data / "derived"))
-    sample_path = EVAL / "sample.json"
+    sample_path = EVAL / ("blind_sample.json" if args.blind else "sample.json")
+    if args.blind and not sample_path.exists():
+        first = read_csv(EVAL / "labels.csv", lambda r: r["key"])
+        sample_path.write_text(json.dumps({"items": draw_blind(first, args.blind), "pairs": []},
+                                          indent=1) + "\n", encoding="utf-8")  # fmt: skip
     if sample_path.exists():
         sample = json.loads(sample_path.read_text(encoding="utf-8"))
     else:
@@ -173,7 +205,8 @@ def main() -> None:
         sample = {"items": keys, "pairs": candidate_pairs(articles, llm, keys)}
         EVAL.mkdir(parents=True, exist_ok=True)
         sample_path.write_text(json.dumps(sample, indent=1) + "\n", encoding="utf-8")
-    labels_csv, pairs_csv = EVAL / "labels.csv", EVAL / "pairs.csv"
+    labels_csv = EVAL / ("blind_labels.csv" if args.blind else "labels.csv")
+    pairs_csv = EVAL / "pairs.csv"
     labels = read_csv(labels_csv, lambda r: r["key"])
     pairs = read_csv(pairs_csv, lambda r: f"{r['key_a']}|{r['key_b']}")
 
@@ -190,7 +223,8 @@ def main() -> None:
                 data = {
                     "sample": sample["items"], "pairs": sample["pairs"],
                     "articles": {k: articles[k] for k in keys},
-                    "llm": {k: llm[k] for k in keys if k in llm},
+                    "llm": {} if args.blind else {k: llm[k] for k in keys if k in llm},
+                    "blind": bool(args.blind),
                     "labels": labels, "pair_labels": pairs,
                 }  # fmt: skip
                 self._send(json.dumps(data, ensure_ascii=False).encode(), "application/json")
@@ -204,7 +238,8 @@ def main() -> None:
                 a = articles[body["key"]]
                 taxa = ", ".join(t.strip() for t in body["taxa"].split(",") if t.strip())
                 labels[body["key"]] = {
-                    "key": body["key"], "category": body["category"], "taxa": taxa,
+                    "key": body["key"], "category": body["category"],
+                    "unsure": "yes" if body.get("unsure") else "", "taxa": taxa,
                     "lang": a["lang"], "outlet": a["outlet"], "title": a["title"],
                     "url": a["url"], "labelled_at": stamp,
                 }  # fmt: skip

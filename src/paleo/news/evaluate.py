@@ -200,6 +200,29 @@ def report_markdown(summary: dict[str, Any]) -> str:
             "measure; the baseline is not affected. A blind sample (labels made without "
             "the proposal) is the honest check.",
         ]
+    b = s.get("blind")
+    if b:
+        lines += [
+            "", "### Blind sample", "",
+            f"{b['all']['n']} of the articles labelled again without the proposal "
+            f"({b['doubtful']} marked doubtful). The person agreed with their first "
+            f"label in {_pct(b['self_agreement'])} of them.", "",
+            "| Production LLM vs blind labels | Macro F1 | Accuracy |", "|---|---:|---:|",
+            f"| All | {b['all']['macro_f1']:.2f} | {_pct(b['all']['accuracy'])} |",
+            f"| Without the doubtful ones | {b['not doubtful']['macro_f1']:.2f} | "
+            f"{_pct(b['not doubtful']['accuracy'])} |",
+        ]  # fmt: skip
+        if b.get("taxa"):
+            lines += [
+                "",
+                "Taxa typed by the person (blind):",
+                "",
+                "| Method | Precision | Recall | F1 |",
+                "|---|---:|---:|---:|",
+            ]
+            for name, t in b["taxa"].items():
+                lines.append(f"| {name} | {t['precision']:.2f} | {t['recall']:.2f} | "
+                             f"{t['f1']:.2f} |")  # fmt: skip
     if not s["support"].get("revision"):
         lines += ["", "No article of the sample is a revision: that class is not measured."]
     lines += ["", "## Taxa", ""]

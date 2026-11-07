@@ -844,7 +844,30 @@ def eval_news(
         "with_taxa": sum(bool(gold[k]["taxa"]) for k in keys),
     }  # fmt: skip
 
+    # Blind sample (labels made without the proposal): the LLM without anchoring, the
+    # person against their first labels and, if typed, the taxa (independent then).
+    blind_gold = ev.load_labels(root / "eval" / "news" / "blind_labels.csv")
+    blind: dict = {}
+    bkeys = [k for k in blind_gold if k in articles]
+    if bkeys:
+        sure = [k for k in bkeys if blind_gold[k].get("unsure") != "yes"]
+        for name, ks in (("all", bkeys), ("not doubtful", sure)):
+            truth_b = [blind_gold[k]["category"] for k in ks]
+            blind[name] = ev.scores(truth_b, [production.get(k, {}).get("category") for k in ks])
+        blind["self_agreement"] = sum(
+            blind_gold[k]["category"] == gold[k]["category"] for k in bkeys if k in gold
+        ) / len(bkeys)
+        blind["doubtful"] = len(bkeys) - len(sure)
+        blind_taxa = {k: blind_gold[k]["taxa"] for k in bkeys}
+        if any(blind_taxa.values()):
+            blind["taxa"] = {
+                "Pages linked (text + checked LLM names)": ev.taxa_scores(blind_taxa, linked),
+                "LLM names only": ev.taxa_scores(
+                    blind_taxa, {k: production.get(k, {}).get("taxa", []) for k in bkeys}),
+            }  # fmt: skip
+
     summary = {
+        "blind": blind,
         "caveats": caveats,
         "evaluated_at": dt.date.today().isoformat(), "labelled": len(keys),
         "by_lang": {lang: sum(articles[k]["lang"] == lang for k in keys) for lang in ("en", "es")},

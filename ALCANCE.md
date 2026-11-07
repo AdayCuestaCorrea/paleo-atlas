@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 37 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 38 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -310,10 +310,10 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Extracción del taxón mencionado y enlace a su ficha *(por el nombre en el texto y por el LLM, los dos comprobados contra las fichas: `int_news_taxa`)*
 - [x] Deduplicación de la misma noticia entre medios e idiomas: se elige el método midiendo con pares etiquetados *(2026-11-07, 47 pares etiquetados por el usuario, 6 de la misma noticia y 5 de ellos entre inglés y español: TF-IDF de caracteres F1 0,29 con umbral elegido por validación cruzada; **Groq como juez de cada par candidato** F1 1,00 con 4 llamadas. Se queda el juez: funciona en Actions sin GPU ni descargas, y cada par se pregunta una sola vez. Los embeddings no hicieron falta)*
 - [ ] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar
-- [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12)
+- [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12.2), **con maquetas antes** *(en curso: términos, fuentes y definiciones comprobadas; v38)*
 - [ ] Documento de fase (`docs/fases/fase-5.md`)
 
-**Terminado cuando:** las métricas de clasificación de noticias están publicadas en el README y el glosario está revisado y en las fichas.
+**Terminado cuando:** las métricas de clasificación de noticias están publicadas en el README y el glosario está en las fichas con su porcentaje de acierto en la muestra revisada.
 
 ### Fase 6 — Extras
 - [ ] Modelos 3D curados (§13)
@@ -492,7 +492,8 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 
 ### 12.2 Glosario (Fase 5) — coste cero en la web
 - 150–300 términos (holotipo, terópodo, Cretácico, Ma, *nomen dubium*…), en ES + EN.
-- Primer borrador con LLM, **revisado a mano** antes de publicar (estado de revisión en el seed).
+- ~~Primer borrador con LLM, revisado a mano antes de publicar~~ *(cambiado en la v38: revisar a mano cientos de términos no es viable)*. **Cada definición, como las fichas:** una frase redactada a partir de la introducción del artículo de Wikipedia del término (en el mismo idioma, o en inglés si no hay artículo en español), citado con su revisión (`oldid`). Solo se publica si pasa todas las comprobaciones: ninguna secuencia de 8 palabras copiada de la fuente, 10–35 palabras, no se define con el propio término, ninguna cifra que no esté en la fuente y un **juez** de otra familia de modelos confirma que todo lo que dice está en la fuente. El usuario revisa una muestra al azar de ~20 y el porcentaje de acierto se publica.
+- Los términos salen de las fichas verificadas (los que aparecen en ≥3), elegidos por un LLM; su forma en español se lee de las frases españolas alineadas con las inglesas (por los hechos que citan), no se adivina. Seed `glossary_terms`. Trabajo de una vez: el pipeline diario no llama al LLM para el glosario; se rehace a mano si cambian las fuentes o aparecen términos nuevos.
 - En las fichas, los términos llevan una explicación emergente al pasar el ratón o al tocarlos; página de glosario completa.
 
 ---
@@ -788,6 +789,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v38: **glosario «como las fichas»** (§12.2): en vez de revisar a mano cada definición, se redacta desde el artículo de Wikipedia del término, citado con su revisión, y se publica solo si pasa las comprobaciones automáticas y un juez de otra familia de modelos; el usuario revisa una muestra de ~20 y se publica el acierto. Términos elegidos de las fichas verificadas, con la forma española leída de las frases alineadas. El redactor es el modelo local (GPU, con permiso del usuario) y el juez Groq (`qwen/qwen3.8-27b`). Las edades de los pisos no están en el repo: los términos de tiempo también van por la fuente, con la comprobación de cifras | El usuario no puede revisar a mano cientos de términos (no los conoce todos) |
 | 2026-11-07 | v37: **métricas de las noticias y cuatro clases.** El usuario etiquetó 300 titulares viendo la propuesta del LLM y mantuvo 294: esa cifra (98 %) es una cota superior por anclaje, y así se publica. En una muestra a ciegas de 50 sin la propuesta, el LLM coincide en el 60 % con cinco clases y el propio usuario consigo mismo en el 70 %: la mayoría de los desacuerdos son «hallazgo» frente a «estudio», que ambos intercambian. Se publican cuatro clases (hallazgo y estudio pasan a «investigación»): 74 % y 84 %. El prompt no cambia (sus errores en «especie nueva» se medirían en noticias nuevas a ciegas, sin afinar sobre las mismas). Taxones: de 21 nombres escritos a ciegas solo 8 aparecen en el titular o el resumen que ve el sistema; los demás están en el artículo, que no se guarda por las licencias | Etiquetado del usuario |
 | 2026-11-07 | v36: **empieza la Fase 5** sin cerrar las anteriores (excepción en §7), publicando sobre la marcha. **F9 verificada:** solo medios con licencia o condiciones que permiten reutilizar titular y enlace (ScienceDaily, The Conversation, SINC); el resumen del feed se guarda sin modificar y con la atribución. 421 artículos el primer día. Clases de noticia: cinco en vez de cuatro (se añade «estudio»: la mayoría de las noticias de paleontología no son ni hallazgos ni nombres nuevos, como la sangre de dinosaurio del 6 nov). `paleo ingest news`, `paleo news classify` (Groq, por lotes de 20), `paleo news dedup` (Groq juzga si cada par de noticias de paleontología publicadas a ±5 días cuenta lo mismo; TF-IDF no sirve entre idiomas), `int_news_taxa` y `fct_news`. Con permiso del usuario, `pipeline.yml` añade esos tres comandos. Las métricas se miden contra etiquetas del usuario, nunca contra las del LLM | Decisión del usuario: avanzar con la Fase 5 |
 | 2026-11-07 | v35: **sin vídeo de demostración** en el interview pack (§7, Fase 4; §20): la demo es la propia web pública y las capturas del README. `docs/fases/fase-3.md` puesto al día con lo hecho hasta la publicación | Decisión del usuario: es poco probable que alguien lo vea |

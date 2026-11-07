@@ -493,14 +493,34 @@ def _atlas_names() -> set[str]:
     return {word for name in names for word in name.split()} | _scientific_names()
 
 
+@glossary_app.command("count")
+def glossary_count() -> None:
+    """Recount the curated seed against the verified pages (forms seen, pages, batch)."""
+    from paleo.glossary import terms
+
+    seed = project_root() / "dbt" / "seeds" / "glossary_terms.csv"
+    rows = terms.count_seed(seed, get_paths().data / "derived" / "texts")
+    terms.write_seed(rows, seed)
+    typer.echo(f"{len(rows)} terms in at least {terms.MIN_PAGES} pages → {seed}")
+
+
 @glossary_app.command("terms")
-def glossary_terms(provider: Provider = "ollama", model: Model = None) -> None:
+def glossary_terms(
+    provider: Provider = "ollama",
+    model: Model = None,
+    spanish_provider: Annotated[
+        str | None, typer.Option(help="Provider of the Spanish forms step [default: --provider].")
+    ] = None,
+) -> None:
     """Pick the technical terms of the verified pages (dbt/seeds/glossary_terms.csv)."""
     from paleo.glossary import terms
     from paleo.llm import LLM
 
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
-    rows = terms.build_terms(llm, get_paths().data / "derived" / "texts", _atlas_names())
+    spanish = LLM(spanish_provider, DEFAULT_MODELS[spanish_provider]) if spanish_provider else None
+    rows = terms.build_terms(
+        llm, get_paths().data / "derived" / "texts", _atlas_names(), spanish_llm=spanish
+    )
     seed = project_root() / "dbt" / "seeds" / "glossary_terms.csv"
     terms.write_seed(rows, seed)
     first = sum(1 for r in rows if r["batch"] == 1)
@@ -512,7 +532,17 @@ JUDGE_MODEL = "qwen/qwen3.8-27b"  # another family than the writer (gpt-oss)
 
 
 @glossary_app.command("write")
-def glossary_write(provider: Provider = "ollama", model: Model = None) -> None:
+def glossary_write(
+    provider: Provider = "ollama",
+    model: Model = None,
+    judge_provider: Annotated[
+        str | None,
+        typer.Option(
+            help="Provider of the judge "
+            "[default: --provider]; groq uses another model family than the writer."
+        ),
+    ] = None,
+) -> None:
     """One checked definition per term and language (data/derived/glossary)."""
     from paleo.glossary.write import write_definitions
     from paleo.ingest.glossary import load_terms
@@ -520,9 +550,12 @@ def glossary_write(provider: Provider = "ollama", model: Model = None) -> None:
 
     paths = get_paths()
     writer = LLM(provider, model or DEFAULT_MODELS[provider])
-    judge = LLM(provider, JUDGE_MODEL if provider == "groq" else DEFAULT_MODELS[provider])
+    judge_by = judge_provider or provider
+    judge = LLM(judge_by, JUDGE_MODEL if judge_by == "groq" else DEFAULT_MODELS[judge_by])
     try:
-        r = write_definitions(writer, judge, load_terms(), derived_root=paths.data / "derived")
+        r = write_definitions(
+            writer, judge, load_terms(), derived_root=paths.data / "derived", raw_root=paths.raw
+        )
     except QuotaExhausted as exc:
         typer.echo(f"Quota exhausted ({exc}); run again tomorrow, finished calls are cached.")
         return

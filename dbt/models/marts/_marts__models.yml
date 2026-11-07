@@ -160,6 +160,14 @@ models:
               arguments:
                 values: [new_species, new_fossil, new_study, revision, noise]
 
+  - name: dim_glossary_term
+    description: >
+      The glossary (§12.2): each term with its definitions; a definition is published
+      only if it was written from a cited Wikipedia revision and passed every check.
+    columns:
+      - name: term_id
+        data_tests: [unique, not_null]
+
 unit_tests:
   - name: neighbourhood_group_is_the_lowest_clade_with_three_genera
     description: >

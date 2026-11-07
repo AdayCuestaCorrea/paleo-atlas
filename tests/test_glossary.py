@@ -79,6 +79,8 @@ def test_a_lead_is_accepted_only_if_it_names_the_term():
     assert not glossary.accepted({**ok, "lead": "A type is a specimen."}, ["holotype"])
     assert not glossary.accepted({**ok, "disambiguation": True}, ["holotype"])
     assert not glossary.accepted({"title": None}, ["holotype"])
+    group = {"title": "Nodosauridae", "lead": "Nodosauridae is a family.", "disambiguation": False}
+    assert glossary.accepted(group, ["nodosaurid", "nodosaurids"])  # the Latin group
 
 
 def test_sources_keep_the_revision_and_the_spanish_article(tmp_path):
@@ -157,21 +159,37 @@ def test_definitions_are_written_once_and_the_judge_can_reject(tmp_path):
         "holotype", {"term_id": "holotype", "title": "Holotype", "revid": 11, "lead": SOURCE}
     )
     glossary.lead_store("en", cache).flush()
+    raw = tmp_path / "raw"
+    glossary.index_store(raw).save_if_changed(
+        "holotype",
+        {
+            "term_id": "holotype",
+            "en": {"title": "Holotype", "revid": 11, "accepted": True},
+            "es": {"title": None, "revid": None, "accepted": False},
+        },
+    )
+    glossary.index_store(raw).flush()
     term = {"term_id": "holotype", "term_en": "holotype", "term_es": "holotipo",
             "all_en": ["holotype"], "all_es": ["holotipo"]}  # fmt: skip
     good = "The one specimen that scientists used to describe a species for the first time."
     llm = Writer(good)
-    r = write.write_definitions(llm, llm, [term], derived_root=derived, cache_root=cache)
+    r = write.write_definitions(
+        llm, llm, [term], derived_root=derived, cache_root=cache, raw_root=raw
+    )
     assert r.verified == {"en": 1, "es": 1}  # Spanish written from the English lead
     es = json.loads(write.definition_path(derived, "holotype", "es").read_text())
     assert es["source"] == {"lang": "en", "title": "Holotype", "revid": 11}
     calls = llm.calls
-    again = write.write_definitions(llm, llm, [term], derived_root=derived, cache_root=cache)
+    again = write.write_definitions(
+        llm, llm, [term], derived_root=derived, cache_root=cache, raw_root=raw
+    )
     assert again.up_to_date == 2 and llm.calls == calls
 
     other = tmp_path / "other"
     bad = Writer("An invented specimen that scientists used to describe a species long ago.")
-    r = write.write_definitions(bad, bad, [term], derived_root=other, cache_root=cache)
+    r = write.write_definitions(
+        bad, bad, [term], derived_root=other, cache_root=cache, raw_root=raw
+    )
     assert r.rejected == {"en": 1, "es": 1}
     en = json.loads(write.definition_path(other, "holotype", "en").read_text())
     assert en["status"] == "rejected" and en["problems"][0].startswith("judge:")

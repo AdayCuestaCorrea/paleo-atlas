@@ -24,7 +24,7 @@ from typing import Any
 import httpx
 
 from paleo.config import get_paths, project_root
-from paleo.glossary.terms import form_pattern
+from paleo.glossary.terms import LATIN, form_pattern
 from paleo.http import HttpError, get_json
 from paleo.store import RawStore
 
@@ -101,9 +101,15 @@ def fetch_leads(client: httpx.Client, lang: str, titles: list[str]) -> dict[str,
 
 
 def accepted(page: dict[str, Any], forms: list[str]) -> bool:
-    """A real article whose lead names the term."""
-    return bool(page.get("title") and page.get("lead") and not page.get("disambiguation")
-                and form_pattern(forms).search(page["lead"]))  # fmt: skip
+    """A real article whose lead names the term, or a group's article named in Latin
+    after it (nodosaurid -> Nodosauridae, whose lead uses the Latin name)."""
+    if not (page.get("title") and page.get("lead") and not page.get("disambiguation")):
+        return False
+    title = page["title"].lower()
+    same_root = LATIN.search(title) is not None and any(
+        len(f) >= 7 and title.startswith(f.lower()[:7]) for f in forms
+    )
+    return bool(form_pattern(forms).search(page["lead"]) or same_root)
 
 
 def ingest_glossary_sources(
@@ -122,7 +128,8 @@ def ingest_glossary_sources(
     result = GlossarySourcesResult(terms=len(terms), skipped_fresh=len(terms) - len(pending))
     found: dict[str, dict[str, dict[str, Any]]] = {t["term_id"]: {} for t in pending}
     for batch in _batches(pending, BATCH):
-        asked = {t["term_id"]: t["term_en"][:1].upper() + t["term_en"][1:] for t in batch}
+        asked = {t["term_id"]: t.get("source_en") or t["term_en"][:1].upper() + t["term_en"][1:]
+                 for t in batch}  # fmt: skip
         try:
             en = fetch_leads(client, "en", sorted(set(asked.values())))
         except HttpError as exc:

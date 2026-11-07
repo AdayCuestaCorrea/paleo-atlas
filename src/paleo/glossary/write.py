@@ -28,7 +28,7 @@ from typing import Any
 from pydantic import BaseModel
 
 from paleo.glossary.terms import form_pattern
-from paleo.ingest.glossary import lead_store
+from paleo.ingest.glossary import index_store, lead_store
 from paleo.llm import LLM
 from paleo.narrative.checks import copied_runs, ngrams, numbers, words
 from paleo.narrative.facts import prompt
@@ -87,13 +87,72 @@ def deterministic_problems(definition: str, source: str, forms: list[str]) -> li
     return problems
 
 
-def _source(term: dict[str, Any], lang: str, cache_root: Path | None) -> dict[str, Any] | None:
-    """The lead a definition in ``lang`` is written from: same language, else English."""
+def _source(
+    term: dict[str, Any], lang: str, cache_root: Path | None, raw_root: Path | None = None
+) -> dict[str, Any] | None:
+    """The lead a definition in ``lang`` is written from: same language, else English;
+    only a lead the index accepts at that same revision (a source dropped later, or
+    replaced by another article, is never used from the cache)."""
+    index = index_store(raw_root).latest(term["term_id"])
+    if index is None:
+        return None
     for source_lang in (lang, "en"):
+        entry = index["payload"].get(source_lang) or {}
         latest = lead_store(source_lang, cache_root).latest(term["term_id"])
-        if latest:
+        if entry.get("accepted") and latest and latest["payload"]["revid"] == entry["revid"]:
             return {"lang": source_lang, **latest["payload"]}
     return None
+
+
+def _attempt(
+    writer: LLM,
+    judge: LLM,
+    system: str,
+    judge_system: str,
+    lang: str,
+    batch: list[tuple[dict[str, Any], dict[str, Any]]],
+    feedback: dict[int, tuple[str, list[str], int]],
+) -> dict[int, tuple[str, list[str], int]]:
+    """Write and check a batch: index -> (definition, problems, attempt number). With
+    ``feedback`` (index -> the previous try), the model sees what was wrong."""
+    parts = []
+    for i, (t, s) in enumerate(batch, start=1):
+        part = (
+            f"{i}. TERM: {t[f'term_{lang}']} · LANGUAGE: {lang}\nSOURCE: {s['lead'][:LEAD_CHARS]}"
+        )
+        if i in feedback:
+            previous, problems, _ = feedback[i]
+            part += (f"\nYOUR PREVIOUS TRY WAS REJECTED: {previous}\nPROBLEMS: "
+                     f"{'; '.join(problems)}\nWrite it again in really different words, "
+                     "without those problems.")  # fmt: skip
+        parts.append(part)
+    answer = writer.complete_json(system, "\n\n".join(parts), Definitions, max_tokens=2_500)
+    written = {d.index: d.definition.strip() for d in answer.definitions}
+    to_judge = [(i, t, s, written[i]) for i, (t, s) in enumerate(batch, start=1)
+                if written.get(i)]  # fmt: skip
+    verdicts: dict[int, Verdict] = {}
+    if to_judge:
+        judge_user = "\n\n".join(
+            f"{n}. TERM: {t[f'term_{lang}']}\nSOURCE: {s['lead'][:LEAD_CHARS]}\nDEFINITION: {d}"
+            for n, (_, t, s, d) in enumerate(to_judge, start=1)
+        )
+        reply = judge.complete_json(judge_system, judge_user, Verdicts, max_tokens=900)
+        by_n = {v.index: v for v in reply.items}
+        verdicts = {i: by_n[n] for n, (i, *_) in enumerate(to_judge, start=1) if n in by_n}
+    out = {}
+    for i, (term, source) in enumerate(batch, start=1):
+        definition = written.get(i, "")
+        if not definition:
+            out[i] = ("", ["not written"], 2 if feedback else 1)
+            continue
+        problems = deterministic_problems(definition, source["lead"], term[f"all_{lang}"])
+        verdict = verdicts.get(i)
+        if verdict is None:
+            problems.append("judge: no answer")
+        elif not verdict.supported:
+            problems.append(f"judge: {verdict.unsupported or 'not supported'}")
+        out[i] = (definition, problems, 2 if feedback else 1)
+    return out
 
 
 def write_definitions(
@@ -103,6 +162,7 @@ def write_definitions(
     *,
     derived_root: Path,
     cache_root: Path | None = None,
+    raw_root: Path | None = None,
     now: dt.datetime | None = None,
 ) -> WriteResult:
     system, version = prompt("glossary_define")
@@ -112,50 +172,33 @@ def write_definitions(
     for lang in ("en", "es"):
         todo = []
         for term in terms:
-            source = _source(term, lang, cache_root)
+            source = _source(term, lang, cache_root, raw_root)
             if source is None:
                 result.no_source += lang == "en"
                 continue
             path = definition_path(derived_root, term["term_id"], lang)
             if path.exists():
                 old = json.loads(path.read_text(encoding="utf-8"))
-                if (old["source"]["revid"] == source["revid"] and old["prompt_version"] == version
+                done = old["status"] == "verified" or old.get("attempts", 1) >= 2
+                if (done and old["source"]["revid"] == source["revid"]
+                        and old["prompt_version"] == version
                         and old["judge_version"] == judge_version):  # fmt: skip
                     result.up_to_date += 1
                     continue
             todo.append((term, source))
         for start in range(0, len(todo), BATCH):
             batch = todo[start : start + BATCH]
-            user = "\n\n".join(
-                f"{i}. TERM: {t[f'term_{lang}']} · LANGUAGE: {lang}\n"
-                f"SOURCE: {s['lead'][:LEAD_CHARS]}"
-                for i, (t, s) in enumerate(batch, start=1)
-            )
-            written = {d.index: d.definition.strip()
-                       for d in writer.complete_json(system, user, Definitions,
-                                                     max_tokens=2_500).definitions}  # fmt: skip
-            to_judge = [(i, t, s, written[i]) for i, (t, s) in enumerate(batch, start=1)
-                        if written.get(i)]  # fmt: skip
-            verdicts: dict[int, Verdict] = {}
-            if to_judge:
-                judge_user = "\n\n".join(
-                    f"{n}. TERM: {t[f'term_{lang}']}\nSOURCE: {s['lead'][:LEAD_CHARS]}\n"
-                    f"DEFINITION: {d}"
-                    for n, (_, t, s, d) in enumerate(to_judge, start=1)
-                )
-                answer = judge.complete_json(judge_system, judge_user, Verdicts, max_tokens=2_000)
-                by_n = {v.index: v for v in answer.items}
-                verdicts = {i: by_n[n] for n, (i, *_) in enumerate(to_judge, start=1) if n in by_n}
+            outcome = _attempt(writer, judge, system, judge_system, lang, batch, {})
+            # one more try for the rejected ones, told what was wrong (like the pages)
+            again = {i: outcome[i] for i in outcome if outcome[i][1]}
+            if again:
+                retry = [batch[i - 1] for i in sorted(again)]
+                feedback = {n: again[i] for n, i in enumerate(sorted(again), start=1)}
+                second = _attempt(writer, judge, system, judge_system, lang, retry, feedback)
+                for n, i in enumerate(sorted(again), start=1):
+                    outcome[i] = (*second[n][:2], 2)
             for i, (term, source) in enumerate(batch, start=1):
-                definition = written.get(i, "")
-                problems = deterministic_problems(definition, source["lead"],
-                                                  term[f"all_{lang}"]) if definition else [
-                    "not written"]  # fmt: skip
-                verdict = verdicts.get(i)
-                if definition and verdict is None:
-                    problems.append("judge: no answer")
-                elif verdict is not None and not verdict.supported:
-                    problems.append(f"judge: {verdict.unsupported or 'not supported'}")
+                definition, problems, attempts = outcome[i]
                 status = "verified" if not problems else "rejected"
                 getattr(result, status)[lang] += 1
                 path = definition_path(derived_root, term["term_id"], lang)
@@ -163,6 +206,7 @@ def write_definitions(
                 _atomic_write(path, json.dumps({
                     "term_id": term["term_id"], "lang": lang, "term": term[f"term_{lang}"],
                     "definition": definition, "status": status, "problems": problems,
+                    "attempts": attempts,
                     "source": {k: source[k] for k in ("lang", "title", "revid")},
                     "generator": writer.label, "judge": judge.label,
                     "prompt_version": version, "judge_version": judge_version,

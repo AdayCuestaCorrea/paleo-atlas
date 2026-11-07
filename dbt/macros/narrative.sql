@@ -5,7 +5,8 @@
   failed ones live in derived/texts_review and are never published), and
   $PALEO_DATA_DIR/derived/study_titles/es.json (paleo titles), and
   $PALEO_DATA_DIR/derived/news/labels.json and groups.json (paleo news classify and
-  dedup; optional).
+  dedup; optional), and $PALEO_DATA_DIR/derived/glossary/<term>.<lang>.json (paleo
+  glossary write; optional).
 #}
 {% macro read_narrative(kind) -%}
     {%- if kind == 'texts' -%}
@@ -71,6 +72,28 @@
     {%- else -%}
     (select cast(null as varchar) as key, cast(null as varchar) as "group",
             cast(null as varchar) as method, cast(null as double) as threshold limit 0)
+    {%- endif -%}
+    {%- elif kind == 'glossary' -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/derived/glossary/*.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+    read_json('{{ path }}', format = 'auto', columns = {
+        term_id: 'VARCHAR', lang: 'VARCHAR', term: 'VARCHAR', definition: 'VARCHAR',
+        status: 'VARCHAR', problems: 'VARCHAR[]',
+        source: 'STRUCT(lang VARCHAR, title VARCHAR, revid BIGINT)', generator: 'VARCHAR',
+        judge: 'VARCHAR', prompt_version: 'VARCHAR', judge_version: 'VARCHAR',
+        generated_at: 'TIMESTAMPTZ'})
+    {%- else -%}
+    (select cast(null as varchar) as term_id, cast(null as varchar) as lang,
+            cast(null as varchar) as term, cast(null as varchar) as definition,
+            cast(null as varchar) as status, cast(null as varchar[]) as problems,
+            cast(null as STRUCT(lang VARCHAR, title VARCHAR, revid BIGINT)) as source,
+            cast(null as varchar) as generator, cast(null as varchar) as judge,
+            cast(null as varchar) as prompt_version, cast(null as varchar) as judge_version,
+            cast(null as timestamptz) as generated_at limit 0)
     {%- endif -%}
     {%- else -%}
     {{ exceptions.raise_compiler_error("Unknown narrative kind: " ~ kind) }}

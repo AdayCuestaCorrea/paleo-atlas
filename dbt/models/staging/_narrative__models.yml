@@ -37,6 +37,17 @@ models:
         data_tests: [unique, not_null]
       - name: story_key
         data_tests: [not_null]
+  - name: stg_glossary__definitions
+    columns:
+      - name: definition_key
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [verified, rejected]
+      - name: source_revid
+        data_tests: [not_null]
   - name: stg_narrative__study_titles
     columns:
       - name: doi

@@ -25,11 +25,11 @@ from paleo.llm import LLM
 from paleo.narrative.facts import prompt
 
 MIN_PAGES = 3
-CANDIDATES = 1_800
-CHUNK = 200
+CANDIDATES = 1_200
+CHUNK = 60
 FIRST_BATCH = 150
 FIELDS = ["term_id", "term_en", "term_es", "forms_en", "forms_es", "category", "pages_en",
-          "pages_es", "batch"]  # fmt: skip
+          "pages_es", "batch", "source_en"]  # fmt: skip
 WORD = re.compile(r"[^\W\d_]+(?:-[^\W\d_]+)*", re.U)
 # Function words: a two-word phrase with one of them is never a term ("during the").
 STOP = {
@@ -66,7 +66,7 @@ class SpanishTerms(BaseModel):
 
 
 LATIN = re.compile(r"(idae|inae|oidea|ia|ini|formes)$", re.I)  # Tyrannosauridae, Ornithischia
-SPANISH_BATCH = 10
+SPANISH_BATCH = 5
 SENTENCES_PER_TERM = 3
 
 
@@ -142,13 +142,23 @@ def pick_terms(llm: LLM, candidates: list[str]) -> list[Term]:
     for start in range(0, len(candidates), CHUNK):
         chunk = candidates[start : start + CHUNK]
         answer = llm.complete_json(system, "CANDIDATES:\n" + "\n".join(chunk), Terms,
-                                   max_tokens=5_000)  # fmt: skip
+                                   max_tokens=1_000)  # fmt: skip
         out += answer.terms
     return out
 
 
 def _proper(term: str) -> str:
     return term[:1].upper() + term[1:]
+
+
+def _stem(word: str) -> str:
+    """Number-blind English key: theropods/theropod, taxa/taxon and vertebrae/vertebra
+    meet (one Latin or English ending stripped)."""
+    w = word.lower().strip()
+    for ending in ("ae", "on", "um", "es", "a", "s"):
+        if w.endswith(ending) and len(w) > len(ending) + 4:
+            return w[: -len(ending)]
+    return w
 
 
 def merge_terms(terms: list[Term]) -> list[Term]:
@@ -165,6 +175,7 @@ def merge_terms(terms: list[Term]) -> list[Term]:
             forms_es = sorted({*t.forms_es, t.es} - {es}) if es != t.es else t.forms_es
             t = t.model_copy(update={"en": en, "es": es, "forms_es": forms_es})
         key = re.sub(r"^(periodo|período|piso|edad|época) ", "", t.es.lower())
+        key = next((k for k, o in out.items() if _stem(o.en) == _stem(t.en)), key)
         if key in out:
             first = out[key]
             first.forms_en = sorted({*first.forms_en, t.en, *t.forms_en} - {first.en})
@@ -193,7 +204,7 @@ def spanish_terms(llm: LLM, terms: list[Term], pairs: list[tuple[str, str]]) -> 
             f"{i}. TERM: {terms[n].en}\n" + "\n".join(f"EN: {en}\nES: {es}" for en, es in found)
             for i, (n, found) in enumerate(batch, start=1)
         )
-        answer = llm.complete_json(system, user, SpanishTerms, max_tokens=3_000)
+        answer = llm.complete_json(system, user, SpanishTerms, max_tokens=900)
         for item in answer.terms:
             if not 1 <= item.index <= len(batch):
                 continue
@@ -206,17 +217,19 @@ def spanish_terms(llm: LLM, terms: list[Term], pairs: list[tuple[str, str]]) -> 
 
 
 def build_terms(
-    llm: LLM, texts_dir: Path, scientific_names: set[str]
+    llm: LLM, texts_dir: Path, scientific_names: set[str], spanish_llm: LLM | None = None
 ) -> list[dict[str, str | int]]:
     """Seed rows: the picked terms with all their forms counted in both languages,
     most used first; the first ``FIRST_BATCH`` are batch 1."""
     texts = page_texts(texts_dir)
     exclude = {n.lower() for n in scientific_names}
     freq = page_frequencies(texts["en"], exclude)
-    candidates = [w for w, n in freq.most_common() if n >= MIN_PAGES][:CANDIDATES]
+    # a stable order (ties by word): the same input gives the same LLM calls (cache)
+    ranked = sorted(freq.items(), key=lambda wn: (-wn[1], wn[0]))
+    candidates = [w for w, n in ranked if n >= MIN_PAGES][:CANDIDATES]
     rows: dict[str, dict[str, str | int]] = {}
     picked = [t for t in pick_terms(llm, candidates) if not LATIN.search(t.en)]
-    picked = merge_terms(spanish_terms(llm, picked, aligned_sentences(texts_dir)))
+    picked = merge_terms(spanish_terms(spanish_llm or llm, picked, aligned_sentences(texts_dir)))
     for t in picked:
         key = term_id(t.en)
         # only forms that really appear in that language's pages ("late Cretácico" is not
@@ -243,3 +256,29 @@ def write_seed(rows: list[dict[str, str | int]], path: Path) -> None:
         writer = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def count_seed(path: Path, texts_dir: Path) -> list[dict[str, str | int]]:
+    """Recount a curated seed against the verified pages: keep only the forms that
+    really appear in each language, count the pages that use each term, drop terms in
+    fewer than ``MIN_PAGES`` pages, sort by use and mark the first batch."""
+    texts = page_texts(texts_dir)
+    with path.open(encoding="utf-8") as f:
+        curated = list(csv.DictReader(f))
+    rows = []
+    for r in curated:
+        out: dict[str, str | int] = {"term_id": r.get("term_id") or term_id(r["term_en"]),
+                                     "term_en": r["term_en"], "term_es": r["term_es"],
+                                     "category": r["category"],
+                                     "source_en": r.get("source_en") or ""}  # fmt: skip
+        for lang in ("en", "es"):
+            forms = [f for f in r[f"forms_{lang}"].split("|") if f]
+            seen = [f for f in forms if pages_with(texts[lang], [f])]
+            out[f"forms_{lang}"] = "|".join(seen)
+            out[f"pages_{lang}"] = pages_with(texts[lang], [r[f"term_{lang}"], *seen])
+        if int(out["pages_en"]) + int(out["pages_es"]) >= MIN_PAGES:
+            rows.append(out)
+    rows.sort(key=lambda r: (-(int(r["pages_en"]) + int(r["pages_es"])), str(r["term_id"])))
+    for n, row in enumerate(rows):
+        row["batch"] = 1 if n < FIRST_BATCH else 2
+    return rows

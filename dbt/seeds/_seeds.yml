@@ -78,6 +78,20 @@ seeds:
           - accepted_values:
               arguments:
                 values: ['es', 'en']
+  - name: glossary_terms
+    description: >
+      Technical terms of the verified pages (paleo glossary terms, §12.2): English and
+      Spanish term, their forms, category and how many pages use them.
+    config:
+      column_types: {forms_en: varchar, forms_es: varchar, source_en: varchar}
+    columns:
+      - name: term_id
+        data_tests: [unique, not_null]
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [anatomy, time, classification, animals, rocks]
   - name: source_cadence
     description: >
       How often each source is checked (ALCANCE.md §5), and its names in both

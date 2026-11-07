@@ -438,6 +438,13 @@ def narrate(
     retry_failed: Annotated[
         bool, typer.Option(help="Write again the pages whose last text failed its checks.")
     ] = False,
+    resalvage: Annotated[
+        bool,
+        typer.Option(
+            help="No model: check again the failed Spanish adaptations with today's checks "
+            "and save those that pass, or pass leaving out a few sentences."
+        ),
+    ] = False,
 ) -> None:
     """Facts, EN text and ES adaptation, one genus page at a time (Phase 3 batches on
     the local GPU). Resumable: pages whose sources, facts and prompts did not change
@@ -452,10 +459,24 @@ def narrate(
         raise typer.BadParameter("only --scope genera for now (new taxa: `paleo facts/write`)")
     paths = get_paths()
     deadline = _deadline(until, dt.datetime.now())
-    llm = LLM(provider, model or DEFAULT_MODELS[provider])
     names = _scientific_names() | {
         word for name in catalog_index(paths.raw) for word in name.split() if word[:1].isupper()
     }
+    if resalvage:
+        from paleo.narrative.write import resalvage_es
+
+        def es_sources(genus: str) -> list[str]:
+            chunks = genus_chunks_for(
+                genus, interim_root=paths.interim, raw_root=paths.raw,
+                cache_root=paths.data / "cache",
+            )  # fmt: skip
+            return [c.text for c in chunks if c.lang == "es" and c.public_quote]
+
+        out = resalvage_es(paths.data / "derived", es_sources, names)
+        for kind, keys in out.items():
+            typer.echo(f"{kind}: {len(keys)}" + (f" ({', '.join(keys)})" if keys else ""))
+        return
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
     queue = genus_queue(only)
     done = skipped = 0
     statuses: dict[str, int] = {}

@@ -11,14 +11,22 @@ import datetime as dt
 import hashlib
 import json
 import re
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
 from paleo.llm import LLM
-from paleo.narrative.checks import MAX_WORDS, TextReport, check_alignment, check_text
+from paleo.narrative.checks import (
+    MAX_WORDS,
+    TextReport,
+    alignment_failures,
+    check_alignment,
+    check_text,
+)
 from paleo.narrative.facts import Category, prompt
 from paleo.narrative.sources import Chunk
 from paleo.store import _atomic_write
@@ -206,6 +214,26 @@ def _salvage(sentences: list, report: TextReport) -> list | None:
     return kept if len(kept) >= 3 else None
 
 
+def _salvage_es(
+    en: list[tuple[str, list[str], str]],
+    adapted: list[str],
+    es: list[tuple[str, list[str], str]],
+    report: TextReport,
+    scientific_names: set[str],
+) -> list | None:
+    """As _salvage, for a Spanish adaptation: the sentences that failed their checks
+    or the alignment with their English sentence (other numbers, a lost name) are
+    left out, when they are a few. None if the sentence count differs."""
+    misaligned = alignment_failures([(t, f) for t, f, _ in en], adapted, scientific_names)
+    if misaligned is None or report.problems:
+        return None
+    failed = {r.index for r in report.sentences if r.problems} | misaligned
+    if not failed or len(failed) > MAX_DROPPED_SENTENCES:
+        return None
+    kept = [x for i, x in enumerate(es) if i not in failed]
+    return kept if len(kept) >= 3 else None
+
+
 def _fact_texts(facts: list[dict[str, Any]]) -> dict[str, str]:
     """What a sentence may rely on: the statement and, when public, the quote."""
     return {f["fact_id"]: f"{f['statement']} {f.get('quote') or ''}".strip() for f in facts}
@@ -379,11 +407,7 @@ def write_page(
         if not problems:
             break
         feedback = problems
-    if (
-        problems
-        and (kept := _salvage(es, es_report)) is not None
-        and not check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
-    ):
+    if problems and (kept := _salvage_es(en, adapted, es, es_report, scientific_names)) is not None:
         report = check_text(
             [(t, f) for t, f, _ in kept], fact_texts, sources["es"], check_names=False
         )
@@ -423,3 +447,81 @@ def write_page(
     result.problems["es"] = problems
     result.words["es"] = es_report.word_count
     return result
+
+
+def _stored_sentences(doc: dict[str, Any]) -> list[tuple[str, list[str], str]]:
+    """(text, fact ids, section[:topic]) of a saved text, in order."""
+    return [
+        (
+            s["text"],
+            s["fact_ids"],
+            section["section"] + (f":{s['topic']}" if s.get("topic") else ""),
+        )
+        for section in doc["sections"]
+        for s in section["sentences"]
+    ]
+
+
+def resalvage_es(
+    derived_root: Path,
+    es_sources: Callable[[str], list[str]],
+    scientific_names: set[str],
+) -> dict[str, list[str]]:
+    """Check again, with today's checks and rescue, the Spanish adaptations that failed
+    (texts_review), without calling any model: those that pass now, or after leaving
+    out a few failed sentences, are saved as verified. Only when their English text is
+    verified and every file is of the same facts. ``es_sources`` gives the Spanish
+    source texts of a genus (for the anti-copy check)."""
+    out: dict[str, list[str]] = {"salvaged": [], "still_failed": [], "skipped": []}
+    for path in sorted((derived_root / "texts_review").glob("*.es.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        key = doc["taxon_key"]
+        en_path = derived_root / "texts" / f"{key}.en.json"
+        facts_path = derived_root / "facts" / f"{key}.json"
+        if not (en_path.exists() and facts_path.exists()):
+            out["skipped"].append(key)
+            continue
+        en_doc = json.loads(en_path.read_text(encoding="utf-8"))
+        facts_doc = json.loads(facts_path.read_text(encoding="utf-8"))
+        current = facts_hash(facts_doc["facts"])
+        if en_doc.get("status") != "verified" or not (
+            en_doc.get("facts_hash") == doc.get("facts_hash") == current
+        ):
+            out["skipped"].append(key)
+            continue
+        en = _stored_sentences(en_doc)
+        adapted = [t for t, _, _ in _stored_sentences(doc)]
+        fact_texts = _fact_texts(select_facts(facts_doc["facts"]))
+        sources = es_sources(doc["taxon"])
+        es = [(text, f, s) for text, (_, f, s) in zip(adapted, en, strict=False)]
+        report = check_text([(t, f) for t, f, _ in es], fact_texts, sources, check_names=False)
+        kept: list | None = es
+        if (
+            check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
+            or not report.passed
+        ):
+            kept = _salvage_es(en, adapted, es, report, scientific_names)
+            if kept is not None:
+                report = check_text(
+                    [(t, f) for t, f, _ in kept], fact_texts, sources, check_names=False
+                )
+                kept = kept if report.passed else None
+        if kept is None:
+            out["still_failed"].append(key)
+            continue
+        _save(
+            derived_root / "texts" / f"{key}.es.json",
+            taxon=doc["taxon"],
+            key=key,
+            lang="es",
+            status="verified",
+            llm=SimpleNamespace(label=doc["generator"]),  # the model that wrote it
+            version=doc["prompt_version"],
+            facts_hash=current,
+            sentences=kept,
+            report=report,
+            problems=[],
+            review="skipped",  # no grammar pass over a text that was not re-adapted
+        )
+        out["salvaged"].append(key)
+    return out

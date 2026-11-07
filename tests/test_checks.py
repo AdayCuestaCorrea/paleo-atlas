@@ -149,3 +149,41 @@ def test_thousands_with_a_comma_are_flagged_in_spanish():
     src = [("The largest weighed about 5,650 kg.", ["F1"])]
     assert any("thousands" in p for p in check_alignment(src, ["El mayor pesaba 5,650 kg."], set()))
     assert check_alignment(src, ["El mayor pesaba unos 5650 kg."], set()) == []
+
+
+def test_names_are_matched_as_whole_words():
+    # "Manu" is not in "manual", nor Carcharodon in "carcharodontosaurines".
+    assert (
+        check_alignment([("Manual analysis of the neck.", [])], ["El análisis manual."], {"Manu"})
+        == []
+    )
+    english = [("Carcharodontosaurines lived on every continent.", [])]
+    assert (
+        check_alignment(
+            english, ["Los carcharodontosaurinos vivieron en todas partes."], {"Carcharodon"}
+        )
+        == []
+    )
+    # A genus that is really there must stay, untranslated.
+    lost = check_alignment(
+        [("It was faster than Tyrannosaurus.", [])],
+        ["Era más rápido que el tiranosaurio."],
+        {"Tyrannosaurus"},
+    )
+    assert lost == ["sentence 1: scientific names lost ['Tyrannosaurus']"]
+
+
+def test_higher_clades_half_spanish_or_with_new_endings_are_accepted():
+    names = {"Caenagnathidae", "Thalassophonea", "Coelurosauria"}
+    english = [("It belongs to Caenagnathidae, Thalassophonea and Coelurosauria.", [])]
+    spanish = "Pertenece a los Caenagnátidos, al clado Talasofonea y a los coelurosáuridos."
+    assert check_alignment(english, [spanish], names) == []
+
+
+def test_alignment_failures_point_at_the_sentences():
+    from paleo.narrative.checks import alignment_failures
+
+    english = [("It weighed 5 t.", []), ("It lived in Niger.", []), ("Spinosaurus swam.", [])]
+    spanish = ["Pesaba 6 t.", "Vivía en Níger.", "El espinosaurio nadaba."]
+    assert alignment_failures(english, spanish, {"Spinosaurus"}) == {0, 2}
+    assert alignment_failures(english, spanish[:2], {"Spinosaurus"}) is None  # count differs

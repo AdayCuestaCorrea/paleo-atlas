@@ -333,7 +333,7 @@ def check_text(
 
 # Clades above the family keep their Latin form in English but are written in
 # Spanish ("Crocodylomorpha" -> "cocodrilomorfos"); genera and species never are.
-_HIGHER_CLADE = re.compile(r"(?:morpha|poda|ia|formes|oidea|idae|inae|ae)$")
+_HIGHER_CLADE = re.compile(r"(?:morpha|poda|ia|formes|oidea|idae|inae|ae|aves|ea)$")
 
 
 def _fold(text: str) -> str:
@@ -350,7 +350,34 @@ def _spanish_clade_in(name: str, text: str) -> bool:
     if not _HIGHER_CLADE.search(name):
         return False
     stem = re.sub(r"[aeiou]+$", "", hispanize(name)).replace("crocodil", "cocodril")
-    return len(stem) >= 6 and any(w.startswith(stem) for w in re.findall(r"\w+", _fold(text)))
+    # The words are spelled the Spanish way too, so a half-Latin form still matches
+    # ("Caenagnátidos" for Caenagnathidae, "coelurosáuridos" for Coelurosauria).
+    words = [hispanize(w).replace("crocodil", "cocodril") for w in re.findall(r"\w+", _fold(text))]
+    return len(stem) >= 6 and any(w.startswith(stem) for w in words)
+
+
+def _has_name(name: str, text: str) -> bool:
+    """The name as a whole word: "Manu" is not in "manual", nor "Troodon" in
+    "Troodontidae"."""
+    return re.search(rf"(?<![\w-]){re.escape(name)}(?![\w-])", text) is not None
+
+
+def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
+    """What an adapted sentence lost from its source sentence (empty if nothing)."""
+    problems = []
+    if numbers(src) != numbers(dst):
+        problems.append(f"numbers differ ({sorted(numbers(src))} vs {sorted(numbers(dst))})")
+    # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.
+    grouped = {m for m in re.findall(r"\b\d{1,3}(?:,\d{3})+(?!\d)", src)}
+    if comma := sorted(m for m in grouped if m in dst):
+        problems.append(
+            f"thousands written with a comma {comma} read as decimals "
+            "in Spanish: write them without it (5650) or with a space (12 300)"
+        )
+    kept = {n for n in scientific_names if _has_name(n, src)}
+    if lost := {n for n in kept if not _has_name(n, dst) and not _spanish_clade_in(n, dst)}:
+        problems.append(f"scientific names lost {sorted(lost)}")
+    return problems
 
 
 def check_alignment(
@@ -362,21 +389,24 @@ def check_alignment(
     and every scientific name used in the source sentence."""
     if len(source) != len(adapted):
         return [f"{len(adapted)} sentences for {len(source)} in the source text"]
-    problems = []
-    for i, ((src, _), dst) in enumerate(zip(source, adapted, strict=True)):
-        if numbers(src) != numbers(dst):
-            problems.append(
-                f"sentence {i + 1}: numbers differ "
-                f"({sorted(numbers(src))} vs {sorted(numbers(dst))})"
-            )
-        # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.
-        grouped = {m for m in re.findall(r"\b\d{1,3}(?:,\d{3})+(?!\d)", src)}
-        if comma := sorted(m for m in grouped if m in dst):
-            problems.append(
-                f"sentence {i + 1}: thousands written with a comma {comma} read as decimals "
-                "in Spanish: write them without it (5650) or with a space (12 300)"
-            )
-        kept = {n for n in scientific_names if n in src}
-        if lost := {n for n in kept if n not in dst and not _spanish_clade_in(n, dst)}:
-            problems.append(f"sentence {i + 1}: scientific names lost {sorted(lost)}")
-    return problems
+    return [
+        f"sentence {i + 1}: {p}"
+        for i, ((src, _), dst) in enumerate(zip(source, adapted, strict=True))
+        for p in _align_one(src, dst, scientific_names)
+    ]
+
+
+def alignment_failures(
+    source: list[tuple[str, list[str]]],
+    adapted: list[str],
+    scientific_names: set[str],
+) -> set[int] | None:
+    """Indices (from 0) of the adapted sentences that fail the alignment; None when
+    the number of sentences differs (then the whole text fails)."""
+    if len(source) != len(adapted):
+        return None
+    return {
+        i
+        for i, ((src, _), dst) in enumerate(zip(source, adapted, strict=True))
+        if _align_one(src, dst, scientific_names)
+    }

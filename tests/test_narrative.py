@@ -337,3 +337,77 @@ def test_padded_fact_ids_are_read_as_the_real_ones():
     assert _canonical_id("F0113") == "F113"
     assert _canonical_id("F013") == "F013" and _canonical_id("F7") == "F007"
     assert _canonical_id("note") == "note"
+
+
+def test_a_few_misaligned_spanish_sentences_are_left_out():
+    from paleo.narrative.checks import SentenceReport, TextReport
+    from paleo.narrative.write import _salvage_es
+
+    en = [(f"Fact number {i} is {i}.", ["F1"], "description") for i in range(6)]
+    good = [f"El hecho número {i} es {i}." for i in range(6)]
+    clean = TextReport([SentenceReport(i, good[i], []) for i in range(6)])
+
+    def es_of(adapted):
+        return [(t, f, s) for t, (_, f, s) in zip(adapted, en, strict=False)]
+
+    one_off = [*good[:2], "El hecho número 2 es 7.", *good[3:]]  # other number
+    kept = _salvage_es(en, one_off, es_of(one_off), clean, set())
+    assert [t for t, _, _ in kept] == good[:2] + good[3:]
+    four_off = ["Otro." for _ in range(4)] + good[4:]
+    assert _salvage_es(en, four_off, es_of(four_off), clean, set()) is None  # too many
+    assert _salvage_es(en, good[:5], es_of(good[:5]), clean, set()) is None  # count differs
+
+
+def test_failed_spanish_texts_are_rescued_without_a_model(tmp_path):
+    import json
+
+    from paleo.narrative.write import facts_hash, resalvage_es
+
+    facts = [{"fact_id": f"F{i}", "statement": f"Fact {i} says {i} things.",
+              "category": "description", "chunk_id": "c1"} for i in range(1, 7)]  # fmt: skip
+    h = facts_hash(facts)
+
+    def doc(lang, texts, status):
+        sentences = [{"text": t, "fact_ids": [f"F{i + 1}"]} for i, t in enumerate(texts)]
+        return {"taxon": "Testosaurus", "taxon_key": "testosaurus", "lang": lang, "status": status,
+                "generator": "ollama/test", "prompt_version": "v", "facts_hash": h,
+                "problems": ["x"],
+                "sections": [{"section": "description", "sentences": sentences}]}  # fmt: skip
+
+    derived = tmp_path / "derived"
+    for folder in ("texts", "texts_review", "facts"):
+        (derived / folder).mkdir(parents=True)
+    (derived / "facts" / "testosaurus.json").write_text(
+        json.dumps({"taxon": "Testosaurus", "taxon_key": "testosaurus", "facts": facts})
+    )
+    english = [
+        f"Fact {i} says {i} things about the fossil record of this curious animal."
+        for i in range(1, 7)
+    ]
+    (derived / "texts" / "testosaurus.en.json").write_text(
+        json.dumps(doc("en", english, "verified"))
+    )
+    spanish = [
+        f"El hecho {i} cuenta {i} cosas sobre el registro fósil de este curioso animal."
+        for i in range(1, 7)
+    ]
+    spanish[3] = (
+        "El hecho 4 cuenta 9 cosas sobre el registro fósil de este curioso animal."  # other number
+    )
+    (derived / "texts_review" / "testosaurus.es.json").write_text(
+        json.dumps(doc("es", spanish, "failed"))
+    )
+
+    out = resalvage_es(derived, lambda genus: [], set())
+    assert out["salvaged"] == ["testosaurus"]
+    saved = json.loads((derived / "texts" / "testosaurus.es.json").read_text())
+    texts = [s["text"] for s in saved["sections"][0]["sentences"]]
+    assert saved["status"] == "verified" and saved["review"] == "skipped" and len(texts) == 5
+    assert not any("9 cosas" in t for t in texts)
+    assert not (derived / "texts_review" / "testosaurus.es.json").exists()
+    # Run again: nothing left to rescue.
+    assert resalvage_es(derived, lambda genus: [], set()) == {
+        "salvaged": [],
+        "still_failed": [],
+        "skipped": [],
+    }

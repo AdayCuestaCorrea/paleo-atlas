@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 33 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 34 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -415,6 +415,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 8. **Fuentes y licencias.**
 9. **Acerca de:** qué es, autoría, enlace al repo.
 10. **Buscador** (`/es/buscar.html`, `/en/search.html`): índice JSON por idioma, búsqueda en el navegador sin servidor.
+11. **Estado de los datos** (`/es/estado.html`, `/en/status.html`) *(v34)*: cómo va el pipeline, con las cifras del propio registro de ejecuciones y del almacén (ver §16).
 
 ### 11.1 Contenido de la ficha
 | Campo | Fuente | Si falta |
@@ -586,6 +587,15 @@ Con una web estática no hay tiempo real al minuto, pero sí **en horas**, grati
 
 ### Informe de ejecución (por cada run)
 Fuentes con cambios, taxones nuevos / actualizados, eventos nuevos, % con correspondencia PBDB, % con imagen por nivel, avisos y errores de tests, duración por paso.
+
+### Página pública «Estado de los datos» (v34)
+Lo que normalmente queda dentro del equipo, a la vista: el informe de cada ejecución (`runs/`) pasa al almacén (`stg_pipeline__runs`, con pasos, resumen, dbt y cambios), y la frescura de cada fuente sale de sus `_checked.json` (`stg_raw__checked`) frente a su ritmo de §5 (seed `source_cadence` → `fct_source_freshness`). La página muestra:
+- una línea de estado («todo en orden» si la última ejecución terminada fue correcta, no hay errores de dbt y ninguna fuente va atrasada) y 6 cifras clave;
+- la duración por paso de las 10 últimas ejecuciones y las fichas verificadas por día y por idioma (SVG generado en el servidor, sin JavaScript);
+- **calidad de los datos**: tests de datos y unitarios por separado, y cada aviso de dbt explicado en lenguaje llano con su cifra real (uno desconocido sale con su nombre técnico, sin inventar explicación);
+- cobertura (especies nuevas en PBDB, imagen de cada ficha por nivel) e historial por tipo de evento;
+- bitácora: calendario de 30 días, las 5 últimas ejecuciones (el resto tras un botón; sin JavaScript se ven todas), y las fuentes con «al día / atrasada».
+La web se construye antes de cerrar la ejecución en curso, así que muestra las terminadas. Los pasos que la API de GitHub aún no da por completados al cerrar se apuntan como parciales; lo que el registro no reparte por pasos se muestra como «sin desglose».
 
 ---
 
@@ -768,7 +778,6 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 | Segundo proveedor LLM gratuito de reserva | Por si Groq falla o cambia su plan gratuito |
 | Open Tree of Life como señal en el árbol | Decir en cada ficha si el género está en el árbol sintético y con cuántos estudios (F11 descartada como topología: 12 % de cobertura) |
 | Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
-| Página pública «Estado de los datos» | Las últimas ejecuciones del pipeline (duración, si hubo cambios), los tests de dbt en verde o con aviso, la frescura de cada fuente y las fichas verificadas frente a las fallidas por idioma, a partir del registro `runs/` de `paleo report`; idea aceptada por el usuario el 2026-11-07 |
 | Retracciones de los estudios de la «Historia anterior» | Cruzar cada mes los ~7.600 DOIs con el CSV de Retraction Watch (vía Crossref) sin guardar un registro por DOI; hoy salen como `unchecked` |
 | Columna «Unit» de las páginas anuales antiguas (≤ 2018) | El parser la ignora con un aviso; los eventos no usan la localidad |
 
@@ -778,6 +787,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v34: **página «Estado de los datos»** (§11, página 11; §16), del backlog al alcance, a partir de la maqueta elegida por el usuario entre cuatro (panel + bitácora + la «Calidad de los datos» de otra). Datos: `read_runs` trae los campos JSON del informe; modelos `stg_raw__checked` y `fct_source_freshness` y seed `source_cadence`; piezas calculadas en `site/status.py` con tests. `paleo report`: separa los tests de datos de los unitarios y apunta como parciales los pasos aún sin cerrar (antes se perdían, como el de la web en dos ejecuciones del 7 nov). Sin tocar `pipeline.yml` | Idea aceptada por el usuario (v30) |
 | 2026-11-07 | v33: **cifras de la adaptación al español**. La comprobación de alineación solo reconocía dígitos, así que «19th century» → «siglo XIX», «the 1990s» → «los años 90» o «2» → «dos» contaban como cifras perdidas; ahora se aceptan esas formas, y una unidad convertida (3,45 t → 3450 kg) o una cifra distinta siguen fallando. El feedback de los reintentos en español (no el prompt, que no sube de versión para no readaptar todo lo verificado) pide no convertir unidades, escribir las cifras con dígitos y reformular de verdad las frases copiadas. Resultado: 2 fichas más rescatadas sin modelo y, en un piloto con la GPU sobre 4 de las 13 que seguían fallando (2,5 min, 54 °C como máximo), 3 verificadas (todas con 1–3 frases quitadas); *Maiasaura* sigue fallando por frases genéricas que coinciden con la Wikipedia en español. Fichas en español verificadas: 389 | Petición del usuario: optimizar el español antes del lote nocturno |
 | 2026-11-07 | v32: **rescate de las fichas en español**. En el lote del 2026-11-05 fallaron 56 de 214 adaptaciones, 40 de ellas por 1–3 frases. (1) La comprobación de nombres científicos buscaba subcadenas: exigía «Manu» en una frase sobre el análisis *manual* o *Carcharodon* en «carcharodontosaurinos»; ahora busca la palabra entera. Los clados escritos a medias en español («Caenagnátidos», «Talasofonea») y las terminaciones -aves y -ea cuentan como clado. (2) El rescate de hasta 3 frases (`_salvage`) también quita las frases españolas mal alineadas con su frase inglesa (otras cifras, un nombre perdido), en vez de tirar la ficha entera. (3) `paleo narrate --resalvage` aplica esto sin ningún modelo a las adaptaciones fallidas guardadas: **41 de 58 rescatadas** (22 fichas en español nuevas y 19 que sustituyen una versión anterior), 15 siguen fallando y 2 se saltan por hechos desactualizados; fichas verificadas en español: 362 → 384. Las rescatadas no tienen la pasada de gramática (igual que el rescate anterior). El prompt no cambia (cambiarlo obligaría a readaptar todo el español ya verificado) | Revisión de los fallos del lote |
 | 2026-11-07 | v31: README bilingüe de la Fase 4 adelantado (§20), con capturas en `docs/img/web/` y cifras medidas en el almacén ese día (dbt: 126 tests de datos y 6 unitarios) | Decisión del usuario: tener el repo al día |

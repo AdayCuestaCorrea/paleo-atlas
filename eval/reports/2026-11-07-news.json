@@ -1,4 +1,146 @@
 {
+ "blind": {
+  "all": {
+   "n": 50,
+   "accuracy": 0.6,
+   "macro_f1": 0.47208976157082744,
+   "per_class": {
+    "new_species": {
+     "precision": 0.8571428571428571,
+     "recall": 0.46153846153846156,
+     "f1": 0.6,
+     "support": 13
+    },
+    "new_fossil": {
+     "precision": 0.3125,
+     "recall": 0.5555555555555556,
+     "f1": 0.39999999999999997,
+     "support": 9
+    },
+    "new_study": {
+     "precision": 0.5,
+     "recall": 0.5454545454545454,
+     "f1": 0.5217391304347826,
+     "support": 11
+    },
+    "revision": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1
+    },
+    "noise": {
+     "precision": 0.8666666666666667,
+     "recall": 0.8125,
+     "f1": 0.8387096774193549,
+     "support": 16
+    }
+   },
+   "confusion": {
+    "new_species": {
+     "new_species": 6,
+     "new_fossil": 5,
+     "new_study": 1,
+     "noise": 1
+    },
+    "new_fossil": {
+     "new_species": 1,
+     "new_study": 3,
+     "new_fossil": 5
+    },
+    "new_study": {
+     "new_study": 6,
+     "new_fossil": 4,
+     "noise": 1
+    },
+    "revision": {
+     "new_fossil": 1
+    },
+    "noise": {
+     "noise": 13,
+     "new_fossil": 1,
+     "new_study": 2
+    }
+   }
+  },
+  "not doubtful": {
+   "n": 46,
+   "accuracy": 0.6086956521739131,
+   "macro_f1": 0.5822619604176407,
+   "per_class": {
+    "new_species": {
+     "precision": 0.8333333333333334,
+     "recall": 0.4166666666666667,
+     "f1": 0.5555555555555556,
+     "support": 12
+    },
+    "new_fossil": {
+     "precision": 0.35714285714285715,
+     "recall": 0.5555555555555556,
+     "f1": 0.43478260869565216,
+     "support": 9
+    },
+    "new_study": {
+     "precision": 0.45454545454545453,
+     "recall": 0.5555555555555556,
+     "f1": 0.5,
+     "support": 9
+    },
+    "revision": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 0
+    },
+    "noise": {
+     "precision": 0.8666666666666667,
+     "recall": 0.8125,
+     "f1": 0.8387096774193549,
+     "support": 16
+    }
+   },
+   "confusion": {
+    "new_species": {
+     "new_species": 5,
+     "new_fossil": 5,
+     "new_study": 1,
+     "noise": 1
+    },
+    "new_fossil": {
+     "new_species": 1,
+     "new_study": 3,
+     "new_fossil": 5
+    },
+    "new_study": {
+     "new_study": 5,
+     "new_fossil": 3,
+     "noise": 1
+    },
+    "revision": {},
+    "noise": {
+     "noise": 13,
+     "new_fossil": 1,
+     "new_study": 2
+    }
+   }
+  },
+  "self_agreement": 0.7,
+  "doubtful": 4,
+  "taxa": {
+   "Pages linked (text + checked LLM names)": {
+    "precision": 0.5,
+    "recall": 0.2857142857142857,
+    "f1": 0.36363636363636365,
+    "gold_names": 21
+   },
+   "LLM names only": {
+    "precision": 0.47058823529411764,
+    "recall": 0.38095238095238093,
+    "f1": 0.42105263157894735,
+    "gold_names": 21
+   }
+  }
+ },
  "caveats": {
   "category_as_proposed": 294,
   "taxa_edited": 0,

@@ -1,6 +1,16 @@
 version: 2
 
 models:
+  - name: int_news_taxa
+    description: Taxon pages named by each news article (by text or by the LLM).
+    columns:
+      - name: taxon_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
   - name: int_catalog_genera
     description: >
       Encyclopedia genera (Phase 3): every accepted extinct genus of the enabled clades of
@@ -187,3 +197,30 @@ unit_tests:
     expect:
       rows:
         - {taxon_key: tyrannosaurus, event_type: new_study, subject_name: Tyrannosaurus rex, origin: tracked}
+  - name: news_taxa_by_name_and_by_llm_both_checked
+    description: >
+      A genus named in the headline links by text; a 4-letter genus (Jian) only through
+      the LLM; "T. rex" links through the LLM to the genus page; a name the LLM made up
+      (not in the article) and a name with no page are dropped.
+    model: int_news_taxa
+    given:
+      - input: ref('stg_news__items')
+        rows:
+          - {news_key: a, title: "Scientists find a new Spinosaurus species", summary: null}
+          - {news_key: b, title: "T. rex grew slowly", summary: "Professor Jian Wang led the study."}
+          - {news_key: c, title: "A dinosaur nest from Mongolia", summary: null}
+      - input: ref('dim_taxon')
+        rows:
+          - {taxon_key: spinosaurus, taxon_name: Spinosaurus, page_type: genus}
+          - {taxon_key: tyrannosaurus, taxon_name: Tyrannosaurus, page_type: genus}
+          - {taxon_key: jian, taxon_name: Jian, page_type: genus}
+          - {taxon_key: oviraptor, taxon_name: Oviraptor, page_type: genus}
+      - input: ref('stg_news__labels')
+        rows:
+          - {news_key: a, llm_taxa: "['Spinosaurus', 'Unknownia']"}
+          - {news_key: b, llm_taxa: "['Tyrannosaurus rex']"}
+          - {news_key: c, llm_taxa: "['Oviraptor']"}
+    expect:
+      rows:
+        - {news_key: a, taxon_key: spinosaurus, matched_by: "['llm', 'text']"}
+        - {news_key: b, taxon_key: tyrannosaurus, matched_by: "['llm']"}

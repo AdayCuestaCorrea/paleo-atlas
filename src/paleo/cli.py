@@ -11,6 +11,7 @@ import json
 import logging
 import os
 import subprocess
+from collections import Counter
 from typing import Annotated
 
 import typer
@@ -18,6 +19,7 @@ import typer
 from paleo.config import Paths, enabled_pages, get_paths, project_root
 from paleo.http import make_client
 from paleo.ingest import articles, crossref, doaj, images, pbdb
+from paleo.ingest import news as news_ingest
 from paleo.ingest import wikipedia as wiki_ingest
 from paleo.parse import wikipedia as wiki_parse
 
@@ -34,6 +36,8 @@ gbif_app = typer.Typer(
     help="GBIF fossil specimens, monthly (ALCANCE.md §7, Phase 3).", no_args_is_help=True
 )
 app.add_typer(gbif_app, name="gbif")
+news_app = typer.Typer(help="Paleontology news: categories, taxa, groups.", no_args_is_help=True)
+app.add_typer(news_app, name="news")
 
 Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
@@ -67,6 +71,8 @@ def check(year: Year = None) -> None:
                 title = page.title(_year(year))
                 if wiki_ingest.has_new_revision(client, title):
                     changed.append(title)
+            if news_ingest.has_new_items(client, news_ingest.load_feeds(), get_paths().raw):
+                changed.append("news feeds")
     except (HttpError, httpx.HTTPError) as exc:
         typer.echo(f"check failed: {exc}", err=True)
         raise typer.Exit(2) from exc
@@ -149,6 +155,16 @@ def ingest_studies(refresh: Refresh = False) -> None:
         f"DOAJ: {d.requested} ISSNs, {d.skipped_fresh} fresh, {d.listed} listed, "
         f"{d.not_listed} not listed, {d.new_versions} new versions"
     )
+
+
+@ingest_app.command("news")
+def ingest_news() -> None:
+    """Headlines from the paleontology news feeds (F9), outlets whose terms allow it."""
+    paths = get_paths()
+    with make_client() as client:
+        r = news_ingest.ingest_feeds(client, news_ingest.load_feeds(), raw_root=paths.raw)
+    failed = f", failed: {', '.join(r.failed)}" if r.failed else ""
+    typer.echo(f"News: {r.feeds} feeds, {r.items} articles, {r.new_versions} new versions{failed}")
 
 
 @ingest_app.command("images")
@@ -392,6 +408,47 @@ def titles(provider: Provider = "ollama", model: Model = None, limit: Limit = No
     typer.echo(f"{llm.label}: {llm.stats}")
 
 
+@news_app.command("classify")
+def news_classify(provider: Provider = "ollama", model: Model = None, limit: Limit = None) -> None:
+    """Category and scientific names of each news article (data/derived/news)."""
+    from paleo.llm import LLM, QuotaExhausted
+    from paleo.news.classify import classify_news
+
+    paths = get_paths()
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    try:
+        r = classify_news(llm, raw_root=paths.raw, derived_root=paths.data / "derived", limit=limit)
+    except QuotaExhausted as exc:
+        typer.echo(f"Quota exhausted ({exc}); the rest are classified on the next run.")
+        return
+    typer.echo(
+        f"{r.total} articles: {r.up_to_date} up to date, {r.classified} classified, "
+        f"{r.missing} left out by the model"
+    )
+    typer.echo(f"{llm.label}: {llm.stats}")
+
+
+@news_app.command("dedup")
+def news_dedup(
+    method: Annotated[str, typer.Option(help="tfidf (CPU) or embeddings (local Ollama).")] = "",
+    threshold: Annotated[float | None, typer.Option(help="Similarity to join two.")] = None,
+) -> None:
+    """Group the articles that tell the same story (data/derived/news/groups.json)."""
+    from paleo.news import dedup
+
+    paths = get_paths()
+    name = method or dedup.METHOD
+    r = dedup.group_news(
+        raw_root=paths.raw, derived_root=paths.data / "derived",
+        similarity=dedup.METHODS[name], method=name,
+        threshold=dedup.THRESHOLD if threshold is None else threshold,
+    )  # fmt: skip
+    typer.echo(
+        f"News groups ({name}): {r['articles']} articles, {r['links']} links, "
+        f"{r['groups']} groups, {r['grouped']} articles in a group of 2 or more"
+    )
+
+
 Until = Annotated[
     str | None, typer.Option(help="Start no new taxon after this local time (HH:MM).")
 ]
@@ -600,6 +657,92 @@ def eval_run(
     summary = evaluate.summarize(results, llm)
     report = evaluate.write_report(summary, project_root() / "eval" / "reports", label)
     typer.echo(f"Report: {report}")
+
+
+@eval_app.command("news")
+def eval_news(
+    provider: Annotated[
+        list[str] | None,
+        typer.Option(
+            help="Also classify the labelled articles "
+            "with this provider (ollama uses the local GPU). Repeatable."
+        ),
+    ] = None,
+    embeddings: Annotated[
+        bool, typer.Option(help="Also measure grouping with embeddings (local Ollama, GPU).")
+    ] = False,
+) -> None:
+    """Metrics of the news pipeline against eval/news/labels.csv and pairs.csv."""
+    import duckdb
+
+    from paleo.llm import LLM
+    from paleo.news import classify, dedup
+    from paleo.news import evaluate as ev
+
+    paths, root = get_paths(), project_root()
+    gold = ev.load_labels(root / "eval" / "news" / "labels.csv")
+    pairs = ev.load_pairs(root / "eval" / "news" / "pairs.csv")
+    articles = classify.stored_articles(paths.raw)
+    keys = [k for k in gold if k in articles]
+    texts = [classify.model_input(articles[k]) for k in keys]
+    truth = [gold[k]["category"] for k in keys]
+
+    def scored(pred: list[str | None]) -> dict:
+        by = {lang: [i for i, k in enumerate(keys) if articles[k]["lang"] == lang]
+              for lang in ("en", "es")}  # fmt: skip
+        return {"all": ev.scores(truth, pred), **{
+            lang: ev.scores([truth[i] for i in idx], [pred[i] for i in idx])
+            for lang, idx in by.items()}}  # fmt: skip
+
+    category = {"TF-IDF + logistic regression (CV)": scored(ev.baseline_predictions(texts, truth))}
+    llm_names: dict[str, dict[str, list[str]]] = {}
+    production = classify.load_labels(classify.labels_path(paths.data / "derived"))
+    runs = [("production", production)]
+    for name in provider or []:
+        llm = LLM(name, DEFAULT_MODELS[name])
+        run_dir = paths.data / "eval_runs" / f"news-{name}"
+        classify.classify_news(llm, raw_root=paths.raw, derived_root=run_dir, keys=set(keys))
+        runs.append((llm.label, classify.load_labels(classify.labels_path(run_dir))))
+        category[llm.label] = scored([runs[-1][1].get(k, {}).get("category") for k in keys])
+        category[llm.label]["cost"] = f"{llm.stats.calls} calls, {llm.stats.seconds:.0f} s"
+    generator = next(iter({r["generator"] for r in production.values()}), "production")
+    category[f"{generator} (production)"] = scored([production.get(k, {}).get("category")
+                                                    for k in keys])  # fmt: skip
+    for label, rows in runs:
+        llm_names[f"LLM names only ({label})"] = {k: rows.get(k, {}).get("taxa", []) for k in keys}
+
+    con = duckdb.connect(str(paths.data / "warehouse.duckdb"), read_only=True)
+    linked: dict[str, list[str]] = {}
+    for key, name in con.sql("select n.news_key, t.taxon_name from main.int_news_taxa n "
+                             "join main.dim_taxon t using (taxon_key)").fetchall():  # fmt: skip
+        linked.setdefault(key, []).append(name)
+    gold_taxa = {k: gold[k]["taxa"] for k in keys}
+    taxa = {"Pages linked (text + checked LLM names)": ev.taxa_scores(gold_taxa, linked)}
+    taxa |= {name: ev.taxa_scores(gold_taxa, pred) for name, pred in llm_names.items()}
+
+    grouping = {}
+    pair_keys = sorted({k for a, b, _ in pairs for k in (a, b) if k in articles})
+    methods = {"TF-IDF of characters": dedup.tfidf_similarity}
+    if embeddings:
+        methods["Qwen3-Embedding 0.6B (local)"] = dedup.embedding_similarity
+    for name, fn in methods.items():
+        if not pairs:
+            break
+        index = {k: i for i, k in enumerate(pair_keys)}
+        matrix = fn([classify.model_input(articles[k]) for k in pair_keys])
+        sims = [matrix[index[a], index[b]] for a, b, _ in pairs]
+        grouping[name] = ev.grouping_scores(sims, [same for _, _, same in pairs])
+
+    summary = {
+        "evaluated_at": dt.date.today().isoformat(), "labelled": len(keys),
+        "by_lang": {lang: sum(articles[k]["lang"] == lang for k in keys) for lang in ("en", "es")},
+        "pairs": len(pairs), "support": dict(sorted(Counter(truth).items())),
+        "category": category, "taxa": taxa, "grouping": grouping,
+    }  # fmt: skip
+    out = root / "eval" / "reports" / f"{dt.date.today().isoformat()}-news"
+    out.with_suffix(".json").write_text(json.dumps(summary, indent=1, default=str) + "\n")
+    out.with_suffix(".md").write_text(ev.report_markdown(summary), encoding="utf-8")
+    typer.echo(f"Report: {out.with_suffix('.md')}")
 
 
 @app.command()

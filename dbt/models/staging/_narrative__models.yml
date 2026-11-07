@@ -27,6 +27,10 @@ models:
               arguments:
                 to: ref('dim_taxon')
                 field: taxon_key
+  - name: stg_news__labels
+    columns:
+      - name: news_key
+        data_tests: [unique, not_null]
   - name: stg_narrative__study_titles
     columns:
       - name: doi

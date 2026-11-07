@@ -141,6 +141,19 @@ models:
                 to: ref('source_cadence')
                 field: source
 
+  - name: fct_news
+    description: >
+      One row per news article from the licensed feeds (F9, Phase 5), with the LLM's
+      category and the taxon pages it is about (int_news_taxa).
+    columns:
+      - name: news_key
+        data_tests: [unique, not_null]
+      - name: category
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [new_species, new_fossil, new_study, revision, noise]
+
 unit_tests:
   - name: neighbourhood_group_is_the_lowest_clade_with_three_genera
     description: >

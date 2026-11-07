@@ -1,0 +1,961 @@
+{
+ "taxon": "Gigantoraptor",
+ "taxon_key": "gigantoraptor",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3303a20e04354d95",
+ "generated_at": "2026-11-05T05:15:49+00:00",
+ "citations": {
+  "gigantoraptor:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (History of discovery)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Description)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Skull)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:6": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Postcranial skeleton)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:7": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:8": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Feathers)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:9": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Ontogeny and development)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:10": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Feeding)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:11": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Reproduction)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:enwiki:12": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor (Paleoenvironment)",
+   "url": "https://en.wikipedia.org/wiki/Gigantoraptor?oldid=1383306888",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (Descubrimiento e investigación)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (Filogenia)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Gigantoraptor erlianensis (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Gigantoraptor_erlianensis?oldid=159934007",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gigantoraptor:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Gigantoraptor",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=103707",
+   "doi": null,
+   "license": "CC BY 4.0"
+  },
+  "gigantoraptor:research:1": {
+   "source": "wikipedia_research",
+   "title": "2026 in archosaur paleontology (research: Theropod research)",
+   "url": "https://doi.org/10.1080/02724634.2026.2716748",
+   "doi": "10.1080/02724634.2026.2716748",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The first remains of Gigantoraptor were discovered in 2005 in the Iren Dabasu Formation of Inner Mongolia.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Iren Dabasu Formation of Inner Mongolia, where the first remains were found in 2005.",
+   "quote_sha": "04d5ebe916638705"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species Gigantoraptor erlianensis was formally named and described in 2007 by Xu, Tan Qingwei, Wang Jianmin, Zhao Xijin, and Tan Lin.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:enwiki:3",
+   "lang": "en",
+   "quote": "In 2007, the type species Gigantoraptor erlianensis was named and described by Xu, Tan Qingwei, Wang Jianmin, Zhao Xijin and Tan Lin.",
+   "quote_sha": "283c4ef95c586546"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus name Gigantoraptor combines the Latin words for \"giant\" and \"seizer\".",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:enwiki:3",
+   "lang": "en",
+   "quote": "The generic name, Gigantoraptor, is derived from the Latin gigas, gigantis, meaning \"giant\" and raptor, meaning \"seizer\".",
+   "quote_sha": "b099edb6fd2a4ed1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species name erlianensis refers to the Erlian basin where the fossil was found.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:enwiki:3",
+   "lang": "en",
+   "quote": "The specific name, erlianensis, refers to the Erlian basin.",
+   "quote_sha": "8d261b07ba341ed9"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Gigantoraptor lived in Asia during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Gigantoraptor () is a genus of large oviraptorosaurian dinosaur that lived in Asia during the Late Cretaceous period.",
+   "quote_sha": "ecaefd3b8e19aa4c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Gigantoraptor was the largest known oviraptorosaur, with estimates of 8 to 8.6 meters in length and 1.4 to 2 metric tons in body mass.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Gigantoraptor was the largest-known oviraptorosaur, reaching 8 or 8.6 m in length and 1.4 - 2 MT in body mass.",
+   "quote_sha": "2dafb70685ab1196"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Gigantoraptor had toothless lower jaws that ended in a keratinous beak, similar to other oviraptorosaurs.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The lower jaws were toothless and ended in a keratinous beak, as seen in other oviraptorosaurs.",
+   "quote_sha": "75b5a662f4f580b7"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The growth pattern of Gigantoraptor indicates accelerated growth compared to other large theropods.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Such development indicates an accelerated growth compared to other large theropods.",
+   "quote_sha": "db2b070bfd3ebce4"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Evidence suggests that large genera like Gigantoraptor built nests with a central depression lacking eggs to prevent crushing.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The discovery and examination of large oviraptorosaur eggs, Macroelongatoolithus, indicates that large genera such as Gigantoraptor built their nests with the center lacking eggs in order to avoid crushing.",
+   "quote_sha": "426a68783318f619"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The shape of Gigantoraptor's beak suggests a generalist diet with potential occasional carnivory.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "The shape of its beak indicates a generalist diet with a potentially occasional carnivory.",
+   "quote_sha": "a0e2a3099f65d016"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Gigantoraptor was approximately three times longer and 35 times heavier than Citipati, with estimates of 8 meters in length, 3.5 meters at the hips, and 1.4 metric tons in weight.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:4",
+   "lang": "en",
+   "quote": "Approximately three times as long and 35 times heavier than the largest earlier-discovered oviraptorosaur Citipati, the holotype of Gigantoraptor has been estimated at 8 m long with a height of 3.5 m at the hips, and a ponderous weight of 1.4 MT.",
+   "quote_sha": "3d41c70dde36aea1"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Other studies have estimated Gigantoraptor's weight at 2 metric tons and its length at 8.6 meters.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:4",
+   "lang": "en",
+   "quote": "Other studies have estimated it to be 2 MT in weight, and one at 8.6 m in length.",
+   "quote_sha": "cc67a70628390e43"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Although likely feathered like other oviraptorosaurs, Gigantoraptor's massive size suggests it may have been partially naked.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:4",
+   "lang": "en",
+   "quote": "As an oviraptorosaur, Gigantoraptor was likely feathered as well, however, given its massive size it may have been partially naked.",
+   "quote_sha": "c39ffb3c886ef08f"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "The preserved lower jaws of Gigantoraptor are 46 cm long and toothless.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:5",
+   "lang": "en",
+   "quote": "As preserved, the total length of the lower jaws is 46 cm, and they are toothless.",
+   "quote_sha": "c40ad1cab2f28638"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "The fused lower jaws formed a broad shovel-like shape, indicating the skull was over half a meter long, toothless, and likely equipped with a horny beak.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:5",
+   "lang": "en",
+   "quote": "This element fused into a broad shovel-like shape, indicating that the unknown skull was over half a metre long and also toothless, likely equipped with a rhamphotheca (horny beak).",
+   "quote_sha": "8d838578962556d6"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "The dentary bones of Gigantoraptor are very deep, toothless, and feature sharply developed shelves on the top edges.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:5",
+   "lang": "en",
+   "quote": "The dentary bones are very deep and toothless, and have a pair of sharply-developed shelves on the top edges.",
+   "quote_sha": "6a58898c324c6694"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Gigantoraptor's forelimbs were rather long due to an elongated humerus measuring 73.5 cm and a slender hand.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:6",
+   "lang": "en",
+   "quote": "The forelimbs are rather long because of an elongated humerus (73.5 cm long) and slender manus.",
+   "quote_sha": "d53ed4a103767618"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "The first metacarpal of Gigantoraptor was very short and carried a strongly diverging thumb.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:6",
+   "lang": "en",
+   "quote": "The first metacarpal is very short and carries a strongly diverging thumb.",
+   "quote_sha": "eb92046bfa283db5"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "Gigantoraptor's femur measured 1.1 meters, the tibia measured 1.10 meters, and the metatarsus was 58.3 cm long with metatarsal III being the largest.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:6",
+   "lang": "en",
+   "quote": "The femur is slender with a distinct head and neck, measuring 1.1 m; the tibia has similar top and bottom borders and measures 1.10 m long; and the metatarsus is 58.3 cm long with the metatarsal III being the largest.",
+   "quote_sha": "d55444a70159b941"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Although originally thought to be a basal oviraptorid, subsequent analyses have shown Gigantoraptor to be a caenagnathid.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "lang": "en",
+   "quote": "Though it was originally found to represent a basal oviraptorid, subsequent analyses have shown it to be a caenagnathid.",
+   "quote_sha": "c6cdc2bf380bcc74"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "In 2007, Xu and colleagues initially assigned Gigantoraptor to the Oviraptoridae in a basal position.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:enwiki:7",
+   "lang": "en",
+   "quote": "In 2007, Xu and colleagues assigned Gigantoraptor to the Oviraptoridae, in a basal (primitive) position.",
+   "quote_sha": "e3c8a7ba4aa90c53"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "A 2010 analysis reclassified Gigantoraptor as a member of the Caenagnathidae rather than the Oviraptoridae.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:enwiki:7",
+   "lang": "en",
+   "quote": "In 2010, a second analysis of Gigantoraptor relationships found it to be a member of the Caenagnathidae rather than an oviraptorid.",
+   "quote_sha": "0ff59bc8757b045d"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Phylogenetic analysis by Lamanna et al. in 2014 supported that Gigantoraptor was a basal caenagnathid.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:enwiki:7",
+   "lang": "en",
+   "quote": "Phylogenetic analysis conducted by Lamanna et al. (2014), supported that Gigantoraptor was a basal caenagnathid.",
+   "quote_sha": "156574d9cb3783f0"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "Despite its large size, Gigantoraptor was likely more bird-like than its smaller oviraptorosaurian relatives.",
+   "category": "debate",
+   "chunk_id": "gigantoraptor:enwiki:7",
+   "lang": "en",
+   "quote": "Despite its size, Gigantoraptor would thus have been more bird-like than its smaller oviraptorosaurian relatives.",
+   "quote_sha": "84f5c76e9fdf6296"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "Researchers suggested in 2007 that Gigantoraptor was likely partially naked because its body mass was 300 times greater than that of smaller feathered dinosaurs.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:enwiki:8",
+   "lang": "en",
+   "quote": "Xu and team in 2007 suggested that Gigantoraptor might have been partially \"naked\" because it is 300 times as heavy as feathered species like Caudipteryx",
+   "quote_sha": "2f0c547eaad0d79d"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "Despite potential loss of body feathers, researchers suggested Gigantoraptor likely retained arm feathers for display and brooding eggs.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:enwiki:8",
+   "lang": "en",
+   "quote": "However, they suggested that at least arm feathers were probably still present on Gigantoraptor, since their primary functions, such as display behaviour and covering the eggs while brooding, are not related to the regulation of body heat.",
+   "quote_sha": "2ae33fefbf38b85b"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "A 2007 histological analysis of the holotype fibula revealed seven preserved growth rings, indicating the animal's age at death.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "lang": "en",
+   "quote": "A histological analysis performed on the holotype fibula by Xu and colleagues in 2007 showed that the specimen had seven lines of arrested growth (LAGs, or growth rings) as preserved.",
+   "quote_sha": "aa28e3ec6174351e"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "The growth rings indicated the holotype died at approximately 11 years old and gained an average of 128 to 140 kg per year.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "lang": "en",
+   "quote": "The amount of LAGs indicate the holotype was around 11 years old at the time of death and had an average growth of 128 - 140 kg per year.",
+   "quote_sha": "e0073b9e44e5be76"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Researchers inferred that Gigantoraptor reached young adulthood at the age of 7 based on the spacing of its growth rings.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "lang": "en",
+   "quote": "However, given that the fourth to seventh sets of LAGs were not very tightly packed, Xu and colleagues inferred that the individual reached its young adulthood at the age of 7.",
+   "quote_sha": "10151514317991f9"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "The elongated hindlimbs of Gigantoraptor suggested it was the most cursorial (adapted for running) large theropod known.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "lang": "en",
+   "quote": "It was suggested the elongation of these limbs would make it the most cursorial—an animal adapted to run or maintain certain speed for a large amount of time—large theropods.",
+   "quote_sha": "a126c6495f1ea576"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "Later analyses found features like an elongated digit IV and curved claws that contradicted the hypothesis that Gigantoraptor was adapted for a cursorial lifestyle.",
+   "category": "debate",
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "lang": "en",
+   "quote": "However, later analysis of the limb material found various features that directly contradicted a cursorial lifestyle, such as an elongated digit IV, curved toe claws, and the lack of an arctometatarsal condition.",
+   "quote_sha": "48af4b836a82028d"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "A 2017 study found that Gigantoraptor possessed the deepest beak among all caenagnathids.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "In 2017, Waisum Ma and colleagues re-examined the preserved jaws of Gigantoraptor and found that it had the deepest beak among caenagnathids",
+   "quote_sha": "12620ba5ee06e4f7"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "The articular region of Gigantoraptor's jaws shows convergence with those of the modern tuatara.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "The articular region of the jaws of Gigantoraptor show convergence to those of the modern tuatara.",
+   "quote_sha": "b493ce7ee6c6dbc4"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "The propalinal jaw movement and sharp dentary shelves suggest Gigantoraptor had a shearing bite capable of cutting plants and possibly meat.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "This movement aided with the sharp shelves of the dentary may indicate a shearing bite capable of cutting through plants (and potentially meat).",
+   "quote_sha": "e282b139f05ceb44"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "The deep lower jaw suggests Gigantoraptor had a large tongue that could have assisted in food processing and improved feeding efficiency.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "The depth of the lower jaw indicates the presence of a large tongue, which could have assisted the animal in food processing, and possibly improving the feeding efficiency.",
+   "quote_sha": "a515ae08fa73843e"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "The strongly U-shaped dentary suggests Gigantoraptor was likely a highly non-selective feeder.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "The strongly U-shaped dentary of Gigantoraptor may suggest that this oviraptorosaur was a highly non-selective feeder",
+   "quote_sha": "b6d5ca59f51adedb"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "It is debated whether Gigantoraptor's gut was specialized for its diet, and researchers could not rule out an occasional carnivorous diet due to its strong beak and jaw movement.",
+   "category": "debate",
+   "chunk_id": "gigantoraptor:enwiki:10",
+   "lang": "en",
+   "quote": "However, it is not known whether the gut of Gigantoraptor was specialized to process this greater ingestion. The team could not disregard an occasional carnivorous diet as the strong beak together with a propalinal jaw movement may have allowed meat processing.",
+   "quote_sha": "d897bd3cb9f12fba"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Gigantoraptor is linked to the discovery of giant oviraptorosaurian eggs up to 50 cm long, assigned to the oospecies Macroelongatoolithus carlylensis.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:enwiki:11",
+   "lang": "en",
+   "quote": "The existence of giant oviraptorosaurians, such as Gigantoraptor, explains several earlier Asian finds of very large, up to ~50 cm long, oviraptorosaurian eggs, assigned to the oospecies Macroelongatoolithus carlylensis.",
+   "quote_sha": "d455ff52b1c400d9"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "Researchers suggested that the nest configuration of giant oviraptorosaurs like Gigantoraptor helped avoid egg-crushing while allowing some body contact during incubation.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:enwiki:11",
+   "lang": "en",
+   "quote": "Tanaka and colleagues pointed out that this adaption was beneficial to avoid egg-crushing and could have allowed some body contact during incubation in these giant oviraptorosaurs.",
+   "quote_sha": "27b99a3897bb0d7d"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "Gigantoraptor fossils are found in the Iren Dabasu Formation of Inner Mongolia, dated to 95.8 ± 6.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:enwiki:12",
+   "lang": "en",
+   "quote": "Gigantoraptor is known from the Iren Dabasu Formation of Inner Mongolia. This formation has been dated to 95.8 ± 6.2 million years ago based on U–Pb and stratigraphic analyses.",
+   "quote_sha": "10c1c302e51c42d1"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Thomas Holtz suggested the age of the Gigantoraptor formation was between 95 and 80 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:enwiki:12",
+   "lang": "en",
+   "quote": "Thomas Holtz suggested that it was around 95 to 80 million years ago.",
+   "quote_sha": "5884e3cb657280f3"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "The environment of Gigantoraptor was a highly humid, large braided river valley with floodplains.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:enwiki:12",
+   "lang": "en",
+   "quote": "The environments around this formation were highly humid, existing as a large braided river valley with floodplains.",
+   "quote_sha": "e79bde561ef965df"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "The Iren Dabasu Formation supported extensive vegetation and foliage, evidenced by paleosol development and numerous herbivorous dinosaur remains.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:enwiki:12",
+   "lang": "en",
+   "quote": "The Iren Dabasu Formation had extensive vegetation and foliage, evidenced in the paleosol development, the numerous herbivorous dinosaurs remains that were found in both the river channel and the floodplain sediments.",
+   "quote_sha": "fcb546d914067450"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "The genus Gigantoraptor was named by Xu and colleagues in 2007.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Xu et al., 2007",
+   "quote_sha": "5fa826b37de6d401"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "The species Gigantoraptor erlianensis was named by Xu and colleagues in 2007.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:eswiki:1",
+   "lang": "es",
+   "quote": "species_authority: Xu et al., 2007",
+   "quote_sha": "00dc7e59837a2d00"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "Gigantoraptor lived during the late Cretaceous, approximately 83 to 70 million years ago in the Campanian stage, in what is now Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales del período Cretácico, hace aproximadamente entre 83 a 70 millones de años, durante el Campaniense, en lo que hoy es Asia",
+   "quote_sha": "74bdb4754caeb8ce"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "Xu et al. estimated the length of Gigantoraptor at 8 meters and the weight at 1400 kilograms.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Xu et al. estimó la longitud en 8 metros y el peso en 1400 kilogramos",
+   "quote_sha": "daf6ac80cb043371"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Gigantoraptor was three times longer than the largest known oviraptorosaur at the time, Citipati.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Era tres veces más largo que el más grande ovirraptosauriano conocido hasta ese momento, Citipati",
+   "quote_sha": "292a9dcdbe9aecaa"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Gigantoraptor has dimensions comparatively larger than other species in the family Oviraptoridae.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Gigantoraptor presenta unas dimensiones, comparativamente, superiores a la de las demás especies de la familia Oviraptoridae",
+   "quote_sha": "c68da6a59df4b579"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Like its smaller oviraptorid relatives, Gigantoraptor was bipedal with a relatively long neck, strong claws, a reduced tail, and a small head equipped with a beak.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Al igual que sus parientes ovirraptóridos más pequeños, Gigantoraptor era bípedo, de cuello relativamente largo, fuertes garras, una cola reducida y una cabeza pequeña dotada de un pico",
+   "quote_sha": "e096740bf66b3a28"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The toothless lower jaws of Gigantoraptor merge into a broad paddle.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Las mandíbulas inferiores sin dientes de Gigantoraptor se funden en una amplia pala",
+   "quote_sha": "610bf03fe17bc1cc"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "The front tail vertebrae of Gigantoraptor have very long neural spines and are highly pneumatized with deep pleurocoels.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Las vértebras de la cola delantera tienen espinas neurales muy largas y están muy neumatizadas con pleurocoelos profundos",
+   "quote_sha": "9f86300c76765533"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The forelimb of Gigantoraptor is quite long due to a slender and elongated hand.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "La extremidad delantera es bastante larga debido a una mano esbelta y alargada",
+   "quote_sha": "d36dec2eb819c493"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "The first metacarpal of Gigantoraptor is very short and bears a highly divergent thumb.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "El primer metacarpiano es muy corto y lleva un pulgar muy divergente",
+   "quote_sha": "ab01591c25feaa74"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "The foot of Gigantoraptor is robust with large, strongly curved claws.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "El pie es robusto con garras grandes y fuertemente curvadas",
+   "quote_sha": "aa45816e4fc983bd"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "No direct feather evidence was preserved with the Gigantoraptor skeleton, but Xu et al. (2007) discussed their probable presence.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "No se conservaron evidencias directas de plumas con el esqueleto, pero Xu et al., en 2007, discutieron su probable presencia en Gigantoraptor",
+   "quote_sha": "7ba6715c2ce47a6c"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Researchers suggest that at least arm feathers were likely present in Gigantoraptor because their primary functions, such as display and brooding eggs, are not related to heat regulation.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "sugirieron que al menos las plumas del brazo probablemente todavía estaban presentes en Gigantoraptor, ya que sus funciones primarias, como la exhibición y cubrir los huevos mientras empollan, no están relacionadas con la regulación del calor corporal",
+   "quote_sha": "721acde9dc33001f"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "The diet of Gigantoraptor remains a mystery.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "La dieta de este animal es un misterio",
+   "quote_sha": "7f7c76b912c7fec8"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Gigantoraptor had hind legs with proportions allowing rapid movement, was likely more agile than the known Tyrannosaurus, and had large claws, a combination not generally found in herbivores of that size.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "lang": "es",
+   "quote": "Gigantoraptor tenía patas traseras con las proporciones que permitieron un movimiento rápido, era probablemente más ágil que el conocido Tyrannosaurus, y garras grandes, una combinación que no se encuentra generalmente en herbívoros de ese tamaño",
+   "quote_sha": "86cc9738eebaf1dc"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Gigantoraptor was discovered in 2005 in sediments of the Erlian Bed of the Iren Dabasu Formation in Inner Mongolia.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "Descubierto en 2005 en sedimentos del Lecho Erlian de la Formación Iren Dabasu, en la Mongolia Interior",
+   "quote_sha": "94e019167ad4b8cc"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "The known specimen LH V0011 was found disarticulated and incomplete.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "Se basa en el único espécimen conocido, LH V0011, que se encontró desarticulado e incompleto",
+   "quote_sha": "a7cfc35702515fde"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "In 2007, the type species Gigantoraptor erlianensis was named and described by Xu, Tan Qingwei, Wang Jianmin, Zhao Xijin, and Tan Lin.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "En 2007, la especie tipo, Gigantoraptor erlianensis fue nombrada y descrita por Xu, Tan Qingwei, Wang Jianmin, Zhao Xijin y Tan Lin",
+   "quote_sha": "fd076647ce1c6503"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The generic name Gigantoraptor is derived from the Latin gigas, meaning \"giant,\" and raptor, meaning \"thief\" or \"rapacious.\"",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "El nombre genérico se deriva del latín gigas, \"gigante\" y raptor, \"rapaz\"",
+   "quote_sha": "412340815124a3cb"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "The specific name erlianensis refers to the Erlian Basin.",
+   "category": "discovery",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "El nombre específico se refiere a la Cuenca de Erlian",
+   "quote_sha": "48451e810983767b"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The age of the Iren Dabasu Formation is controversial; based on ostracods, Godefroit suggested it was equivalent to the Nemegt Formation at around 70 million years, though some vertebrate remains suggest an older Santonian age between 84 and 86 million years.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "La edad de la formación Iren Dabasu es controvertida, basado en ostrácodos, Godefroit sugirió la unidad era equivalente a la formación Nemegt, o alrededor de 70 millones de años, aunque algunos restos de vertebrados sugieren una mayor edad, en el Santoniano entre 84 y 86 millones de años",
+   "quote_sha": "8ebaf2a58aa3e615"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The fossil consists of incomplete and disarticulated remains of a single subadult individual, a partial skeleton lacking the skull but including the lower jaw, one neck vertebra, most of the back and tail, and most elements of the fore and hind limbs.",
+   "category": "description",
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "lang": "es",
+   "quote": "Consiste en los restos incompletos y disociados de un solo individuo subadulto, un esqueleto parcial que carece del cráneo pero que incluye la mandíbula inferior, una vértebra del cuello, la mayor parte de la espalda y la cola y la mayoría de los elementos de la extremidades anteriores y posteriores",
+   "quote_sha": "98b5a4a2ed889caf"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "In 2007, Xu et al. assigned Gigantoraptor to Oviraptoridae in a basal position.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:eswiki:5",
+   "lang": "es",
+   "quote": "En 2007, Xu et al. asignaron a Gigantoraptor Oviraptoridae, en una posición basal",
+   "quote_sha": "72b1e17dab407011"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "In 2010, a second analysis of Gigantoraptor's relationships found it to be a member of Caenagnathidae rather than an oviraptorid.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:eswiki:5",
+   "lang": "es",
+   "quote": "En 2010, un segundo análisis de las relaciones de Gigantoraptor encontró que era un miembro de Caenagnathidae en lugar de un oviraptórido",
+   "quote_sha": "7e684603057e1e4c"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "The phylogenetic analysis conducted by Lamanna et al. in 2014 supported that Gigantoraptor was a basal caenagnathid.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:eswiki:5",
+   "lang": "es",
+   "quote": "El análisis filogenético realizado por Lamanna et al. en 2014, apoyaron que Gigantoraptor era un cenagnátido basal",
+   "quote_sha": "276456317dce37b1"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The parent group of Gigantoraptor is Caenagnathidae.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Caenagnathidae",
+   "quote_sha": "ee3a25cb1954dba9"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Gigantoraptor belongs to the family Caenagnathidae.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Caenagnathidae",
+   "quote_sha": "69851402a727b758"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Gigantoraptor is classified in the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "gigantoraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "The time range for Gigantoraptor is the Campanian stage, from 83.6 to 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "gigantoraptor:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Campanian (83.6 to 72.2 million years ago)",
+   "quote_sha": "ad61ec998840c2d9"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "The preserved jaw of Gigantoraptor indicates the theropod had a shearing bite, possibly for cutting plants or potentially meat.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La mandíbula conservada para Gigantoraptor también indica que el terópodo tenía una mordida de cizallamiento, posiblemente para cortar plantas o potencialmente carne",
+   "quote_sha": "35c5adb2d42a9248"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "The specimen has advanced ossification and growth rings in the perone indicating it was probably 11 years old when it died.",
+   "category": "paleobiology",
+   "chunk_id": "gigantoraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La muestra tiene osificación avanzada y anillos de crecimiento en el peroné que indican que probablemente tenía 11 años de edad cuando murió",
+   "quote_sha": "53d4fba66dee4eb3"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "The existence of giant oviraptorosaurs like Gigantoraptor explains previous findings of very large eggs, up to 53 centimeters long, assigned to the oospecies Macroelongatoolithus carlylensis.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La existencia de oviraptorosaurianos gigantes, como Gigantoraptor, explica varios hallazgos anteriores de huevos muy grandes, de hasta 53 centímetros de largo, asignados a la ooespecie Macroelongatoolithus carlylensis",
+   "quote_sha": "38c7738c22d093e4"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "These giant eggs were placed in enormous rings with a diameter of three meters.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:7",
+   "lang": "es",
+   "quote": "Estos fueron colocados en enormes anillos con un diámetro de tres metros",
+   "quote_sha": "c28c75930a4a9414"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "The presence of Macroelongatoolithus in North America indicates that giant oviraptorosaurs were also present there, although no skeletal fossils have been found.",
+   "category": "curiosities",
+   "chunk_id": "gigantoraptor:eswiki:7",
+   "lang": "es",
+   "quote": "La presencia de Macroelongatoolithus en América del Norte indica que también estaban presentes oviraptorosaurianos gigantes, aunque no se han encontrado restos esqueléticos fósiles",
+   "quote_sha": "99464a6294671ed3"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "gigantoraptor:enwiki:3",
+   "statement": "The holotype specimen, designated LH V0011, consists of incomplete and disassociated remains of a single adult individual.",
+   "category": "discovery",
+   "quote": "The holotype, LH V0011, consists of the incomplete and disassociated remains of a single adult individual...",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:3",
+   "statement": "In 2015, a team led by Takanobu Tsuihiji reported a large partial dentary from the Bayan Shireh Formation that may represent another Gigantoraptor specimen.",
+   "category": "discovery",
+   "quote": "In 2015, Takanobu Tsuihiji with team reported a partial—and large—caenagnathid dentary (specimen MPC-D 107/17) from the Bayan Shireh Formation...",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "statement": "Gigantoraptor possessed an extensively pneumatized vertebral column and elongated arms and legs.",
+   "category": "description",
+   "quote": "It had an extensively pneumatized vertebral column and elongated arms and legs.",
+   "reason": "statement copies the source wording: 'an extensively pneumatized vertebral column and elongated arms'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "statement": "Both the femur and tibia of Gigantoraptor measured over 1 meter in length, an unusual trait among giant theropods.",
+   "category": "description",
+   "quote": "Both femur and tibia measured over 1 m in length, an unusual trait among giant theropods.",
+   "reason": "statement copies the source wording: 'in length an unusual trait among giant theropods'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "statement": "The only known specimen of Gigantoraptor represents a young adult that died at the age of 11 and reached young adulthood around 7 years old.",
+   "category": "description",
+   "quote": "The holotype—and only known specimen—has been determined to represent a young adult that died at the age of 11, and it reached a young adulthood around 7 years of life.",
+   "reason": "statement copies the source wording: 'a young adult that died at the age'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "statement": "Gigantoraptor was a giant, ground-dwelling bipedal omnivore or herbivore with a shearing bite.",
+   "category": "paleobiology",
+   "quote": "It was a giant, ground-dwelling bipedal omnivore or herbivore with a shearing bite as indicated by the preserved mandible.",
+   "reason": "statement copies the source wording: 'was a giant ground-dwelling bipedal omnivore or herbivore'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:6",
+   "statement": "The humerus of Gigantoraptor was bowed outwards to an exceptional extent with a very rounded head, similar to some birds but unlike any other oviraptorosaur.",
+   "category": "description",
+   "quote": "The humerus is bowed outwards to an exceptionally large extent and has a very rounded head, similar to some birds but unlike any other oviraptorosaur.",
+   "reason": "statement copies the source wording: 'a very rounded head similar to some birds'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:6",
+   "statement": "The foot of Gigantoraptor was robust with large and strongly curved pedal unguals.",
+   "category": "description",
+   "quote": "The pes is robust with large and strongly curved pedal unguals.",
+   "reason": "statement copies the source wording: 'robust with large and strongly curved pedal unguals'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:2",
+   "statement": "Gigantoraptor is classified as an oviraptorosaurian dinosaur, a group of generally small feathered animals.",
+   "category": "classification",
+   "quote": "The genus is classified as an oviraptorosaurian dinosaur, a group of generally small feathered animals.",
+   "reason": "statement copies the source wording: 'is classified as an oviraptorosaurian dinosaur a group'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:9",
+   "statement": "Gigantoraptor exhibited a growth rate much faster than most large non-avian theropods like tyrannosaurids.",
+   "category": "paleobiology",
+   "quote": "This indicates that Gigantoraptor had a growth rate much faster than most large non-avian theropods, such as tyrannosaurids.",
+   "reason": "statement copies the source wording: 'a growth rate much faster than most large'"
+  },
+  {
+   "chunk_id": "gigantoraptor:enwiki:11",
+   "statement": "Gigantoraptor laid its eggs in enormous rings with a diameter of three meters.",
+   "category": "curiosities",
+   "quote": "These were laid in enormous rings with a diameter of three metres.",
+   "reason": "statement copies the source wording: 'in enormous rings with a diameter of three'"
+  },
+  {
+   "chunk_id": "gigantoraptor:eswiki:2",
+   "statement": "Gigantoraptor erlianensis is the only known species of the extinct dinosaur genus Gigantoraptor, a basal caenagnathid theropod.",
+   "category": "description",
+   "quote": "Gigantoraptor erlianensis es la única especie conocida del género extinto Gigantoraptor de dinosaurio terópodo cenagnátido",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "gigantoraptor:eswiki:3",
+   "statement": "Researchers suggest Gigantoraptor might have been \"naked\" because it is 300 times more massive than feathered relatives, as large animals may rely on mass for temperature regulation rather than insulating covers.",
+   "category": "debate",
+   "quote": "podría haber estado \"desnudo\" porque es trescientas veces más masivo que estas especies, y los animales muy grandes pueden confiar más en su masa para la regulación de la temperatura, perdiendo las cubiertas aislantes encontradas en sus parientes más pequeños",
+   "reason": "numbers not in the quote: ['300']"
+  },
+  {
+   "chunk_id": "gigantoraptor:eswiki:4",
+   "statement": "The first study of this species, published in Nature, included an osteological analysis estimating the death age of the specimen at 11 years and a growth rate of approximately 130 kilograms per year.",
+   "category": "discovery",
+   "quote": "El primer estudio de esta especie, publicado por la revista Nature, incluye un análisis osteológico que ha permitido estimar la edad de la muerte del ejemplar, once años y su velocidad de crecimiento, unos 130 kilogramos cada año aproximadamente",
+   "reason": "numbers not in the quote: ['11']"
+  }
+ ]
+}

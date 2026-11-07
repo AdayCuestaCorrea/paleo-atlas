@@ -2,9 +2,9 @@
  "taxon": "Sinosauropteryx",
  "taxon_key": "sinosauropteryx",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "242773deb736ae3b",
- "generated_at": "2026-11-03T05:47:05+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "12703e287e6a8487",
+ "generated_at": "2026-11-05T01:15:40+00:00",
  "citations": {
   "sinosauropteryx:enwiki:1": {
    "source": "wikipedia_article",
@@ -111,6 +111,13 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "sinosauropteryx:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Sinosauropteryx (Plumas)",
+   "url": "https://es.wikipedia.org/wiki/Sinosauropteryx?oldid=174040984",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "sinosauropteryx:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Sinosauropteryx",
@@ -122,7 +129,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Sinosauropteryx was first described by Ji and Ji in 1996.",
+   "statement": "The genus Sinosauropteryx was described by Ji and Ji in 1996.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:1",
    "lang": "en",
@@ -131,16 +138,16 @@
   },
   {
    "fact_id": "F002",
-   "statement": "A second species, S. lingyuanensis, was named by Qiu and colleagues in 2025.",
+   "statement": "The species was originally named Compsognathus prima before being reclassified as Sinosauropteryx prima.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:1",
    "lang": "en",
-   "quote": "subdivision: * S. lingyuanensisQiu et al., 2025",
-   "quote_sha": "5025ef9e47fd0b41"
+   "quote": "synonyms: *Compsognathus prima (Ji & Ji, 1996)",
+   "quote_sha": "80ba34474c2321ea"
   },
   {
    "fact_id": "F003",
-   "statement": "Sinosauropteryx was the first non-avian dinosaur taxon found with evidence of feathers when it was described in 1996.",
+   "statement": "Sinosauropteryx was the first non-avian dinosaur taxon discovered with evidence of feathers.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:2",
    "lang": "en",
@@ -149,7 +156,7 @@
   },
   {
    "fact_id": "F004",
-   "statement": "Sinosauropteryx was covered in a coat of simple, filament-like feathers.",
+   "statement": "The dinosaur was covered in a coat of simple, filament-like feathers.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:2",
    "lang": "en",
@@ -167,33 +174,6 @@
   },
   {
    "fact_id": "F006",
-   "statement": "The reddish-brown coloration previously attributed to Sinosauropteryx was actually based on melanosomes found in a separate genus, Huadanosaurus.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:2",
-   "lang": "en",
-   "quote": "The reddish brown colouration previously inferred for Sinosauropteryx is based on the melanosomes preserved in the specimen of a separate genus, Huadanosaurus.",
-   "quote_sha": "6a02f89039e46bd7"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "Some researchers have suggested the filamentous impressions are collagen fibers rather than feathers, but this view is not widely accepted.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:2",
-   "lang": "en",
-   "quote": "Some contention has arisen with an alternative interpretation of the filamentous impression as remains of collagen fibres, but this has not been widely accepted.",
-   "quote_sha": "a114ca5cf090c110"
-  },
-  {
-   "fact_id": "F008",
-   "statement": "Sinosauropteryx was a small theropod characterized by an unusually long tail and short arms.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:2",
-   "lang": "en",
-   "quote": "Sinosauropteryx was a small theropod with an unusually long tail and short arms.",
-   "quote_sha": "bda8284064cb743d"
-  },
-  {
-   "fact_id": "F009",
    "statement": "The largest known specimen of Sinosauropteryx reached a length of 1.07 meters and an estimated weight of 0.55 kilograms.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:2",
@@ -202,8 +182,17 @@
    "quote_sha": "c8093d7b46f1c717"
   },
   {
-   "fact_id": "F010",
-   "statement": "While initially thought to belong to the family Compsognathidae with Compsognathus, later analyses placed Sinosauropteryx in its own family, Sinosauropterygidae.",
+   "fact_id": "F007",
+   "statement": "Sinosauropteryx was a small theropod characterized by an unusually long tail and short arms.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:enwiki:2",
+   "lang": "en",
+   "quote": "Sinosauropteryx was a small theropod with an unusually long tail and short arms.",
+   "quote_sha": "bda8284064cb743d"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "While initially placed in the family Compsognathidae, later analyses placed Sinosauropteryx in its own family, Sinosauropterygidae.",
    "category": "classification",
    "chunk_id": "sinosauropteryx:enwiki:2",
    "lang": "en",
@@ -211,7 +200,7 @@
    "quote_sha": "c63ad056cb3fd472"
   },
   {
-   "fact_id": "F011",
+   "fact_id": "F009",
    "statement": "Sinosauropteryx lived in northeastern China during the Early Cretaceous period.",
    "category": "time_and_habitat",
    "chunk_id": "sinosauropteryx:enwiki:2",
@@ -220,8 +209,8 @@
    "quote_sha": "0aae3f884a527431"
   },
   {
-   "fact_id": "F012",
-   "statement": "The first fossil specimen of Sinosauropteryx prima was discovered in August 1996 by the farmer Li Yumin.",
+   "fact_id": "F010",
+   "statement": "The first fossil specimen of Sinosauropteryx prima was uncovered in August 1996 by the fossil hunter Li Yumin.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:3",
    "lang": "en",
@@ -229,8 +218,8 @@
    "quote_sha": "1dc8430cc845dbcf"
   },
   {
-   "fact_id": "F013",
-   "statement": "All known fossils of Sinosauropteryx were found in the Jianshangou or Dawangzhangzi Beds of the Yixian Formation in Liaoning, China.",
+   "fact_id": "F011",
+   "statement": "All known fossils of Sinosauropteryx were found in the Yixian Formation in the Beipiao and Lingyuan regions of Liaoning, China.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:3",
    "lang": "en",
@@ -238,8 +227,17 @@
    "quote_sha": "2e4187ed0044e858"
   },
   {
-   "fact_id": "F014",
-   "statement": "Rui Qiu and colleagues named and described the second species, S. lingyuanensis, in 2025.",
+   "fact_id": "F012",
+   "statement": "The fossil beds containing Sinosauropteryx are dated to between 124.6 and 122 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinosauropteryx:enwiki:3",
+   "lang": "en",
+   "quote": "These fossil beds have been dated to 124.6–122 million years ago, during the early Aptian stage of the Early Cretaceous.",
+   "quote_sha": "16985284bc5474f4"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "A second species, Sinosauropteryx lingyuanensis, was named and described by Rui Qiu and colleagues in 2025.",
    "category": "discovery",
    "chunk_id": "sinosauropteryx:enwiki:3",
    "lang": "en",
@@ -247,26 +245,35 @@
    "quote_sha": "7b434f0c32adb8bb"
   },
   {
-   "fact_id": "F015",
-   "statement": "The holotype for S. lingyuanensis is specimen IVPP V 12415, a near-complete skeleton of a potential juvenile preserving feather traces.",
-   "category": "discovery",
+   "fact_id": "F014",
+   "statement": "The holotype of S. lingyuanensis is a near-complete skeleton of a potential juvenile that preserves traces of feather integument.",
+   "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:3",
    "lang": "en",
    "quote": "The assigned holotype is IVPP V 12415, which comprises a near complete skeleton of a potential juvenile which also preserves traces of feather integument.",
    "quote_sha": "d3ccc86a61bac4ae"
   },
   {
-   "fact_id": "F016",
-   "statement": "A larger specimen previously assigned to S. prima, GMV 2124, was later reclassified as likely belonging to Tyrannosauroidea.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:enwiki:3",
+   "fact_id": "F015",
+   "statement": "There is a debated alternative interpretation suggesting the filamentous impressions are collagen fibers rather than feathers, though this is not widely accepted.",
+   "category": "debate",
+   "chunk_id": "sinosauropteryx:enwiki:2",
    "lang": "en",
-   "quote": "The assignment of an additional larger specimen to S. prima, GMV 2124 (also known as NGMC 2124), was later found to be in error, and most likely belongs to Tyrannosauroidea.",
-   "quote_sha": "b2e8d3d23a41a445"
+   "quote": "Some contention has arisen with an alternative interpretation of the filamentous impression as remains of collagen fibres, but this has not been widely accepted.",
+   "quote_sha": "a114ca5cf090c110"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "Well-preserved fossils of Sinosauropteryx provide evidence regarding its diet and reproduction.",
+   "category": "paleobiology",
+   "chunk_id": "sinosauropteryx:enwiki:2",
+   "lang": "en",
+   "quote": "Well-preserved fossils of this genus illustrate many aspects of its biology, such as its diet and reproduction.",
+   "quote_sha": "8a27ab5c8e8022c9"
   },
   {
    "fact_id": "F017",
-   "statement": "Initial studies of the first Sinosauropteryx specimen concluded that the preserved structures were not modern feathers, though their exact nature remained uncertain.",
+   "statement": "Researchers initially debated whether the filamentous structures on Sinosauropteryx were modern feathers or something else, with some suggesting they were stiffening structures from a frill.",
    "category": "debate",
    "chunk_id": "sinosauropteryx:enwiki:4",
    "lang": "en",
@@ -275,7 +282,7 @@
   },
   {
    "fact_id": "F018",
-   "statement": "Some researchers proposed that the filamentous structures on Sinosauropteryx were collagen fibers forming a frill, rather than primitive feathers.",
+   "statement": "Some researchers proposed that the filaments were collagen fibers forming a frill on the back and underside of the tail, similar to modern aquatic lizards.",
    "category": "debate",
    "chunk_id": "sinosauropteryx:enwiki:4",
    "lang": "en",
@@ -284,25 +291,7 @@
   },
   {
    "fact_id": "F019",
-   "statement": "Most researchers rejected the hypothesis that the structures on Sinosauropteryx were collagen fibers.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:4",
-   "lang": "en",
-   "quote": "Most researchers have disagreed with the identification of the structures as collagen or other structural fibres",
-   "quote_sha": "b58f856f10cf1664"
-  },
-  {
-   "fact_id": "F020",
-   "statement": "A 2017 study by Smithwick et al. analyzed and disproven the hypothesis that the structures on Sinosauropteryx were collagen fibers.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:4",
-   "lang": "en",
-   "quote": "The hypothesis that the structures were collagen fibers was closely analyzed and disproven by a 2017 paper published by Smithwick et al.",
-   "quote_sha": "9d92b3b0eb292883"
-  },
-  {
-   "fact_id": "F021",
-   "statement": "Sinosauropteryx was a small bipedal theropod characterized by short arms, a large first finger, and a long tail.",
+   "statement": "Sinosauropteryx was a small bipedal theropod characterized by short arms, large first fingers, and a long tail.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:5",
    "lang": "en",
@@ -310,17 +299,17 @@
    "quote_sha": "f25551c8a7808ff0"
   },
   {
-   "fact_id": "F022",
-   "statement": "The longest known Sinosauropteryx specimen measured 1.07 meters in length and weighed approximately 0.55 kilograms.",
+   "fact_id": "F020",
+   "statement": "The holotype specimen of Sinosauropteryx measured 68 cm in length, including the tail, making it one of the smallest known adult non-avian theropods.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:5",
    "lang": "en",
-   "quote": "The longest known specimen reaches up to 1.07 m in length, with an estimated weight of 0.55 kg",
-   "quote_sha": "02b8722810d47836"
+   "quote": "The taxon includes some of the smallest known adult non-avian theropod specimens, with the holotype specimen measuring only 68 cm in length, including the tail",
+   "quote_sha": "c02f0012c73599bf"
   },
   {
-   "fact_id": "F023",
-   "statement": "A later study estimated the mass of Sinosauropteryx to be 0.99 kilograms.",
+   "fact_id": "F021",
+   "statement": "A later study estimated the mass of Sinosauropteryx to be 0.99 kg.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:5",
    "lang": "en",
@@ -328,53 +317,62 @@
    "quote_sha": "2a4be94eb4f616be"
   },
   {
-   "fact_id": "F024",
-   "statement": "The arms of Sinosauropteryx were only 30% the length of its legs.",
+   "fact_id": "F022",
+   "statement": "The arms of Sinosauropteryx were only 30% the length of its legs, compared to 40% in Compsognathus.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:5",
    "lang": "en",
-   "quote": "The arms of Sinosauropteryx (humerus and radius) were only 30% the length of its legs",
-   "quote_sha": "4cfb53142dfeddd4"
+   "quote": "The arms of Sinosauropteryx (humerus and radius) were only 30% the length of its legs (thigh bone and shin), compared to 40% in Compsognathus",
+   "quote_sha": "3ea9a3a993466d99"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "The hands of Sinosauropteryx were about 84% to 91% the length of the rest of the arm and half the length of the foot.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:enwiki:5",
+   "lang": "en",
+   "quote": "Its hands were long compared to its arms, about 84% to 91% of the length of the rest of the arm (humerus and radius), and half the length of the foot",
+   "quote_sha": "025b75c1aade72dc"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "The teeth of Sinosauropteryx were heterodont, with slender, unserrated teeth near the tips of the upper jaws and serrated, laterally compressed teeth behind them.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:enwiki:5",
+   "lang": "en",
+   "quote": "The teeth differed slightly (they were heterodont) based on position: those near the tips of the upper jaws (on the premaxillae) were slender and lacked serrations, while those behind them (on the maxillae) were serrated and laterally compressed",
+   "quote_sha": "a745c0b93b51bbdf"
   },
   {
    "fact_id": "F025",
-   "statement": "Sinosauropteryx had 64 vertebrae in its tail.",
+   "statement": "Sinosauropteryx had over 50 extremely elongated caudal vertebrae, constituting 60% of its body length.",
    "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:5",
+   "chunk_id": "sinosauropteryx:enwiki:6",
    "lang": "en",
-   "quote": "It had 64 vertebrae in its tail",
-   "quote_sha": "f197d3bd4a5583c0"
+   "quote": "that there are over 50 extremely elongated caudals, constituting 60% of the body length",
+   "quote_sha": "33a549a1902a1098"
   },
   {
    "fact_id": "F026",
-   "statement": "The hands of Sinosauropteryx were long, measuring about 84% to 91% of the length of the rest of the arm.",
+   "statement": "The hind limb of Sinosauropteryx was long and robust, with the tibia only slightly longer than the femur.",
    "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:5",
+   "chunk_id": "sinosauropteryx:enwiki:6",
    "lang": "en",
-   "quote": "Its hands were long compared to its arms, about 84% to 91% of the length of the rest of the arm",
-   "quote_sha": "4ac142a1e6055db8"
+   "quote": "the hind limb was long and robust, the tibia is only slightly longer than the femur",
+   "quote_sha": "428c73a0c37e5a09"
   },
   {
    "fact_id": "F027",
-   "statement": "Sinosauropteryx had over 50 extremely elongated caudal vertebrae that constituted 60% of its body length.",
+   "statement": "The tarsals of Sinosauropteryx were separated, and the metatarsals were relatively robust with unfused proximal ends.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:6",
    "lang": "en",
-   "quote": "there are over 50 extremely elongated caudals, constituting 60% of the body length",
-   "quote_sha": "a7f60be6f52dbfd2"
+   "quote": "the tarsals are separated, and the metatarsals are relatively robust with unfused proximal ends",
+   "quote_sha": "4fe18a9e8c85884b"
   },
   {
    "fact_id": "F028",
-   "statement": "The feathers of Sinosauropteryx were described as short, small, and uniform.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:6",
-   "lang": "en",
-   "quote": "the feathers are short, small, and uniform",
-   "quote_sha": "541fbfc5c6a0592c"
-  },
-  {
-   "fact_id": "F029",
-   "statement": "Most paleontologists interpret the preserved integumentary filaments on Sinosauropteryx as a primitive type of feather.",
+   "statement": "Most paleontologists interpret the preserved filaments on Sinosauropteryx as a primitive type of feather.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
    "lang": "en",
@@ -382,17 +380,8 @@
    "quote_sha": "b8a8f87be7122601"
   },
   {
-   "fact_id": "F030",
-   "statement": "On the type specimen, the filaments are 13 mm long just in front of the eyes.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:7",
-   "lang": "en",
-   "quote": "On the type specimen, they are shortest just in front of the eyes, with a length of 13 mm.",
-   "quote_sha": "9d6978c249ab4ecf"
-  },
-  {
-   "fact_id": "F031",
-   "statement": "The filaments reach a length of 35 mm over the shoulder blades.",
+   "fact_id": "F029",
+   "statement": "The filaments increase in length along the body to reach 35 mm over the shoulder blades.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
    "lang": "en",
@@ -400,7 +389,7 @@
    "quote_sha": "592b917fe6365770"
   },
   {
-   "fact_id": "F032",
+   "fact_id": "F030",
    "statement": "The filaments reach their maximum length of 40 mm midway down the tail.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
@@ -409,7 +398,7 @@
    "quote_sha": "31b156939caa5988"
   },
   {
-   "fact_id": "F033",
+   "fact_id": "F031",
    "statement": "The longest feathers on the forearm measured 14 mm.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
@@ -418,26 +407,8 @@
    "quote_sha": "75f11843e6f25b18"
   },
   {
-   "fact_id": "F034",
-   "statement": "A 2018 study proposed that thick filaments might simply be bundles of thin filaments rather than distinct structures.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:7",
-   "lang": "en",
-   "quote": "However, a 2018 study considered that the thick filaments could simply be bundles of thin filaments overlapping each other.",
-   "quote_sha": "a15de1ca86028f9d"
-  },
-  {
-   "fact_id": "F035",
-   "statement": "The random, wavy orientation of the filaments suggests they were soft and pliable in life.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:7",
-   "lang": "en",
-   "quote": "The filaments exhibit random orientations and are often wavy, which has been interpreted as evidence that they were soft and pliable in life.",
-   "quote_sha": "661316a9e48a09e1"
-  },
-  {
-   "fact_id": "F036",
-   "statement": "Microscopic examination suggests the filaments were hollow, similar to modern feathers.",
+   "fact_id": "F032",
+   "statement": "Microscopic examination suggests the filaments were hollow, appearing dark at the edges and light internally, similar to modern feathers.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
    "lang": "en",
@@ -445,17 +416,17 @@
    "quote_sha": "4b2e754d8640b2d9"
   },
   {
-   "fact_id": "F037",
-   "statement": "The filaments were coarser and thicker than the hairs of similarly sized modern mammals.",
-   "category": "description",
+   "fact_id": "F033",
+   "statement": "Researchers suggest that thick filaments being bundles of thin filaments is a more plausible hypothesis than them being a variant of quilled plumaceous feathers with a morphology opposite to birds.",
+   "category": "debate",
    "chunk_id": "sinosauropteryx:enwiki:7",
    "lang": "en",
-   "quote": "Compared to modern mammals the filaments were quite coarse, with each individual strand much larger and thicker than the corresponding hairs of similarly sized mammals.",
-   "quote_sha": "4947db43cb53a155"
+   "quote": "Thus, the idea that thick filaments are simply bundles of thin filaments is less unusual than the idea that they were a variant of quilled plumaceous feathers which developed a morphology opposite that of birds and other feathered theropods.",
+   "quote_sha": "c6b0f8594c31c6cb"
   },
   {
-   "fact_id": "F038",
-   "statement": "Sinosauropteryx was not very closely related to Archaeopteryx despite having feather-like structures.",
+   "fact_id": "F034",
+   "statement": "Sinosauropteryx had feather-like structures but was not very closely related to Archaeopteryx.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:7",
    "lang": "en",
@@ -463,17 +434,8 @@
    "quote_sha": "e52f0b14558c06cc"
   },
   {
-   "fact_id": "F039",
-   "statement": "The presence of feathers on Sinosauropteryx suggests that feathers were a characteristic of many theropod dinosaurs, possibly including Compsognathus.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:7",
-   "lang": "en",
-   "quote": "This indicates that feathers may have been a characteristic of many theropod dinosaurs, not just the obviously bird-like ones, making it quite likely that equally distant animals such as Compsognathus had feathers as well.",
-   "quote_sha": "05c1155c4d72063a"
-  },
-  {
-   "fact_id": "F040",
-   "statement": "In a 2002 presentation, Longrich suggested that the banding patterns on the fossils represent remnants of the animal's coloration.",
+   "fact_id": "F035",
+   "statement": "In a 2002 presentation, Longrich suggested that the banding patterns on Sinosauropteryx specimens preserve remnants of the animal's actual colouration.",
    "category": "description",
    "chunk_id": "sinosauropteryx:enwiki:8",
    "lang": "en",
@@ -481,277 +443,25 @@
    "quote_sha": "6e9351e08a7b7148"
   },
   {
-   "fact_id": "F041",
-   "statement": "Longrich argued that the evenly spaced dark bands on the tail represent fossilized pigments rather than preservation artifacts.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:8",
-   "lang": "en",
-   "quote": "He argued that the dark, banded areas on the tail were too evenly spaced to have been caused by random separation of the fossil slabs, and that they represent fossilized pigments present in the feathers.",
-   "quote_sha": "00917c2ed5638887"
-  },
-  {
-   "fact_id": "F042",
-   "statement": "Zhang and colleagues found evidence of melanosomes in fossilized feathers, which determine color in modern birds.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:8",
-   "lang": "en",
-   "quote": "Fucheng Zhang and colleagues examined the fossilized feathers of several dinosaurs and early birds, and found evidence that they preserved melanosomes, the cell components that give the feathers of modern birds their colour.",
-   "quote_sha": "51c3af50e56873b3"
-  },
-  {
-   "fact_id": "F043",
-   "statement": "The presence of phaeomelanosomes indicates the darker feathers were chestnut or reddish brown.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:8",
-   "lang": "en",
-   "quote": "From the presence of phaeomelanosomes, spherical melanosomes that make and store red pigment, they concluded that the darker feathers of this specimen were chestnut or reddish brown in colour.",
-   "quote_sha": "1137f4610ce72402"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "Research on three specimens reveals Sinosauropteryx had a raccoon-like mask and countershading, suggesting it lived in an open habitat.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:8",
-   "lang": "en",
-   "quote": "More research on the coloration of Sinosauropteryx based on three specimens (NIGP 127586, NIGP 127587, and IVPP V12415) reveals that it had a raccoon-like bandit mask and countershading patterns most likely associated with an open habitat, indicating that the Jehol likely had a range of habitat types.",
-   "quote_sha": "a2e7f03596559954"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "The original describers of Sinosauropteryx argued that it should be considered a true bird because it possessed filamentous plumes with a rachis and barbs.",
-   "category": "description",
+   "fact_id": "F036",
+   "statement": "Sinosauropteryx is classified within the family Compsognathidae, a group of small, long-tailed coelurosaurian theropods.",
+   "category": "classification",
    "chunk_id": "sinosauropteryx:enwiki:9",
    "lang": "en",
-   "quote": "The scientists who described Sinosauropteryx, however, used a character-based, or apomorphic, definition of the Class Aves, in which any animal with feathers is considered to be a bird.",
-   "quote_sha": "31f8878758d3aee5"
+   "quote": "Sinosauropteryx is generally classified in the family Compsognathidae, a group of small-bodied long-tailed coelurosaurian theropods known from the Late Jurassic and Early Cretaceous of Asia, Europe, and South America.",
+   "quote_sha": "25a5917a300fc1f0"
   },
   {
-   "fact_id": "F046",
-   "statement": "The original classification placed Sinosauropteryx in the new order Sinosauropterygiformes and family Sinosauropterygidae within the subclass Sauriurae.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:9",
-   "lang": "en",
-   "quote": "They classified the genus as belonging to a new biological order, Sinosauropterygiformes, family Sinosauropterygidae, within the subclass Sauriurae.",
-   "quote_sha": "275d5fe8297d5446"
-  },
-  {
-   "fact_id": "F047",
-   "statement": "The proposal to classify Sinosauropteryx as a bird or in the order Sinosauropterygiformes was not accepted, and it is generally classified in the family Compsognathidae.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:9",
-   "lang": "en",
-   "quote": "These proposals have not been accepted, and Sinosauropteryx is generally classified in the family Compsognathidae, a group of small-bodied long-tailed coelurosaurian theropods known from the Late Jurassic and Early Cretaceous of Asia, Europe, and South America.",
-   "quote_sha": "b2176017893c186f"
-  },
-  {
-   "fact_id": "F048",
-   "statement": "A 2024 study by Andrea Cau questioned the assessment of compsognathid taxa, recovering Sinosauropteryx in a polytomy that excluded the genus Compsognathus.",
-   "category": "debate",
+   "fact_id": "F037",
+   "statement": "A 2024 study by Andrea Cau questioned the classification of Sinosauropteryx and related taxa, recovering them in a polytomy within basal Coelurosauria that excluded the genus Compsognathus.",
+   "category": "classification",
    "chunk_id": "sinosauropteryx:enwiki:9",
    "lang": "en",
    "quote": "In 2024, Andrea Cau published a study on the phylogenetics of compsognathids that called the assessment of these taxa into question.",
    "quote_sha": "bccc1edad09fe637"
   },
   {
-   "fact_id": "F049",
-   "statement": "It is debated whether Sinosauropteryx lingyuanensis and Huadanosaurus are distinct species or juveniles of known tyrannosauroids, as their describers lacked strong arguments against this possibility.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:enwiki:9",
-   "lang": "en",
-   "quote": "Hendrickx commented that both S. lingyuanensis and Huadanosaurus can alternatively be suggested as juveniles of already known tyrannosauroids from the Jehol Biota, since the describers did not provide strong arguments against this possibility.",
-   "quote_sha": "92e9ce0bb1bc819d"
-  },
-  {
-   "fact_id": "F050",
-   "statement": "Evidence from specimen NIGP 127587 indicates that small, fast-moving lizards were part of the diet of Sinosauropteryx prima.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:10",
-   "lang": "en",
-   "quote": "The specimen NIGP 127587 was preserved with the remains of a lizard in its gut region, indicating that small, fast-moving animals made up part of the diet of Sinosauropteryx prima.",
-   "quote_sha": "1a7cdbf0c7b58dd0"
-  },
-  {
-   "fact_id": "F051",
-   "statement": "A specimen previously attributed to Sinosauropteryx was found containing three mammal jaws in its gut region.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:enwiki:10",
-   "lang": "en",
-   "quote": "The previously attributed Sinosauropteryx specimen GMV 2124 (Sinosauropteryx? sp.) was found with three mammal jaws in its gut region.",
-   "quote_sha": "e72e9ac8ae2c083f"
-  },
-  {
-   "fact_id": "F052",
-   "statement": "The specimen containing mammal jaws was later reclassified as a tyrannosauroid, casting doubt on whether Sinosauropteryx fed on venomous mammals.",
-   "category": "paleobiology",
-   "chunk_id": "sinosauropteryx:enwiki:10",
-   "lang": "en",
-   "quote": "However, this specimen was later reclassified as a tyrannosauroid.",
-   "quote_sha": "c92b0caaccba4c67"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "Specimen NIGP 127587 of Sinosauropteryx prima contained several small eggs in its abdomen alongside lizard remains.",
-   "category": "paleobiology",
-   "chunk_id": "sinosauropteryx:enwiki:11",
-   "lang": "en",
-   "quote": "The same specimen of S. prima which had preserved a lizard in its stomach contents (NIGP 127587) also had several small eggs in its abdomen.",
-   "quote_sha": "66b1402a52c6eb18"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "The eggs preserved in the Sinosauropteryx specimen measured 36 mm in length and 26 mm in width.",
-   "category": "paleobiology",
-   "chunk_id": "sinosauropteryx:enwiki:11",
-   "lang": "en",
-   "quote": "Each egg measured 36 mm long by 26 mm wide.",
-   "quote_sha": "05a8c669e563b7de"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "Sinosauropteryx is a member of the Jehol Biota, an assemblage of organisms found in the Yixian and Jiufotang Formations.",
-   "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:enwiki:12",
-   "lang": "en",
-   "quote": "Sinosauropteryx, as a Yixian Formation dinosaur, is a member of the Jehol Biota, the assemblage of organisms found in the Yixian Formation and overlying Jiufotang Formation.",
-   "quote_sha": "7f9856bb439329ce"
-  },
-  {
-   "fact_id": "F056",
-   "statement": "The climate during Sinosauropteryx's time was temperate with distinct wet and dry seasons, averaging about 10 C yearly, which indicates unusually cold winters for the Mesozoic era.",
-   "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:enwiki:12",
-   "lang": "en",
-   "quote": "The climate has been interpreted as temperate, with distinct wet and dry seasons. The yearly temperature during this time period averaged about 10 C, indicating a temperate climate with unusually cold winters for the generally warm Mesozoic era, possibly due to northern China's high latitude during this time.",
-   "quote_sha": "2defdb0de55435ec"
-  },
-  {
-   "fact_id": "F057",
-   "statement": "The fossil range of Sinosauropteryx is the Early Cretaceous.",
-   "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:eswiki:1",
-   "lang": "es",
-   "quote": "fossil_range: Cretácico Inferior",
-   "quote_sha": "baa7d8fc3fc2f524"
-  },
-  {
-   "fact_id": "F058",
-   "statement": "Sinosauropteryx lived during the mid-Cretaceous, approximately 120 million years ago in the Aptian stage, in what is now Asia.",
-   "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Sinosauropteryx es un género con dos especies conocidas extinto de dinosaurio terópodo compsognátido con plumas, que vivió a mediados del período Cretácico, hace aproximadamente 120 millones de años, en el Aptiense, en lo que hoy es Asia.",
-   "quote_sha": "88aed49c0d7eb220"
-  },
-  {
-   "fact_id": "F059",
-   "statement": "Sinosauropteryx inhabited China during the Early Cretaceous and was likely a close relative of Compsognathus.",
-   "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Habitó China durante el Cretácico Inferior y probablemente fue un pariente cercano de Compsognathus.",
-   "quote_sha": "db2497838604c61d"
-  },
-  {
-   "fact_id": "F060",
-   "statement": "The species Sinosauropteryx prima was described in 1996 and is the first dinosaur taxon outside Avialae found with evidence of feathers.",
-   "category": "discovery",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "La primera especie, Sinosauropteryx prima (\"primer lagarto chino con alas\"), fue descrita en 1996 y es el primer taxón de dinosaurio fuera de Avialae, aves y sus parientes inmediatos, que se encontró con evidencia de plumas.",
-   "quote_sha": "9b8bd944f6f8523c"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "Sinosauropteryx was covered with a layer of very simple feathers, though an alternative interpretation of the filamentous impressions as collagen fibers has not been widely accepted.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "El fósil, extremadamente bien preservado, muestra que Sinosauropteryx estuvo cubierto con una capa de plumas muy simples, aunque una cierta controversia presentó una interpretación alternativa de la impresión filamentosa como fibras del colágenos, pero esto no ha sido ampliamente aceptado.",
-   "quote_sha": "8a8d4d9a7f40b538"
-  },
-  {
-   "fact_id": "F062",
-   "statement": "The filaments of Sinosauropteryx consisted of a simple two-branched structure, very similar to the primitive secondary feathers of the modern kiwi.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Estos filamentos consistían en una estructura ramificada en dos simple, muy similar a las plumas secundarias primitivas del moderno kiwi.",
-   "quote_sha": "dcad6ca2e4f3fca4"
-  },
-  {
-   "fact_id": "F063",
-   "statement": "Sinosauropteryx is the first non-avian dinosaur where coloration has been determined, based on preserved structures in its feathers.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "En algunas de sus plumas también se han conservado estructuras que indican coloración, lo que hace Sinosauropteryx los primeros dinosaurios no aviares donde se ha determinado la coloración.",
-   "quote_sha": "5f55c80f99114520"
-  },
-  {
-   "fact_id": "F064",
-   "statement": "The determined coloration of Sinosauropteryx includes a reddish tail with light bands.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "La coloración incluye una cola rojiza y con bandas claras.",
-   "quote_sha": "209f79ef18171c92"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "Sinosauropteryx was a small theropod with an unusually long tail and short arms.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Sinosauropteryx era un pequeño terópodo con una cola inusualmente larga y brazos cortos.",
-   "quote_sha": "a3cf1b41f3c0d303"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "The longest known specimen of Sinosauropteryx reaches 1.07 meters in length with an estimated weight of 0.55 kilograms.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "El espécimen más largo conocido alcanza hasta 1,07metros de largo, con un peso estimado de 0,55kilogramos.",
-   "quote_sha": "dc40b439db0883fe"
-  },
-  {
-   "fact_id": "F067",
-   "statement": "Sinosauropteryx was the first dinosaur genus found in the Jehol Biota in Liaoning Province.",
-   "category": "discovery",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Fue el primer género de dinosaurio hallado en la Biota de Jehol en la Provincia de Liaoning.",
-   "quote_sha": "3b162d21425d1c5e"
-  },
-  {
-   "fact_id": "F068",
-   "statement": "Only one species of Sinosauropteryx, S. prima, has been named, referring to its status as the first discovered non-avian feathered dinosaur species.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Solo se ha nombrado una especie de Sinosauropteryx, S. prima, que significa \"primero\" en referencia a su estado como la primera especie de dinosaurio emplumado no aviar descubierta.",
-   "quote_sha": "f91b85e8e09d138d"
-  },
-  {
-   "fact_id": "F069",
-   "statement": "Three specimens have been described; the third specimen previously assigned to this genus represents either a second unnamed species or a distinct related genus.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "Se han descrito tres ejemplares. El tercer espécimen previamente asignado a este género representa una segunda especie, aún sin nombre, o un género relacionado distinto.",
-   "quote_sha": "b256b7fc9884a9a6"
-  },
-  {
-   "fact_id": "F070",
-   "statement": "The second species, Sinosauropteryx lingyuanensis, is known from a single specimen named after its type locality.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:eswiki:2",
-   "lang": "es",
-   "quote": "La segunda especie, Sinosauropteryx lingyuanensis, se conoce a partir de un solo espécimen, llamado así por su localidad tipo.",
-   "quote_sha": "298b49a982843435"
-  },
-  {
-   "fact_id": "F071",
+   "fact_id": "F038",
    "statement": "The genus Sinosauropteryx was described by Ji Q. and Ji S. in 1996.",
    "category": "classification",
    "chunk_id": "sinosauropteryx:eswiki:1",
@@ -760,7 +470,7 @@
    "quote_sha": "2085fbecf0e3f1de"
   },
   {
-   "fact_id": "F072",
+   "fact_id": "F039",
    "statement": "The type species of the genus Sinosauropteryx is Sinosauropteryx prima.",
    "category": "classification",
    "chunk_id": "sinosauropteryx:eswiki:1",
@@ -769,8 +479,8 @@
    "quote_sha": "5bf81acf4b7f77c6"
   },
   {
-   "fact_id": "F073",
-   "statement": "The species Sinosauropteryx lingyuanensis was described by Qiu et al. in 2025.",
+   "fact_id": "F040",
+   "statement": "A second species, Sinosauropteryx lingyuanensis, was described by Qiu et al. in 2025.",
    "category": "classification",
    "chunk_id": "sinosauropteryx:eswiki:1",
    "lang": "es",
@@ -778,144 +488,158 @@
    "quote_sha": "821c3ebd8931c0e8"
   },
   {
-   "fact_id": "F074",
-   "statement": "Sinosauropteryx was a small bipedal theropod known for its short arms, a large index finger functioning as a thumb, and a long tail.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "Sinosauropteryx era un pequeño terópodo bípedo, conocido por sus brazos cortos, su dedo índice grande que funciona como pulgar y su cola larga.",
-   "quote_sha": "8e63e54624109772"
-  },
-  {
-   "fact_id": "F075",
-   "statement": "The holotype specimen of Sinosauropteryx measures only 68 cm in length, including the tail.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "El taxón incluye algunos de los especímenes de terópodos no aviares adultos más pequeños conocidos y el espécimen holotipo mide solo 68cm de largo, incluida la cola.",
-   "quote_sha": "bd88f37e878b1c39"
-  },
-  {
-   "fact_id": "F076",
-   "statement": "The largest known specimen of Sinosauropteryx reaches up to 1.07 meters in length with an estimated weight of 0.55 kg.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "El espécimen más largo conocido alcanza hasta 1,07m de largo, con un peso estimado de 0,55kg.",
-   "quote_sha": "6dc7804ae54f20ec"
-  },
-  {
-   "fact_id": "F077",
-   "statement": "Sinosauropteryx had 64 vertebrae in its tail, making it the longest tail relative to body length of any theropod.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "Tenía 64vértebras en su cola. Este alto número hizo que su cola fuera la más larga en relación con la longitud del cuerpo de cualquier terópodo.",
-   "quote_sha": "56ebf72daf88d851"
-  },
-  {
-   "fact_id": "F078",
-   "statement": "The hands of Sinosauropteryx were long relative to its arms, measuring about 84% to 91% of the length of the rest of the arm (humerus and radius) and half the length of the foot.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "Sus manos eran largas en comparación con sus brazos, alrededor del 84% al 91% de la longitud del resto del brazo, húmero y radio, y la mitad de la longitud del pie.",
-   "quote_sha": "2ac1fdfbcc796506"
-  },
-  {
-   "fact_id": "F079",
-   "statement": "The teeth of Sinosauropteryx were heterodont: those near the tips of the upper jaws were thin and lacked serrations, while those behind them were serrated and laterally compressed.",
-   "category": "description",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "Los dientes diferían ligeramente, eran heterodontes, según la posición: los que estaban cerca de las puntas de las mandíbulas superiores, en los premaxilares, eran delgados y carecían de aserraduras, mientras que los que estaban detrás de ellos, en los maxilares, eran aserados y comprimidas lateralmente.",
-   "quote_sha": "9673ebb99ca9955f"
-  },
-  {
-   "fact_id": "F080",
-   "statement": "The genus Sinosauropteryx was named by Ji and Ji in 1996.",
-   "category": "discovery",
-   "chunk_id": "sinosauropteryx:pbdb:1",
-   "lang": "en",
-   "quote": "PBDB name: Sinosauropteryx (genus), Ji and Ji 1996",
-   "quote_sha": "6cd46adfbb44d1d6"
-  },
-  {
-   "fact_id": "F081",
-   "statement": "The parent group of Sinosauropteryx is Sinosauropterygidae.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Sinosauropterygidae",
-   "quote_sha": "17de091b4d2a84af"
-  },
-  {
-   "fact_id": "F082",
-   "statement": "Sinosauropteryx belongs to the family Sinosauropterygidae.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Sinosauropterygidae",
-   "quote_sha": "7df7996ee2b7bc78"
-  },
-  {
-   "fact_id": "F083",
-   "statement": "Sinosauropteryx is classified in the class Reptilia.",
-   "category": "classification",
-   "chunk_id": "sinosauropteryx:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Reptilia",
-   "quote_sha": "cdcaa2922520f735"
-  },
-  {
-   "fact_id": "F084",
-   "statement": "Sinosauropteryx lived during the Barremian to Aptian stages, between 125.77 and 119.57 million years ago.",
+   "fact_id": "F041",
+   "statement": "Sinosauropteryx lived approximately 120 million years ago during the Aptian stage of the Early Cretaceous in what is now Asia.",
    "category": "time_and_habitat",
-   "chunk_id": "sinosauropteryx:pbdb:1",
-   "lang": "en",
-   "quote": "Time range: Barremian to Aptian (125.77 to 119.57 million years ago)",
-   "quote_sha": "1c1b021434f72d55"
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a mediados del período Cretácico, hace aproximadamente 120 millones de años, en el Aptiense, en lo que hoy es Asia.",
+   "quote_sha": "03a5e195a22b99b8"
   },
   {
-   "fact_id": "F085",
-   "statement": "Researchers John Ruben and colleagues suggested that a pigmented area on the holotype's abdomen represented the liver, part of a \"hepatic piston\" respiratory system similar to that of crocodiles.",
+   "fact_id": "F042",
+   "statement": "Sinosauropteryx inhabited China during the Early Cretaceous and was likely a close relative of the genus Compsognathus.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "Habitó China durante el Cretácico Inferior y probablemente fue un pariente cercano de Compsognathus.",
+   "quote_sha": "db2497838604c61d"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "Sinosauropteryx was covered in simple feathers, though some researchers have debated whether these filamentous impressions represent collagen fibers instead of feathers.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "El fósil, extremadamente bien preservado, muestra que Sinosauropteryx estuvo cubierto con una capa de plumas muy simples, aunque una cierta controversia presentó una interpretación alternativa de la impresión filamentosa como fibras del colágenos, pero esto no ha sido ampliamente aceptado.",
+   "quote_sha": "8a8d4d9a7f40b538"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "The filaments of Sinosauropteryx had a simple two-branched structure similar to the primitive secondary feathers of the modern kiwi.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "Estos filamentos consistían en una estructura ramificada en dos simple, muy similar a las plumas secundarias primitivas del moderno kiwi.",
+   "quote_sha": "dcad6ca2e4f3fca4"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Sinosauropteryx is the first non-avian dinosaur in which coloration has been determined, showing a reddish tail with light bands.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "En algunas de sus plumas también se han conservado estructuras que indican coloración, lo que hace Sinosauropteryx los primeros dinosaurios no aviares donde se ha determinado la coloración.",
+   "quote_sha": "5f55c80f99114520"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "Sinosauropteryx was a small theropod with an unusually long tail and short arms.",
+   "category": "description",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "Sinosauropteryx era un pequeño terópodo con una cola inusualmente larga y brazos cortos.",
+   "quote_sha": "a3cf1b41f3c0d303"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "Fossil evidence from specimen NIGP 127587 shows that Sinosauropteryx ate small, fast-moving lizards like Dalinghosaurus.",
    "category": "paleobiology",
-   "chunk_id": "sinosauropteryx:eswiki:3",
-   "lang": "es",
-   "quote": "Se ha sugerido un área pigmentada en el abdomen del holotipo como posibles rastros de órganos, y John Ruben y sus colegas lo interpretaron como el hígado, que describieron como parte de un sistema respiratorio de \" pistón hepático \" similar a un cocodrilo.",
-   "quote_sha": "61abad7cfc5fa76a"
+   "chunk_id": "sinosauropteryx:enwiki:10",
+   "lang": "en",
+   "quote": "The specimen NIGP 127587 was preserved with the remains of a lizard in its gut region, indicating that small, fast-moving animals made up part of the diet of Sinosauropteryx prima.",
+   "quote_sha": "1a7cdbf0c7b58dd0"
   },
   {
-   "fact_id": "F086",
-   "statement": "A later study disagreed with the identification of the pigmented area as a liver, noting that any organ would have been distorted by the flattening processes that made the skeleton essentially two-dimensional.",
-   "category": "debate",
-   "chunk_id": "sinosauropteryx:eswiki:3",
+   "fact_id": "F048",
+   "statement": "Specimen NIGP 127587 contained several small eggs in its abdomen, providing evidence of reproduction in Sinosauropteryx.",
+   "category": "paleobiology",
+   "chunk_id": "sinosauropteryx:enwiki:11",
+   "lang": "en",
+   "quote": "The same specimen of S. prima which had preserved a lizard in its stomach contents (NIGP 127587) also had several small eggs in its abdomen.",
+   "quote_sha": "66b1402a52c6eb18"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "The eggs of Sinosauropteryx measured 36 mm in length and 26 mm in width.",
+   "category": "paleobiology",
+   "chunk_id": "sinosauropteryx:enwiki:11",
+   "lang": "en",
+   "quote": "Each egg measured 36 mm long by 26 mm wide.",
+   "quote_sha": "05a8c669e563b7de"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "The climate of Sinosauropteryx's habitat was temperate with distinct seasons, averaging about 10°C annually, which implies unusually cold winters for the Mesozoic era likely due to high latitude.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinosauropteryx:enwiki:12",
+   "lang": "en",
+   "quote": "The climate has been interpreted as temperate, with distinct wet and dry seasons. The yearly temperature during this time period averaged about 10 C, indicating a temperate climate with unusually cold winters for the generally warm Mesozoic era, possibly due to northern China's high latitude during this time.",
+   "quote_sha": "2defdb0de55435ec"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "The environment where Sinosauropteryx lived experienced periodic mortality events caused by volcanic eruptions, wildfires, and noxious gases.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinosauropteryx:enwiki:12",
+   "lang": "en",
+   "quote": "The setting was subject to periodic mortality events including volcanic eruptions, wildfires, and noxious gases erupting from the lakes.",
+   "quote_sha": "a48caa101b2503af"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "Sinosauropteryx was the first dinosaur genus discovered in the Jehol Biota of Liaoning Province.",
+   "category": "curiosities",
+   "chunk_id": "sinosauropteryx:eswiki:2",
    "lang": "es",
-   "quote": "Un estudio posterior, aunque estuvo de acuerdo en que el área pigmentada representaba algo originalmente dentro del cuerpo, no encontró una estructura definida y notó que cualquier órgano habría sido distorsionado por los procesos que aplanaron el esqueleto en una forma esencialmente bidimensional.",
-   "quote_sha": "6ed852ac085d850b"
+   "quote": "Fue el primer género de dinosaurio hallado en la Biota de Jehol en la Provincia de Liaoning.",
+   "quote_sha": "3b162d21425d1c5e"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "The species name S. prima means \"first,\" honoring its status as the first discovered non-avian feathered dinosaur species.",
+   "category": "curiosities",
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "lang": "es",
+   "quote": "Solo se ha nombrado una especie de Sinosauropteryx, S. prima, que significa \"primero\" en referencia a su estado como la primera especie de dinosaurio emplumado no aviar descubierta.",
+   "quote_sha": "f91b85e8e09d138d"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "sinosauropteryx:enwiki:3",
-   "statement": "Fossils of Sinosauropteryx date to between 124.6 and 122 million years ago, during the early Aptian stage of the Early Cretaceous.",
-   "category": "time_and_habitat",
-   "quote": "These fossil beds have been dated to 124.6–122 million years ago, during the early Aptian stage of the Early Cretaceous.",
-   "reason": "statement copies the source wording: '122 million years ago during the early Aptian'"
+   "chunk_id": "sinosauropteryx:enwiki:4",
+   "statement": "Most researchers disagreed with the hypothesis that the structures were collagen fibers, arguing instead that they were feathers.",
+   "category": "debate",
+   "quote": "Most researchers have disagreed with the identification of the structures as collagen or other structural fibres",
+   "reason": "statement copies the source wording: 'the hypothesis that the structures were collagen fibers'"
   },
   {
-   "chunk_id": "sinosauropteryx:enwiki:3",
-   "statement": "Specimen IVPP V14202 was originally assigned to Sinosauropteryx in 2010 but was later designated as the holotype of the separate genus Huadanosaurus.",
-   "category": "classification",
-   "quote": "Another specimen, IVPP V14202, was originally assigned to the genus in 2010, but was later designated as the holotype of a separate genus Huadanosaurus.",
-   "reason": "statement copies the source wording: '2010 but was later designated as the holotype'"
+   "chunk_id": "sinosauropteryx:enwiki:4",
+   "statement": "A 2017 study compared Sinosauropteryx integument to collagen fibers in the ichthyosaur Stenopterygius to disprove the collagen hypothesis.",
+   "category": "curiosities",
+   "quote": "The integument of Sinosauropteryx was closely compared to less controversial evidence of collagen fibers preserved in the ichthyosaur Stenopterygius",
+   "reason": "numbers not in the quote: ['2017']"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:5",
-   "statement": "The skull of Sinosauropteryx was 15% longer than its thigh bones.",
+   "statement": "The longest known Sinosauropteryx specimen reached 1.07 meters in length with an estimated weight of 0.55 kg.",
    "category": "description",
-   "quote": "The skull of Sinosauropteryx was 15% longer than its thigh bones",
+   "quote": "The longest known specimen reaches up to 1.07 m in length, with an estimated weight of 0.55 kg",
+   "reason": "statement copies the source wording: 'length with an estimated weight of 0.55 kg'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:5",
+   "statement": "The skull of Sinosauropteryx was 15% longer than its thigh bones, differing from Compsognathus where these bones are approximately equal in length.",
+   "category": "description",
+   "quote": "The skull of Sinosauropteryx was 15% longer than its thigh bones, unlike in Compsognathus, where the skull and thigh bones are approximately equivalent in length",
    "reason": "statement copies the source wording: 'Sinosauropteryx was 15 longer than its thigh bones'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:5",
+   "statement": "Sinosauropteryx had 64 vertebrae in its tail, making it the longest relative to body length of any theropod.",
+   "category": "description",
+   "quote": "Sinosauropteryx had several features unique among all other theropods. It had 64 vertebrae in its tail",
+   "reason": "statement copies the source wording: 'the longest relative to body length of any'"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:5",
@@ -926,23 +650,44 @@
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:5",
-   "statement": "The teeth of Sinosauropteryx near the tips of the upper jaws were slender and lacked serrations, while those behind them were serrated and laterally compressed.",
+   "statement": "A pigmented area in the abdomen of the holotype was interpreted by John Ruben and colleagues as the liver, part of a crocodilian-like \"hepatic piston\" respiratory system.",
+   "category": "paleobiology",
+   "quote": "A pigmented area in the abdomen of the holotype has been suggested as possible traces of organs, and was interpreted as the liver by John Ruben and colleagues, which they described as part of a crocodilian-like \"hepatic piston\" respiratory system",
+   "reason": "statement copies the source wording: 'pigmented area in the abdomen of the holotype'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:6",
+   "statement": "Ji and Ji (1996) identified many features that set Sinosauropteryx apart from other birds and non-avian dinosaurs.",
    "category": "description",
-   "quote": "those near the tips of the upper jaws (on the premaxillae) were slender and lacked serrations, while those behind them (on the maxillae) were serrated and laterally compressed",
-   "reason": "statement copies the source wording: 'were slender and lacked serrations while those behind'"
+   "quote": "Ji and Ji (1996) identified many features that set Sinosauropteryx apart from other birds and non-avian dinosaurs",
+   "reason": "statement copies the source wording: 'and Ji 1996 identified many features that set'"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:6",
    "statement": "Ji and Ji (1996) described Sinosauropteryx as a small primitive bird with a relatively high skull, blunt rostrum, and slightly high premaxilla.",
    "category": "description",
-   "quote": "they found that it was a small primitive bird with a relatively high skull, blunt rostrum and a slightly high premaxilla",
+   "quote": "They found that it was a small primitive bird with a relatively high skull, blunt rostrum and a slightly high premaxilla",
    "reason": "numbers not in the quote: ['1996']"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:6",
-   "statement": "Feathers on Sinosauropteryx ornamented the top of the skull, cervical and dorsal regions, as well as the dorsal and ventral caudal regions.",
+   "statement": "The forelimb of Sinosauropteryx was extremely short with a short and thick humerus.",
    "category": "description",
-   "quote": "many ornament the top of the skull, cervical, and dorsal regions, in addition to the dorsal and ventral caudal region",
+   "quote": "the forelimb is extremely short with a short and thick humerus",
+   "reason": "statement copies the source wording: 'extremely short with a short and thick humerus'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:6",
+   "statement": "The pubis of Sinosauropteryx was elongated and extremely inflated at its distal end, while the ischium was broad.",
+   "category": "description",
+   "quote": "the pubis was elongated and extremely inflated at its distal end and the ischium is broad",
+   "reason": "statement copies the source wording: 'was elongated and extremely inflated at its distal'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:6",
+   "statement": "The feathers of Sinosauropteryx were short, small, and uniform, ornamenting the top of the skull, cervical, and dorsal regions, as well as the dorsal and ventral caudal regions.",
+   "category": "description",
+   "quote": "the feathers are short, small, and uniform; many ornament the top of the skull, cervical, and dorsal regions, in addition to the dorsal and ventral caudal region",
    "reason": "statement copies the source wording: 'the top of the skull cervical and dorsal'"
   },
   {
@@ -954,59 +699,227 @@
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:7",
-   "statement": "A 2018 study preferred the hypothesis that Sinosauropteryx feathers were simple single-branch filaments, though they might have occasionally formed tufts at the base.",
-   "category": "debate",
-   "quote": "As a whole, the study preferred the hypothesis that Sinosauropteryx feathers were simple single-branch filaments, although it is conceivable that they were occasionally joined at the base into tufts as predecessors to down-like plumaceous feathers.",
-   "reason": "numbers not in the quote: ['2018']"
+   "statement": "On the type specimen, the filaments are shortest just in front of the eyes, measuring 13 mm in length.",
+   "category": "description",
+   "quote": "On the type specimen, they are shortest just in front of the eyes, with a length of 13 mm.",
+   "reason": "statement copies the source wording: 'are shortest just in front of the eyes'"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:7",
-   "statement": "The filaments most closely resemble the plumules or down-like feathers of some modern birds.",
+   "statement": "Compared to modern mammals, the filaments were quite coarse, with each strand being much larger and thicker than the hairs of similarly sized mammals.",
+   "category": "description",
+   "quote": "Compared to modern mammals the filaments were quite coarse, with each individual strand much larger and thicker than the corresponding hairs of similarly sized mammals.",
+   "reason": "statement copies the source wording: 'Compared to modern mammals the filaments were quite'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:7",
+   "statement": "A 2018 study hypothesized that the thick filaments might simply be bundles of thin filaments overlapping each other rather than distinct structures.",
+   "category": "debate",
+   "quote": "However, a 2018 study considered that the thick filaments could simply be bundles of thin filaments overlapping each other.",
+   "reason": "statement copies the source wording: 'simply be bundles of thin filaments overlapping each'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:7",
+   "statement": "Overall, the filaments most closely resemble the plumules or down-like feathers of some modern birds, featuring a thick central quill and long, thin barbs.",
    "category": "description",
    "quote": "Overall, the filaments most closely resemble the \"plumules\" or down-like feathers of some modern birds, with a thick central quill and long, thin barbs.",
-   "reason": "statement copies the source wording: 'The filaments most closely resemble the plumules or'"
-  },
-  {
-   "chunk_id": "sinosauropteryx:enwiki:7",
-   "statement": "Several studies suggest the presence of two distinct filament types, thick and thin, interspersed on the specimens.",
-   "category": "description",
-   "quote": "Though the feathers are too dense to isolate a single structure for examination, several studies have suggested the presence of two distinct filament types (thick and thin) interspersed with each other.",
-   "reason": "statement copies the source wording: 'the presence of two distinct filament types thick'"
+   "reason": "statement copies the source wording: 'Overall the filaments most closely resemble the plumules'"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:8",
-   "statement": "Sinosauropteryx was the first non-avian dinosaur to have its life coloration described based on physical evidence.",
-   "category": "description",
+   "statement": "Sinosauropteryx was the first non-avian dinosaur to have its life colouration described by scientists based on physical evidence.",
+   "category": "curiosities",
    "quote": "Sinosauropteryx was the first non-avian dinosaur to have its life colouration described by scientists based on physical evidence.",
    "reason": "statement copies the source wording: 'Sinosauropteryx was the first non-avian dinosaur to have'"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:8",
-   "statement": "The presence of dark feathers only on the top of the body suggests Sinosauropteryx was countershaded with dark back and light underside, with tail bands for camouflage.",
+   "statement": "Analysis of phaeomelanosomes indicated that the darker feathers of the specimen were chestnut or reddish brown in colour.",
    "category": "description",
-   "quote": "Additionally, rather than an artifact of preservation or decomposition, the presence of dark feathers along only the top of the body may also reflect the colour pattern in life, indicating that Sinosauropteryx prima was countershaded with dark colouration on its back and lighter colouration on the underside, with bands or stripes on the tail for camouflage.",
+   "quote": "From the presence of phaeomelanosomes, spherical melanosomes that make and store red pigment, they concluded that the darker feathers of this specimen were chestnut or reddish brown in colour.",
+   "reason": "statement copies the source wording: 'specimen were chestnut or reddish brown in colour'"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:8",
+   "statement": "Research based on three specimens reveals that Sinosauropteryx had a raccoon-like bandit mask and countershading patterns likely associated with an open habitat.",
+   "category": "description",
+   "quote": "More research on the coloration of Sinosauropteryx based on three specimens (NIGP 127586, NIGP 127587, and IVPP V12415) reveals that it had a raccoon-like bandit mask and countershading patterns most likely associated with an open habitat.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:9",
+   "statement": "Researchers have suggested that Sinosauropteryx lingyuanensis might alternatively be a juvenile tyrannosauroid rather than a distinct compsognathid species.",
+   "category": "classification",
+   "quote": "Hendrickx commented that both S. lingyuanensis and Huadanosaurus can alternatively be suggested as juveniles of already known tyrannosauroids from the Jehol Biota.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "sinosauropteryx:eswiki:2",
+   "statement": "The largest known specimen of Sinosauropteryx reached a length of 1.07 meters and an estimated weight of 0.55 kilograms.",
+   "category": "description",
+   "quote": "El espécimen más largo conocido alcanza hasta 1,07metros de largo, con un peso estimado de 0,55kilogramos.",
+   "reason": "duplicate"
+  },
+  {
+   "chunk_id": "sinosauropteryx:enwiki:10",
+   "statement": "A specimen previously attributed to Sinosauropteryx (GMV 2124) contained mammal jaws, suggesting it fed on small mammals like Zhangheotherium and Sinobaatar, though this specimen was later reclassified as a tyrannosauroid.",
+   "category": "paleobiology",
+   "quote": "The previously attributed Sinosauropteryx specimen GMV 2124... was found with three mammal jaws in its gut region.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:11",
-   "statement": "Researchers believe the eggs found in the abdomen of specimen NIGP 127587 were unlaid eggs produced by the animal, proving it to be a female.",
+   "statement": "The eggs found in the abdomen of specimen NIGP 127587 are interpreted as unlaid eggs, proving the specimen was a female.",
    "category": "paleobiology",
    "quote": "It is more likely that they are unlaid eggs produced by the animal itself, proving the specimen to be a female.",
    "reason": "numbers not in the quote: ['127587']"
   },
   {
    "chunk_id": "sinosauropteryx:enwiki:11",
-   "statement": "The presence of two developed eggs suggests that Sinosauropteryx had dual oviducts and laid eggs in pairs.",
+   "statement": "Sinosauropteryx likely had dual oviducts and laid eggs in pairs, similar to other theropods.",
    "category": "paleobiology",
    "quote": "The presence of two developed eggs suggests that Sinosauropteryx had dual oviducts and laid eggs in pairs, like other theropods.",
-   "reason": "statement copies the source wording: 'The presence of two developed eggs suggests that'"
+   "reason": "statement copies the source wording: 'had dual oviducts and laid eggs in pairs'"
   },
   {
-   "chunk_id": "sinosauropteryx:enwiki:12",
-   "statement": "The environment where Sinosauropteryx lived was subject to periodic mortality events including volcanic eruptions, wildfires, and noxious gases.",
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "Sinosauropteryx was a small bipedal theropod characterized by short arms, a large thumb-like index finger, and a long tail.",
+   "category": "description",
+   "quote": "Sinosauropteryx era un pequeño terópodo bípedo, conocido por sus brazos cortos, su dedo índice grande que funciona como pulgar y su cola larga.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "The holotype specimen of Sinosauropteryx measured only 68 cm in length, including the tail.",
+   "category": "description",
+   "quote": "El espécimen holotipo mide solo 68cm de largo, incluida la cola.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "The largest known specimen of Sinosauropteryx reached a length of 1.07 meters with an estimated weight of 0.55 kg.",
+   "category": "description",
+   "quote": "El espécimen más largo conocido alcanza hasta 1,07m de largo, con un peso estimado de 0,55kg.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "Sinosauropteryx had 64 vertebrae in its tail, making it the longest tail relative to body length of any known theropod.",
+   "category": "description",
+   "quote": "Tenía 64vértebras en su cola. Este alto número hizo que su cola fuera la más larga en relación con la longitud del cuerpo de cualquier terópodo.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "Sinosauropteryx possessed heterodont teeth where those near the tips of the upper jaws were thin and unserrated, while those behind them were serrated and laterally compressed.",
+   "category": "description",
+   "quote": "Los dientes diferían ligeramente, eran heterodontes, según la posición: los que estaban cerca de las puntas de las mandíbulas superiores, en los premaxilares, eran delgados y carecían de aserraduras, mientras que los que estaban detrás de ellos, en los maxilares, eran aserados y comprimidas lateralmente.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:3",
+   "statement": "Researchers suggested a pigmented area on the holotype's abdomen represented a liver involved in a crocodile-like \"hepatic piston\" respiratory system.",
+   "category": "curiosities",
+   "quote": "Se ha sugerido un área pigmentada en el abdomen del holotipo como posibles rastros de órganos, y John Ruben y sus colegas lo interpretaron como el hígado, que describieron como parte de un sistema respiratorio de \" pistón hepático \" similar a un cocodrilo.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "All known specimens of Sinosauropteryx preserve integumentary structures described by paleontologists as primitive feathers.",
+   "category": "description",
+   "quote": "Todos los ejemplares de Sinosauropteryx preservan estructuras integumentarias, filamentos saliendo desde la piel, que los paleontólogos han descrito como plumas primitivas.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "Short down-like filaments were preserved along the back half of the skull, arms, neck, back, and the top and bottom of the tail.",
+   "category": "description",
+   "quote": "Estos cortos filamentos, en forma de plumón, se preservan a lo largo de la mitad trasera del cráneo, los brazos, el cuello, el lomo y la cola por debajo y arriba.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "The filaments were shortest near the eyes, measuring only 13 mm in length.",
+   "category": "description",
+   "quote": "La longitud de los filamentos varía según su posición en el cuerpo. Eran más cortos en las proximidades de los ojos, con una longitud de 13mm.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "The filaments grew rapidly along the body to reach a length of 35 mm over the hips.",
+   "category": "description",
+   "quote": "A lo largo del cuerpo, los filamentos aumentan rápidamente hasta alcanzar 35mm de largo sobre la cruz.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "The filaments reached their maximum length of 40 mm at the end of the tail.",
+   "category": "description",
+   "quote": "La longitud se uniforma sobre el dorso hasta más allá de las caderas, donde los filamentos se alargan otra vez y a mitad del camino alcanzan la longitud máxima al final de la cola con 40mm.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "The filaments on the underside of the tail were shorter and decreased in length more rapidly than those on the dorsal surface.",
+   "category": "description",
+   "quote": "Los filamentos en la superficie inferior de la cola son más cortos y la disminución en longitud se produce más rápidamente que en la superficie dorsal.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "Some researchers have interpreted the filamentous impressions around Sinosauropteryx fossils as collagen fibers rather than primitive feathers.",
+   "category": "description",
+   "quote": "Algunos investigadores han interpretado las impresiones filamentosas alrededor de los fósiles de Sinosauropteryx como restos de fibras de colágeno, más que plumas primitivas.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:eswiki:4",
+   "statement": "It is debated whether the filamentous impressions are collagen fibers forming a sail-like structure on the back and tail, similar to modern aquatic lizards, rather than feathers.",
+   "category": "debate",
+   "quote": "Algunos investigadores han interpretado las impresiones filamentosas alrededor de los fósiles de Sinosauropteryx como restos de fibras de colágeno, más que plumas primitivas. Puesto que son claramente externas al cuerpo, estos investigadores han propuesto que las fibras formaron una vela en el dorso del animal y en la superficie inferior de su cola, similar a la de algunos lagartos acuáticos modernos.",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "The genus Sinosauropteryx was named by Ji and Ji in 1996.",
+   "category": "classification",
+   "quote": "PBDB name: Sinosauropteryx (genus), Ji and Ji 1996",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "Sinosauropteryx belongs to the parent group Sinosauropterygidae.",
+   "category": "classification",
+   "quote": "Parent group: Sinosauropterygidae",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "Sinosauropteryx is classified in the family Sinosauropterygidae.",
+   "category": "classification",
+   "quote": "Family: Sinosauropterygidae",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "Sinosauropteryx is classified within the class Reptilia.",
+   "category": "classification",
+   "quote": "Class: Reptilia",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "Sinosauropteryx lived during the Barremian to Aptian stages, between 125.77 and 119.57 million years ago.",
    "category": "time_and_habitat",
-   "quote": "The setting was subject to periodic mortality events including volcanic eruptions, wildfires, and noxious gases erupting from the lakes.",
-   "reason": "statement copies the source wording: 'was subject to periodic mortality events including volcanic'"
+   "quote": "Time range: Barremian to Aptian (125.77 to 119.57 million years ago)",
+   "reason": "unknown chunk id"
+  },
+  {
+   "chunk_id": "sinosaurox:pbdb:1",
+   "statement": "There are 4 recorded fossil occurrences of Sinosauropteryx in the Paleobiology Database.",
+   "category": "time_and_habitat",
+   "quote": "Fossil occurrences recorded: 4",
+   "reason": "unknown chunk id"
   }
  ]
 }

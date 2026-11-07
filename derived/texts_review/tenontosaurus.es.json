@@ -4,30 +4,66 @@
  "lang": "es",
  "status": "failed",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "f4708e369d5c58fe",
- "generated_at": "2026-11-03T06:46:15+00:00",
- "word_count": 458,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "e2e0bdebfca5a9c0",
+ "generated_at": "2026-11-05T02:17:43+00:00",
+ "word_count": 566,
  "problems": [
-  "sentence 7 ('Se discute si la reconstrucción original del cráneo de Tenon'): copies 8+ words from a source: 'que sea el ancestro del resto del grupo'"
+  "sentence 17: numbers differ (['20'] vs [])",
+  "sentence 17: scientific names lost ['Deinonychus']",
+  "sentence 16 ('La presencia de tejido óseo medular en el fémur y la tibia c'): copies 8+ words from a source: 'presencia de tejido óseo medular en el fémur'"
  ],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "Tenontosaurus fue un dinosaurio ornitópodo iguanodóntido que presentaba un pico grueso y en forma de U, formado por las premaxilarias ensanchadas. El hueso vomer se extendía desde el pico hasta la parte posterior de la órbita ocular, siendo el más largo del cráneo. Su mandíbula inferior terminaba en un hueso predentario, una estructura única de los ornitisquios que formaba el pico inferior.",
+     "text": "Tenontosaurus fue un ornitópodo de tamaño medio que pesaba aproximadamente 1000 kg, aunque las estimaciones alcanzan hasta 2 toneladas.",
      "fact_ids": [
-      "F004",
-      "F015",
-      "F016",
-      "F017"
+      "F009",
+      "F041"
      ]
     },
     {
-     "text": "Este animal poseía una cola inusualmente larga y ancha, endurecida por una red de tendones óseos, similar a la de su espalda.",
+     "text": "Su boca presentaba un pico grueso y en forma de U creado por las premaxilares ensanchadas, mientras que la mandíbula inferior terminaba en un hueso predentario único de los ornitisquios.",
      "fact_ids": [
-      "F005"
+      "F011",
+      "F013"
+     ]
+    },
+    {
+     "text": "Cada diente de este animal estaba esmaltado únicamente en la superficie interna o medial.",
+     "fact_ids": [
+      "F015"
+     ]
+    },
+    {
+     "text": "El cráneo en sí era bajo y largo, apareciendo muy alargado al ser visto desde arriba.",
+     "fact_ids": [
+      "F047"
+     ]
+    },
+    {
+     "text": "Su columna vertebral estaba compuesta por doce vértebras cervicales, quince dorsales, seis sacrales y al menos sesenta y una de la cola.",
+     "fact_ids": [
+      "F051"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Las poblaciones de este animal aumentaron drásticamente durante un cambio de climas áridos a más húmedos, lo que demuestra que era notablemente adaptable.",
+     "fact_ids": [
+      "F037"
+     ]
+    },
+    {
+     "text": "Al igual que Tyrannosaurus y Allosaurus, un individuo murió a los ocho años sin alcanzar su tamaño adulto completo.",
+     "fact_ids": [
+      "F073"
      ]
     }
    ]
@@ -36,12 +72,29 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "El primer fósil fue hallado en el condado de Big Horn, Montana, por una expedición del AMNH en 1903. Barnum Brown nombró informalmente al animal 'Tenantosaurus' o 'lagarto de tendones' debido a sus tendones endurecedores. John Ostrom describió científicamente el taxón como Tenontosaurus tilletti en 1970, basándose en fósiles de la Formación Cloverly. El nombre de la especie 'tilletti' rinde homenaje a la familia Lloyd Tillett, que auxilió a los equipos de campo de Yale.",
+     "text": "El primer fósil fue hallado en 1903 en el condado de Big Horn, Montana, por una expedición del AMNH.",
      "fact_ids": [
-      "F006",
-      "F007",
-      "F008",
-      "F009"
+      "F003",
+      "F004"
+     ]
+    },
+    {
+     "text": "Barnum Brown nombró informalmente al criatura 'Tenantosaurus' o 'lagarto de tendones' debido a sus tendones que lo endurecían.",
+     "fact_ids": [
+      "F004"
+     ]
+    },
+    {
+     "text": "El género Tenontosaurus fue nombrado oficialmente por John Ostrom en 1970.",
+     "fact_ids": [
+      "F038"
+     ]
+    },
+    {
+     "text": "Más tarde, Jonathan Tennant describió el esqueleto postcraneal en 2013 utilizando el ejemplar LL.12275, y el cráneo fue detallado en 2015 usando el ejemplar OMNH 58340 hallado en 2000.",
+     "fact_ids": [
+      "F065",
+      "F066"
      ]
     }
    ]
@@ -50,13 +103,50 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Gregory S. Paul estimó que T. dossi medía 7 metros de longitud y pesaba 1000 kg. Tenontosaurus era un cuadrúpedo facultativo capaz de mantenerse sobre dos o cuatro patas. Probablemente utilizaba una postura cuadrúpeda para alimentarse, pero probablemente no podía desplazarse rápidamente sobre cuatro patas. Los adultos de Tenontosaurus podían pastar vegetación a una altura de unos 3 metros cuando se mantenían sobre dos patas.",
+     "text": "Este dinosaurio era un cuadrúpedo facultativo capaz de mantenerse sobre dos o cuatro patas, aunque probablemente no podía moverse rápidamente sobre cuatro.",
      "fact_ids": [
-      "F012",
-      "F013",
-      "F014",
-      "F024"
-     ]
+      "F016",
+      "F017"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Como herbívoro de baja altura, un adulto podía alcanzar una altura máxima de unos 3 metros al mantenerse bípedo para alimentarse.",
+     "fact_ids": [
+      "F024",
+      "F069"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Poseía un potente pico en forma de U y dientes inclinados que le permitían consumir hojas, madera y fruta.",
+     "fact_ids": [
+      "F025"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "El tejido óseo medular encontrado en un ejemplar indica que utilizaba este tejido para la reproducción, sugiriendo que las líneas evolutivas tempranas alcanzaban la madurez antes del tamaño máximo.",
+     "fact_ids": [
+      "F028",
+      "F029"
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "La presencia de tejido óseo medular en el fémur y la tibia confirma el uso de este tejido, presente hoy solo en aves ovíparas, para la reproducción.",
+     "fact_ids": [
+      "F071"
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "Se debate si la reconstrucción original del cráneo de Tenontosaurus por Ostrom representaba con precisión su verdadera profundidad.",
+     "fact_ids": [
+      "F026",
+      "F027"
+     ],
+     "topic": "health"
     }
    ]
   },
@@ -64,11 +154,21 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El género Tenontosaurus fue descrito por John Ostrom en 1970 y contiene dos especies: la especie tipo T. tilletti y T. dossi, descrita por Winkler, Murry y Jacobs en 1997. Tenontosaurus fue colocado originalmente en la familia Iguanodontidae, pero posteriormente se reclasificó en la Hypsilophodontidae.",
+     "text": "Tenontosaurus se clasifica como un género de dinosaurio ornitópodo iguanodóntido.",
      "fact_ids": [
-      "F002",
-      "F003",
-      "F020"
+      "F019"
+     ]
+    },
+    {
+     "text": "Originalmente se colocó en la familia Iguanodontidae, pero posteriormente se reclasificó en la Hypsilophodontidae.",
+     "fact_ids": [
+      "F022"
+     ]
+    },
+    {
+     "text": "Aunque su estructura ligera se asemeja a la de un hipsilofodóntido, un examen detallado sugiere que probablemente es un miembro basal de los Iguanodontia.",
+     "fact_ids": [
+      "F067"
      ]
     }
    ]
@@ -77,12 +177,39 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Tenontosaurus vivió durante el período Cretácico Medio, entre aproximadamente 122 y 108 millones de años atrás, desde los estadios Aptiense hasta Albiense. El rango temporal de Tenontosaurus se registra como Aptiense a Cenomaniense, abarcando desde 121,4 hasta 93,9 millones de años atrás. Cuando Tenontosaurus apareció por primera vez en Wyoming y Montana durante la edad Albiense temprana, el clima era árido a semiarido con precipitaciones estacionales y sequías ocasionales. Vivió en un paleoambiente de bosques tropicales o subtropicales, llanuras de inundación y pantanos similares al de la actual Luisiana.",
+     "text": "Tenontosaurus vivió durante el periodo Cretácico Medio, entre aproximadamente 122 y 108 millones de años atrás.",
      "fact_ids": [
-      "F035",
-      "F036",
-      "F037",
+      "F034"
+     ]
+    },
+    {
+     "text": "Vivió desde el piso Albiense hasta el Cenomaniense, entre 121,4 y 93,9 millones de años atrás.",
+     "fact_ids": [
+      "F068"
+     ]
+    },
+    {
+     "text": "El animal habitaba un paleoambiente de bosques tropicales o subtropicales, llanuras de inundación y pantanos similares a los de Louisiana actual.",
+     "fact_ids": [
+      "F031"
+     ]
+    },
+    {
+     "text": "Cuando el animal apareció por primera vez en Wyoming y Montana, el clima era árido a semiárido con lluvias estacionales y sequías ocasionales.",
+     "fact_ids": [
+      "F036"
+     ]
+    },
+    {
+     "text": "En la Formación Cloverly, Tenontosaurus era el vertebrado más abundante, cinco veces más común que la siguiente especie más frecuente, Sauropelta.",
+     "fact_ids": [
       "F032"
+     ]
+    },
+    {
+     "text": "En el miembro Little Sheep Mudstone, árido, era el único dinosaurio herbívoro, compartiendo su hábitat con Deinonychus, un terópodo alosauroide, y un cocodrilomorfo goniófolido.",
+     "fact_ids": [
+      "F033"
      ]
     }
    ]
@@ -91,11 +218,15 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Se discute si la reconstrucción original del cráneo de Tenontosaurus de Ostrom representaba con precisión su verdadera profundidad, ya que pudo haber sido exagerada. Los científicos debaten la posición filogenética exacta de Tenontosaurus; algunos estudios lo vinculan más estrechamente con los dryomorfos, mientras que otros lo sitúan como taxón hermano de un clado que incluye rhabdóntidos y dryomorfos. Se debate si Tenontosaurus dossi representa un ancestro directo con dientes de Tenontosaurus tilletti, dado que es improbable que sea el ancestro del resto del grupo, lo que sugiere que la característica de ausencia de dientes pudo haber evolucionado de forma independiente.",
+     "text": "Se discute si la reconstrucción original del cráneo de Tenontosaurus por Ostrom representaba con precisión su verdadera profundidad.",
      "fact_ids": [
-      "F019",
-      "F022",
-      "F058"
+      "F021"
+     ]
+    },
+    {
+     "text": "La posición de Tenontosaurus en el árbol evolutivo fue muy problemática y controvertida debido a la falta de un análisis cladístico adecuado.",
+     "fact_ids": [
+      "F074"
      ]
     }
    ]

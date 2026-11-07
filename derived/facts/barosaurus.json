@@ -2,9 +2,9 @@
  "taxon": "Barosaurus",
  "taxon_key": "barosaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "266a481da0c7a457",
- "generated_at": "2026-11-03T05:44:40+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "4f0de3625ecbc4c5",
+ "generated_at": "2026-11-05T01:12:53+00:00",
  "citations": {
   "barosaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -69,6 +69,34 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "barosaurus:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Barosaurus lentus (Barosaurus en África)",
+   "url": "https://es.wikipedia.org/wiki/Barosaurus_lentus?oldid=176003886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "barosaurus:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Barosaurus lentus (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Barosaurus_lentus?oldid=176003886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "barosaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Barosaurus lentus (Sistemática)",
+   "url": "https://es.wikipedia.org/wiki/Barosaurus_lentus?oldid=176003886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "barosaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Barosaurus lentus (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Barosaurus_lentus?oldid=176003886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "barosaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Barosaurus",
@@ -94,7 +122,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The animal belongs to the genus Barosaurus.",
+   "statement": "Barosaurus is a genus of dinosaur.",
    "category": "classification",
    "chunk_id": "barosaurus:enwiki:1",
    "lang": "en",
@@ -103,7 +131,7 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The only valid species is Barosaurus lentus.",
+   "statement": "The only valid species in the genus is Barosaurus lentus.",
    "category": "classification",
    "chunk_id": "barosaurus:enwiki:1",
    "lang": "en",
@@ -148,7 +176,7 @@
   },
   {
    "fact_id": "F007",
-   "statement": "Adult Barosaurus measured about 25 to 27 meters in length and weighed between 12 and 20 metric tons.",
+   "statement": "Adult Barosaurus measured between 25 and 27 meters in length and weighed between 12 and 20 metric tons.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
@@ -166,7 +194,7 @@
   },
   {
    "fact_id": "F009",
-   "statement": "Barosaurus possessed 16 cervical vertebrae, which are more numerous than those of Diplodocus and Apatosaurus.",
+   "statement": "Barosaurus possessed 16 cervical vertebrae, which were extremely elongated.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
@@ -175,12 +203,12 @@
   },
   {
    "fact_id": "F010",
-   "statement": "The holotype specimen of B. lentus initially consisted of four tail vertebrae found in 1889 in South Dakota by Isabella R. Ellerman.",
-   "category": "discovery",
+   "statement": "Barosaurus had a compact back consisting of only nine dorsal vertebrae.",
+   "category": "description",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
-   "quote": "B. lentus holotype (name-bearing) specimen initially consisted of four caudal (tail) vertebrae that were found in 1889 in South Dakota by Ms. Isabella R. Ellerman.",
-   "quote_sha": "29509754c9013d00"
+   "quote": "The back was more compact, with only nine dorsal vertebrae.",
+   "quote_sha": "0eedaf51a09b9496"
   },
   {
    "fact_id": "F011",
@@ -193,15 +221,24 @@
   },
   {
    "fact_id": "F012",
-   "statement": "The first Barosaurus remains were discovered in 1889 in the Morrison Formation of South Dakota by Isabella R. Ellerman and excavated by Othniel Charles Marsh and John Bell Hatcher.",
+   "statement": "The initial type specimen consisted of six tail vertebrae, which Marsh named Barosaurus lentus.",
    "category": "discovery",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
-   "quote": "Initial discoveries The first Barosaurus remains were discovered in the Morrison Formation of South Dakota by Ms. Isabella R. Ellerman, postmistress of Postville, and excavated by Othniel Charles Marsh and John Bell Hatcher of Yale University in 1889.",
-   "quote_sha": "7b4a40e620f3633b"
+   "quote": "Only six tail vertebrae were recovered at that time, forming the type specimen (YPM 429) of a new species, which Marsh named Barosaurus lentus.",
+   "quote_sha": "5e93608913051c76"
   },
   {
    "fact_id": "F013",
+   "statement": "Marsh first classified Barosaurus as a diplodocid in 1898, after previously placing it in Atlantosauridae in 1896.",
+   "category": "discovery",
+   "chunk_id": "barosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "In 1896 Marsh had placed Barosaurus in the Atlantosauridae; in 1898 it was classified by him as a diplodocid for the first time.",
+   "quote_sha": "67ad55fa1f1935f6"
+  },
+  {
+   "fact_id": "F014",
    "statement": "Four neck vertebrae, each 1 meter long, were collected in 1912 and later identified as belonging to Barosaurus by William Jacob Holland.",
    "category": "discovery",
    "chunk_id": "barosaurus:enwiki:2",
@@ -210,26 +247,35 @@
    "quote_sha": "e05da3ba1b9be89b"
   },
   {
-   "fact_id": "F014",
-   "statement": "In 1929, Barnum Brown arranged for the most complete Barosaurus specimen to be moved to the American Museum of Natural History in New York City.",
+   "fact_id": "F015",
+   "statement": "The type specimen of Barosaurus was fully described by Richard Swann Lull in 1919.",
    "category": "discovery",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
-   "quote": "However, in 1929 Barnum Brown arranged for all of the material to be shipped to the American Museum of Natural History in New York City, where it remains today.",
-   "quote_sha": "41d4804eb36f522b"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "The Morrison Formation environment where Barosaurus lived featured a floodplain with hot summers and moderate winters.",
-   "category": "paleobiology",
-   "chunk_id": "barosaurus:enwiki:2",
-   "lang": "en",
-   "quote": "The Morrison Formation had a floodplain environment with hot summers and moderate winters.",
-   "quote_sha": "e44c445ca08e3a0d"
+   "quote": "The type specimen of Barosaurus had finally been prepared at Yale in the winter of 1917 and was fully described by Richard Swann Lull in 1919.",
+   "quote_sha": "90e73a19b2cf51a3"
   },
   {
    "fact_id": "F016",
-   "statement": "It is noted that late 20th-century depictions of Barosaurus as a short-tailed sauropod with a U-shaped neck are considered errors based on a specific artistic interpretation.",
+   "statement": "A cast of a Barosaurus specimen was controversially mounted in the American Museum of Natural History lobby rearing up to defend its young from an Allosaurus.",
+   "category": "discovery",
+   "chunk_id": "barosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "A cast of this specimen (AMNH 6341) was controversially mounted in the lobby of the American Museum, rearing up to defend its young (AMNH 7530, now classified as Kaatedocus siberi) from an attacking Allosaurus fragilis.",
+   "quote_sha": "c9004eda8307ef24"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Barosaurus is among the largest diplodocid sauropods.",
+   "category": "description",
+   "chunk_id": "barosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "This makes it among the largest diplodocid sauropods.",
+   "quote_sha": "e690d7de922c0441"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "It is debated how Barosaurus was depicted in popular media, with Darren Naish noting that late 20th-century books often incorrectly showed it as a short-tailed sauropod with a U-shaped neck.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:2",
    "lang": "en",
@@ -237,8 +283,17 @@
    "quote_sha": "5c0bf64df81c6b0b"
   },
   {
-   "fact_id": "F017",
-   "statement": "Paleontologist David Evans discovered a reference to a Barosaurus skeleton in the Royal Ontario Museum collection in 2007.",
+   "fact_id": "F019",
+   "statement": "A Barosaurus specimen was excavated by Earl Douglass at the Carnegie Quarry in the early 20th century and later traded to the Royal Ontario Museum in 1962.",
+   "category": "discovery",
+   "chunk_id": "barosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Another specimen excavated by Earl Douglass at Carnegie Quarry in the early 20th century was acquired by the Royal Ontario Museum (ROM) in Toronto in a 1962 trade with the Carnegie Museum.",
+   "quote_sha": "9c2e69ee5b3783e9"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "Paleontologist David Evans discovered a forgotten Barosaurus skeleton in the Royal Ontario Museum collection in 2007.",
    "category": "discovery",
    "chunk_id": "barosaurus:enwiki:3",
    "lang": "en",
@@ -246,79 +301,16 @@
    "quote_sha": "43d02aaa20631391"
   },
   {
-   "fact_id": "F018",
-   "statement": "The Royal Ontario Museum Barosaurus specimen is nicknamed \"Gordo\" after curator Gordon Edmunds.",
-   "category": "description",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The ROM specimen is nicknamed \"Gordo\" after Gordon Edmunds, the museum curator who arranged for the skeleton to be brought to the ROM.",
-   "quote_sha": "985deb9fe077b9d9"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "The Royal Ontario Museum Barosaurus specimen is about 40% complete and wears a Diplodocus skull because no Barosaurus skull has ever been found.",
-   "category": "description",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The specimen is about 40% complete, but as a skull of Barosaurus has never been found, the ROM specimen wears the head of a Diplodocus.",
-   "quote_sha": "a7785512a96a4cc2"
-  },
-  {
-   "fact_id": "F020",
-   "statement": "Eberhard Fraas discovered sauropod skeletons in the Tendaguru Beds of German East Africa (now Tanzania) in 1907.",
-   "category": "time_and_habitat",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Misidentified discoveries in Africa In 1907, German paleontologist Eberhard Fraas discovered the skeletons of two sauropods on an expedition to the Tendaguru Beds in German East Africa (now Tanzania).",
-   "quote_sha": "8c476e792ef80c58"
-  },
-  {
    "fact_id": "F021",
-   "statement": "The genus name Gigantosaurus was preoccupied, leading to the reclassification of Fraas's African sauropods into the genus Tornieria in 1911.",
-   "category": "classification",
+   "statement": "Adult Barosaurus measured about 25 to 27 meters in length and weighed between 12 and 20 metric tons.",
+   "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
    "lang": "en",
-   "quote": "However, this genus name had already been given to the fragmentary remains of a sauropod from England. Both species were moved to a new genus, Tornieria, in 1911.",
-   "quote_sha": "29f7709b0e3249d2"
+   "quote": "Barosaurus was an enormous animal, with some adults measuring about 25 - 27 m in length and weighing about 12–20 metric tons (13–22 short tons).",
+   "quote_sha": "75a5240de4114672"
   },
   {
    "fact_id": "F022",
-   "statement": "Werner Janensch reclassified the African sauropod species into the genus Barosaurus after studying fossils from the Tendaguru Beds.",
-   "category": "classification",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Upon further study of these remains and many other sauropod fossils from the hugely productive Tendaguru Beds, Werner Janensch moved the species once again, this time to the North American genus Barosaurus.",
-   "quote_sha": "6b694cbdc23f2b12"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "In 1991, Gigantosaurus robustus was recognized as a titanosaur and placed in the new genus Janenschia.",
-   "category": "classification",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "In 1991, \"Gigantosaurus\" robustus was recognized as a titanosaur and placed in a new genus, Janenschia, as J. robusta.",
-   "quote_sha": "1ab73366c9719c66"
-  },
-  {
-   "fact_id": "F024",
-   "statement": "The African sauropod species, once thought to be Barosaurus africanus, is now classified as Tornieria africana.",
-   "category": "classification",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The African species, although closely related to Barosaurus lentus and Diplodocus from North America, is now once again known as Tornieria africana.",
-   "quote_sha": "ceb6436ffd91af0c"
-  },
-  {
-   "fact_id": "F025",
-   "statement": "It is debated whether a specimen from the Kadsi Formation in Zimbabwe represents Barosaurus, as its referral is doubtful due to poor preservation and it may instead be Tornieria.",
-   "category": "debate",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "A species of Barosaurus was also allegedly identified from the Kadsi Formation in Zimbabwe in 1987. However, this material is poorly preserved and fragmentary and was not adequately diagnosed as such, and so its referral to Barosaurus is doubtful. It may represent Tornieria.",
-   "quote_sha": "e3278c4434a8895c"
-  },
-  {
-   "fact_id": "F026",
    "statement": "Barosaurus had a longer neck and shorter tail than Diplodocus but was about the same overall length.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
@@ -327,25 +319,25 @@
    "quote_sha": "d6e122c1df65dcfd"
   },
   {
-   "fact_id": "F027",
-   "statement": "Barosaurus was longer than Apatosaurus but had a less robust skeleton.",
+   "fact_id": "F023",
+   "statement": "No Barosaurus skull has ever been discovered.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
    "lang": "en",
-   "quote": "It was longer than Apatosaurus, but its skeleton was less robust.",
-   "quote_sha": "d6c9d0686141c2e7"
+   "quote": "Scientists have yet to discover a Barosaurus skull.",
+   "quote_sha": "f71f531d34e6f799"
   },
   {
-   "fact_id": "F028",
-   "statement": "Most distinguishing features of Barosaurus are found in the vertebrae, though a complete vertebral column has never been discovered.",
+   "fact_id": "F024",
+   "statement": "In 2017, researchers assigned an incomplete juvenile diplodocid skeleton found at Dinosaur National Monument to Barosaurus.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
    "lang": "en",
-   "quote": "Most of the distinguishing skeletal features of Barosaurus were in the vertebrae, although a complete vertebral column has never been found.",
-   "quote_sha": "3a6d25bdaa3325d4"
+   "quote": "In 2017, American researcher Keegan M. Melstrom and colleagues assigned an incomplete juvenile diplodocid skeleton (DINO 2921) that had been found at Dinosaur National Monument to Barosaurus.",
+   "quote_sha": "6466ff4454d798aa"
   },
   {
-   "fact_id": "F029",
+   "fact_id": "F025",
    "statement": "Barosaurus had only 9 dorsal vertebrae, whereas Diplodocus and Apatosaurus had 10.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
@@ -354,7 +346,7 @@
    "quote_sha": "13387420b5169fd4"
   },
   {
-   "fact_id": "F030",
+   "fact_id": "F026",
    "statement": "A dorsal vertebra may have been converted into a cervical one, resulting in a total of 16 neck vertebrae in Barosaurus.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
@@ -363,25 +355,16 @@
    "quote_sha": "3d73a6f03a1a7935"
   },
   {
-   "fact_id": "F031",
-   "statement": "The neural spines on Barosaurus vertebrae were not as tall or complex as those in Diplodocus.",
+   "fact_id": "F027",
+   "statement": "Some Barosaurus neck vertebrae were up to 50% longer than those of Diplodocus.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
    "lang": "en",
-   "quote": "The neural spines protruding from the top of the vertebrae were neither as tall or as complex in Barosaurus as they were in Diplodocus.",
-   "quote_sha": "0b612fd9d582c9a3"
+   "quote": "Barosaurus cervicals were similar to those of Diplodocus, but some were up to 50% longer.",
+   "quote_sha": "62e940a567c97ff9"
   },
   {
-   "fact_id": "F032",
-   "statement": "Barosaurus tail chevrons were forked with a prominent forward spike, similar to Diplodocus.",
-   "category": "description",
-   "chunk_id": "barosaurus:enwiki:3",
-   "lang": "en",
-   "quote": "The chevron bones lining the underside of the tail were forked and had a prominent forward spike, much like the closely related Diplodocus.",
-   "quote_sha": "b4d1c26eef46ec9e"
-  },
-  {
-   "fact_id": "F033",
+   "fact_id": "F028",
    "statement": "The Barosaurus tail likely ended in a long whiplash, similar to other diplodocids which could have up to 80 tail vertebrae.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:3",
@@ -390,7 +373,25 @@
    "quote_sha": "d43407a16f34a4bd"
   },
   {
-   "fact_id": "F034",
+   "fact_id": "F029",
+   "statement": "Paleontologists suspected that Barosaurus africanus was distinct from the North American genus, a view confirmed by a 2006 redescription.",
+   "category": "debate",
+   "chunk_id": "barosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Many paleontologists suspected \"Barosaurus\" africanus was also distinct from the North American genus, which was confirmed when the material was redescribed in 2006.",
+   "quote_sha": "00c1f516ec47db53"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "A 1987 identification of a Barosaurus species from the Kadsi Formation in Zimbabwe is considered doubtful due to poor preservation and inadequate diagnosis.",
+   "category": "debate",
+   "chunk_id": "barosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "A species of Barosaurus was also allegedly identified from the Kadsi Formation in Zimbabwe in 1987. However, this material is poorly preserved and fragmentary and was not adequately diagnosed as such, and so its referral to Barosaurus is doubtful.",
+   "quote_sha": "eb74c0fe735c4cd5"
+  },
+  {
+   "fact_id": "F031",
    "statement": "Barosaurus had limb bones that were virtually indistinguishable from those of Diplodocus.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:4",
@@ -399,7 +400,7 @@
    "quote_sha": "2a480cf4fa305689"
   },
   {
-   "fact_id": "F035",
+   "fact_id": "F032",
    "statement": "Barosaurus was a quadruped with columnar limbs adapted to support its enormous bulk.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:4",
@@ -408,17 +409,8 @@
    "quote_sha": "55f0083e63a0fe09"
   },
   {
-   "fact_id": "F036",
-   "statement": "Barosaurus had a single carpal bone in its wrist and more slender metacarpals than Diplodocus.",
-   "category": "description",
-   "chunk_id": "barosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "There was a single carpal bone in the wrist, and the metacarpals were more slender than those of Diplodocus.",
-   "quote_sha": "8ccbfb7767015dcd"
-  },
-  {
-   "fact_id": "F037",
-   "statement": "Although Barosaurus feet have never been discovered, it is believed to have been digitigrade with five small toes on each foot.",
+   "fact_id": "F033",
+   "statement": "Although Barosaurus feet have never been discovered, it would have been digitigrade with five small toes on each of its four feet.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -426,7 +418,7 @@
    "quote_sha": "73900e973fc013b9"
   },
   {
-   "fact_id": "F038",
+   "fact_id": "F034",
    "statement": "Barosaurus had a large claw on the inside digit of its forefoot and smaller claws on the inside three digits of its hindfoot.",
    "category": "description",
    "chunk_id": "barosaurus:enwiki:4",
@@ -435,8 +427,8 @@
    "quote_sha": "61e61072b0d4361d"
   },
   {
-   "fact_id": "F039",
-   "statement": "Barosaurus is a member of the sauropod family Diplodocidae and is sometimes placed in the subfamily Diplodocinae with Diplodocus.",
+   "fact_id": "F035",
+   "statement": "Barosaurus is classified as a member of the sauropod family Diplodocidae and is sometimes placed in the subfamily Diplodocinae with Diplodocus.",
    "category": "classification",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -444,8 +436,17 @@
    "quote_sha": "632f70bea7909b57"
   },
   {
-   "fact_id": "F040",
-   "statement": "Tornieria and Australodocus from the Tendaguru Beds of Tanzania in eastern Africa have been classified as diplodocines.",
+   "fact_id": "F036",
+   "statement": "Many paleontologists consider the genus Seismosaurus to be a junior synonym of Diplodocus, potentially representing a fourth species.",
+   "category": "classification",
+   "chunk_id": "barosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "Another diplodocid genus, Seismosaurus, is considered by many paleontologists to be a junior synonym of Diplodocus as a possible fourth species.",
+   "quote_sha": "a06e39cd9197c50a"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "Tornieria (formerly Barosaurus africanus) and Australodocus from the Tendaguru Beds of Tanzania have been classified as diplodocines.",
    "category": "classification",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -453,7 +454,7 @@
    "quote_sha": "9a5df0d847bebf29"
   },
   {
-   "fact_id": "F041",
+   "fact_id": "F038",
    "statement": "Diplodocid fossils, including those of Barosaurus, are found in North America, Europe, and Africa.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:4",
@@ -462,7 +463,7 @@
    "quote_sha": "8f64725da7c230ab"
   },
   {
-   "fact_id": "F042",
+   "fact_id": "F039",
    "statement": "A 2016 preprint by Mike Taylor and Mathew Wedel argued that Barosaurus cervical vertebrae allowed significant lateral neck flexibility but restricted vertical flexibility.",
    "category": "paleobiology",
    "chunk_id": "barosaurus:enwiki:4",
@@ -471,7 +472,16 @@
    "quote_sha": "3ba5e996ee0ff525"
   },
   {
-   "fact_id": "F043",
+   "fact_id": "F040",
+   "statement": "The neck structure suggests Barosaurus had a different feeding style compared to other diplodocids.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "This suggests a different feeding style for this genus when compared to other diplodocids.",
+   "quote_sha": "b0bfe0d180342413"
+  },
+  {
+   "fact_id": "F041",
    "statement": "The restriction in vertical neck flexibility suggests Barosaurus did not primarily feed on vegetation high off the ground.",
    "category": "paleobiology",
    "chunk_id": "barosaurus:enwiki:4",
@@ -480,25 +490,7 @@
    "quote_sha": "6a13c13e07459ee3"
   },
   {
-   "fact_id": "F044",
-   "statement": "There is a debate regarding sauropod posture, with traditional views depicting a sprawled gait and later studies suggesting necks held high to graze tall trees.",
-   "category": "debate",
-   "chunk_id": "barosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "While diplodocids were traditionally depicted as having a sprawled, lizard-like gait, later studies often portrayed them with their necks held high up in the air, allowing them to graze from tall trees.",
-   "quote_sha": "85d40f48e32e4688"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Studies conclude that the neutral posture of Diplodocus was close to horizontal, leading scientists like Kent Stevens to argue that Barosaurus did not raise its head much above shoulder level.",
-   "category": "debate",
-   "chunk_id": "barosaurus:enwiki:4",
-   "lang": "en",
-   "quote": "Studies looking at the morphology of sauropod necks have concluded that the neutral posture of Barosaurus' close relative Diplodocus neck was close to horizontal, rather than vertical, and scientists such as Kent Stevens have used this to argue that sauropods including Barosaurus did not raise their heads much above shoulder level.",
-   "quote_sha": "4a3be61f10ad9ee0"
-  },
-  {
-   "fact_id": "F046",
+   "fact_id": "F042",
    "statement": "It is hypothesized that a nuchal ligament may have held Barosaurus' neck in a horizontal position.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:4",
@@ -507,8 +499,8 @@
    "quote_sha": "f5ad3124975aea2a"
   },
   {
-   "fact_id": "F047",
-   "statement": "Another hypothesis suggests Barosaurus possessed an avian-like elastic ligament similar to that seen in Struthio camelus.",
+   "fact_id": "F043",
+   "statement": "An alternative hypothesis suggests Barosaurus possessed an avian-like elastic ligament similar to that seen in Struthio camelus.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -516,8 +508,8 @@
    "quote_sha": "86349eb827c1a8c6"
   },
   {
-   "fact_id": "F048",
-   "statement": "A 2009 study argued that sauropods likely held their necks at maximum vertical extension in an alert posture, unless unique soft tissue anatomy differed from other animals.",
+   "fact_id": "F044",
+   "statement": "A 2009 study argued that sauropods likely held their necks at maximum vertical extension in an alert posture, barring unknown unique soft tissue characteristics.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -525,8 +517,8 @@
    "quote_sha": "468839679839a1b2"
   },
   {
-   "fact_id": "F049",
-   "statement": "The idea that diplodocoids held their necks vertically might be contradicted by evidence that their inner ears are aligned for a horizontal neck pose.",
+   "fact_id": "F045",
+   "statement": "This idea of an elevated neck pose might be contradicted by evidence that the inner ear of diplodocoids aligns with a horizontal neck pose.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:4",
    "lang": "en",
@@ -534,115 +526,133 @@
    "quote_sha": "c07f463b2eac6d8c"
   },
   {
-   "fact_id": "F050",
-   "statement": "The extremely long neck of Barosaurus is a subject of significant scientific controversy.",
+   "fact_id": "F046",
+   "statement": "A 1992 study suggested that Barosaurus would have needed a heart weighing 1.6 tons to pump blood up its very long neck.",
+   "category": "curiosities",
+   "chunk_id": "barosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "A 1992 Columbia University study of diplodocid neck structure indicated that the longest necks would have required a 1.6-ton heart",
+   "quote_sha": "98b5bfc681d7f9ba"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "Some scientists hypothesize that Barosaurus possessed auxiliary hearts in its neck to assist blood circulation.",
    "category": "debate",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "The very long neck of Barosaurus is the source of much controversy among scientists.",
-   "quote_sha": "5d2a5debb670132d"
+   "quote": "The study proposed that animals like these would have had rudimentary auxiliary \"hearts\" in their necks",
+   "quote_sha": "855418b1d4a26c68"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "Researchers debate whether Barosaurus held its neck horizontally to avoid the challenge of pumping blood to its brain.",
+   "category": "debate",
+   "chunk_id": "barosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Some argue that the near-horizontal posture of the head and neck would have eliminated the problem of supplying blood to the brain",
+   "quote_sha": "f3fe910e5c372969"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Barosaurus lived approximately 150 million years ago during the late Kimmeridgian to early Tithonian stages of the Late Jurassic.",
+   "category": "time_and_habitat",
+   "chunk_id": "barosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "Barosaurus fossils are found in late Kimmeridgian to early Tithonian sediments, around 150 million years old",
+   "quote_sha": "0adf0e45261f5a48"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Barosaurus shared its environment with other giant sauropods including Camarasaurus, Diplodocus, Apatosaurus, and Brachiosaurus.",
+   "category": "time_and_habitat",
+   "chunk_id": "barosaurus:enwiki:5",
+   "lang": "en",
+   "quote": "The Morrison Formation records an environment and time dominated by gigantic sauropod dinosaurs such as Camarasaurus, Diplodocus, Apatosaurus and Brachiosaurus",
+   "quote_sha": "7b487f7ce09b7b53"
   },
   {
    "fact_id": "F051",
-   "statement": "A 1992 study suggested that Barosaurus would have needed a heart weighing 1.6 tons, which is about one-tenth of its body weight, to pump blood up its long neck.",
-   "category": "paleobiology",
+   "statement": "Herbivorous ornithischians such as Camptosaurus, Dryosaurus, Stegosaurus, and Othnielosaurus lived alongside Barosaurus.",
+   "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "A 1992 Columbia University study of diplodocid neck structure indicated that the longest necks would have required a 1.6-ton heart – a tenth of the animal's body weight.",
-   "quote_sha": "4ccf5695210f8e99"
+   "quote": "Dinosaurs that lived alongside Barosaurus included the herbivorous ornithischians Camptosaurus, Dryosaurus, Stegosaurus and Othnielosaurus",
+   "quote_sha": "30b15ad481cc548a"
   },
   {
    "fact_id": "F052",
-   "statement": "Some researchers argue that Barosaurus held its head and neck in a near-horizontal posture, which would have made blood supply to the brain easier.",
-   "category": "paleobiology",
+   "statement": "Barosaurus faced predators including theropods like Saurophaganax, Allosaurus, Torvosaurus, Ceratosaurus, Marshosaurus, Stokesosaurus, and Ornitholestes.",
+   "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Some argue that the near-horizontal posture of the head and neck would have eliminated the problem of supplying blood to the brain, as it would not be elevated.",
-   "quote_sha": "4abfdb2c4d585334"
+   "quote": "predators in this paleoenvironment included the theropods Saurophaganax, Allosaurus, Torvosaurus, Ceratosaurus, Marshosaurus, Stokesosaurus and Ornitholestes",
+   "quote_sha": "d83af7ef16092091"
   },
   {
    "fact_id": "F053",
-   "statement": "Barosaurus fossils are found in sediments dating to the late Kimmeridgian to early Tithonian stages, approximately 150 million years ago.",
+   "statement": "Allosaurus made up 70 to 75% of theropod fossils found in the Morrison Formation and occupied the top trophic level.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Barosaurus fossils are found in late Kimmeridgian to early Tithonian sediments, around 150 million years old.",
-   "quote_sha": "84d2d34ab672d2d8"
+   "quote": "Allosaurus accounted for 70 to 75% of theropod specimens and was almost at the top trophic level of the Morrison food web",
+   "quote_sha": "a207477d2e07d8a1"
   },
   {
    "fact_id": "F054",
-   "statement": "Barosaurus lived in an environment dominated by other giant sauropods including Camarasaurus, Diplodocus, Apatosaurus, and Brachiosaurus.",
+   "statement": "High atmospheric carbon dioxide levels during the Late Jurassic created a greenhouse effect with global high temperatures.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "The Morrison Formation records an environment and time dominated by gigantic sauropod dinosaurs such as Camarasaurus, Diplodocus, Apatosaurus and Brachiosaurus.",
-   "quote_sha": "05358c5ad5f8a141"
+   "quote": "Very high atmospheric concentrations of carbon dioxide in the Late Jurassic led to high temperatures around the globe",
+   "quote_sha": "ba0880ee6bd86179"
   },
   {
    "fact_id": "F055",
-   "statement": "Barosaurus shared its habitat with herbivorous ornithischians like Camptosaurus and Stegosaurus, and theropod predators such as Allosaurus and Saurophaganax.",
+   "statement": "Studies estimate Late Jurassic CO2 levels at 1120 parts per million, predicting winter temperatures of 20°C and summer averages of 40-45°C in western North America.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Dinosaurs that lived alongside Barosaurus included the herbivorous ornithischians Camptosaurus, Dryosaurus, Stegosaurus and Othnielosaurus, and predators in this paleoenvironment included the theropods Saurophaganax, Allosaurus, Torvosaurus, Ceratosaurus, Marshosaurus, Stokesosaurus and Ornitholestes.",
-   "quote_sha": "4f21b5dbdc1fca6d"
+   "quote": "One study, estimating CO2 concentrations of 1120 parts per million, predicted average winter temperatures in western North America of 20 °C and summer temperatures averaging 40 - 45 C",
+   "quote_sha": "3a59fbefb845445a"
   },
   {
    "fact_id": "F056",
-   "statement": "High atmospheric carbon dioxide levels during the Late Jurassic created a greenhouse effect with high global temperatures.",
+   "statement": "Recent studies suggest CO2 concentrations in the Late Jurassic may have reached up to 3180 parts per million.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "Very high atmospheric concentrations of carbon dioxide in the Late Jurassic led to high temperatures around the globe, due to the greenhouse effect.",
-   "quote_sha": "414776607122027e"
+   "quote": "A more recent study suggested even higher CO2 concentrations of up to 3180 parts per million",
+   "quote_sha": "3d41e3d916b00477"
   },
   {
    "fact_id": "F057",
-   "statement": "One study estimated that Late Jurassic CO2 levels of 1120 ppm resulted in average winter temperatures of 20°C and summer temperatures of 40-45°C in western North America.",
+   "statement": "The climate in the Barosaurus habitat was semi-arid with seasonal rainfall due to high evaporation and rain shadows from western mountains.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "One study, estimating CO2 concentrations of 1120 parts per million, predicted average winter temperatures in western North America of 20 °C and summer temperatures averaging 40 - 45 C.",
-   "quote_sha": "62f47ed0a4f62709"
+   "quote": "Warm temperatures that led to significant evaporation year-round, along with possible rain shadow effect from the mountains to the west, led to a semi-arid climate with only seasonal rainfall",
+   "quote_sha": "530b2fc8d59ee2db"
   },
   {
    "fact_id": "F058",
-   "statement": "A more recent study suggested Late Jurassic CO2 concentrations could have reached up to 3180 parts per million.",
+   "statement": "Vegetation ranged from river-lining forests of tree ferns to fern savannas with occasional trees like the conifer Brachyphyllum.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:enwiki:5",
    "lang": "en",
-   "quote": "A more recent study suggested even higher CO2 concentrations of up to 3180 parts per million.",
-   "quote_sha": "a1bdf2891ba6710c"
+   "quote": "Vegetation varied from river-lining forests of tree ferns, and ferns (gallery forests), to fern savannas with occasional trees such as the Araucaria-like conifer Brachyphyllum",
+   "quote_sha": "23a37ecafb29c089"
   },
   {
    "fact_id": "F059",
-   "statement": "The climate of Barosaurus's habitat was semi-arid with seasonal rainfall, caused by high evaporation and rain shadows from western mountains.",
+   "statement": "The name Barosaurus comes from the Greek words barys meaning 'heavy' and sauros meaning 'lizard'.",
    "category": "time_and_habitat",
-   "chunk_id": "barosaurus:enwiki:5",
-   "lang": "en",
-   "quote": "Warm temperatures that led to significant evaporation year-round, along with possible rain shadow effect from the mountains to the west, led to a semi-arid climate with only seasonal rainfall.",
-   "quote_sha": "570163d5c73ebf54"
+   "chunk_id": "barosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "El término compuesto Barosaurus proviene de las palabras griegas barys, βαρυς que significa \"pesado\" y sauros σαυρος, que significa \"lagarto\"",
+   "quote_sha": "6898153252fbdf48"
   },
   {
    "fact_id": "F060",
-   "statement": "The genus Barosaurus was named by Marsh in 1890.",
-   "category": "classification",
-   "chunk_id": "barosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "genus_authority: Marsh, 1890",
-   "quote_sha": "2409496e1e4b8331"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "The species Barosaurus lentus was named by Marsh in 1890.",
-   "category": "classification",
-   "chunk_id": "barosaurus:eswiki:1",
-   "lang": "es",
-   "quote": "species_authority: Marsh, 1890",
-   "quote_sha": "e06c70fc85294c9a"
-  },
-  {
-   "fact_id": "F062",
    "statement": "Barosaurus lentus is the only known species of the extinct genus Barosaurus, a diplodocid sauropod dinosaur.",
    "category": "description",
    "chunk_id": "barosaurus:eswiki:2",
@@ -651,43 +661,151 @@
    "quote_sha": "c6ac7af3511b706a"
   },
   {
-   "fact_id": "F063",
-   "statement": "The name Barosaurus comes from the Greek words barys meaning 'heavy' and sauros meaning 'lizard'.",
+   "fact_id": "F061",
+   "statement": "The American Museum of Natural History in New York displays a Barosaurus skeleton posed standing on hind legs to protect its young from an Allosaurus.",
    "category": "description",
    "chunk_id": "barosaurus:eswiki:2",
    "lang": "es",
-   "quote": "El término compuesto Barosaurus proviene de las palabras griegas barys, βαρυς que significa \"pesado\" y sauros σαυρος, que significa \"lagarto\".",
-   "quote_sha": "8ce56734a93c1f37"
+   "quote": "El Museo Americano de Historia Natural en Nueva York, tiene un esqueleto de una madre Barosaurus parada en sus piernas traseras a una altura enorme para proteger a su prole contra un Allosaurus",
+   "quote_sha": "8284d4ece7e99bf2"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "The head of the Barosaurus skeleton at the American Museum of Natural History reaches the level of the fifth floor.",
+   "category": "curiosities",
+   "chunk_id": "barosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Su cabeza está al nivel del quinto piso del edificio",
+   "quote_sha": "270076938bccd5fc"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "It is unknown whether Barosaurus could have stood on its hind legs in life as displayed in the museum.",
+   "category": "debate",
+   "chunk_id": "barosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Sin embargo, el que Barosaurus pudiera colocarse de tal manera en vida, es aún desconocido",
+   "quote_sha": "ddd060e0fbc49aee"
   },
   {
    "fact_id": "F064",
-   "statement": "The American Museum of Natural History in New York possesses a Barosaurus skeleton posed with its mother standing on hind legs to protect her young from an Allosaurus.",
-   "category": "description",
-   "chunk_id": "barosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "El Museo Americano de Historia Natural en Nueva York, tiene un esqueleto de una madre Barosaurus parada en sus piernas traseras a una altura enorme para proteger a su prole contra un Allosaurus.",
-   "quote_sha": "62bcc3704ca92268"
-  },
-  {
-   "fact_id": "F065",
-   "statement": "It is currently unknown whether Barosaurus could have stood in the posed position of a mother protecting her young in life.",
-   "category": "paleobiology",
-   "chunk_id": "barosaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Sin embargo, el que Barosaurus pudiera colocarse de tal manera en vida, es aún desconocido.",
-   "quote_sha": "d9f681595ee82304"
-  },
-  {
-   "fact_id": "F066",
-   "statement": "Barosaurus remains have been found in the Morrison Formation in Utah and South Dakota, and possibly in Africa as evidenced by the Kadisi Formation.",
+   "statement": "Barosaurus fossils have been found in the Morrison Formation in Utah and South Dakota, and possibly in Africa.",
    "category": "time_and_habitat",
    "chunk_id": "barosaurus:eswiki:2",
    "lang": "es",
-   "quote": "Los restos se han encontrado en la Formación Morrison en el Período Jurásico Superior en las zonas estratigráficas 2-5 de Utah y Dakota del Sur y posiblemente África, como lo demuestra la Formación Kadsi.",
-   "quote_sha": "8e4f09cc5cd00763"
+   "quote": "Los restos se han encontrado en la Formación Morrison en el Período Jurásico Superior en las zonas estratigráficas 2-5 de Utah y Dakota del Sur y posiblemente África",
+   "quote_sha": "981e2d873d6ec73a"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The genus Barosaurus was described by Marsh in 1890.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Marsh, 1890",
+   "quote_sha": "2409496e1e4b8331"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The species Barosaurus lentus was described by Marsh in 1890.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "species_authority: Marsh, 1890",
+   "quote_sha": "e06c70fc85294c9a"
   },
   {
    "fact_id": "F067",
+   "statement": "Barosaurus is classified in the family Diplodocidae.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Diplodocidae",
+   "quote_sha": "c5a4f63c36933a10"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Barosaurus belongs to the subfamily Diplodocinae.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "subfamilia: Diplodocinae",
+   "quote_sha": "ca5b3d65cc96551e"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Barosaurus is part of the superfamily Diplodocoidea.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "superfamilia: Diplodocoidea",
+   "quote_sha": "428096b54117a907"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "Barosaurus is classified in the order Saurischia.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "ordo: Saurischia",
+   "quote_sha": "6643985f020f6df7"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Barosaurus belongs to the infraorder Sauropoda.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "infraordo: Sauropoda",
+   "quote_sha": "7a28a57559d31332"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Barosaurus is part of the suborder Sauropodomorpha.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "subordo: Sauropodomorpha",
+   "quote_sha": "4410bbb4e06e8b4c"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "Barosaurus is classified in the class Sauropsida.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "classis: Sauropsida",
+   "quote_sha": "3f2c49d973a6d05b"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Barosaurus belongs to the phylum Chordata.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "phylum: Chordata",
+   "quote_sha": "50d96aa3e00d9727"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Barosaurus is an animal in the kingdom Animalia.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "regnum: Animalia",
+   "quote_sha": "975c8f6bfbee637a"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Barosaurus lived in North America during the Late Jurassic, approximately 150 million years ago in the Tithonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "barosaurus:eswiki:2",
+   "lang": "es",
+   "quote": "que vivió a finales del período Jurásico, hace aproximadamente 150 millones de años, durante el Titoniense, en Norteamérica",
+   "quote_sha": "6b1c9ba8ac60b8b2"
+  },
+  {
+   "fact_id": "F077",
    "statement": "Barosaurus was a large but typical diplodocid with a long neck and a long whip-like tail.",
    "category": "description",
    "chunk_id": "barosaurus:eswiki:3",
@@ -696,8 +814,8 @@
    "quote_sha": "5b18b58afc59ddc6"
   },
   {
-   "fact_id": "F068",
-   "statement": "Some adult Barosaurus measured more than 26 meters in length and weighed more than 20 tonnes.",
+   "fact_id": "F078",
+   "statement": "Some adult Barosaurus measured more than 26 meters in length and weighed more than 20 tons.",
    "category": "description",
    "chunk_id": "barosaurus:eswiki:3",
    "lang": "es",
@@ -705,7 +823,7 @@
    "quote_sha": "902518a8f131a44f"
   },
   {
-   "fact_id": "F069",
+   "fact_id": "F079",
    "statement": "Barosaurus had shorter caudal vertebrae than Diplodocus, resulting in a shorter tail.",
    "category": "description",
    "chunk_id": "barosaurus:eswiki:3",
@@ -714,7 +832,16 @@
    "quote_sha": "c56cf10f3c526a6f"
   },
   {
-   "fact_id": "F070",
+   "fact_id": "F080",
+   "statement": "The limb bones of Barosaurus were virtually indistinguishable from those of Diplodocus.",
+   "category": "description",
+   "chunk_id": "barosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los huesos de las extremidades de Barosaurus eran virtualmente indistinguibles de las de Diplodocus.",
+   "quote_sha": "6dfc52f794e88be2"
+  },
+  {
+   "fact_id": "F081",
    "statement": "The first Barosaurus remains were discovered in the Morrison Formation of South Dakota by Mrs. E.R. Ellerman and excavated by Othniel Charles Marsh and John Bell Hatcher in 1889.",
    "category": "discovery",
    "chunk_id": "barosaurus:eswiki:4",
@@ -723,8 +850,8 @@
    "quote_sha": "980c7ab77dab47f6"
   },
   {
-   "fact_id": "F071",
-   "statement": "Marsh named Barosaurus lentus, derived from Greek words meaning 'heavy' and 'lizard', and Latin meaning 'slow'.",
+   "fact_id": "F082",
+   "statement": "Marsh named Barosaurus lentus, derived from Greek words meaning 'heavy' and 'lizard', and the Latin word for 'slow'.",
    "category": "discovery",
    "chunk_id": "barosaurus:eswiki:4",
    "lang": "es",
@@ -732,177 +859,226 @@
    "quote_sha": "3c0c12ce2a7ffe32"
   },
   {
-   "fact_id": "F072",
-   "statement": "The type specimen of Barosaurus was fully described by Richard Swann Lull in 1919 after being prepared at Yale in the winter of 1917.",
-   "category": "discovery",
-   "chunk_id": "barosaurus:eswiki:4",
-   "lang": "es",
-   "quote": "El espécimen tipo de Barosaurus habían sido finalmente preparado en Yale en el invierno de 1917 y fue descrito completamente por Richard Swann Lull en 1919.",
-   "quote_sha": "5366004dbc0ef344"
-  },
-  {
-   "fact_id": "F073",
+   "fact_id": "F083",
    "statement": "In 1929, Barnum Brown organized the material to be sent to the American Museum of Natural History in New York, where it remains today.",
    "category": "discovery",
    "chunk_id": "barosaurus:eswiki:4",
    "lang": "es",
-   "quote": "Sin embargo, en 1929 Barnum Brown organizó todo el material para ser enviado al Museo Americano de Historia Natural en Nueva York , donde permanece en la actualidad.",
-   "quote_sha": "f46cd1dac534eae7"
+   "quote": "En 1929 Barnum Brown organizó todo el material para ser enviado al Museo Americano de Historia Natural en Nueva York , donde permanece en la actualidad.",
+   "quote_sha": "eb51bc8856993485"
   },
   {
-   "fact_id": "F074",
-   "statement": "A vertebra interpreted as the northernmost record of Barosaurus lentus has been reported from the Pryor Mountains in Montana.",
+   "fact_id": "F084",
+   "statement": "It was once believed that Barosaurus could raise its long neck like a giraffe, which would require a heart weighing nearly 1.6 tons to pump blood to the brain.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Antiguamente se creía que Barosaurus podía levantar su largo cuello hacia arriba como una jirafa. Para bombear sangre al cerebro, el corazón habría tenido que pesar cerca de 1,6 toneladas.",
+   "quote_sha": "1aa1ad3d7b638cbd"
+  },
+  {
+   "fact_id": "F085",
+   "statement": "Marsh first classified Barosaurus as a diplodocid in 1898, after previously placing it in the family Atlantosauridae in 1896.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:4",
+   "lang": "es",
+   "quote": "En 1896 Marsh había colocado Barosaurus en la familia Atlantosauridae, en 1898 fue clasificado por él por primera vez como un diplodócido.",
+   "quote_sha": "7823fb7e0317a093"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "Sauropod skulls are rarely preserved, and scientists have yet to discover a Barosaurus skull.",
+   "category": "debate",
+   "chunk_id": "barosaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los cráneos de saurópodos rara vez se conservan, y los científicos todavía tienen que descubrir uno de Barosaurus.",
+   "quote_sha": "b04a10d789cadcb3"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "German paleontologist Eberhard Fraas discovered two sauropod skeletons in the Tendaguru beds of East Africa (now Tanzania) in 1907.",
+   "category": "discovery",
+   "chunk_id": "barosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "En 1907, el paleontólogo alemán Eberhard Fraas descubrió los esqueletos de dos saurópodos en una expedición a las camas Tendaguru en África Oriental Alemana, ahora Tanzania.",
+   "quote_sha": "92b3930a45424db4"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "In 1991, the species formerly known as Gigantosaurus robustus was reclassified as a titanosaurian and placed in the new genus Janenschia.",
+   "category": "discovery",
+   "chunk_id": "barosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "En 1991, \"Gigantosaurus\" robustus fue reconocido como un titanosauriano y colocado en un nuevo género, Janenschia , como J. robusta.",
+   "quote_sha": "dbc33247fea5be2e"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Unfossil material referred to Barosaurus has been found in the Kadzi Formation of Zimbabwe, though it remains undescribed.",
    "category": "time_and_habitat",
+   "chunk_id": "barosaurus:eswiki:6",
+   "lang": "es",
+   "quote": "Otra formación de África, la formación Kadsi de Zimbabue presenta material referido a Barosaurus, aunque están sin describir aun y su informe es anterior a la descripción de Tornieria.",
+   "quote_sha": "4fae2e2a5aedbb45"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Barosaurus is a member of the family Diplodocidae and is usually placed in the subfamily Diplodocinae with Diplodocus.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:7",
+   "lang": "es",
+   "quote": "Barosaurus es un miembro de la familia Diplodocidae y se lo suele colocar con Diplodocus en la subfamilia Diplodocinae.",
+   "quote_sha": "19a04ac55cd08b96"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Barosaurus is monospecific, containing only the type species B. lentus, whereas the genus Diplodocus contains at least three species.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:7",
+   "lang": "es",
+   "quote": "Barosaurus es monoespecífico, ya que contiene sólo la especie tipo, B. lentus, mientras que al menos tres especies pertenecen al género Diplodocus.",
+   "quote_sha": "940d5e7e959211f4"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "Diplodocid fossils are found in America, Europe, and Africa.",
+   "category": "classification",
+   "chunk_id": "barosaurus:eswiki:7",
+   "lang": "es",
+   "quote": "Los fósiles de diplodócido se encuentran en América, Europa y África.",
+   "quote_sha": "11b24e04bd2053c0"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "The cervical vertebrae of Barosaurus allowed significant lateral neck flexibility but restricted vertical flexibility.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "La estructura de las vértebras cervicales de Barosaurus permitió un grado significativo de flexibilidad lateral en el cuello, pero restringe la flexibilidad vertical.",
+   "quote_sha": "f8740ccd849506b4"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Barosaurus likely fed by sweeping its long neck in low arcs along the ground, a strategy first proposed by John Martin in 1987.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Barosaurus barrió el cuello en arcos largos a nivel del suelo cuando se alimentaba, cosa que se parecía a la estrategia que fue propuesta por primera vez por John Martin en 1987.",
+   "quote_sha": "2d326e2b1f5ee247"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "The restriction of vertical flexibility suggests that Barosaurus could not feed on high vegetation or elevated terrain.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "La restricción de la flexibilidad vertical, sugiere que Barosaurus no podía alimentarse de vegetación alta o en terreno elevado.",
+   "quote_sha": "cd25b88fd3bdaaa9"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "Barosaurus may have developed an extremely long neck of about 10 meters to feed over a wide area without moving.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "El cuello extremadamente largo de unos 10 metros pueden haberse desarrollado para permitir a Barosaurus alimentarse en una amplia zona sin moverse.",
+   "quote_sha": "e58a4f6807e7211a"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "The long neck may also have allowed Barosaurus to radiate excess body heat.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "También puede haber permitido a los dinosaurios irradiar el exceso de calor del cuerpo.",
+   "quote_sha": "b93611cd3e05808b"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "Curator David Evans suggests that sexual selection may have favored individuals with longer necks.",
+   "category": "paleobiology",
+   "chunk_id": "barosaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Evans sugiere que la selección sexual puede haber favorecido a aquellos con cuellos más largos.",
+   "quote_sha": "308b7759d9dda6b4"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "There are 19 recorded fossil occurrences of the genus Barosaurus.",
+   "category": "curiosities",
+   "chunk_id": "barosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 19",
+   "quote_sha": "b7871dd0a8ac9fc8"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "A vertebra interpreted as the northernmost record of Barosaurus lentus was described from the Pryor Mountains in Montana, United States, in 2026.",
+   "category": "curiosities",
    "chunk_id": "barosaurus:research:1",
    "lang": "en",
    "quote": "A vertebra interpreted as the northernmost record of Barosaurus lentus from the Morrison Formation reported to date is described from the Pryor Mountains (Montana, United States) by Woodruff et al. (2026).",
    "quote_sha": "9af64cbbda726340"
   },
   {
-   "fact_id": "F075",
-   "statement": "Barosaurus was quadrupedal with pillar-like limbs adapted to support its enormous mass, similar to Diplodocus.",
-   "category": "paleobiology",
-   "chunk_id": "barosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Los huesos de las extremidades de Barosaurus eran virtualmente indistinguibles de las de Diplodocus. Ambos eran cuadrúpedos, con extremidades con forma de columna adaptados para soportar la enorme masa de los animales.",
-   "quote_sha": "0f0ea9685fd00703"
-  },
-  {
-   "fact_id": "F076",
-   "statement": "Although Barosaurus feet have never been found, they likely were digitigrade with five small toes on each foot, like other sauropods.",
-   "category": "paleobiology",
-   "chunk_id": "barosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Los pies de Barosaurus nunca han sido descubiertos, pero al igual que otros saurópodos, que habrían sido digitígrados, con las cuatro patas que llevan cada cinco pequeños dedos de los pies.",
-   "quote_sha": "c4bd9fd11f023a62"
-  },
-  {
-   "fact_id": "F077",
-   "statement": "It was once hypothesized that Barosaurus had eight hearts to pump blood to its brain when holding its neck vertically, but this theory was discarded due to physiological inconsistencies.",
-   "category": "debate",
-   "chunk_id": "barosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Antiguamente se creía que Barosaurus podía levantar su largo cuello hacia arriba como una jirafa. Para bombear sangre al cerebro, el corazón habría tenido que pesar cerca de 1,6 toneladas. Cuanto más grande un corazón es, más lento el latido. Pero en ese caso, la sangre fluiría de nuevo al corazón antes de que alcanzara el cerebro. Debido a esta inconsistencia, existió una teoría radical que afirmaba que Barosaurus tenía 8 corazones, dos en el pecho y tres pares en el cuello.",
-   "quote_sha": "3cbe521c359cbf2d"
-  },
-  {
-   "fact_id": "F078",
-   "statement": "Another theory suggested Barosaurus had arterial sphincters to reduce blood backflow, though this was later resolved by computer models showing horizontal neck posture.",
-   "category": "debate",
-   "chunk_id": "barosaurus:eswiki:3",
-   "lang": "es",
-   "quote": "Otra teoría postuló que tenía esfínteres arteriales que reducían la cantidad de sangre que retrocedía.",
-   "quote_sha": "46d5e1278042a282"
-  },
-  {
-   "fact_id": "F079",
-   "statement": "A 2026 study reported a pathology found in the whip section of a Barosaurus tail specimen.",
-   "category": "paleobiology",
+   "fact_id": "F101",
+   "statement": "In 2026, researchers reported a Barosaurus specimen with a pathology located in the 'whip' section of its tail.",
+   "category": "curiosities",
    "chunk_id": "barosaurus:research:2",
    "lang": "en",
    "quote": "van der Linden et al. (2026) report on a specimen of Barosaurus with a pathology in the \"whip\" part of the tail.",
    "quote_sha": "948fa10859fc619d"
-  },
-  {
-   "fact_id": "F080",
-   "statement": "Barosaurus was first classified as a diplodocid by Othniel Charles Marsh in 1898.",
-   "category": "classification",
-   "chunk_id": "barosaurus:eswiki:4",
-   "lang": "es",
-   "quote": "En 1898 fue clasificado por él por primera vez como un diplodócido.",
-   "quote_sha": "297b0ab8f71b56cd"
-  },
-  {
-   "fact_id": "F081",
-   "statement": "Barosaurus belongs to the subfamily Diplodocinae.",
-   "category": "classification",
-   "chunk_id": "barosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Diplodocinae",
-   "quote_sha": "156f3f5acc3d5038"
-  },
-  {
-   "fact_id": "F082",
-   "statement": "Barosaurus is classified in the family Diplodocidae.",
-   "category": "classification",
-   "chunk_id": "barosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Diplodocidae",
-   "quote_sha": "ccc4571d8c48e496"
-  },
-  {
-   "fact_id": "F083",
-   "statement": "Barosaurus is classified in the class Saurischia.",
-   "category": "classification",
-   "chunk_id": "barosaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Saurischia",
-   "quote_sha": "8e64a48e9ac37acb"
   }
  ],
  "rejected": [
   {
    "chunk_id": "barosaurus:enwiki:2",
-   "statement": "Six tail vertebrae recovered in 1889 formed the type specimen (YPM 429) for the new species Barosaurus lentus.",
-   "category": "discovery",
-   "quote": "Only six tail vertebrae were recovered at that time, forming the type specimen (YPM 429) of a new species, which Marsh named Barosaurus lentus.",
-   "reason": "numbers not in the quote: ['1889']"
+   "statement": "Barosaurus lived in the Morrison Formation, a floodplain environment with hot summers and moderate winters.",
+   "category": "paleobiology",
+   "quote": "The Morrison Formation had a floodplain environment with hot summers and moderate winters.",
+   "reason": "statement copies the source wording: 'a floodplain environment with hot summers and moderate'"
   },
   {
    "chunk_id": "barosaurus:enwiki:2",
-   "statement": "The remainder of the type specimen was collected in 1898 by George Reber Wieland after being left in the ground since 1889.",
+   "statement": "The holotype of Barosaurus lentus initially consisted of four tail vertebrae found in South Dakota in 1889 by Isabella R. Ellerman.",
    "category": "discovery",
-   "quote": "The rest of the type specimen was left in the ground under the protection of the landowner, Ms Rachel Hatch, until it was collected nine years later, in 1898, by Marsh's assistant, George Reber Wieland.",
-   "reason": "numbers not in the quote: ['1889']"
+   "quote": "Barosaurus lentus holotype (name-bearing) specimen initially consisted of four caudal (tail) vertebrae that were found in 1889 in South Dakota by Ms. Isabella R. Ellerman.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:enwiki:2",
-   "statement": "The most complete specimen of Barosaurus lentus was excavated in 1923 from the Carnegie Quarry by Earl Douglass.",
+   "statement": "Later excavations revealed that the holotype specimen included vertebrae, limb bones, and other postcranial remains from the same individual.",
+   "category": "discovery",
+   "quote": "However, later excavations found vertebrae, limb bones, and other postcranial remains from the same individual.",
+   "reason": "statement copies the source wording: 'vertebrae limb bones and other postcranial remains from'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:2",
+   "statement": "The most complete specimen of Barosaurus lentus was excavated from the Carnegie Quarry in 1923 by Earl Douglass.",
    "category": "discovery",
    "quote": "The most complete specimen of Barosaurus lentus was excavated from the Carnegie Quarry in 1923 by Douglass, now working for the University of Utah after the death of U.S. Steel founder Andrew Carnegie, who had been financing Douglass' earlier work in Pittsburgh.",
    "reason": "statement copies the source wording: 'most complete specimen of Barosaurus lentus was excavated'"
   },
   {
    "chunk_id": "barosaurus:enwiki:3",
-   "statement": "A Barosaurus specimen excavated by Earl Douglass at Carnegie Quarry in the early 20th century was acquired by the Royal Ontario Museum in a 1962 trade.",
-   "category": "discovery",
-   "quote": "Another specimen excavated by Earl Douglass at Carnegie Quarry in the early 20th century was acquired by the Royal Ontario Museum (ROM) in Toronto in a 1962 trade with the Carnegie Museum.",
-   "reason": "statement copies the source wording: 'in the early 20 th century was acquired'"
-  },
-  {
-   "chunk_id": "barosaurus:enwiki:3",
-   "statement": "The Royal Ontario Museum Barosaurus mount is nearly 27.5 meters long and was announced as the largest dinosaur mount in Canada.",
-   "category": "description",
-   "quote": "Nearly 27.5 m in length, the skeletal mount was announced to be the largest dinosaur mount in Canada.",
+   "statement": "The Royal Ontario Museum's Barosaurus specimen is nicknamed \"Gordo\" after the curator Gordon Edmunds.",
+   "category": "curiosities",
+   "quote": "The specimen is nicknamed \"Gordo\" after Gordon Edmunds, the museum curator who arranged for the skeleton to be brought to the ROM.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:enwiki:3",
-   "statement": "Paleontologists suspected Barosaurus africanus was distinct from the North American genus, a hypothesis confirmed when the material was redescribed in 2006.",
-   "category": "classification",
-   "quote": "Meanwhile, many paleontologists suspected \"Barosaurus\" africanus was also distinct from the North American genus, which was confirmed when the material was redescribed in 2006.",
-   "reason": "statement copies the source wording: 'confirmed when the material was redescribed in 2006'"
+   "statement": "The ROM Barosaurus mount is only about 40% complete and wears a Diplodocus skull because no Barosaurus skull has ever been found.",
+   "category": "description",
+   "quote": "The ROM specimen is about 40% complete, but as a skull of Barosaurus has never been found, the ROM specimen wears the head of a Diplodocus.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:enwiki:3",
-   "statement": "Adult Barosaurus measured about 25 to 27 meters in length and weighed between 12 and 20 metric tons.",
-   "category": "description",
-   "quote": "Barosaurus was an enormous animal, with some adults measuring about 25 - 27 m in length and weighing about 12–20 metric tons (13–22 short tons).",
-   "reason": "duplicate"
-  },
-  {
-   "chunk_id": "barosaurus:enwiki:3",
-   "statement": "In 2017, Keegan M. Melstrom and colleagues assigned an incomplete juvenile diplodocid skeleton found at Dinosaur National Monument to Barosaurus.",
-   "category": "description",
-   "quote": "In 2017, American researcher Keegan M. Melstrom and colleagues assigned an incomplete juvenile diplodocid skeleton (DINO 2921) that had been found at Dinosaur National Monument to Barosaurus.",
-   "reason": "statement copies the source wording: 'M Melstrom and colleagues assigned an incomplete juvenile'"
-  },
-  {
-   "chunk_id": "barosaurus:enwiki:3",
-   "statement": "Barosaurus cervical vertebrae were similar to Diplodocus but some were up to 50% longer.",
-   "category": "description",
-   "quote": "Barosaurus cervicals were similar to those of Diplodocus, but some were up to 50% longer.",
-   "reason": "statement copies the source wording: 'Diplodocus but some were up to 50 longer'"
+   "statement": "The ROM Barosaurus mount is nearly 27.5 meters long and was announced as the largest dinosaur mount in Canada.",
+   "category": "curiosities",
+   "quote": "Nearly 27.5 m in length, the skeletal mount was announced to be the largest dinosaur mount in Canada.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:enwiki:3",
@@ -913,24 +1089,24 @@
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
-   "statement": "Barosaurus had proportionately longer forelimbs than other diplodocids, but these were still shorter than those of most other sauropod groups.",
+   "statement": "Barosaurus had proportionately longer forelimbs than other diplodocids, though they remained shorter than in most other sauropod groups.",
    "category": "description",
    "quote": "Barosaurus had proportionately longer forelimbs than other diplodocids, although they were still shorter than most other groups of sauropods.",
    "reason": "statement copies the source wording: 'Barosaurus had proportionately longer forelimbs than other diplodocids'"
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
-   "statement": "Barosaurus and Diplodocus have slenderer builds and longer necks and tails than apatosaurines, the other subfamily of diplodocids.",
-   "category": "classification",
-   "quote": "Diplodocines like Barosaurus and Diplodocus have slenderer builds and longer necks and tails than apatosaurines, the other subfamily of diplodocids.",
-   "reason": "statement copies the source wording: 'Barosaurus and Diplodocus have slenderer builds and longer'"
+   "statement": "Barosaurus possessed a single carpal bone in the wrist and had more slender metacarpals than Diplodocus.",
+   "category": "description",
+   "quote": "There was a single carpal bone in the wrist, and the metacarpals were more slender than those of Diplodocus.",
+   "reason": "statement copies the source wording: 'a single carpal bone in the wrist and'"
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
-   "statement": "Diplodocus has long been regarded as the closest relative of Barosaurus.",
+   "statement": "Diplodocids are characterized by long tails with over 70 vertebrae, shorter forelimbs than other sauropods, and numerous skull features.",
    "category": "classification",
-   "quote": "Diplodocus has long been regarded as the closest relative of Barosaurus.",
-   "reason": "statement copies the source wording: 'Diplodocus has long been regarded as the closest'"
+   "quote": "Diplodocids are characterized by long tails with over 70 vertebrae, shorter forelimbs than other sauropods, and numerous features of the skull.",
+   "reason": "statement copies the source wording: 'Diplodocids are characterized by long tails with over'"
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
@@ -941,6 +1117,13 @@
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Diplodocus has long been regarded as the closest relative of Barosaurus.",
+   "category": "classification",
+   "quote": "Diplodocus has long been regarded as the closest relative of Barosaurus.",
+   "reason": "statement copies the source wording: 'Diplodocus has long been regarded as the closest'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
    "statement": "Due to its elongated neck vertebrae, Tornieria may have been particularly closely related to Barosaurus.",
    "category": "classification",
    "quote": "With its elongated neck vertebrae, Tornieria may have been particularly closely related to Barosaurus.",
@@ -948,30 +1131,72 @@
   },
   {
    "chunk_id": "barosaurus:enwiki:4",
-   "statement": "Researchers suggest Barosaurus had a different feeding style than other diplodocids, sweeping its neck in long arcs at ground level in a \"vacuum-cleaner\" like fashion.",
+   "statement": "Barosaurus likely swept its neck in long arcs at ground level in a \"vacuum-cleaner\" like fashion when feeding.",
    "category": "paleobiology",
-   "quote": "This suggests a different feeding style for this genus when compared to other diplodocids. Barosaurus swept its neck in long arcs at ground level when feeding, in a \"vacuum-cleaner\" like fashion.",
-   "reason": "statement copies the source wording: 'its neck in long arcs at ground level'"
+   "quote": "Barosaurus swept its neck in long arcs at ground level when feeding, in a \"vacuum-cleaner\" like fashion.",
+   "reason": "statement copies the source wording: 'swept its neck in long arcs at ground'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Studies conclude that the neutral posture of Diplodocus, Barosaurus' close relative, was close to horizontal rather than vertical.",
+   "category": "paleobiology",
+   "quote": "Studies looking at the morphology of sauropod necks have concluded that the neutral posture of Barosaurus' close relative Diplodocus neck was close to horizontal, rather than vertical.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Scientists like Kent Stevens argue that sauropods including Barosaurus did not raise their heads much above shoulder level.",
+   "category": "paleobiology",
+   "quote": "scientists such as Kent Stevens have used this to argue that sauropods including Barosaurus did not raise their heads much above shoulder level.",
+   "reason": "statement copies the source wording: 'argue that sauropods including Barosaurus did not raise'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Researchers suggest that if Diplodocus relied on a mammal-like nuchal ligament, it would have been for passively sustaining the weight of its head and neck.",
+   "category": "debate",
+   "quote": "If Diplodocus relied on a mammal-like nuchal ligament, it would have been for passively sustaining the weight of its head and neck.",
+   "reason": "statement copies the source wording: 'if Diplodocus relied on a mammal-like nuchal ligament'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Since most sauropods lack withers, researchers suggest that if they possessed a similar ligament, it would differ substantially, perhaps anchoring in the hip region.",
+   "category": "debate",
+   "quote": "However, most sauropods do not have withers in the shoulders, so if they possessed a similar ligament, it would differ substantially, perhaps anchoring in the hip region.",
+   "reason": "statement copies the source wording: 'if they possessed a similar ligament it would'"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "Based on these reasons, the 2009 study argued that Diplodocus held its neck at a more elevated angle than previous studies concluded.",
+   "category": "debate",
+   "quote": "For these reasons they argued that Diplodocus would have held its neck at a more elevated angle than previous studies have concluded.",
+   "reason": "numbers not in the quote: ['2009']"
+  },
+  {
+   "chunk_id": "barosaurus:enwiki:4",
+   "statement": "It is debated whether the alert pose is the osteologically normal position for sauropods.",
+   "category": "debate",
+   "quote": "Also, it is not necessarily accurate to say that the alert pose is the osteologically normal position.",
+   "reason": "statement copies the source wording: 'the alert pose is the osteologically normal position'"
   },
   {
    "chunk_id": "barosaurus:enwiki:5",
-   "statement": "A 1992 study proposed that Barosaurus possessed rudimentary auxiliary hearts in its neck to assist in pumping blood to the brain.",
-   "category": "paleobiology",
-   "quote": "The study proposed that animals like these would have had rudimentary auxiliary \"hearts\" in their necks, whose only purpose was to pump blood up to the next \"heart\".",
-   "reason": "numbers not in the quote: ['1992']"
+   "statement": "The Late Jurassic flora included green algae, fungi, mosses, horsetails, cycads, ginkgoes, and various conifer families.",
+   "category": "time_and_habitat",
+   "quote": "The flora of the period has been revealed by fossils of green algae, fungi, mosses, horsetails, cycads, ginkgoes, and several families of conifers",
+   "reason": "statement copies the source wording: 'green algae fungi mosses horsetails cycads ginkgoes and'"
   },
   {
    "chunk_id": "barosaurus:eswiki:3",
-   "statement": "Barosaurus had a very long neck, probably more than 14 meters long.",
+   "statement": "Barosaurus had a neck that was probably more than 14 meters long.",
    "category": "description",
    "quote": "Barosaurus tenía un cuello mucho más largo, de probablemente de más de 14 metros de largo.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:eswiki:3",
-   "statement": "Some cervical vertebrae of Barosaurus were up to 50% longer than those of Diplodocus.",
+   "statement": "Some of Barosaurus's cervical vertebrae were up to 50% longer than those of Diplodocus.",
    "category": "description",
-   "quote": "Barosaurus tenía vértebras cervicales... algunas eran hasta 50% más larga.",
+   "quote": "Barosaurus tenía vértebras cervicales... algunas eran hasta 50% más larga [que las de Diplodocus].",
    "reason": "quote not found verbatim in the source"
   },
   {
@@ -983,31 +1208,73 @@
   },
   {
    "chunk_id": "barosaurus:eswiki:3",
-   "statement": "Barosaurus had a single carpal bone in the wrist and thinner metacarpals than Diplodocus.",
+   "statement": "Barosaurus likely had digitigrade feet, with each of its four legs ending in five small toes.",
    "category": "description",
-   "quote": "Barosaurus tenía una solo hueso carpiano en la muñeca, y los metacarpianos eran más delgados que los de Diplodocus.",
+   "quote": "Los pies de Barosaurus... habrían sido digitígrados, con las cuatro patas que llevan cada cinco pequeños dedos de los pies.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:eswiki:3",
+   "statement": "A large claw adorned the inner digit of the front hands.",
+   "category": "description",
+   "quote": "Una gran garra adornado el dígito en el interior en las manos, pie delantero.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:eswiki:4",
    "statement": "Only six tail vertebrae were recovered initially, forming the type specimen YPM 429 of the new species Barosaurus lentus.",
    "category": "discovery",
-   "quote": "Solamente seis vértebras de la cola fueron recuperadas en ese momento, formando el espécimen tipo, YPM 429 de una nueva especie, que Marsh nombró Barosaurus lentus...",
+   "quote": "Solamente seis vértebras de la cola fueron recuperadas en ese momento, formando el espécimen tipo, YPM 429 de una nueva especie, que Marsh nombró Barosaurus lentus.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:eswiki:4",
-   "statement": "The most complete Barosaurus lentus specimen was excavated from the Carnegie Quarry in 1923 by Earl Douglass.",
+   "statement": "The rest of the type specimen remained in the ground under the protection of landowner Mrs. Rachel Hatch until it was collected nine years later in 1898.",
    "category": "discovery",
-   "quote": "El espécimen más completo de Barosaurus lentus fue excavado desde la cantera Carnegie en 1923 por Douglass...",
+   "quote": "El espécimen tipo fue dejado en el suelo bajo la protección del propietario del terreno, la Sra. Rachel Hatch, hasta que se recogió nueve años más tarde, en 1898.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "barosaurus:eswiki:4",
-   "statement": "Barosaurus fossils have been found in the Morrison Formation of South Dakota.",
-   "category": "time_and_habitat",
-   "quote": "Los primeros restos de Barosaurus fueron descubiertos en la Formación Morrison de Dakota del Sur...",
+   "statement": "The most complete Barosaurus lentus specimen was excavated from the Carnegie Quarry in 1923 by Douglass.",
+   "category": "discovery",
+   "quote": "El espécimen más completo de Barosaurus lentus fue excavado desde la cantera Carnegie en 1923 por Douglass.",
    "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:eswiki:3",
+   "statement": "Computer models of diplodocids have since demonstrated that they likely held their necks more or less horizontally, eliminating the need for an oversized heart.",
+   "category": "paleobiology",
+   "quote": "Desde entonces, los modelos de computadora de diplodócidos han demostrado que probablemente era habitual que sostuvieran sus cuellos más o menos horizontalmente, con lo que elimina este problema.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:eswiki:4",
+   "statement": "The first Barosaurus remains were found in the Morrison Formation of South Dakota.",
+   "category": "time_and_habitat",
+   "quote": "Los primeros restos de Barosaurus fueron descubiertos en la Formación Morrison de Dakota del Sur.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:eswiki:3",
+   "statement": "Barosaurus had much higher dorsal spines and a much longer neck, probably over 14 meters long.",
+   "category": "description",
+   "quote": "Barosaurus tenía espinas dorsales mucho más altas con una cola más corta, y un cuello mucho más largo, de probablemente de más de 14 metros de largo.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "barosaurus:eswiki:6",
+   "statement": "The African species formerly classified as Barosaurus africanus is now known as Tornieria africana after being redescribed in 2006.",
+   "category": "discovery",
+   "quote": "La especie africana, aunque estrechamente relacionada con Barosaurus lentus y Diplodocus de América del Norte, es ahora una vez más conocido como Tornieria africana.",
+   "reason": "numbers not in the quote: ['2006']"
+  },
+  {
+   "chunk_id": "barosaurus:pbdb:1",
+   "statement": "The genus Barosaurus was named by O.C. Marsh in 1890.",
+   "category": "discovery",
+   "quote": "Marsh 1890",
+   "reason": "quote too short"
   }
  ]
 }

@@ -4,43 +4,71 @@
  "lang": "es",
  "status": "failed",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "39886d2b514fbcb9",
- "generated_at": "2026-11-03T00:09:03+00:00",
- "word_count": 390,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "70766237c3e4bb13",
+ "generated_at": "2026-11-05T00:32:59+00:00",
+ "word_count": 735,
  "problems": [
-  "sentence 5: numbers differ (['1778', '18'] vs ['1778'])",
-  "sentence 4 ('Los expertos creen que *Mosasaurus* vivía cerca de la superf'): copies 8+ words from a source: 'vivía cerca de la superficie del océano donde'"
+  "sentence 9: numbers differ (['1764', '18'] vs ['1764'])",
+  "sentence 11: numbers differ (['19'] vs [])",
+  "sentence 4 ('El nombre Mosasaurus hace referencia al hecho de que el prim'): copies 8+ words from a source: 'hace referencia al hecho de que el primer'"
  ],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "La especie más grande, *Mosasaurus hoffmanni*, se estima que alcanzaba una longitud máxima de 12 metros.",
+     "text": "Mosasaurus fue un mosasáurido derivado caracterizado por rasgos evolutivos avanzados, incluyendo un estilo de vida totalmente acuático. El cráneo de Mosasaurus es cónico y se estrecha hacia un hocico corto que se extiende ligeramente más allá de los dientes más anteriores.",
      "fact_ids": [
-      "F011"
+      "F029",
+      "F038"
      ]
     },
     {
-     "text": "Hermann Schlegel demostró en 1854 que *Mosasaurus* poseía aletas completamente acuáticas en lugar de extremidades para caminar. Estas aletas son anchas, planas y tienen forma de paletas utilizadas para remar bajo el agua.",
+     "text": "Los dientes de Mosasaurus estaban especializados para cortar presas y presentaban superficies altamente prismáticas con dos bordes de corte opuestos.",
      "fact_ids": [
-      "F012",
-      "F026",
-      "F027"
+      "F043"
      ]
     },
     {
-     "text": "Schlegel también demostró que las falanges de *Mosasaurus* carecían de inserciones musculares o tendinosas, lo que hacía imposible el caminar.",
+     "text": "Un esqueleto de Mosasaurus casi completo (SDSM 452) poseía siete vértebras cervicales, treinta y ocho vértebras dorsales, ocho vértebras sacras y sesenta y ocho vértebras caudales.",
      "fact_ids": [
-      "F034"
+      "F052"
      ]
     },
     {
-     "text": "Los expertos creen que *Mosasaurus* vivía cerca de la superficie del océano, donde se alimentaba de peces, tortugas, amonites y posiblemente de mosasaurios más pequeños.",
+     "text": "El nombre Mosasaurus hace referencia al hecho de que el primer espécimen fue hallado cerca del río Mosa.",
      "fact_ids": [
-      "F090",
+      "F135"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Los investigadores estimaron anteriormente que la longitud de la mandíbula de M. hoffmanni era una décima parte de su longitud corporal total.",
+     "fact_ids": [
+      "F036"
+     ]
+    },
+    {
+     "text": "Utilizando una mandíbula parcial más pequeña, otro estudio estimó que la longitud máxima de M. hoffmanni era de 17,6 metros.",
+     "fact_ids": [
+      "F037"
+     ]
+    },
+    {
+     "text": "Solo se conocen dos especímenes de Mosasaurus con contenido estomacal, incluyendo un M. missouriensis de 75 millones de años que contenía restos desmembrados de un pez de 1 metro de longitud.",
+     "fact_ids": [
       "F091"
+     ]
+    },
+    {
+     "text": "Un esqueleto de un M. hoffmanni subadulto apodado «Lars» fue recuperado cerca de Maastricht y contiene huesos corroídos por ácido de una tortuga juvenil y otros animales no identificados en su región gástrica.",
+     "fact_ids": [
+      "F094"
      ]
     }
    ]
@@ -49,17 +77,22 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Los primeros fósiles de *Mosasaurus* fueron descubiertos como cráneos en una cantera de yeso cerca de Maastricht, en los Países Bajos, a finales del siglo XVIII. Un cráneo encontrado en 1778 recibió el apodo de «el gran animal de Maastricht».",
+     "text": "Los primeros fósiles de Mosasaurus fueron descubiertos como cráneos en una cantera de yeso cerca de Maastricht, Países Bajos, a finales del siglo XVIII. El primer fósil conocido de Mosasaurus, un cráneo descubierto en 1764 cerca de Maastricht, fue inicialmente identificado erróneamente como una ballena.",
      "fact_ids": [
-      "F004",
+      "F001",
       "F005"
      ]
     },
     {
-     "text": "Un segundo cráneo fue hallado en la misma cantera en 1778, lo que llamó la atención de Johann Leonard Hoffmann. El primer fósil conocido de *Mosasaurus*, catalogado como TM 7424, se exhibe actualmente en el Museo Teylers de Haarlem.",
+     "text": "Una expedición identificó un esqueleto fósil como un pez de 49 pies de longitud, descubierto por la Expedición Lewis y Clark en 1804 cerca del río Misisipi.",
      "fact_ids": [
-      "F006",
-      "F007"
+      "F017"
+     ]
+    },
+    {
+     "text": "La ambigüedad en la definición del género Mosasaurus surgió porque los científicos del siglo XIX no proporcionaron un diagnóstico adecuado durante las descripciones iniciales debido a la falta de reglas nomenclatoriales definidas.",
+     "fact_ids": [
+      "F064"
      ]
     }
    ]
@@ -68,9 +101,70 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Los mosasaurios derivados como *Mosasaurus* se entienden ahora como poseer construcciones corporales similares a los ictiosaurios, los cocodrilomorfos marinos y los cetáceos arqueocetos debido a la evolución convergente.",
+     "text": "Mosasaurus utilizaba su cola para nadar. Hermann Schlegel demostró en 1854 que Mosasaurus poseía aletas totalmente acuáticas en lugar de extremidades para caminar.",
      "fact_ids": [
-      "F035"
+      "F074",
+      "F027"
+     ]
+    },
+    {
+     "text": "Los grandes anillos esclerales en las órbitas de Mosasaurus sugieren que el animal tenía buena visión.",
+     "fact_ids": [
+      "F081"
+     ]
+    },
+    {
+     "text": "Mosasaurus probablemente no era carroñero debido a su pobre sentido del olfato.",
+     "fact_ids": [
+      "F084"
+     ]
+    },
+    {
+     "text": "La evidencia fósil documenta un caso en el que el mosasáurido Tylosaurus atacaba a un Mosasaurus.",
+     "fact_ids": [
+      "F012"
+     ]
+    },
+    {
+     "text": "Un esqueleto parcial de M. conodon muestra múltiples cortes, roturas, perforaciones y un diente atravesando el hueso cuadrado, lo que indica ataques de otro M. conodon.",
+     "fact_ids": [
+      "F096"
+     ]
+    },
+    {
+     "text": "Mosasaurus perdía constantemente los dientes mediante un proceso en el que un diente de reemplazo se desarrollaba dentro de la raíz del diente original y lo empujaba hacia afuera.",
+     "fact_ids": [
+      "F050"
+     ]
+    },
+    {
+     "text": "Algunas mandíbulas de M. hoffmanni muestran evidencia de enfermedades infecciosas causadas por lesiones físicas.",
+     "fact_ids": [
+      "F100"
+     ]
+    },
+    {
+     "text": "Los estudios microanatómicos muestran que las estructuras óseas de los Mosasaurus juveniles son comparables a las de los adultos.",
+     "fact_ids": [
+      "F108"
+     ]
+    },
+    {
+     "text": "Lingham-Soliar estudió la musculatura de la cabeza de Mosasaurus hoffmanni en 1995.",
+     "fact_ids": [
+      "F071"
+     ]
+    },
+    {
+     "text": "Los expertos creen que Mosasaurus vivía cerca de la superficie del océano, alimentándose de peces, tortugas, amonites y posiblemente mosasáuridos más pequeños.",
+     "fact_ids": [
+      "F139"
+     ]
+    },
+    {
+     "text": "Investigaciones recientes de 2024 sugieren que la depredación por emboscada podría no haber sido la única estrategia de caza para Mosasaurus hoffmanni.",
+     "fact_ids": [
+      "F086"
      ]
     }
    ]
@@ -79,22 +173,27 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El género *Mosasaurus* fue nombrado por William Daniel Conybeare en 1822. La especie tipo del género *Mosasaurus* es *Mosasaurus hoffmanni*.",
-     "fact_ids": [
-      "F001",
-      "F002"
-     ]
-    },
-    {
-     "text": "Las especies descritas dentro del género *Mosasaurus* incluyen *M. missouriensis*, *M. conodon*, *M. lemonnieri* y *M. beaugei*.",
-     "fact_ids": [
-      "F003"
-     ]
-    },
-    {
-     "text": "*Mosasaurus* es el género tipo de la familia Mosasauridae y de la subfamilia Mosasaurinae, y pertenece al orden Squamata.",
+     "text": "Mosasaurus es el género tipo de la familia Mosasauridae y la subfamilia Mosasaurinae, y es un miembro del orden Squamata.",
      "fact_ids": [
       "F067"
+     ]
+    },
+    {
+     "text": "Más de cincuenta especies fueron atribuidas anteriormente al género Mosasaurus.",
+     "fact_ids": [
+      "F015"
+     ]
+    },
+    {
+     "text": "Bell reconoció a Plotosaurus como un género distinto en su estudio de 1997, a pesar de encontrarlo estrechamente relacionado con Mosasaurus.",
+     "fact_ids": [
+      "F070"
+     ]
+    },
+    {
+     "text": "La validez taxonómica de M. lemonnieri ha sido objeto de un debate de larga data.",
+     "fact_ids": [
+      "F032"
      ]
     }
    ]
@@ -103,17 +202,33 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Los fósiles de *Mosasaurus* datan del Cretácico Superior (Maastrichtiense). *Mosasaurus* vivió entre hace 70 y 66 millones de años.",
+     "text": "La evidencia fósil indica que Mosasaurus habitó gran parte del Océano Atlántico y los mares adyacentes.",
      "fact_ids": [
-      "F073",
-      "F074"
+      "F010"
      ]
     },
     {
-     "text": "Los fósiles de *Mosasaurus* han sido encontrados en América del Norte y del Sur, Europa, África, Asia Occidental y la Antártida. *Mosasaurus* habitó zonas de la actual Europa Occidental, América del Norte, América del Sur y la Antártida.",
+     "text": "Los fósiles de Mosasaurus se han encontrado en el Medio Oeste y la Costa Este de EE. UU., Canadá, Europa, Turquía, Rusia, el Levante, la costa africana desde Marruecos hasta Sudáfrica, Brasil, Argentina y la Antártida.",
      "fact_ids": [
-      "F013",
-      "F075"
+      "F110"
+     ]
+    },
+    {
+     "text": "Mosasaurus vivió en la región del Mediterráneo del Tethys, que cubría la Europa, África y Oriente Medio actual durante la etapa mastrichtiense.",
+     "fact_ids": [
+      "F113"
+     ]
+    },
+    {
+     "text": "Mosasaurus y Prognathodon fueron los taxones de mosasáuridos dominantes y ecológicamente diversos a lo largo del estrecho marino del Tethys Mediterráneo.",
+     "fact_ids": [
+      "F128"
+     ]
+    },
+    {
+     "text": "La aparición de especies de Mosasaurus a los 79,5 millones de años provocó un cambio faunístico completo en el Estrecho Marítimo del Interior Occidental, reestructurando profundamente los ecosistemas marinos.",
+     "fact_ids": [
+      "F129"
      ]
     }
    ]
@@ -122,22 +237,9 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Los científicos continúan debatiendo si los parientes vivos más cercanos de *Mosasaurus* son los lagartos monitores o las serpientes.",
+     "text": "Los científicos continúan debatiendo si los parientes vivos más cercanos de Mosasaurus son los lagartos monitores o las serpientes.",
      "fact_ids": [
       "F014"
-     ]
-    },
-    {
-     "text": "Un diagnóstico poco claro de la especie tipo *M. hoffmanni* llevó a problemas de clasificación históricamente complejos.",
-     "fact_ids": [
-      "F015"
-     ]
-    },
-    {
-     "text": "La validez taxonómica de *M. lemonnieri* ha sido objeto de un debate de larga data. En 2004, Mulder, Cornelissen y Verding sugirieron que *M. lemonnieri* podría ser una forma juvenil de *M. hoffmanni*, una hipósis refutada por estudios anatómicos posteriores.",
-     "fact_ids": [
-      "F031",
-      "F032"
      ]
     }
    ]

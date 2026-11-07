@@ -1,0 +1,985 @@
+{
+ "taxon": "Troodon",
+ "taxon_key": "troodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e92610774ffbb6a8",
+ "generated_at": "2026-11-05T05:08:37+00:00",
+ "citations": {
+  "troodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Troodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Troodon?oldid=1379171153",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Troodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Troodon?oldid=1379171153",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Troodon (introduction, part 2)",
+   "url": "https://en.wikipedia.org/wiki/Troodon?oldid=1379171153",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Troodon (introduction, part 3)",
+   "url": "https://en.wikipedia.org/wiki/Troodon?oldid=1379171153",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:4": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Disolución del modelo de una especie)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:5": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Descubrimiento e investigación)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Taxonomía)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:eswiki:10": {
+   "source": "wikipedia_article",
+   "title": "Troodon formosus (Paleopatología)",
+   "url": "https://es.wikipedia.org/wiki/Troodon_formosus?oldid=175772141",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Troodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38572",
+   "doi": null,
+   "license": "CC BY 4.0"
+  },
+  "troodon:research:1": {
+   "source": "wikipedia_research",
+   "title": "2026 in archosaur paleontology (research: Theropod research)",
+   "url": "https://doi.org/10.1002/ar.70280",
+   "doi": "10.1002/ar.70280",
+   "license": "CC BY-SA 4.0"
+  },
+  "troodon:research:2": {
+   "source": "wikipedia_research",
+   "title": "2026 in archosaur paleontology (research: Theropod research)",
+   "url": "https://doi.org/10.3897/sjp.145.195625",
+   "doi": "10.3897/sjp.145.195625",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Troodon fossils date to the Late Cretaceous, specifically the Campanian stage, with possible records from the Late Maastrichtian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "troodon:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Cretaceous (Campanian), Possible Late Maastrichtian record",
+   "quote_sha": "e7ffd060fa3fcf85"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species Troodon formosus was discovered in October 1855 and was initially mistaken for a lizard until 1877.",
+   "category": "discovery",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "Discovered in October 1855, T. formosus was among the first dinosaurs found in North America, although it was thought to be a lizard until 1877.",
+   "quote_sha": "66d6fc68e553524a"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus name was originally spelled Troödon by Joseph Leidy in 1856 and was officially amended to Troodon by Sauvage in 1876.",
+   "category": "discovery",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "The name was originally spelled Troödon (with a diaeresis) by Joseph Leidy in 1856, which was officially amended to its current status by Sauvage in 1876.",
+   "quote_sha": "65b59a71f56b8784"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The entire genus Troodon was originally based on a single tooth found in the Judith River Formation.",
+   "category": "discovery",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "The type specimen of Troodon has caused problems with classification, as the entire genus is based only on one single tooth from the Judith River Formation.",
+   "quote_sha": "d2f604ad950dacc8"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The name Troodon means \"wounding tooth\" in Ancient Greek, referring to the unique serrations on its teeth.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "The genus name is Ancient Greek for \"wounding tooth\", referring to the teeth, which were different from those of most other theropods known at the time of their discovery.",
+   "quote_sha": "6650173d5bb1d820"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The tooth serrations of Troodon are morphometrically similar to those of herbivorous reptiles, suggesting it may have had an omnivorous diet.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "These \"wounding\" serrations, however, are morphometrically more similar to those of herbivorous reptiles, and suggest a possibly omnivorous diet.",
+   "quote_sha": "1d616eca559afd14"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Charles Mortram Sternberg rejected the classification of Troodon as a pachycephalosaur in 1945 due to its similarity to carnivorous dinosaur teeth.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "In 1945, Charles Mortram Sternberg rejected the possibility that Troodon was a pachycephalosaur thanks to its stronger similarity to the teeth of other carnivorous dinosaurs.",
+   "quote_sha": "b3598f3eabcd4fe9"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Phil Currie classified the family Saurornithoididae as a junior synonym of Troodontidae.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "Currie also made Saurornithoididae a junior synonym of Troodontidae.",
+   "quote_sha": "53731fc969d2aac1"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Gregory S. Paul included Saurornithoides mongoliensis in the genus Troodon in 1988, but this reclassification was not widely adopted by other researchers.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:2",
+   "lang": "en",
+   "quote": "In 1988, Gregory S. Paul went farther and included Saurornithoides mongoliensis in the genus Troodon as T. mongoliensis, but this reclassification, along with many other unilateral synonymizations of well known genera, was not adopted by other researchers.",
+   "quote_sha": "141433ff241834d4"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Troodon is considered a nomen dubium because its holotype consists of only a single tooth.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "Because the holotype of T. formosus is a single tooth, this renders Troodon a nomen dubium.",
+   "quote_sha": "e13d6868e9664d99"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Troodon is classified as one of the most derived members of the Troodontidae family.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "Troodon is considered to be one of the most derived members of its family.",
+   "quote_sha": "80e26d4e24b0c51a"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Troodon forms a clade of specialized troodontids alongside Zanabazar, Saurornithoides, and Talos.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "Along with Zanabazar, Saurornithoides, and Talos, it forms a clade of specialized troodontids.",
+   "quote_sha": "93ebbeda9e4ba8c3"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Studies of teeth from northern Alaska suggest that northern populations of Troodon grew to a larger average body size than southern populations, hinting at Bergmann's rule.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "These teeth are much larger than those collected from more southern sites, providing evidence that northern Alaskan populations of Troodon grew to larger average body size, hinting at Bergmann's rule.",
+   "quote_sha": "c222e497cb45adcc"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "Research hypothesizes that the primary diet of Troodon consisted of meat.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "This study hypothesizes a diet primarily consisting of meat.",
+   "quote_sha": "af546f38ce60c273"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "In 2025, Varricchio and colleagues proposed neotype MOR 553 from the Jack's Birthday Site of the Two Medicine Formation as the neotype for T. formosus.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:3",
+   "lang": "en",
+   "quote": "In 2025, Varricchio and colleagues proposed the troodontid material (MOR 553, \"a collection of elements representing multiple individuals of differing ontogenetic stages\") from the Jack's Birthday Site of the Two Medicine Formation as the neotype of T. formosus",
+   "quote_sha": "cda30dbe9046eba8"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "Researchers suggest that Troodon practiced communal nesting, where multiple females laid eggs together at a single site to form large clutches due to limited individual egg production.",
+   "category": "curiosities",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "Thus, the study concluded that the large clutches of fossilized eggs present in the formation, despite the limited egg production each individual had, would indicate that Troodon had communal nesting behavior, where eggs would be laid together at a single nest by multiple females, forming large clutches.",
+   "quote_sha": "4a0447698dfade80"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "Troodon eggs were characterized by a steep inclination, a trait distinct from both birds and crocodilians.",
+   "category": "curiosities",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "Unlike either birds or crocodilians, Troodon eggs were characterised by a steep inclination.",
+   "quote_sha": "e3d05a6f1303d5f3"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Similar to crocodilian eggs, Troodon eggs were not rotated and were lightly buried in the nest.",
+   "category": "curiosities",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "Like the eggs of crocodilians though, the eggs of Troodon were not rotated and did get lightly buried.",
+   "quote_sha": "ce6c5a47c636cbc5"
+  },
+  {
+   "fact_id": "F019",
+   "statement": "The environment where Troodon lived experienced temperatures between 2-12°C (36-54°F) and approximately 120 days of winter darkness.",
+   "category": "time_and_habitat",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "The temperature ranged from possibly 2-12°C, which roughly correlates to 36-54°F, and based on Alaska's position in the late Cretaceous, the area faced 120 or so days of winter darkness.",
+   "quote_sha": "437e9488fccd6c51"
+  },
+  {
+   "fact_id": "F020",
+   "statement": "It is suggested that Troodon favored cooler climates, as it was more abundant during cooler intervals like the early Maastrichtian.",
+   "category": "time_and_habitat",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "This, along with evidence that Troodon was more abundant during cooler intervals, such as the early Maastrichtian, may indicate that Troodon favored cooler climates.",
+   "quote_sha": "48e12de0e9654a57"
+  },
+  {
+   "fact_id": "F021",
+   "statement": "In the Prince Creek Formation, Troodon was the most common theropod, making up 2/3 of all specimens, compared to only 6% in southern Montana deposits.",
+   "category": "time_and_habitat",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "Based on the amount of teeth found, this troodontid was the most common theropod of the formation, making up 2/3 of all specimens, which is a stark contrast to more southern deposits in Montana, where troodontids only comprise 6% of all theropod remains.",
+   "quote_sha": "241ec75ad233e9a5"
+  },
+  {
+   "fact_id": "F022",
+   "statement": "Troodon formosus was discovered in 1855 and is one of the first dinosaurs found in North America and Asia.",
+   "category": "discovery",
+   "chunk_id": "troodon:eswiki:2",
+   "lang": "es",
+   "quote": "Descubierto en 1855, es uno de los primeros dinosaurios descubierto en América del Norte y Asia.",
+   "quote_sha": "8219f53c445d184d"
+  },
+  {
+   "fact_id": "F023",
+   "statement": "Troodon teeth have prominent ridges oriented apically, a feature distinct from other theropods.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:2",
+   "lang": "es",
+   "quote": "Los dientes tienen prominentes dentaduras orientadas apicalmente.",
+   "quote_sha": "1ec109bb7f822a74"
+  },
+  {
+   "fact_id": "F024",
+   "statement": "The morphology of Troodon's teeth is more similar to that of herbivorous reptiles, suggesting an omnivorous diet.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:2",
+   "lang": "es",
+   "quote": "Estas dentaduras \"hirientes\", sin embargo, son en su morfometría más parecidas a la de los reptiles herbívoros, y sugieren una dieta omnívora.",
+   "quote_sha": "370de77fef3d666c"
+  },
+  {
+   "fact_id": "F025",
+   "statement": "In May 2025, Varricchio, Hogan, and Gardner published in the Journal of Paleontology assigning fossil specimen MOR 553 as the neotype of Troodon formosus based on anatomical and historical considerations.",
+   "category": "discovery",
+   "chunk_id": "troodon:eswiki:2",
+   "lang": "es",
+   "quote": "En mayo del año 2025, Varricchio, Hogan, y Gardner, publican en la revista Journal of Paleontology la asignación del espécimen fósil MOR 553 como neotipo de Troodon formosus,, en dicho artículo fundamentan su propuesta basándose en consideraciones anatómicas como históricas al ser el dinosaurio más antiguo identificado en Norteamérica.",
+   "quote_sha": "e983d5bd75f7d740"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "The genus Troodon was named by Leidy in 1856.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Leidy, 1856",
+   "quote_sha": "8ec47a992e4208ba"
+  },
+  {
+   "fact_id": "F027",
+   "statement": "The species Troodon formosus was named by Leidy in 1856.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:1",
+   "lang": "es",
+   "quote": "species_authority: Leidy, 1856",
+   "quote_sha": "20c977c0e2fe686f"
+  },
+  {
+   "fact_id": "F028",
+   "statement": "It is now considered unlikely that fossils from widely separated localities and time periods all represent a single species or genus of troodontid.",
+   "category": "classification",
+   "chunk_id": "troodon:enwiki:4",
+   "lang": "en",
+   "quote": "It is now recognized as unlikely that all of these fossils, which come from localities hundreds or thousands of miles apart, separated by millions of years of time, represent a single species or even a single genus of troodontid.",
+   "quote_sha": "3016fc4b78609f35"
+  },
+  {
+   "fact_id": "F029",
+   "statement": "Based on the model Stenonychosaurus, Troodon had a long neck, long narrow jaws with small sharp teeth, short forelimbs with three clawed fingers, and long hind legs adapted for running.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Troodon, tomando como modelo a Stenonychosaurus, poseía un cuello largo, mandíbulas largas y estrechas con pequeños dientes afilados, patas anteriores cortas con tres dedos armados de garras y largas patas traseras adaptadas para correr.",
+   "quote_sha": "7fcef18f6229bb02"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "The animal measured approximately 2 meters in length, 1 meter in height, and weighed between 27 and 45 kilograms.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Medía aproximadamente 2 m de largo, 1 de alto y pesaba entre 27 y 45 kg.",
+   "quote_sha": "53fb6e94ab2a68a7"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "It had long upper limbs that it folded against the chest wall like a bird.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Tenía largos miembros superiores que doblaba contra la pared del tórax como un ave.",
+   "quote_sha": "9eabc28ddfbf1d4b"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "It possessed large sickle-shaped retractable claws on the second toe of each foot, which were raised off the ground when running.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Tenía garras en forma de hoz grandes, retraibles en el segundo dedo de cada pie, que estaban levantadas de la tierra al correr.",
+   "quote_sha": "d11f073ffd215ebb"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "Its eyes were large and adapted for nocturnal vision, pointing slightly forward to give Troodon some binocular vision.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Sus ojos eran grandes y adaptados a la visión nocturna, levemente apuntando hacia el frente, dando a Troodon una cierta visión binocular.",
+   "quote_sha": "8892b7b2903472ba"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "Most reconstructions show Troodon's eyes pointing forward more than any other dinosaur, implying it had better depth perception than most dinosaurs.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "De hecho la mayoría de las reconstrucciones dan a los ojos de Troodon que apuntan hacia adelante más que cualquier otro dinosaurio, lo implica que tenía una percepción de profundidad mejor que la mayoría de los dinosaurios.",
+   "quote_sha": "08984c4a300d7244"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "Its light skulls contained a capsule similar to those found in ostrich dinosaurs.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Sus cráneos ligeros contuvieron una cápsula similar a esas encontradas en dinosaurios avestruz.",
+   "quote_sha": "ccbe72f8b2c845bf"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "It was likely an agile hunter of mammals and small reptiles that occasionally stole eggs or ate carrion.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Era muy probablemente un ágil cazador de mamíferos y pequeños reptiles que de vez en cuando robaba huevos o comía carroña.",
+   "quote_sha": "8a0b8c89bacdf7a3"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "Due to its relationship with feathered dinosaurs, it is deduced that it must have possessed feathers.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Por su parentesco con dinosaurios emplumados, se deduce que debía de poseer plumas.",
+   "quote_sha": "8c93f9aa278313db"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Based on Stenonychosaurus, Troodon is considered one of the most intelligent non-avian dinosaurs.",
+   "category": "curiosities",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Troodon, si nos basamos en Stenonychosaurus, es considerado como uno de los dinosaurios no avianos más inteligentes.",
+   "quote_sha": "5f382585c2b3b778"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "Its brain was so large that its impressions were found in the fossilized cranial cavity.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Su cerebro era tan grande, que incluso se hallaron sus marcas en la cavidad craneal fosilizada.",
+   "quote_sha": "e3a6480f3a3568ff"
+  },
+  {
+   "fact_id": "F040",
+   "statement": "It had a well-developed occipital lobe for memory and vision, and a frontal lobe outline, which some scientists speculate allowed for complex communication and consciousness.",
+   "category": "description",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Tenía bien desarrollado el lóbulo occipital, encargado de la memoria y de la visión, y tenía un esbozo de lóbulo frontal, lo que, según algunos científicos especulan, le habría permitido una comunicación compleja y una conciencia.",
+   "quote_sha": "9373a0e0b03f0eae"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "A study of multiple Troodon teeth found in Upper Cretaceous deposits in northern Alaska found them much larger than those from southern localities, providing evidence that Alaskan populations reached a larger body size.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Un estudio basado en múltiples dientes de Troodon que fueron encontrados en depósitos del Cretácico Superior del norte de Alaska encontró que estos son mucho más grandes que los recolectados en localidades de más al sur, lo que proporciona evidencia de que las poblaciones de Troodon de Alaska llegaban a tener un mayor tamaño corporal.",
+   "quote_sha": "8d03d38e07dd7698"
+  },
+  {
+   "fact_id": "F042",
+   "statement": "The study suggests Alaskan Troodon may have preyed on large animals because that habitat likely lacked large tyrannosaurs to compete for resources.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "El estudio sugiere que los Troodon de Alaska pueden haber depredado a animales grandes debido a que en ese hábitat no habrían grandes tiranosáuridos con los que compitieran por esos recursos.",
+   "quote_sha": "3e9ba4b44972762c"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "It was proposed that wear patterns on all Troodon teeth suggest a diet based on soft foods, ruling out the consumption of bones, invertebrate exoskeletons, or hard plant matter.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Se propuso que los patrones de desgaste de todos los dientes de Troodon sugieren una dieta basada en alimentos suaves, descartando el consumo de huesos, exoesqueletos de invertebrados o comida vegetal dura.",
+   "quote_sha": "59b4ba392dc98d51"
+  },
+  {
+   "fact_id": "F044",
+   "statement": "The suggested hypothesis is that its diet consisted mainly of meat.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "La hipótesis sugerida es que su dieta consistiría principalmente en carne.",
+   "quote_sha": "cad7fcae4bed8318"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "Due to these characteristics, scientists consider it a member of Maniraptora.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:3",
+   "lang": "es",
+   "quote": "Debido a estas características los científicos lo consideran un miembro de Maniraptora.",
+   "quote_sha": "c6a1439dfd92e8ff"
+  },
+  {
+   "fact_id": "F046",
+   "statement": "However, the concept that all Upper Cretaceous North American troodontids belong to a single species began to be questioned shortly after Currie's 1987 article was published, including Currie himself.",
+   "category": "discovery",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "Sin embargo, el concepto de que todos los troodóntidos norteamericanos del Cretácico superior pertenecen a una especie comenzó a cuestionarse poco después de que se publicara el artículo de Currie en 1987, incluido el propio Currie.",
+   "quote_sha": "74e43c0608014abc"
+  },
+  {
+   "fact_id": "F047",
+   "statement": "In 1991, George Olshevsky assigned Lance Formation fossils, first named Pectinodon bakkeri but later synonymized with Troodon formosus, to the species Troodon bakkeri, while other researchers including Currie maintained Dinosaur Park Formation fossils as Troodon inequalis, now Stenonychosaurus inequalis.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "En 1991, George Olshevsky asignó los fósiles de la formación Lance, que primero se llamaron Pectinodon bakkeri pero luego se sinonimizaron con Troodon formosus a la especie Troodon bakkeri, y varios otros investigadores, incluido Currie, han vuelto a mantener separados los fósiles de la Formación Dinosaur Park como Troodon inequalis, ahora Stenonychosaurus inequalis.",
+   "quote_sha": "c1e82a7f4037fee0"
+  },
+  {
+   "fact_id": "F048",
+   "statement": "In 2011, Zanno and collaborators reviewed the complex classification history of North American Upper Cretaceous troodontids, following Longrich 2008 in treating Pectinodon bakkeri as a valid genus, and noted that numerous specimens currently assigned to Troodon formosus likely represent numerous new genera, though a more exhaustive review is required.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "En 2011 Zanno y colaboradores revisaron la enrevesada historia de la clasificación de troodóntidos en el Cretácico superior de América del Norte. Siguieron a Longrich de 2008 al tratar a Pectinodon bakkeri como un género válido, y señalaron que es probable que los numerosos especímenes del Cretácico superior actualmente asignados a Troodon formosus representen casi con certeza numerosos géneros nuevos, pero que se requiere una revisión más exhaustiva de los especímenes.",
+   "quote_sha": "c247473387695037"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "Because the holotype of T. formosus is a single tooth, this makes Troodon a nomen dubium.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "Debido a que el holotipo de T. formosus es un solo diente, esto convierte a Troodon en un dudoso.",
+   "quote_sha": "5961f03e292f474c"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "In 2017, Evans and collaborators discussed the non-diagnostic nature of the Troodon formosus holotype and suggested that Stenonychosaurus be used for Dinosaur Park Formation troodontid skeletal material.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "En 2017 Evans y colaboradores discutieron más a fondo la naturaleza no diagnóstica del holotipo de Troodon formosus y sugirieron que Stenonychosaurus se use para el material esquelético de troodontidos de la Formación Dinosaur Park.",
+   "quote_sha": "dff32a480099407b"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Later that same year, Aaron J. van der Reest and Currie reached a similar conclusion to Evans and collaborators, and also divided much of the material assigned to Stenonychosaurus into a new genus, Latenivenatrix.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "Más tarde en el mismo año, Aaron J. van der Reest y Currie llegaron a una conclusión similar a la de Evans y colaboradores, y también dividieron gran parte del material asignado a Stenonychosaurus en un nuevo género, Latenivenatrix.",
+   "quote_sha": "66da528971162ef7"
+  },
+  {
+   "fact_id": "F052",
+   "statement": "In 2018, Varricchio and collaborators disagreed with Evans and collaborators, citing that Stenonychosaurus had not been used for thirty years since Currie and collaborators synonymized it with Troodon, and indicated that \"Troodon formosus remains the proper name of this taxon.\"",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "En 2018, Varricchio y colaboradores no estuvieron de acuerdo con Evans y colaboradores, citando que Stenonychosaurus no se había utilizado en los treinta años desde que Currie y colaboradores lo sinonimizaron con Troodon, e indicaron que \"Troodon formosus sigue siendo el nombre propio de este taxón\".",
+   "quote_sha": "d4805bc75b17a96c"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Cullen and collaborators addressed Varricchio's comments in their 2021 review, noting that while Stenonychosaurus had not been used for 30 years, Currie's original hypothesis of subjective synonymy based on tooth and jaw morphology was never directly tested, and since later research found teeth were not diagnostic below the family level in troodontids, Currie's original hypothesis is therefore not supported by available data regardless of time elapsed.",
+   "category": "debate",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "Los comentarios de Varricchio fueron abordados más tarde por Cullen y colaboradores en su revisión de 2021 de la biodiversidad de la Formación Dinosaur Park, donde notaron que mientras Stenonychosaurus de hecho, no se ha utilizado durante 30 años, la hipótesis original de Currie de la sinonimia subjetiva, basada en la morfología del diente y la mandíbula, nunca se probó directamente, y dado que investigaciones posteriores encontraron que los dientes no eran diagnósticos por debajo del nivel familiar en los trodóntidos, la hipótesis original de Currie es por lo tanto, no está respaldado por los datos disponibles, independientemente del tiempo transcurrido desde que se propuso originalmente.",
+   "quote_sha": "eae9f8d7dee00720"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "However, Varricchio and others still insist on their naming method.",
+   "category": "debate",
+   "chunk_id": "troodon:eswiki:4",
+   "lang": "es",
+   "quote": "Sin embargo, Varricchio y otros aún insisten en su método de denominación.",
+   "quote_sha": "80e627cda5cce631"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "The genus Troodon was originally named Troödon by Joseph Leidy in 1856.",
+   "category": "discovery",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "Troodon originalmente fue llamado Troödon, con diéresis, por Joseph Leidy en 1856",
+   "quote_sha": "8ae1c25f26955804"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "The spelling of the genus name was officially corrected to its current form by Sauvage in 1876.",
+   "category": "discovery",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "cuál fue enmendado oficialmente a su estado actual por Sauvage en 1876",
+   "quote_sha": "0e0527ab840224df"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Joseph Leidy originally classified the Troodon tooth as belonging to a lizard (Lacertilia).",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "El diente de Troodon fue clasificado originalmente como perteneciente a una lagartija, perteneciente a Lacertilia, por Leidy",
+   "quote_sha": "a3a44a3e7e9f4735"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Nopsca reclassified the tooth as belonging to a megalosaurid dinosaur in 1901.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "pero reasignado como un dinosaurio megalosáurido por Nopsca en 1901",
+   "quote_sha": "2dcab7fc44193353"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "Gilmore suggested in 1924 that the tooth belonged to Stegoceras, a herbivorous pachycephalosaurid.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "En 1924, Gilmore sugirió que el diente pertenecía a Stegoceras, un paquicefalosáurido herbívoro",
+   "quote_sha": "d6277d527fb049f4"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Complete remains of Stenonychosaurus convinced paleontologists that it was the same animal as Troodon, leading to the replacement of the former name.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:7",
+   "lang": "es",
+   "quote": "Restos más completos de Stenonychosaurus convencieron a los paleontólogos que de hecho se tratan ambos del mismo animal, por lo que el nombre Stenonychosaurus ha sido reemplazado por el de Troodon",
+   "quote_sha": "a0267ed49c234e0f"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "Other genera, including Polyodontosaurus and Pectinodon, have been assigned to Troodon.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:7",
+   "lang": "es",
+   "quote": "Otros géneros, incluyendo a Polyodontosaurus y Pectinodon, también han sido asignados a Troodon",
+   "quote_sha": "397c828274a58ef2"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "In 2005, Phil Currie resurrected the type species Stenonychosaurus inequalis within the genus Troodon as Troodon inequalis.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:7",
+   "lang": "es",
+   "quote": "En el capítulo \"Theropods including birds.\" del libro de 2005 Dinosaur Provincial Park, Phil Currie, uno de los principales expertos de troodontidos de Norteamérica resucita la especie tipo de Stenonychosaurus, S. inequalis, dentro del género Troodon como Troodon inequalis",
+   "quote_sha": "495d3e129825e3aa"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "Troodon is considered the most derived member of its family.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:8",
+   "lang": "es",
+   "quote": "Troodon es considerado como el miembro más derivado de su familia",
+   "quote_sha": "db878910fa531b36"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "Troodon forms a clade of specialized troodontids along with Zanabazar, Saurornithoides, and Talos.",
+   "category": "classification",
+   "chunk_id": "troodon:eswiki:8",
+   "lang": "es",
+   "quote": "Junto con Zanabazar, Saurornithoides y Talos forma un clado de trodóntidos especializados",
+   "quote_sha": "e52d456afe8fc5d3"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The parent group of Troodon is Troodontinae.",
+   "category": "classification",
+   "chunk_id": "troodon:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Troodontinae",
+   "quote_sha": "dd4a9b5b3a1625e4"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Troodon belongs to the family Troodontidae.",
+   "category": "classification",
+   "chunk_id": "troodon:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Troodontidae",
+   "quote_sha": "83653b8fd16507ee"
+  },
+  {
+   "fact_id": "F067",
+   "statement": "Troodon is classified within the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "troodon:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F068",
+   "statement": "Troodon lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "troodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Maastrichtian (83.6 to 66 million years ago)",
+   "quote_sha": "c5801ed7c899e141"
+  },
+  {
+   "fact_id": "F069",
+   "statement": "Troodon is believed to have been a predator, supported by its sickle-shaped toe claw and good binocular vision.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Se cree que Troodon fue un depredador, una opinión apoyada por su garra falciforme en el pie y su buena visión binocular",
+   "quote_sha": "b7c2c886adef170a"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "A comparative study of the feeding apparatus suggests Troodon may have been omnivorous.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Un estudio comparativo del aparato de alimentación sugiere que Troodon podría haber sido onmnívoro",
+   "quote_sha": "f5b866e1b5ff8620"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Troodon teeth had large striations with holes at the intersections of denticles, and the denticle points pointed toward the tip of each tooth.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Los dientes de Troodon llevaban grandes estrías; hay hoyos en las intersecciones de los dentículos y los puntos de los dentículos apuntan hacia la punta o ápice de cada diente",
+   "quote_sha": "3cb0a849333b2f9a"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "Troodon teeth show wear facets on their sides.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Los dientes muestran facetas de desgaste en sus lados",
+   "quote_sha": "7b9903337bcd6b92"
+  },
+  {
+   "fact_id": "F073",
+   "statement": "A study hypothesizes that Troodon's diet consisted mainly of meat.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Este estudio plantea la hipótesis de una dieta que consistía principalmente en carne",
+   "quote_sha": "f4fe4384269928d2"
+  },
+  {
+   "fact_id": "F074",
+   "statement": "Studies using growth ring counts suggest Troodon reached adult size in approximately 3-5 years.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "La determinación de la edad estudios realizados sobre los restos fosilizados de Troodon utilizando los recuentos de los anillos de crecimiento sugieren que este dinosaurio alcanzaba su tamaño adulto, probablemente en 3-5 años",
+   "quote_sha": "09f5af184c19fa36"
+  },
+  {
+   "fact_id": "F075",
+   "statement": "Much larger teeth of Troodon have been found in Late Cretaceous deposits in northern Alaska compared to more southern locations.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Han sido recogidos de los depósitos del norte de Alaska en el Cretácico Tardío unos dientes mucho mayores que los recogidos en lugares más meridionales",
+   "quote_sha": "824f4da12234f225"
+  },
+  {
+   "fact_id": "F076",
+   "statement": "Wear patterns on all Troodon teeth suggest a diet of soft foods, unsuitable for chewing bone, exoskeletons, or tough plants.",
+   "category": "paleobiology",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Se propone que los patrones de desgaste de todos los dientes de Troodon sugieren una dieta de alimentos blandos (no servían para la masticación de hueso, de exoesqueletos o de plantas duras)",
+   "quote_sha": "5acfc8a7fe4189ad"
+  },
+  {
+   "fact_id": "F077",
+   "statement": "A parietal bone cataloged as TMP 79.8.1 attributed to Troodon formosus shows a \"pathological opening\".",
+   "category": "curiosities",
+   "chunk_id": "troodon:eswiki:10",
+   "lang": "es",
+   "quote": "Un hueso parietal catalogado como TMP 79.8.1 atribuido a Troodon formosus muestra una \"abertura patológica\"",
+   "quote_sha": "b9f74d1495348544"
+  },
+  {
+   "fact_id": "F078",
+   "statement": "Phil Currie suspected in 1985 that a pathological opening was caused by a cyst, but Tanke and Rothschild interpreted it in 1999 as a possible bite wound.",
+   "category": "curiosities",
+   "chunk_id": "troodon:eswiki:10",
+   "lang": "es",
+   "quote": "En 1985 Phil Currie presumió que esta abertura era causada por un quiste, pero en 1999 Tanke y Rothschild lo interpretaron como una posible mordedura de la herida",
+   "quote_sha": "922bcf69f6428f30"
+  },
+  {
+   "fact_id": "F079",
+   "statement": "In one sample, a juvenile may have suffered a congenital defect in the front of its jaw, which was twisted.",
+   "category": "curiosities",
+   "chunk_id": "troodon:eswiki:10",
+   "lang": "es",
+   "quote": "En una muestra, una cría pudo haber sufrido un defecto congénito en la parte frontal de su mandíbula, la cual estaba torcida",
+   "quote_sha": "e6e497b33a00210e"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "In a 2001 study, Bruce Rothschild and colleagues examined 21 foot bones attributed to Troodon for stress fractures but found none.",
+   "category": "curiosities",
+   "chunk_id": "troodon:eswiki:10",
+   "lang": "es",
+   "quote": "En un estudio de 2001 realizado por Bruce Rothschild y otros paleontólogos, examinaron 21 huesos del pie atribuidos a Troodon para buscar signos de fractura de estrés, pero no se encontró ninguna",
+   "quote_sha": "07b32cd59427774a"
+  },
+  {
+   "fact_id": "F081",
+   "statement": "Troodon has historically been an unstable classification and has been subject to numerous conflicting synonymies with similar theropod specimens.",
+   "category": "debate",
+   "chunk_id": "troodon:eswiki:5",
+   "lang": "es",
+   "quote": "Troodon ha sido históricamente una clasificación muy inestable y ha sido objeto de numerosas sinonimias conflictivas con especímenes de terópodos similares",
+   "quote_sha": "c58932a4aba740d0"
+  },
+  {
+   "fact_id": "F082",
+   "statement": "The future of the name Troodon itself is doubtful, as genera based on teeth have often been abandoned in favor of names based on better remains.",
+   "category": "debate",
+   "chunk_id": "troodon:eswiki:7",
+   "lang": "es",
+   "quote": "Por esta razón el futuro del nombre Troodon en sí es dudoso, pues en similares situaciones, los géneros basados en los dientes se han abandonado a favor de los nombres basados en mejores restos",
+   "quote_sha": "e4dce940b4947759"
+  },
+  {
+   "fact_id": "F083",
+   "statement": "Holtz (1998) observed that traits supporting a predatory habit in Troodon (grasping hands, large brain, stereoscopic vision) are all shared with modern omnivores like primates and raccoons.",
+   "category": "debate",
+   "chunk_id": "troodon:eswiki:9",
+   "lang": "es",
+   "quote": "Holtz (1998) también observó que las características utilizadas para apoyar un hábito depredador de Troodon (las manos de agarre, gran cerebro y la visión estereoscópica), son todas características compartidas con los omnívoros actuales, como los primates y el mapache",
+   "quote_sha": "98780f5cb50eb8e0"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "troodon:enwiki:2",
+   "statement": "A 2017 analysis considered the genus Troodon undiagnostic, leading some specimens to be reclassified into the genera Stenonychosaurus, Latenivenatrix, and Pectinodon.",
+   "category": "classification",
+   "quote": "In a 2017 analysis, the genus was considered undiagnostic, and some of its specimens were referred to the genus Stenonychosaurus, some to the genus Latenivenatrix, and some to the genus Pectinodon.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "troodon:enwiki:2",
+   "statement": "The 2017 reclassification of Troodon specimens has been disputed, with a 2025 paper recommending a neotype to preserve the genus's validity and treating Stenonychosaurus as a junior synonym.",
+   "category": "debate",
+   "quote": "However, this has been disputed since, and a 2025 paper recommended the designation of a neotype to preserve Troodons validity, with Stenonychosaurus as a junior synonym.",
+   "reason": "numbers not in the quote: ['2017']"
+  },
+  {
+   "chunk_id": "troodon:enwiki:2",
+   "statement": "Phil Currie demonstrated in 1987 that differences between troodontids and saurornithoidids were due to age and tooth position rather than distinct species.",
+   "category": "classification",
+   "quote": "In 1987, Phil Currie showed that supposed differences in tooth and jaw structure among troodontids and saurornithoidids were based on age and position of the tooth in the jaw, rather than a difference in species.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "troodon:enwiki:2",
+   "statement": "The classification of all North American troodontid material as the single species Troodon formosus became widely adopted, leading to Stenonychosaurus specimens being referred to as Troodon through the early 21st century.",
+   "category": "classification",
+   "quote": "Currie's classification of all North American troodontid material in the single species Troodon formosus became widely adopted by other paleontologists and all of the specimens once called Stenonychosaurus were referred to as Troodon in scientific literature through the early 21st century.",
+   "reason": "statement copies the source wording: 'the single species Troodon formosus became widely adopted'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:3",
+   "statement": "Wear patterns on Troodon teeth suggest a diet of soft foods, which is inconsistent with bone chewing, invertebrate exoskeletons, or tough plant items.",
+   "category": "paleobiology",
+   "quote": "It proposes that the wear patterns of all Troodon teeth suggest a diet of soft foods - inconsistent with bone chewing, invertebrate exoskeletons, or tough plant items.",
+   "reason": "statement copies the source wording: 'Troodon teeth suggest a diet of soft foods'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:3",
+   "statement": "A fossil pellet possibly belonging to Troodon suggests it hunted early mammals like Alphadon.",
+   "category": "paleobiology",
+   "quote": "A pellet possibly belonging to Troodon suggests it hunted early mammals such as Alphadon.",
+   "reason": "statement copies the source wording: 'pellet possibly belonging to Troodon suggests it hunted'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:3",
+   "statement": "It is debated whether Troodon and Stenonychosaurus should be synonymized, as Currie's original hypothesis based on tooth and jaw morphology was never directly tested and is not supported by data showing teeth are not diagnostic below the family level.",
+   "category": "debate",
+   "quote": "Currie's original hypothesis of subjective synonymy (based on tooth and jaw morphology) was never directly tested and, given that later research found that teeth were not diagnostic below the family level in troodontids, Currie's original hypothesis is therefore not supported by the available data",
+   "reason": "statement copies the source wording: 'based on tooth and jaw morphology was never'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:4",
+   "statement": "A 2023 study determined that Troodon eggs had slowed calcification similar to reptiles rather than the rapid mineralization seen in modern birds.",
+   "category": "curiosities",
+   "quote": "The study found that in contrast to the accelerated mineralization of eggs in modern birds, Troodon and likely other non-avian maniraptorans had slowed egg calcification akin to other reptiles.",
+   "reason": "numbers not in the quote: ['2023']"
+  },
+  {
+   "chunk_id": "troodon:enwiki:4",
+   "statement": "The Judith River Formation where the type specimen was found dates to between 77.5 and 76.5 million years ago.",
+   "category": "time_and_habitat",
+   "quote": "The rocks of the Judith River Formation are equivalent in age with the Oldman Formation of Alberta, which has been dated to between 77.5 and 76.5 million years ago.",
+   "reason": "statement copies the source wording: 'to between 77.5 and 76.5 million years ago'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:4",
+   "statement": "Evidence of gypsum and pyrite suggests the environment where Troodon fossils were found was bordered by a large body of water.",
+   "category": "time_and_habitat",
+   "quote": "Based on the presence of gypsum and pyrite in the rocks, it suggests that the formation was bordered by a large body of water.",
+   "reason": "statement copies the source wording: 'was bordered by a large body of water'"
+  },
+  {
+   "chunk_id": "troodon:enwiki:4",
+   "statement": "It is debated whether any additional species can be referred to Troodon, which would render the genus a nomen dubium.",
+   "category": "debate",
+   "quote": "It is questionable that, after further study, any additional species can be referred to Troodon, in which case the genus would be considered a nomen dubium.",
+   "reason": "statement copies the source wording: 'any additional species can be referred to Troodon'"
+  },
+  {
+   "chunk_id": "troodon:eswiki:3",
+   "statement": "Its encephalization quotient is 5.8, which is very high compared to most large herbivorous dinosaurs at 1 and many carnivores at 2.",
+   "category": "description",
+   "quote": "Su cociente de encefalización es de 5'8, muy alta teniendo en cuenta que la mayoría los grandes dinosaurios herbívoros tenían un cociente de 1 y en muchos carnívoros, el cociente de encefalización era de un 2.",
+   "reason": "numbers not in the quote: ['5.8']"
+  },
+  {
+   "chunk_id": "troodon:eswiki:5",
+   "statement": "The entire genus Troodon was originally based on a single tooth found in the Judith River Formation.",
+   "category": "discovery",
+   "quote": "El espécimen tipo de Troodon ha causado problemas con la clasificación, ya que todo el género se basa solo en un solo diente de la Formación Judith River",
+   "reason": "duplicate"
+  },
+  {
+   "chunk_id": "troodon:eswiki:5",
+   "statement": "Charles Mortram Sternberg rejected the idea that Troodon was a pachycephalosaur in 1945 due to similarities with carnivorous dinosaur teeth.",
+   "category": "classification",
+   "quote": "En 1945, Charles Mortram Sternberg rechazó la posibilidad de que Troodon sea un paquicefalosaurio debido a la gran similitud con los dientes de otros dinosaurios carnívoros",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "troodon:eswiki:9",
+   "statement": "The study suggests Troodon in Alaska may have accessed large animals as prey because there were no large tyrannosaurids in its habitat to provide competition.",
+   "category": "paleobiology",
+   "quote": "Este estudio sugiere que Troodon en Alaska pudo haber tenido acceso a grandes animales como presa, ya que no había grandes tiranosáuridos en su hábitat para proporcionar competencia",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "troodon:eswiki:9",
+   "statement": "It is debated whether Troodon in Alaska accessed large animals as prey due to a lack of large tyrannosaurid competitors in its habitat.",
+   "category": "debate",
+   "quote": "Este estudio sugiere que Troodon en Alaska pudo haber tenido acceso a grandes animales como presa, ya que no había grandes tiranosáuridos en su hábitat para proporcionar competencia",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

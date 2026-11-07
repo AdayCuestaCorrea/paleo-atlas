@@ -4,18 +4,18 @@
  "lang": "es",
  "status": "verified",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "fce94425711f10c2",
- "generated_at": "2026-11-03T06:48:17+00:00",
- "word_count": 464,
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "1a707099a843663c",
+ "generated_at": "2026-11-05T02:18:39+00:00",
+ "word_count": 500,
  "problems": [],
- "review": "unchanged",
+ "review": "accepted",
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "El holotipo —el ejemplar sobre el que se define la especie— consta de un cráneo incompleto y aplastado, con huesos postorbitales desplazados y una mandíbula inferior casi completa. También incluye placas dispersas que forman el anillo escleral y dos elementos del hueso hioides. No se conservan tejidos blandos ni partes queratinosas.",
+     "text": "El holotipo —la muestra sobre la que se basa la especie— consta de un cráneo incompleto y aplastado con huesos postorbitales desplazados y una mandíbula inferior casi completa.",
      "fact_ids": [
       "F004",
       "F011",
@@ -23,10 +23,28 @@
      ]
     },
     {
-     "text": "En 2012, los investigadores estimaron que la envergadura de este pequeño pterosaurio rondaba los 2 metros. Sin embargo, en 2023, el mismo equipo revisó esta estimación situándola entre 3 y 4 metros, clasificándolo como un pterosaurio de tamaño medio.",
+     "text": "También se encuentran placas dispersas que forman el anillo escleral y dos elementos del hueso hioideo, pero no sobrevivieron tejidos blandos ni partes queratinizadas.",
+     "fact_ids": [
+      "F011",
+      "F012"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Los investigadores estimaron inicialmente que la envergadura era de unos 2 metros, pero una revisión de 2023 elevó el tamaño entre 3 y 4 metros, reclasificándola como un pterosaurio de tamaño medio.",
      "fact_ids": [
       "F013",
       "F014"
+     ]
+    },
+    {
+     "text": "Se identificó en esta especie una forma única de la cresta del dentario, un rasgo no observado en otros pterosaurios.",
+     "fact_ids": [
+      "F027"
      ]
     }
    ]
@@ -35,17 +53,27 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Romain Vullo y sus colaboradores informaron sobre un nuevo cráneo de pterosaurio de Las Hoyas en 2012. El género y la especie Europejara olcadesorum recibieron ese mismo nombre por parte de Vullo y sus colegas.",
+     "text": "El género y la especie Europejara olcadesorum fueron nombrados y descritos en 2012 por Romain Vullo, Jesús Marugán-Lobón, Alexander Kellner, Ángela Buscalioni, Bernard Gómez, Montserrat de la Fuente y José Moratalla.",
      "fact_ids": [
       "F001",
       "F003",
-      "F009"
+      "F045",
+      "F047"
      ]
     },
     {
-     "text": "El yacimiento fue descubierto en 1985 y, para 2023, había proporcionado más de 20.000 fósiles.",
+     "text": "El fósil se recuperó del yacimiento de Las Hoyas, en la Formación La Huérguina, una localidad descubierta en 1985 que aportó más de 20 000 fósiles para 2023.",
      "fact_ids": [
-      "F008"
+      "F007",
+      "F008",
+      "F035",
+      "F051"
+     ]
+    },
+    {
+     "text": "El nombre de la especie hace referencia a los olcades, una tribu celtibera que habitaba la región de Cuenca.",
+     "fact_ids": [
+      "F049"
      ]
     }
    ]
@@ -54,18 +82,43 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "En 2013, Mark Witton describió a los tapejaridos como voladores adaptables y generalistas, comparables a los colimbos y cuervos modernos. Es probable que volaran en zonas interiores debido a sus alas cortas, mientras que sus largas y bien musculadas extremidades les ayudaban en el despegue y el aleteo. Se cree que eran frugívoros o granívoros en base a sus cráneos cortos, mandíbulas en forma y ausencia de dientes.",
+     "text": "Los autores asumieron que Europejara tenía un estilo de vida frugívoro, y los investigadores sugieren que era frugívoro o granívoro, desempeñando un papel en la dispersión de semillas cuando aparecieron las angiospermas.",
      "fact_ids": [
+      "F005",
       "F028",
       "F029",
-      "F030"
-     ]
+      "F030",
+      "F031",
+      "F032",
+      "F034",
+      "F057"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "Los investigadores sugieren que era frugívoro o granívoro y jugaba un papel en la dispersión de semillas cuando aparecieron las angiospermas por primera vez.",
+     "text": "Mark Witton describió a los tapejaridos como voladores adaptables y generalistas, comparables a los modernos colimbos y cuervos, que probablemente volaban en zonas interiores debido a sus alas cortas, mientras que sus largas y bien musculadas extremidades ayudaban en el despegue y el aleteo.",
      "fact_ids": [
-      "F005"
-     ]
+      "F028",
+      "F029"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Los picos de los tapejaridos probablemente estaban cubiertos por una rhamfoteca, con algunos que quizás tenían proyecciones puntiagudas similares a las de aves omnívoras como los tucanes, y las estimaciones de la fuerza de mordida apoyan una dieta de frutas, semillas y materia vegetal resistente.",
+     "fact_ids": [
+      "F030",
+      "F031",
+      "F032",
+      "F034"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Los investigadores sugirieron que los tapejaridos podrían haber tenido una dieta herbívora u omnívora que incluía semillas, frutas, insectos y pequeños vertebrados, aunque esto carece de evidencia fósil directa.",
+     "fact_ids": [
+      "F032"
+     ],
+     "topic": "diet"
     }
    ]
   },
@@ -73,11 +126,20 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "En 2012, Vullo y sus colegas clasificaron a Europejara como miembro de la familia de pterosaurios Tapejaridae. En 2016, Rubi Vargas Pêgas y sus colaboradores identificaron a Europejara como el grupo hermano de los géneros brasileños Caiuajara, Tapejara y Tupandactylus. En 2019, Alexander W. Kellner y sus colegas nombraron el tribu Tapejarini para incluir a Europejara y sus parientes brasileños.",
+     "text": "En 2012, Vullo y sus colegas clasificaron a Europejara como miembro de la familia de pterosaurios Tapejaridae, y en 2016, Rubi Vargas Pêgas y sus colegas la identificaron como el grupo hermano de los géneros brasileños Caiuajara, Tapejara y Tupandactylus.",
      "fact_ids": [
       "F021",
       "F022",
-      "F023"
+      "F043",
+      "F048",
+      "F055"
+     ]
+    },
+    {
+     "text": "El nombre del género combina 'Europa' con el género emparentado 'Tapejara'.",
+     "fact_ids": [
+      "F043",
+      "F048"
      ]
     }
    ]
@@ -86,13 +148,11 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Europejara vivió en España durante el Barremiense del Cretácico Inferior, hace entre 125 y 121 millones de años. Vivió en un entorno de humedal subtropical representado por la Formación La Huérguina. La localidad pertenece a la Formación La Huérguina y data del Barremiense tardío del Cretácico Inferior. Europejara vivió durante el Barremiense en España, lo que indica que los tapejaridos estaban distribuidos por Gondwana y Laurasia antes de lo que se conocía. Europejara fue recuperada del yacimiento de Las Hoyas en la Formación La Huérguina, datada del Barremiense tardío del Cretácico Inferior.",
+     "text": "Europejara vivió en España durante el piso barremiense del Cretácico Inferior, hace 125 a 121 millones de años, lo que indica que los tapejaridos estaban distribuidos por Gondwana y Laurasia antes de lo conocido.",
      "fact_ids": [
       "F002",
-      "F006",
-      "F007",
       "F024",
-      "F035"
+      "F046"
      ]
     }
    ]
@@ -101,10 +161,16 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Se debate si los tapejaridos originaron en Laurasia o Gondwana, con algunos investigadores argumentando que la monofilia de los tapejarinos chinos no apoya un origen laurasiense. Se necesita más investigación para respaldar interpretaciones sobre los patrones de dispersión y los orígenes de los tapejaridos, incluyendo la relación de Europejara con los taxones sudamericanos. Los investigadores advirtieron que se necesitan más fósiles y análisis de contenido estomacal para determinar si los tapejaridos coevolucionaron con las angiospermas o simplemente las dispersaron incidentalmente.",
+     "text": "Se debate si los tapejaridos originaron en Laurasia o Gondwana, con algunos investigadores argumentando que la monofilia de los tapejarinos chinos no apoya un origen laurasiense, y que se necesita más investigación para respaldar las interpretaciones sobre los patrones de dispersión y los orígenes de los tapejaridos, incluida la relación de Europejara con los taxones sudamericanos.",
      "fact_ids": [
       "F025",
       "F026",
+      "F042"
+     ]
+    },
+    {
+     "text": "Los investigadores advirtieron que se necesitan más fósiles y análisis de contenido gástrico para determinar si los tapejaridos coevolucionaron con las angiospermas o simplemente las dispersaron incidentalmente.",
+     "fact_ids": [
       "F042"
      ]
     }

@@ -2,9 +2,9 @@
  "taxon": "Fregilupus",
  "taxon_key": "fregilupus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "bef4180d63fe4d31",
- "generated_at": "2026-11-03T06:58:18+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c54a1cbfab9e39ba",
+ "generated_at": "2026-11-05T02:27:09+00:00",
  "citations": {
   "fregilupus:enwiki:1": {
    "source": "wikipedia_article",
@@ -83,9 +83,16 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
-  "fregilupus:eswiki:4": {
+  "fregilupus:eswiki:6": {
    "source": "wikipedia_article",
-   "title": "Fregilupus varius (Taxonomía, part 2)",
+   "title": "Fregilupus varius (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Fregilupus_varius?oldid=171113760",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "fregilupus:eswiki:7": {
+   "source": "wikipedia_article",
+   "title": "Fregilupus varius (Comportamiento y ecología)",
    "url": "https://es.wikipedia.org/wiki/Fregilupus_varius?oldid=171113760",
    "doi": null,
    "license": "CC BY-SA 4.0"
@@ -101,8 +108,8 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The hoopoe starling lived on the island of Réunion and became extinct in the 1850s.",
-   "category": "discovery",
+   "statement": "The hoopoe starling lived on the island of Réunion and went extinct around 1850.",
+   "category": "time_and_habitat",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
    "quote": "The hoopoe starling (Fregilupus varius), also known as the Réunion starling or the Bourbon crested starling, is a species of starling that lived on the Mascarene island of Réunion and became extinct in the 1850s.",
@@ -110,7 +117,16 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The hoopoe starling had plumage that was primarily white and grey, with darker brown and grey on its back, wings, and tail.",
+   "statement": "The hoopoe starling measured 30 centimeters in length.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:2",
+   "lang": "en",
+   "quote": "The hoopoe starling was 30 cm in length.",
+   "quote_sha": "8c218e1a6243c88f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The bird had white and grey plumage with darker brown and grey on its back, wings, and tail.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
@@ -118,8 +134,8 @@
    "quote_sha": "60817ea155c9b224"
   },
   {
-   "fact_id": "F003",
-   "statement": "The hoopoe starling had a light, mobile crest that curled forwards.",
+   "fact_id": "F004",
+   "statement": "The species possessed a light, mobile crest that curled forward.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
@@ -127,8 +143,8 @@
    "quote_sha": "23a53bb1dbe6269f"
   },
   {
-   "fact_id": "F004",
-   "statement": "Researchers suggest the hoopoe starling was sexually dimorphic, with males being larger and having more curved beaks.",
+   "fact_id": "F005",
+   "statement": "Males were likely larger than females and had more curved beaks.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
@@ -136,8 +152,8 @@
    "quote_sha": "517ae47839473be7"
   },
   {
-   "fact_id": "F005",
-   "statement": "The hoopoe starling reportedly lived in large flocks and inhabited humid areas and marshes.",
+   "fact_id": "F006",
+   "statement": "The bird likely lived in large flocks within humid areas and marshes.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
@@ -145,8 +161,17 @@
    "quote_sha": "19420a7669011e6c"
   },
   {
-   "fact_id": "F006",
-   "statement": "The hoopoe starling's robust pelvis, large feet and claws, and strong jaws indicate it foraged near the ground.",
+   "fact_id": "F007",
+   "statement": "It was an omnivore that fed on plant matter and insects.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:enwiki:2",
+   "lang": "en",
+   "quote": "The hoopoe starling was omnivorous, feeding on plant matter and insects.",
+   "quote_sha": "f6ff2ba717f55462"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Its robust pelvis, large feet and claws, and strong jaws suggest it foraged near the ground.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
@@ -154,17 +179,62 @@
    "quote_sha": "b874588b06ff7474"
   },
   {
-   "fact_id": "F007",
-   "statement": "In 1831, French naturalist René-Primevère Lesson placed the hoopoe starling in its own monotypic genus, Fregilipus.",
-   "category": "classification",
-   "chunk_id": "fregilupus:enwiki:3",
+   "fact_id": "F009",
+   "statement": "The bird was first mentioned in the 17th century and was long believed to be related to the hoopoe.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:2",
    "lang": "en",
-   "quote": "In 1831, French naturalist René-Primevère Lesson placed the bird in its own monotypic genus, Fregilipus",
-   "quote_sha": "07adb910ee217c71"
+   "quote": "The bird was first mentioned during the 17th century and was long thought to be related to the hoopoe, from which its name is derived.",
+   "quote_sha": "993825026289561c"
   },
   {
-   "fact_id": "F008",
-   "statement": "German ornithologist Hermann Schlegel proposed in 1857 that the hoopoe starling belonged to the starling family and reclassified it as Sturnus capensis.",
+   "fact_id": "F010",
+   "statement": "Settlers on Réunion hunted the birds for food and kept them as pets.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:2",
+   "lang": "en",
+   "quote": "The birds were hunted by settlers on Réunion, who also kept them as pets.",
+   "quote_sha": "33e06d5238f57711"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Nineteen museum specimens of the species exist worldwide.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:2",
+   "lang": "en",
+   "quote": "Nineteen specimens exist in museums around the world.",
+   "quote_sha": "a6675de9b4579ffd"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The earliest potential mention of the bird is a 1658 list by French governor Étienne de Flacourt.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:3",
+   "lang": "en",
+   "quote": "The first account thought to mention the hoopoe starling is a 1658 list of birds of Madagascar written by French governor Étienne de Flacourt.",
+   "quote_sha": "43af68c88f9dbb7b"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Père Vachet first noted the bird on Réunion in 1669, and Sieur Dubois described it in detail in 1674.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:3",
+   "lang": "en",
+   "quote": "The hoopoe starling was first noted on the Mascarene island of Réunion (then called \"Bourbon\") by Père Vachet in 1669, and first described in detail by French traveler Sieur Dubois's in 1674",
+   "quote_sha": "8b45d75832d24e55"
+  },
+  {
+   "fact_id": "F014",
+   "statement": "The species was first scientifically described by Philippe Guéneau de Montbeillard in 1779, with the name finalized by Pieter Boddaert in 1783.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:3",
+   "lang": "en",
+   "quote": "The species was first scientifically described by French naturalist Philippe Guéneau de Montbeillard in the 1779 edition of French naturalist Comte de Buffon's Histoire Naturelle, and received its scientific name from Dutch naturalist Pieter Boddaert for the book's 1783 edition.",
+   "quote_sha": "a2fbf96d101f0345"
+  },
+  {
+   "fact_id": "F015",
+   "statement": "Hermann Schlegel proposed in 1857 that the bird belonged to the starling family, reclassifying it as Sturnus capensis.",
    "category": "classification",
    "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
@@ -172,8 +242,8 @@
    "quote_sha": "80f578c55047776d"
   },
   {
-   "fact_id": "F009",
-   "statement": "Swedish zoologist Carl Jakob Sundevall proposed the genus name Lophopsarus in 1872, but Fregilupus varius remains the valid binomial name as it is the oldest.",
+   "fact_id": "F016",
+   "statement": "Carl Jakob Sundevall proposed the genus Lophopsarus in 1872, but Fregilupus varius remains the valid binomial name.",
    "category": "classification",
    "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
@@ -181,8 +251,8 @@
    "quote_sha": "ca79350f80a53ec0"
   },
   {
-   "fact_id": "F010",
-   "statement": "British zoologist James Murie agreed in 1874 that the hoopoe starling was a starling after analyzing its skeleton.",
+   "fact_id": "F017",
+   "statement": "James Murie confirmed in 1874 that the bird was a starling based on the analysis of its skeleton.",
    "category": "classification",
    "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
@@ -190,8 +260,8 @@
    "quote_sha": "f0b418044e39e6bd"
   },
   {
-   "fact_id": "F011",
-   "statement": "American ornithologist Andrew John Berger cast doubt on the hoopoe starling's relationship with starlings in 1957 due to subtle anatomical differences.",
+   "fact_id": "F018",
+   "statement": "Andrew John Berger cast doubt on the bird's relationship with starlings in 1957 due to subtle anatomical differences.",
    "category": "debate",
    "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
@@ -199,8 +269,8 @@
    "quote_sha": "3d9a8ffe32d3b84a"
   },
   {
-   "fact_id": "F012",
-   "statement": "Some authors proposed a relationship between the hoopoe starling and vangas, but this was rejected by Japanese ornithologist Hiroyuki Morioka in 1996.",
+   "fact_id": "F019",
+   "statement": "A relationship with vangas was proposed by some authors but rejected by Hiroyuki Morioka in 1996.",
    "category": "debate",
    "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
@@ -208,34 +278,43 @@
    "quote_sha": "70af252e72da9e00"
   },
   {
-   "fact_id": "F013",
-   "statement": "The hoopoe starling's lineage diverged from other starlings 4 million years ago, suggesting it may have first evolved on now-submerged landmasses.",
-   "category": "time_and_habitat",
-   "chunk_id": "fregilupus:enwiki:4",
+   "fact_id": "F020",
+   "statement": "Subfossil bones found on Rodrigues led to the description of the Rodrigues starling in 1879.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
-   "quote": "Its lineage diverged from that of other starlings 4 million years ago (about 2 million years before Réunion emerged from the sea), so it may have first evolved on landmasses now partially submerged.",
-   "quote_sha": "70fd293bed21d494"
+   "quote": "In 1879, these bones became the basis for a new species, Necropsar rodericanus (the Rodrigues starling), named by British ornithologists Albert Günther and Edward Newton.",
+   "quote_sha": "5654cdabcdf5a444"
   },
   {
-   "fact_id": "F014",
-   "statement": "The divergence of the hoopoe starling's lineage converged with the emergence of Réunion between 2.1 and 3.0 million years ago, without evidence of stepping-stone dispersal.",
-   "category": "time_and_habitat",
-   "chunk_id": "fregilupus:enwiki:4",
+   "fact_id": "F021",
+   "statement": "Subfossils found in 1974 confirmed the Rodrigues starling is a distinct genus from Fregilupus due to its stouter bill.",
+   "category": "classification",
+   "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
-   "quote": "Their divergence estimate converged with the emergence of Réunion 2.1–3.0 million years ago, and did not indicate stepping stone dispersal.",
-   "quote_sha": "3c04be8d5aef62a5"
+   "quote": "Subfossils found in 1974 confirmed that the Rodrigues bird was a distinct genus of starling; primarily, its stouter bill warrants generic separation from Fregilupus.",
+   "quote_sha": "634516e0b440b0ef"
   },
   {
-   "fact_id": "F015",
-   "statement": "Researchers suggest a sea-level increase during the last interglacial period may have reduced the hoopoe starling's habitat and caused a population decrease.",
-   "category": "paleobiology",
-   "chunk_id": "fregilupus:enwiki:4",
+   "fact_id": "F022",
+   "statement": "Julian P. Hume described the Mauritius starling in 2014, noting it is closer to the Rodrigues starling than the hoopoe starling.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:3",
    "lang": "en",
-   "quote": "The decrease in its population was perhaps due to a sea-level increase caused by the last interglacial period, which reduced the bird's habitat on the island.",
-   "quote_sha": "a58232d6ded79089"
+   "quote": "In 2014, British palaeontologist Julian P. Hume described a new extinct species, the Mauritius starling (Cryptopsar ischyrhynchus), based on subfossils from Mauritius, which was closer to the Rodrigues starling than to the hoopoe starling in its skull, sternal (breastbone), and humeral features.",
+   "quote_sha": "dba3aed665df7aa2"
   },
   {
-   "fact_id": "F016",
+   "fact_id": "F023",
+   "statement": "The hoopoe starling measured 30 cm in length.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The hoopoe starling was 30 cm in length.",
+   "quote_sha": "8c218e1a6243c88f"
+  },
+  {
+   "fact_id": "F024",
    "statement": "The hoopoe starling was the largest of the three Mascarene starlings.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:5",
@@ -244,8 +323,17 @@
    "quote_sha": "100a1b0bca6a63cf"
   },
   {
-   "fact_id": "F017",
-   "statement": "The bird has an ash-brown back and tail, darker wings with a greyish wash, and upper tail coverts and rump with a rufous wash.",
+   "fact_id": "F025",
+   "statement": "A presumed adult male specimen in the Paris museum had a light ash-grey head and neck with a long crest of the same color featuring white shafts.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "A presumed adult male (NHMUK 1889.5.30.15) in the Paris museum has a light ash-grey head and back of the neck (lighter on the hind-neck), with a long crest the same colour with white shafts.",
+   "quote_sha": "af9b5da80ba1baf7"
+  },
+  {
+   "fact_id": "F026",
+   "statement": "The hoopoe starling had ash-brown back and tail, darker wings with a greyish wash, and upper tail coverts and rump with a rufous wash.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:5",
    "lang": "en",
@@ -253,7 +341,7 @@
    "quote_sha": "f3efe8c34bc4b6cf"
   },
   {
-   "fact_id": "F018",
+   "fact_id": "F027",
    "statement": "The hoopoe starling had lemon-yellow beaks and legs with yellow-brown claws.",
    "category": "description",
    "chunk_id": "fregilupus:enwiki:5",
@@ -262,17 +350,107 @@
    "quote_sha": "e2cda5d870816926"
   },
   {
-   "fact_id": "F019",
-   "statement": "It is debated whether the type illustration of the hoopoe starling was a life drawing or a derivative of an earlier drawing by Jossigny.",
-   "category": "debate",
+   "fact_id": "F028",
+   "statement": "The hoopoe starling had a bare, triangular patch of skin around the eye that may have been yellow in life.",
+   "category": "description",
    "chunk_id": "fregilupus:enwiki:5",
    "lang": "en",
-   "quote": "Hume believes that Martinet did this when he made the type illustration, and it was derivative of Jossigny's image rather than a life drawing.",
-   "quote_sha": "469fd06f63fa1202"
+   "quote": "It has a bare, triangular area of skin around the eye, which may have been yellow in life.",
+   "quote_sha": "d8379a8ee60fbaee"
   },
   {
-   "fact_id": "F020",
-   "statement": "The hoopoe starling was an omnivore that fed on fruits, seeds, and insects.",
+   "fact_id": "F029",
+   "statement": "An observer named Vinson described the hoopoe starling's crest as flexible, composed of disunited forward-curled barbs of varying lengths, highest in the center, and capable of being erected at will.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "Vinson, who observed live hoopoe starlings when he lived on Réunion, described the crest as flexible, disunited and forward-curled barbs of various lengths, highest in the centre, and able to be erected at will.",
+   "quote_sha": "202b90d895e83d16"
+  },
+  {
+   "fact_id": "F030",
+   "statement": "The only illustration of the hoopoe starling believed to be drawn from life was created by French artist Paul Philippe Sauguin de Jossigny in the early 1770s.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The only illustration of the hoopoe starling now thought to have been made from life was drawn by French artist Paul Philippe Sauguin de Jossigny during the early 1770s.",
+   "quote_sha": "62245ac620c8dd7e"
+  },
+  {
+   "fact_id": "F031",
+   "statement": "The hoopoe starling had a narrow, strongly decurved upper beak and a narrow, sharply pointed lower beak.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The upper beak was narrow and strongly decurved, and the lower beak was narrow and sharply pointed.",
+   "quote_sha": "8c8fb38138bac4cf"
+  },
+  {
+   "fact_id": "F032",
+   "statement": "The hoopoe starling possessed an extremely robust pelvis.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The pelvis was extremely robust.",
+   "quote_sha": "6c0295a3574be4e4"
+  },
+  {
+   "fact_id": "F033",
+   "statement": "The hoopoe starling's femur was robust, particularly at the upper and lower ends, with a straight shaft.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The femur (thigh bone) was robust, especially at the upper and lower ends, and the shaft was straight.",
+   "quote_sha": "9a6052118a7e8634"
+  },
+  {
+   "fact_id": "F034",
+   "statement": "In 1943, American ornithologist Dean Amadon suggested that Sturnus-like species arrived in Africa and gave rise to the wattled starling and Mascarene starlings.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:4",
+   "lang": "en",
+   "quote": "In 1943, American ornithologist Dean Amadon suggested that Sturnus-like species could have arrived in Africa and given rise to the wattled starling (Creatophora cinerea) and the Mascarene starlings.",
+   "quote_sha": "425bb64191ac477e"
+  },
+  {
+   "fact_id": "F035",
+   "statement": "In 2008, Dario Zuccon and colleagues used a toe-pad sample from a Stockholm specimen to confirm the hoopoe starling's status as an isolated lineage of Southeast Asian starlings.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:4",
+   "lang": "en",
+   "quote": "A 2008 study by Italian zoologist Dario Zuccon and colleagues analysing the DNA of a variety of starlings confirmed that the hoopoe starling belonged in a clade of Southeast Asian starlings as an isolated lineage, with no close relatives. They used a toe-pad sample from the specimen in Stockholm (an earlier attempt by another team could not extract viable hoopoe starling DNA).",
+   "quote_sha": "8f703fc181f0c8cc"
+  },
+  {
+   "fact_id": "F036",
+   "statement": "In 2024, Jérôme Fuchs and colleagues studied the Stockholm specimen and confirmed the hoopoe starling's close relations with the genera Sturnia, Leucopsar, and Sturnornis.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:4",
+   "lang": "en",
+   "quote": "In 2024, French biologist Jérôme Fuchs and colleagues also studied the Stockholm sample, and confirmed the species' close relations with the starling genera Sturnia, Leucopsar, and Sturnornis.",
+   "quote_sha": "561264b918cd1a65"
+  },
+  {
+   "fact_id": "F037",
+   "statement": "The only known life drawing of the hoopoe starling was made by French artist Paul Philippe Sauguin de Jossigny in the early 1770s.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:5",
+   "lang": "en",
+   "quote": "The only illustration of the hoopoe starling now thought to have been made from life was drawn by French artist Paul Philippe Sauguin de Jossigny during the early 1770s.",
+   "quote_sha": "62245ac620c8dd7e"
+  },
+  {
+   "fact_id": "F038",
+   "statement": "Researchers suggest the hoopoe starling's population decline may have been caused by sea-level increases during the last interglacial period, which reduced its habitat on the island.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:enwiki:4",
+   "lang": "en",
+   "quote": "The decrease in its population was perhaps due to a sea-level increase caused by the last interglacial period, which reduced the bird's habitat on the island.",
+   "quote_sha": "a58232d6ded79089"
+  },
+  {
+   "fact_id": "F039",
+   "statement": "The hoopoe starling was an omnivore that ate fruits, seeds, and insects.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:enwiki:6",
    "lang": "en",
@@ -280,17 +458,35 @@
    "quote_sha": "aee96d54b97bfef2"
   },
   {
-   "fact_id": "F021",
-   "statement": "The hoopoe starling had robust pelvic elements and large feet and claws, suggesting it foraged near the ground.",
-   "category": "paleobiology",
+   "fact_id": "F040",
+   "statement": "The bird had a long, slender, sharp, and frayed tongue that may have moved rapidly to feed on fruit, nectar, pollen, and invertebrates.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:6",
+   "lang": "en",
+   "quote": "Its tongue — long, slender, sharp, and frayed — may have been able to move rapidly, helpful when feeding on fruit, nectar, pollen, and invertebrates.",
+   "quote_sha": "1e0ed5193ba670cd"
+  },
+  {
+   "fact_id": "F041",
+   "statement": "Robust pelvic elements and large feet and claws suggest the hoopoe starling foraged near the ground.",
+   "category": "description",
    "chunk_id": "fregilupus:enwiki:6",
    "lang": "en",
    "quote": "Its pelvic elements were robust and its feet and claws large, indicating that it foraged near the ground.",
    "quote_sha": "111f9f4cfc072c7a"
   },
   {
-   "fact_id": "F022",
-   "statement": "A dissected specimen's stomach contents included seeds and berries of Pseudobuxus, possibly Eugenia buxifolia.",
+   "fact_id": "F042",
+   "statement": "The bird had strong jaws and a skull similar to the hoopoe, likely used for probing and opening holes in the substrate.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:6",
+   "lang": "en",
+   "quote": "Its jaws were strong; Morioka compared its skull to that of the hoopoe, and it may have foraged in a similar way, probing and opening holes in substrate by inserting and opening its beak.",
+   "quote_sha": "5225be1a66253d27"
+  },
+  {
+   "fact_id": "F043",
+   "statement": "Stomach contents of a dissected specimen included seeds and berries of Pseudobuxus, possibly Eugenia buxifolia.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:enwiki:6",
    "lang": "en",
@@ -298,7 +494,16 @@
    "quote_sha": "5b2fa926606bea31"
   },
   {
-   "fact_id": "F023",
+   "fact_id": "F044",
+   "statement": "A specimen weighed 4 oz and was fatter during June and July.",
+   "category": "description",
+   "chunk_id": "fregilupus:enwiki:6",
+   "lang": "en",
+   "quote": "He noted that the bird weighed 4 oz, and was fatter around June and July.",
+   "quote_sha": "275aa19b45930094"
+  },
+  {
+   "fact_id": "F045",
    "statement": "The hoopoe starling likely nested in tree cavities.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:enwiki:6",
@@ -307,17 +512,17 @@
    "quote_sha": "1d6677d85cd86af9"
   },
   {
-   "fact_id": "F024",
-   "statement": "In 2020, researchers noted the hoopoe starling had black skin and light plumage, which may have evolved to protect against ultraviolet radiation.",
-   "category": "paleobiology",
+   "fact_id": "F046",
+   "statement": "Research in 2020 noted the bird had black skin and light plumage, possibly an adaptation for protection against ultraviolet radiation.",
+   "category": "description",
    "chunk_id": "fregilupus:enwiki:6",
    "lang": "en",
    "quote": "Belgian biologist Michaël P. J. Nicolaï and colleagues pointed out in 2020 that the hoopoe starling had black skin combined with light plumage and lived in high irradiation zones, which may have evolved for protection against ultraviolet irradiation in this and other black-skinned birds.",
    "quote_sha": "14c3171a1e4a0bc0"
   },
   {
-   "fact_id": "F025",
-   "statement": "Two specimens from the aviary of Julien Desjardins were sent to the Paris museum in 1839.",
+   "fact_id": "F047",
+   "statement": "Two specimens from Julien Desjardins' aviary were pickled and sent to the Paris museum in 1839.",
    "category": "discovery",
    "chunk_id": "fregilupus:enwiki:7",
    "lang": "en",
@@ -325,8 +530,17 @@
    "quote_sha": "d10f26afbb5ac3c8"
   },
   {
-   "fact_id": "F026",
-   "statement": "The last definite record of a live hoopoe starling was taken in 1836.",
+   "fact_id": "F048",
+   "statement": "Captive birds could be fed bananas, potatoes, and chayote, while wild birds avoided inhabited areas.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "Cordemoy recalled that captive birds could be fed a wide variety of food, such as bananas, potatoes, and chayote, and wild birds would never enter inhabited areas.",
+   "quote_sha": "4a19d94627bbccf9"
+  },
+  {
+   "fact_id": "F049",
+   "statement": "The last definite live specimen was taken in 1836.",
    "category": "discovery",
    "chunk_id": "fregilupus:enwiki:7",
    "lang": "en",
@@ -334,7 +548,16 @@
    "quote_sha": "8392d47d3a6431ea"
   },
   {
-   "fact_id": "F027",
+   "fact_id": "F050",
+   "statement": "There are 19 surviving specimens globally, including one skeleton and two in spirits, with two in Paris and four in Troyes.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "There are 19 surviving hoopoe starling specimens in museums around the world (including one skeleton and two specimens preserved in spirits), with two in the Paris Museum and four in Troyes.",
+   "quote_sha": "2768b6491af9832b"
+  },
+  {
+   "fact_id": "F051",
    "statement": "The only known subfossil specimen is a femur discovered in 1993 in a Réunion grotto.",
    "category": "discovery",
    "chunk_id": "fregilupus:enwiki:7",
@@ -343,34 +566,142 @@
    "quote_sha": "4a82f0d414e66863"
   },
   {
-   "fact_id": "F028",
-   "statement": "It is suggested that the introduction of the common myna led to competition with the hoopoe starling.",
-   "category": "debate",
+   "fact_id": "F052",
+   "statement": "Specimens were sent to Europe starting in the late 18th century, with most collected in the early 19th century.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "Specimens were sent to Europe beginning in the second half of the 18th century, with most collected during the first half of the 19th century.",
+   "quote_sha": "b2e8bcef7a7a7f3b"
+  },
+  {
+   "fact_id": "F053",
+   "statement": "Skins in Turin, Livorno, and Caen were destroyed in WWII, and four skins from Réunion and Mauritius have disappeared.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "Additional skins in Turin, Livorno, and Caen were destroyed during World War II, and four skins have disappeared from Réunion and Mauritius (which now have one each).",
+   "quote_sha": "a77bda592eaf6a10"
+  },
+  {
+   "fact_id": "F054",
+   "statement": "It is unclear when specimens were acquired, and they were frequently moved between collections.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "It is unclear when each specimen was acquired, and specimens were frequently moved between collections.",
+   "quote_sha": "fa7230ddadc099d1"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "It is unclear which specimens served as the basis for descriptions and illustrations.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:7",
+   "lang": "en",
+   "quote": "It is also unclear which specimens were the basis for which descriptions and illustrations.",
+   "quote_sha": "3f3f8dd921c1f090"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "It is often suggested that the introduction of the common myna caused competition between the two starling species.",
+   "category": "discovery",
    "chunk_id": "fregilupus:enwiki:8",
    "lang": "en",
    "quote": "An oft-repeated suggestion is that the introduction of the common myna (Acridotheres tristis) led to competition between these two starling species.",
    "quote_sha": "73b52f3c57834cd0"
   },
   {
-   "fact_id": "F029",
-   "statement": "Hume argued that over-hunting by a growing human population was the final blow that drove the species to extinction.",
-   "category": "debate",
+   "fact_id": "F057",
+   "statement": "The common myna was introduced in 1759 to fight locusts but became a pest; the hoopoe starling coexisted with it for nearly 100 years, possibly without sharing habitat.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "The myna was introduced to Réunion in 1759 to combat locusts, and became a pest itself, but the hoopoe starling coexisted with the myna for nearly 100 years and they may not have shared habitat.",
+   "quote_sha": "3bb237921881b7a3"
+  },
+  {
+   "fact_id": "F058",
+   "statement": "Rats inhabited tree cavities and likely preyed on eggs, juveniles, and nesting birds.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "Like the hoopoe starling, the rats inhabited tree cavities and would have preyed on eggs, juveniles, and nesting birds.",
+   "quote_sha": "225c79971604139a"
+  },
+  {
+   "fact_id": "F059",
+   "statement": "British ecologist Anthony S. Cheke identified predation by the wolf snake as the chief cause of extinction, noting the species survived other threats for generations.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "According to British ecologist Anthony S. Cheke, this was the chief cause of the hoopoe starling's extinction; the species had survived for generations despite other threats.",
+   "quote_sha": "8a786c53bccd80d9"
+  },
+  {
+   "fact_id": "F060",
+   "statement": "Deforestation for plantations began in Réunion in the 1830s.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "Beginning in the 1830s, Réunion was deforested for plantations.",
+   "quote_sha": "5052c5881eb35417"
+  },
+  {
+   "fact_id": "F061",
+   "statement": "After slavery was abolished in 1848, former slaves and white peasants cultivated pristine areas, pushing the hoopoe starling to the edges of its habitat.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "Former slaves joined white peasants in cultivating pristine areas after slavery was abolished in 1848, and the hoopoe starling was pushed to the edges of its former habitat.",
+   "quote_sha": "aa43385faea873b2"
+  },
+  {
+   "fact_id": "F062",
+   "statement": "According to Hume, over-hunting by a growing population was the final blow to the species as forests became more accessible.",
+   "category": "discovery",
    "chunk_id": "fregilupus:enwiki:8",
    "lang": "en",
    "quote": "According to Hume, over-hunting was the final blow to the species; with forests more accessible, hunting by the rapidly growing human population may have driven the remaining birds to extinction.",
    "quote_sha": "a1f4c4359fe8940c"
   },
   {
-   "fact_id": "F030",
-   "statement": "The hoopoe starling was the last of the Mascarene starling species to go extinct.",
-   "category": "time_and_habitat",
+   "fact_id": "F063",
+   "statement": "Writers in the 1860s noted the bird had almost disappeared, likely already extinct, and Vinson in 1877 suggested the last individuals may have died in forest fires.",
+   "category": "discovery",
    "chunk_id": "fregilupus:enwiki:8",
    "lang": "en",
-   "quote": "The hoopoe starling survived longer than many other extinct Mascarene species, and was the last of the Mascarene starling species to face extinction.",
-   "quote_sha": "7cc29f81bbb35a88"
+   "quote": "During the 1860s, various writers noted that the bird had almost disappeared, but it was probably already extinct by this time; in 1877, Vinson lamented that the last individuals might have been killed by recent forest fires.",
+   "quote_sha": "1395959f15d473ab"
   },
   {
-   "fact_id": "F031",
+   "fact_id": "F064",
+   "statement": "Rodrigues and Mauritius starling species likely disappeared with rats, and rats contributed to the extinction of at least five Aplonis starling species in the Pacific.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:enwiki:8",
+   "lang": "en",
+   "quote": "The Rodrigues and Mauritius species probably disappeared with the arrival of rats; at least five species of Aplonis starlings have disappeared from the Pacific Islands, with rats also contributing to their extinction.",
+   "quote_sha": "3d2dfbc6f46fdcef"
+  },
+  {
+   "fact_id": "F065",
+   "statement": "The hoopoe starling belongs to the kingdom Animalia, phylum Chordata, class Aves, order Passeriformes, family Sturnidae, and genus Fregilupus.",
+   "category": "classification",
+   "chunk_id": "fregilupus:eswiki:1",
+   "lang": "es",
+   "quote": "regnum: Animalia phylum: Chordata classis: Aves ordo: Passeriformes familia: Sturnidae genus: Fregilupus",
+   "quote_sha": "c762657669dee9ad"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "The species is Fregilupus varius, with the binomial authority cited as Boddaert, 1783.",
+   "category": "classification",
+   "chunk_id": "fregilupus:eswiki:1",
+   "lang": "es",
+   "quote": "species: F. varius binomial: Fregilupus varius binomial_authority: (Boddaert, 1783)",
+   "quote_sha": "2df521badf470f31"
+  },
+  {
+   "fact_id": "F067",
    "statement": "The genus Fregilupus was established by Lesson in 1831.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:1",
@@ -379,34 +710,25 @@
    "quote_sha": "e0e3716b8fbd858b"
   },
   {
-   "fact_id": "F032",
-   "statement": "The binomial name Fregilupus varius was originally described by Boddaert in 1783.",
-   "category": "classification",
-   "chunk_id": "fregilupus:eswiki:1",
-   "lang": "es",
-   "quote": "binomial_authority: (Boddaert, 1783)",
-   "quote_sha": "d9d17488284887fc"
-  },
-  {
-   "fact_id": "F033",
-   "statement": "The species is considered extinct by 1850.",
-   "category": "time_and_habitat",
+   "fact_id": "F068",
+   "statement": "The species is recorded as extinct in 1850.",
+   "category": "discovery",
    "chunk_id": "fregilupus:eswiki:1",
    "lang": "es",
    "quote": "extinct: 1850",
    "quote_sha": "819a3a8ce3f85527"
   },
   {
-   "fact_id": "F034",
-   "statement": "Fregilupus varius, known as the Réunion crested starling, is an extinct passerine bird from the family Sturnidae that was endemic to Réunion in the Mascarene Islands.",
-   "category": "description",
-   "chunk_id": "fregilupus:eswiki:2",
+   "fact_id": "F069",
+   "statement": "The IUCN Red List status of the species is Extinct (EX) under the IUCN 3.1 system.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:eswiki:1",
    "lang": "es",
-   "quote": "El estornino de Reunión o estornino crestado de Reunión (Fregilupus varius) es una especie extinta de ave paseriforme de la familia Sturnidae endémica de Reunión, en las islas Mascareñas.",
-   "quote_sha": "3eb15ade29364d11"
+   "quote": "status: EX status_system: IUCN3.1",
+   "quote_sha": "54a442b1ab247a06"
   },
   {
-   "fact_id": "F035",
+   "fact_id": "F070",
    "statement": "The bird measured approximately 30 centimeters in length.",
    "category": "description",
    "chunk_id": "fregilupus:eswiki:2",
@@ -415,7 +737,7 @@
    "quote_sha": "6eb1042a441f6f4a"
   },
   {
-   "fact_id": "F036",
+   "fact_id": "F071",
    "statement": "Its plumage was mostly white and gray, with the back, wings, and tail being dark brown and gray.",
    "category": "description",
    "chunk_id": "fregilupus:eswiki:2",
@@ -424,7 +746,7 @@
    "quote_sha": "b681d69e06386611"
   },
   {
-   "fact_id": "F037",
+   "fact_id": "F072",
    "statement": "It possessed a slight erect crest that curved forward.",
    "category": "description",
    "chunk_id": "fregilupus:eswiki:2",
@@ -433,7 +755,7 @@
    "quote_sha": "fab47b64285cf5b0"
   },
   {
-   "fact_id": "F038",
+   "fact_id": "F073",
    "statement": "Researchers believe the species exhibited sexual dimorphism, with males being larger and having a more curved bill than females.",
    "category": "description",
    "chunk_id": "fregilupus:eswiki:2",
@@ -442,7 +764,16 @@
    "quote_sha": "319d6bb0c697ea9a"
   },
   {
-   "fact_id": "F039",
+   "fact_id": "F074",
+   "statement": "Its robust pelvis, long toes with large claws, and strong jaws suggest it foraged for food near the ground.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:2",
+   "lang": "es",
+   "quote": "Su pelvis era robusta, tenía dedos largos con garras grandes y mandíbulas fuertes lo que indica que buscaba alimento cerca del suelo.",
+   "quote_sha": "b5cfbc1f0ce2d64c"
+  },
+  {
+   "fact_id": "F075",
    "statement": "Reports indicate the birds lived in large flocks and inhabited wetlands and marshes.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:eswiki:2",
@@ -451,8 +782,8 @@
    "quote_sha": "617aca0563b2c89e"
   },
   {
-   "fact_id": "F040",
-   "statement": "The species was omnivorous, feeding on plant matter and insects.",
+   "fact_id": "F076",
+   "statement": "It was omnivorous, feeding on plant matter and insects.",
    "category": "paleobiology",
    "chunk_id": "fregilupus:eswiki:2",
    "lang": "es",
@@ -460,16 +791,7 @@
    "quote_sha": "c293a9bd9500e3b0"
   },
   {
-   "fact_id": "F041",
-   "statement": "Its robust pelvis, long toes with large claws, and strong jaws suggest it foraged for food near the ground.",
-   "category": "paleobiology",
-   "chunk_id": "fregilupus:eswiki:2",
-   "lang": "es",
-   "quote": "Su pelvis era robusta, tenía dedos largos con garras grandes y mandíbulas fuertes lo que indica que buscaba alimento cerca del suelo.",
-   "quote_sha": "b5cfbc1f0ce2d64c"
-  },
-  {
-   "fact_id": "F042",
+   "fact_id": "F077",
    "statement": "Only nineteen specimens of the species are preserved worldwide.",
    "category": "discovery",
    "chunk_id": "fregilupus:eswiki:2",
@@ -478,25 +800,16 @@
    "quote_sha": "06eac7cbb3f1c592"
   },
   {
-   "fact_id": "F043",
-   "statement": "The first mention of the bird is believed to be in a 1658 list of birds from Madagascar written by French governor Étienne de Flacourt.",
-   "category": "discovery",
-   "chunk_id": "fregilupus:eswiki:3",
+   "fact_id": "F078",
+   "statement": "Various factors have been proposed for its extinction, including competition and predation by introduced species, disease, deforestation, and human persecution for food or as crop pests.",
+   "category": "debate",
+   "chunk_id": "fregilupus:eswiki:2",
    "lang": "es",
-   "quote": "Se cree que la primera vez donde aparece mencionado el estornino crestado de Reunión es en una lista de aves de Madagascar de 1658 escrita por el gobernador francés Étienne de Flacourt.",
-   "quote_sha": "d40f7afa54d040af"
+   "quote": "Se han propuesto varios factores que habrían conducido a su extinción, como la competencia y depredación de especies introducidas, las enfermedades, la deforestación y la persecución realizada por los humanos, que los cazaban para comérselos y aduciendo que eran una plaga para las cosechas.",
+   "quote_sha": "385fd241e5eb9e6d"
   },
   {
-   "fact_id": "F044",
-   "statement": "The bird was first recorded on the island of Réunion (then called Bourbon) by Père Vachet in 1669, but was not described in detail until Sieur Dubois's report in 1674.",
-   "category": "discovery",
-   "chunk_id": "fregilupus:eswiki:3",
-   "lang": "es",
-   "quote": "El estornino crestado fue registrado por primera vez en la isla de Reunión (entonces llamada \"Bourbon\") por Père Vachet en 1669, pero no fue descrito en detalle hasta el informe de Sieur Dubois de 1674",
-   "quote_sha": "3a667970d69f4a8c"
-  },
-  {
-   "fact_id": "F045",
+   "fact_id": "F079",
    "statement": "Although scientifically described by French naturalist Philippe Guéneau de Montbeillard in the 1779 edition of Buffon's Histoire Naturelle, it did not receive its scientific name until Dutch naturalist Pieter Boddaert assigned it in the 1783 edition.",
    "category": "discovery",
    "chunk_id": "fregilupus:eswiki:3",
@@ -505,7 +818,7 @@
    "quote_sha": "973c02e54dc48ee2"
   },
   {
-   "fact_id": "F046",
+   "fact_id": "F080",
    "statement": "Boddaert named it Upupa varia, classifying it in the hoopoe genus, meaning \"mottled hoopoe\" in reference to its white and dark colors.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:3",
@@ -514,8 +827,8 @@
    "quote_sha": "9d8a40ef17d42fce"
   },
   {
-   "fact_id": "F047",
-   "statement": "In 1831, René-Primevère Lesson placed it in its own genus, Fregilipus, a combination of Upupa and Fregilus, the latter being an obsolete name for coucals.",
+   "fact_id": "F081",
+   "statement": "In 1831, René-Primevère Lesson placed it in its own genus, Fregilipus, a combination of Upupa and Fregilus, the latter being an obsolete name used for coucals.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:3",
    "lang": "es",
@@ -523,7 +836,7 @@
    "quote_sha": "766d6601399c6e30"
   },
   {
-   "fact_id": "F048",
+   "fact_id": "F082",
    "statement": "Hermann Schlegel first proposed in 1857 that the species belonged to the starling family (Sturnidae), reclassifying it within the genus Sturnus as S. capensis.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:3",
@@ -532,25 +845,7 @@
    "quote_sha": "96f8890d1bb690ec"
   },
   {
-   "fact_id": "F049",
-   "statement": "Carl Jakob Sundevall proposed the genus name Lophopsarus in 1872, but Fregilupus varius remains the valid binomial name, with all others being synonyms.",
-   "category": "classification",
-   "chunk_id": "fregilupus:eswiki:3",
-   "lang": "es",
-   "quote": "Carl Jakob Sundevall propuso un nuevo nombre para su propio género Lophopsarus (estornino crestado) en 1872, aunque Fregilupus varius—el nombre correcto más antiguo—prevalece como nombre binomial del ave y todos los demás nombres científicos quedan como sinónimos.",
-   "quote_sha": "186076a9c42279a2"
-  },
-  {
-   "fact_id": "F050",
-   "statement": "In 1941, Malcolm R. Miller found the bird's musculature similar to the common starling after dissecting an alcohol-preserved specimen, but noted the degraded tissue did not necessarily confirm a relationship with starlings.",
-   "category": "classification",
-   "chunk_id": "fregilupus:eswiki:3",
-   "lang": "es",
-   "quote": "En 1941 Malcolm R. Miller encontró que la musculatura del ave era similar a la del estornino común (Sturnus vulgaris) tras diseccionar un espécimen conservado en alcohol en el museo de Cambridge, pero anotó que el tejido estaba muy degradado y que la similitud no confirmaba necesariamente una relación con los estorninos.",
-   "quote_sha": "ef86443c40c98c1d"
-  },
-  {
-   "fact_id": "F051",
+   "fact_id": "F083",
    "statement": "In 1957, Andrew John Berger doubted the bird's relationship with starlings due to subtle anatomical differences after dissecting another alcohol-preserved specimen at the American Museum of Natural History.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:3",
@@ -559,7 +854,7 @@
    "quote_sha": "992fa2ee7402068c"
   },
   {
-   "fact_id": "F052",
+   "fact_id": "F084",
    "statement": "Other authors proposed a relationship with vangas (Vangidae), but Hiroyuki Morioka rejected this in 1996 following a comparative study of their skeletons.",
    "category": "classification",
    "chunk_id": "fregilupus:eswiki:3",
@@ -568,8 +863,170 @@
    "quote_sha": "f46035d7f0b45258"
   },
   {
-   "fact_id": "F053",
-   "statement": "The parent group of the genus Fregilupus is Sturnidae.",
+   "fact_id": "F085",
+   "statement": "Early colonists of Réunion called these birds \"huppe\" (hoopoe) due to their resemblance in crest and curved bill.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:3",
+   "lang": "es",
+   "quote": "Los primeros colonos de Reunión llamaban a estas aves «huppe» (abubilla), debido a su parecido por su copete y su pico curvado.",
+   "quote_sha": "e7e6872fb7aee27e"
+  },
+  {
+   "fact_id": "F086",
+   "statement": "The Réunion starling measured approximately 30 cm in length.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "El estornino de Reunión medía unos 30 cm de longitud.",
+   "quote_sha": "b1433a6ee8ca40f6"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "Its beak culmen measured 41 mm, its wing 147 mm, its tail 114 mm, and its tarsus about 39 mm.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "El culmen de su pico medía 41 mm, su ala 147 mm, su cola 114 mm y su tarso aunos 39 mm.",
+   "quote_sha": "e0a74a85e63c2dc8"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "It was the largest of the three starling species from the Mascarene islands.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "Era el estornino más grande de las tres especies de las Mascareñas.",
+   "quote_sha": "b3f1e102f6cf8d44"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "It had a triangular naked area around the eye that may have been yellow in life.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "Tenía una zona triangular desnuda alrededor del ojo que podría ser amarilla en vida.",
+   "quote_sha": "69799cbb4c24f04c"
+  },
+  {
+   "fact_id": "F090",
+   "statement": "Its beak and legs were lemon yellow, with the lower mandible brown.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "El pico y las patas eran de color amarillo limón, con la mandíbula inferior pardo.",
+   "quote_sha": "246dac1f6601d7da"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Vinson described its crest as flexible, with separate feathers curved forward of varying lengths, higher in the center, and capable of being erected at will.",
+   "category": "description",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "Vinson, que observó estorninos crestados cuando vivía en Reunión, describió su penacho como flexible, con plumas separadas y curvadas hacia delante de varias longitudes, más altas por el centro, y que podía erizarse a voluntad.",
+   "quote_sha": "2b7cde35a8c6f5b8"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "Like most starlings, the Réunion starling was omnivorous, feeding on fruits, seeds, and insects.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Como la mayoría de los estorninos, el estornino de Reunión era omnívoro, se alimentaba de frutos, semillas e insectos.",
+   "quote_sha": "0444bf349719670c"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "It could move its long, thin, pointed tongue quickly to help itself when feeding on fruits, nectar, pollen, and invertebrates.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Podía mover su lengua (larga, delgada y puntiaguda) rápidamente para ayudarse cuando se alimentaba de frutos, néctar, polen e invertebrados.",
+   "quote_sha": "206f3ae4443ecede"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Its pelvic elements were robust, and its legs and claws were long, indicating it fed near the ground.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Sus elementos pélvicos eran robustos y sus patas y garras eran largas, lo que indicaba que se alimentaba cerca del suelo.",
+   "quote_sha": "11a54af0d243f147"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Morioka compared its skull to that of a hoopoe, suggesting it may have fed similarly by probing and making holes in the substrate by inserting and opening its beak.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Morioka comparó su cráneo con el de la abubilla, y podría haberse alimentado de una forma similar, sondeando y haciendo agujeros en el sustrato insertando y abriendo su pico.",
+   "quote_sha": "90f23b32fdda23fe"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "De Montbeillard was informed of the stomach contents of a dissected specimen, which consisted of seeds and fruits of \"Pseudobuxus\" (possibly Eugenia buxifolia, a shrub with sweet and orange berries).",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "De Montbeillard fue informado del contenido del estómago de un espécimen diseccionado, que consistía de semillas y frutos de \"Pseudobuxus\" (posiblemente Eugenia buxifolia, un arbusto con bayas dulces y naranjas).",
+   "quote_sha": "146d5a02815e9346"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "It was noted that the bird weighed 110 grams and was fatter around June and July.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Anotó que el pájaro pesaba 110 gramos, y que estaba más gordo alrededor de junio y julio.",
+   "quote_sha": "d692bce0c12b694f"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "Several reports indicate that the crested starling migrated within Réunion, spending six months in the lowlands and six months in the mountains.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "Varios informes indican que el estornino crestado migraban dentro de Reunión, pasando seis meses en las tierras bajas y seis meses en las montañas.",
+   "quote_sha": "34a82060463cca9d"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "The crested starling probably nested in tree cavities.",
+   "category": "paleobiology",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "El estornino crestado probablemente anidaría en las cavidades de los árboles.",
+   "quote_sha": "60aaf11e2c6c3e1b"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "It was abundant and formed large flocks that inhabited wet areas and swamps.",
+   "category": "time_and_habitat",
+   "chunk_id": "fregilupus:eswiki:7",
+   "lang": "es",
+   "quote": "era abundante y formaba grandes bandadas que habitaban en las zonas húmedas y los pantanos.",
+   "quote_sha": "16c58df8a9938fac"
+  },
+  {
+   "fact_id": "F101",
+   "statement": "The only illustration of the crested starling currently believed to be based on living individuals was drawn by Paul Philippe Sauguin de Jossigny at the beginning of the 1770s.",
+   "category": "discovery",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "La única ilustración del estornino crestado que en la actualidad se cree fue realizada a partir de individuos vivos fue dibujada por Paul Philippe Sauguin de Jossigny al comienzo de la década de 1770.",
+   "quote_sha": "35c67a3fe42b90f1"
+  },
+  {
+   "fact_id": "F102",
+   "statement": "The genus Fregilupus was named by Lesson in 1831.",
+   "category": "classification",
+   "chunk_id": "fregilupus:pbdb:1",
+   "lang": "en",
+   "quote": "PBDB name: Fregilupus (genus), Lesson 1831",
+   "quote_sha": "8beedece359849ad"
+  },
+  {
+   "fact_id": "F103",
+   "statement": "Its parent group is the family Sturnidae.",
    "category": "classification",
    "chunk_id": "fregilupus:pbdb:1",
    "lang": "en",
@@ -577,8 +1034,8 @@
    "quote_sha": "36a2c1e328382f1c"
   },
   {
-   "fact_id": "F054",
-   "statement": "The family of the genus Fregilupus is Sturnidae.",
+   "fact_id": "F104",
+   "statement": "It belongs to the family Sturnidae.",
    "category": "classification",
    "chunk_id": "fregilupus:pbdb:1",
    "lang": "en",
@@ -586,8 +1043,8 @@
    "quote_sha": "4c03b213909ad981"
   },
   {
-   "fact_id": "F055",
-   "statement": "The time range for the genus Fregilupus is the Holocene, from 0.0117 to 0 million years ago.",
+   "fact_id": "F105",
+   "statement": "It lived during the Holocene, from 0.0117 to 0 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "fregilupus:pbdb:1",
    "lang": "en",
@@ -595,145 +1052,112 @@
    "quote_sha": "f56ba1fbcf339319"
   },
   {
-   "fact_id": "F056",
-   "statement": "In 1875, Alfred Newton hypothesized that a black and white bird mentioned in a 1726–27 manuscript by a mariner stranded on Rodrigues was the same species as the Réunion crested starling.",
+   "fact_id": "F106",
+   "statement": "There has been confusion about which characteristics were due to sexual dimorphism in the species.",
    "category": "debate",
-   "chunk_id": "fregilupus:eswiki:4",
+   "chunk_id": "fregilupus:eswiki:6",
    "lang": "es",
-   "quote": "En 1875 el ornitólogo británico Alfred Newton intentó identificar con el estornino de Reunión un pájaro blanco y negro mencionado en un manuscrito del que describía un marinero abandonado en las isla de Rodrigues (también de las Mascareñas) entre 1726–27, suponiendo que podría tratarse de la misma especie.",
-   "quote_sha": "57285aa62ed7c2eb"
+   "quote": "Ha habido confusión sobre qué características eran debidas al dimorfismo sexual en la especie.",
+   "quote_sha": "7b9d297328e3154e"
   },
   {
-   "fact_id": "F057",
-   "statement": "Although Günther and Newton found the Rodrigues bird closely related to the Réunion crested starling, they assigned them to separate genera.",
+   "fact_id": "F107",
+   "statement": "In 1911, Réunion resident Eugène Jacob de Cordemoy recalled his observations of this bird from 50 years prior, indicating that only males had the white crest, but this is believed to be incorrect.",
    "category": "debate",
-   "chunk_id": "fregilupus:eswiki:4",
+   "chunk_id": "fregilupus:eswiki:6",
    "lang": "es",
-   "quote": "Aunque encontraron que esta ave de Rodrigues estaba cercanamente emparentada con el estornino crestado de Reunión, Günther y Newton les asignaron géneros separados.",
-   "quote_sha": "a346f3d6527fc16f"
+   "quote": "En 1911 el residente en Reunión Eugène Jacob de Cordemoy recordando sus observaciones de este pájaro de 50 años atrás, indicó que solo los machos tenían el copete blanco, pero se cree que esto es incorrecto.",
+   "quote_sha": "186e49468173007d"
   },
   {
-   "fact_id": "F058",
-   "statement": "In 2014, Julian P. Hume described the extinct Mauritius starling (Cryptopsar ischyrhynchus) from subfossils, noting it was more closely related to the Rodrigues starling than to the Réunion crested starling based on skull, sternum, and humerus characteristics.",
+   "fact_id": "F108",
+   "statement": "Although the iris of the species was described as brownish-blue, it has been depicted as brown, yellow, and orange.",
    "category": "debate",
-   "chunk_id": "fregilupus:eswiki:4",
+   "chunk_id": "fregilupus:eswiki:6",
    "lang": "es",
-   "quote": "En 2014 el paleontólogo británico Julian P. Hume describió una nueva especie extinta: el estornino de Mauricio (Cryptopsar ischyrhynchus), a partir de subfósiles de Mauricio, que estaba más próximamente emparentada con el estornino de Rodrigues que el crestado de Reunión por las características de su cráneo, esternón y húmero.",
-   "quote_sha": "afb8e4c624781468"
+   "quote": "Aunque el iris de la especie se describió como pardo azulado, se ha representado como castaño, amarillo y naranja.",
+   "quote_sha": "af7171b7c8c545d7"
+  },
+  {
+   "fact_id": "F109",
+   "statement": "Jossigny also made the only life drawing of the extinct Rodrigues parrot (Psittacula exsul) from a specimen sent to him from Rodrigues to Mauritius, so perhaps he also drew the crested starling there.",
+   "category": "curiosities",
+   "chunk_id": "fregilupus:eswiki:6",
+   "lang": "es",
+   "quote": "Jossigny también hizo el único dibujo en vida de la extinta cotorra de Rodrigues (Psittacula exsul) a partir de un ejemplar que le mandaron de Rodrigues a Mauricio, así que quizás fue donde también dibujó al estornino crestadoso.",
+   "quote_sha": "2f743d591c7fc37f"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "fregilupus:enwiki:2",
-   "statement": "The hoopoe starling was first mentioned during the 17th century.",
-   "category": "discovery",
-   "quote": "The bird was first mentioned during the 17th century",
-   "reason": "statement copies the source wording: 'was first mentioned during the 17 th century'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:2",
-   "statement": "The hoopoe starling was 30 cm in length.",
-   "category": "description",
-   "quote": "The hoopoe starling was 30 cm in length.",
-   "reason": "statement copies the source wording: 'The hoopoe starling was 30 cm in length'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:2",
-   "statement": "The hoopoe starling was omnivorous, feeding on plant matter and insects.",
-   "category": "paleobiology",
-   "quote": "The hoopoe starling was omnivorous, feeding on plant matter and insects.",
-   "reason": "statement copies the source wording: 'The hoopoe starling was omnivorous feeding on plant'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The earliest account thought to mention the hoopoe starling is a 1658 list of birds of Madagascar written by French governor Étienne de Flacourt.",
-   "category": "discovery",
-   "quote": "The first account thought to mention the hoopoe starling is a 1658 list of birds of Madagascar written by French governor Étienne de Flacourt.",
-   "reason": "statement copies the source wording: 'account thought to mention the hoopoe starling is'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The hoopoe starling was first noted on the island of Réunion by Père Vachet in 1669.",
-   "category": "discovery",
-   "quote": "The hoopoe starling was first noted on the Mascarene island of Réunion (then called \"Bourbon\") by Père Vachet in 1669",
-   "reason": "statement copies the source wording: 'The hoopoe starling was first noted on the'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The hoopoe starling was first described in detail by French traveler Sieur Dubois in 1674.",
-   "category": "discovery",
-   "quote": "and first described in detail by French traveler Sieur Dubois's in 1674",
-   "reason": "statement copies the source wording: 'first described in detail by French traveler Sieur'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The hoopoe starling was first scientifically described by French naturalist Philippe Guéneau de Montbeillard in the 1779 edition of Comte de Buffon's Histoire Naturelle.",
-   "category": "discovery",
-   "quote": "The species was first scientifically described by French naturalist Philippe Guéneau de Montbeillard in the 1779 edition of French naturalist Comte de Buffon's Histoire Naturelle",
-   "reason": "statement copies the source wording: 'was first scientifically described by French naturalist Philippe'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The hoopoe starling received its scientific name from Dutch naturalist Pieter Boddaert for the 1783 edition of the book.",
-   "category": "discovery",
-   "quote": "and received its scientific name from Dutch naturalist Pieter Boddaert for the book's 1783 edition.",
-   "reason": "statement copies the source wording: 'received its scientific name from Dutch naturalist Pieter'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:3",
-   "statement": "The hoopoe starling was reported to be in decline by the early 19th century and was probably extinct before the 1860s.",
-   "category": "time_and_habitat",
-   "quote": "The hoopoe starling was reported to be in decline by the early 19th century and was probably extinct before the 1860s.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
    "chunk_id": "fregilupus:enwiki:4",
-   "statement": "A 2008 DNA study placed the hoopoe starling in a clade of Southeast Asian starlings as an isolated lineage with no close relatives.",
+   "statement": "A 2008 DNA study by Dario Zuccon and colleagues placed the hoopoe starling in a clade of Southeast Asian starlings as an isolated lineage with no close relatives.",
    "category": "classification",
    "quote": "A 2008 study by Italian zoologist Dario Zuccon and colleagues analysing the DNA of a variety of starlings confirmed that the hoopoe starling belonged in a clade of Southeast Asian starlings as an isolated lineage, with no close relatives.",
    "reason": "statement copies the source wording: 'Asian starlings as an isolated lineage with no'"
   },
   {
    "chunk_id": "fregilupus:enwiki:4",
-   "statement": "A 2024 study confirmed the hoopoe starling's close relations with the starling genera Sturnia, Leucopsar, and Sturnornis.",
+   "statement": "Researchers suggested that ancestors of the hoopoe starling reached Réunion from Southeast Asia by using island chains as stepping stones across the Indian Ocean.",
+   "category": "classification",
+   "quote": "Zuccon and colleagues suggested that ancestors of the hoopoe starling reached Réunion from Southeast Asia by using island chains as \"stepping stones\" across the Indian Ocean, a scenario also suggested for other Mascarene birds.",
+   "reason": "statement copies the source wording: 'suggested that ancestors of the hoopoe starling reached'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "The hoopoe starling's lineage diverged from other starlings 4 million years ago, suggesting it may have first evolved on landmasses now partially submerged.",
+   "category": "classification",
+   "quote": "Its lineage diverged from that of other starlings 4 million years ago (about 2 million years before Réunion emerged from the sea), so it may have first evolved on landmasses now partially submerged.",
+   "reason": "statement copies the source wording: 'it may have first evolved on landmasses now'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "A 2024 study by Jérôme Fuchs and colleagues confirmed the hoopoe starling's close relations with the starling genera Sturnia, Leucopsar, and Sturnornis.",
    "category": "classification",
    "quote": "In 2024, French biologist Jérôme Fuchs and colleagues also studied the Stockholm sample, and confirmed the species' close relations with the starling genera Sturnia, Leucopsar, and Sturnornis.",
    "reason": "statement copies the source wording: 'close relations with the starling genera Sturnia Leucopsar'"
   },
   {
-   "chunk_id": "fregilupus:enwiki:5",
-   "statement": "The hoopoe starling was 30 cm in length.",
-   "category": "description",
-   "quote": "The hoopoe starling was 30 cm in length.",
-   "reason": "statement copies the source wording: 'The hoopoe starling was 30 cm in length'"
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "A 2024 study estimated the hoopoe starling's divergence time converged with the emergence of Réunion between 2.1 and 3.0 million years ago, contradicting the stepping stone dispersal hypothesis.",
+   "category": "classification",
+   "quote": "Their divergence estimate converged with the emergence of Réunion 2.1–3.0 million years ago, and did not indicate stepping stone dispersal.",
+   "reason": "numbers not in the quote: ['2024']"
   },
   {
    "chunk_id": "fregilupus:enwiki:5",
-   "statement": "A presumed adult male specimen has a light ash-grey head and back of the neck with a long crest of the same color featuring white shafts.",
-   "category": "description",
-   "quote": "A presumed adult male (NHMUK 1889.5.30.15) in the Paris museum has a light ash-grey head and back of the neck (lighter on the hind-neck), with a long crest the same colour with white shafts.",
-   "reason": "statement copies the source wording: 'has a light ash-grey head and back of'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:5",
-   "statement": "The species had a bare, triangular area of skin around the eye that may have been yellow in life.",
-   "category": "description",
-   "quote": "It has a bare, triangular area of skin around the eye, which may have been yellow in life.",
-   "reason": "statement copies the source wording: 'a bare triangular area of skin around the'"
-  },
-  {
-   "chunk_id": "fregilupus:enwiki:5",
-   "statement": "The hoopoe starling can be distinguished from other Mascarene starlings by its cranium being rounded when viewed from above and bulbous towards the back.",
+   "statement": "The hoopoe starling can be distinguished from other Mascarene starlings by its cranium being rounded when viewed from above and bulbous toward the back.",
    "category": "description",
    "quote": "The hoopoe starling can be distinguished skeletally from other Mascarene starlings by its cranium being rounded when seen from above, bulbous towards the back.",
    "reason": "statement copies the source wording: 'from other Mascarene starlings by its cranium being'"
   },
   {
    "chunk_id": "fregilupus:enwiki:5",
-   "statement": "The upper beak was narrow and strongly decurved, while the lower beak was narrow and sharply pointed.",
+   "statement": "The hoopoe starling's tarsometatarsus was long and robust with a relatively straight shaft.",
    "category": "description",
-   "quote": "The upper beak was narrow and strongly decurved, and the lower beak was narrow and sharply pointed.",
-   "reason": "statement copies the source wording: 'The upper beak was narrow and strongly decurved'"
+   "quote": "The tarsometatarsus (ankle bone) was long and robust, with a relatively straight shaft.",
+   "reason": "statement copies the source wording: 'was long and robust with a relatively straight'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "In 1999, Cécile Mourer-Chauviré and colleagues noted that Réunion is 3 million years old, allowing time for new genera to evolve, but many endemics were likely wiped out by Piton des Neiges eruptions between 300,000 and 180,000 years ago.",
+   "category": "discovery",
+   "quote": "In 1999, the French palaeontologist Cécile Mourer-Chauviré and colleagues pointed out that Réunion is 3 million years old, which is enough time for new genera to evolve, but many endemics would have been wiped out by eruptions of the volcano Piton des Neiges between 300,000 and 180,000 years ago.",
+   "reason": "statement copies the source wording: 'time for new genera to evolve but many'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "Population history reconstruction shows the hoopoe starling experienced a strong genetic bottleneck around 200,000 to 300,000 years ago before increasing in the last 10,000 years, with a population size not especially low compared to other extinct birds.",
+   "category": "paleobiology",
+   "quote": "They also reconstructed the population history of the species, and found it went through a strong genetic bottleneck about 200–300.000 years ago before increasing during the last 10.000 years, though its population was not especially low compared to other extinct or critically endangered birds.",
+   "reason": "numbers not in the quote: ['200000']"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:4",
+   "statement": "It is debated whether the type illustration of the hoopoe starling by Martinet was an original life drawing or a derivative of Jossigny's image.",
+   "category": "debate",
+   "quote": "Hume believes that Martinet did this when he made the type illustration, and it was derivative of Jossigny's image rather than a life drawing.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "fregilupus:enwiki:6",
@@ -751,45 +1175,108 @@
   },
   {
    "chunk_id": "fregilupus:enwiki:7",
-   "statement": "There are 19 surviving hoopoe starling specimens in museums worldwide, including one skeleton and two in spirits, with two in the Paris Museum and four in Troyes.",
+   "statement": "In 1704, Jean Feuilley explained that humans and cats caught the birds.",
    "category": "discovery",
-   "quote": "There are 19 surviving hoopoe starling specimens in museums around the world (including one skeleton and two specimens preserved in spirits), with two in the Paris Museum and four in Troyes.",
-   "reason": "statement copies the source wording: 'There are 19 surviving hoopoe starling specimens in'"
+   "quote": "In 1704, French pilot engineer Jean Feuilley explained how the birds were caught by humans and cats.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "fregilupus:enwiki:8",
-   "statement": "British ecologist Anthony S. Cheke proposed that predation by introduced rats was the chief cause of the hoopoe starling's extinction.",
-   "category": "debate",
-   "quote": "According to British ecologist Anthony S. Cheke, this was the chief cause of the hoopoe starling's extinction; the species had survived for generations despite other threats.",
-   "reason": "statement copies the source wording: \"was the chief cause of the hoopoe starling's\""
+   "statement": "The black rat arrived in the 1670s and the brown rat in 1735, multiplying rapidly and threatening agriculture and native species.",
+   "category": "discovery",
+   "quote": "The black rat (Rattus rattus) arrived on Reunion in the 1670s, and the brown rat (Rattus norvegicus) in 1735, multiplying rapidly and threatening agriculture and native species.",
+   "reason": "statement copies the source wording: 'in 1735 multiplying rapidly and threatening agriculture and'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:8",
+   "statement": "A 1821 law mandated the extermination of grain-damaging birds, and the hoopoe starling had a reputation for damaging crops.",
+   "category": "discovery",
+   "quote": "In 1821, a law mandating the extermination of grain-damaging birds was implemented, and the hoopoe starling had a reputation for damaging crops.",
+   "reason": "statement copies the source wording: 'and the hoopoe starling had a reputation for'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:8",
+   "statement": "No attempts to preserve the species in captivity appear to have been made.",
+   "category": "discovery",
+   "quote": "No attempts to preserve the species in captivity seem to have been made.",
+   "reason": "statement copies the source wording: 'No attempts to preserve the species in captivity'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:8",
+   "statement": "The hoopoe starling survived longer than many other Mascarene species and was the last Mascarene starling species to go extinct.",
+   "category": "discovery",
+   "quote": "The hoopoe starling survived longer than many other extinct Mascarene species, and was the last of the Mascarene starling species to face extinction.",
+   "reason": "statement copies the source wording: 'The hoopoe starling survived longer than many other'"
+  },
+  {
+   "chunk_id": "fregilupus:enwiki:8",
+   "statement": "The bird may have survived longer due to Réunion's rugged topography and highlands, where it spent much of the year.",
+   "category": "discovery",
+   "quote": "The hoopoe starling may have survived longer because of Réunion's rugged topography and highlands, where it spent much of the year.",
+   "reason": "statement copies the source wording: \"Réunion's rugged topography and highlands where it spent\""
   },
   {
    "chunk_id": "fregilupus:eswiki:2",
-   "statement": "Its decline was reported in the early 19th century, and it likely went extinct before the 1860s.",
+   "statement": "Fregilupus varius, known as the Réunion bulbul or crested bulbul, was an extinct passerine bird in the family Sturnidae endemic to Réunion in the Mascarene Islands.",
+   "category": "description",
+   "quote": "El estornón de Reunión o estornón crestado de Reunión (Fregilupus varius) es una especie extinta de ave paseriforme de la familia Sturnidae endémica de Reunión, en las islas Mascareñas.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:2",
+   "statement": "Its decline was reported in the early 1800s, and it likely went extinct before the 1860s.",
    "category": "time_and_habitat",
    "quote": "A principios del se informó de su declive, y probablemente se extinguió antes de la década de 1860.",
-   "reason": "numbers not in the quote: ['19']"
+   "reason": "numbers not in the quote: ['1800']"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:3",
+   "statement": "The earliest mention of the bird is believed to be in a 1658 list of birds from Madagascar written by French governor Étienne de Flacourt.",
+   "category": "discovery",
+   "quote": "Se cree que la primera vez donde aparece mencionado el estornón crestado de Reunión es en una lista de aves de Madagascar de 1658 escrita por el gobernador francés Étienne de Flacourt.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:3",
+   "statement": "The bird was first recorded on the island of Réunion (then called Bourbon) by Père Vachet in 1669, but was not described in detail until Sieur Dubois's report in 1674.",
+   "category": "discovery",
+   "quote": "El estornón crestado fue registrado por primera vez en la isla de Reunión (entonces llamada \"Bourbon\") por Père Vachet en 1669, pero no fue descrito en detalle hasta el informe de Sieur Dubois de 1674.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:3",
+   "statement": "Carl Jakob Sundevall proposed a new genus name Lophopsarus (crested starling) in 1872, but Fregilupus varius—the oldest valid name—remains the accepted binomial, with all others as synonyms.",
+   "category": "classification",
+   "quote": "Carl Jakob Sundevall propuso un nuevo nombre para su propio género Lophopsarus (estornón crestado) en 1872, aunque Fregilupus varius—el nombre correcto más antiguo—prevalece como nombre binomial del ave y todos los demás nombres científicos quedan como sinónimos.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:3",
+   "statement": "In 1941, Malcolm R. Miller found the bird's musculature similar to the common starling (Sturnus vulgaris) after dissecting an alcohol-preserved specimen, but noted the tissue was highly degraded and the similarity did not necessarily confirm a relationship with starlings.",
+   "category": "classification",
+   "quote": "En 1941 Malcolm R. Miller encontró que la musculatura del ave era similar a la del estornón común (Sturnus vulgaris) tras diseccionar un espécimen conservado en alcohol en el museo de Cambridge, pero anotó que el tejido estaba muy degradado y que la similitud no confirmaba necesariamente una relación con los estorninos.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:3",
+   "statement": "The 1770 illustration of the Réunion bulbul by François-Nicolas Martinet, accompanying the name provided by Boddaert, is considered the holotype or type illustration of the species.",
+   "category": "curiosities",
+   "quote": "Boddaert proporcionaba la nomenclatura binomial a las láminas de las obras de Buffon, por lo que la ilustración de 1770 del estornón de Reunión de François-Nicolas Martinet que acompaña a este nombre se considera el holotipo de la especie o ilustración tipo.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "fregilupus:eswiki:6",
+   "statement": "Its mandibles were strong.",
+   "category": "paleobiology",
+   "quote": "Sus mandíbulas eran fuertes.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "fregilupus:pbdb:1",
-   "statement": "The class of the genus Fregilupus is Aves.",
+   "statement": "It is classified in the class Aves.",
    "category": "classification",
    "quote": "Class: Aves",
    "reason": "quote too short"
-  },
-  {
-   "chunk_id": "fregilupus:eswiki:3",
-   "statement": "It is debated whether the 1658 mention of \"tivouch\" refers to the Réunion crested starling or the Malagasy hoopoe subspecies, though the latter resembles the European subspecies.",
-   "category": "debate",
-   "quote": "Aunque se le menciona como \"tivouch\" (abubilla) blanca y gris, los autores posteriores piensan que o bien se refiere al estornino crestado o a la subespecie malgache de la abubilla (Upupa epops marginata), pero esta última es de aspecto similar a la subespecie europea.",
-   "reason": "numbers not in the quote: ['1658']"
-  },
-  {
-   "chunk_id": "fregilupus:eswiki:3",
-   "statement": "It is currently impossible to determine whether the 1770 type illustration was based on a specimen from the National Museum of Natural History in Paris.",
-   "category": "debate",
-   "quote": "Aunque la lámina podría estar basada en un espécimen del Museo Nacional de Historia Natural de París, en la actualidad es imposible determinarlo.",
-   "reason": "numbers not in the quote: ['1770']"
   }
  ]
 }

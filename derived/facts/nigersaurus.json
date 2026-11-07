@@ -2,9 +2,9 @@
  "taxon": "Nigersaurus",
  "taxon_key": "nigersaurus",
  "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "ad719effb716f1e0",
- "generated_at": "2026-11-03T07:04:38+00:00",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "af62941db5ef03b0",
+ "generated_at": "2026-11-05T02:35:40+00:00",
  "citations": {
   "nigersaurus:enwiki:1": {
    "source": "wikipedia_article",
@@ -111,6 +111,27 @@
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
+  "nigersaurus:eswiki:6": {
+   "source": "wikipedia_article",
+   "title": "Nigersaurus taqueti (Clasificación)",
+   "url": "https://es.wikipedia.org/wiki/Nigersaurus_taqueti?oldid=175944442",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nigersaurus:eswiki:8": {
+   "source": "wikipedia_article",
+   "title": "Nigersaurus taqueti (Paleobiología)",
+   "url": "https://es.wikipedia.org/wiki/Nigersaurus_taqueti?oldid=175944442",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nigersaurus:eswiki:9": {
+   "source": "wikipedia_article",
+   "title": "Nigersaurus taqueti (Dieta y alimentación)",
+   "url": "https://es.wikipedia.org/wiki/Nigersaurus_taqueti?oldid=175944442",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
   "nigersaurus:pbdb:1": {
    "source": "pbdb",
    "title": "Paleobiology Database: Nigersaurus",
@@ -131,7 +152,16 @@
   },
   {
    "fact_id": "F002",
-   "statement": "Nigersaurus was discovered in the Elrhaz Formation at Gadoufaoua in Niger.",
+   "statement": "The genus Nigersaurus was formally described by Sereno and colleagues in 1999.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Sereno et al., 1999",
+   "quote_sha": "ce3d8f1699670f51"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Nigersaurus were discovered in the Elrhaz Formation at Gadoufaoua in Niger.",
    "category": "discovery",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -139,8 +169,8 @@
    "quote_sha": "847f095d26d745fc"
   },
   {
-   "fact_id": "F003",
-   "statement": "Fossils of Nigersaurus were first described in 1976, but the species was formally named in 1999.",
+   "fact_id": "F004",
+   "statement": "Remains were first mentioned in 1976, but the species was not named until 1999 when more complete fossils were found.",
    "category": "discovery",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -148,8 +178,8 @@
    "quote_sha": "aa80b3d0bd540401"
   },
   {
-   "fact_id": "F004",
-   "statement": "The specific name taqueti honors Philippe Taquet, who discovered the first remains.",
+   "fact_id": "F005",
+   "statement": "The specific name 'taqueti' honors Philippe Taquet, who discovered the initial remains.",
    "category": "discovery",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -157,8 +187,8 @@
    "quote_sha": "ff1afbd28c62c533"
   },
   {
-   "fact_id": "F005",
-   "statement": "Nigersaurus was small for a sauropod, measuring 9 to 14.1 meters in length with a short neck.",
+   "fact_id": "F006",
+   "statement": "Nigersaurus was a small sauropod, measuring between 9 and 14.1 meters in length with a short neck.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -166,8 +196,8 @@
    "quote_sha": "a7b7633809ea8896"
   },
   {
-   "fact_id": "F006",
-   "statement": "Nigersaurus weighed approximately 1.9 to 4 metric tons, comparable to a modern elephant.",
+   "fact_id": "F007",
+   "statement": "The animal weighed approximately 1.9 to 4 metric tons, similar to the weight of a modern elephant.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -175,8 +205,8 @@
    "quote_sha": "71a7ef91ef355f94"
   },
   {
-   "fact_id": "F007",
-   "statement": "Nigersaurus had a wide muzzle containing over 500 teeth that were replaced approximately every 14 days.",
+   "fact_id": "F008",
+   "statement": "Nigersaurus possessed a wide muzzle containing over 500 teeth that were replaced every 14 days.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -184,25 +214,7 @@
    "quote_sha": "0ca2e9df6ae0cd3c"
   },
   {
-   "fact_id": "F008",
-   "statement": "The tooth-bearing bones of Nigersaurus jaws were rotated transversely so that all teeth were located far to the front, unlike other tetrapods.",
-   "category": "description",
-   "chunk_id": "nigersaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Unlike other tetrapods, the tooth-bearing bones of its jaws were rotated transversely relative to the rest of the skull, so that all of its teeth were located far to the front.",
-   "quote_sha": "cd5a6325356260fe"
-  },
-  {
    "fact_id": "F009",
-   "statement": "Nigersaurus had a highly pneumatized skeleton filled with air spaces, but possessed robustly built limbs.",
-   "category": "description",
-   "chunk_id": "nigersaurus:enwiki:2",
-   "lang": "en",
-   "quote": "Its skeleton was highly pneumatised (filled with air spaces connected to air sacs), but the limbs were robustly built.",
-   "quote_sha": "48d51cb407e6839e"
-  },
-  {
-   "fact_id": "F010",
    "statement": "Nigersaurus belongs to the subfamily Rebbachisaurinae of the family Rebbachisauridae within the sauropod superfamily Diplodocoidea.",
    "category": "classification",
    "chunk_id": "nigersaurus:enwiki:2",
@@ -211,17 +223,26 @@
    "quote_sha": "ab73b9ca6029b716"
   },
   {
-   "fact_id": "F011",
-   "statement": "The olfactory region of Nigersaurus's brain was underdeveloped, though its overall brain size was comparable to other dinosaurs.",
+   "fact_id": "F010",
+   "statement": "Researchers believe Nigersaurus was a browser that fed on vegetation close to the ground.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
-   "quote": "The region of its brain that detected smell was underdeveloped, although its brain size was comparable to that of other dinosaurs.",
-   "quote_sha": "25a51f4953a4d051"
+   "quote": "Nigersaurus was probably a browser, and fed with its head close to the ground.",
+   "quote_sha": "3b02825d9c9e2955"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "It inhabited a riparian environment and likely ate soft plants including ferns, horsetails, and angiosperms.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It lived in a riparian habitat, and its diet probably consisted of soft plants, such as ferns, horsetails, and angiosperms.",
+   "quote_sha": "df4101425c694923"
   },
   {
    "fact_id": "F012",
-   "statement": "It is debated whether Nigersaurus habitually held its head downwards or horizontally like other sauropods.",
+   "statement": "There is an ongoing debate regarding whether Nigersaurus held its head habitually downwards or horizontally.",
    "category": "debate",
    "chunk_id": "nigersaurus:enwiki:2",
    "lang": "en",
@@ -230,16 +251,16 @@
   },
   {
    "fact_id": "F013",
-   "statement": "Nigersaurus lived in a riparian habitat and likely ate soft plants like ferns, horsetails, and angiosperms.",
-   "category": "paleobiology",
-   "chunk_id": "nigersaurus:enwiki:2",
+   "statement": "Initial remains were discovered during a 1965–1972 expedition led by Philippe Taquet and first published in 1976.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:enwiki:3",
    "lang": "en",
-   "quote": "It lived in a riparian habitat, and its diet probably consisted of soft plants, such as ferns, horsetails, and angiosperms.",
-   "quote_sha": "df4101425c694923"
+   "quote": "Remains thought to belong to Nigersaurus were first discovered during a 1965–1972 expedition to the Republic of Niger led by French paleontologist Philippe Taquet, and first mentioned in a paper published in 1976.",
+   "quote_sha": "f5632bea22e10134"
   },
   {
    "fact_id": "F014",
-   "statement": "Nigersaurus remained poorly known until additional material was found during expeditions led by Paul Sereno in 1997 and 2000.",
+   "statement": "The genus remained poorly known until Paul Sereno led expeditions in 1997 and 2000 that found more individuals.",
    "category": "discovery",
    "chunk_id": "nigersaurus:enwiki:3",
    "lang": "en",
@@ -248,16 +269,34 @@
   },
   {
    "fact_id": "F015",
-   "statement": "The Nigersaurus fossils are housed at the National Museum of Niger.",
+   "statement": "Fossils and a reconstructed skeleton were presented at the National Geographic Society in Washington.",
    "category": "discovery",
    "chunk_id": "nigersaurus:enwiki:3",
    "lang": "en",
-   "quote": "These fossils are housed at the National Museum of Niger.",
-   "quote_sha": "63b41135dcb205c7"
+   "quote": "The fossils, along with a reconstructed skeleton mount and a plastic model of the head and neck, were subsequently presented at the National Geographic Society in Washington.",
+   "quote_sha": "bba4bda14e7e238f"
   },
   {
    "fact_id": "F016",
-   "statement": "Among sauropods, Nigersaurus was small with a body length of 9 to 14.1 meters, a femur of 1 meter, and a weight of 1.9 to 4 metric tons.",
+   "statement": "Some skull fossils were so thin that light beams could pass through them.",
+   "category": "description",
+   "chunk_id": "nigersaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Some of the skull fossils were so thin that a strong light beam was visible through them.",
+   "quote_sha": "eafa7530f7d2b20e"
+  },
+  {
+   "fact_id": "F017",
+   "statement": "The press dubbed Nigersaurus a \"Mesozoic cow,\" and Sereno considered it the most unusual dinosaur he had seen.",
+   "category": "description",
+   "chunk_id": "nigersaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Nigersaurus was dubbed a \"Mesozoic cow\" in the press, and Sereno stressed that it was the most unusual dinosaur he had ever seen.",
+   "quote_sha": "81ce87cfb94fa73c"
+  },
+  {
+   "fact_id": "F018",
+   "statement": "Nigersaurus had a body length of 9 to 14.1 meters and a femur of only 1 meter, weighing 1.9 to 4 metric tons.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:4",
    "lang": "en",
@@ -265,8 +304,8 @@
    "quote_sha": "549dc67cd55db086"
   },
   {
-   "fact_id": "F017",
-   "statement": "Nigersaurus had a short neck for a sauropod consisting of thirteen cervical vertebrae.",
+   "fact_id": "F019",
+   "statement": "It possessed a short sauropod neck consisting of thirteen cervical vertebrae.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:4",
    "lang": "en",
@@ -274,17 +313,8 @@
    "quote_sha": "c59639f47cf0abe5"
   },
   {
-   "fact_id": "F018",
-   "statement": "The Nigersaurus skull was delicate with four side fenestrae larger than those in other sauropodomorphs.",
-   "category": "description",
-   "chunk_id": "nigersaurus:enwiki:5",
-   "lang": "en",
-   "quote": "The skull of Nigersaurus was delicate, with the four side fenestrae (openings in the skull) larger than in other sauropodomorphs.",
-   "quote_sha": "161bf2591a6c15f0"
-  },
-  {
-   "fact_id": "F019",
-   "statement": "The connecting bone struts in the Nigersaurus skull were usually less than 2 mm thick.",
+   "fact_id": "F020",
+   "statement": "The connecting bone struts in the skull were usually less than 2 millimeters thick.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:5",
    "lang": "en",
@@ -292,17 +322,8 @@
    "quote_sha": "5c97443f9220d4a8"
   },
   {
-   "fact_id": "F020",
-   "statement": "Nigersaurus possessed a closed supratemporal fenestra, a unique trait among sauropodomorphs.",
-   "category": "description",
-   "chunk_id": "nigersaurus:enwiki:5",
-   "lang": "en",
-   "quote": "Another unique trait it had among sauropodomorphs was a closed supratemporal fenestra.",
-   "quote_sha": "4e39f8864fc5cc71"
-  },
-  {
    "fact_id": "F021",
-   "statement": "The maxillary tooth row of Nigersaurus was entirely transversely rotated, with the rear 90° everted towards the front.",
+   "statement": "The maxillary tooth row was completely transversely rotated, with the rear 90 degrees everted toward the front.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:5",
    "lang": "en",
@@ -311,7 +332,7 @@
   },
   {
    "fact_id": "F022",
-   "statement": "No other tetrapod has all its teeth located as far forward as those of Nigersaurus due to its unique jaw configuration.",
+   "statement": "No other tetrapod has all its teeth located as far forward as Nigersaurus due to this unique configuration.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:5",
    "lang": "en",
@@ -320,7 +341,7 @@
   },
   {
    "fact_id": "F023",
-   "statement": "Nigersaurus had dental batteries with 68 columns in the upper jaws and 60 in the lower, totaling over 500 active and replacement teeth.",
+   "statement": "Its dental batteries consisted of 68 columns in the upper jaw and 60 in the lower, totaling over 500 active and replacement teeth.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:5",
    "lang": "en",
@@ -329,6 +350,15 @@
   },
   {
    "fact_id": "F024",
+   "statement": "The tooth enamel was highly asymmetrical, being ten times thicker on the outer side than the inner side.",
+   "category": "description",
+   "chunk_id": "nigersaurus:enwiki:5",
+   "lang": "en",
+   "quote": "The enamel on the teeth of Nigersaurus was highly asymmetrical, ten times thicker on the outwards facing side than on the inner side.",
+   "quote_sha": "98bf88de1d19404b"
+  },
+  {
+   "fact_id": "F025",
    "statement": "Nigersaurus is the only known tetrapod with jaws wider than the skull and teeth extending laterally across the front.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:5",
@@ -337,142 +367,142 @@
    "quote_sha": "e5a54b1f63791489"
   },
   {
-   "fact_id": "F025",
-   "statement": "Teeth similar to Nigersaurus have been found on the Isle of Wight and in Brazil, but their taxonomic affiliation remains unknown.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:enwiki:3",
-   "lang": "en",
-   "quote": "Teeth similar to those of Nigersaurus have been found on the Isle of Wight and in Brazil, but it is unknown whether they belonged to relatives of this taxon, or to titanosaurs, whose remains have been found in the vicinity.",
-   "quote_sha": "ab367295bfe296e1"
-  },
-  {
    "fact_id": "F026",
-   "statement": "Nigersaurus vertebrae contained little to no cancellous bone, consisting instead of thin plates filled with air spaces.",
-   "category": "description",
-   "chunk_id": "nigersaurus:enwiki:6",
+   "statement": "Grooves at the front of the jaws indicate the presence of a keratinous sheath.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:enwiki:5",
    "lang": "en",
-   "quote": "It had little to no cancellous bone, making the centra thin bone plates filled with air spaces",
-   "quote_sha": "08a8a7ae0a2c6c28"
+   "quote": "The front ends of the jaws had grooves that indicate the presence of a keratinous (horny) sheath.",
+   "quote_sha": "17054cfbf2e77f97"
   },
   {
    "fact_id": "F027",
-   "statement": "The side walls of Nigersaurus vertebral arches were reduced to 2 mm thick intersecting laminae due to extensive pneumatization.",
+   "statement": "Nigersaurus had presacral vertebrae that were so hollow they formed a column of thin shells separated by septa.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:6",
    "lang": "en",
-   "quote": "The vertebral arches were so heavily pierced by extensions of the external air sacs that of their side walls little remained but 2 mm thick intersecting laminae",
-   "quote_sha": "e4a056f4948d2187"
+   "quote": "The presacral vertebrae (vertebrae in front of the sacrum) were heavily pneumatised to the point where the column consisted of a series of hollow \"shells\", each divided by a thin septum in the middle.",
+   "quote_sha": "94dca67e0b222d6b"
   },
   {
    "fact_id": "F028",
-   "statement": "Unlike the rest of the spine, the tail vertebrae of Nigersaurus had solid centra.",
+   "statement": "The side walls of Nigersaurus vertebral arches were reduced to 2 mm thick ridges due to extensive air sac extensions.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:6",
    "lang": "en",
-   "quote": "The vertebrae of the tail, however, did have solid centra",
-   "quote_sha": "0480f89d925cc558"
+   "quote": "The vertebral arches were so heavily pierced by extensions of the external air sacs that of their side walls little remained but 2 mm thick intersecting laminae, the ridges between the pneumatic openings.",
+   "quote_sha": "000492ed7626effc"
   },
   {
    "fact_id": "F029",
-   "statement": "The pelvic and pectoral girdle bones of Nigersaurus were very thin, often only several millimeters thick.",
+   "statement": "The pelvic and pectoral girdle bones of Nigersaurus were very thin, often only a few millimeters thick.",
    "category": "description",
    "chunk_id": "nigersaurus:enwiki:6",
    "lang": "en",
-   "quote": "The pelvic and pectoral girdle bones were very thin also, often only several millimetres thick",
-   "quote_sha": "fdcbbb0f7bfc3689"
+   "quote": "The pelvic and pectoral girdle bones were very thin also, often only several millimetres thick.",
+   "quote_sha": "e38a2adc18e7c513"
   },
   {
    "fact_id": "F030",
-   "statement": "Nigersaurus was initially described by Taquet in 1976 as a dicraeosaurid.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:enwiki:7",
+   "statement": "Nigersaurus had a distinctive wrinkled area on the base of its shoulder blade.",
+   "category": "description",
+   "chunk_id": "nigersaurus:enwiki:6",
    "lang": "en",
-   "quote": "The remains of Nigersaurus were initially described by Taquet in 1976 as belonging to a dicraeosaurid",
-   "quote_sha": "d5b83db82e52a112"
+   "quote": "It had a prominent rugosity (a roughly wrinkled area) on the midline aspect of the scapular blade's base, a distinguishing feature.",
+   "quote_sha": "775ce4151752d0d7"
   },
   {
    "fact_id": "F031",
-   "statement": "In 1999, Sereno and colleagues reclassified Nigersaurus as a rebbachisaurid diplodocoid.",
-   "category": "classification",
-   "chunk_id": "nigersaurus:enwiki:7",
+   "statement": "The front legs of Nigersaurus were approximately two-thirds the length of its hind legs.",
+   "category": "description",
+   "chunk_id": "nigersaurus:enwiki:6",
    "lang": "en",
-   "quote": "but in 1999 Sereno and colleagues reclassified it as a rebbachisaurid diplodocoid",
-   "quote_sha": "660224c792b5941a"
+   "quote": "The front legs of Nigersaurus were about two-thirds the length of the back legs, as in most diplodocoids.",
+   "quote_sha": "6f567a4b5ca6a914"
   },
   {
    "fact_id": "F032",
-   "statement": "The subfamily Nigersaurinae was named by John A. Whitlock in 2011 to include Nigersaurus and related genera.",
+   "statement": "Nigersaurus was originally classified as a dicraeosaurid in 1976 but was reclassified as a rebbachisaurid diplodocoid in 1999.",
    "category": "classification",
    "chunk_id": "nigersaurus:enwiki:7",
    "lang": "en",
-   "quote": "The eponymous subfamily Nigersaurinae, which includes Nigersaurus and closely related genera, was named by the American palaeontologist John A. Whitlock in 2011",
-   "quote_sha": "37868887769ed4eb"
+   "quote": "The remains of Nigersaurus were initially described by Taquet in 1976 as belonging to a dicraeosaurid, but in 1999 Sereno and colleagues reclassified it as a rebbachisaurid diplodocoid.",
+   "quote_sha": "a11cca911a2a2103"
   },
   {
    "fact_id": "F033",
+   "statement": "The subfamily Nigersaurinae, containing Nigersaurus, was named by John A. Whitlock in 2011.",
+   "category": "classification",
+   "chunk_id": "nigersaurus:enwiki:7",
+   "lang": "en",
+   "quote": "The eponymous subfamily Nigersaurinae, which includes Nigersaurus and closely related genera, was named by the American palaeontologist John A. Whitlock in 2011.",
+   "quote_sha": "7815f5594afc8119"
+  },
+  {
+   "fact_id": "F034",
    "statement": "A 2015 study suggested that Nigersaurinae might be a junior synonym of Rebbachisaurinae.",
    "category": "classification",
    "chunk_id": "nigersaurus:enwiki:7",
    "lang": "en",
-   "quote": "A 2015 cladistic study by Wilsona and the French palaeontologist Ronan Allain found Rebbachisaurus itself to group with the nigersaurines, and the authors suggested that Nigersaurinae was therefore a junior synonym of Rebbachisaurinae",
-   "quote_sha": "1183d4cf49461a54"
-  },
-  {
-   "fact_id": "F034",
-   "statement": "It is debated whether the clade Rebbachisaurinae necessarily includes Nigersaurus, as some studies place it as a sister taxon to other nigersaurines.",
-   "category": "debate",
-   "chunk_id": "nigersaurus:enwiki:7",
-   "lang": "en",
-   "quote": "In 2019, Mannion and colleagues pointed out that since Nigersaurus was found to be the sister taxon of all other nigersaurines in some studies, a Rebbachisaurinae clade may not necessarily include Nigersaurus itself",
-   "quote_sha": "bab183b878d2610a"
+   "quote": "A 2015 cladistic study by Wilsona and the French palaeontologist Ronan Allain found Rebbachisaurus itself to group with the nigersaurines, and the authors suggested that Nigersaurinae was therefore a junior synonym of Rebbachisaurinae (since that name would have priority).",
+   "quote_sha": "f553cbeadc092dba"
   },
   {
    "fact_id": "F035",
-   "statement": "Nigersaurus had an underdeveloped olfactory region and did not possess an advanced sense of smell.",
+   "statement": "Despite having large nostrils, Nigersaurus had an underdeveloped olfactory brain region and likely lacked an advanced sense of smell.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:8",
    "lang": "en",
-   "quote": "Sereno and colleagues found that Nigersaurus had an underdeveloped olfactory region of its brain and thus did not have an advanced sense of smell",
-   "quote_sha": "cc7db3e20b7ea745"
+   "quote": "Though it had large nostrils and a fleshy snout, Sereno and colleagues found that Nigersaurus had an underdeveloped olfactory region of its brain and thus did not have an advanced sense of smell.",
+   "quote_sha": "17c66ac28ca338e6"
   },
   {
    "fact_id": "F036",
-   "statement": "The eyes of Nigersaurus were positioned high on the skull above the muzzle, providing overlapping fields of view.",
+   "statement": "Nigersaurus had eyes positioned high on its skull above the muzzle, providing overlapping fields of view.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:8",
    "lang": "en",
-   "quote": "The eyes of Nigersaurus were placed further towards the top of the skull than in most other sauropods, above the muzzle, which would give it overlapping fields of view",
-   "quote_sha": "52e735dbd907c8d1"
+   "quote": "The eyes of Nigersaurus were placed further towards the top of the skull than in most other sauropods, above the muzzle, which would give it overlapping fields of view.",
+   "quote_sha": "fbc8210f3740f6a0"
   },
   {
    "fact_id": "F037",
-   "statement": "Nigersaurus likely had a visual field close to 360 degrees, requiring hypersensitivity to movement as a prey animal.",
+   "statement": "Nigersaurus likely had a visual field close to 360 degrees, making it sensitive to movement as a vulnerable prey animal.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:8",
    "lang": "en",
-   "quote": "Its visual field would have been at or close to 360 degrees, and hypersensitivity of movement would have been important to a vulnerable prey-animal",
-   "quote_sha": "87bba8523a88cdfb"
+   "quote": "Its visual field would have been at or close to 360 degrees, and hypersensitivity of movement would have been important to a vulnerable prey-animal.",
+   "quote_sha": "ab123d647cdf9c84"
   },
   {
    "fact_id": "F038",
-   "statement": "Ibiricu and colleagues suggested that skeletal pneumaticity in rebbachisaurids was an adaptation to lower skeletal density.",
+   "statement": "In 2017, researchers suggested that skeletal pneumaticity in Nigersaurus helped lower body density, reduce muscle energy needs, and dissipate heat.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:8",
    "lang": "en",
-   "quote": "In 2017, the Argentinian palaeontologist Lucio M. Ibiricu and colleagues examined the postcranial skeletal pneumaticity in the skeletons of rebbachisaurids, and suggested that it was an adaptation for lowering the density of the skeleton",
-   "quote_sha": "7fcc193d3b67e384"
+   "quote": "In 2017, the Argentinian palaeontologist Lucio M. Ibiricu and colleagues examined the postcranial skeletal pneumaticity in the skeletons of rebbachisaurids, and suggested that it was an adaptation for lowering the density of the skeleton, and that this could have decreased the muscle energy needed to move the body, as well as the heat generated in the process.",
+   "quote_sha": "98687bdf42c9d075"
   },
   {
    "fact_id": "F039",
-   "statement": "Lefebvre and colleagues conducted a 2023 study examining the microanatomical structure of Nigersaurus limb bones using CT-scans.",
+   "statement": "A 2023 study conducted the first CT-scan analysis of the microanatomical structure of Nigersaurus limb bones.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:8",
    "lang": "en",
-   "quote": "A 2023 study by the French palaeontologist Rémi Lefebvre and colleagues examined the microanatomical structure of the limb bones of Nigersaurus through CT-scans",
-   "quote_sha": "dafc51fef8f1227d"
+   "quote": "A 2023 study by the French palaeontologist Rémi Lefebvre and colleagues examined the microanatomical structure of the limb bones of Nigersaurus through CT-scans, the first such study of a sauropod.",
+   "quote_sha": "6bd1a3daf076d29c"
   },
   {
    "fact_id": "F040",
+   "statement": "Researchers suggested that features like pneumaticity and fleshy foot pads helped reduce pressure on Nigersaurus bones, implying sauropods were lighter than expected.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:enwiki:8",
+   "lang": "en",
+   "quote": "These researchers suggested that the microanatomy of sauropods was not affected by drastic selective pressure caused by bearing weight, but that features such as the columnar limbs (as seen in elephants), pneumaticity, and fleshy foot pads and cartilage relaxed pressure on the bones.",
+   "quote_sha": "7c5fec8cc75e2874"
+  },
+  {
+   "fact_id": "F041",
    "statement": "Researchers suggest Nigersaurus was a ground-level, non-selective browser.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:9",
@@ -481,7 +511,7 @@
    "quote_sha": "3fa14da3651d9759"
   },
   {
-   "fact_id": "F041",
+   "fact_id": "F042",
    "statement": "Nigersaurus could gather and crop food within 1 meter of the ground surface.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:9",
@@ -490,35 +520,8 @@
    "quote_sha": "a4b3d10664c8fd15"
   },
   {
-   "fact_id": "F042",
-   "statement": "Evidence suggests Nigersaurus had jaw movement limited to precise up-and-down motions.",
-   "category": "paleobiology",
-   "chunk_id": "nigersaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Nigersaurus also bears signs of low-angle tooth-to-tooth wear on the inside of the maxillary crowns, which suggests that jaw movement was limited to precise up-and-down motions.",
-   "quote_sha": "a32b44d674090ab6"
-  },
-  {
    "fact_id": "F043",
-   "statement": "A 2011 study indicates Nigersaurus ate relatively soft, herbaceous plants like low-growing ferns.",
-   "category": "paleobiology",
-   "chunk_id": "nigersaurus:enwiki:9",
-   "lang": "en",
-   "quote": "In addition, according to Whitlock and colleagues in 2011, the small, nearly parallel nature of the tooth scratches and pits (caused by grit, which would not be obtained as often by high-browsers) indicate that it ate relatively soft, herbaceous plants such as low-growing ferns.",
-   "quote_sha": "1eeaaf5570b91b94"
-  },
-  {
-   "fact_id": "F044",
-   "statement": "Nigersaurus had the highest tooth replacement rate of any known dinosaur.",
-   "category": "paleobiology",
-   "chunk_id": "nigersaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Nigersaurus wore its tooth crowns down faster than other dinosaurian herbivores, and its tooth replacement rate was the highest of any known dinosaur.",
-   "quote_sha": "637aa93616ef94eb"
-  },
-  {
-   "fact_id": "F045",
-   "statement": "Nigersaurus replaced each tooth approximately every 14 days.",
+   "statement": "Nigersaurus replaced each tooth every 14 days, a rate higher than previous estimates.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:enwiki:9",
    "lang": "en",
@@ -526,25 +529,25 @@
    "quote_sha": "239f457b893681a8"
   },
   {
+   "fact_id": "F044",
+   "statement": "A 2009 study contested whether the downturned head posture was the habitual one for Nigersaurus.",
+   "category": "debate",
+   "chunk_id": "nigersaurus:enwiki:10",
+   "lang": "en",
+   "quote": "A 2009 study by the British palaeontologist Mike P. Taylor and colleagues agreed that Nigersaurus was able to feed with the downturned head and neck posture proposed by the 2007 study, but contested that this was the habitual posture of the animal.",
+   "quote_sha": "4b1eb5ce6f666ab3"
+  },
+  {
+   "fact_id": "F045",
+   "statement": "A 2020 study cautioned against using semicircular canals to infer precise skull orientation, noting the plane was not horizontal in resting poses.",
+   "category": "debate",
+   "chunk_id": "nigersaurus:enwiki:10",
+   "lang": "en",
+   "quote": "In 2020, the French palaeontologist Julien Benoit and colleagues tested lateral semicircular canal correlation to head posture on modern mammals, and found that while there was significant correlation between the reconstructed and actual head postures, the plane of the semicircular canal was not held horizontally in the resting pose as inferred.",
+   "quote_sha": "d3caf9e8abcab3ca"
+  },
+  {
    "fact_id": "F046",
-   "statement": "Some researchers suggest Nigersaurus teeth may have functioned like a comb to strain water plants or invertebrates.",
-   "category": "paleobiology",
-   "chunk_id": "nigersaurus:enwiki:9",
-   "lang": "en",
-   "quote": "Wedel suggested that the evenly spaced teeth of Nigersaurus could have functioned like a comb, by straining water plants or invertebrates, similar to flamingos.",
-   "quote_sha": "09cad105fec79133"
-  },
-  {
-   "fact_id": "F047",
-   "statement": "Nigersaurus fossils are found in the Elrhaz Formation of the Tegama Group in the Gadoufaoua area of the Ténéré Desert, Niger.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:enwiki:11",
-   "lang": "en",
-   "quote": "Nigersaurus is known from the Elrhaz Formation of the Tegama Group in an area of the Ténéré Desert called Gadoufaoua, located in Niger.",
-   "quote_sha": "d20c622ba6b774b3"
-  },
-  {
-   "fact_id": "F048",
    "statement": "The genus Nigersaurus was described by Sereno and colleagues in 1999.",
    "category": "classification",
    "chunk_id": "nigersaurus:eswiki:1",
@@ -553,7 +556,7 @@
    "quote_sha": "cd7bd73a5a8cf002"
   },
   {
-   "fact_id": "F049",
+   "fact_id": "F047",
    "statement": "The species Nigersaurus taqueti was described by Sereno and colleagues in 1999.",
    "category": "classification",
    "chunk_id": "nigersaurus:eswiki:1",
@@ -562,8 +565,8 @@
    "quote_sha": "62d9dceb3abc66bc"
   },
   {
-   "fact_id": "F050",
-   "statement": "Nigersaurus is classified in the subfamily Nigersaurinae.",
+   "fact_id": "F048",
+   "statement": "Nigersaurus belongs to the subfamily Nigersaurinae.",
    "category": "classification",
    "chunk_id": "nigersaurus:eswiki:1",
    "lang": "es",
@@ -571,52 +574,34 @@
    "quote_sha": "404e1d3930d3811f"
   },
   {
-   "fact_id": "F051",
-   "statement": "It is debated whether the downturned head posture was the habitual position for Nigersaurus.",
-   "category": "debate",
-   "chunk_id": "nigersaurus:enwiki:10",
+   "fact_id": "F049",
+   "statement": "Nigersaurus holds the record for the highest tooth replacement rate of any known dinosaur.",
+   "category": "curiosities",
+   "chunk_id": "nigersaurus:enwiki:9",
    "lang": "en",
-   "quote": "A 2009 study by the British palaeontologist Mike P. Taylor and colleagues agreed that Nigersaurus was able to feed with the downturned head and neck posture proposed by the 2007 study, but contested that this was the habitual posture of the animal.",
-   "quote_sha": "4b1eb5ce6f666ab3"
+   "quote": "Nigersaurus wore its tooth crowns down faster than other dinosaurian herbivores, and its tooth replacement rate was the highest of any known dinosaur.",
+   "quote_sha": "637aa93616ef94eb"
+  },
+  {
+   "fact_id": "F050",
+   "statement": "Due to the lateral orientation of its teeth, Nigersaurus probably could not chew.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Because of the lateral orientation of the teeth, it probably would not have been able to chew.",
+   "quote_sha": "0377c2ded8218c44"
+  },
+  {
+   "fact_id": "F051",
+   "statement": "Some researchers suggest Nigersaurus teeth functioned like a comb to strain water plants or invertebrates.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:enwiki:9",
+   "lang": "en",
+   "quote": "Wedel suggested that the evenly spaced teeth of Nigersaurus could have functioned like a comb, by straining water plants or invertebrates, similar to flamingos.",
+   "quote_sha": "09cad105fec79133"
   },
   {
    "fact_id": "F052",
-   "statement": "A 2020 study cautions against using semicircular canals to infer the precise orientation of skulls, noting discrepancies in resting pose orientation.",
-   "category": "debate",
-   "chunk_id": "nigersaurus:enwiki:10",
-   "lang": "en",
-   "quote": "In 2020, the French palaeontologist Julien Benoit and colleagues tested lateral semicircular canal correlation to head posture on modern mammals, and found that while there was significant correlation between the reconstructed and actual head postures, the plane of the semicircular canal was not held horizontally in the resting pose as inferred.",
-   "quote_sha": "d3caf9e8abcab3ca"
-  },
-  {
-   "fact_id": "F053",
-   "statement": "The genus Nigersaurus was first announced in 1976 but was not formally named until 1999.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Los fósiles de este dinosaurio fueron dados a conocer por primera vez en 1976, pero no fue nombrado hasta 1999",
-   "quote_sha": "6915805f5628f2df"
-  },
-  {
-   "fact_id": "F054",
-   "statement": "Nigersaurus was discovered in the Elrhaz Formation at a site called Gadoufaoua in Niger.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Fue descubierta en la Formación Elrhaz, en una zona llamada Gadoufaoua, en la República de Níger",
-   "quote_sha": "9ea1d426ff0ff4c5"
-  },
-  {
-   "fact_id": "F055",
-   "statement": "The specific name taqueti honors French paleontologist Philippe Taquet, who discovered the initial remains.",
-   "category": "discovery",
-   "chunk_id": "nigersaurus:eswiki:2",
-   "lang": "es",
-   "quote": "el nombre específico taqueti refiere al apellido del paleontólogo francés Philippe Taquet, quien descubrió los primeros restos",
-   "quote_sha": "6abfbae5508de29a"
-  },
-  {
-   "fact_id": "F056",
    "statement": "Nigersaurus lived during the mid-Cretaceous period, approximately 115 to 105 million years ago, between the Aptian and Albian ages.",
    "category": "time_and_habitat",
    "chunk_id": "nigersaurus:eswiki:2",
@@ -625,7 +610,7 @@
    "quote_sha": "fc1c4f6b24ca727b"
   },
   {
-   "fact_id": "F057",
+   "fact_id": "F053",
    "statement": "Nigersaurus lived in what is now Africa.",
    "category": "time_and_habitat",
    "chunk_id": "nigersaurus:eswiki:2",
@@ -634,8 +619,35 @@
    "quote_sha": "9a858927525ef178"
   },
   {
-   "fact_id": "F058",
-   "statement": "Nigersaurus measured nine meters in length, which is small for a sauropod.",
+   "fact_id": "F054",
+   "statement": "Nigersaurus was discovered in the Elrhaz Formation at a site called Gadoufaoua in the Republic of Niger.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Fue descubierta en la Formación Elrhaz, en una zona llamada Gadoufaoua, en la República de Níger",
+   "quote_sha": "9ea1d426ff0ff4c5"
+  },
+  {
+   "fact_id": "F055",
+   "statement": "Fossils of Nigersaurus were first announced in 1976, but the species was not named until 1999.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Los fósiles de este dinosaurio fueron dados a conocer por primera vez en 1976, pero no fue nombrado hasta 1999",
+   "quote_sha": "6915805f5628f2df"
+  },
+  {
+   "fact_id": "F056",
+   "statement": "The specific name taqueti honors French paleontologist Philippe Taquet, who discovered the initial remains.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "el nombre específico taqueti refiere al apellido del paleontólogo francés Philippe Taquet, quien descubrió los primeros restos",
+   "quote_sha": "6abfbae5508de29a"
+  },
+  {
+   "fact_id": "F057",
+   "statement": "Nigersaurus measured nine meters in length, making it small for a sauropod.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
@@ -643,8 +655,8 @@
    "quote_sha": "9d93d60372210a88"
   },
   {
-   "fact_id": "F059",
-   "statement": "Nigersaurus weighed approximately four tons, comparable to a modern elephant.",
+   "fact_id": "F058",
+   "statement": "Nigersaurus weighed around four tons, comparable to a modern elephant.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
@@ -652,17 +664,8 @@
    "quote_sha": "a02833a1007f18f0"
   },
   {
-   "fact_id": "F060",
-   "statement": "The skull of Nigersaurus was highly specialized for feeding, featuring a large fenestra and thin bones.",
-   "category": "description",
-   "chunk_id": "nigersaurus:eswiki:2",
-   "lang": "es",
-   "quote": "Su cráneo era muy especializado para la alimentación, con una gran fenestra y huesos delgados",
-   "quote_sha": "35669cc45c7a1084"
-  },
-  {
-   "fact_id": "F061",
-   "statement": "The teeth of Nigersaurus were replaced at a rapid rate of approximately every fourteen days.",
+   "fact_id": "F059",
+   "statement": "Nigersaurus replaced its teeth at a rapid rate of approximately every fourteen days.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
@@ -670,25 +673,16 @@
    "quote_sha": "e9a86d1a086430c9"
   },
   {
-   "fact_id": "F062",
-   "statement": "The bones supporting the teeth in the upper jaws formed a right angle relative to the main axis of the skull.",
+   "fact_id": "F060",
+   "statement": "The jaw bones supporting the teeth formed a right angle with the skull's main axis, placing all teeth at the very front of the mouth.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
-   "quote": "los huesos que soportan los dientes de los maxilares forman un ángulo recto con respecto al eje mayor del cráneo",
-   "quote_sha": "e97e20345acba92d"
+   "quote": "los huesos que soportan los dientes de los maxilares forman un ángulo recto con respecto al eje mayor del cráneo, por lo que todos sus dientes estaban ubicados en el extremo frontal de la boca",
+   "quote_sha": "1478dec180613077"
   },
   {
-   "fact_id": "F063",
-   "statement": "All of Nigersaurus's teeth were located at the very front of the mouth.",
-   "category": "description",
-   "chunk_id": "nigersaurus:eswiki:2",
-   "lang": "es",
-   "quote": "por lo que todos sus dientes estaban ubicados en el extremo frontal de la boca",
-   "quote_sha": "d70dc944655f1742"
-  },
-  {
-   "fact_id": "F064",
+   "fact_id": "F061",
    "statement": "Nigersaurus is the only known species of the extinct sauropod dinosaur genus Nigersaurus.",
    "category": "classification",
    "chunk_id": "nigersaurus:eswiki:2",
@@ -697,26 +691,53 @@
    "quote_sha": "ecf32c35d7bd9b45"
   },
   {
-   "fact_id": "F065",
-   "statement": "Nigersaurus was likely a browser that fed with its head near the ground.",
+   "fact_id": "F062",
+   "statement": "Nigersaurus belongs to the subfamily Rebbachisaurinae (formerly Nigersaurinae) of the family Rebbachisauridae.",
    "category": "classification",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "se agrupan dentro de la subfamilia Rebbachisaurinae, anteriormente llamada Nigersaurinae, de la familia Rebbachisauridae",
+   "quote_sha": "98ea1539cbd7b47e"
+  },
+  {
+   "fact_id": "F063",
+   "statement": "The family Rebbachisauridae is part of the sauropod superfamily Diplodocoidea.",
+   "category": "classification",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "que forma parte de la superfamilia de saurópodos Diplodocoidea",
+   "quote_sha": "77ccff1ebee033aa"
+  },
+  {
+   "fact_id": "F064",
+   "statement": "Nigersaurus was likely a browser that fed with its head near the ground.",
+   "category": "paleobiology",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
    "quote": "Nigersaurus era probablemente un ramoneador, y se alimentaba con la cabeza cerca del suelo",
    "quote_sha": "d55a5789a48cc58c"
   },
   {
-   "fact_id": "F066",
-   "statement": "Nigersaurus lived in a riparian habitat and likely ate soft plants such as ferns, horsetails, and angiosperms.",
+   "fact_id": "F065",
+   "statement": "Nigersaurus likely ate soft plants such as ferns, horsetails, and angiosperms.",
    "category": "paleobiology",
    "chunk_id": "nigersaurus:eswiki:2",
    "lang": "es",
-   "quote": "Vivió en un hábitat ribereño, y su dieta probablemente consistía en plantas blandas, como helechos, equisetos y angiospermas",
-   "quote_sha": "ddd6d43a9aecddab"
+   "quote": "su dieta probablemente consistía en plantas blandas, como helechos, equisetos y angiospermas",
+   "quote_sha": "26045de9b4107503"
+  },
+  {
+   "fact_id": "F066",
+   "statement": "Nigersaurus lived in a riparian habitat.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Vivió en un hábitat ribereño",
+   "quote_sha": "5f2919bcfa832aa5"
   },
   {
    "fact_id": "F067",
-   "statement": "Nigersaurus was a large quadruped with a small head, thick hind legs, and a prominent tail.",
+   "statement": "Nigersaurus was a massive quadruped with a small head, thick hind legs, and a prominent tail.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:3",
    "lang": "es",
@@ -725,16 +746,43 @@
   },
   {
    "fact_id": "F068",
-   "statement": "Nigersaurus had thirteen cervical vertebrae.",
+   "statement": "Nigersaurus had a short sauropod neck consisting of thirteen cervical vertebrae.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:3",
    "lang": "es",
-   "quote": "con trece vértebras cervicales",
-   "quote_sha": "ee497881d8c328c4"
+   "quote": "Tenía un cuello corto para un saurópodo, con trece vértebras cervicales",
+   "quote_sha": "e8163e170ae9883c"
   },
   {
    "fact_id": "F069",
-   "statement": "The pelvic and shoulder girdle bones of Nigersaurus were very thin, often only a few millimeters thick.",
+   "statement": "Within its clade, Nigersaurus was quite small, with a body length of nine meters and a femur reaching only one meter long.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Entre este clado, Nigersaurus era bastante pequeño, con una longitud corporal de nueve metros y un fémur que alcanzaba solo un metro de largo",
+   "quote_sha": "5c6e218b0e36f792"
+  },
+  {
+   "fact_id": "F070",
+   "statement": "The vertebral arches were so heavily crossed by extensions of external air sacs that little remained of their lateral walls.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:3",
+   "lang": "es",
+   "quote": "Los arcos vertebrales estaban tan fuertemente atravesados por extensiones de los sacos aéreos externos que de sus paredes laterales era poco lo que quedaba",
+   "quote_sha": "a6e587daf725fded"
+  },
+  {
+   "fact_id": "F071",
+   "statement": "Nigersaurus possessed thick intersection plates two millimeters thick, which served as ridges between the pneumatic openings.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:3",
+   "lang": "es",
+   "quote": "poseía gruesas láminas de intersección de dos milímetros, que son las crestas entre las aberturas neumáticas",
+   "quote_sha": "c727e1d0992c090f"
+  },
+  {
+   "fact_id": "F072",
+   "statement": "The pelvic and shoulder girdle bones were also very thin, often only a few millimeters thick.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:3",
    "lang": "es",
@@ -742,7 +790,7 @@
    "quote_sha": "0588997905421d68"
   },
   {
-   "fact_id": "F070",
+   "fact_id": "F073",
    "statement": "The front legs of Nigersaurus were about two-thirds the length of the hind legs.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:3",
@@ -751,8 +799,8 @@
    "quote_sha": "062746d8aab0a80d"
   },
   {
-   "fact_id": "F071",
-   "statement": "The skull of Nigersaurus was delicate, featuring four lateral fenestrae larger than those in other sauropodomorphs.",
+   "fact_id": "F074",
+   "statement": "The Nigersaurus skull was delicate, featuring four lateral fenestrae larger than those in other sauropodomorphs.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
    "lang": "es",
@@ -760,8 +808,8 @@
    "quote_sha": "39289ae4b41976c6"
   },
   {
-   "fact_id": "F072",
-   "statement": "The total area of bone connecting the mouth to the back of the skull in Nigersaurus measured only one square centimeter.",
+   "fact_id": "F075",
+   "statement": "The total area of bone connecting the mouth to the back of the skull measured only one square centimeter.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
    "lang": "es",
@@ -769,7 +817,16 @@
    "quote_sha": "a3507d305ef5e273"
   },
   {
-   "fact_id": "F073",
+   "fact_id": "F076",
+   "statement": "These bony connection struts were generally less than two millimeters thick.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Estos puntales de conexión ósea eran por lo general de menos de dos milímetros de espesor",
+   "quote_sha": "609b5a5c6b482d9f"
+  },
+  {
+   "fact_id": "F077",
    "statement": "A unique trait among sauropodomorphs was a closed supratemporal fenestra in Nigersaurus.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
@@ -778,17 +835,26 @@
    "quote_sha": "0dd9515ca37845b2"
   },
   {
-   "fact_id": "F074",
-   "statement": "Nigersaurus is the only known tetrapod with maxillae wider than the skull and teeth extending laterally across the front.",
+   "fact_id": "F078",
+   "statement": "The row of maxillary teeth was fully rotated transversely, so its posterior part was turned 90 degrees forward.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
    "lang": "es",
-   "quote": "Nigersaurus es el único animal tetrápodo conocido que tenía maxilares más anchos que el cráneo y dientes que se extienden lateralmente a través de la parte delantera",
-   "quote_sha": "040ae8e8a3e9355b"
+   "quote": "La fila de dientes maxilares se encontraba totalmente girada de manera transversal, de modo que su parte posterior estaba volcada 90° hacia el frente",
+   "quote_sha": "277ecb35d852b90c"
   },
   {
-   "fact_id": "F075",
-   "statement": "Under each active tooth in the jaw of Nigersaurus, there was a column of nine replacement teeth.",
+   "fact_id": "F079",
+   "statement": "Nigersaurus was the only known tetrapod with all its teeth located entirely at the front.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Nigersaurus era el único tetrápodo que tenía todos sus dientes localizados enteramente en la parte anterior",
+   "quote_sha": "6ee8b3b8dff0afac"
+  },
+  {
+   "fact_id": "F080",
+   "statement": "Under each active tooth, there was a column of nine replacement teeth in the jaw.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
    "lang": "es",
@@ -796,7 +862,7 @@
    "quote_sha": "76b08cd0516ce658"
   },
   {
-   "fact_id": "F076",
+   "fact_id": "F081",
    "statement": "The enamel of Nigersaurus teeth was highly asymmetric, ten times thicker on the outer side than on the inner side.",
    "category": "description",
    "chunk_id": "nigersaurus:eswiki:4",
@@ -805,44 +871,71 @@
    "quote_sha": "80ac883da8bf4a1d"
   },
   {
-   "fact_id": "F077",
-   "statement": "The parent group of Nigersaurus is Rebbachisaurinae.",
-   "category": "classification",
-   "chunk_id": "nigersaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Parent group: Rebbachisaurinae",
-   "quote_sha": "f362eb772527ba58"
+   "fact_id": "F082",
+   "statement": "Nigersaurus is the only known tetrapod with maxillae wider than the skull and teeth extending laterally across the front.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Nigersaurus es el único animal tetrápodo conocido que tenía maxilares más anchos que el cráneo y dientes que se extienden lateralmente a través de la parte delantera",
+   "quote_sha": "040ae8e8a3e9355b"
   },
   {
-   "fact_id": "F078",
-   "statement": "Nigersaurus belongs to the family Rebbachisauridae.",
-   "category": "classification",
-   "chunk_id": "nigersaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Rebbachisauridae",
-   "quote_sha": "020d0e723667d787"
+   "fact_id": "F083",
+   "statement": "Nigersaurus did not exhibit the same modifications found in the throats of other dinosaurs with dental batteries or mammals with complex chewing functions.",
+   "category": "description",
+   "chunk_id": "nigersaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Nigersaurus no exhibía las mismas modificaciones que se observan en las fauces de otros dinosaurios con baterías dentales, o en mamíferos con elaboradas funciones de masticación",
+   "quote_sha": "849f7e80d00a73eb"
   },
   {
-   "fact_id": "F079",
-   "statement": "Nigersaurus is classified in the class Saurischia.",
-   "category": "classification",
-   "chunk_id": "nigersaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Saurischia",
-   "quote_sha": "8e64a48e9ac37acb"
+   "fact_id": "F084",
+   "statement": "The front ends of the maxillae had grooves indicating the presence of a keratinous sheath.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:4",
+   "lang": "es",
+   "quote": "Los extremos delanteros de los maxilares tenían ranuras que indican la presencia de una vaina de queratina",
+   "quote_sha": "8e26186946749a9f"
   },
   {
-   "fact_id": "F080",
-   "statement": "The type species of the genus Nigersaurus is Nigersaurus taqueti.",
-   "category": "classification",
-   "chunk_id": "nigersaurus:pbdb:1",
-   "lang": "en",
-   "quote": "Type species: Nigersaurus taqueti",
-   "quote_sha": "b612a07bfa870649"
+   "fact_id": "F085",
+   "statement": "It is debated whether Nigersaurus habitually held its head down or horizontally like other sauropods, with the horizontal position being favored.",
+   "category": "debate",
+   "chunk_id": "nigersaurus:eswiki:2",
+   "lang": "es",
+   "quote": "Se ha debatido sobre si llevaba habitualmente la cabeza hacia abajo u horizontalmente, como otros saurópodos, favoreciéndose la última idea",
+   "quote_sha": "6eddc4c7c388cff7"
   },
   {
-   "fact_id": "F081",
-   "statement": "The time range for Nigersaurus is from the Aptian to the Albian, between 121.4 and 100.5 million years ago.",
+   "fact_id": "F086",
+   "statement": "Nigersaurus was reclassified in 1999 by Sereno's team as a rebbachisaurid diplodocoidean.",
+   "category": "classification",
+   "chunk_id": "nigersaurus:eswiki:6",
+   "lang": "es",
+   "quote": "en 1999 el equipo de Sereno lo reclasificó como un diplodocoideo rebbachisáurido",
+   "quote_sha": "157938e0e99151b3"
+  },
+  {
+   "fact_id": "F087",
+   "statement": "The subfamily Nigersaurinae, which includes Nigersaurus, was named by John A. Whitlock in 2011.",
+   "category": "classification",
+   "chunk_id": "nigersaurus:eswiki:6",
+   "lang": "es",
+   "quote": "La subfamilia Nigersaurinae, que incluye a Nigersaurus y los géneros más estrechamente relacionados con este, fue nombrada por John A. Whitlock en 2011",
+   "quote_sha": "73255239ab757d5d"
+  },
+  {
+   "fact_id": "F088",
+   "statement": "A 2013 analysis by Federico Fanti and colleagues confirmed Nigersaurus as a basal member of the Nigersaurinae subclade.",
+   "category": "classification",
+   "chunk_id": "nigersaurus:eswiki:6",
+   "lang": "es",
+   "quote": "El análisis de Federico Fanti y colegas de 2013 confirmó la clasificación de Nigersaurus como un rebbachisáurido nigersaurino basal",
+   "quote_sha": "34e7348198ef75f8"
+  },
+  {
+   "fact_id": "F089",
+   "statement": "Nigersaurus lived from the Aptian to the Albian stages, between 121.4 and 100.5 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "nigersaurus:pbdb:1",
    "lang": "en",
@@ -850,29 +943,112 @@
    "quote_sha": "b4a748b7a96c701a"
   },
   {
-   "fact_id": "F082",
-   "statement": "It is debated whether Nigersaurus usually held its head down or horizontally like other sauropods, with the horizontal position being favored.",
-   "category": "debate",
-   "chunk_id": "nigersaurus:eswiki:2",
+   "fact_id": "F090",
+   "statement": "Remains of Nigersaurus were initially described in 1976 as belonging to a dicraeosaurid.",
+   "category": "discovery",
+   "chunk_id": "nigersaurus:eswiki:6",
    "lang": "es",
-   "quote": "Se ha debatido sobre si llevaba habitualmente la cabeza hacia abajo u horizontalmente, como otros saurópodos, favoreciéndose la última idea",
-   "quote_sha": "6eddc4c7c388cff7"
+   "quote": "Los restos de Nigersaurus fueron descritos inicialmente en 1976 como pertenecientes a un dicreosáurido",
+   "quote_sha": "b263a5ccb87c0f0b"
+  },
+  {
+   "fact_id": "F091",
+   "statement": "Despite having large nasal openings and a fleshy snout, Nigersaurus had a poorly developed olfactory region in its brain.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:8",
+   "lang": "es",
+   "quote": "A pesar de que tenía grandes ventanas en la nariz y un hocico carnoso, Nigersaurus tenía una región olfativa escasamente desarrollada en su cerebro",
+   "quote_sha": "96616a0de5576386"
+  },
+  {
+   "fact_id": "F092",
+   "statement": "In 2017, Lucio M. Ibiricu and colleagues suggested that postcranial pneumatization in rebbachisaurids was an adaptation to decrease skeletal density.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:8",
+   "lang": "es",
+   "quote": "En 2017, el paleontólogo argentino Lucio M. Ibiricu y colaboradores examinaron la neumatización del esqueleto postcraneal de los rebaquisáuridos, y sugirieron que era una adaptación con el fin de disminuir la densidad del esqueleto",
+   "quote_sha": "1be9bff780a1b2a6"
+  },
+  {
+   "fact_id": "F093",
+   "statement": "According to Ibiricu and colleagues, pneumatization may explain why rebbachisaurids were the only group of diplodocoideans to survive until the Late Cretaceous.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:8",
+   "lang": "es",
+   "quote": "De acuerdo con Ibiricu y colaboradores, esta adaptación puede haber sido la razón de por qué los rebaquisáuridos fueron el único grupo de diplodocoideos que sobrevivieron hasta el Cretácico Superior",
+   "quote_sha": "94dc91d331fdebc3"
+  },
+  {
+   "fact_id": "F094",
+   "statement": "Sereno and colleagues suggested that Nigersaurus was a non-selective grazer that fed at ground level.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Sereno y colaboradores sugirieron que Nigersaurus era un pastador que se alimentaba a nivel del suelo, siendo poco selectivo",
+   "quote_sha": "13c8882be1b10da4"
+  },
+  {
+   "fact_id": "F095",
+   "statement": "Low-angle wear inside the upper tooth crowns suggests Nigersaurus had limited jaw movement restricted to precise vertical displacements.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Nigersaurus también tiene signos de desgaste en un ángulo bajo en el interior de las coronas de los dientes maxilares, lo que sugiere que el movimiento de la mandíbula se limitaba a desplazamientos precisos de arriba abajo",
+   "quote_sha": "2c475b556835f460"
+  },
+  {
+   "fact_id": "F096",
+   "statement": "Nigersaurus likely had one of the weakest bites among sauropods due to weak jaw muscles.",
+   "category": "curiosities",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Tanto ésta como el resto de los músculos de masticación eran probablemente débiles, y se estima que Nigersaurus tuvo una de las mordidas más débiles entre los saurópodos",
+   "quote_sha": "38e989c1daf8c43f"
+  },
+  {
+   "fact_id": "F097",
+   "statement": "Nigersaurus replaced its teeth faster than any other known dinosaur, with a replacement rate of once every fourteen days.",
+   "category": "curiosities",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Nigersaurus gastaba sus coronas dentales más rápido que otros herbívoros dinosaurios, y su tasa de reemplazo de dientes era la más alta de las de cualquier dinosaurio conocido",
+   "quote_sha": "ee3305bcfbdece2f"
+  },
+  {
+   "fact_id": "F098",
+   "statement": "Due to the lateral orientation of its teeth, Nigersaurus was probably unable to chew.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "Debido a la orientación lateral de los dientes, probablemente no habría sido capaz de masticar",
+   "quote_sha": "2ef6598c6b805504"
+  },
+  {
+   "fact_id": "F099",
+   "statement": "Parallel scratches on teeth and bones caused by grit indicate Nigersaurus ate relatively soft herbaceous plants like low-growing ferns.",
+   "category": "paleobiology",
+   "chunk_id": "nigersaurus:eswiki:9",
+   "lang": "es",
+   "quote": "la naturaleza casi en paralelo de los pequeños arañazos en los dientes y huesos (causados por la grava, lo que no ocurriría con tanta frecuencia en los ramoneadores de mayor altura) indican que comía plantas herbáceas relativamente suaves, como los helechos de bajo crecimiento",
+   "quote_sha": "d715ec7cd37722c9"
+  },
+  {
+   "fact_id": "F100",
+   "statement": "The discovery of basal diplodocoideans suggests that short necks and small size were ancestral traits for the group.",
+   "category": "curiosities",
+   "chunk_id": "nigersaurus:eswiki:6",
+   "lang": "es",
+   "quote": "El descubrimiento de estos diplodocoideos basales puede indicar que el cuello corto y el pequeño tamaño eran características ancestrales del grupo",
+   "quote_sha": "a11b93cb195c5f9b"
   }
  ],
  "rejected": [
   {
    "chunk_id": "nigersaurus:enwiki:2",
-   "statement": "Nigersaurus was likely a browser that fed with its head close to the ground.",
-   "category": "paleobiology",
-   "quote": "Nigersaurus was probably a browser, and fed with its head close to the ground.",
-   "reason": "statement copies the source wording: 'fed with its head close to the ground'"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:3",
-   "statement": "Remains of Nigersaurus were first discovered during a 1965–1972 expedition led by Philippe Taquet and first mentioned in 1976.",
-   "category": "discovery",
-   "quote": "Remains thought to belong to Nigersaurus were first discovered during a 1965–1972 expedition to the Republic of Niger led by French paleontologist Philippe Taquet, and first mentioned in a paper published in 1976.",
-   "reason": "statement copies the source wording: 'were first discovered during a 1965 1972 expedition'"
+   "statement": "The tooth-bearing bones of its jaws were rotated transversely, placing all teeth far forward in the mouth, a trait unique among tetrapods.",
+   "category": "description",
+   "quote": "Unlike other tetrapods, the tooth-bearing bones of its jaws were rotated transversely relative to the rest of the skull, so that all of its teeth were located far to the front.",
+   "reason": "statement copies the source wording: 'The tooth-bearing bones of its jaws were rotated'"
   },
   {
    "chunk_id": "nigersaurus:enwiki:3",
@@ -882,85 +1058,57 @@
    "reason": "statement copies the source wording: '512 consists of a partial skull and neck'"
   },
   {
-   "chunk_id": "nigersaurus:enwiki:3",
-   "statement": "Some Nigersaurus skull fossils were so thin that a strong light beam could be seen through them.",
-   "category": "description",
-   "quote": "Some of the skull fossils were so thin that a strong light beam was visible through them.",
-   "reason": "statement copies the source wording: 'skull fossils were so thin that a strong'"
-  },
-  {
    "chunk_id": "nigersaurus:enwiki:5",
-   "statement": "The total area of bone connecting the muzzle to the back of the Nigersaurus skull was only 1.0 cm².",
+   "statement": "The total area of bone connecting the muzzle to the back of the skull was only 1.0 square centimeter.",
    "category": "description",
    "quote": "The total area of bone connecting the muzzle to the back of the skull was only 1.0 cm2.",
    "reason": "statement copies the source wording: 'The total area of bone connecting the muzzle'"
   },
   {
-   "chunk_id": "nigersaurus:enwiki:5",
-   "statement": "The enamel on Nigersaurus teeth was highly asymmetrical, ten times thicker on the outer side than the inner side.",
-   "category": "description",
-   "quote": "The enamel on the teeth of Nigersaurus was highly asymmetrical, ten times thicker on the outwards facing side than on the inner side.",
-   "reason": "statement copies the source wording: 'was highly asymmetrical ten times thicker on the'"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:6",
-   "statement": "Nigersaurus had paired pneumatic spaces at the base of the neural spines on its dorsal vertebrae.",
-   "category": "description",
-   "quote": "Nigersaurus was distinct in that its dorsal (back) vertebrae had paired pneumatic spaces at the base of the neural spines",
-   "reason": "statement copies the source wording: 'had paired pneumatic spaces at the base of'"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:6",
-   "statement": "The presacral vertebrae of Nigersaurus were heavily pneumatized, forming hollow shells divided by thin septa.",
-   "category": "description",
-   "quote": "The presacral vertebrae were heavily pneumatised to the point where the column consisted of a series of hollow \"shells\", each divided by a thin septum in the middle",
+   "chunk_id": "nigersaurus:enwiki:3",
+   "statement": "Sereno compared its appearance to Darth Vader and a vacuum cleaner, and its tooth shear to a conveyor belt and sharpened piano keys.",
+   "category": "curiosities",
+   "quote": "Sereno likened its physical appearance to Darth Vader and a vacuum cleaner, and compared its tooth shear with a conveyor belt and sharpened piano keys.",
    "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:6",
-   "statement": "A prominent rugosity on the midline aspect of the scapular blade base is a distinguishing feature of Nigersaurus.",
-   "category": "description",
-   "quote": "It had a prominent rugosity on the midline aspect of the scapular blade's base, a distinguishing feature",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:6",
-   "statement": "Nigersaurus had robust limbs that contrasted with the extremely lightweight construction of the rest of its skeleton.",
-   "category": "description",
-   "quote": "Like other sauropods, its limbs were robust, contrasting with the extremely lightweight construction of the rest of the skeleton",
-   "reason": "statement copies the source wording: 'with the extremely lightweight construction of the rest'"
-  },
-  {
-   "chunk_id": "nigersaurus:enwiki:6",
-   "statement": "The front legs of Nigersaurus were about two-thirds the length of its back legs.",
-   "category": "description",
-   "quote": "the front legs of Nigersaurus were about two-thirds the length of the back legs, as in most diplodocoids",
-   "reason": "statement copies the source wording: 'The front legs of Nigersaurus were about two-thirds'"
   },
   {
    "chunk_id": "nigersaurus:enwiki:7",
-   "statement": "Mannion and colleagues supported the continued use of the name Nigersaurinae for rebbachisaurids more closely related to Nigersaurus than to Limaysaurus.",
+   "statement": "In 2019, Mannion and colleagues argued that Nigersaurus might not belong in the Rebbachisaurinae clade and supported keeping the name Nigersaurinae.",
    "category": "classification",
-   "quote": "In 2019, Mannion and colleagues... supported the continued use of the name Nigersaurinae over Rebbachisaurinae for all rebbachisaurids more closely related to Nigersaurus than to Limaysaurus",
+   "quote": "In 2019, Mannion and colleagues pointed out that since Nigersaurus was found to be the sister taxon of all other nigersaurines in some studies, a Rebbachisaurinae clade may not necessarily include Nigersaurus itself...",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "nigersaurus:enwiki:8",
-   "statement": "Ibiricu and colleagues suggested that skeletal pneumaticity may have helped rebbachisaurids cope with high temperatures.",
+   "chunk_id": "nigersaurus:enwiki:9",
+   "statement": "Nigersaurus is estimated to have had one of the weakest bites among sauropods.",
    "category": "paleobiology",
-   "quote": "According to Ibiricu and colleagues, this adaptation may have helped the animals cope with the very high temperatures",
+   "quote": "Nigersaurus is estimated to have had one of the weakest bites of the sauropods.",
+   "reason": "statement copies the source wording: 'Nigersaurus is estimated to have had one of'"
+  },
+  {
+   "chunk_id": "nigersaurus:enwiki:9",
+   "statement": "A 2011 study suggests Nigersaurus ate relatively soft, herbaceous plants like low-growing ferns.",
+   "category": "paleobiology",
+   "quote": "According to Whitlock and colleagues in 2011, the small, nearly parallel nature of the tooth scratches and pits indicate that it ate relatively soft, herbaceous plants such as low-growing ferns.",
    "reason": "quote not found verbatim in the source"
   },
   {
-   "chunk_id": "nigersaurus:enwiki:8",
-   "statement": "Lefebvre and colleagues suggested that sauropod limb microanatomy was not driven by weight-bearing pressure but was relaxed by features like pneumaticity and fleshy foot pads.",
+   "chunk_id": "nigersaurus:enwiki:9",
+   "statement": "Nigersaurus had the highest tooth replacement rate of any known dinosaur, replacing teeth once every 14 days.",
    "category": "paleobiology",
-   "quote": "These researchers suggested that the microanatomy of sauropods was not affected by drastic selective pressure caused by bearing weight, but that features such as the columnar limbs, pneumaticity, and fleshy foot pads and cartilage relaxed pressure on the bones",
-   "reason": "quote not found verbatim in the source"
+   "quote": "Nigersaurus wore its tooth crowns down faster than other dinosaurian herbivores, and its tooth replacement rate was the highest of any known dinosaur.",
+   "reason": "numbers not in the quote: ['14']"
+  },
+  {
+   "chunk_id": "nigersaurus:enwiki:10",
+   "statement": "A 2013 study suggested Nigersaurus habitually held its head like other sauropods, contrary to the downturned posture hypothesis.",
+   "category": "debate",
+   "quote": "This was supported by the Spanish palaeontologist Jesús Marugán-Lobón and colleagues in a 2013 study that suggested the methods used by Sereno's team were imprecise, and that Nigersaurus habitually held its head like other sauropods.",
+   "reason": "statement copies the source wording: 'Nigersaurus habitually held its head like other sauropods'"
   },
   {
    "chunk_id": "nigersaurus:enwiki:11",
-   "statement": "Nigersaurus lived in Niger between 120 and 112 million years ago during the Aptian and Albian ages of the mid-Cretaceous.",
+   "statement": "Nigersaurus lived in Niger between 120 and 112 million years ago during the Aptian and Albian ages.",
    "category": "time_and_habitat",
    "quote": "Nigersaurus lived in what is now Niger about 120 to 112 million years ago, during the Aptian and Albian ages of the mid-Cretaceous.",
    "reason": "statement copies the source wording: '112 million years ago during the Aptian and'"
@@ -973,32 +1121,46 @@
    "reason": "statement copies the source wording: 'likely lived in habitats dominated by inland floodplains'"
   },
   {
-   "chunk_id": "nigersaurus:enwiki:10",
-   "statement": "Some researchers argue that Nigersaurus habitually held its head like other sauropods, contrary to the downturned posture hypothesis.",
-   "category": "debate",
-   "quote": "This was supported by the Spanish palaeontologist Jesús Marugán-Lobón and colleagues in a 2013 study that suggested the methods used by Sereno's team were imprecise, and that Nigersaurus habitually held its head like other sauropods.",
-   "reason": "statement copies the source wording: 'that Nigersaurus habitually held its head like other'"
+   "chunk_id": "nigersaurus:eswiki:2",
+   "statement": "Nigersaurus had a relatively short neck.",
+   "category": "description",
+   "quote": "Su cuello era relativamente corto",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "nigersaurus:eswiki:2",
-   "statement": "Nigersaurus had a wide snout containing more than 500 teeth, both active and replacement teeth.",
+   "statement": "Nigersaurus had a wide snout filled with more than 500 teeth, including both active and replacement teeth.",
    "category": "description",
    "quote": "Tenía un hocico ancho lleno de más de quinientos dientes, entre activos y de reemplazo",
    "reason": "numbers not in the quote: ['500']"
   },
   {
    "chunk_id": "nigersaurus:eswiki:3",
-   "statement": "The presacral vertebrae of Nigersaurus were highly pneumatized, making the column consist of a series of hollow \"shells\".",
+   "statement": "The presacral vertebrae were highly pneumatized, making the spine consist of a series of hollow \"shells.\"",
    "category": "description",
-   "quote": "Las vértebras presacrales... estaban sumamente neumatizadas hasta el punto en que la columna consistía en una serie de \"conchas\" huecas",
+   "quote": "Las vértebras presacrales estaban sumamente neumatizadas hasta el punto en que la columna consistía en una serie de \"conchas\" huecas",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "nigersaurus:eswiki:4",
-   "statement": "With sixty-eight columns in the upper jaw and sixty in the lower, Nigersaurus had a total of more than 500 active and replacement teeth.",
+   "statement": "With sixty-eight columns in the upper jaw and sixty in the lower, the dental batteries comprised a total of more than 500 active and replacement teeth.",
    "category": "description",
-   "quote": "Con sesentaiocho columnas en la mandíbula superior y otras sesenta en la inferior... comprendían un total de más de quinientos dientes tanto activos como de reemplazo",
+   "quote": "con sesentaiocho columnas en la mandíbula superior y otras sesenta en la inferior, las así llamadas baterías dentales, también presentes en los hadrosáuridos y los ceratopsios, comprendían un total de más de quinientos dientes tanto activos como de reemplazo",
+   "reason": "numbers not in the quote: ['500']"
+  },
+  {
+   "chunk_id": "nigersaurus:eswiki:6",
+   "statement": "In 2019, Mannion and colleagues suggested that the clade Rebbachisaurinae might not necessarily include Nigersaurus itself.",
+   "category": "classification",
+   "quote": "En 2019, Mannion y sus colegas señalaron que... un clado Rebbachisaurinae no necesariamente incluye a Nigersaurus en sí",
    "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "nigersaurus:eswiki:6",
+   "statement": "In 2019, Brazilian paleontologist Rafael Matos Lindoso and colleagues used the name Nigersaurinae following Mannion's recommendation.",
+   "category": "classification",
+   "quote": "El mismo año, el paleontólogo brasileño Rafael Matos Lindoso y sus colegas usaron el nombre Nigersaurinae siguiendo la recomendación de Mannion",
+   "reason": "numbers not in the quote: ['2019']"
   }
  ]
 }

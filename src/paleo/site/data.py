@@ -101,7 +101,7 @@ def load(warehouse: Path) -> SiteData:
             select e.taxon_key, e.event_type, e.event_date, e.date_is_publication, e.date_precision,
                    e.study_id, e.changed_fields, e.subject_name, e.related_name,
                    e.attribution, e.source_title, e.origin,
-                   s.doi, s.title, t.title_es, s.journal, s.publication_year,
+                   s.doi, s.title, t.title_es, s.journal, s.publication_year, s.language,
                    s.reliability_status, s.is_peer_reviewed_journal, s.is_preprint,
                    s.is_retracted, s.is_corrected, s.in_trusted_journal, s.in_doaj
             from main.fct_taxon_event as e

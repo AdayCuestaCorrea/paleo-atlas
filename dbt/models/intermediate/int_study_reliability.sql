@@ -57,6 +57,7 @@ select
     c.last_updated_on,
     s.first_seen_at,
     c.work_type,
+    c.language,
     s.doi is not null as has_doi,
     coalesce(c.found_in_crossref, false) as found_in_crossref,
     coalesce(c.work_type = 'journal-article' and len(c.issns) > 0, false) as is_peer_reviewed_journal,

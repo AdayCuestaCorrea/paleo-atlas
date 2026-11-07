@@ -22,6 +22,8 @@ select
     {{ strip_html("work ->> '$.title[0]'") }} as title,
     {{ strip_html("work ->> '$.container-title[0]'") }} as journal,
     work ->> 'publisher' as publisher,
+    -- ISO 639-1 code of the article's language, when the publisher gives it.
+    lower(work ->> 'language') as language,
     cast(json_extract(work, '$.ISSN') as varchar[]) as issns,
     try_cast(
         concat_ws(

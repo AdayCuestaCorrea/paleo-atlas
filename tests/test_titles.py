@@ -18,10 +18,11 @@ def test_check_title_keeps_numbers_and_scientific_names():
     assert check_title("A 1.5 m skull", "Un cráneo de 1,5 m", NAMES) == []
 
 
-def store_works(raw, titles):
+def store_works(raw, titles, languages=None):
     works = crossref.store(raw)
     for doi, title in titles.items():
-        works.save_if_changed(doi, {"doi": doi, "found": True, "work": {"title": [title]}})
+        work = {"title": [title], "language": (languages or {}).get(doi)}
+        works.save_if_changed(doi, {"doi": doi, "found": True, "work": work})
     works.flush()
 
 
@@ -49,3 +50,19 @@ def test_titles_are_translated_once_and_bad_ones_rejected(tmp_path):
         make_llm(tmp_path, again), raw_root=raw, derived_root=derived, scientific_names=NAMES
     )
     assert (result.up_to_date, result.translated) == (1, 1)  # only the rejected one again
+
+
+def test_titles_already_in_spanish_are_not_translated(tmp_path):
+    raw, derived = tmp_path / "raw", tmp_path / "derived"
+    store_works(raw, {"10.1/es": "Un nuevo Spinosaurus de Níger", "10.1/en": "A new Spinosaurus"},
+                languages={"10.1/es": "es", "10.1/en": "en"})  # fmt: skip
+    # A translation made before the language was read is dropped.
+    titles_path(derived).parent.mkdir(parents=True)
+    titles_path(derived).write_text(json.dumps([{"doi": "10.1/es", "title": "x", "title_es": "y",
+                                                 "prompt_version": "old"}]))  # fmt: skip
+    answers = [{"sentences": [{"index": 1, "text": "Un nuevo Spinosaurus"}]}]
+    result = translate_titles(
+        make_llm(tmp_path, answers), raw_root=raw, derived_root=derived, scientific_names=NAMES
+    )
+    assert (result.total, result.translated) == (1, 1)
+    assert [r["doi"] for r in json.loads(titles_path(derived).read_text())] == ["10.1/en"]

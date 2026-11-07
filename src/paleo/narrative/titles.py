@@ -38,17 +38,22 @@ def titles_path(derived_root: Path) -> Path:
     return derived_root / "study_titles" / "es.json"
 
 
-def stored_titles(raw_root: Path | None) -> dict[str, str]:
-    """DOI -> plain English title of every work Crossref knows."""
+def stored_titles(raw_root: Path | None) -> tuple[dict[str, str], set[str]]:
+    """(DOI -> plain title of every work Crossref knows that is not in Spanish, DOIs of
+    the works Crossref says are in Spanish): those never need a translation."""
     works = crossref.store(raw_root)
-    out = {}
+    out, spanish = {}, set()
     for doi in works.stored_keys():
         latest = works.latest(doi)
         if latest and latest["payload"].get("found"):
-            title = study_title(latest["payload"]["work"])
+            work = latest["payload"]["work"]
+            if str(work.get("language") or "").lower() == "es":
+                spanish.add(doi)
+                continue
+            title = study_title(work)
             if title:
                 out[doi] = title
-    return out
+    return out, spanish
 
 
 def check_title(source: str, translated: str, scientific_names: set[str]) -> list[str]:
@@ -96,7 +101,9 @@ def translate_titles(
     rows = _load(path)
     if not path.exists():
         _save(path, rows)  # dbt reads the file even when nothing gets translated
-    titles = stored_titles(raw_root)
+    titles, spanish = stored_titles(raw_root)
+    for doi in spanish & rows.keys():  # translated before the language was read
+        del rows[doi]
     result = TitlesResult(total=len(titles))
     pending = []
     for doi, title in sorted(titles.items()):

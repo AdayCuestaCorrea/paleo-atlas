@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 30 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 31 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -295,7 +295,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 **Terminado cuando:** la enciclopedia de los tres bloques de §4 está publicada y el benchmark está documentado con cifras reales.
 
 ### Fase 4 — Portfolio
-- [ ] README bilingüe completo (§20)
+- [x] README bilingüe completo (§20) *(2026-11-07, adelantado: qué es con capturas, arquitectura, por qué no hay Spark en la capa diaria y el benchmark, calidad de datos, cifras medidas ese día, fuentes y licencias, limitaciones conocidas, cómo ejecutarlo; se actualiza al cerrar cada fase)*
 - [x] ADRs D1–D10 *(2026-11-03, adelantados en la rama `fase-3`: [`docs/adr/`](docs/adr/README.md))*
 - [ ] Interview pack: one-pager, vídeo de 2 min, postmortem
 - [ ] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17
@@ -778,6 +778,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v31: README bilingüe de la Fase 4 adelantado (§20), con capturas en `docs/img/web/` y cifras medidas en el almacén ese día (dbt: 126 tests de datos y 6 unitarios) | Decisión del usuario: tener el repo al día |
 | 2026-11-07 | v30: **ficha de taxón nueva** (§11, página 4; §11.2), elegida por el usuario entre cuatro maquetas con datos reales. Piezas calculadas en `site/taxon_page.py` (con tests): `srcset` de Commons, franja del tiempo, parientes en filas con fechas, historial por décadas, «Nuevo», etiqueta de idioma y encuadre del mapa; `site/tree.py` (cladograma SVG) eliminado. **Idioma de los estudios**: `stg_crossref__works.language` → `dim_study` (465 en inglés, 1 en alemán, el resto sin dato); `paleo titles` deja de traducir los estudios en español y borra las traducciones hechas antes. Portada: imágenes enteras en el carrusel y las casillas de grupo, y los estudios en pestaña nueva. Texto alineado a la izquierda (legibilidad, WCAG 1.4.8). Nueva idea en el backlog: «Estado de los datos» | Revisión del usuario |
 | 2026-11-07 | v29: **merge adelantado** de `fase-3` → `main` y `data-fase-3` → `data` (avance rápido, tras fusionar en `data-fase-3` los commits diarios de Actions con `scripts/merge_data.py`: 5 de 5 conflictos resueltos), sin esperar a que la Fase 1 cumpliera sus 2 semanas autónomas. Antes, en local: dbt sin errores y `paleo site --check` con 0 problemas. Las 2 semanas de la Fase 1 empiezan a contar desde el merge. Los lotes nocturnos de la GPU siguen en `data-fase-3` y se llevan a `data` de la misma forma | Decisión del usuario: tener la Fase 3 publicada |
 | 2026-11-04 | v28: **portada nueva** (§11, página 2), elegida por el usuario entre cuatro maquetas con datos reales. Una sola regla de periodo, grupo y país para el explorador y los índices de la enciclopedia (`site/explore.py`: con los géneros da las mismas cifras), en un JSON aparte por idioma (`explorar.json`/`explore.json`, 132 KB comprimido) que se descarga al llegar al explorador; el primer estado va en el HTML (15 KB comprimido). Curiosidad del día: géneros con curiosidades en ES y EN e imagen de Commons con autor y licencia; la frase que nombra al género, de 240 caracteres como mucho; el orden gira con la fecha del build. Mapa de la portada: Natural Earth **1:50m** (dominio público; trae Canarias y Baleares), simplificado a 0,05° (82 KB comprimido) y cargado solo al hacer zoom; las fichas siguen con el 1:110m. Las tarjetas piden miniaturas de Commons de 330 px en lugar de 960 (unas 5 veces menos peso) | Petición del usuario: la portada era casi un volcado de texto |

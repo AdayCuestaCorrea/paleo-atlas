@@ -66,6 +66,18 @@ seeds:
       - name: journal
         data_tests: [unique, not_null]
 
+  - name: news_feeds
+    description: >
+      The news feeds read by paleo ingest news (F9, ALCANCE.md §5): only outlets whose
+      terms allow reusing headlines and links; the summary is kept only where allowed.
+    columns:
+      - name: feed
+        data_tests: [unique, not_null]
+      - name: lang
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['es', 'en']
   - name: source_cadence
     description: >
       How often each source is checked (ALCANCE.md §5), and its names in both

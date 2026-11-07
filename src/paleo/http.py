@@ -47,10 +47,11 @@ def _retry_after(response: httpx.Response) -> float | None:
         return None
 
 
-def request_json(
+def _request(
     client: httpx.Client,
     method: str,
     url: str,
+    read: Callable[[httpx.Response], tuple[bool, Any, str]],
     *,
     params: Mapping[str, Any] | None = None,
     json: Any = None,
@@ -60,13 +61,11 @@ def request_json(
     retries: int = 5,
     backoff: float = 2.0,
     sleep: Callable[[float], None] = time.sleep,
-) -> dict[str, Any]:
-    """Send a request and return its JSON body, retrying transient failures.
-
-    Retries on HTTP 429/5xx, network errors and MediaWiki ``maxlag`` errors,
-    honouring ``Retry-After`` when the server sends it. Client errors (4xx)
-    are raised at once with the start of the response body, for debugging.
-    """
+) -> Any:
+    """Send a request and return what ``read`` makes of the response, retrying
+    transient failures: HTTP 429/5xx, network errors and whatever ``read`` reports as
+    not ready (``(False, None, reason)``). ``Retry-After`` is honoured. Client errors
+    (4xx) are raised at once with the start of the response body, for debugging."""
     last_error = "unknown error"
     for attempt in range(retries + 1):
         wait = backoff * 2**attempt
@@ -88,18 +87,35 @@ def request_json(
                     response.status_code,
                 )
             else:
-                body = response.json()
-                error = body.get("error") if isinstance(body, dict) else None
-                if isinstance(error, dict) and error.get("code") == "maxlag":
-                    last_error = "MediaWiki maxlag"
-                elif error:
-                    raise HttpError(f"API error: {error}")
-                else:
-                    return body
+                ok, value, reason = read(response)
+                if ok:
+                    return value
+                last_error = reason
         if attempt < retries:
             log.warning("Retrying %s in %.0fs (%s)", url, wait, last_error)
             sleep(wait)
     raise HttpError(f"Giving up on {url} after {retries + 1} attempts: {last_error}")
+
+
+def _read_json(response: httpx.Response) -> tuple[bool, Any, str]:
+    body = response.json()
+    error = body.get("error") if isinstance(body, dict) else None
+    if isinstance(error, dict) and error.get("code") == "maxlag":
+        return False, None, "MediaWiki maxlag"
+    if error:
+        raise HttpError(f"API error: {error}")
+    return True, body, ""
+
+
+def request_json(client: httpx.Client, method: str, url: str, **kwargs: Any) -> dict[str, Any]:
+    """Send a request and return its JSON body (see :func:`_request`); MediaWiki
+    ``maxlag`` errors are retried, other API errors raised."""
+    return _request(client, method, url, _read_json, **kwargs)
+
+
+def get_text(client: httpx.Client, url: str, **kwargs: Any) -> str:
+    """GET ``url`` and return its body as text (feeds), with the same retries."""
+    return _request(client, "GET", url, lambda r: (True, r.text, ""), **kwargs)
 
 
 def get_json(

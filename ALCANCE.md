@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 35 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 36 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -150,7 +150,7 @@ Notas:
 | F7 | ZooBank | Registro oficial del nombre (obligatorio en publicaciones electrónicas según el ICZN) | API / búsqueda pública | Por cada taxón nuevo | **API no disponible** (404 en todas las rutas el 2026-11-02; también informado el 28-08-2026). Se reintenta en la Fase 3; mientras, no se muestra el distintivo | [ ] |
 | F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública (sin clave), por ISSN | Mensual (caché de 30 días) | Metadatos de revistas **CC0** | [x] 2026-11-02 |
 | F13 | Wikidata — SPARQL | Verificación de los artículos de Wikipedia de cada género (ID de PBDB P842 y ascendencia P171 hasta la raíz del bloque) y título del artículo en español | Servicio de consultas público, 100 elementos por consulta | Mensual, escalonado (como mucho 600 géneros por ejecución) | Datos **CC0** | [x] 2026-11-02 |
-| F9 | *(Fase 5)* RSS de medios ES/EN | Noticias: titular, enlace, fecha | RSS | Diaria | Solo titular + enlace + resumen propio | [ ] |
+| F9 | *(Fase 5)* RSS de medios ES/EN con licencia (seed `news_feeds`): ScienceDaily (3 feeds), The Conversation (4 temas en inglés y Ciencia en español), SINC (Tierra y Noticias) | Noticias: titular, enlace, fecha y, si la licencia lo permite, el resumen del propio feed | RSS / Atom | Diaria (detección de cambios en `paleo check`) | ScienceDaily: sus condiciones del RSS permiten usarlo en otra web sin modificar el texto y citándolo · The Conversation: CC BY-ND 4.0 · SINC: CC BY 4.0. **Fuera:** Phys.org (solo uso personal), Science News (prohíbe reproducir), Live Science, ABC y Europa Press (sin permiso explícito; en España rige además el derecho de los editores de prensa) | [x] 2026-11-07 |
 | F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
 | F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | — | — | Descartada por ahora (2026-11-03): reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético |
 | F12 | *(Fase 6)* Conjuntos de datos de tamaño corporal publicados (p. ej. en Dryad) + seed curado a mano | Longitud y masa estimadas, con rango y cita | Descarga + curación | Puntual | Dryad publica en CC0; resto, a verificar por conjunto | [ ] |
@@ -214,7 +214,7 @@ F1 F2 F4 F5 F6 F7 ─► raw JSON (rama `data`)         → extracto Parquet
 
 ## 7. Fases y entregables
 
-Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar la anterior. *Excepción (v14):* la Fase 2 se hace mientras la Fase 1 espera sus 2 semanas de ejecución autónoma, sin tocar `pipeline.yml`, `src/paleo/` ni `dbt/` para que esas semanas sigan contando (solo se añaden `airflow/`, scripts, tests y `ci.yml`).
+Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar la anterior. *Excepción (v14):* la Fase 2 se hace mientras la Fase 1 espera sus 2 semanas de ejecución autónoma, sin tocar `pipeline.yml`, `src/paleo/` ni `dbt/` para que esas semanas sigan contando (solo se añaden `airflow/`, scripts, tests y `ci.yml`). *Excepción (v36):* la Fase 5 empieza mientras la Fase 1 cumple sus 2 semanas, la Fase 3 termina sus lotes nocturnos y la Fase 4 espera al CV, y se publica sobre la marcha (decisión del usuario). Las 2 semanas siguen contando: publicar funciones nuevas no es intervenir para que el pipeline funcione.
 
 ### Fase 0 — Preparación
 - [x] Esqueleto de carpetas
@@ -306,9 +306,10 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Fase 5 — IA y noticias
 - [ ] Ingesta RSS (F9)
-- [ ] Clasificación de noticias (especie nueva / revisión / fósil nuevo / ruido): baseline clásico vs LLM, con métricas
-- [ ] Extracción del taxón mencionado y enlace a su ficha
-- [ ] Deduplicación de la misma noticia entre medios (embeddings)
+- [ ] Clasificación de noticias: baseline clásico vs LLM, con métricas sobre titulares etiquetados a mano (`scripts/label_news.py` → `eval/news/`). Cinco clases (v36): especie nueva, hallazgo (fósil nuevo sin nombre nuevo), estudio (investigación sobre un animal ya conocido), revisión (taxonómica) y ruido (todo lo que no trata de los grupos de §4)
+- [ ] Extracción del taxón mencionado y enlace a su ficha *(por el nombre en el texto y por el LLM, los dos comprobados contra las fichas: `int_news_taxa`)*
+- [ ] Deduplicación de la misma noticia entre medios e idiomas: se elige el método midiendo con pares etiquetados (TF-IDF de caracteres, embeddings)
+- [ ] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar
 - [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12)
 - [ ] Documento de fase (`docs/fases/fase-5.md`)
 
@@ -787,6 +788,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v36: **empieza la Fase 5** sin cerrar las anteriores (excepción en §7), publicando sobre la marcha. **F9 verificada:** solo medios con licencia o condiciones que permiten reutilizar titular y enlace (ScienceDaily, The Conversation, SINC); el resumen del feed se guarda sin modificar y con la atribución. 421 artículos el primer día. Clases de noticia: cinco en vez de cuatro (se añade «estudio»: la mayoría de las noticias de paleontología no son ni hallazgos ni nombres nuevos, como la sangre de dinosaurio del 6 nov). `paleo ingest news`, `paleo news classify` (Groq, por lotes de 20), `int_news_taxa` y `fct_news`. Las métricas se miden contra etiquetas del usuario, nunca contra las del LLM | Decisión del usuario: avanzar con la Fase 5 |
 | 2026-11-07 | v35: **sin vídeo de demostración** en el interview pack (§7, Fase 4; §20): la demo es la propia web pública y las capturas del README. `docs/fases/fase-3.md` puesto al día con lo hecho hasta la publicación | Decisión del usuario: es poco probable que alguien lo vea |
 | 2026-11-07 | v34: **página «Estado de los datos»** (§11, página 11; §16), del backlog al alcance, a partir de la maqueta elegida por el usuario entre cuatro (panel + bitácora + la «Calidad de los datos» de otra). Datos: `read_runs` trae los campos JSON del informe; modelos `stg_raw__checked` y `fct_source_freshness` y seed `source_cadence`; piezas calculadas en `site/status.py` con tests. `paleo report`: separa los tests de datos de los unitarios y apunta como parciales los pasos aún sin cerrar (antes se perdían, como el de la web en dos ejecuciones del 7 nov). Sin tocar `pipeline.yml` | Idea aceptada por el usuario (v30) |
 | 2026-11-07 | v33: **cifras de la adaptación al español**. La comprobación de alineación solo reconocía dígitos, así que «19th century» → «siglo XIX», «the 1990s» → «los años 90» o «2» → «dos» contaban como cifras perdidas; ahora se aceptan esas formas, y una unidad convertida (3,45 t → 3450 kg) o una cifra distinta siguen fallando. El feedback de los reintentos en español (no el prompt, que no sube de versión para no readaptar todo lo verificado) pide no convertir unidades, escribir las cifras con dígitos y reformular de verdad las frases copiadas. Resultado: 2 fichas más rescatadas sin modelo y, en un piloto con la GPU sobre 4 de las 13 que seguían fallando (2,5 min, 54 °C como máximo), 3 verificadas (todas con 1–3 frases quitadas); *Maiasaura* sigue fallando por frases genéricas que coinciden con la Wikipedia en español. Fichas en español verificadas: 389 | Petición del usuario: optimizar el español antes del lote nocturno |

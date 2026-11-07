@@ -1,6 +1,20 @@
 version: 2
 
 models:
+  - name: stg_news__items
+    description: Latest version of each article from the news feeds (F9).
+    columns:
+      - name: news_key
+        data_tests: [unique, not_null]
+      - name: title
+        data_tests: [not_null]
+      - name: url
+        data_tests: [not_null]
+      - name: lang
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['es', 'en']
   - name: stg_doaj__journals
     columns:
       - name: issn

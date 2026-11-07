@@ -274,9 +274,12 @@ def _adapt_es(
         lines += [
             "",
             "Cómo corregirlas: una frase por cada frase inglesa, con el mismo índice; los "
-            "números iguales que en inglés (con coma decimal); los géneros y especies sin "
-            "traducir (los clados por encima de la familia pueden ir en español); y si una "
-            "frase copia ocho palabras seguidas de una fuente, dila con otras palabras.",
+            "números iguales que en inglés (con coma decimal) y escritos con cifras; NO "
+            "conviertas unidades (3.45 t es «3,45 t», nunca «3450 kg»; 8.8 m es «8,8 m»); los "
+            "géneros y especies sin traducir (los clados por encima de la familia pueden ir en "
+            "español); y si una frase copia ocho palabras seguidas de una fuente, reescríbela "
+            "de verdad: cambia el orden de la frase, el verbo y la construcción, no solo una "
+            "palabra suelta.",
         ]
     result = llm.complete_json(system, "\n".join(lines), AdaptedText, max_tokens=3_000)
     by_index = {s.index: _tidy(s.text) for s in result.sentences}

@@ -187,3 +187,16 @@ def test_alignment_failures_point_at_the_sentences():
     spanish = ["Pesaba 6 t.", "Vivía en Níger.", "El espinosaurio nadaba."]
     assert alignment_failures(english, spanish, {"Spinosaurus"}) == {0, 2}
     assert alignment_failures(english, spanish[:2], {"Spinosaurus"}) is None  # count differs
+
+
+def test_numbers_may_be_written_the_spanish_way_but_not_changed():
+    from paleo.narrative.checks import numbers_match
+
+    assert numbers_match("He lived in the 19th century.", "Vivió en el siglo XIX.")
+    assert numbers_match("Between the 19th and 20th centuries.", "Entre los siglos XIX y XX.")
+    assert numbers_match("In the 1990s Bakker argued.", "En los años 90 Bakker sostuvo.")
+    assert numbers_match("It has 2 horns and weighed 65 kg.", "Tenía dos cuernos y pesaba 65 kg.")
+    # A converted unit, another number or an added one still fail.
+    assert not numbers_match("It weighed 3.45 t.", "Pesaba 3450 kg.")
+    assert not numbers_match("It weighed 5 t.", "Pesaba 6 t.")
+    assert not numbers_match("It was 25 m long.", "Medía 25 m y 1 m de alto.")

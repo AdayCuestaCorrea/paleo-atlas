@@ -362,10 +362,58 @@ def _has_name(name: str, text: str) -> bool:
     return re.search(rf"(?<![\w-]){re.escape(name)}(?![\w-])", text) is not None
 
 
+_ES_NUMBER_WORDS = {
+    "un": 1, "uno": 1, "una": 1, "dos": 2, "tres": 3, "cuatro": 4, "cinco": 5, "seis": 6,
+    "siete": 7, "ocho": 8, "nueve": 9, "diez": 10, "once": 11, "doce": 12, "trece": 13,
+    "catorce": 14, "quince": 15, "dieciseis": 16, "diecisiete": 17, "dieciocho": 18,
+    "diecinueve": 19, "veinte": 20, "treinta": 30, "cuarenta": 40, "cincuenta": 50,
+    "sesenta": 60, "setenta": 70, "ochenta": 80, "noventa": 90, "cien": 100, "ciento": 100,
+    "mil": 1000,
+}  # fmt: skip
+_ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50}
+
+
+def _roman(token: str) -> int | None:
+    if not re.fullmatch(r"[IVXL]+", token):
+        return None
+    total = 0
+    for a, b in zip(token, token[1:] + " ", strict=True):
+        value = _ROMAN[a]
+        total += -value if b != " " and _ROMAN[b] > value else value
+    return total
+
+
+def _said_otherwise(number: str, dst: str) -> bool:
+    """A number of the English sentence that the Spanish one writes in its own way: a
+    century in Roman numerals ("19th century" -> "siglo XIX") or in words ("dos")."""
+    if not number.isdigit() or int(number) > 1000:
+        return False
+    n = int(number)
+    if any(_roman(t) == n for t in re.findall(r"\b[IVXL]+\b", dst)):
+        return True
+    return any(_ES_NUMBER_WORDS.get(w) == n for w in re.findall(r"\w+", _fold(dst)))
+
+
+def numbers_match(src: str, dst: str) -> bool:
+    """The same numbers in a sentence and its adaptation, allowing the Spanish ways of
+    writing some of them: centuries in Roman numerals, small numbers in words and short
+    decades ("the 1990s" -> "los años 90"). A converted unit (3.45 t -> 3450 kg) or a
+    different number still fails."""
+    s, d = numbers(src), numbers(dst)
+    missing, extra = s - d, d - s
+    for n in sorted(missing):
+        if re.fullmatch(r"1[5-9]\d0|20[0-2]0", n) and n[2:] in extra:  # "1990" -> "90"
+            missing.discard(n)
+            extra.discard(n[2:])
+        elif _said_otherwise(n, dst):
+            missing.discard(n)
+    return not missing and not extra
+
+
 def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
     """What an adapted sentence lost from its source sentence (empty if nothing)."""
     problems = []
-    if numbers(src) != numbers(dst):
+    if not numbers_match(src, dst):
         problems.append(f"numbers differ ({sorted(numbers(src))} vs {sorted(numbers(dst))})")
     # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.
     grouped = {m for m in re.findall(r"\b\d{1,3}(?:,\d{3})+(?!\d)", src)}

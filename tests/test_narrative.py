@@ -411,3 +411,17 @@ def test_failed_spanish_texts_are_rescued_without_a_model(tmp_path):
         "still_failed": [],
         "skipped": [],
     }
+
+
+def test_a_failed_spanish_attempt_gets_concrete_instructions():
+    from paleo.narrative.write import AdaptedText, _adapt_es
+
+    seen = {}
+
+    class Stub:
+        def complete_json(self, system, user, schema, max_tokens):
+            seen["user"] = user
+            return AdaptedText(sentences=[])
+
+    _adapt_es(Stub(), "Testosaurus", [("It weighed 3.45 t.", ["F1"], "description")], ["x"])
+    assert "NO conviertas unidades" in seen["user"] and "reescríbela de verdad" in seen["user"]

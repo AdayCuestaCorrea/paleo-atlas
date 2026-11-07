@@ -65,7 +65,7 @@ Measured on 2026-11-07 from the warehouse and the test suite.
 | Studies | 8,195, of which 586 checked in Crossref (retractions, corrections, peer review) |
 | Fossil record | 58,570 PBDB occurrences in 188 countries · 138,388 GBIF specimens reconciled with their genus |
 | Narrative pages | 397 verified in English, 362 in Spanish (and growing every night) |
-| Tests | 216 pytest · 132 dbt tests in every pipeline run (126 data tests, 6 unit tests) |
+| Tests | 249 pytest · 157 dbt tests in every pipeline run (150 data tests, 7 unit tests) |
 | Daily run | ~4 minutes for a full run with ingestion, plus deployment |
 | Benchmark (932,494 rows) | DuckDB 0.86 s / 459 MB · Spark 13.7 s / 1.5 GB; 124 vs 242 lines of code |
 | Running cost | 0 € |
@@ -84,7 +84,7 @@ About 7.5 s of Spark's time is fixed cost (JVM, session, planning). Method and r
 
 ## Data quality
 
-- **dbt tests** on every run (126 data tests and 6 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
+- **dbt tests** on every run (150 data tests and 7 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
 - **Run report** per execution (`paleo report`), kept in the `data` branch: what changed, durations, counts.
 - **Website check** on every build (`paleo site --check`): broken links, language alternates, pages nobody links to, pictures without a license.
 - **Narrative pages** are only published if every sentence passes its checks: cited facts, same numbers, scientific names kept, no copying of 8 or more words from a source; how each check works is explained in [`docs/fases/`](docs/fases/) (Spanish).

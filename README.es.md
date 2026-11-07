@@ -65,7 +65,7 @@ Medidas el 2026-11-07 en el almacén y en la suite de tests.
 | Estudios | 8195, de ellos 586 comprobados en Crossref (retractaciones, correcciones, revisión por pares) |
 | Registro fósil | 58 570 hallazgos de PBDB en 188 países · 138 388 especímenes de GBIF reconciliados con su género |
 | Fichas narrativas | 397 verificadas en inglés y 362 en español (y crecen cada noche) |
-| Tests | 216 de pytest · 132 de dbt en cada ejecución del pipeline (126 de datos y 6 unitarios) |
+| Tests | 249 de pytest · 157 de dbt en cada ejecución del pipeline (150 de datos y 7 unitarios) |
 | Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |
 | Coste | 0 € |
@@ -84,7 +84,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 
 ## Calidad de datos
 
-- **Tests de dbt** en cada ejecución (126 de datos y 6 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
+- **Tests de dbt** en cada ejecución (150 de datos y 7 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
 - **Informe de cada ejecución** (`paleo report`), guardado en la rama `data`: qué cambió, duraciones, recuentos.
 - **Comprobación de la web** en cada build (`paleo site --check`): enlaces rotos, versión en el otro idioma, páginas a las que nadie enlaza, imágenes sin licencia.
 - **Las fichas narrativas** solo se publican si cada frase pasa sus comprobaciones: hechos citados, mismas cifras, nombres científicos conservados, nada de copiar 8 o más palabras seguidas de una fuente; cómo funciona cada comprobación se explica en [`docs/fases/`](docs/fases/).

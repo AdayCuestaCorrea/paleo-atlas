@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 29 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 30 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -402,7 +402,13 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 1. **Selector de idioma** (raíz).
 2. **Portada** *(rediseñada en la v28)*: carrusel de curiosidades (la del día y 7 «¿Sabías que…?», frases verificadas de las fichas, con el crédito de la imagen; avanza solo cada 8 s, con pausa), «Última hora» (6 eventos; el título abre el estudio por su DOI) + enlace al último recap, y un **explorador**: «Nuevas del año / Todo el atlas», filtrable por periodo (franja con los colores de la carta cronoestratigráfica), grupo (por bloques de §4) y país (mapa con arrastre y zoom, atajos por región y selector), con las cifras cruzadas y el estado en la URL. Sin JavaScript, los periodos, grupos y países enlazan a sus índices y se ven las nuevas. Buscador con sugerencias en la cabecera de todas las páginas.
 3. **Recap semanal** (archivo de todas las semanas).
-4. **Ficha de taxón.**
+4. **Ficha de taxón** *(rediseñada en la v30)*:
+   - cabecera con la imagen entera (sin recortes, en 960/1280/1920 px según la pantalla) y el visor de imágenes;
+   - resumen rápido (cuándo vivió, dónde, fósiles registrados, familia) y la franja del tiempo geológico con su rango marcado;
+   - lectura a una columna: curiosidades en un recuadro, citas que muestran su fuente al pasar el ratón o tocar;
+   - columna lateral con la ficha técnica, un minimapa, lo último y el índice (fijo al bajar);
+   - «Historial de estudios» con un gráfico por décadas y la etiqueta «Nuevo» (≤ 90 días);
+   - cada estudio se abre en una pestaña nueva y lleva su idioma: el de Crossref cuando lo da, si no «título traducido» o «título original».
 5. **Índices:** por grupo, época, país *(Fase 3)*.
 6. **Glosario** *(Fase 5)*.
 7. **Cómo evaluamos las fuentes.**
@@ -437,6 +443,7 @@ Lo que buscas se llama **cladograma** o, con el eje del tiempo, **árbol filogen
 - **Eje temporal:** cada rama se dibuja en el intervalo en que vivió el animal (primera y última aparición en PBDB), sobre la escala de periodos (Triásico, Jurásico, Cretácico…). Filtros por época.
 - **Navegable:** pulsar un hermano abre su ficha; se puede subir o bajar de nivel (familia → orden). Nunca se dibuja el árbol entero de golpe, solo el vecindario del taxón.
 - **Honestidad:** la topología sale de la clasificación de PBDB, que es una clasificación y no un análisis filogenético. Se indica en la propia vista, y que la ubicación de muchos animales está en debate. *(Open Tree of Life se descartó el 2026-11-03: solo ~12 % de los géneros fósiles están en su árbol sintético, y mezclar las dos fuentes daría vecindarios casi vacíos.)*
+- **Cambio (v30, decisión del usuario):** el SVG de cladograma se sustituye por **filas sobre un eje de millones de años**, una por género, con su rango escrito junto a la barra (sin depender del hover, que en móvil no existe) y las bandas de los periodos; se pierden las líneas del cladograma, y el parentesco se lee en el orden (los más emparentados primero) y en el clado nombrado. Los dos niveles se mantienen, con un selector.
 - **Hecho (2026-11-03):** dos niveles, «Grupo» (el clado más bajo con al menos 3 géneros de la enciclopedia) y «Un nivel más arriba», cada uno con hasta 20 géneros, los más cercanos primero; SVG estático con enlaces, más un filtro por periodo; las especies muestran el árbol de su género. Las siluetas solo se ponen cuando son del propio género (41), no las del clado.
 
 ### 11.3 Comparador de tamaños (Fase 6)
@@ -761,6 +768,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 | Segundo proveedor LLM gratuito de reserva | Por si Groq falla o cambia su plan gratuito |
 | Open Tree of Life como señal en el árbol | Decir en cada ficha si el género está en el árbol sintético y con cuántos estudios (F11 descartada como topología: 12 % de cobertura) |
 | Imagen alternativa cuando la principal de PhyloPic es NC | Pedir otras imágenes del mismo nodo con licencia permitida (hoy se cae al género o clado) |
+| Página pública «Estado de los datos» | Las últimas ejecuciones del pipeline (duración, si hubo cambios), los tests de dbt en verde o con aviso, la frescura de cada fuente y las fichas verificadas frente a las fallidas por idioma, a partir del registro `runs/` de `paleo report`; idea aceptada por el usuario el 2026-11-07 |
 | Retracciones de los estudios de la «Historia anterior» | Cruzar cada mes los ~7.600 DOIs con el CSV de Retraction Watch (vía Crossref) sin guardar un registro por DOI; hoy salen como `unchecked` |
 | Columna «Unit» de las páginas anuales antiguas (≤ 2018) | El parser la ignora con un aviso; los eventos no usan la localidad |
 
@@ -770,6 +778,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v30: **ficha de taxón nueva** (§11, página 4; §11.2), elegida por el usuario entre cuatro maquetas con datos reales. Piezas calculadas en `site/taxon_page.py` (con tests): `srcset` de Commons, franja del tiempo, parientes en filas con fechas, historial por décadas, «Nuevo», etiqueta de idioma y encuadre del mapa; `site/tree.py` (cladograma SVG) eliminado. **Idioma de los estudios**: `stg_crossref__works.language` → `dim_study` (465 en inglés, 1 en alemán, el resto sin dato); `paleo titles` deja de traducir los estudios en español y borra las traducciones hechas antes. Portada: imágenes enteras en el carrusel y las casillas de grupo, y los estudios en pestaña nueva. Texto alineado a la izquierda (legibilidad, WCAG 1.4.8). Nueva idea en el backlog: «Estado de los datos» | Revisión del usuario |
 | 2026-11-07 | v29: **merge adelantado** de `fase-3` → `main` y `data-fase-3` → `data` (avance rápido, tras fusionar en `data-fase-3` los commits diarios de Actions con `scripts/merge_data.py`: 5 de 5 conflictos resueltos), sin esperar a que la Fase 1 cumpliera sus 2 semanas autónomas. Antes, en local: dbt sin errores y `paleo site --check` con 0 problemas. Las 2 semanas de la Fase 1 empiezan a contar desde el merge. Los lotes nocturnos de la GPU siguen en `data-fase-3` y se llevan a `data` de la misma forma | Decisión del usuario: tener la Fase 3 publicada |
 | 2026-11-04 | v28: **portada nueva** (§11, página 2), elegida por el usuario entre cuatro maquetas con datos reales. Una sola regla de periodo, grupo y país para el explorador y los índices de la enciclopedia (`site/explore.py`: con los géneros da las mismas cifras), en un JSON aparte por idioma (`explorar.json`/`explore.json`, 132 KB comprimido) que se descarga al llegar al explorador; el primer estado va en el HTML (15 KB comprimido). Curiosidad del día: géneros con curiosidades en ES y EN e imagen de Commons con autor y licencia; la frase que nombra al género, de 240 caracteres como mucho; el orden gira con la fecha del build. Mapa de la portada: Natural Earth **1:50m** (dominio público; trae Canarias y Baleares), simplificado a 0,05° (82 KB comprimido) y cargado solo al hacer zoom; las fichas siguen con el 1:110m. Las tarjetas piden miniaturas de Commons de 330 px en lugar de 960 (unas 5 veces menos peso) | Petición del usuario: la portada era casi un volcado de texto |
 | 2026-11-04 | v27: lote nocturno con las fichas más ricas: 128 géneros en 7 h 20 min (GPU 72,9 °C de media, máx. 78 °C), 115 verificados en EN y 94 en ES, 113 con curiosidades (mediana de 544 palabras). Arreglos por lo visto en el lote: los identificadores de hechos que el modelo escribe con un cero de más (`F0113`) se leen como el real (rescata 8 de los 13 fallos en EN); un único trozo cuya respuesta sale cortada se pide por mitades (3 géneros saltados); `paleo narrate --retry-failed` reintenta solo las fichas que fallaron | Revisión del lote |

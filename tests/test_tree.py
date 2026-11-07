@@ -1,13 +1,12 @@
 """Kinship tree (Phase 3, H7): PBDB clades, the neighbourhood drawing and its page."""
 
 import datetime as dt
-import re
 
 import httpx
 
 from paleo.http import make_client
 from paleo.ingest import pbdb
-from paleo.site import tree
+from paleo.site import taxon_page
 from paleo.site.data import SiteData
 
 DAY = dt.date(2026, 11, 3)
@@ -65,46 +64,31 @@ ROWS = [
 ]
 
 
-def test_single_child_clades_are_collapsed_and_leaves_never_overlap():
-    root = tree.build(ROWS)
-    names = {c.name for c in root.children}
-    assert names == {"Spinosaurinae", "Baryonychinae"}  # Spinosaurini had one genus
-    n = tree.layout(root)
-    ys = [leaf.y for leaf in root.leaves()]
-    assert n == 4 and len(set(ys)) == 4 and ys == sorted(ys)
-    for node in root.children:
-        assert node.children[0].y <= node.y <= node.children[-1].y
-
-
-def test_svg_links_every_genus_highlights_the_page_and_escapes_names():
-    svg = str(tree.svg([*ROWS, row("x", "<b>X</b>", [])], lang="es",
-                       url=lambda kind, key: f"/es/taxones/{key}.html", label="Grupo"))  # fmt: skip
-    assert svg.count('<a href="/es/taxones/') == 5
-    assert svg.count("is-self") == 1 and "&lt;b&gt;X" in svg and "<b>X" not in svg
-    assert ">Cretácico<" in svg  # period names in the page's language
-    xs = [float(x) for x in re.findall(r'class="tree__bar" x="([\d.]+)"', svg)]
-    assert len(xs) == 4  # Suchomimus has no dates: no bar, still a link
-    assert all(
-        tree.CLADO_W + tree.LABEL_W <= x <= tree.CLADO_W + tree.LABEL_W + tree.TIME_W for x in xs
+def test_relatives_are_rows_on_a_time_axis_with_every_range_written():
+    chart = taxon_page.kin_rows(ROWS)
+    assert chart["clade"] == "Spinosauridae" and chart["total"] == 4
+    # Same order as the neighbourhood (closest first), the page itself marked.
+    assert [r["name"] for r in chart["rows"]] == [
+        "Spinosaurus",
+        "Oxalaia",
+        "Baryonyx",
+        "Suchomimus",
+    ]
+    me = chart["rows"][0]
+    assert me["self"] and (me["from"], me["to"]) == (125.8, 72.2)
+    # Older to the left: Baryonyx (139.1 Ma) starts before Spinosaurus (125.8 Ma).
+    assert (
+        chart["rows"][2]["left"] < me["left"] and 0 <= me["left"] < me["left"] + me["width"] <= 100
     )
+    assert chart["rows"][3]["to"] is None and "left" not in chart["rows"][3]  # no ages: no bar
+    ticks = [t["ma"] for t in chart["ticks"]]
+    assert 3 <= len(ticks) <= 7 and ticks == sorted(ticks)
+    assert all(0 <= t["pos"] <= 100 for t in chart["ticks"])
+    assert [b["key"] for b in chart["bands"]] == ["cretaceous"]  # 70-139 Ma (with margin)
+    assert taxon_page.kin_rows([]) is None
 
 
 def test_species_pages_show_the_tree_of_their_genus():
     data = SiteData([], {}, {}, {}, {}, neighborhood={"spinosaurus": {"group": ROWS}})
     assert data.kinship({"taxon_key": "spinosaurus-mirabilis", "genus_key": "spinosaurus"})
     assert data.kinship({"taxon_key": "otodus", "genus_key": None}) == {}
-
-
-def test_labels_are_drawn_only_where_they_fit_and_kept_on_hover_otherwise():
-    assert tree.fits("Otodontidae", 80, tree.CLADE_CHAR)
-    assert not tree.fits("Ornithothoraces", 25, tree.CLADE_CHAR)
-    deep = [
-        row(f"g{i}", f"G{i}", ["Ornithothoraces", "Ornithuromorpha", f"C{i % 2}"]) for i in range(4)
-    ]
-    svg = str(tree.svg(deep, lang="en", url=lambda kind, key: key, label="Group"))
-    assert "<title>Ornithuromorpha</title>" in svg  # no room on its short branch
-    assert 'class="tree__clade"' not in svg or "Ornithuromorpha</text>" not in svg
-    # A narrow period (the Quaternary in a Cretaceous-to-today axis) only on hover.
-    wide = [row("a", "A", [], first=140.0, last=0.0, self_=True, depth=0), row("b", "B", [])]
-    axis = str(tree.svg(wide, lang="en", url=lambda kind, key: key, label="Group"))
-    assert ">Cretaceous</text>" in axis and "<title>Quaternary</title>" in axis

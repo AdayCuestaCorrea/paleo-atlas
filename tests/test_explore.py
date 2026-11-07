@@ -180,7 +180,7 @@ def home_builder():
              ("allosaurus", "en"): text("Allosaurus had crests.")}  # fmt: skip
     event = {"taxon_key": "hintighernia-x", "event_type": "description", "origin": "tracked",
              "date_precision": "day", "event_date": dt.date(2026, 10, 30), "doi": "10.1/x",
-             "title": "A new pterosaur", "title_es": "Un pterosaurio nuevo",
+             "title": "A new pterosaur", "title_es": "Un pterosaurio nuevo", "language": "en",
              "journal": "J"}  # fmt: skip
     data = SiteData([allo, hint], {"hintighernia-x": [event]}, texts, {}, {}, dt.date(2026, 11, 4),
                     country_centroids={"us": (40.0, -100.0)})  # fmt: skip

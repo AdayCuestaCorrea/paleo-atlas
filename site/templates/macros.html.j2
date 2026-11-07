@@ -42,15 +42,25 @@
 <span class="event__date"{% if e.date_precision == 'seen' %} title="{{ T.date_seen_note }}"{% endif %}>{% if e.date_precision == 'seen' %}{{ T.date_seen }} {{ fmt_date(e.event_date) }}{% else %}{{ fmt_date(e.event_date, e.date_precision) }}{% endif %}</span>
 {%- endmacro %}
 
-{#- Spanish pages show the translated title first and the original below it. -#}
+{#- Hidden text for links that open in a new tab (studies, sources). -#}
+{% macro new_tab(T) -%}<span class="ext" aria-hidden="true"> ↗</span><span class="visually-hidden"> ({{ T.new_tab }})</span>{%- endmacro %}
+
+{#- What the reader should know about a study's language before opening it
+    (taxon_page.study_lang_tag): Crossref's language, else whether the title is ours. -#}
+{% macro lang_tag(e, T) -%}
+{%- set tag = study_lang_tag(e, T.lang) -%}
+{%- if tag -%}
+{%- if tag.startswith('lang:') %}{% set code = tag[5:] %}<span class="lang-tag" title="{{ T.lang_tag_title }}">{{ T['lang_' ~ code] if ('lang_' ~ code) in T else code | upper }}</span>
+{%- elif tag == 'translated' %}<span class="lang-tag" title="{{ T.original_title }}: {{ e.title }}">{{ T.lang_tag_translated }}</span>
+{%- else %}<span class="lang-tag" title="{{ T.lang_tag_title }}">{{ T.lang_tag_original }}</span>{% endif %} {% endif -%}
+{%- endmacro %}
+
+{#- A study's title: on Spanish pages our translation when there is one (the
+    original goes in the language tag's tooltip). -#}
 {% macro study_title(e, T, compact=False) -%}
 {% set translated = T.lang == 'es' and e.title_es and e.title_es != e.title %}
-{% if translated %}
-  <span class="event__title" lang="es">{{ e.title_es }}</span>
-  {% if not compact %}<span class="event__original" lang="en"><span class="tag">{{ T.article_in_english }}</span> {{ T.original_title }}: {{ e.title }}</span>{% endif %}
-{% elif e.title %}
-  <span class="event__title"{% if T.lang == 'es' %} lang="en"{% endif %}>{{ e.title }}</span>
-{% endif %}
+{% if translated %}<span class="event__title" lang="es">{{ e.title_es }}</span>
+{%- elif e.title %}<span class="event__title"{% if e.language and e.language != T.lang %} lang="{{ e.language }}"{% endif %}>{{ e.title }}</span>{% endif %}
 {%- endmacro %}
 
 {#- What a taxonomic event says, e.g. "Brontosaurus, synonym of Apatosaurus". The
@@ -65,21 +75,22 @@
 {%- endif -%}
 {%- endmacro %}
 
-{% macro event(e, T, fmt_date, url=None, show_taxon=False, page_name=None) -%}
+{% macro event(e, T, fmt_date, url=None, show_taxon=False, page_name=None, new=False) -%}
 <li class="event event--{{ e.event_type }}">
   {{ event_date(e, T, fmt_date) }}
+  {% if new %}<span class="tag-new">{{ T.tag_new }}</span>{% endif %}
   <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
   {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
   {{ event_claim(e, T, page_name) }}
   {% if e.event_type == 'entry_changed' %}
   <span class="event__title">{{ T.entry_changed_fields }}: {% for f in e.changed_fields %}{{ T['changed_' ~ f] }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
-  {% else %}
-  {{ study_title(e, T) }}
+  {% elif e.title %}
+  <span class="event__study">{{ lang_tag(e, T) }}{% if e.doi %}<a href="https://doi.org/{{ e.doi }}" rel="noopener" target="_blank">{{ study_title(e, T) }}{{ new_tab(T) }}</a>{% else %}{{ study_title(e, T) }}{% endif %}</span>
   {% endif %}
   <span class="event__source">
     {%- if e.attribution %}<span class="event__by">{{ e.attribution }}{% if e.origin == 'backfill' %}, {{ e.event_date.year }}{% endif %}</span>{% endif -%}
     {%- if e.journal %}{% if e.attribution %} · {% endif %}<cite>{{ e.journal }}</cite>{% endif -%}
-    {%- if e.doi %} · <a href="https://doi.org/{{ e.doi }}" rel="noopener">{{ T.doi }} {{ e.doi }}</a>{% endif -%}
+    {%- if e.doi %} · <span class="event__doi">{{ T.doi }} {{ e.doi }}</span>{% endif -%}
     {%- if e.source_title %} · <span class="event__via">{{ T.event_via }} {{ e.source_title }}</span>{% endif -%}
   </span>
   {{ badges(e, T) }}
@@ -97,8 +108,8 @@
     {% set translated = T.lang == 'es' and e.title_es %}
     {% set title = e.title_es if translated else e.title %}
     {% if title %}
-    {% if e.doi %}<a class="news__title" href="https://doi.org/{{ e.doi }}" rel="noopener" title="{{ T.open_study }}"{% if T.lang == 'es' and not translated %} lang="en"{% endif %}>{{ title }}<span class="news__ext" aria-hidden="true"> ↗</span></a>
-    {% elif e.taxon %}<a class="news__title" href="{{ url('taxon', e.taxon.taxon_key) }}#historial"{% if T.lang == 'es' and not translated %} lang="en"{% endif %}>{{ title }}</a>
+    {% if e.doi %}<a class="news__title" href="https://doi.org/{{ e.doi }}" rel="noopener" target="_blank" title="{{ T.open_study }}"{% if not translated and e.language and e.language != T.lang %} lang="{{ e.language }}"{% endif %}>{{ lang_tag(e, T) }}{{ title }}<span class="news__ext" aria-hidden="true"> ↗</span><span class="visually-hidden"> ({{ T.new_tab }})</span></a>
+    {% elif e.taxon %}<a class="news__title" href="{{ url('taxon', e.taxon.taxon_key) }}#historial">{{ lang_tag(e, T) }}{{ title }}</a>
     {% else %}<span class="news__title">{{ title }}</span>{% endif %}
     {% endif %}
     {% if e.journal %}<cite class="news__journal">{{ e.journal }}</cite>{% endif %}

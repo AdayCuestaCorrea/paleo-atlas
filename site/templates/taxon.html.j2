@@ -1,245 +1,347 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import image, event, event_date, study_title, folded %}
+{% from "macros.html.j2" import event, event_date, study_title, folded, lang_tag, new_tab %}
 {% block title %}{{ taxon.taxon_name }} · {{ T.site_name }}{% endblock %}
 {% block description %}{{ fallback or taxon.taxon_name }}{% endblock %}
 {% block content %}
+{% set periods_in, _group, country_codes = facets(taxon) %}
+{% set has_points = taxon.pbdb_points or taxon.gbif_points %}
+{% set recent = history.recent %}
+{% set n_history = recent | length + (history.backfill or 0) %}
+{% set kin_levels = [] %}{% for level in ['group', 'up'] if kin and kin.get(level) %}{% set _ = kin_levels.append((level, kin_rows(kin[level]))) %}{% endfor %}
+
 <article class="taxon">
-  <header class="taxon__head">
-    <figure class="taxon__figure">
-      {% if taxon.image_url and taxon.image_page_url %}
-      <a class="zoom" href="{{ taxon.image_page_url }}" data-viewer
-         data-full="{{ taxon.image_url }}" data-thumb="{{ taxon.image_url }}"
+  {# Header picture: the whole image (never cropped) over a blurred copy of itself. #}
+  {% set silhouette = taxon.image_source == 'phylopic' %}
+  <figure class="tx-banner{% if silhouette or not taxon.image_url %} tx-banner--plain{% endif %}">
+    {% if taxon.image_url %}
+      {% if not silhouette %}<img class="tx-banner__bg" src="{{ thumb(taxon.image_url, 960) }}" alt="" aria-hidden="true" decoding="async">{% endif %}
+      {% set big = thumb(taxon.image_url, 1920) %}
+      {% set main_img %}<img class="tx-banner__img{% if silhouette %} pic--silhouette{% endif %}" src="{{ thumb(taxon.image_url, 960) }}"{% set set = srcset(taxon.image_url) %}{% if set %} srcset="{{ set }}" sizes="100vw"{% endif %} alt="{{ taxon.taxon_name }}" decoding="async" fetchpriority="high">{% endset %}
+      {% if taxon.image_page_url %}
+      <a class="tx-banner__link" href="{{ taxon.image_page_url }}" data-viewer
+         data-full="{{ big }}" data-thumb="{{ thumb(taxon.image_url) }}"
          data-caption="{{ T.image_credit }}: {{ taxon.image_author or '—' }} · {{ taxon.image_license }}"
-         data-license-url="{{ taxon.image_license_url or '' }}" aria-label="{{ T.enlarge_image }}">
-        {{ image(taxon, T, "hero") }}
-      </a>
-      {% else %}{{ image(taxon, T, "hero") }}{% endif %}
-      <figcaption>
-        {% if taxon.image_url %}
-          {{ T.image_credit }}: {{ taxon.image_author or '—' }} ·
-          {% if taxon.image_license_url %}<a href="{{ taxon.image_license_url }}" rel="license noopener">{{ taxon.image_license }}</a>{% else %}{{ taxon.image_license }}{% endif %}
-          {% if taxon.image_page_url %} · <a href="{{ taxon.image_page_url }}" rel="noopener">{{ T.open_source }}</a>{% endif %}
-          {% if taxon.image_level in ('genus', 'clade', 'group') %}<br><span class="note">{{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}</span>{% endif %}
-        {% else %}{{ T.no_image }}{% endif %}
-      </figcaption>
-      {% if gallery and taxon.image_url and taxon.image_page_url %}
-      {#- Thumbnails of every picture: each opens the viewer there (or, without
-          JavaScript, its Commons page). #}
-      <ul class="strip" aria-label="{{ T.gallery_title }}">
-        <li><a class="strip__item" href="{{ taxon.image_page_url }}" data-open="0" aria-label="{{ T.enlarge_image }}"><img src="{{ taxon.image_url }}" alt="" loading="lazy" decoding="async"></a></li>
-        {% for img in gallery %}<li><a class="strip__item" href="{{ img.page_url }}" data-open="{{ loop.index }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}"><img src="{{ img.thumb_url }}" alt="" loading="lazy" decoding="async"></a></li>{% endfor %}
-      </ul>
+         data-license-url="{{ taxon.image_license_url or '' }}" aria-label="{{ T.enlarge_image }}">{{ main_img }}<span class="tx-banner__zoom" aria-hidden="true">{{ T.zoom }} ⤢</span></a>
+      {% else %}{{ main_img }}{% endif %}
+    {% else %}
+      <div class="tx-banner__empty" aria-hidden="true">✶</div>
+    {% endif %}
+    <figcaption class="tx-banner__credit">
+      {% if taxon.image_url %}
+        {{ T.image_credit }}: {{ taxon.image_author or '—' }} ·
+        {% if taxon.image_license_url %}<a href="{{ taxon.image_license_url }}" rel="license noopener" target="_blank">{{ taxon.image_license }}</a>{% else %}{{ taxon.image_license }}{% endif %}
+        {% if taxon.image_level in ('genus', 'clade', 'group') %} · {{ t('image_approx', level=T['level_' ~ taxon.image_level]) }}{% endif %}
+      {% else %}{{ T.no_image }}{% endif %}
+    </figcaption>
+  </figure>
+
+  <header class="tx-title">
+    <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {% if taxon.taxon_group in indices.groups %}<a href="{{ url('group_index', taxon.taxon_group) }}">{{ g }}</a>{% else %}{{ g }}{% endif %}{% endif %}</p>
+    <h1><em>{{ taxon.taxon_name }}</em>{% if taxon.page_type == 'new' %} <span class="tx-badge">{{ t('new_in_year', year=taxon.naming_year or built_on.year) }}</span>{% endif %}</h1>
+    {% if taxon.name_authors %}<p class="authority">{{ taxon.name_authors }}{% if taxon.naming_year %}, {{ taxon.naming_year }}{% endif %}</p>{% endif %}
+
+    {# Quick summary: only what the data has #}
+    {% set early, late = terms.span(taxon, lang) %}
+    <div class="tx-glance">
+      {% if early and taxon.first_appearance_max_ma is not none %}
+      <div><small>{{ T.glance_when }}</small><b>{{ early }}{% if late and late != early %}–{{ late }}{% endif %}</b><span>{{ t('glance_when_ma', max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma if taxon.last_appearance_min_ma is not none else taxon.first_appearance_max_ma)) }}</span></div>
+      {% elif taxon.age_text %}
+      <div><small>{{ T.glance_when }}</small><b>{{ terms.age(taxon.age_text, lang) }}</b><span>{{ T.glance_when_words }}</span></div>
       {% endif %}
-    </figure>
-    <div class="taxon__title">
-      <p class="kicker">{{ T['block_' ~ taxon.taxonomic_block] }}{% set g = terms.group(taxon.taxon_group, lang, plural=True) %}{% if g %} · {% if taxon.taxon_group in indices.groups %}<a href="{{ url('group_index', taxon.taxon_group) }}">{{ g }}</a>{% else %}{{ g }}{% endif %}{% endif %}</p>
-      <h1><em>{{ taxon.taxon_name }}</em></h1>
-      {% if taxon.name_authors %}<p class="authority">{{ taxon.name_authors }}{% if taxon.naming_year %}, {{ taxon.naming_year }}{% endif %}</p>{% endif %}
-      <dl class="facts">
-        {% set nov = terms.novelty(taxon.novelty, lang) %}
-        {% if nov %}<dt>{{ T.field_novelty }}</dt><dd>{{ nov[0] }}</dd>{% endif %}
-        {% set status = terms.status(taxon.status, lang) %}
-        {% if status %}<dt>{{ T.field_status }}</dt><dd>{{ status }}</dd>{% endif %}
-        {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>
-        {% elif taxon.first_appearance_max_ma is none %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
-        {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
-        {% if taxon.country_codes %}
-          {%- macro country(c) -%}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{%- endmacro -%}
-          {%- set links = [] %}{% for c in taxon.country_codes %}{% set _ = links.append(country(c)) %}{% endfor -%}
-          <dt>{{ T.field_country }}</dt><dd>{{ folded(links, t('and_n_more', n=links | length - 12)) }}</dd>
-        {% elif taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
-        {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
-        {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
-        {% if taxon.family_name or taxon.order_name or taxon.class_name %}
-          <dt>{{ T.field_classification }}</dt>
-          <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}
-          {% if taxon.classification %}<details class="lineage"><summary>{{ T.classification_full }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}{% if c.rank and c.rank != 'unranked clade' %} <span class="muted">({{ T['rank_' ~ c.rank] if ('rank_' ~ c.rank) in T else c.rank }})</span>{% endif %}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details>{% endif %}</dd>
-        {% elif taxon.classification %}
-          <dt>{{ T.field_classification }}</dt>
-          <dd><details class="lineage"><summary>{{ taxon.classification[-1].name }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details></dd>
-        {% endif %}
-        {% set early, late = terms.span(taxon, lang) %}
-        {% if early and taxon.first_appearance_max_ma is not none %}
-          <dt>{{ T.field_time_range }}</dt>
-          <dd>{{ t('time_range', early=early, late=late, max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}
-            {%- set periods = terms.time_units(taxon.first_appearance_max_ma, taxon.last_appearance_min_ma) | selectattr(0, 'in', terms.PERIODS) | list %}
-            {%- if periods %}<br>{% for en, es in periods %}{% set k = unit_key(en) %}{% if k in indices.periods %}<a href="{{ url('period_index', k) }}">{{ es if lang == 'es' else en }}</a>{% else %}{{ es if lang == 'es' else en }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}{% endif %}</dd>
-        {% endif %}
-        {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
-      </dl>
-      {% if taxon.pbdb_has_taxon %}<p class="note">{{ T.pbdb_credit }} <a href="https://paleobiodb.org/classic/basicTaxonInfo?taxon_no={{ taxon.pbdb_taxon_no | replace('txn:', '') }}" rel="noopener">Paleobiology Database</a> (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener">CC BY 4.0</a>).</p>{% endif %}
+      {% if country_codes %}
+      <div><small>{{ T.glance_where }}</small><b>{{ T.glance_country_one if country_codes | length == 1 else t('glance_countries', n=country_codes | length) }}</b>
+        <span>{% for c in country_codes[:3] %}{% if c in indices.countries %}<a href="{{ url('country_index', c) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}{% if country_codes | length > 3 %}…{% endif %}</span></div>
+      {% endif %}
+      {% if taxon.occurrence_count %}
+      <div><small>{{ T.glance_fossils }}</small><b>{{ count(taxon.occurrence_count) }}</b><span>{{ T.glance_fossils_note }}</span></div>
+      {% endif %}
+      {% if taxon.family_name or taxon.order_name %}
+      <div><small>{{ T.glance_family }}</small><b>{{ taxon.family_name or taxon.order_name }}</b><span>{{ [taxon.order_name if taxon.family_name else None, taxon.class_name] | select | join(' › ') }}</span></div>
+      {% endif %}
     </div>
+
+    {% set ax = time_axis(taxon.first_appearance_max_ma, taxon.last_appearance_min_ma, periods_in) %}
+    <svg class="tx-time" viewBox="0 0 {{ ax.width | int }} 56" role="img"
+         aria-label="{% if taxon.first_appearance_max_ma is not none %}{{ T.glance_when }}: {{ t('glance_when_ma', max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma if taxon.last_appearance_min_ma is not none else taxon.first_appearance_max_ma)) }}{% else %}{{ T.glance_when }}: {{ terms.age(taxon.age_text, lang) or T.unknown }}{% endif %}">
+      {% for b in ax.bands %}{% set name = b.es if lang == 'es' else b.en %}
+      <rect x="{{ b.x }}" y="6" width="{{ b.width }}" height="30" style="fill: var(--p-{{ b.key }})"{% if not b.active %} opacity="0.28"{% endif %}><title>{{ name }}</title></rect>
+      {% if b.labelled %}<text class="tx-time__lbl{% if b.key in ('ordovician', 'devonian', 'permian', 'triassic') %} tx-time__lbl--dark{% endif %}" x="{{ b.x + b.width / 2 }}" y="25">{{ name }}</text>{% endif %}
+      {% endfor %}
+      {% if ax.mark %}<rect class="tx-time__me" x="{{ ax.mark.x }}" y="2" width="{{ ax.mark.width }}" height="38" rx="3"></rect>{% endif %}
+      <text class="tx-time__axis" x="0" y="53">487 Ma</text>
+      {% for tk in ax.ticks %}<text class="tx-time__axis" x="{{ tk.x }}" y="53" text-anchor="middle">{{ tk.label }}</text>{% endfor %}
+      <text class="tx-time__axis" x="{{ ax.width | int }}" y="53" text-anchor="end">{{ T.today }}</text>
+    </svg>
   </header>
 
-  {% if events %}
-  <aside class="latest-box" aria-labelledby="latest-title">
-    <h2 id="latest-title">{{ T.latest_for_taxon }}</h2>
-    <ol>
-      {% for e in events[:3] %}
-      <li>{{ event_date(e, T, fmt_date) }} · <span class="event__type">{{ T['event_' ~ e.event_type] }}</span> {{ study_title(e, T, compact=True) }}</li>
-      {% endfor %}
-    </ol>
-    <a href="#historial">{{ T.see_history }}{% if events | length > 3 %} ({{ events | length }}){% endif %}</a>
-  </aside>
-  {% endif %}
-
-  <section class="block prose">
-    <h2>{{ T.text_title }}</h2>
-    {% if text %}
-      {% for section in SECTION_ORDER %}
-        {% for s in text.sections if s.section == section %}
-          <div class="text-section text-section--{{ section }}">
-          <h3>{{ T['section_' ~ section] }}</h3>
-          {% for topic, sentences in s.groups %}
-          {% if topic %}<h4>{{ T['topic_' ~ topic] }}</h4>{% endif %}
-          {% if section == 'curiosities' %}<ul class="curiosities">{% for sentence in sentences %}<li>{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %}</li>{% endfor %}</ul>
-          {% else %}<p>{% for sentence in sentences %}{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>{% endif %}
-          {% endfor %}
+  <div class="tx-layout">
+    <article class="tx-read">
+      <section id="sabemos" class="tx-sec">
+        <h2>{{ T.text_title }}</h2>
+        {% if text %}
+          {% for s in text.sections if s.section == 'curiosities' %}
+          <div class="tx-curio">
+            <h3>{{ T.section_curiosities }}</h3>
+            <ul>{% for topic, sentences in s.groups %}{% for sentence in sentences %}<li>{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}" data-ref="{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %}</li>{% endfor %}{% endfor %}</ul>
           </div>
-        {% endfor %}
-      {% endfor %}
-      <p class="note">{{ T.ai_note }}</p>
-    {% elif fallback %}
-      <p>{{ fallback }}</p>
-      {% if taxon.page_type == 'new' %}<p class="note">{{ T.fallback_note }}</p>{% endif %}
-    {% endif %}
-    {% if not text and taxon.page_type == 'known' %}<p class="note">{{ T.known_note }}</p>{% endif %}
-  </section>
+          {% endfor %}
+          <div class="prose">
+          {% for section in SECTION_ORDER if section != 'curiosities' %}
+            {% for s in text.sections if s.section == section %}
+            <div class="text-section text-section--{{ section }}">
+              <h3>{{ T['section_' ~ section] }}</h3>
+              {% for topic, sentences in s.groups %}
+              {% if topic %}<h4>{{ T['topic_' ~ topic] }}</h4>{% endif %}
+              <p>{% for sentence in sentences %}{{ prose(sentence.text) }}{% if sentence.refs %}<sup class="ref">{% for n in sentence.refs %}<a href="#src-{{ n }}" data-ref="{{ n }}">{{ n }}</a>{% if not loop.last %},{% endif %}{% endfor %}</sup>{% endif %} {% endfor %}</p>
+              {% endfor %}
+            </div>
+            {% endfor %}
+          {% endfor %}
+          <p class="note">{{ T.ai_note }}</p>
+          </div>
+        {% elif fallback %}
+          <div class="prose"><p>{{ fallback }}</p>
+          {% if taxon.page_type == 'new' %}<p class="note">{{ T.fallback_note }}</p>{% endif %}</div>
+        {% endif %}
+        {% if not text and taxon.page_type == 'known' %}<p class="note">{{ T.known_note }}</p>{% endif %}
+      </section>
 
+      {% if has_points or taxon.gbif_top_institutions %}
+      <section class="tx-sec" id="hallazgos">
+        <h2>{{ T.map_title }}</h2>
+        {% if has_points %}
+        <figure class="map">
+          <svg viewBox="{{ map_viewbox((taxon.pbdb_points or []) + (taxon.gbif_points or [])) }}" role="img" aria-label="{{ T.map_title }}: {{ taxon.taxon_name }}">
+            <use href="{{ base }}/static/world.svg#land" class="map__land" x="-180" y="-90" width="360" height="180"></use>
+            {% for p in taxon.pbdb_points or [] %}<circle class="map__pbdb" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
+            {% for p in taxon.gbif_points or [] %}<circle class="map__gbif" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
+          </svg>
+          <figcaption>
+            {% if taxon.pbdb_points %}<span class="map__key map__key--pbdb"></span> {{ t('map_pbdb', n=taxon.pbdb_points | sum(attribute='n')) }}{% endif %}
+            {% if taxon.gbif_points %}<span class="map__key map__key--gbif"></span> {{ t('map_gbif', n=taxon.gbif_points | sum(attribute='n'), total=taxon.gbif_specimens) }}{% endif %}
+            <br><span class="note">{{ T.map_note }}</span>
+          </figcaption>
+        </figure>
+        {% endif %}
+        {% if taxon.gbif_top_institutions %}
+        <h3>{{ T.museums_title }}</h3>
+        <ul class="museums">
+          {% for i in taxon.gbif_top_institutions %}<li><a href="https://www.gbif.org/occurrence/search?institution_code={{ i.code | urlencode }}&amp;basis_of_record=FOSSIL_SPECIMEN" rel="noopener" target="_blank">{{ i.code }}</a> <span class="muted">{{ t('specimens_n', n=i.n) }}</span></li>{% endfor %}
+        </ul>
+        <p class="note">{{ T.museums_note }}{% if taxon.gbif_doi %} <a href="https://doi.org/{{ taxon.gbif_doi }}" rel="noopener" target="_blank">GBIF (DOI {{ taxon.gbif_doi }}){{ new_tab(T) }}</a>.{% endif %}</p>
+        {% endif %}
+      </section>
+      {% endif %}
+
+      {% if kin_levels %}
+      <section class="tx-sec" id="parientes" data-kin>
+        <h2>{{ T.kin_title }}</h2>
+        {% if taxon.genus_key %}<p class="note">{{ T.kin_of_genus }} <a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a>.</p>{% endif %}
+        <p class="kt__note">{{ T.kin_explain | md }}</p>
+        {% if kin_levels | length > 1 %}
+        <div class="kt__levels" role="group" aria-label="{{ T.kin_title }}" hidden>
+          {% for level, chart in kin_levels %}<button type="button" class="chip" data-kin-level="{{ level }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ T['kin_' ~ level] }}: {{ chart.clade }}</button>{% endfor %}
+        </div>
+        {% endif %}
+        {% for level, chart in kin_levels %}
+        <div class="kt" data-kin-chart="{{ level }}"{% if not loop.first %} data-kin-rest{% endif %}>
+          <h3 class="kt__title">{{ T['kin_' ~ level] }}: {{ chart.clade }} <span class="muted">({{ t('kin_shown', n=chart.rows | length, total=chart.total) }})</span></h3>
+          {% if chart.ticks %}
+          <div class="kt__axis" aria-hidden="true">
+            <span>Ma</span>
+            <div class="kt__track">
+              {% for b in chart.bands %}<div class="kt__band" style="left: {{ b.left }}%; width: {{ b.width }}%; background: var(--p-{{ b.key }})"><span>{{ b.es if lang == 'es' else b.en }}</span></div>{% endfor %}
+              {% for tk in chart.ticks %}<span class="kt__tick" style="left: {{ tk.pos }}%">{{ num(tk.ma) }} Ma</span>{% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          <ol class="kt__rows">
+            {% for r in chart.rows %}
+            <li class="kt__row{% if r.self %} is-me{% endif %}">
+              <a href="{{ url('taxon', r.key) }}"{% if r.self %} aria-current="page"{% endif %}><i>{{ r.name }}</i></a>
+              <div class="kt__track">
+                {% if r.to is not none %}
+                <span class="kt__bar" style="left: {{ r.left }}%; width: {{ r.width }}%"></span>
+                <span class="kt__lbl" style="{% if r.label_right %}right: {{ r.right }}%{% else %}left: {{ r.left }}%{% endif %}">{{ num(r['from']) }}–{{ num(r.to) }} Ma{% if r.self %} · {{ T.kin_me }}{% endif %}</span>
+                {% else %}<span class="kt__lbl">{{ T.kin_no_age }}</span>{% endif %}
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+        {% endfor %}
+        <p class="note">{{ T.kin_note }}</p>
+      </section>
+      {% endif %}
+
+      <section class="tx-sec" id="historial">
+        <h2>{{ T.history_title }}</h2>
+        {% if n_history %}
+        {% set n_new = recent | select('is_new') | list | length %}
+        <p class="tx-hist-sum">{{ t('history_summary', n=count(n_history), taxon=taxon.taxon_name) | md }}{% if n_new %} · <strong>{{ T.history_new_one if n_new == 1 else t('history_new_n', n=n_new) }}</strong>{% endif %}. {{ T.history_newest_first }}</p>
+        {% set bars = history_by_decade(history) %}
+        {% if bars | length > 1 %}
+        <div class="tx-hchart" role="img" aria-label="{{ T.history_chart_label }}">
+          {% for b in bars %}<div class="tx-hchart__bar{% if b.now %} is-now{% endif %}" title="{{ b.label }}: {{ b.n }}"><span style="height: {{ b.height }}%"></span><small>{{ b.label }}</small></div>{% endfor %}
+        </div>
+        {% endif %}
+        {% endif %}
+        {% if recent %}
+          <ol class="timeline">{% for e in recent %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name, new=e is is_new) }}{% endfor %}</ol>
+        {% elif not history.decades %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
+        {% if history.decades %}
+        <h3 class="history__earlier">{{ T.history_earlier }} <span class="muted">({{ history.backfill }})</span></h3>
+        <p class="note">{{ T.history_earlier_note }}</p>
+        {% for decade, items in history.decades %}
+        <details class="decade"{% if loop.first and not recent %} open{% endif %}>
+          <summary>{{ t('decade', n=decade) }} <span class="muted">({{ items | length }})</span></summary>
+          <ol class="timeline">{% for e in items %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name) }}{% endfor %}</ol>
+        </details>
+        {% endfor %}
+        {% endif %}
+      </section>
+
+      {% if gallery %}
+      <section class="tx-sec" id="imagenes">
+        <h2>{{ T.gallery_title }}</h2>
+        {% set kinds = gallery | map(attribute='image_kind') | unique | list %}
+        {% if gallery | length >= 6 and kinds | length >= 3 %}
+        <div class="gallery__filters" role="group" aria-label="{{ T.gallery_filter }}">
+          <button type="button" class="chip chip--on" data-kind="" aria-pressed="true">{{ T.search_all }}</button>
+          {% for k in kinds %}<button type="button" class="chip" data-kind="{{ k }}" aria-pressed="false">{{ T['kind_' ~ k] }}</button>{% endfor %}
+        </div>
+        {% endif %}
+        <ul class="gallery">
+          {% for img in gallery %}
+          <li class="gallery__item" data-kind="{{ img.image_kind }}">
+            <figure>
+              <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}" data-thumb="{{ img.thumb_url }}"
+                 data-caption="{{ T['kind_' ~ img.image_kind] }}{% if img.caption %}: {{ img.caption }}{% endif %} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
+                 data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
+                <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
+              </a>
+              <figcaption>
+                <strong>{{ T['kind_' ~ img.image_kind] }}</strong>{% if img.caption %} <span class="gallery__caption"{% if lang != 'en' %} lang="en"{% endif %}>{{ img.caption }}</span>{% endif %}<br>{{ img.author }} ·
+                {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener" target="_blank">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
+              </figcaption>
+            </figure>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <section class="tx-sec" id="fuentes">
+        <h2>{{ T.sources_title }}</h2>
+        {% if text and text.sources %}
+        <ol class="sources">
+          {% for src in text.sources %}
+          <li id="src-{{ src.number }}">
+            {% if src.source == 'wikipedia_article' %}
+              Wikipedia: <em>{{ src.title }}</em> —
+              {% for l in src.links %}<a href="{{ l.url }}" rel="noopener" target="_blank" hreflang="{{ l.lang }}">{{ T['in_lang_' ~ l.lang] }}{{ new_tab(T) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+            {% elif src.links %}<a href="{{ src.links[0].url }}" rel="noopener" target="_blank">{{ src.title | md }}{{ new_tab(T) }}</a>
+            {% else %}{{ src.title | md }}{% endif %}
+            {% if src.doi %} · <span class="muted">{{ T.doi }} {{ src.doi }}</span>{% endif %}
+            {% if src.license %} <span class="muted">· {{ src.license }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        {% else %}
+        <ul class="sources">
+          {% for src in basic_sources %}<li><a href="{{ src.url }}" rel="noopener" target="_blank">{{ src.title }}{{ new_tab(T) }}</a>{% if src.note %} <span class="muted">· {{ src.note }}</span>{% endif %}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if taxon.pbdb_has_taxon %}<p class="note">{{ T.pbdb_credit }} <a href="https://paleobiodb.org/classic/basicTaxonInfo?taxon_no={{ taxon.pbdb_taxon_no | replace('txn:', '') }}" rel="noopener" target="_blank">Paleobiology Database{{ new_tab(T) }}</a> (<a href="https://creativecommons.org/licenses/by/4.0/" rel="license noopener" target="_blank">CC BY 4.0</a>).</p>{% endif %}
+      </section>
+    </article>
+
+    <aside class="tx-side">
+      <nav class="tx-toc" aria-label="{{ T.toc_title }}">
+        <p class="tx-label">{{ T.toc_title }}</p>
+        <a href="#sabemos">{{ T.text_title }}</a>
+        {% if has_points or taxon.gbif_top_institutions %}<a href="#hallazgos">{{ T.map_title }}</a>{% endif %}
+        {% if kin_levels %}<a href="#parientes">{{ T.kin_title }}</a>{% endif %}
+        <a href="#historial">{{ T.history_title }}</a>
+        {% if gallery %}<a href="#imagenes">{{ T.gallery_title }}</a>{% endif %}
+        <a href="#fuentes">{{ T.sources_title }}</a>
+      </nav>
+
+      <div class="tx-card">
+        <p class="tx-label">{{ T.side_facts }}</p>
+        <dl class="facts">
+          {% set nov = terms.novelty(taxon.novelty, lang) %}
+          {% if nov %}<dt>{{ T.field_novelty }}</dt><dd>{{ nov[0] }}</dd>{% endif %}
+          {% set status = terms.status(taxon.status, lang) %}
+          {% if status %}<dt>{{ T.field_status }}</dt><dd>{{ status }}</dd>{% endif %}
+          {% if taxon.age_text %}<dt>{{ T.field_age }}</dt><dd>{{ terms.age(taxon.age_text, lang) }}</dd>
+          {% elif taxon.first_appearance_max_ma is none %}<dt>{{ T.field_age }}</dt><dd class="muted">{{ T.unknown }}</dd>{% endif %}
+          {% if taxon.type_locality %}<dt>{{ T.field_locality }}</dt><dd>{{ terms.locality(taxon.type_locality, lang) }}</dd>{% endif %}
+          {% if taxon.country_codes %}
+            {%- macro country(c) -%}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{%- endmacro -%}
+            {%- set links = [] %}{% for c in taxon.country_codes %}{% set _ = links.append(country(c)) %}{% endfor -%}
+            <dt>{{ T.field_country }}</dt><dd>{{ folded(links, t('and_n_more', n=links | length - 12)) }}</dd>
+          {% elif taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
+          {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
+          {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
+          {% if taxon.family_name or taxon.order_name or taxon.class_name %}
+            <dt>{{ T.field_classification }}</dt>
+            <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}
+            {% if taxon.classification %}<details class="lineage"><summary>{{ T.classification_full }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}{% if c.rank and c.rank != 'unranked clade' %} <span class="muted">({{ T['rank_' ~ c.rank] if ('rank_' ~ c.rank) in T else c.rank }})</span>{% endif %}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details>{% endif %}</dd>
+          {% elif taxon.classification %}
+            <dt>{{ T.field_classification }}</dt>
+            <dd><details class="lineage"><summary>{{ taxon.classification[-1].name }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details></dd>
+          {% endif %}
+          {% if early and taxon.first_appearance_max_ma is not none %}
+            <dt>{{ T.field_time_range }}</dt>
+            <dd>{{ t('time_range', early=early, late=late, max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}
+              {%- set ps = terms.time_units(taxon.first_appearance_max_ma, taxon.last_appearance_min_ma) | selectattr(0, 'in', terms.PERIODS) | list %}
+              {%- if ps %}<br>{% for en, es in ps %}{% set k = unit_key(en) %}{% if k in indices.periods %}<a href="{{ url('period_index', k) }}">{{ es if lang == 'es' else en }}</a>{% else %}{{ es if lang == 'es' else en }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}{% endif %}</dd>
+          {% endif %}
+          {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
+        </dl>
+      </div>
+
+      {% if has_points %}
+      <a class="tx-card tx-card--map" href="#hallazgos">
+        <span class="tx-label">{{ T.side_finds }}</span>
+        <svg viewBox="-180 -90 360 180" aria-hidden="true">
+          <use href="{{ base }}/static/world.svg#land" class="map__land" x="-180" y="-90" width="360" height="180"></use>
+          {% for p in taxon.pbdb_points or [] %}<circle class="map__pbdb" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.6 + p.n ** 0.5, 6] | min }}"></circle>{% endfor %}
+          {% for p in taxon.gbif_points or [] %}<circle class="map__gbif" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.6 + p.n ** 0.5, 6] | min }}"></circle>{% endfor %}
+        </svg>
+        <span class="visually-hidden">{{ T.map_title }}</span>
+      </a>
+      {% endif %}
+
+      {% if recent %}
+      <div class="tx-card">
+        <p class="tx-label">{{ T.latest_for_taxon }}</p>
+        <ol class="tx-latest">
+          {% for e in recent[:2] %}
+          <li>{{ event_date(e, T, fmt_date) }}{% if e is is_new %} <span class="tag-new">{{ T.tag_new }}</span>{% endif %}
+            <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
+            {% if e.title %}{{ lang_tag(e, T) }}{% if e.doi %}<a href="https://doi.org/{{ e.doi }}" rel="noopener" target="_blank">{{ study_title(e, T, compact=True) }}{{ new_tab(T) }}</a>{% else %}{{ study_title(e, T, compact=True) }}{% endif %}{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        <a href="#historial">{{ T.see_history }} →</a>
+      </div>
+      {% endif %}
+    </aside>
+  </div>
 
   <dialog class="viewer" aria-label="{{ T.enlarge_image }}">
     <figure>
       <img alt="">
-      <figcaption><span class="viewer__caption"></span> · <a class="viewer__license" rel="license noopener">{{ T.license }}</a> · <a class="viewer__source" rel="noopener">{{ T.open_source }}</a></figcaption>
+      <figcaption><span class="viewer__caption"></span> · <a class="viewer__license" rel="license noopener" target="_blank">{{ T.license }}</a> · <a class="viewer__source" rel="noopener" target="_blank">{{ T.open_source }}</a></figcaption>
     </figure>
     <button type="button" class="viewer__prev" aria-label="{{ T.previous }}">‹</button>
     <button type="button" class="viewer__next" aria-label="{{ T.next }}">›</button>
     <button type="button" class="viewer__close" aria-label="{{ T.close }}">×</button>
     <div class="viewer__strip" role="group" aria-label="{{ T.gallery_title }}"></div>
   </dialog>
-
-  {% set pbdb_points = taxon.pbdb_points or [] %}
-  {% set gbif_points = taxon.gbif_points or [] %}
-  {% if pbdb_points or gbif_points or taxon.gbif_top_institutions %}
-  <section class="block" id="hallazgos">
-    <h2>{{ T.map_title }}</h2>
-    {% if pbdb_points or gbif_points %}
-    <figure class="map">
-      <svg viewBox="-180 -90 360 180" role="img" aria-label="{{ T.map_title }}: {{ taxon.taxon_name }}">
-        <use href="{{ base }}/static/world.svg#land" class="map__land" x="-180" y="-90" width="360" height="180"></use>
-        {% for p in pbdb_points %}<circle class="map__pbdb" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
-        {% for p in gbif_points %}<circle class="map__gbif" cx="{{ p.lon }}" cy="{{ -p.lat }}" r="{{ [1.2 + p.n ** 0.5, 5] | min }}"></circle>{% endfor %}
-      </svg>
-      <figcaption>
-        {% if pbdb_points %}<span class="map__key map__key--pbdb"></span> {{ t('map_pbdb', n=pbdb_points | sum(attribute='n')) }}{% endif %}
-        {% if gbif_points %}<span class="map__key map__key--gbif"></span> {{ t('map_gbif', n=gbif_points | sum(attribute='n'), total=taxon.gbif_specimens) }}{% endif %}
-        <br><span class="note">{{ T.map_note }}</span>
-      </figcaption>
-    </figure>
-    {% endif %}
-    {% if taxon.gbif_top_institutions %}
-    <h3>{{ T.museums_title }}</h3>
-    <ul class="museums">
-      {% for i in taxon.gbif_top_institutions %}<li><a href="https://www.gbif.org/occurrence/search?institution_code={{ i.code | urlencode }}&amp;basis_of_record=FOSSIL_SPECIMEN" rel="noopener">{{ i.code }}</a> <span class="muted">{{ t('specimens_n', n=i.n) }}</span></li>{% endfor %}
-    </ul>
-    <p class="note">{{ T.museums_note }}{% if taxon.gbif_doi %} <a href="https://doi.org/{{ taxon.gbif_doi }}" rel="noopener">GBIF (DOI {{ taxon.gbif_doi }})</a>.{% endif %}</p>
-    {% endif %}
-  </section>
-  {% endif %}
-
-  {% if kin and kin.get('group') %}
-  <section class="block" id="parientes">
-    <h2>{{ T.kin_title }}</h2>
-    {% if taxon.genus_key %}<p class="note">{{ T.kin_of_genus }} <a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a>.</p>{% endif %}
-    {% for level in ['group', 'up'] if kin.get(level) %}
-    {% set rows = kin[level] %}
-    <details class="kin" data-tree{% if loop.first %} open{% endif %}>
-      <summary>{{ T['kin_' ~ level] }}: {{ rows[0].level_clade_name }} <span class="muted">({{ t('kin_shown', n=rows | length, total=rows[0].level_genera) }})</span></summary>
-      <div class="kin__filter" role="group" aria-label="{{ T.kin_filter }}">
-        <button type="button" class="chip chip--on" data-tree-period="">{{ T.kin_all }}</button>
-        {% for key, name in tree_periods(rows, lang) %}<button type="button" class="chip" data-tree-period="{{ key }}">{{ name }}</button>{% endfor %}
-      </div>
-      <div class="kin__scroll">{{ tree_svg(rows, lang=lang, url=url, label=T['kin_' ~ level] ~ ': ' ~ rows[0].level_clade_name, silhouettes=silhouettes) }}</div>
-      <ul class="kin__list">{% for m in rows %}<li><a href="{{ url('taxon', m.member_key) }}"{% if m.is_self %} aria-current="page"{% endif %}><i>{{ m.member_name }}</i></a>{% if m.first_appearance_max_ma is not none %} <span class="muted">{{ num(m.first_appearance_max_ma) }}–{{ num(m.last_appearance_min_ma or 0) }} Ma</span>{% endif %}</li>{% endfor %}</ul>
-    </details>
-    {% endfor %}
-    <p class="note">{{ T.kin_note }}</p>
-  </section>
-  {% endif %}
-
-  <section class="block" id="historial">
-    <h2>{{ T.history_title }}</h2>
-    {% if history.recent %}
-      <ol class="timeline">{% for e in history.recent %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name) }}{% endfor %}</ol>
-    {% elif not history.decades %}<p class="muted">{{ T.history_empty }}</p>{% endif %}
-    {% if history.decades %}
-    <h3 class="history__earlier">{{ T.history_earlier }} <span class="muted">({{ history.backfill }})</span></h3>
-    <p class="note">{{ T.history_earlier_note }}</p>
-    {% for decade, items in history.decades %}
-    <details class="decade"{% if loop.first and not history.recent %} open{% endif %}>
-      <summary>{{ t('decade', n=decade) }} <span class="muted">({{ items | length }})</span></summary>
-      <ol class="timeline">{% for e in items %}{{ event(e, T, fmt_date, page_name=taxon.taxon_name) }}{% endfor %}</ol>
-    </details>
-    {% endfor %}
-    {% endif %}
-  </section>
-
-  {% if not (text and text.sources) %}
-  <section class="block">
-    <h2>{{ T.sources_title }}</h2>
-    <ul class="sources">
-      {% for src in basic_sources %}<li><a href="{{ src.url }}" rel="noopener">{{ src.title }}</a>{% if src.note %} <span class="muted">· {{ src.note }}</span>{% endif %}</li>{% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-  {% if text and text.sources %}
-  <section class="block">
-    <h2>{{ T.sources_title }}</h2>
-    <ol class="sources">
-      {% for src in text.sources %}
-      <li id="src-{{ src.number }}">
-        {% if src.source == 'wikipedia_article' %}
-          Wikipedia: <em>{{ src.title }}</em> —
-          {% for l in src.links %}<a href="{{ l.url }}" rel="noopener" hreflang="{{ l.lang }}">{{ T['in_lang_' ~ l.lang] }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
-        {% elif src.links %}<a href="{{ src.links[0].url }}" rel="noopener">{{ src.title | md }}</a>
-        {% else %}{{ src.title | md }}{% endif %}
-        {% if src.doi %} · <span class="muted">{{ T.doi }} {{ src.doi }}</span>{% endif %}
-        {% if src.license %} <span class="muted">· {{ src.license }}</span>{% endif %}
-      </li>
-      {% endfor %}
-    </ol>
-  </section>
-  {% endif %}
-
-  {% if gallery %}
-  <section class="block" id="imagenes">
-    <h2>{{ T.gallery_title }}</h2>
-    {% set kinds = gallery | map(attribute='image_kind') | unique | list %}
-    {% if gallery | length >= 6 and kinds | length >= 3 %}
-    <div class="gallery__filters" role="group" aria-label="{{ T.gallery_filter }}">
-      <button type="button" class="chip chip--on" data-kind="" aria-pressed="true">{{ T.search_all }}</button>
-      {% for k in kinds %}<button type="button" class="chip" data-kind="{{ k }}" aria-pressed="false">{{ T['kind_' ~ k] }}</button>{% endfor %}
-    </div>
-    {% endif %}
-    <ul class="gallery">
-      {% for img in gallery %}
-      <li class="gallery__item" data-kind="{{ img.image_kind }}">
-        <figure>
-          <a href="{{ img.page_url }}" rel="noopener" data-viewer data-full="{{ img.large_url }}" data-thumb="{{ img.thumb_url }}"
-             data-caption="{{ T['kind_' ~ img.image_kind] }}{% if img.caption %}: {{ img.caption }}{% endif %} · {{ T.image_credit }}: {{ img.author }} · {{ img.license }}"
-             data-license-url="{{ img.license_url or '' }}" aria-label="{{ T.enlarge_image }}: {{ T['kind_' ~ img.image_kind] }}">
-            <img src="{{ img.thumb_url }}" alt="{{ T['kind_' ~ img.image_kind] }} · {{ taxon.taxon_name }}" loading="lazy" decoding="async">
-          </a>
-          <figcaption>
-            <strong>{{ T['kind_' ~ img.image_kind] }}</strong>{% if img.caption %} <span class="gallery__caption"{% if lang != 'en' %} lang="en"{% endif %}>{{ img.caption }}</span>{% endif %}<br>{{ img.author }} ·
-            {% if img.license_url %}<a href="{{ img.license_url }}" rel="license noopener">{{ img.license }}</a>{% else %}{{ img.license }}{% endif %}
-          </figcaption>
-        </figure>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
 </article>
 <script src="{{ base }}/static/viewer.js" defer></script>
+<script src="{{ base }}/static/taxon.js" defer></script>
 {% endblock %}

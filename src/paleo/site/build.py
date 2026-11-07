@@ -26,7 +26,7 @@ from markupsafe import Markup, escape
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import explore, terms, tree
+from paleo.site import explore, taxon_page, terms
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.indices import build_indices, unit_key, unit_name
@@ -180,8 +180,21 @@ class SiteBuilder:
         )
         self.env.filters["md"] = md_inline
         self.env.globals["claim"] = claim
-        self.env.globals["tree_svg"] = tree.svg
-        self.env.globals["tree_periods"] = tree.tree_periods
+        # Taxon page pieces (taxon_page.py), computed on the server so pages work
+        # without JavaScript.
+        for fn in (
+            taxon_page.srcset,
+            taxon_page.time_axis,
+            taxon_page.kin_rows,
+            taxon_page.map_viewbox,
+            taxon_page.study_lang_tag,
+            explore.facets,
+        ):
+            self.env.globals[fn.__name__] = fn
+        self.env.globals["history_by_decade"] = lambda h: taxon_page.history_by_decade(
+            h, data.built_on
+        )
+        self.env.tests["is_new"] = lambda e: taxon_page.is_new(e, data.built_on)
         self.env.globals["terms"] = terms
         self.env.globals["thumb"] = explore.thumb
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER

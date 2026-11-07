@@ -11,7 +11,8 @@
     <article class="feature__slide{% if loop.first %} is-on{% endif %}" aria-roledescription="{{ T.slide }}"
              aria-label="{{ t('slide_n', n=loop.index, total=loop.length) }}">
       <a class="feature__link" href="{{ url('taxon', tx.taxon_key) }}">
-        <img src="{{ thumb(tx.image_url, 960) }}" alt="{{ tx.taxon_name }}"{% if loop.index > 2 %} loading="lazy"{% endif %} decoding="async">
+        <img class="feature__bg" src="{{ thumb(tx.image_url, 960) }}" alt="" aria-hidden="true"{% if loop.index > 2 %} loading="lazy"{% endif %} decoding="async">
+        <img class="feature__img" src="{{ thumb(tx.image_url, 960) }}"{% set set = srcset(tx.image_url) %}{% if set %} srcset="{{ set }}" sizes="(min-width: 920px) 62vw, 100vw"{% endif %} alt="{{ tx.taxon_name }}"{% if loop.index > 2 %} loading="lazy"{% endif %} decoding="async">
         <span class="feature__body">
           <span class="kicker">{% if loop.first %}{{ T.curiosity_of_the_day }} · {{ fmt_date(built_on, 'short') }}{% else %}{{ T.did_you_know }}{% endif %}</span>
           <span class="feature__quote">{{ prose(s.text[lang], links=False) }}</span>
@@ -90,7 +91,7 @@
         {% set tag = 'a' if g in indices.groups else 'span' %}
         <{{ tag }} class="gtile{% if not n %} is-zero{% endif %}"{% if tag == 'a' %} href="{{ url('group_index', g) }}"{% endif %} data-key="{{ g }}"
            title="{{ T.get('group_note_' ~ g, '') }}{% if pic %}{% if T.get('group_note_' ~ g) %} · {% endif %}{{ pic.taxon_name }} · {{ T.image_credit }}: {{ pic.image_author }}, {{ pic.image_license }}{% endif %}">
-          {% if pic %}<img src="{{ thumb(pic.image_url) }}" alt="" loading="lazy" decoding="async">{% endif %}
+          {% if pic %}<img class="gtile__bg" src="{{ thumb(pic.image_url) }}" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="gtile__img" src="{{ thumb(pic.image_url) }}" alt="" loading="lazy" decoding="async">{% endif %}
           <span class="gtile__label">{{ terms.group(g, lang, plural=True) or g }}<small>{{ t('explore_tile_new', n=count(n)) }}</small></span>
         </{{ tag }}>
         {% endfor %}

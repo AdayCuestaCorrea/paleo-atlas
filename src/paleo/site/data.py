@@ -42,6 +42,9 @@ class SiteData:
     redirects: list[dict[str, Any]] = field(default_factory=list)
     # Lowercase country code -> (lat, lon): median of PBDB's occurrences there (home map).
     country_centroids: dict[str, tuple[float, float]] = field(default_factory=dict)
+    # Pipeline run log and source freshness, for the data status page.
+    runs: list[dict[str, Any]] = field(default_factory=list)
+    freshness: list[dict[str, Any]] = field(default_factory=list)
 
     @cached_property
     def silhouettes(self) -> dict[str, str]:
@@ -198,6 +201,8 @@ def load(warehouse: Path) -> SiteData:
                 """,
             )
         }
+        runs = _rows(con, "select * from main.stg_pipeline__runs order by started_at")
+        freshness = _rows(con, "select * from main.fct_source_freshness order by sort")
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -208,7 +213,7 @@ def load(warehouse: Path) -> SiteData:
         images=dict(images), last_checked=last_checked, stats=stats,
         gbif=gbif[0] if gbif else None,
         neighborhood={k: dict(v) for k, v in neighborhood.items()},
-        redirects=redirects, country_centroids=centroids,
+        redirects=redirects, country_centroids=centroids, runs=runs, freshness=freshness,
     )  # fmt: skip
 
 

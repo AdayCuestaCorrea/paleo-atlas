@@ -1,0 +1,148 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.status_title }} · {{ T.site_name }}{% endblock %}
+{% block description %}{{ T.status_lead }}{% endblock %}
+{% macro when(ts) -%}{{ fmt_date(ts.date(), 'short') }}, {{ '%02d:%02d' % (ts.hour, ts.minute) }}{%- endmacro %}
+{% macro hmin(minutes) -%}{% if minutes >= 60 %}{{ minutes // 60 }} h {% endif %}{% if minutes % 60 %}{{ minutes % 60 }} min{% endif %}{%- endmacro %}
+{% macro secs(n) -%}{% if n >= 60 %}{{ n // 60 }} min {% if n % 60 %}{{ n % 60 }} s{% endif %}{% else %}{{ n }} s{% endif %}{%- endmacro %}
+{% set GROUP_COLORS = {'prep': 'color-mix(in srgb, var(--muted) 45%, var(--card))', 'ingest': 'var(--p-jurassic)', 'groq': 'var(--p-permian)', 'dbt': 'var(--p-cretaceous)', 'site': 'var(--ochre)', 'unsplit': 'var(--muted)'} %}
+{% block content %}
+<article class="st">
+  <h1>{{ T.status_title }}</h1>
+  <p class="lead">{{ T.status_lead }}</p>
+  {% if last_run %}
+  <p class="st-status{% if not ok %} st-status--warn{% endif %}"><i aria-hidden="true">{{ '✓' if ok else '!' }}</i>{{ T.status_ok if ok else T.status_check }} · {{ t('status_last_run', when=when(last_run.finished_at)) }}</p>
+  {% endif %}
+
+  {% set data_tests = tests.get('data', {}) %}
+  <div class="st-kpis">
+    <div><small>{{ T.status_kpi_pages }}</small><b>{{ count(taxa_total) }}</b><span>{{ T.status_kpi_pages_note }}</span></div>
+    <div><small>{{ T.status_kpi_studies }}</small><b>{{ count(studies) }}</b><span>{{ T.status_kpi_studies_note }}</span></div>
+    <div><small>{{ T.status_kpi_events }}</small><b>{{ count(event_total) }}</b><span>{{ T.status_kpi_events_note }}</span></div>
+    <div><small>{{ T.status_kpi_texts }}</small><b>{{ count(texts_total.en) }} / {{ count(texts_total.es) }}</b><span>{{ T.status_kpi_texts_note }}</span></div>
+    <div><small>{{ T.status_kpi_tests }}</small><b>{{ data_tests.get('pass', 0) }} ✓ · {{ data_tests.get('warn', 0) }} ⚠</b><span>{{ t('status_kpi_tests_note', errors=data_tests.get('error', 0) + data_tests.get('fail', 0), unit=tests.get('unit', {}).get('pass', 0)) }}</span></div>
+    <div><small>{{ T.status_kpi_runs }}</small><b>{{ view | length }}</b><span>{{ t('status_kpi_runs_note', ok=view | selectattr('status', 'equalto', 'ok') | list | length) }}</span></div>
+  </div>
+
+  <div class="st-grid2">
+    {% if bars %}
+    <section class="st-card">
+      <h2>{{ T.status_durations }}</h2>
+      <svg class="st-chart" viewBox="0 0 {{ bars.width }} {{ bars.height }}" role="img" aria-label="{{ T.status_durations }}">
+        {% for g in bars.grid %}<line class="st-gridline" x1="34" x2="{{ bars.width - 4 }}" y1="{{ g.y }}" y2="{{ g.y }}"></line><text class="st-axis" x="30" y="{{ g.y + 4 }}" text-anchor="end">{{ g.label }} s</text>{% endfor %}
+        {% for b in bars.bars %}
+        {% for s in b.segments %}<rect x="{{ b.x }}" y="{{ s.y }}" width="{{ b.w }}" height="{{ s.h }}" rx="2" style="fill: {{ GROUP_COLORS[s.key] }}"><title>{{ when(b.run.started_at) }} · {{ T['status_step_' ~ s.key] }}: {{ s.seconds }} s</title></rect>{% endfor %}
+        <text class="st-axis" x="{{ b.cx }}" y="{{ bars.axis_y }}" text-anchor="middle">{{ fmt_date(b.run.started_at.date(), 'short') }}</text>
+        <text class="st-axis st-axis--small" x="{{ b.cx }}" y="{{ bars.axis_y + 11 }}" text-anchor="middle">{{ T['status_trigger_short_' ~ b.run.trigger] }}</text>
+        {% endfor %}
+      </svg>
+      <p class="st-legend">{% for key in ['prep', 'ingest', 'groq', 'dbt', 'site', 'unsplit'] %}<span><i style="background: {{ GROUP_COLORS[key] }}"></i>{{ T['status_step_' ~ key] }}</span>{% endfor %}</p>
+      <p class="note">{{ T.status_durations_note }}</p>
+    </section>
+    {% endif %}
+    {% if texts %}
+    <section class="st-card">
+      <h2>{{ T.status_texts }}</h2>
+      <svg class="st-chart" viewBox="0 0 {{ texts.width }} {{ texts.height }}" role="img" aria-label="{{ T.status_texts }}">
+        {% for g in texts.grid %}<line class="st-gridline" x1="34" x2="{{ texts.width - 52 }}" y1="{{ g.y }}" y2="{{ g.y }}"></line><text class="st-axis" x="30" y="{{ g.y + 4 }}" text-anchor="end">{{ count(g.label) }}</text>{% endfor %}
+        {% for d in texts.days %}<text class="st-axis" x="{{ d.x }}" y="{{ texts.axis_y }}" text-anchor="middle">{{ fmt_date(d.day, 'short') }}</text>{% endfor %}
+        {% for l in texts.lines %}
+        <path class="st-line st-line--{{ l.key }}" d="{{ l.path }}"></path>
+        {% for cx, cy in l.dots %}<circle class="st-dot--{{ l.key }}" cx="{{ cx }}" cy="{{ cy }}" r="3"></circle>{% endfor %}
+        <text class="st-lbl st-lbl--{{ l.key }}" x="{{ l.label_x }}" y="{{ l.label_y }}">{{ l.key | upper }} {{ count(l.value) }}</text>
+        {% endfor %}
+      </svg>
+      <p class="note">{{ T.status_texts_note }}</p>
+    </section>
+    {% endif %}
+  </div>
+
+  <div class="st-grid2">
+    <section class="st-card" id="calidad">
+      <h2>{{ T.status_quality }}</h2>
+      <p>{{ t('status_quality_line', ok=data_tests.get('pass', 0), warn=data_tests.get('warn', 0), errors=data_tests.get('error', 0) + data_tests.get('fail', 0), unit=tests.get('unit', {}).get('pass', 0)) | md }}</p>
+      <ul class="st-warnings">
+        {% for i in errors %}<li><span class="st-pill st-pill--bad">{{ T.status_error }}</span> <b>{{ i.node }}</b></li>{% endfor %}
+        {% for i in issues %}
+        {% set key = 'dbtwarn_' ~ i.node %}
+        <li><span class="st-pill st-pill--warn">{{ T.status_warning }}</span>
+          {% if (key ~ '_title') in T %}<b>{{ T[key ~ '_title'].format(n=count(i.failures or 0)) }}</b><span class="note">{{ T[key ~ '_note'] }}</span>
+          {% else %}<b><code>{{ i.node }}</code> ({{ i.failures }})</b>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="note">{{ T.status_quality_note }}</p>
+    </section>
+    <div class="st-stack">
+      <section class="st-card">
+        <h2>{{ T.status_coverage }}</h2>
+        {% set matched, total = pbdb_new %}
+        {% if total %}
+        <p><b>{{ T.status_pbdb_new }}</b> {{ t('status_of', a=matched, b=total) }} ({{ (matched * 100 / total) | round | int }} %)</p>
+        <div class="st-meter"><i style="width: {{ matched * 100 / total }}%"></i></div>
+        <p class="note">{{ T.status_pbdb_note }}</p>
+        {% endif %}
+        <p><b>{{ T.status_images }}</b> ({{ count(image_total) }})</p>
+        {% set IMG_COLORS = {'commons/taxon': 'var(--fossil)', 'phylopic/taxon': 'var(--p-jurassic)', 'phylopic/genus': 'var(--p-cretaceous)', 'phylopic/clade': 'var(--ochre)', 'phylopic/group': 'var(--muted)'} %}
+        <div class="st-bar100">{% for key, n in images if n %}<i style="width: {{ n * 100 / image_total }}%; background: {{ IMG_COLORS.get(key, 'var(--line)') }}" title="{{ T.get('status_img_' ~ key | replace('/', '_'), key) }}: {{ count(n) }}"></i>{% endfor %}</div>
+        <p class="st-legend">{% for key, n in images if n %}<span><i style="background: {{ IMG_COLORS.get(key, 'var(--line)') }}"></i>{{ T.get('status_img_' ~ key | replace('/', '_'), key) }} {% if n * 100 / image_total < 1 %}&lt;1{% else %}{{ (n * 100 / image_total) | round | int }}{% endif %} %</span>{% endfor %}</p>
+      </section>
+      <section class="st-card">
+        <h2>{{ T.status_history }}</h2>
+        {% set top = (events_by_type | first)[1] if events_by_type else 1 %}
+        <div class="st-hbars">
+          {% for key, n in events_by_type %}<span>{{ T.get('status_event_' ~ key, key) }}</span><span><i style="width: {{ [n * 100 / top, 1] | max }}%"></i></span><span class="muted">{{ count(n) }}</span>{% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="st-card st-log" data-runs>
+    <div class="st-head">
+      <h2>{{ T.status_log }}</h2>
+      <span class="note">{{ T.status_times_utc }}{% if delay %} {{ t('status_delay', min=hmin(delay[0]), max=hmin(delay[1])) }}{% endif %}</span>
+    </div>
+    <div class="st-days" aria-label="{{ T.status_calendar }}">
+      {% for d in calendar %}<i class="st-day st-day--{{ d.state }}" title="{{ fmt_date(d.day, 'short') }}: {{ T['status_day_' ~ d.state] }}"></i>{% endfor %}
+    </div>
+    <div class="st-days-scale" aria-hidden="true"><span>{{ T.status_days_ago }}</span><span>{{ T.today }}</span></div>
+    <ol class="st-runs">
+      {% for r in view %}
+      <li{% if loop.index > 5 %} data-more{% endif %}>
+        <p class="st-when">{{ when(r.started_at) }}<small>{{ T['status_trigger_' ~ r.trigger] }} · {{ secs(r.seconds) }}</small></p>
+        <div>
+          <p class="st-meta">
+            <span class="st-pill {{ 'st-pill--ok' if r.status == 'ok' else 'st-pill--bad' }}">{{ T.status_run_ok if r.status == 'ok' else T.status_run_failed }}</span>
+            <span class="muted">{{ T.status_changed if r.changed else T.status_unchanged }}</span>
+            {% if r.wikipedia %}<span class="st-chip">{{ t('status_wikipedia_pages' ~ ('_one' if r.wikipedia == 1 else ''), n=r.wikipedia) }}</span>{% endif %}
+            {% for key, n in r.sources.items() %}<span class="st-chip">{{ T.get('status_source_' ~ key | replace('/', '_') ~ ('_one' if n == 1 else ''), key).format(n=count(n)) }}</span>{% endfor %}
+          </p>
+          {% if r.groups or r.unsplit %}
+          <p class="st-runbar">{% for g in r.groups %}<i style="width: {{ g.seconds * 100 / r.seconds }}%; background: {{ GROUP_COLORS[g.key] }}" title="{{ T['status_step_' ~ g.key] }}: {{ g.seconds }} s{% if g.partial %} ({{ T.status_partial }}){% endif %}"></i>{% endfor %}{% if r.unsplit > 2 %}<i style="width: {{ r.unsplit * 100 / r.seconds }}%; background: var(--muted)" title="{{ T.status_step_unsplit }}: {{ r.unsplit }} s"></i>{% endif %}</p>
+          {% endif %}
+          {% if r.diffs %}<p class="st-diff">{{ T.status_since_previous }} {% for key, n in r.diffs %}<b>{{ '+' if n > 0 }}{{ count(n) if n > 0 else '−' ~ count(-n) }}</b> {{ T['status_total_' ~ key] }}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+          <p class="st-diff">dbt: {% if r.errors %}<b class="st-bad">{{ t('status_dbt_errors', n=r.errors) }}</b> · {% endif %}{% if r.warnings %}{{ t('status_dbt_warnings', n=r.warnings) }}{% else %}{{ T.status_dbt_clean }}{% endif %}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if view | length > 5 %}<p><button type="button" class="button button--ghost" data-runs-more hidden>{{ t('status_all_runs', n=view | length) }}</button></p>{% endif %}
+  </section>
+
+  <section class="st-card">
+    <h2>{{ T.status_sources }}</h2>
+    <div class="st-scroll">
+      <table class="st-table">
+        <thead><tr><th>{{ T.status_source }}</th><th>{{ T.status_checked }}</th><th class="num">{{ T.status_records }}</th></tr></thead>
+        <tbody>
+          {% for s in sources %}
+          <tr><td>{{ s['name_' ~ lang] }}<br><span class="note">{{ s['cadence_' ~ lang] }}</span></td>
+            <td class="st-checked">{{ fmt_date(s.last_checked, 'short') if s.last_checked else '—' }} <span class="st-pill {{ 'st-pill--ok' if s.fresh else 'st-pill--warn' }}">{{ T.status_fresh if s.fresh else T.status_late }}</span></td>
+            <td class="num">{{ count(s.records) if s.records is not none else '—' }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">{{ T.status_sources_note }}</p>
+  </section>
+</article>
+{% endblock %}

@@ -15,3 +15,18 @@
     if (target) { window.location.replace(target.href); }
   }
 })();
+
+// Data status page: the latest runs, the rest one click away (all shown without JS).
+(function () {
+  var box = document.querySelector("[data-runs]");
+  if (!box) { return; }
+  var more = box.querySelectorAll("[data-more]");
+  var button = box.querySelector("[data-runs-more]");
+  if (!more.length || !button) { return; }
+  more.forEach(function (li) { li.hidden = true; });
+  button.hidden = false;
+  button.addEventListener("click", function () {
+    more.forEach(function (li) { li.hidden = false; });
+    button.remove();
+  });
+})();

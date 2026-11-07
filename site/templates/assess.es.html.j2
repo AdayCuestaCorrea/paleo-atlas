@@ -38,5 +38,6 @@
   <tr><th>En revistas de acceso abierto (DOAJ)</th><td>{{ s.in_doaj }} ({{ pct(s.in_doaj, s.studies) }})</td></tr>
 </table>
 <p class="note">Una ficha que no pasa todas las comprobaciones no se publica: se muestra el resumen generado de los datos.</p>
+<p>Cómo va cada día el proceso que actualiza la web, los tests del almacén de datos y lo al día que está cada fuente: <a href="{{ url('status') }}">Estado de los datos</a>.</p>
 </article>
 {% endblock %}

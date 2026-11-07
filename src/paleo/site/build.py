@@ -26,7 +26,7 @@ from markupsafe import Markup, escape
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import explore, taxon_page, terms
+from paleo.site import explore, status, taxon_page, terms
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.indices import build_indices, unit_key, unit_name
@@ -48,6 +48,7 @@ PATHS = {
         "assess": "es/como-evaluamos.html",
         "about": "es/acerca.html",
         "search": "es/buscar.html",
+        "status": "es/estado.html",
         "search_index": "es/buscar.json",
         "explore_index": "es/explorar.json",
         "encyclopedia": "es/enciclopedia/index.html",
@@ -65,6 +66,7 @@ PATHS = {
         "assess": "en/how-we-assess.html",
         "about": "en/about.html",
         "search": "en/search.html",
+        "status": "en/status.html",
         "search_index": "en/search.json",
         "explore_index": "en/explore.json",
         "encyclopedia": "en/encyclopedia/index.html",
@@ -314,6 +316,51 @@ class SiteBuilder:
             "period_symbols": explore.PERIOD_SYMBOLS,
         }
 
+    # ----------------------------------------------------------- data status
+
+    def status_context(self) -> dict[str, Any]:
+        """Everything the data status page shows (status.py)."""
+        from paleo.report import dbt_issues
+
+        data = self.data
+        view = status.runs_view(data.runs)
+        runs = status.finished(data.runs)
+        # The dbt results of this very build when present (CI runs dbt just before the
+        # site); otherwise those logged by the last finished run.
+        dbt = dbt_issues(project_root() / "dbt" / "target" / "run_results.json")
+        if dbt is None and runs:
+            dbt = runs[-1].get("dbt")
+        tests = (dbt or {}).get("tests") or {"data": (dbt or {}).get("counts", {}), "unit": {}}
+        sources = status.freshness(data.freshness, data.built_on)
+        texts = status.texts_by_day(data.texts)
+        new = [t for t in data.taxa if t["page_type"] == "new"]
+        images = Counter(
+            f"{t.get('image_source') or 'none'}/{t.get('image_level') or 'none'}" for t in data.taxa
+        )
+        events = Counter(e["event_type"] for evs in data.events.values() for e in evs)
+        return {
+            "last_run": runs[-1] if runs else None,
+            "ok": status.overall(runs[-1] if runs else None, tests, sources),
+            "view": view,
+            "bars": status.bar_chart(view) if view else None,
+            "calendar": status.calendar(data.runs, data.built_on),
+            "delay": status.schedule_delay(data.runs),
+            "texts": status.line_chart(texts) if texts else None,
+            "texts_total": texts[-1] if texts else {"en": 0, "es": 0},
+            "tests": tests,
+            "issues": [i for i in (dbt or {}).get("issues", []) if i["status"] == "warn"],
+            "errors": [i for i in (dbt or {}).get("issues", []) if i["status"] != "warn"],
+            "sources": sources,
+            "pbdb_new": (sum(1 for t in new if t.get("pbdb_has_taxon")), len(new)),
+            "images": images.most_common(),
+            "image_total": sum(images.values()),
+            "events_by_type": events.most_common(),
+            "studies": (data.stats or {}).get("studies", 0)
+            + (data.stats or {}).get("unchecked_studies", 0),
+            "event_total": sum(events.values()),
+            "taxa_total": len(data.taxa),
+        }
+
     # ----------------------------------------------------------------- pages
 
     def pages(self) -> list[Page]:
@@ -336,6 +383,7 @@ class SiteBuilder:
         new.sort(key=lambda t: (t.get("naming_year") or 0, t["taxon_name"]), reverse=False)
         out: list[Page] = []
         home = self.home_context(events)
+        status_ctx = self.status_context()
         for lang in LANGS:
             common = {"latest_week": week_keys[0] if week_keys else None}
             out.append(Page(lang, "home", None, "index.html.j2", {**common, **home}))
@@ -364,6 +412,7 @@ class SiteBuilder:
                 out.append(
                     Page(lang, "recap", key, "recap.html.j2", {"week": key, "events": weeks[key]})
                 )
+            out.append(Page(lang, "status", None, "status.html.j2", status_ctx))
             for kind in ("sources", "assess", "about"):
                 extra = {"gbif": data.gbif} if kind == "sources" else {}
                 out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", extra))

@@ -38,5 +38,6 @@
   <tr><th>In open-access journals (DOAJ)</th><td>{{ s.in_doaj }} ({{ pct(s.in_doaj, s.studies) }})</td></tr>
 </table>
 <p class="note">A page that fails any check is not published: the summary generated from the data is shown instead.</p>
+<p>How the process that updates the website goes every day, the warehouse tests and how fresh each source is: <a href="{{ url('status') }}">Data status</a>.</p>
 </article>
 {% endblock %}

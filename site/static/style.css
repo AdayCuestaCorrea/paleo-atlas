@@ -634,7 +634,12 @@ a.gl:hover, a.gl:focus-visible { background: color-mix(in srgb, var(--fossil) 14
 .gl-pop__term { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem !important; }
 .gl-pop__also { font-weight: 400; color: var(--muted); font-size: 0.8rem; }
 .gl-pop__foot { color: var(--muted); font-size: 0.75rem; margin-top: 0.45rem !important; }
-.gl-pop__back { border: 0; background: none; padding: 0; margin-bottom: 0.3rem; color: var(--ochre); font: inherit; font-size: 0.78rem; cursor: pointer; }
+.gl-pop { overflow: hidden; }
+.gl-pop__lock { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: var(--fossil); }
+.gl-pop.is-locking .gl-pop__lock { animation: gl-lock linear forwards; }
+.gl-pop.is-locked .gl-pop__lock { width: 100%; animation: none; opacity: 0.55; }
+@keyframes gl-lock { from { width: 0; } to { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .gl-pop.is-locking .gl-pop__lock { animation: none; width: 100%; opacity: 0.3; } }
 .tx-pop { display: flex; gap: 0.7rem; align-items: center; }
 .tx-pop__img { width: 84px; height: 64px; object-fit: cover; border-radius: 6px; background: var(--line); flex: none; }
 .tx-pop__img.is-sil { object-fit: contain; padding: 4px; box-sizing: border-box; }

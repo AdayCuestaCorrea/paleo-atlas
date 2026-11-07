@@ -483,7 +483,7 @@ class SiteBuilder:
             "glossary": self.glossaries[lang].page_data(marked["glossary"]),
             "previews": previews,
             "labels": {k: self.i18n[lang][k] for k in (
-                "gl_source", "gl_see", "gl_back", "gl_also")},
+                "gl_source", "gl_see", "gl_also")},
         }  # fmt: skip
         payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
         return (f'<script type="application/json" id="page-data">{payload}</script>\n'

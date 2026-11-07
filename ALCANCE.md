@@ -309,7 +309,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [x] Clasificación de noticias: baseline clásico vs LLM, con métricas sobre titulares etiquetados a mano (`scripts/label_news.py` → `eval/news/`). **Cuatro clases publicadas (v37):** especie nueva, investigación (hallazgo o estudio de un animal ya conocido), revisión (taxonómica) y ruido (todo lo que no trata de los grupos de §4); el LLM sigue distinguiendo hallazgo y estudio (`category_detail`) *(2026-11-07: [`eval/reports/2026-11-07-news.md`](eval/reports/2026-11-07-news.md))*
 - [ ] Extracción del taxón mencionado y enlace a su ficha *(por el nombre en el texto y por el LLM, los dos comprobados contra las fichas: `int_news_taxa`)*
 - [x] Deduplicación de la misma noticia entre medios e idiomas: se elige el método midiendo con pares etiquetados *(2026-11-07, 47 pares etiquetados por el usuario, 6 de la misma noticia y 5 de ellos entre inglés y español: TF-IDF de caracteres F1 0,29 con umbral elegido por validación cruzada; **Groq como juez de cada par candidato** F1 1,00 con 4 llamadas. Se queda el juez: funciona en Actions sin GPU ni descargas, y cada par se pregunta una sola vez. Los embeddings no hicieron falta)*
-- [ ] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar
+- [x] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar *(2026-11-07, elección del usuario: en la ficha, tarjeta «En los medios» en el lateral con las 3 más recientes; en la portada, pestañas «Estudios | En los medios» dentro de «Última hora», con el mismo formato que los estudios; resúmenes semanales con «En los medios esta semana»; página `es/noticias.html` / `en/news.html` con filtros por tipo e idioma, y las noticias que nombran un animal con ficha destacadas con su imagen. Titular y resumen del medio sin modificar, con su nombre, enlace y licencia; nunca el ruido)*
 - [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12.2), **con maquetas antes** *(v38: en la web; muestra de 20 revisada por el usuario: 19 correctas y 1 que no supo juzgar; faltan los reintentos de las definiciones en español, por cuota del juez)*
 - [ ] Documento de fase (`docs/fases/fase-5.md`)
 
@@ -416,6 +416,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 8. **Fuentes y licencias.**
 9. **Acerca de:** qué es, autoría, enlace al repo.
 10. **Buscador** (`/es/buscar.html`, `/en/search.html`): índice JSON por idioma, búsqueda en el navegador sin servidor.
+12. **Noticias** *(Fase 5, v38)*: `es/noticias.html` / `en/news.html`, las historias de los medios con licencia, agrupadas, con filtros y enlazadas a las fichas.
 11. **Estado de los datos** (`/es/estado.html`, `/en/status.html`) *(v34)*: cómo va el pipeline, con las cifras del propio registro de ejecuciones y del almacén (ver §16).
 
 ### 11.1 Contenido de la ficha

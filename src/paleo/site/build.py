@@ -26,7 +26,7 @@ from markupsafe import Markup, escape
 from paleo.config import enabled_pages, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import explore, status, taxon_page, terms
+from paleo.site import explore, news, status, taxon_page, terms
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.glossary import Glossary
@@ -51,6 +51,7 @@ PATHS = {
         "search": "es/buscar.html",
         "status": "es/estado.html",
         "glossary": "es/glosario.html",
+        "news": "es/noticias.html",
         "search_index": "es/buscar.json",
         "explore_index": "es/explorar.json",
         "encyclopedia": "es/enciclopedia/index.html",
@@ -70,6 +71,7 @@ PATHS = {
         "search": "en/search.html",
         "status": "en/status.html",
         "glossary": "en/glossary.html",
+        "news": "en/news.html",
         "search_index": "en/search.json",
         "explore_index": "en/explore.json",
         "encyclopedia": "en/encyclopedia/index.html",
@@ -227,6 +229,7 @@ class SiteBuilder:
         self.glossaries = {lang: Glossary(data.glossary, lang, self.url(lang, "glossary"))
                            for lang in ("es", "en")}  # fmt: skip
         self.taxa_by_key = {t["taxon_key"]: t for t in data.taxa}
+        self.env.globals["taxa_by_key"] = self.taxa_by_key
         self._marked: dict[str, set[str]] | None = None
 
     # ----------------------------------------------------------------- prose
@@ -400,8 +403,16 @@ class SiteBuilder:
         home = self.home_context(events)
         status_ctx = self.status_context()
         for lang in LANGS:
+            # News stories (Phase 5): the page language's article first in each story.
+            stories = news.stories(data.news, lang)
+            media_of = news.by_taxon(stories)
+            media_weeks: dict[str, list[dict[str, Any]]] = defaultdict(list)
+            for st in stories:
+                if st["date"]:
+                    media_weeks[iso_week(st["date"])].append(st)
             common = {"latest_week": week_keys[0] if week_keys else None}
-            out.append(Page(lang, "home", None, "index.html.j2", {**common, **home}))
+            out.append(Page(lang, "home", None, "index.html.j2",
+                            {**common, **home, "media": stories[:6]}))  # fmt: skip
             out.append(Page(lang, "taxa", None, "taxa.html.j2", {"new": new, "known": known}))
             for taxon in data.taxa:
                 key = taxon["taxon_key"]
@@ -414,6 +425,7 @@ class SiteBuilder:
                           "gallery": data.images.get(key, []),
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),
+                          "media": media_of.get(key, [])[:3],
                           "basic_sources": basic_sources(
                               taxon, data.events.get(key, []),
                               year_pages.get(taxon.get("taxonomic_block"), default_page),
@@ -425,9 +437,18 @@ class SiteBuilder:
             )  # fmt: skip
             for key in week_keys:
                 out.append(
-                    Page(lang, "recap", key, "recap.html.j2", {"week": key, "events": weeks[key]})
+                    Page(
+                        lang,
+                        "recap",
+                        key,
+                        "recap.html.j2",
+                        {"week": key, "events": weeks[key], "media": media_weeks.get(key, [])},
+                    )
                 )
             out.append(Page(lang, "status", None, "status.html.j2", status_ctx))
+            out.append(Page(lang, "news", None, "news.html.j2", {
+                "stories": stories, "news_categories": Counter(st["category"] for st in stories),
+            }))  # fmt: skip
             entries = self.glossaries[lang].entries()
             out.append(Page(lang, "glossary", None, "glossary.html.j2", {
                 "entries": entries,

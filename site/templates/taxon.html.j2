@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import event, event_date, study_title, folded, lang_tag, new_tab %}
+{% from "macros.html.j2" import event, event_date, study_title, folded, lang_tag, new_tab, media_compact %}
 {% block title %}{{ taxon.taxon_name }} · {{ T.site_name }}{% endblock %}
 {% block description %}{{ fallback or taxon.taxon_name }}{% endblock %}
 {% block content %}
@@ -326,6 +326,14 @@
           {% endfor %}
         </ol>
         <a href="#historial">{{ T.see_history }} →</a>
+      </div>
+      {% endif %}
+
+      {% if media is defined and media %}
+      <div class="tx-card tx-media">
+        <p class="tx-label">{{ T.news_media }}</p>
+        <ol class="news__list">{% for s in media %}{{ media_compact(s, T, fmt_date, url, show_taxon=False) }}{% endfor %}</ol>
+        <a href="{{ url('news') }}">{{ T.news_see_all }} →</a>
       </div>
       {% endif %}
     </aside>

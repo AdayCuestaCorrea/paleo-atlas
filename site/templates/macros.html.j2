@@ -131,3 +131,18 @@
 {%- for i in items[:limit] %}{{ i }}{% if not loop.last or items | length > limit %}, {% endif %}{% endfor -%}
 {%- if items | length > limit %}<details class="more"><summary>{{ more_label }}</summary>{% for i in items[limit:] %}{{ i }}{% if not loop.last %}, {% endif %}{% endfor %}</details>{% endif -%}
 {%- endmacro %}
+
+{#- A news story (Phase 5) in the style of event_compact: date, type, headline (the
+    outlet's own, in a new tab) and its outlet; the others telling the same story. -#}
+{% macro media_compact(s, T, fmt_date, url, show_taxon=True) -%}
+{%- set m = s.main -%}
+<li class="news__item">
+  {% if s.date %}<time datetime="{{ s.date.isoformat() }}">{{ fmt_date(s.date, 'short') }}</time>{% else %}<span></span>{% endif %}
+  <div>
+    <span class="news__type">{{ T['news_cat_' ~ s.category] }}</span>
+    {% if show_taxon %}{% for k in s.taxa[:2] if taxa_by_key.get(k) %}<a class="news__taxon" href="{{ url('taxon', k) }}"><em>{{ taxa_by_key[k].taxon_name }}</em></a>{% endfor %}{% endif %}
+    <a class="news__title" href="{{ m.url }}" rel="noopener" target="_blank"{% if m.lang != T.lang %} lang="{{ m.lang }}"{% endif %}>{% if m.lang != T.lang %}<span class="lang-tag">{{ T['lang_' ~ m.lang] }}</span> {% endif %}{{ m.title }}{{ new_tab(T) }}</a>
+    <cite class="news__journal">{{ m.outlet }}{% if s.others %} · {{ T.news_also }} {% for o in s.others %}<a href="{{ o.url }}" rel="noopener" target="_blank"{% if o.lang != T.lang %} lang="{{ o.lang }}"{% endif %}>{{ o.outlet }}{% if o.lang != T.lang %} ({{ o.lang | upper }}){% endif %}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</cite>
+  </div>
+</li>
+{%- endmacro %}

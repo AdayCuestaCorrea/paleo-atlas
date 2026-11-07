@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import card, event_compact %}
+{% from "macros.html.j2" import card, event_compact, media_compact %}
 {% block content %}
 <h1 class="visually-hidden">{{ T.site_name }} · {{ T.tagline }}</h1>
 
@@ -35,9 +35,18 @@
 
   <aside class="news" aria-labelledby="h-latest">
     <h2 id="h-latest">{{ T.latest }}{% if latest_week %} <a href="{{ url('recap', latest_week) }}">{{ T.latest_recap }} →</a>{% endif %}</h2>
-    <ol class="news__list">
+    {% if media is defined and media %}<div class="news-tabs" role="tablist" hidden>
+      <button type="button" role="tab" aria-selected="true" aria-controls="news-studies" class="is-on">{{ T.news_studies }}</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="news-media">{{ T.news_media }}</button>
+    </div>{% endif %}
+    <ol class="news__list" id="news-studies">
       {% for e in events %}{{ event_compact(e, T, fmt_date, url) }}{% endfor %}
     </ol>
+    {% if media is defined and media %}<div id="news-media" class="news-media">
+      <h3 class="news-media__h">{{ T.news_media }}</h3>
+      <ol class="news__list">{% for s in media %}{{ media_compact(s, T, fmt_date, url) }}{% endfor %}</ol>
+      <a class="news-media__all" href="{{ url('news') }}">{{ T.news_see_all }} →</a>
+    </div>{% endif %}
   </aside>
 </div>
 
@@ -150,4 +159,5 @@
   <p class="note">{{ T.explore_source }}</p>
 </section>
 <script src="{{ base }}/static/home.js" defer></script>
+<script src="{{ base }}/static/news.js" defer></script>
 {% endblock %}

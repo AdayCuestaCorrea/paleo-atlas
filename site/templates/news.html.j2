@@ -1,0 +1,49 @@
+{% extends "base.html.j2" %}
+{% from "macros.html.j2" import new_tab %}
+{% block title %}{{ T.news_title }} · {{ T.site_name }}{% endblock %}
+{% block description %}{{ T.news_lead }}{% endblock %}
+{% block content %}
+<article class="nm-page">
+  <h1>{{ T.news_title }}</h1>
+  <p class="gl-intro">{{ T.news_intro | md }}</p>
+  {% if stories %}
+  <div class="nm-filters" hidden>
+    <div class="nm-chips" data-filter="cat" role="group" aria-label="{{ T.news_filter_type }}">
+      <button type="button" class="is-on" data-v="">{{ T.gl_all }} <span>{{ stories | length }}</span></button>
+      {% for c in ['new_species', 'research', 'revision'] if news_categories[c] %}<button type="button" data-v="{{ c }}">{{ T['news_cat_' ~ c] }} <span>{{ news_categories[c] }}</span></button>{% endfor %}
+    </div>
+    <div class="nm-chips" data-filter="lang" role="group" aria-label="{{ T.news_filter_lang }}">
+      <button type="button" class="is-on" data-v="">{{ T.news_any_lang }}</button>
+      <button type="button" data-v="es">Español</button>
+      <button type="button" data-v="en">English</button>
+      <button type="button" data-v="taxon">{{ T.news_with_page }}</button>
+    </div>
+  </div>
+  <ol class="nm-list">
+    {% for s in stories %}
+    {% set m = s.main %}
+    {% set pages = s.taxa | select('in', taxa_by_key) | list %}
+    <li class="nm-story{% if pages %} has-taxon{% endif %}" data-cat="{{ s.category }}" data-lang="{{ s.langs | join(' ') }}{% if pages %} taxon{% endif %}">
+      <div class="nm-body">
+        <p class="nm-meta"><span class="nm-cat nm-cat--{{ s.category }}">{{ T['news_cat_' ~ s.category] }}</span>{% if s.date %} <time datetime="{{ s.date.isoformat() }}">{{ fmt_date(s.date) }}</time>{% endif %}</p>
+        <h2 class="nm-title"><a href="{{ m.url }}" rel="noopener" target="_blank"{% if m.lang != lang %} lang="{{ m.lang }}"{% endif %}>{% if m.lang != lang %}<span class="lang-tag">{{ T['lang_' ~ m.lang] }}</span> {% endif %}{{ m.title }}{{ new_tab(T) }}</a></h2>
+        {% if m.summary %}<p class="nm-summary"{% if m.lang != lang %} lang="{{ m.lang }}"{% endif %}>{{ m.summary }}</p>{% endif %}
+        <p class="nm-src">{{ m.outlet }}{% if s.others %} · {{ T.news_also }} {% for o in s.others %}<a href="{{ o.url }}" rel="noopener" target="_blank"{% if o.lang != lang %} lang="{{ o.lang }}"{% endif %}>{{ o.outlet }}{% if o.lang != lang %} ({{ o.lang | upper }}){% endif %}</a>{% if not loop.last %}, {% endif %}{% endfor %}{% endif %}</p>
+      </div>
+      {% if pages %}
+      <div class="nm-taxa">
+        {% for k in pages[:2] %}{% set tx = taxa_by_key[k] %}
+        <a class="nm-taxon" href="{{ url('taxon', k) }}">
+          {% if tx.image_url %}<img src="{{ thumb(tx.image_url) }}" alt="" loading="lazy" decoding="async"{% if tx.image_source == 'phylopic' %} class="is-sil"{% endif %}>{% endif %}
+          <span><em>{{ tx.taxon_name }}</em><small>{{ card_meta(tx) }}</small><b>{{ T.news_open_page }} →</b></span>
+        </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</article>
+<script src="{{ base }}/static/news.js" defer></script>
+{% endblock %}

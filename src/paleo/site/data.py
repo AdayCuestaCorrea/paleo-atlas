@@ -47,6 +47,8 @@ class SiteData:
     freshness: list[dict[str, Any]] = field(default_factory=list)
     # Glossary terms with their published definitions (§12.2).
     glossary: list[dict[str, Any]] = field(default_factory=list)
+    # News articles that are not noise (Phase 5), newest first.
+    news: list[dict[str, Any]] = field(default_factory=list)
 
     @cached_property
     def silhouettes(self) -> dict[str, str]:
@@ -205,6 +207,16 @@ def load(warehouse: Path) -> SiteData:
         }
         runs = _rows(con, "select * from main.stg_pipeline__runs order by started_at")
         freshness = _rows(con, "select * from main.fct_source_freshness order by sort")
+        news = _rows(
+            con,
+            """
+            select news_key, outlet, lang, title, url, summary, category, story_key,
+                   published_at, taxon_keys
+            from main.fct_news
+            where category in ('new_species', 'research', 'revision')
+            order by published_at desc nulls last, news_key
+            """,
+        )
         glossary = _rows(
             con,
             """
@@ -226,7 +238,7 @@ def load(warehouse: Path) -> SiteData:
         gbif=gbif[0] if gbif else None,
         neighborhood={k: dict(v) for k, v in neighborhood.items()},
         redirects=redirects, country_centroids=centroids, runs=runs, freshness=freshness,
-        glossary=glossary,
+        glossary=glossary, news=news,
     )  # fmt: skip
 
 

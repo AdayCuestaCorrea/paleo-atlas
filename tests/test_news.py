@@ -182,3 +182,28 @@ def test_the_judge_is_asked_once_per_pair_and_groups_follow(tmp_path, monkeypatc
     gold = [("a", "b", True), ("a", "c", False), ("b", "c", True)]
     s = judged_scores(answers, gold)
     assert (s["precision"], s["recall"], s["same"]) == (1.0, 0.5, 2)
+
+
+def test_stories_group_articles_and_put_the_page_language_first():
+    import datetime as dt
+
+    from paleo.site import news
+
+    t = dt.datetime(2026, 11, 6, 10, tzinfo=dt.UTC)
+    rows = [
+        {"news_key": "a", "story_key": "s1", "lang": "en", "category": "research",
+         "published_at": t, "taxon_keys": ["tyrannosaurus"]},
+        {"news_key": "b", "story_key": "s1", "lang": "es", "category": "research",
+         "published_at": t + dt.timedelta(days=1), "taxon_keys": []},
+        {"news_key": "c", "story_key": None, "lang": "en", "category": "new_species",
+         "published_at": t + dt.timedelta(days=3), "taxon_keys": []},
+        {"news_key": "d", "story_key": "s9", "lang": "en", "category": "noise",
+         "published_at": t, "taxon_keys": []},
+    ]  # fmt: skip
+    es = news.stories(rows, "es")
+    assert [s["key"] for s in es] == ["c", "s1"]  # newest first; noise never shows
+    s1 = es[1]
+    assert s1["main"]["news_key"] == "b" and [o["news_key"] for o in s1["others"]] == ["a"]
+    assert s1["date"] == t.date() and s1["langs"] == ["en", "es"]
+    assert news.stories(rows, "en")[1]["main"]["news_key"] == "a"
+    assert news.by_taxon(es) == {"tyrannosaurus": [s1]}

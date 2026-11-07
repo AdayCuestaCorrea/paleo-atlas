@@ -1,9 +1,16 @@
 {% extends "base.html.j2" %}
-{% from "macros.html.j2" import event %}
+{% from "macros.html.j2" import event, media_compact %}
 {% block title %}{{ week_label(week) }} · {{ T.site_name }}{% endblock %}
 {% block content %}
 <p class="kicker"><a href="{{ url('recaps') }}">{{ T.recaps_title }}</a></p>
 <h1>{{ week_label(week) }}</h1>
 <p class="muted">{{ t('week_items', n=events|length) }}</p>
 <ol class="timeline">{% for e in events %}{{ event(e, T, fmt_date, url, show_taxon=True) }}{% endfor %}</ol>
+{% if media is defined and media %}
+<section class="recap-media">
+  <h2>{{ T.news_week }}</h2>
+  <ol class="news__list">{% for s in media %}{{ media_compact(s, T, fmt_date, url) }}{% endfor %}</ol>
+  <p><a href="{{ url('news') }}">{{ T.news_see_all }} →</a></p>
+</section>
+{% endif %}
 {% endblock %}

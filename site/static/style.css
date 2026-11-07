@@ -664,3 +664,40 @@ a.gl:hover, a.gl:focus-visible { background: color-mix(in srgb, var(--fossil) 14
 .gl-other { font-weight: 400; color: var(--muted); font-size: 0.85rem; margin-left: 0.3rem; }
 .gl-entry dd { margin: 0.15rem 0 0; }
 .gl-entry small { display: block; color: var(--muted); font-size: 0.78rem; margin-top: 0.2rem; }
+
+/* ---- news (Phase 5) ---- */
+.news-tabs { display: flex; gap: 0.35rem; margin: 0.1rem 0 0.4rem; }
+.news-tabs button { border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 999px; padding: 0.22rem 0.75rem; font: inherit; font-size: 0.8rem; cursor: pointer; }
+.news-tabs button.is-on { background: var(--ochre); border-color: var(--ochre); color: #fff; }
+.news-media__h { font-size: 1rem; margin: 1rem 0 0.2rem; }
+.news-media.is-tab .news-media__h { display: none; }
+.news-media__all { display: inline-block; margin-top: 0.4rem; font-size: 0.85rem; }
+.news__journal a { color: var(--muted); }
+.tx-media .news__item { grid-template-columns: 3.1rem 1fr; }
+.recap-media { margin-top: 2rem; }
+.nm-filters { display: grid; gap: 0.4rem; margin: 0.8rem 0 0.4rem; }
+.nm-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.nm-chips button { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 0.28rem 0.75rem; font: inherit; font-size: 0.84rem; cursor: pointer; }
+.nm-chips button span { color: var(--muted); }
+.nm-chips button.is-on { background: var(--ochre); border-color: var(--ochre); color: #fff; }
+.nm-chips button.is-on span { color: #fff; }
+.nm-list { list-style: none; margin: 0.5rem 0 0; padding: 0; max-width: 60rem; }
+.nm-story { display: grid; gap: 0.8rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 760px) { .nm-story.has-taxon { grid-template-columns: minmax(0, 1fr) 15rem; } }
+.nm-story.has-taxon .nm-body { border-left: 3px solid var(--ochre); padding-left: 0.8rem; }
+.nm-meta { margin: 0; font-size: 0.8rem; color: var(--muted); }
+.nm-cat { display: inline-block; font-weight: 700; font-size: 0.7rem; border-radius: 999px; padding: 0.05rem 0.55rem; margin-right: 0.35rem; background: var(--fossil-soft); color: var(--fossil); }
+.nm-cat--new_species { background: var(--ochre-soft); color: var(--ochre); }
+.nm-title { font-size: 1.08rem; line-height: 1.35; margin: 0.25rem 0; }
+.nm-title a { color: var(--ink); text-decoration: none; }
+.nm-title a:hover { text-decoration: underline; }
+.nm-summary { margin: 0.2rem 0; color: var(--muted); font-size: 0.92rem; }
+.nm-src { margin: 0.2rem 0 0; font-size: 0.8rem; color: var(--muted); }
+.nm-src a { color: var(--muted); }
+.nm-taxa { display: grid; gap: 0.5rem; align-content: start; }
+.nm-taxon { display: flex; gap: 0.6rem; align-items: center; background: var(--card); border-radius: 12px; box-shadow: var(--shadow); padding: 0.45rem; text-decoration: none; color: var(--ink); }
+.nm-taxon img { width: 72px; height: 56px; object-fit: cover; border-radius: 8px; flex: none; background: var(--line); }
+.nm-taxon img.is-sil { object-fit: contain; padding: 4px; box-sizing: border-box; }
+.nm-taxon span { display: grid; font-size: 0.95rem; }
+.nm-taxon small { color: var(--muted); font-size: 0.75rem; }
+.nm-taxon b { color: var(--ochre); font-size: 0.78rem; font-weight: 600; }

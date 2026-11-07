@@ -430,21 +430,37 @@ def news_classify(provider: Provider = "ollama", model: Model = None, limit: Lim
 
 @news_app.command("dedup")
 def news_dedup(
-    method: Annotated[str, typer.Option(help="tfidf (CPU) or embeddings (local Ollama).")] = "",
+    provider: Provider = "ollama",
+    model: Model = None,
+    method: Annotated[
+        str,
+        typer.Option(
+            help="llm (asks the provider about each candidate "
+            "pair), tfidf or embeddings (similarity with --threshold)."
+        ),
+    ] = "llm",
     threshold: Annotated[float | None, typer.Option(help="Similarity to join two.")] = None,
 ) -> None:
     """Group the articles that tell the same story (data/derived/news/groups.json)."""
+    from paleo.llm import LLM, QuotaExhausted
     from paleo.news import dedup
 
     paths = get_paths()
-    name = method or dedup.METHOD
-    r = dedup.group_news(
-        raw_root=paths.raw, derived_root=paths.data / "derived",
-        similarity=dedup.METHODS[name], method=name,
-        threshold=dedup.THRESHOLD if threshold is None else threshold,
-    )  # fmt: skip
+    if method == "llm":
+        llm = LLM(provider, model or DEFAULT_MODELS[provider])
+        try:
+            r = dedup.group_news_llm(llm, raw_root=paths.raw, derived_root=paths.data / "derived")
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc}); the groups are completed on the next run.")
+            return
+    else:
+        r = dedup.group_news(
+            raw_root=paths.raw, derived_root=paths.data / "derived",
+            similarity=dedup.METHODS[method], method=method,
+            threshold=dedup.THRESHOLD if threshold is None else threshold,
+        )  # fmt: skip
     typer.echo(
-        f"News groups ({name}): {r['articles']} articles, {r['links']} links, "
+        f"News groups ({method}): {r['articles']} articles, {r['links']} same-story links, "
         f"{r['groups']} groups, {r['grouped']} articles in a group of 2 or more"
     )
 
@@ -694,7 +710,11 @@ def eval_news(
             lang: ev.scores([truth[i] for i in idx], [pred[i] for i in idx])
             for lang, idx in by.items()}}  # fmt: skip
 
-    category = {"TF-IDF + logistic regression (CV)": scored(ev.baseline_predictions(texts, truth))}
+    category = {}  # nothing to score until the headlines are labelled
+    if keys:
+        category["TF-IDF + logistic regression (CV)"] = scored(
+            ev.baseline_predictions(texts, truth)
+        )
     llm_names: dict[str, dict[str, list[str]]] = {}
     production = classify.load_labels(classify.labels_path(paths.data / "derived"))
     runs = [("production", production)]
@@ -706,7 +726,8 @@ def eval_news(
         category[llm.label] = scored([runs[-1][1].get(k, {}).get("category") for k in keys])
         category[llm.label]["cost"] = f"{llm.stats.calls} calls, {llm.stats.seconds:.0f} s"
     generator = next(iter({r["generator"] for r in production.values()}), "production")
-    category[f"{generator} (production)"] = scored([production.get(k, {}).get("category")
+    if keys:
+        category[f"{generator} (production)"] = scored([production.get(k, {}).get("category")
                                                     for k in keys])  # fmt: skip
     for label, rows in runs:
         llm_names[f"LLM names only ({label})"] = {k: rows.get(k, {}).get("taxa", []) for k in keys}
@@ -732,6 +753,16 @@ def eval_news(
         matrix = fn([classify.model_input(articles[k]) for k in pair_keys])
         sims = [matrix[index[a], index[b]] for a, b, _ in pairs]
         grouping[name] = ev.grouping_scores(sims, [same for _, _, same in pairs])
+
+    if pairs:
+        judge = LLM("groq", DEFAULT_MODELS["groq"])
+        answers = dedup.judge_pairs(
+            judge,
+            articles,
+            [(a, b) for a, b, _ in pairs],
+            paths.data / "eval_runs" / "news-pairs-groq" / "pairs.json",
+        )
+        grouping[f"{judge.label} as judge"] = ev.judged_scores(answers, pairs)
 
     summary = {
         "evaluated_at": dt.date.today().isoformat(), "labelled": len(keys),

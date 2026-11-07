@@ -4,7 +4,8 @@
   $PALEO_DATA_DIR/derived/texts/<taxon_key>.<lang>.json (verified texts only;
   failed ones live in derived/texts_review and are never published), and
   $PALEO_DATA_DIR/derived/study_titles/es.json (paleo titles), and
-  $PALEO_DATA_DIR/derived/news/labels.json (paleo news classify; optional).
+  $PALEO_DATA_DIR/derived/news/labels.json and groups.json (paleo news classify and
+  dedup; optional).
 #}
 {% macro read_narrative(kind) -%}
     {%- if kind == 'texts' -%}
@@ -57,6 +58,19 @@
             cast(null as varchar[]) as taxa, cast(null as varchar) as input_hash,
             cast(null as varchar) as generator, cast(null as varchar) as prompt_version,
             cast(null as timestamptz) as classified_at limit 0)
+    {%- endif -%}
+    {%- elif kind == 'news_groups' -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/derived/news/groups.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+    read_json('{{ path }}', format = 'array',
+              columns = {key: 'VARCHAR', "group": 'VARCHAR', method: 'VARCHAR', threshold: 'DOUBLE'})
+    {%- else -%}
+    (select cast(null as varchar) as key, cast(null as varchar) as "group",
+            cast(null as varchar) as method, cast(null as double) as threshold limit 0)
     {%- endif -%}
     {%- else -%}
     {{ exceptions.raise_compiler_error("Unknown narrative kind: " ~ kind) }}

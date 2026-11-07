@@ -32,7 +32,10 @@ DAILY: tuple[Step, ...] = (
     Step("ingest_studies", ("ingest studies",), network=True),
     Step("ingest_images", ("ingest images",), network=True),
     Step("ingest_articles", ("ingest articles",), network=True),
-    # "Facts and texts for pending species"
+    Step("ingest_news", ("ingest news",), network=True),
+    # "Facts and texts for pending species" (and the news categories)
+    Step("news_classify", ("news classify",), narrative=True),
+    Step("news_dedup", ("news dedup",), narrative=True),
     Step("facts", ("facts",), narrative=True),
     Step("write", ("write",), narrative=True),
     Step("titles", ("titles",), narrative=True),

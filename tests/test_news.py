@@ -140,3 +140,45 @@ def test_grouping_threshold_is_chosen_on_other_folds():
     g = grouping_scores(sims, same)
     assert (g["precision"], g["recall"], g["f1"]) == (1.0, 1.0, 1.0)
     assert 0.3 < g["threshold"] <= 0.7
+
+
+class FakeJudge:
+    label = "fake/judge"
+
+    def __init__(self):
+        self.calls = 0
+
+    def complete_json(self, system, user, output, max_tokens):
+        self.calls += 1
+        pairs, index, first = [], None, ""
+        for line in user.split("\n")[1:]:
+            if line[:1].isdigit():
+                index, first = line.split(". A: ", 1)
+            else:
+                both = [("blood" in t or "Sangre" in t) for t in (first, line)]
+                pairs.append({"index": int(index), "same": all(both)})
+        return output.model_validate({"pairs": pairs})
+
+
+def test_the_judge_is_asked_once_per_pair_and_groups_follow(tmp_path, monkeypatch):
+    from paleo.news import dedup
+    from paleo.news.evaluate import judged_scores
+
+    monkeypatch.setattr(dedup, "PAIR_BATCH", 1)
+    arts = {
+        "a": {"title": "Dinosaur blood", "lang": "en", "published": "2026-11-06T10:00:00Z"},
+        "b": {"title": "Sangre de dinosaurio", "lang": "es", "published": "2026-11-06T12:00:00Z"},
+        "c": {"title": "A new crocodile", "lang": "en", "published": "2026-11-07T09:00:00Z"},
+        "d": {"title": "Old news", "lang": "en", "published": "2026-10-01T09:00:00Z"},
+    }
+    pairs = dedup.candidate_pairs(list(arts), arts)
+    assert pairs == [("a", "b"), ("a", "c"), ("b", "c")]  # d is out of the window
+    judge, path = FakeJudge(), tmp_path / "pairs.json"
+    answers = dedup.judge_pairs(judge, arts, pairs, path)
+    assert answers == {("a", "b"): True, ("a", "c"): False, ("b", "c"): False}
+    assert judge.calls == 3
+    dedup.judge_pairs(judge, arts, pairs, path)
+    assert judge.calls == 3  # nothing asked again
+    gold = [("a", "b", True), ("a", "c", False), ("b", "c", True)]
+    s = judged_scores(answers, gold)
+    assert (s["precision"], s["recall"], s["same"]) == (1.0, 0.5, 2)

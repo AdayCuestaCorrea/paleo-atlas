@@ -92,6 +92,7 @@ jobs:
           uv run paleo ingest studies
           uv run paleo ingest images
           uv run paleo ingest articles
+          uv run paleo ingest news
 
       - name: Facts and texts for pending species (Groq)
         if: env.RUN == 'true' && (github.event_name == 'schedule' || inputs.narrative)
@@ -101,6 +102,8 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
+          uv run paleo news classify --provider groq
+          uv run paleo news dedup --provider groq
           uv run paleo facts --provider groq
           uv run paleo write --provider groq
           uv run paleo titles --provider groq

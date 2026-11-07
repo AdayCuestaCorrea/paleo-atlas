@@ -44,7 +44,7 @@ def read_csv(path: Path, key) -> dict:
 def write_csv(path: Path, fields: list[str], rows: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         w.writeheader()
         for k in sorted(rows):
             w.writerow(rows[k])

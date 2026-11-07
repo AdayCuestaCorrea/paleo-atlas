@@ -29,6 +29,8 @@ SEED = 7
 
 
 def load_labels(path: Path) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
     with path.open(encoding="utf-8") as f:
         return {
             r["key"]: {**r, "taxa": [t.strip() for t in r["taxa"].split(",") if t.strip()]}
@@ -137,6 +139,21 @@ def grouping_scores(sims: Sequence[float], same: Sequence[bool]) -> dict[str, fl
     }  # fmt: skip
 
 
+def judged_scores(
+    answers: dict[tuple[str, str], bool], pairs: Sequence[tuple[str, str, bool]]
+) -> dict[str, Any]:
+    """Pair precision/recall/F1 of yes/no answers (an unanswered pair counts as no)."""
+    tp = sum(answers.get((a, b)) is True and same for a, b, same in pairs)
+    fp = sum(answers.get((a, b)) is True and not same for a, b, same in pairs)
+    fn = sum(answers.get((a, b)) is not True and same for a, b, same in pairs)
+    precision = tp / (tp + fp) if tp + fp else 0.0
+    recall = tp / (tp + fn) if tp + fn else 0.0
+    return {
+        "pairs": len(pairs), "same": tp + fn, "precision": precision, "recall": recall,
+        "f1": 2 * precision * recall / (precision + recall) if tp else 0.0, "threshold": None,
+    }  # fmt: skip
+
+
 def _pct(x: float) -> str:
     return f"{100 * x:.0f} %"
 
@@ -180,6 +197,7 @@ def report_markdown(summary: dict[str, Any]) -> str:
               "| Method | Pairs (same) | Precision | Recall | F1 | Threshold |",
               "|---|---:|---:|---:|---:|---:|"]  # fmt: skip
     for name, g in s["grouping"].items():
+        cut = "—" if g["threshold"] is None else f"{g['threshold']:.3f}"
         lines.append(f"| {name} | {g['pairs']} ({g['same']}) | {g['precision']:.2f} | "
-                     f"{g['recall']:.2f} | {g['f1']:.2f} | {g['threshold']:.3f} |")  # fmt: skip
+                     f"{g['recall']:.2f} | {g['f1']:.2f} | {cut} |")  # fmt: skip
     return "\n".join(lines) + "\n"

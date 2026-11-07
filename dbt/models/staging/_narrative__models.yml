@@ -31,6 +31,12 @@ models:
     columns:
       - name: news_key
         data_tests: [unique, not_null]
+  - name: stg_news__groups
+    columns:
+      - name: news_key
+        data_tests: [unique, not_null]
+      - name: story_key
+        data_tests: [not_null]
   - name: stg_narrative__study_titles
     columns:
       - name: doi

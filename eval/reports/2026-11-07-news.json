@@ -1,0 +1,396 @@
+{
+ "caveats": {
+  "category_as_proposed": 294,
+  "taxa_edited": 0,
+  "with_taxa": 25
+ },
+ "evaluated_at": "2026-11-07",
+ "labelled": 300,
+ "by_lang": {
+  "en": 121,
+  "es": 179
+ },
+ "pairs": 47,
+ "support": {
+  "new_fossil": 25,
+  "new_species": 13,
+  "new_study": 30,
+  "noise": 232
+ },
+ "category": {
+  "TF-IDF + logistic regression (CV)": {
+   "all": {
+    "n": 300,
+    "accuracy": 0.79,
+    "macro_f1": 0.49191728307773985,
+    "per_class": {
+     "new_species": {
+      "precision": 0.3333333333333333,
+      "recall": 0.07692307692307693,
+      "f1": 0.125,
+      "support": 13
+     },
+     "new_fossil": {
+      "precision": 0.3333333333333333,
+      "recall": 0.48,
+      "f1": 0.39344262295081966,
+      "support": 25
+     },
+     "new_study": {
+      "precision": 0.45454545454545453,
+      "recall": 0.6666666666666666,
+      "f1": 0.5405405405405405,
+      "support": 30
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9400921658986175,
+      "recall": 0.8793103448275862,
+      "f1": 0.9086859688195992,
+      "support": 232
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_fossil": 6,
+      "noise": 3,
+      "new_study": 3,
+      "new_species": 1
+     },
+     "new_fossil": {
+      "new_fossil": 12,
+      "new_study": 8,
+      "noise": 5
+     },
+     "new_study": {
+      "noise": 5,
+      "new_study": 20,
+      "new_fossil": 5
+     },
+     "revision": {},
+     "noise": {
+      "noise": 204,
+      "new_study": 13,
+      "new_fossil": 13,
+      "new_species": 2
+     }
+    }
+   },
+   "en": {
+    "n": 121,
+    "accuracy": 0.5619834710743802,
+    "macro_f1": 0.45803428391342355,
+    "per_class": {
+     "new_species": {
+      "precision": 0.3333333333333333,
+      "recall": 0.1,
+      "f1": 0.15384615384615383,
+      "support": 10
+     },
+     "new_fossil": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5454545454545454,
+      "f1": 0.41379310344827586,
+      "support": 22
+     },
+     "new_study": {
+      "precision": 0.45454545454545453,
+      "recall": 0.7692307692307693,
+      "f1": 0.5714285714285714,
+      "support": 26
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9210526315789473,
+      "recall": 0.5555555555555556,
+      "f1": 0.693069306930693,
+      "support": 63
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_fossil": 6,
+      "new_study": 3,
+      "new_species": 1
+     },
+     "new_fossil": {
+      "new_fossil": 12,
+      "new_study": 8,
+      "noise": 2
+     },
+     "new_study": {
+      "new_study": 20,
+      "new_fossil": 5,
+      "noise": 1
+     },
+     "revision": {},
+     "noise": {
+      "new_study": 13,
+      "noise": 35,
+      "new_fossil": 13,
+      "new_species": 2
+     }
+    }
+   },
+   "es": {
+    "n": 179,
+    "accuracy": 0.9441340782122905,
+    "macro_f1": 0.24281609195402298,
+    "per_class": {
+     "new_species": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+     },
+     "new_fossil": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+     },
+     "new_study": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9441340782122905,
+      "recall": 1.0,
+      "f1": 0.9712643678160919,
+      "support": 169
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "noise": 3
+     },
+     "new_fossil": {
+      "noise": 3
+     },
+     "new_study": {
+      "noise": 4
+     },
+     "revision": {},
+     "noise": {
+      "noise": 169
+     }
+    }
+   }
+  },
+  "groq/openai/gpt-oss-120b (production)": {
+   "all": {
+    "n": 300,
+    "accuracy": 0.98,
+    "macro_f1": 0.908524740755468,
+    "per_class": {
+     "new_species": {
+      "precision": 0.8888888888888888,
+      "recall": 0.6153846153846154,
+      "f1": 0.7272727272727274,
+      "support": 13
+     },
+     "new_fossil": {
+      "precision": 0.8620689655172413,
+      "recall": 1.0,
+      "f1": 0.9259259259259259,
+      "support": 25
+     },
+     "new_study": {
+      "precision": 1.0,
+      "recall": 0.9666666666666667,
+      "f1": 0.983050847457627,
+      "support": 30
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9957081545064378,
+      "recall": 1.0,
+      "f1": 0.9978494623655914,
+      "support": 232
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 8,
+      "new_fossil": 4,
+      "noise": 1
+     },
+     "new_fossil": {
+      "new_fossil": 25
+     },
+     "new_study": {
+      "new_study": 29,
+      "new_species": 1
+     },
+     "revision": {},
+     "noise": {
+      "noise": 232
+     }
+    }
+   },
+   "en": {
+    "n": 121,
+    "accuracy": 0.9586776859504132,
+    "macro_f1": 0.9036426767054618,
+    "per_class": {
+     "new_species": {
+      "precision": 0.8571428571428571,
+      "recall": 0.6,
+      "f1": 0.7058823529411764,
+      "support": 10
+     },
+     "new_fossil": {
+      "precision": 0.88,
+      "recall": 1.0,
+      "f1": 0.9361702127659575,
+      "support": 22
+     },
+     "new_study": {
+      "precision": 1.0,
+      "recall": 0.9615384615384616,
+      "f1": 0.9803921568627451,
+      "support": 26
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.984375,
+      "recall": 1.0,
+      "f1": 0.9921259842519685,
+      "support": 63
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 6,
+      "new_fossil": 3,
+      "noise": 1
+     },
+     "new_fossil": {
+      "new_fossil": 22
+     },
+     "new_study": {
+      "new_study": 25,
+      "new_species": 1
+     },
+     "revision": {},
+     "noise": {
+      "noise": 63
+     }
+    }
+   },
+   "es": {
+    "n": 179,
+    "accuracy": 0.994413407821229,
+    "macro_f1": 0.9142857142857143,
+    "per_class": {
+     "new_species": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+     },
+     "new_fossil": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 3
+     },
+     "new_study": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 4
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 169
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 2,
+      "new_fossil": 1
+     },
+     "new_fossil": {
+      "new_fossil": 3
+     },
+     "new_study": {
+      "new_study": 4
+     },
+     "revision": {},
+     "noise": {
+      "noise": 169
+     }
+    }
+   }
+  }
+ },
+ "taxa": {
+  "Pages linked (text + checked LLM names)": {
+   "precision": 0.9473684210526315,
+   "recall": 0.6923076923076923,
+   "f1": 0.7999999999999999,
+   "gold_names": 26
+  },
+  "LLM names only (production)": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "gold_names": 26
+  }
+ },
+ "grouping": {
+  "TF-IDF of characters": {
+   "pairs": 47,
+   "same": 6,
+   "precision": 0.2,
+   "recall": 0.5,
+   "f1": 0.28571428571428575,
+   "threshold": 0.0635
+  },
+  "groq/openai/gpt-oss-120b as judge": {
+   "pairs": 47,
+   "same": 6,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "threshold": null
+  }
+ }
+}

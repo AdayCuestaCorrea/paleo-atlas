@@ -190,10 +190,31 @@ def report_markdown(summary: dict[str, Any]) -> str:
         lines.append(f"| {name} | {r['en']['macro_f1']:.2f} | {r['es']['macro_f1']:.2f} |")
     lines += ["", "Support per class: " + ", ".join(
         f"{c} {n}" for c, n in s["support"].items()) + "."]  # fmt: skip
-    lines += ["", "## Taxa", "", "| Method | Precision | Recall | F1 |", "|---|---:|---:|---:|"]
+    c = s.get("caveats")
+    if c:
+        lines += [
+            "",
+            "**How far to trust these figures.** The labeller saw the production LLM's "
+            f"proposal: {c['category_as_proposed']} of {s['labelled']} labels kept its "
+            "category, so its scores are an upper bound (anchoring), not an independent "
+            "measure; the baseline is not affected. A blind sample (labels made without "
+            "the proposal) is the honest check.",
+        ]
+    if not s["support"].get("revision"):
+        lines += ["", "No article of the sample is a revision: that class is not measured."]
+    lines += ["", "## Taxa", ""]
+    if c and c["taxa_edited"] == 0:
+        lines += [f"Not measured: none of the {c['with_taxa']} taxa proposed by the LLM was "
+                  "edited, so comparing with the labels would only measure the proposal "
+                  "against itself."]  # fmt: skip
+        s = {**s, "taxa": {}}
+    else:
+        lines += ["| Method | Precision | Recall | F1 |", "|---|---:|---:|---:|"]
     for name, t in s["taxa"].items():
         lines.append(f"| {name} | {t['precision']:.2f} | {t['recall']:.2f} | {t['f1']:.2f} |")
     lines += ["", "## Same story (grouping)", "",
+              "The pairs were labelled without any proposal: these figures are independent.",
+              "",
               "| Method | Pairs (same) | Precision | Recall | F1 | Threshold |",
               "|---|---:|---:|---:|---:|---:|"]  # fmt: skip
     for name, g in s["grouping"].items():

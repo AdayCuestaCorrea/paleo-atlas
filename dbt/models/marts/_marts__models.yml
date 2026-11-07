@@ -127,6 +127,20 @@ models:
               arguments:
                 values: [group, up]
 
+  - name: fct_source_freshness
+    description: >
+      Last check of each source and its expected rhythm, for the data status page:
+      a source is late when more days than its rhythm have passed.
+    columns:
+      - name: source
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('source_cadence')
+                field: source
+
 unit_tests:
   - name: neighbourhood_group_is_the_lowest_clade_with_three_genera
     description: >

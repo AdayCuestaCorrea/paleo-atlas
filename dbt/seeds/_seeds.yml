@@ -65,3 +65,13 @@ seeds:
     columns:
       - name: journal
         data_tests: [unique, not_null]
+
+  - name: source_cadence
+    description: >
+      How often each source is checked (ALCANCE.md §5), and its names in both
+      languages, for the data status page. The rhythm is data, not code.
+    columns:
+      - name: source
+        data_tests: [unique, not_null]
+      - name: every_days
+        data_tests: [not_null]

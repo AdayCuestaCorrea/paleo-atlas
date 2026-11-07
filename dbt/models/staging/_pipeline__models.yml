@@ -15,3 +15,10 @@ models:
           - accepted_values:
               arguments:
                 values: [running, ok, failed]
+
+  - name: stg_raw__checked
+    columns:
+      - name: source
+        data_tests: [unique, not_null]
+      - name: last_checked
+        data_tests: [not_null]

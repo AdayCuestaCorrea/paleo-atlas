@@ -44,9 +44,29 @@
         format = 'array',
         columns = {
             started_at: 'TIMESTAMPTZ', finished_at: 'TIMESTAMPTZ', trigger: 'VARCHAR',
-            changed: 'BOOLEAN', status: 'VARCHAR'
+            changed: 'BOOLEAN', status: 'VARCHAR', steps: 'JSON', summary: 'JSON', dbt: 'JSON',
+            sources_changed: 'JSON', changes_since_previous: 'JSON',
+            wikipedia_new_revisions: 'JSON'
         }
     )
+{%- endmacro %}
+
+{#
+  When each stored source was last checked: RawStore keeps, per source/kind, a
+  _checked.json object {key: "YYYY-MM-DD"} (a check is recorded even when nothing
+  changed). An empty relation when there are none yet (the CI fixture).
+#}
+{% macro read_checked() -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/raw/*/*/_checked.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+        read_json_objects('{{ path }}', filename = true)
+    {%- else -%}
+        (select cast(null as json) as json, cast(null as varchar) as filename limit 0)
+    {%- endif -%}
 {%- endmacro %}
 
 {#

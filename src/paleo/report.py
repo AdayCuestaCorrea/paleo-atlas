@@ -156,29 +156,51 @@ def dbt_issues(run_results: Path) -> dict[str, Any] | None:
         return None
     results = json.loads(run_results.read_text(encoding="utf-8")).get("results", [])
     counts: dict[str, int] = {}
+    tests: dict[str, dict[str, int]] = {"data": {}, "unit": {}}  # data tests vs unit tests
     issues = []
     for r in results:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
+        kind = {"test": "data", "unit_test": "unit"}.get(r["unique_id"].split(".", 1)[0])
+        if kind:
+            tests[kind][r["status"]] = tests[kind].get(r["status"], 0) + 1
         if r["status"] in ("warn", "error", "fail", "runtime error"):
             name = re.sub(r"\.[0-9a-f]{10}$", "", r["unique_id"].split(".", 2)[-1])
             issues.append({"status": r["status"], "node": name, "failures": r.get("failures")})
-    return {"counts": dict(sorted(counts.items())), "issues": issues}
+    return {
+        "counts": dict(sorted(counts.items())),
+        "tests": {k: dict(sorted(v.items())) for k, v in tests.items()},
+        "issues": issues,
+    }
 
 
-def step_results(jobs: Path, job_name: str = "update") -> list[dict[str, Any]]:
-    """Name, conclusion and seconds of the finished steps of this job (GitHub API dump)."""
+REPORT_STEP = "Run report"  # the step that calls `paleo report finish`: never finished yet
+
+
+def step_results(
+    jobs: Path, job_name: str = "update", now: dt.datetime | None = None
+) -> list[dict[str, Any]]:
+    """Name, conclusion and seconds of the steps of this job (GitHub API dump).
+
+    The API can still show a step that has just ended as in progress: such a step
+    (started, not completed, not the report itself) is kept with its time up to
+    ``now`` and ``partial: true``, instead of being lost."""
     if not jobs.exists():
         return []
     doc = json.loads(jobs.read_text(encoding="utf-8") or "{}")
     job = next((j for j in doc.get("jobs", []) if j.get("name") == job_name), None)
     out = []
     for step in (job or {}).get("steps", []):
-        if not step.get("completed_at") or step.get("conclusion") == "skipped":
+        if step.get("conclusion") == "skipped" or not step.get("started_at"):
             continue
         started = dt.datetime.fromisoformat(step["started_at"])
-        completed = dt.datetime.fromisoformat(step["completed_at"])
-        seconds = int((completed - started).total_seconds())
-        out.append({"name": step["name"], "conclusion": step["conclusion"], "seconds": seconds})
+        if step.get("completed_at"):
+            completed = dt.datetime.fromisoformat(step["completed_at"])
+            out.append({"name": step["name"], "conclusion": step["conclusion"],
+                        "seconds": int((completed - started).total_seconds())})  # fmt: skip
+        elif step["name"] != REPORT_STEP and now is not None:
+            out.append({"name": step["name"], "conclusion": "in_progress",
+                        "seconds": max(0, int((now - started).total_seconds())),
+                        "partial": True})  # fmt: skip
     return out
 
 
@@ -224,7 +246,7 @@ def finish_run(
     summary = warehouse_summary(warehouse)
     revisions = wikipedia_revisions(data)
     old_revisions = (previous or {}).get("wikipedia_revisions", {})
-    steps = step_results(jobs) if jobs else []
+    steps = step_results(jobs, now=moment) if jobs else []
     dbt = dbt_issues(run_results)
     failed = any(s["conclusion"] == "failure" for s in steps) or bool(
         dbt and any(i["status"] in ("error", "fail", "runtime error") for i in dbt["issues"])

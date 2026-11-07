@@ -103,3 +103,33 @@ def test_finish_needs_a_started_run_and_triggers_are_checked(tmp_path):
         report.finish_run(tmp_path, warehouse=tmp_path / "w", run_results=tmp_path / "r")
     with pytest.raises(ValueError):
         report.start_run(tmp_path, trigger="cron", changed=True)
+
+
+def test_a_step_the_api_still_shows_running_is_kept_as_partial(tmp_path):
+    jobs = tmp_path / "jobs.json"
+    jobs.write_text(json.dumps({"jobs": [{"name": "update", "steps": [
+        {"name": "dbt build", "conclusion": "success",
+         "started_at": "2026-11-02T06:24:00Z", "completed_at": "2026-11-02T06:24:20Z"},
+        {"name": "Build the website", "conclusion": None,
+         "started_at": "2026-11-02T06:24:20Z", "completed_at": None},
+        {"name": "Run report", "conclusion": None,
+         "started_at": "2026-11-02T06:26:20Z", "completed_at": None},
+    ]}]}))  # fmt: skip
+    now = dt.datetime(2026, 11, 2, 6, 26, 30, tzinfo=dt.UTC)
+    steps = report.step_results(jobs, now=now)
+    assert steps[1] == {"name": "Build the website", "conclusion": "in_progress", "seconds": 130,
+                        "partial": True}  # fmt: skip
+    assert [s["name"] for s in steps] == ["dbt build", "Build the website"]  # not the report
+
+
+def test_dbt_counts_tell_data_tests_from_unit_tests(tmp_path):
+    results = tmp_path / "run_results.json"
+    results.write_text(json.dumps({"results": [
+        {"unique_id": "model.p.m", "status": "success"},
+        {"unique_id": "test.p.not_null_x.abc1234567", "status": "pass"},
+        {"unique_id": "test.p.lag.abc1234567", "status": "warn", "failures": 3},
+        {"unique_id": "unit_test.p.m.u1", "status": "pass"},
+    ]}))  # fmt: skip
+    out = report.dbt_issues(results)
+    assert out["tests"] == {"data": {"pass": 1, "warn": 1}, "unit": {"pass": 1}}
+    assert out["issues"] == [{"status": "warn", "node": "lag", "failures": 3}]

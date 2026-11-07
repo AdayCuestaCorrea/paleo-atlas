@@ -1,4 +1,13 @@
 [
  {"started_at": "2026-11-01T06:23:05Z", "trigger": "schedule", "changed": true, "status": "ok",
-  "finished_at": "2026-11-01T06:26:40Z"}
+  "finished_at": "2026-11-01T06:26:40Z",
+  "steps": [{"name": "Set up job", "conclusion": "success", "seconds": 2},
+            {"name": "Ingest and parse", "conclusion": "success", "seconds": 40},
+            {"name": "dbt build", "conclusion": "success", "seconds": 30},
+            {"name": "Build the website", "conclusion": "in_progress", "seconds": 5, "partial": true}],
+  "sources_changed": {"pbdb/taxa": 2},
+  "wikipedia_new_revisions": ["2026_in_archosaur_paleontology"],
+  "changes_since_previous": {"events": 3},
+  "summary": {"totals": {"events": 3}},
+  "dbt": {"counts": {"pass": 10, "warn": 1}, "issues": []}}
 ]

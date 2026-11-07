@@ -22,7 +22,7 @@ from typing import Any
 
 import numpy as np
 
-from paleo.news.classify import CATEGORIES
+from paleo.news.classify import CLASSES, to_class
 
 FOLDS = 5
 SEED = 7
@@ -47,9 +47,11 @@ def load_pairs(path: Path) -> list[tuple[str, str, bool]]:
 
 def scores(gold: Sequence[str], pred: Sequence[str | None]) -> dict[str, Any]:
     """Per-class precision/recall/F1/support, macro F1, accuracy and confusion matrix
-    (rows: gold, columns: predicted; a missing prediction counts as wrong)."""
+    (rows: gold, columns: predicted; a missing prediction counts as wrong), over the
+    published classes (a finding and a study both count as research)."""
+    gold, pred = [to_class(g) for g in gold], [to_class(p) for p in pred]
     per = {}
-    for c in CATEGORIES:
+    for c in CLASSES:
         tp = sum(g == c and p == c for g, p in zip(gold, pred, strict=True))
         fp = sum(g != c and p == c for g, p in zip(gold, pred, strict=True))
         fn = sum(g == c and p != c for g, p in zip(gold, pred, strict=True))
@@ -57,9 +59,9 @@ def scores(gold: Sequence[str], pred: Sequence[str | None]) -> dict[str, Any]:
         recall = tp / (tp + fn) if tp + fn else 0.0
         f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
         per[c] = {"precision": precision, "recall": recall, "f1": f1, "support": tp + fn}
-    present = [c for c in CATEGORIES if per[c]["support"]]
+    present = [c for c in CLASSES if per[c]["support"]]
     confusion = {g: dict(Counter(p for gg, p in zip(gold, pred, strict=True) if gg == g))
-                 for g in CATEGORIES}  # fmt: skip
+                 for g in CLASSES}  # fmt: skip
     return {
         "n": len(gold),
         "accuracy": sum(g == p for g, p in zip(gold, pred, strict=True)) / len(gold) if gold else 0,
@@ -174,15 +176,15 @@ def report_markdown(summary: dict[str, Any]) -> str:
         "## Category",
         "",
         "| Configuration | Macro F1 | Accuracy | "
-        + " | ".join(f"F1 {c}" for c in CATEGORIES)
+        + " | ".join(f"F1 {c}" for c in CLASSES)
         + " | Cost |",
-        "|---|---:|---:|" + "---:|" * len(CATEGORIES) + "---|",
+        "|---|---:|---:|" + "---:|" * len(CLASSES) + "---|",
     ]
     for name, r in s["category"].items():
         per = r["all"]["per_class"]
         lines.append(
             f"| {name} | {r['all']['macro_f1']:.2f} | {_pct(r['all']['accuracy'])} | "
-            + " | ".join(f"{per[c]['f1']:.2f}" for c in CATEGORIES)
+            + " | ".join(f"{per[c]['f1']:.2f}" for c in CLASSES)
             + f" | {r.get('cost', '—')} |"
         )
     lines += ["", "By language (macro F1):", "", "| Configuration | EN | ES |", "|---|---:|---:|"]
@@ -215,7 +217,8 @@ def report_markdown(summary: dict[str, Any]) -> str:
         if b.get("taxa"):
             lines += [
                 "",
-                "Taxa typed by the person (blind):",
+                f"Taxa typed by the person (blind): {b['taxa_visible']} of the {b['taxa_typed']} "
+                "names are in the headline or summary the system sees; scored on those:",
                 "",
                 "| Method | Precision | Recall | F1 |",
                 "|---|---:|---:|---:|",

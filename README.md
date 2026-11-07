@@ -68,6 +68,7 @@ Measured on 2026-11-07 from the warehouse and the test suite.
 | Tests | 249 pytest · 157 dbt tests in every pipeline run (150 data tests, 7 unit tests) |
 | Daily run | ~4 minutes for a full run with ingestion, plus deployment |
 | Benchmark (932,494 rows) | DuckDB 0.86 s / 459 MB · Spark 13.7 s / 1.5 GB; 124 vs 242 lines of code |
+| News classifier | Agrees with a person in 74 % of 50 headlines labelled blind, 4 classes (the person agrees with their own earlier labels in 84 %); a TF-IDF + logistic regression baseline scores macro F1 0.50 against the LLM's 0.89 on 300 headlines labelled with the LLM's proposal in view ([report](eval/reports/2026-11-07-news.md)) |
 | Running cost | 0 € |
 
 ## Why no Spark in the daily layer — and Spark vs DuckDB, measured

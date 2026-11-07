@@ -116,9 +116,9 @@ def test_class_scores_by_hand():
     sp, no = s["per_class"]["new_species"], s["per_class"]["noise"]
     assert (sp["precision"], sp["recall"], sp["support"]) == (1.0, 0.5, 2)
     assert (no["precision"], no["recall"]) == (2 / 3, 1.0)
-    assert s["per_class"]["new_study"]["recall"] == 0.0  # no answer counts as wrong
+    assert s["per_class"]["research"]["recall"] == 0.0  # a study is research; no answer is wrong
     assert s["accuracy"] == 3 / 5
-    present_f1 = [2 / 3, 0.8, 0.0]  # new_species, noise, new_study (others absent)
+    present_f1 = [2 / 3, 0.8, 0.0]  # new_species, noise, research (revision absent)
     assert abs(s["macro_f1"] - sum(present_f1) / 3) < 1e-9
     assert s["confusion"]["new_species"] == {"new_species": 1, "noise": 1}
 

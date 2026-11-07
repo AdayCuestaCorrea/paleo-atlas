@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 36 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 37 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -306,7 +306,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Fase 5 — IA y noticias
 - [ ] Ingesta RSS (F9)
-- [ ] Clasificación de noticias: baseline clásico vs LLM, con métricas sobre titulares etiquetados a mano (`scripts/label_news.py` → `eval/news/`). Cinco clases (v36): especie nueva, hallazgo (fósil nuevo sin nombre nuevo), estudio (investigación sobre un animal ya conocido), revisión (taxonómica) y ruido (todo lo que no trata de los grupos de §4)
+- [x] Clasificación de noticias: baseline clásico vs LLM, con métricas sobre titulares etiquetados a mano (`scripts/label_news.py` → `eval/news/`). **Cuatro clases publicadas (v37):** especie nueva, investigación (hallazgo o estudio de un animal ya conocido), revisión (taxonómica) y ruido (todo lo que no trata de los grupos de §4); el LLM sigue distinguiendo hallazgo y estudio (`category_detail`) *(2026-11-07: [`eval/reports/2026-11-07-news.md`](eval/reports/2026-11-07-news.md))*
 - [ ] Extracción del taxón mencionado y enlace a su ficha *(por el nombre en el texto y por el LLM, los dos comprobados contra las fichas: `int_news_taxa`)*
 - [x] Deduplicación de la misma noticia entre medios e idiomas: se elige el método midiendo con pares etiquetados *(2026-11-07, 47 pares etiquetados por el usuario, 6 de la misma noticia y 5 de ellos entre inglés y español: TF-IDF de caracteres F1 0,29 con umbral elegido por validación cruzada; **Groq como juez de cada par candidato** F1 1,00 con 4 llamadas. Se queda el juez: funciona en Actions sin GPU ni descargas, y cada par se pregunta una sola vez. Los embeddings no hicieron falta)*
 - [ ] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar
@@ -620,7 +620,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | Coste mensual | 0 € | — |
 | GBIF: especímenes fósiles procesados | 932.494 procesados → 138.388 reconciliados con 1.739 géneros, de 78 instituciones | 2026-11-02 |
 | Benchmark Spark vs DuckDB: tiempo, memoria | 932.494 filas: DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB (local, 16 hilos); código 124 vs 242 líneas | 2026-11-02 |
-| Clasificador de noticias: precisión / recall (baseline vs LLM) | — | — |
+| Clasificador de noticias (4 clases) | **A ciegas** (50 titulares etiquetados sin ver la propuesta): el LLM coincide con el usuario en el 74 %, y el usuario consigo mismo en el 84 %. Con la propuesta a la vista (300): baseline TF-IDF + regresión logística F1 macro 0,50 (validación cruzada) frente a Groq 0,89, cota superior por anclaje. Misma noticia (47 pares, a ciegas): TF-IDF F1 0,29, Groq como juez 1,00 | 2026-11-07 |
 | Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies, Groq) · géneros con Qwen 3.5 9B local: EN 90 % · ES 72 % (201 géneros, primer lote) | 2026-11-03 |
 | Hechos extraídos que pasan la comprobación (%) | 78 % (1685 de 2158) | 2026-11-02 |
 
@@ -788,6 +788,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v37: **métricas de las noticias y cuatro clases.** El usuario etiquetó 300 titulares viendo la propuesta del LLM y mantuvo 294: esa cifra (98 %) es una cota superior por anclaje, y así se publica. En una muestra a ciegas de 50 sin la propuesta, el LLM coincide en el 60 % con cinco clases y el propio usuario consigo mismo en el 70 %: la mayoría de los desacuerdos son «hallazgo» frente a «estudio», que ambos intercambian. Se publican cuatro clases (hallazgo y estudio pasan a «investigación»): 74 % y 84 %. El prompt no cambia (sus errores en «especie nueva» se medirían en noticias nuevas a ciegas, sin afinar sobre las mismas). Taxones: de 21 nombres escritos a ciegas solo 8 aparecen en el titular o el resumen que ve el sistema; los demás están en el artículo, que no se guarda por las licencias | Etiquetado del usuario |
 | 2026-11-07 | v36: **empieza la Fase 5** sin cerrar las anteriores (excepción en §7), publicando sobre la marcha. **F9 verificada:** solo medios con licencia o condiciones que permiten reutilizar titular y enlace (ScienceDaily, The Conversation, SINC); el resumen del feed se guarda sin modificar y con la atribución. 421 artículos el primer día. Clases de noticia: cinco en vez de cuatro (se añade «estudio»: la mayoría de las noticias de paleontología no son ni hallazgos ni nombres nuevos, como la sangre de dinosaurio del 6 nov). `paleo ingest news`, `paleo news classify` (Groq, por lotes de 20), `paleo news dedup` (Groq juzga si cada par de noticias de paleontología publicadas a ±5 días cuenta lo mismo; TF-IDF no sirve entre idiomas), `int_news_taxa` y `fct_news`. Con permiso del usuario, `pipeline.yml` añade esos tres comandos. Las métricas se miden contra etiquetas del usuario, nunca contra las del LLM | Decisión del usuario: avanzar con la Fase 5 |
 | 2026-11-07 | v35: **sin vídeo de demostración** en el interview pack (§7, Fase 4; §20): la demo es la propia web pública y las capturas del README. `docs/fases/fase-3.md` puesto al día con lo hecho hasta la publicación | Decisión del usuario: es poco probable que alguien lo vea |
 | 2026-11-07 | v34: **página «Estado de los datos»** (§11, página 11; §16), del backlog al alcance, a partir de la maqueta elegida por el usuario entre cuatro (panel + bitácora + la «Calidad de los datos» de otra). Datos: `read_runs` trae los campos JSON del informe; modelos `stg_raw__checked` y `fct_source_freshness` y seed `source_cadence`; piezas calculadas en `site/status.py` con tests. `paleo report`: separa los tests de datos de los unitarios y apunta como parciales los pasos aún sin cerrar (antes se perdían, como el de la web en dos ejecuciones del 7 nov). Sin tocar `pipeline.yml` | Idea aceptada por el usuario (v30) |

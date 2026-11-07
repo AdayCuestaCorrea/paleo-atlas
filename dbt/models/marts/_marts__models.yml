@@ -152,6 +152,12 @@ models:
         data_tests:
           - accepted_values:
               arguments:
+                values: [new_species, research, revision, noise]
+      - name: category_detail
+        description: What the LLM answered (research split into a finding and a study).
+        data_tests:
+          - accepted_values:
+              arguments:
                 values: [new_species, new_fossil, new_study, revision, noise]
 
 unit_tests:

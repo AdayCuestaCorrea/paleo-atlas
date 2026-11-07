@@ -23,7 +23,16 @@ from paleo.narrative.facts import prompt
 from paleo.store import _atomic_write
 
 BATCH = 20
-CATEGORIES = ("new_species", "new_fossil", "new_study", "revision", "noise")
+CATEGORIES = ("new_species", "new_fossil", "new_study", "revision", "noise")  # asked
+# Published classes (ALCANCE v37): a finding and a study of a known animal are one class,
+# "research": in a blind relabelling the person swapped them as often as the LLM did.
+CLASSES = ("new_species", "research", "revision", "noise")
+
+
+def to_class(category: str | None) -> str | None:
+    return "research" if category in ("new_fossil", "new_study") else category
+
+
 Category = Literal["new_species", "new_fossil", "new_study", "revision", "noise"]
 
 

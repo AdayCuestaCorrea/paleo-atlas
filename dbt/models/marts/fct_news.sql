@@ -16,7 +16,10 @@ select
     i.url,
     i.published_at,
     i.summary,
-    l.category,
+    -- published class (ALCANCE v37): a finding and a study are both research
+    case when l.category in ('new_fossil', 'new_study') then 'research' else l.category end
+        as category,
+    l.category as category_detail,
     l.generator,
     l.prompt_version,
     coalesce(t.taxon_keys, []) as taxon_keys,

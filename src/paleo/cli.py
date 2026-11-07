@@ -782,7 +782,7 @@ def eval_news(
     category = {}  # nothing to score until the headlines are labelled
     if keys:
         category["TF-IDF + logistic regression (CV)"] = scored(
-            ev.baseline_predictions(texts, truth)
+            ev.baseline_predictions(texts, [classify.to_class(t) for t in truth])
         )
     llm_names: dict[str, dict[str, list[str]]] = {}
     production = classify.load_labels(classify.labels_path(paths.data / "derived"))
@@ -855,10 +855,20 @@ def eval_news(
             truth_b = [blind_gold[k]["category"] for k in ks]
             blind[name] = ev.scores(truth_b, [production.get(k, {}).get("category") for k in ks])
         blind["self_agreement"] = sum(
-            blind_gold[k]["category"] == gold[k]["category"] for k in bkeys if k in gold
+            classify.to_class(blind_gold[k]["category"]) == classify.to_class(gold[k]["category"])
+            for k in bkeys
+            if k in gold
         ) / len(bkeys)
         blind["doubtful"] = len(bkeys) - len(sure)
-        blind_taxa = {k: blind_gold[k]["taxa"] for k in bkeys}
+        # only names the system can see (in the headline or summary): the person read
+        # some in the article itself, which is not stored (licences)
+        blind_taxa = {
+            k: [t for t in blind_gold[k]["taxa"]
+                if t.split()[0].lower() in classify.model_input(articles[k]).lower()]
+            for k in bkeys
+        }  # fmt: skip
+        blind["taxa_typed"] = sum(len(blind_gold[k]["taxa"]) for k in bkeys)
+        blind["taxa_visible"] = sum(len(v) for v in blind_taxa.values())
         if any(blind_taxa.values()):
             blind["taxa"] = {
                 "Pages linked (text + checked LLM names)": ev.taxa_scores(blind_taxa, linked),
@@ -866,12 +876,13 @@ def eval_news(
                     blind_taxa, {k: production.get(k, {}).get("taxa", []) for k in bkeys}),
             }  # fmt: skip
 
+    support = dict(sorted(Counter(map(classify.to_class, truth)).items()))
     summary = {
         "blind": blind,
         "caveats": caveats,
         "evaluated_at": dt.date.today().isoformat(), "labelled": len(keys),
         "by_lang": {lang: sum(articles[k]["lang"] == lang for k in keys) for lang in ("en", "es")},
-        "pairs": len(pairs), "support": dict(sorted(Counter(truth).items())),
+        "pairs": len(pairs), "support": support,
         "category": category, "taxa": taxa, "grouping": grouping,
     }  # fmt: skip
     out = root / "eval" / "reports" / f"{dt.date.today().isoformat()}-news"

@@ -68,6 +68,7 @@ Medidas el 2026-11-07 en el almacén y en la suite de tests.
 | Tests | 249 de pytest · 157 de dbt en cada ejecución del pipeline (150 de datos y 7 unitarios) |
 | Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |
+| Clasificador de noticias | Coincide con una persona en el 74 % de 50 titulares etiquetados a ciegas, con 4 clases (la persona coincide consigo misma en el 84 %); un baseline TF-IDF + regresión logística logra F1 macro 0,50 frente a 0,89 del LLM en 300 titulares etiquetados viendo la propuesta del LLM ([informe](eval/reports/2026-11-07-news.md), en inglés) |
 | Coste | 0 € |
 
 ## Por qué no hay Spark en la capa diaria, y Spark frente a DuckDB medido

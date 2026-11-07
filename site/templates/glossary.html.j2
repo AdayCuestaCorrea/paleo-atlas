@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.gl_title }} · {{ T.site_name }}{% endblock %}
+{% block description %}{{ T.gl_lead }}{% endblock %}
+{% block content %}
+<article class="gl-page">
+  <h1>{{ T.gl_title }}</h1>
+  <p class="gl-intro">{{ t('gl_intro', n=count(entries | length)) }}</p>
+  {% if entries %}
+  <div class="gl-tools">
+    <input type="search" id="gl-q" placeholder="{{ T.gl_search }}" aria-label="{{ T.gl_search }}" hidden>
+    <div class="gl-chips" role="group" aria-label="{{ T.gl_categories }}" hidden>
+      <button type="button" class="is-on" data-cat="">{{ T.gl_all }} <span>{{ entries | length }}</span></button>
+      {% for cat in ['anatomy', 'time', 'classification', 'animals', 'rocks'] if categories[cat] %}<button type="button" data-cat="{{ cat }}">{{ T['gl_cat_' ~ cat] }} <span>{{ categories[cat] }}</span></button>{% endfor %}
+    </div>
+    <nav class="gl-az" aria-label="A–Z">{% for l in letters %}<a href="#l-{{ l }}">{{ l }}</a>{% endfor %}</nav>
+  </div>
+  {% for l in letters %}
+  <section class="gl-letter" id="l-{{ l }}">
+    <h2>{{ l }}</h2>
+    <dl>
+      {% for e in entries if e.letter == l %}
+      <div class="gl-entry" id="{{ e.id }}" data-cat="{{ e.category }}" data-q="{{ e.search }}">
+        <dt>{{ e.term }} <span class="gl-other" lang="{{ other }}">{{ e.other }}</span></dt>
+        <dd>{{ e.html | safe }}
+          <small>{% if e.pages %}{{ t('gl_pages' ~ ('_one' if e.pages == 1 else ''), n=count(e.pages)) }} · {% endif %}{{ T['gl_cat_' ~ e.category] }} · {{ T.gl_source }}: <a href="{{ e.url }}" target="_blank" rel="noopener">Wikipedia · {{ e.title }}</a></small>
+        </dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endfor %}
+  {% endif %}
+</article>
+<script src="{{ base }}/static/glossary.js" defer></script>
+{% endblock %}

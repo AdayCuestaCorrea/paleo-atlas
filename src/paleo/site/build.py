@@ -29,6 +29,7 @@ from paleo.names import GENUS_LIKE
 from paleo.site import explore, status, taxon_page, terms
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
+from paleo.site.glossary import Glossary
 from paleo.site.indices import build_indices, unit_key, unit_name
 from paleo.site.search import build_index, card_meta
 
@@ -49,6 +50,7 @@ PATHS = {
         "about": "es/acerca.html",
         "search": "es/buscar.html",
         "status": "es/estado.html",
+        "glossary": "es/glosario.html",
         "search_index": "es/buscar.json",
         "explore_index": "es/explorar.json",
         "encyclopedia": "es/enciclopedia/index.html",
@@ -67,6 +69,7 @@ PATHS = {
         "about": "en/about.html",
         "search": "en/search.html",
         "status": "en/status.html",
+        "glossary": "en/glossary.html",
         "search_index": "en/search.json",
         "explore_index": "en/explore.json",
         "encyclopedia": "en/encyclopedia/index.html",
@@ -219,6 +222,12 @@ class SiteBuilder:
         self.env.globals["indices"] = self.indices
         self.env.globals["unit_name"] = unit_name
         self.env.globals["unit_key"] = unit_key
+        # Glossary per language (§12.2) and, while a page renders, what its prose marked
+        # and linked: the glossary terms and the taxon pages its popovers need.
+        self.glossaries = {lang: Glossary(data.glossary, lang, self.url(lang, "glossary"))
+                           for lang in ("es", "en")}  # fmt: skip
+        self.taxa_by_key = {t["taxon_key"]: t for t in data.taxa}
+        self._marked: dict[str, set[str]] | None = None
 
     # ----------------------------------------------------------------- prose
 
@@ -233,6 +242,8 @@ class SiteBuilder:
             if name == own_name or not links:
                 return f"<em>{name}</em>"
             if key:
+                if self._marked is not None:
+                    self._marked["taxa"].add(key)
                 href = self.url(lang, "taxon", key)
                 title = html.escape(self.t(lang, "link_taxon", taxon=name), quote=True)
                 return f'<a class="taxon-link" href="{href}" title="{title}"><em>{name}</em></a>'
@@ -262,6 +273,10 @@ class SiteBuilder:
             out += [escaped[pos:start], link(name)]
             pos = start + len(name)
         out.append(escaped[pos:])
+        if links and self._marked is not None and self.glossaries[lang]:
+            # glossary terms in the plain text only (never inside a name's link or <em>)
+            out = [self.glossaries[lang].mark(seg, self._marked["glossary"]) if i % 2 == 0
+                   and "*" not in seg else seg for i, seg in enumerate(out)]  # fmt: skip
         return Markup(re.sub(r"\*([^*]+)\*", r"<em>\1</em>", "".join(out)))
 
     # ------------------------------------------------------------------ urls
@@ -413,6 +428,12 @@ class SiteBuilder:
                     Page(lang, "recap", key, "recap.html.j2", {"week": key, "events": weeks[key]})
                 )
             out.append(Page(lang, "status", None, "status.html.j2", status_ctx))
+            entries = self.glossaries[lang].entries()
+            out.append(Page(lang, "glossary", None, "glossary.html.j2", {
+                "entries": entries,
+                "letters": list(dict.fromkeys(e["letter"] for e in entries)),
+                "categories": Counter(e["category"] for e in entries),
+            }))  # fmt: skip
             for kind in ("sources", "assess", "about"):
                 extra = {"gbif": data.gbif} if kind == "sources" else {}
                 out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", extra))
@@ -433,6 +454,42 @@ class SiteBuilder:
         return out
 
     def render(self, page: Page) -> str:
+        """The page's HTML. On taxon pages the prose marks glossary terms and links
+        taxa; the popovers' data (definitions, previews) goes at the end of the page."""
+        self._marked = {"glossary": set(), "taxa": set()} if page.kind == "taxon" else None
+        try:
+            out = self._render(page)
+            marked = self._marked
+        finally:
+            self._marked = None
+        if marked and (marked["glossary"] or marked["taxa"]):
+            out = out.replace("</body>", self.popover_data(page.lang, marked) + "</body>", 1)
+        return out
+
+    def popover_data(self, lang: str, marked: dict[str, set[str]]) -> str:
+        """JSON for glossary.js: definitions of the marked terms (and of the terms they
+        use) and a preview of every linked taxon page."""
+        previews = {}
+        for key in sorted(marked["taxa"]):
+            t = self.taxa_by_key.get(key)
+            if t is None:
+                continue
+            previews[key] = {
+                "name": t["taxon_name"], "meta": card_meta(t, lang),
+                "img": explore.thumb(t.get("image_url")),  # card width: Commons serves fixed ones
+                "silhouette": t.get("image_source") == "phylopic",
+            }  # fmt: skip
+        data = {
+            "glossary": self.glossaries[lang].page_data(marked["glossary"]),
+            "previews": previews,
+            "labels": {k: self.i18n[lang][k] for k in (
+                "gl_source", "gl_see", "gl_back", "gl_also")},
+        }  # fmt: skip
+        payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+        return (f'<script type="application/json" id="page-data">{payload}</script>\n'
+                f'<script src="{self.base}/static/glossary.js" defer></script>\n')  # fmt: skip
+
+    def _render(self, page: Page) -> str:
         lang, other = page.lang, "en" if page.lang == "es" else "es"
         template = self.env.get_template(page.template)
         return template.render(

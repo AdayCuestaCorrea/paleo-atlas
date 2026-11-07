@@ -193,3 +193,64 @@ def test_definitions_are_written_once_and_the_judge_can_reject(tmp_path):
     assert r.rejected == {"en": 1, "es": 1}
     en = json.loads(write.definition_path(other, "holotype", "en").read_text())
     assert en["status"] == "rejected" and en["problems"][0].startswith("judge:")
+
+
+# ------------------------------------------------------------------ the website
+
+ROWS = [
+    {"term_id": "holotype", "category": "classification", "term_en": "holotype",
+     "term_es": "holotipo", "forms_en": ["holotypes"], "forms_es": ["holotipos"],
+     "pages_en": 5, "pages_es": 4,
+     "definition_en": "The single specimen a species was described from.",
+     "definition_es": "Ejemplar único con el que se describió una especie.",
+     "source_title_en": "Holotype", "source_revid_en": 1, "source_lang_es": "es",
+     "source_title_es": "Holotipo", "source_revid_es": 2},
+    {"term_id": "species", "category": "classification", "term_en": "species",
+     "term_es": "especie", "forms_en": [], "forms_es": ["especies"], "pages_en": 9, "pages_es": 9,
+     "definition_en": "A group of organisms that can breed.", "definition_es": None,
+     "source_title_en": "Species", "source_revid_en": 3, "source_lang_es": None,
+     "source_title_es": None, "source_revid_es": None},
+]  # fmt: skip
+
+
+def test_terms_are_marked_once_and_definitions_mark_other_terms():
+    from paleo.site.glossary import Glossary
+
+    g = Glossary(ROWS, "en", "/pa/en/glossary.html")
+    used: set[str] = set()
+    out = g.mark("Two Holotypes &amp; a holotype.", used)
+    assert out.count('class="gl"') == 1 and 'data-gl="holotype">Holotypes</a>' in out
+    assert g.mark("another holotype", used) == "another holotype"  # once per page
+    assert 'data-gl="species"' in g.definition_html("holotype")
+    assert 'data-gl="holotype"' not in g.definition_html("holotype")  # never itself
+    data = g.page_data({"holotype"})
+    assert set(data) == {"holotype", "species"}  # the closure of what popovers open
+    assert data["holotype"]["url"].endswith("title=Holotype&oldid=1")
+    es = Glossary(ROWS, "es", "/pa/es/glosario.html")
+    assert set(es.terms) == {"holotype"}  # no Spanish definition published for species
+    assert es.source("holotype")["url"].startswith("https://es.wikipedia.org/")
+
+
+def test_prose_marks_terms_outside_names_and_pages_carry_their_data():
+    import datetime as dt
+
+    from paleo.site.build import Page, SiteBuilder
+    from paleo.site.data import SiteData
+
+    taxa = [{"taxon_name": n, "taxon_key": k, "page_type": "genus", "image_url": None}
+            for n, k in (("Tyrannosaurus", "tyrannosaurus"), ("Holotypus", "holotypus"))
+            ]  # fmt: skip
+    b = SiteBuilder(SiteData(taxa, {}, {}, {}, {}, dt.date(2026, 11, 1), glossary=ROWS),
+                    base="/pa")  # fmt: skip
+    b._marked = {"glossary": set(), "taxa": set()}
+    out = str(b.prose("The holotype of Tyrannosaurus is a holotype.", "en", None))
+    assert out.count('class="gl"') == 1
+    assert '<a class="taxon-link" href="/pa/en/taxa/tyrannosaurus.html"' in out
+    assert b._marked["taxa"] == {"tyrannosaurus"}
+    b._marked = None
+    assert 'class="gl"' not in str(b.prose("A holotype.", "en", None))  # only taxon pages
+    pages = [p for p in b.pages() if p.kind == "glossary"]
+    assert {p.lang for p in pages} == {"es", "en"}
+    html = b.render(next(p for p in pages if p.lang == "en"))
+    assert 'id="holotype"' in html and 'id="species"' in html
+    assert isinstance(pages[0], Page)

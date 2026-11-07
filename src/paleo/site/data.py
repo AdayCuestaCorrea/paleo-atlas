@@ -45,6 +45,8 @@ class SiteData:
     # Pipeline run log and source freshness, for the data status page.
     runs: list[dict[str, Any]] = field(default_factory=list)
     freshness: list[dict[str, Any]] = field(default_factory=list)
+    # Glossary terms with their published definitions (§12.2).
+    glossary: list[dict[str, Any]] = field(default_factory=list)
 
     @cached_property
     def silhouettes(self) -> dict[str, str]:
@@ -203,6 +205,16 @@ def load(warehouse: Path) -> SiteData:
         }
         runs = _rows(con, "select * from main.stg_pipeline__runs order by started_at")
         freshness = _rows(con, "select * from main.fct_source_freshness order by sort")
+        glossary = _rows(
+            con,
+            """
+            select * replace (list_filter(forms_en, lambda f: f <> '') as forms_en,
+                              list_filter(forms_es, lambda f: f <> '') as forms_es)
+            from main.dim_glossary_term
+            where published_en or published_es
+            order by term_id
+            """,
+        )
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -214,6 +226,7 @@ def load(warehouse: Path) -> SiteData:
         gbif=gbif[0] if gbif else None,
         neighborhood={k: dict(v) for k, v in neighborhood.items()},
         redirects=redirects, country_centroids=centroids, runs=runs, freshness=freshness,
+        glossary=glossary,
     )  # fmt: skip
 
 

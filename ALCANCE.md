@@ -310,7 +310,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [ ] Extracción del taxón mencionado y enlace a su ficha *(por el nombre en el texto y por el LLM, los dos comprobados contra las fichas: `int_news_taxa`)*
 - [x] Deduplicación de la misma noticia entre medios e idiomas: se elige el método midiendo con pares etiquetados *(2026-11-07, 47 pares etiquetados por el usuario, 6 de la misma noticia y 5 de ellos entre inglés y español: TF-IDF de caracteres F1 0,29 con umbral elegido por validación cruzada; **Groq como juez de cada par candidato** F1 1,00 con 4 llamadas. Se queda el juez: funciona en Actions sin GPU ni descargas, y cada par se pregunta una sola vez. Los embeddings no hicieron falta)*
 - [ ] Noticias en la web (ficha, «Última hora» y recaps, página propia), **con maquetas antes** de implementar
-- [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12.2), **con maquetas antes** *(en curso: términos, fuentes y definiciones comprobadas; v38)*
+- [ ] Glosario bilingüe con explicaciones emergentes en las fichas (§12.2), **con maquetas antes** *(v38: en la web; muestra de 20 revisada por el usuario: 19 correctas y 1 que no supo juzgar; faltan los reintentos de las definiciones en español, por cuota del juez)*
 - [ ] Documento de fase (`docs/fases/fase-5.md`)
 
 **Terminado cuando:** las métricas de clasificación de noticias están publicadas en el README y el glosario está en las fichas con su porcentaje de acierto en la muestra revisada.
@@ -411,7 +411,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
    - «Historial de estudios» con un gráfico por décadas y la etiqueta «Nuevo» (≤ 90 días);
    - cada estudio se abre en una pestaña nueva y lleva su idioma: el de Crossref cuando lo da, si no «título traducido» o «título original».
 5. **Índices:** por grupo, época, país *(Fase 3)*.
-6. **Glosario** *(Fase 5)*.
+6. **Glosario** *(Fase 5, v38)*: `es/glosario.html` / `en/glossary.html`, con buscador, categorías e índice A–Z; cada término con su definición, en cuántas fichas aparece y su fuente (Wikipedia con su revisión).
 7. **Cómo evaluamos las fuentes.**
 8. **Fuentes y licencias.**
 9. **Acerca de:** qué es, autoría, enlace al repo.
@@ -494,7 +494,7 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 - 150–300 términos (holotipo, terópodo, Cretácico, Ma, *nomen dubium*…), en ES + EN.
 - ~~Primer borrador con LLM, revisado a mano antes de publicar~~ *(cambiado en la v38: revisar a mano cientos de términos no es viable)*. **Cada definición, como las fichas:** una frase redactada a partir de la introducción del artículo de Wikipedia del término (en el mismo idioma, o en inglés si no hay artículo en español), citado con su revisión (`oldid`). Solo se publica si pasa todas las comprobaciones: ninguna secuencia de 8 palabras copiada de la fuente, 10–35 palabras, no se define con el propio término, ninguna cifra que no esté en la fuente y un **juez** de otra familia de modelos confirma que todo lo que dice está en la fuente. El usuario revisa una muestra al azar de ~20 y el porcentaje de acierto se publica.
 - Los términos salen de las fichas verificadas (los que aparecen en ≥3), elegidos por un LLM; su forma en español se lee de las frases españolas alineadas con las inglesas (por los hechos que citan), no se adivina. Seed `glossary_terms`. Trabajo de una vez: el pipeline diario no llama al LLM para el glosario; se rehace a mano si cambian las fuentes o aparecen términos nuevos.
-- En las fichas, los términos llevan una explicación emergente al pasar el ratón o al tocarlos; página de glosario completa.
+- En las fichas, los términos llevan una explicación emergente al pasar el ratón o al tocarlos; página de glosario completa. *(Hecho en la v38, maqueta A elegida por el usuario: la primera aparición de cada término va en verde con subrayado punteado y es un enlace a su entrada, así que funciona sin JavaScript; la ventanita muestra la palabra tal como sale en el texto y, si difiere, el término del glosario («jugal · en el glosario: yugal»); los términos dentro de una definición abren la suya en la misma ventanita, con «Volver». A petición del usuario, los nombres de taxones con ficha muestran al pasar el ratón una vista previa con imagen, grupo, edad y país; en pantallas táctiles el toque sigue abriendo la ficha.)*
 
 ---
 

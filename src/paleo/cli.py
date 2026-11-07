@@ -38,6 +38,8 @@ gbif_app = typer.Typer(
 app.add_typer(gbif_app, name="gbif")
 news_app = typer.Typer(help="Paleontology news: categories, taxa, groups.", no_args_is_help=True)
 app.add_typer(news_app, name="news")
+glossary_app = typer.Typer(help="Bilingual glossary (§12.2).", no_args_is_help=True)
+app.add_typer(glossary_app, name="glossary")
 
 Refresh = Annotated[bool, typer.Option(help="Ignore freshness and query every entity again.")]
 Year = Annotated[int | None, typer.Option(help="Year of the Wikipedia pages [default: this year].")]
@@ -165,6 +167,23 @@ def ingest_news() -> None:
         r = news_ingest.ingest_feeds(client, news_ingest.load_feeds(), raw_root=paths.raw)
     failed = f", failed: {', '.join(r.failed)}" if r.failed else ""
     typer.echo(f"News: {r.feeds} feeds, {r.items} articles, {r.new_versions} new versions{failed}")
+
+
+@ingest_app.command("glossary")
+def ingest_glossary(refresh: Refresh = False) -> None:
+    """Wikipedia leads of the glossary terms (titles and oldid in raw, text in cache)."""
+    from paleo.ingest import glossary
+
+    paths = get_paths()
+    with make_client() as client:
+        r = glossary.ingest_glossary_sources(
+            client, glossary.load_terms(), raw_root=paths.raw, refresh=refresh
+        )
+    typer.echo(
+        f"Glossary sources: {r.terms} terms, {r.skipped_fresh} fresh, accepted EN "
+        f"{r.accepted['en']} and ES {r.accepted['es']}, {r.new_versions} new versions, "
+        f"{r.failed} failed"
+    )
 
 
 @ingest_app.command("images")
@@ -463,6 +482,56 @@ def news_dedup(
         f"News groups ({method}): {r['articles']} articles, {r['links']} same-story links, "
         f"{r['groups']} groups, {r['grouped']} articles in a group of 2 or more"
     )
+
+
+def _atlas_names() -> set[str]:
+    """Every word of the scientific names with a page (they are not glossary terms)."""
+    import duckdb
+
+    con = duckdb.connect(str(get_paths().data / "warehouse.duckdb"), read_only=True)
+    names = {n for (n,) in con.sql("select taxon_name from main.dim_taxon").fetchall()}
+    return {word for name in names for word in name.split()} | _scientific_names()
+
+
+@glossary_app.command("terms")
+def glossary_terms(provider: Provider = "ollama", model: Model = None) -> None:
+    """Pick the technical terms of the verified pages (dbt/seeds/glossary_terms.csv)."""
+    from paleo.glossary import terms
+    from paleo.llm import LLM
+
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    rows = terms.build_terms(llm, get_paths().data / "derived" / "texts", _atlas_names())
+    seed = project_root() / "dbt" / "seeds" / "glossary_terms.csv"
+    terms.write_seed(rows, seed)
+    first = sum(1 for r in rows if r["batch"] == 1)
+    typer.echo(f"{len(rows)} terms ({first} in the first batch) → {seed}")
+    typer.echo(f"{llm.label}: {llm.stats}")
+
+
+JUDGE_MODEL = "qwen/qwen3.8-27b"  # another family than the writer (gpt-oss)
+
+
+@glossary_app.command("write")
+def glossary_write(provider: Provider = "ollama", model: Model = None) -> None:
+    """One checked definition per term and language (data/derived/glossary)."""
+    from paleo.glossary.write import write_definitions
+    from paleo.ingest.glossary import load_terms
+    from paleo.llm import LLM, QuotaExhausted
+
+    paths = get_paths()
+    writer = LLM(provider, model or DEFAULT_MODELS[provider])
+    judge = LLM(provider, JUDGE_MODEL if provider == "groq" else DEFAULT_MODELS[provider])
+    try:
+        r = write_definitions(writer, judge, load_terms(), derived_root=paths.data / "derived")
+    except QuotaExhausted as exc:
+        typer.echo(f"Quota exhausted ({exc}); run again tomorrow, finished calls are cached.")
+        return
+    typer.echo(
+        f"{r.terms} terms: {r.up_to_date} up to date, {r.no_source} without a source; "
+        f"verified EN {r.verified['en']} / ES {r.verified['es']}, "
+        f"rejected EN {r.rejected['en']} / ES {r.rejected['es']}"
+    )
+    typer.echo(f"{writer.label}: {writer.stats} · {judge.label}: {judge.stats}")
 
 
 Until = Annotated[
@@ -764,7 +833,19 @@ def eval_news(
         )
         grouping[f"{judge.label} as judge"] = ev.judged_scores(answers, pairs)
 
+    # How independent the labels are from what the labeller was shown (the production
+    # proposal): agreement on the category and how many proposed taxa were edited.
+    shown = {k: production.get(k, {}) for k in keys}
+    caveats = {
+        "category_as_proposed": sum(shown[k].get("category") == gold[k]["category"]
+                                    for k in keys),
+        "taxa_edited": sum(sorted(gold[k]["taxa"]) != sorted(shown[k].get("taxa", []))
+                           for k in keys),
+        "with_taxa": sum(bool(gold[k]["taxa"]) for k in keys),
+    }  # fmt: skip
+
     summary = {
+        "caveats": caveats,
         "evaluated_at": dt.date.today().isoformat(), "labelled": len(keys),
         "by_lang": {lang: sum(articles[k]["lang"] == lang for k in keys) for lang in ("en", "es")},
         "pairs": len(pairs), "support": dict(sorted(Counter(truth).items())),

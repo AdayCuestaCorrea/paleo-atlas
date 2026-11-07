@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 34 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 35 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
 
 ---
 
@@ -297,7 +297,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 ### Fase 4 — Portfolio
 - [x] README bilingüe completo (§20) *(2026-11-07, adelantado: qué es con capturas, arquitectura, por qué no hay Spark en la capa diaria y el benchmark, calidad de datos, cifras medidas ese día, fuentes y licencias, limitaciones conocidas, cómo ejecutarlo; se actualiza al cerrar cada fase)*
 - [x] ADRs D1–D10 *(2026-11-03, adelantados en la rama `fase-3`: [`docs/adr/`](docs/adr/README.md))*
-- [ ] Interview pack: one-pager, vídeo de 2 min, postmortem
+- [ ] Interview pack: one-pager y postmortem *(el vídeo de 2 min se descarta en la v35)*
 - [ ] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17
 - [ ] Enlace en LinkedIn y en el perfil de GitHub
 - [ ] Documento de fase (`docs/fases/fase-4.md`)
@@ -684,7 +684,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 
 ### Interview pack (`docs/interview-pack/`)
 - **One-pager:** producto, arquitectura, métricas, plan de evaluación.
-- **Demo:** URL pública + vídeo de 2 minutos.
+- **Demo:** URL pública (y capturas en el README).
 - **Postmortem:** qué funcionó, qué no, qué cambiaría.
 - **Historias STAR** candidatas: estado en git, historial con snapshots, retraso de PBDB, reconciliación de nombres, Spark vs DuckDB, señales de fiabilidad, verificación de fidelidad del LLM, regla de 0 €.
 
@@ -787,6 +787,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-07 | v35: **sin vídeo de demostración** en el interview pack (§7, Fase 4; §20): la demo es la propia web pública y las capturas del README. `docs/fases/fase-3.md` puesto al día con lo hecho hasta la publicación | Decisión del usuario: es poco probable que alguien lo vea |
 | 2026-11-07 | v34: **página «Estado de los datos»** (§11, página 11; §16), del backlog al alcance, a partir de la maqueta elegida por el usuario entre cuatro (panel + bitácora + la «Calidad de los datos» de otra). Datos: `read_runs` trae los campos JSON del informe; modelos `stg_raw__checked` y `fct_source_freshness` y seed `source_cadence`; piezas calculadas en `site/status.py` con tests. `paleo report`: separa los tests de datos de los unitarios y apunta como parciales los pasos aún sin cerrar (antes se perdían, como el de la web en dos ejecuciones del 7 nov). Sin tocar `pipeline.yml` | Idea aceptada por el usuario (v30) |
 | 2026-11-07 | v33: **cifras de la adaptación al español**. La comprobación de alineación solo reconocía dígitos, así que «19th century» → «siglo XIX», «the 1990s» → «los años 90» o «2» → «dos» contaban como cifras perdidas; ahora se aceptan esas formas, y una unidad convertida (3,45 t → 3450 kg) o una cifra distinta siguen fallando. El feedback de los reintentos en español (no el prompt, que no sube de versión para no readaptar todo lo verificado) pide no convertir unidades, escribir las cifras con dígitos y reformular de verdad las frases copiadas. Resultado: 2 fichas más rescatadas sin modelo y, en un piloto con la GPU sobre 4 de las 13 que seguían fallando (2,5 min, 54 °C como máximo), 3 verificadas (todas con 1–3 frases quitadas); *Maiasaura* sigue fallando por frases genéricas que coinciden con la Wikipedia en español. Fichas en español verificadas: 389 | Petición del usuario: optimizar el español antes del lote nocturno |
 | 2026-11-07 | v32: **rescate de las fichas en español**. En el lote del 2026-11-05 fallaron 56 de 214 adaptaciones, 40 de ellas por 1–3 frases. (1) La comprobación de nombres científicos buscaba subcadenas: exigía «Manu» en una frase sobre el análisis *manual* o *Carcharodon* en «carcharodontosaurinos»; ahora busca la palabra entera. Los clados escritos a medias en español («Caenagnátidos», «Talasofonea») y las terminaciones -aves y -ea cuentan como clado. (2) El rescate de hasta 3 frases (`_salvage`) también quita las frases españolas mal alineadas con su frase inglesa (otras cifras, un nombre perdido), en vez de tirar la ficha entera. (3) `paleo narrate --resalvage` aplica esto sin ningún modelo a las adaptaciones fallidas guardadas: **41 de 58 rescatadas** (22 fichas en español nuevas y 19 que sustituyen una versión anterior), 15 siguen fallando y 2 se saltan por hechos desactualizados; fichas verificadas en español: 362 → 384. Las rescatadas no tienen la pasada de gramática (igual que el rescate anterior). El prompt no cambia (cambiarlo obligaría a readaptar todo el español ya verificado) | Revisión de los fallos del lote |

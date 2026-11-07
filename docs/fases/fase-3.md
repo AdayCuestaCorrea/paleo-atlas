@@ -2,7 +2,7 @@
 
 > Alcance y casillas: [`ALCANCE.md` §7, Fase 3](../../ALCANCE.md#fase-3--enciclopedia-ampliación-y-spark). Este documento explica el porqué.
 >
-> **Estado (2026-11-03): en curso.** Hitos 1–5 y 7 hechos; el hito 6 (fichas narrativas de los géneros) avanza en lotes nocturnos. Se termina de escribir al cerrar la fase.
+> **Estado (2026-11-07): publicada, sin cerrar.** Hitos 1–5, 7 y 8 hechos y en la web desde el merge del 2026-11-07; el hito 6 (fichas narrativas de los géneros) avanza en lotes nocturnos. Se termina de escribir al cerrar la fase.
 
 ## 1. En una frase
 
@@ -18,7 +18,7 @@ Al acabar la Fase 1, la web tenía 82 especies nuevas y unas 200 fichas básicas
 4. **La historia de cada nombre** antes de 2026, y **su lugar en el árbol de la vida**.
 5. **Texto narrativo** para miles de géneros sin gastar dinero. El plan gratuito de Groq da para unas pocas especies al día, no para 2.743 géneros.
 
-Hay una restricción que lo condiciona todo: **la Fase 1 está cumpliendo sus 2 semanas de ejecución autónoma.** Nada de esta fase puede tocar `main`, la rama `data` ni `pipeline.yml`. Todo va en `fase-3` (código) y `data-fase-3` (datos), con merge al cerrar la Fase 1.
+Hay una restricción que lo condiciona todo: **la Fase 1 está cumpliendo sus 2 semanas de ejecución autónoma.** Nada de esta fase puede tocar `main`, la rama `data` ni `pipeline.yml`. Todo va en `fase-3` (código) y `data-fase-3` (datos), con merge al cerrar la Fase 1. *(El merge se adelantó al 2026-11-07, por decisión del usuario, para tener la enciclopedia publicada; las 2 semanas de la Fase 1 cuentan desde entonces. `pipeline.yml` sigue sin cambios.)*
 
 ## 3. Conceptos, desde cero
 
@@ -77,8 +77,9 @@ flowchart LR
 | H3 | Reptiles marinos (358 géneros) y peces fósiles (1.353) | `paleo/scope.py` (la regla de alcance en un solo sitio), seed `featured_fishes` |
 | H4 | Historial hacia atrás: opiniones de PBDB y páginas anuales 2009–2025 | `int_opinion_events`, `int_backfill_events`, `raw/wikipedia_past` |
 | H5 | GBIF, el job en DuckDB y en Spark, el benchmark, el mapa y los museos, y el DAG mensual | `paleo/gbif_job/`, `spark/jobs/gbif_reconcile.py`, [`benchmarks/gbif/`](../../benchmarks/gbif/results.md) |
-| H6 | Fichas narrativas de los géneros con artículo (2.743), con la GPU local *(en curso)* | `paleo narrate --scope genera --until HH:MM`, `genus_chunks_for` |
-| H7 | Clasificación completa y árbol de parentesco | `int_genus_lineage`, `fct_taxon_neighborhood`, `paleo/site/tree.py` |
+| H6 | Fichas narrativas de los géneros con artículo (2.743), con la GPU local *(en curso)*, y rescate de las adaptaciones al español que fallaban por 1–3 frases | `paleo narrate --scope genera --until HH:MM`, `genus_chunks_for`, `paleo narrate --resalvage` |
+| H7 | Clasificación completa y parientes sobre un eje de millones de años | `int_genus_lineage`, `fct_taxon_neighborhood`, `paleo/site/taxon_page.py` (sustituye al cladograma de `tree.py`) |
+| H8 | La web de una enciclopedia: portada con explorador, ficha nueva y página «Estado de los datos» | `paleo/site/explore.py`, `site/static/home.js`, `paleo/site/taxon_page.py`, `paleo/site/status.py`, `fct_source_freshness` |
 
 **Frecuencia de cada fuente** (todo cabe en el plan gratuito):
 
@@ -101,13 +102,18 @@ flowchart LR
 - **Un evento por cambio de estado, no por opinión.** PBDB guarda una opinión por cada autor que usó un nombre, y los autores discrepan durante décadas: *Brontosaurus* es sinónimo de *Apatosaurus* para Riggs en 1903, válido para Romer en 1966 y otra vez sinónimo en 1970. Un evento por opinión daría una línea temporal que va y viene. La regla es la **primera** vez que un nombre recibe cada estado, más la **revalidación** cuando la clasificación actual de PBDB lo vuelve a aceptar (Tschopp y colaboradores, 2015).
 - **Lo reconstruido no es noticia.** Los eventos `backfill` no entran en «Última hora» ni en los resúmenes semanales; si entraran, aparecerían semanas de 2015. Sus ~7.600 estudios no se buscan en Crossref, porque serían ~100 MB más en git: salen como `unchecked`, sin distintivo, y la página «Cómo evaluamos las fuentes» lo explica.
 - **Árbol de PBDB, no de Open Tree of Life** (decisión del usuario). Open Tree reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético. Si se mezclaran las dos fuentes, el vecindario de un género de Open Tree tendría muy pocos parientes. La clasificación de PBDB cubre el 100 %, y la vista avisa de que es una clasificación, no un análisis filogenético.
-- **Solo el vecindario, como SVG estático.** Dibujar 4.751 géneros no le sirve a nadie. Cada ficha enseña dos niveles: «Grupo» (el clado más bajo con al menos 3 géneros) y «Un nivel más arriba», con hasta 20 géneros, primero los más cercanos. El SVG se genera al construir la web, así que los enlaces funcionan sin JavaScript; el filtro por periodo es una mejora opcional.
-- **El texto de los géneros, con la GPU de casa.** Con la cuota de Groq, 2.743 géneros tardarían meses. Ollama con Qwen 3.5 9B tarda ~137 s por género: unas 8–12 noches en total. El lote es **reanudable** (caché del LLM por contenido y salto de lo ya hecho), para **a una hora fija** y apaga el PC. Un vigilante lo detiene si la GPU pasa de 85 °C. El wikitext de los géneros (65 MB) se queda en la caché local; cada hecho cita la revisión exacta (`oldid`), así que no hace falta versionarlo.
+- **Solo el vecindario, generado al construir la web.** Dibujar 4.751 géneros no le sirve a nadie. Cada ficha enseña dos niveles: «Grupo» (el clado más bajo con al menos 3 géneros) y «Un nivel más arriba», con hasta 20 géneros, primero los más cercanos. Se genera en el build, así que los enlaces funcionan sin JavaScript.
+- **Filas con fechas en vez de cladograma** (decisión del usuario, v30). El primer árbol era un SVG con las líneas del cladograma y el rango de cada género al pasar el ratón, que en el móvil no existe. Ahora es una fila por género sobre un eje de millones de años, con las fechas escritas junto a la barra y las bandas de los periodos. Se pierden las líneas; el parentesco se lee en el orden (los más cercanos primero) y en el clado nombrado.
+- **Maquetas con datos reales antes de implementar.** La portada, la ficha y la página de estado se decidieron igual: 3–4 maquetas en HTML con los datos del almacén (no con texto de relleno), la elección y los retoques del usuario, y después el plan. Las maquetas viven fuera del repo. Así los problemas de verdad (una imagen recortada, una etiqueta que no cabe en el móvil) salen antes de escribir el código.
+- **Una sola regla de facetas para el explorador y los índices** (`site/explore.py`). El explorador de la portada filtra por periodo, grupo y país en el navegador, y los índices de la enciclopedia son páginas estáticas. Si cada uno tuviera su regla, darían cifras distintas para «Jurásico + España»; con la misma función, dan las mismas. El explorador carga su JSON (132 KB comprimido) solo al llegar a él, y sin JavaScript los filtros enlazan a los índices.
+- **El estado del pipeline, a la vista y desde el almacén.** El informe de cada ejecución (`runs/`) ya estaba en git; ahora pasa por dbt como cualquier otra fuente (`stg_pipeline__runs`), y la frescura de cada fuente se compara con su ritmo, que es un seed y no código. La página pública enseña la duración por paso, los tests (los avisos explicados en lenguaje llano), la cobertura y una bitácora de 30 días. Para un perfil de datos, la observabilidad y la calidad son justo lo que suele quedar invisible.
+- **El texto de los géneros, con la GPU de casa.** Con la cuota de Groq, 2.743 géneros tardarían meses. Ollama con Qwen 3.5 9B tardaba ~137 s por género; con las fichas más ricas de la v26 (fuentes por secciones y curiosidades) pasó a ~3,4 min, unas 130 fichas por noche.
+- **Rescatar en vez de regenerar.** Cada ficha guarda la versión de su prompt, y cambiar el prompt obliga a rehacer todas las fichas ya verificadas. Por eso las mejoras del español fueron en las comprobaciones (que eran demasiado literales) y en el feedback de los reintentos, no en el prompt. Una adaptación que falla por 1–3 frases se publica sin ellas (`_salvage`), y `paleo narrate --resalvage` aplica las reglas nuevas a los fallos guardados sin llamar a ningún modelo. El lote es **reanudable** (caché del LLM por contenido y salto de lo ya hecho), para **a una hora fija** y apaga el PC. Un vigilante lo detiene si la GPU pasa de 85 °C. El wikitext de los géneros (65 MB) se queda en la caché local; cada hecho cita la revisión exacta (`oldid`), así que no hace falta versionarlo.
 - **Lecturas opcionales en dbt.** La rama `data` y el fixture del CI aún no tienen opiniones ni clados de PBDB, y DuckDB falla si un patrón de archivos no encuentra nada. Las macros comprueban primero con `glob()` y, si no hay archivos, devuelven una tabla vacía con los mismos tipos. El merge no rompe el pipeline diario.
 
 ## 6. Cómo se comprueba
 
-- **Tests (183 de pytest; en dbt, 130 de datos y 8 unitarios):**
+- **Tests (a 2026-11-07: 236 de pytest; en dbt, 135 de datos, 131 en verde y 4 avisos, y 6 unitarios):**
   - Tests unitarios de dbt para las reglas con más lógica: la elección del clado más específico de un género, las opiniones que dan evento y el nivel «grupo» del vecindario.
   - Tests de datos:
     - el linaje no tiene ciclos;
@@ -118,6 +124,7 @@ flowchart LR
 - **CI con el fixture:** cada cambio se prueba también en un directorio vacío, con los datos del fixture del CI (sin opiniones, clados ni páginas antiguas), para asegurar que el pipeline diario sigue en verde tras el merge.
 - **Las fuentes del texto no cambian sin querer.** Un script compara el `sources_hash` guardado en cada ficha de hechos con el de sus fuentes actuales. Después de H4 y de H7 dio 0 de 280: ningún hito obligó a rehacer los textos.
 - **Lectura humana:** el primer lote de la GPU se leyó a mano en inglés y en español; de ahí salieron nuevas reglas en los prompts (§8). La web se revisa en el navegador, también con el ancho de móvil.
+- **La lógica de la web, en funciones puras con tests:** las facetas del explorador (también su JavaScript, que se prueba con Node desde pytest), las piezas de la ficha (`srcset`, franja del tiempo, historial por décadas) y las de la página de estado (agrupación de pasos, calendario, frescura). Las plantillas solo pintan, y un test exige que la página en español y en inglés tengan la misma estructura.
 
 ## 7. Resultados reales (2026-11-03)
 
@@ -131,6 +138,16 @@ flowchart LR
 | Árbol | 4.846 de 4.930 fichas (98 %); mediana del grupo: 27 géneros |
 | Primer lote de la GPU | 201 géneros en ~7,5 h (137 s por género, 72 °C de media); verificados EN 90 % y ES 72 % |
 | Coste | 0 € |
+
+**Al publicar (2026-11-07):**
+
+| Qué | Resultado |
+|---|---|
+| Fichas | 4.890: 4.751 géneros, 115 especies nuevas y 24 taxones conocidos (los demás conocidos se integraron en la ficha de su género, con redirección) |
+| Web | 10.254 páginas en ES y EN, 330 MB, 0 problemas de enlaces |
+| Historial | 19.541 eventos y 8.195 estudios |
+| Fichas narrativas | Tras tres lotes nocturnos (3, 4 y 5 nov) y el rescate: 397 verificadas en inglés y 389 en español (362 → 389 con las v32 y v33) |
+| Ejecución diaria | ~45 s en GitHub Actions; GitHub lanza el cron de las 06:23 UTC entre 7 y 8,5 h tarde |
 
 ## 8. Qué salió mal y qué se aprendió
 
@@ -154,6 +171,15 @@ flowchart LR
   
   *Lección:* una regla que parece neutral («una de cada tipo primero») cambia qué fuente gana, y solo se nota al mirar la página.
 - **El escape de HTML de Jinja**: concatenar `<em>` con un valor ya escapado lo escapa también, y `Markup.replace` escapa lo que inserta. Las frases del historial se montan ahora en Python, con un test.
+- **Las comprobaciones del español eran demasiado literales.** En el lote del 5 nov fallaron 56 de 214 adaptaciones, y la mayoría no por estar mal:
+  - la de nombres buscaba subcadenas: exigía «Manu» en una frase que decía *manual*;
+  - la de cifras solo veía dígitos, así que «siglo XIX», «los años 90» o «dos» contaban como cifras perdidas;
+  - un clado escrito en español («Caenagnátidos») no contaba como el latino.
+  
+  Con las reglas arregladas, 43 fichas en español se rescataron sin volver a llamar al modelo (y 3 más en un piloto con la GPU). *Lección:* antes de culpar al modelo, leer los fallos uno a uno; una comprobación estricta que falla por motivos tontos esconde los fallos de verdad.
+- **El registro de ejecuciones perdía pasos.** `paleo report finish` corre dentro del propio job y pregunta a la API de GitHub por sus pasos; el de la web a veces aún no constaba como terminado, y se descartaba. Lo destapó la maqueta de la página de estado, al no cuadrar las duraciones. Ahora se apunta como parcial, y lo que no se reparte por pasos se enseña como «sin desglose» en vez de esconderlo.
+- **El cron de GitHub llega tarde.** Programado a las 06:23 UTC, se lanza entre 7 y 8,5 h después. No importa para una web que cambia una vez al día, pero la página de estado lo dice con las cifras de cada ejecución. *Lección:* el cron de Actions es «como mucho una vez al día», no una hora.
+- **La caché del navegador engaña al revisar.** Tras reconstruir la web, el navegador seguía sirviendo el CSS y el JavaScript viejos, y un arreglo parecía no funcionar. Ahora la revisión fuerza la recarga de los estáticos.
 
 ## 9. Preguntas de entrevista
 
@@ -172,12 +198,17 @@ Cada ficha guarda un hash de sus fuentes públicas y las versiones de sus prompt
 **¿Por qué un LLM local y no una API?**
 Por coste y por cuota: 2.743 géneros con el plan gratuito de Groq tardarían meses. Con la GPU de casa son unas 10 noches, a coste 0. Lo que exige: lotes reanudables, una hora de parada, un vigilante de temperatura y apagado automático. Las mismas verificaciones de fidelidad sirven para los dos proveedores.
 
+**¿Cómo sabes que el pipeline va bien?**
+Hay una página pública que lo cuenta: la duración por paso de cada ejecución, los tests de dbt (los de datos aparte de los unitarios, y cada aviso explicado con su cifra real), la frescura de cada fuente frente a su ritmo y una bitácora de 30 días. Sale del propio registro de ejecuciones, que pasa por dbt como cualquier otra fuente, así que la misma página que lo enseña también está probada. Un error de dbt detiene la publicación; un aviso se publica y se ve.
+
 **¿Cómo calculas los ancestros de 4.751 géneros?**
 Con una CTE recursiva sobre los enlaces padre-hijo de PBDB: unas 4.750 × 40 filas en milisegundos con DuckDB. Un test de datos comprueba que ninguna cadena llega al límite de recursión, lo que delataría un ciclo.
 
 ## 10. Límites y lo que queda
 
-- **H6 en curso:** quedan unos 2.540 géneros, unas 8–12 noches de GPU. Las 82 especies nuevas tendrán que reescribirse con los prompts nuevos tras el merge.
+- **H6 en curso:** quedan unos 2.350 géneros. A unas 130 fichas por noche son 2–3 semanas de lotes nocturnos con la GPU. Las 82 especies nuevas las reescribe Groq con los prompts nuevos tras el merge, al ritmo de su cuota gratuita.
+- **Las fichas en español rescatadas** (sin las frases que fallaban) no han pasado la revisión de gramática; queda una pasada solo para ellas, con la GPU.
+- **Unos 2.000 géneros sin artículo en Wikipedia** se quedan con el texto de respaldo (§11.4): no hay fuente suficiente para una ficha narrativa.
 - **Databricks Free Edition** (opcional): el mismo job de Spark en un entorno gestionado.
 - **El benchmark con 5 y 10 veces el volumen** quedó descartado: confirmaría lo que ya se sabe. Spark se lucirá mejor en un proyecto aparte, con un volumen que lo justifique.
 - **Estudios antiguos sin comprobar:** cruzarlos cada mes con Retraction Watch, sin guardar un registro por DOI (backlog).

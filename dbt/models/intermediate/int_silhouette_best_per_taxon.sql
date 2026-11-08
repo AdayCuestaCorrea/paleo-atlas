@@ -21,9 +21,13 @@ with lineage as (
     from {{ ref('dim_taxon') }} as t,
          unnest(t.classification) with ordinality as c(node, pos)
     union all
+    -- Only for a classified taxon: a new species PBDB has not classified yet would get
+    -- the silhouette of its whole group (Dinosauria is an Eoraptor, not a tyrannosaur).
+    -- Once PBDB classifies it, the daily run finds its clades and draws it.
     select t.taxon_key, g.clade_name, 'group', 1000
     from {{ ref('dim_taxon') }} as t
     inner join {{ ref('group_clades') }} as g using (taxon_group)
+    where len(coalesce(t.classification, [])) > 0
 ),
 
 candidates as (

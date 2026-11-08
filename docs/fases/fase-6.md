@@ -102,7 +102,7 @@ flowchart LR
 |---|---|
 | Frases con una longitud | 2.868 en 610 taxones con hechos |
 | Aceptadas | 1.182: 440 por la regla y el resto por el LLM, que etiquetó ~1.190 frases dudosas |
-| Taxones con tamaño | 429 (416 dibujables en la web publicada; tras el arreglo de la v42, 423, y 190 con la silueta del propio animal o su género en vez de 71) |
+| Taxones con tamaño | 429 (416 dibujables en la web publicada; tras el arreglo de la v42, 417, y 190 con la silueta del propio animal o su género en vez de 71) |
 | Coste del LLM | ~150.000 tokens de gpt-oss en un día (de 200.000 gratuitos); luego solo frases nuevas |
 | Siluetas | 177 archivos limpios (1,5 MB); 42 poses excluidas |
 | Índice del comparador | ~286 KB sin comprimir por idioma, cargado solo al abrir la ventana |
@@ -142,7 +142,7 @@ flowchart LR
 
 - **La altura es aproximada** y muchas veces sale de la silueta del grupo, no del propio animal. Se dice en cada caso.
 - **6 taxones con tamaño no se dibujan** (v42): los pterosaurios, porque PhyloPic casi solo tiene pterosaurios en vuelo y se miden por la envergadura.
-- **Las especies nuevas sin clasificación en PBDB** caen en la silueta de su grupo (Dinosauria es un *Eoraptor*), que puede no parecerse al animal.
+- **Las especies nuevas que PBDB aún no ha clasificado no se dibujan** (6 en la v42): la única silueta posible era la de todo su grupo (Dinosauria es un *Eoraptor*). Se dibujan solas cuando PBDB las clasifica. La ejecución diaria vuelve a consultar PBDB por nombre cada 7 días y el catálogo cada mes; después consulta PhyloPic para sus clados y descarga la silueta. Lo que no es automático es la revisión de las poses: una silueta nueva en mala pose saldría publicada hasta que alguien la añada a `silhouette_exclusions`.
 - **La envergadura no se usa**, y es como se mide a los pterosaurios (backlog). Tampoco la masa (backlog).
 - **Las referencias son pocas** (8) y la persona promedio es española (NCD-RisC, 19 años); en la página en inglés también.
 - **El autobús mide la longitud máxima legal en la UE** (13,5 m), porque es la cifra que da la fuente; un autobús urbano típico es algo más corto.

@@ -198,9 +198,31 @@ def ingest_images(
             "from (itself, its genus and its clades)."
         ),
     ] = False,
+    phylopic_missing: Annotated[
+        bool,
+        typer.Option(
+            help="Only PhyloPic, now: look up again the one-word names (genera, clades) "
+            "stored as not found, which may be kept as the node of their species."
+        ),
+    ] = False,
 ) -> None:
     """Commons files from the Wikipedia tables and PhyloPic silhouettes."""
     paths = get_paths()
+    if phylopic_missing:
+        store = images.phylopic_store(paths.raw)
+        names = []
+        for key in store.stored_keys():
+            latest = store.latest(key)
+            payload = (latest or {}).get("payload") or {}
+            name = payload.get("name") or ""
+            if name and " " not in name and not payload.get("found"):
+                names.append(name)
+        with make_client() as client:
+            n, found, new = images.refresh_phylopic(client, sorted(names), raw_root=paths.raw)
+        typer.echo(
+            f"PhyloPic (not found before): {n} lookups ({found} with an image), {new} new versions"
+        )
+        return
     if phylopic_for_sizes:
         import duckdb
 
@@ -211,6 +233,7 @@ def ingest_images(
                 select t.taxon_name as node from {sized}
                 union all select t.genus_name from {sized}
                 union all select c.node.name from {sized}, unnest(t.classification) as c(node)
+                union all select proxy_name from main.silhouette_proxies
             ) where node is not null order by node""").fetchall()]  # fmt: skip
         con.close()
         with make_client() as client:

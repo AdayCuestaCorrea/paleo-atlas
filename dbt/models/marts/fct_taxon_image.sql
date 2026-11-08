@@ -31,6 +31,11 @@ with candidates as (
     left join {{ ref('int_image_best_per_taxon') }} as hero
         on hero.taxon_key = f.taxon_key and hero.image_ref = f.file_name
     where hero.taxon_key is null  -- the main image is shown above, not again
+      and not exists (
+          select 1 from {{ ref('image_exclusions') }} as x
+          where x.taxon_key = f.taxon_key
+            and replace(x.file_name, ' ', '_') = replace(f.file_name, ' ', '_')
+      )
       and i.mime_type in ('image/jpeg', 'image/png', 'image/svg+xml', 'image/webp', 'image/gif', 'image/tiff')
       and coalesce(i.author, i.credit) is not null
 ),

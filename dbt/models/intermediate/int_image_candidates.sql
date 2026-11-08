@@ -103,3 +103,9 @@ from (
     union all select * from phylopic
 ) as c
 left join {{ ref('license_allowlist') }} as a using (license_id)
+-- Files checked by eye that show another animal, a map or a locality (seed image_exclusions).
+where not exists (
+    select 1 from {{ ref('image_exclusions') }} as x
+    where c.image_source = 'commons' and x.taxon_key = c.taxon_key
+      and replace(x.file_name, ' ', '_') = replace(c.image_ref, ' ', '_')
+)

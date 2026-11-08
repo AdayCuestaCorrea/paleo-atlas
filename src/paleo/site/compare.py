@@ -112,9 +112,9 @@ LABELS = (
     "cmp_smallest", "cmp_add", "cmp_search", "cmp_more", "cmp_kind_taxon", "cmp_kind_people",
     "cmp_kind_animals", "cmp_kind_objects", "cmp_remove", "cmp_long", "cmp_tall",
     "cmp_height_approx", "cmp_sil_taxon", "cmp_sil_genus", "cmp_sil_clade", "cmp_sil_group",
-    "cmp_sil_own", "cmp_source", "cmp_estimates", "cmp_partial", "cmp_old", "cmp_error",
-    "cmp_warn", "cmp_history", "cmp_max_items", "cmp_aria", "cmp_measure", "cmp_page",
-    "cmp_details", "cmp_none",
+    "cmp_sil_proxy", "cmp_sil_own", "cmp_source", "cmp_estimates", "cmp_partial", "cmp_old",
+    "cmp_error", "cmp_warn", "cmp_history", "cmp_max_items", "cmp_aria", "cmp_measure",
+    "cmp_page", "cmp_details", "cmp_none",
 )  # fmt: skip
 
 

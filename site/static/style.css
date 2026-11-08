@@ -128,7 +128,7 @@ img { max-width: 100%; }
 .authority { color: var(--muted); margin: 0 0 1rem; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1rem; margin: 0; }
 .facts dt { font-weight: 600; color: var(--fossil); font-size: 0.9rem; }
-.facts dd { margin: 0; }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
 .prose { max-width: 46rem; }
 .prose p { margin: 0.4em 0 1em; }
 .ref { font-size: 0.7em; margin-left: 0.1em; }
@@ -499,7 +499,7 @@ a.news__title:hover { color: var(--ochre); text-decoration: underline; }
 .tx-glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 46%), 1fr)); gap: 0.6rem; margin: 1rem 0 0.6rem; }
 .tx-glance > div { background: var(--card); border-radius: 12px; padding: 0.6rem 0.8rem; box-shadow: var(--shadow); min-width: 0; }
 .tx-glance small { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 700; }
-.tx-glance b { display: block; font-family: var(--serif); font-size: 1.12rem; line-height: 1.2; margin: 0.15rem 0; }
+.tx-glance b { display: block; font-family: var(--serif); font-size: 1.12rem; line-height: 1.2; margin: 0.15rem 0; overflow-wrap: anywhere; hyphens: auto; }
 .tx-glance span { font-size: 0.78rem; color: var(--muted); }
 .tx-glance a { color: inherit; }
 .tx-time { width: 100%; height: auto; display: block; margin-bottom: 0.4rem; }

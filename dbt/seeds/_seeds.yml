@@ -33,6 +33,30 @@ seeds:
     columns:
       - name: image_uuid
         data_tests: [unique, not_null]
+  - name: silhouette_proxies
+    description: >
+      Taxa of the size comparator with no usable silhouette of their own genus (none on
+      PhyloPic, or only non-commercial ones) drawn with the silhouette of a relative
+      chosen by hand, of a similar build, instead of their clade's. The comparator says
+      so ("silhouette of a relative: Dreadnoughtus"). The license filter still applies.
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: proxy_name
+        data_tests: [not_null]
+      - name: image_uuid
+        data_tests: [not_null]
+  - name: image_exclusions
+    description: >
+      Commons files that must not be the picture or a gallery image of one taxon page,
+      checked by eye (scripts/audit_header_images.py): they show another genus, a map or
+      a fauna chart. Per page: the same file can be right on another page (Kaiwhekea's
+      own). The page falls back to its next candidate.
+    columns:
+      - name: taxon_key
+        data_tests: [not_null]
+      - name: file_name
+        data_tests: [not_null]
   - name: license_allowlist
     description: >
       Image licenses (normalized ids). Only `allowed = true` licenses can be shown

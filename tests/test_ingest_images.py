@@ -93,8 +93,11 @@ def image(uuid, license_url, node_title="Giganotosaurus carolinii"):
     }
 
 
-def phylopic_handler(known, clade_images=None):
+def phylopic_handler(known, clade_images=None, autocomplete=None):
     def handler(request):
+        if request.url.path == "/autocomplete":
+            matches = (autocomplete or {}).get(request.url.params["query"], [])
+            return httpx.Response(200, json={"build": BUILD, "matches": matches})
         if request.url.path == "/images":
             items = (clade_images or {}).get(request.url.params["filter_clade"], [])
             return httpx.Response(200, json={"_embedded": {"items": items}})
@@ -265,3 +268,85 @@ def test_a_homonym_among_the_second_names_is_not_used():
     chitons["names"].append([{"class": "scientific", "text": "Loricata"}])
     with make_client(httpx.MockTransport(phylopic_handler({"loricata": chitons}))) as client:
         assert not images.fetch_phylopic(client, "Loricata", BUILD)["found"]
+
+
+def species_node(name, uuid, license_url="https://creativecommons.org/publicdomain/zero/1.0/"):
+    out = node(name, license_url)
+    out["uuid"] = uuid
+    out["_embedded"]["primaryImage"]["uuid"] = f"img-{uuid}"
+    return out
+
+
+def test_a_genus_kept_only_as_its_species_node_is_found_by_autocomplete():
+    # "Acrocanthosaurus atokensis" has no second name: the exact lookup of the genus
+    # misses it, the autocomplete finds it.
+    known = {"acrocanthosaurus atokensis": species_node("Acrocanthosaurus atokensis", "n-a")}
+    others = {"n-a": [image("img-2", "https://creativecommons.org/publicdomain/zero/1.0/",
+                            "Acrocanthosaurus atokensis")]}  # fmt: skip
+    hints = {"acrocanthosaurus": ["acrocanthosaurus atokensis"]}
+    with make_client(httpx.MockTransport(phylopic_handler(known, others, hints))) as client:
+        out = images.fetch_phylopic(client, "Acrocanthosaurus", BUILD)
+    assert out["found"] and out["node_uuid"] == "n-a"
+    assert out["species_nodes"] == ["acrocanthosaurus atokensis"]
+    assert [i["uuid"] for i in out["images"]] == ["img-n-a", "img-2"]
+
+
+def test_the_autocomplete_only_takes_species_of_that_genus():
+    known = {"tarbosaurusoides x": species_node("Tarbosaurusoides x", "n-x")}
+    hints = {"tarbosaurus": ["tarbosaurusoides x", "tarbosaurus"]}
+    with make_client(httpx.MockTransport(phylopic_handler(known, None, hints))) as client:
+        assert not images.fetch_phylopic(client, "Tarbosaurus", BUILD)["found"]
+
+
+def test_several_species_nodes_are_merged_primaries_first():
+    known = {
+        "testosaurus rex": species_node("Testosaurus rex", "n-r"),
+        "testosaurus minor": species_node("Testosaurus minor", "n-m"),
+    }
+    cc0 = "https://creativecommons.org/publicdomain/zero/1.0/"
+    others = {"n-r": [image("img-r2", cc0, "Testosaurus rex")]}
+    hints = {"testosaurus": ["testosaurus rex", "testosaurus minor"]}
+    with make_client(httpx.MockTransport(phylopic_handler(known, others, hints))) as client:
+        out = images.fetch_phylopic(client, "Testosaurus", BUILD)
+    assert [i["uuid"] for i in out["images"]] == ["img-n-r", "img-n-m", "img-r2"]
+    assert out["image"]["uuid"] == "img-n-r"
+
+
+def test_a_species_name_does_not_ask_the_autocomplete():
+    hints = {"testosaurus rex": ["testosaurus rex foo"]}
+    with make_client(httpx.MockTransport(phylopic_handler({}, None, hints))) as client:
+        assert not images.fetch_phylopic(client, "Testosaurus rex", BUILD)["found"]
+
+
+def test_a_species_filed_under_another_genus_is_taken_as_a_labelled_synonym():
+    # PhyloPic files Gorgosaurus libratus as "Albertosaurus libratus"; "Gorgosaurus
+    # lancensis" is an old name of Nanotyrannus. Both are kept, labelled with the binomial
+    # looked up; dbt only draws the one PBDB counts as a valid species of the genus.
+    albertosaurus = species_node("Albertosaurus libratus", "n-al")
+    albertosaurus["names"].append([{"class": "scientific", "text": "Gorgosaurus libratus"}])
+    albertosaurus["_embedded"]["primaryImage"]["_links"]["specificNode"] = {
+        "title": "Albertosaurus libratus"
+    }
+    nano = species_node("Nanotyrannus lancensis", "n-na")
+    nano["names"].append([{"class": "scientific", "text": "Gorgosaurus lancensis"}])
+
+    def handler(request):
+        if request.url.path == "/autocomplete":
+            return httpx.Response(200, json={"matches": [
+                "gorgosaurus", "gorgosaurus lancensis", "gorgosaurus libratus"]})  # fmt: skip
+        if request.url.path == "/images":
+            return httpx.Response(200, json={"_embedded": {"items": []}})
+        wanted = request.url.params["filter_name"]
+        items = {"gorgosaurus lancensis": [nano], "gorgosaurus libratus": [albertosaurus]}
+        if wanted not in items:
+            return httpx.Response(404, json={"errors": []})
+        return httpx.Response(200, json={"_embedded": {"items": items[wanted]}})
+
+    with make_client(httpx.MockTransport(handler)) as client:
+        out = images.fetch_phylopic(client, "Gorgosaurus", BUILD)
+    assert out["species_nodes"] == ["gorgosaurus lancensis", "gorgosaurus libratus"]
+    assert [(i["node"], i.get("synonym_of")) for i in out["images"]] == [
+        ("Gorgosaurus lancensis", "nanotyrannus lancensis"),
+        ("Gorgosaurus libratus", "Albertosaurus libratus"),
+    ]
+    assert out["image"] is None  # a synonym node gives no page picture

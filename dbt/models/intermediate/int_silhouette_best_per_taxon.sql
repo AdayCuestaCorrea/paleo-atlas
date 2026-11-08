@@ -9,22 +9,28 @@
 -- non-commercial primary does not send the taxon up to a clade. Pterosaurs are not
 -- drawn: nearly every PhyloPic pterosaur is in flight, and they are measured by their
 -- wingspan, not their length (wingspan in the comparator is in the backlog, §24).
+-- With no silhouette of its own genus, a relative chosen by hand comes before the clades
+-- (seed silhouette_proxies: Argentinosaurus is drawn as Dreadnoughtus, not as the
+-- clade's Neuquensaurus, a small and stocky titanosaur).
 with lineage as (
-    select taxon_key, taxon_name as node, 'taxon' as level, 0 as depth
+    select taxon_key, taxon_name as node, 'taxon' as level, 0 as depth, null as pick
     from {{ ref('dim_taxon') }}
     union all
-    select taxon_key, genus_name, 'genus', 1
+    select taxon_key, genus_name, 'genus', 1, null
     from {{ ref('dim_taxon') }}
     where genus_name is not null and genus_name <> taxon_name
     union all
-    select t.taxon_key, c.node.name, 'clade', 2 + len(t.classification) - c.pos
+    select taxon_key, proxy_name, 'proxy', 2, image_uuid
+    from {{ ref('silhouette_proxies') }}
+    union all
+    select t.taxon_key, c.node.name, 'clade', 3 + len(t.classification) - c.pos, null
     from {{ ref('dim_taxon') }} as t,
          unnest(t.classification) with ordinality as c(node, pos)
     union all
     -- Only for a classified taxon: a new species PBDB has not classified yet would get
     -- the silhouette of its whole group (Dinosauria is an Eoraptor, not a tyrannosaur).
     -- Once PBDB classifies it, the daily run finds its clades and draws it.
-    select t.taxon_key, g.clade_name, 'group', 1000
+    select t.taxon_key, g.clade_name, 'group', 1000, null
     from {{ ref('dim_taxon') }} as t
     inner join {{ ref('group_clades') }} as g using (taxon_group)
     where len(coalesce(t.classification, [])) > 0
@@ -62,6 +68,11 @@ candidates as (
         on a.license_id = i.license_id_raw and a.allowed
     where i.vector_url is not null
       and i.image_uuid not in (select image_uuid from {{ ref('silhouette_exclusions') }})
+      and (l.pick is null or i.image_uuid = l.pick)
+      -- A species PhyloPic files under another genus only for a species PBDB counts as
+      -- valid ("Gorgosaurus libratus", not the old "Gorgosaurus lancensis" = Nanotyrannus).
+      and (i.synonym_of is null or i.image_node = t.taxon_name
+           or list_contains(t.species_names, i.image_node))
       -- At the taxon and genus levels only the same genus: PhyloPic files some genera
       -- under others (Bannykus under Haplocheirus); those count as the group's, higher up.
       and (l.level not in ('taxon', 'genus')

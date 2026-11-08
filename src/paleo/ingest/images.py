@@ -401,35 +401,108 @@ def _phylopic_clade_images(client: httpx.Client, node_uuid: str, build: int) -> 
     return body.get("_embedded", {}).get("items", [])
 
 
-def fetch_phylopic(client: httpx.Client, name: str, build: int) -> dict[str, Any]:
-    """Silhouettes of the PhyloPic node named exactly ``name`` (any of its names): the
-    primary image and the first others of the node and its descendants, each with its
-    license (the license filter lives in dbt)."""
+def _phylopic_node(
+    client: httpx.Client, name: str, build: int, *, synonym: bool = False
+) -> dict[str, Any] | None:
+    """The PhyloPic node named exactly ``name`` (see ``_names_node``), or None. With
+    ``synonym``, a binomial may be any of the node's names: PhyloPic lumps genera that
+    PBDB keeps apart ("Tarbosaurus bataar" is a name of its "Tyrannosaurus bataar")."""
     try:
         body = _phylopic_nodes(client, name, build)
     except HttpError as exc:
         if exc.status_code == 404:  # PhyloPic answers 404 when nothing matches
-            return {"name": name, "found": False, "build": build}
+            return None
         raise
     items = body.get("_embedded", {}).get("items", [])
-    node = next((n for n in items if _names_node(n, name)), None)
-    if node is None:
+    if synonym:
+        wanted = name.lower()
+        return next((n for n in items if wanted in _all_names(n)), None)
+    return next((n for n in items if _names_node(n, name)), None)
+
+
+def _all_names(node: dict[str, Any]) -> list[str]:
+    return [_scientific(n) for n in node.get("names") or []]
+
+
+# Species nodes of a genus looked at when the genus has no node of its own.
+PHYLOPIC_SPECIES_NODES = 6
+
+
+def _phylopic_species_names(client: httpx.Client, genus: str, build: int) -> list[str]:
+    """Names of the species nodes of ``genus`` ("acrocanthosaurus atokensis"): PhyloPic
+    often keeps a genus only as the node of its species, and that node does not always
+    carry the genus as a second name, so the exact lookup misses it."""
+    try:
+        body = get_json(
+            client, PHYLOPIC_API + "/autocomplete", {"build": build, "query": genus.lower()},
+            headers={"Accept": PHYLOPIC_ACCEPT},
+        )  # fmt: skip
+    except HttpError as exc:
+        if exc.status_code == 404:
+            return []
+        raise
+    prefix = genus.lower() + " "
+    matches = [m for m in body.get("matches") or [] if isinstance(m, str) and m.startswith(prefix)]
+    return matches[:PHYLOPIC_SPECIES_NODES]
+
+
+def fetch_phylopic(client: httpx.Client, name: str, build: int) -> dict[str, Any]:
+    """Silhouettes of the PhyloPic node named exactly ``name`` (any of its names): the
+    primary image and the first others of the node and its descendants, each with its
+    license (the license filter lives in dbt).
+
+    A genus without a node of its own takes the images of its species' nodes. When
+    PhyloPic files a species under another genus, the node is still taken if the
+    binomial is one of its names; its own images are labelled with that binomial and
+    ``synonym_of`` (dbt only draws them for a species PBDB counts as valid: "Gorgosaurus
+    lancensis" is also an old name of Nanotyrannus), and it gives no page picture."""
+    nodes: list[tuple[dict[str, Any], str | None]] = []  # (node, binomial if a synonym)
+    node = _phylopic_node(client, name, build)
+    if node is not None:
+        nodes = [(node, None)]
+    elif " " not in name.strip():
+        for species in _phylopic_species_names(client, name, build):
+            found, alias = _phylopic_node(client, species, build), None
+            if found is None:
+                found = _phylopic_node(client, species, build, synonym=True)
+                alias = species
+            if found is not None and all(found["uuid"] != n["uuid"] for n, _ in nodes):
+                nodes.append((found, alias))
+    if not nodes:
         return {"name": name, "found": False, "build": build}
-    primary = node.get("_embedded", {}).get("primaryImage")
-    images = [primary] if primary else []
-    for image in _phylopic_clade_images(client, node["uuid"], build):
-        if len(images) >= PHYLOPIC_IMAGES:
-            break
-        if all(image.get("uuid") != i.get("uuid") for i in images):
-            images.append(image)
-    return {
+    images: list[dict[str, Any]] = []
+
+    def add(image: dict[str, Any] | None, n: dict[str, Any], alias: str | None) -> None:
+        if not image or len(images) >= PHYLOPIC_IMAGES:
+            return
+        if any(image.get("uuid") == i["uuid"] for i in images):
+            return
+        out = _phylopic_image(image)
+        if alias:
+            own = out["node"] is None or out["node"].lower() == _all_names(n)[0]
+            if own:  # the synonym node's own picture: name it as PBDB does
+                out["synonym_of"] = out["node"] or _all_names(n)[0]
+                out["node"] = alias[:1].upper() + alias[1:]  # "Gorgosaurus libratus"
+        images.append(out)
+
+    for n, alias in nodes:  # the primaries first, then the others of each node
+        add(n.get("_embedded", {}).get("primaryImage"), n, alias)
+    for n, alias in nodes:
+        for image in _phylopic_clade_images(client, n["uuid"], build):
+            add(image, n, alias)
+    first, first_alias = nodes[0]
+    primary = first.get("_embedded", {}).get("primaryImage")
+    out = {
         "name": name,
         "found": bool(images),
         "build": build,
-        "node_uuid": node.get("uuid"),
-        "image": _phylopic_image(primary) if primary else None,
-        "images": [_phylopic_image(i) for i in images],
+        "node_uuid": first.get("uuid"),
+        "image": _phylopic_image(primary) if primary and not first_alias else None,
+        "images": images,
     }
+    if node is None:
+        out["species_nodes"] = [alias or _all_names(n)[0] for n, alias in nodes]
+    return out
 
 
 def refresh_phylopic(

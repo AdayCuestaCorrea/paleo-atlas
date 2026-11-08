@@ -145,14 +145,24 @@
     var inPop = e.target.closest(".gl-pop");
     open(a, inPop ? +inPop.dataset.level + 1 : 0, true);
   });
+  // What made the click: a tap must never follow the term's link, even when the tap
+  // already focused it and "focusin" opened the popover (Chrome on Android). Only the
+  // popover's own "see in the glossary" link navigates. A mouse click still does.
+  var lastPointer = "";
+  document.addEventListener("pointerdown", function (e) { lastPointer = e.pointerType || ""; }, true);
   document.addEventListener("click", function (e) {
     var g = e.target.closest("a.gl");
     var inPop = e.target.closest(".gl-pop");
-    if (touch && g) {  // a tap opens the definition (inside a popover, one more on top)
+    var tapped = lastPointer === "touch" || lastPointer === "pen" || (!lastPointer && touch);
+    if (tapped && g) {  // a tap opens the definition (inside a popover, one more on top)
+      e.preventDefault();
       var level = inPop ? +inPop.dataset.level + 1 : 0;
-      if (!(stack[level] && stack[level].trigger === g)) { e.preventDefault(); open(g, level, true); return; }
+      if (!(stack[level] && stack[level].trigger === g)) open(g, level, true);
+      return;
     }
     if (!inPop && !g) closeFrom(0);
   });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeFrom(stack.length - 1); });
+  document.addEventListener("keydown", function (e) { lastPointer = "key"; if (e.key === "Escape") closeFrom(stack.length - 1); });
+  // Coming back to the page from the glossary: no popover left open.
+  window.addEventListener("pageshow", function (e) { if (e.persisted) closeFrom(0); });
 })();

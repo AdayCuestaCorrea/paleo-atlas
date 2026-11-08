@@ -29,6 +29,8 @@ select
     position,
     image ->> 'uuid' as image_uuid,
     image ->> 'node' as image_node,
+    -- Set when PhyloPic files this species under another genus (its node's own name).
+    image ->> 'synonym_of' as synonym_of,
     image ->> 'attribution' as attribution,
     image ->> 'contributor' as contributor,
     image ->> 'license_url' as license_url,

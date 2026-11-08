@@ -131,6 +131,28 @@ def test_each_check_catches_its_problem():
     ]
 
 
+def test_numbers_in_words_are_checked_too():
+    source = "The Cretaceous ended 66 million years ago; the stage began 72.1 million years ago."
+    same = "The time of the last dinosaurs, which ended about sixty-six million years ago."
+    assert write.deterministic_problems(same, source, ["maastrichtian"]) == []
+    other = "The time of the last dinosaurs, which ended about fifty-eight million years ago."
+    assert write.deterministic_problems(other, source, ["maastrichtian"]) == [
+        "numbers not in the source: 58000000"
+    ]
+    es = (
+        "La época de los últimos dinosaurios, que terminó hace unos cincuenta y ocho "
+        "millones de años."
+    )
+    assert write.deterministic_problems(es, source, ["maastrichtiense"]) == [
+        "numbers not in the source: 58000000"
+    ]
+    rounded = "A span of the Late Cretaceous that began about seventy-two million years ago."
+    assert write.deterministic_problems(rounded, source, ["maastrichtian"]) == []
+    # Small numbers are ordinary words, not figures.
+    small = "One of the two great groups of dinosaurs, with hips shaped like those of birds."
+    assert write.deterministic_problems(small, source, ["ornithischia"]) == []
+
+
 class Writer:
     label = "fake/writer"
 

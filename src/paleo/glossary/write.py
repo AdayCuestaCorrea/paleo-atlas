@@ -30,7 +30,7 @@ from pydantic import BaseModel
 from paleo.glossary.terms import form_pattern
 from paleo.ingest.glossary import index_store, lead_store
 from paleo.llm import LLM
-from paleo.narrative.checks import copied_runs, ngrams, numbers, words
+from paleo.narrative.checks import copied_runs, ngrams, numbers, spelled_numbers, words
 from paleo.narrative.facts import prompt
 from paleo.store import _atomic_write
 
@@ -81,7 +81,12 @@ def deterministic_problems(definition: str, source: str, forms: list[str]) -> li
         problems.append(f"copied: {run}")
     if form_pattern(forms).search(definition):
         problems.append("circular: uses the term")
-    extra = numbers(definition) - numbers(source)
+    known = numbers(source).union(*spelled_numbers(source))
+    extra = numbers(definition) - known
+    # Written in words: "fifty-eight million" may be "58 million" or "58,000,000", or a
+    # rounded "58.3 million" (nobody spells out decimals).
+    rounded = known | {str(f(float(n))) for n in known if "." in n for f in (int, round)}
+    extra |= {max(forms, key=len) for forms in spelled_numbers(definition) if not forms & rounded}
     if extra:
         problems.append(f"numbers not in the source: {', '.join(sorted(extra))}")
     return problems

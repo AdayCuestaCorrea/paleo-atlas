@@ -370,6 +370,81 @@ _ES_NUMBER_WORDS = {
     "sesenta": 60, "setenta": 70, "ochenta": 80, "noventa": 90, "cien": 100, "ciento": 100,
     "mil": 1000,
 }  # fmt: skip
+_EN_NUMBER_WORDS = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8,
+    "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14,
+    "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19,
+    "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60, "seventy": 70,
+    "eighty": 80, "ninety": 90,
+}  # fmt: skip
+_ES_EXTRA_WORDS = {
+    "veintiun": 21, "veintiuno": 21, "veintiuna": 21, "veintidos": 22, "veintitres": 23,
+    "veinticuatro": 24, "veinticinco": 25, "veintiseis": 26, "veintisiete": 27,
+    "veintiocho": 28, "veintinueve": 29, "doscientos": 200, "doscientas": 200,
+    "trescientos": 300, "trescientas": 300, "cuatrocientos": 400, "cuatrocientas": 400,
+    "quinientos": 500, "quinientas": 500, "seiscientos": 600, "seiscientas": 600,
+    "setecientos": 700, "setecientas": 700, "ochocientos": 800, "ochocientas": 800,
+    "novecientos": 900, "novecientas": 900,
+}  # fmt: skip
+_SPELLED_SMALL = {k: v for k, v in _ES_NUMBER_WORDS.items() if v < 100}
+_SPELLED_SMALL |= _EN_NUMBER_WORDS | {k: v for k, v in _ES_EXTRA_WORDS.items() if v < 100}
+_HUNDREDS = {"hundred": 100, "cien": 100, "ciento": 100} | {
+    k: v for k, v in _ES_EXTRA_WORDS.items() if v >= 100
+}
+_SCALES = {"thousand": 1000, "mil": 1000, "million": 10**6, "millon": 10**6,
+           "millones": 10**6, "billion": 10**9}  # fmt: skip
+
+
+def spelled_numbers(text: str) -> list[set[str]]:
+    """Numbers written in words, in English or Spanish ("fifty-eight million",
+    "cincuenta y ocho millones"), each as the forms it may take in digits: the whole
+    value and, before "million" or larger, the number in front of it ("58 million" ->
+    58). Small numbers alone (one to twelve) are left out: they are ordinary words ("one
+    of the", "dos grupos") more often than figures. "Mil millones" is a (short) billion."""
+    tokens = re.findall(r"\w+", _fold(text).replace("-", " "))
+    found: list[set[str]] = []
+    i = 0
+    while i < len(tokens):
+        total = current = used = 0
+        coefficient = None
+        j = i
+        while j < len(tokens):
+            t = tokens[j]
+            if t in _SPELLED_SMALL and (not used or current % 10 == 0):
+                current += _SPELLED_SMALL[t]
+            elif t == "hundred" and used:
+                current *= 100
+            elif t in _HUNDREDS and t != "hundred":
+                current += _HUNDREDS[t]
+            elif t in _SCALES and (used or t == "mil"):
+                scale = _SCALES[t]
+                if t == "mil" and tokens[j + 1 : j + 2] in (["millones"], ["millon"]):
+                    scale, j = 10**9, j + 1
+                if scale >= 10**6 and coefficient is None:
+                    coefficient = total + (current or 1)
+                total += (current or 1) * scale
+                current = 0
+            elif (
+                t in ("and", "y")
+                and used
+                and tokens[j + 1 : j + 2]
+                and tokens[j + 1] in _SPELLED_SMALL
+            ):
+                pass
+            else:
+                break
+            used += 1
+            j += 1
+        if not used:
+            i += 1
+            continue
+        value = total + current
+        if total or value > 12:
+            found.append({str(value)} | ({str(coefficient)} if coefficient else set()))
+        i = j
+    return found
+
+
 _ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50}
 
 

@@ -4,7 +4,7 @@
 
 > **English summary of [`ALCANCE.md`](ALCANCE.md)**, which is canonical and much longer (phases with every checkbox, decisions, risks, the full change log). This summary is updated when a phase closes, not on every change. If the two do not match, `ALCANCE.md` wins. Section numbers follow `ALCANCE.md`, so `ALCANCE.md` §N is the detail of §N here.
 
-**Summarised from version:** 46 (2026-11-08) · **Status:** Phases 0, 2, 4 (except the LinkedIn post), 5 and 6 done; Phase 1 completing its 2 unattended weeks (until 2026-11-21); Phase 3 published, with narrative pages for the whole encyclopedia still growing in batches.
+**Summarised from version:** 46 (2026-11-08) · **Status:** Phases 0, 2, 4, 5 and 6 done; Phase 1 completing its 2 unattended weeks (until 2026-11-21); Phase 3 published, with narrative pages for the whole encyclopedia still growing in batches.
 
 Website: https://adaycuestacorrea.github.io/paleo-atlas/ · Interview pack: [`docs/interview-pack/`](docs/interview-pack/one-pager.md)
 
@@ -74,7 +74,7 @@ Ten decisions, each with an ADR in [`docs/adr/`](docs/adr/README.md): D1 no Spar
 | 1 — MVP (archosaurs, bilingual) | The public site shows the 2026 archosaur species in both languages, with verified narrative page, image, reliability signals and history, and has updated itself **2 weeks in a row** unattended | Built; the 2 weeks count from the 2026-11-07 merge (until 2026-11-21) |
 | 2 — Airflow | The DAGs produce exactly the same result as Actions | Done (0 differences in 33 tables and 97 site files) |
 | 3 — Encyclopedia, expansion and Spark | The three blocks are published and the benchmark is documented with real figures | Published; narrative pages for all 2,743 genera with an article grow in overnight GPU batches (598 EN / 582 ES so far); the Databricks variant moved to the backlog |
-| 4 — Portfolio | The project is on the CV with URL and verifiable metrics | Done: bilingual README, ADRs, one-pager, postmortem, STAR stories, CV entry, GitHub profile; the LinkedIn post is left to the author |
+| 4 — Portfolio | The project is on the CV with URL and verifiable metrics | Done: bilingual README, ADRs, one-pager, postmortem, STAR stories, CV entry, GitHub profile and LinkedIn project |
 | 5 — AI and news | News classification metrics are in the README and the glossary is on the pages with its sample accuracy | Done |
 | 6 — Size comparator | The comparator follows §11.3 and is published | Done (3D models moved to the backlog in v40) |
 

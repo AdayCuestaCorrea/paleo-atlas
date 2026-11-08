@@ -2,7 +2,7 @@
 
 > Alcance y casillas: [`ALCANCE.md` §7, Fase 4](../../ALCANCE.md#7-fases-y-entregables), [§17](../../ALCANCE.md#17-métricas-del-proyecto-para-cv-y-entrevistas) y [§20](../../ALCANCE.md#20-documentación-y-material-de-portfolio). Este documento explica el porqué.
 >
-> **Estado (2026-11-08):** README bilingüe y ADRs adelantados (2026-11-07 y 2026-11-03); interview pack, cifras de §17, entrada del CV y perfil de GitHub hechos el 2026-11-08 (`main` `2d2c2c9b`). Queda la sección de proyectos de LinkedIn, que publica el usuario con los textos ya preparados. El vídeo de demostración se descartó en la v35.
+> **Estado (2026-11-08):** README bilingüe y ADRs adelantados (2026-11-07 y 2026-11-03); interview pack, cifras de §17, entrada del CV y perfil de GitHub hechos el 2026-11-08 (`main` `2d2c2c9b`). Queda la sección de proyectos de LinkedIn, que publica el usuario con los textos ya preparados. `SCOPE.md` pasa a ser un resumen en inglés. El vídeo de demostración se descartó en la v35.
 
 ## 1. En una frase
 
@@ -65,7 +65,7 @@ Antes de cada commit, una búsqueda de los términos prohibidos en los archivos 
 | Interview pack | One-pager, postmortem y 5 historias STAR, en español y en inglés |
 | README | Cifras corregidas: tests (291 → 302 de pytest; 189 → 196 de dbt), duración (~4 → ~3 min), siluetas propias (190 → 187) |
 | CV | Entrada de Paleo Atlas sustituida («en desarrollo», 207 tests y 53 modelos → las cifras publicadas) y tres herramientas añadidas a las habilidades |
-| GitHub | README de perfil creado, descripción en el repo del TFM |
+| GitHub | README de perfil creado; bio, ubicación y web del perfil; descripción en el repo del TFM |
 | LinkedIn | Textos de la sección de proyectos en ES y EN, listos para el usuario |
 
 ## 8. Qué salió mal y qué se aprendió
@@ -73,7 +73,7 @@ Antes de cada commit, una búsqueda de los términos prohibidos en los archivos 
 - **Las cifras se quedan viejas en todas partes a la vez.** El README del día anterior ya tenía 291 tests en vez de 302, «~4 minutos» en vez de ~3 y 190 siluetas propias en vez de 187 (la v44 cambió cuáles cuentan). El CV seguía con 207 tests, 53 modelos y «en desarrollo». *Lección: medir con una orden, no copiar de la última vez, y tener un solo sitio (§17) del que copien los demás.*
 - **El modo que añade al CV no actualiza.** La herramienta del CV evita duplicados: si la entrada ya existe, no hace nada. Para poner al día una entrada hubo que sustituirla a mano, con una copia del archivo antes.
 - **Un falso positivo del filtro de términos.** Una palabra inglesa corriente contenía uno de los términos prohibidos. Se cambió la palabra; el filtro no se toca para un caso así.
-- **El token de GitHub no podía editar el perfil.** Tenía permiso para repos, pero no `user`, que es el que hace falta para la bio. El repo del perfil se pudo crear; la bio necesita ampliar el token.
+- **El token de GitHub no podía editar el perfil.** Tenía permiso para repos, pero no `user`, que es el que hace falta para la bio. El repo del perfil se pudo crear enseguida; la bio, después de que el usuario ampliara el token (`gh auth refresh -s user`).
 
 ## 9. Preguntas de entrevista
 
@@ -85,6 +85,5 @@ Antes de cada commit, una búsqueda de los términos prohibidos en los archivos 
 ## 10. Límites y lo que queda
 
 - **LinkedIn** lo publica el usuario con los textos preparados. Hasta entonces, la casilla de la Fase 4 sigue abierta.
-- **La bio de GitHub** necesita ampliar el permiso del token (`gh auth refresh -s user`).
 - **Las cifras seguirán cambiando.** Las fichas narrativas crecen con cada lote nocturno; §17, el README y el one-pager se ponen al día al cerrar cada fase, y el CV después.
 - **Las capturas del README** se rehacen con `scripts/screenshots.py` cuando cambia la web.

@@ -137,6 +137,24 @@ def test_scientific_names_are_italic_and_linked():
     assert "Patagonia &amp; Niger" in out and "Sereno." in out
 
 
+def test_abbreviated_species_are_italic_and_linked_to_their_page():
+    from paleo.site.build import SiteBuilder
+    from paleo.site.data import SiteData
+
+    names = ["Tyrannosaurus rex", "Tylosaurus", "Tylosaurus rex", "Spinosaurus"]
+    taxa = [{"taxon_name": n, "taxon_key": n.lower().replace(" ", "-")} for n in names]
+    b = SiteBuilder(SiteData(taxa, {}, {}, {}, {}, dt.date(2026, 11, 1)), base="/pa")
+    out = str(b.prose("The largest species, T. rex, and T. proriger.", "en", "Tylosaurus"))
+    assert 'href="/pa/en/taxa/tylosaurus-rex.html"' in out  # its own genus first
+    assert "<em>T. rex</em></a>" in out and "<em>T. proriger</em>," not in out
+    assert "<em>T. proriger</em>." in out  # a species without a page: italics only
+    # outside the two genera "T. rex" may be either: italics, no link
+    out = str(b.prose("Smaller than T. rex.", "en", "Spinosaurus"))
+    assert "<em>T. rex</em>." in out and "href" not in out
+    out = str(b.prose("By Ji Q. and Ji S., in Washington D.C. since 1915.", "en", "Spinosaurus"))
+    assert "<em>" not in out
+
+
 def test_species_epithets_need_a_latin_ending():
     out = str(
         builder().prose("Spinosaurus aegyptiacus y Baryonyx vivieron en el Cretácico.", "es", None)

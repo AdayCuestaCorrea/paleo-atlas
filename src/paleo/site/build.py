@@ -157,6 +157,8 @@ def week_label(key: str, lang: str) -> str:
 
 _GENUS = GENUS_LIKE
 _EPITHET = re.compile(r"[a-z]{4,}(?:us|um|is|ae|ii|ensis|icus|ianus)")
+_FUNCTION_WORDS = {"and", "the", "for", "from", "with", "since", "del", "los", "las", "que", "por",
+                   "con", "una"}  # fmt: skip
 _NOT_EPITHETS = {"thus", "plus", "status", "bonus", "genus", "corpus", "campus", "virus",
                  "analysis", "basis", "axis", "this", "naris"}  # fmt: skip
 
@@ -223,7 +225,14 @@ class SiteBuilder:
             t["taxon_name"]: t["taxon_key"] for t in data.taxa
         }
         self.atlas_genera = {name.split(" ")[0] for name in self.atlas_names}
-        self._names = re.compile(r"\b[A-Z][a-z]+(?: [a-z]+)?")
+        # Abbreviated species ("T. rex") by initial and epithet: Tyrannosaurus rex and
+        # Tylosaurus rex share one, so outside their genus pages "T. rex" is ambiguous.
+        self.abbreviated: dict[tuple[str, str], set[str]] = {}
+        for name in self.atlas_names:
+            genus, _, epithet = name.partition(" ")
+            if epithet and " " not in epithet:
+                self.abbreviated.setdefault((genus[0], epithet), set()).add(name)
+        self._names = re.compile(r"(?<![\w.])[A-Z]\. [a-z]{3,}\b(?!\.\w)|\b[A-Z][a-z]+(?: [a-z]+)?")
         clades = scope_clades(enabled_only=False)
         groups = list(dict.fromkeys(c.taxon_group for c in clades))
         self.groups = groups
@@ -268,9 +277,43 @@ class SiteBuilder:
                 f'title="{title}"><em>{name}</em></a>'
             )
 
+        own_genus = (own_name or "").split(" ")[0]
+        own_key = self.atlas_names.get(own_name or "")
+
+        def abbreviation(abbr: str, before: str) -> str | None:
+            """ "T. rex": in italics and linked to its page when the species is known —
+            of the page's own genus first, else the only atlas species it can be."""
+            initial, epithet = abbr[0], abbr[3:]
+            if (
+                epithet in _NOT_EPITHETS
+                or epithet in _FUNCTION_WORDS
+                or re.search(r"\b[A-Z]\. ?$", before)
+            ):
+                return None  # "Ji Q. and", "Washington D. C. since"
+            if own_genus[:1] == initial:
+                full = f"{own_genus} {epithet}"
+            else:
+                candidates = self.abbreviated.get((initial, epithet), set())
+                if len(candidates) != 1:
+                    return f"<em>{abbr}</em>" if candidates or _EPITHET.fullmatch(epithet) else None
+                full = next(iter(candidates))
+            key = self.atlas_names.get(full)
+            if not key or key == own_key or not links:
+                return f"<em>{abbr}</em>"
+            if self._marked is not None:
+                self._marked["taxa"].add(key)
+            href = self.url(lang, "taxon", key)
+            title = html.escape(self.t(lang, "link_taxon", taxon=full), quote=True)
+            return f'<a class="taxon-link" href="{href}" title="{title}"><em>{abbr}</em></a>'
+
         out, pos = [], 0
         for match in self._names.finditer(escaped):
             name = match.group(0)
+            if name[1] == ".":
+                if (rendered := abbreviation(name, escaped[: match.start()])) is not None:
+                    out += [escaped[pos : match.start()], rendered]
+                    pos = match.end()
+                continue
             genus, _, epithet = name.partition(" ")
             if (
                 epithet

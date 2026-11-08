@@ -6,6 +6,7 @@ from paleo.narrative.checks import (
     names,
     ngrams,
     numbers,
+    species_not_in_source,
     words,
 )
 
@@ -200,3 +201,52 @@ def test_numbers_may_be_written_the_spanish_way_but_not_changed():
     assert not numbers_match("It weighed 3.45 t.", "Pesaba 3450 kg.")
     assert not numbers_match("It weighed 5 t.", "Pesaba 6 t.")
     assert not numbers_match("It was 25 m long.", "Medía 25 m y 1 m de alto.")
+
+
+# ----------------------------------------------------------- species abbreviations
+
+
+def test_species_renamed_by_the_model_is_caught():
+    quote = "Dos especies rusas, A. zajsanicus en 1982 y A. volgensis en 1993."
+    statement = "Two Russian species, A. zajsanicus and A. volynensis, were assigned in 1993."
+    assert species_not_in_source(statement, quote) == ["A. volynensis"]
+    assert check_fact(statement, quote, quote).startswith("species not named so")
+
+
+def test_species_swapped_for_the_heading_one_is_caught():
+    # the heading names one species, the quote another: the quote decides
+    quote = "A. palustris was described by Blanco in 2021 from fossils in Velaux."
+    statement = "A. iberoarmoricanus was described by Blanco in 2021."
+    assert species_not_in_source(statement, quote, "Allodaposuchus iberoarmoricanus") == [
+        "A. iberoarmoricanus"
+    ]
+
+
+def test_this_species_is_completed_from_the_heading_or_chunk():
+    quote = "Based on some specimens, it could measure up to 75 cm long."
+    assert species_not_in_source("L. gigas could reach 75 cm.", quote, "Lepidotes (L. gigas)") == []
+    statement = "Unlike S. albertensis, the spikes of S. ovatus converge."
+    quote = "Unlike S. albertensis, the longest spikes of this species converge."
+    assert species_not_in_source(statement, quote, "Styracosaurus ovatus was named") == []
+
+
+def test_species_named_in_other_forms_of_the_source():
+    cases = [
+        ("P. trossingensis is SMNS 132000.", "The type of Plateosaurus trossingensis is SMNS."),
+        ("The species is G. jonesi.", "genus: Galahadosuchus\nspecies: jonesi"),
+        ("A. siemensii was described in 1897.", "subdivision: *A. siemensiiDames, 1897"),
+        ("S. kryschtofovici is dubious.", "S, kryschtofovici descrito"),
+    ]
+    for statement, quote in cases:
+        assert species_not_in_source(statement, quote) == [], statement
+
+
+def test_source_typos_the_model_fixed_are_accepted():
+    assert species_not_in_source("N. gracilis had a 2.72 m wingspan.", "N. gracillis had") == []
+    assert species_not_in_source("C. dentisulcatus was large.", "C. dentisuclatus fue") == []
+
+
+def test_initials_and_acronyms_are_not_species():
+    quote = "Ji Q. & Ji S., 1996; on display in Washington D. C., since 1915"
+    assert species_not_in_source("It was described by Ji Q. and Ji S. in 1996.", quote) == []
+    assert species_not_in_source("On display in Washington D. C. since 1915.", quote) == []

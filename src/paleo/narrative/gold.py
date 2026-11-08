@@ -40,7 +40,7 @@ def validate(doc: dict[str, Any], chunks: list[Chunk], scientific_names: set[str
             continue
         if not chunk.public_quote:
             problems.append(f"{fact['fact_id']}: gold facts must use public chunks only")
-        if reason := check_fact(fact["statement"], fact["quote"], chunk.text):
+        if reason := check_fact(fact["statement"], fact["quote"], chunk.text, chunk.title):
             problems.append(f"{fact['fact_id']}: {reason}")
     fact_texts = {f["fact_id"]: f"{f['statement']} {f['quote']}" for f in doc["facts"]}
     sources = {

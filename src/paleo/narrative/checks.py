@@ -3,8 +3,9 @@
 No model judges another model here: every rule is plain string logic, so a
 failure can be explained and reproduced.
 
-* **Fact check** — a fact's quote must appear verbatim in its source chunk, and
-  every number in the fact must appear in that quote.
+* **Fact check** — a fact's quote must appear verbatim in its source chunk, every
+  number in the fact must appear in that quote, and every abbreviated species
+  ("A. volgensis") must be named so in the quote or its chunk.
 * **Citation** — every sentence cites at least one existing fact.
 * **Faithfulness** — numbers in a sentence must come from the facts it cites;
   capitalized names must come from the taxon's facts.
@@ -230,9 +231,83 @@ def names(text: str) -> set[str]:
 
 # --------------------------------------------------------------------------- facts
 
+# "A. volgensis"; not "D.C. since" (an acronym) nor "Ji Q. and" (a person's initial).
+_SPECIES_ABBR = re.compile(r"(?<![^\W\d_.])([A-Z])\. ([a-z]{3,})\b")
 
-def check_fact(statement: str, quote: str, chunk_text: str) -> str | None:
-    """Why the fact is rejected, or None when it is supported by its chunk."""
+
+def _one_letter_apart(a: str, b: str) -> bool:
+    """A letter added, dropped or two letters swapped ("gracillis", "dentisuclatus"):
+    a typo of the source the model fixed, not another species."""
+    if min(len(a), len(b)) < 6 or a == b:
+        return False
+    if len(a) == len(b):
+        diff = [i for i in range(len(a)) if a[i] != b[i]]
+        if len(diff) != 2 or diff[1] != diff[0] + 1:
+            return False
+        i, j = diff
+        return a[i] == b[j] and a[j] == b[i]
+    if abs(len(a) - len(b)) != 1:
+        return False
+    short, long_ = sorted((a, b), key=len)
+    return any(long_[:i] + long_[i + 1 :] == short for i in range(len(long_)))
+
+
+def _named_epithets(initial: str, text: str, *, strict: bool) -> list[str]:
+    """Epithets the text names for that initial. Strict: only after the abbreviation
+    ("A. volgensis", '"A." volgensis', "S, kryschtofovici"). Otherwise also after any
+    word with that initial ("Asiatosuchus volgensis") or a catalog key ("species:")."""
+    text = unicodedata.normalize("NFKC", text).translate(_QUOTES)
+    if strict:
+        pattern = rf"(?<![^\W\d_])\"?{initial}\"?[.,]\"?\s{{0,2}}\"?([a-z]{{3,}})"
+    else:  # lookahead: "Dryptosaurus\nspecies: aquilunguis" overlaps
+        pattern = rf"(?=(?:\b{initial}[^\W\d_]*|species:)[\s.,'\"*]{{1,4}}([a-z]{{3,}}))"
+    return re.findall(pattern, text)
+
+
+def _same_epithet(found: str, epithet: str) -> bool:
+    # a typo of the source the model fixed ("gracillis"), or the wikitext glued the
+    # next word: "A. siemensiiDames" ([a-z] stops there), "M. glycyswith" (a prefix)
+    return (
+        found == epithet
+        or _one_letter_apart(found, epithet)
+        or (len(epithet) >= 5 and found.startswith(epithet))
+    )
+
+
+def species_not_in_source(statement: str, quote: str, context: str = "") -> list[str]:
+    """Abbreviated species of the statement ("A. volynensis") that the source does
+    not name: their epithet must appear after a word with the same initial
+    ("A. volgensis", "Asiatosuchus volgensis", '"A." volgensis', "S, kryschtofovici")
+    or in a catalog line ("species: jonesi"), spelled the same or one letter apart.
+
+    A quote that only says "this species" may be completed from the ``context`` (the
+    chunk and its heading), unless the statement swaps the species of the quote for
+    another one ("A. palustris was described…" under a heading about another species
+    becomes "A. iberoarmoricanus was described…"). Catches a
+    species name changed or made up by the model, which the number check cannot see."""
+    missing = []
+    for match in _SPECIES_ABBR.finditer(statement):
+        initial, epithet = match.groups()
+        if epithet in _FUNCTION_WORDS or re.search(r"\b[A-Z]\. ?$", statement[: match.start()]):
+            continue  # "Ji Q. and", "Washington D. C. since"
+        if any(_same_epithet(n, epithet) for n in _named_epithets(initial, quote, strict=False)):
+            continue  # "P. trossingensis" for "Plateosaurus trossingensis"
+        in_quote = _named_epithets(initial, quote, strict=True)
+        in_statement = _named_epithets(initial, statement, strict=False)  # "Pteranodon sternbergi"
+        if in_quote and not any(_same_epithet(q, e) for q in in_quote for e in in_statement):
+            missing.append(f"{initial}. {epithet}")  # swapped for the quote's species
+            continue
+        in_context = _named_epithets(initial, context, strict=False)
+        if not any(_same_epithet(n, epithet) for n in in_context):
+            missing.append(f"{initial}. {epithet}")
+    return missing
+
+
+def check_fact(statement: str, quote: str, chunk_text: str, heading: str = "") -> str | None:
+    """Why the fact is rejected, or None when it is supported by its chunk.
+
+    ``heading`` is the chunk's title ("Lepidotes (L. gigas)"): a species section
+    names its species there and then says "this species"."""
     if len(quote.strip()) < MIN_QUOTE_CHARS:
         return "quote too short"
     if normalize(quote) not in normalize(chunk_text):
@@ -240,6 +315,8 @@ def check_fact(statement: str, quote: str, chunk_text: str) -> str | None:
     missing = numbers(statement) - numbers(quote)
     if missing:
         return f"numbers not in the quote: {sorted(missing)}"
+    if unnamed := species_not_in_source(statement, quote, f"{heading}\n{chunk_text}"):
+        return f"species not named so in the source: {unnamed}"
     if copied := copied_runs(statement, ngrams(words(chunk_text))):
         # Facts copied from the source would be copied again by the writer.
         return f"statement copies the source wording: {copied[0]!r}"

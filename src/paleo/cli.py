@@ -670,6 +670,40 @@ def genus_queue(only: list[str] | None = None) -> list[str]:
     return sorted(sizes, key=lambda g: (-sizes[g], g))
 
 
+@app.command("recheck-facts")
+def recheck_facts() -> None:
+    """No model: check the stored facts again with the species-name rule (a fact must
+    not rename the species of its quote) and move those that fail to ``rejected``.
+    Lists the pages whose texts cited them: those need writing again."""
+    from paleo.narrative.facts import recheck_species
+    from paleo.narrative.sources import chunks_for, genus_chunks_for
+    from paleo.narrative.write import facts_hash
+
+    paths = get_paths()
+    roots = {"interim_root": paths.interim, "raw_root": paths.raw,
+             "cache_root": paths.data / "cache"}  # fmt: skip
+
+    def chunks_of(taxon: str) -> list:
+        try:
+            return genus_chunks_for(taxon, **roots)
+        except LookupError:
+            return chunks_for(taxon, **roots)
+
+    derived = paths.data / "derived"
+    before = {p.stem: facts_hash(json.loads(p.read_text("utf-8"))["facts"])
+              for p in (derived / "facts").glob("*.json")}  # fmt: skip
+    moved = recheck_species(derived, paths.data / "cache", chunks_of)
+    for m in moved:
+        typer.echo(f"{m['taxon_key']} {m['fact_id']}: {m['reason']}\n  {m['statement']}")
+
+    def changed(key: str) -> bool:
+        doc = json.loads((derived / "facts" / f"{key}.json").read_text("utf-8"))
+        return facts_hash(doc["facts"]) != before[key]
+
+    stale = sorted({m["taxon_key"] for m in moved if changed(m["taxon_key"])})
+    typer.echo(f"{len(moved)} facts rejected; pages to write again: {', '.join(stale) or 'none'}")
+
+
 @app.command()
 def narrate(
     scope: Annotated[str, typer.Option(help="Which pages: genera.")] = "genera",

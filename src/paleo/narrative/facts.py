@@ -11,15 +11,16 @@ import dataclasses
 import datetime as dt
 import hashlib
 import json
+from collections.abc import Callable
 from dataclasses import dataclass
 from importlib import resources
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, field_validator
 
 from paleo.llm import LLM, LLMOutputError
-from paleo.narrative.checks import check_fact, normalize
+from paleo.narrative.checks import check_fact, normalize, species_not_in_source
 from paleo.narrative.sources import Chunk, taxon_key
 from paleo.store import _atomic_write
 
@@ -136,7 +137,7 @@ def extract_facts(
         reason = (
             "unknown chunk id"
             if chunk is None or chunk.chunk_id not in {c.chunk_id for c in batch}
-            else check_fact(fact.statement, fact.quote, chunk.text)
+            else check_fact(fact.statement, fact.quote, chunk.text, chunk.title)
         )
         key = normalize(fact.statement)
         if reason is None and key in seen:
@@ -179,3 +180,40 @@ def extract_facts(
         private.parent.mkdir(parents=True, exist_ok=True)
         _atomic_write(private, json.dumps(private_quotes, ensure_ascii=False, indent=1) + "\n")
     return FactsResult(taxon, len(accepted), len(rejected), path)
+
+
+def recheck_species(
+    derived_root: Path, cache_root: Path, chunks_of: Callable[[str], list[Chunk]]
+) -> list[dict[str, Any]]:
+    """Check the stored facts again with the species-name rule of ``check_fact``,
+    without calling any model; a fact that fails moves to ``rejected`` with its reason
+    (ids of the others are kept, so the texts still cite the right facts). Returns
+    the facts moved. ``chunks_of`` gives the chunks of a taxon (LookupError: skip)."""
+    moved = []
+    for path in sorted((derived_root / "facts").glob("*.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        try:
+            by_id = {c.chunk_id: c for c in chunks_of(doc["taxon"])}
+        except LookupError:
+            continue
+        private_path = cache_root / "facts_private" / path.name
+        private = json.loads(private_path.read_text("utf-8")) if private_path.exists() else {}
+        kept = []
+        for fact in doc["facts"]:
+            chunk = by_id.get(fact["chunk_id"])
+            quote = fact["quote"] or private.get(fact["fact_id"], "")
+            unnamed = chunk and species_not_in_source(
+                fact["statement"], quote, f"{chunk.title}\n{chunk.text}"
+            )
+            if not unnamed:
+                kept.append(fact)
+                continue
+            reason = f"species not named so in the source: {unnamed}"
+            record = {k: v for k, v in fact.items() if k not in ("fact_id", "lang", "quote_sha")}
+            doc["rejected"].append({**record, "reason": reason})  # a private quote stays private
+            moved.append({"taxon_key": doc["taxon_key"], "fact_id": fact["fact_id"],
+                          "statement": fact["statement"], "reason": reason})  # fmt: skip
+        if len(kept) != len(doc["facts"]):
+            doc["facts"] = kept
+            _atomic_write(path, json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
+    return moved

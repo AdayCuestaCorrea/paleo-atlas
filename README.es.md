@@ -10,9 +10,9 @@ Una enciclopedia paleontológica visual y viva, en español e inglés, que se re
 
 ## Qué es
 
-- **4890 fichas** en dos idiomas (10 252 páginas web): los 4751 géneros de arcosaurios (dinosaurios, aves, pterosaurios, parientes de los cocodrilos), reptiles marinos y peces fósiles que recoge la Paleobiology Database, las 115 especies descritas en 2026 y 24 especies conocidas con estudios nuevos.
+- **4890 fichas** en dos idiomas (10 258 páginas web): los 4751 géneros de arcosaurios (dinosaurios, aves, pterosaurios, parientes de los cocodrilos), reptiles marinos y peces fósiles que recoge la Paleobiology Database, las 115 especies descritas en 2026 y 24 especies conocidas con estudios nuevos.
 - **Se actualiza a diario** con fuentes abiertas: las páginas anuales de paleontología de Wikipedia, la Paleobiology Database (PBDB), Crossref, GBIF, Wikimedia Commons, PhyloPic, DOAJ y Wikidata.
-- **Cada frase del texto cita su fuente** y pasa comprobaciones automáticas antes de publicarse: hechos y cifras contra la fuente, nombres científicos, nada copiado. Si una ficha no pasa alguna, muestra un texto construido con sus datos. Por ahora hay 397 fichas verificadas en inglés y 362 en español; el resto se redacta en lotes nocturnos con una GPU local.
+- **Cada frase del texto cita su fuente** y pasa comprobaciones automáticas antes de publicarse: hechos y cifras contra la fuente, nombres científicos, nada copiado. Si una ficha no pasa alguna, muestra un texto construido con sus datos. Por ahora hay 598 fichas verificadas en inglés y 582 en español; el resto se redacta en lotes nocturnos con una GPU local.
 - **Un historial por animal:** 19 541 eventos: 402 seguidos según ocurrían desde 2026 y 19 139 reconstruidos hacia atrás con las opiniones taxonómicas de PBDB y las páginas anuales de Wikipedia (2009–2025). Cada estudio lleva sus señales de fiabilidad (revisión por pares, preprint, retractación, revista de acceso abierto).
 - **0 € al mes:** GitHub Actions, GitHub Pages, planes gratuitos de las API y un modelo local.
 
@@ -57,15 +57,16 @@ Python 3.14 · uv · DuckDB · dbt · Jinja2 · JavaScript sin framework · GitH
 
 ## Cifras
 
-Medidas el 2026-11-07 en el almacén y en la suite de tests.
+Medidas el 2026-11-08 en el almacén y en la suite de tests.
 
 | | |
 |---|---|
-| Fichas (ES + EN) | 4890 taxones → 10 252 páginas web, comprobadas en cada build (enlaces rotos, versiones en el otro idioma, licencias) |
+| Fichas (ES + EN) | 4890 taxones → 10 258 páginas web, comprobadas en cada build (enlaces rotos, versiones en el otro idioma, licencias) |
 | Estudios | 8195, de ellos 586 comprobados en Crossref (retractaciones, correcciones, revisión por pares) |
 | Registro fósil | 58 570 hallazgos de PBDB en 188 países · 138 388 especímenes de GBIF reconciliados con su género |
-| Fichas narrativas | 397 verificadas en inglés y 362 en español (y crecen cada noche) |
-| Tests | 249 de pytest · 157 de dbt en cada ejecución del pipeline (150 de datos y 7 unitarios) |
+| Fichas narrativas | 598 verificadas en inglés y 582 en español (y crecen cada noche) |
+| Glosario | 163 términos que aparecen en las fichas; 144 definiciones verificadas en inglés y 139 en español, cada una redactada a partir del artículo de Wikipedia del término (citado) y comprobada como las fichas: nada copiado, cifras contra la fuente y un juez LLM de otra familia de modelos |
+| Tests | 265 de pytest · 170 de dbt en cada ejecución del pipeline (163 de datos y 7 unitarios) |
 | Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |
 | Clasificador de noticias | Coincide con una persona en el 74 % de 50 titulares etiquetados a ciegas, con 4 clases (la persona coincide consigo misma en el 84 %); un baseline TF-IDF + regresión logística logra F1 macro 0,50 frente a 0,89 del LLM en 300 titulares etiquetados viendo la propuesta del LLM ([informe](eval/reports/2026-11-07-news.md), en inglés) |
@@ -85,7 +86,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 
 ## Calidad de datos
 
-- **Tests de dbt** en cada ejecución (150 de datos y 7 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
+- **Tests de dbt** en cada ejecución (163 de datos y 7 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
 - **Informe de cada ejecución** (`paleo report`), guardado en la rama `data`: qué cambió, duraciones, recuentos.
 - **Comprobación de la web** en cada build (`paleo site --check`): enlaces rotos, versión en el otro idioma, páginas a las que nadie enlaza, imágenes sin licencia.
 - **Las fichas narrativas** solo se publican si cada frase pasa sus comprobaciones: hechos citados, mismas cifras, nombres científicos conservados, nada de copiar 8 o más palabras seguidas de una fuente; cómo funciona cada comprobación se explica en [`docs/fases/`](docs/fases/).
@@ -106,7 +107,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 ## Limitaciones conocidas
 
 - **El parentesco sigue la clasificación de PBDB**, no un análisis filogenético; la posición de muchos animales está en debate, y las fichas lo dicen.
-- **Las fichas narrativas cubren por ahora una minoría de los géneros** (397 en inglés y 362 en español, de 2743 géneros con artículo en Wikipedia). Con el modelo local, cerca de una cuarta parte de las adaptaciones al español no pasa las comprobaciones de copia y de cifras y no se publica; esa ficha muestra su texto construido con datos.
+- **Las fichas narrativas cubren por ahora una minoría de los géneros** (598 en inglés y 582 en español, de 2743 géneros con artículo en Wikipedia). Con el modelo local, 15 de las 595 adaptaciones al español siguen sin pasar las comprobaciones de copia y de cifras tras la pasada de rescate y no se publican; esas fichas muestran su texto construido con datos.
 - **El idioma de cada estudio** viene de Crossref, que lo da en torno al 80 % de los estudios seguidos; el historial reconstruido hacia atrás (7600 estudios) no se comprueba en Crossref.
 - **GitHub lanza la ejecución diaria tarde** (unas 8 horas la mayoría de los días), así que la actualización «diaria» suele llegar por la tarde (UTC).
 - **Las especies nuevas tardan en llegar a PBDB**, así que muchas aún no tienen edades ni hallazgos; su periodo y su país salen de su descripción.

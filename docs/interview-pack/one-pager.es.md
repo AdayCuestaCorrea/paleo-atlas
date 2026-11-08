@@ -27,14 +27,15 @@ fuentes abiertas → paleo ingest → crudo versionado en git → dbt + DuckDB �
 
 **Stack:** Python 3.14 · dbt · DuckDB · PySpark · Airflow · GitHub Actions · Ollama (Qwen 3.5 9B, GPU local) · Groq · Jinja2 · JavaScript sin frameworks · pytest.
 
-## Las cifras (medidas el 2026-11-07)
+## Las cifras (medidas el 2026-11-08)
 
 | | |
 |---|---|
-| Tests | 249 de pytest · 157 de dbt en cada ejecución (150 de datos y 7 unitarios) |
+| Tests | 265 de pytest · 170 de dbt en cada ejecución (163 de datos y 7 unitarios) |
 | Reconciliación GBIF ↔ PBDB | 138.388 especímenes con su género: exacta, por sinónimo o por errata |
 | Benchmark, 932.494 filas | DuckDB 0,86 s y 459 MB · Spark 13,7 s y 1,5 GB |
-| Fichas narrativas verificadas | 397 en inglés y 362 en español (crecen cada noche con la GPU local) |
+| Fichas narrativas verificadas | 598 en inglés y 582 en español (crecen cada noche con la GPU local) |
+| Glosario | 163 términos; 144 definiciones verificadas en inglés y 139 en español |
 | Coste mensual | 0 € |
 
 ## Cómo se evalúa la calidad

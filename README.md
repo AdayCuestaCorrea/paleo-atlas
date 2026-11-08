@@ -10,9 +10,9 @@ A living, visual paleontology encyclopedia in Spanish and English, rebuilt every
 
 ## What it is
 
-- **4,890 pages** in two languages (10,252 web pages): the 4,751 genera of archosaurs (dinosaurs, birds, pterosaurs, crocodile relatives), marine reptiles and fossil fishes known to the Paleobiology Database, the 115 species described in 2026 and 24 known species with new studies.
+- **4,890 pages** in two languages (10,258 web pages): the 4,751 genera of archosaurs (dinosaurs, birds, pterosaurs, crocodile relatives), marine reptiles and fossil fishes known to the Paleobiology Database, the 115 species described in 2026 and 24 known species with new studies.
 - **Updated daily** from open sources: Wikipedia's yearly paleontology pages, the Paleobiology Database (PBDB), Crossref, GBIF, Wikimedia Commons, PhyloPic, DOAJ and Wikidata.
-- **Every narrative sentence cites its source** and passes automatic checks before it is published: facts and numbers against the source, scientific names, no copied passages. A page that fails any check shows a text built from its data instead. So far 397 pages are verified in English and 362 in Spanish; the rest are written in nightly batches on a local GPU.
+- **Every narrative sentence cites its source** and passes automatic checks before it is published: facts and numbers against the source, scientific names, no copied passages. A page that fails any check shows a text built from its data instead. So far 598 pages are verified in English and 582 in Spanish; the rest are written in nightly batches on a local GPU.
 - **A history per animal:** 19,541 events: 402 tracked as they happened since 2026 and 19,139 rebuilt backwards from PBDB's taxonomic opinions and Wikipedia's yearly pages (2009–2025). Each study carries its reliability signals (peer review, preprint, retraction, open-access journal).
 - **0 € a month:** GitHub Actions, GitHub Pages, free API tiers and a local model.
 
@@ -57,15 +57,16 @@ Python 3.14 · uv · DuckDB · dbt · Jinja2 · vanilla JavaScript · GitHub Act
 
 ## Figures
 
-Measured on 2026-11-07 from the warehouse and the test suite.
+Measured on 2026-11-08 from the warehouse and the test suite.
 
 | | |
 |---|---|
-| Pages (ES + EN) | 4,890 taxa → 10,252 web pages, checked for broken links, alternates and licenses on every build |
+| Pages (ES + EN) | 4,890 taxa → 10,258 web pages, checked for broken links, alternates and licenses on every build |
 | Studies | 8,195, of which 586 checked in Crossref (retractions, corrections, peer review) |
 | Fossil record | 58,570 PBDB occurrences in 188 countries · 138,388 GBIF specimens reconciled with their genus |
-| Narrative pages | 397 verified in English, 362 in Spanish (and growing every night) |
-| Tests | 249 pytest · 157 dbt tests in every pipeline run (150 data tests, 7 unit tests) |
+| Narrative pages | 598 verified in English, 582 in Spanish (and growing every night) |
+| Glossary | 163 terms that appear in the pages; 144 definitions verified in English and 139 in Spanish, each written from the term's Wikipedia article (cited) and checked like the pages: no copying, numbers against the source, an LLM judge of another model family |
+| Tests | 265 pytest · 170 dbt tests in every pipeline run (163 data tests, 7 unit tests) |
 | Daily run | ~4 minutes for a full run with ingestion, plus deployment |
 | Benchmark (932,494 rows) | DuckDB 0.86 s / 459 MB · Spark 13.7 s / 1.5 GB; 124 vs 242 lines of code |
 | News classifier | Agrees with a person in 74 % of 50 headlines labelled blind, 4 classes (the person agrees with their own earlier labels in 84 %); a TF-IDF + logistic regression baseline scores macro F1 0.50 against the LLM's 0.89 on 300 headlines labelled with the LLM's proposal in view ([report](eval/reports/2026-11-07-news.md)) |
@@ -85,7 +86,7 @@ About 7.5 s of Spark's time is fixed cost (JVM, session, planning). Method and r
 
 ## Data quality
 
-- **dbt tests** on every run (150 data tests and 7 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
+- **dbt tests** on every run (163 data tests and 7 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
 - **Run report** per execution (`paleo report`), kept in the `data` branch: what changed, durations, counts.
 - **Website check** on every build (`paleo site --check`): broken links, language alternates, pages nobody links to, pictures without a license.
 - **Narrative pages** are only published if every sentence passes its checks: cited facts, same numbers, scientific names kept, no copying of 8 or more words from a source; how each check works is explained in [`docs/fases/`](docs/fases/) (Spanish).
@@ -106,7 +107,7 @@ About 7.5 s of Spark's time is fixed cost (JVM, session, planning). Method and r
 ## Known limitations
 
 - **Relationships follow PBDB's classification**, not a phylogenetic analysis; the position of many animals is debated, and the pages say so.
-- **Narrative pages cover a minority of the genera so far** (397 in English, 362 in Spanish, of 2,743 genera with a Wikipedia article). With the local model, about a quarter of the Spanish adaptations fail the anti-copy and number checks and are not published; that page shows its data-based text instead.
+- **Narrative pages cover a minority of the genera so far** (598 in English, 582 in Spanish, of 2,743 genera with a Wikipedia article). With the local model, 15 of the 595 Spanish adaptations still fail the anti-copy and number checks after the rescue pass and are not published; those pages show their data-based text instead.
 - **The study language** comes from Crossref, which gives it for about 80 % of the tracked studies; the history rebuilt backwards (7,600 studies) is not checked in Crossref.
 - **GitHub runs the daily schedule late** (about 8 hours on most days), so the "daily" update usually lands in the afternoon (UTC).
 - **New species reach PBDB late**, so many have no ages or occurrences yet; their period and country come from their description.

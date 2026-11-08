@@ -159,6 +159,9 @@
       if (ev.key === "ArrowUp") { ev.preventDefault(); (i > 0 ? links[i - 1] : input).focus(); }
       if (ev.key === "Escape") { hide(); input.focus(); }
     });
+    // Keep the focus in the box while a suggestion is pressed: nothing moves between the
+    // press and the release, so the click opens the page that was under the pointer.
+    list.addEventListener("mousedown", function (ev) { ev.preventDefault(); });
     document.addEventListener("click", function (ev) { if (!form.contains(ev.target)) hide(); });
   });
 

@@ -195,10 +195,12 @@ a.ext::after { content: "\2197"; font-size: 0.7em; margin-left: 0.15em; vertical
   position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
 .nav__search input {
-  width: 9rem; padding: 0.3rem 0.6rem; border: 1px solid var(--line); border-radius: 999px;
+  width: 11rem; padding: 0.3rem 0.6rem; border: 1px solid var(--line); border-radius: 999px;
   background: var(--card); color: var(--ink); font: inherit; font-size: 0.9rem;
 }
-.nav__search input:focus { outline: 2px solid var(--ochre); outline-offset: 1px; width: 12rem; }
+/* Same width when focused: growing moved the header, and the suggestion under the pointer
+   with it, so a click landed on another one (or none). */
+.nav__search input:focus { outline: 2px solid var(--ochre); outline-offset: 1px; }
 .search__form input {
   width: 100%; max-width: 40rem; padding: 0.75rem 1rem; font: inherit; font-size: 1.15rem;
   border: 1.5px solid var(--line); border-radius: 0.6rem; background: var(--card); color: var(--ink);

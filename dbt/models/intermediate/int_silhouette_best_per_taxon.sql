@@ -37,6 +37,14 @@ candidates as (
         l.depth,
         l.node,
         i.position,
+        -- Which of the node's images: the page's own species first (PBDB's valid species
+        -- of a genus: T. rex, not the "T. magnus" PhyloPic puts first), then the node
+        -- itself, then any other descendant.
+        case
+            when i.image_node = t.taxon_name or list_contains(t.species_names, i.image_node) then 0
+            when i.image_node is null or i.image_node = l.node then 1
+            else 2
+        end as preference,
         i.image_uuid,
         i.vector_url,
         i.page_url,
@@ -47,12 +55,17 @@ candidates as (
         try_cast(regexp_extract(i.raster_url, '/raster/(\d+)x\d+\.', 1) as double) as raster_w,
         try_cast(regexp_extract(i.raster_url, '/raster/\d+x(\d+)\.', 1) as double) as raster_h
     from lineage as l
+    inner join {{ ref('dim_taxon') }} as t using (taxon_key)
     inner join {{ ref('stg_phylopic__node_images') }} as i
         on i.queried_name = l.node
     inner join {{ ref('license_allowlist') }} as a
         on a.license_id = i.license_id_raw and a.allowed
     where i.vector_url is not null
       and i.image_uuid not in (select image_uuid from {{ ref('silhouette_exclusions') }})
+      -- At the taxon and genus levels only the same genus: PhyloPic files some genera
+      -- under others (Bannykus under Haplocheirus); those count as the group's, higher up.
+      and (l.level not in ('taxon', 'genus')
+           or split_part(coalesce(i.image_node, l.node), ' ', 1) = split_part(l.node, ' ', 1))
 )
 
 select
@@ -70,4 +83,4 @@ select
 from candidates
 where raster_w > 0 and raster_h > 0
     and taxon_key not in (select taxon_key from {{ ref('dim_taxon') }} where taxon_group = 'pterosaurs')
-qualify row_number() over (partition by taxon_key order by depth, node, position) = 1
+qualify row_number() over (partition by taxon_key order by depth, node, preference, position) = 1

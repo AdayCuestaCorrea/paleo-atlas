@@ -23,10 +23,10 @@ from urllib.parse import quote
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup, escape
 
-from paleo.config import enabled_pages, project_root
+from paleo.config import enabled_pages, get_paths, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
-from paleo.site import explore, news, status, taxon_page, terms
+from paleo.site import compare, explore, news, status, taxon_page, terms
 from paleo.site.data import SiteData, history, load, numbered_text
 from paleo.site.fallback import basic_sources, fallback_text
 from paleo.site.glossary import Glossary
@@ -52,6 +52,8 @@ PATHS = {
         "status": "es/estado.html",
         "glossary": "es/glosario.html",
         "news": "es/noticias.html",
+        "compare": "es/comparador.html",
+        "compare_index": "es/comparar.json",
         "search_index": "es/buscar.json",
         "explore_index": "es/explorar.json",
         "encyclopedia": "es/enciclopedia/index.html",
@@ -72,6 +74,8 @@ PATHS = {
         "status": "en/status.html",
         "glossary": "en/glossary.html",
         "news": "en/news.html",
+        "compare": "en/size.html",
+        "compare_index": "en/compare.json",
         "search_index": "en/search.json",
         "explore_index": "en/explore.json",
         "encyclopedia": "en/encyclopedia/index.html",
@@ -203,6 +207,14 @@ class SiteBuilder:
         )
         self.env.tests["is_new"] = lambda e: taxon_page.is_new(e, data.built_on)
         self.env.globals["terms"] = terms
+        self.env.globals["size_range"] = lambda s, lang: compare.fmt_range(
+            s["min_m"], s["max_m"], s["qualifier"], lang
+        )
+        self.env.globals["size_phrase"] = lambda s, lang: compare.phrase(
+            s["min_m"], s["max_m"], lang
+        )
+        self.env.globals["fmt_len"] = compare.fmt_len
+        self.env.globals["compare_hash"] = compare.HASH
         self.env.globals["thumb"] = explore.thumb
         self.env.globals["SECTION_ORDER"] = SECTION_ORDER
         # Atlas taxa by name (and genus-only pages by genus) for links in the prose.
@@ -426,6 +438,7 @@ class SiteBuilder:
                           "text": numbered_text(data, key, lang),
                           "fallback": fallback_text(taxon, lang),
                           "media": media_of.get(key, [])[:3],
+                          "size": self.drawable_size(key),
                           "basic_sources": basic_sources(
                               taxon, data.events.get(key, []),
                               year_pages.get(taxon.get("taxonomic_block"), default_page),
@@ -459,6 +472,9 @@ class SiteBuilder:
                 extra = {"gbif": data.gbif} if kind == "sources" else {}
                 out.append(Page(lang, kind, None, f"{kind}.{lang}.html.j2", extra))
             out.append(Page(lang, "search", None, "search.html.j2", {}))
+            out.append(Page(lang, "compare", None, "compare.html.j2", {
+                "compare_count": sum(1 for s in data.sizes.values() if s.get("in_comparator")),
+            }))  # fmt: skip
             out.append(Page(lang, "encyclopedia", None, "encyclopedia.html.j2", {}))
             for key, families in idx.groups.items():
                 out.append(Page(lang, "group_index", key, "index_list.html.j2",
@@ -473,6 +489,21 @@ class SiteBuilder:
                                 {"index_kind": "country", "index_key": key,
                                  "sections": [("", genera)]}))  # fmt: skip
         return out
+
+    @cached_property
+    def silhouettes(self) -> set[str]:
+        """Uuids of the silhouettes the site serves (clean copies, paleo sizes
+        silhouettes): PhyloPic's host sends no CORS headers, so masks need our own."""
+        folder = get_paths().data / "derived" / "silhouettes"
+        return {p.stem for p in folder.glob("*.svg")} if folder.exists() else set()
+
+    def drawable_size(self, key: str) -> dict[str, Any] | None:
+        """The taxon's size for the card, if the comparator can draw it."""
+        size = self.data.sizes.get(key)
+        if size and size.get("in_comparator") and size.get("silhouette_uuid") in self.silhouettes:
+            sil = compare.sil_url(f"{self.base}/static", size["silhouette_uuid"])
+            return {**size, "sil_url": sil}
+        return None
 
     def render(self, page: Page) -> str:
         """The page's HTML. On taxon pages the prose marks glossary terms and links
@@ -583,6 +614,15 @@ class SiteBuilder:
             (tmp / self.path(lang, "explore_index")).write_text(
                 json.dumps(explorer, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
             )
+            index = compare.build_compare(
+                self.data.sizes, self.data.refs,
+                {t["taxon_key"]: t["taxon_name"] for t in self.data.taxa}, lang,
+                lambda key, lang=lang: self.url(lang, "taxon", key),
+                f"{self.base}/static", self.i18n[lang], self.silhouettes,
+            )  # fmt: skip
+            (tmp / self.path(lang, "compare_index")).write_text(
+                json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
+            )
         root_ctx = {"base": self.base, "T": self.i18n}
         (tmp / "index.html").write_text(
             self.env.get_template("root.html.j2").render(**root_ctx), encoding="utf-8"
@@ -595,6 +635,13 @@ class SiteBuilder:
             encoding="utf-8",
         )
         shutil.copytree(self.static_dir, tmp / "static")
+        sil_out = tmp / "static" / "sil"
+        sil_out.mkdir(exist_ok=True)
+        used = {s["silhouette_uuid"] for s in self.data.sizes.values()} | {
+            r["phylopic_uuid"] for r in self.data.refs if r.get("phylopic_uuid")
+        }
+        for uuid in sorted(used & self.silhouettes):
+            shutil.copy2(get_paths().data / "derived" / "silhouettes" / f"{uuid}.svg", sil_out)
         (tmp / ".nojekyll").write_text("", encoding="utf-8")  # serve files as they are
         if out_dir.exists():
             shutil.rmtree(out_dir)

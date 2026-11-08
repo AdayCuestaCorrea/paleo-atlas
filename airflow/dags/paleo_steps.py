@@ -39,9 +39,12 @@ DAILY: tuple[Step, ...] = (
     Step("facts", ("facts",), narrative=True),
     Step("write", ("write",), narrative=True),
     Step("titles", ("titles",), narrative=True),
+    Step("sizes", ("sizes extract",), narrative=True),
     # "dbt build": interim/ is rebuilt from the stored revisions when nothing changed.
     Step("parse_unchanged", ("parse wikipedia",)),
     Step("dbt_build", ("build",)),
+    # "Silhouettes for the size comparator"
+    Step("silhouettes", ("sizes silhouettes",), network=True),
     # "Build the website"
     Step("site", ("site",)),
     Step("site_check", ("site --check",)),

@@ -302,6 +302,22 @@
         </dl>
       </div>
 
+      {% if size is defined and size %}
+      {% set main = size.estimates[0] %}
+      <div class="tx-card cmp-card" data-compare="{{ url('compare_index') }}" data-key="{{ taxon.taxon_key }}" data-sil="{{ size.sil_url }}" data-aspect="{{ size.silhouette_aspect }}" data-len="{{ size.max_m }}" data-hash="{{ compare_hash[lang] }}">
+        <p class="tx-label">{{ T.size_title }}</p>
+        <div class="cmp-mini" aria-hidden="true"></div>
+        <p class="cmp-card__vs">{{ T.size_vs_man }}</p>
+        <p class="cmp-card__range"><b>{{ size_range(size, lang) }}</b> {{ T.size_long }}</p>
+        <p class="cmp-card__phrase">{{ size_phrase(size, lang) }}</p>
+        <p class="cmp-card__src">{{ T.size_according }} <a href="{{ main.source_url }}" rel="noopener" target="_blank">Wikipedia</a>
+          {%- if size.estimate_count > 1 %} · <a href="#" data-cmp-open>{{ T.size_more }}</a>{% endif %}
+          {%- if size.partial_remains %} · <span class="cmp-badge">{{ T.cmp_partial }}</span>{% endif %}
+          {%- if size.only_old_estimates %} · <span class="cmp-badge">{{ T.cmp_old }}</span>{% endif %}</p>
+        <a class="cmp-card__cta" href="{{ url('compare') }}#{{ compare_hash[lang] }}={{ taxon.taxon_key }},man">{{ T.size_compare }} →</a>
+      </div>
+      {% endif %}
+
       {% if has_points %}
       <a class="tx-card tx-card--map" href="#hallazgos">
         <span class="tx-label">{{ T.side_finds }}</span>
@@ -352,4 +368,5 @@
 </article>
 <script src="{{ base }}/static/viewer.js" defer></script>
 <script src="{{ base }}/static/taxon.js" defer></script>
+{% if size is defined and size %}<script src="{{ base }}/static/compare.js" defer></script>{% endif %}
 {% endblock %}

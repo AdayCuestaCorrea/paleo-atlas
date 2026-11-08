@@ -1,0 +1,14 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ T.compare_title }} · {{ T.site_name }}{% endblock %}
+{% block description %}{{ T.compare_lead }}{% endblock %}
+{% block content %}
+<article class="cmp-page-wrap">
+  <h1>{{ T.compare_title }}</h1>
+  <p class="lead">{{ T.compare_lead }}</p>
+  <p class="gl-intro">{{ t('compare_intro', n=compare_count) }}</p>
+  <div id="cmp-page" class="cmp-page" data-compare="{{ url('compare_index') }}" data-hash="{{ compare_hash[lang] }}">
+    <noscript><p class="cmp-noscript">{{ T.compare_noscript }} <a href="{{ url('encyclopedia') }}">{{ T.nav_encyclopedia }}</a></p></noscript>
+  </div>
+</article>
+<script src="{{ base }}/static/compare.js" defer></script>
+{% endblock %}

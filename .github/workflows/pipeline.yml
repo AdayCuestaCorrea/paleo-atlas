@@ -107,6 +107,8 @@ jobs:
           uv run paleo facts --provider groq
           uv run paleo write --provider groq
           uv run paleo titles --provider groq
+          # Body sizes for the comparator: only the new doubtful sentences ask Groq.
+          uv run paleo sizes extract --provider groq
 
       - name: dbt build
         if: env.SKIP != 'true'
@@ -114,6 +116,13 @@ jobs:
         run: |
           [ "$RUN" = true ] || uv run paleo parse wikipedia
           uv run paleo build
+
+      - name: Silhouettes for the size comparator
+        if: env.SKIP != 'true'
+        # Clean copies of the PhyloPic silhouettes the comparator draws (only new ones
+        # are downloaded). Without them a taxon is simply not drawn.
+        continue-on-error: true
+        run: uv run paleo sizes silhouettes
 
       - name: Build the website
         id: site

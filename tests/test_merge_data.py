@@ -64,3 +64,14 @@ def test_news_groups_are_rebuilt_from_the_merged_pairs():
              {"key_a": "c", "key_b": "d", "same": True}]  # fmt: skip
     groups = {r["key"]: r["group"] for r in merge_data.merge_groups(ours, theirs, pairs)}
     assert groups == {"a": "a", "b": "b", "c": "b", "d": "b"}
+
+
+def test_size_labels_are_joined_by_key_and_the_latest_wins():
+    ours = [{"key": "a:F1", "labelled_at": "2026-11-09", "adult_body_length": True}]
+    theirs = [
+        {"key": "a:F1", "labelled_at": "2026-11-08", "adult_body_length": False},
+        {"key": "b:F2", "labelled_at": "2026-11-08", "adult_body_length": True},
+    ]
+    merged = merge_data.merge_size_labels(ours, theirs)
+    assert [r["key"] for r in merged] == ["a:F1", "b:F2"]
+    assert merged[0]["adult_body_length"] is True

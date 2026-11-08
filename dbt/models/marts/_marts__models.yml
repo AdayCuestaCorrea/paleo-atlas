@@ -22,6 +22,25 @@ models:
               arguments:
                 to: ref('dim_taxon')
                 field: taxon_key
+  - name: fct_taxon_size
+    description: >
+      Size of a taxon page for the comparator (ALCANCE.md §11.3): the main adult body
+      length read from a verified fact, the span of every estimate, and the silhouette
+      that draws it. `in_comparator` is false when no allowed silhouette exists.
+    columns:
+      - name: taxon_key
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_taxon')
+                field: taxon_key
+      - name: qualifier
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [range, about, up_to, at_least]
   - name: dim_study
     columns:
       - name: study_id

@@ -6,7 +6,8 @@
   $PALEO_DATA_DIR/derived/study_titles/es.json (paleo titles), and
   $PALEO_DATA_DIR/derived/news/labels.json and groups.json (paleo news classify and
   dedup; optional), and $PALEO_DATA_DIR/derived/glossary/<term>.<lang>.json (paleo
-  glossary write; optional).
+  glossary write; optional), and $PALEO_DATA_DIR/derived/sizes/sizes.json (paleo sizes
+  extract; optional).
 #}
 {% macro read_narrative(kind) -%}
     {%- if kind == 'texts' -%}
@@ -94,6 +95,26 @@
             cast(null as varchar) as generator, cast(null as varchar) as judge,
             cast(null as varchar) as prompt_version, cast(null as varchar) as judge_version,
             cast(null as timestamptz) as generated_at limit 0)
+    {%- endif -%}
+    {%- elif kind == 'sizes' -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/derived/sizes/sizes.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+    read_json('{{ path }}', format = 'array', columns = {
+        taxon_key: 'VARCHAR', taxon: 'VARCHAR', min_m: 'DOUBLE', max_m: 'DOUBLE',
+        qualifier: 'VARCHAR', main_fact_id: 'VARCHAR', span_min_m: 'DOUBLE',
+        span_max_m: 'DOUBLE', partial_remains: 'BOOLEAN', only_old_estimates: 'BOOLEAN',
+        estimates: 'JSON'})
+    {%- else -%}
+    (select cast(null as varchar) as taxon_key, cast(null as varchar) as taxon,
+            cast(null as double) as min_m, cast(null as double) as max_m,
+            cast(null as varchar) as qualifier, cast(null as varchar) as main_fact_id,
+            cast(null as double) as span_min_m, cast(null as double) as span_max_m,
+            cast(null as boolean) as partial_remains, cast(null as boolean) as only_old_estimates,
+            cast(null as json) as estimates limit 0)
     {%- endif -%}
     {%- else -%}
     {{ exceptions.raise_compiler_error("Unknown narrative kind: " ~ kind) }}

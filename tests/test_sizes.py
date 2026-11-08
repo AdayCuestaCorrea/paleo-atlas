@@ -106,3 +106,47 @@ def test_main_estimate_is_the_one_closest_to_the_median(tmp_path):
     assert (row["span_min_m"], row["span_max_m"]) == (3.0, 10.0)
     assert [e["fact_id"] for e in row["estimates"]][-1] == "F3"
     assert row["estimates"][0]["source_url"].endswith("oldid=1")
+
+
+def test_a_figure_the_sentence_questions_is_not_published(tmp_path):
+    facts = {"taxon": "Liopleurodon", "taxon_key": "lio", "citations": {}}
+    (tmp_path / "lio.json").write_text(json.dumps(facts))
+    cs = [
+        cand("Liopleurodon was about 6 meters long.", "Liopleurodon", "lio", "F1"),
+        cand("Liopleurodon was 25 meters long, an exaggerated size.", "Liopleurodon", "lio", "F2"),
+    ]
+    cs[1].status = "accepted"  # as if the model had said yes
+    (row,) = sizes.taxon_sizes(cs, tmp_path)
+    assert [e["fact_id"] for e in row["estimates"]] == ["F1"]
+
+
+def test_old_estimates_are_listed_but_never_the_main_one(tmp_path):
+    facts = {"taxon": "Patagotitan", "taxon_key": "pat", "citations": {}}
+    (tmp_path / "pat.json").write_text(json.dumps(facts))
+    cs = [
+        cand("Patagotitan was 31 meters long.", "Patagotitan", "pat", "F1"),
+        cand("Patagotitan was initially estimated at 37 meters long.", "Patagotitan", "pat", "F2"),
+        cand("Patagotitan measured 40 meters long.", "Patagotitan", "pat", "F3"),
+    ]
+    for c in cs:
+        c.status = "accepted"
+    (row,) = sizes.taxon_sizes(cs, tmp_path)
+    # Two current figures (31, 40): the tie goes to the one nearer all of them (37).
+    assert row["main_fact_id"] == "F3" and row["estimates"][-1]["fact_id"] == "F2"
+    assert not row["only_old_estimates"]
+
+
+def test_svg_cleaning_keeps_the_drawing_only():
+    raw = (
+        b'<?xml version="1.0"?>\n<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"\n'
+        b' "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">\n'
+        b'<svg xmlns="http://www.w3.org/2000/svg" width="10pt" height="5pt" viewBox="0 0 10 5">'
+        b'<metadata>potrace</metadata><g transform="scale(1)" onclick="x()">'
+        b'<path d="M0 0h10v5z"/></g></svg>'
+    )
+    out = sizes.clean_svg(raw).decode()
+    assert "viewBox" in out and "<path" in out and "d=" in out
+    assert "metadata" not in out and "onclick" not in out and "10pt" not in out
+    assert sizes.clean_svg(raw.replace(b"<path", b"<script>x()</script><path")) is None
+    assert sizes.clean_svg(b'<!DOCTYPE x [<!ENTITY a "b">]><svg viewBox="0 0 1 1"/>') is None
+    assert sizes.clean_svg(b"<svg><foreignObject/></svg>") is None

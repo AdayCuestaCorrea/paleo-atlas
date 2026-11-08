@@ -1,6 +1,38 @@
 version: 2
 
 seeds:
+  - name: reference_objects
+    description: >
+      What the size comparator compares the animals with (ALCANCE.md §11.3): people,
+      living animals and objects, each with its measure and its source (a revision of
+      the Wikipedia article, or the study). `axis` says which dimension the measure is
+      (height or length); `min_m`/`max_m` a stated range. People and objects are own
+      drawings (`shape`, site/static/compare/) with their bounding box in metres
+      (`box_w_m`, `box_h_m`: the house's roof and the hoop's backboard stand above the
+      measure); animals use a PhyloPic silhouette (`phylopic_uuid`), checked by hand
+      to have an allowed license.
+    columns:
+      - name: ref_id
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [people, animals, objects]
+      - name: axis
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [height, length]
+      - name: source_url
+        data_tests: [not_null]
+  - name: silhouette_exclusions
+    description: >
+      PhyloPic silhouettes the size comparator must not use: their pose makes the
+      bounding box useless as a measure (a coiled body seen from above, a curled tail).
+    columns:
+      - name: image_uuid
+        data_tests: [unique, not_null]
   - name: license_allowlist
     description: >
       Image licenses (normalized ids). Only `allowed = true` licenses can be shown

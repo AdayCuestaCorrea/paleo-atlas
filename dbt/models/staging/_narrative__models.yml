@@ -31,6 +31,13 @@ models:
     columns:
       - name: news_key
         data_tests: [unique, not_null]
+  - name: stg_sizes__taxa
+    description: Adult body length of each taxon from its verified facts (paleo sizes extract).
+    columns:
+      - name: taxon_key
+        data_tests: [unique, not_null]
+      - name: main_fact_id
+        data_tests: [not_null]
   - name: stg_news__groups
     columns:
       - name: news_key

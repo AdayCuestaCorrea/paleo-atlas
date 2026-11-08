@@ -490,6 +490,32 @@ def sizes_extract(
     )
 
 
+@sizes_app.command("silhouettes")
+def sizes_silhouettes() -> None:
+    """Download and clean the silhouettes the size comparator draws (after dbt build):
+    PhyloPic's image host sends no CORS headers to browsers, so the site serves copies."""
+    import duckdb
+    import httpx
+
+    from paleo import sizes
+    from paleo.config import USER_AGENT
+
+    paths = get_paths()
+    con = duckdb.connect(str(paths.warehouse), read_only=True)
+    try:
+        rows = con.execute(
+            "select silhouette_uuid, silhouette_url from main.fct_taxon_size "
+            "where in_comparator union "
+            "select phylopic_uuid, 'https://images.phylopic.org/images/' || phylopic_uuid "
+            "|| '/vector.svg' from main.reference_objects where phylopic_uuid is not null"
+        ).fetchall()
+    finally:
+        con.close()
+    with httpx.Client(timeout=30, headers={"User-Agent": USER_AGENT}, follow_redirects=True) as c:
+        counts = sizes.fetch_silhouettes(c, dict(rows), paths.data / "derived")
+    typer.echo(", ".join(f"{v} {k}" for k, v in counts.items()))
+
+
 @news_app.command("dedup")
 def news_dedup(
     provider: Provider = "ollama",
@@ -877,7 +903,7 @@ def eval_news(
     for label, rows in runs:
         llm_names[f"LLM names only ({label})"] = {k: rows.get(k, {}).get("taxa", []) for k in keys}
 
-    con = duckdb.connect(str(paths.data / "warehouse.duckdb"), read_only=True)
+    con = duckdb.connect(str(paths.warehouse), read_only=True)
     linked: dict[str, list[str]] = {}
     for key, name in con.sql("select n.news_key, t.taxon_name from main.int_news_taxa n "
                              "join main.dim_taxon t using (taxon_key)").fetchall():  # fmt: skip

@@ -13,6 +13,9 @@ so their conflicts are predictable:
   news too): the union by key (article, or pair of articles); a label classified on
   both sides keeps the most recent one, a pair keeps ours. ``groups.json`` is then
   rebuilt from the merged pairs (union-find, as ``paleo news dedup`` does).
+* ``derived/sizes/labels.json`` (the LLM's size labels): the union by key, the most
+  recently labelled kept. ``sizes.json`` is computed from the facts and the labels by
+  every run (``paleo sizes extract``), so ours is kept and the next run refreshes it.
 
 Run it inside the data checkout, in the middle of the merge:
 
@@ -31,6 +34,7 @@ from typing import Any
 
 VOLATILE = {"fetched_at", "elapsed_time"}
 NEWS = "derived/news/"
+SIZES = "derived/sizes/"
 
 
 def merge_checked(ours: dict[str, str], theirs: dict[str, str]) -> dict[str, str]:
@@ -66,6 +70,17 @@ def merge_labels(ours: list[dict[str, Any]], theirs: list[dict[str, Any]]) -> li
         old = rows.get(row["key"])
         if old is None or (row.get("classified_at") or "") > (old.get("classified_at") or ""):
             rows[row["key"]] = row
+    return [rows[k] for k in sorted(rows)]
+
+
+def merge_size_labels(
+    ours: list[dict[str, Any]], theirs: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Size labels by taxon:fact key; the most recently labelled wins."""
+    rows = {r["key"]: r for r in theirs}
+    for r in ours:
+        if r["key"] not in rows or r["labelled_at"] >= rows[r["key"]]["labelled_at"]:
+            rows[r["key"]] = r
     return [rows[k] for k in sorted(rows)]
 
 
@@ -122,7 +137,9 @@ def resolve(path: str) -> bool:
     elif path == NEWS + "groups.json":
         pairs = json.loads(Path(NEWS + "pairs.json").read_text(encoding="utf-8"))
         text = json.dumps(merge_groups(ours, theirs, pairs), indent=1) + "\n"
-    elif same_snapshot(ours, theirs):
+    elif path == SIZES + "labels.json":
+        text = json.dumps(merge_size_labels(ours, theirs), ensure_ascii=False, indent=1) + "\n"
+    elif path == SIZES + "sizes.json" or same_snapshot(ours, theirs):
         subprocess.run(["git", "checkout", "--ours", "--", path], check=True)
         subprocess.run(["git", "add", "--", path], check=True)
         return True

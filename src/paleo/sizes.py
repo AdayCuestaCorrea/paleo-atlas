@@ -405,7 +405,9 @@ def taxon_sizes(cands: list[Candidate], facts_dir: Path) -> list[dict[str, Any]]
     or extreme figure); the others are listed, and the span of all of them is given."""
     by_taxon: dict[str, list[Candidate]] = {}
     for c in cands:
-        if c.status == "accepted":
+        # A figure the sentence itself questions ("not supported by scientific
+        # literature", "it is debated whether...") is never published.
+        if c.status == "accepted" and not DOUBT.search(c.statement):
             by_taxon.setdefault(c.taxon_key, []).append(c)
     out = []
     for key, cs in sorted(by_taxon.items()):
@@ -436,9 +438,15 @@ def taxon_sizes(cands: list[Candidate], facts_dir: Path) -> list[dict[str, Any]]
         mids = [(e["min_m"] + e["max_m"]) / 2 for e in est]
         current = [i for i, e in enumerate(est) if not e["superseded"]] or list(range(len(est)))
         med = statistics.median(mids[i] for i in current)
+        med_all = statistics.median(mids)  # breaks a tie between two current estimates
         order = sorted(
             range(len(est)),
-            key=lambda i: (i not in current, abs(mids[i] - med), est[i]["fact_id"]),
+            key=lambda i: (
+                i not in current,
+                abs(mids[i] - med),
+                abs(mids[i] - med_all),
+                est[i]["fact_id"],
+            ),
         )
         main = est[order[0]]
         out.append({
@@ -451,3 +459,97 @@ def taxon_sizes(cands: list[Candidate], facts_dir: Path) -> list[dict[str, Any]]
             "estimates": [est[i] for i in order],
         })  # fmt: skip
     return out
+
+
+# --------------------------------------------------------------------------- silhouettes
+
+# PhyloPic's image host answers browsers without CORS headers, so a CSS mask or a canvas
+# cannot read its files: the comparator serves its own copies. Only plain vector drawing
+# survives the cleaning (served from the site's origin, a script in an SVG would run).
+SVG_NS = "http://www.w3.org/2000/svg"
+SVG_TAGS = {"svg", "g", "path", "circle", "ellipse", "rect", "polygon", "polyline", "line"}
+SVG_ATTRS = {
+    "viewBox", "width", "height", "version", "d", "transform", "fill", "fill-rule",
+    "clip-rule", "fill-opacity", "opacity", "stroke", "stroke-width", "cx", "cy", "r", "rx",
+    "ry", "x", "y", "x1", "y1", "x2", "y2", "points", "preserveAspectRatio",
+}  # fmt: skip
+
+
+def silhouettes_dir(derived_root: Path) -> Path:
+    return derived_root / "silhouettes"
+
+
+def clean_svg(raw: bytes) -> bytes | None:
+    """The drawing of an SVG with nothing else (no metadata, scripts, links, styles or
+    foreign content), or None if it holds an element that is not plain drawing."""
+    import xml.etree.ElementTree as ET
+
+    text = raw.decode("utf-8", errors="replace")
+    # A public DOCTYPE (potrace writes one) is dropped; an internal subset or an entity
+    # is never parsed.
+    text = re.sub(r"<!DOCTYPE[^>\[]*>", "", text, count=1)
+    if "<!DOCTYPE" in text or "<!ENTITY" in text:
+        return None
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError:
+        return None
+
+    def local(tag: str) -> str:
+        return tag.rsplit("}", 1)[-1]
+
+    def clean(node: ET.Element) -> ET.Element | None:
+        name = local(node.tag)
+        if name in ("metadata", "title", "desc"):
+            return None
+        if name not in SVG_TAGS:
+            raise ValueError(name)
+        out = ET.Element(f"{{{SVG_NS}}}{name}")
+        for k, v in node.attrib.items():
+            if name == "svg" and k in ("width", "height"):
+                continue  # the viewBox gives the proportions
+            if k in SVG_ATTRS and "url(" not in v and "javascript" not in v.lower():
+                out.set(k, v)
+        for child in node:
+            c = clean(child)
+            if c is not None:
+                out.append(c)
+        return out
+
+    if local(root.tag) != "svg" or "viewBox" not in root.attrib:
+        return None
+    try:
+        tree = clean(root)
+    except ValueError:
+        return None
+    ET.register_namespace("", SVG_NS)
+    return ET.tostring(tree, encoding="utf-8")  # type: ignore[arg-type]
+
+
+def fetch_silhouettes(client: Any, wanted: dict[str, str], derived_root: Path) -> dict[str, int]:
+    """Download (once) and clean the silhouettes the comparator draws: uuid -> URL.
+    Returns counts: present, downloaded, rejected (not plain drawing), failed."""
+    folder = silhouettes_dir(derived_root)
+    folder.mkdir(parents=True, exist_ok=True)
+    counts = {"present": 0, "downloaded": 0, "rejected": 0, "failed": 0}
+    for uuid, url in sorted(wanted.items()):
+        if not re.fullmatch(r"[0-9a-f-]{36}", uuid):
+            counts["rejected"] += 1
+            continue
+        path = folder / f"{uuid}.svg"
+        if path.exists():
+            counts["present"] += 1
+            continue
+        try:
+            r = client.get(url)
+            r.raise_for_status()
+        except Exception:  # retried on the next run
+            counts["failed"] += 1
+            continue
+        svg = clean_svg(r.content)
+        if svg is None:
+            counts["rejected"] += 1
+            continue
+        _atomic_write(path, svg.decode("utf-8") + "\n")
+        counts["downloaded"] += 1
+    return counts

@@ -49,6 +49,10 @@ class SiteData:
     glossary: list[dict[str, Any]] = field(default_factory=list)
     # News articles that are not noise (Phase 5), newest first.
     news: list[dict[str, Any]] = field(default_factory=list)
+    # Size comparator (§11.3): adult body length of each taxon with one (estimates parsed),
+    # and what to compare them with (seed reference_objects).
+    sizes: dict[str, dict[str, Any]] = field(default_factory=dict)
+    refs: list[dict[str, Any]] = field(default_factory=list)
 
     @cached_property
     def silhouettes(self) -> dict[str, str]:
@@ -227,6 +231,19 @@ def load(warehouse: Path) -> SiteData:
             order by term_id
             """,
         )
+        sizes = {
+            r["taxon_key"]: {**r, "estimates": json.loads(r["estimates"])}
+            for r in _rows(con, "select * from main.fct_taxon_size")
+        }
+        refs = _rows(
+            con,
+            """
+            select r.*, a.label as silhouette_license, a.license_url as silhouette_license_url
+            from main.reference_objects as r
+            left join main.license_allowlist as a on a.license_id = r.silhouette_license_id
+            order by case r.kind when 'people' then 1 when 'animals' then 2 else 3 end, r.max_m
+            """,
+        )
         last_checked = con.execute(
             "select max(started_at)::date from main.stg_pipeline__runs"
         ).fetchone()[0]
@@ -238,7 +255,7 @@ def load(warehouse: Path) -> SiteData:
         gbif=gbif[0] if gbif else None,
         neighborhood={k: dict(v) for k, v in neighborhood.items()},
         redirects=redirects, country_centroids=centroids, runs=runs, freshness=freshness,
-        glossary=glossary, news=news,
+        glossary=glossary, news=news, sizes=sizes, refs=refs,
     )  # fmt: skip
 
 

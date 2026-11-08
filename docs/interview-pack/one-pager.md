@@ -8,9 +8,10 @@ Website: https://adaycuestacorrea.github.io/paleo-atlas/ · Code: https://github
 ## The product
 
 - **4,890 pages** on archosaurs (dinosaurs, birds, pterosaurs, crocodile relatives), marine reptiles and fossil fishes, in two languages: more than 10,000 web pages.
-- **Up to date:** every day it queries its sources, each at its own rhythm (Wikipedia daily; the Paleobiology Database, Crossref, Commons and PhyloPic weekly or monthly; GBIF monthly). If something changed, it rebuilds the warehouse and publishes again.
+- **Up to date:** every day it queries its sources, each at its own rhythm (Wikipedia and the news daily; the Paleobiology Database, Crossref, Commons and PhyloPic weekly or monthly; GBIF monthly). If something changed, it rebuilds the warehouse and publishes again.
 - **With a history:** 19,541 events (descriptions, synonymies, genus changes…) since 1758 and 8,195 studies; those tracked since 2026 carry their reliability signals (peer review, preprint, retraction).
-- **Texts that cite every sentence:** an LLM writes from facts extracted with their source, and only what passes the automatic checks is published.
+- **Texts that cite every sentence:** an LLM writes from facts extracted with their source, and only what passes the automatic checks is published. A glossary with pop-up explanations follows the same method.
+- **News and sizes:** news from three outlets with a license is classified by an LLM, grouped across outlets and languages and linked to its page; a size comparator draws 417 animals to scale, with the length read from their verified sentences.
 - **Transparent:** a public [Data status](https://adaycuestacorrea.github.io/paleo-atlas/en/status.html) page shows every run, the tests and the freshness of each source.
 
 ## The architecture
@@ -31,16 +32,22 @@ open sources → paleo ingest → raw store versioned in git → dbt + DuckDB �
 
 | | |
 |---|---|
-| Tests | 265 pytest · 170 dbt tests on every run (163 data tests, 7 unit tests) |
+| Tests | 302 pytest · 196 dbt tests on every run (188 data tests, 8 unit tests), over 66 models |
 | GBIF ↔ PBDB reconciliation | 138,388 specimens matched to their genus: exact, by synonym or by typo |
 | Benchmark, 932,494 rows | DuckDB 0.86 s and 459 MB · Spark 13.7 s and 1.5 GB |
-| Verified narrative pages | 598 in English and 582 in Spanish (growing every night on the local GPU) |
-| Glossary | 163 terms; 144 definitions verified in English and 139 in Spanish |
+| Verified narrative pages | 598 in English and 582 in Spanish (growing in overnight batches on the local GPU); 82 % of the 43,764 extracted facts pass the check |
+| Glossary | 163 terms; 144 definitions verified in English and 139 in Spanish; 19 of 20 correct in a reviewed sample |
+| News classification | Blind, the LLM agrees with a person 74 % of the time (the person with themselves, 84 %); duplicates across outlets: F1 1.00 against 0.29 for TF-IDF |
+| Size comparator | 429 taxa with a sourced length; 19 of 20 correct in a reviewed sample |
+| Daily run | ~3 min on GitHub Actions (ingestion, dbt and website) |
 | Monthly cost | 0 € |
 
 ## How quality is evaluated
 
 - **Data:** dbt tests on every run (keys, relationships, accepted values, freshness, scope rules). An error stops publishing; a warning is published and explained on the status page.
 - **LLM texts:** every sentence must cite a fact, keep its numbers and scientific names, and not copy 8 words in a row from the source. Model configurations were compared on 12 reference pages before choosing one.
+- **Classifiers:** measured against hand labels, with a separate blind sample, because labelling while seeing the model's proposal only gives an upper bound.
 - **Website:** every build is checked for broken links, ES/EN parity and the license of every picture.
 - **Decisions:** 10 ADRs with context, alternatives and consequences, and a document per phase with what went wrong and what was learned.
+
+More: [postmortem](postmortem.md) · [STAR stories](star-stories.md)

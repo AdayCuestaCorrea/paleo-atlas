@@ -65,11 +65,11 @@ Measured on 2026-11-08 from the warehouse and the test suite.
 | Pages (ES + EN) | 4,890 taxa → 10,260 web pages, checked for broken links, alternates and licenses on every build |
 | Studies | 8,195, of which 586 checked in Crossref (retractions, corrections, peer review) |
 | Fossil record | 58,570 PBDB occurrences in 188 countries · 138,388 GBIF specimens reconciled with their genus |
-| Narrative pages | 598 verified in English, 582 in Spanish (and growing every night) |
+| Narrative pages | 598 verified in English, 582 in Spanish (and growing in overnight batches) |
 | Glossary | 163 terms that appear in the pages; 144 definitions verified in English and 139 in Spanish, each written from the term's Wikipedia article (cited) and checked like the pages: no copying, numbers against the source, an LLM judge of another model family. In a sample of 20 reviewed by hand, 19 were right (95 %) and 1 could not be judged |
-| Size comparison | 429 taxa with an adult length read from their verified sentences (417 with a silhouette that can be drawn, 190 of them the animal's own or its genus's; pterosaurs, measured by their wingspan, and species PBDB has not classified yet are not drawn); a sample of 20 checked by a person: 19 right, 1 undecided |
-| Tests | 291 pytest · 189 dbt tests in every pipeline run (182 data tests, 7 unit tests) |
-| Daily run | ~4 minutes for a full run with ingestion, plus deployment |
+| Size comparison | 429 taxa with an adult length read from their verified sentences (417 with a silhouette that can be drawn, 187 of them the animal's own or its genus's; pterosaurs, measured by their wingspan, and species PBDB has not classified yet are not drawn); a sample of 20 checked by a person: 19 right, 1 undecided |
+| Tests | 302 pytest · 196 dbt tests in every pipeline run (188 data tests, 8 of them warnings, and 8 unit tests) over 66 models |
+| Daily run | ~3 minutes for a full run with ingestion, dbt and the website (146–202 s on 2026-11-08), plus deployment |
 | Benchmark (932,494 rows) | DuckDB 0.86 s / 459 MB · Spark 13.7 s / 1.5 GB; 124 vs 242 lines of code |
 | News classifier | Agrees with a person in 74 % of 50 headlines labelled blind, 4 classes (the person agrees with their own earlier labels in 84 %); a TF-IDF + logistic regression baseline scores macro F1 0.50 against the LLM's 0.89 on 300 headlines labelled with the LLM's proposal in view ([report](eval/reports/2026-11-07-news.md)) |
 | Running cost | 0 € |
@@ -88,7 +88,7 @@ About 7.5 s of Spark's time is fixed cost (JVM, session, planning). Method and r
 
 ## Data quality
 
-- **dbt tests** on every run (163 data tests and 7 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
+- **dbt tests** on every run (188 data tests and 8 unit tests): keys, accepted values, relationships, freshness of each source and scope rules; the run stops on an error and reports warnings.
 - **Run report** per execution (`paleo report`), kept in the `data` branch: what changed, durations, counts.
 - **Website check** on every build (`paleo site --check`): broken links, language alternates, pages nobody links to, pictures without a license.
 - **Narrative pages** are only published if every sentence passes its checks: cited facts, same numbers, scientific names kept, no copying of 8 or more words from a source; how each check works is explained in [`docs/fases/`](docs/fases/) (Spanish).

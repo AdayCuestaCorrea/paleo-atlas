@@ -612,26 +612,29 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 
 | Métrica | Valor | Fecha |
 |---|---|---|
-| Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | 82 / 82 (arcosaurios) | 2026-11-02 |
-| Taxones en la enciclopedia por bloque | Arcosaurios: 280 (82 nuevos + 198 conocidos) | 2026-11-02 |
-| Eventos en el historial | 403 seguidos desde 2026 + 19.354 hacia atrás (PBDB y páginas anuales 2009–2025) | 2026-11-03 |
+| Taxones nuevos de 2026 recogidos / total de las páginas de Wikipedia | 115 / 115 (83 arcosaurios, 13 reptiles marinos, 19 peces) | 2026-11-08 |
+| Fichas en la enciclopedia | 4.890: 4.751 géneros (arcosaurios 3.040 · reptiles marinos 358 · peces 1.353), 115 especies nuevas y 24 taxones conocidos; 10.260 páginas en ES y EN | 2026-11-08 |
+| Eventos en el historial | 19.541 en 4.880 fichas (de 1758 a hoy) · 8.195 estudios | 2026-11-08 |
 | Fichas con árbol de parentesco | 4.846 / 4.930 (98 %; clasificación de PBDB) | 2026-11-03 |
-| % con correspondencia en PBDB | Nuevos 41 % (PBDB tarda en añadirlos) · conocidos 99 % | 2026-11-02 |
-| % con imagen (especie / género / clado) | 100 %: especie 36 % · género 4 % · clado 49 % · grupo 11 % | 2026-11-02 |
-| % de estudios revisados por pares / preprints / retractados | 94 % / 0 % / 0 % (5 corregidos; 28 % en revistas DOAJ) | 2026-11-02 |
+| % con correspondencia en PBDB | Nuevos 37 % (42 de 115; PBDB tarda en añadirlos) · conocidos 100 % · géneros 100 % | 2026-11-08 |
+| % con imagen (Commons / silueta del taxón o género / clado / grupo) | 100 %: Commons 43 % · PhyloPic del taxón o género 1 % · clado 50 % · grupo 6 % | 2026-11-08 |
+| % de estudios revisados por pares / preprints / retractados | De los 586 seguidos desde 2026: 94 % / 0 % / 0 % (6 corregidos; 29 % en revistas DOAJ) | 2026-11-08 |
 | Retraso medio publicación → web (horas) | — | — |
-| Semanas seguidas sin intervención manual | 0 (empieza a contar con el primer cron) | 2026-11-02 |
-| Nº de tests (pytest + dbt) | 265 + 170 (163 de datos y 7 unitarios) | 2026-11-08 |
-| Duración del pipeline diario | ~1 min (ejecución completa sin LLM, 2026-11-02) | 2026-11-02 |
+| Semanas seguidas sin intervención manual | 0 completas: cuentan desde el merge del 2026-11-07 (hasta el 2026-11-21). Las 5 ejecuciones programadas del 4 al 8 nov, en verde | 2026-11-08 |
+| Nº de tests (pytest + dbt) | 302 + 196 (188 de datos, 8 de ellos avisos, y 8 unitarios) | 2026-11-08 |
+| Modelos dbt | 66 modelos y 13 seeds | 2026-11-08 |
+| Fuentes | 9 (Wikipedia, PBDB, GBIF, PhyloPic, Commons, Crossref, DOAJ, Wikidata y 3 medios por RSS), con 12 frescuras vigiladas | 2026-11-08 |
+| Duración del pipeline diario | ~3 min en Actions con ingesta, dbt y web (146–202 s el 2026-11-08; la programada, 174 s), más el despliegue; 614 s con fichas de Groq | 2026-11-08 |
 | Coste mensual | 0 € | — |
 | GBIF: especímenes fósiles procesados | 932.494 procesados → 138.388 reconciliados con 1.739 géneros, de 78 instituciones | 2026-11-02 |
 | Benchmark Spark vs DuckDB: tiempo, memoria | 932.494 filas: DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB (local, 16 hilos); código 124 vs 242 líneas | 2026-11-02 |
 | Clasificador de noticias (4 clases) | **A ciegas** (50 titulares etiquetados sin ver la propuesta): el LLM coincide con el usuario en el 74 %, y el usuario consigo mismo en el 84 %. Con la propuesta a la vista (300): baseline TF-IDF + regresión logística F1 macro 0,50 (validación cruzada) frente a Groq 0,89, cota superior por anclaje. Misma noticia (47 pares, a ciegas): TF-IDF F1 0,29, Groq como juez 1,00 | 2026-11-07 |
 | Fichas narrativas que pasan fidelidad / anti-copia / cita por frase (%) | Todas las verificaciones: EN 100 % · ES 99 % (82 especies, Groq) · géneros con Qwen 3.5 9B local: EN 90 % · ES 72 % (201 géneros, primer lote) | 2026-11-03 |
-| Fichas narrativas verificadas (acumulado) | EN 598 (12 fallidas) · ES 582 (15 de las 595 de Qwen local siguen fallando tras el rescate) | 2026-11-08 |
-| Glosario: definiciones verificadas | EN 144 · ES 139, de 163 términos (26 rechazadas tras dos intentos; 9 sin artículo fuente); juez Groq `qwen/qwen3.8-27b` | 2026-11-08 |
-| Noticias recogidas / de paleontología | 421 de 3 medios con licencia / 67 (el resto, «ruido» según el clasificador) | 2026-11-08 |
-| Hechos extraídos que pasan la comprobación (%) | 78 % (1685 de 2158) | 2026-11-02 |
+| Fichas narrativas verificadas (acumulado) | EN 598 · ES 582 (arcosaurios 522/509, reptiles marinos 49/47, peces 27/26) | 2026-11-08 |
+| Glosario: definiciones verificadas | EN 144 · ES 139, de 163 términos (26 rechazadas tras dos intentos; 9 sin artículo fuente); juez Groq `qwen/qwen3.8-27b`; muestra de 20: 19 correctas | 2026-11-08 |
+| Noticias recogidas / de paleontología | 421 de 3 medios con licencia / 67 (58 investigación, 9 especie nueva; el resto, «ruido» según el clasificador); 20 enlazan a 13 fichas | 2026-11-08 |
+| Comparador de tamaños | 429 taxones con longitud de sus frases verificadas; 417 dibujables, 187 con la silueta del propio animal o su género; muestra de 20: 19 correctas | 2026-11-08 |
+| Hechos extraídos que pasan la comprobación (%) | 82 % (36.074 de 43.764, en 610 taxones) | 2026-11-08 |
 
 ---
 

@@ -8,9 +8,10 @@ Web: https://adaycuestacorrea.github.io/paleo-atlas/ · Código: https://github.
 ## El producto
 
 - **4.890 fichas** de arcosaurios (dinosaurios, aves, pterosaurios, cocodrilos), reptiles marinos y peces fósiles, en dos idiomas: más de 10.000 páginas.
-- **Al día:** cada día consulta sus fuentes, cada una a su ritmo (Wikipedia a diario; la Paleobiology Database, Crossref, Commons y PhyloPic cada semana o cada mes; GBIF cada mes). Si algo cambió, reconstruye el almacén y vuelve a publicar.
+- **Al día:** cada día consulta sus fuentes, cada una a su ritmo (Wikipedia y las noticias a diario; la Paleobiology Database, Crossref, Commons y PhyloPic cada semana o cada mes; GBIF cada mes). Si algo cambió, reconstruye el almacén y vuelve a publicar.
 - **Con historia:** 19.541 eventos (descripciones, sinonimias, cambios de género…) desde 1758 y 8.195 estudios; los seguidos desde 2026 llevan sus señales de fiabilidad (revisión por pares, preprint, retracción).
-- **Textos que citan cada frase:** un LLM redacta a partir de hechos extraídos con su fuente, y solo se publica lo que pasa las comprobaciones automáticas.
+- **Textos que citan cada frase:** un LLM redacta a partir de hechos extraídos con su fuente, y solo se publica lo que pasa las comprobaciones automáticas. Un glosario con explicaciones emergentes sigue el mismo método.
+- **Noticias y tamaños:** las noticias de tres medios con licencia se clasifican con un LLM, se agrupan entre medios e idiomas y enlazan a su ficha; un comparador dibuja a escala 417 animales con la longitud leída de sus frases verificadas.
 - **Transparente:** una página pública, [«Estado de los datos»](https://adaycuestacorrea.github.io/paleo-atlas/es/estado.html), muestra cada ejecución, los tests y la frescura de cada fuente.
 
 ## La arquitectura
@@ -31,16 +32,22 @@ fuentes abiertas → paleo ingest → crudo versionado en git → dbt + DuckDB �
 
 | | |
 |---|---|
-| Tests | 265 de pytest · 170 de dbt en cada ejecución (163 de datos y 7 unitarios) |
+| Tests | 302 de pytest · 196 de dbt en cada ejecución (188 de datos y 8 unitarios), sobre 66 modelos |
 | Reconciliación GBIF ↔ PBDB | 138.388 especímenes con su género: exacta, por sinónimo o por errata |
 | Benchmark, 932.494 filas | DuckDB 0,86 s y 459 MB · Spark 13,7 s y 1,5 GB |
-| Fichas narrativas verificadas | 598 en inglés y 582 en español (crecen cada noche con la GPU local) |
-| Glosario | 163 términos; 144 definiciones verificadas en inglés y 139 en español |
+| Fichas narrativas verificadas | 598 en inglés y 582 en español (crecen por lotes nocturnos con la GPU local); 82 % de los 43.764 hechos extraídos pasan la comprobación |
+| Glosario | 163 términos; 144 definiciones verificadas en inglés y 139 en español; 19 de 20 correctas en una muestra revisada |
+| Clasificación de noticias | A ciegas, el LLM coincide con la persona en el 74 % (la persona consigo misma, 84 %); duplicados entre medios: F1 1,00 frente a 0,29 de TF-IDF |
+| Comparador de tamaños | 429 taxones con longitud y fuente; 19 de 20 correctas en una muestra revisada |
+| Ejecución diaria | ~3 min en GitHub Actions (ingesta, dbt y web) |
 | Coste mensual | 0 € |
 
 ## Cómo se evalúa la calidad
 
 - **Datos:** tests de dbt en cada ejecución (claves, relaciones, valores aceptados, frescura, reglas de alcance). Un error detiene la publicación; un aviso se publica y se explica en la página de estado.
 - **Textos del LLM:** cada frase debe citar un hecho, conservar sus cifras y nombres científicos y no copiar 8 palabras seguidas de la fuente. Las configuraciones de modelo se compararon con 12 fichas de referencia antes de elegir.
+- **Clasificadores:** se miden contra etiquetas a mano, con una muestra a ciegas aparte, porque etiquetar viendo la propuesta del modelo solo da una cota superior.
 - **Web:** en cada build se comprueban enlaces rotos, la paridad ES/EN y las licencias de cada imagen.
 - **Decisiones:** 10 ADRs con contexto, alternativas y consecuencias, y un documento por fase con lo que salió mal y lo aprendido.
+
+Más: [postmortem](postmortem.es.md) · [historias STAR](historias-star.es.md)

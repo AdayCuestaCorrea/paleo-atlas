@@ -65,11 +65,11 @@ Medidas el 2026-11-08 en el almacén y en la suite de tests.
 | Fichas (ES + EN) | 4890 taxones → 10 260 páginas web, comprobadas en cada build (enlaces rotos, versiones en el otro idioma, licencias) |
 | Estudios | 8195, de ellos 586 comprobados en Crossref (retractaciones, correcciones, revisión por pares) |
 | Registro fósil | 58 570 hallazgos de PBDB en 188 países · 138 388 especímenes de GBIF reconciliados con su género |
-| Fichas narrativas | 598 verificadas en inglés y 582 en español (y crecen cada noche) |
+| Fichas narrativas | 598 verificadas en inglés y 582 en español (y crecen por lotes nocturnos) |
 | Glosario | 163 términos que aparecen en las fichas; 144 definiciones verificadas en inglés y 139 en español, cada una redactada a partir del artículo de Wikipedia del término (citado) y comprobada como las fichas: nada copiado, cifras contra la fuente y un juez LLM de otra familia de modelos. En una muestra de 20 revisada a mano, 19 correctas (95 %) y 1 que no se pudo juzgar |
-| Comparador de tamaños | 429 taxones con la longitud de un adulto leída de sus frases verificadas (417 con una silueta que se puede dibujar, 190 de ellos con la del propio animal o su género; no se dibujan los pterosaurios, que se miden por la envergadura, ni las especies que PBDB aún no ha clasificado); muestra de 20 revisada por una persona: 19 correctas y 1 sin decidir |
-| Tests | 291 de pytest · 189 de dbt en cada ejecución del pipeline (182 de datos y 7 unitarios) |
-| Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
+| Comparador de tamaños | 429 taxones con la longitud de un adulto leída de sus frases verificadas (417 con una silueta que se puede dibujar, 187 de ellos con la del propio animal o su género; no se dibujan los pterosaurios, que se miden por la envergadura, ni las especies que PBDB aún no ha clasificado); muestra de 20 revisada por una persona: 19 correctas y 1 sin decidir |
+| Tests | 302 de pytest · 196 de dbt en cada ejecución del pipeline (188 de datos, 8 de ellos avisos, y 8 unitarios) sobre 66 modelos |
+| Ejecución diaria | unos 3 minutos una ejecución completa con ingesta, dbt y web (146–202 s el 2026-11-08), más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |
 | Clasificador de noticias | Coincide con una persona en el 74 % de 50 titulares etiquetados a ciegas, con 4 clases (la persona coincide consigo misma en el 84 %); un baseline TF-IDF + regresión logística logra F1 macro 0,50 frente a 0,89 del LLM en 300 titulares etiquetados viendo la propuesta del LLM ([informe](eval/reports/2026-11-07-news.md), en inglés) |
 | Coste | 0 € |
@@ -88,7 +88,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 
 ## Calidad de datos
 
-- **Tests de dbt** en cada ejecución (163 de datos y 7 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
+- **Tests de dbt** en cada ejecución (188 de datos y 8 unitarios): claves, valores aceptados, relaciones, frescura de cada fuente y reglas de alcance; un error detiene la ejecución y los avisos quedan en el informe.
 - **Informe de cada ejecución** (`paleo report`), guardado en la rama `data`: qué cambió, duraciones, recuentos.
 - **Comprobación de la web** en cada build (`paleo site --check`): enlaces rotos, versión en el otro idioma, páginas a las que nadie enlaza, imágenes sin licencia.
 - **Las fichas narrativas** solo se publican si cada frase pasa sus comprobaciones: hechos citados, mismas cifras, nombres científicos conservados, nada de copiar 8 o más palabras seguidas de una fuente; cómo funciona cada comprobación se explica en [`docs/fases/`](docs/fases/).

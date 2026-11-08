@@ -141,4 +141,4 @@ flowchart LR
 - **Las referencias son pocas** (8) y la persona promedio es española (NCD-RisC, 19 años); en la página en inglés también.
 - **El autobús mide la longitud máxima legal en la UE** (13,5 m), porque es la cifra que da la fuente; un autobús urbano típico es algo más corto.
 - **Contrastar con conjuntos publicados** (Dryad, O'Gorman y Hone 2012) queda en el backlog.
-- **Las frases de los hechos pueden tener errores propios** (en la de *Tylosaurus* pone «T. rex»). El comparador enseña la cita literal precisamente para eso.
+- **Las frases de los hechos pueden tener errores propios.** El comparador enseña la cita literal precisamente para eso. (El «T. rex» de *Tylosaurus* no lo era: *Tylosaurus rex* es una especie de 2026. Desde la v41 se escribe en cursiva y enlaza a su ficha, y los hechos que cambian el nombre de una especie se rechazan.)

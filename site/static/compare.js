@@ -87,7 +87,11 @@
   if (typeof document === "undefined") { module.exports = Core; return; } // tests (node)
 
   // ===================================================================== 2. UI
-  const PALETTE = ["#c0612b", "#3f7cac", "#5e8c4a", "#8a5aa8", "#b8892a", "#2f8f8a"];
+  // Silhouette colours from the CSS token --cmp (light and dark mode), read when drawn.
+  const palette = () => {
+    const v = getComputedStyle(document.documentElement).getPropertyValue("--cmp").trim();
+    return v ? v.split(/\s+/) : ["#2c6b55", "#b07a1f", "#3f6e9c", "#8a4f7d", "#6e7f2e", "#4a5560"];
+  };
   const KINDS = ["taxon", "people", "animals", "objects"];
   const MAX_ITEMS = 6;
   const LIST_LIMIT = 30;
@@ -150,10 +154,10 @@
     }
     pad() { return this.opts.static ? { l: 6, r: 6, t: 4, b: 6 } : { l: 46, r: 16, t: 34, b: 30 }; }
     set(keys, keep) {
-      const old = new Map(this.items.map((i) => [i.k, i]));
+      const old = new Map(this.items.map((i) => [i.k, i])), pal = palette();
       this.items = keys.map((k, n) => {
         const prev = keep && old.get(k);
-        return { ...CATALOG.get(k), color: PALETTE[n % PALETTE.length], pos: prev ? prev.pos : null, z: prev ? prev.z : ++this.z };
+        return { ...CATALOG.get(k), color: pal[n % pal.length], pos: prev ? prev.pos : null, z: prev ? prev.z : ++this.z };
       });
       const boxes = this.boxes(), lay = Core.layout(boxes);
       // Keep where the user put things; new items go to the right of everything.

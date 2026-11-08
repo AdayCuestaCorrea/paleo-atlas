@@ -317,7 +317,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 ### Fase 6 — Comparador de tamaños *(v40: los modelos 3D pasan al backlog, §24)*
 - [x] Comparador de tamaños (§11.3) *(2026-11-08: tarjeta en la ficha, ventana con el fondo difuminado y página propia; 429 taxones con tamaño con fuente, 417 con silueta dibujable; muestra de 20 revisada por el usuario: 19 correctas y 1 sin decidir)*
-- [ ] Documento de fase (`docs/fases/fase-6.md`)
+- [x] Documento de fase (`docs/fases/fase-6.md`) *(2026-11-08)*
 
 **Terminado cuando:** el comparador cumple las reglas de §11.3 y está publicado.
 

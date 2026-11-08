@@ -25,4 +25,4 @@ Cada documento se escribe al cerrar su fase. Va en español primero y en inglés
 | 3 — Enciclopedia, ampliación y Spark | [fase-3.md](fase-3.md) | En curso: hitos 1–5 y 7 hechos; el 6 (textos de los géneros con la GPU) avanza por lotes |
 | 4 — Portfolio | — | Se escribe al cerrarla |
 | 5 — IA y noticias | — | Se escribe al cerrarla |
-| 6 — Extras | — | Se escribe al cerrarla |
+| 6 — Comparador de tamaños (el 3D pasó al backlog) | [fase-6.md](fase-6.md) | Hecha y publicada (2026-11-08) |

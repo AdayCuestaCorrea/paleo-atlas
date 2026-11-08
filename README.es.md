@@ -10,10 +10,11 @@ Una enciclopedia paleontológica visual y viva, en español e inglés, que se re
 
 ## Qué es
 
-- **4890 fichas** en dos idiomas (10 258 páginas web): los 4751 géneros de arcosaurios (dinosaurios, aves, pterosaurios, parientes de los cocodrilos), reptiles marinos y peces fósiles que recoge la Paleobiology Database, las 115 especies descritas en 2026 y 24 especies conocidas con estudios nuevos.
+- **4890 fichas** en dos idiomas (10 260 páginas web): los 4751 géneros de arcosaurios (dinosaurios, aves, pterosaurios, parientes de los cocodrilos), reptiles marinos y peces fósiles que recoge la Paleobiology Database, las 115 especies descritas en 2026 y 24 especies conocidas con estudios nuevos.
 - **Se actualiza a diario** con fuentes abiertas: las páginas anuales de paleontología de Wikipedia, la Paleobiology Database (PBDB), Crossref, GBIF, Wikimedia Commons, PhyloPic, DOAJ y Wikidata.
 - **Cada frase del texto cita su fuente** y pasa comprobaciones automáticas antes de publicarse: hechos y cifras contra la fuente, nombres científicos, nada copiado. Si una ficha no pasa alguna, muestra un texto construido con sus datos. Por ahora hay 598 fichas verificadas en inglés y 582 en español; el resto se redacta en lotes nocturnos con una GPU local.
 - **Un historial por animal:** 19 541 eventos: 402 seguidos según ocurrían desde 2026 y 19 139 reconstruidos hacia atrás con las opiniones taxonómicas de PBDB y las páginas anuales de Wikipedia (2009–2025). Cada estudio lleva sus señales de fiabilidad (revisión por pares, preprint, retractación, revista de acceso abierto).
+- **Un comparador de tamaños:** una tarjeta en cada ficha con tamaño con fuente abre una ventana para poner el animal junto a personas, animales actuales, edificios y otros animales del atlas, a escala, y arrastrar las siluetas para superponerlas ([página](https://adaycuestacorrea.github.io/paleo-atlas/es/comparador.html)). Los tamaños salen solo de frases verificadas: 429 taxones, leídos por una regla estricta o, si hay dudas, por un LLM cuyas cifras tienen que estar en la frase.
 - **0 € al mes:** GitHub Actions, GitHub Pages, planes gratuitos de las API y un modelo local.
 
 | | |
@@ -61,12 +62,13 @@ Medidas el 2026-11-08 en el almacén y en la suite de tests.
 
 | | |
 |---|---|
-| Fichas (ES + EN) | 4890 taxones → 10 258 páginas web, comprobadas en cada build (enlaces rotos, versiones en el otro idioma, licencias) |
+| Fichas (ES + EN) | 4890 taxones → 10 260 páginas web, comprobadas en cada build (enlaces rotos, versiones en el otro idioma, licencias) |
 | Estudios | 8195, de ellos 586 comprobados en Crossref (retractaciones, correcciones, revisión por pares) |
 | Registro fósil | 58 570 hallazgos de PBDB en 188 países · 138 388 especímenes de GBIF reconciliados con su género |
 | Fichas narrativas | 598 verificadas en inglés y 582 en español (y crecen cada noche) |
 | Glosario | 163 términos que aparecen en las fichas; 144 definiciones verificadas en inglés y 139 en español, cada una redactada a partir del artículo de Wikipedia del término (citado) y comprobada como las fichas: nada copiado, cifras contra la fuente y un juez LLM de otra familia de modelos |
-| Tests | 265 de pytest · 170 de dbt en cada ejecución del pipeline (163 de datos y 7 unitarios) |
+| Comparador de tamaños | 429 taxones con la longitud de un adulto leída de sus frases verificadas (417 con una silueta que se puede dibujar); muestra de 20 revisada por una persona: 19 correctas y 1 sin decidir |
+| Tests | 291 de pytest · 189 de dbt en cada ejecución del pipeline (182 de datos y 7 unitarios) |
 | Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |
 | Clasificador de noticias | Coincide con una persona en el 74 % de 50 titulares etiquetados a ciegas, con 4 clases (la persona coincide consigo misma en el 84 %); un baseline TF-IDF + regresión logística logra F1 macro 0,50 frente a 0,89 del LLM en 300 titulares etiquetados viendo la propuesta del LLM ([informe](eval/reports/2026-11-07-news.md), en inglés) |
@@ -103,6 +105,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 | Wikimedia Commons · PhyloPic | Imágenes y siluetas, solo con licencias permitidas (sin NC) | Por archivo, visible en cada imagen |
 | Wikidata | Comprobar qué artículo de Wikipedia corresponde a cada género | CC0 |
 | Natural Earth | Mapas del mundo | Dominio público |
+| NCD-RisC (The Lancet 2020) | Estatura del hombre y la mujer promedio en el comparador | Cifras citadas; los datos no se redistribuyen |
 
 ## Limitaciones conocidas
 
@@ -110,6 +113,7 @@ Unos 7,5 s del tiempo de Spark son coste fijo (JVM, sesión, planificación). M�
 - **Las fichas narrativas cubren por ahora una minoría de los géneros** (598 en inglés y 582 en español, de 2743 géneros con artículo en Wikipedia). Con el modelo local, 15 de las 595 adaptaciones al español siguen sin pasar las comprobaciones de copia y de cifras tras la pasada de rescate y no se publican; esas fichas muestran su texto construido con datos.
 - **El idioma de cada estudio** viene de Crossref, que lo da en torno al 80 % de los estudios seguidos; el historial reconstruido hacia atrás (7600 estudios) no se comprueba en Crossref.
 - **GitHub lanza la ejecución diaria tarde** (unas 8 horas la mayoría de los días), así que la actualización «diaria» suele llegar por la tarde (UTC).
+- **El comparador saca la altura de las siluetas**, muchas veces la del grupo del animal, así que es aproximada (y lo dice); 13 taxones con tamaño no tienen ninguna silueta en una pose que se pueda medir y no se dibujan. Los pterosaurios suelen medirse por la envergadura, que aún no se usa.
 - **Las especies nuevas tardan en llegar a PBDB**, así que muchas aún no tienen edades ni hallazgos; su periodo y su país salen de su descripción.
 
 ## Decisiones de diseño

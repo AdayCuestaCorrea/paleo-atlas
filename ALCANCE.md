@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 39 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); glosario y noticias publicados el 2026-11-08; Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso
+**Creado:** 2026-10-31 · **Versión:** 40 · **Estado:** Fase 3 publicada (merge a `main` el 2026-11-07); glosario y noticias publicados el 2026-11-08; Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
 
 ---
 
@@ -48,7 +48,7 @@ Una **enciclopedia paleontológica visual y viva, en español e inglés**, que s
 
 - **Última hora:** lo publicado hoy aparece en la web en horas (ver §15).
 - **Recap semanal:** resumen de todo lo que pasó en la semana, archivado.
-- **Enciclopedia:** una ficha por taxón con imagen 2D (y 3D si existe un modelo fiable), datos clave, **historial de todo lo que se ha descubierto o cambiado sobre él**, mapa de hallazgos y museos que guardan especímenes.
+- **Enciclopedia:** una ficha por taxón con imagen 2D, datos clave, comparador de tamaños, **historial de todo lo que se ha descubierto o cambiado sobre él**, mapa de hallazgos y museos que guardan especímenes.
 - **Parentesco visual:** familia y clasificación de cada animal, y un **árbol de parentesco** con sus «hermanos», ordenados en el tiempo geológico.
 - **Comparador de tamaños:** *T. rex* frente a *Ankylosaurus*, un elefante o un avión, a escala.
 - **Para todos los públicos:** glosario y explicaciones para quien no sabe qué es un holotipo o el Cretácico.
@@ -95,9 +95,9 @@ Demostrar, con un sistema que funciona en público, las habilidades que piden la
 - **Fichas básicas para los taxones ya conocidos** que aparecen en los estudios del año (datos de PBDB, imagen e historial de estudios; texto narrativo en la Fase 3). Decisión del 2026-11-02. *Revisada el 2026-11-03 (v25): una especie conocida cuyo género tiene ficha de enciclopedia se integra en ella (sus estudios van al historial del género con el nombre de la especie y su URL redirige); las especies nuevas del año conservan su ficha.*
 - Señales de fiabilidad de cada estudio.
 - Enciclopedia con datos de PBDB y GBIF; Spark local + benchmark.
-- Imágenes 2D con licencia libre; modelos 3D curados cuando existan y sean fiables.
+- Imágenes 2D con licencia libre. *(Los modelos 3D salen del alcance en la v40: backlog, §24.)*
 - Familia y clasificación en cada ficha; árbol de parentesco con escala temporal (Fase 3).
-- Comparador de tamaños con objetos y animales actuales, solo con tamaños que tengan fuente (Fase 6).
+- Comparador de tamaños con personas, objetos y animales actuales, solo con tamaños que tengan fuente (Fase 6, hecho en la v40).
 - **Fichas narrativas propias** en ES + EN, cada frase con su cita (§12.1): especies nuevas en la Fase 1, toda la enciclopedia en la Fase 3.
 - IA: glosario y clasificación de noticias (Fase 5).
 - Airflow en Docker; GitHub Actions para la ejecución programada.
@@ -151,9 +151,9 @@ Notas:
 | F8 | DOAJ | Si la revista de acceso abierto está en el directorio | API pública (sin clave), por ISSN | Mensual (caché de 30 días) | Metadatos de revistas **CC0** | [x] 2026-11-02 |
 | F13 | Wikidata — SPARQL | Verificación de los artículos de Wikipedia de cada género (ID de PBDB P842 y ascendencia P171 hasta la raíz del bloque) y título del artículo en español | Servicio de consultas público, 100 elementos por consulta | Mensual, escalonado (como mucho 600 géneros por ejecución) | Datos **CC0** | [x] 2026-11-02 |
 | F9 | *(Fase 5)* RSS de medios ES/EN con licencia (seed `news_feeds`): ScienceDaily (3 feeds), The Conversation (4 temas en inglés y Ciencia en español), SINC (Tierra y Noticias) | Noticias: titular, enlace, fecha y, si la licencia lo permite, el resumen del propio feed | RSS / Atom | Diaria (detección de cambios en `paleo check`) | ScienceDaily: sus condiciones del RSS permiten usarlo en otra web sin modificar el texto y citándolo · The Conversation: CC BY-ND 4.0 · SINC: CC BY 4.0. **Fuera:** Phys.org (solo uso personal), Science News (prohíbe reproducir), Live Science, ABC y Europa Press (sin permiso explícito; en España rige además el derecho de los editores de prensa) | [x] 2026-11-07 |
-| F10 | *(Fase 6)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
+| F10 | *(backlog desde la v40)* Fuentes de modelos 3D (§13): Smithsonian 3D, MorphoSource, Sketchfab, colecciones de museos | Modelos 3D | API o embebido oficial | Curación manual | Por modelo; mismas licencias permitidas que F4 | [ ] |
 | F11 | *(Fase 3)* Open Tree of Life — API | Árbol de parentesco sintético (topología), con identificadores cruzados a otras bases | API pública | — | — | Descartada por ahora (2026-11-03): reconoce 631 de 1.000 géneros fósiles, pero solo ~12 % están en su árbol sintético |
-| F12 | *(Fase 6)* Conjuntos de datos de tamaño corporal publicados (p. ej. en Dryad) + seed curado a mano | Longitud y masa estimadas, con rango y cita | Descarga + curación | Puntual | Dryad publica en CC0; resto, a verificar por conjunto | [ ] |
+| F12 | *(Fase 6; v40: el tamaño sale de los hechos verificados de las fichas, §11.3; estos conjuntos quedan para contrastar, backlog)* Conjuntos de datos de tamaño corporal publicados (p. ej. en Dryad) + seed curado a mano | Longitud y masa estimadas, con rango y cita | Descarga + curación | Puntual | Dryad publica en CC0; resto, a verificar por conjunto | [ ] |
 
 ### Resultado de la comprobación de licencias (2026-11-01)
 
@@ -315,12 +315,11 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 
 **Terminado cuando:** las métricas de clasificación de noticias están publicadas en el README y el glosario está en las fichas con su porcentaje de acierto en la muestra revisada.
 
-### Fase 6 — Extras
-- [ ] Modelos 3D curados (§13)
-- [ ] Comparador de tamaños (§11.3)
+### Fase 6 — Comparador de tamaños *(v40: los modelos 3D pasan al backlog, §24)*
+- [x] Comparador de tamaños (§11.3) *(2026-11-08: tarjeta en la ficha, ventana con el fondo difuminado y página propia; 429 taxones con tamaño con fuente, 417 con silueta dibujable; muestra de 20 revisada por el usuario: 19 correctas y 1 sin decidir)*
 - [ ] Documento de fase (`docs/fases/fase-6.md`)
 
-**Terminado cuando:** cada extra cumple sus reglas de §11.3 y §13 y se ha publicado.
+**Terminado cuando:** el comparador cumple las reglas de §11.3 y está publicado.
 
 ---
 
@@ -343,8 +342,8 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 | Término del glosario | Término, definición ES, definición EN, estado de revisión (§12) |
 
 ### Capas (nombres orientativos; *(hecho)* = existe con ese nombre)
-- **seeds:** `license_allowlist`, `trusted_journals`, `group_clades` y `scope_clades` *(hechos; `scope_clades` es el alcance de §4)*; `contested_topics` *(Fase 3)*, `models_3d`, `glossary`, `body_sizes`, `reference_objects`. El título de las páginas anuales sigue en `config.py` y en la macro `wikipedia_block` (se unifica al activar los bloques nuevos)
-- **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__genus_specimens`, `stg_gbif__institutions`, `stg_gbif__downloads` *(los de GBIF, hechos: leen el extracto agregado, no los registros)*, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_body_sizes`
+- **seeds:** `license_allowlist`, `trusted_journals`, `group_clades` y `scope_clades` *(hechos; `scope_clades` es el alcance de §4)*; `contested_topics` *(Fase 3)*, `glossary`, `reference_objects` y `silhouette_exclusions` *(v40, comparador)*; `models_3d` *(backlog)*. El título de las páginas anuales sigue en `config.py` y en la macro `wikipedia_block` (se unifica al activar los bloques nuevos)
+- **staging:** *(hechos)* `stg_wikipedia__new_taxa`, `stg_wikipedia__research_items`, `stg_pbdb__taxa`, `stg_phylopic__images`, `stg_commons__images`, `stg_commons__taxon_files`, `stg_crossref__works`, `stg_doaj__journals`, `stg_narrative__*` (hechos, citas, textos, títulos), `stg_pipeline__runs`; los artículos de Wikipedia se leen en Python (`paleo facts`), no en dbt. *(Fases siguientes)* `stg_pbdb__opinions`, `stg_pbdb__occurrences`, `stg_gbif__genus_specimens`, `stg_gbif__institutions`, `stg_gbif__downloads` *(los de GBIF, hechos: leen el extracto agregado, no los registros)*, `stg_phylopic__images`, `stg_commons__images`, `stg_crossref__works`, `stg_zoobank__names`, `stg_otol__tree`, `stg_sizes__taxa` *(v40: de `derived/sizes`, con `int_silhouette_best_per_taxon` y `fct_taxon_size`)*
 - **historial (SCD2 desde versiones crudas):** `int_new_taxa_history`; los `stg_*_versions` / `stg_*_revisions` conservan todas las versiones
 - **intermediate:** *(hechos)* `int_taxon_pages`, `int_taxon_classification`, `int_research_taxon_links` (resolución de nombres), `int_image_candidates`, `int_image_best_per_taxon`, `int_study_reliability`, `int_taxon_events`
 - **marts:** `dim_taxon`, `dim_taxon_tree` (padre-hijo + rango temporal), `dim_study`, `dim_institution`, `dim_geologic_interval`, `fct_taxon_event`, `fct_taxon_text` (texto verificado por idioma), `fct_specimens_by_taxon`. *(Hechos:* `dim_taxon`, `dim_study`, `dim_institution`, `fct_taxon_event`, `fct_taxon_text`, `fct_taxon_image`, `fct_specimens_by_taxon`*.)* El recap semanal se calcula en Python al generar la web y el resumen de ejecución lo escribe `paleo report` en `runs/`
@@ -417,6 +416,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 9. **Acerca de:** qué es, autoría, enlace al repo.
 10. **Buscador** (`/es/buscar.html`, `/en/search.html`): índice JSON por idioma, búsqueda en el navegador sin servidor.
 12. **Noticias** *(Fase 5, v38)*: `es/noticias.html` / `en/news.html`, las historias de los medios con licencia, agrupadas, con filtros y enlazadas a las fichas.
+13. **Comparador de tamaños** (`/es/comparador.html`, `/en/size.html`) *(Fase 6, v40)*: ver §11.3.
 11. **Estado de los datos** (`/es/estado.html`, `/en/status.html`) *(v34)*: cómo va el pipeline, con las cifras del propio registro de ejecuciones y del almacén (ver §16).
 
 ### 11.1 Contenido de la ficha
@@ -426,12 +426,12 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 | Imagen 2D + autor + licencia, ampliable | F4 / F5 | Silueta del género, del clado o, en último caso, del grupo (seed `group_clades`), con aviso «imagen aproximada» |
 | Galería (fósiles, dientes, esqueletos, reconstrucciones…; máx. 12, con autor, licencia y la descripción de Commons; primero las del artículo de Wikipedia, la categoría solo rellena; tira de miniaturas bajo la imagen principal y en el visor) | F5 | Ocultar |
 | «Lo último»: los 3 eventos más recientes del historial | §9 | Ocultar |
-| Modelo 3D *(Fase 6)* | F10 | Ocultar |
+| Modelo 3D *(backlog desde la v40)* | F10 | Ocultar |
 | Familia y clasificación (familia → orden → clase) | PBDB | El nivel más bajo conocido |
 | Grupo (clado) y bloque | PBDB / seed | Clado de F1 |
 | Época y edad (Ma) | PBDB / F1 | «Desconocida» |
 | Lugar del hallazgo | F1 / PBDB | Ocultar |
-| Tamaño (rango + cita) y botón «Comparar» *(Fase 6)* | F12 / seed `body_sizes` (§11.3). **No se inventa** | Ocultar |
+| Tamaño (rango + cita) y tarjeta «Comparar tamaños» *(Fase 6, v40)* | Hechos verificados de la ficha (`paleo sizes extract`, §11.3). **No se inventa** | Ocultar |
 | Árbol de parentesco *(Fase 3)* | §11.2 | Solo la clasificación en texto |
 | **Texto narrativo** por secciones: Descripción, Descubrimiento, Paleobiología, Clasificación, Época y hábitat, Debates; cada frase con su cita (una por obra) y los nombres científicos en cursiva, enlazados a su ficha o a Wikipedia | §12.1 | Texto de la plantilla (§11.4) |
 | Línea temporal / historial | §9 | Solo la descripción original |
@@ -449,12 +449,14 @@ Lo que buscas se llama **cladograma** o, con el eje del tiempo, **árbol filogen
 - **Cambio (v30, decisión del usuario):** el SVG de cladograma se sustituye por **filas sobre un eje de millones de años**, una por género, con su rango escrito junto a la barra (sin depender del hover, que en móvil no existe) y las bandas de los periodos; se pierden las líneas del cladograma, y el parentesco se lee en el orden (los más emparentados primero) y en el clado nombrado. Los dos niveles se mantienen, con un selector.
 - **Hecho (2026-11-03):** dos niveles, «Grupo» (el clado más bajo con al menos 3 géneros de la enciclopedia) y «Un nivel más arriba», cada uno con hasta 20 géneros, los más cercanos primero; SVG estático con enlaces, más un filtro por periodo; las especies muestran el árbol de su género. Las siluetas solo se ponen cuando son del propio género (41), no las del clado.
 
-### 11.3 Comparador de tamaños (Fase 6)
-- Elegir 2–4 elementos: taxones del atlas y objetos de referencia (persona, elefante africano, autobús, avión comercial…).
-- Se dibujan **a escala** con sus siluetas (F4), en una cuadrícula en metros, con altura de una persona como referencia.
-- **Solo tamaños con fuente:** cada taxón muestra el rango estimado (mín.–máx.) y la cita. Si no hay tamaño con fuente, el taxón no aparece en el comparador.
-- Los objetos de referencia tienen medidas con fuente en el seed `reference_objects`.
-- Aviso: los tamaños de los animales extintos son estimaciones y cambian con los estudios (enlaza con el historial de §9).
+### 11.3 Comparador de tamaños (Fase 6) *(hecho en la v40)*
+- **Dónde:** una tarjeta en la columna derecha de la ficha (miniatura del animal frente a un hombre promedio, la cifra, una frase automática y la fuente) que abre una **ventana con el fondo difuminado**; y una página propia (`es/comparador.html`, `en/size.html`), que es la misma ventana a página completa. Sin JavaScript, la tarjeta es un enlace a la página. El estado va en la URL (`#comparar=tyrannosaurus,man`) para compartirlo.
+- **Qué se compara:** hasta 6 elementos entre animales del atlas, personas (hombre y mujer promedio), animales actuales (elefante africano, jirafa, ballena azul) y edificios u objetos (autobús, casa de dos plantas, canasta de baloncesto), a escala sobre una cuadrícula en metros y con un suelo común. Atajos «Récords del atlas» (el más largo y el más pequeño). Interruptor «Mínimo / Máximo» del rango.
+- **Siluetas:** semitransparentes y de colores distintos; se **arrastran** con ratón o con el dedo (un toque de menos de 8 px es un clic) y se agarran **por el dibujo, no por su rectángulo** (la de abajo se puede coger por un hueco de la de arriba); también con las flechas del teclado. «Recolocar» las vuelve a poner en fila. Respeta `prefers-reduced-motion`. En el móvil, la ventana ocupa la pantalla.
+- **Solo tamaños con fuente:** la longitud de un adulto sale de las frases verificadas de la ficha (`paleo sizes extract`): una regla estricta acepta las claras («*Taxón* medía/alcanzaba… N m de largo», sin partes del cuerpo, juveniles ni dudas) y Groq (`openai/gpt-oss-120b`) etiqueta el resto; sus cifras tienen que estar en la frase. La cifra principal es la más cercana a la mediana de las estimaciones actuales; las antiguas («early», «originally»…) se listan pero no mandan, y las que la propia frase pone en duda no se publican. Se muestran el abanico de estimaciones, «restos parciales» cuando la fuente lo dice y la cita literal. Muestra de 20 revisada por el usuario (`eval/sizes/review.csv`): 19 correctas y 1 sin decidir.
+- **La altura no se mide:** sale de la proporción de la silueta y se dice («altura aproximada según la silueta»). Silueta: la PhyloPic con licencia permitida más cercana (el taxón, su género o el clado más bajo de su clasificación), con autor y licencia; se excluyen a mano las poses que no sirven para medir (seed `silhouette_exclusions`: vistas desde arriba, en vuelo, en diagonal). El servidor de imágenes de PhyloPic no envía cabeceras CORS a los navegadores, así que la web sirve copias limpias (solo el dibujo) en `derived/silhouettes` (`paleo sizes silhouettes`).
+- **Referencias con fuente** en el seed `reference_objects`: personas de NCD-RisC (The Lancet 2020; estatura media a los 19 años, España, 2019: 1,76 y 1,62 m), animales y objetos de artículos de Wikipedia con su revisión (`oldid`). Las siluetas de personas y objetos son dibujos propios.
+- **Aviso:** los tamaños de los animales extintos son estimaciones y cambian con los estudios (enlaza con el historial de la ficha, §9), y «¿Ves un error?» abre un issue de GitHub con el taxón.
 
 ### 11.4 Texto de respaldo (plantilla)
 Solo se usa si la ficha narrativa no existe todavía o no pasa las verificaciones. Plantillas en cada idioma a partir de los campos. Ej.: «Nuevo género de saurópodo del Cretácico Superior de Argentina, descrito por X et al. (2026)».
@@ -500,6 +502,8 @@ Prosa propia, no esquemas, en ES + EN, con cada frase citada.
 ---
 
 ## 13. Modelos 3D
+
+> **Fuera del alcance desde la v40** (backlog, §24): la Fase 6 se queda en el comparador de tamaños. Lo que sigue es el diseño por si vuelve.
 
 Dos tipos, con reglas distintas:
 
@@ -746,7 +750,7 @@ D1–D10 de §6, en formato breve: contexto, decisión, alternativas, consecuenc
 ### Abiertas
 | # | Decisión | Opciones | Cuándo |
 |---|---|---|---|
-| A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | Después de Fase 5 |
+| A14 | ¿Hacer la Fase 6? | Sí / no / solo 3D / solo comparador | **Solo comparador** (decidido el 2026-11-08, v40) |
 
 ---
 
@@ -774,6 +778,10 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Idea | Notas |
 |---|---|
+| Modelos 3D curados (§13) | Fuera del alcance desde la v40; el diseño de §13 sigue valiendo si vuelve |
+| Envergadura de los pterosaurios en el comparador | Su tamaño se publica como envergadura, que hoy se descarta; necesitaría siluetas con las alas abiertas |
+| Contrastar los tamaños con conjuntos publicados | Dryad (reptiles marinos, 2025; titanosauriformes, 2014), O'Gorman y Hone (2012); comprobar la licencia de cada uno |
+| Masa corporal en el comparador | Los hechos la dan a menudo; habría que extraerla con las mismas reglas |
 | Tiempo real al minuto | Escuchar los cambios de Wikipedia en directo (EventStreams); necesita un proceso siempre encendido |
 | Feed RSS de la propia web | Fácil con web estática |
 | Mapa paleogeográfico (dónde estaban los continentes en esa época) | Existen servicios de reconstrucción de placas; a investigar |
@@ -793,6 +801,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-08 | v40: **la Fase 6 se queda en el comparador de tamaños** y los modelos 3D pasan al backlog (§13, §24). Comparador hecho (§11.3): tarjeta en la ficha, ventana con el fondo difuminado y página propia; tamaños de las frases verificadas (`paleo sizes extract`: regla estricta + Groq para las dudosas, 429 taxones; muestra de 20 revisada: 19 correctas, 1 sin decidir); siluetas PhyloPic servidas desde la web (su servidor no envía CORS) y elegidas por toda la clasificación, con 42 poses excluidas a mano; referencias con fuente (NCD-RisC, Wikipedia con revisión); arrastre por el dibujo. Nuevos: seeds `reference_objects` y `silhouette_exclusions`, `fct_taxon_size`, pasos `sizes extract` y `sizes silhouettes` en `pipeline.yml` y en el DAG | Decisión del usuario (maquetas: tarjeta A + ventana C) |
 | 2026-11-08 | v39: **glosario y noticias publicados** (merge de datos y avance rápido de `fase-3` a `main`). Glosario: reintentos del español terminados (EN 144 / ES 139 verificadas); la comprobación de cifras de las definiciones también lee los números escritos con letra («fifty-eight million», «cincuenta y ocho millones», con redondeo de un decimal de la fuente). Un HTTP 400 `json_validate_failed` de Groq cuenta como salida inválida (se reintenta y se salta el lote) en vez de parar la ejecución. `scripts/merge_data.py` une `derived/news/{labels,pairs}.json` por clave y rehace `groups.json`. §17 al día: 598/582 fichas verificadas, 265 + 170 tests | Publicar la web completa antes del lunes 9; el lote nocturno del 8 se cortó a las 06:21 porque el PC se suspendió (227 géneros, 196 verificados en los dos idiomas) |
 | 2026-11-07 | v38: **glosario «como las fichas»** (§12.2): en vez de revisar a mano cada definición, se redacta desde el artículo de Wikipedia del término, citado con su revisión, y se publica solo si pasa las comprobaciones automáticas y un juez de otra familia de modelos; el usuario revisa una muestra de ~20 y se publica el acierto. Términos elegidos de las fichas verificadas, con la forma española leída de las frases alineadas. El redactor es el modelo local (GPU, con permiso del usuario) y el juez Groq (`qwen/qwen3.8-27b`). Las edades de los pisos no están en el repo: los términos de tiempo también van por la fuente, con la comprobación de cifras | El usuario no puede revisar a mano cientos de términos (no los conoce todos) |
 | 2026-11-07 | v37: **métricas de las noticias y cuatro clases.** El usuario etiquetó 300 titulares viendo la propuesta del LLM y mantuvo 294: esa cifra (98 %) es una cota superior por anclaje, y así se publica. En una muestra a ciegas de 50 sin la propuesta, el LLM coincide en el 60 % con cinco clases y el propio usuario consigo mismo en el 70 %: la mayoría de los desacuerdos son «hallazgo» frente a «estudio», que ambos intercambian. Se publican cuatro clases (hallazgo y estudio pasan a «investigación»): 74 % y 84 %. El prompt no cambia (sus errores en «especie nueva» se medirían en noticias nuevas a ciegas, sin afinar sobre las mismas). Taxones: de 21 nombres escritos a ciegas solo 8 aparecen en el titular o el resumen que ve el sistema; los demás están en el artículo, que no se guarda por las licencias | Etiquetado del usuario |

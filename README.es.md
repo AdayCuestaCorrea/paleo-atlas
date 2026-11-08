@@ -67,7 +67,7 @@ Medidas el 2026-11-08 en el almacén y en la suite de tests.
 | Registro fósil | 58 570 hallazgos de PBDB en 188 países · 138 388 especímenes de GBIF reconciliados con su género |
 | Fichas narrativas | 598 verificadas en inglés y 582 en español (y crecen cada noche) |
 | Glosario | 163 términos que aparecen en las fichas; 144 definiciones verificadas en inglés y 139 en español, cada una redactada a partir del artículo de Wikipedia del término (citado) y comprobada como las fichas: nada copiado, cifras contra la fuente y un juez LLM de otra familia de modelos. En una muestra de 20 revisada a mano, 19 correctas (95 %) y 1 que no se pudo juzgar |
-| Comparador de tamaños | 429 taxones con la longitud de un adulto leída de sus frases verificadas (417 con una silueta que se puede dibujar); muestra de 20 revisada por una persona: 19 correctas y 1 sin decidir |
+| Comparador de tamaños | 429 taxones con la longitud de un adulto leída de sus frases verificadas (423 con una silueta que se puede dibujar, 190 de ellos con la del propio animal o su género; los pterosaurios no se dibujan: se miden por la envergadura); muestra de 20 revisada por una persona: 19 correctas y 1 sin decidir |
 | Tests | 291 de pytest · 189 de dbt en cada ejecución del pipeline (182 de datos y 7 unitarios) |
 | Ejecución diaria | unos 4 minutos una ejecución completa con ingesta, más la publicación |
 | Benchmark (932 494 filas) | DuckDB 0,86 s / 459 MB · Spark 13,7 s / 1,5 GB; 124 frente a 242 líneas de código |

@@ -189,9 +189,34 @@ def ingest_glossary(refresh: Refresh = False) -> None:
 
 
 @ingest_app.command("images")
-def ingest_images(refresh: Refresh = False) -> None:
+def ingest_images(
+    refresh: Refresh = False,
+    phylopic_for_sizes: Annotated[
+        bool,
+        typer.Option(
+            help="Only PhyloPic, now: the names a size-comparator taxon draws its silhouette "
+            "from (itself, its genus and its clades)."
+        ),
+    ] = False,
+) -> None:
     """Commons files from the Wikipedia tables and PhyloPic silhouettes."""
     paths = get_paths()
+    if phylopic_for_sizes:
+        import duckdb
+
+        con = duckdb.connect(str(paths.warehouse), read_only=True)
+        sized = "main.fct_taxon_size s join main.dim_taxon t using (taxon_key)"
+        names = [r[0] for r in con.sql(f"""
+            select distinct node from (
+                select t.taxon_name as node from {sized}
+                union all select t.genus_name from {sized}
+                union all select c.node.name from {sized}, unnest(t.classification) as c(node)
+            ) where node is not null order by node""").fetchall()]  # fmt: skip
+        con.close()
+        with make_client() as client:
+            n, found, new = images.refresh_phylopic(client, names, raw_root=paths.raw)
+        typer.echo(f"PhyloPic: {n} lookups ({found} with an image), {new} new versions")
+        return
     with make_client() as client:
         r = images.ingest_images(client, paths.interim, raw_root=paths.raw, refresh=refresh)
     typer.echo(

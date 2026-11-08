@@ -63,7 +63,7 @@ flowchart LR
 - **Extracción:** [`src/paleo/sizes.py`](../../src/paleo/sizes.py) y el prompt [`size_label.md`](../../src/paleo/narrative/prompts/size_label.md). Solo pregunta al LLM por las frases nuevas o cambiadas: cada etiqueta guarda el hash de la frase y la versión del prompt. Se usa `paleo sizes extract [--provider groq] [--no-llm]`.
 - **dbt:**
   - `stg_sizes__taxa` lee `sizes.json`;
-  - `int_silhouette_best_per_taxon` elige la primera silueta PhyloPic con licencia permitida subiendo por **toda** la clasificación de PBDB (taxón → género → cada clado → grupo) y saca la proporción del nombre del ráster (`/raster/1536x497.png`);
+  - `int_silhouette_best_per_taxon` elige la primera silueta PhyloPic con licencia permitida subiendo por **toda** la clasificación de PBDB (taxón → género → cada clado → grupo) y saca la proporción del nombre del ráster (`/raster/1536x497.png`). Desde la v42, cada nodo ofrece varias imágenes (`stg_phylopic__node_images`, la principal primero) y se toma la primera permitida; los pterosaurios no se dibujan;
   - `fct_taxon_size` lo junta todo;
   - tests: tamaños sensatos (> 0, mín. ≤ máx., ≤ 60 m), licencias permitidas y relación con `dim_taxon`.
 - **Seeds:** `reference_objects` (cada medida con su fuente: NCD-RisC o un artículo de Wikipedia con su `oldid`) y `silhouette_exclusions` (42 poses que no sirven para medir, revisadas a ojo).
@@ -102,7 +102,7 @@ flowchart LR
 |---|---|
 | Frases con una longitud | 2.868 en 610 taxones con hechos |
 | Aceptadas | 1.182: 440 por la regla y el resto por el LLM, que etiquetó ~1.190 frases dudosas |
-| Taxones con tamaño | 429 (416 dibujables en la web publicada) |
+| Taxones con tamaño | 429 (416 dibujables en la web publicada; tras el arreglo de la v42, 423, y 190 con la silueta del propio animal o su género en vez de 71) |
 | Coste del LLM | ~150.000 tokens de gpt-oss en un día (de 200.000 gratuitos); luego solo frases nuevas |
 | Siluetas | 177 archivos limpios (1,5 MB); 42 poses excluidas |
 | Índice del comparador | ~286 KB sin comprimir por idioma, cargado solo al abrir la ventana |
@@ -115,6 +115,11 @@ flowchart LR
 - **Los extremos delatan los errores.** Ordenar por tamaño y mirar los 10 primeros y los 10 últimos encontró en minutos lo que una muestra aleatoria habría tardado en ver: 0 m, 1 mm, el récord de *Maraapunisaurus* (58 m, una estimación histórica) o los 50 m de *Supersaurus*. Ese último era un empate entre dos estimaciones que se resolvía por el número del hecho; ahora desempata la mediana de todas.
 - **«Tiene CORS» no es «funciona en el navegador».** `curl` con `Origin` devolvía la cabecera, pero Chrome rechazaba la petición, también desde la web publicada. Se descubrió en el build real, no en las maquetas, que servían las siluetas desde el mismo origen. *Lección: probar en el navegador con el origen de producción, no con `curl`.*
 - **La silueta de la ficha no vale para medir.** La búsqueda saltaba de la familia al orden, y en la primera pasada a ojo de 197 siluetas salieron 31 inútiles: vistas desde arriba, aves posadas, pterosaurios en vuelo, cuerpos en diagonal. Al excluirlas aparecieron otras 10 malas. Se repitió hasta que no salió ninguna.
+- **El *Giganotosaurus* llevaba la silueta de un *Monolophosaurus*** (v42, visto por el usuario en la web publicada; también *Gigantoraptor* con la de *Microvenator* y *Utahraptor*). No era el LLM. Había dos fallos en la ingesta de PhyloPic:
+  - en PhyloPic un género monotípico es el segundo nombre del nodo de su especie, y la ingesta solo comparaba el primero, así que el género salía «no encontrado» y el modelo subía hasta Tetanurae;
+  - solo se guardaba la imagen principal del nodo, que a veces es no comercial cuando hay otras CC0 o CC BY del mismo animal.
+
+  Ahora se aceptan esos segundos nombres (solo si el primero es una especie de ese género: comparar todos los nombres casó el clado de cocodrilos Loricata con los quitones) y se guardan hasta 12 imágenes por nodo. Las de nivel taxón o género pasan de 71 a 190. La revisión a ojo, en tres vueltas, excluyó 50 poses más: cada pose excluida deja paso a la siguiente, que también hay que mirar. Los pterosaurios de PhyloPic están casi todos en vuelo, así que salen del dibujo hasta que se use la envergadura. *Lección: cuando un dato «no existe» en una fuente, comprobar a mano un caso famoso antes de fiarse de la cobertura.*
 - **Pequeños tropiezos de herramienta:**
   - Chrome cacheaba el CSS de las maquetas (de ahí el servidor con `no-store`);
   - el servidor local apuntaba a una carpeta del build que se reemplaza al reconstruir;
@@ -136,7 +141,8 @@ flowchart LR
 ## 10. Límites y lo que queda
 
 - **La altura es aproximada** y muchas veces sale de la silueta del grupo, no del propio animal. Se dice en cada caso.
-- **13 taxones con tamaño no se dibujan**: no tienen ninguna silueta en una pose útil (sobre todo pterosaurios y aves).
+- **6 taxones con tamaño no se dibujan** (v42): los pterosaurios, porque PhyloPic casi solo tiene pterosaurios en vuelo y se miden por la envergadura.
+- **Las especies nuevas sin clasificación en PBDB** caen en la silueta de su grupo (Dinosauria es un *Eoraptor*), que puede no parecerse al animal.
 - **La envergadura no se usa**, y es como se mide a los pterosaurios (backlog). Tampoco la masa (backlog).
 - **Las referencias son pocas** (8) y la persona promedio es española (NCD-RisC, 19 años); en la página en inglés también.
 - **El autobús mide la longitud máxima legal en la UE** (13,5 m), porque es la cifra que da la fuente; un autobús urbano típico es algo más corto.

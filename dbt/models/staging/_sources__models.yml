@@ -50,3 +50,10 @@ models:
     columns:
       - name: queried_name
         data_tests: [unique, not_null]
+  - name: stg_phylopic__node_images
+    description: Every PhyloPic image kept per queried name, the primary first (position 0).
+    columns:
+      - name: image_key
+        data_tests: [unique, not_null]
+      - name: image_uuid
+        data_tests: [not_null]

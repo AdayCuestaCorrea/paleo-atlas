@@ -4,7 +4,11 @@
 -- (seed group_clades). Unlike the page picture, every intermediate clade counts: a
 -- titanosaur must not get the order's (Saurischia) silhouette. Proportions come from
 -- the largest raster PhyloPic renders (".../raster/1536x497.png"); poses useless as a
--- measure are left out (seed silhouette_exclusions).
+-- measure are left out (seed silhouette_exclusions). Each node offers several images
+-- (stg_phylopic__node_images, the primary first): the first allowed one is taken, so a
+-- non-commercial primary does not send the taxon up to a clade. Pterosaurs are not
+-- drawn: nearly every PhyloPic pterosaur is in flight, and they are measured by their
+-- wingspan, not their length (wingspan in the comparator is in the backlog, §24).
 with lineage as (
     select taxon_key, taxon_name as node, 'taxon' as level, 0 as depth
     from {{ ref('dim_taxon') }}
@@ -28,6 +32,7 @@ candidates as (
         l.level,
         l.depth,
         l.node,
+        i.position,
         i.image_uuid,
         i.vector_url,
         i.page_url,
@@ -38,8 +43,8 @@ candidates as (
         try_cast(regexp_extract(i.raster_url, '/raster/(\d+)x\d+\.', 1) as double) as raster_w,
         try_cast(regexp_extract(i.raster_url, '/raster/\d+x(\d+)\.', 1) as double) as raster_h
     from lineage as l
-    inner join {{ ref('stg_phylopic__images') }} as i
-        on i.queried_name = l.node and i.found_on_phylopic
+    inner join {{ ref('stg_phylopic__node_images') }} as i
+        on i.queried_name = l.node
     inner join {{ ref('license_allowlist') }} as a
         on a.license_id = i.license_id_raw and a.allowed
     where i.vector_url is not null
@@ -60,4 +65,5 @@ select
     round(raster_h / raster_w, 4) as aspect
 from candidates
 where raster_w > 0 and raster_h > 0
-qualify row_number() over (partition by taxon_key order by depth, node) = 1
+    and taxon_key not in (select taxon_key from {{ ref('dim_taxon') }} where taxon_group = 'pterosaurs')
+qualify row_number() over (partition by taxon_key order by depth, node, position) = 1

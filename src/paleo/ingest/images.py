@@ -331,6 +331,7 @@ def phylopic_build(client: httpx.Client) -> int:
 
 def _phylopic_image(image: dict[str, Any]) -> dict[str, Any]:
     links = image.get("_links", {})
+    specific = links.get("specificNode")
 
     def href(name: str) -> str | None:
         value = links.get(name)
@@ -345,6 +346,7 @@ def _phylopic_image(image: dict[str, Any]) -> dict[str, Any]:
         "vector_url": href("vectorFile"),
         "raster_url": raster[0].get("href") if raster else None,
         "page_url": f"https://www.phylopic.org/images/{image.get('uuid')}",
+        "node": specific.get("title") if isinstance(specific, dict) else None,
     }
 
 
@@ -363,8 +365,46 @@ def _phylopic_nodes(client: httpx.Client, name: str, build: int) -> dict[str, An
     )
 
 
+# Images of a node kept per lookup (the first page of /images, the primary first): the
+# primary is sometimes non-commercial while others of the same animal are CC0 or CC BY.
+PHYLOPIC_IMAGES = 12
+
+
+def _scientific(names: list[dict[str, Any]]) -> str:
+    return " ".join(p.get("text", "") for p in names if p.get("class") == "scientific").lower()
+
+
+def _names_node(node: dict[str, Any], name: str) -> bool:
+    """The node is named ``name``: its own name, or a monotypic genus folded into its
+    species' node ("Giganotosaurus" in "Giganotosaurus carolinii"). Other second names
+    are not used: they can be homonyms (the crocodile clade Loricata is also a name of
+    the chitons, Polyplacophora)."""
+    names = [_scientific(n) for n in node.get("names") or []]
+    if not names:
+        return False
+    wanted = name.lower()
+    return names[0] == wanted or (wanted in names and names[0].startswith(wanted + " "))
+
+
+def _phylopic_clade_images(client: httpx.Client, node_uuid: str, build: int) -> list[dict]:
+    try:
+        body = get_json(
+            client,
+            PHYLOPIC_API + "/images",
+            {"build": build, "filter_clade": node_uuid, "page": 0, "embed_items": "true"},
+            headers={"Accept": PHYLOPIC_ACCEPT},
+        )
+    except HttpError as exc:
+        if exc.status_code == 404:
+            return []
+        raise
+    return body.get("_embedded", {}).get("items", [])
+
+
 def fetch_phylopic(client: httpx.Client, name: str, build: int) -> dict[str, Any]:
-    """Primary silhouette of the PhyloPic node named exactly ``name``."""
+    """Silhouettes of the PhyloPic node named exactly ``name`` (any of its names): the
+    primary image and the first others of the node and its descendants, each with its
+    license (the license filter lives in dbt)."""
     try:
         body = _phylopic_nodes(client, name, build)
     except HttpError as exc:
@@ -372,27 +412,42 @@ def fetch_phylopic(client: httpx.Client, name: str, build: int) -> dict[str, Any
             return {"name": name, "found": False, "build": build}
         raise
     items = body.get("_embedded", {}).get("items", [])
-    node = next(
-        (
-            n
-            for n in items
-            if any(
-                part.get("class") == "scientific" and part.get("text", "").lower() == name.lower()
-                for part in (n.get("names") or [[]])[0]
-            )
-        ),
-        None,
-    )
+    node = next((n for n in items if _names_node(n, name)), None)
     if node is None:
         return {"name": name, "found": False, "build": build}
-    image = node.get("_embedded", {}).get("primaryImage")
+    primary = node.get("_embedded", {}).get("primaryImage")
+    images = [primary] if primary else []
+    for image in _phylopic_clade_images(client, node["uuid"], build):
+        if len(images) >= PHYLOPIC_IMAGES:
+            break
+        if all(image.get("uuid") != i.get("uuid") for i in images):
+            images.append(image)
     return {
         "name": name,
-        "found": image is not None,
+        "found": bool(images),
         "build": build,
         "node_uuid": node.get("uuid"),
-        "image": _phylopic_image(image) if image else None,
+        "image": _phylopic_image(primary) if primary else None,
+        "images": [_phylopic_image(i) for i in images],
     }
+
+
+def refresh_phylopic(
+    client: httpx.Client, names: list[str], *, raw_root: Path | None = None,
+    today: dt.date | None = None,
+) -> tuple[int, int, int]:  # fmt: skip
+    """Look up these PhyloPic names again now (lookups, found, new versions)."""
+    store = phylopic_store(raw_root)
+    build = phylopic_build(client)
+    found = new = 0
+    for i, name in enumerate(names, start=1):
+        payload = fetch_phylopic(client, name, build)
+        found += payload["found"]
+        new += store.save_if_changed(name, payload, today).created
+        if i % 50 == 0:
+            store.flush()
+    store.flush()
+    return len(names), found, new
 
 
 # --------------------------------------------------------------------------- entry

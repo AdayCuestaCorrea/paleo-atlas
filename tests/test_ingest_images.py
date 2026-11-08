@@ -80,8 +80,24 @@ def node(name, license_url="https://creativecommons.org/publicdomain/zero/1.0/")
     }
 
 
-def phylopic_handler(known):
+def image(uuid, license_url, node_title="Giganotosaurus carolinii"):
+    return {
+        "uuid": uuid,
+        "attribution": "Someone",
+        "_links": {
+            "license": {"href": license_url},
+            "specificNode": {"title": node_title},
+            "vectorFile": {"href": f"https://images.phylopic.org/{uuid}/vector.svg"},
+            "rasterFiles": [{"href": f"https://images.phylopic.org/{uuid}/raster/1024x330.png"}],
+        },
+    }
+
+
+def phylopic_handler(known, clade_images=None):
     def handler(request):
+        if request.url.path == "/images":
+            items = (clade_images or {}).get(request.url.params["filter_clade"], [])
+            return httpx.Response(200, json={"_embedded": {"items": items}})
         if request.url.path == "/" and "build" not in request.url.params:
             return httpx.Response(
                 307, headers={"Location": f"https://api.phylopic.org/?build={BUILD}"}
@@ -220,3 +236,32 @@ def test_a_file_commons_rejects_does_not_cost_the_rest_of_its_batch():
     assert set(out) == {"A.png", "B.png"}  # the odd one is skipped, the others kept
     assert asked[0] == ["File:A.png", "File:Odd.png", "File:B.png"]
     assert sorted(asked[1:]) == [["File:A.png"], ["File:B.png"], ["File:Odd.png"]]
+
+
+def test_a_genus_that_is_a_second_name_of_its_species_node_is_found():
+    # PhyloPic merges a monotypic genus into its species' node
+    giga = node("Giganotosaurus carolinii")
+    giga["names"].append([{"class": "scientific", "text": "Giganotosaurus"}])
+    with make_client(httpx.MockTransport(phylopic_handler({"giganotosaurus": giga}))) as client:
+        out = images.fetch_phylopic(client, "Giganotosaurus", BUILD)
+    assert out["found"] and out["node_uuid"] == "node-1"
+
+
+def test_other_images_of_the_node_are_kept_after_the_primary():
+    nc = "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    cc0 = "https://creativecommons.org/publicdomain/zero/1.0/"
+    known = {"giganotosaurus carolinii": node("Giganotosaurus carolinii", nc)}
+    others = {"node-1": [image("img-1", nc), image("img-2", cc0), image("img-3", cc0)]}
+    with make_client(httpx.MockTransport(phylopic_handler(known, others))) as client:
+        out = images.fetch_phylopic(client, "Giganotosaurus carolinii", BUILD)
+    assert out["image"]["uuid"] == "img-1"  # the primary, still the page picture
+    assert [i["uuid"] for i in out["images"]] == ["img-1", "img-2", "img-3"]  # no duplicate
+    assert out["images"][1]["license_url"] == cc0
+    assert out["images"][1]["node"] == "Giganotosaurus carolinii"
+
+
+def test_a_homonym_among_the_second_names_is_not_used():
+    chitons = node("Polyplacophora")
+    chitons["names"].append([{"class": "scientific", "text": "Loricata"}])
+    with make_client(httpx.MockTransport(phylopic_handler({"loricata": chitons}))) as client:
+        assert not images.fetch_phylopic(client, "Loricata", BUILD)["found"]

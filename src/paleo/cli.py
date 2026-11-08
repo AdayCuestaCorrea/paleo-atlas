@@ -38,6 +38,8 @@ gbif_app = typer.Typer(
 app.add_typer(gbif_app, name="gbif")
 news_app = typer.Typer(help="Paleontology news: categories, taxa, groups.", no_args_is_help=True)
 app.add_typer(news_app, name="news")
+sizes_app = typer.Typer(help="Body sizes for the size comparator.", no_args_is_help=True)
+app.add_typer(sizes_app, name="sizes")
 glossary_app = typer.Typer(help="Bilingual glossary (§12.2).", no_args_is_help=True)
 app.add_typer(glossary_app, name="glossary")
 
@@ -445,6 +447,47 @@ def news_classify(provider: Provider = "ollama", model: Model = None, limit: Lim
         f"{r.missing} left out by the model"
     )
     typer.echo(f"{llm.label}: {llm.stats}")
+
+
+@sizes_app.command("extract")
+def sizes_extract(
+    provider: Provider = "groq",
+    model: Model = None,
+    limit: Annotated[
+        int | None, typer.Option(help="Ask the model about at most this many sentences.")
+    ] = None,
+    llm: Annotated[bool, typer.Option(help="Ask the model about the doubtful sentences.")] = True,
+) -> None:
+    """Adult body lengths from the verified facts (data/derived/sizes): a rule reads the
+    clear sentences, the model labels the doubtful ones."""
+    from collections import Counter
+
+    from paleo import sizes
+    from paleo.llm import LLM, QuotaExhausted
+
+    paths = get_paths()
+    derived = paths.data / "derived"
+    facts_dir = derived / "facts"
+    cands = sizes.scan(facts_dir)
+    if llm:
+        names = {}
+        for f in facts_dir.glob("*.json"):
+            names[f.stem] = json.loads(f.read_text(encoding="utf-8")).get("taxon", f.stem)
+        client = LLM(provider, model or DEFAULT_MODELS[provider])
+        try:
+            asked, missing = sizes.label_doubtful(client, cands, derived, names, limit=limit)
+            typer.echo(f"Asked about {asked} sentences ({missing} left out by the model)")
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc}); the rest are labelled on the next run.")
+        typer.echo(f"{client.label}: {client.stats}")
+    sizes.resolve(cands, derived)
+    rows = sizes.taxon_sizes(cands, facts_dir)
+    sizes.save_json(sizes.sizes_path(derived), rows)
+    by = Counter(c.status for c in cands)
+    typer.echo(
+        f"{len(cands)} sentences with a length: {by['accepted']} accepted, "
+        f"{by['rejected']} rejected, {by['doubtful']} still doubtful; {len(rows)} taxa with a size"
+    )
 
 
 @news_app.command("dedup")

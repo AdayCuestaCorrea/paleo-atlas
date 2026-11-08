@@ -66,7 +66,7 @@ Measured on 2026-11-08 from the warehouse and the test suite.
 | Studies | 8,195, of which 586 checked in Crossref (retractions, corrections, peer review) |
 | Fossil record | 58,570 PBDB occurrences in 188 countries · 138,388 GBIF specimens reconciled with their genus |
 | Narrative pages | 598 verified in English, 582 in Spanish (and growing every night) |
-| Glossary | 163 terms that appear in the pages; 144 definitions verified in English and 139 in Spanish, each written from the term's Wikipedia article (cited) and checked like the pages: no copying, numbers against the source, an LLM judge of another model family |
+| Glossary | 163 terms that appear in the pages; 144 definitions verified in English and 139 in Spanish, each written from the term's Wikipedia article (cited) and checked like the pages: no copying, numbers against the source, an LLM judge of another model family. In a sample of 20 reviewed by hand, 19 were right (95 %) and 1 could not be judged |
 | Size comparison | 429 taxa with an adult length read from their verified sentences (417 with a silhouette that can be drawn); a sample of 20 checked by a person: 19 right, 1 undecided |
 | Tests | 291 pytest · 189 dbt tests in every pipeline run (182 data tests, 7 unit tests) |
 | Daily run | ~4 minutes for a full run with ingestion, plus deployment |

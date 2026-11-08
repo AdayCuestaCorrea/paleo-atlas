@@ -98,6 +98,15 @@ seeds:
       - name: journal
         data_tests: [unique, not_null]
 
+  - name: taxon_aliases
+    description: >
+      Common names the press uses for an animal with a page (int_news_taxa): matched as
+      whole words, in any case, like a scientific name in the text.
+    columns:
+      - name: alias
+        data_tests: [unique, not_null]
+      - name: taxon_name
+        data_tests: [not_null]
   - name: news_feeds
     description: >
       The news feeds read by paleo ingest news (F9, ALCANCE.md §5): only outlets whose

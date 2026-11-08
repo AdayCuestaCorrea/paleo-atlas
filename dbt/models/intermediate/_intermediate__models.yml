@@ -226,7 +226,39 @@ unit_tests:
           - {news_key: a, llm_taxa: "['Spinosaurus', 'Unknownia']"}
           - {news_key: b, llm_taxa: "['Tyrannosaurus rex']"}
           - {news_key: c, llm_taxa: "['Oviraptor']"}
+      - input: ref('taxon_aliases')
+        rows: []
     expect:
       rows:
         - {news_key: a, taxon_key: spinosaurus, matched_by: "['llm', 'text']"}
         - {news_key: b, taxon_key: tyrannosaurus, matched_by: "['llm']"}
+  - name: news_taxa_new_genus_alias_and_passing_mentions
+    description: >
+      A new genus with a page of its own (page_type new) links through the LLM by its
+      species name; the cousin named in passing, found only in the text, is dropped;
+      the press name "megalodon" links to Otodus by text and through the LLM.
+    model: int_news_taxa
+    given:
+      - input: ref('stg_news__items')
+        rows:
+          - {news_key: a, title: "A four-winged dinosaur", summary: "Jian changmaensis, a close cousin of Velociraptor."}
+          - {news_key: b, title: "Megalodon fossils rediscovered", summary: null}
+          - {news_key: c, title: "Why did Velociraptor have feathers?", summary: null}
+      - input: ref('dim_taxon')
+        rows:
+          - {taxon_key: jian, taxon_name: Jian, page_type: new}
+          - {taxon_key: velociraptor, taxon_name: Velociraptor, page_type: genus}
+          - {taxon_key: otodus, taxon_name: Otodus, page_type: genus}
+      - input: ref('stg_news__labels')
+        rows:
+          - {news_key: a, llm_taxa: "['Jian changmaensis']"}
+          - {news_key: b, llm_taxa: "['Megalodon']"}
+          - {news_key: c, llm_taxa: "[]"}
+      - input: ref('taxon_aliases')
+        rows:
+          - {alias: Megalodon, taxon_name: Otodus}
+    expect:
+      rows:
+        - {news_key: a, taxon_key: jian, matched_by: "['llm']"}
+        - {news_key: b, taxon_key: otodus, matched_by: "['llm', 'text']"}
+        - {news_key: c, taxon_key: velociraptor, matched_by: "['text']"}

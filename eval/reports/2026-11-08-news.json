@@ -1,0 +1,447 @@
+{
+ "blind": {
+  "all": {
+   "n": 50,
+   "accuracy": 0.74,
+   "macro_f1": 0.5471774193548387,
+   "per_class": {
+    "new_species": {
+     "precision": 0.8571428571428571,
+     "recall": 0.46153846153846156,
+     "f1": 0.6,
+     "support": 13
+    },
+    "research": {
+     "precision": 0.6428571428571429,
+     "recall": 0.9,
+     "f1": 0.75,
+     "support": 20
+    },
+    "revision": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 1
+    },
+    "noise": {
+     "precision": 0.8666666666666667,
+     "recall": 0.8125,
+     "f1": 0.8387096774193549,
+     "support": 16
+    }
+   },
+   "confusion": {
+    "new_species": {
+     "new_species": 6,
+     "research": 6,
+     "noise": 1
+    },
+    "research": {
+     "new_species": 1,
+     "research": 18,
+     "noise": 1
+    },
+    "revision": {
+     "research": 1
+    },
+    "noise": {
+     "noise": 13,
+     "research": 3
+    }
+   }
+  },
+  "not doubtful": {
+   "n": 46,
+   "accuracy": 0.7391304347826086,
+   "macro_f1": 0.7128170931621794,
+   "per_class": {
+    "new_species": {
+     "precision": 0.8333333333333334,
+     "recall": 0.4166666666666667,
+     "f1": 0.5555555555555556,
+     "support": 12
+    },
+    "research": {
+     "precision": 0.64,
+     "recall": 0.8888888888888888,
+     "f1": 0.7441860465116279,
+     "support": 18
+    },
+    "revision": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "support": 0
+    },
+    "noise": {
+     "precision": 0.8666666666666667,
+     "recall": 0.8125,
+     "f1": 0.8387096774193549,
+     "support": 16
+    }
+   },
+   "confusion": {
+    "new_species": {
+     "new_species": 5,
+     "research": 6,
+     "noise": 1
+    },
+    "research": {
+     "new_species": 1,
+     "research": 16,
+     "noise": 1
+    },
+    "revision": {},
+    "noise": {
+     "noise": 13,
+     "research": 3
+    }
+   }
+  },
+  "self_agreement": 0.84,
+  "doubtful": 4,
+  "taxa_typed": 21,
+  "taxa_visible": 8,
+  "taxa": {
+   "Pages linked (text + checked LLM names)": {
+    "precision": 0.5384615384615384,
+    "recall": 0.875,
+    "f1": 0.6666666666666667,
+    "gold_names": 8
+   },
+   "LLM names only": {
+    "precision": 0.47058823529411764,
+    "recall": 1.0,
+    "f1": 0.6399999999999999,
+    "gold_names": 8
+   }
+  }
+ },
+ "caveats": {
+  "category_as_proposed": 294,
+  "taxa_edited": 0,
+  "with_taxa": 25
+ },
+ "evaluated_at": "2026-11-08",
+ "labelled": 300,
+ "by_lang": {
+  "en": 121,
+  "es": 179
+ },
+ "pairs": 47,
+ "support": {
+  "new_species": 13,
+  "noise": 232,
+  "research": 55
+ },
+ "category": {
+  "TF-IDF + logistic regression (CV)": {
+   "all": {
+    "n": 300,
+    "accuracy": 0.8,
+    "macro_f1": 0.5024887901600229,
+    "per_class": {
+     "new_species": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 13
+     },
+     "research": {
+      "precision": 0.4946236559139785,
+      "recall": 0.8363636363636363,
+      "f1": 0.6216216216216215,
+      "support": 55
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.941747572815534,
+      "recall": 0.8362068965517241,
+      "f1": 0.8858447488584474,
+      "support": 232
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "research": 10,
+      "noise": 3
+     },
+     "research": {
+      "noise": 9,
+      "research": 46
+     },
+     "revision": {},
+     "noise": {
+      "noise": 194,
+      "research": 37,
+      "new_species": 1
+     }
+    }
+   },
+   "en": {
+    "n": 121,
+    "accuracy": 0.5867768595041323,
+    "macro_f1": 0.4026792750197005,
+    "per_class": {
+     "new_species": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 10
+     },
+     "research": {
+      "precision": 0.4946236559139785,
+      "recall": 0.9583333333333334,
+      "f1": 0.652482269503546,
+      "support": 48
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9259259259259259,
+      "recall": 0.3968253968253968,
+      "f1": 0.5555555555555555,
+      "support": 63
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "research": 10
+     },
+     "research": {
+      "research": 46,
+      "noise": 2
+     },
+     "revision": {},
+     "noise": {
+      "research": 37,
+      "noise": 25,
+      "new_species": 1
+     }
+    }
+   },
+   "es": {
+    "n": 179,
+    "accuracy": 0.9441340782122905,
+    "macro_f1": 0.32375478927203066,
+    "per_class": {
+     "new_species": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+     },
+     "research": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 7
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9441340782122905,
+      "recall": 1.0,
+      "f1": 0.9712643678160919,
+      "support": 169
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "noise": 3
+     },
+     "research": {
+      "noise": 7
+     },
+     "revision": {},
+     "noise": {
+      "noise": 169
+     }
+    }
+   }
+  },
+  "groq/openai/gpt-oss-120b (production)": {
+   "all": {
+    "n": 300,
+    "accuracy": 0.98,
+    "macro_f1": 0.8936248006758998,
+    "per_class": {
+     "new_species": {
+      "precision": 0.8888888888888888,
+      "recall": 0.6153846153846154,
+      "f1": 0.7272727272727274,
+      "support": 13
+     },
+     "research": {
+      "precision": 0.9310344827586207,
+      "recall": 0.9818181818181818,
+      "f1": 0.9557522123893805,
+      "support": 55
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.9957081545064378,
+      "recall": 1.0,
+      "f1": 0.9978494623655914,
+      "support": 232
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 8,
+      "research": 4,
+      "noise": 1
+     },
+     "research": {
+      "research": 54,
+      "new_species": 1
+     },
+     "revision": {},
+     "noise": {
+      "noise": 232
+     }
+    }
+   },
+   "en": {
+    "n": 121,
+    "accuracy": 0.9586776859504132,
+    "macro_f1": 0.8857306702208442,
+    "per_class": {
+     "new_species": {
+      "precision": 0.8571428571428571,
+      "recall": 0.6,
+      "f1": 0.7058823529411764,
+      "support": 10
+     },
+     "research": {
+      "precision": 0.94,
+      "recall": 0.9791666666666666,
+      "f1": 0.9591836734693877,
+      "support": 48
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 0.984375,
+      "recall": 1.0,
+      "f1": 0.9921259842519685,
+      "support": 63
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 6,
+      "research": 3,
+      "noise": 1
+     },
+     "research": {
+      "research": 47,
+      "new_species": 1
+     },
+     "revision": {},
+     "noise": {
+      "noise": 63
+     }
+    }
+   },
+   "es": {
+    "n": 179,
+    "accuracy": 0.994413407821229,
+    "macro_f1": 0.9111111111111111,
+    "per_class": {
+     "new_species": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+     },
+     "research": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1": 0.9333333333333333,
+      "support": 7
+     },
+     "revision": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+     },
+     "noise": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 169
+     }
+    },
+    "confusion": {
+     "new_species": {
+      "new_species": 2,
+      "research": 1
+     },
+     "research": {
+      "research": 7
+     },
+     "revision": {},
+     "noise": {
+      "noise": 169
+     }
+    }
+   }
+  }
+ },
+ "taxa": {
+  "Pages linked (text + checked LLM names)": {
+   "precision": 0.9047619047619048,
+   "recall": 0.7307692307692307,
+   "f1": 0.8085106382978723,
+   "gold_names": 26
+  },
+  "LLM names only (production)": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "gold_names": 26
+  }
+ },
+ "grouping": {
+  "TF-IDF of characters": {
+   "pairs": 47,
+   "same": 6,
+   "precision": 0.2,
+   "recall": 0.5,
+   "f1": 0.28571428571428575,
+   "threshold": 0.0635
+  },
+  "groq/openai/gpt-oss-120b as judge": {
+   "pairs": 47,
+   "same": 6,
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "threshold": null
+  }
+ }
+}

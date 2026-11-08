@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 45 · **Estado:** Fase 5 hecha (2026-11-08); Fase 3 publicada (merge a `main` el 2026-11-07); glosario y noticias publicados el 2026-11-08; Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
+**Creado:** 2026-10-31 · **Versión:** 46 · **Estado:** Fase 4 hecha salvo LinkedIn (2026-11-08); Fase 5 hecha (2026-11-08); Fase 3 publicada (merge a `main` el 2026-11-07); glosario y noticias publicados el 2026-11-08; Fase 1 cumpliendo sus 2 semanas autónomas desde el merge; Fase 2 (Airflow) hecha; fichas narrativas de la enciclopedia en curso; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
 
 ---
 
@@ -283,7 +283,7 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [x] Descarga filtrada de GBIF (F3) y su DOI en la página de fuentes *(fósiles de cordados sin mamíferos ni tortugas: 932.494 registros, DOI [10.15468/dl.8v87yz](https://doi.org/10.15468/dl.8v87yz); `paleo gbif extract` reutiliza una descarga de menos de 28 días)*
 - [x] Job PySpark local: reconciliación de nombres con PBDB (sinónimos, erratas, rango) + agregados *(138.388 especímenes en 1.739 géneros: exacto 118.371, sinónimo 17.052, errata 2.965; las coordenadas que GBIF marca como erróneas no van al mapa)*
 - [x] Mismo trabajo en DuckDB → **benchmark** (tiempo, memoria, complejidad del código) *(mismo extracto fila a fila; DuckDB 15–17× más rápido y 3–6× menos memoria: [`benchmarks/gbif/results.md`](benchmarks/gbif/results.md))*
-- [ ] *Opcional:* mismo job en Databricks Free Edition (verificar cuotas y acceso a datos externos)
+- *v46: el job opcional en Databricks Free Edition pasa al backlog (§24)*
 - [x] Web: fichas de enciclopedia con mapa de hallazgos, museos y línea temporal *(la línea temporal hacia atrás va agrupada por décadas, debajo de lo seguido desde 2026)*
 - [x] Índices por grupo, época y país *(arcosaurios; el país sale de las ocurrencias de PBDB, una descarga mensual por bloque)*
 - [x] Familia y clasificación completa en cada ficha (PBDB) *(2026-11-03: los 4.751 géneros, y las especies a través de su género; cadena de PBDB desde la raíz del bloque)*
@@ -297,10 +297,10 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 ### Fase 4 — Portfolio
 - [x] README bilingüe completo (§20) *(2026-11-07, adelantado: qué es con capturas, arquitectura, por qué no hay Spark en la capa diaria y el benchmark, calidad de datos, cifras medidas ese día, fuentes y licencias, limitaciones conocidas, cómo ejecutarlo; se actualiza al cerrar cada fase)*
 - [x] ADRs D1–D10 *(2026-11-03, adelantados en la rama `fase-3`: [`docs/adr/`](docs/adr/README.md))*
-- [ ] Interview pack: one-pager y postmortem *(el vídeo de 2 min se descarta en la v35)*
-- [ ] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17
-- [ ] Enlace en LinkedIn y en el perfil de GitHub
-- [ ] Documento de fase (`docs/fases/fase-4.md`)
+- [x] Interview pack: one-pager y postmortem *(el vídeo de 2 min se descarta en la v35; 2026-11-08: one-pager al día, postmortem y 5 historias STAR, en ES y EN, en [`docs/interview-pack/`](docs/interview-pack/one-pager.es.md))*
+- [x] Entrada en `cv.md` vía modo `add` de career-ops, con métricas reales de §17 *(2026-11-08: la entrada que ya existía se sustituyó con las cifras publicadas en `main`, porque `add` no duplica; el resumen de pruebas, con `add`. Los dos, fuera del repo)*
+- [ ] Enlace en LinkedIn y en el perfil de GitHub *(2026-11-08: README de perfil en GitHub y descripción del repo del TFM; textos de LinkedIn en ES y EN preparados, los publica el usuario; la bio de GitHub espera al permiso `user` del token)*
+- [x] Documento de fase ([`docs/fases/fase-4.md`](docs/fases/fase-4.md)) *(2026-11-08)*
 
 **Terminado cuando:** el proyecto aparece en el CV con URL y métricas verificables.
 
@@ -781,6 +781,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Idea | Notas |
 |---|---|
+| Job de GBIF en Databricks Free Edition | Era la casilla opcional de la Fase 3 (v46). Verificar cuotas y acceso a datos externos; mismo `paleo.gbif_job.spec` |
 | Modelos 3D curados (§13) | Fuera del alcance desde la v40; el diseño de §13 sigue valiendo si vuelve |
 | Envergadura de los pterosaurios en el comparador | Su tamaño se publica como envergadura, que hoy se descarta; necesitaría siluetas con las alas abiertas |
 | Contrastar los tamaños con conjuntos publicados | Dryad (reptiles marinos, 2025; titanosauriformes, 2014), O'Gorman y Hone (2012); comprobar la licencia de cada uno |
@@ -804,6 +805,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-08 | v46: **Fase 4 casi cerrada** (§7): cifras de §17 medidas de nuevo (302 tests de pytest y 196 de dbt, 66 modelos, 9 fuentes, ~3 min por ejecución, 187 siluetas propias, 82 % de hechos aceptados) y llevadas al README y al one-pager; postmortem e historias STAR en `docs/interview-pack/`; entrada del CV puesta al día; README de perfil de GitHub; `docs/fases/fase-4.md`. Queda LinkedIn, que publica el usuario. El job opcional de Databricks pasa al backlog (§24) | Fase 4 y decisión del usuario |
 | 2026-11-08 | v45: **especies sin ficha enlazan a la ficha de su género** (§11.1). Una especie nombrada en el texto que no tiene ficha propia (*Spinosaurus aegyptiacus* en la ficha de *S. mirabilis*) enlazaba a Wikipedia aunque su género sí tuviera ficha: 1.121 enlaces en 529 fichas, 373 especies. Ahora enlaza a la ficha del género, con el título de esa ficha; dentro de la propia ficha del género va solo en cursiva. Lo mismo con las abreviaturas («S. aegyptiacus»). Los nombres con ficha o redirección propia no cambian (el autoenlace de *Tyrannosaurus rex* se queda, decisión del usuario). Medido tras el cambio: 0 enlaces de ese tipo | Revisión del usuario |
 | 2026-11-08 | v44: **siluetas de la propia especie** (§11.3). El usuario vio que *Tyrannosaurus* se dibujaba con la silueta de «Tyrannosaurus magnus»: entre las imágenes de un nodo se tomaba la primera por el orden de PhyloPic, sin mirar de qué especie era, y la revisión a ojo de la v42 solo miró las siluetas que cambiaban. Ahora, dentro de cada nodo, primero la propia ficha o las especies válidas del género según PBDB, luego el nodo, luego el resto; y en los niveles de taxón y género solo imágenes del mismo género (PhyloPic mete *Bannykus* en *Haplocheirus*, *Morturneria* en *Aristonectes*, *Brachypterygius* en *Platypterygius*: esas cuentan como silueta del grupo, más arriba). Medido: de 10 siluetas de nivel taxón/género con otra especie quedan 4, todas del mismo género y defendibles (única especie, especie válida que falta en PBDB, sinónimo, o la del género para una especie sin silueta propia). 23 siluetas cambian; revisadas a ojo, 5 poses más excluidas; *Tyrannosaurus* lleva un *T. rex* de perfil. **Buscador de la cabecera:** el campo crecía de 9 a 12 rem al recibir el foco y movía la cabecera; al pulsar una sugerencia, el campo perdía el foco, encogía y la lista se desplazaba bajo el puntero, así que el clic abría otra ficha o ninguna. Ahora el ancho es fijo (11 rem) y la lista no le quita el foco al campo al pulsarla | Revisión del usuario |
 | 2026-11-08 | v43: **paleta nueva «Fósil y resina»** (§11), elegida por el usuario entre tres maquetas aplicadas a la web real (portada, ficha, comparador y noticias, en claro y oscuro): fondo de caliza, acento verde pino y ámbar como segundo color, en vez de crema y terracota (se parecía demasiado a la interfaz de Claude). Contraste AA comprobado en los dos modos (la anterior fallaba con el texto blanco de los botones en oscuro, 2,53, y en los avisos, 3,86). Los colores sueltos pasan a tokens: texto sobre el acento, fondo de las fotos, mapa (que salía siempre oscuro porque usaba dos tokens inexistentes), suelo y siluetas del comparador (`--cmp`, leído por `compare.js`), visor y favicon. Los colores de la carta cronoestratigráfica no cambian. Capturas del README rehechas con `scripts/screenshots.py` (Playwright, modo oscuro, 1210×980, desde el build local) | Decisión del usuario |

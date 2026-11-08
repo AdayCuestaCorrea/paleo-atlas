@@ -261,15 +261,26 @@ class SiteBuilder:
         ``links`` is false, e.g. inside a link)."""
         escaped = html.escape(text)
 
+        def page_of(name: str) -> tuple[str | None, str]:
+            """The atlas page of a name and the name it is titled by: a species without a
+            page of its own goes to its genus page (Spinosaurus aegyptiacus -> Spinosaurus)
+            instead of Wikipedia."""
+            if key := self.atlas_names.get(name):
+                return key, name
+            genus = name.split(" ")[0]
+            if " " in name and (key := self.atlas_names.get(genus)):
+                return key, genus
+            return None, name
+
         def link(name: str) -> str:
-            key = self.atlas_names.get(name)
-            if name == own_name or not links:
-                return f"<em>{name}</em>"
+            key, page_name = page_of(name)
+            if name == own_name or not links or (page_name != name and key == own_key):
+                return f"<em>{name}</em>"  # this very page (a species of the page's genus)
             if key:
                 if self._marked is not None:
                     self._marked["taxa"].add(key)
                 href = self.url(lang, "taxon", key)
-                title = html.escape(self.t(lang, "link_taxon", taxon=name), quote=True)
+                title = html.escape(self.t(lang, "link_taxon", taxon=page_name), quote=True)
                 return f'<a class="taxon-link" href="{href}" title="{title}"><em>{name}</em></a>'
             title = html.escape(self.t(lang, "link_wikipedia", taxon=name), quote=True)
             return (
@@ -297,13 +308,13 @@ class SiteBuilder:
                 if len(candidates) != 1:
                     return f"<em>{abbr}</em>" if candidates or _EPITHET.fullmatch(epithet) else None
                 full = next(iter(candidates))
-            key = self.atlas_names.get(full)
+            key, page_name = page_of(full)
             if not key or key == own_key or not links:
                 return f"<em>{abbr}</em>"
             if self._marked is not None:
                 self._marked["taxa"].add(key)
             href = self.url(lang, "taxon", key)
-            title = html.escape(self.t(lang, "link_taxon", taxon=full), quote=True)
+            title = html.escape(self.t(lang, "link_taxon", taxon=page_name), quote=True)
             return f'<a class="taxon-link" href="{href}" title="{title}"><em>{abbr}</em></a>'
 
         out, pos = [], 0

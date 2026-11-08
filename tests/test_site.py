@@ -155,6 +155,24 @@ def test_abbreviated_species_are_italic_and_linked_to_their_page():
     assert "<em>" not in out
 
 
+def test_a_species_without_a_page_links_to_its_genus_page():
+    from paleo.site.build import SiteBuilder
+    from paleo.site.data import SiteData
+
+    names = ["Spinosaurus", "Spinosaurus mirabilis"]
+    taxa = [{"taxon_name": n, "taxon_key": n.lower().replace(" ", "-")} for n in names]
+    b = SiteBuilder(SiteData(taxa, {}, {}, {}, {}, dt.date(2026, 11, 1)), base="/pa")
+    text = "Unlike Spinosaurus aegyptiacus and S. aegyptiacus, it had a crest."
+    out = str(b.prose(text, "en", "Spinosaurus mirabilis"))
+    assert out.count('href="/pa/en/taxa/spinosaurus.html"') == 2  # not Wikipedia
+    assert "wikipedia" not in out
+    assert 'title="Open the Spinosaurus page"' in out  # says where it really goes
+    # on the genus page itself: italics, no link to the same page
+    out = str(b.prose(text, "en", "Spinosaurus"))
+    assert "<em>Spinosaurus aegyptiacus</em> and <em>S. aegyptiacus</em>" in out
+    assert "href" not in out
+
+
 def test_species_epithets_need_a_latin_ending():
     out = str(
         builder().prose("Spinosaurus aegyptiacus y Baryonyx vivieron en el Cretácico.", "es", None)

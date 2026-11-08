@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -29,10 +30,12 @@ from pydantic import BaseModel
 
 from paleo.glossary.terms import form_pattern
 from paleo.ingest.glossary import index_store, lead_store
-from paleo.llm import LLM
+from paleo.llm import LLM, LLMOutputError
 from paleo.narrative.checks import copied_runs, ngrams, numbers, spelled_numbers, words
 from paleo.narrative.facts import prompt
 from paleo.store import _atomic_write
+
+log = logging.getLogger(__name__)
 
 BATCH = 10
 LEAD_CHARS = 1_500  # the first paragraphs say what a term is; enough context, little quota
@@ -131,8 +134,12 @@ def _attempt(
                      f"{'; '.join(problems)}\nWrite it again in really different words, "
                      "without those problems.")  # fmt: skip
         parts.append(part)
-    answer = writer.complete_json(system, "\n\n".join(parts), Definitions, max_tokens=2_500)
-    written = {d.index: d.definition.strip() for d in answer.definitions}
+    try:
+        answer = writer.complete_json(system, "\n\n".join(parts), Definitions, max_tokens=2_500)
+        written = {d.index: d.definition.strip() for d in answer.definitions}
+    except LLMOutputError as exc:  # the batch stays unwritten ("not written")
+        log.warning("glossary writer: %s", exc)
+        written = {}
     to_judge = [(i, t, s, written[i]) for i, (t, s) in enumerate(batch, start=1)
                 if written.get(i)]  # fmt: skip
     verdicts: dict[int, Verdict] = {}
@@ -141,9 +148,13 @@ def _attempt(
             f"{n}. TERM: {t[f'term_{lang}']}\nSOURCE: {s['lead'][:LEAD_CHARS]}\nDEFINITION: {d}"
             for n, (_, t, s, d) in enumerate(to_judge, start=1)
         )
-        reply = judge.complete_json(judge_system, judge_user, Verdicts, max_tokens=900)
-        by_n = {v.index: v for v in reply.items}
-        verdicts = {i: by_n[n] for n, (i, *_) in enumerate(to_judge, start=1) if n in by_n}
+        try:
+            reply = judge.complete_json(judge_system, judge_user, Verdicts, max_tokens=900)
+        except LLMOutputError as exc:  # the batch stays unjudged ("judge: no answer")
+            log.warning("glossary judge: %s", exc)
+        else:
+            by_n = {v.index: v for v in reply.items}
+            verdicts = {i: by_n[n] for n, (i, *_) in enumerate(to_judge, start=1) if n in by_n}
     out = {}
     for i, (term, source) in enumerate(batch, start=1):
         definition = written.get(i, "")

@@ -102,6 +102,24 @@ def test_json_schema_is_downgraded_when_rejected(tmp_path):
     assert formats == ["json_schema", "json_object"]
 
 
+def test_an_answer_the_server_finds_invalid_is_an_invalid_output(tmp_path):
+    """Groq checks the JSON itself and answers 400 json_validate_failed: retried like a
+    cut answer, then LLMOutputError (the caller skips the batch), and json_schema stays."""
+    formats = []
+    error = {"code": "json_validate_failed", "message": "Failed to validate JSON."}
+    failed = httpx.Response(400, json={"error": error})
+
+    def handler(request):
+        formats.append(json.loads(request.content)["response_format"]["type"])
+        return failed if len(formats) < 3 else reply('{"answer": "ok", "number": 3}')
+
+    llm = make_llm(tmp_path, handler)
+    with pytest.raises(LLMOutputError):
+        llm.complete_json("sys", "user", Answer)
+    assert llm.complete_json("sys", "user", Answer).number == 3
+    assert formats == ["json_schema"] * 3
+
+
 def test_parse_json_tolerates_fences_and_prose():
     assert parse_json('```json\n{"a": 1}\n```') == {"a": 1}
     assert parse_json('Here it is: {"a": 1}') == {"a": 1}

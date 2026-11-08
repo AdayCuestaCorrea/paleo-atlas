@@ -304,11 +304,13 @@ class LLM:
         # A cut or malformed answer gets one more try with twice the room; the cache
         # keeps the first key, so a later run reuses the good answer.
         for attempt in range(2):
-            content = self._answer(payload, messages)
             try:
+                content = self._answer(payload, messages)
                 result = output.model_validate(parse_json(content))
                 break
-            except (json.JSONDecodeError, ValidationError) as exc:
+            except (json.JSONDecodeError, ValidationError, HttpError) as exc:
+                if isinstance(exc, HttpError) and "json_validate_failed" not in str(exc):
+                    raise
                 if attempt:
                     raise LLMOutputError(f"{self.label}: invalid output ({exc})") from exc
                 log.warning("%s: invalid output, retrying with more tokens (%s)", self.label, exc)
@@ -340,6 +342,10 @@ class LLM:
         try:
             return post_json(self.client, url, payload, headers=self._headers(), retries=4)
         except HttpError as exc:
+            # An answer that failed the server's own JSON check is an invalid output
+            # (complete_json retries it), not a sign that json_schema is unsupported.
+            if exc.status_code == 400 and "json_validate_failed" in str(exc):
+                raise
             # Some models reject json_schema: retry once in plain JSON mode.
             if exc.status_code == 400 and self._schema_mode == "json_schema":
                 log.warning("%s: json_schema not accepted, falling back to json_object", self.label)

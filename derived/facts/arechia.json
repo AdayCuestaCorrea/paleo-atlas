@@ -1,0 +1,151 @@
+{
+ "taxon": "Arechia",
+ "taxon_key": "arechia",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "bad5c03f14a4b7cd",
+ "generated_at": "2026-11-10T07:37:32+00:00",
+ "citations": {
+  "arechia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Arechia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Arechia?oldid=1369380170",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arechia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Arechia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Arechia?oldid=1369380170",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arechia:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Arechia (Taxonomy)",
+   "url": "https://en.wikipedia.org/wiki/Arechia?oldid=1369380170",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arechia:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Arechia",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34725",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Arechia was described by Cappetta in 1983.",
+   "category": "discovery",
+   "chunk_id": "arechia:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Cappetta, 1983",
+   "quote_sha": "3b5bb115a2ef6862"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Arechia inhabited the northern Tethys Ocean during the Early Eocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "arechia:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from two species (one known from articulated remains, the other from isolated teeth) that inhabited the northern Tethys Ocean during the Early Eocene.",
+   "quote_sha": "30c278497b317af0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Isolated teeth of Arechia have been found potentially as late as the Early Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "arechia:enwiki:2",
+   "lang": "en",
+   "quote": "Isolated teeth of this genus are also known, potentially as late as the Early Oligocene.",
+   "quote_sha": "08662caf79e5c308"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Arechia is considered the oldest known genus of stingaree.",
+   "category": "classification",
+   "chunk_id": "arechia:enwiki:3",
+   "lang": "en",
+   "quote": "It is the oldest known stingaree genus",
+   "quote_sha": "16c3d8d48d1edbdb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The species A. arambourgi was named for Camille Arambourg, who originally classified the teeth as Raja praealba in 1952.",
+   "category": "discovery",
+   "chunk_id": "arechia:enwiki:3",
+   "lang": "en",
+   "quote": "It is named for Camille Arambourg, who originally ascribed these teeth to Raja praealba in 1952.",
+   "quote_sha": "663ad83be117c962"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Henri Cappetta erected the genus Arechia in 1983, separating males originally called A. arambourgi from females placed in Merabatis.",
+   "category": "discovery",
+   "chunk_id": "arechia:enwiki:3",
+   "lang": "en",
+   "quote": "Henri Cappetta revised the species in 1983, erecting this genus for those Arambourg called males in this genus and placed the ones he called females in Merabatis.",
+   "quote_sha": "d35b1b0487743d15"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The environment where A. crassicaudata lived matches the typical warm, shallow habitat of modern stingarees.",
+   "category": "paleobiology",
+   "chunk_id": "arechia:enwiki:3",
+   "lang": "en",
+   "quote": "The inferred environment of the Monte Postale site where this species is found matches with the typical warm, shallow environment of extant representatives of this family.",
+   "quote_sha": "3cf57f762bb41324"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Isolated teeth of Arechia are known from sites in Senegal, Tunisia, and potentially Egypt.",
+   "category": "discovery",
+   "chunk_id": "arechia:enwiki:3",
+   "lang": "en",
+   "quote": "In addition to these two species, isolated teeth of Arechia sp. are known from several sites throughout North Africa, including from the Ypresian & Lutetian of Senegal, Bartonian of Tunisia, and potentially the Rupelian of Egypt.",
+   "quote_sha": "82564526da1ada0b"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Arechia lived between 59.24 and 37.71 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "arechia:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Thanetian to Bartonian (59.24 to 37.71 million years ago)",
+   "quote_sha": "743d6b0fb8247df5"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "arechia:enwiki:3",
+   "statement": "Molecular data suggests Arechia diverged from butterfly rays about 75 million years ago or from deepwater stingrays around the K-Pg transition.",
+   "category": "classification",
+   "quote": "though molecular data suggests they diverged from butterfly rays about 75 million years ago or from deepwater stingrays around the time of the K-Pg transition.",
+   "reason": "statement copies the source wording: 'diverged from butterfly rays about 75 million years'"
+  },
+  {
+   "chunk_id": "arechia:enwiki:3",
+   "statement": "The type species Arechia arambourgi is known from isolated teeth found in the Ypresian deposits of Ouled Abdoun, Morocco.",
+   "category": "discovery",
+   "quote": "The type species, A. arambourgi Cappetta, 1983, is known from isolated teeth found in the Ypresian deposits of Ouled Abdoun, Morocco.",
+   "reason": "statement copies the source wording: 'is known from isolated teeth found in the'"
+  },
+  {
+   "chunk_id": "arechia:enwiki:3",
+   "statement": "The species A. crassicaudata is from the Ypresian-age Bolca Lagerstätte of Italy and is known from several articulated individuals.",
+   "category": "discovery",
+   "quote": "The second species, A. crassicaudata (de Blainville, 1818) is from the Ypresian-age Bolca Lagerstätte of Italy and is known from several articulated individuals.",
+   "reason": "statement copies the source wording: 'Italy and is known from several articulated individuals'"
+  },
+  {
+   "chunk_id": "arechia:enwiki:3",
+   "statement": "A. crassicaudata was attributed to the genus Arechia in 2020 due to the close resemblance of its teeth to those of A. arambourgi.",
+   "category": "discovery",
+   "quote": "This species was placed in various genera, generally in Urolophus, until finally being attributed to Arechia in 2020, due to the close resemblance of its teeth to those of A. arambourgi.",
+   "reason": "statement copies the source wording: 'due to the close resemblance of its teeth'"
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+{
+ "taxon": "Archaeolamna",
+ "taxon_key": "archaeolamna",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c528e5c896bd6fa5",
+ "generated_at": "2026-11-10T05:34:29+00:00",
+ "citations": {
+  "archaeolamna:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Archaeolamna (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Archaeolamna?oldid=1314022647",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "archaeolamna:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Archaeolamna (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Archaeolamna?oldid=1314022647",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "archaeolamna:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Archaeolamna (Taxonomy)",
+   "url": "https://en.wikipedia.org/wiki/Archaeolamna?oldid=1314022647",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "archaeolamna:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Archaeolamna",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34601",
+   "doi": null,
+   "license": "CC BY 4.0"
+  },
+  "archaeolamna:research:1": {
+   "source": "wikipedia_research",
+   "title": "2026 in paleoichthyology (research: Cartilaginous fish research)",
+   "url": "https://doi.org/10.1016/j.gr.2026.01.022",
+   "doi": "10.1016/j.gr.2026.01.022",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Archaeolamna contains three valid species, one of which has two subspecies, found in Europe, North America, and Australia.",
+   "category": "discovery",
+   "chunk_id": "archaeolamna:enwiki:2",
+   "lang": "en",
+   "quote": "It contains three valid species (one with two subspecies) which have been found in Europe, North America, and Australia.",
+   "quote_sha": "3bd1ec8fc4e83214"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Archaeolamna likely had an antitropical distribution, inhabiting temperate waters in both hemispheres but avoiding tropical waters near the equator.",
+   "category": "paleobiology",
+   "chunk_id": "archaeolamna:enwiki:2",
+   "lang": "en",
+   "quote": "Archaeolamna likely had an antitropical distribution, being found in the temperate waters of both hemispheres but absent from the tropical waters around the equator, much like the modern porbeagle shark.",
+   "quote_sha": "15337e8907a3b66c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Archaeolamna is the sole surviving member of the family Archaeolamnidae after other genera were reassigned or synonymized.",
+   "category": "classification",
+   "chunk_id": "archaeolamna:enwiki:3",
+   "lang": "en",
+   "quote": "This leaves Archaeolamna as the sole member of the family.",
+   "quote_sha": "9190a0c35b3d258b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Archaeolamna lived from the Albian to the Maastrichtian stages, between 113.2 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "archaeolamna:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Albian to Maastrichtian (113.2 to 66 million years ago)",
+   "quote_sha": "c4d5a1bc794c6701"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "A 2026 study using enameloid zinc isotope values suggests that Archaeolamna occupied high trophic positions in the Late Cretaceous Western Interior Seaway.",
+   "category": "paleobiology",
+   "chunk_id": "archaeolamna:research:1",
+   "lang": "en",
+   "quote": "McCormack et al. (2026) study the ecology of Late Cretaceous (Turonian–Coniacian) sharks from the Western Interior Seaway as indicated by enameloid zinc isotope values, providing evidence of high trophic positions of members of the genera Archaeolamna, Cretodus and Cretoxyrhina",
+   "quote_sha": "2d24df49fc9becad"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "archaeolamna:enwiki:2",
+   "statement": "Archaeolamna is an extinct genus of mackerel sharks that lived during the Cretaceous period.",
+   "category": "discovery",
+   "quote": "Archaeolamna (from Greek arche which turned into archaeo and Lamna, an extinct shark genus) is an extinct genus of mackerel sharks that lived during the Cretaceous.",
+   "reason": "statement copies the source wording: 'is an extinct genus of mackerel sharks that'"
+  },
+  {
+   "chunk_id": "archaeolamna:enwiki:2",
+   "statement": "Archaeolamna is mostly known from isolated teeth, though associated jaws, cranial fragments, and vertebrae of A. kopingensis come from the Pierre Shale of Kansas.",
+   "category": "description",
+   "quote": "While it is mostly known from isolated teeth, an associated set of teeth, jaws, cranial fragments, and vertebrae of A. kopingensis is known from the Pierre Shale of Kansas.",
+   "reason": "statement copies the source wording: 'jaws cranial fragments and vertebrae of A kopingensis'"
+  },
+  {
+   "chunk_id": "archaeolamna:enwiki:2",
+   "statement": "Archaeolamna was a medium-sized shark with an estimated total body length of 3 to 4 meters.",
+   "category": "description",
+   "quote": "It was a medium-sized shark with an estimated total body length of 3 - 4 m.",
+   "reason": "statement copies the source wording: 'was a medium-sized shark with an estimated total'"
+  }
+ ]
+}

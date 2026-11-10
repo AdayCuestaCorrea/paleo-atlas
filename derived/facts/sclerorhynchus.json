@@ -1,0 +1,137 @@
+{
+ "taxon": "Sclerorhynchus",
+ "taxon_key": "sclerorhynchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c0ad008dbf94ea5e",
+ "generated_at": "2026-11-10T07:33:07+00:00",
+ "citations": {
+  "sclerorhynchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Sclerorhynchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Sclerorhynchus?oldid=1319745011",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sclerorhynchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Sclerorhynchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Sclerorhynchus?oldid=1319745011",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sclerorhynchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Sclerorhynchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34712",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Sclerorhynchus was first described by Woodward in 1889.",
+   "category": "discovery",
+   "chunk_id": "sclerorhynchus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Woodward, 1889",
+   "quote_sha": "d93e8f65082c879b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Sclerorhynchus atavus.",
+   "category": "classification",
+   "chunk_id": "sclerorhynchus:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: †Sclerorhynchus atavus",
+   "quote_sha": "90e93fef2faac58c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Other known species include S. leptodon, S. pettersi, S. fanninensis, S. priscus, and S. karakensis.",
+   "category": "classification",
+   "chunk_id": "sclerorhynchus:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: †Sclerorhynchus leptodon (Arambourg, 1935) †Sclerorhynchus pettersi Case & Cappetta, 1997 †Sclerorhynchus fanninensis Cappetta & Case, 1999 †Sclerorhynchus priscus Cappetta & Case, 1999 †Sclerorhynchus karakensis Mustafa, Case, & Zalmout, 2002",
+   "quote_sha": "0db3e3476023ac23"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus Ganopristis is now treated as a junior synonym of Sclerorhynchus.",
+   "category": "classification",
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "lang": "en",
+   "quote": "The genus Ganopristis is considered a junior synonym of Sclerorhynchus.",
+   "quote_sha": "af43a3421d69be43"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The time range for Sclerorhynchus spans from the Cenomanian to the Maastrichtian, between 100.5 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "sclerorhynchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Maastrichtian (100.5 to 66 million years ago)",
+   "quote_sha": "2e2cb06c500a2b7b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Sclerorhynchus belongs to the class Chondrichthyes.",
+   "category": "time_and_habitat",
+   "chunk_id": "sclerorhynchus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Sclerorhynchus is classified within the family Sclerorhynchidae.",
+   "category": "classification",
+   "chunk_id": "sclerorhynchus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Sclerorhynchidae",
+   "quote_sha": "1bef7c400d2c18fd"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The name Sclerorhynchus means 'hard snout'.",
+   "category": "description",
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "lang": "en",
+   "quote": "Sclerorhynchus (from , 'hard' and 'snout')",
+   "quote_sha": "712b7e68f2899a02"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Fossils of Sclerorhynchus have been found in the Middle East, North Africa, Europe, and North America.",
+   "category": "time_and_habitat",
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "lang": "en",
+   "quote": "It was a widespread genus, with fossils found in the Middle East (S. atavus, S. karakensis), North Africa (S. leptodon), Europe (S. leptodon), and North America (S. fanninensis, S. pettersi, S. priscus).",
+   "quote_sha": "93bdc510c3b8e067"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "statement": "Sclerorhynchus lived during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "quote": "Sclerorhynchus ... is an extinct genus of ganopristid sclerorhynchoid that lived during the Late Cretaceous.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "statement": "Although Sclerorhynchus had a long rostrum with large denticles resembling sawfishes and sawsharks, its closest living relatives are skates.",
+   "category": "description",
+   "quote": "While it had a long rostrum with large denticles similar to sawfishes and sawsharks, its closest living relatives are actually skates.",
+   "reason": "statement copies the source wording: 'sawfishes and sawsharks its closest living relatives are'"
+  },
+  {
+   "chunk_id": "sclerorhynchus:enwiki:2",
+   "statement": "Complete specimens of S. atavus show a fin arrangement similar to skates, with pectoral and pelvic fins touching, dorsal fins behind the pelvic fins, and a reduced caudal fin.",
+   "category": "description",
+   "quote": "Complete specimens of S. atavus show that its fin arrangement was similar to skates, with the pectoral and pelvic fins touching, both dorsal fins located behind the pelvic fins, and a reduced caudal fin.",
+   "reason": "statement copies the source wording: 'behind the pelvic fins and a reduced caudal'"
+  }
+ ]
+}

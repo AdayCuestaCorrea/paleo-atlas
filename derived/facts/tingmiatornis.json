@@ -1,0 +1,152 @@
+{
+ "taxon": "Tingmiatornis",
+ "taxon_key": "tingmiatornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "1fe8b9de7f6dfa43",
+ "generated_at": "2026-11-10T02:16:51+00:00",
+ "citations": {
+  "tingmiatornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Tingmiatornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Tingmiatornis?oldid=1369644851",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tingmiatornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Tingmiatornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Tingmiatornis?oldid=1369644851",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tingmiatornis:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Tingmiatornis (Description)",
+   "url": "https://en.wikipedia.org/wiki/Tingmiatornis?oldid=1369644851",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tingmiatornis:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Tingmiatornis (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Tingmiatornis?oldid=1369644851",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tingmiatornis:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Tingmiatornis (Paleoecology)",
+   "url": "https://en.wikipedia.org/wiki/Tingmiatornis?oldid=1369644851",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tingmiatornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Tingmiatornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=371237",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus contains only one species, T. arctica, which was described in 2016 and lived during the Turonian epoch of the Cretaceous.",
+   "category": "description",
+   "chunk_id": "tingmiatornis:enwiki:2",
+   "lang": "en",
+   "quote": "The genus contains a single species, T. arctica, described in 2016, which lived during the Turonian epoch of the Cretaceous.",
+   "quote_sha": "fbb1ef4f5666dfb3"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Remains of Tingmiatornis were discovered on Axel Heiberg Island in the High Arctic of Nunavut, Canada.",
+   "category": "discovery",
+   "chunk_id": "tingmiatornis:enwiki:4",
+   "lang": "en",
+   "quote": "The remains of Tingmiatornis were found on Axel Heiberg Island in the High Arctic of Nunavut, Canada",
+   "quote_sha": "007159e9cf9a277b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Radiometric dating places the age of the rock layer containing the fossils at 92 million years ago.",
+   "category": "discovery",
+   "chunk_id": "tingmiatornis:enwiki:4",
+   "lang": "en",
+   "quote": "Radiometric dating places the age of these rocks at 92 Mya.",
+   "quote_sha": "b426de24a11403f2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Tingmiatornis belongs to the parent group Ornithurae.",
+   "category": "classification",
+   "chunk_id": "tingmiatornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ornithurae",
+   "quote_sha": "6c29063d232ac6cb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Tingmiatornis is classified within the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "tingmiatornis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The time range for Tingmiatornis is estimated from 100.5 to 93.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "tingmiatornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Cenomanian (100.5 to 93.9 million years ago)",
+   "quote_sha": "ff16862b0c6874e7"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "tingmiatornis:enwiki:2",
+   "statement": "Tingmiatornis is a genus of flighted and possibly diving ornithuran dinosaur found in the High Arctic of Canada.",
+   "category": "description",
+   "quote": "Tingmiatornis (meaning \"bird that flies\") is a genus of flighted and possibly diving ornithuran dinosaur from the High Arctic of Canada.",
+   "reason": "statement copies the source wording: 'is a genus of flighted and possibly diving'"
+  },
+  {
+   "chunk_id": "tingmiatornis:enwiki:3",
+   "statement": "The thickness of the cortical bone, averaging 1.24 mm, and the relative length of the humerus suggest the animal was capable of flight and likely also diving.",
+   "category": "description",
+   "quote": "the thickness of the cortical bone (on average, 1.24 mm) and the relative length of the humerus suggest that it was apparently capable of flight and likely also diving",
+   "reason": "statement copies the source wording: 'mm and the relative length of the humerus'"
+  },
+  {
+   "chunk_id": "tingmiatornis:enwiki:4",
+   "statement": "The genus name incorporates the Inuktitut word \"Tingmiat\", which means \"those that fly\".",
+   "category": "discovery",
+   "quote": "The genus name of Tingmiatornis incorporates the Inuktitut word \"Tingmiat\", which means \"those that fly\".",
+   "reason": "statement copies the source wording: 'incorporates the Inuktitut word Tingmiat which means those'"
+  },
+  {
+   "chunk_id": "tingmiatornis:enwiki:5",
+   "statement": "During the Turonian, the habitat was a large freshwater to brackish bay situated at approximately 71° paleolatitude.",
+   "category": "time_and_habitat",
+   "quote": "During the Turonian, the area would have been a large, freshwater to brackish bay situated at approximately 71° paleolatitude.",
+   "reason": "statement copies the source wording: 'a large freshwater to brackish bay situated at'"
+  },
+  {
+   "chunk_id": "tingmiatornis:enwiki:5",
+   "statement": "The habitat had a mean temperature of approximately 14 °C, making it an ideal nesting ground for the animal.",
+   "category": "time_and_habitat",
+   "quote": "This habitat, which had a mean temperature of approximately 14 °C, would have been an ideal nesting ground for Tingmiatornis",
+   "reason": "statement copies the source wording: 'had a mean temperature of approximately 14 C'"
+  },
+  {
+   "chunk_id": "tingmiatornis:enwiki:5",
+   "statement": "Researchers suggest Tingmiatornis may have fished at night, a behavior supported by the fact that the location experienced approximately two months of continuous darkness per year.",
+   "category": "paleobiology",
+   "quote": "Tingmiatornis may also have fished at night, much like the modern Western grebe; at this latitude, it would have experienced approximately two months of continuous darkness per year.",
+   "reason": "statement copies the source wording: 'experienced approximately two months of continuous darkness per'"
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "taxon": "Polarornis",
+ "taxon_key": "polarornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "7a9487679ba7f644",
+ "generated_at": "2026-11-10T03:26:26+00:00",
+ "citations": {
+  "polarornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Polarornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Polarornis?oldid=1377153503",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "polarornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Polarornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Polarornis?oldid=1377153503",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "polarornis:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Polarornis (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Polarornis?oldid=1377153503",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "polarornis:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Polarornis (Paleobiology)",
+   "url": "https://en.wikipedia.org/wiki/Polarornis?oldid=1377153503",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "polarornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Polarornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=243335",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Sankar Chatterjee first announced the discovery of Polarornis gregorii in 1989 but did not officially describe and name the species until 2002.",
+   "category": "discovery",
+   "chunk_id": "polarornis:enwiki:2",
+   "lang": "en",
+   "quote": "The discovery of Polarornis gregorii was first announced by Sankar Chatterjee in 1989, but he did not describe and officially name the species until 2002.",
+   "quote_sha": "37aa95ace63165c4"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The single known species, Polarornis gregorii, was found on Seymour Island, Antarctica, in Late Cretaceous rocks dated to about 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "polarornis:enwiki:2",
+   "lang": "en",
+   "quote": "It contains a single species Polarornis gregorii, known from incomplete remains of one individual found on Seymour Island, Antarctica, in rocks which are dated to the Late Cretaceous (López de Bertodano Formation, about 66 Ma).",
+   "quote_sha": "54fce717dcd2a322"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Polarornis is classified as a prehistoric bird that is either a possible member of the family Vegaviidae or the group Aequornithes.",
+   "category": "classification",
+   "chunk_id": "polarornis:enwiki:2",
+   "lang": "en",
+   "quote": "Polarornis is a genus of prehistoric bird, either a possible member of the Vegaviidae or Aequornithes.",
+   "quote_sha": "745a84feeb64302f"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Gerald Mayr criticized the original description of the fossils, noting that Polarornis differed from loons in important characteristics and that the specimen's completeness was overstated.",
+   "category": "debate",
+   "chunk_id": "polarornis:enwiki:3",
+   "lang": "en",
+   "quote": "Gerald Mayr, for example, noted that Polarornis differed from loons in some important characteristics, and criticized Chatterjee's original description of the fossils for overstating the specimen's completeness.",
+   "quote_sha": "272cf6511714349d"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "A 2025 study by Irazoqui and colleagues recovered Polarornis as a member of Aequornithes, with one analysis grouping it with Gaviidae.",
+   "category": "classification",
+   "chunk_id": "polarornis:enwiki:3",
+   "lang": "en",
+   "quote": "In their 2025 description of Pujatopouli, Irazoqui and colleagues recovered Polarornis as a member of the Aequornithes based on the Neornithes dataset, with one analysis grouping it with Gaviidae.",
+   "quote_sha": "eb2bf6683e57118b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group of the genus Polarornis is the family Vegaviidae.",
+   "category": "classification",
+   "chunk_id": "polarornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Vegaviidae",
+   "quote_sha": "5d8e3bb4a89de5ae"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Polarornis lived during the Maastrichtian stage, from 72.2 to 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "polarornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
+   "quote_sha": "8c03278f69290924"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "polarornis:enwiki:2",
+   "statement": "Polarornis was roughly the size of a common loon, with an estimated body length of 60 cm and a weight between 2.8 and 4 kg.",
+   "category": "description",
+   "quote": "It was about the size of a common loon, with an estimated body length of 60 cm and weighing up to 2.8 - 4 kg.",
+   "reason": "statement copies the source wording: 'size of a common loon with an estimated'"
+  },
+  {
+   "chunk_id": "polarornis:enwiki:3",
+   "statement": "While often claimed to be an ancestor of modern loons, some scientists have questioned this relationship.",
+   "category": "debate",
+   "quote": "It is often claimed to be an ancestor of modern loons (divers), but some scientists have questioned this.",
+   "reason": "statement copies the source wording: 'often claimed to be an ancestor of modern'"
+  },
+  {
+   "chunk_id": "polarornis:enwiki:3",
+   "statement": "Mesozoic bird specialists Storrs Olson and Sylvia Hope have supported the classification of Polarornis as an early member of the loon lineage.",
+   "category": "classification",
+   "quote": "However, other Mesozoic bird specialists, including Storrs Olson and Sylvia Hope, have supported the classification of Polarornis as an early member of the loon lineage.",
+   "reason": "statement copies the source wording: 'as an early member of the loon lineage'"
+  },
+  {
+   "chunk_id": "polarornis:enwiki:4",
+   "statement": "Polarornis was likely aquatic and fed on fish and large invertebrates, acting as an ecological equivalent to loons, grebes, or Hesperornithes.",
+   "category": "paleobiology",
+   "quote": "Polarornis was in all likelihood aquatic and fed on fish and large invertebrates, probably being an ecological equivalent of loons, grebes, or the Cretaceous Hesperornithes of the Northern Hemisphere.",
+   "reason": "statement copies the source wording: 'aquatic and fed on fish and large invertebrates'"
+  },
+  {
+   "chunk_id": "polarornis:enwiki:4",
+   "statement": "Analysis of the femur suggests Polarornis had dense bones rather than hollow ones, indicating it was a flightless or near-flightless diving bird similar to hesperornithines and penguins.",
+   "category": "paleobiology",
+   "quote": "One analysis of the structure of the femur (TTU P 9265) showed that the bones were dense, rather than hollow and lightweight as in flying birds, suggesting that Polarornis was a flightless or near-flightless diving bird similar to hesperornithines and penguins.",
+   "reason": "statement copies the source wording: 'was a flightless or near-flightless diving bird similar'"
+  }
+ ]
+}

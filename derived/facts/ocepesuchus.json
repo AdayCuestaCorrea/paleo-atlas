@@ -1,0 +1,136 @@
+{
+ "taxon": "Ocepesuchus",
+ "taxon_key": "ocepesuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3a9214335938991f",
+ "generated_at": "2026-11-10T06:24:59+00:00",
+ "citations": {
+  "ocepesuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Ocepesuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Ocepesuchus?oldid=1298690457",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ocepesuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Ocepesuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Ocepesuchus?oldid=1298690457",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ocepesuchus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Ocepesuchus (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Ocepesuchus?oldid=1298690457",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ocepesuchus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Ocepesuchus (Paleobiology)",
+   "url": "https://en.wikipedia.org/wiki/Ocepesuchus?oldid=1298690457",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ocepesuchus:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Ocepesuchus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Ocepesuchus?oldid=1298690457",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ocepesuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Ocepesuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=194874",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Ocepesuchus possessed a long snout with a tubular shape that was wider than it was high.",
+   "category": "description",
+   "chunk_id": "ocepesuchus:enwiki:3",
+   "lang": "en",
+   "quote": "Ocepesuchus had a long snout with a tubular shape, wider than high.",
+   "quote_sha": "e8001c2bc89554d1"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Based on its narrow snout, Ocepesuchus likely had a piscivorous diet, but its skull, preserved at about 38 cm long, was too small to eat large pycnodonts like Phacodus.",
+   "category": "paleobiology",
+   "chunk_id": "ocepesuchus:enwiki:4",
+   "lang": "en",
+   "quote": "Ocepesuchus likely had a piscivorous diet based on its narrow snout, but it wasn't suited for eating large pycnodonts like Phacodus, with the preserved portion of its skull measuring only about 38 cm long.",
+   "quote_sha": "30611fb6e57d2a10"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Researchers suggest the type specimen was either a small adult or subadult that may have spent juvenile stages in freshwater, potentially offering some protection from the Cretaceous–Paleogene extinction event.",
+   "category": "paleobiology",
+   "chunk_id": "ocepesuchus:enwiki:4",
+   "lang": "en",
+   "quote": "The type specimen is interpreted as either a small-sized adult or a subadult, and it may have spent its time in freshwater during its juvenile stages, similar to modern marine crocodiles; if this were indeed the case, some of the juveniles may have been protected to an extent from the Cretaceous–Paleogene extinction event.",
+   "quote_sha": "acb23861d89f6850"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "A cladistic analysis by Jouve and colleagues classified Ocepesuchus as a gavialoid.",
+   "category": "classification",
+   "chunk_id": "ocepesuchus:enwiki:5",
+   "lang": "en",
+   "quote": "Jouve and colleagues performed a cladistic analysis incorporating their new taxon, and found Ocepesuchus to be a gavialoid.",
+   "quote_sha": "0a52d9b749e4498a"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Ocepesuchus lived between 72.2 and 66 million years ago during the Maastrichtian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "ocepesuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Maastrichtian to Maastrichtian (72.2 to 66 million years ago)",
+   "quote_sha": "8c03278f69290924"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "ocepesuchus:enwiki:2",
+   "statement": "Ocepesuchus is an extinct genus of gavialoid crocodilian related to modern gharials, named after the phosphate-mining company OCP that helped excavate the specimen.",
+   "category": "description",
+   "quote": "Ocepesuchus (meaning \"Ocepe crocodile\", in reference to the OCP, or Office Chérifien des Phosphates, a phosphate-mining company that participated in the excavation of the specimen) is an extinct genus of gavialoid crocodilian, related to modern gharials.",
+   "reason": "statement copies the source wording: 'is an extinct genus of gavialoid crocodilian related'"
+  },
+  {
+   "chunk_id": "ocepesuchus:enwiki:2",
+   "statement": "Ocepesuchus lived in Morocco during the late Maastrichtian age of the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "quote": "It lived in Morocco during the late Maastrichtian age of the Late Cretaceous.",
+   "reason": "statement copies the source wording: 'lived in Morocco during the late Maastrichtian age'"
+  },
+  {
+   "chunk_id": "ocepesuchus:enwiki:3",
+   "statement": "Jouve and colleagues described Ocepesuchus in 2008, naming the type species O. eoafricanus to reflect its great age relative to other African crocodilians.",
+   "category": "discovery",
+   "quote": "Described by Jouve and colleagues in 2008, the type species is O. eoafricanus, with the specific name meaning \"dawn African\" in reference to its great age relative to other African crocodilians.",
+   "reason": "statement copies the source wording: 'its great age relative to other African crocodilians'"
+  },
+  {
+   "chunk_id": "ocepesuchus:enwiki:3",
+   "statement": "The holotype of Ocepesuchus is a crushed but mostly complete skull, missing the snout tip and part of the bottom surface, found in late Maastrichtian rocks near Khouribga, Morocco.",
+   "category": "discovery",
+   "quote": "The holotype of Ocepesuchus is OCP DEK-GE 45, a crushed but mostly complete skull, missing the end of the snout and part of its bottom surface, from late Maastrichtian (Late Cretaceous)-age rocks in the Oulad Abdoun Basin, in the vicinity of Khouribga, Morocco.",
+   "reason": "statement copies the source wording: 'a crushed but mostly complete skull missing the'"
+  },
+  {
+   "chunk_id": "ocepesuchus:enwiki:5",
+   "statement": "A 2022 phylogenetic study by Iijima et al. recovered Ocepesuchus within the subfamily Gavialinae, deeply nested within the superfamily Gavialoidea.",
+   "category": "classification",
+   "quote": "A 2022 phylogenetic study by Iijima et al. recovered Ocepesuchus within Gavialinae, deeply nested within Gavialoidea, as shown in the cladogram below:",
+   "reason": "statement copies the source wording: '2022 phylogenetic study by Iijima et al recovered'"
+  }
+ ]
+}

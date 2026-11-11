@@ -1,0 +1,114 @@
+{
+ "taxon": "Songzia",
+ "taxon_key": "songzia",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "17a4082aeb076730",
+ "generated_at": "2026-11-11T06:03:56+00:00",
+ "citations": {
+  "songzia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Songzia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Songzia?oldid=1379859997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "songzia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Songzia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Songzia?oldid=1379859997",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "songzia:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Songzia",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56422",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Songzia was an extinct genus of birds related to rails.",
+   "category": "description",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "Songzia is an extinct genus of gruiform bird related to rails.",
+   "quote_sha": "bbe474d3a8a06bd2"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Songzia have been found in Songzi county, Hubei Province, China.",
+   "category": "discovery",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "Its fossils have been found in Songzi county (Hubei Province People's Republic of China).",
+   "quote_sha": "5084fa18b58b19cd"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Two species of Songzia are known: Songzia heidangkouensis and Songzia acutunguis.",
+   "category": "discovery",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "Two species are known and have been named Songzia heidangkouensis and Songzia acutunguis.",
+   "quote_sha": "879bad4f5706945b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The names for the genus and family were originally published in a newsletter before being validated in a scientific journal.",
+   "category": "discovery",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "The genus and family names for the type species were originally first published in a newsletter, and only subsequently in a scientific journal to fulfill the ICZN's requirements valid new scientific names.",
+   "quote_sha": "1a85b562eeca0894"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Songzia lived during the Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "It lived in the Eocene epoch.",
+   "quote_sha": "19cbcca6111f6edf"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Songzia lived between 56 and 48.07 million years ago during the Ypresian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "songzia:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Songzia belongs to the family Songziidae.",
+   "category": "classification",
+   "chunk_id": "songzia:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Songziidae",
+   "quote_sha": "d17b3d34449d2c01"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Fossils from the Driftwood site in the Eocene Okanagan Highlands and the Paleocene Menat Formation have been tentatively assigned to the family Songziidae.",
+   "category": "debate",
+   "chunk_id": "songzia:enwiki:2",
+   "lang": "en",
+   "quote": "An additional fossil found in the Driftwood site avifauna of the Eocene Okanagan Highlands was tentatively referred the to family, as has a fossil from the Paleocene Menat Formation",
+   "quote_sha": "bde074d744684b32"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "songzia:pbdb:1",
+   "statement": "Songzia is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

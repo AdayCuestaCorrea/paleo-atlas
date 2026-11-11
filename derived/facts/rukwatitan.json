@@ -1,0 +1,115 @@
+{
+ "taxon": "Rukwatitan",
+ "taxon_key": "rukwatitan",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ff7069af9fb51178",
+ "generated_at": "2026-11-11T07:17:32+00:00",
+ "citations": {
+  "rukwatitan:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Rukwatitan (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Rukwatitan?oldid=1350995604",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rukwatitan:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Rukwatitan (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Rukwatitan?oldid=1350995604",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rukwatitan:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Rukwatitan bisepultus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Rukwatitan_bisepultus?oldid=174767850",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rukwatitan:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Rukwatitan bisepultus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Rukwatitan_bisepultus?oldid=174767850",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rukwatitan:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Rukwatitan",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=320810",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Rukwatitan was described by Gorscak et al. in 2014.",
+   "category": "classification",
+   "chunk_id": "rukwatitan:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Gorscak et al., 2014",
+   "quote_sha": "5f26664073325a6a"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Rukwatitan is classified within the unranked family Titanosauria.",
+   "category": "classification",
+   "chunk_id": "rukwatitan:eswiki:1",
+   "lang": "es",
+   "quote": "unranked_familia: Titanosauria",
+   "quote_sha": "07749736ebcfd683"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The time range for Rukwatitan spans from the Cenomanian to the Campanian, between 100.5 and 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "rukwatitan:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Campanian (100.5 to 72.2 million years ago)",
+   "quote_sha": "6bc02f2d7a99dde2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Rukwatitan measured approximately 9.1 meters from head to tail and had forelimbs estimated at around 2 meters long.",
+   "category": "description",
+   "chunk_id": "rukwatitan:eswiki:2",
+   "lang": "es",
+   "quote": "medía 9,1 metros desde la cabeza hasta la punta de la cola, y tenía extremidades anteriores que se estimaban en alrededor de 2 metros.",
+   "quote_sha": "96663ba11df7759f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Rukwatitan lived in the middle of the Cretaceous period, approximately 100 million years ago during the Albian stage, in what is now Africa.",
+   "category": "time_and_habitat",
+   "chunk_id": "rukwatitan:eswiki:2",
+   "lang": "es",
+   "quote": "vivió a mediados del período Cretácico, hace aproximadamente 100 millones de años, en el Albiense, en lo que hoy es África.",
+   "quote_sha": "885a30a8e5c3c996"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "rukwatitan:enwiki:2",
+   "statement": "Rukwatitan fossils were discovered embedded in a cliff face near Lake Rukwa in the Rukwa Valley, giving the animal its name.",
+   "category": "discovery",
+   "quote": "Its fossils were found embedded in a cliff face near Lake Rukwa in the Rukwa Valley, from which it gets its name.",
+   "reason": "statement copies the source wording: 'embedded in a cliff face near Lake Rukwa'"
+  },
+  {
+   "chunk_id": "rukwatitan:enwiki:2",
+   "statement": "Rukwatitan lived approximately 100 million years ago during the middle Cretaceous period.",
+   "category": "time_and_habitat",
+   "quote": "It lived around 100 million years ago, during the middle Cretaceous.",
+   "reason": "statement copies the source wording: '100 million years ago during the middle Cretaceous'"
+  },
+  {
+   "chunk_id": "rukwatitan:enwiki:2",
+   "statement": "Rukwatitan measured about 30 feet from head to tail and had forelimbs estimated at 6.5 feet long.",
+   "category": "description",
+   "quote": "The species... measured 30 ft from the head to the tip of the tail, and had forelimbs that were estimated around 6.5 ft long.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

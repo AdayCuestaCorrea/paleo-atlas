@@ -1,0 +1,123 @@
+{
+ "taxon": "Propristis",
+ "taxon_key": "propristis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "b72b1f1ccbc856cf",
+ "generated_at": "2026-11-11T02:01:11+00:00",
+ "citations": {
+  "propristis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Propristis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Propristis?oldid=1359950181",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "propristis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Propristis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Propristis?oldid=1359950181",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "propristis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Propristis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34702",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Propristis was first described by Dames in 1883.",
+   "category": "discovery",
+   "chunk_id": "propristis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Dames, 1883",
+   "quote_sha": "a27d3ef56f53126e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Propristis schweinfurthi.",
+   "category": "classification",
+   "chunk_id": "propristis:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: †Propristis schweinfurthi",
+   "quote_sha": "d5d5f0c31a53c962"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A second valid species, Propristis mayumbensis, was described by Dartevelle and Casier in 1943.",
+   "category": "classification",
+   "chunk_id": "propristis:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: †Propristis mayumbensis Dartevelle & Casier, 1943",
+   "quote_sha": "5c297e422c4d2dbe"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Propristis is an extinct genus of sawfish.",
+   "category": "description",
+   "chunk_id": "propristis:enwiki:2",
+   "lang": "en",
+   "quote": "Propristis is an extinct genus of sawfish",
+   "quote_sha": "89653a5fd5f908ee"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of Propristis have been found in Egypt, Cabinda, Morocco, Qatar, Spain, the United Kingdom, and the United States.",
+   "category": "time_and_habitat",
+   "chunk_id": "propristis:enwiki:2",
+   "lang": "en",
+   "quote": "It has been found in Egypt, Cabinda, Morocco, Qatar, Spain, the United Kingdom, and the United States",
+   "quote_sha": "d235e6908f293b26"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The most common fossil remains of Propristis are isolated rostral denticles, though complete rostra have also been discovered.",
+   "category": "paleobiology",
+   "chunk_id": "propristis:enwiki:2",
+   "lang": "en",
+   "quote": "Isolated rostral denticles are the most common remains, but rostra has also been found",
+   "quote_sha": "f6962210c276ffba"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Propristis belongs to the family Pristidae.",
+   "category": "classification",
+   "chunk_id": "propristis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Pristidae",
+   "quote_sha": "ed363ef68eb87c3a"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Propristis is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "propristis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Propristis lived from the Ypresian to the Chattian stages, between 56 and 23.04 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "propristis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Chattian (56 to 23.04 million years ago)",
+   "quote_sha": "0637ef9fe5d8f4a0"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "propristis:enwiki:2",
+   "statement": "Propristis lived during the Eocene and Miocene epochs.",
+   "category": "time_and_habitat",
+   "quote": "It lived from the Eocene to the Miocene",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

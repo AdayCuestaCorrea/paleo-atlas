@@ -1,0 +1,117 @@
+{
+ "taxon": "Guildavis",
+ "taxon_key": "guildavis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "375785b3cf02b7d8",
+ "generated_at": "2026-11-11T06:54:45+00:00",
+ "citations": {
+  "guildavis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Guildavis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Guildavis?oldid=1382805995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "guildavis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Guildavis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Guildavis?oldid=1382805995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "guildavis:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Guildavis (Description)",
+   "url": "https://en.wikipedia.org/wiki/Guildavis?oldid=1382805995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "guildavis:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Guildavis (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Guildavis?oldid=1382805995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "guildavis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Guildavis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=207937",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The fossil of Guildavis was discovered in 1879 by Edgar W. Guild in Kansas.",
+   "category": "discovery",
+   "chunk_id": "guildavis:enwiki:3",
+   "lang": "en",
+   "quote": "The type specimen of G. tener, YPM 1760, was found in 1879 by Edgar W. Guild, in the rocks of the Smoky Hill Chalk Member of the Niobara Formation, near Smoky Hill River in Wallace County, Kansas.",
+   "quote_sha": "ee2d5df25b36a604"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known fossil of Guildavis is a tiny, crushed fragment of the sacrum.",
+   "category": "description",
+   "chunk_id": "guildavis:enwiki:3",
+   "lang": "en",
+   "quote": "The type specimen is fragmentary, consisting of two fragments of a tiny, heavily crushed sacrum.",
+   "quote_sha": "bc5e0a7fa5e1a455"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Guildavis lived during the Late Cretaceous period in the Niobrara Formation of Kansas.",
+   "category": "time_and_habitat",
+   "chunk_id": "guildavis:enwiki:2",
+   "lang": "en",
+   "quote": "Guildavis (meaning \"Guild's bird\", after Edgar W. Guild) is a genus of ornithuran avialan known from the Late Cretaceous (Santonian age Niobrara Formation of Kansas, United States.",
+   "quote_sha": "3cb45d378e5f3afe"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Guildavis is classified as an ornithuran avialan.",
+   "category": "classification",
+   "chunk_id": "guildavis:enwiki:2",
+   "lang": "en",
+   "quote": "Guildavis (meaning \"Guild's bird\", after Edgar W. Guild) is a genus of ornithuran avialan known from the Late Cretaceous (Santonian age Niobrara Formation of Kansas, United States.",
+   "quote_sha": "3cb45d378e5f3afe"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Guildavis is more closely related to modern birds than its original genus, Ichthyornis.",
+   "category": "classification",
+   "chunk_id": "guildavis:enwiki:4",
+   "lang": "en",
+   "quote": "However, when Clarke named Guildavis, it was found to be more closely related to modern birds than Ichthyornis.",
+   "quote_sha": "385685f2e10ad661"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Guildavis belongs to the parent group Ornithurae.",
+   "category": "classification",
+   "chunk_id": "guildavis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ornithurae",
+   "quote_sha": "6c29063d232ac6cb"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "guildavis:enwiki:3",
+   "statement": "Othniel Charles Marsh originally described the specimen as a species of Ichthyornis in 1880.",
+   "category": "discovery",
+   "quote": "Marsh described it and named it as a species of Ichthyornis, Ichthyornis tener, in the following year.",
+   "reason": "numbers not in the quote: ['1880']"
+  },
+  {
+   "chunk_id": "guildavis:enwiki:3",
+   "statement": "Julia Clarke reclassified the species into its own genus, Guildavis, in 2004, naming it after the discoverer.",
+   "category": "discovery",
+   "quote": "It remained under this name until Julia Clarke named a new genus for this species, Guildavis, which means \"Guild's bird\", after the man who found the fossil.",
+   "reason": "numbers not in the quote: ['2004']"
+  }
+ ]
+}

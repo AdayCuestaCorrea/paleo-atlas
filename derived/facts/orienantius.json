@@ -1,0 +1,133 @@
+{
+ "taxon": "Orienantius",
+ "taxon_key": "orienantius",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "25b28df27fed3424",
+ "generated_at": "2026-11-11T07:15:56+00:00",
+ "citations": {
+  "orienantius:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Orienantius (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Orienantius?oldid=1376123161",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "orienantius:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Orienantius (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Orienantius?oldid=1376123161",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "orienantius:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Orienantius (Description)",
+   "url": "https://en.wikipedia.org/wiki/Orienantius?oldid=1376123161",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "orienantius:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Orienantius (Etymology)",
+   "url": "https://en.wikipedia.org/wiki/Orienantius?oldid=1376123161",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "orienantius:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Orienantius",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=391373",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Orienantius was described by Liu and colleagues in 2019.",
+   "category": "discovery",
+   "chunk_id": "orienantius:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Liu et al., 2019",
+   "quote_sha": "7ae4e2c670ffdf4c"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Orienantius ritteri is an extinct bird belonging to the Enantiornithes group found in China during the Lower Cretaceous.",
+   "category": "discovery",
+   "chunk_id": "orienantius:enwiki:2",
+   "lang": "en",
+   "quote": "Orienantius ritteri is an extinct genus of enantiornithean bird from the Lower Cretaceous of China.",
+   "quote_sha": "431890bf1268b51a"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Orienantius were found in the Huajiying Formation of Hebei Province.",
+   "category": "description",
+   "chunk_id": "orienantius:enwiki:3",
+   "lang": "en",
+   "quote": "Both specimens of Orienantius come from the Huajiying Formation of Hebei Province.",
+   "quote_sha": "ef2cf29feec85b08"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Researchers estimated that individuals of Orienantius were about the same size as the Eurasian Skylark.",
+   "category": "description",
+   "chunk_id": "orienantius:enwiki:3",
+   "lang": "en",
+   "quote": "Both individuals were estimated by the authors to be about the same size as the Eurasian Skylark.",
+   "quote_sha": "e847d08c1607e6a2"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of Orienantius preserve extensive non-plumage soft tissues including the neck, hindlimbs, forelimbs, and visceral region, which is exceptional for fossil birds.",
+   "category": "description",
+   "chunk_id": "orienantius:enwiki:3",
+   "lang": "en",
+   "quote": "Fossils of Orienantius preserves extensive non-plumage soft tissues of the neck, hindlimbs, forelimbs, and visceral region, an exceptional state of preservation for fossil birds.",
+   "quote_sha": "75883c9c2e4c533f"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The specific name ritteri honors the German scientist Johann Wilhelm Ritter.",
+   "category": "discovery",
+   "chunk_id": "orienantius:enwiki:4",
+   "lang": "en",
+   "quote": "The specific name, ritteri, honours the German scientist Johann Wilhelm Ritter.",
+   "quote_sha": "7396eef6e2b4d0f3"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Orienantius lived during the Hauterivian stage, between 132.6 and 125.77 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "orienantius:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Hauterivian to Hauterivian (132.6 to 125.77 million years ago)",
+   "quote_sha": "6dedae7413add757"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "orienantius:enwiki:3",
+   "statement": "The holotype specimen of Orienantius is a nearly complete, articulated skeleton with extensive feather impressions preserved on a slab and counterslab.",
+   "category": "description",
+   "quote": "BMNHC Ph 1156a/b consists of a nearly complete, articulated skeleton with extensive feather impressions on a slab and counterslab.",
+   "reason": "statement copies the source wording: 'a nearly complete articulated skeleton with extensive feather'"
+  },
+  {
+   "chunk_id": "orienantius:enwiki:3",
+   "statement": "The lack of fusion in several bones suggests that the holotype of Orienantius was not skeletally mature when it died.",
+   "category": "paleobiology",
+   "quote": "The lack of fusion in the carpometacarpus, tibiotarsus, tarsometatarsus, and other compound bones lead the authors to suggest that the holotype of Orienantius was not skeletally mature at the time of death.",
+   "reason": "statement copies the source wording: 'the holotype of Orienantius was not skeletally mature'"
+  },
+  {
+   "chunk_id": "orienantius:enwiki:3",
+   "statement": "Evidence from soft tissue preservation indicates that Orienantius was capable of high manoeuvrability and intermittent flap-gliding.",
+   "category": "paleobiology",
+   "quote": "Orienantius showed evidence that it was capable of high manoeuvrability and intermittent flap-gliding.",
+   "reason": "statement copies the source wording: 'was capable of high manoeuvrability and intermittent flap-gliding'"
+  }
+ ]
+}

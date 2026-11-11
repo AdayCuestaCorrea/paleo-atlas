@@ -1,0 +1,126 @@
+{
+ "taxon": "Egertonodus",
+ "taxon_key": "egertonodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "47248d47f058208c",
+ "generated_at": "2026-11-11T02:41:39+00:00",
+ "citations": {
+  "egertonodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Egertonodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Egertonodus?oldid=1331197170",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "egertonodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Egertonodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Egertonodus?oldid=1331197170",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "egertonodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Egertonodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=151799",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Egertonodus was described by Maisey in 1987.",
+   "category": "classification",
+   "chunk_id": "egertonodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Maisey, 1987",
+   "quote_sha": "5a0f86db20afff2a"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus lived between 168.2 and 83.6 million years ago, from the Bathonian to the Santonian.",
+   "category": "time_and_habitat",
+   "chunk_id": "egertonodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bathonian to Santonian (168.2 to 83.6 million years ago)",
+   "quote_sha": "537e440f06dba40d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Egertonodus is distinguished from Hybodus sensu stricto by specific characters of the skull and teeth.",
+   "category": "description",
+   "chunk_id": "egertonodus:enwiki:2",
+   "lang": "en",
+   "quote": "The genus is distinguished from Hybodus sensu stricto by characters of the skull and teeth.",
+   "quote_sha": "4c57e3835cb59009"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The most common species, E. basanus, is thought to have reached a length of 1.5 meters (4 ft 11 in).",
+   "category": "description",
+   "chunk_id": "egertonodus:enwiki:2",
+   "lang": "en",
+   "quote": "E. basanus, the most common species, is thought to have reached 1.5 m (4 ft 11in) in length.",
+   "quote_sha": "b637cd0acf85967f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "It is debated whether E. fraasi belongs in Egertonodus, as some authors question the placement due to strong differences in tooth morphology.",
+   "category": "debate",
+   "chunk_id": "egertonodus:enwiki:2",
+   "lang": "en",
+   "quote": "E. fraasi from the Late Jurassic of Germany, known from a poorly preserved full body fossil, was placed in Egertonodus in one study, but this has been subsequently questioned by other authors, due to strong differences in tooth morphology from the type species.",
+   "quote_sha": "2635df722d15867e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Egertonodus belongs to the family Hybodontidae.",
+   "category": "classification",
+   "chunk_id": "egertonodus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Hybodontidae",
+   "quote_sha": "50cae5b246862e0a"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Egertonodus is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "egertonodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "egertonodus:enwiki:2",
+   "statement": "Egertonodus is an extinct genus of shark-like hybodont fish.",
+   "category": "classification",
+   "quote": "Egertonodus is an extinct genus of shark-like hybodont fish.",
+   "reason": "statement copies the source wording: 'Egertonodus is an extinct genus of shark-like hybodont'"
+  },
+  {
+   "chunk_id": "egertonodus:enwiki:2",
+   "statement": "Fossils of Egertonodus date from the Oxfordian to the Albian stages.",
+   "category": "time_and_habitat",
+   "quote": "fossil_range: Oxfordian - Albian,",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "egertonodus:enwiki:2",
+   "statement": "The species E. basanus is known from preserved skull material, whereas E. duffini is known only from teeth.",
+   "category": "time_and_habitat",
+   "quote": "E. basanus is known from preserved skull material, while E. duffini is only known from teeth.",
+   "reason": "statement copies the source wording: 'E basanus is known from preserved skull material'"
+  },
+  {
+   "chunk_id": "egertonodus:enwiki:2",
+   "statement": "Fossils of Egertonodus have been found in freshwater and lagoonal environments.",
+   "category": "time_and_habitat",
+   "quote": "Fossils have been found in freshwater and lagoonal environments.",
+   "reason": "statement copies the source wording: 'have been found in freshwater and lagoonal environments'"
+  }
+ ]
+}

@@ -1,0 +1,119 @@
+{
+ "taxon": "Hoplosuchus",
+ "taxon_key": "hoplosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "640cf3ba28023c52",
+ "generated_at": "2026-11-11T05:50:16+00:00",
+ "citations": {
+  "hoplosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Hoplosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Hoplosuchus?oldid=1377476702",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hoplosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Hoplosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Hoplosuchus?oldid=1377476702",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hoplosuchus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Hoplosuchus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Hoplosuchus?oldid=1377476702",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hoplosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Hoplosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38353",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Hoplosuchus is known from a single skeleton found in the Morrison Formation of Utah during road construction.",
+   "category": "discovery",
+   "chunk_id": "hoplosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "It is so far only known definitely from one specimen, a skeleton collected from sandstone of the Upper Jurassic-age Morrison Formation rocks at Dinosaur National Monument, Utah, during road construction.",
+   "quote_sha": "0ca1c8c87d01f1fe"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The known specimen of Hoplosuchus was approximately 20 cm long, though it might have been a juvenile.",
+   "category": "time_and_habitat",
+   "chunk_id": "hoplosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "The individual was small, approximately 20 cm long, although it may have been very young.",
+   "quote_sha": "e97a13e5a7d648da"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Hoplosuchus had relatively long limbs, indicating it was a terrestrial animal.",
+   "category": "description",
+   "chunk_id": "hoplosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "The limbs were relatively long, suggesting that the animal was terrestrial.",
+   "quote_sha": "e15f4b06be253634"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Due to its small size, Hoplosuchus likely ate insects and small vertebrates, possibly being carnivorous or omnivorous.",
+   "category": "paleobiology",
+   "chunk_id": "hoplosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Given its small size, it probably ate insects and small vertebrates; it may have been carnivorous or omnivorous.",
+   "quote_sha": "1a2b399f351e3b16"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Charles W. Gilmore named the genus Hoplosuchus in 1926, with H. kayi as the type species.",
+   "category": "discovery",
+   "chunk_id": "hoplosuchus:enwiki:3",
+   "lang": "en",
+   "quote": "Charles W. Gilmore named Hoplosuchus in 1926; the type species is H. kayi.",
+   "quote_sha": "5cfe14be962e26ff"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "A 2017 cladistic analysis recovered Hoplosuchus as a member of the family Protosuchidae.",
+   "category": "classification",
+   "chunk_id": "hoplosuchus:enwiki:3",
+   "lang": "en",
+   "quote": "A 2017 cladistic analysis of Cassissuchus recovered it as a member of Protosuchidae.",
+   "quote_sha": "a9efa60833a53155"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Hoplosuchus lived during the Tithonian stage, between 149.2 and 145.06 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "hoplosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tithonian to Tithonian (149.2 to 145.06 million years ago)",
+   "quote_sha": "827217a632977976"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "hoplosuchus:enwiki:2",
+   "statement": "Two rows of wide, rectangular bony scutes ran along the back of Hoplosuchus.",
+   "category": "description",
+   "quote": "Two rows of wide, rectangular bony scutes ran down the back.",
+   "reason": "statement copies the source wording: 'Two rows of wide rectangular bony scutes ran'"
+  },
+  {
+   "chunk_id": "hoplosuchus:enwiki:3",
+   "statement": "While sometimes classified as an atoposaurid, a 1988 review suggested Hoplosuchus is more likely a protosuchian-grade crocodylomorph.",
+   "category": "classification",
+   "quote": "Sometimes classified as an atoposaurid, a 1988 review of atoposaurids found it more likely to be a protosuchian-grade crocodylomorph.",
+   "reason": "statement copies the source wording: 'sometimes classified as an atoposaurid a 1988 review'"
+  }
+ ]
+}

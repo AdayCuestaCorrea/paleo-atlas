@@ -1,0 +1,121 @@
+{
+ "taxon": "Platydyptes",
+ "taxon_key": "platydyptes",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "cf1add4737a8d8a8",
+ "generated_at": "2026-11-11T07:42:38+00:00",
+ "citations": {
+  "platydyptes:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Platydyptes (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Platydyptes?oldid=1341564649",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "platydyptes:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Platydyptes (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Platydyptes?oldid=1341564649",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "platydyptes:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Platydyptes (Species)",
+   "url": "https://en.wikipedia.org/wiki/Platydyptes?oldid=1341564649",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "platydyptes:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Platydyptes",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39731",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Platydyptes was described by Marples in 1952.",
+   "category": "classification",
+   "chunk_id": "platydyptes:enwiki:1",
+   "lang": "en",
+   "quote": "taxon: Platydyptes authority: Marples, 1952",
+   "quote_sha": "1b69c996a7c01cdf"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Platydyptes date from the Late Oligocene to the Early Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "platydyptes:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Oligocene to Early Miocene,",
+   "quote_sha": "91f1a4e4a8acc968"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Platydyptes is an extinct genus of penguin that lived in New Zealand between 27.3 and 21.7 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "platydyptes:enwiki:2",
+   "lang": "en",
+   "quote": "Platydyptes is a genus of extinct penguins from the Late Oligocene to Early Miocene (about 27.3 to 21.7 million years ago) of New Zealand.",
+   "quote_sha": "eb40bc7ce057984b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "All three species of Platydyptes were described from fossils found in the north Otago to south Canterbury region of New Zealand's South Island.",
+   "category": "discovery",
+   "chunk_id": "platydyptes:enwiki:2",
+   "lang": "en",
+   "quote": "It was created by Brian Marples in 1952 and contains three relatively large species, all of which were described from the north Otago to south Canterbury region in the South Island.",
+   "quote_sha": "1e231ba7e33ebb24"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus name Platydyptes refers to the broad and flat shape of the humerus bone.",
+   "category": "description",
+   "chunk_id": "platydyptes:enwiki:2",
+   "lang": "en",
+   "quote": "The genus name Platydyptes combines the Greek platys (\"broad and flat\"), alluding to the shape of the humerus, with dyptes (\"diver\").",
+   "quote_sha": "0c01679f6009d07a"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Platydyptes amiesi was the largest species, roughly the size of a king penguin but with longer flippers.",
+   "category": "description",
+   "chunk_id": "platydyptes:enwiki:3",
+   "lang": "en",
+   "quote": "Platydyptes amiesi Marples, 1952 – Amies' penguin. The largest species, it was about the size of a king penguin, though with longer flippers.",
+   "quote_sha": "8066674304d56f23"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Platydyptes belongs to the class Aves and the parent group Sphenisciformes.",
+   "category": "classification",
+   "chunk_id": "platydyptes:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sphenisciformes Class: Aves",
+   "quote_sha": "1e7db6d4598a413e"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for Platydyptes is from the Priabonian to the Aquitanian stages, spanning 36.7 to 21.7 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "platydyptes:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Aquitanian (36.7 to 21.7 million years ago)",
+   "quote_sha": "36cd751e1fec48fa"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "platydyptes:enwiki:3",
+   "statement": "The name Platydyptes amiesi honors A.C. Amies, a University of Otago student who collected the first specimen in 1946.",
+   "category": "discovery",
+   "quote": "The epithet and common name honour A.C. Amies, a University of Otago student who collected the first specimen in 1946 and was killed in Malaysia soon afterwards.",
+   "reason": "statement copies the source wording: 'University of Otago student who collected the first'"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "taxon": "Palaeocarcharias",
+ "taxon_key": "palaeocarcharias",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c8b693f191a7e002",
+ "generated_at": "2026-11-11T02:29:22+00:00",
+ "citations": {
+  "palaeocarcharias:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Palaeocarcharias (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Palaeocarcharias?oldid=1344160165",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeocarcharias:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Palaeocarcharias (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Palaeocarcharias?oldid=1344160165",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeocarcharias:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Palaeocarcharias",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34622",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Palaeocarcharias is an extinct genus of shark found in Europe during the Jurassic period.",
+   "category": "discovery",
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "lang": "en",
+   "quote": "Palaeocarcharias is an extinct genus of shark, known from the Jurassic of Europe.",
+   "quote_sha": "dc8a7546223a3d89"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Isolated teeth from England suggest the genus Palaeocarcharias existed back to the Middle Jurassic (Bathonian).",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "lang": "en",
+   "quote": "Isolated teeth of indeterminate species from England (White Limestone Formation, and possibly the Forest Marble and Taynton Limestone) extend the range of the genus back to the Middle Jurassic (Bathonian).",
+   "quote_sha": "5c50e317ab63dd54"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Palaeocarcharias resembled carpet sharks and reached a total body length of about 1 meter.",
+   "category": "description",
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "lang": "en",
+   "quote": "Morphologically, it closely resembles carpet sharks (Orectolobiformes), and is around 1 m in total body length.",
+   "quote_sha": "fd24694c60e69434"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "A 2018 study proposed classifying it as the sole member of the order Palaeocarchariiformes, while a 2023 study favored placing it within Lamniformes.",
+   "category": "classification",
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "lang": "en",
+   "quote": "A 2018 study suggested that should be classified as the sole member of the order Palaeocarchariiformes, but a subsequent 2023 study questioned this and favoured placement in Lamniformes.",
+   "quote_sha": "5d8357ebab4426a2"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "A 2024 study suggested that a specimen from Canjuers might actually be a true carpet shark belonging to Orectolobidae.",
+   "category": "debate",
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "lang": "en",
+   "quote": "A 2024 study of a specimen from Canjuers suggested that as that it was in fact a true carpet shark, perhaps a member of Orectolobidae (the wobbegongs).",
+   "quote_sha": "145e614724d073d0"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The Paleobi Database lists the parent group of Palaeocarcharias as Lamniformes.",
+   "category": "classification",
+   "chunk_id": "palaeocarcharias:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Lamniformes",
+   "quote_sha": "ce400200caee22b4"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus lived from the Bathonian to the Tithonian, between 168.2 and 145.06 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeocarcharias:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bathonian to Tithonian (168.2 to 145.06 million years ago)",
+   "quote_sha": "145af51a89758024"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "statement": "The only named species, Palaeocarcharias stromeri, is known from exceptionally preserved fossils in the Late Jurassic (Tithonian) of Germany and France.",
+   "category": "time_and_habitat",
+   "quote": "It has only a single named species, Palaeocarcharias stromeri, which is known from exceptionally preserved specimens from the Late Jurassic (Tithonian) of Germany (Solnhofen Limestone) and France (Canjuers Lagerstatte).",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "palaeocarcharias:enwiki:2",
+   "statement": "The shark shared similarities in tooth development with mackerel sharks, specifically the absence of orthodentine.",
+   "category": "description",
+   "quote": "However, it shares greater similarities in tooth development with mackerel sharks (Lamniformes), including the absence of orthodentine.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

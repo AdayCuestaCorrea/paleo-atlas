@@ -1,0 +1,117 @@
+{
+ "taxon": "Pachyosteus",
+ "taxon_key": "pachyosteus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "84c3d29803375a6c",
+ "generated_at": "2026-11-11T03:13:23+00:00",
+ "citations": {
+  "pachyosteus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pachyosteus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Pachyosteus?oldid=1354873541",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pachyosteus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pachyosteus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Pachyosteus?oldid=1354873541",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pachyosteus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Pachyosteus (Phylogeny)",
+   "url": "https://en.wikipedia.org/wiki/Pachyosteus?oldid=1354873541",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pachyosteus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Pachyosteus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34372",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Pachyosteus was described by Jaekel in 1903.",
+   "category": "discovery",
+   "chunk_id": "pachyosteus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Jaekel, 1903",
+   "quote_sha": "e77c7edb13922c7b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Pachyosteus bulla, described by Jaekel in 1903.",
+   "category": "discovery",
+   "chunk_id": "pachyosteus:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: Pachyosteus bulla Jaekel, 1903 (type)",
+   "quote_sha": "67f69321ca7d2559"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Pachyosteus are found in the Late Devonian Kellwasserkalk facies of Bad Wildungen, Germany, and the Famennian layers of the Holy Cross Mountains in Poland.",
+   "category": "time_and_habitat",
+   "chunk_id": "pachyosteus:enwiki:2",
+   "lang": "en",
+   "quote": "known from the Upper Frasnian Kellwasserkalk facies of Late Devonian Bad Wildungen, Germany and from the Famennian portions of the Holy Cross Mountains of Poland",
+   "quote_sha": "3ddd26aeca0a4496"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Pachyosteus belongs to the family Selenosteidae within the clade Aspinothoracidi, which is part of the larger clade Pachyosteomorphi.",
+   "category": "classification",
+   "chunk_id": "pachyosteus:enwiki:3",
+   "lang": "en",
+   "quote": "member of the family Selenosteidae of the clade Aspinothoracidi, which belongs to the clade Pachyosteomorphi",
+   "quote_sha": "2b9618a833d53134"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "According to Rücklin (2011), Pachyosteus bulla is a basal selenosteid and the sister taxon to American genera.",
+   "category": "classification",
+   "chunk_id": "pachyosteus:enwiki:3",
+   "lang": "en",
+   "quote": "Rücklin (2011) regards Pachyosteus bulla as a basal selenosteid, being the sister taxon of the American genera",
+   "quote_sha": "fcbda2bf1bb26440"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Pachyosteus lived during the Frasnian stage, approximately 379 to 375.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "pachyosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Frasnian to Frasnian (379 to 375.2 million years ago)",
+   "quote_sha": "f261a7adcb8a8a25"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "pachyosteus:enwiki:2",
+   "statement": "The type species Pachyosteus bulla has a broad skull measuring between 7 and 10 centimeters in length.",
+   "category": "description",
+   "quote": "The type species Pachyosteus bulla has a broad skull about 7 to 10 cm long",
+   "reason": "statement copies the source wording: 'The type species Pachyosteus bulla has a broad'"
+  },
+  {
+   "chunk_id": "pachyosteus:enwiki:2",
+   "statement": "This species features a comparatively long median dorsal plate and a short rostral plate that connects to the pineal plate.",
+   "category": "description",
+   "quote": "a comparatively long median dorsal plate, and a short rostral plate that meets the pineal plate",
+   "reason": "statement copies the source wording: 'a comparatively long median dorsal plate and a'"
+  },
+  {
+   "chunk_id": "pachyosteus:enwiki:2",
+   "statement": "Pachyosteus is an extinct, monospecific genus of medium-sized selenosteid arthrodire placoderm.",
+   "category": "classification",
+   "quote": "extinct monospecific genus of medium-sized selenosteid arthrodire placoderm",
+   "reason": "statement copies the source wording: 'Pachyosteus is an extinct monospecific genus of medium-sized'"
+  }
+ ]
+}

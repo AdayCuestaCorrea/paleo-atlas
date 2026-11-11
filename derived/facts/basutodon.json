@@ -1,0 +1,131 @@
+{
+ "taxon": "Basutodon",
+ "taxon_key": "basutodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "1fa9a069f8054647",
+ "generated_at": "2026-11-11T06:14:53+00:00",
+ "citations": {
+  "basutodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Basutodon?oldid=1358363445",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Basutodon?oldid=1358363445",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Basutodon?oldid=1358363445",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (Description)",
+   "url": "https://en.wikipedia.org/wiki/Basutodon?oldid=1358363445",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Basutodon?oldid=173486335",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Basutodon (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Basutodon?oldid=173486335",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "basutodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Basutodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56609",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Basutodon lived during the Late Triassic in the Lower Elliot Formation of Lesotho.",
+   "category": "time_and_habitat",
+   "chunk_id": "basutodon:enwiki:2",
+   "lang": "en",
+   "quote": "Basutodon is a genus of suchian archosaur from the Late Triassic (late Norian-early Rhaetian) Lower Elliot Formation of Lesotho.",
+   "quote_sha": "014f37e38a235e06"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The holotype of Basutodon is a single tooth found near Euskelosaurus browni in the upper Elliot Formation of Lesotho.",
+   "category": "discovery",
+   "chunk_id": "basutodon:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype is a single tooth that was discovered alongside the remains of Euskelosaurus browni in the upper Elliot Formation, Lesotho.",
+   "quote_sha": "0613f3b0b4a86e8f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Researchers suggest that Likhoelesaurus ingens may be the same animal as Basutodon ferox.",
+   "category": "debate",
+   "chunk_id": "basutodon:enwiki:3",
+   "lang": "en",
+   "quote": "\"Likhoelesaurus ingens\", an undescribed archosauriform from the Lower Elliot Formation of South Africa, may have been the same animal as Basutodon ferox.",
+   "quote_sha": "264fc493d193b16b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Basutodon is currently classified as a basal member of Suchia, though some researchers suggest it may belong to Rauisuchia.",
+   "category": "classification",
+   "chunk_id": "basutodon:enwiki:4",
+   "lang": "en",
+   "quote": "Basutodon is currently listed as a basal member of Suchia, although Tolchard et al. (2019) suggested that Basutodon may belong to Rauisuchia.",
+   "quote_sha": "a94522197e92071b"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Basutodon was a pseudosuchian archosaur that lived in the Lower Elliot Formation of Lesotho.",
+   "category": "classification",
+   "chunk_id": "basutodon:eswiki:2",
+   "lang": "es",
+   "quote": "Basutodon era un género de arcosaurio pseudosuquio que vivió a finales del Carniense - principios del Noriense en el piso inferior de la Formación Elliot del Triásico Superior en Lesoto.",
+   "quote_sha": "dfabce64d32884e0"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Basutodon lived between 227.3 and 201.4 million years ago during the Norian to Rhaetian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "basutodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Norian to Rhaetian (227.3 to 201.4 million years ago)",
+   "quote_sha": "6d5520b2c7bacd72"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "basutodon:enwiki:3",
+   "statement": "The species Basutodon ferox was named and described by von Huene in 1932.",
+   "category": "discovery",
+   "quote": "The species Basutodon ferox was named and described by von Huene (1932).",
+   "reason": "statement copies the source wording: 'The species Basutodon ferox was named and described'"
+  },
+  {
+   "chunk_id": "basutodon:eswiki:2",
+   "statement": "Basutodon is known from teeth that were once mistaken for remains of prosauropods like Teratosaurus.",
+   "category": "description",
+   "quote": "Se basa en dientes que alguna vez se confundieron con restos de prosaurópodos, como Teratosaurus.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

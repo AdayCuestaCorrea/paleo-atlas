@@ -1,0 +1,117 @@
+{
+ "taxon": "Brindabellaspis",
+ "taxon_key": "brindabellaspis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "4029fd6f1b9361ca",
+ "generated_at": "2026-11-11T06:47:25+00:00",
+ "citations": {
+  "brindabellaspis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Brindabellaspis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Brindabellaspis?oldid=1378415017",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "brindabellaspis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Brindabellaspis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Brindabellaspis?oldid=1378415017",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "brindabellaspis:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Brindabellaspis stensioi (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Brindabellaspis_stensioi?oldid=170015967",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "brindabellaspis:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Brindabellaspis stensioi (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Brindabellaspis_stensioi?oldid=170015967",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "brindabellaspis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Brindabellaspis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34287",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Brindabellaspis lived during the Early Devonian period.",
+   "category": "time_and_habitat",
+   "chunk_id": "brindabellaspis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Devonian",
+   "quote_sha": "08cab256202f6ecb"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "When discovered in 1980, Brindabellaspis was initially classified as a Weejasperaspid acanthothoracid because of its anatomical similarities to other reef species.",
+   "category": "discovery",
+   "chunk_id": "brindabellaspis:enwiki:2",
+   "lang": "en",
+   "quote": "When B. stensioi was first discovered in 1980, it was originally regarded as a Weejasperaspid acanthothoracid due to anatomical similarities with the other species found at the reef.",
+   "quote_sha": "aeb122c5d54320d0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The dorsolaterally positioned eyes of Brindabellaspis suggest it lived a benthic lifestyle.",
+   "category": "paleobiology",
+   "chunk_id": "brindabellaspis:enwiki:2",
+   "lang": "en",
+   "quote": "Regardless, its dorsolaterally positioned eyes are consistent with a benthic lifestyle.",
+   "quote_sha": "beb6a611402f7c4b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Brindabellaspis was formerly considered part of the orders Acanthothoraci or Rhenanida but was eventually placed in its own order.",
+   "category": "classification",
+   "chunk_id": "brindabellaspis:eswiki:2",
+   "lang": "es",
+   "quote": "Antiguamente se consideraba parte del orden Acanthothoraci o Rhenanida pero al final se le colocó en su propio orden.",
+   "quote_sha": "567c55db9b9cbf77"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Brindabellaspis possesses an elongated ossification that flanks the serial bones supporting the lateral line, similar to maxillary placoderms.",
+   "category": "description",
+   "chunk_id": "brindabellaspis:eswiki:2",
+   "lang": "es",
+   "quote": "También posee una osificación alargada que flanquea los huesos seriales que soportan la línea lateral siendo similar a los placodermos maxilares",
+   "quote_sha": "686a8da51bdb0dd0"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The time range for Brindabellaspis is the Emsian stage, spanning from 410.62 to 393.47 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "brindabellaspis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Emsian to Emsian (410.62 to 393.47 million years ago)",
+   "quote_sha": "5fe28e8ab6dd5026"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "brindabellaspis:enwiki:2",
+   "statement": "Brindabellaspis is a placoderm characterized by a flat, platypus-like snout found in the Early Devonian Murrumbidgee Group of Australia.",
+   "category": "description",
+   "quote": "Brindabellaspis stensioi ... is a placoderm with a flat, platypus-like snout from the Early Devonian of the Murrumbidgee Group in Australia.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "brindabellaspis:enwiki:2",
+   "statement": "Philippe Janvier suggests that Brindabellaspis and antiarchs are basal placoderms closest to the ancestral placoderm based on braincase similarities with jawless fish.",
+   "category": "classification",
+   "quote": "According to Philippe Janvier, anatomical similarities of B. stensiois brain and braincase with those of jawless fish, such as the Osteostraci and the Galeaspida, strongly suggest that B. stensioi, and also the antiarchs, are basal placoderms closest to the ancestral placoderm.",
+   "reason": "statement copies the source wording: 'antiarchs are basal placoderms closest to the ancestral'"
+  }
+ ]
+}

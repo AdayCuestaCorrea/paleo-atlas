@@ -1,0 +1,133 @@
+{
+ "taxon": "Mongolosaurus",
+ "taxon_key": "mongolosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2b2de74811c67cfa",
+ "generated_at": "2026-11-11T03:57:37+00:00",
+ "citations": {
+  "mongolosaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Mongolosaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Mongolosaurus?oldid=1290255424",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mongolosaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Mongolosaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Mongolosaurus?oldid=1290255424",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mongolosaurus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Mongolosaurus (Discovery and systematics)",
+   "url": "https://en.wikipedia.org/wiki/Mongolosaurus?oldid=1290255424",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mongolosaurus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Mongolosaurus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Mongolosaurus?oldid=1290255424",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mongolosaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Mongolosaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38708",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Mongolosaurus was a titanosauriform sauropod dinosaur that lived in China during the Early Cretaceous.",
+   "category": "description",
+   "chunk_id": "mongolosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Mongolosaurus is a genus of titanosauriform sauropod dinosaur which lived during the Early Cretaceous of China.",
+   "quote_sha": "16ce3057e6966228"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Charles W. Gilmore named and described the species Mongolosaurus haplodon in 1933.",
+   "category": "discovery",
+   "chunk_id": "mongolosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "In 1933 Charles W. Gilmore, based on this fossil, named and described the type species Mongolosaurus haplodon.",
+   "quote_sha": "6fa8b2a18294679b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus name Mongolosaurus refers to Mongolia.",
+   "category": "discovery",
+   "chunk_id": "mongolosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The generic name refers to Mongolia.",
+   "quote_sha": "ee933c512c526498"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The holotype specimen AMNH 6710 was found in the Early Cretaceous On Gong Formation.",
+   "category": "discovery",
+   "chunk_id": "mongolosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype, AMNH 6710, was found in the Early Cretaceous (Aptian-Albian) On Gong Formation.",
+   "quote_sha": "7b573f8eeedbfcdb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Recent phylogenetic analyses recovered Mongolosaurus as a derived member of the clade Lognkosauria, sister to Jiangxititan.",
+   "category": "classification",
+   "chunk_id": "mongolosaurus:enwiki:4",
+   "lang": "en",
+   "quote": "They recovered Mongolosaurus as a derived member of the titanosaurian clade Lognkosauria, as the sister taxon to Jiangxititan.",
+   "quote_sha": "15e32a9d2eccea26"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Mongolosaurus lived between 121.4 and 100.5 million years ago during the Aptian to Albian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "mongolosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Albian (121.4 to 100.5 million years ago)",
+   "quote_sha": "b4a748b7a96c701a"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Mongolosaurus belongs to the parent group Titanosauria.",
+   "category": "classification",
+   "chunk_id": "mongolosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Titanosauria",
+   "quote_sha": "bca2134bcfc81271"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "mongolosaurus:enwiki:3",
+   "statement": "The specific name haplodon is derived from the Greek words for 'single' and 'tooth'.",
+   "category": "discovery",
+   "quote": "The specific name is derived from Greek haploos, 'single', and odon, 'tooth'.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "mongolosaurus:enwiki:3",
+   "statement": "The holotype consists of teeth, a basioccipital bone, and parts of the first three cervical vertebrae.",
+   "category": "description",
+   "quote": "It consists of teeth, a basioccipital from the back of the skull and parts of the first three cervical vertebrae.",
+   "reason": "statement copies the source wording: 'and parts of the first three cervical vertebrae'"
+  },
+  {
+   "chunk_id": "mongolosaurus:enwiki:4",
+   "statement": "Mongolosaurus was previously classified in Diplodocidae, Titanosauridae, and Euhelopodidae, but recent studies suggest it is either a basal titanosaur or a non-titanosaurian somphospondylan.",
+   "category": "classification",
+   "quote": "Mongolosaurus was previously assigned to Diplodocidae, Titanosauridae and Euhelopodidae, though recent studies find it to be either a basal titanosaur or a non-titanosaurian somphospondylan.",
+   "reason": "statement copies the source wording: 'either a basal titanosaur or a non-titanosaurian somphospondylan'"
+  }
+ ]
+}

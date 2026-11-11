@@ -1,0 +1,126 @@
+{
+ "taxon": "Keasius",
+ "taxon_key": "keasius",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5dab929dfb6f82d0",
+ "generated_at": "2026-11-11T05:46:34+00:00",
+ "citations": {
+  "keasius:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Keasius (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Keasius?oldid=1365734146",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "keasius:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Keasius (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Keasius?oldid=1365734146",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "keasius:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Keasius (Palaeobiology)",
+   "url": "https://en.wikipedia.org/wiki/Keasius?oldid=1365734146",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "keasius:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Keasius",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=305806",
+   "doi": null,
+   "license": "CC BY 4.0"
+  },
+  "keasius:research:1": {
+   "source": "wikipedia_research",
+   "title": "2026 in paleoichthyology (research: Cartilaginous fish research)",
+   "url": "https://doi.org/10.3897/sjp.145.203557",
+   "doi": "10.3897/sjp.145.203557",
+   "license": "CC BY-SA 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Keasius was described by Welton in 2013.",
+   "category": "discovery",
+   "chunk_id": "keasius:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Welton, 2013",
+   "quote_sha": "f5934987f6e4f322"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus Keasius is Keasius taylori.",
+   "category": "classification",
+   "chunk_id": "keasius:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: †Keasius taylori",
+   "quote_sha": "29313cd8fee915e5"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Keasius belongs to the family Cetorhinidae.",
+   "category": "classification",
+   "chunk_id": "keasius:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cetorhinidae",
+   "quote_sha": "f278a4121075570a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Keasius is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "keasius:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Keasius lived from 41.03 to 11.63 million years ago, during the Bartonian to Serravallian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "keasius:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bartonian to Serravallian (41.03 to 11.63 million years ago)",
+   "quote_sha": "71e62124a9bc0b3c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Four valid species of Keasius have been found in North America, Europe, and Antarctica.",
+   "category": "time_and_habitat",
+   "chunk_id": "keasius:enwiki:2",
+   "lang": "en",
+   "quote": "It contains four valid species, which have been found in North America, Europe, and Antarctica.",
+   "quote_sha": "b43d62c1e79a1a64"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "A 2026 study found remains of Keasius cf. septemtrionalis in a regurgitalite from the Miocene of Slovenia, extending the known range to the southeastern central Paratethys.",
+   "category": "paleobiology",
+   "chunk_id": "keasius:enwiki:3",
+   "lang": "en",
+   "quote": "A 2026 study analyzed a regurgitalite produced by either a lamniform or a hexanchid shark which contained remains attibuted to K. cf. septemtrionalis from the Miocene (Burdigalian) of Slovenia, extending it's known range to the southeastern central paratethys ocean.",
+   "quote_sha": "e35aed81643b07d9"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "keasius:enwiki:2",
+   "statement": "Keasius is an extinct genus of basking sharks that lived during the Cenozoic era.",
+   "category": "description",
+   "quote": "Keasius is an extinct genus of basking sharks that lived during the Cenozoic.",
+   "reason": "statement copies the source wording: 'Keasius is an extinct genus of basking sharks'"
+  },
+  {
+   "chunk_id": "keasius:research:1",
+   "statement": "Research published in 2026 reports that a regurgitalite likely produced by a mackerel or hexanchid shark contained remains of Keasius cf. septemtrionalis from the Miocene of Slovenia.",
+   "category": "paleobiology",
+   "quote": "Gašparič et al. (2026) report the discovery of a regurgitalite (likely produced by a mackerel or hexanchid shark) with remains of the basking shark Keasius cf. septemtrionalis from the Miocene (Burdigalian) strata from Slovenia, extending known geographical range of Keasius into southeastern part of central Paratethys.",
+   "reason": "statement copies the source wording: 'a regurgitalite likely produced by a mackerel or'"
+  }
+ ]
+}

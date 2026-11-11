@@ -1,0 +1,128 @@
+{
+ "taxon": "Anomotodon",
+ "taxon_key": "anomotodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5117e410454e1c26",
+ "generated_at": "2026-11-11T07:32:16+00:00",
+ "citations": {
+  "anomotodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Anomotodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Anomotodon?oldid=1365602612",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anomotodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Anomotodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Anomotodon?oldid=1365602612",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anomotodon:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Anomotodon (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Anomotodon?oldid=154917967",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anomotodon:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Anomotodon (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Anomotodon?oldid=154917967",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anomotodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Anomotodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34600",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Anomotodon was described by Arambourg in 1952.",
+   "category": "discovery",
+   "chunk_id": "anomotodon:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Arambourg, 1952",
+   "quote_sha": "ffa2ccb8073490d3"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Anomotodon are found worldwide and date from the Early Cretaceous through the Eocene, possibly extending into the Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "anomotodon:enwiki:2",
+   "lang": "en",
+   "quote": "The distribution of Anomotodon fossils is worldwide, in formations indicating that members of the genus lived from the Early Cretaceous epoch through the Eocene epoch, and perhaps through the Oligocene as well.",
+   "quote_sha": "bd09dbc30d57b5a8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Anomotodon belongs to the family Mitsukurinidae.",
+   "category": "classification",
+   "chunk_id": "anomotodon:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Mitsukurinidae",
+   "quote_sha": "49e340bc1f2283e5"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Anomotodon is an extinct genus of elasmobranch selachomorphs in the family Mitsukurinidae, whose only surviving relative is the pink goblin shark.",
+   "category": "classification",
+   "chunk_id": "anomotodon:eswiki:2",
+   "lang": "es",
+   "quote": "Anomotodon es un género extinto de elasmobranquios selacimorfos de la familia Mitsukurinidae, de la cual su único sobreviviente es el tiburón duende rosado.",
+   "quote_sha": "b167ee979a7bddb5"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Anomotodon appeared in the Paleogene during the Eocene and disappeared at the beginning of the Tertiary, approximately 55.8 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "anomotodon:eswiki:2",
+   "lang": "es",
+   "quote": "Apareció en el periodo Paleógeno, en el Eoceno, desapareciendo a principios del periodo Terciario, hace 55,8 millones de años.",
+   "quote_sha": "705c12eca9c8dd15"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Anomotodon fed on squids, crustaceans, and mollusks such as clams.",
+   "category": "paleobiology",
+   "chunk_id": "anomotodon:eswiki:2",
+   "lang": "es",
+   "quote": "Se alimentaba de calamares, crustáceos y moluscos, como las almejas.",
+   "quote_sha": "c984c7d5023722c6"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Anomotodon lived in deep waters between 1,000 and 6,500 meters deep.",
+   "category": "paleobiology",
+   "chunk_id": "anomotodon:eswiki:2",
+   "lang": "es",
+   "quote": "Vivía en aguas de alta profundidad entre los 1000 y 6500 metros de profundidad.",
+   "quote_sha": "2776cd8b4a8c5cd8"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for Anomotodon is from the Aptian to the Burdigalian, spanning from 121.4 to 15.98 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "anomotodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Burdigalian (121.4 to 15.98 million years ago)",
+   "quote_sha": "d66019f75cc5501c"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "anomotodon:enwiki:2",
+   "statement": "Anomotodon is an extinct genus of shark related to the modern goblin shark.",
+   "category": "description",
+   "quote": "Anomotodon is an extinct genus of shark related to the extant goblin shark (Mitsukurina owstoni).",
+   "reason": "statement copies the source wording: 'Anomotodon is an extinct genus of shark related'"
+  }
+ ]
+}

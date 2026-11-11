@@ -1,0 +1,112 @@
+{
+ "taxon": "Petalodus",
+ "taxon_key": "petalodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ec51da664c074265",
+ "generated_at": "2026-11-11T05:59:22+00:00",
+ "citations": {
+  "petalodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Petalodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Petalodus?oldid=1306210943",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "petalodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Petalodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Petalodus?oldid=1306210943",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "petalodus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Petalodus (Sources)",
+   "url": "https://en.wikipedia.org/wiki/Petalodus?oldid=1306210943",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "petalodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Petalodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34833",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Petalodus was named by Richard Owen in 1840.",
+   "category": "discovery",
+   "chunk_id": "petalodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Owen, 1840",
+   "quote_sha": "0d36f278f8288e3d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Petalodus hastingsii.",
+   "category": "discovery",
+   "chunk_id": "petalodus:enwiki:2",
+   "lang": "en",
+   "quote": "The genus was named by Richard Owen in 1840 and the type species is Petalodus hastingsii.",
+   "quote_sha": "ca848cfa902df881"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus is known from teeth that are subtriangular to rhomboidal in shape.",
+   "category": "description",
+   "chunk_id": "petalodus:enwiki:2",
+   "lang": "en",
+   "quote": "known from subtriangular to rhomboidal teeth",
+   "quote_sha": "eee4f6716ef4f35c"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Petalodus lived during the Pennsylvanian and Permian periods.",
+   "category": "time_and_habitat",
+   "chunk_id": "petalodus:enwiki:2",
+   "lang": "en",
+   "quote": "from the Pennsylvanian to the Permian",
+   "quote_sha": "1a1b63c9d557da7e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Petalodus lived between 346.7 and 264.9 million years ago, from the Visean to the Wordian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "petalodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Visean to Wordian (346.7 to 264.9 million years ago)",
+   "quote_sha": "9d04bbb9378162df"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Petalodus belongs to the family Petalodontidae.",
+   "category": "classification",
+   "chunk_id": "petalodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Petalodontidae",
+   "quote_sha": "83732b924aaf8d36"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Petalodus is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "petalodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "petalodus:enwiki:2",
+   "statement": "Petalodus is an extinct genus of cartilaginous fish.",
+   "category": "classification",
+   "quote": "Petalodus is an extinct genus of cartilaginous fish",
+   "reason": "statement copies the source wording: 'Petalodus is an extinct genus of cartilaginous fish'"
+  }
+ ]
+}

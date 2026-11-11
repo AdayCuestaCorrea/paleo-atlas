@@ -1,0 +1,94 @@
+{
+ "taxon": "Chomatodus",
+ "taxon_key": "chomatodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f33b2aba412adce0",
+ "generated_at": "2026-11-11T06:54:30+00:00",
+ "citations": {
+  "chomatodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Chomatodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Chomatodus?oldid=1306211086",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chomatodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Chomatodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Chomatodus?oldid=1306211086",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chomatodus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Chomatodus (Species)",
+   "url": "https://en.wikipedia.org/wiki/Chomatodus?oldid=1306211086",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chomatodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Chomatodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34839",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Chomatodus was first described by Louis Agassiz in 1838.",
+   "category": "discovery",
+   "chunk_id": "chomatodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Agassiz, 1838",
+   "quote_sha": "052970d867c0eba3"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Chomatodus belongs to the family Petalodontidae.",
+   "category": "classification",
+   "chunk_id": "chomatodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Petalodontidae",
+   "quote_sha": "83732b924aaf8d36"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Chomatodus is classified within the class Chondrichthyes, which includes sharks and rays.",
+   "category": "classification",
+   "chunk_id": "chomatodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Chomatodus lived between 351.9 and 293.52 million years ago during the Tournaisian to Asselian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "chomatodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tournaisian to Asselian (351.9 to 293.52 million years ago)",
+   "quote_sha": "61f15b0af159a916"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossil remains of Chomatodus have been discovered in the Keokuk Limestone in Keokuk, Iowa, United States.",
+   "category": "time_and_habitat",
+   "chunk_id": "chomatodus:enwiki:3",
+   "lang": "en",
+   "quote": "Remains have been found in Keokuk Limestone, Keokuk, Iowa, United States.",
+   "quote_sha": "fa9b41243a4b2d3d"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "chomatodus:enwiki:2",
+   "statement": "Chomatodus is a prehistoric genus of cartilaginous fish named for its mound-like teeth.",
+   "category": "description",
+   "quote": "Chomatodus (from Greek, 'mound' and 'tooth') is a prehistoric cartilaginous fish genus.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

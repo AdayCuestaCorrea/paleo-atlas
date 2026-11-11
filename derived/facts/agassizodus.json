@@ -1,0 +1,112 @@
+{
+ "taxon": "Agassizodus",
+ "taxon_key": "agassizodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "56dd0d2b72f0ce6d",
+ "generated_at": "2026-11-11T07:25:00+00:00",
+ "citations": {
+  "agassizodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Agassizodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Agassizodus?oldid=1327643961",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agassizodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Agassizodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Agassizodus?oldid=1327643961",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agassizodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Agassizodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34446",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species Agassizodus variabilis was originally named Lophodus variabilis before the name Lophodus was found to be preoccupied.",
+   "category": "discovery",
+   "chunk_id": "agassizodus:enwiki:2",
+   "lang": "en",
+   "quote": "The type species, A. variabilis, was originally named Lophodus variabilis until the name \"Lophodus\" was determined to be preoccupied.",
+   "quote_sha": "d292a0c8292240a3"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Agassizodus was named by St. John and Worthen in 1875 based on tooth fragments from the Pennsylvanian of Illinois and a massive jaw from Osage County, Kansas.",
+   "category": "discovery",
+   "chunk_id": "agassizodus:enwiki:2",
+   "lang": "en",
+   "quote": "A. variabilis was originally based on tooth fragments from the Pennsylvanian of Illinois, but the authors who named the genus (St. John and Worthen, 1875) also referred a massive jaw from Osage County, Kansas.",
+   "quote_sha": "85feec6dc92da571"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Some authors argue that the Eastman specimens and the Osage jaw represent an entirely new genus rather than Agassizodus or Campodus.",
+   "category": "debate",
+   "chunk_id": "agassizodus:enwiki:2",
+   "lang": "en",
+   "quote": "Other authors disagree, arguing that the Eastman specimens and the Osage jaw represent neither Agassizodus or Campodus, but rather an entirely new genus.",
+   "quote_sha": "b8b5fd5b9bbbac31"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Agassizodus belongs to the family Helicoprionidae, which is sometimes referred to as Agassizodontidae.",
+   "category": "classification",
+   "chunk_id": "agassizodus:enwiki:2",
+   "lang": "en",
+   "quote": "It belongs to the family Helicoprionidae, which is sometimes called Agassizodontidae.",
+   "quote_sha": "94e5323df70dc4f2"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Agassizodus possessed a symphyseal tooth whorl at the tip of its lower jaw associated with lateral crushing tooth plates.",
+   "category": "paleobiology",
+   "chunk_id": "agassizodus:enwiki:2",
+   "lang": "en",
+   "quote": "Like other members of its family, it possessed a symphyseal tooth whorl, which was likely present at the tip of the lower jaw and associated with lateral crushing tooth plates.",
+   "quote_sha": "37605b04f54ddcdc"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Agassizodus lived from the Bashkirian to the Changhsingian stages, between 323.4 and 251.902 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "agassizodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bashkirian to Changhsingian (323.4 to 251.902 million years ago)",
+   "quote_sha": "1b5a40f6f422c025"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Agassizodus is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "agassizodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "agassizodus:enwiki:2",
+   "statement": "Eastman renamed Agassizodus variabilis to Campodus variabilis in 1902, concluding the specimens belonged to Campodus.",
+   "category": "discovery",
+   "quote": "Eastman concluded that the tooth whorls and jaw belonged to Campodus, so he renamed Agassizodus variabilis to Campodus variabilis.",
+   "reason": "numbers not in the quote: ['1902']"
+  },
+  {
+   "chunk_id": "agassizodus:enwiki:2",
+   "statement": "Agassizodus is an extinct genus of eugeneodont holocephalian fish that lived during the Carboniferous Period.",
+   "category": "classification",
+   "quote": "Agassizodus is an extinct genus of eugeneodont holocephalian fish that lived during the Carboniferous Period.",
+   "reason": "statement copies the source wording: 'Agassizodus is an extinct genus of eugeneodont holocephalian'"
+  }
+ ]
+}

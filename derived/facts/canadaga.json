@@ -1,0 +1,137 @@
+{
+ "taxon": "Canadaga",
+ "taxon_key": "canadaga",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3fb4809738917b1e",
+ "generated_at": "2026-11-11T06:23:31+00:00",
+ "citations": {
+  "canadaga:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Canadaga (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Canadaga?oldid=1379859820",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "canadaga:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Canadaga (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Canadaga?oldid=1379859820",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "canadaga:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Canadaga (Description)",
+   "url": "https://en.wikipedia.org/wiki/Canadaga?oldid=1379859820",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "canadaga:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Canadaga",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=203028",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The only known species of this genus is Canadaga arctica.",
+   "category": "discovery",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "The single known species is Canadaga arctica.",
+   "quote_sha": "505d62d166e86956"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Canadaga lived in the shallow seas near modern-day Bylot and Devon Islands in Nunavut, Canada.",
+   "category": "time_and_habitat",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "It lived in the shallow seas around what today is Bylot and Devon Islands in Nunavut, Canada.",
+   "quote_sha": "2f76c7b4a0822204"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Canadaga date to the Campanian to mid-Maastrichtian age, approximately 67 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "Its fossils were found in rocks dated to the Campanian to mid-Maastrichtian age, about 67 million years ago.",
+   "quote_sha": "0098bcc2b8d8827b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The fossils of Canadaga were discovered in the Kanguk Formation.",
+   "category": "discovery",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "It was found in the Kanguk Formation",
+   "quote_sha": "a57e3e30eed62eed"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Canadaga was a member of the Hesperornithes, a group of flightless, toothed seabirds from the Cretaceous.",
+   "category": "classification",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "It was a member of the Hesperornithes, flightless toothed seabirds of the Cretaceous.",
+   "quote_sha": "82798e49b71dc1c5"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Canadaga belonged to the family Hesperornithidae, which also includes the genus Hesperornis.",
+   "category": "classification",
+   "chunk_id": "canadaga:enwiki:2",
+   "lang": "en",
+   "quote": "Among these, it belonged to the Hesperornithidae, along with Hesperornis, the well-known namesake genus.",
+   "quote_sha": "1bd5fb98bed69763"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Unlike its relatives found in tropical waters, Canadaga seems to have lived in temperate or subarctic areas.",
+   "category": "paleobiology",
+   "chunk_id": "canadaga:enwiki:3",
+   "lang": "en",
+   "quote": "Unlike its relatives which are mainly known from subtropical or tropical waters, this species seems to have ranged in temperate or even subarctic areas.",
+   "quote_sha": "2cca1f024adfc1b2"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The parent group of Canadaga is the family Hesperornithidae.",
+   "category": "classification",
+   "chunk_id": "canadaga:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Hesperornithidae",
+   "quote_sha": "7d58e3b03644ead8"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The time range for Canadaga spans from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "canadaga:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Maastrichtian (83.6 to 66 million years ago)",
+   "quote_sha": "c5801ed7c899e141"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "canadaga:enwiki:3",
+   "statement": "Canadaga arctica was one of the largest known members of the Hesperornithes, reaching a length of 2.2 meters.",
+   "category": "description",
+   "quote": "C. arctica is one of the largest known members of the Hesperornithes, reaching a length of 2.2 m.",
+   "reason": "statement copies the source wording: 'one of the largest known members of the'"
+  },
+  {
+   "chunk_id": "canadaga:enwiki:3",
+   "statement": "The species is known from three cervical vertebrae, one caudal vertebra, and two femurs.",
+   "category": "description",
+   "quote": "The species is described from three associated cervical vertebrae, one caudal vertebra and two femurs.",
+   "reason": "statement copies the source wording: 'cervical vertebrae one caudal vertebra and two femurs'"
+  }
+ ]
+}

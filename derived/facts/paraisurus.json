@@ -1,0 +1,112 @@
+{
+ "taxon": "Paraisurus",
+ "taxon_key": "paraisurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "fe799cce121c74dc",
+ "generated_at": "2026-11-11T02:23:51+00:00",
+ "citations": {
+  "paraisurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Paraisurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Paraisurus?oldid=1353660878",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "paraisurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Paraisurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Paraisurus?oldid=1353660878",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "paraisurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Paraisurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=151700",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Four valid species of Paraisurus have been found in Europe, Asia, North America, and Australia.",
+   "category": "discovery",
+   "chunk_id": "paraisurus:enwiki:2",
+   "lang": "en",
+   "quote": "It contains four valid species, which have been found in Europe, Asia, North America, and Australia.",
+   "quote_sha": "5f427bccd0369839"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The status of P. amudarjensis is debated, with some paleontologists considering it a possible synonym of P. compressus.",
+   "category": "discovery",
+   "chunk_id": "paraisurus:enwiki:2",
+   "lang": "en",
+   "quote": "A fifth species, P. amudarjensis, is considered by some paleontologists a possible synonym of P. compressus, but is debated.",
+   "quote_sha": "fe85e132fff8c576"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Paraisurus went extinct around the Albian-Cenomanian boundary, and a supposed Coniacian occurrence is likely a misidentified pseudoscapanorhynchid.",
+   "category": "discovery",
+   "chunk_id": "paraisurus:enwiki:2",
+   "lang": "en",
+   "quote": "It went extinct around the Albian-Cenomanian boundary, as a supposed Coniacian occurrence of \"P. sp.\" is likely a misidentified pseudoscapanorhynchid.",
+   "quote_sha": "ba05fae83e41b740"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The parent group of Paraisurus is Paraisuridae.",
+   "category": "classification",
+   "chunk_id": "paraisurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Paraisuridae",
+   "quote_sha": "2d2fe189acbe68bf"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Paraisurus belongs to the family Paraisuridae.",
+   "category": "classification",
+   "chunk_id": "paraisurus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Paraisuridae",
+   "quote_sha": "dfa777c1058abc1b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Paraisurus is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "paraisurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Paraisurus lived from the Aptian to the Cenomanian, between 121.4 and 93.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "paraisurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Cenomanian (121.4 to 93.9 million years ago)",
+   "quote_sha": "24290d283b6e9168"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "paraisurus:enwiki:2",
+   "statement": "Paraisurus is an extinct genus of mackerel sharks that lived during the Cretaceous period.",
+   "category": "discovery",
+   "quote": "Paraisurus is an extinct genus of mackerel sharks that lived during the Cretaceous period.",
+   "reason": "statement copies the source wording: 'Paraisurus is an extinct genus of mackerel sharks'"
+  },
+  {
+   "chunk_id": "paraisurus:enwiki:2",
+   "statement": "While mostly known from isolated teeth, an associated dentition of P. compressus was found in the Weno Formation of Texas.",
+   "category": "discovery",
+   "quote": "While this genus is mostly known from isolated teeth, an associated dentition of P. compressus was found in the Weno Formation of Texas.",
+   "reason": "statement copies the source wording: 'mostly known from isolated teeth an associated dentition'"
+  }
+ ]
+}

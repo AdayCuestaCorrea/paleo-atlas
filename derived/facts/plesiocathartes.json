@@ -1,0 +1,137 @@
+{
+ "taxon": "Plesiocathartes",
+ "taxon_key": "plesiocathartes",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "fda9982788d6c710",
+ "generated_at": "2026-11-11T07:08:06+00:00",
+ "citations": {
+  "plesiocathartes:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Plesiocathartes (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Plesiocathartes?oldid=1344246599",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "plesiocathartes:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Plesiocathartes (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Plesiocathartes?oldid=1344246599",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "plesiocathartes:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Plesiocathartes (Distribution)",
+   "url": "https://en.wikipedia.org/wiki/Plesiocathartes?oldid=1344246599",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "plesiocathartes:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Plesiocathartes",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39650",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Plesiocathartes was originally described by Gaillard in 1908.",
+   "category": "discovery",
+   "chunk_id": "plesiocathartes:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Gaillard, 1908",
+   "quote_sha": "0a4acc8f0ff89f82"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Plesiocathartes europaeus.",
+   "category": "classification",
+   "chunk_id": "plesiocathartes:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: P. europaeus",
+   "quote_sha": "245c16db80238134"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Five species are currently recognized within the genus, including P. gaillardi, P. major, P. insolitipes, P. kelleri, and P. wyomingensis.",
+   "category": "classification",
+   "chunk_id": "plesiocathartes:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: P. gaillardi Crusafont & Villalta, 1955 P. major Weidig, 2006 P. insolitipes Mayr & Kitchener, 2022 P. kelleri Mayr, 2002 P. wyomingensis Weidig, 2006",
+   "quote_sha": "9156e66f3cbf0185"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Plesiocathartes is an extinct genus of birds.",
+   "category": "description",
+   "chunk_id": "plesiocathartes:enwiki:2",
+   "lang": "en",
+   "quote": "Plesiocathartes is an extinct genus of birds",
+   "quote_sha": "82eb2345ea751dd9"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of the genus have been found in Europe and North America.",
+   "category": "time_and_habitat",
+   "chunk_id": "plesiocathartes:enwiki:2",
+   "lang": "en",
+   "quote": "It currently presents 5 species from Europe and North America",
+   "quote_sha": "7fd718d16f3076f5"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus is classified within the order Leptosomiformes.",
+   "category": "classification",
+   "chunk_id": "plesiocathartes:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Leptosomiformes",
+   "quote_sha": "0f497ba5c61290f6"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus lived from the Ypresian to the Rupelian stages, approximately 56 to 27.3 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "plesiocathartes:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Rupelian (56 to 27.3 million years ago)",
+   "quote_sha": "644c38e6e1cba9a7"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "There are four recorded fossil occurrences of the genus in the Paleobiology Database.",
+   "category": "discovery",
+   "chunk_id": "plesiocathartes:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 4",
+   "quote_sha": "836466f9e6e57dc0"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Fossils of P. insolitipes have been found at Walton-on-the-Naze in the London Clay Formation of southeastern England.",
+   "category": "discovery",
+   "chunk_id": "plesiocathartes:enwiki:3",
+   "lang": "en",
+   "quote": "P. insolitipes fossils are known from Walton-on-the-Naze, a site stratigraphically located in the Walton Member of the London Clay Formation of southeastern England",
+   "quote_sha": "05443716b5fbb2fa"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "plesiocathartes:enwiki:2",
+   "statement": "The genus lived during the Eocene to Oligocene periods.",
+   "category": "time_and_habitat",
+   "quote": "It lived during the Eocene to Oligocene period",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "plesiocathartes:enwiki:2",
+   "statement": "While originally thought to be related to New World vultures, recent studies suggest Plesiocathartes is more closely related to the cuckoo-roller from Madagascar.",
+   "category": "debate",
+   "quote": "It was originally described related to New World vultures, but recent studies have uncovered that the genus was more closely related to the cuckoo-roller from Madagascar",
+   "reason": "statement copies the source wording: 'more closely related to the cuckoo-roller from Madagascar'"
+  }
+ ]
+}

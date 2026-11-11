@@ -1,0 +1,126 @@
+{
+ "taxon": "Antineosteus",
+ "taxon_key": "antineosteus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "bd7362b1bdc27d0a",
+ "generated_at": "2026-11-11T06:23:13+00:00",
+ "citations": {
+  "antineosteus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Antineosteus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Antineosteus?oldid=1350817521",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "antineosteus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Antineosteus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Antineosteus?oldid=1350817521",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "antineosteus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Antineosteus (Description)",
+   "url": "https://en.wikipedia.org/wiki/Antineosteus?oldid=1350817521",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "antineosteus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Antineosteus (Diet)",
+   "url": "https://en.wikipedia.org/wiki/Antineosteus?oldid=1350817521",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "antineosteus:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Antineosteus (Phylogeny)",
+   "url": "https://en.wikipedia.org/wiki/Antineosteus?oldid=1350817521",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "antineosteus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Antineosteus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34419",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Antineosteus was described by Lelièvre in 1984.",
+   "category": "discovery",
+   "chunk_id": "antineosteus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Lelièvre, 1984",
+   "quote_sha": "f41864bfaba0effc"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Antineosteus lived during the Early Devonian (Emsian) in the Anti-Atlas Mountains of Morocco and the Barrandian area of the Czech Republic.",
+   "category": "time_and_habitat",
+   "chunk_id": "antineosteus:enwiki:2",
+   "lang": "en",
+   "quote": "Antineosteus is an extinct genus of homostiid arthrodire from the Emsian, Early Devonian Kess-Kess Mounds, in the eastern Anti-Atlas Mountains, Morocco, and the Barrandian area of the Czech Republic.",
+   "quote_sha": "8464e1db265a4079"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Antineosteus rufus is estimated to have exceeded 3 meters in length based on comparisons with plates from better-preserved related taxa.",
+   "category": "description",
+   "chunk_id": "antineosteus:enwiki:3",
+   "lang": "en",
+   "quote": "A. rufus is estimated to exceed 3 m, from measuring the plates with the ones from better-preserved, related taxa.",
+   "quote_sha": "d584845192ec9f12"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Antineosteus likely had a planktivorous or suspension-feeding lifestyle, supported by its large size and lack of bladed jaw teeth, similar to modern baleen whales or whale sharks.",
+   "category": "paleobiology",
+   "chunk_id": "antineosteus:enwiki:4",
+   "lang": "en",
+   "quote": "Antineosteus, like many other members of Homostiidae, lacked bladed dentition on their jaws, and was large in size. These traits all in one animal support a planktivorous lifestyle, like baleen whales, or the whale shark, as supported by Denison, 1978, suggesting similar lifestyles for arthrodires like Homostius, making it reasonable for many homostiids to be suspension-feeders like the later Titanichthys.",
+   "quote_sha": "1a11b6c35624c75a"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Antineosteus is classified as a homostiid and is most closely related to the genus Homostius.",
+   "category": "classification",
+   "chunk_id": "antineosteus:enwiki:5",
+   "lang": "en",
+   "quote": "Antineosteus is a homostiid, closest related to Homostius.",
+   "quote_sha": "b9dec1f643c77f2c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Antineosteus belongs to the family Homostiidae within the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "antineosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Homostiidae",
+   "quote_sha": "9c89414a94f68927"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Fossils of Antineosteus date from the Pragian to the Emsian stages, between 413.02 and 393.47 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "antineosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Pragian to Emsian (413.02 to 393.47 million years ago)",
+   "quote_sha": "62bba47f04919dac"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "antineosteus:enwiki:3",
+   "statement": "The species Antineosteus lehmani is known only from fragmentary fossils including a left anterior dorsolateral plate, a left paranuchal plate, and an inferognathal.",
+   "category": "description",
+   "quote": "Antineosteus lehmani is rather fragmentary, known from a left anterior dorsolateral plate, a left paranuchal plate, and an inferognathal.",
+   "reason": "statement copies the source wording: 'a left anterior dorsolateral plate a left paranuchal'"
+  }
+ ]
+}

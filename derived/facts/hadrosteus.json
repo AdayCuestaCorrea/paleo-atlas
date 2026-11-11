@@ -1,0 +1,123 @@
+{
+ "taxon": "Hadrosteus",
+ "taxon_key": "hadrosteus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5f23151ceef4dd8d",
+ "generated_at": "2026-11-11T05:47:17+00:00",
+ "citations": {
+  "hadrosteus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Hadrosteus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Hadrosteus?oldid=1350817893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hadrosteus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Hadrosteus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Hadrosteus?oldid=1350817893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hadrosteus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Hadrosteus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34344",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Hadrosteus was described by Gross in 1932.",
+   "category": "discovery",
+   "chunk_id": "hadrosteus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Gross, 1932",
+   "quote_sha": "852f263604bc9440"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Hadrosteus lived during the Frasnian stage of the Late Devonian period.",
+   "category": "time_and_habitat",
+   "chunk_id": "hadrosteus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Devonian: Frasnian,",
+   "quote_sha": "bd32600c787a405e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Hadrosteus date from 382.31 to 372.15 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "hadrosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Frasnian to Frasnian (382.31 to 372.15 million years ago)",
+   "quote_sha": "7f55dedd97464c53"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Hadrosteus was found in the Kellwasserkalk facies of Bad Wildungen, Germany.",
+   "category": "time_and_habitat",
+   "chunk_id": "hadrosteus:enwiki:2",
+   "lang": "en",
+   "quote": "Hadrosteus is an extinct monospecific genus of large arthrodire placoderm from the Late Frasnian (Late Devonian) Kellwasserkalk facies of Bad Wildungen, Germany.",
+   "quote_sha": "7ac2b7c85de67ecb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Hadrosteus belongs to the clade Aspinothoracidi, which is part of the major clade Pachyosteomorphi.",
+   "category": "classification",
+   "chunk_id": "hadrosteus:enwiki:2",
+   "lang": "en",
+   "quote": "Hadrosteus is a member of the clade Aspinothoracidi, which belongs to the clade Pachyosteomorphi, one of the two major clades within Eubrachythoraci.",
+   "quote_sha": "714620fe68ac4b11"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Hadrosteus is classified within the family Hadrosteidae.",
+   "category": "classification",
+   "chunk_id": "hadrosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Hadrosteidae",
+   "quote_sha": "7fea9308acaa377f"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Hadrosteus possessed large, double-pronged lower jawbones with serrated edges, indicating it was a fish-eating predator.",
+   "category": "description",
+   "chunk_id": "hadrosteus:enwiki:2",
+   "lang": "en",
+   "quote": "It had large, double-pronged inferognathals (lower jawbones), and serrated edges along its mandible, strongly suggesting that it was a fish-eating predator.",
+   "quote_sha": "b35c5eea8014e41e"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The average skull length of Hadrosteus is about 16 centimeters.",
+   "category": "description",
+   "chunk_id": "hadrosteus:enwiki:2",
+   "lang": "en",
+   "quote": "The average skull length is about 16 centimeters.",
+   "quote_sha": "7b0862ecb9b89696"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The name of the type species Hadrosteus rapax translates to \"Rapacious Strong-Bone\".",
+   "category": "curiosities",
+   "chunk_id": "hadrosteus:enwiki:2",
+   "lang": "en",
+   "quote": "Etymology The type species Hadrosteus rapax means \"Rapacious Strong-Bone\".",
+   "quote_sha": "901bbf611fa6ab19"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "hadrosteus:enwiki:2",
+   "statement": "Hadrosteus had a triangular snout and a short, high trunkshield featuring a median dorsal plate that was broader than it was wide.",
+   "category": "description",
+   "quote": "The head had a triangular snout, and the trunkshield was short, but high, with a median dorsal plate that was broader than wide.",
+   "reason": "statement copies the source wording: 'a median dorsal plate that was broader than'"
+  }
+ ]
+}

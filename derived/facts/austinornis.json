@@ -1,0 +1,76 @@
+{
+ "taxon": "Austinornis",
+ "taxon_key": "austinornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "64ce3aadde678b05",
+ "generated_at": "2026-11-11T06:30:26+00:00",
+ "citations": {
+  "austinornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Austinornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Austinornis?oldid=1379676778",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "austinornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Austinornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Austinornis?oldid=1379676778",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "austinornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Austinornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=207942",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Austinornis lived during the Late Cretaceous period in Texas.",
+   "category": "time_and_habitat",
+   "chunk_id": "austinornis:enwiki:2",
+   "lang": "en",
+   "quote": "Austinornis is an extinct genus of prehistoric ornithuran of uncertain phylogenetic placement from the Late Cretaceous of Texas.",
+   "quote_sha": "155d3d8a7cdf4105"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "In 2014, Gerald Mayr suggested that Austinornis might actually belong to the ornithurine genera Apatornis or Iaceornis rather than being a distinct genus.",
+   "category": "debate",
+   "chunk_id": "austinornis:enwiki:2",
+   "lang": "en",
+   "quote": "Notably, in 2014, Gerald Mayr suggested that Austinornis is a non-neornithine from the Coniacian or Santonian age and that the specimen probably belongs to the ornithurine Apatornis or Iaceornis.",
+   "quote_sha": "334adbf9e0d18137"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The Paleobiology Database lists the parent group of Austinornis as Pangalliformes.",
+   "category": "classification",
+   "chunk_id": "austinornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Pangalliformes",
+   "quote_sha": "53363c2bbe9bfe52"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "austinornis:enwiki:2",
+   "statement": "Paleontologist Julia A. Clarke named the genus Austinornis in 2004 based on a partial tarsometatarsus fossil found in the Austin Chalk.",
+   "category": "discovery",
+   "quote": "The paleontologist Julia A. Clarke named the genus in 2004 based on a partial tarsometatarsus fossil from Austin Chalk.",
+   "reason": "statement copies the source wording: 'in 2004 based on a partial tarsometatarsus fossil'"
+  },
+  {
+   "chunk_id": "austinornis:enwiki:2",
+   "statement": "While originally classified as a pangalliform, the classification of Austinornis is disputed by other researchers due to the fragmentary nature of the holotype.",
+   "category": "classification",
+   "quote": "Although Austinornis was thought to be a pangalliform, other researchers have disputed its classification and dismissed it in phylogenetic analyses due to the fragmentary nature of the holotype.",
+   "reason": "statement copies the source wording: 'due to the fragmentary nature of the holotype'"
+  }
+ ]
+}

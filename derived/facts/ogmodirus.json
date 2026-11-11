@@ -1,0 +1,131 @@
+{
+ "taxon": "Ogmodirus",
+ "taxon_key": "ogmodirus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "96cc3d88272058b0",
+ "generated_at": "2026-11-11T07:01:45+00:00",
+ "citations": {
+  "ogmodirus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Ogmodirus?oldid=1323350895",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Ogmodirus?oldid=1323350895",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Ogmodirus?oldid=1323350895",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Ogmodirus?oldid=1323350895",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Ogmodirus?oldid=155478619",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Ogmodirus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Ogmodirus?oldid=155478619",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ogmodirus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Ogmodirus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36494",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species was originally named Ogmodirus martini by Williston and Moodie in 1913, though the specific name was later emended to martinii.",
+   "category": "discovery",
+   "chunk_id": "ogmodirus:enwiki:3",
+   "lang": "en",
+   "quote": "KUVP 441 was named as Ogmodirus martini by Williston & Moodie (1913) and the specific name was emended to martinii by Moodie (1916), but the original name takes precedence.",
+   "quote_sha": "fb80833f7a6fd531"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "A second species, Ogmodirus ischiadicus, was initially placed in its own genus but has since been referred to Styxosaurus.",
+   "category": "discovery",
+   "chunk_id": "ogmodirus:enwiki:3",
+   "lang": "en",
+   "quote": "A second species, Ogmodirus ischiadicus (based on specimen KUVP 434), was initially placed within its own genus, Thalassiosaurus, and has since been referred to Styxosaurus.",
+   "quote_sha": "b84c595da0c28ae9"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Welles (1962) suggested Ogmodirus may belong to the Elasmosauridae, but noted the genus is dubious beyond the suborder Plesiosauria due to fossil condition.",
+   "category": "classification",
+   "chunk_id": "ogmodirus:enwiki:4",
+   "lang": "en",
+   "quote": "According to Welles (1962), Ogmodirus martini may be member of the Elasmosauridae, a group of marine animals related to Elasmosaurus, but the condition of the fossils discovered to date means the genus is dubious beyond Plesiosauria.",
+   "quote_sha": "af476d1e0468675e"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Sepkoski (2002) assigned Ogmodirus to the Plesiosauria without a more specific classification.",
+   "category": "classification",
+   "chunk_id": "ogmodirus:eswiki:2",
+   "lang": "es",
+   "quote": "Sepkoski (2002) asignó a Ogmodirus a Plesiosauria, sin asignación más específica.",
+   "quote_sha": "07194bbf8aadd420"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Ogmodirus lived during the Turonian stage, between 93.9 and 89.8 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "ogmodirus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Turonian to Turonian (93.9 to 89.8 million years ago)",
+   "quote_sha": "4ced93a7128bec1c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Ogmodirus is an extinct genus of plesiosaur characterized by an extremely long neck that lived during the Cretaceous.",
+   "category": "description",
+   "chunk_id": "ogmodirus:eswiki:2",
+   "lang": "es",
+   "quote": "Ogmodirus es un género extinto de plesiosaurio con un cuello extremadamente largo que vivió en el Cretácico.",
+   "quote_sha": "cf45404a53fd2fa8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "ogmodirus:enwiki:2",
+   "statement": "Ogmodirus is an extinct genus of plesiosaur found in the Late Cretaceous Greenhorn Limestone of Kansas.",
+   "category": "description",
+   "quote": "Ogmodirus is an extinct genus of plesiosaur found in the Cenomanian-Turonian (Late Cretaceous) Greenhorn Limestone of Kansas.",
+   "reason": "statement copies the source wording: 'Ogmodirus is an extinct genus of plesiosaur found'"
+  },
+  {
+   "chunk_id": "ogmodirus:enwiki:3",
+   "statement": "The holotype specimen consists of a pelvic girdle, limb elements, and more than fifty cervical vertebrae from a juvenile discovered in Cloud County, Kansas, in 1909.",
+   "category": "discovery",
+   "quote": "The holotype, KUVP 441, consists of a pelvic girdle, limb elements, and more than fifty cervical (neck) vertebrae from a juvenile discovered in Cloud County, Kansas by C. Boyce in 1909.",
+   "reason": "statement copies the source wording: 'consists of a pelvic girdle limb elements and'"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "taxon": "Neusticosaurus",
+ "taxon_key": "neusticosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a0cf2ce9061da8ef",
+ "generated_at": "2026-11-11T06:54:58+00:00",
+ "citations": {
+  "neusticosaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Neusticosaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Neusticosaurus?oldid=1281123707",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neusticosaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Neusticosaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Neusticosaurus?oldid=1281123707",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neusticosaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Neusticosaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36441",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Neusticosaurus was first described by Seeley in 1882.",
+   "category": "discovery",
+   "chunk_id": "neusticosaurus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Seeley, 1882",
+   "quote_sha": "01fdd04c02641aba"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Neusticosaurus lived during the Middle Triassic period.",
+   "category": "time_and_habitat",
+   "chunk_id": "neusticosaurus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Middle Triassic,",
+   "quote_sha": "952947c7f78151e5"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The name Neusticosaurus means \"swimming lizard\" and is sometimes misspelled as Neuticosaurus.",
+   "category": "description",
+   "chunk_id": "neusticosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Neusticosaurus (sometimes misspelled Neuticosaurus) (\"swimming lizard\")",
+   "quote_sha": "ba6507a49ef89949"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Neusticosaurus have been found in Italy, Switzerland, and Germany.",
+   "category": "time_and_habitat",
+   "chunk_id": "neusticosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "from Italy, Switzerland and Germany",
+   "quote_sha": "7e3b66740f8c472e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Neusticosaurus was one of the smallest nothosaurs and likely fed on small fish.",
+   "category": "paleobiology",
+   "chunk_id": "neusticosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Neusticosaurus was one of the smallest nothosaurs and probably fed on small fish",
+   "quote_sha": "ecb65908c602f214"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group of Neusticosaurus is the family Pachypleurosauridae.",
+   "category": "classification",
+   "chunk_id": "neusticosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Pachypleurosauridae",
+   "quote_sha": "2e42dc5ff3ab093b"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Neusticosaurus is classified within the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "neusticosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "neusticosaurus:enwiki:2",
+   "statement": "Neusticosaurus is an extinct genus of marine reptile belonging to the pachypleurosaurs.",
+   "category": "description",
+   "quote": "is an extinct genus of marine reptile belonging to the pachypleurosaurs",
+   "reason": "statement copies the source wording: 'is an extinct genus of marine reptile belonging'"
+  }
+ ]
+}

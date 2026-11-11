@@ -1,0 +1,133 @@
+{
+ "taxon": "Campodus",
+ "taxon_key": "campodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c1b74968d33376a2",
+ "generated_at": "2026-11-11T05:56:43+00:00",
+ "citations": {
+  "campodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Campodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Campodus?oldid=1306624399",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "campodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Campodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Campodus?oldid=1306624399",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "campodus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Campodus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Campodus?oldid=121869366",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "campodus:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Campodus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Campodus?oldid=121869366",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "campodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Campodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34449",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species Campodus agassizianus was first described in 1844 from teeth found in the Namurian stage of Belgium.",
+   "category": "discovery",
+   "chunk_id": "campodus:enwiki:2",
+   "lang": "en",
+   "quote": "The type species, C. agassizianus, was originally described in 1844 based on a small number of teeth from the Namurian of Belgium.",
+   "quote_sha": "707e3ebc8d7b6bc9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Campodus is characterized by broad, ridge-ornamented crushing teeth composed of various types of dentine.",
+   "category": "description",
+   "chunk_id": "campodus:enwiki:2",
+   "lang": "en",
+   "quote": "it can be characterized by its broad, ridge-ornamented crushing teeth made of various types of dentine.",
+   "quote_sha": "0b0a0b42879dd1b3"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Campodus lived between the Gzhelian and Roadian stages, approximately 303.7 to 266.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "campodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Gzhelian to Roadian (303.7 to 266.9 million years ago)",
+   "quote_sha": "adfec389eeb499d9"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "There is a debate over whether Agassizodus and Campodus are synonyms, as some authors suggest they are the same while others note a lack of overlapping fossil locations.",
+   "category": "debate",
+   "chunk_id": "campodus:enwiki:2",
+   "lang": "en",
+   "quote": "This has led some authors to the conclusion that Agassizodus and Campodus were synonyms. However, others note that clearly identifiable Campodus teeth have not been found in the same areas from which Agassizodus was originally described.",
+   "quote_sha": "3dd5dbae693ca21c"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Campodus was established by Koninck in 1844.",
+   "category": "classification",
+   "chunk_id": "campodus:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Koninck, 1844",
+   "quote_sha": "027d7a517facb9e7"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Multiple species have been assigned to Campodus, including C. agassizianus, C. arizonensis, C. basalis, C. corrugatus, C. scitulus, C. variabilis, and C. virginianus.",
+   "category": "classification",
+   "chunk_id": "campodus:eswiki:1",
+   "lang": "es",
+   "quote": "subdivision: C. agassizianus Koninck, 1844 C. arizonensis Gass, 1963 C. basalis Cope, 1894 C. corrugatus Newberry & Worthen, 1870 C. scitulus St. John & Worthen, 1875 C. variabilis Newberry & Worthen, 1870 C. virginianus St. John & Worthen, 1875",
+   "quote_sha": "bb691759036c1bba"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Campodus is an extinct genus of cartilaginous fish belonging to the order Eugeneodontiformes from the Carboniferous.",
+   "category": "classification",
+   "chunk_id": "campodus:eswiki:2",
+   "lang": "es",
+   "quote": "Campodus es un género extinto de peces cartilaginosos del orden Eugeneodontiformes que vivió en el Carbonífero.",
+   "quote_sha": "26555b0b08ec48a8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "campodus:enwiki:2",
+   "statement": "Campodus is an extinct genus of eugeneodont holocephalans that lived during the Carboniferous period.",
+   "category": "classification",
+   "quote": "Campodus is an extinct genus of eugeneodont holocephalans from the Carboniferous.",
+   "reason": "statement copies the source wording: 'Campodus is an extinct genus of eugeneodont holocephalans'"
+  },
+  {
+   "chunk_id": "campodus:enwiki:2",
+   "statement": "Campodus is likely one of the earliest and most basal members of the caseodontoid group.",
+   "category": "paleobiology",
+   "quote": "Likely one of the earliest and most basal caseodontoids",
+   "reason": "statement copies the source wording: 'likely one of the earliest and most basal'"
+  },
+  {
+   "chunk_id": "campodus:enwiki:2",
+   "statement": "Fossils of Campodus have been found in Belgium, Missouri, Nebraska, and Kansas, with additional species described by Lohest, Zangerl, and Eastman in the 19th and 20th centuries.",
+   "category": "discovery",
+   "quote": "Additional fossils have been referred to the genus. These include Belgian specimens referred by Lohest (1884), fossils from Missouri referred by Zangerl (1981), and symphyseal tooth-whorls from Nebraska and Kansas referred by Eastman (1902).",
+   "reason": "numbers not in the quote: ['19', '20']"
+  }
+ ]
+}

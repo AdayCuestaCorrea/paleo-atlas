@@ -1,0 +1,108 @@
+{
+ "taxon": "Elektorornis",
+ "taxon_key": "elektorornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "6bbed1cc4272a479",
+ "generated_at": "2026-11-11T07:14:20+00:00",
+ "citations": {
+  "elektorornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Elektorornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Elektorornis?oldid=1376137448",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "elektorornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Elektorornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Elektorornis?oldid=1376137448",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "elektorornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Elektorornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=388971",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "In life, Elektorornis was slightly smaller than a sparrow.",
+   "category": "description",
+   "chunk_id": "elektorornis:enwiki:2",
+   "lang": "en",
+   "quote": "In life, it would have been slightly smaller than a sparrow",
+   "quote_sha": "c32f47f4fa2f9219"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Alexander D. Clark and Jingmai O'Connor (2021) concluded that Elektorornis likely had a toothless beak to pry into wood, using its elongated toe to acquire prey.",
+   "category": "paleobiology",
+   "chunk_id": "elektorornis:enwiki:2",
+   "lang": "en",
+   "quote": "Alexander D. Clark and Jingmai O'Connor (2021) observed that extant animals with similar probing structures consistently have additional anatomical traits that allow the animal to penetrate a hard substrate, such as wood. The researchers concluded that Elektorornis likely would have had an edentulous (toothless) beak to pry or gouge into wood, allowing it to use its uniquely elongated toe to acquire prey.",
+   "quote_sha": "99258134d9a9f18f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Elektorornis belongs to the parent group Enantiornithes.",
+   "category": "classification",
+   "chunk_id": "elektorornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Enantiornithes",
+   "quote_sha": "ead47a9d5fe06358"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Elektorornis is classified in the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "elektorornis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Elektorornis lived during the Cenomanian stage, between 100.5 and 93.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "elektorornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Cenomanian (100.5 to 93.9 million years ago)",
+   "quote_sha": "ff16862b0c6874e7"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "elektorornis:enwiki:2",
+   "statement": "Elektorornis chenguangi is the first bird species described from remains found in Burmese amber.",
+   "category": "discovery",
+   "quote": "Elektorornis chenguangi is the first bird species described from remains found in Burmese amber",
+   "reason": "statement copies the source wording: 'Elektorornis chenguangi is the first bird species described'"
+  },
+  {
+   "chunk_id": "elektorornis:enwiki:2",
+   "statement": "The genus Elektorornis contains only one species, Elektorornis chenguangi, known from a partial hindlimb and some wing feathers preserved in amber.",
+   "category": "description",
+   "quote": "The genus contains a single species, Elektorornis chenguangi, known from a partial hindlimb and a small amount of wing plumage preserved in amber",
+   "reason": "statement copies the source wording: 'species Elektorornis chenguangi known from a partial hindlimb'"
+  },
+  {
+   "chunk_id": "elektorornis:enwiki:2",
+   "statement": "Researchers suggest Elektorornis likely used its characteristically elongated middle toe to probe for food.",
+   "category": "paleobiology",
+   "quote": "possibly used its characteristically elongated middle toe to probe for food",
+   "reason": "statement copies the source wording: 'used its characteristically elongated middle toe to probe'"
+  },
+  {
+   "chunk_id": "elektorornis:enwiki:2",
+   "statement": "Elektorornis is an extinct genus of enantiornithean bird from the Late Cretaceous of Myanmar.",
+   "category": "time_and_habitat",
+   "quote": "Elektorornis () is an extinct genus of enantiornithean bird from the Late Cretaceous of Myanmar",
+   "reason": "statement copies the source wording: 'Elektorornis is an extinct genus of enantiornithean bird'"
+  }
+ ]
+}

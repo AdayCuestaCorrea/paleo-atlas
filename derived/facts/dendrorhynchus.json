@@ -1,0 +1,83 @@
+{
+ "taxon": "Dendrorhynchus",
+ "taxon_key": "dendrorhynchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "b2a2e9491d1e2679",
+ "generated_at": "2026-11-11T06:45:46+00:00",
+ "citations": {
+  "dendrorhynchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Dendrorhynchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Dendrorhynchus?oldid=1344649003",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dendrorhynchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Dendrorhynchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Dendrorhynchus?oldid=1344649003",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dendrorhynchus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Dendrorhynchus (Homonyms)",
+   "url": "https://en.wikipedia.org/wiki/Dendrorhynchus?oldid=1344649003",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dendrorhynchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Dendrorhynchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=68165",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Dendrorhynchus is a genus of gregarines belonging to the family Dactylophoridae.",
+   "category": "classification",
+   "chunk_id": "dendrorhynchus:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Dendrorhynchus",
+   "quote_sha": "aaa5c704d44c6ec7"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus contains a total of two species.",
+   "category": "description",
+   "chunk_id": "dendrorhynchus:enwiki:2",
+   "lang": "en",
+   "quote": "Dendrorhynchus is a gregarine genus with total 2 species.",
+   "quote_sha": "1631fcd92256d366"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A genus named Dendrorhynchus is recorded in the Paleobiology Database as a parent group within the family Rhamphorhynchidae.",
+   "category": "classification",
+   "chunk_id": "dendrorhynchus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Rhamphorhynchidae",
+   "quote_sha": "6431ab592858e3c9"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "dendrorhynchus:enwiki:2",
+   "statement": "The genus was first described in 1920 by David Keilin from the alimentary canal of dolichopodid larvae Systenus.",
+   "category": "discovery",
+   "quote": "The genus was first described in 1920 by David Keilin from the alimentary canal of dolichopodid larvae Systenus.",
+   "reason": "statement copies the source wording: 'Keilin from the alimentary canal of dolichopodid larvae'"
+  },
+  {
+   "chunk_id": "dendrorhynchus:enwiki:3",
+   "statement": "The name Dendrorhynchus is a senior homonym for genera of nemerteans and pterosaurs.",
+   "category": "classification",
+   "quote": "Dendrorhynchus is a senior homonym for genera of nemerteans (replaced with Polydendrorhynchus) and pterosaurs (replaced with Dendrorhynchoides).",
+   "reason": "statement copies the source wording: 'is a senior homonym for genera of nemerteans'"
+  }
+ ]
+}

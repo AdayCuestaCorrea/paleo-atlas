@@ -630,5 +630,74 @@
     "tokens": 198145
    }
   }
+ },
+ {
+  "started_at": "2026-11-12T17:45:49Z",
+  "trigger": "manual",
+  "changed": true,
+  "status": "ok",
+  "finished_at": "2026-11-12T19:15:32Z",
+  "steps": [
+   {
+    "name": "Set up job",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "Run actions/checkout@v7.0.1",
+    "conclusion": "success",
+    "seconds": 2
+   },
+   {
+    "name": "Check out the data branch",
+    "conclusion": "success",
+    "seconds": 11
+   },
+   {
+    "name": "Run astral-sh/setup-uv@v10.3.3",
+    "conclusion": "success",
+    "seconds": 7
+   },
+   {
+    "name": "Install",
+    "conclusion": "success",
+    "seconds": 7
+   },
+   {
+    "name": "Anything new?",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Ingest and parse",
+    "conclusion": "success",
+    "seconds": 36
+   },
+   {
+    "name": "Facts and texts for pending species (Groq)",
+    "conclusion": "in_progress",
+    "seconds": 5347,
+    "partial": true
+   }
+  ],
+  "sources_changed": {
+   "commons/files": 1,
+   "news/items": 10
+  },
+  "wikipedia_revisions": {
+   "2026_in_archosaur_paleontology": 1385002080,
+   "2026_in_paleoichthyology": 1385090570,
+   "2026_in_reptile_paleontology": 1384729677
+  },
+  "wikipedia_new_revisions": [],
+  "summary": null,
+  "changes_since_previous": {},
+  "dbt": null,
+  "llm_tokens": {
+   "openai/gpt-oss-120b": {
+    "requests": 10,
+    "tokens": 46581
+   }
+  }
  }
 ]

@@ -1,10 +1,12 @@
 -- Every published sentence cites at least one fact that exists (ALCANCE.md §16).
+-- Texts whose facts were extracted again are held back by fct_taxon_text (see
+-- assert_texts_waiting_for_rewrite); what reaches the site must cite real facts.
 with sentences as (
     select t.taxon_key, t.lang, s.value as sentence
-    from {{ ref('stg_narrative__texts') }} as t
+    from {{ ref('fct_taxon_text') }} as t
     cross join json_each(t.sections) as sec
     cross join json_each(sec.value -> 'sentences') as s
-    where t.status = 'verified'
+    where t.text_status = 'verified'
 ),
 
 cited as (

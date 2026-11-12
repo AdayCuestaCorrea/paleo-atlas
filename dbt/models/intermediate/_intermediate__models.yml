@@ -191,6 +191,9 @@ unit_tests:
       - input: ref('stg_wikipedia__research_items')
         rows:
           - {research_id: r1, primary_doi: 10.1/rex, revision_timestamp: "2026-10-01 10:00:00+00"}
+      - input: ref('stg_wikipedia__research_revisions')
+        rows:
+          - {research_id: r1, revision_timestamp: "2026-10-01 10:00:00+00"}
       - input: ref('int_study_reliability')
         rows:
           - {study_id: "doi:10.1/rex", issued_on: "2026-09-30", issued_precision: day, is_retracted: false, is_corrected: false}
@@ -203,6 +206,39 @@ unit_tests:
     expect:
       rows:
         - {taxon_key: tyrannosaurus, event_type: new_study, subject_name: Tyrannosaurus rex, origin: tracked}
+  - name: a_study_without_a_date_is_dated_when_first_seen
+    description: >
+      A study with no publication date (not in Crossref) is dated the day it was first
+      listed, not by the latest edit of the yearly page (16 studies moved every day).
+    model: int_taxon_events
+    given:
+      - input: ref('int_taxon_pages')
+        rows:
+          - {taxon_key: gansus}
+      - input: ref('int_folded_species')
+        rows: []
+      - input: ref('int_research_taxon_links')
+        rows:
+          - {research_id: r2, taxon_key: gansus}
+      - input: ref('stg_wikipedia__research_items')
+        rows:
+          - {research_id: r2, primary_doi: null, revision_timestamp: "2026-11-11 20:00:00+00"}
+      - input: ref('stg_wikipedia__research_revisions')
+        rows:
+          - {research_id: r2, revision_timestamp: "2026-11-01 08:00:00+00"}
+          - {research_id: r2, revision_timestamp: "2026-11-11 20:00:00+00"}
+      - input: ref('int_study_reliability')
+        rows:
+          - {study_id: "research:r2", issued_on: null, issued_precision: null, is_retracted: false, is_corrected: false}
+      - input: ref('stg_wikipedia__new_taxa_revisions')
+        rows: []
+      - input: ref('int_new_taxa_history')
+        rows: []
+      - input: ref('int_backfill_events')
+        rows: []
+    expect:
+      rows:
+        - {taxon_key: gansus, event_type: new_study, event_date: "2026-11-01", date_precision: seen}
   - name: news_taxa_by_name_and_by_llm_both_checked
     description: >
       A genus named in the headline links by text; a 4-letter genus (Jian) only through

@@ -32,19 +32,28 @@ descriptions as (
     inner join studies as s using (study_id)
 ),
 
+research_first_seen as (
+    -- The first stored revision that lists each study: a study without a publication
+    -- date is dated the day it was first seen, not by the latest edit of the page.
+    select research_id, min(revision_timestamp) as first_seen_at
+    from {{ ref('stg_wikipedia__research_revisions') }}
+    group by research_id
+),
+
 new_studies as (
     select
         l.taxon_key,
         'new_study' as event_type,
         s.study_id,
         r.research_id,
-        coalesce(s.issued_on, cast(r.revision_timestamp as date)) as event_date,
+        coalesce(s.issued_on, cast(fs.first_seen_at as date)) as event_date,
         s.issued_on is not null as date_is_publication,
         coalesce(s.issued_precision, 'seen') as date_precision,
         cast(null as varchar) as change_id,
         cast(null as varchar[]) as changed_fields
     from {{ ref('int_research_taxon_links') }} as l
     inner join {{ ref('stg_wikipedia__research_items') }} as r using (research_id)
+    inner join research_first_seen as fs using (research_id)
     inner join studies as s
         on s.study_id = coalesce('doi:' || r.primary_doi, 'research:' || r.research_id)
 ),

@@ -11,8 +11,29 @@ langs as (
     select unnest(['en', 'es']) as lang
 ),
 
-texts as (
+verified as (
     select * from {{ ref('stg_narrative__texts') }} where status = 'verified'
+),
+
+broken as (
+    -- A text written from facts that were extracted again (Groq re-extracts the facts
+    -- first and may run out of quota before the text): if any sentence cites a fact
+    -- that no longer exists, the page shows the fallback until the text is rewritten.
+    select distinct v.taxon_key, v.lang
+    from verified as v
+    cross join json_each(v.sections) as sec
+    cross join json_each(sec.value -> 'sentences') as s
+    cross join unnest(
+        coalesce(json_extract_string(s.value, '$.fact_ids[*]'), ['__none__'])
+    ) as c (fact_id)
+    left join {{ ref('stg_narrative__facts') }} as f
+        on f.taxon_key = v.taxon_key and f.fact_id = c.fact_id
+    where f.fact_id is null
+),
+
+texts as (
+    select v.* from verified as v
+    anti join broken as b on b.taxon_key = v.taxon_key and b.lang = v.lang
 )
 
 select

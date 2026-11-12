@@ -1,0 +1,121 @@
+{
+ "taxon": "Lithoptila",
+ "taxon_key": "lithoptila",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "7a2a2989654f5897",
+ "generated_at": "2026-11-12T02:04:19+00:00",
+ "citations": {
+  "lithoptila:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Lithoptila (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Lithoptila?oldid=1327274918",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "lithoptila:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Lithoptila (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Lithoptila?oldid=1327274918",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "lithoptila:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Lithoptila (Distribution)",
+   "url": "https://en.wikipedia.org/wiki/Lithoptila?oldid=1327274918",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "lithoptila:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Lithoptila",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=140423",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Lithoptila was named by Bourdon in 2005.",
+   "category": "discovery",
+   "chunk_id": "lithoptila:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Bourdon, 2005",
+   "quote_sha": "5acebd2fb56a3d8d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species described within the genus is Lithoptila abdounensis.",
+   "category": "discovery",
+   "chunk_id": "lithoptila:enwiki:1",
+   "lang": "en",
+   "quote": "species: abdounensis",
+   "quote_sha": "0528f6d919a930b8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Lithoptila abdounensis is a distant relative of modern tropicbirds.",
+   "category": "time_and_habitat",
+   "chunk_id": "lithoptila:enwiki:2",
+   "lang": "en",
+   "quote": "It is a distant relative of the tropicbirds.",
+   "quote_sha": "975981432deb1024"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Lithoptila abdounensis was an extinct seabird belonging to the family Prophaethontidae that lived during the Palaeogene period.",
+   "category": "time_and_habitat",
+   "chunk_id": "lithoptila:enwiki:2",
+   "lang": "en",
+   "quote": "Lithoptila abdounensis is an extinct species of prophaethontid seabird that lived during the Palaeogene period.",
+   "quote_sha": "7ad3ba74f520dccf"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of L. abdounensis have been found in Morocco in strata dating to the Late Palaeocene and Early Eocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "lithoptila:enwiki:3",
+   "lang": "en",
+   "quote": "L. abdounensis lived in Morocco, its fossils having been found in strata dating to both the Late Palaeocene and Early Eocene.",
+   "quote_sha": "318c20f68587871e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus Lithoptila belongs to the parent group Prophaethontidae.",
+   "category": "classification",
+   "chunk_id": "lithoptila:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Prophaethontidae",
+   "quote_sha": "8b4e8641c9074820"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Lithoptila is classified within the family Prophaethontidae.",
+   "category": "classification",
+   "chunk_id": "lithoptila:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Prophaethontidae",
+   "quote_sha": "20d7505d46092a46"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The genus Lithoptila lived between 61.66 and 48.07 million years ago, from the Selandian to the Ypresian.",
+   "category": "time_and_habitat",
+   "chunk_id": "lithoptila:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Selandian to Ypresian (61.66 to 48.07 million years ago)",
+   "quote_sha": "ae58e0306571ede5"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "lithoptila:pbdb:1",
+   "statement": "Lithoptila is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

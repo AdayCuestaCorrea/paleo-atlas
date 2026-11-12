@@ -1,0 +1,96 @@
+{
+ "taxon": "Masillastega",
+ "taxon_key": "masillastega",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "211ad8fd8ca79877",
+ "generated_at": "2026-11-12T03:15:35+00:00",
+ "citations": {
+  "masillastega:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Masillastega (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Masillastega?oldid=1322538204",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "masillastega:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Masillastega (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Masillastega?oldid=1322538204",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "masillastega:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Masillastega",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=90640",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Masillastega was described by Mayr in 2002.",
+   "category": "discovery",
+   "chunk_id": "masillastega:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Mayr, 2002",
+   "quote_sha": "1c374dd88e4c9956"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species is Masillastega rectirostris.",
+   "category": "discovery",
+   "chunk_id": "masillastega:enwiki:1",
+   "lang": "en",
+   "quote": "species: rectirostris",
+   "quote_sha": "37566c476a112b1c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Masillastega was an extinct aquatic bird that lived in Germany during the Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "masillastega:enwiki:2",
+   "lang": "en",
+   "quote": "Masillastega is an extinct genus of aquatic bird from the Eocene of Germany.",
+   "quote_sha": "1063b977c8670f3a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Unlike its relatives, modern gannets and boobies, Masillastega lived in freshwater environments.",
+   "category": "description",
+   "chunk_id": "masillastega:enwiki:2",
+   "lang": "en",
+   "quote": "It is related to modern gannets and boobies, but unlike these birds it occurred in freshwater environments.",
+   "quote_sha": "4b3f9c7e6987259a"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Masillastega lived between 48.07 and 41.03 million years ago during the Lutetian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "masillastega:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Lutetian to Lutetian (48.07 to 41.03 million years ago)",
+   "quote_sha": "e35d7f5a585cb620"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Masillastega belongs to the family Sulidae.",
+   "category": "classification",
+   "chunk_id": "masillastega:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sulidae",
+   "quote_sha": "40a4a931271b409a"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "masillastega:pbdb:1",
+   "statement": "Masillastega is classified as a bird within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

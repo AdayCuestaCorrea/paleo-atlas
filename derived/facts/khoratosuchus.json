@@ -1,0 +1,87 @@
+{
+ "taxon": "Khoratosuchus",
+ "taxon_key": "khoratosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "287a07a26ad67485",
+ "generated_at": "2026-11-12T02:45:56+00:00",
+ "citations": {
+  "khoratosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Khoratosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Khoratosuchus?oldid=1282991090",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "khoratosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Khoratosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Khoratosuchus?oldid=1282991090",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "khoratosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Khoratosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=156176",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Khoratosuchus was described by Lauprasert and colleagues in 2009.",
+   "category": "discovery",
+   "chunk_id": "khoratosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Lauprasert et al., 2009",
+   "quote_sha": "45acffccb4f22a37"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Khoratosuchus lived in northeast Thailand during the Early Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "khoratosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Khoratosuchus is an extinct genus of neosuchian crocodylomorph which existed in northeast Thailand during the early Cretaceous period.",
+   "quote_sha": "e7fa6fc7ec2a043e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The skull of Khoratosuchus features secondary choanae positioned relatively posteriorly and a smooth dorsal surface.",
+   "category": "description",
+   "chunk_id": "khoratosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "including secondary choanae relatively posterior and almost encircled by the pterygoid bones on the palate and a smooth dorsal surface of the skull.",
+   "quote_sha": "886628fc2184cf1d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Khoratosuchus is classified as a neosuchian crocodylomorph.",
+   "category": "classification",
+   "chunk_id": "khoratosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Khoratosuchus is an extinct genus of neosuchian crocodylomorph",
+   "quote_sha": "85f0cd2cac55a26b"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Khoratosuchus lived between 121.4 and 113.2 million years ago during the Aptian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "khoratosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (121.4 to 113.2 million years ago)",
+   "quote_sha": "de7ef34eaead7f99"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "khoratosuchus:enwiki:2",
+   "statement": "Khoratosuchus is the youngest and most advanced Mesozoic crocodyliform known from Thailand.",
+   "category": "paleobiology",
+   "quote": "Khoratosuchus is the youngest and most advanced Mesozoic crocodyliform yet known from Thailand.",
+   "reason": "statement copies the source wording: 'is the youngest and most advanced Mesozoic crocodyliform'"
+  }
+ ]
+}

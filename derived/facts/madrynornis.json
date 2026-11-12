@@ -1,0 +1,105 @@
+{
+ "taxon": "Madrynornis",
+ "taxon_key": "madrynornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f8bb502312962317",
+ "generated_at": "2026-11-12T03:26:39+00:00",
+ "citations": {
+  "madrynornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Madrynornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Madrynornis?oldid=1371817951",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "madrynornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Madrynornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Madrynornis?oldid=1371817951",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "madrynornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Madrynornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=105575",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Madrynornis was described by Hospitaleche and colleagues in 2007.",
+   "category": "discovery",
+   "chunk_id": "madrynornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Hospitaleche et al., 2007",
+   "quote_sha": "fa39166e260bbef0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Madrynornis lived during the Late Miocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "madrynornis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Miocene",
+   "quote_sha": "48d4bfe05913bdd1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Madrynornis date from 11.63 to 7.246 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "madrynornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tortonian to Tortonian (11.63 to 7.246 million years ago)",
+   "quote_sha": "adc855547b4792e3"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Madrynornis inhabited Argentina during the Late Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "madrynornis:enwiki:2",
+   "lang": "en",
+   "quote": "that inhabited Argentina during the Late Miocene",
+   "quote_sha": "9e148f8fbe1ca0ee"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Madrynornis is an extinct genus containing only one species within the penguin family Spheniscidae.",
+   "category": "classification",
+   "chunk_id": "madrynornis:enwiki:2",
+   "lang": "en",
+   "quote": "Madrynornis is an extinct monotypic genus of spheniscid",
+   "quote_sha": "e3ce5bf7dc99e7cf"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Madrynornis belongs to the family Spheniscidae.",
+   "category": "classification",
+   "chunk_id": "madrynornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Spheniscidae",
+   "quote_sha": "1067bef5237d1e1e"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The only known species in the genus Madrynornis is M. mirandus.",
+   "category": "description",
+   "chunk_id": "madrynornis:enwiki:2",
+   "lang": "en",
+   "quote": "containing the species M. mirandus",
+   "quote_sha": "f1309e2f696ef2b8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "madrynornis:pbdb:1",
+   "statement": "Madrynornis is classified as a bird.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

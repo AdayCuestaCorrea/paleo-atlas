@@ -1,0 +1,103 @@
+{
+ "taxon": "Helicampodus",
+ "taxon_key": "helicampodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c29f814ca9d6b356",
+ "generated_at": "2026-11-12T01:52:20+00:00",
+ "citations": {
+  "helicampodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Helicampodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Helicampodus?oldid=1306624448",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "helicampodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Helicampodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Helicampodus?oldid=1306624448",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "helicampodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Helicampodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34458",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Helicampodus lived during the Late Permian to Early Triassic periods.",
+   "category": "time_and_habitat",
+   "chunk_id": "helicampodus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Permian - Early Triassic,",
+   "quote_sha": "d3f22bdfcc43b7e7"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Helicampodus was described by Branson in 1935.",
+   "category": "discovery",
+   "chunk_id": "helicampodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Branson, 1935",
+   "quote_sha": "9d20dd3347d147b1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Helicampodus have been found in Asia.",
+   "category": "time_and_habitat",
+   "chunk_id": "helicampodus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils of Helicampodus have been found in Asia.",
+   "quote_sha": "fdd4a8bafb5accb0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Helicampodus was formerly classified in the families Helicoprionidae and Edestidae but is now placed in Helicampodontidae.",
+   "category": "classification",
+   "chunk_id": "helicampodus:enwiki:2",
+   "lang": "en",
+   "quote": "It was earlier placed in the families Helicoprionidae and Edestidae, but has more recently been placed in Helicampodontidae.",
+   "quote_sha": "d61f01bb247ff3c0"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Helicampodus belongs to the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "helicampodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group of Helicampodus is the family Helicampodontidae.",
+   "category": "classification",
+   "chunk_id": "helicampodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Helicampodontidae",
+   "quote_sha": "24dab612019496f6"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "helicampodus:enwiki:2",
+   "statement": "Helicampodus is an extinct genus of shark-like eugeneodont fish.",
+   "category": "description",
+   "quote": "Helicampodus is an extinct genus of shark-like eugeneodont fish",
+   "reason": "statement copies the source wording: 'Helicampodus is an extinct genus of shark-like eugeneodont'"
+  },
+  {
+   "chunk_id": "helicampodus:enwiki:2",
+   "statement": "The largest teeth of Helicampodus kokeni are about 2.7 cm long, suggesting a maximum body size of around 2 meters.",
+   "category": "curiosities",
+   "quote": "The largest teeth of Helicampodus kokeni are about 2.7 cm in length, which points to a maximum size of around 2 m based on its relatives.",
+   "reason": "statement copies the source wording: 'The largest teeth of Helicampodus kokeni are about'"
+  }
+ ]
+}

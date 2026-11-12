@@ -1,0 +1,105 @@
+{
+ "taxon": "Llanosuchus",
+ "taxon_key": "llanosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5992bbc75d9ac598",
+ "generated_at": "2026-11-12T03:01:49+00:00",
+ "citations": {
+  "llanosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Llanosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Llanosuchus?oldid=1328367632",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "llanosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Llanosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Llanosuchus?oldid=1328367632",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "llanosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Llanosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=334321",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus was known from fossils found in the Late Cretaceous Los Llanos Formation in Argentina.",
+   "category": "discovery",
+   "chunk_id": "llanosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "known from the Late Cretaceous Los Llanos Formation in Argentina",
+   "quote_sha": "ccf31e9ae6c39d4d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus contains only a single species, L. tamaensis.",
+   "category": "discovery",
+   "chunk_id": "llanosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "It contains a single species, L. tamaensis.",
+   "quote_sha": "bb4f81db3a2328a6"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus was described by Fiorelli et al. in 2016.",
+   "category": "discovery",
+   "chunk_id": "llanosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Fiorelli et al., 2016",
+   "quote_sha": "179e1ef65098baae"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Llanosuchus lived during the Campanian stage, from 83.6 to 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "llanosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Campanian (83.6 to 72.2 million years ago)",
+   "quote_sha": "ad61ec998840c2d9"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Llanosuchus belongs to the parent group Notosuchia.",
+   "category": "classification",
+   "chunk_id": "llanosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Notosuchia",
+   "quote_sha": "9ff4191a8db4e5aa"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Llanosuchus is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "llanosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Only one fossil occurrence of Llanosuchus has been recorded.",
+   "category": "discovery",
+   "chunk_id": "llanosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "llanosuchus:enwiki:2",
+   "statement": "Llanosuchus is an extinct genus of notosuchian mesoeucrocodylian.",
+   "category": "classification",
+   "quote": "Llanosuchus is an extinct genus of notosuchian mesoeucrocodylian",
+   "reason": "statement copies the source wording: 'Llanosuchus is an extinct genus of notosuchian mesoeucrocodylian'"
+  }
+ ]
+}

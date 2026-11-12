@@ -1,0 +1,124 @@
+{
+ "taxon": "Mystiornis",
+ "taxon_key": "mystiornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a65a78830bc451d8",
+ "generated_at": "2026-11-12T01:49:06+00:00",
+ "citations": {
+  "mystiornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Mystiornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Mystiornis?oldid=1379907110",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mystiornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Mystiornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Mystiornis?oldid=1379907110",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mystiornis:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Mystiornis cyrili (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Mystiornis_cyrili?oldid=171871375",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mystiornis:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Mystiornis cyrili (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Mystiornis_cyrili?oldid=171871375",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mystiornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Mystiornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=203294",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The only known fossil of Mystiornis is an isolated metatarsus discovered in the Shestakovo-1 locality in southern Western Siberia.",
+   "category": "discovery",
+   "chunk_id": "mystiornis:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from an isolated metatarsus found in the Shestakovo-1 locality of southern Western Siberia.",
+   "quote_sha": "a267a79df4fa9f41"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Mystiornis was named in 2011 by Evgeny N. Kurochkin, Nikita V. Zelenkov, Alexandr O. Averianov, and Sergei V. Leshchinskiy.",
+   "category": "discovery",
+   "chunk_id": "mystiornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was named by Evgeny N. Kurochkin, Nikita V. Zelenkov, Alexandr O. Averianov and Sergei V. Leshchinskiy in 2011",
+   "quote_sha": "bcdf84078f653c6c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Mystiornis was approximately the size of a thrush.",
+   "category": "description",
+   "chunk_id": "mystiornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was the size of a thrush.",
+   "quote_sha": "36e53c5048eae8d3"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Based on its shortened second metatarsal and the orientation of its trochleae, Mystiornis possessed diving adaptations similar to those of Gansus and Neogaeornis.",
+   "category": "paleobiology",
+   "chunk_id": "mystiornis:enwiki:2",
+   "lang": "en",
+   "quote": "Based on the strongly shortened metatarsal II and orientation of throchleae, Mystiornis had diving adaptations similar to that of Gansus and Neogaeornis.",
+   "quote_sha": "ad3f22d51d7aec96"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Mystiornis belongs to the order Mystiornithiformes.",
+   "category": "classification",
+   "chunk_id": "mystiornis:eswiki:1",
+   "lang": "es",
+   "quote": "ordo: Mystiornithiformes",
+   "quote_sha": "09b57c6b5ed0c6fb"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Mystiornis lived between 121.4 and 113.2 million years ago during the Aptian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "mystiornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (121.4 to 113.2 million years ago)",
+   "quote_sha": "de7ef34eaead7f99"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "mystiornis:enwiki:2",
+   "statement": "Mystiornis lived in what is now western Siberia, Russia, during the early Cretaceous period, specifically the Barremian and Aptian ages.",
+   "category": "time_and_habitat",
+   "quote": "Mystiornis is an extinct genus of bird which existed in what is now western Siberia, Russia during the early Cretaceous period (Barremian/Aptian age).",
+   "reason": "statement copies the source wording: 'in what is now western Siberia Russia during'"
+  },
+  {
+   "chunk_id": "mystiornis:enwiki:2",
+   "statement": "Recent studies tentatively classify Mystiornis as an enantiornithean avisaurid, but a firm classification requires more fossil material due to the unusual features of the existing specimen.",
+   "category": "classification",
+   "quote": "While most recent studies place it as an enantiornithean, specifically an avisaurid, the authors note that the placement in both groups is tentative and further material will be required to make a firm decision on placement due to the unusual features of the existing material.",
+   "reason": "statement copies the source wording: 'due to the unusual features of the existing'"
+  },
+  {
+   "chunk_id": "mystiornis:eswiki:1",
+   "statement": "Mystiornis is classified within the family Mystiornithidae.",
+   "category": "classification",
+   "quote": "Family: Mystiornithidae",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

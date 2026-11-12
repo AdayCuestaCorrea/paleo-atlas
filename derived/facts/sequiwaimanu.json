@@ -1,0 +1,110 @@
+{
+ "taxon": "Sequiwaimanu",
+ "taxon_key": "sequiwaimanu",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f88e02e18e83d981",
+ "generated_at": "2026-11-12T01:55:35+00:00",
+ "citations": {
+  "sequiwaimanu:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Sequiwaimanu (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Sequiwaimanu?oldid=1380012996",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sequiwaimanu:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Sequiwaimanu (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Sequiwaimanu?oldid=1380012996",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sequiwaimanu:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Sequiwaimanu (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Sequiwaimanu?oldid=1380012996",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sequiwaimanu:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Sequiwaimanu (Description)",
+   "url": "https://en.wikipedia.org/wiki/Sequiwaimanu?oldid=1380012996",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sequiwaimanu:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Sequiwaimanu",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=366393",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Sequiwaimanu is an extinct genus of early penguin found in the Waipara Greensand of New Zealand.",
+   "category": "description",
+   "chunk_id": "sequiwaimanu:enwiki:2",
+   "lang": "en",
+   "quote": "Sequiwaimanu (meaning \"to follow Waimanu\") is an extinct genus of early penguin from the Waipara Greensand of New Zealand.",
+   "quote_sha": "d516ebdd3d3ae5aa"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species Sequiwaimanu rosieae was named and described by Gerald Mayr in 2018.",
+   "category": "discovery",
+   "chunk_id": "sequiwaimanu:enwiki:2",
+   "lang": "en",
+   "quote": "The type species, S. rosieae, was named and described by Gerald Mayr in 2018.",
+   "quote_sha": "c8a005689a96394e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The holotype specimen was discovered within the Claremont Estate, which was owned by Richard Goord at the time.",
+   "category": "discovery",
+   "chunk_id": "sequiwaimanu:enwiki:3",
+   "lang": "en",
+   "quote": "The specimen was discovered within Claremont Estate, which was owned by Richard Goord at the time of its discovery.",
+   "quote_sha": "7b3c112ad66f96da"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Sequiwaimanu lived between 61.66 and 56 million years ago during the Selandian to Thanetian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "sequiwaimanu:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Selandian to Thanetian (61.66 to 56 million years ago)",
+   "quote_sha": "9b33d7a925c64627"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Sequiwaimanu belongs to the parent group Sphenisciformes.",
+   "category": "classification",
+   "chunk_id": "sequiwaimanu:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sphenisciformes",
+   "quote_sha": "0f414bdf0e89f099"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Sequiwaimanu possessed leg bones that were similar to those of an unnamed giant penguin.",
+   "category": "paleobiology",
+   "chunk_id": "sequiwaimanu:enwiki:4",
+   "lang": "en",
+   "quote": "Sequiwaimanu had leg bones similar to an unnamed giant penguin.",
+   "quote_sha": "b156b2b3a131772f"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "sequiwaimanu:enwiki:3",
+   "statement": "Sequiwaimanu is the fourth penguin species discovered from the Waipara Greensand in New Zealand.",
+   "category": "discovery",
+   "quote": "Sequiwaimanu is the fourth penguin species to be discovered from the Waipara Greensand in New Zealand.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

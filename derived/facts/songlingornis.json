@@ -1,0 +1,94 @@
+{
+ "taxon": "Songlingornis",
+ "taxon_key": "songlingornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "317ab948ccc31f5a",
+ "generated_at": "2026-11-12T01:36:51+00:00",
+ "citations": {
+  "songlingornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Songlingornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Songlingornis?oldid=1379859984",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "songlingornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Songlingornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Songlingornis?oldid=1379859984",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "songlingornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Songlingornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=197837",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Songlingornis was described by Hou in 1997.",
+   "category": "discovery",
+   "chunk_id": "songlingornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Hou, 1997",
+   "quote_sha": "cfa2d168c61ae952"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Songlingornis have been found in the Jiufotang Formation of Liaoning, China.",
+   "category": "time_and_habitat",
+   "chunk_id": "songlingornis:enwiki:2",
+   "lang": "en",
+   "quote": "Its fossils have been found in the Jiufotang Formation of Liaoning (PRC).",
+   "quote_sha": "a2ecd1b5e1c87101"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The age of the rocks containing Songlingornis fossils is disputed but is likely around 125 to 120 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "songlingornis:enwiki:2",
+   "lang": "en",
+   "quote": "The age of these rocks is somewhat disputed, but probably around the early Aptian, 125-120 million years ago.",
+   "quote_sha": "24e6cf716bb7ee0d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Songlingornis belongs to the parent group Hongshanornithidae.",
+   "category": "classification",
+   "chunk_id": "songlingornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Hongshanornithidae",
+   "quote_sha": "2c7b694a2b93b325"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The time range for Songlingornis is estimated from 121.4 to 113.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "songlingornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (121.4 to 113.2 million years ago)",
+   "quote_sha": "de7ef34eaead7f99"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "songlingornis:enwiki:2",
+   "statement": "Songlingornis is an extinct genus of ornithuromorph dinosaurs.",
+   "category": "classification",
+   "quote": "Songlingornis is an extinct genus of ornithuromorph dinosaurs",
+   "reason": "statement copies the source wording: 'Songlingornis is an extinct genus of ornithuromorph dinosaurs'"
+  },
+  {
+   "chunk_id": "songlingornis:enwiki:2",
+   "statement": "It is sometimes considered to be the same genus as Yanornis, though this is not universally accepted.",
+   "category": "classification",
+   "quote": "It is sometimes considered to be the same genus as Yanornis",
+   "reason": "statement copies the source wording: 'is sometimes considered to be the same genus'"
+  }
+ ]
+}

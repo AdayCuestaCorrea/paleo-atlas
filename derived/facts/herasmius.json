@@ -1,0 +1,112 @@
+{
+ "taxon": "Herasmius",
+ "taxon_key": "herasmius",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3d8dab83533d1967",
+ "generated_at": "2026-11-12T01:12:01+00:00",
+ "citations": {
+  "herasmius:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Herasmius (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Herasmius?oldid=1354885576",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "herasmius:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Herasmius (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Herasmius?oldid=1354885576",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "herasmius:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Herasmius (Description)",
+   "url": "https://en.wikipedia.org/wiki/Herasmius?oldid=1354885576",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "herasmius:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Herasmius",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=421006",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Fossils of Herasmius have been found in freshwater deposits in Norway and Canada.",
+   "category": "time_and_habitat",
+   "chunk_id": "herasmius:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been discovered freshwater deposits in Norway and Canada.",
+   "quote_sha": "191fe3a9165d42c0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species Herasmius granulatus was described in 1966 by Ørvig based on an incomplete skull found in early Eifelian-aged freshwater deposits on Spitsbergen, Norway.",
+   "category": "discovery",
+   "chunk_id": "herasmius:enwiki:3",
+   "lang": "en",
+   "quote": "The type species Herasmius granulatus was discovered in early Eifelian-aged freshwater deposits from the Wood Bay Group on the island of Spitsbergen in the Svalbard archipelago of Norway, and was described in 1966 by Ørvig based on an incomplete skull.",
+   "quote_sha": "9836065bc97591ac"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Herasmius is smaller than the genus Heterosteus and possesses a comparatively broader and shorter skull.",
+   "category": "description",
+   "chunk_id": "herasmius:enwiki:3",
+   "lang": "en",
+   "quote": "Herasmius is smaller than Heterosteus, and also differs by having a comparatively broader, shorter skull.",
+   "quote_sha": "aaad6fd93c94c123"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species Herasmius dayi was described in 2017 by Schultze and Cumbaa from Lower Devonian marine deposits in the Bear Rock Formation, Canada.",
+   "category": "discovery",
+   "chunk_id": "herasmius:enwiki:3",
+   "lang": "en",
+   "quote": "A second species, Herasmius dayi, was described in 2017 by Schultze & Cumbaa, found in Lower Devonian marine deposits of the Bear Rock Formation along the Anderson River of Northwest Territories, Canada.",
+   "quote_sha": "c9183ba4434e34c0"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Herasmius belongs to the parent group Dunkleosteidae.",
+   "category": "classification",
+   "chunk_id": "herasmius:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Dunkleosteidae",
+   "quote_sha": "1b0085712abc9b26"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Herasmius is classified within the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "herasmius:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Herasmius lived during the Eifelian stage, between 393.47 and 390.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "herasmius:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Eifelian to Eifelian (393.47 to 390.5 million years ago)",
+   "quote_sha": "8b2597f883e9eaf4"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "herasmius:enwiki:2",
+   "statement": "Herasmius is an extinct genus of heterosteid placoderm that lived during the Devonian period.",
+   "category": "classification",
+   "quote": "Herasmius is an extinct genus of heterosteid placoderm from the Devonian period.",
+   "reason": "statement copies the source wording: 'Herasmius is an extinct genus of heterosteid placoderm'"
+  }
+ ]
+}

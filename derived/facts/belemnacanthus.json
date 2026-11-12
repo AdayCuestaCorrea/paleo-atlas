@@ -1,0 +1,117 @@
+{
+ "taxon": "Belemnacanthus",
+ "taxon_key": "belemnacanthus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e4dddea70c9ccb4d",
+ "generated_at": "2026-11-12T03:02:30+00:00",
+ "citations": {
+  "belemnacanthus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Belemnacanthus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Belemnacanthus?oldid=1339174989",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "belemnacanthus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Belemnacanthus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Belemnacanthus?oldid=1339174989",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "belemnacanthus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Belemnacanthus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34308",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Belemnacanthus fossils date to the Givetian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "belemnacanthus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Givetian",
+   "quote_sha": "9fc89713dc6ead6b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Belemnacanthus was described by Eastman in 1898.",
+   "category": "discovery",
+   "chunk_id": "belemnacanthus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Eastman, 1898",
+   "quote_sha": "9a857ae8fdff2892"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The species lived during the Middle Devonian in the Eifel region of Germany.",
+   "category": "time_and_habitat",
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "lang": "en",
+   "quote": "from Givetian-aged strata of Middle Devonian Eifel, Germany",
+   "quote_sha": "bfd7d971d031d6e0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Before its correct identification, the fossil was successively described as a spine of an elasmobranch, an agnathan, and an antiarch.",
+   "category": "discovery",
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "lang": "en",
+   "quote": "Before the plate was identified as that of a holonematid, the plate of B. giganteus had been successively described as a tremendous spine of an elasmobranch, an agnathan, and lastly, the plate of an antiarch",
+   "quote_sha": "99f3b82495f6ef6e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Belemnacanthus belongs to the family Holonematidae.",
+   "category": "classification",
+   "chunk_id": "belemnacanthus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Holonematidae",
+   "quote_sha": "2f163f38d79fd99d"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Belemnacanthus is classified within the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "belemnacanthus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "statement": "Belemnacanthus giganteus is a large, extinct, barrel-shaped holonematid arthrodire placoderm.",
+   "category": "discovery",
+   "quote": "Belemnacanthus giganteus is a large, extinct, barrel-shaped holonematid arthrodire placoderm",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "statement": "The species is known only from a 37 cm portion of a median dorsal plate.",
+   "category": "description",
+   "quote": "B. giganteus is known only from the holotype, a 37 cm portion of a median dorsal plate",
+   "reason": "statement copies the source wording: 'a 37 cm portion of a median dorsal'"
+  },
+  {
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "statement": "The fossil features a long, somewhat high, arching crest running down the median line of the dorsal side.",
+   "category": "description",
+   "quote": "with a long, somewhat high, arching crest running down the median line of the exterior/dorsal side of the plate",
+   "reason": "statement copies the source wording: 'a long somewhat high arching crest running down'"
+  },
+  {
+   "chunk_id": "belemnacanthus:enwiki:2",
+   "statement": "The plate has ridges that originate from a point behind the preserved portion of the median dorsal plate.",
+   "category": "description",
+   "quote": "The plate has an ornamentation of ridges that originate from a point posterior to the preserved portion of the median dorsal plate",
+   "reason": "statement copies the source wording: 'the preserved portion of the median dorsal plate'"
+  }
+ ]
+}

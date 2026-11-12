@@ -1,0 +1,139 @@
+{
+ "taxon": "Pinpanetta",
+ "taxon_key": "pinpanetta",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "0440b902a17774fe",
+ "generated_at": "2026-11-12T03:02:46+00:00",
+ "citations": {
+  "pinpanetta:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pinpanetta (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Pinpanetta?oldid=1341564640",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pinpanetta:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pinpanetta (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Pinpanetta?oldid=1341564640",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pinpanetta:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Pinpanetta",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=367887",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Pinpanetta fossils date to the Late Oligocene.",
+   "category": "discovery",
+   "chunk_id": "pinpanetta:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Oligocene,",
+   "quote_sha": "79ab65be6dcf27f6"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Pinpanetta was described by Worthy in 2009.",
+   "category": "discovery",
+   "chunk_id": "pinpanetta:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Worthy, 2009",
+   "quote_sha": "35506f75f9f9ae12"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Pinpanetta is an extinct genus of birds belonging to the duck family.",
+   "category": "description",
+   "chunk_id": "pinpanetta:enwiki:2",
+   "lang": "en",
+   "quote": "Pinpanetta is an extinct genus of birds, in the duck family",
+   "quote_sha": "51ec63039c76073b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Pinpanetta lived in central Australia during the Late Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "pinpanetta:enwiki:2",
+   "lang": "en",
+   "quote": "from the Late Oligocene of central Australia",
+   "quote_sha": "ab2921407118a901"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus name Pinpanetta is derived from Lake Pinpa in the Lake Eyre Basin of north-eastern South Australia.",
+   "category": "discovery",
+   "chunk_id": "pinpanetta:enwiki:2",
+   "lang": "en",
+   "quote": "The genus name comes from Lake Pinpa, in the Lake Eyre Basin of north-eastern South Australia",
+   "quote_sha": "c326a637231341de"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Much of the descriptive fossil material for Pinpanetta comes from the Pinpa Local Fauna.",
+   "category": "discovery",
+   "chunk_id": "pinpanetta:enwiki:2",
+   "lang": "en",
+   "quote": "with reference to the Pinpa Local Fauna from which much of the descriptive fossil material derives",
+   "quote_sha": "f5972f947bd3e34b"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus Pinpanetta includes three species: P. tedfordi, P. vickersrichae, and P. fromensis.",
+   "category": "description",
+   "chunk_id": "pinpanetta:enwiki:2",
+   "lang": "en",
+   "quote": "It comprises three species: P. tedfordi Worthy, 2009 (type species) P. vickersrichae Worthy, 2009 P. fromensis Worthy, 2009",
+   "quote_sha": "0c3c4ed6e34bf433"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Pinpanetta belongs to the subfamily Erismaturinae.",
+   "category": "classification",
+   "chunk_id": "pinpanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Erismaturinae",
+   "quote_sha": "2afc448df67ada4d"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Pinpanetta is classified within the family Anatidae.",
+   "category": "classification",
+   "chunk_id": "pinpanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Anatidae",
+   "quote_sha": "7c71625aa16f5c16"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Pinpanetta lived between 27.3 and 23.04 million years ago during the Chattian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "pinpanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Chattian to Chattian (27.3 to 23.04 million years ago)",
+   "quote_sha": "ce50a1415e106800"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "pinpanetta:enwiki:2",
+   "statement": "The specific part of the genus name refers to the Greek word netta, meaning duck.",
+   "category": "description",
+   "quote": "from the Greek netta (duck)",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "pinpanetta:pbdb:1",
+   "statement": "Pinpanetta is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

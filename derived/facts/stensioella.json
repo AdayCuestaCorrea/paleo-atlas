@@ -1,0 +1,131 @@
+{
+ "taxon": "Stensioella",
+ "taxon_key": "stensioella",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "1fbbfe26b9645d81",
+ "generated_at": "2026-11-12T01:01:49+00:00",
+ "citations": {
+  "stensioella:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Stensioella (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Stensioella?oldid=1288581403",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Stensioella (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Stensioella?oldid=1288581403",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Stensioella (Anatomy)",
+   "url": "https://en.wikipedia.org/wiki/Stensioella?oldid=1288581403",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Stensioella (Taxonomy)",
+   "url": "https://en.wikipedia.org/wiki/Stensioella?oldid=1288581403",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Stensioella heintzi (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Stensioella_heintzi?oldid=171004471",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Stensioella heintzi (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Stensioella_heintzi?oldid=171004471",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "stensioella:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Stensioella",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34251",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Stensioella heintzi is known only from fossils found in the Lower Devonian Hunsrück slate of Germany.",
+   "category": "discovery",
+   "chunk_id": "stensioella:enwiki:2",
+   "lang": "en",
+   "quote": "It is only known from the Lower Devonian Hunsrück slate of Germany.",
+   "quote_sha": "2357c59d785bb3f2"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "It is tentatively classified as one of the most basal placoderms based on shoulder joint similarities.",
+   "category": "classification",
+   "chunk_id": "stensioella:enwiki:4",
+   "lang": "en",
+   "quote": "Stensioella is tentatively placed within Placodermi as being among the most basal of all placoderms",
+   "quote_sha": "3a9fb19355be33c0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Paleontologist Philippe Janvier suggests that Stensioella was a holocephalid rather than a placoderm.",
+   "category": "debate",
+   "chunk_id": "stensioella:enwiki:4",
+   "lang": "en",
+   "quote": "The paleontologist, Philippe Janvier suggests that it was actually a holocephalid, and not a placoderm at all.",
+   "quote_sha": "01abbe0063757248"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "It is often considered a relative of the order Pseudopetalichthyida and a basal placoderm.",
+   "category": "classification",
+   "chunk_id": "stensioella:eswiki:2",
+   "lang": "es",
+   "quote": "Se le suele considerar un pariente del orden Pseudopetalichthyida y se le considera un placodermo basal.",
+   "quote_sha": "80e4dbd19025ae58"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The species is characterized by the presence of teeth in the jaw and branchial spines on the gill arches.",
+   "category": "paleobiology",
+   "chunk_id": "stensioella:eswiki:2",
+   "lang": "es",
+   "quote": "se caracteriza por la presencia de dientes en la mandíbula y branquioespinas en los arcos branquiales.",
+   "quote_sha": "8fa27c9753375f82"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Stensioella lived during the Emsian stage, between 410.62 and 399.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "stensioella:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Emsian to Emsian (410.62 to 399.5 million years ago)",
+   "quote_sha": "9734971ea54ec52d"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "stensioella:enwiki:3",
+   "statement": "The animal had an elongated body, a whip-like tail, and long, wing-like pectoral fins.",
+   "category": "description",
+   "quote": "Stensioella heintzi has an elongated body, a whip-like tail, and long, wing-like pectoral fins.",
+   "reason": "statement copies the source wording: 'an elongated body a whip-like tail and long'"
+  },
+  {
+   "chunk_id": "stensioella:enwiki:3",
+   "statement": "Its armor consisted of a complex mosaic of small, scale-like tubercles rather than large bony plates.",
+   "category": "description",
+   "quote": "Like the sympatric Gemuendina, S. heintzi had armor made up of a complex mosaic of small, scale-like tubercles.",
+   "reason": "statement copies the source wording: 'of a complex mosaic of small scale-like tubercles'"
+  }
+ ]
+}

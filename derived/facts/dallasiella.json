@@ -1,0 +1,123 @@
+{
+ "taxon": "Dallasiella",
+ "taxon_key": "dallasiella",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "7390e946bf3035e9",
+ "generated_at": "2026-11-12T02:07:11+00:00",
+ "citations": {
+  "dallasiella:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Dallasiella (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Dallasiella?oldid=1240512855",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dallasiella:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Dallasiella (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Dallasiella?oldid=1240512855",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dallasiella:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Dallasiella",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=121376",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Dallasiella was described by Cappetta and Case in 1999.",
+   "category": "discovery",
+   "chunk_id": "dallasiella:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Cappetta & Case, 1999",
+   "quote_sha": "7b0b7a62d5f0b233"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus Dallasiella is Dallasiella willistoni.",
+   "category": "classification",
+   "chunk_id": "dallasiella:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: Dallasiella willistoni",
+   "quote_sha": "b151cee012b07558"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Dallasiella contains two valid species: Dallasiella brachyodon and Dallasiella willistoni.",
+   "category": "classification",
+   "chunk_id": "dallasiella:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: Dallasiella brachyodon Siversson, Cederström, & Ryan, 2022 Dallasiella willistoni Cappetta & Case, 1999",
+   "quote_sha": "4b49855b560c42ef"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Dallasiella species have been found in North America and Europe.",
+   "category": "time_and_habitat",
+   "chunk_id": "dallasiella:enwiki:2",
+   "lang": "en",
+   "quote": "It contains two valid species, D. willistoni and D. brachyodon, which have been found in North America and Europe.",
+   "quote_sha": "cf34d17052cd0b24"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Dallasiella is currently classified as Lamniformes incertae sedis, having previously been placed in the families Cretoxyrhinidae and Archaeolamnidae.",
+   "category": "classification",
+   "chunk_id": "dallasiella:enwiki:2",
+   "lang": "en",
+   "quote": "While formerly placed in the families Cretoxyrhinidae and Archaeolamnidae, it is now considered Lamniformes incertae sedis.",
+   "quote_sha": "4eb723e6ec18ff85"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Dallasiella lived during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "dallasiella:enwiki:2",
+   "lang": "en",
+   "quote": "Dallasiella is an extinct genus of mackerel sharks that lived during the Late Cretaceous.",
+   "quote_sha": "ee2fd588b858fb32"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Dallasiella lived from the Albian to the Campanian stages, between 113.2 and 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "dallasiella:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Albian to Campanian (113.2 to 72.2 million years ago)",
+   "quote_sha": "70ae1ca9e5800dcf"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Dallasiella belongs to the parent group Lamniformes.",
+   "category": "classification",
+   "chunk_id": "dallasiella:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Lamniformes",
+   "quote_sha": "ce400200caee22b4"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Dallasiella is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "dallasiella:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "dallasiella:enwiki:2",
+   "statement": "Dallasiella is an extinct genus of mackerel sharks.",
+   "category": "description",
+   "quote": "Dallasiella is an extinct genus of mackerel sharks",
+   "reason": "statement copies the source wording: 'Dallasiella is an extinct genus of mackerel sharks'"
+  }
+ ]
+}

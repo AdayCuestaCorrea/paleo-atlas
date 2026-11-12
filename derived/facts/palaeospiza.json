@@ -1,0 +1,69 @@
+{
+ "taxon": "Palaeospiza",
+ "taxon_key": "palaeospiza",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2a370a003a7d9caf",
+ "generated_at": "2026-11-12T03:10:55+00:00",
+ "citations": {
+  "palaeospiza:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Palaeospiza (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Palaeospiza?oldid=1354918512",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeospiza:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Palaeospiza (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Palaeospiza?oldid=1354918512",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeospiza:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Palaeospiza",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=191373",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Palaeospiza was described by Allen in 1878.",
+   "category": "discovery",
+   "chunk_id": "palaeospiza:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Allen, 1878",
+   "quote_sha": "a5274585bc001361"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Palaeospiza bella lived in what is now Colorado during the Eocene and Oligocene epochs.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeospiza:enwiki:2",
+   "lang": "en",
+   "quote": "Palaeospiza bella lived in what is now Colorado in the Eocene and Oligocene.",
+   "quote_sha": "84cdf13d6f92385e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Palaeospiza existed from 37.71 to 33.9 million years ago during the Priabonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeospiza:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Priabonian (37.71 to 33.9 million years ago)",
+   "quote_sha": "b818740c208466cf"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "palaeospiza:enwiki:2",
+   "statement": "Palaeospiza bella was originally classified as a passerine but is now placed in the order Coliiformes.",
+   "category": "classification",
+   "quote": "Palaeospiza bella is a bird which was originally considered a passerine but is now included in the Coliiformes.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

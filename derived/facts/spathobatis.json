@@ -1,0 +1,112 @@
+{
+ "taxon": "Spathobatis",
+ "taxon_key": "spathobatis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e443dde835d145d9",
+ "generated_at": "2026-11-12T01:51:15+00:00",
+ "citations": {
+  "spathobatis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Spathobatis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Spathobatis?oldid=1362796801",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "spathobatis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Spathobatis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Spathobatis?oldid=1362796801",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "spathobatis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Spathobatis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34713",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Spathobatis was described by Thiollière in 1848.",
+   "category": "discovery",
+   "chunk_id": "spathobatis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Thiollière 1848",
+   "quote_sha": "7dbc75e7fc52406d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Spathobatis is an extinct genus of rays from the Jurassic period of Europe.",
+   "category": "time_and_habitat",
+   "chunk_id": "spathobatis:enwiki:2",
+   "lang": "en",
+   "quote": "Spathobatis (from , 'blade' and 'ray') is an extinct genus of rays in the family Asterodermidae from the Jurassic period of Europe.",
+   "quote_sha": "f03944235d4caf92"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Spathobatis had eyes and spiracles on top of its head, a mouth and gill slits on its underside, and greatly expanded pectoral fins for swimming.",
+   "category": "description",
+   "chunk_id": "spathobatis:enwiki:2",
+   "lang": "en",
+   "quote": "Like them, its eyes and spiracles were located atop the head, its mouth and gill slits were positioned on the underside of the body, and it had greatly expanded pectoral fins for swimming.",
+   "quote_sha": "ccacc1ca78be96ec"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus Spathobatis is classified in the family Rhinobatidae.",
+   "category": "classification",
+   "chunk_id": "spathobatis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Rhinobatidae",
+   "quote_sha": "4f5d3cf6bb638f73"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Spathobatis belongs to the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "spathobatis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Spathobatis lived from the Aalenian to the Albian stages, between 174.7 and 106.3 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "spathobatis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aalenian to Albian (174.7 to 106.3 million years ago)",
+   "quote_sha": "6043bff4331d9696"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "There are 22 recorded fossil occurrences of Spathobatis.",
+   "category": "discovery",
+   "chunk_id": "spathobatis:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 22",
+   "quote_sha": "b6a61af16eb3f139"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "spathobatis:enwiki:2",
+   "statement": "Spathobatis had a body similar to a modern guitarfish, being highly flattened and widened for a life on the ocean floor.",
+   "category": "description",
+   "quote": "Spathobatis had a body similar to that of a modern guitarfish, being highly flattened and widened, adapting the creature for a life on the ocean floor.",
+   "reason": "statement copies the source wording: 'a modern guitarfish being highly flattened and widened'"
+  },
+  {
+   "chunk_id": "spathobatis:enwiki:2",
+   "statement": "Spathobatis had flattened teeth suitable for eating shellfish and an elongated snout used to probe for food on the muddy sea floor.",
+   "category": "paleobiology",
+   "quote": "Distinctive features of Spathobatis included flattened teeth, suitable for eating shellfish, and an elongated snout that was presumably used to probe for food on the muddy sea floor.",
+   "reason": "statement copies the source wording: 'flattened teeth suitable for eating shellfish and an'"
+  }
+ ]
+}

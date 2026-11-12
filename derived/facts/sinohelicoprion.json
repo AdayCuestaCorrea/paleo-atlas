@@ -1,0 +1,96 @@
+{
+ "taxon": "Sinohelicoprion",
+ "taxon_key": "sinohelicoprion",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "8ba7a68f7498365d",
+ "generated_at": "2026-11-12T02:31:53+00:00",
+ "citations": {
+  "sinohelicoprion:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Sinohelicoprion (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Sinohelicoprion?oldid=1306624464",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sinohelicoprion:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Sinohelicoprion (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Sinohelicoprion?oldid=1306624464",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sinohelicoprion:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Sinohelicoprion",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=205377",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Sinohelicoprion is an extinct genus of eugeneodontid fish known as the \"Chinese spiral saw\".",
+   "category": "description",
+   "chunk_id": "sinohelicoprion:enwiki:2",
+   "lang": "en",
+   "quote": "Sinohelicoprion (meaning \"Chinese spiral saw\" or \"Chinese Helicoprion\") is an extinct genus of eugeneodontid fish",
+   "quote_sha": "6308fc883718ac97"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "H. T. Liu and M. N. Chang first named and classified the genus in 1963.",
+   "category": "discovery",
+   "chunk_id": "sinohelicoprion:enwiki:2",
+   "lang": "en",
+   "quote": "It was first named and classified by H. T. Liu and M. N. Chang in 1963.",
+   "quote_sha": "ffa1c6e1a79992c1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus belongs to the parent group Helicampodontidae.",
+   "category": "classification",
+   "chunk_id": "sinohelicoprion:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Helicampodontidae",
+   "quote_sha": "24dab612019496f6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Sinohelicoprion is classified within the family Helicampodontidae.",
+   "category": "classification",
+   "chunk_id": "sinohelicoprion:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Helicampodontidae",
+   "quote_sha": "452eccfee846b1f8"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The animal is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "sinohelicoprion:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Fossil evidence places the animal's time range strictly within the Changhsingian stage, from 254.14 to 251.902 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinohelicoprion:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Changhsingian to Changhsingian (254.14 to 251.902 million years ago)",
+   "quote_sha": "f36ed267dfce2741"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "sinohelicoprion:enwiki:2",
+   "statement": "The animal lived from 254 to 251 million years ago, spanning the late Permian and possibly the Early Triassic.",
+   "category": "time_and_habitat",
+   "quote": "It lived during the late Permian and possibly the Early Triassic, from 254 to 251 million years ago.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

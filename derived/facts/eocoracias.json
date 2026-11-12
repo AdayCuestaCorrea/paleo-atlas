@@ -1,0 +1,130 @@
+{
+ "taxon": "Eocoracias",
+ "taxon_key": "eocoracias",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "746fe5c69e947d71",
+ "generated_at": "2026-11-12T01:30:17+00:00",
+ "citations": {
+  "eocoracias:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Eocoracias (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Eocoracias?oldid=1380012842",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eocoracias:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Eocoracias (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Eocoracias?oldid=1380012842",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eocoracias:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Eocoracias",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=135348",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The extinct animal belongs to the genus Eocoracias.",
+   "category": "classification",
+   "chunk_id": "eocoracias:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Eocoracias",
+   "quote_sha": "6d1a61459ef23514"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species within this genus is Eocoracias brachyptera.",
+   "category": "classification",
+   "chunk_id": "eocoracias:enwiki:1",
+   "lang": "en",
+   "quote": "species: brachyptera",
+   "quote_sha": "be4b4dcbc636fb34"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus was described by Mayr and Mourer-Chauviré in 2000.",
+   "category": "classification",
+   "chunk_id": "eocoracias:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Mayr & Mourer-Chauviré, 2000",
+   "quote_sha": "601996dd079ea2b7"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Eocoracias is classified within the parent group Coracii.",
+   "category": "classification",
+   "chunk_id": "eocoracias:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Coracii",
+   "quote_sha": "b19973092f4bd048"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Eocoracias brachyptera lived approximately 47 million years ago during the Lutetian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "eocoracias:enwiki:2",
+   "lang": "en",
+   "quote": "It contains one species, Eocoracias brachyptera, and it lived approximately 47 million years ago (Lutetian stage) based on dating of the fossil site.",
+   "quote_sha": "d838f90ffdff9ac6"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus existed between 48.07 and 41.03 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "eocoracias:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Lutetian to Lutetian (48.07 to 41.03 million years ago)",
+   "quote_sha": "e35d7f5a585cb620"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Fossils of Eocoracias have been discovered at the Messel Pit in Germany.",
+   "category": "discovery",
+   "chunk_id": "eocoracias:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been found at the Messel Pit in Germany.",
+   "quote_sha": "8e1cfa0e63db18db"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "A specimen of Eocoracias is notable for preserving non-iridescent structural coloration on its feathers, a feature previously unknown in fossil birds.",
+   "category": "curiosities",
+   "chunk_id": "eocoracias:enwiki:2",
+   "lang": "en",
+   "quote": "It is known for a specimen having preserved non-iridescent structural coloration on its feathers, previously unknown in fossil birds.",
+   "quote_sha": "0df423d3f5691ba4"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "There are two recorded fossil occurrences of Eocoracias.",
+   "category": "discovery",
+   "chunk_id": "eocoracias:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 2",
+   "quote_sha": "2a7bb9b953123d90"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "eocoracias:pbdb:1",
+   "statement": "This animal is classified as a bird (Class Aves).",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  },
+  {
+   "chunk_id": "eocoracias:enwiki:2",
+   "statement": "Eocoracias is an extinct bird related to modern rollers and other Coraciiformes like kingfishers and bee-eaters.",
+   "category": "description",
+   "quote": "Eocoracias is an extinct genus of bird related to modern rollers and other Coraciiformes such as kingfishers, bee-eaters, motmots, and todies.",
+   "reason": "statement copies the source wording: 'bird related to modern rollers and other Coraciiformes'"
+  }
+ ]
+}

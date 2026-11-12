@@ -1,0 +1,105 @@
+{
+ "taxon": "Vectisuchus",
+ "taxon_key": "vectisuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "92a4462228bc927d",
+ "generated_at": "2026-11-12T02:33:15+00:00",
+ "citations": {
+  "vectisuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Vectisuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Vectisuchus?oldid=1355411822",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "vectisuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Vectisuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Vectisuchus?oldid=1355411822",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "vectisuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Vectisuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38369",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Vectisuchus is a genus of pholidosaurid mesoeucrocodylian.",
+   "category": "description",
+   "chunk_id": "vectisuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Vectisuchus is a genus of pholidosaurid mesoeucrocodylian",
+   "quote_sha": "cb3c7c709faecfd5"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Vectisuchus fossils are known from the Early Cretaceous-age Wealden Group of the Isle of Wight, England.",
+   "category": "time_and_habitat",
+   "chunk_id": "vectisuchus:enwiki:2",
+   "lang": "en",
+   "quote": "known from the Early Cretaceous-age Wealden Group of the Isle of Wight, England",
+   "quote_sha": "ea8c581c50fe6c26"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The type specimen, SMNS 50984, was found in 1977.",
+   "category": "discovery",
+   "chunk_id": "vectisuchus:enwiki:2",
+   "lang": "en",
+   "quote": "The type specimen, SMNS 50984, was found in 1977",
+   "quote_sha": "90e1c863cb5ba839"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Vectisuchus was described in 1980.",
+   "category": "discovery",
+   "chunk_id": "vectisuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Vectisuchus was described in 1980",
+   "quote_sha": "6a4fce77e00c0401"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The type species is V. leptognathus.",
+   "category": "classification",
+   "chunk_id": "vectisuchus:enwiki:2",
+   "lang": "en",
+   "quote": "The type species is V. leptognathus",
+   "quote_sha": "276eaaa71fa9fbf5"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Vectisuchus belongs to the parent group Dyrosauroidea.",
+   "category": "classification",
+   "chunk_id": "vectisuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Dyrosauroidea",
+   "quote_sha": "8e69efb983e8c5ca"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Vectisuchus lived during the Barremian to Aptian stages, from 125.77 to 119.57 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "vectisuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Barremian to Aptian (125.77 to 119.57 million years ago)",
+   "quote_sha": "1c1b021434f72d55"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "vectisuchus:enwiki:2",
+   "statement": "Vectisuchus was a small, fish-eating crocodylomorph with a narrow, elongate snout and relatively long forearms.",
+   "category": "description",
+   "quote": "It was a small, piscivorous crocodylomorph with a narrow, elongate snout, and relatively long forearms",
+   "reason": "statement copies the source wording: 'crocodylomorph with a narrow elongate snout and relatively'"
+  }
+ ]
+}

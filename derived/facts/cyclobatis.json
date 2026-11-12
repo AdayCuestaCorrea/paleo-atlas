@@ -1,0 +1,123 @@
+{
+ "taxon": "Cyclobatis",
+ "taxon_key": "cyclobatis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "26a628b8f474b4de",
+ "generated_at": "2026-11-12T01:52:35+00:00",
+ "citations": {
+  "cyclobatis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Cyclobatis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Cyclobatis?oldid=1362674848",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cyclobatis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Cyclobatis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Cyclobatis?oldid=1362674848",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cyclobatis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Cyclobatis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34682",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Cyclobatis was described by Egerton in 1844.",
+   "category": "classification",
+   "chunk_id": "cyclobatis:enwiki:1",
+   "lang": "en",
+   "quote": "genus_authority: Egerton, 1844",
+   "quote_sha": "26b83f6b2193dc4e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Cyclobatis belongs to the extinct family Cyclobatidae.",
+   "category": "classification",
+   "chunk_id": "cyclobatis:enwiki:1",
+   "lang": "en",
+   "quote": "familia: †Cyclobatidae",
+   "quote_sha": "85d8b4d73c52e381"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Three species are recognized within the genus: Cyclobatis longicanudatus, Cyclobatis major, and Cyclobatis oligodactylus.",
+   "category": "classification",
+   "chunk_id": "cyclobatis:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: *Cyclobatis longicanudatus Cyclobatis major Cyclobatis oligodactylus",
+   "quote_sha": "efdb20006f3915b6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus is characterized by a circular body shape.",
+   "category": "description",
+   "chunk_id": "cyclobatis:enwiki:2",
+   "lang": "en",
+   "quote": "The genus is typified by a circular form.",
+   "quote_sha": "aa5fa5c5fef1cd40"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Cyclobatis had a very short tail equipped with a venomous stinger.",
+   "category": "description",
+   "chunk_id": "cyclobatis:enwiki:2",
+   "lang": "en",
+   "quote": "This fish had a very short tail, fitted with a venomous stinger.",
+   "quote_sha": "1ec3e44fb7e5acfd"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Cyclobatis major could grow to a length of about 25 cm.",
+   "category": "description",
+   "chunk_id": "cyclobatis:enwiki:2",
+   "lang": "en",
+   "quote": "Cyclobatis major can reach a length of about 25 cm",
+   "quote_sha": "f2f5444e9568cfd1"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Cyclobatis oligodactylus reached a length of around 15 cm.",
+   "category": "description",
+   "chunk_id": "cyclobatis:enwiki:2",
+   "lang": "en",
+   "quote": "Cyclobatis oligodactylus around 15 cm",
+   "quote_sha": "2c036c3802a96eb6"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Cyclobatis lived in warm, shallow seas during its lifetime.",
+   "category": "time_and_habitat",
+   "chunk_id": "cyclobatis:enwiki:2",
+   "lang": "en",
+   "quote": "In life the environment of this creature was a warm shallow sea.",
+   "quote_sha": "e344b47c5ff4fc4d"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Cyclobatis lived between 100.5 and 93.9 million years ago during the Cenomanian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "cyclobatis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Cenomanian (100.5 to 93.9 million years ago)",
+   "quote_sha": "ff16862b0c6874e7"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "cyclobatis:enwiki:2",
+   "statement": "Cyclobatis is an extinct genus of stingray-like skate found in the Upper Cretaceous of modern-day Lebanon.",
+   "category": "description",
+   "quote": "Cyclobatis is an extinct genus of stingray-like skate from the Upper Cretaceous of what is now Lebanon.",
+   "reason": "statement copies the source wording: 'Cyclobatis is an extinct genus of stingray-like skate'"
+  }
+ ]
+}

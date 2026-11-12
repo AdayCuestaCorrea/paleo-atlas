@@ -1,0 +1,94 @@
+{
+ "taxon": "Helonetta",
+ "taxon_key": "helonetta",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "d933437b9b92ca64",
+ "generated_at": "2026-11-12T03:26:27+00:00",
+ "citations": {
+  "helonetta:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Helonetta (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Helonetta?oldid=1322428955",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "helonetta:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Helonetta (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Helonetta?oldid=1322428955",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "helonetta:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Helonetta (Distribution)",
+   "url": "https://en.wikipedia.org/wiki/Helonetta?oldid=1322428955",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "helonetta:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Helonetta",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=289983",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Helonetta brodkorpi was described by Emslie in 1992.",
+   "category": "classification",
+   "chunk_id": "helonetta:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Helonetta\nspecies: brodkorpi\nauthority: Emslie, 1992",
+   "quote_sha": "4d23401abb3c4caf"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Helonetta lived during the Late Pliocene.",
+   "category": "classification",
+   "chunk_id": "helonetta:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Pliocene",
+   "quote_sha": "50d1693ac88aba2d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Helonetta brodkorpi is known from the Tamiami Formation of Florida.",
+   "category": "time_and_habitat",
+   "chunk_id": "helonetta:enwiki:3",
+   "lang": "en",
+   "quote": "Helonetta brodkorpi is known from the Tamiami Formation of Florida.",
+   "quote_sha": "4bf8c62de5e692f8"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Helonetta belongs to the subfamily Anatinae, the family Anatidae, and the class Aves.",
+   "category": "classification",
+   "chunk_id": "helonetta:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Anatinae\nFamily: Anatidae\nClass: Aves",
+   "quote_sha": "bb52062ac8cd45e0"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Helonetta lived from 4.7 to 1.4 million years ago, spanning the Zanclean to Calabrian ages.",
+   "category": "time_and_habitat",
+   "chunk_id": "helonetta:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Zanclean to Calabrian (4.7 to 1.4 million years ago)",
+   "quote_sha": "230ed169413df024"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "helonetta:enwiki:2",
+   "statement": "Helonetta is an extinct genus of anatid that lived during the Piacenzian stage of the Pliocene epoch.",
+   "category": "classification",
+   "quote": "Helonetta is an extinct genus of anatid that lived during the Piacenzian stage of the Pliocene epoch.",
+   "reason": "statement copies the source wording: 'is an extinct genus of anatid that lived'"
+  }
+ ]
+}

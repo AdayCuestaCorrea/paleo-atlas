@@ -1,0 +1,129 @@
+{
+ "taxon": "Pengornis",
+ "taxon_key": "pengornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "851e2ded16c007d3",
+ "generated_at": "2026-11-12T01:39:05+00:00",
+ "citations": {
+  "pengornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pengornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Pengornis?oldid=1380751749",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pengornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pengornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Pengornis?oldid=1380751749",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pengornis:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pengornis houi (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Pengornis_houi?oldid=171878896",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pengornis:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pengornis houi (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Pengornis_houi?oldid=171878896",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pengornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Pengornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=166965",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The holotype specimen of Pengornis has the accession number IVPP V15336.",
+   "category": "discovery",
+   "chunk_id": "pengornis:enwiki:2",
+   "lang": "en",
+   "quote": "Its accession number is IVPP V15336.",
+   "quote_sha": "a2513d41c2ef5045"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Pengornis fossils were collected from the Jiufotang Formation at Dapingfang, Chaoyang, Liaoning, China.",
+   "category": "time_and_habitat",
+   "chunk_id": "pengornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was collected from the Jiufotang Formation, at Dapingfang, Chaoyang, Liaoning China.",
+   "quote_sha": "afee3fc4dcbdb3a6"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A second, juvenile specimen of Pengornis (IVPP V18632) was described by Hu, Zhou, and O'Connor in 2014.",
+   "category": "discovery",
+   "chunk_id": "pengornis:enwiki:2",
+   "lang": "en",
+   "quote": "A second, juvenile specimen, IVPP V18632, was described by Hu, Zhou, and O'Connor in 2014.",
+   "quote_sha": "ef7ddb768645ca80"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Pengornis is classified within the family Pengornithidae.",
+   "category": "classification",
+   "chunk_id": "pengornis:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Pengornithidae",
+   "quote_sha": "41674569cbf2e65e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Pengornis lived during the Aptian stage, between 121.4 and 113.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "pengornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (121.4 to 113.2 million years ago)",
+   "quote_sha": "de7ef34eaead7f99"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "pengornis:enwiki:2",
+   "statement": "Pengornis is the largest known enantiornithean bird from the Early Cretaceous of northeast China.",
+   "category": "curiosities",
+   "quote": "Pengornis is the largest known enantiornithean bird from the Early Cretaceous of northeast China.",
+   "reason": "statement copies the source wording: 'Pengornis is the largest known enantiornithean bird from'"
+  },
+  {
+   "chunk_id": "pengornis:enwiki:2",
+   "statement": "Pengornis was originally known from a single adult fossil described by Zhou et al. in 2008.",
+   "category": "discovery",
+   "quote": "Pengornis was originally known from a single adult fossil, described by Zhou et al. in 2008.",
+   "reason": "statement copies the source wording: 'Pengornis was originally known from a single adult'"
+  },
+  {
+   "chunk_id": "pengornis:enwiki:2",
+   "statement": "In 2015, the juvenile specimen IVPP V18632 was reclassified as Parapengornis.",
+   "category": "discovery",
+   "quote": "In 2015 this was referred to Parapengornis.",
+   "reason": "numbers not in the quote: ['18632']"
+  },
+  {
+   "chunk_id": "pengornis:enwiki:2",
+   "statement": "Pengornis possesses characters of the humeral head, acromion, and anterior cervical vertebrae that were previously known only in Ornithurae.",
+   "category": "description",
+   "quote": "Pengornis shows characters of the humeral head, acromion, and anterior cervical vertebrae, that were previously known only in members of the Ornithurae.",
+   "reason": "statement copies the source wording: 'characters of the humeral head acromion and anterior'"
+  },
+  {
+   "chunk_id": "pengornis:enwiki:2",
+   "statement": "Pengornis supports the hypothesis that Enantiornithes and Ornithurae may not be distinct clades.",
+   "category": "debate",
+   "quote": "Thus, Pengornis supports the possibility that Enantiornithes and Ornithurae may not be distinct clades.",
+   "reason": "statement copies the source wording: 'Enantiornithes and Ornithurae may not be distinct clades'"
+  }
+ ]
+}

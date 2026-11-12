@@ -1,0 +1,142 @@
+{
+ "taxon": "Cryptopsar",
+ "taxon_key": "cryptopsar",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "881c90f9d9151141",
+ "generated_at": "2026-11-12T02:22:02+00:00",
+ "citations": {
+  "cryptopsar:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Mauritius starling (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Mauritius_starling?oldid=1379873284",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cryptopsar:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Mauritius starling (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Mauritius_starling?oldid=1379873284",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cryptopsar:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Cryptopsar ischyrhynchus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Cryptopsar_ischyrhynchus?oldid=173126388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cryptopsar:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Cryptopsar ischyrhynchus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Cryptopsar_ischyrhynchus?oldid=173126388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cryptopsar:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Cryptopsar",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=371809",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species was formally described in 2014 by Julian P. Hume.",
+   "category": "discovery",
+   "chunk_id": "cryptopsar:enwiki:2",
+   "lang": "en",
+   "quote": "described in 2014 by Julian P. Hume",
+   "quote_sha": "f055dcf0aba9c90d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The Mauritius starling is an extinct species of starling.",
+   "category": "description",
+   "chunk_id": "cryptopsar:enwiki:2",
+   "lang": "en",
+   "quote": "The Mauritius starling (Cryptopsar ischyrhynchus) is an extinct species of starling",
+   "quote_sha": "6f50a43455c210c1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The fossil range of the species is the Holocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "cryptopsar:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Holocene",
+   "quote_sha": "4d8901013935e872"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The former range of the species was the island of Mauritius.",
+   "category": "time_and_habitat",
+   "chunk_id": "cryptopsar:enwiki:1",
+   "lang": "en",
+   "quote": "range_map: Mauritius island location.svg",
+   "quote_sha": "e874782a52f014fd"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The species belongs to the family Sturnidae.",
+   "category": "classification",
+   "chunk_id": "cryptopsar:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Sturnidae",
+   "quote_sha": "ef18db0c6a06e8ef"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus Cryptopsar was established by Hume in 2014.",
+   "category": "classification",
+   "chunk_id": "cryptopsar:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Hume, 2014",
+   "quote_sha": "2b9e7a0b822f6271"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus Cryptopsar is a parent group within the family Sturnidae.",
+   "category": "classification",
+   "chunk_id": "cryptopsar:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sturnidae",
+   "quote_sha": "36a2c1e328382f1c"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for the genus Cryptopsar is from 0.0117 to 0 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "cryptopsar:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Holocene to Holocene (0.0117 to 0 million years ago)",
+   "quote_sha": "f56ba1fbcf339319"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "cryptopsar:enwiki:2",
+   "statement": "The holotype mandible of the Mauritius starling was discovered in 1904 but remained hidden in a museum drawer for over a century.",
+   "category": "discovery",
+   "quote": "The holotype mandible was discovered in 1904, but was hidden in a museum drawer for over a hundred years",
+   "reason": "statement copies the source wording: 'hidden in a museum drawer for over a'"
+  },
+  {
+   "chunk_id": "cryptopsar:enwiki:2",
+   "statement": "The genus name Cryptopsar means 'hidden starling'.",
+   "category": "description",
+   "quote": "The genus name... means 'hidden starling'",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "cryptopsar:enwiki:2",
+   "statement": "The Mauritius starling is more closely related to the Rodrigues starling than to the hoopoe starling of Réunion.",
+   "category": "paleobiology",
+   "quote": "The Mauritius starling was shown to be closer to the Rodrigues starling than to the hoopoe starling of Réunion",
+   "reason": "statement copies the source wording: 'the Rodrigues starling than to the hoopoe starling'"
+  }
+ ]
+}

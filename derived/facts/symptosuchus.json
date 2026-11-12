@@ -1,0 +1,105 @@
+{
+ "taxon": "Symptosuchus",
+ "taxon_key": "symptosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "6e3d7570fe43172d",
+ "generated_at": "2026-11-12T02:50:43+00:00",
+ "citations": {
+  "symptosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Symptosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Symptosuchus?oldid=1041916021",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "symptosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Symptosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Symptosuchus?oldid=1041916021",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "symptosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Symptosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38368",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Symptosuchus fossils date to the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "symptosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Cretaceous",
+   "quote_sha": "c566fe2e04c759dc"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Symptosuchus was found in Argentina during the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "symptosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Late Cretaceous of Argentina.",
+   "quote_sha": "7a85afe641c4bf8f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Argentine paleontologist Florentino Ameghino named the genus Symptosuchus and its type species S. contortidens in 1899.",
+   "category": "discovery",
+   "chunk_id": "symptosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Argentine paleontologist Florentino Ameghino named the genus in 1899, along with the type species S. contortidens.",
+   "quote_sha": "d60b763b8b1a1db1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus Symptosuchus was formally described by Carlos Rusconi in 1934.",
+   "category": "discovery",
+   "chunk_id": "symptosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "It was formally described by Carlos Rusconi in 1934.",
+   "quote_sha": "2c44b80a48a50105"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Symptosuchus belongs to the parent group Goniopholididae.",
+   "category": "classification",
+   "chunk_id": "symptosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Goniopholididae",
+   "quote_sha": "e648185ee78612a9"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Symptosuchus is classified in the family Goniopholididae.",
+   "category": "classification",
+   "chunk_id": "symptosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Goniopholididae",
+   "quote_sha": "e27b8b91d261f628"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Symptosuchus is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "symptosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "symptosuchus:enwiki:2",
+   "statement": "Symptosuchus is an extinct genus of goniopholidid mesoeucrocodylian.",
+   "category": "description",
+   "quote": "Symptosuchus is an extinct genus of goniopholidid mesoeucrocodylian.",
+   "reason": "statement copies the source wording: 'Symptosuchus is an extinct genus of goniopholidid mesoeucrocodylian'"
+  }
+ ]
+}

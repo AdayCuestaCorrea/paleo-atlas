@@ -1,0 +1,96 @@
+{
+ "taxon": "Apocopodon",
+ "taxon_key": "apocopodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c8f2feb7a79a18ce",
+ "generated_at": "2026-11-12T03:01:35+00:00",
+ "citations": {
+  "apocopodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Apocopodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Apocopodon?oldid=1345465696",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "apocopodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Apocopodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Apocopodon?oldid=1345465696",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "apocopodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Apocopodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34723",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Apocopodon was first described from fossils found in the Danian-aged Marina Farinha Formation in Brazil.",
+   "category": "discovery",
+   "chunk_id": "apocopodon:enwiki:2",
+   "lang": "en",
+   "quote": "It was originally described from the Danian-aged Marina Farinha Formation of the Paraíba Basin of Brazil.",
+   "quote_sha": "573178efbf77f0a0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Apocopodon were recently reported in Kingstree, South Carolina, from the lower Paleocene Rhems Formation, expanding its known geographic range.",
+   "category": "discovery",
+   "chunk_id": "apocopodon:enwiki:2",
+   "lang": "en",
+   "quote": "Recently, the genus was reported in Kingstree, South Carolina probably derived from the lower paleocene-aged Rhems Formation, significantly extending the geographic range of the genus.",
+   "quote_sha": "f6b29d57eb4b9e91"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Apocopodon contains only one known species, A. sericeus.",
+   "category": "classification",
+   "chunk_id": "apocopodon:enwiki:2",
+   "lang": "en",
+   "quote": "It contains a single species A. sericeus.",
+   "quote_sha": "9511da32cdb2a937"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Apocopodon belongs to the family Myliobatidae.",
+   "category": "classification",
+   "chunk_id": "apocopodon:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Myliobatidae",
+   "quote_sha": "94b186db8c0701aa"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Apocopodon is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "apocopodon:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The time range for Apocopodon is listed as the Cenomanian to Maastrichtian, from 100.5 to 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "apocopodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Maastrichtian (100.5 to 66 million years ago)",
+   "quote_sha": "2e2cb06c500a2b7b"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "apocopodon:enwiki:2",
+   "statement": "Apocopodon is an extinct genus of eagle ray that lived during the Paleocene epoch.",
+   "category": "classification",
+   "quote": "Apocopodon is an extinct genus of eagle ray from the Paleocene epoch of the Paleogene period.",
+   "reason": "statement copies the source wording: 'Apocopodon is an extinct genus of eagle ray'"
+  }
+ ]
+}

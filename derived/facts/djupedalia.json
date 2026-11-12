@@ -1,0 +1,119 @@
+{
+ "taxon": "Djupedalia",
+ "taxon_key": "djupedalia",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f2feec989dcb8064",
+ "generated_at": "2026-11-12T01:09:42+00:00",
+ "citations": {
+  "djupedalia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Djupedalia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Djupedalia?oldid=1283156386",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "djupedalia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Djupedalia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Djupedalia?oldid=1283156386",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "djupedalia:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Djupedalia (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Djupedalia?oldid=157038679",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "djupedalia:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Djupedalia (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Djupedalia?oldid=157038679",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "djupedalia:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Djupedalia",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=248878",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus was named after Øystein Djupedal, a former Norwegian minister who funded the excavation with 1.2 million kroner.",
+   "category": "discovery",
+   "chunk_id": "djupedalia:enwiki:2",
+   "lang": "en",
+   "quote": "It is named after Øystein Djupedal, the former Minister of Education and Research who helped fund the fossil excavation with a budget of 1.2 million Norwegian kroner.",
+   "quote_sha": "48a181f4cb61ece8"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils were discovered in 2009 in Spitsbergen within the Agardhfjellet Formation.",
+   "category": "discovery",
+   "chunk_id": "djupedalia:eswiki:2",
+   "lang": "es",
+   "quote": "Sus restos fósiles aparecieron en 2009 en Spitsbergen, en la Formación Agardhfjellet",
+   "quote_sha": "86d63297a0e51769"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The fossils are dated to the middle Volgian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "djupedalia:eswiki:2",
+   "lang": "es",
+   "quote": "y se ha datado en el Volgiano medio.",
+   "quote_sha": "7ff03554e2f13e2c"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The holotype specimen, PMO 216.839, is a partially preserved juvenile plesiosaur.",
+   "category": "discovery",
+   "chunk_id": "djupedalia:eswiki:2",
+   "lang": "es",
+   "quote": "El espécimen holotipo (PMO 216.839) pertenece a un plesiosaurio juvenil conservado parcialmente.",
+   "quote_sha": "f5cef44c6872dbac"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The animal lived in the uppermost Jurassic in central Spitsbergen, Norway.",
+   "category": "time_and_habitat",
+   "chunk_id": "djupedalia:enwiki:2",
+   "lang": "en",
+   "quote": "Djupedalia is an extinct genus of cryptoclidid plesiosauroid plesiosaur known from the uppermost Jurassic of central Spitsbergen, Norway.",
+   "quote_sha": "26124a1184eeea42"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Djupedalia belongs to the family Cryptoclididae.",
+   "category": "classification",
+   "chunk_id": "djupedalia:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cryptoclididae",
+   "quote_sha": "05b527355c6ea020"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus lived between 149.2 and 143.1 million years ago during the Tithonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "djupedalia:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tithonian to Tithonian (149.2 to 143.1 million years ago)",
+   "quote_sha": "8a1a606590fb19e3"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "djupedalia:enwiki:1",
+   "statement": "Djupedalia is classified as an extinct genus of cryptoclidid plesiosaur.",
+   "category": "classification",
+   "quote": "Djupedalia is an extinct genus of cryptoclidid plesiosauroid plesiosaur",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

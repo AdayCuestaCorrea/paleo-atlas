@@ -1,0 +1,105 @@
+{
+ "taxon": "Acmoniodus",
+ "taxon_key": "acmoniodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ec18b19898875c2e",
+ "generated_at": "2026-11-12T02:34:09+00:00",
+ "citations": {
+  "acmoniodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Acmoniodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Acmoniodus?oldid=1375602726",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "acmoniodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Acmoniodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Acmoniodus?oldid=1375602726",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "acmoniodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Acmoniodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34754",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Acmoniodus was named by Hussakof and Bryant in 1918.",
+   "category": "classification",
+   "chunk_id": "acmoniodus:enwiki:1",
+   "lang": "en",
+   "quote": "genus_authority: Hussakof & Bryant, 1918",
+   "quote_sha": "ebeb26c4a452c6c6"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Acmoniodus is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "acmoniodus:enwiki:1",
+   "lang": "en",
+   "quote": "classis: Chondrichthyes",
+   "quote_sha": "37c90243f8925651"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Acmoniodus belongs to the order Copodontiformes.",
+   "category": "classification",
+   "chunk_id": "acmoniodus:enwiki:1",
+   "lang": "en",
+   "quote": "ordo: Copodontiformes",
+   "quote_sha": "c01aa2da8f90e881"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The family placement of Acmoniodus is currently uncertain (incertae sedis).",
+   "category": "classification",
+   "chunk_id": "acmoniodus:enwiki:1",
+   "lang": "en",
+   "quote": "familia: incertae sedis",
+   "quote_sha": "bf7c4e447de1bdb7"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The Paleobiology Database lists Ptyctodontidae as the parent group for Acmoniodus.",
+   "category": "classification",
+   "chunk_id": "acmoniodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ptyctodontidae",
+   "quote_sha": "7b9439cd382ca9dd"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Acmoniodus is classified as a member of the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "acmoniodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The only known species, A. clarkei, was found in the lower Frasnian-aged Geneseo Shale of New York.",
+   "category": "time_and_habitat",
+   "chunk_id": "acmoniodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known only by a singular species described from the lower Frasnian-aged Geneseo Shale of New York (state): A. clarkei.",
+   "quote_sha": "ba67e6622417d11a"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "acmoniodus:enwiki:2",
+   "statement": "Acmoniodus is a poorly known extinct genus of Holocephalian fish from the Devonian period.",
+   "category": "description",
+   "quote": "Acmoniodus is a poorly known extinct genus of Holocephalian fish from the Devonian period.",
+   "reason": "statement copies the source wording: 'Acmoniodus is a poorly known extinct genus of'"
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "taxon": "Dianosuchus",
+ "taxon_key": "dianosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c5b7b0a017e85e34",
+ "generated_at": "2026-11-12T03:00:55+00:00",
+ "citations": {
+  "dianosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Dianosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Dianosuchus?oldid=1377465871",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dianosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Dianosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Dianosuchus?oldid=1377465871",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dianosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Dianosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38327",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The animal belongs to the genus Dianosuchus.",
+   "category": "classification",
+   "chunk_id": "dianosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Dianosuchus",
+   "quote_sha": "07b1ca0b76e9f8b0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus was described by Young in 1982.",
+   "category": "discovery",
+   "chunk_id": "dianosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Young, 1982",
+   "quote_sha": "b372e2bc50347247"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The species is named Dianosuchus changchiawaensis.",
+   "category": "classification",
+   "chunk_id": "dianosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "species: changchiawaensis",
+   "quote_sha": "d168a4b6e3cefc86"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Dianosuchus is a member of the family Protosuchidae.",
+   "category": "classification",
+   "chunk_id": "dianosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Protosuchidae",
+   "quote_sha": "9d517741a4a2cfd9"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Dianosuchus is classified as a reptile.",
+   "category": "classification",
+   "chunk_id": "dianosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Fossils date to the Sinemurian stage of the Early Jurassic.",
+   "category": "time_and_habitat",
+   "chunk_id": "dianosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "dating back to the Sinemurian stage of the Early Jurassic",
+   "quote_sha": "8ea7431eef3d7349"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The animal lived between 199.5 and 192.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "dianosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Sinemurian to Sinemurian (199.5 to 192.9 million years ago)",
+   "quote_sha": "735a64d53c157da4"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Fossils were found in the Dark Red Beds of the Lower Lufeng Formation in Yunnan, China.",
+   "category": "time_and_habitat",
+   "chunk_id": "dianosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been found from the Dark Red Beds of the Lower Lufeng Formation in Yunnan, China",
+   "quote_sha": "dfa14cbe956ddf46"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Its teeth were conical and isodont, lacking striations.",
+   "category": "description",
+   "chunk_id": "dianosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "conical isodont teeth that lacked striations",
+   "quote_sha": "4f213cc7ea5956e4"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "It possessed very small antorbital fenestrae.",
+   "category": "description",
+   "chunk_id": "dianosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "and very small antorbital fenestrae",
+   "quote_sha": "fd24f5cb44ad0aa8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "dianosuchus:enwiki:2",
+   "statement": "It had an unusually flattened snout compared to other protosuchians.",
+   "category": "description",
+   "quote": "It is characterized by an unusually flattened snout compared to other protosuchians",
+   "reason": "statement copies the source wording: 'an unusually flattened snout compared to other protosuchians'"
+  }
+ ]
+}

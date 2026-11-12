@@ -1,0 +1,96 @@
+{
+ "taxon": "Colymbiculus",
+ "taxon_key": "colymbiculus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "7bb8132f563bc17d",
+ "generated_at": "2026-11-12T03:27:32+00:00",
+ "citations": {
+  "colymbiculus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Colymbiculus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Colymbiculus?oldid=1272982559",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "colymbiculus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Colymbiculus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Colymbiculus?oldid=1272982559",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "colymbiculus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Colymbiculus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=206271",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The extinct genus Colymbiculus was described by Mayr and Zvonok in 2011.",
+   "category": "discovery",
+   "chunk_id": "colymbiculus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Mayr and Zvonok 2011",
+   "quote_sha": "40fb4194487b6b31"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Colymbiculus is an extinct genus of loon found in Novopskov, Ukraine.",
+   "category": "discovery",
+   "chunk_id": "colymbiculus:enwiki:2",
+   "lang": "en",
+   "quote": "Colymbiculus is an extinct genus of loon that lived in Novopskov, Ukraine in the Eocene.",
+   "quote_sha": "c2f929258e82d344"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Colymbiculus lived between 48.07 and 41.03 million years ago during the Lutetian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "colymbiculus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Lutetian to Lutetian (48.07 to 41.03 million years ago)",
+   "quote_sha": "e35d7f5a585cb620"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Colymbiculus belongs to the family Gaviidae.",
+   "category": "classification",
+   "chunk_id": "colymbiculus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Gaviidae",
+   "quote_sha": "cf19f1cdac95c624"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The type species of the genus Colymbiculus is Colymbiculus udovichenkoi.",
+   "category": "classification",
+   "chunk_id": "colymbiculus:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Colymbiculus udovichenkoi",
+   "quote_sha": "54ce1f4f139c47c3"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Only one fossil occurrence of Colymbiculus has been recorded.",
+   "category": "paleobiology",
+   "chunk_id": "colymbiculus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "colymbiculus:pbdb:1",
+   "statement": "Colymbiculus is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

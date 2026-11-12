@@ -1,0 +1,85 @@
+{
+ "taxon": "Itardiornis",
+ "taxon_key": "itardiornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "19d0e70b259922a7",
+ "generated_at": "2026-11-12T03:25:07+00:00",
+ "citations": {
+  "itardiornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Itardiornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Itardiornis?oldid=1275477356",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "itardiornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Itardiornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Itardiornis?oldid=1275477356",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "itardiornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Itardiornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=241467",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Itardiornis fossils date to the Late Eocene and Early Oligocene periods.",
+   "category": "time_and_habitat",
+   "chunk_id": "itardiornis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Eocene-Early Oligocene",
+   "quote_sha": "b8e2588cccae4622"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only described species within the genus is Itardiornis hessae.",
+   "category": "discovery",
+   "chunk_id": "itardiornis:enwiki:1",
+   "lang": "en",
+   "quote": "species: hessae",
+   "quote_sha": "b48ab8e6268c0bf2"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Itardiornis belongs to the extinct family Messelornithidae.",
+   "category": "classification",
+   "chunk_id": "itardiornis:enwiki:2",
+   "lang": "en",
+   "quote": "Itardiornis is an extinct genus of the family Messelornithidae",
+   "quote_sha": "996a582aae581849"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species Itardiornis hessae was discovered in the fissure fillings of Quercy.",
+   "category": "discovery",
+   "chunk_id": "itardiornis:enwiki:2",
+   "lang": "en",
+   "quote": "Only one species is described, Itardiornis hessae, from Quercy fissure fillings",
+   "quote_sha": "88087a6960631df8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "itardiornis:enwiki:1",
+   "statement": "The genus Itardiornis was named by Mourer-Chauviré in 1995.",
+   "category": "classification",
+   "quote": "genus: Itardiornis",
+   "reason": "numbers not in the quote: ['1995']"
+  },
+  {
+   "chunk_id": "itardiornis:pbdb:1",
+   "statement": "Itardiornis is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

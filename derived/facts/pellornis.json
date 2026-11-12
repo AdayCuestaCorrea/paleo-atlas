@@ -1,0 +1,94 @@
+{
+ "taxon": "Pellornis",
+ "taxon_key": "pellornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "28a64874c43a9ac8",
+ "generated_at": "2026-11-12T03:16:46+00:00",
+ "citations": {
+  "pellornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pellornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Pellornis?oldid=1322594101",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pellornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pellornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Pellornis?oldid=1322594101",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pellornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Pellornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=241462",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Pellornis was described by Bertelli and colleagues in 2011.",
+   "category": "discovery",
+   "chunk_id": "pellornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Bertelli et al., 2011",
+   "quote_sha": "521c110118f31c3d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Pellornis date to the Early Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "pellornis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Eocene",
+   "quote_sha": "2ddfd66b19462a50"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Pellornis lived between 56 and 48.07 million years ago during the Ypresian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "pellornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Pellornis belongs to the family Messelornithidae.",
+   "category": "classification",
+   "chunk_id": "pellornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Messelornithidae",
+   "quote_sha": "ce501d6817102741"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "There is only one recorded fossil occurrence of Pellornis in the Paleobiology Database.",
+   "category": "time_and_habitat",
+   "chunk_id": "pellornis:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "pellornis:enwiki:2",
+   "statement": "Pellornis is an extinct genus of gruiform bird found in Denmark.",
+   "category": "classification",
+   "quote": "Pellornis is an extinct genus of gruiform bird from the Early Eocene of Denmark.",
+   "reason": "statement copies the source wording: 'Pellornis is an extinct genus of gruiform bird'"
+  },
+  {
+   "chunk_id": "pellornis:pbdb:1",
+   "statement": "Pellornis is classified as a bird within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

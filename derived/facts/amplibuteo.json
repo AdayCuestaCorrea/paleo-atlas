@@ -1,0 +1,110 @@
+{
+ "taxon": "Amplibuteo",
+ "taxon_key": "amplibuteo",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "862147c234ae066e",
+ "generated_at": "2026-11-12T03:18:45+00:00",
+ "citations": {
+  "amplibuteo:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Amplibuteo (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Amplibuteo?oldid=1354656615",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "amplibuteo:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Amplibuteo (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Amplibuteo?oldid=1354656615",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "amplibuteo:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Amplibuteo (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Amplibuteo?oldid=120219125",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "amplibuteo:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Amplibuteo (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Amplibuteo?oldid=120219125",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "amplibuteo:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Amplibuteo",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=289533",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Amplibuteo is an extinct genus of raptorial birds belonging to the family Accipitridae.",
+   "category": "classification",
+   "chunk_id": "amplibuteo:eswiki:2",
+   "lang": "es",
+   "quote": "Amplibuteo es un género extinto de aves de presa, pertenecientes a la familia Accipitridae.",
+   "quote_sha": "42c1c40f2e86df4b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Amplibuteo was described by Campbell in 1979.",
+   "category": "discovery",
+   "chunk_id": "amplibuteo:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Campbell, 1979",
+   "quote_sha": "84c429ce3427d7fe"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Amplibuteo date to the Pleistocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "amplibuteo:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Pleistocene",
+   "quote_sha": "9ca4b0c88fe737f2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Amplibuteo lived from the Zanclean age to the Late Pleistocene, approximately 4.7 to 0.0117 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "amplibuteo:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Zanclean to Late Pleistocene (4.7 to 0.0117 million years ago)",
+   "quote_sha": "f7333f8a4fed13a3"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus name Amplibuteo was established by Campbell in 1979.",
+   "category": "classification",
+   "chunk_id": "amplibuteo:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Campbell, 1979",
+   "quote_sha": "85843d115e4b0291"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The type species of the genus Amplibuteo is Amplibuteo hibbardi.",
+   "category": "classification",
+   "chunk_id": "amplibuteo:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Amplibuteo hibbardi",
+   "quote_sha": "6a61b9eb983182ea"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "amplibuteo:enwiki:2",
+   "statement": "Amplibuteo is an extinct genus of birds of prey classified within the family Accipitridae.",
+   "category": "classification",
+   "quote": "Amplibuteo is an extinct genus of birds of prey, belonging to the family Accipitridae.",
+   "reason": "statement copies the source wording: 'is an extinct genus of birds of prey'"
+  }
+ ]
+}

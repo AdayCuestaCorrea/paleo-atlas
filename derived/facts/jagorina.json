@@ -1,0 +1,121 @@
+{
+ "taxon": "Jagorina",
+ "taxon_key": "jagorina",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2a602b9644526407",
+ "generated_at": "2026-11-12T02:55:33+00:00",
+ "citations": {
+  "jagorina:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Jagorina (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Jagorina?oldid=1143501143",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "jagorina:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Jagorina (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Jagorina?oldid=1143501143",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "jagorina:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Jagorina",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34260",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Jagorina pandora is a species of rhenanid placoderm found in Upper Frasnian Germany.",
+   "category": "discovery",
+   "chunk_id": "jagorina:enwiki:2",
+   "lang": "en",
+   "quote": "Jagorina pandora is a rhenanid placoderm of Upper Frasnian Germany.",
+   "quote_sha": "bbe3810276a251aa"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Jagorina pandora was a flattened, skate-like fish covered in armor made of unfused tubercles.",
+   "category": "description",
+   "chunk_id": "jagorina:enwiki:2",
+   "lang": "en",
+   "quote": "As with other rhenanids, it was a flattened, skate-like fish protected in an armor made up of unfused tubercles",
+   "quote_sha": "f7b12f47104e95ff"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Jagorina pandora consist mainly of bone fragments and an intact skull.",
+   "category": "description",
+   "chunk_id": "jagorina:enwiki:2",
+   "lang": "en",
+   "quote": "Although J. pandora is known primarily from bone fragments and an intact skull",
+   "quote_sha": "bb2aeea05a4229c2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Jagorina pandora provides the primary details regarding the skull anatomy of rhenanids.",
+   "category": "paleobiology",
+   "chunk_id": "jagorina:enwiki:2",
+   "lang": "en",
+   "quote": "It is from Jagorina that the details of the skull anatomy of rhenanids are known.",
+   "quote_sha": "0694cdf6ccec0b77"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Jagorina belongs to the parent group Asterosteidae.",
+   "category": "classification",
+   "chunk_id": "jagorina:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Asterosteidae",
+   "quote_sha": "3656fc87ccdffe65"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Jagorina is classified within the family Asterosteidae.",
+   "category": "classification",
+   "chunk_id": "jagorina:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Asterosteidae",
+   "quote_sha": "4839ee25bbcf6b5a"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Jagorina is a member of the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "jagorina:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Jagorina lived during the Frasnian stage, between 382.31 and 372.15 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "jagorina:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Frasnian to Frasnian (382.31 to 372.15 million years ago)",
+   "quote_sha": "7f55dedd97464c53"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "jagorina:enwiki:2",
+   "statement": "The species was described by Jaekel in 1921.",
+   "category": "discovery",
+   "quote": "Jagorina pandora is a rhenanid placoderm of Upper Frasnian Germany.",
+   "reason": "numbers not in the quote: ['1921']"
+  },
+  {
+   "chunk_id": "jagorina:enwiki:2",
+   "statement": "Jagorina pandora hunted smaller fish by ambushing them from the sea bottom.",
+   "category": "paleobiology",
+   "quote": "and preyed on other, smaller fish by ambushing them from the sea bottom.",
+   "reason": "statement copies the source wording: 'smaller fish by ambushing them from the sea'"
+  }
+ ]
+}

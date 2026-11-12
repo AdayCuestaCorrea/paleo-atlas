@@ -1,0 +1,103 @@
+{
+ "taxon": "Miomancalla",
+ "taxon_key": "miomancalla",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5bdca334106f872d",
+ "generated_at": "2026-11-12T02:11:10+00:00",
+ "citations": {
+  "miomancalla:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Miomancalla (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Miomancalla?oldid=1358355597",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "miomancalla:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Miomancalla (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Miomancalla?oldid=1358355597",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "miomancalla:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Miomancalla",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=206165",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species Miomancalla wetmorei was described by Howard in 1976.",
+   "category": "discovery",
+   "chunk_id": "miomancalla:enwiki:1",
+   "lang": "en",
+   "quote": "type_species_authority: Howard, 1976",
+   "quote_sha": "311d0d2502619a97"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Miomancalla contains two species: M. howardi and M. wetmorei.",
+   "category": "classification",
+   "chunk_id": "miomancalla:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: M. howardi M. wetmorei",
+   "quote_sha": "b0c6f6b1a242eba1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Miomancalla belongs to the subfamily Mancallinae.",
+   "category": "classification",
+   "chunk_id": "miomancalla:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Mancallinae",
+   "quote_sha": "4e8da2d6d2cf9771"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Miomancalla is classified within the family Alcidae.",
+   "category": "classification",
+   "chunk_id": "miomancalla:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Alcidae",
+   "quote_sha": "b67df50a87101415"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Miomancalla lived from the Tortonian to the Messinian stages, between 11.63 and 5.333 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "miomancalla:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tortonian to Messinian (11.63 to 5.333 million years ago)",
+   "quote_sha": "c0de6c11c7d0b49c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "There are four recorded fossil occurrences of Miomancalla in the Paleobiology Database.",
+   "category": "discovery",
+   "chunk_id": "miomancalla:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 4",
+   "quote_sha": "836466f9e6e57dc0"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "miomancalla:enwiki:2",
+   "statement": "Miomancalla was an extinct genus of flightless alcids that lived on the Pacific coast of modern-day California during the Miocene epoch.",
+   "category": "time_and_habitat",
+   "quote": "Miomancalla is an extinct genus of prehistoric flightless alcids that lived on the Pacific coast of today's California in the Miocene epoch.",
+   "reason": "statement copies the source wording: 'flightless alcids that lived on the Pacific coast'"
+  },
+  {
+   "chunk_id": "miomancalla:enwiki:2",
+   "statement": "Miomancalla howardi was the largest bird in the order Charadriiformes, with an estimated body mass of 5.4 kg.",
+   "category": "description",
+   "quote": "M. howardi, was the largest charadriiform of all time, with an estimated body mass of 5.4 kg.",
+   "reason": "statement copies the source wording: 'with an estimated body mass of 5.4 kg'"
+  }
+ ]
+}

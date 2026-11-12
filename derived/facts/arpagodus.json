@@ -1,0 +1,96 @@
+{
+ "taxon": "Arpagodus",
+ "taxon_key": "arpagodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "81322388ca059016",
+ "generated_at": "2026-11-12T03:23:59+00:00",
+ "citations": {
+  "arpagodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Arpagodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Arpagodus?oldid=1306624388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arpagodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Arpagodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Arpagodus?oldid=1306624388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arpagodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Arpagodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34447",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Arpagodus was first described by St. John and Worthen in 1875.",
+   "category": "discovery",
+   "chunk_id": "arpagodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: St. John & Worthen, 1875",
+   "quote_sha": "36da5877f338d1fe"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Arpagodus currently contains only the single species A. rectangulus.",
+   "category": "time_and_habitat",
+   "chunk_id": "arpagodus:enwiki:2",
+   "lang": "en",
+   "quote": "It currently contains only the species A. rectangulus.",
+   "quote_sha": "6193d933463cc9e0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Arpagodus are known mainly from the Pennsylvanian subperiod, including sites in Russia and the Raytown Limestone Formation in Kansas, USA.",
+   "category": "time_and_habitat",
+   "chunk_id": "arpagodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known mainly from the Pennsylvanian subperiod, such as the early Pennsylvanian of Russia and the late Pennsylvanian of Raytown Limestone Formation of Kansas, USA.",
+   "quote_sha": "c8a4d207732962a8"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Arpagodus belongs to the parent group Helicoprionidae.",
+   "category": "classification",
+   "chunk_id": "arpagodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Helicoprionidae",
+   "quote_sha": "918c402fd415bd71"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Arpagodus is classified within the family Helicoprionidae.",
+   "category": "classification",
+   "chunk_id": "arpagodus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Helicoprionidae",
+   "quote_sha": "90103297fa8ff96c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Arpagodus is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "arpagodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "arpagodus:enwiki:2",
+   "statement": "Arpagodus is an extinct genus of eugeneodont fish that lived during the Carboniferous period.",
+   "category": "time_and_habitat",
+   "quote": "Arpagodus is an extinct genus of eugeneodont fish from the Carboniferous period.",
+   "reason": "statement copies the source wording: 'Arpagodus is an extinct genus of eugeneodont fish'"
+  }
+ ]
+}

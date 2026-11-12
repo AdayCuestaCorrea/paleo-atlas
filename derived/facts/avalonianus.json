@@ -1,0 +1,103 @@
+{
+ "taxon": "Avalonianus",
+ "taxon_key": "avalonianus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "99b6f8879e8d4b59",
+ "generated_at": "2026-11-12T02:09:01+00:00",
+ "citations": {
+  "avalonianus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Avalonianus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Avalonianus?oldid=1315898179",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "avalonianus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Avalonianus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Avalonianus?oldid=1315898179",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "avalonianus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Avalonianus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Avalonianus?oldid=166173956",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "avalonianus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Avalonianus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=56608",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Avalonianus was originally described by Harry Seeley in 1898.",
+   "category": "discovery",
+   "chunk_id": "avalonianus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Seeley, 1898",
+   "quote_sha": "cde4fa5c6cbe481a"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus name was later renamed by Oskar Kuhn in 1961 because the original name was preoccupied.",
+   "category": "discovery",
+   "chunk_id": "avalonianus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Kuhn, 1961",
+   "quote_sha": "8e33a5b2cc8c759b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Avalonianus is considered a dubious or invalid genus of archosaur from the Late Triassic Westbury Formation of England.",
+   "category": "time_and_habitat",
+   "chunk_id": "avalonianus:enwiki:2",
+   "lang": "en",
+   "quote": "Avalonianus is a highly dubious and possibly invalid genus of archosaur from the Late Triassic Westbury Formation of England.",
+   "quote_sha": "2a00a8ff2b7a73a1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Subsequent analyses demonstrated that the remains were a paleontological chimera of Camelotia material and teeth from an archosaur or a possible primitive theropod.",
+   "category": "paleobiology",
+   "chunk_id": "avalonianus:eswiki:1",
+   "lang": "es",
+   "quote": "Posteriores análisis demostraron que se trataba de una quimera paleontológica de restos del Camelotia y dientes de un arcosaurio o un posible terópodo primitivo.",
+   "quote_sha": "150f626ee9ecc0c3"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Avalonianus is classified within the parent group Saurischia.",
+   "category": "classification",
+   "chunk_id": "avalonianus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Saurischia",
+   "quote_sha": "7b122705aa1de087"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The type species for the genus Avalonianus is Avalonia sanfordi.",
+   "category": "classification",
+   "chunk_id": "avalonianus:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Avalonia sanfordi",
+   "quote_sha": "3e7815ef43cfbfb7"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "avalonianus:enwiki:2",
+   "statement": "Later analysis revealed that the original description was a chimera, combining teeth from a non-dinosaurian ornithosuchian or early theropod with post-cranial remains of a prosauropod.",
+   "category": "paleobiology",
+   "quote": "It was thought to be a prosauropod, but later analysis revealed it was actually a chimera, with the original teeth coming from a non-dinosaurian ornithosuchian (or possibly an early theropod), and later-referred post-cranial prosauropod remains.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

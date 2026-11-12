@@ -1,0 +1,112 @@
+{
+ "taxon": "Remiornis",
+ "taxon_key": "remiornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a2472422b9976a3b",
+ "generated_at": "2026-11-12T02:57:36+00:00",
+ "citations": {
+  "remiornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Remiornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Remiornis?oldid=1322565746",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "remiornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Remiornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Remiornis?oldid=1322565746",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "remiornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Remiornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39558",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Remiornis heberti was first described by Lemoine in 1881.",
+   "category": "discovery",
+   "chunk_id": "remiornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Lemoine, 1881",
+   "quote_sha": "e3f6b2ae11dd73a0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Remiornis was originally established by Martin in 1992.",
+   "category": "discovery",
+   "chunk_id": "remiornis:enwiki:1",
+   "lang": "en",
+   "quote": "grandparent_authority: Martin, 1992",
+   "quote_sha": "4e4ba1d55fb13636"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Remiornis heberti is an extinct bird from the Paleocene period found in France.",
+   "category": "time_and_habitat",
+   "chunk_id": "remiornis:enwiki:2",
+   "lang": "en",
+   "quote": "Remiornis heberti is an extinct species of paleognath bird from the Paleocene of France.",
+   "quote_sha": "dd701c75a66532ce"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Remiornis heberti was comparable in size to modern rheas.",
+   "category": "description",
+   "chunk_id": "remiornis:enwiki:2",
+   "lang": "en",
+   "quote": "It is a species comparable in size to modern rheas",
+   "quote_sha": "c9067071930da627"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Remiornis heberti is possibly related to the European Paleogene ratite Palaeotis.",
+   "category": "paleobiology",
+   "chunk_id": "remiornis:enwiki:2",
+   "lang": "en",
+   "quote": "possibly related to another European Paleogene ratite, Palaeotis",
+   "quote_sha": "9d63102b439e9975"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Remiornis belongs to the family Remiornithidae.",
+   "category": "classification",
+   "chunk_id": "remiornis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Remiornithidae",
+   "quote_sha": "a1d1b40c77b85e99"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Remiornis lived during the Thanetian stage, between 59.24 and 56 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "remiornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Thanetian to Thanetian (59.24 to 56 million years ago)",
+   "quote_sha": "c42ab53ab2cdc55e"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "remiornis:enwiki:2",
+   "statement": "Remiornis heberti is considered one of the oldest ratites in the world.",
+   "category": "classification",
+   "quote": "In spite of being one of the oldest ratites in the world",
+   "reason": "statement copies the source wording: 'one of the oldest ratites in the world'"
+  },
+  {
+   "chunk_id": "remiornis:pbdb:1",
+   "statement": "Remiornis is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

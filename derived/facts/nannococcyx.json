@@ -1,0 +1,110 @@
+{
+ "taxon": "Nannococcyx",
+ "taxon_key": "nannococcyx",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "6075974348981787",
+ "generated_at": "2026-11-12T02:52:23+00:00",
+ "citations": {
+  "nannococcyx:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Saint Helena cuckoo (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Saint_Helena_cuckoo?oldid=1380576886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nannococcyx:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Saint Helena cuckoo (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Saint_Helena_cuckoo?oldid=1380576886",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nannococcyx:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Nannococcyx psix (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Nannococcyx_psix?oldid=172357591",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nannococcyx:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Nannococcyx psix (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Nannococcyx_psix?oldid=172357591",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "nannococcyx:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Nannococcyx",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=335273",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The Saint Helena cuckoo was confirmed to exist based on a single humerus fossil.",
+   "category": "discovery",
+   "chunk_id": "nannococcyx:enwiki:2",
+   "lang": "en",
+   "quote": "It was confirmed to have previously existed by a single humerus.",
+   "quote_sha": "42d6c24506ba32da"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The Saint Helena cuckoo was relatively small compared to other cuckoos.",
+   "category": "description",
+   "chunk_id": "nannococcyx:enwiki:2",
+   "lang": "en",
+   "quote": "Compared to other cuckoos, it was relatively small",
+   "quote_sha": "37e7d102fcae237c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The species went extinct due to deforestation on the island in the 18th century.",
+   "category": "paleobiology",
+   "chunk_id": "nannococcyx:enwiki:2",
+   "lang": "en",
+   "quote": "Its extinction was a result of deforestation on the island in the 18th century.",
+   "quote_sha": "872e132a4487d7c6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species belongs to the family Cuculidae.",
+   "category": "classification",
+   "chunk_id": "nannococcyx:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Cuculidae",
+   "quote_sha": "6af3daf4ad4e17df"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The species was described by Olson in 1975.",
+   "category": "classification",
+   "chunk_id": "nannococcyx:eswiki:1",
+   "lang": "es",
+   "quote": "binomial_authority: Olson, 1975",
+   "quote_sha": "9d7fdf94e47d3f22"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus lived during the Holocene, from 0.0117 to 0 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "nannococcyx:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Holocene to Holocene (0.0117 to 0 million years ago)",
+   "quote_sha": "f56ba1fbcf339319"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "nannococcyx:enwiki:2",
+   "statement": "The bird probably lived in forests on the island of Saint Helena.",
+   "category": "time_and_habitat",
+   "quote": "it probably lived in forests on the island of Saint Helena",
+   "reason": "statement copies the source wording: 'probably lived in forests on the island of'"
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "taxon": "Palaealectoris",
+ "taxon_key": "palaealectoris",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3558647de602996c",
+ "generated_at": "2026-11-12T01:13:17+00:00",
+ "citations": {
+  "palaealectoris:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Palaealectoris (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Palaealectoris?oldid=1380742203",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaealectoris:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Palaealectoris (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Palaealectoris?oldid=1380742203",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaealectoris:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Palaealectoris (History and etymology)",
+   "url": "https://en.wikipedia.org/wiki/Palaealectoris?oldid=1380742203",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaealectoris:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Palaealectoris (Description)",
+   "url": "https://en.wikipedia.org/wiki/Palaealectoris?oldid=1380742203",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaealectoris:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Palaealectoris",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=105580",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Palaealectoris is classified under the parent group Tetraonidae.",
+   "category": "classification",
+   "chunk_id": "palaealectoris:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Tetraonidae",
+   "quote_sha": "c470a2b4316cc62a"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Palaealectoris have been found in Nebraska and Maryland and date to the Early Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaealectoris:enwiki:2",
+   "lang": "en",
+   "quote": "Its fossilized remains, found in the Marsland Formation, a part of the Agate Fossil Beds National Monument in Nebraska, and in the Calvert Formation in Maryland, are dated from the Early Miocene.",
+   "quote_sha": "66d087c8b6e76cc4"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Palaealectoris lived between 23.1 and 18.5 million years ago during the Chattian to Burdigalian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaealectoris:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Chattian to Burdigalian (23.1 to 18.5 million years ago)",
+   "quote_sha": "f90b662f57777612"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "A fragmentary tibiotarsus was collected in May 1925 near Chesapeake Beach, Maryland, by Remington Kellogg and Norman Boss.",
+   "category": "discovery",
+   "chunk_id": "palaealectoris:enwiki:3",
+   "lang": "en",
+   "quote": "The first remains associated with the genus, a fragmentary tibiotarsus, were collected in May 1925 in marine strata belonging to the Miocene-aged Calvert Formation, near Chesapeake Beach, Maryland, by Remington Kellogg and Norman Boss.",
+   "quote_sha": "c4f148f5c152f8f1"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The holotype remains were collected in the summer of 1928 by Erich Maren Schlaikjer in Nebraska.",
+   "category": "discovery",
+   "chunk_id": "palaealectoris:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype remains of Palaealectoris were collected during the summer of 1928 by Erich Maren Schlaikjer in Lower Miocene deposits belonging to the Agate Fossil Beds in Sioux County, Nebraska.",
+   "quote_sha": "71197dd9565a6f1e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus was described in 1930 by Alexander Wetmore based on parts of a left humerus.",
+   "category": "discovery",
+   "chunk_id": "palaealectoris:enwiki:3",
+   "lang": "en",
+   "quote": "The genus was first described shortly after, in 1930, by Alexander Wetmore, at Schlaikjer's demand, based on the two extremities of a left humerus, with P. incertus as the type species.",
+   "quote_sha": "017c43aa26657bf6"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The superior crest of the humerus showed similarities to chachalacas, likely representing a convergent adaptation.",
+   "category": "description",
+   "chunk_id": "palaealectoris:enwiki:4",
+   "lang": "en",
+   "quote": "The superior crest of the humerus shared several similarities in development with that of the chachalacas, although this was probably a convergent adaptation.",
+   "quote_sha": "d5f50a8fac605391"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "palaealectoris:enwiki:2",
+   "statement": "Palaealectoris is an extinct genus of landfowl in the family Phasianidae, distantly related to modern grouse.",
+   "category": "classification",
+   "quote": "Palaealectoris is an extinct monotypic genus of landfowl, belonging to the family Phasianidae, distantly related to modern grouse.",
+   "reason": "statement copies the source wording: 'the family Phasianidae distantly related to modern grouse'"
+  },
+  {
+   "chunk_id": "palaealectoris:enwiki:4",
+   "statement": "Palaealectoris was a medium-sized landfowl, intermediate in size between bobwhites and spruce grouse.",
+   "category": "description",
+   "quote": "Palaealectoris was a medium-sized landfowl, intermediate in size between the bobwhites and the spruce grouse.",
+   "reason": "statement copies the source wording: 'Palaealectoris was a medium-sized landfowl intermediate in size'"
+  },
+  {
+   "chunk_id": "palaealectoris:enwiki:4",
+   "statement": "The general shape of the humerus is sufficient to assign the animal to the family Phasianidae, though it represents an aberrant form.",
+   "category": "description",
+   "quote": "The general shape of the humerus is however sufficient to assign it to the family Phasianidae, although this represents an aberrant form.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

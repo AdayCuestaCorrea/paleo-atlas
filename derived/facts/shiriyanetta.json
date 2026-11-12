@@ -1,0 +1,96 @@
+{
+ "taxon": "Shiriyanetta",
+ "taxon_key": "shiriyanetta",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a85430314b25496a",
+ "generated_at": "2026-11-12T03:21:11+00:00",
+ "citations": {
+  "shiriyanetta:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Shiriyanetta (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Shiriyanetta?oldid=1341564651",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "shiriyanetta:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Shiriyanetta (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Shiriyanetta?oldid=1341564651",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "shiriyanetta:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Shiriyanetta",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=333117",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Shiriyanetta hasegawai was described by Watanabe and colleagues in 2015.",
+   "category": "discovery",
+   "chunk_id": "shiriyanetta:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Watanabe et al 2015",
+   "quote_sha": "018e5da788585a54"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Shiriyanetta date from the Mid Pleistocene to the Late Pleistocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "shiriyanetta:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Mid Pleistocene - Late Pleistocene",
+   "quote_sha": "8209c74d4a49a54b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Shiriyanetta belongs to the subfamily Mergini.",
+   "category": "classification",
+   "chunk_id": "shiriyanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Mergini",
+   "quote_sha": "c765284d5f69202b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Shiriyanetta is classified within the family Anatidae.",
+   "category": "classification",
+   "chunk_id": "shiriyanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Anatidae",
+   "quote_sha": "7c71625aa16f5c16"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Shiriyanetta lived between 0.774 and 0.0117 million years ago, spanning the Chibanian to Late Pleistocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "shiriyanetta:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Chibanian to Late Pleistocene (0.774 to 0.0117 million years ago)",
+   "quote_sha": "6435246e752bcd98"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Shiriyanetta was a flightless seaduck, a trait similar to the extinct Chendytes.",
+   "category": "paleobiology",
+   "chunk_id": "shiriyanetta:enwiki:2",
+   "lang": "en",
+   "quote": "It was flightless, similar to the also extinct Chendytes from the opposite side of the Pacific.",
+   "quote_sha": "f887de54699a3dc8"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "shiriyanetta:pbdb:1",
+   "statement": "Shiriyanetta is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

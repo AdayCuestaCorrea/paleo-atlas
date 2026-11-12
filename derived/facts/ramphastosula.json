@@ -1,0 +1,121 @@
+{
+ "taxon": "Ramphastosula",
+ "taxon_key": "ramphastosula",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "8aa954a5739086dd",
+ "generated_at": "2026-11-12T02:12:52+00:00",
+ "citations": {
+  "ramphastosula:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Ramphastosula (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Ramphastosula?oldid=1340787966",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ramphastosula:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Ramphastosula (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Ramphastosula?oldid=1340787966",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "ramphastosula:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Ramphastosula",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=87501",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Ramphastosula was described by Stucchi and Urbina in 2004.",
+   "category": "discovery",
+   "chunk_id": "ramphastosula:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Stucchi & Urbina, 2004",
+   "quote_sha": "d0c1dab38a12ccbb"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Ramphastosula date to the early Pliocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "ramphastosula:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: early Pliocene",
+   "quote_sha": "345003a65192a3d0"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The only named species, R. ramirezi, honors the Peruvian paleontologist Gregorio Ramirez.",
+   "category": "discovery",
+   "chunk_id": "ramphastosula:enwiki:2",
+   "lang": "en",
+   "quote": "The type and only named species is R. ramirezi, named for Peruvian vertebrate paleontologist Gregorio Ramirez.",
+   "quote_sha": "ee0a4bea6790afad"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus name combines the words for toucan and booby, with the latter derived from an Icelandic word meaning fool.",
+   "category": "description",
+   "chunk_id": "ramphastosula:enwiki:2",
+   "lang": "en",
+   "quote": "The genus name is a combination of \"Rhamphastos\", \"toucan\" and \"sula\", an Icelandic word for \"fool\" that has been used to describe boobies (Sulidae, Sula) in general.",
+   "quote_sha": "8ec083e0ab43412f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils were recovered from the 4 to 5 million-year-old Sud Sacaco Level of the Pisco Formation.",
+   "category": "discovery",
+   "chunk_id": "ramphastosula:enwiki:2",
+   "lang": "en",
+   "quote": "The remains were recovered from the west side of Sud Sacaco Level (4–5 Million year-old) of the Pisco Formation.",
+   "quote_sha": "09db3fa370204af6"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The habitat where the fossils were found was a sheltered beach featuring rock platforms.",
+   "category": "paleobiology",
+   "chunk_id": "ramphastosula:enwiki:2",
+   "lang": "en",
+   "quote": "This area was a sheltered beach with rock platforms.",
+   "quote_sha": "8995ab7cda279121"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Ramphastosula belongs to the bird family Sulidae.",
+   "category": "classification",
+   "chunk_id": "ramphastosula:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sulidae",
+   "quote_sha": "40a4a931271b409a"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for Ramphastosula is estimated between 7.246 and 5.333 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "ramphastosula:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Messinian to Messinian (7.246 to 5.333 million years ago)",
+   "quote_sha": "f6d051ac056e0f08"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "ramphastosula:enwiki:2",
+   "statement": "Ramphastosula is an extinct genus of birds from the family Sulidae found in early Pliocene rocks in Peru.",
+   "category": "discovery",
+   "quote": "Ramphastosula is an extinct genus of sulid bird known from fossils discovered in early Pliocene rocks of Peru.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "ramphastosula:enwiki:2",
+   "statement": "Unlike modern boobies, this bird possessed a large bill with a convex upper mandible similar to a toucan.",
+   "category": "description",
+   "quote": "Unlike living boobies, it has a large bill with a convex upper mandible, reminiscent of a toucan.",
+   "reason": "statement copies the source wording: 'a large bill with a convex upper mandible'"
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "taxon": "Sinanas",
+ "taxon_key": "sinanas",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e1c3c62a05122804",
+ "generated_at": "2026-11-12T02:01:58+00:00",
+ "citations": {
+  "sinanas:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Sinanas (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Sinanas?oldid=1374559853",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sinanas:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Sinanas (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Sinanas?oldid=1374559853",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "sinanas:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Sinanas",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39630",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Sinanas was named by Yeh in 1980.",
+   "category": "discovery",
+   "chunk_id": "sinanas:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Yeh, 1980",
+   "quote_sha": "ade1d15762cc2228"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Sinanas date to the Miocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinanas:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Miocene",
+   "quote_sha": "ca2eac6e3cee0b13"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The only known species within the genus is Sinanas diatomas.",
+   "category": "classification",
+   "chunk_id": "sinanas:enwiki:1",
+   "lang": "en",
+   "quote": "species: diatomas",
+   "quote_sha": "135afd22e584d192"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Sinanas is classified as a genus of prehistoric duck.",
+   "category": "description",
+   "chunk_id": "sinanas:enwiki:2",
+   "lang": "en",
+   "quote": "Sinanas is a genus of prehistoric duck",
+   "quote_sha": "e15dc6fd64dc717a"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "This duck lived during the middle Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinanas:enwiki:2",
+   "lang": "en",
+   "quote": "lived during the middle Miocene",
+   "quote_sha": "4160c97fae5b3df8"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Fossils of Sinanas have been found in the Shandong Province of China.",
+   "category": "discovery",
+   "chunk_id": "sinanas:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils of the species have been recovered from the Shandong Province of China",
+   "quote_sha": "1fdcad245c570e1c"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "It is debated whether Sinanas is closely related to modern waterfowl.",
+   "category": "debate",
+   "chunk_id": "sinanas:enwiki:2",
+   "lang": "en",
+   "quote": "Taxonomists are uncertain as to its affinities to modern waterfowl",
+   "quote_sha": "991a066e0d0b176e"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The parent group for Sinanas is the family Anatidae.",
+   "category": "classification",
+   "chunk_id": "sinanas:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Anatidae",
+   "quote_sha": "94eaa3c7e7b19a2c"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Sinanas lived between 20.45 and 15.98 million years ago during the Burdigalian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "sinanas:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Burdigalian to Burdigalian (20.45 to 15.98 million years ago)",
+   "quote_sha": "e598a8fdbfb9b199"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "sinanas:pbdb:1",
+   "statement": "Sinanas belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

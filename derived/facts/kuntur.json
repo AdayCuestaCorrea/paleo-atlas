@@ -1,0 +1,87 @@
+{
+ "taxon": "Kuntur",
+ "taxon_key": "kuntur",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "9d7261b15e98fe0c",
+ "generated_at": "2026-11-12T02:24:04+00:00",
+ "citations": {
+  "kuntur:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Kuntur (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Kuntur?oldid=1369764505",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kuntur:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Kuntur (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Kuntur?oldid=1369764505",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kuntur:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Kuntur",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=326043",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Kuntur cardenasi was described by Stucchi and colleagues in 2015.",
+   "category": "classification",
+   "chunk_id": "kuntur:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Kuntur\nspecies: cardenasi\nauthority: Stucchi et al., 2015",
+   "quote_sha": "103d8c39fd8a2aa9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Kuntur belongs to the family Cathartidae.",
+   "category": "classification",
+   "chunk_id": "kuntur:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cathartidae",
+   "quote_sha": "01e31e3f021496c1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Kuntur was an extinct bird of the family Cathartidae that lived in South America during the Tortonian stage of the Miocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "kuntur:enwiki:2",
+   "lang": "en",
+   "quote": "Kuntur is an extinct monotypic genus of cathartid bird that lived in South America during the Tortonian stage of the Miocene epoch.",
+   "quote_sha": "74437a7eaeb6f087"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Kuntur lived between 11.63 and 7.246 million years ago during the Tortonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "kuntur:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tortonian to Tortonian (11.63 to 7.246 million years ago)",
+   "quote_sha": "adc855547b4792e3"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Only one fossil occurrence of Kuntur has been recorded in the Paleobiology Database.",
+   "category": "discovery",
+   "chunk_id": "kuntur:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "kuntur:enwiki:2",
+   "statement": "The specific name cardenasi honors Santiago de Cárdenas, the first Peruvian naturalist to study condors.",
+   "category": "discovery",
+   "quote": "The specific epithet refers to Santiago de Cárdenas, the first Peruvian naturalist to study condors.",
+   "reason": "statement copies the source wording: 'Cárdenas the first Peruvian naturalist to study condors'"
+  }
+ ]
+}

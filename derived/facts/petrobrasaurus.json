@@ -1,0 +1,94 @@
+{
+ "taxon": "Petrobrasaurus",
+ "taxon_key": "petrobrasaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "748abcf8f6f79eca",
+ "generated_at": "2026-11-12T01:51:29+00:00",
+ "citations": {
+  "petrobrasaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Petrobrasaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Petrobrasaurus?oldid=1355987636",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "petrobrasaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Petrobrasaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Petrobrasaurus?oldid=1355987636",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "petrobrasaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Petrobrasaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=201030",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Petrobrasaurus is a titanosaur that lived during the upper Cretaceous period in what is now Patagonia, Argentina.",
+   "category": "classification",
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It is a titanosaur which lived during the upper Cretaceous period (Coniacian-Santonian age) in what is now Rincón de los Sauces, Patagonia, Argentina.",
+   "quote_sha": "9505b71df42f62ff"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Petrobrasaurus was named by Filippi et al. in 2011.",
+   "category": "discovery",
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "lang": "en",
+   "quote": "This genus was named by Leonardo S. Filippi, José Ignacio Canudo, Leonardo J. Salgado, Alberto C. Garrido, Rodolfo A. Garcia, Ignacio A. Cerda and Alejandro Otero in 2011",
+   "quote_sha": "0fdbd4c56ef4f6dd"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus is known from a partial disarticulated skeleton found in the Plottier Formation of Argentina.",
+   "category": "discovery",
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the holotype MAU-Pv-PH-449 — a partial disarticulated skeleton recovered from the Plottier Formation (Neuquén Basin), Argentina.",
+   "quote_sha": "375541b22c5b8c14"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The generic name combines \"Petrobras\", an oil company, with the Greek word for lizard.",
+   "category": "discovery",
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The generic name is derived from \"Petrobras\" (oil company) and saurus, \"lizard\".",
+   "quote_sha": "08da0e72b8e14314"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Petrobrasaurus lived between 89.8 and 83.6 million years ago during the Coniacian to Santonian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "petrobrasaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Coniacian to Santonian (89.8 to 83.6 million years ago)",
+   "quote_sha": "ac3e3dd8538e3b02"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "statement": "Petrobrasaurus is a genus of herbivorous sauropod dinosaur.",
+   "category": "classification",
+   "quote": "Petrobrasaurus is a genus of herbivorous sauropod dinosaur.",
+   "reason": "statement copies the source wording: 'Petrobrasaurus is a genus of herbivorous sauropod dinosaur'"
+  },
+  {
+   "chunk_id": "petrobrasaurus:enwiki:2",
+   "statement": "The specific name refers to the Puesto Hernández oil field where the fossils were discovered.",
+   "category": "discovery",
+   "quote": "The specific name refers to the Puesto Hernández oil field, where the fossil remains were found.",
+   "reason": "statement copies the source wording: 'specific name refers to the Puesto Hernández oil'"
+  }
+ ]
+}

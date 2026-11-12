@@ -1,0 +1,114 @@
+{
+ "taxon": "Agkistracanthus",
+ "taxon_key": "agkistracanthus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "b0f6ac952b44cb71",
+ "generated_at": "2026-11-12T03:10:25+00:00",
+ "citations": {
+  "agkistracanthus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Agkistracanthus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Agkistracanthus?oldid=1345659580",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agkistracanthus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Agkistracanthus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Agkistracanthus?oldid=1345659580",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agkistracanthus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Agkistracanthus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34791",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Agkistracanthus was described by Duffin and Furrer in 1981.",
+   "category": "discovery",
+   "chunk_id": "agkistracanthus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Duffin & Furrer, 1981",
+   "quote_sha": "e72a878bc22344ff"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Agkistracanthus contains only one known species, A. mitgelensis.",
+   "category": "description",
+   "chunk_id": "agkistracanthus:enwiki:2",
+   "lang": "en",
+   "quote": "It currently contains a single species, A. mitgelensis",
+   "quote_sha": "348c609e30cb41d7"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Agkistracanthus lived during the Rhaetian to Hettangian epochs, covering the transition from the Triassic to the Jurassic period.",
+   "category": "time_and_habitat",
+   "chunk_id": "agkistracanthus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Rhaetian to Hettangian epochs, spanning the transition from the Triassic to Jurassic period",
+   "quote_sha": "5d6d26c0e3a56a91"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Agkistracanthus have been found in Switzerland, Austria, and Britain.",
+   "category": "time_and_habitat",
+   "chunk_id": "agkistracanthus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils from this genus are known from Switzerland, Austria, and Britain",
+   "quote_sha": "eb04a71e602516ec"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Knowledge of Agkistracanthus comes mostly from isolated and fragmentary fossils, including fin spines and parts of the skull and jaws.",
+   "category": "description",
+   "chunk_id": "agkistracanthus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known mostly from isolated and fragmentary material, including fin spines as well as palatine, symphyseal, and mandibular structures",
+   "quote_sha": "c54ef731dd3a6890"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Agkistracanthus belongs to the family Myriacanthidae.",
+   "category": "classification",
+   "chunk_id": "agkistracanthus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Myriacanthidae",
+   "quote_sha": "8116d1e4ca591fc0"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Agkistracanthus is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "agkistracanthus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Agkistracanthus lived between 205.7 and 199.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "agkistracanthus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Rhaetian to Hettangian (205.7 to 199.5 million years ago)",
+   "quote_sha": "de4501380576f3fb"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "agkistracanthus:enwiki:2",
+   "statement": "Agkistracanthus is an extinct genus of holocephalan cartilaginous fish.",
+   "category": "description",
+   "quote": "Agkistracanthus is an extinct genus of holocephalan cartilaginous fish",
+   "reason": "statement copies the source wording: 'Agkistracanthus is an extinct genus of holocephalan cartilaginous'"
+  }
+ ]
+}

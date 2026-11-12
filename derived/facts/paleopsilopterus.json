@@ -1,0 +1,121 @@
+{
+ "taxon": "Paleopsilopterus",
+ "taxon_key": "paleopsilopterus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "24701344fcc10b0a",
+ "generated_at": "2026-11-12T01:47:10+00:00",
+ "citations": {
+  "paleopsilopterus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Paleopsilopterus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Paleopsilopterus?oldid=1378892159",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "paleopsilopterus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Paleopsilopterus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Paleopsilopterus?oldid=1378892159",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "paleopsilopterus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Paleopsilopterus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=181131",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Paleopsilopterus was described by Alvarenga in 1985.",
+   "category": "discovery",
+   "chunk_id": "paleopsilopterus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Alvarenga, 1985",
+   "quote_sha": "1147005f734e381d"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Paleopsilopterus was a large, flightless, predatory bird.",
+   "category": "description",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "Paleopsilopterus is an extinct genus of large, flightless, predatory birds",
+   "quote_sha": "1149fd4aa45b71ae"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Paleopsilopterus belongs to the order Cariamiformes.",
+   "category": "classification",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "classified within the order Cariamiformes",
+   "quote_sha": "7415bbaec729f8b2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus is generally placed in the subfamily Psilopterinae and the family Phorusrhacidae.",
+   "category": "classification",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "It is generally placed in the subfamily Psilopterinae of the family Phorusrhacidae",
+   "quote_sha": "55cebd0d1b2aea7e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The precise taxonomic placement of Paleopsilopterus remains debated.",
+   "category": "classification",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "although its precise taxonomic placement has been subject to debate",
+   "quote_sha": "dba8acbbba35ff19"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The animal lived specifically within the Itaboraian South American Land Mammal Age.",
+   "category": "time_and_habitat",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "specifically within the Itaboraian South American Land Mammal Age",
+   "quote_sha": "2537772c68062cc4"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Fossils of the only known species, P. itaboraiensis, were found in the Itaboraí Formation near São José de Itaborai, Rio de Janeiro, Brazil.",
+   "category": "time_and_habitat",
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils of the only known species, Paleopsilopterus itaboraiensis, have been discovered in the Itaboraí Formation near São José de Itaborai in the state of Rio de Janeiro, Brazil",
+   "quote_sha": "9b95175f6ae5df43"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for the genus is the Ypresian stage, from 56 to 48.07 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "paleopsilopterus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "statement": "Paleopsilopterus lived during the Early Eocene, approximately 53 to 50 million years ago.",
+   "category": "time_and_habitat",
+   "quote": "Paleopsilopterus lived during the Early Eocene (approximately 53 to 50 million years ago)",
+   "reason": "statement copies the source wording: 'Eocene approximately 53 to 50 million years ago'"
+  },
+  {
+   "chunk_id": "paleopsilopterus:enwiki:2",
+   "statement": "The family Phorusrhacidae, to which Paleopsilopterus belongs, is commonly known as 'terror birds'.",
+   "category": "paleobiology",
+   "quote": "commonly known as \"terror birds\"",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

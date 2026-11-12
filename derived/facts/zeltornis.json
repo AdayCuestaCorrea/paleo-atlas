@@ -1,0 +1,137 @@
+{
+ "taxon": "Zeltornis",
+ "taxon_key": "zeltornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e5da363aa24a7a01",
+ "generated_at": "2026-11-12T02:02:59+00:00",
+ "citations": {
+  "zeltornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Zeltornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Zeltornis?oldid=1354829360",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "zeltornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Zeltornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Zeltornis?oldid=1354829360",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "zeltornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Zeltornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39550",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Zeltornis is an extinct genus of bird.",
+   "category": "classification",
+   "chunk_id": "zeltornis:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Zeltornis",
+   "quote_sha": "b8c6a650de461c88"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species in the genus is Zeltornis ginsburgi.",
+   "category": "classification",
+   "chunk_id": "zeltornis:enwiki:1",
+   "lang": "en",
+   "quote": "species: ginsburgi",
+   "quote_sha": "fff24827b367dfb8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Zeltornis was described by Balouet in 1981.",
+   "category": "discovery",
+   "chunk_id": "zeltornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Balouet, 1981",
+   "quote_sha": "a44232e26c08f656"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Zeltornis lived during the Early Miocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "zeltornis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Miocene",
+   "quote_sha": "3860e44a03841b98"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Zeltornis is an extinct genus of heron.",
+   "category": "description",
+   "chunk_id": "zeltornis:enwiki:2",
+   "lang": "en",
+   "quote": "Zeltornis (\"Zelten bird\") is an extinct genus of heron.",
+   "quote_sha": "68f11eeb67462211"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The estimated wingspan of Zeltornis is 2.50 meters.",
+   "category": "description",
+   "chunk_id": "zeltornis:enwiki:2",
+   "lang": "en",
+   "quote": "Its wingspan is estimated at 2.50 m (8 ft 4 in).",
+   "quote_sha": "270f7476ec2db246"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Zeltornis is known from a single right coracoid bone with the distal part missing.",
+   "category": "discovery",
+   "chunk_id": "zeltornis:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from a single right coracoid of which the distal part is missing (MNHN collection, uncatalogued).",
+   "quote_sha": "b8536db1d313ba03"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Zeltornis is believed to be most closely allied to night herons.",
+   "category": "description",
+   "chunk_id": "zeltornis:enwiki:2",
+   "lang": "en",
+   "quote": "In particular it seems to have been allied most closely to the night herons",
+   "quote_sha": "1d0acc74d9ccc1bd"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Zeltornis belongs to the family Ardeidae.",
+   "category": "classification",
+   "chunk_id": "zeltornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ardeidae",
+   "quote_sha": "81dafc4d920bab8a"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "zeltornis:enwiki:2",
+   "statement": "Zeltornis resembled modern night herons but was much larger, standing 2 meters tall and weighing about 15 kilograms.",
+   "category": "description",
+   "quote": "Zeltornis probably resembled the modern night herons, but was much larger, standing 2 m (6 ft 8 in) tall and weighing about 15 kg.",
+   "reason": "statement copies the source wording: 'modern night herons but was much larger standing'"
+  },
+  {
+   "chunk_id": "zeltornis:enwiki:2",
+   "statement": "Zeltornis is named after the mountain Zelten in Libya, where the fossils were discovered.",
+   "category": "description",
+   "quote": "Zeltornis is named after the mountain Zelten in Libya, where it was found.",
+   "reason": "statement copies the source wording: 'named after the mountain Zelten in Libya where'"
+  },
+  {
+   "chunk_id": "zeltornis:pbdb:1",
+   "statement": "Zeltornis is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

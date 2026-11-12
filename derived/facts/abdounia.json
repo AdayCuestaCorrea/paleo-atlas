@@ -1,0 +1,135 @@
+{
+ "taxon": "Abdounia",
+ "taxon_key": "abdounia",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e0ee1478d4db731b",
+ "generated_at": "2026-11-12T01:43:13+00:00",
+ "citations": {
+  "abdounia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Abdounia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Abdounia?oldid=1359602257",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "abdounia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Abdounia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Abdounia?oldid=1359602257",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "abdounia:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Abdounia (Locations)",
+   "url": "https://en.wikipedia.org/wiki/Abdounia?oldid=1359602257",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "abdounia:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Abdounia (Species)",
+   "url": "https://en.wikipedia.org/wiki/Abdounia?oldid=1359602257",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "abdounia:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Abdounia",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34638",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Abdounia was described by Cappetta in 1980.",
+   "category": "discovery",
+   "chunk_id": "abdounia:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Cappetta, 1980",
+   "quote_sha": "0bb65bda5f62a33b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Abdounia fossils date from the Danian to the Rupelian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "abdounia:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Danian-Rupelian,",
+   "quote_sha": "ea8ceba56fbb9a00"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Abdounia fossils have been found in the Paleogene of Morocco, France, Belgium, Russia, and the United States.",
+   "category": "time_and_habitat",
+   "chunk_id": "abdounia:enwiki:3",
+   "lang": "en",
+   "quote": "Fossil Abdounia teeth are known from the Paleogene of Morocco, France, Belgium, Russia, and the United States (North Carolina, Georgia, Alabama, and Virginia).",
+   "quote_sha": "ed499b54b9397de8"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "In the lower Nanjemoy Formation of Virginia, Abdounia teeth are the most common fossil shark teeth.",
+   "category": "paleobiology",
+   "chunk_id": "abdounia:enwiki:3",
+   "lang": "en",
+   "quote": "In the lower Nanjemoy Formation of Virginia, they are the most common fossil shark tooth.",
+   "quote_sha": "8a0556cde71d5414"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "By the end of the Oligocene, the genus was severely reduced, likely due to competition with other sharks like Carcharhinus.",
+   "category": "paleobiology",
+   "chunk_id": "abdounia:enwiki:3",
+   "lang": "en",
+   "quote": "By the end of the Oligocene Epoch the genus is severely reduced, probably due to competition with other Carcharhiniformes like Carcharhinus.",
+   "quote_sha": "bfcf9c43c31cfa10"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Abdounia belongs to the family Carcharhinidae.",
+   "category": "classification",
+   "chunk_id": "abdounia:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Carcharhinidae",
+   "quote_sha": "6f49435481d167e6"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Abdounia is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "abdounia:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Abdounia lived between 66 and 27.3 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "abdounia:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Danian to Rupelian (66 to 27.3 million years ago)",
+   "quote_sha": "bdb49d4f8a956b6a"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "abdounia:enwiki:2",
+   "statement": "Abdounia is an extinct genus of requiem shark known primarily from isolated teeth.",
+   "category": "description",
+   "quote": "Abdounia is an extinct genus of requiem shark which lived during the Paleogene period, and is mainly known from isolated teeth.",
+   "reason": "statement copies the source wording: 'Abdounia is an extinct genus of requiem shark'"
+  },
+  {
+   "chunk_id": "abdounia:enwiki:2",
+   "statement": "Abdounia was one of the earliest requiem shark genera and was widespread in North America, Europe, and Africa.",
+   "category": "paleobiology",
+   "quote": "Abdounia is one of the earliest requiem shark genera, and attained widespread success in North America, Europe, and Africa.",
+   "reason": "statement copies the source wording: 'one of the earliest requiem shark genera and'"
+  }
+ ]
+}

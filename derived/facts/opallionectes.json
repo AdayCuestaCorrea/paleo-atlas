@@ -1,0 +1,113 @@
+{
+ "taxon": "Opallionectes",
+ "taxon_key": "opallionectes",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "305c7f2833e9f82f",
+ "generated_at": "2026-11-12T01:21:27+00:00",
+ "citations": {
+  "opallionectes:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Opallionectes?oldid=1300086107",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Opallionectes?oldid=1300086107",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (Description)",
+   "url": "https://en.wikipedia.org/wiki/Opallionectes?oldid=1300086107",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Opallionectes?oldid=162298125",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Opallionectes?oldid=162298125",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Opallionectes (Descripción)",
+   "url": "https://es.wikipedia.org/wiki/Opallionectes?oldid=162298125",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "opallionectes:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Opallionectes",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=176430",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "An opalized partial skeleton was found in an opal mine in the Bulldog Shale at Andamooka, South Australia, and described by Kear in 2006.",
+   "category": "discovery",
+   "chunk_id": "opallionectes:enwiki:3",
+   "lang": "en",
+   "quote": "An opalized partial skeleton (including vertebrae, ribs, limb elements, teeth, and associated gastroliths) of the animal has been discovered in an opal mine in the Bulldog Shale at Andamooka in South Australia and described by Kear in 2006.",
+   "quote_sha": "f219e3badb818418"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The animal possessed fine, needle-like sharp teeth similar to those of nothosaurs, likely used to trap small prey like fish and squids.",
+   "category": "description",
+   "chunk_id": "opallionectes:enwiki:3",
+   "lang": "en",
+   "quote": "It had fine needle like sharp teeth similar to those of nothosaurs and were probably used to trap small prey such as fish and squids.",
+   "quote_sha": "60e7d675e6caccab"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Opallionectes is classified within the family Cryptoclididae.",
+   "category": "classification",
+   "chunk_id": "opallionectes:eswiki:1",
+   "lang": "es",
+   "quote": "familia: †Cryptoclididae",
+   "quote_sha": "aa369f556397ecd6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Opallionectes lived during the Aptian stage, between 119.57 and 113.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "opallionectes:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (119.57 to 113.2 million years ago)",
+   "quote_sha": "a3674360d45e6562"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "opallionectes:enwiki:3",
+   "statement": "Analysis of sedimentary structures, fossils, isotope data, and climatic modeling suggests Opallionectes lived in regions with seasonally cold, possibly freezing conditions, indicating adaptations like seasonal migration or elevated metabolism.",
+   "category": "time_and_habitat",
+   "quote": "Analyses of the sedimentary structures, fossils, isotope data and climatic modeling show that Opallionectes lived in a region characterized by seasonally cold (possibly freezing) conditions, suggesting that it had developed some adaptation to live in cold water, such as seasonal migration or elevated metabolism.",
+   "reason": "statement copies the source wording: 'sedimentary structures fossils isotope data and climatic modeling'"
+  },
+  {
+   "chunk_id": "opallionectes:enwiki:3",
+   "statement": "Opallionectes is considered a missing link between older plesiosaurs from 165 million years ago and those near the end of the Cretaceous 66 million years ago, bridging a gap in the fossil record.",
+   "category": "curiosities",
+   "quote": "It is considered a sort of missing link between the much older plesiosaurs, living 165 million years ago, and the ones near the end of the Cretaceous, 66 million years ago, between which there had been a gap in the fossil record.",
+   "reason": "statement copies the source wording: 'end of the Cretaceous 66 million years ago'"
+  }
+ ]
+}

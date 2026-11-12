@@ -1,0 +1,69 @@
+{
+ "taxon": "Eocuculus",
+ "taxon_key": "eocuculus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "3daec60fe9aef0b3",
+ "generated_at": "2026-11-12T03:29:15+00:00",
+ "citations": {
+  "eocuculus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Eocuculus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Eocuculus?oldid=1300218893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eocuculus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Eocuculus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Eocuculus?oldid=1300218893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eocuculus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Eocuculus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=94273",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Eocuculus belongs to the family Cuculidae.",
+   "category": "classification",
+   "chunk_id": "eocuculus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cuculidae",
+   "quote_sha": "5a15ae21794ca890"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Eocuculus lived between 37 and 27.3 million years ago, during the Priabonian and Rupelian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "eocuculus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Rupelian (37 to 27.3 million years ago)",
+   "quote_sha": "57babf75ee8d24ae"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "There are two recorded fossil occurrences of the genus Eocuculus.",
+   "category": "discovery",
+   "chunk_id": "eocuculus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 2",
+   "quote_sha": "2a7bb9b953123d90"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "eocuculus:enwiki:2",
+   "statement": "Eocuculus cherpinae is a prehistoric bird known from postcranial fossils found in the late Eocene Florissant beds of Colorado.",
+   "category": "discovery",
+   "quote": "Eocuculus cherpinae is a prehistoric bird, known from postcranial remains from the late Eocene Florissant beds in Colorado.",
+   "reason": "statement copies the source wording: 'cherpinae is a prehistoric bird known from postcranial'"
+  }
+ ]
+}

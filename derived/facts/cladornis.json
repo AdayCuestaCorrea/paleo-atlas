@@ -1,0 +1,130 @@
+{
+ "taxon": "Cladornis",
+ "taxon_key": "cladornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "51688c2c6a7ef62a",
+ "generated_at": "2026-11-12T03:09:38+00:00",
+ "citations": {
+  "cladornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Cladornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Cladornis?oldid=1381119227",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cladornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Cladornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Cladornis?oldid=1381119227",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "cladornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Cladornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=53634",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Cladornis was described by Ameghino in 1895.",
+   "category": "discovery",
+   "chunk_id": "cladornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Ameghino, 1895",
+   "quote_sha": "2d5175350128f6ab"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Cladornis lived in Argentina during the early Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "cladornis:enwiki:2",
+   "lang": "en",
+   "quote": "Cladornis is an extinct genus of bird from the early Oligocene of Argentina.",
+   "quote_sha": "9110b8808ebdc335"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus is known from a single partial tarsometatarsus fossil.",
+   "category": "description",
+   "chunk_id": "cladornis:enwiki:2",
+   "lang": "en",
+   "quote": "Known from a single partial tarsometatarsus",
+   "quote_sha": "817e9405ea57d837"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The taxonomic placement of Cladornis is uncertain.",
+   "category": "description",
+   "chunk_id": "cladornis:enwiki:2",
+   "lang": "en",
+   "quote": "Its taxonomic placement is uncertain.",
+   "quote_sha": "35a46e650b605ae7"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The shaft of the Cladornis tarsometatarsus was very flat and short.",
+   "category": "description",
+   "chunk_id": "cladornis:enwiki:2",
+   "lang": "en",
+   "quote": "The shaft of the tarsometatarsus of Cladornis was very flat and short",
+   "quote_sha": "f94c0566cfcee5ee"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The distal head of the Cladornis tarsometatarsus suggests strong development of the toes.",
+   "category": "description",
+   "chunk_id": "cladornis:enwiki:2",
+   "lang": "en",
+   "quote": "the distal head suggests strong development of the toes.",
+   "quote_sha": "0298b801f809b306"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Cladornis belongs to the parent group Cladornithidae.",
+   "category": "classification",
+   "chunk_id": "cladornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cladornithidae",
+   "quote_sha": "19a8cec674f07aee"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Cladornis is classified in the family Cladornithidae.",
+   "category": "classification",
+   "chunk_id": "cladornis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Cladornithidae",
+   "quote_sha": "79a750f3f89f2ae8"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Cladornis lived between 33.9 and 23.04 million years ago, from the Rupelian to the Chattian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "cladornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Rupelian to Chattian (33.9 to 23.04 million years ago)",
+   "quote_sha": "1f2a862f21cc053b"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "cladornis:enwiki:2",
+   "statement": "Researchers have debated whether Cladornis was a terrestrial penguin, a pelecaniform, or a very large and extremely weird land bird.",
+   "category": "debate",
+   "quote": "It has been variously described as some kind of terrestrial penguin, a pelecaniform, and a 'very large and extremely weird land bird'.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "cladornis:pbdb:1",
+   "statement": "Cladornis is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+ "taxon": "Neococcyx",
+ "taxon_key": "neococcyx",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "71ed2824b0fba789",
+ "generated_at": "2026-11-12T03:29:26+00:00",
+ "citations": {
+  "neococcyx:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Neococcyx (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Neococcyx?oldid=1341564625",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neococcyx:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Neococcyx (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Neococcyx?oldid=1341564625",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neococcyx:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Neococcyx",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39315",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The animal belongs to the genus Neococcyx.",
+   "category": "classification",
+   "chunk_id": "neococcyx:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Neococcyx",
+   "quote_sha": "6664baf997b990dd"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species is named mccorquodalei.",
+   "category": "classification",
+   "chunk_id": "neococcyx:enwiki:1",
+   "lang": "en",
+   "quote": "species: mccorquodalei",
+   "quote_sha": "508e79783d0bb1e1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus was described by Weigel in 1963.",
+   "category": "classification",
+   "chunk_id": "neococcyx:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Weigel, 1963",
+   "quote_sha": "9538bd535717800b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species was described by Weigel in 1963.",
+   "category": "classification",
+   "chunk_id": "neococcyx:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Weigel, 1963",
+   "quote_sha": "95cb5f007fa1ce05"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Neococcyx belongs to the family Cuculidae.",
+   "category": "classification",
+   "chunk_id": "neococcyx:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cuculidae",
+   "quote_sha": "5a15ae21794ca890"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The fossil range for Neococcyx is the Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "neococcyx:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Oligocene",
+   "quote_sha": "a4fdaebc11e5c84e"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Neococcyx lived between 37 and 33.9 million years ago during the Priabonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "neococcyx:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Priabonian (37 to 33.9 million years ago)",
+   "quote_sha": "913454405192826e"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "neococcyx:enwiki:2",
+   "statement": "Neococcyx mccorquodalei is a prehistoric bird known from postcranial remains found in the late Eocene of Canada.",
+   "category": "discovery",
+   "quote": "Neococcyx mccorquodalei is a prehistoric bird, known from postcranial remains from the late Eocene (Chadronian) of Canada.",
+   "reason": "statement copies the source wording: 'mccorquodalei is a prehistoric bird known from postcranial'"
+  },
+  {
+   "chunk_id": "neococcyx:pbdb:1",
+   "statement": "Neococcyx is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

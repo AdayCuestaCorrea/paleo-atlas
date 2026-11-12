@@ -1,0 +1,112 @@
+{
+ "taxon": "Chondrenchelys",
+ "taxon_key": "chondrenchelys",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "12f888da437723be",
+ "generated_at": "2026-11-12T01:20:48+00:00",
+ "citations": {
+  "chondrenchelys:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Chondrenchelys (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Chondrenchelys?oldid=1323847053",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chondrenchelys:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Chondrenchelys (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Chondrenchelys?oldid=1323847053",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chondrenchelys:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Chondrenchelys",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34749",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Chondrenchelys was described by Traquair in 1888.",
+   "category": "classification",
+   "chunk_id": "chondrenchelys:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Traquair, 1888",
+   "quote_sha": "611625d68de414f7"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Chondrenchelys was a medium-sized fish with an elongated body reaching up to 18 cm in length.",
+   "category": "description",
+   "chunk_id": "chondrenchelys:enwiki:2",
+   "lang": "en",
+   "quote": "Chondrenchelys would have been quite a relatively medium-sized fish with an elongated body up to 18 cmin length",
+   "quote_sha": "56d5815d23a6a5d8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The fish had a long dorsal fin and a body that tapered to a point.",
+   "category": "description",
+   "chunk_id": "chondrenchelys:enwiki:2",
+   "lang": "en",
+   "quote": "it had a dorsal fin which was indeed long and a body which tapered to a point.",
+   "quote_sha": "b3d8a30d588058c1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species name problematicus likely refers to the lack of scales, which distinguished it from other known fish at the time of discovery.",
+   "category": "description",
+   "chunk_id": "chondrenchelys:enwiki:2",
+   "lang": "en",
+   "quote": "The speciea name, problematicus, is likely derived from the lack of scales setting it apart from all other fish known at the time of discovery.",
+   "quote_sha": "ae4a48392e83023c"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Chondrenchelys lived during the Visean stage, from 346.7 to 339.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "chondrenchelys:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Visean to Visean (346.7 to 339.9 million years ago)",
+   "quote_sha": "bbb197449155ce45"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Chondrenchelys belongs to the family Chondrenchelyidae.",
+   "category": "classification",
+   "chunk_id": "chondrenchelys:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Chondrenchelyidae",
+   "quote_sha": "26dc3ef2681f68ff"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Chondrenchelys is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "chondrenchelys:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "chondrenchelys:enwiki:2",
+   "statement": "Chondrenchelys is an extinct genus of cartilaginous fish and the earliest known member of Holocephali with complete skeletons.",
+   "category": "classification",
+   "quote": "Chondrenchelys is an extinct genus of cartilaginous fish and the earliest member of Holocephali known from complete skeletons.",
+   "reason": "statement copies the source wording: 'Chondrenchelys is an extinct genus of cartilaginous fish'"
+  },
+  {
+   "chunk_id": "chondrenchelys:enwiki:2",
+   "statement": "Each jaw contained one large pair, one middle-sized pair, and three small pairs of tooth plates.",
+   "category": "description",
+   "quote": "Chondrenchelys had one large pair, one middle-sized pair, and three small pair of tooth plates in each jaw.",
+   "reason": "statement copies the source wording: 'one large pair one middle-sized pair and three'"
+  }
+ ]
+}

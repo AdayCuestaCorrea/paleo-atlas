@@ -1,0 +1,103 @@
+{
+ "taxon": "Telmabates",
+ "taxon_key": "telmabates",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "671a758c7e0fc3e9",
+ "generated_at": "2026-11-12T01:59:29+00:00",
+ "citations": {
+  "telmabates:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Telmabates (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Telmabates?oldid=1291858056",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "telmabates:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Telmabates (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Telmabates?oldid=1291858056",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "telmabates:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Telmabates",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=57763",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Telmabates contains only one species, T. antiquus.",
+   "category": "description",
+   "chunk_id": "telmabates:enwiki:2",
+   "lang": "en",
+   "quote": "The genus contains a single species, T. antiquus",
+   "quote_sha": "3a1838f6dc0c2289"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species Telmabates antiquus was named and described by Howard in 1955.",
+   "category": "discovery",
+   "chunk_id": "telmabates:enwiki:2",
+   "lang": "en",
+   "quote": "Telmabates antiquus was named and described by Howard (1955)",
+   "quote_sha": "45be7c31da406890"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A second species, T. howardae, was named by Cracraft in 1970 but was later moved to the new species Wunketru howardae by De Mendoza, Degrange, and Tambussi in 2024.",
+   "category": "discovery",
+   "chunk_id": "telmabates:enwiki:2",
+   "lang": "en",
+   "quote": "A second species, T. howardae was named by Cracraft (1970), but De Mendoza, Degrange & Tambussi (2024) moved T. howardae to the new species Wunketru howardae",
+   "quote_sha": "2c58d6c47b6b0a0d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Telmabates were found in the Eocene Bird Clay Locality of the Sarmiento Formation in Chubut Province, Argentina.",
+   "category": "time_and_habitat",
+   "chunk_id": "telmabates:enwiki:2",
+   "lang": "en",
+   "quote": "from the Eocene Bird Clay Locality of the Sarmiento Formation of Chubut Province, Argentina",
+   "quote_sha": "5d349370b32814b0"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Telmabates lived between 56 and 48 million years ago during the Ypresian to Lutetian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "telmabates:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Lutetian (56 to 48 million years ago)",
+   "quote_sha": "a757d23df73ac850"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Telmabates belongs to the family Presbyornithidae.",
+   "category": "classification",
+   "chunk_id": "telmabates:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Presbyornithidae",
+   "quote_sha": "23518d4dfd6abeb2"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "telmabates:enwiki:2",
+   "statement": "Telmabates is an extinct genus of presbyornithid bird.",
+   "category": "description",
+   "quote": "Telmabates is an extinct genus of presbyornithid bird",
+   "reason": "statement copies the source wording: 'Telmabates is an extinct genus of presbyornithid bird'"
+  },
+  {
+   "chunk_id": "telmabates:pbdb:1",
+   "statement": "Telmabates is classified as a bird (Class Aves).",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

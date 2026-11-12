@@ -1,0 +1,105 @@
+{
+ "taxon": "Apatosagittarius",
+ "taxon_key": "apatosagittarius",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f7d72afb614bee2c",
+ "generated_at": "2026-11-12T02:50:58+00:00",
+ "citations": {
+  "apatosagittarius:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Apatosagittarius (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Apatosagittarius?oldid=1368858206",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "apatosagittarius:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Apatosagittarius (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Apatosagittarius?oldid=1368858206",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "apatosagittarius:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Apatosagittarius",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=360263",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Apatosagittarius fossils date to the Late Miocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "apatosagittarius:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Miocene",
+   "quote_sha": "48d4bfe05913bdd1"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Apatosagittarius was described by Feduccia and Voorhies in 1989.",
+   "category": "discovery",
+   "chunk_id": "apatosagittarius:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Feduccia & Voorhies, 1989",
+   "quote_sha": "63b706d497af6c2d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Apatosagittarius is an extinct genus of hawks (Accipitridae) found in Nebraska.",
+   "category": "classification",
+   "chunk_id": "apatosagittarius:enwiki:2",
+   "lang": "en",
+   "quote": "Apatosagittarius is an extinct monotypic genus of Accipitridae from the Late Miocene of Nebraska.",
+   "quote_sha": "1e0318f2452300b5"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The name Apatosagittarius means \"false secretarybird\" because it looked similar to the modern secretary bird.",
+   "category": "description",
+   "chunk_id": "apatosagittarius:enwiki:2",
+   "lang": "en",
+   "quote": "The genus name, which Feduccia and Voorhies translate as \"false secretarybird,\" refers to the bird's superficial resemblance to the living secretary bird.",
+   "quote_sha": "dfd0091fe28ace70"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Apatosagittarius lived between 12.5 and 9.4 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "apatosagittarius:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Serravallian to Tortonian (12.5 to 9.4 million years ago)",
+   "quote_sha": "3b7f07e07a5eaf5f"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Apatosagittarius belongs to the family Accipitridae.",
+   "category": "classification",
+   "chunk_id": "apatosagittarius:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Accipitridae",
+   "quote_sha": "e1fd1c97348bb9e0"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "There are records of two fossil occurrences of Apatosagittarius.",
+   "category": "discovery",
+   "chunk_id": "apatosagittarius:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 2",
+   "quote_sha": "2a7bb9b953123d90"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "apatosagittarius:pbdb:1",
+   "statement": "Apatosagittarius is classified as a bird (Class Aves).",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

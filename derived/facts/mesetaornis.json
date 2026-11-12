@@ -1,0 +1,105 @@
+{
+ "taxon": "Mesetaornis",
+ "taxon_key": "mesetaornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "16998a108171c2c6",
+ "generated_at": "2026-11-12T03:24:44+00:00",
+ "citations": {
+  "mesetaornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Mesetaornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Mesetaornis?oldid=1337229028",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mesetaornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Mesetaornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Mesetaornis?oldid=1337229028",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "mesetaornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Mesetaornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=92197",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The scientific name of the species is Mesetaornis polaris.",
+   "category": "classification",
+   "chunk_id": "mesetaornis:enwiki:1",
+   "lang": "en",
+   "quote": "taxon: Mesetaornis polaris",
+   "quote_sha": "3d2b67dda2efa874"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus was described by Myrcha and colleagues in 2002.",
+   "category": "discovery",
+   "chunk_id": "mesetaornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Myrcha et al., 2002",
+   "quote_sha": "f2ed91b44c1bf079"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Mesetaornis is an extinct genus of penguin that lived during the Eocene period.",
+   "category": "description",
+   "chunk_id": "mesetaornis:enwiki:2",
+   "lang": "en",
+   "quote": "Mesetaornis is an extinct genus of penguin from the Eocene period.",
+   "quote_sha": "735e00657c90246f"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus contains only one known species, Mesetaornis polaris.",
+   "category": "description",
+   "chunk_id": "mesetaornis:enwiki:2",
+   "lang": "en",
+   "quote": "It contains the single species Mesetaornis polaris.",
+   "quote_sha": "52a5bae46bddd2ed"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Mesetaornis belongs to the order Sphenisciformes.",
+   "category": "classification",
+   "chunk_id": "mesetaornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sphenisciformes",
+   "quote_sha": "0f414bdf0e89f099"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Mesetaornis lived between 41.03 and 33.9 million years ago, spanning the Bartonian to Priabonian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "mesetaornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bartonian to Priabonian (41.03 to 33.9 million years ago)",
+   "quote_sha": "c46170f75eb16adb"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "There are two recorded fossil occurrences of Mesetaornis in the Paleobiology Database.",
+   "category": "discovery",
+   "chunk_id": "mesetaornis:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 2",
+   "quote_sha": "2a7bb9b953123d90"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "mesetaornis:pbdb:1",
+   "statement": "Mesetaornis is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

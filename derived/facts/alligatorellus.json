@@ -1,0 +1,135 @@
+{
+ "taxon": "Alligatorellus",
+ "taxon_key": "alligatorellus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "18d212feb48af4b9",
+ "generated_at": "2026-11-12T02:03:14+00:00",
+ "citations": {
+  "alligatorellus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Alligatorellus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Alligatorellus?oldid=1282991277",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "alligatorellus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Alligatorellus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Alligatorellus?oldid=1282991277",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "alligatorellus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Alligatorellus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Alligatorellus?oldid=157040626",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "alligatorellus:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Alligatorellus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Alligatorellus?oldid=157040626",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "alligatorellus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Alligatorellus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38350",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Alligatorellus was described by Gervais in 1871.",
+   "category": "classification",
+   "chunk_id": "alligatorellus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Gervais, 1871",
+   "quote_sha": "70b2a1b496790c29"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Alligatorellus beaumonti.",
+   "category": "classification",
+   "chunk_id": "alligatorellus:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: Alligatorellus beaumonti",
+   "quote_sha": "4eb4da477fd84735"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A skeleton of Alligatorellus was found in the Solnhofen Limestone of Kelheim, Germany.",
+   "category": "discovery",
+   "chunk_id": "alligatorellus:enwiki:2",
+   "lang": "en",
+   "quote": "A skeleton of Alligatorellus has also been found in the Solnhofen Limestone of Kelheim, Germany.",
+   "quote_sha": "fb1030c37e303554"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The German skeleton was likely washed into a lagoon within a marine environment before fossilization.",
+   "category": "paleobiology",
+   "chunk_id": "alligatorellus:enwiki:2",
+   "lang": "en",
+   "quote": "The limestone was deposited in a marine environment and the individual may have washed into a lagoon where it was fossilized.",
+   "quote_sha": "c032875c592b1a17"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The German skeleton preserves osteoderms and limb bones in three dimensions.",
+   "category": "description",
+   "chunk_id": "alligatorellus:enwiki:2",
+   "lang": "en",
+   "quote": "The skeleton includes osteoderms and limb bones, which are three-dimensionally preserved.",
+   "quote_sha": "37ef0eab72dad3b4"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The German skeleton provides more anatomical detail than most other atoposaurid fossils because it is three-dimensional rather than compressed flat.",
+   "category": "curiosities",
+   "chunk_id": "alligatorellus:enwiki:2",
+   "lang": "en",
+   "quote": "The German skeleton shows more details of atoposaurid anatomy than most fossils, as other atoposaurid remains are compressed flat.",
+   "quote_sha": "729cc74e2830b825"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Alligatorellus belongs to the family Atoposauridae.",
+   "category": "classification",
+   "chunk_id": "alligatorellus:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Atoposauridae",
+   "quote_sha": "cbde1302793578f8"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Alligatorellus lived from the Kimmeridgian to the Tithonian stages, between 154.8 and 145.06 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "alligatorellus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Kimmeridgian to Tithonian (154.8 to 145.06 million years ago)",
+   "quote_sha": "5b24b57085904884"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "alligatorellus:enwiki:2",
+   "statement": "Alligatorellus is an extinct genus of atoposaurid crocodyliform related to Atoposaurus.",
+   "category": "description",
+   "quote": "Alligatorellus is an extinct genus of atoposaurid crocodyliform found in France that was related to Atoposaurus.",
+   "reason": "statement copies the source wording: 'Alligatorellus is an extinct genus of atoposaurid crocodyliform'"
+  },
+  {
+   "chunk_id": "alligatorellus:enwiki:2",
+   "statement": "Remains of four crinoids that lived in the lagoon were found in the same fossil block as the Alligatorellus skeleton.",
+   "category": "paleobiology",
+   "quote": "Remains of four crinoids that lived in the lagoon are found in the same block as the skeleton.",
+   "reason": "statement copies the source wording: 'of four crinoids that lived in the lagoon'"
+  }
+ ]
+}

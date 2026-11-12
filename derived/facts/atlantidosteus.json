@@ -1,0 +1,117 @@
+{
+ "taxon": "Atlantidosteus",
+ "taxon_key": "atlantidosteus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "57a6ed3f18b120fe",
+ "generated_at": "2026-11-12T02:09:56+00:00",
+ "citations": {
+  "atlantidosteus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Atlantidosteus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Atlantidosteus?oldid=1378787765",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "atlantidosteus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Atlantidosteus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Atlantidosteus?oldid=1378787765",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "atlantidosteus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Atlantidosteus (Description)",
+   "url": "https://en.wikipedia.org/wiki/Atlantidosteus?oldid=1378787765",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "atlantidosteus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Atlantidosteus (Phylogeny)",
+   "url": "https://en.wikipedia.org/wiki/Atlantidosteus?oldid=1378787765",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "atlantidosteus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Atlantidosteus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34307",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Atlantidosteus fossils date from the Emsian to the Eifelian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "atlantidosteus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: (Emsian to Eifelian)",
+   "quote_sha": "6d4a95c4c96ef369"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Atlantidosteus was described by Lelièvre in 1984.",
+   "category": "discovery",
+   "chunk_id": "atlantidosteus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Lelièvre, 1984",
+   "quote_sha": "f41864bfaba0effc"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Atlantidosteus is an extinct homostiid arthrodire found in Morocco and Queensland during the Early to Middle Devonian.",
+   "category": "description",
+   "chunk_id": "atlantidosteus:enwiki:2",
+   "lang": "en",
+   "quote": "Atlantidosteus is an extinct genus of homostiid arthrodire from the Early to Middle Devonian of Morocco and Queensland.",
+   "quote_sha": "229f216d65fb1edf"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Atlantidosteus belongs to the clade Migmatocephala and is more closely related to Homostius than to Antineosteus.",
+   "category": "classification",
+   "chunk_id": "atlantidosteus:enwiki:4",
+   "lang": "en",
+   "quote": "Atlantidosteus is part of the clade Migmatocephala, closer related to Homostius, than Antineosteus.",
+   "quote_sha": "f989778f423db1cf"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Atlantidosteus belongs to the parent group Arthrodira.",
+   "category": "classification",
+   "chunk_id": "atlantidosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Arthrodira",
+   "quote_sha": "9c9781b1ed6ad203"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Atlantidosteus is classified in the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "atlantidosteus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "atlantidosteus:enwiki:2",
+   "statement": "The genus contains two known species: A. hollardi and A. pacifica.",
+   "category": "description",
+   "quote": "It contains two known species, A. hollardi and A. pacifica.",
+   "reason": "statement copies the source wording: 'contains two known species A hollardi and A'"
+  },
+  {
+   "chunk_id": "atlantidosteus:enwiki:3",
+   "statement": "Atlantidosteus pacifica is known from a right suborbital plate found in the Broken River Group of Queensland, Australia.",
+   "category": "description",
+   "quote": "Atlantidosteus pacifica is known from a right suborbital plate, found in the Broken River Group of Queensland, Australia.",
+   "reason": "statement copies the source wording: 'pacifica is known from a right suborbital plate'"
+  }
+ ]
+}

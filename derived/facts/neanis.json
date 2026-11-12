@@ -1,0 +1,133 @@
+{
+ "taxon": "Neanis",
+ "taxon_key": "neanis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "69adbbd52725f98f",
+ "generated_at": "2026-11-12T01:29:00+00:00",
+ "citations": {
+  "neanis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Neanis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Neanis?oldid=1380714185",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neanis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Neanis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Neanis?oldid=1380714185",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neanis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Neanis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39381",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Neanis fossils date to the Early Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "neanis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Eocene",
+   "quote_sha": "2ddfd66b19462a50"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Neanis was described by Shufeldt in 1913.",
+   "category": "discovery",
+   "chunk_id": "neanis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Shufeldt, 1913",
+   "quote_sha": "e00ffb9d9d9a5db1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Neanis species are found in the Late Wasatchian stratum (51-52 million years ago) of the Early Eocene Green River Formation in the Western-Central USA.",
+   "category": "time_and_habitat",
+   "chunk_id": "neanis:enwiki:2",
+   "lang": "en",
+   "quote": "Both are known from the Late Wasatchian (51-52 MYA) stratum of the Early Eocene Green River Formation of the Western-Central USA.",
+   "quote_sha": "d7be32a35d3e46e3"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Neanis is an extinct genus of bird that is probably related to woodpeckers and toucans.",
+   "category": "description",
+   "chunk_id": "neanis:enwiki:2",
+   "lang": "en",
+   "quote": "Neanis is an extinct genus of bird probably related to woodpeckers and toucans.",
+   "quote_sha": "ea70f2eeca992eca"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The family Primobucconidae, which originally included Neanis, has been moved to the order Coraciiformes.",
+   "category": "classification",
+   "chunk_id": "neanis:enwiki:2",
+   "lang": "en",
+   "quote": "Indeed, the only remaining genus of the family is Primobucco (without kistneri), and the family as such has been moved to the Coraciiformes.",
+   "quote_sha": "3e4a02412d948a91"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Neanis schucherti appears to share traits with Hassiavis and might even be a cypselomorph.",
+   "category": "classification",
+   "chunk_id": "neanis:enwiki:2",
+   "lang": "en",
+   "quote": "Neanis schucherti appears to share some traits with Hassiavis and might even be a cypselomorph",
+   "quote_sha": "037ccd5ee5391c83"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The parent group of the genus Neanis is Coracii.",
+   "category": "classification",
+   "chunk_id": "neanis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Coracii",
+   "quote_sha": "b19973092f4bd048"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "neanis:enwiki:2",
+   "statement": "N. kistneri resembles N. schucherti but likely belongs to a distinct genus and may not be closely related.",
+   "category": "description",
+   "quote": "N. kistneri resembles this, but it probably belongs to a distinct genus and may not be closely related.",
+   "reason": "statement copies the source wording: 'belongs to a distinct genus and may not'"
+  },
+  {
+   "chunk_id": "neanis:enwiki:2",
+   "statement": "N. kistneri is known from one fairly complete but poorly preserved skeleton, while even less material is known for N. schucherti.",
+   "category": "description",
+   "quote": "\"N.\" kistneri is known from one fairly complete, but not very well preserved skeleton, whereas of N. schucherti even less material was found.",
+   "reason": "statement copies the source wording: 'N kistneri is known from one fairly complete'"
+  },
+  {
+   "chunk_id": "neanis:enwiki:2",
+   "statement": "Researchers suggest Neanis schucherti's closest relatives may be the Piciformes, or it might be an ancestral form in the piciform-coraciiform radiation.",
+   "category": "classification",
+   "quote": "The closest relatives of Neanis schucherti may be the Piciformes, or it might be an ancestral form in the piciform-coraciiform radiation.",
+   "reason": "statement copies the source wording: 'might be an ancestral form in the piciform-coraciiform'"
+  },
+  {
+   "chunk_id": "neanis:enwiki:2",
+   "statement": "N. kistneri seems more closely related to piciform birds than to other Neanis species.",
+   "category": "classification",
+   "quote": "\"N.\" kistneri seems more closely related to piciform birds.",
+   "reason": "statement copies the source wording: 'N kistneri seems more closely related to piciform'"
+  },
+  {
+   "chunk_id": "neanis:pbdb:1",
+   "statement": "Neanis is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

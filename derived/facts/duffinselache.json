@@ -1,0 +1,87 @@
+{
+ "taxon": "Duffinselache",
+ "taxon_key": "duffinselache",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "691887918af98906",
+ "generated_at": "2026-11-12T02:54:25+00:00",
+ "citations": {
+  "duffinselache:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Duffinselache (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Duffinselache?oldid=1306945763",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "duffinselache:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Duffinselache (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Duffinselache?oldid=1306945763",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "duffinselache:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Duffinselache",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=275503",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "This extinct basal shark, known as Duffin's shark, is represented by a single species found in the Late Triassic of England.",
+   "category": "discovery",
+   "chunk_id": "duffinselache:enwiki:2",
+   "lang": "en",
+   "quote": "Duffinselache (Duffin's shark) is an extinct genus of basal shark elasmobranchii cartilaginous fish, known from a single species, Duffinselache holwellensis, collected from the Late Triassic (Rhaetian stage) of England.",
+   "quote_sha": "5880a8f8bb8d4d54"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Duffin first named the animal in 1998, initially classifying it as a species of Polyacrodus.",
+   "category": "discovery",
+   "chunk_id": "duffinselache:enwiki:2",
+   "lang": "en",
+   "quote": "It was first named by Duffin in 1998 as a species of Polyacrodus.",
+   "quote_sha": "08da713c0336fe99"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "In 2012, researchers Plamen S. Andreev and Gilles Cuny moved the species to a new genus, designating it the type species of Duffinselache.",
+   "category": "discovery",
+   "chunk_id": "duffinselache:enwiki:2",
+   "lang": "en",
+   "quote": "Plamen S. Andreev and Gilles Cuny in 2012 reassigned it to a new genus as its type species, Polyacrodus holwellensis.",
+   "quote_sha": "604b5ad378a43418"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Duffinselache belongs to the class Chondrichthyes and the parent group Neoselachii.",
+   "category": "classification",
+   "chunk_id": "duffinselache:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Neoselachii\nClass: Chondrichthyes",
+   "quote_sha": "92307d20eba22778"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The animal lived during the Rhaetian stage, between 205.7 and 201.4 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "duffinselache:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Rhaetian to Rhaetian (205.7 to 201.4 million years ago)",
+   "quote_sha": "f46aa17f2c492523"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "duffinselache:enwiki:1",
+   "statement": "The species Duffinselache holwellensis was originally described by Duffin in 1998 under the genus Polyacrodus before being reassigned to its own genus in 2012.",
+   "category": "classification",
+   "quote": "genus: Duffinselache\nspecies: holwellensis\nauthority: (Duffin, 1998)\nparent_authority: Andreev & Cuny, 2012\nsynonyms: Polyacrodus holwellensi Duffin, 1998",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

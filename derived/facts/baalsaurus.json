@@ -1,0 +1,130 @@
+{
+ "taxon": "Baalsaurus",
+ "taxon_key": "baalsaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2e217b014bfe394b",
+ "generated_at": "2026-11-12T01:42:56+00:00",
+ "citations": {
+  "baalsaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Baalsaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Baalsaurus?oldid=1314278953",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baalsaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Baalsaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Baalsaurus?oldid=1314278953",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baalsaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Baalsaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=379935",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The only known species, B. mansillai, was named after Juan Eduardo Mansilla, a museum technician who discovered the fossil.",
+   "category": "discovery",
+   "chunk_id": "baalsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The type and only known species is B. mansillai, with the specific name honoring the discoverer Juan Eduardo Mansilla, a museum technician at the Geology and Paleontology Museum of the National University of Comahue.",
+   "quote_sha": "1108bbaa94c4070b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The holotype specimen, MUCPv-1460, consists of a mostly complete right dentary found in the upper Portezuelo Formation.",
+   "category": "discovery",
+   "chunk_id": "baalsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The holotype specimen, MUCPv-1460, is a mostly complete right dentary that was found in rocks of the upper Portezuelo Formation.",
+   "quote_sha": "4d73e3986f550a9a"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The dentary bone is squared-off rather than curved, with teeth crowded at the front of the jaw.",
+   "category": "description",
+   "chunk_id": "baalsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The dentary is squared-off instead of curved when viewed from above or below, with the teeth crowded into the front of the jaw",
+   "quote_sha": "3f5107e3117b3d24"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Baalsaurus lived during the Late Cretaceous in Neuquén Province, Patagonia, Argentina.",
+   "category": "time_and_habitat",
+   "chunk_id": "baalsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "from the Late Cretaceous of Neuquén Province, Patagonia, Argentina",
+   "quote_sha": "a4396e5a9c386772"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Baalsaurus lived between 93.9 and 85.7 million years ago, during the Turonian to Coniacian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "baalsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Turonian to Coniacian (93.9 to 85.7 million years ago)",
+   "quote_sha": "4b6a13877faf7a25"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Baalsaurus belongs to the parent group Titanosauria.",
+   "category": "classification",
+   "chunk_id": "baalsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Titanosauria",
+   "quote_sha": "bca2134bcfc81271"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Baalsaurus is classified within the class Saurischia.",
+   "category": "classification",
+   "chunk_id": "baalsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Saurischia",
+   "quote_sha": "8e64a48e9ac37acb"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The genus was described by Calvo and González Riga in 2018.",
+   "category": "discovery",
+   "chunk_id": "baalsaurus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Calvo & González Riga, 2018",
+   "quote_sha": "43782f9bfcaa534f"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The species name of the genus is mansillai.",
+   "category": "discovery",
+   "chunk_id": "baalsaurus:enwiki:1",
+   "lang": "en",
+   "quote": "species: mansillai",
+   "quote_sha": "82963a11292807fc"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "baalsaurus:enwiki:2",
+   "statement": "The genus name Baalsaurus honors the fossil site Baal in Argentina, which is named after the ancient Phoenician god Baal.",
+   "category": "discovery",
+   "quote": "Baalsaurus (named after the dinosaur fossil site Baal in Argentina, which in turn is named after the ancient Phoenician god Baal)",
+   "reason": "statement copies the source wording: 'is named after the ancient Phoenician god Baal'"
+  },
+  {
+   "chunk_id": "baalsaurus:enwiki:2",
+   "statement": "Baalsaurus is classified as a titanosaurian sauropod dinosaur.",
+   "category": "classification",
+   "quote": "Baalsaurus ... is a genus of titanosaurian sauropod dinosaur",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

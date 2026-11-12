@@ -1,0 +1,96 @@
+{
+ "taxon": "Bdellodus",
+ "taxon_key": "bdellodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "f0db0881a095243f",
+ "generated_at": "2026-11-12T02:38:03+00:00",
+ "citations": {
+  "bdellodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Bdellodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Bdellodus?oldid=1306941108",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bdellodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Bdellodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Bdellodus?oldid=1306941108",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bdellodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Bdellodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34486",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Bdellodus is monotypic, meaning it contains only one species, B. bollensis.",
+   "category": "discovery",
+   "chunk_id": "bdellodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is monotypic, containing only the species B. bollensis.",
+   "quote_sha": "59b69c9e28eb58c5"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Bdellodus have been found in the Toarcian stage of Germany.",
+   "category": "discovery",
+   "chunk_id": "bdellodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Toarcian of Germany.",
+   "quote_sha": "0ac4d544d8ada4f1"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus was originally described based on associated teeth.",
+   "category": "discovery",
+   "chunk_id": "bdellodus:enwiki:2",
+   "lang": "en",
+   "quote": "It was named on an associated dentition.",
+   "quote_sha": "ec7a3c27f7f062e0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Bdellodus is often classified within the subfamily Acrodontinae, a group of durophagous (shell-crushing) hybodont sharks.",
+   "category": "classification",
+   "chunk_id": "bdellodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is often placed in the subfamily Acrodontinae alongside other durophagous hybodontids.",
+   "quote_sha": "0269e301746e07b2"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Bdellodus lived during the Early Jurassic epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "bdellodus:enwiki:2",
+   "lang": "en",
+   "quote": "Bdellodus is an extinct genus of hybodont from the Early Jurassic epoch of the Jurassic Period.",
+   "quote_sha": "4ca0f324400eef82"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The time range for Bdellodus is estimated to be between 184.2 and 174.7 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "bdellodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Toarcian to Toarcian (184.2 to 174.7 million years ago)",
+   "quote_sha": "728c17e50078f056"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "bdellodus:enwiki:2",
+   "statement": "The genus was named by Friedrich August von Quenstedt in 1882 because the teeth appeared coal-black, resembling leech teeth.",
+   "category": "discovery",
+   "quote": "Friedrich August von Quenstedt named them this due to their \"coal-black\" color which he associated with leeches.",
+   "reason": "numbers not in the quote: ['1882']"
+  }
+ ]
+}

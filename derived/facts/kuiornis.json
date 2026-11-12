@@ -1,0 +1,96 @@
+{
+ "taxon": "Kuiornis",
+ "taxon_key": "kuiornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "1ab80d8b5e512884",
+ "generated_at": "2026-11-12T03:04:46+00:00",
+ "citations": {
+  "kuiornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Kuiornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Kuiornis?oldid=1297908929",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kuiornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Kuiornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Kuiornis?oldid=1297908929",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kuiornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Kuiornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=166854",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Kuiornis was described by Worthy and colleagues in 2010.",
+   "category": "classification",
+   "chunk_id": "kuiornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Worthy et al., 2010",
+   "quote_sha": "cc7834f182eb572b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species in the genus Kuiornis is Kuiornis indicator.",
+   "category": "classification",
+   "chunk_id": "kuiornis:enwiki:1",
+   "lang": "en",
+   "quote": "species: indicator",
+   "quote_sha": "c8dea6a23a03dd50"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Kuiornis indicator is an extinct species of wren belonging to the family Acanthisittidae.",
+   "category": "description",
+   "chunk_id": "kuiornis:enwiki:2",
+   "lang": "en",
+   "quote": "Kuiornis indicator is an extinct New Zealand wren (Acanthisittidae)",
+   "quote_sha": "12572ca208ea4096"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Kuiornis indicator date to the early Miocene, between 19 and 16 million years ago, found in the St Bathans fauna of Central Otago.",
+   "category": "time_and_habitat",
+   "chunk_id": "kuiornis:enwiki:2",
+   "lang": "en",
+   "quote": "known from the early Miocene (19–16 million years ago) St Bathans fauna in Central Otago",
+   "quote_sha": "696720d822208f53"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The species is known from a single fossil specimen, a holotype consisting of a proximal right tarsometatarsus.",
+   "category": "discovery",
+   "chunk_id": "kuiornis:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from a holotype proximal right tarsometatarsus (NMNZ S.50929)",
+   "quote_sha": "f8fbd9362bb1f7f2"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The time range for the genus Kuiornis is estimated from 18.7 to 15.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "kuiornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Burdigalian to Langhian (18.7 to 15.9 million years ago)",
+   "quote_sha": "31af60ac9235ce48"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "kuiornis:enwiki:2",
+   "statement": "Amongst the Acanthisittidae family, Kuiornis indicator is most closely related to the living rifleman.",
+   "category": "paleobiology",
+   "quote": "Amongst acanthisittids it is most closely related to the living rifleman",
+   "reason": "statement copies the source wording: 'is most closely related to the living rifleman'"
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "taxon": "Anabernicula",
+ "taxon_key": "anabernicula",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "29339392a5e749e1",
+ "generated_at": "2026-11-12T02:47:36+00:00",
+ "citations": {
+  "anabernicula:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Anabernicula (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Anabernicula?oldid=1379565905",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anabernicula:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Anabernicula (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Anabernicula?oldid=1379565905",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "anabernicula:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Anabernicula",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=83430",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Four species of Anabernicula have been described: A. minuscula, A. gracilenta, A. oregonensis, and A. robusta.",
+   "category": "description",
+   "chunk_id": "anabernicula:enwiki:2",
+   "lang": "en",
+   "quote": "Four species have been described: A. minuscula, A. gracilenta, A. oregonensis, and A. robusta",
+   "quote_sha": "3e06373b2b9cadfe"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Anabernicula was first described by Ross in 1935.",
+   "category": "discovery",
+   "chunk_id": "anabernicula:enwiki:2",
+   "lang": "en",
+   "quote": "The genus got described for the first time by Ross in 1935",
+   "quote_sha": "f91bc1b897255700"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Anabernicula lived in North America from the Pliocene to the Pleistocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "anabernicula:enwiki:2",
+   "lang": "en",
+   "quote": "Anabernicula is an extinct genus of waterfowl related to shelducks that existed from the Pliocene to the Pleistocene in North America",
+   "quote_sha": "d611cc12b57d8f4d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Anabernicula belongs to the subfamily Anatini.",
+   "category": "classification",
+   "chunk_id": "anabernicula:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Anatini",
+   "quote_sha": "b2513963668bfbfd"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Anabernicula is classified in the family Anatidae.",
+   "category": "classification",
+   "chunk_id": "anabernicula:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Anatidae",
+   "quote_sha": "7c71625aa16f5c16"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Anabernicula lived from the Zanclean age to the Late Pleistocene, between 4.7 and 0.0117 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "anabernicula:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Zanclean to Late Pleistocene (4.7 to 0.0117 million years ago)",
+   "quote_sha": "f7333f8a4fed13a3"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "anabernicula:enwiki:2",
+   "statement": "Anabernicula is an extinct genus of waterfowl related to shelducks.",
+   "category": "description",
+   "quote": "Anabernicula is an extinct genus of waterfowl related to shelducks",
+   "reason": "statement copies the source wording: 'Anabernicula is an extinct genus of waterfowl related'"
+  },
+  {
+   "chunk_id": "anabernicula:pbdb:1",
+   "statement": "Anabernicula is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "taxon": "Kizylkumavis",
+ "taxon_key": "kizylkumavis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "05649e11a15de9fc",
+ "generated_at": "2026-11-12T03:25:39+00:00",
+ "citations": {
+  "kizylkumavis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Kizylkumavis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Kizylkumavis?oldid=1322537130",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kizylkumavis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Kizylkumavis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Kizylkumavis?oldid=1322537130",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "kizylkumavis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Kizylkumavis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=70297",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Kizylkumavis was described by Nesov in 1984.",
+   "category": "discovery",
+   "chunk_id": "kizylkumavis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Nesov, 1984",
+   "quote_sha": "079d674158cd9353"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The parent group of Kizylkumavis is Alexornithidae.",
+   "category": "classification",
+   "chunk_id": "kizylkumavis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Alexornithidae",
+   "quote_sha": "36bed1e4b2cea554"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Kizylkumavis belongs to the family Alexornithidae.",
+   "category": "classification",
+   "chunk_id": "kizylkumavis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Alexornithidae",
+   "quote_sha": "7c6f45895ca13a81"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Kizylkumavis is classified under the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "kizylkumavis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Kizylkumavis lived during the Turonian stage, between 93.9 and 89.8 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "kizylkumavis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Turonian to Turonian (93.9 to 89.8 million years ago)",
+   "quote_sha": "4ced93a7128bec1c"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "kizylkumavis:enwiki:2",
+   "statement": "Kizylkumavis is an extinct genus of enantiornithine birds found in the Late Cretaceous Bissekty Formation of the Kyzyl Kum in Uzbekistan.",
+   "category": "discovery",
+   "quote": "Kizylkumavis is an extinct genus of enantiornithine birds known from the Late Cretaceous Bissekty Formation of the Kyzyl Kum in Uzbekistan.",
+   "reason": "statement copies the source wording: 'Kizylkumavis is an extinct genus of enantiornithine birds'"
+  }
+ ]
+}

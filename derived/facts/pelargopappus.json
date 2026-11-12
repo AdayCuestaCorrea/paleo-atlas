@@ -1,0 +1,139 @@
+{
+ "taxon": "Pelargopappus",
+ "taxon_key": "pelargopappus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "004281956b0e5dab",
+ "generated_at": "2026-11-12T02:23:50+00:00",
+ "citations": {
+  "pelargopappus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Pelargopappus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Pelargopappus?oldid=1329527426",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pelargopappus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Pelargopappus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Pelargopappus?oldid=1329527426",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "pelargopappus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Pelargopappus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39322",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Pelargopappus is an extinct genus of bird.",
+   "category": "description",
+   "chunk_id": "pelargopappus:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Pelargopappus",
+   "quote_sha": "c7b4015446470acc"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Pelargopappus was named by Stejneger in 1885.",
+   "category": "discovery",
+   "chunk_id": "pelargopappus:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Stejneger, 1885",
+   "quote_sha": "a51fd6b5f1a94f4b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The only officially recognized species is P. magnus.",
+   "category": "discovery",
+   "chunk_id": "pelargopappus:enwiki:1",
+   "lang": "en",
+   "quote": "species: magnus",
+   "quote_sha": "f79100f5e9f13b43"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species P. magnus was originally described by Milne-Edwards in 1868.",
+   "category": "discovery",
+   "chunk_id": "pelargopappus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: (Milne-Edwards, 1868)",
+   "quote_sha": "2bbbb2579714930f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Pelargopappus lived in France during the early Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "pelargopappus:enwiki:2",
+   "lang": "en",
+   "quote": "lived in early Miocene France",
+   "quote_sha": "0f5f6759f9dada4c"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Pelargopappus is an extinct raptor related to the secretarybird.",
+   "category": "classification",
+   "chunk_id": "pelargopappus:enwiki:2",
+   "lang": "en",
+   "quote": "extinct genus of raptor related to the secretarybird",
+   "quote_sha": "e7de40c6d7d7b6ec"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Researcher Cécile Mourer-Chauviré supported placing the genus in the family Sagittariidae.",
+   "category": "classification",
+   "chunk_id": "pelargopappus:enwiki:2",
+   "lang": "en",
+   "quote": "supported the placement of the genus in Sagittariidae",
+   "quote_sha": "3dce6cf81923b99b"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Cécile Mourer-Chauviré concluded that the genus Amynoptilon is a synonym of Pelargopappus.",
+   "category": "classification",
+   "chunk_id": "pelargopappus:enwiki:2",
+   "lang": "en",
+   "quote": "Amynoptilon was also a synonym",
+   "quote_sha": "f2f62780a59646bd"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The Paleobiology Database lists the parent group of Pelargopappus as Accipitridae.",
+   "category": "classification",
+   "chunk_id": "pelargopappus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Accipitridae",
+   "quote_sha": "e1fd1c97348bb9e0"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The Paleobiology Database classifies Pelargopappus within the family Accipitridae.",
+   "category": "classification",
+   "chunk_id": "pelargopappus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Accipitridae",
+   "quote_sha": "f0f587fb3d013d98"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "pelargopappus:enwiki:2",
+   "statement": "Cécile Mourer-Chauviré argued that Pelargopappus belongs in Sagittariidae rather than the stork family Ciconiidae.",
+   "category": "classification",
+   "quote": "rather than the stork family Ciconiidae",
+   "reason": "statement copies the source wording: 'in Sagittariidae rather than the stork family Ciconiidae'"
+  },
+  {
+   "chunk_id": "pelargopappus:pbdb:1",
+   "statement": "Pelargopappus is classified as a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

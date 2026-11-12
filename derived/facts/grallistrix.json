@@ -1,0 +1,149 @@
+{
+ "taxon": "Grallistrix",
+ "taxon_key": "grallistrix",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "d0c73719e72fcc05",
+ "generated_at": "2026-11-12T01:56:16+00:00",
+ "citations": {
+  "grallistrix:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Stilt-owl (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Stilt-owl?oldid=1252358682",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Stilt-owl (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Stilt-owl?oldid=1252358682",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Stilt-owl (Species)",
+   "url": "https://en.wikipedia.org/wiki/Stilt-owl?oldid=1252358682",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Grallistrix (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Grallistrix?oldid=157045471",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Grallistrix (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Grallistrix?oldid=157045471",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:eswiki:3": {
+   "source": "wikipedia_article",
+   "title": "Grallistrix (Especies)",
+   "url": "https://es.wikipedia.org/wiki/Grallistrix?oldid=157045471",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "grallistrix:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Grallistrix",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=336227",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus name Grallistrix means 'owl on stilts' because of their long legs and terrestrial habits evolved without mammalian predators.",
+   "category": "description",
+   "chunk_id": "grallistrix:enwiki:2",
+   "lang": "en",
+   "quote": "The genus received this name due to the long legs and terrestrial habits which they evolved in the absence of mammalian predators on their island homes.",
+   "quote_sha": "318b1794fb24f1af"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "These owls fed on smaller birds, including Hawaiian honeycreepers.",
+   "category": "paleobiology",
+   "chunk_id": "grallistrix:enwiki:2",
+   "lang": "en",
+   "quote": "They fed on smaller birds such as Hawaiian honeycreepers.",
+   "quote_sha": "6c2bff709325eb47"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Although capable of flight, these owls likely hunted mostly on the ground to fill niches occupied by medium-sized predatory mammals.",
+   "category": "paleobiology",
+   "chunk_id": "grallistrix:enwiki:2",
+   "lang": "en",
+   "quote": "They were also able to fly, but likely did most of their hunting on the ground, filling the niches occupied by medium-sized predatory mammals elsewhere.",
+   "quote_sha": "f7d4b2585c7b7ec9"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Scientists have never seen these owls alive; they are known only from subfossil bones.",
+   "category": "discovery",
+   "chunk_id": "grallistrix:enwiki:2",
+   "lang": "en",
+   "quote": "The owls were never seen alive by scientists and are known only from subfossil bones.",
+   "quote_sha": "8b2b57a7e16ea051"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Grallistrix was described by Olson and James in 1991.",
+   "category": "classification",
+   "chunk_id": "grallistrix:eswiki:1",
+   "lang": "es",
+   "quote": "genus_authority: Olson & James, 1991",
+   "quote_sha": "33fa78ddfd4aeee3"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Grallistrix lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "grallistrix:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Late Pleistocene to Holocene (0.129 to 0 million years ago)",
+   "quote_sha": "04a5822866be546d"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Grallistrix belongs to the family Strigidae.",
+   "category": "classification",
+   "chunk_id": "grallistrix:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Strigidae",
+   "quote_sha": "f513ab2229ab2c5a"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The type species of the genus Grallistrix is Grallistrix auceps.",
+   "category": "classification",
+   "chunk_id": "grallistrix:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Grallistrix auceps",
+   "quote_sha": "bd55d03bf7ebbdba"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "grallistrix:enwiki:2",
+   "statement": "Grallistrix is an extinct genus of true owls containing four species that lived on the Hawaiian Islands.",
+   "category": "description",
+   "quote": "The stilt-owls (Grallistrix) is an extinct genus of true owls which contains four species, all of which lived on the Hawaiian Islands.",
+   "reason": "statement copies the source wording: 'Grallistrix is an extinct genus of true owls'"
+  },
+  {
+   "chunk_id": "grallistrix:enwiki:3",
+   "statement": "The four species of Grallistrix are the Kauaʻi stilt-owl (Grallistrix auceps), Maui stilt-owl (Grallistrix erdmani), Molokaʻi stilt-owl (Grallistrix geleches), and Oʻahu stilt-owl (Grallistrix orion).",
+   "category": "classification",
+   "quote": "Kauaʻi stilt-owl, Grallistrix auceps Maui stilt-owl, Grallistrix erdmani Molokaʻi stilt-owl, Grallistrix geleches Oʻahu stilt-owl, Grallistrix orion",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

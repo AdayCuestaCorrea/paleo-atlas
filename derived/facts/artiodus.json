@@ -1,0 +1,103 @@
+{
+ "taxon": "Artiodus",
+ "taxon_key": "artiodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "44958e60afae4fef",
+ "generated_at": "2026-11-12T03:05:53+00:00",
+ "citations": {
+  "artiodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Artiodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Artiodus?oldid=1306942968",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "artiodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Artiodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Artiodus?oldid=1306942968",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "artiodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Artiodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=355455",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Artiodus is monotypic, containing only the single species Artiodus prominens.",
+   "category": "classification",
+   "chunk_id": "artiodus:enwiki:2",
+   "lang": "en",
+   "quote": "It is currently monotypic, containing only the species Artiodus prominens",
+   "quote_sha": "e7548ecf22c99648"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The evolutionary affinities of Artiodus remain unclear, a common issue for many Paleozoic cartilaginous fish genera.",
+   "category": "classification",
+   "chunk_id": "artiodus:enwiki:2",
+   "lang": "en",
+   "quote": "As with many Paleozoic chondrichthyian genera, its affinities are unclear at this time.",
+   "quote_sha": "77533ff4ce0c6f30"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Artiodus prominens have been found in the Early Permian deposits of the Middle Urals in Russia.",
+   "category": "time_and_habitat",
+   "chunk_id": "artiodus:enwiki:2",
+   "lang": "en",
+   "quote": "from the Early Permian of the Middle Urals of Russia",
+   "quote_sha": "dce4ac21e2e78f5d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Artiodus lived during the Artinskian stage, between 290.1 and 283.3 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "artiodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Artinskian to Artinskian (290.1 to 283.3 million years ago)",
+   "quote_sha": "3f0b00f8ce488e5a"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Artiodus is classified within the parent group Euselachii.",
+   "category": "classification",
+   "chunk_id": "artiodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Euselachii",
+   "quote_sha": "b48ea29308d49b41"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Artiodus belongs to the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "artiodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "artiodus:enwiki:2",
+   "statement": "The genus name Artiodus combines the name of the Arti River type locality with the Greek word for tooth.",
+   "category": "discovery",
+   "quote": "The name comes from the type locality, the Arti River, combined with the Greek word for 'tooth.'",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "artiodus:enwiki:2",
+   "statement": "Artiodus is an extinct genus of cartilaginous fish that lived during the Permian period.",
+   "category": "classification",
+   "quote": "Artiodus is an extinct genus of cartilaginous fish from the Permian period.",
+   "reason": "statement copies the source wording: 'Artiodus is an extinct genus of cartilaginous fish'"
+  }
+ ]
+}

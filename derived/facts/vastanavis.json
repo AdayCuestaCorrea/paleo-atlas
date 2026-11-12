@@ -1,0 +1,105 @@
+{
+ "taxon": "Vastanavis",
+ "taxon_key": "vastanavis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "7488a3cd6140fc24",
+ "generated_at": "2026-11-12T02:16:40+00:00",
+ "citations": {
+  "vastanavis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Vastanavis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Vastanavis?oldid=1341564630",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "vastanavis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Vastanavis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Vastanavis?oldid=1341564630",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "vastanavis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Vastanavis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=109652",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Vastanavis cambayensis was described by Mayr and colleagues in 2010.",
+   "category": "classification",
+   "chunk_id": "vastanavis:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: *Vastanavis cambayensis Mayr et al., 2010",
+   "quote_sha": "140513ebe2dde36f"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Vastanavis was first described by Mayr and colleagues in 2007.",
+   "category": "discovery",
+   "chunk_id": "vastanavis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Mayr et al., 2007",
+   "quote_sha": "a833edd0374b96de"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Vastanavis date to the Early Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "vastanavis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Eocene",
+   "quote_sha": "2ddfd66b19462a50"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Vastanavis lived between 56 and 48.07 million years ago during the Ypresian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "vastanavis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Vastanavis belongs to the Neognathae group of birds.",
+   "category": "time_and_habitat",
+   "chunk_id": "vastanavis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Neognathae",
+   "quote_sha": "6acf8310b945d30b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The two known species of Vastanavis, V. eocaena and V. cambayensis, are found in the Cambay Formation.",
+   "category": "time_and_habitat",
+   "chunk_id": "vastanavis:enwiki:2",
+   "lang": "en",
+   "quote": "It contains two species, Vastanavis eocaena and Vastanavis cambayensis; both are known from the Cambay Formation.",
+   "quote_sha": "c3594b8fa52f0f77"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Vastanavis had at least semi-zygodactyl feet and was likely an arboreal bird.",
+   "category": "paleobiology",
+   "chunk_id": "vastanavis:enwiki:2",
+   "lang": "en",
+   "quote": "Vastanavis was at least semi-zygodactyl, and most likely arboreal.",
+   "quote_sha": "2043cedfe9382d16"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "vastanavis:enwiki:2",
+   "statement": "Vastanavis was a parrot-like bird that lived in what is now western India during the Early Eocene.",
+   "category": "description",
+   "quote": "Vastanavis is a genus of parrot-like bird that lived in what is now western India in the Early Eocene.",
+   "reason": "statement copies the source wording: 'parrot-like bird that lived in what is now'"
+  }
+ ]
+}

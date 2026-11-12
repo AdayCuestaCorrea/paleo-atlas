@@ -1,0 +1,121 @@
+{
+ "taxon": "Neogyps",
+ "taxon_key": "neogyps",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "04953d996a36a736",
+ "generated_at": "2026-11-12T01:46:30+00:00",
+ "citations": {
+  "neogyps:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Neogyps (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Neogyps?oldid=1370514479",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neogyps:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Neogyps (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Neogyps?oldid=1370514479",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "neogyps:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Neogyps",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=370294",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Fossil remains of Neogyps have been found in western North America, including the La Brea Tar Pits in southern California.",
+   "category": "discovery",
+   "chunk_id": "neogyps:enwiki:2",
+   "lang": "en",
+   "quote": "fossil remains known from western North America, including the La Brea Tar Pits in southern California",
+   "quote_sha": "fa1d6f7aaeb51bb2"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The fossil remains of Neogyps date primarily to the Late Pleistocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "neogyps:enwiki:2",
+   "lang": "en",
+   "quote": "These remains date primarily to the Late Pleistocene",
+   "quote_sha": "70d7005582b814b9"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Neogyps lived from the Chibanian to the Late Pleistocene, between 0.21 and 0.0117 million years ago.",
+   "category": "discovery",
+   "chunk_id": "neogyps:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Chibanian to Late Pleistocene (0.21 to 0.0117 million years ago)",
+   "quote_sha": "dac345c06ba3793a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Neogyps is classified within the parent group Aegypiinae.",
+   "category": "classification",
+   "chunk_id": "neogyps:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Aegypiinae",
+   "quote_sha": "e6e8175b862a105b"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Neogyps belongs to the family Accipitridae.",
+   "category": "classification",
+   "chunk_id": "neogyps:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Accipitridae",
+   "quote_sha": "f0f587fb3d013d98"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The type species of the genus Neogyps is Neogyps errans.",
+   "category": "classification",
+   "chunk_id": "neogyps:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Neogyps errans",
+   "quote_sha": "e9e61de7a0f9f4c3"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Although taxonomically placed among Old World vultures, Neogyps was native to the New World.",
+   "category": "paleobiology",
+   "chunk_id": "neogyps:enwiki:2",
+   "lang": "en",
+   "quote": "Despite its taxonomic placement among Old World vultures, Neogyps was native to the New World",
+   "quote_sha": "3009f750963e0fc7"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "There are six recorded fossil occurrences of Neogyps.",
+   "category": "discovery",
+   "chunk_id": "neogyps:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 6",
+   "quote_sha": "bdbb3f8bb20d9c6c"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "neogyps:pbdb:1",
+   "statement": "Neogyps is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  },
+  {
+   "chunk_id": "neogyps:enwiki:2",
+   "statement": "Morphological characteristics suggest that Neogyps was closely related to the subfamily Gypaetinae.",
+   "category": "paleobiology",
+   "quote": "Several morphological characteristics suggest that Neogyps was closely related to the subfamily Gypaetinae",
+   "reason": "statement copies the source wording: 'Morphological characteristics suggest that Neogyps was closely related'"
+  }
+ ]
+}

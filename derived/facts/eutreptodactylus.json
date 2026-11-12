@@ -1,0 +1,103 @@
+{
+ "taxon": "Eutreptodactylus",
+ "taxon_key": "eutreptodactylus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "d53f8d59efabdc6c",
+ "generated_at": "2026-11-12T01:45:18+00:00",
+ "citations": {
+  "eutreptodactylus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Eutreptodactylus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Eutreptodactylus?oldid=1322427259",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eutreptodactylus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Eutreptodactylus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Eutreptodactylus?oldid=1322427259",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eutreptodactylus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Eutreptodactylus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=134403",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Eutreptodactylus was described by Baird and Vickers-Rich in 1997.",
+   "category": "discovery",
+   "chunk_id": "eutreptodactylus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Baird & Vickers-Rich, 1997",
+   "quote_sha": "5aa3c62c29bb71ee"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Eutreptodactylus was an extinct bird that lived in Brazil during the Early Eocene period.",
+   "category": "time_and_habitat",
+   "chunk_id": "eutreptodactylus:enwiki:2",
+   "lang": "en",
+   "quote": "Eutreptodactylus is an extinct genus of insectivorous bird known from the Early Eocene period (Itaboraian) of Brazil.",
+   "quote_sha": "e681bfde6ceee6e8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Eutreptodactylus was an insectivorous bird.",
+   "category": "paleobiology",
+   "chunk_id": "eutreptodactylus:enwiki:2",
+   "lang": "en",
+   "quote": "Eutreptodactylus is an extinct genus of insectivorous bird",
+   "quote_sha": "e2d0f2e597b09784"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Eutreptodactylus have been found in the Itaboraí Formation at São José de Itaborai.",
+   "category": "discovery",
+   "chunk_id": "eutreptodactylus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been found in the Itaboraí Formation at São José de Itaborai.",
+   "quote_sha": "210e9f4552b8b5bf"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The parent group of the genus Eutreptodactylus is the family Cuculidae.",
+   "category": "classification",
+   "chunk_id": "eutreptodactylus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cuculidae",
+   "quote_sha": "5a15ae21794ca890"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Eutreptodactylus lived between 56 and 48.07 million years ago during the Ypresian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "eutreptodactylus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "eutreptodactylus:enwiki:2",
+   "statement": "Researchers suggest that Eutreptodactylus was likely the most primitive member of the order Cuculiformes.",
+   "category": "paleobiology",
+   "quote": "It was probably the most primitive member of the order Cuculiformes.",
+   "reason": "statement copies the source wording: 'the most primitive member of the order Cuculiformes'"
+  },
+  {
+   "chunk_id": "eutreptodactylus:pbdb:1",
+   "statement": "Eutreptodactylus belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

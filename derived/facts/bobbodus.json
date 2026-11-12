@@ -1,0 +1,121 @@
+{
+ "taxon": "Bobbodus",
+ "taxon_key": "bobbodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "8e68d40bcb315ca2",
+ "generated_at": "2026-11-12T02:05:49+00:00",
+ "citations": {
+  "bobbodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Bobbodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Bobbodus?oldid=1306624392",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobbodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Bobbodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Bobbodus?oldid=1306624392",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobbodus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Bobbodus (Species)",
+   "url": "https://en.wikipedia.org/wiki/Bobbodus?oldid=1306624392",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobbodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Bobbodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34448",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Bobbodus was described by Zangerl in 1981.",
+   "category": "discovery",
+   "chunk_id": "bobbodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Zangerl, 1981",
+   "quote_sha": "cbbe2d23b39d8cc7"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Bobbodus is an extinct genus of eugeneodont holocephalians that lived during the Carboniferous and Permian periods.",
+   "category": "classification",
+   "chunk_id": "bobbodus:enwiki:2",
+   "lang": "en",
+   "quote": "Bobbodus is an extinct genus of eugeneodont holocephalian from the Carboniferous and Permian periods.",
+   "quote_sha": "84854705e9ce1e2c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Bobbodus lived from the Kasimovian to the Wuchiapingian stages, between 307 and 254.14 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "bobbodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Kasimovian to Wuchiapingian (307 to 254.14 million years ago)",
+   "quote_sha": "c112e65f8fe9b752"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The type species, Bobbodus schaefferi, is known from three specimens found on the ancient eastern coast of the Panthalassic Ocean.",
+   "category": "discovery",
+   "chunk_id": "bobbodus:enwiki:3",
+   "lang": "en",
+   "quote": "B. schaefferi is the type species and is known from three specimens, all from what was the eastern coast of the Panthalassic Ocean.",
+   "quote_sha": "1d2d5e120cc10350"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of Bobbodus schaefferi have been found in the Kasimovian of Iowa, the Gzhelian of Nebraska, and the Asselian of Kansas.",
+   "category": "discovery",
+   "chunk_id": "bobbodus:enwiki:3",
+   "lang": "en",
+   "quote": "Fossils of this species were found in the Kasimovian of Iowa, Gzhelian of Nebraska, Asselian of Kansas.",
+   "quote_sha": "cee0fded1dfcb3b5"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Specimens of Bobbodus schaefferi include partial upper and lower teeth, the palatoquadrate, and the gill arch.",
+   "category": "description",
+   "chunk_id": "bobbodus:enwiki:3",
+   "lang": "en",
+   "quote": "Specimens of this species show the partial upper and lower dentition, the palatoquadrate, and gill arch.",
+   "quote_sha": "eaafcd9d82e14958"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Bobbodus belongs to the family Eugeneodontidae.",
+   "category": "classification",
+   "chunk_id": "bobbodus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Eugeneodontidae",
+   "quote_sha": "114bf6fdc07faab7"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Bobbodus is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "bobbodus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "bobbodus:enwiki:3",
+   "statement": "The second species, Bobbodus xerxesi, is known from a single tooth found in Wuchiapingian-aged deposits in the Baghuk Mountains of central Iran.",
+   "category": "discovery",
+   "quote": "A second species, B. xerxesi, is known from a single tooth found in Wuchiapingian-aged deposits in the Baghuk Mountains of central Iran.",
+   "reason": "statement copies the source wording: 'xerxesi is known from a single tooth found'"
+  }
+ ]
+}

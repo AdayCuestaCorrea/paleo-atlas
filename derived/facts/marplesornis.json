@@ -1,0 +1,101 @@
+{
+ "taxon": "Marplesornis",
+ "taxon_key": "marplesornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "d1dacfe7d9d37bb1",
+ "generated_at": "2026-11-12T01:15:01+00:00",
+ "citations": {
+  "marplesornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Marplesornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Marplesornis?oldid=1281246340",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "marplesornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Marplesornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Marplesornis?oldid=1281246340",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "marplesornis:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Marplesornis (History)",
+   "url": "https://en.wikipedia.org/wiki/Marplesornis?oldid=1281246340",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "marplesornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Marplesornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39724",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Marplesornis novaezealandiae was a relatively large penguin approximately the size of a king penguin.",
+   "category": "description",
+   "chunk_id": "marplesornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was a relatively large penguin, about the same size as a king penguin.",
+   "quote_sha": "b1b1d6a8a15b5b10"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "George Gaylord Simpson later reclassified the species into the new monotypic genus Marplesornis to honor Brian Marples.",
+   "category": "discovery",
+   "chunk_id": "marplesornis:enwiki:3",
+   "lang": "en",
+   "quote": "It was subsequently moved by George Gaylord Simpson to the new, monotypic genus Marplesornis, named to honour the original describer.",
+   "quote_sha": "0b2e8367fcf46ec4"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus lived between 2.4 and 1.63 million years ago during the Gelasian to Calabrian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "marplesornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Gelasian to Calabrian (2.4 to 1.63 million years ago)",
+   "quote_sha": "d5aa642baf8e489a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Marplesornis novaezealandiae, also known as Harris's penguin, is an extinct penguin species from New Zealand.",
+   "category": "classification",
+   "chunk_id": "marplesornis:enwiki:2",
+   "lang": "en",
+   "quote": "Marplesornis novaezealandiae, also referred to as Harris's penguin, is a genus and species of extinct penguin from New Zealand.",
+   "quote_sha": "414519148e9e705b"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Marplesornis belongs to the penguin family Spheniscidae.",
+   "category": "classification",
+   "chunk_id": "marplesornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Spheniscidae",
+   "quote_sha": "1067bef5237d1e1e"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "marplesornis:enwiki:3",
+   "statement": "Brian Marples described the species in 1960 based on a fairly complete skeleton collected by G. Harris in 1955 from Motunau Beach in New Zealand's South Island.",
+   "category": "discovery",
+   "quote": "The penguin was described by Brian Marples from fossil material (a fairly complete skeleton) collected by G. Harris in 1955 from Motunau Beach in the Canterbury region of the South Island.",
+   "reason": "numbers not in the quote: ['1960']"
+  },
+  {
+   "chunk_id": "marplesornis:enwiki:2",
+   "statement": "The age of the only known specimen is uncertain, ranging from the Early Miocene to the Late Pliocene.",
+   "category": "time_and_habitat",
+   "quote": "The age of the only known specimen is uncertain, being often mentioned as Late Pliocene in age. However, due to the complex geology of the collection site, its actual age is somewhere between Early Miocene and Late Pliocene.",
+   "reason": "statement copies the source wording: 'The age of the only known specimen is'"
+  }
+ ]
+}

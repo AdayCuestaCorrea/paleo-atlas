@@ -1,0 +1,139 @@
+{
+ "taxon": "Palaeotodus",
+ "taxon_key": "palaeotodus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a4f370919add8c97",
+ "generated_at": "2026-11-12T01:20:12+00:00",
+ "citations": {
+  "palaeotodus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Palaeotodus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Palaeotodus?oldid=1380576841",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeotodus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Palaeotodus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Palaeotodus?oldid=1380576841",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeotodus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Palaeotodus (Species)",
+   "url": "https://en.wikipedia.org/wiki/Palaeotodus?oldid=1380576841",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeotodus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Palaeotodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39389",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Palaeotodus was described by Olson in 1976.",
+   "category": "classification",
+   "chunk_id": "palaeotodus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Olson, 1976",
+   "quote_sha": "0bad390b4cd2b0da"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Palaeotodus is an extinct genus belonging to the todie family Todidae.",
+   "category": "classification",
+   "chunk_id": "palaeotodus:enwiki:2",
+   "lang": "en",
+   "quote": "Palaeotodus is an extinct genus of todies in the family Todidae.",
+   "quote_sha": "0152dacaaca76a5b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Palaeotodus date to the Lower Oligocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeotodus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Lower Oligocene",
+   "quote_sha": "eb5e08689e1faa16"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The genus lived between 33.9 and 27.3 million years ago during the Rupelian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeotodus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Rupelian to Rupelian (33.9 to 27.3 million years ago)",
+   "quote_sha": "80843067ea63d104"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of Palaeotodus have been found in France and the US state of Wyoming.",
+   "category": "discovery",
+   "chunk_id": "palaeotodus:enwiki:2",
+   "lang": "en",
+   "quote": "The genus has at least three species known from fossils found in France and the American state of Wyoming.",
+   "quote_sha": "dbf793db0389fe6e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Palaeotodus species were larger than modern todies and similar in size to the modern tody motmot.",
+   "category": "description",
+   "chunk_id": "palaeotodus:enwiki:2",
+   "lang": "en",
+   "quote": "They were larger than modern todies, and closer in size to the modern living tody motmot.",
+   "quote_sha": "8658c26c13ef630f"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Remains of Palaeotodus emryi show a larger body size and proportionally larger wings compared to modern todies.",
+   "category": "description",
+   "chunk_id": "palaeotodus:enwiki:3",
+   "lang": "en",
+   "quote": "These remains of Palaeotodus emryi indicate a larger size and proportionally larger wings than those of modern todies.",
+   "quote_sha": "bbe44de05f594413"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The species Palaeotodus emryi was described by Olson in 1976 based on Oligocene fossils from Wyoming.",
+   "category": "discovery",
+   "chunk_id": "palaeotodus:enwiki:3",
+   "lang": "en",
+   "quote": "†Palaeotodus emryi - Olson, 1976: Oligocene fossils found in Wyoming (United States).",
+   "quote_sha": "f916c968ef57a6fc"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The species Palaeotodus escampsiensis was described by Mourer-Chauviré in 1985 from Upper Eocene fossils in France.",
+   "category": "discovery",
+   "chunk_id": "palaeotodus:enwiki:3",
+   "lang": "en",
+   "quote": "†Palaeotodus escampsiensis - Mourer-Chauviré, 1985: Upper Eocene fossils found in France.",
+   "quote_sha": "16d754acf90324d7"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The species Palaeotodus itardiensis was described by Mourer-Chauviré in 1985 from Lower Oligocene fossils in France.",
+   "category": "discovery",
+   "chunk_id": "palaeotodus:enwiki:3",
+   "lang": "en",
+   "quote": "†Palaeotodus itardiensis - Mourer-Chauviré, 1985: Lower Oligocene fossils found in France.",
+   "quote_sha": "7bed5b32b2a941e6"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "palaeotodus:pbdb:1",
+   "statement": "Palaeotodus is classified within the class Aves (birds).",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

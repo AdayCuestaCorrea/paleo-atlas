@@ -1,0 +1,78 @@
+{
+ "taxon": "Phorcynis",
+ "taxon_key": "phorcynis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "75a56f8b4cbdd9da",
+ "generated_at": "2026-11-12T02:49:51+00:00",
+ "citations": {
+  "phorcynis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Phorcynis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Phorcynis?oldid=1356858459",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "phorcynis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Phorcynis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Phorcynis?oldid=1356858459",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "phorcynis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Phorcynis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34594",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Phorcynis was described by Thiollière in 1854.",
+   "category": "classification",
+   "chunk_id": "phorcynis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Thiollière 1854",
+   "quote_sha": "c559795a6e85b327"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Phorcynis belongs to the family Phorcynidae.",
+   "category": "classification",
+   "chunk_id": "phorcynis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Phorcynidae",
+   "quote_sha": "4713c4bc1c75a98e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Phorcynis is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "phorcynis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "There are only two recorded fossil occurrences of Phorcynis.",
+   "category": "paleobiology",
+   "chunk_id": "phorcynis:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 2",
+   "quote_sha": "2a7bb9b953123d90"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "phorcynis:enwiki:2",
+   "statement": "Phorcynis possessed scales with elongated crowns featuring a narrow median keel and short lateral folds, along with asymmetrical teeth similar to those of Orectolobus.",
+   "category": "description",
+   "quote": "The scales of Phorcynis have elongated crowns with a narrow median keel and short lateral folds and the teeth are asymmetrical, similar to those of Orectolobus.",
+   "reason": "statement copies the source wording: 'a narrow median keel and short lateral folds'"
+  }
+ ]
+}

@@ -1,0 +1,117 @@
+{
+ "taxon": "Candidodon",
+ "taxon_key": "candidodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "0d4e621f7bd327bf",
+ "generated_at": "2026-11-12T01:23:13+00:00",
+ "citations": {
+  "candidodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Candidodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Candidodon?oldid=1354655540",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "candidodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Candidodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Candidodon?oldid=1354655540",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "candidodon:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Candidodon (Description)",
+   "url": "https://en.wikipedia.org/wiki/Candidodon?oldid=1354655540",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "candidodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Candidodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=114394",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Candidodon was described by Carvalho and Campos in 1988.",
+   "category": "discovery",
+   "chunk_id": "candidodon:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Carvalho & Campos 1988",
+   "quote_sha": "cde36b2c610bdd6e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Candidodon date to the Albian stage of the Early Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "candidodon:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Albian~",
+   "quote_sha": "0f69b94cba6abbee"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Candidodon lived between 119.57 and 93.9 million years ago, spanning the Aptian to Cenomanian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "candidodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Cenomanian (119.57 to 93.9 million years ago)",
+   "quote_sha": "4417a916194aa1c2"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Candidodon is classified as a reptile.",
+   "category": "time_and_habitat",
+   "chunk_id": "candidodon:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils of Candidodon have been found in the Early Cretaceous Itapecuru and Alcântara Formations in Brazil.",
+   "category": "time_and_habitat",
+   "chunk_id": "candidodon:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been found in the Early Cretaceous Itapecuru Formation and Alcântara Formation in Brazil.",
+   "quote_sha": "3b9f3c7f066a6abc"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "It is debated whether Mariliasuchus belongs to the family Comahuesuchidae; if so, Candidodon would be the sole member of the family Candidodontidae.",
+   "category": "debate",
+   "chunk_id": "candidodon:enwiki:3",
+   "lang": "en",
+   "quote": "a recent phylogenetic analysis has shown that Mariliasuchus may instead be closer in relation to Comahuesuchus than to Candidodon and thus a member of the family Comahuesuchidae. If this is true, Candidodon would be the only member of the family Candidodontidae.",
+   "quote_sha": "c42b0dd125ea7d2b"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "candidodon:enwiki:2",
+   "statement": "Candidodon is an extinct genus of notosuchian mesoeucrocodylian.",
+   "category": "classification",
+   "quote": "Candidodon is an extinct genus of notosuchian mesoeucrocodylian.",
+   "reason": "statement copies the source wording: 'Candidodon is an extinct genus of notosuchian mesoeucrocodylian'"
+  },
+  {
+   "chunk_id": "candidodon:enwiki:3",
+   "statement": "Candidodon is characterized by a particularly elongate pair of choanae in its palate.",
+   "category": "description",
+   "quote": "The genus is characterized by a particularly elongate pair of choanae in its palate.",
+   "reason": "statement copies the source wording: 'is characterized by a particularly elongate pair of'"
+  },
+  {
+   "chunk_id": "candidodon:enwiki:3",
+   "statement": "Candidodon was named the type genus of the family Candidodontidae, which was first constructed in 2004.",
+   "category": "classification",
+   "quote": "It has been named the type genus of the family Candidodontidae, first constructed in 2004.",
+   "reason": "statement copies the source wording: 'named the type genus of the family Candidodontidae'"
+  }
+ ]
+}

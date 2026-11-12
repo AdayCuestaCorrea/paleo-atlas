@@ -1,0 +1,112 @@
+{
+ "taxon": "Haematosaurus",
+ "taxon_key": "haematosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "dbba92c48e11c0ba",
+ "generated_at": "2026-11-12T02:32:09+00:00",
+ "citations": {
+  "haematosaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Haematosaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Haematosaurus?oldid=1272067991",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "haematosaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Haematosaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Haematosaurus?oldid=1272067991",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "haematosaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Haematosaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36594",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Fossils of Haematosaurus have been found in Boulogne-sur-Mer in northern France.",
+   "category": "discovery",
+   "chunk_id": "haematosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils have been found from Boulogne-sur-Mer in northern France of Jurassic age.",
+   "quote_sha": "f768007761ddfdd9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species was reassigned to the new genus Haematosaurus in 1934.",
+   "category": "discovery",
+   "chunk_id": "haematosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "although it was later reassigned to the new genus in 1934.",
+   "quote_sha": "716ce7958184fb95"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Haematosaurus is now known to be a marine crocodylomorph.",
+   "category": "classification",
+   "chunk_id": "haematosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It is now known to have been a marine crocodylomorph.",
+   "quote_sha": "d005430347cec768"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Due to fragmentary fossil material, Haematosaurus is currently regarded as a nomen dubium.",
+   "category": "discovery",
+   "chunk_id": "haematosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Due to the fragmentary nature of the material associated with the genus, it is currently regarded as a nomen dubium.",
+   "quote_sha": "646944935a7e19e8"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Haematosaurus lived during the Kimmeridgian stage, between 152.21 and 149.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "haematosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Kimmeridgian to Kimmeridgian (152.21 to 149.2 million years ago)",
+   "quote_sha": "356cc6fe42d4ac49"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group of Haematosaurus is the family Teleosauridae.",
+   "category": "classification",
+   "chunk_id": "haematosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Teleosauridae",
+   "quote_sha": "6256a87b8aceedd1"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Haematosaurus belongs to the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "haematosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "haematosaurus:enwiki:2",
+   "statement": "Haematosaurus is an extinct genus of teleosaurid thalattosuchian.",
+   "category": "classification",
+   "quote": "Haematosaurus is an extinct genus of teleosaurid thalattosuchian.",
+   "reason": "statement copies the source wording: 'Haematosaurus is an extinct genus of teleosaurid thalattosuchian'"
+  },
+  {
+   "chunk_id": "haematosaurus:enwiki:2",
+   "statement": "The type species was initially assigned to the genus Plesiosaurus in 1874.",
+   "category": "discovery",
+   "quote": "It was originally thought to be a plesiosaur, and the type species was initially assigned to the genus Plesiosaurus in 1874.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

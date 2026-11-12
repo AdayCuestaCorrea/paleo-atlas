@@ -1,0 +1,103 @@
+{
+ "taxon": "Qingxiusaurus",
+ "taxon_key": "qingxiusaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ffde45cda7032f06",
+ "generated_at": "2026-11-12T02:14:08+00:00",
+ "citations": {
+  "qingxiusaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Qingxiusaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Qingxiusaurus?oldid=1320097313",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qingxiusaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Qingxiusaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Qingxiusaurus?oldid=1320097313",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qingxiusaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Qingxiusaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=133088",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species of Qingxiusaurus is Q. youjiangensis, which was described by Mo et al. in 2008.",
+   "category": "discovery",
+   "chunk_id": "qingxiusaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The type species, described by Mo et al. in 2008, is Q. youjiangensis.",
+   "quote_sha": "f10e749d0e4ba6df"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Like other sauropods, Qingxiusaurus was a large quadrupedal herbivore.",
+   "category": "paleobiology",
+   "chunk_id": "qingxiusaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Like other sauropods, Qingxiusaurus would have been a large quadrupedal herbivore.",
+   "quote_sha": "aba58b2fc10e0fbc"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Qingxiusaurus belongs to the parent group Saltasauridae.",
+   "category": "classification",
+   "chunk_id": "qingxiusaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Saltasauridae",
+   "quote_sha": "ede78742a392b612"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Qingxiusaurus is classified in the family Saltasauridae.",
+   "category": "classification",
+   "chunk_id": "qingxiusaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Saltasauridae",
+   "quote_sha": "694c87543cfe3717"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Qingxiusaurus is a member of the class Saurischia.",
+   "category": "classification",
+   "chunk_id": "qingxiusaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Saurischia",
+   "quote_sha": "8e64a48e9ac37acb"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Qingxiusaurus lived during the Cenomanian to Maastrichtian stages, between 100.5 and 66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "qingxiusaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Maastrichtian (100.5 to 66 million years ago)",
+   "quote_sha": "2e2cb06c500a2b7b"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "qingxiusaurus:enwiki:2",
+   "statement": "Qingxiusaurus is known from limited remains collected in 1991, including two humeri, two sternal plates, and the neural spine of a single vertebra.",
+   "category": "discovery",
+   "quote": "It is known from only limited remains collected in 1991: Two humeri, two sternal plates, and the neural spine of a single vertebra.",
+   "reason": "statement copies the source wording: 'two humeri two sternal plates and the neural'"
+  },
+  {
+   "chunk_id": "qingxiusaurus:enwiki:2",
+   "statement": "The genus name Qingxiusaurus means \"Qingxiu lizard,\" referring to a picturesque scenery of mountains and water in Guangxi, and the animal is a titanosaur sauropod from the Late Cretaceous Dashi Site in Guangxi, China.",
+   "category": "discovery",
+   "quote": "Qingxiusaurus (meaning \"Qingxiu lizard\"; \"Qingxiu\" is short for Pinyin \"shangqingshuixiu\", which means \"a picturesque scenery of mountains and water in Guangxi\") is a genus of titanosaur sauropod dinosaur from the Late Cretaceous Dashi Site of Guangxi, China.",
+   "reason": "statement copies the source wording: 'a picturesque scenery of mountains and water in'"
+  }
+ ]
+}

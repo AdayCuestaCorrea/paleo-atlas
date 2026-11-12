@@ -1,0 +1,96 @@
+{
+ "taxon": "Baharipristis",
+ "taxon_key": "baharipristis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "c1b87cbe43f5c92b",
+ "generated_at": "2026-11-12T03:20:45+00:00",
+ "citations": {
+  "baharipristis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Baharipristis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Baharipristis?oldid=1268558388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baharipristis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Baharipristis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Baharipristis?oldid=1268558388",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baharipristis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Baharipristis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=154431",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The scientific name of the species is Baharipristis bastetiae.",
+   "category": "classification",
+   "chunk_id": "baharipristis:enwiki:1",
+   "lang": "en",
+   "quote": "taxon: Baharipristis bastetiae",
+   "quote_sha": "d714cab45f232263"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Baharipristis is an extinct genus of sclerorhynchoid shark that lived during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "baharipristis:enwiki:2",
+   "lang": "en",
+   "quote": "Baharipristis is an extinct genus of sclerorhynchoid from the Late Cretaceous.",
+   "quote_sha": "2dd9e2849b9769d5"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The species lived between 100.5 and 93.9 million years ago during the Cenomanian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "baharipristis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Cenomanian (100.5 to 93.9 million years ago)",
+   "quote_sha": "ff16862b0c6874e7"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Baharipristis belongs to the family Sclerorhynchidae.",
+   "category": "classification",
+   "chunk_id": "baharipristis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Sclerorhynchidae",
+   "quote_sha": "b8ecce50c5faa1fb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Baharipristis is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "baharipristis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The Bahariya formation where Baharipristis fossils were found also contains remains of at least nine other genera of Sclerorhynchid saw-snouted sharks.",
+   "category": "paleobiology",
+   "chunk_id": "baharipristis:enwiki:2",
+   "lang": "en",
+   "quote": "It shares the formation with at least 9 other genera of Sclerorhynchid Saw-snouted sharks.",
+   "quote_sha": "8981351e0f3d1487"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "baharipristis:enwiki:2",
+   "statement": "The genus was described in 1989 by Werner based on isolated rostral teeth found in the Bahariya formation of Gebel Ghorabi, Egypt.",
+   "category": "discovery",
+   "quote": "It was described from the Cenomanian-aged Bahariya formation of Gebel Ghorabi, Egypt based on distinctive isolated rostral teeth.",
+   "reason": "numbers not in the quote: ['1989']"
+  }
+ ]
+}

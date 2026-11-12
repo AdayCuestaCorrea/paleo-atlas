@@ -1,0 +1,96 @@
+{
+ "taxon": "Messelastur",
+ "taxon_key": "messelastur",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ba9898d42ec089f3",
+ "generated_at": "2026-11-12T03:16:00+00:00",
+ "citations": {
+  "messelastur:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Messelastur (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Messelastur?oldid=1322538585",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "messelastur:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Messelastur (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Messelastur?oldid=1322538585",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "messelastur:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Messelastur",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=137231",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Messelastur was described by Peters in 1994.",
+   "category": "discovery",
+   "chunk_id": "messelastur:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Peters, 1994",
+   "quote_sha": "ff786112076bc91b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Messelastur have been found in the Messel pit in Germany.",
+   "category": "discovery",
+   "chunk_id": "messelastur:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Messel pit of Germany",
+   "quote_sha": "b85d222a145504f6"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Messelastur lived during the Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "messelastur:enwiki:2",
+   "lang": "en",
+   "quote": "which dates to the Eocene",
+   "quote_sha": "f5831e30de7782f7"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Messelastur is classified as a genus of bird within the family Messelasturidae.",
+   "category": "classification",
+   "chunk_id": "messelastur:enwiki:2",
+   "lang": "en",
+   "quote": "Messelastur is a genus of messelasturid bird",
+   "quote_sha": "ebda8f7bd055e6b3"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Messelastur lived between 48.07 and 41.03 million years ago during the Lutetian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "messelastur:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Lutetian to Lutetian (48.07 to 41.03 million years ago)",
+   "quote_sha": "e35d7f5a585cb620"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group of the genus Messelastur is the family Messelasturidae.",
+   "category": "classification",
+   "chunk_id": "messelastur:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Messelasturidae",
+   "quote_sha": "8fab01de2059ae18"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "messelastur:pbdb:1",
+   "statement": "Messelastur belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

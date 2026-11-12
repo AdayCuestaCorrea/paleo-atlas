@@ -1,0 +1,105 @@
+{
+ "taxon": "Eoptolamna",
+ "taxon_key": "eoptolamna",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "1699ccee45605549",
+ "generated_at": "2026-11-12T02:16:04+00:00",
+ "citations": {
+  "eoptolamna:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Eoptolamna (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Eoptolamna?oldid=1323219618",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eoptolamna:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Eoptolamna (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Eoptolamna?oldid=1323219618",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "eoptolamna:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Eoptolamna",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=134382",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Eoptolamna was described by Kriwet, Klug, Canudo, and Cuenca-Bescos in 2008.",
+   "category": "discovery",
+   "chunk_id": "eoptolamna:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Kriwet, Klug, Canudo, & Cuenca-Bescos, 2008",
+   "quote_sha": "afab767072b67638"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus Eoptolamna is the extinct species Eoptolamna eccentrolopha.",
+   "category": "classification",
+   "chunk_id": "eoptolamna:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: †Eoptolamna eccentrolopha",
+   "quote_sha": "3ecc75f011da8d97"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "A second valid species, Eoptolamna supracretacea, was described by Guinot, Underwood, Cappetta, and Ward in 2013.",
+   "category": "classification",
+   "chunk_id": "eoptolamna:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: †E. supracretacea Guinot, Underwood, Cappetta, & Ward, 2013",
+   "quote_sha": "24bedb793c8f5087"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Eoptolamna have been found in Europe and North Africa.",
+   "category": "time_and_habitat",
+   "chunk_id": "eoptolamna:enwiki:2",
+   "lang": "en",
+   "quote": "It contains two valid species, E. eccentrolopha and E. supracretacea, which have been found in Europe and North Africa.",
+   "quote_sha": "81329ef304c688bb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Eoptolamna lived from the Barremian to the Campanian stages, between 125.77 and 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "eoptolamna:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Barremian to Campanian (125.77 to 72.2 million years ago)",
+   "quote_sha": "4ad0a104bed8c312"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus Eoptolamna belongs to the family Eoptolamnidae.",
+   "category": "classification",
+   "chunk_id": "eoptolamna:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Eoptolamnidae",
+   "quote_sha": "82775bc500d1a24c"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Eoptolamna is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "eoptolamna:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "eoptolamna:enwiki:2",
+   "statement": "Eoptolamna is an extinct genus of mackerel sharks.",
+   "category": "description",
+   "quote": "Eoptolamna is an extinct genus of mackerel sharks",
+   "reason": "statement copies the source wording: 'Eoptolamna is an extinct genus of mackerel sharks'"
+  }
+ ]
+}

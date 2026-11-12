@@ -1,0 +1,87 @@
+{
+ "taxon": "Dagasuchus",
+ "taxon_key": "dagasuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "992f8b2d04af42c2",
+ "generated_at": "2026-11-12T01:18:19+00:00",
+ "citations": {
+  "dagasuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Dagasuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Dagasuchus?oldid=1349940763",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dagasuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Dagasuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Dagasuchus?oldid=1349940763",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "dagasuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Dagasuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=333691",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Dagasuchus santacruzensis was named in 2015 based on a partial hip consisting of one ilium and a pair of ischia discovered near Santa Cruz do Sul, Brazil.",
+   "category": "discovery",
+   "chunk_id": "dagasuchus:enwiki:2",
+   "lang": "en",
+   "quote": "D. santacruzensis was named in 2015 on the basis of specimen UFRGS-PV-1244-T and UFRGS-PV-1245-T, a partial hip (one ilium and a pair of ischia) found in an exposure of the Santa Maria Formation in the Paraná Basin, near the city of Santa Cruz do Sul.",
+   "quote_sha": "45ff0f4a0a12fb83"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Dagasuchus lived during the Late Triassic (Carnian) period in Rio Grande do Sul, Brazil.",
+   "category": "time_and_habitat",
+   "chunk_id": "dagasuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Dagasuchus is an extinct genus of pseudosuchian archosaur from the Late Triassic (Carnian) of Rio Grande do Sul, Brazil",
+   "quote_sha": "8ae6d753d636b831"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Dagasuchus is classified as an early member of the evolutionary group Loricata, which contains modern crocodilians and their ancestors.",
+   "category": "classification",
+   "chunk_id": "dagasuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Dagasuchus is an early member of a large evolutionary group called Loricata, which originated in the Triassic and includes modern crocodylians and their ancestors.",
+   "quote_sha": "73d6bf60af2a9c4a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The hip structure of Dagasuchus closely resembles that of other early loricatans like Stagonosuchus and Saurosuchus.",
+   "category": "paleobiology",
+   "chunk_id": "dagasuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Features of its hip closely resemble those of other early loricatans such as Stagonosuchus and Saurosuchus.",
+   "quote_sha": "2527579b4ef048ba"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Dagasuchus lived between 237 and 227.3 million years ago during the Carnian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "dagasuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Carnian to Carnian (237 to 227.3 million years ago)",
+   "quote_sha": "74c0d459a1dece11"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "dagasuchus:enwiki:2",
+   "statement": "Dagasuchus is notable for being the first loricatan discovered in the Santacruzodon assemblage zone, filling a gap in the fossil record between older and younger zones where the group was previously known.",
+   "category": "curiosities",
+   "quote": "Dagasuchus is notable for being the first loricatan found in the Santacruzodon assemblage zone of the Santa Maria Formation; previously loricatans were only known from the older Dinodontosaurus assemblage zone and the younger Hyperodapedon assemblage zone within the Santa Maria Formation, meaning that Dagasuchus fills in a gap in the fossil record of the group.",
+   "reason": "statement copies the source wording: 'Dagasuchus is notable for being the first loricatan'"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "taxon": "Linxiavis",
+ "taxon_key": "linxiavis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "616ed03a6a01c580",
+ "generated_at": "2026-11-12T02:27:05+00:00",
+ "citations": {
+  "linxiavis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Linxiavis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Linxiavis?oldid=1304653099",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "linxiavis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Linxiavis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Linxiavis?oldid=1304653099",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "linxiavis:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Linxiavis (Discovery, research and history)",
+   "url": "https://en.wikipedia.org/wiki/Linxiavis?oldid=1304653099",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "linxiavis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Linxiavis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=413870",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Linxiavis inaquosus was described by Li et al. in 2020.",
+   "category": "discovery",
+   "chunk_id": "linxiavis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Li et al., 2020",
+   "quote_sha": "7e6242c166651e19"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The description of Linxiavis was based on articulated and associated fossil elements including wings, shoulder girdle, vertebrae, and hind limbs.",
+   "category": "paleobiology",
+   "chunk_id": "linxiavis:enwiki:3",
+   "lang": "en",
+   "quote": "Linxiavis was described in 2020 on the basis of articulated and associated elements of the wings, shoulder girdle, vertebrae, and hind limb",
+   "quote_sha": "f569db824156b04b"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The fossil exhibits specific traits of Columbiformes and Sandgrouses, including a notarium and a short coracoid shaft.",
+   "category": "paleobiology",
+   "chunk_id": "linxiavis:enwiki:3",
+   "lang": "en",
+   "quote": "that exhibited apomorphies of Columbiformes and Sandgrouses (Pteroclidae) such as a notarium, and a short coracoid shaft.",
+   "quote_sha": "2e3055d0aef586a3"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The holotype suggests that sandgrouse like Linxiavis may have continuously occupied arid, high-elevation Tibetan habitats since the late Miocene, carrying water in modified breast feathers to feed their young.",
+   "category": "paleobiology",
+   "chunk_id": "linxiavis:enwiki:3",
+   "lang": "en",
+   "quote": "The holotype fossil suggests that the arid and high elevation Tibetan habitats may have been continuously occupied since the late Miocene by sandgrouse that would've been carrying water in their modified breast feathers to their young.",
+   "quote_sha": "bca00a4310915fa5"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Linxiavis belongs to the family Pteroclidae.",
+   "category": "classification",
+   "chunk_id": "linxiavis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Pteroclidae",
+   "quote_sha": "6153ea45f4f13226"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Linxiavis lived during the Tortonian to Messinian stages, between 11.63 and 5.333 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "linxiavis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Tortonian to Messinian (11.63 to 5.333 million years ago)",
+   "quote_sha": "c0de6c11c7d0b49c"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "linxiavis:enwiki:2",
+   "statement": "Linxiavis inaquosus is an extinct sandgrouse known from a partial skeleton found in the Late Miocene Liushu Formation (6–9 Ma) at the edge of the Tibetan Plateau in Gansu Province, China.",
+   "category": "discovery",
+   "quote": "Linxiavis inaquosus is an extinct species of sandgrouse known from a partial skeleton, found in the Late Miocene Liushu Formation (6–9 Ma) at the edge of the Tibetan Plateau in Gansu Province of China.",
+   "reason": "statement copies the source wording: 'sandgrouse known from a partial skeleton found in'"
+  },
+  {
+   "chunk_id": "linxiavis:enwiki:2",
+   "statement": "Linxiavis inaquosus represents the most substantial and oldest record of crown Sandgrouse found in China.",
+   "category": "curiosities",
+   "quote": "It is the most substantial and oldest record of crown Sandgrouse in China",
+   "reason": "statement copies the source wording: 'the most substantial and oldest record of crown'"
+  },
+  {
+   "chunk_id": "linxiavis:enwiki:3",
+   "statement": "Linxiavis lived in the late Miocene Linxia Basin, which was an arid savannah associated with the uplift of the Tibetan Plateau.",
+   "category": "time_and_habitat",
+   "quote": "It was a part of the diverse \"Hipparion fauna\", which reinforces the consensus that late Miocene Linxia Basin was an arid savannah, associated with the uplift of the Tibetan Plateau.",
+   "reason": "statement copies the source wording: 'was an arid savannah associated with the uplift'"
+  },
+  {
+   "chunk_id": "linxiavis:pbdb:1",
+   "statement": "Linxiavis is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

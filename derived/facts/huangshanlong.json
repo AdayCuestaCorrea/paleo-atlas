@@ -1,0 +1,92 @@
+{
+ "taxon": "Huangshanlong",
+ "taxon_key": "huangshanlong",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a872cab86e2e949a",
+ "generated_at": "2026-11-12T01:18:52+00:00",
+ "citations": {
+  "huangshanlong:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Huangshanlong (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Huangshanlong?oldid=1304895103",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "huangshanlong:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Huangshanlong (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Huangshanlong?oldid=1304895103",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "huangshanlong:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Huangshanlong (Discovery and description)",
+   "url": "https://en.wikipedia.org/wiki/Huangshanlong?oldid=1304895103",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "huangshanlong:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Huangshanlong",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=309607",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus contains only one species, Huangshanlong anhuiensis, making it one of three dinosaur genera known from Anhui province.",
+   "category": "description",
+   "chunk_id": "huangshanlong:enwiki:2",
+   "lang": "en",
+   "quote": "It contains a single species, Huangshanlong anhuiensis, which represents, along with Anhuilong and Wannanosaurus, one of the three dinosaurs found in Anhui province.",
+   "quote_sha": "30d4871e0fe363a9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Huangshanlong is distinguished by unique arm bone proportions, including a humerus where the proximal transverse length is 36% of the total length and the radius is 58% of the humerus length.",
+   "category": "paleobiology",
+   "chunk_id": "huangshanlong:enwiki:3",
+   "lang": "en",
+   "quote": "It can be distinguished from other mamenchisaurids in having the following unique combination of features: such as transverse length of the proximal end of the humerus is 36% of the total length of the humerus, accessory processes are located near the middle of the cranial edge of the distal end of the humerus, length of the radius is 58% of that of the humerus, length of the ulna is two thirds of that of the humerus, craniomedial process on the proximal end of the ulna is longer than the craniolateral one, and ridges develop on the cranial, caudomedial, and caudolateral faces of the distal portion of the ulna.",
+   "quote_sha": "dde395e703a841b7"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Research by Ren et al. (2018) places Huangshanlong as a sister taxon to Anhuilong and Omeisaurus within a specific clade of Mamenchisauridae.",
+   "category": "classification",
+   "chunk_id": "huangshanlong:enwiki:3",
+   "lang": "en",
+   "quote": "Ren et al. (2018) recover Huangshanlong as sister to Anhuilong and Omeisaurus in a clade within Mamenchisauridae exclusive of other mamenchisaurids.",
+   "quote_sha": "c5de6c0c7d87d686"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Huangshanlong lived between 174.7 and 161.5 million years ago during the Aalenian to Callovian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "huangshanlong:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aalenian to Callovian (174.7 to 161.5 million years ago)",
+   "quote_sha": "9c032401ead3ad6e"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "huangshanlong:enwiki:2",
+   "statement": "Huangshanlong is a genus of mamenchisaurid dinosaurs native to Anhui province in China.",
+   "category": "description",
+   "quote": "Huangshanlong (meaning \"Huangshan dragon\") is a genus of mamenchisaurid dinosaurs native to the Anhui province of China.",
+   "reason": "statement copies the source wording: 'is a genus of mamenchisaurid dinosaurs native to'"
+  },
+  {
+   "chunk_id": "huangshanlong:enwiki:3",
+   "statement": "The only known specimen is a partial forelimb discovered in 2002 during the construction of the Huihang Highway.",
+   "category": "discovery",
+   "quote": "The only specimen consists of a partial forelimb discovered in 2002 during the construction of the Huihang Highway.",
+   "reason": "statement copies the source wording: 'a partial forelimb discovered in 2002 during the'"
+  }
+ ]
+}

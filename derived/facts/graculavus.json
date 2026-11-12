@@ -1,0 +1,121 @@
+{
+ "taxon": "Graculavus",
+ "taxon_key": "graculavus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a0df7c3ccec05fdf",
+ "generated_at": "2026-11-12T00:57:04+00:00",
+ "citations": {
+  "graculavus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Graculavus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Graculavus?oldid=1299912066",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "graculavus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Graculavus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Graculavus?oldid=1299912066",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "graculavus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Graculavus (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Graculavus?oldid=1299912066",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "graculavus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Graculavus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36642",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Graculavus was described by O. C. Marsh in 1872.",
+   "category": "discovery",
+   "chunk_id": "graculavus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Marsh, 1872",
+   "quote_sha": "daaac01012d17139"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Graculavus have been found in the Austin Chalk of Texas, the Lance Formation, and the Hornerstown Formation.",
+   "category": "discovery",
+   "chunk_id": "graculavus:enwiki:2",
+   "lang": "en",
+   "quote": "Its remains were found in the Late Cretaceous Austin Chalk of Texas, USA, and Lance Formation (late Maastrichtian faunal stage, or Lancian land mammal age), and the controversial Hornerstown Formation which straddles the Cretaceous–Paleocene boundary, possibly dating to the Danian stage.",
+   "quote_sha": "5da7864aeb56ac65"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Graculavus lived on the shores of the northwestern Atlantic and the Western Interior Seaway approximately 68 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "graculavus:enwiki:2",
+   "lang": "en",
+   "quote": "These birds lived on the shores of the northwestern Atlantic and the Western Interior Seaway some 68 million years ago.",
+   "quote_sha": "cdb6b1e4fee37482"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Graculavus is the namesake for the form taxon Graculavidae, which was historically considered a group of transitional shorebirds.",
+   "category": "classification",
+   "chunk_id": "graculavus:enwiki:3",
+   "lang": "en",
+   "quote": "Graculavus is the namesake for the form taxon \"Graculavidae\", a plesiomorphic assembly of unrelated birds that were believed to hold a key position in avian evolution as \"transitional shorebirds.\"",
+   "quote_sha": "80606924b9858f95"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Two species of Graculavus are known: G. augustus from the Western Interior Seaway and G. velox from the Atlantic Seaboard.",
+   "category": "classification",
+   "chunk_id": "graculavus:enwiki:3",
+   "lang": "en",
+   "quote": "Two species are known: Graculavus augustus from the Western Interior Seaway and Graculavus velox from the Atlantic Seaboard.",
+   "quote_sha": "afdea07fbefe1bc4"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The species formerly known as Graculavus lentus is now considered an early galliform or close relative placed in the genus Austinornis.",
+   "category": "classification",
+   "chunk_id": "graculavus:enwiki:3",
+   "lang": "en",
+   "quote": "\"Graculavus\" lentus was for some time placed in Ichthyornis or Pedioecetes after being removed from the present genus. It is not related to either however and is nowadays considered an early galliform or close relative and placed in the genus Austinornis.",
+   "quote_sha": "9b2e0703a103e3a1"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Graculavus belongs to the parent group Charadriiformes.",
+   "category": "classification",
+   "chunk_id": "graculavus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Charadriiformes",
+   "quote_sha": "c80930aca290157f"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Graculavus lived from the Maastrichtian to the Danian stages, between 72.2 and 61.66 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "graculavus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Maastrichtian to Danian (72.2 to 61.66 million years ago)",
+   "quote_sha": "babb7e114b6e5d60"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "graculavus:enwiki:3",
+   "statement": "G. velox was considered the only valid species until 1999, when G. augustus was described.",
+   "category": "classification",
+   "quote": "Most scientists considered G. velox the only valid Graculavus species until 1999, when G. augustus was described.",
+   "reason": "statement copies the source wording: 'species until 1999 when G augustus was described'"
+  }
+ ]
+}

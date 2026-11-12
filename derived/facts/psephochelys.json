@@ -1,0 +1,96 @@
+{
+ "taxon": "Psephochelys",
+ "taxon_key": "psephochelys",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "b6cce89bccd42e6c",
+ "generated_at": "2026-11-12T02:43:23+00:00",
+ "citations": {
+  "psephochelys:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Psephochelys (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Psephochelys?oldid=1283156911",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "psephochelys:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Psephochelys (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Psephochelys?oldid=1283156911",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "psephochelys:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Psephochelys",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=137158",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Psephochelys is an extinct genus of placodont reptile that lived in China during the Late Triassic.",
+   "category": "description",
+   "chunk_id": "psephochelys:enwiki:2",
+   "lang": "en",
+   "quote": "Psephochelys (meaning \"pebbly turtle\") is an extinct genus of placodont reptile from the Late Triassic of China.",
+   "quote_sha": "f555cba08970d4b0"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus was named in 2002 based on a single partial skeleton discovered in the Carnian-age Falong Formation in Guizhou Province.",
+   "category": "discovery",
+   "chunk_id": "psephochelys:enwiki:2",
+   "lang": "en",
+   "quote": "named in 2002 on the basis of a single partial skeleton found in an outcrop of the Carnian-age Falong Formation in Guizhou Province.",
+   "quote_sha": "9d6df5583fa2b2f5"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Psephochelys belongs to the family Placochelyidae and the superfamily Cyamodontoidea.",
+   "category": "classification",
+   "chunk_id": "psephochelys:enwiki:2",
+   "lang": "en",
+   "quote": "Psephochelys is classified as a member of the family Placochelyidae, which is within the larger placodont superfamily Cyamodontoidea.",
+   "quote_sha": "006e0d574a27e67c"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Psephochelys possessed a wide shell covering its body, resembling that of a turtle.",
+   "category": "description",
+   "chunk_id": "psephochelys:enwiki:2",
+   "lang": "en",
+   "quote": "Like other cyamodontoids, Psephochelys has a wide shell covering its body, similar to that of a turtle.",
+   "quote_sha": "5412e28afe295f2c"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Unlike other cyamodontoids, the shell of Psephochelys covered only its back.",
+   "category": "description",
+   "chunk_id": "psephochelys:enwiki:2",
+   "lang": "en",
+   "quote": "However, unlike those of other cyamodontoids, the shell of Psephochelys only covers its back.",
+   "quote_sha": "0ea63b176fca517d"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Psephochelys lived between 233.6 and 227.3 million years ago during the Carnian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "psephochelys:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Carnian to Carnian (233.6 to 227.3 million years ago)",
+   "quote_sha": "25ca47678c12c075"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "psephochelys:enwiki:2",
+   "statement": "Psephochelys lacked a plastron, instead having rib-like gastralia surrounded by loosely connecting osteoderms or bony plates.",
+   "category": "description",
+   "quote": "The plastron, which covers the underside of other cyamodontoids, is absent, and in its place are rib-like gastralia surrounded by loosely connecting osteoderms or bony plates.",
+   "reason": "statement copies the source wording: 'rib-like gastralia surrounded by loosely connecting osteoderms or'"
+  }
+ ]
+}

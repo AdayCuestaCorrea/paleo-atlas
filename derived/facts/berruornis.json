@@ -1,0 +1,114 @@
+{
+ "taxon": "Berruornis",
+ "taxon_key": "berruornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ee7b83be491303b7",
+ "generated_at": "2026-11-12T03:16:31+00:00",
+ "citations": {
+  "berruornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Berruornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Berruornis?oldid=1368288013",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "berruornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Berruornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Berruornis?oldid=1368288013",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "berruornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Berruornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=105814",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Berruornis was first described by Mourer-Chauviré in 1994.",
+   "category": "discovery",
+   "chunk_id": "berruornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Mourer-Chauviré, 1994",
+   "quote_sha": "d1c9834c57238ac6"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species within the genus is Berruornis orbisantiqui.",
+   "category": "discovery",
+   "chunk_id": "berruornis:enwiki:1",
+   "lang": "en",
+   "quote": "species: orbisantiqui",
+   "quote_sha": "0d78d18e03c7a74e"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Berruornis date from the Paleocene to the Eocene epochs.",
+   "category": "time_and_habitat",
+   "chunk_id": "berruornis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Paleocene–Eocene",
+   "quote_sha": "2a66a6f1d52fc5e0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Berruornis lived between 61.66 and 56 million years ago during the Selandian and Thanetian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "berruornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Selandian to Thanetian (61.66 to 56 million years ago)",
+   "quote_sha": "9b33d7a925c64627"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The fossils were recovered from late Paleocene deposits near Reims in northeastern France.",
+   "category": "discovery",
+   "chunk_id": "berruornis:enwiki:2",
+   "lang": "en",
+   "quote": "recovered from late Paleocene deposits in the region of Reims in northeastern France",
+   "quote_sha": "eeb5cba3498fa03b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Berruornis was approximately the size of a modern Eurasian eagle-owl.",
+   "category": "description",
+   "chunk_id": "berruornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was about the size of a Eurasian eagle-owl (Bubo bubo)",
+   "quote_sha": "9f6f4e1d96c43f37"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Berruornis belongs to the order Strigiformes, which includes owls.",
+   "category": "classification",
+   "chunk_id": "berruornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Strigiformes",
+   "quote_sha": "44d2bb39978504a9"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Berruornis is an early fossil genus of an owl or an owl-like bird.",
+   "category": "description",
+   "chunk_id": "berruornis:enwiki:2",
+   "lang": "en",
+   "quote": "Berruornis is an early fossil genus of owl or owl-like bird",
+   "quote_sha": "c78500b3efb6e1a1"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "berruornis:pbdb:1",
+   "statement": "Berruornis is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

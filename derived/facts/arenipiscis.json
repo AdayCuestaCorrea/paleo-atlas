@@ -1,0 +1,112 @@
+{
+ "taxon": "Arenipiscis",
+ "taxon_key": "arenipiscis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "364a9353c8c6fcce",
+ "generated_at": "2026-11-12T03:14:41+00:00",
+ "citations": {
+  "arenipiscis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Arenipiscis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Arenipiscis?oldid=1378414995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arenipiscis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Arenipiscis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Arenipiscis?oldid=1378414995",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arenipiscis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Arenipiscis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34305",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Arenipiscis was described by Young in 1981.",
+   "category": "classification",
+   "chunk_id": "arenipiscis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Young, 1981",
+   "quote_sha": "5656f157b00f1447"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species within the genus is Arenipiscis westolli.",
+   "category": "classification",
+   "chunk_id": "arenipiscis:enwiki:1",
+   "lang": "en",
+   "quote": "species: westolli",
+   "quote_sha": "99ff07bf8f2f5a11"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The holotype specimen, identified as ANU 35616, consists of an incomplete skull roof.",
+   "category": "discovery",
+   "chunk_id": "arenipiscis:enwiki:2",
+   "lang": "en",
+   "quote": "The holotype specimen, ANU 35616, is an incomplete skull-roof.",
+   "quote_sha": "475306d0d8ea06e6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The name Arenipiscis means \"sand fish\" because its armor has a granular texture created by tiny bumps on the dermal surfaces.",
+   "category": "description",
+   "chunk_id": "arenipiscis:enwiki:2",
+   "lang": "en",
+   "quote": "The generic name, meaning \"sand fish,\" refers to how the dermal surfaces of the armor have a pattern of tiny bumps, creating a granular texture.",
+   "quote_sha": "8577850b1b96edd2"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Arenipiscis lived during the Emsian stage, between 410.62 and 393.47 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "arenipiscis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Emsian to Emsian (410.62 to 393.47 million years ago)",
+   "quote_sha": "5fe28e8ab6dd5026"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Arenipiscis belongs to the parent group Arthrodira.",
+   "category": "classification",
+   "chunk_id": "arenipiscis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Arthrodira",
+   "quote_sha": "9c9781b1ed6ad203"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Arenipiscis is classified in the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "arenipiscis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "arenipiscis:enwiki:2",
+   "statement": "Arenipiscis westolli is an extinct buchanosteid arthrodire placoderm.",
+   "category": "classification",
+   "quote": "Arenipiscis westolli is an extinct buchanosteid arthrodire placoderm.",
+   "reason": "statement copies the source wording: 'Arenipiscis westolli is an extinct buchanosteid arthrodire placoderm'"
+  },
+  {
+   "chunk_id": "arenipiscis:enwiki:2",
+   "statement": "Fossils of Arenipiscis have been found in Emsian-aged marine strata of the Murrumbidgee Group in New South Wales, Australia.",
+   "category": "discovery",
+   "quote": "Its fossils have been found in Emsian-aged marine strata of the Murrumbidgee Group in New South Wales, Australia.",
+   "reason": "statement copies the source wording: 'have been found in Emsian-aged marine strata of'"
+  }
+ ]
+}

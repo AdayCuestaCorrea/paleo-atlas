@@ -1,0 +1,112 @@
+{
+ "taxon": "Hydrotherikornis",
+ "taxon_key": "hydrotherikornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "df4966dc9a185ac0",
+ "generated_at": "2026-11-12T03:10:11+00:00",
+ "citations": {
+  "hydrotherikornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Hydrotherikornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Hydrotherikornis?oldid=1193061464",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hydrotherikornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Hydrotherikornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Hydrotherikornis?oldid=1193061464",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hydrotherikornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Hydrotherikornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=212147",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species is named Hydrotherikornis oregonus.",
+   "category": "classification",
+   "chunk_id": "hydrotherikornis:enwiki:1",
+   "lang": "en",
+   "quote": "taxon: Hydrotherikornis oregonus",
+   "quote_sha": "e655c0d6ff85e59e"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species was described by A. H. Miller in 1931.",
+   "category": "discovery",
+   "chunk_id": "hydrotherikornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: A. H. Miller. 1931",
+   "quote_sha": "7ac3940e1e4c654d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The authority for the species is A. H. Miller, 1931.",
+   "category": "discovery",
+   "chunk_id": "hydrotherikornis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: A. H. Miller. 1931",
+   "quote_sha": "211d78e9090ddc74"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Hydrotherikornis oregonus is an extinct species of auk.",
+   "category": "description",
+   "chunk_id": "hydrotherikornis:enwiki:2",
+   "lang": "en",
+   "quote": "Hydrotherikornis oregonus is an extinct species of auk.",
+   "quote_sha": "911538bbb18ee6e6"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The fossil was found in 1926 and published in 1931.",
+   "category": "discovery",
+   "chunk_id": "hydrotherikornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was found in 1926 and published in 1931.",
+   "quote_sha": "2c6a17e9d3741e31"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The distal tibiotarsus from the late Eocene is one of the earliest examples of pan-Alcidae in North America.",
+   "category": "paleobiology",
+   "chunk_id": "hydrotherikornis:enwiki:2",
+   "lang": "en",
+   "quote": "The distal tibiotarsus late Eocone fossil is one of the earliest examples of pan-Alcidae in North American.",
+   "quote_sha": "1a0a629123662035"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus Hydrotherikornis belongs to the parent group Procellariiformes.",
+   "category": "classification",
+   "chunk_id": "hydrotherikornis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Procellariiformes",
+   "quote_sha": "b4adc7a055561c43"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "hydrotherikornis:enwiki:2",
+   "statement": "The fossil specimen was found near Coos Bay on the Oregon coast.",
+   "category": "discovery",
+   "quote": "The fossil specimen was found near Coos Bay on the Oregon coast.",
+   "reason": "statement copies the source wording: 'The fossil specimen was found near Coos Bay'"
+  },
+  {
+   "chunk_id": "hydrotherikornis:pbdb:1",
+   "statement": "The genus Hydrotherikornis belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "taxon": "Iaceornis",
+ "taxon_key": "iaceornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e15f0656cf951fd3",
+ "generated_at": "2026-11-12T02:23:29+00:00",
+ "citations": {
+  "iaceornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Iaceornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Iaceornis?oldid=1379676788",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "iaceornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Iaceornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Iaceornis?oldid=1379676788",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "iaceornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Iaceornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=207939",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Iaceornis is a genus of dinosaur.",
+   "category": "classification",
+   "chunk_id": "iaceornis:enwiki:1",
+   "lang": "en",
+   "quote": "genus: Iaceornis",
+   "quote_sha": "eb552b7c53e51093"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The only known species is Iaceornis marshi.",
+   "category": "classification",
+   "chunk_id": "iaceornis:enwiki:1",
+   "lang": "en",
+   "quote": "species: marshi",
+   "quote_sha": "1cd8b61e33f7c8ae"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus was named by Clarke in 2004.",
+   "category": "classification",
+   "chunk_id": "iaceornis:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Clarke, 2004",
+   "quote_sha": "b9372314503ab315"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The fossil specimen was first discovered by Othniel Charles Marsh in 1877.",
+   "category": "discovery",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "Since it was first discovered by Othniel Charles Marsh in 1877",
+   "quote_sha": "5e705a1e74980632"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "In 2004, Julia A. Clarke distinguished the skeleton from Apatornis based on differences in wing bone characteristics.",
+   "category": "discovery",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "In 2004, paleontologist Julia A. Clarke showed that the skeleton actually differed in important characteristics of the wing bones from the true, holotype specimen of Apatornis.",
+   "quote_sha": "6d7b48e641ef865e"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Clarke named the new species Iaceornis marshi, which translates to \"Marsh's neglected bird\".",
+   "category": "discovery",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "Therefore, she assigned the more complete remains to a new genus and species, Iaceornis marshi, meaning \"Marsh's neglected bird\".",
+   "quote_sha": "ea0f74104eb5201d"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Iaceornis lived in North America during the Late Cretaceous, approximately 83.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "It was endemic to North America during the Late Cretaceous, living about 83.5 million years ago.",
+   "quote_sha": "5208fcfe2d3d8705"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The time range for Iaceornis is the Santonian stage, between 85.7 and 83.6 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "iaceornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Santonian to Santonian (85.7 to 83.6 million years ago)",
+   "quote_sha": "ea55b8ba6369358f"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The animal is known from a single partial skeleton found in Gove County, Kansas, that lacks a skull.",
+   "category": "description",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from a single fossil specimen found in Gove County, Kansas, and consisting of a partial skeleton lacking a skull.",
+   "quote_sha": "e16467bcd37ee096"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "Iaceornis was a marine ornithuran dinosaur closely related to modern birds.",
+   "category": "paleobiology",
+   "chunk_id": "iaceornis:enwiki:2",
+   "lang": "en",
+   "quote": "Iaceornis is a genus of marine ornithuran dinosaurs closely related to modern birds.",
+   "quote_sha": "e204f1b8bec9142c"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "iaceornis:enwiki:2",
+   "statement": "Phylogenetic analysis places Iaceornis as more advanced than Ichthyornis but less advanced than modern birds.",
+   "category": "paleobiology",
+   "quote": "In Clarke's phylogenetic analysis, she found that Iaceornis is more advanced than Ichthyornis but less advanced than modern birds.",
+   "reason": "statement copies the source wording: 'more advanced than Ichthyornis but less advanced than'"
+  }
+ ]
+}

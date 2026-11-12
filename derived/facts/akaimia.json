@@ -1,0 +1,96 @@
+{
+ "taxon": "Akaimia",
+ "taxon_key": "akaimia",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "308d34a1da979bdb",
+ "generated_at": "2026-11-12T01:57:16+00:00",
+ "citations": {
+  "akaimia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Akaimia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Akaimia?oldid=1378818146",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "akaimia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Akaimia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Akaimia?oldid=1378818146",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "akaimia:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Akaimia",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=200183",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Akaimia was first described by Jan Rees in 2010.",
+   "category": "discovery",
+   "chunk_id": "akaimia:enwiki:2",
+   "lang": "en",
+   "quote": "It was first named by Jan Rees in 2010.",
+   "quote_sha": "c753c77975338050"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species, A. altucuspis, lived during the middle or late Jurassic in southern Poland.",
+   "category": "time_and_habitat",
+   "chunk_id": "akaimia:enwiki:2",
+   "lang": "en",
+   "quote": "the type species A. altucuspis from the middle or late Jurassic (Callovian or Oxfordian age) of Ogrodzieniec near Zawiercie, southern Poland",
+   "quote_sha": "dcb6c1e2f5db0ab8"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The species A. myriacuspis lived during the middle Jurassic in the Oxford Clay near Peterborough.",
+   "category": "time_and_habitat",
+   "chunk_id": "akaimia:enwiki:2",
+   "lang": "en",
+   "quote": "A. myriacuspis, from the middle Jurassic (Callovian) of the Oxford Clay, near Peterborough.",
+   "quote_sha": "842b6c0b186932b4"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Akaimia belongs to the parent group Orectolobiformes.",
+   "category": "classification",
+   "chunk_id": "akaimia:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Orectolobiformes",
+   "quote_sha": "e994b7ea5543dc2e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Akaimia is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "akaimia:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Akaimia lived between 165.3 and 161.5 million years ago during the Callovian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "akaimia:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Callovian to Callovian (165.3 to 161.5 million years ago)",
+   "quote_sha": "02107d609a6ab00d"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "akaimia:enwiki:2",
+   "statement": "Akaimia is an extinct genus of carpet sharks that lived across Europe.",
+   "category": "description",
+   "quote": "Akaimia is an extinct genus of carpet sharks which existed across Europe.",
+   "reason": "statement copies the source wording: 'Akaimia is an extinct genus of carpet sharks'"
+  }
+ ]
+}

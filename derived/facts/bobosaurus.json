@@ -1,0 +1,124 @@
+{
+ "taxon": "Bobosaurus",
+ "taxon_key": "bobosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a2698db141b73b66",
+ "generated_at": "2026-11-12T01:11:18+00:00",
+ "citations": {
+  "bobosaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Bobosaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Bobosaurus?oldid=1319440123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobosaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Bobosaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Bobosaurus?oldid=1319440123",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobosaurus:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Bobosaurus (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Bobosaurus?oldid=162298221",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobosaurus:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Bobosaurus (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Bobosaurus?oldid=162298221",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "bobosaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Bobosaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=241907",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Bobosaurus was named in 2006 by Fabio M. Dalla Vecchia with the type species B. forojuliensis.",
+   "category": "discovery",
+   "chunk_id": "bobosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Bobosaurus was named in 2006 by Fabio M. Dalla Vecchia and the type species is B. forojuliensis.",
+   "quote_sha": "829492b8359893aa"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Researchers debate whether Bobosaurus is a pistosaurid or closer to Plesiosauria.",
+   "category": "debate",
+   "chunk_id": "bobosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It may be a pistosaurid, or closer to Plesiosauria.",
+   "quote_sha": "8c8c48f498d23399"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Bobosaurus was a relatively large animal exceeding 3 meters in length.",
+   "category": "description",
+   "chunk_id": "bobosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It was a relatively large animal, with more than 3 m in length.",
+   "quote_sha": "09326e25038499d1"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Bobosaurus is classified within the order Nothosauria.",
+   "category": "classification",
+   "chunk_id": "bobosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "ordo: Nothosauria",
+   "quote_sha": "a1d3df0fa4fe6aae"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Bobosaurus belongs to the unranked family Pistosauroidea.",
+   "category": "classification",
+   "chunk_id": "bobosaurus:eswiki:1",
+   "lang": "es",
+   "quote": "unranked_familia: Pistosauroidea",
+   "quote_sha": "b4652a02d8a9c6f8"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Bobosaurus lived during the Carnian stage of the Late Triassic, between 237 and 233.6 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "bobosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Carnian to Carnian (237 to 233.6 million years ago)",
+   "quote_sha": "7e1c898293a61d80"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "bobosaurus:enwiki:2",
+   "statement": "Bobosaurus is an extinct genus of sauropterygian reptile related to plesiosaurs.",
+   "category": "description",
+   "quote": "Bobosaurus is an extinct genus of sauropterygian reptile related to plesiosaurs.",
+   "reason": "statement copies the source wording: 'Bobosaurus is an extinct genus of sauropterygian reptile'"
+  },
+  {
+   "chunk_id": "bobosaurus:enwiki:2",
+   "statement": "The genus is based on holotype MFSN 27285, a partial skeleton found in the Rio del Lago Formation in northeastern Italy.",
+   "category": "discovery",
+   "quote": "It is based on the holotype MFSN 27285, a partial skeleton found in early Carnian-aged rocks (early Late Triassic) of the Rio del Lago Formation, northeastern Italy.",
+   "reason": "statement copies the source wording: 'holotype MFSN 27285 a partial skeleton found in'"
+  },
+  {
+   "chunk_id": "bobosaurus:enwiki:2",
+   "statement": "A 2011 cladistic analysis classified Bobosaurus as a more basal pistosaur.",
+   "category": "paleobiology",
+   "quote": "A recent cladistic analysis found it to be a more basal pistosaur.",
+   "reason": "numbers not in the quote: ['2011']"
+  }
+ ]
+}

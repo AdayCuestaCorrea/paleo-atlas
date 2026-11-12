@@ -1,0 +1,87 @@
+{
+ "taxon": "Palaeohierax",
+ "taxon_key": "palaeohierax",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "dd0ae4d5220a1b0e",
+ "generated_at": "2026-11-12T03:16:57+00:00",
+ "citations": {
+  "palaeohierax:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Palaeohierax (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Palaeohierax?oldid=1380560279",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeohierax:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Palaeohierax (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Palaeohierax?oldid=1380560279",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "palaeohierax:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Palaeohierax",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39326",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Palaeohierax lived during the Late Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "palaeohierax:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Oligocene",
+   "quote_sha": "12600817618bd211"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Palaeohierax was named by Milne-Edwards in 1871.",
+   "category": "discovery",
+   "chunk_id": "palaeohierax:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Milne-Edwards, 1871",
+   "quote_sha": "bcd66ad5b20d6462"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The only known species of Palaeohierax is Palaeohierax gervaisii.",
+   "category": "discovery",
+   "chunk_id": "palaeohierax:enwiki:1",
+   "lang": "en",
+   "quote": "species: gervaisii",
+   "quote_sha": "2752c340464aa4d6"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species Palaeohierax gervaisii was originally described by Milne-Edwards in 1863.",
+   "category": "discovery",
+   "chunk_id": "palaeohierax:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Milne-Edwards, 1863",
+   "quote_sha": "44da887c267a6299"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Palaeohierax is an extinct genus of birds belonging to the family Accipitridae.",
+   "category": "classification",
+   "chunk_id": "palaeohierax:enwiki:2",
+   "lang": "en",
+   "quote": "Palaeohierax is an extinct genus of Accipitridae birds from the late Oligocene.",
+   "quote_sha": "ab42f4ebd1f71c97"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "palaeohierax:pbdb:1",
+   "statement": "Palaeohierax is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

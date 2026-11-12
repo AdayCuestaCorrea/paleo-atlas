@@ -1,0 +1,141 @@
+{
+ "taxon": "Hovacrex",
+ "taxon_key": "hovacrex",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "66d4078412510c08",
+ "generated_at": "2026-11-12T02:55:14+00:00",
+ "citations": {
+  "hovacrex:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Hova gallinule (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Hova_gallinule?oldid=1355340310",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hovacrex:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Hova gallinule (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Hova_gallinule?oldid=1355340310",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hovacrex:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Hovacrex",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=373522",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species was first described by Andrews in 1897.",
+   "category": "discovery",
+   "chunk_id": "hovacrex:enwiki:1",
+   "lang": "en",
+   "quote": "authority: (Andrews, 1897)",
+   "quote_sha": "e383da170829e1d9"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species was originally named Tribonyx roberti.",
+   "category": "discovery",
+   "chunk_id": "hovacrex:enwiki:1",
+   "lang": "en",
+   "quote": "synonyms: *Tribonyx roberti Andrews, 1897",
+   "quote_sha": "a677e1c40fe72242"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Hovacrex was established by Brodkorb in 1965.",
+   "category": "discovery",
+   "chunk_id": "hovacrex:enwiki:1",
+   "lang": "en",
+   "quote": "parent_authority: Brodkorb, 1965",
+   "quote_sha": "b83361a13cc03be9"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The animal lived during the Late Pleistocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "hovacrex:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Late Pleistocene",
+   "quote_sha": "cb8ab45b3dd86608"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Fossils date from 0.129 to 0.0117 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "hovacrex:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Late Pleistocene to Late Pleistocene (0.129 to 0.0117 million years ago)",
+   "quote_sha": "6698d75a206dbc09"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "It was a large gallinule found only in Madagascar.",
+   "category": "paleobiology",
+   "chunk_id": "hovacrex:enwiki:2",
+   "lang": "en",
+   "quote": "It was a large gallinule that was endemic to Madagascar.",
+   "quote_sha": "dcb1b1aef6453552"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The bird was about the size of the Tasmanian nativehen.",
+   "category": "description",
+   "chunk_id": "hovacrex:enwiki:2",
+   "lang": "en",
+   "quote": "About the size of the Tasmanian nativehen",
+   "quote_sha": "db6a26a848afb194"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The absence of wing bones in fossils from Sirabé in central Madagascar makes it uncertain if the species was flightless.",
+   "category": "paleobiology",
+   "chunk_id": "hovacrex:enwiki:2",
+   "lang": "en",
+   "quote": "The lack of wing bones in the subfossil material found at Sirabé in central Madagascar makes it uncertain as to whether the species was flightless.",
+   "quote_sha": "324d4feb4a4c3a3c"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "It belongs to the rail family and was originally classified in the genus Tribonyx.",
+   "category": "classification",
+   "chunk_id": "hovacrex:enwiki:2",
+   "lang": "en",
+   "quote": "It was a large gallinule that was endemic to Madagascar. About the size of the Tasmanian nativehen, it was originally placed in the same genus, Tribonyx.",
+   "quote_sha": "f8b92e66e9129260"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "It may be synonymous with the genus Gallinula.",
+   "category": "classification",
+   "chunk_id": "hovacrex:enwiki:2",
+   "lang": "en",
+   "quote": "Hovacrex may also be synonymous with Gallinula.",
+   "quote_sha": "97914b01898155e4"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Its parent group is the family Rallidae.",
+   "category": "classification",
+   "chunk_id": "hovacrex:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Rallidae",
+   "quote_sha": "c6120e725d005e84"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "hovacrex:pbdb:1",
+   "statement": "It is classified in the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

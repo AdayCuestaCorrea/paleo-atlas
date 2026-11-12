@@ -1,0 +1,117 @@
+{
+ "taxon": "Qiliania",
+ "taxon_key": "qiliania",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "ef320d2e882fb81e",
+ "generated_at": "2026-11-12T01:43:33+00:00",
+ "citations": {
+  "qiliania:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Qiliania (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Qiliania?oldid=1379877272",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qiliania:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Qiliania (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Qiliania?oldid=1379877272",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qiliania:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Qiliania graffini (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Qiliania_graffini?oldid=173006726",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qiliania:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Qiliania graffini (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Qiliania_graffini?oldid=173006726",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "qiliania:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Qiliania",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=186991",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Qiliania was an enantiornithean bird that lived in what is now Gansu Province in north-western China.",
+   "category": "description",
+   "chunk_id": "qiliania:enwiki:2",
+   "lang": "en",
+   "quote": "It is an enantiornithean which lived in what is now Gansu Province, north-western China.",
+   "quote_sha": "c804cb5086ff9e45"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The fossils were found in the Xiagou Formation of the Changma Basin.",
+   "category": "discovery",
+   "chunk_id": "qiliania:enwiki:2",
+   "lang": "en",
+   "quote": "which were found in the Xiagou Formation of the Changma Basin.",
+   "quote_sha": "9f9eec8947d88027"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Qiliania was first named by a team including Shu-An Ji and Peter Dodson in 2011.",
+   "category": "discovery",
+   "chunk_id": "qiliania:enwiki:2",
+   "lang": "en",
+   "quote": "It was first named by Shu-An Ji, Jessie Atterholt, Jingmai O'Connor, Matthew Lamanna, Jerry Harrs, Li Da-Qing, You Hai-Lu and Peter Dodson in 2011",
+   "quote_sha": "5274e5518cb63c15"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species name graffini honors Greg Graffin of the band Bad Religion, suggested by co-author Jingmai O'Connor.",
+   "category": "discovery",
+   "chunk_id": "qiliania:enwiki:2",
+   "lang": "en",
+   "quote": "The species was named for Greg Graffin, a paleontologist and member of the punk rock group Bad Religion, at the suggestion of coauthor Jingmai O'Connor, a longtime fan of the band.",
+   "quote_sha": "ce4fd40fd87a7aee"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Qiliania is classified in the class Aves and the subclass Enantiornithes.",
+   "category": "classification",
+   "chunk_id": "qiliania:eswiki:1",
+   "lang": "es",
+   "quote": "regnum: Animalia phylum: Chordata classis: Aves subclassis: Enantiornithes",
+   "quote_sha": "5c2042d7ae4b97dd"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Qiliania lived during the Aptian stage, between 121.4 and 113.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "qiliania:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Aptian to Aptian (121.4 to 113.2 million years ago)",
+   "quote_sha": "de7ef34eaead7f99"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "qiliania:enwiki:2",
+   "statement": "Qiliania is an extinct genus of early bird from the lower Cretaceous, approximately 120 million years ago.",
+   "category": "description",
+   "quote": "Qiliania (from the Xiongnu qilian, \"heaven\") is an extinct genus of early bird from the lower Cretaceous (Aptian stage) about 120 million years ago.",
+   "reason": "statement copies the source wording: 'is an extinct genus of early bird from'"
+  },
+  {
+   "chunk_id": "qiliania:enwiki:2",
+   "statement": "The genus is known from two incomplete, semi-articulated, and three-dimensionally preserved skeletons.",
+   "category": "description",
+   "quote": "It is known from two incomplete, semi-articulated and three-dimensionally preserved skeletons",
+   "reason": "statement copies the source wording: 'is known from two incomplete semi-articulated and three-dimensionally'"
+  }
+ ]
+}

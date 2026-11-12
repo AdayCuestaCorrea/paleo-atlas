@@ -1,0 +1,105 @@
+{
+ "taxon": "Gobipipus",
+ "taxon_key": "gobipipus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "325be2dbfafa85e4",
+ "generated_at": "2026-11-12T03:02:01+00:00",
+ "citations": {
+  "gobipipus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Gobipipus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Gobipipus?oldid=1379907037",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gobipipus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Gobipipus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Gobipipus?oldid=1379907037",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "gobipipus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Gobipipus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=286807",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The only known fossil of Gobipipus is an incomplete embryo discovered by a Russian-Mongolian expedition in the Barun Goyot Formation of the Gobi Desert.",
+   "category": "discovery",
+   "chunk_id": "gobipipus:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from an incomplete embryonic individual that was found during a joint Russian-Mongolian Expedition to the Barun Goyot Formation of the Gobi Desert.",
+   "quote_sha": "5f777714a88369b4"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Gobipipus is classified as a genus of enantiornithine bird.",
+   "category": "classification",
+   "chunk_id": "gobipipus:enwiki:2",
+   "lang": "en",
+   "quote": "Gobipipus (\"Gobi Desert chick\") is a genus of enantiornithine bird.",
+   "quote_sha": "a7de63da7efe79ce"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The parent group of Gobipipus is Enantiornithes.",
+   "category": "classification",
+   "chunk_id": "gobipipus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Enantiornithes",
+   "quote_sha": "ead47a9d5fe06358"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Gobipipus is classified within the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "gobipipus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Gobipipus was described by Kurochkin, Chatterjee, and Mikhailov in 2013.",
+   "category": "discovery",
+   "chunk_id": "gobipipus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Kurochkin, Chatterjee, & Mikhailov, 2013",
+   "quote_sha": "d7cb93311c8fe7fe"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The type species of the genus Gobipipus is Gobipipus reshetovi.",
+   "category": "discovery",
+   "chunk_id": "gobipipus:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: Gobipipus reshetovi",
+   "quote_sha": "43eb6871d701c61b"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The time range for the genus Gobipipus spans from 83.6 to 72.2 million years ago during the Campanian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "gobipipus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Campanian (83.6 to 72.2 million years ago)",
+   "quote_sha": "ad61ec998840c2d9"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "gobipipus:enwiki:2",
+   "statement": "Gobipipus lived approximately 80 to 76 million years ago in what is now Mongolia.",
+   "category": "time_and_habitat",
+   "quote": "It lived during the middle Campanian stage of the Upper Cretaceous around 80 to 76 million years ago in what is now Mongolia.",
+   "reason": "statement copies the source wording: '80 to 76 million years ago in what'"
+  }
+ ]
+}

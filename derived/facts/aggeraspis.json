@@ -1,0 +1,105 @@
+{
+ "taxon": "Aggeraspis",
+ "taxon_key": "aggeraspis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "34d83062061fa15e",
+ "generated_at": "2026-11-12T03:27:04+00:00",
+ "citations": {
+  "aggeraspis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Aggeraspis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Aggeraspis?oldid=1350817509",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "aggeraspis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Aggeraspis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Aggeraspis?oldid=1350817509",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "aggeraspis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Aggeraspis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=420923",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Aggeraspis was described by Gross in 1962.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Gross, 1962",
+   "quote_sha": "fd80a2c60d377c84"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus Aggeraspis is Aggeraspis brevis.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: †Aggeraspis brevis",
+   "quote_sha": "f2db149784be6387"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The type species Aggeraspis brevis was originally described by Gross in 1933.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:enwiki:1",
+   "lang": "en",
+   "quote": "type_species_authority: Gross, 1933",
+   "quote_sha": "abb7c818f1f998b0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Aggeraspis lived during the Early Devonian period in Europe.",
+   "category": "time_and_habitat",
+   "chunk_id": "aggeraspis:enwiki:2",
+   "lang": "en",
+   "quote": "which lived during the Early Devonian period in Europe",
+   "quote_sha": "a5bddceb232f3ffb"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The parent group of Aggeraspis is the family Phlyctaeniidae.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Phlyctaeniidae",
+   "quote_sha": "13829fff5669bd27"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Aggeraspis belongs to the family Phlyctaeniidae.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Phlyctaeniidae",
+   "quote_sha": "f715e3a0a758bae2"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Aggeraspis is classified in the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "aggeraspis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "aggeraspis:enwiki:2",
+   "statement": "Aggeraspis is an extinct genus of arthrodire placoderm fish.",
+   "category": "description",
+   "quote": "Aggeraspis is an extinct genus of arthrodire placoderm fish",
+   "reason": "statement copies the source wording: 'Aggeraspis is an extinct genus of arthrodire placoderm'"
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "taxon": "Thaumatosaurus",
+ "taxon_key": "thaumatosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "679645a6f3e00e27",
+ "generated_at": "2026-11-12T01:53:58+00:00",
+ "citations": {
+  "thaumatosaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Thaumatosaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Thaumatosaurus?oldid=1358992076",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "thaumatosaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Thaumatosaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Thaumatosaurus?oldid=1358992076",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "thaumatosaurus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Thaumatosaurus (History)",
+   "url": "https://en.wikipedia.org/wiki/Thaumatosaurus?oldid=1358992076",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "thaumatosaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Thaumatosaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=36520",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Thaumatosaurus is an extinct genus of plesiosaur whose name means 'wonder reptile'.",
+   "category": "description",
+   "chunk_id": "thaumatosaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Thaumatosaurus (Meaning 'wonder reptile') is a dubious extinct genus of plesiosaur.",
+   "quote_sha": "733e647d77079816"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Thaumatosaurus was described by paleontologist Christian Erich Hermann von Meyer in 1841.",
+   "category": "discovery",
+   "chunk_id": "thaumatosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The name Thaumatosaurus, which means 'wonder reptile', belonged to a genus of plesiosaur that was described by palaeontologist Christian Erich Hermann von Meyer, back in 1841.",
+   "quote_sha": "a99584dfc867ce32"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Thaumatosaurus is currently considered a nomen dubium because its holotype can only be identified as an indeterminate plesiosaur.",
+   "category": "classification",
+   "chunk_id": "thaumatosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "Today this taxon is regarded as a nomen dubium because the holotype can be referred to Pliosauroidea indet at best.",
+   "quote_sha": "7e6c889c667e8424"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Specimens once attributed to Thaumatosaurus are now recognized as the holotypes for the genera Eurycleidus, Meyerasaurus, and Rhomaleosaurus.",
+   "category": "classification",
+   "chunk_id": "thaumatosaurus:enwiki:3",
+   "lang": "en",
+   "quote": "The diagnostic specimens which previously were regarded as Thaumatosauruss specimens, now represent the holotypes of Eurycleidus, Meyerasaurus and Rhomaleosaurus.",
+   "quote_sha": "2372b0ef0ec2d37f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Thaumatosaurus belongs to the family Plesiosauridae.",
+   "category": "classification",
+   "chunk_id": "thaumatosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Plesiosauridae",
+   "quote_sha": "880d3fd1738af671"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Thaumatosaurus lived during the Bathonian stage, between 168.2 and 165.3 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "thaumatosaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Bathonian to Bathonian (168.2 to 165.3 million years ago)",
+   "quote_sha": "03d57b14b3ce1a98"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "thaumatosaurus:enwiki:3",
+   "statement": "The species Thaumatosaurus oolithicus was described based on partial skull, vertebral, and limb remains found in the Posidonia Shale of Holzmaden, Germany.",
+   "category": "discovery",
+   "quote": "Meyer described the species Thaumatosaurus oolithicus based on partial skull, vertebral and limb remains, that were found in the Posidonia Shale of Holzmaden, Baden-Württemberg, Germany.",
+   "reason": "statement copies the source wording: 'based on partial skull vertebral and limb remains'"
+  }
+ ]
+}

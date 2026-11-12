@@ -1,0 +1,128 @@
+{
+ "taxon": "Matanas",
+ "taxon_key": "matanas",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5bcb8d88b9f59a83",
+ "generated_at": "2026-11-12T02:25:36+00:00",
+ "citations": {
+  "matanas:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Matanas (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Matanas?oldid=1281246434",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "matanas:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Matanas (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Matanas?oldid=1281246434",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "matanas:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Matanas (Name)",
+   "url": "https://en.wikipedia.org/wiki/Matanas?oldid=1281246434",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "matanas:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Matanas",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=230834",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Matanas enrighti is an extinct duck that lived in New Zealand during the Miocene epoch.",
+   "category": "description",
+   "chunk_id": "matanas:enwiki:2",
+   "lang": "en",
+   "quote": "Matanas enrighti is an extinct duck from the Miocene of New Zealand.",
+   "quote_sha": "419a039fb9144fca"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The species was described based on a left humerus fossil found at the Saint Bathans Fauna site near Mata Creek in the Central Otago region of New Zealand's South Island.",
+   "category": "discovery",
+   "chunk_id": "matanas:enwiki:2",
+   "lang": "en",
+   "quote": "It was described from fossil material (a left humerus) collected from a Saint Bathans Fauna site near Mata Creek, in the lower Bannockburn Formation of the Manuherikia Group, in the Manuherikia River valley in the Central Otago region of the South Island.",
+   "quote_sha": "d475c84b21924a1d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The fossil material used to describe the species was collected from the lower Bannockburn Formation of the Manuherikia Group.",
+   "category": "discovery",
+   "chunk_id": "matanas:enwiki:2",
+   "lang": "en",
+   "quote": "It was described from fossil material (a left humerus) collected from a Saint Bathans Fauna site near Mata Creek, in the lower Bannockburn Formation of the Manuherikia Group, in the Manuherikia River valley in the Central Otago region of the South Island.",
+   "quote_sha": "d475c84b21924a1d"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The specific epithet enrighti honors Jack Enright, the owner of the station where the type material was collected.",
+   "category": "discovery",
+   "chunk_id": "matanas:enwiki:3",
+   "lang": "en",
+   "quote": "The specific epithet honours Jack Enright, owner of the station on which the type material was collected.",
+   "quote_sha": "c1f7f71c9b3f7129"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Matanas belongs to the subfamily Anatini.",
+   "category": "classification",
+   "chunk_id": "matanas:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Anatini",
+   "quote_sha": "b2513963668bfbfd"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Matanas is classified within the family Anatidae.",
+   "category": "classification",
+   "chunk_id": "matanas:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Anatidae",
+   "quote_sha": "7c71625aa16f5c16"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Matanas lived between 18.7 and 15.9 million years ago, spanning the Burdigalian and Langhian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "matanas:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Burdigalian to Langhian (18.7 to 15.9 million years ago)",
+   "quote_sha": "31af60ac9235ce48"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The species was described by Worthy and colleagues in 2007.",
+   "category": "discovery",
+   "chunk_id": "matanas:enwiki:1",
+   "lang": "en",
+   "quote": "Worthy et al., 2007",
+   "quote_sha": "116a73518168951e"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "matanas:enwiki:3",
+   "statement": "The genus name Matanas combines the name of Mata Creek with the Greek word for duck, anas.",
+   "category": "discovery",
+   "quote": "The genus name is a combination of the name of Mata Creek with anas (duck).",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "matanas:pbdb:1",
+   "statement": "Matanas is a member of the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "taxon": "Tienosuchus",
+ "taxon_key": "tienosuchus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "38dba5fb2ce3a2a8",
+ "generated_at": "2026-11-12T02:07:50+00:00",
+ "citations": {
+  "tienosuchus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Tienosuchus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Tienosuchus?oldid=1363273609",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tienosuchus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Tienosuchus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Tienosuchus?oldid=1363273609",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "tienosuchus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Tienosuchus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38459",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Tienosuchus was named by Young in 1949.",
+   "category": "classification",
+   "chunk_id": "tienosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "genus_authority: Young, 1949",
+   "quote_sha": "faba65a74339f6be"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The type species of the genus is Tienosuchus hsiangi, described by Young in 1949.",
+   "category": "classification",
+   "chunk_id": "tienosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: T. hsiangi Young, 1949 (type)",
+   "quote_sha": "480cfa4d57e66582"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Tienosuchus is classified as a dubious, monospecific genus of gavialoid crocodilian.",
+   "category": "classification",
+   "chunk_id": "tienosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "Tienosuchus is a dubious extinct monospecific genus of gavialoid crocodilian.",
+   "quote_sha": "69860468e6887084"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Tienosuchus is closely related to the genus Thoracosaurus and was traditionally placed in the subfamily Thoracosaurinae.",
+   "category": "classification",
+   "chunk_id": "tienosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "It is closely related to the genus Thoracosaurus, and has traditionally been placed in the subfamily Thoracosaurinae.",
+   "quote_sha": "54f2f79791a351a5"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The subfamily Thoracosaurinae is now considered a paraphyletic assemblage of basal gavialoids rather than a true clade.",
+   "category": "classification",
+   "chunk_id": "tienosuchus:enwiki:2",
+   "lang": "en",
+   "quote": "The subfamily is now considered to be a paraphyletic assemblage of basal gavialoids, and therefore not a true clade.",
+   "quote_sha": "a3a770b90bb189cd"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Fossils of Tienosuchus date to the Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "tienosuchus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Eocene",
+   "quote_sha": "bfafafce6d33cf43"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Tienosuchus lived between 56 and 48.07 million years ago during the Ypresian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "tienosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Ypresian to Ypresian (56 to 48.07 million years ago)",
+   "quote_sha": "3ae309ca3ac110c5"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Only one fossil occurrence of Tienosuchus has been recorded.",
+   "category": "discovery",
+   "chunk_id": "tienosuchus:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "tienosuchus:enwiki:2",
+   "statement": "Due to the low diagnostic value of its fragmentary remains, the genus is now considered a nomen dubium.",
+   "category": "classification",
+   "quote": "Because the fragmentary remains provide little diagnostic value, the genus is now considered a nomen dubium.",
+   "reason": "statement copies the source wording: 'the genus is now considered a nomen dubium'"
+  },
+  {
+   "chunk_id": "tienosuchus:enwiki:2",
+   "statement": "The genus is known from a single tooth and some postcranial remains found in Eocene deposits in Hunan, China.",
+   "category": "discovery",
+   "quote": "It is known from a single tooth and some postcranial remains collected from Eocene deposits in Hunan, China.",
+   "reason": "statement copies the source wording: 'is known from a single tooth and some'"
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "taxon": "Geranopterus",
+ "taxon_key": "geranopterus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "da0ef0a4ac84eb35",
+ "generated_at": "2026-11-12T03:27:46+00:00",
+ "citations": {
+  "geranopterus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Geranopterus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Geranopterus?oldid=1380559961",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "geranopterus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Geranopterus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Geranopterus?oldid=1380559961",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "geranopterus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Geranopterus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39377",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Geranopterus lived from the late Eocene to the early Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "geranopterus:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: late Eocene to early Miocene",
+   "quote_sha": "5d93ad8d521e307a"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Geranopterus was named by Milne-Edwards in 1892.",
+   "category": "discovery",
+   "chunk_id": "geranopterus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Milne-Edwards, 1892",
+   "quote_sha": "7bc916f93fa8757f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Three species are recognized within the genus: G. milneedwardsi, G. alatus, and G. bohemicus.",
+   "category": "classification",
+   "chunk_id": "geranopterus:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: †G. milneedwardsi †G. alatus †G. bohemicus",
+   "quote_sha": "3fe2ff31707bad05"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "This extinct genus of Geranopteridae inhabited Europe during the late Eocene to early Miocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "geranopterus:enwiki:2",
+   "lang": "en",
+   "quote": "Geranopterus is an extinct genus of Geranopteridae that lived during the late Eocene to early Miocene in Europe.",
+   "quote_sha": "e031fbc692eb6217"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Milne-Edwards described and named the genus in 1892.",
+   "category": "discovery",
+   "chunk_id": "geranopterus:enwiki:2",
+   "lang": "en",
+   "quote": "It was named by Milne-Edwards in 1892.",
+   "quote_sha": "9ba80324450527d8"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Geranopterus belongs to the family Geranopteridae.",
+   "category": "classification",
+   "chunk_id": "geranopterus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Geranopteridae",
+   "quote_sha": "480331b76b58f750"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Fossils of Geranopterus date from 37.71 to 33.9 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "geranopterus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Priabonian (37.71 to 33.9 million years ago)",
+   "quote_sha": "b818740c208466cf"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "geranopterus:pbdb:1",
+   "statement": "Geranopterus is classified within the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

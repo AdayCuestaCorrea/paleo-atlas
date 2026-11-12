@@ -1,0 +1,132 @@
+{
+ "taxon": "Wodnika",
+ "taxon_key": "wodnika",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "39c4f9c2dd716a94",
+ "generated_at": "2026-11-12T02:07:30+00:00",
+ "citations": {
+  "wodnika:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Wodnika (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Wodnika?oldid=1357568110",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "wodnika:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Wodnika (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Wodnika?oldid=1357568110",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "wodnika:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Wodnika",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34520",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Wodnika was described by Münster in 1843.",
+   "category": "discovery",
+   "chunk_id": "wodnika:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Münster 1843",
+   "quote_sha": "92b5c920ff568c68"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Wodnika has the synonym Radamas.",
+   "category": "classification",
+   "chunk_id": "wodnika:enwiki:1",
+   "lang": "en",
+   "quote": "synonyms: *Radamas Münster 1843",
+   "quote_sha": "447544ce543e607f"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The genus Wodnika includes three species: Wodnika althausi, Wodnika ocoyae, and Wodnika striatula.",
+   "category": "classification",
+   "chunk_id": "wodnika:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: Wodnika althausi Wodnika ocoyae Wodnika striatula",
+   "quote_sha": "1784db5acc51bda3"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Wodnika lived during the Late Permian period in what is now Germany and Russia.",
+   "category": "time_and_habitat",
+   "chunk_id": "wodnika:enwiki:2",
+   "lang": "en",
+   "quote": "Wodnika is an extinct genus of cartilaginous fish which lived in the Late Permian period in the present area of Germany and Russia",
+   "quote_sha": "9013851dc678113f"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Wodnika measured about 1 meter (3.2 feet) in length.",
+   "category": "description",
+   "chunk_id": "wodnika:enwiki:2",
+   "lang": "en",
+   "quote": "It measured about 1 m (3.2 ft) in length",
+   "quote_sha": "c7472e0ba1717eed"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The tail shape of Wodnika suggests it was likely a good swimmer.",
+   "category": "paleobiology",
+   "chunk_id": "wodnika:enwiki:2",
+   "lang": "en",
+   "quote": "its tail shape indicates it was probably a good swimmer",
+   "quote_sha": "67e754f54fd57519"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Fossils of Wodnika often preserve the internal cartilage skeleton, a rare feature for shark-like fish.",
+   "category": "description",
+   "chunk_id": "wodnika:enwiki:2",
+   "lang": "en",
+   "quote": "Internally, the cartilage skeleton is preserved on the fossil, which is fairly rare for fossilized shark-like chondrichthyans",
+   "quote_sha": "0fec43e639ae0c56"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Wodnika belongs to the parent group Ctenacanthoidea.",
+   "category": "classification",
+   "chunk_id": "wodnika:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Ctenacanthoidea",
+   "quote_sha": "a63340e89b655270"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Wodnika is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "wodnika:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "The time range for Wodnika is listed as the Wordian to Burdigalian, spanning from 266.9 to 15.98 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "wodnika:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Wordian to Burdigalian (266.9 to 15.98 million years ago)",
+   "quote_sha": "45019f8f25cbd494"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "wodnika:enwiki:2",
+   "statement": "Wodnika is an extinct genus of cartilaginous fish.",
+   "category": "description",
+   "quote": "Wodnika is an extinct genus of cartilaginous fish",
+   "reason": "statement copies the source wording: 'Wodnika is an extinct genus of cartilaginous fish'"
+  }
+ ]
+}

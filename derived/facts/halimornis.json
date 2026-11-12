@@ -1,0 +1,140 @@
+{
+ "taxon": "Halimornis",
+ "taxon_key": "halimornis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "dcfa02b267ceea03",
+ "generated_at": "2026-11-12T01:49:25+00:00",
+ "citations": {
+  "halimornis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Halimornis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Halimornis?oldid=1379689241",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "halimornis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Halimornis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Halimornis?oldid=1379689241",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "halimornis:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Halimornis thompsoni (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Halimornis_thompsoni?oldid=171871385",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "halimornis:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Halimornis thompsoni (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Halimornis_thompsoni?oldid=171871385",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "halimornis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Halimornis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=122606",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Halimornis was a type of bird belonging to the Enantiornithes group.",
+   "category": "description",
+   "chunk_id": "halimornis:enwiki:2",
+   "lang": "en",
+   "quote": "Halimornis was an enantiornithean bird.",
+   "quote_sha": "a82a5e5e28f54e89"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Halimornis lived approximately 80 million years ago during the Late Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "halimornis:enwiki:2",
+   "lang": "en",
+   "quote": "It lived during the Late Cretaceous about 80 mya",
+   "quote_sha": "ede1f673228378d9"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Evidence suggests Halimornis was an ocean-going species because its fossils were found about 50 km offshore.",
+   "category": "paleobiology",
+   "chunk_id": "halimornis:enwiki:2",
+   "lang": "en",
+   "quote": "The fossil bird was found at a location that would have been about 50 km off shore, indicating that it was an ocean-going species.",
+   "quote_sha": "0377b6965517194f"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The name Halimornis translates to \"bird of the sea\".",
+   "category": "curiosities",
+   "chunk_id": "halimornis:enwiki:2",
+   "lang": "en",
+   "quote": "The name Halimornis means \"bird of the sea\".",
+   "quote_sha": "eb95c0965dc9b9a8"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Halimornis is classified within the family Avisauridae.",
+   "category": "classification",
+   "chunk_id": "halimornis:eswiki:1",
+   "lang": "es",
+   "quote": "familia: Avisauridae",
+   "quote_sha": "1eeae571ad1d6b3b"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Halimornis is a monotypic genus known only from the species H. thompsoni.",
+   "category": "classification",
+   "chunk_id": "halimornis:eswiki:2",
+   "lang": "es",
+   "quote": "Es un género monotípico conocido a partir de la especie H. thompsoni.",
+   "quote_sha": "d452229a38ee05c8"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The time range for Halimornis is estimated between 83.6 and 72.2 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "halimornis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Campanian to Campanian (83.6 to 72.2 million years ago)",
+   "quote_sha": "ad61ec998840c2d9"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "halimornis:enwiki:2",
+   "statement": "Fossils of Halimornis were discovered in the Mooreville Chalk Formation in Greene County, Alabama.",
+   "category": "discovery",
+   "quote": "It is known from fossils found in the Mooreville Chalk Formation in Greene County, Alabama.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "halimornis:enwiki:2",
+   "statement": "The species is known from a single fossil specimen containing vertebrae, leg bones, and part of the humerus.",
+   "category": "discovery",
+   "quote": "It is known from a single fossil individual, including preserved vertebrae, leg bones and part of the humerus (upper arm bone).",
+   "reason": "statement copies the source wording: 'vertebrae leg bones and part of the humerus'"
+  },
+  {
+   "chunk_id": "halimornis:enwiki:2",
+   "statement": "Halimornis likely lived alongside the more advanced seabird Ichthyornis dispar.",
+   "category": "paleobiology",
+   "quote": "It would have lived alongside the more advanced seabird Ichthyornis dispar.",
+   "reason": "statement copies the source wording: 'lived alongside the more advanced seabird Ichthyornis dispar'"
+  },
+  {
+   "chunk_id": "halimornis:enwiki:2",
+   "statement": "Halimornis is one of the few known enantiornithine birds that inhabited a marine environment.",
+   "category": "paleobiology",
+   "quote": "It is one of the few known enantiornithine birds to have lived in a marine environment",
+   "reason": "statement copies the source wording: 'is one of the few known enantiornithine birds'"
+  }
+ ]
+}

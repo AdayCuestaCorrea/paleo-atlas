@@ -1,0 +1,121 @@
+{
+ "taxon": "Deltoptychius",
+ "taxon_key": "deltoptychius",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2541c336281a69a2",
+ "generated_at": "2026-11-12T02:06:42+00:00",
+ "citations": {
+  "deltoptychius:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Deltoptychius (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Deltoptychius?oldid=1366729111",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "deltoptychius:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Deltoptychius (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Deltoptychius?oldid=1366729111",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "deltoptychius:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Deltoptychius",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34798",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Deltoptychius was first described by Morris and Roberts in 1862.",
+   "category": "discovery",
+   "chunk_id": "deltoptychius:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Morris & Roberts, 1862",
+   "quote_sha": "07f2be57a03e8a03"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Deltoptychius lived during the Carboniferous period in what is now the United Kingdom.",
+   "category": "time_and_habitat",
+   "chunk_id": "deltoptychius:enwiki:2",
+   "lang": "en",
+   "quote": "It lived in the Carboniferous period in present-day United Kingdom.",
+   "quote_sha": "79363974853cfa45"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Deltoptychius have been discovered in the Glencartholm Volcanic Beds Formation in Scotland.",
+   "category": "discovery",
+   "chunk_id": "deltoptychius:enwiki:2",
+   "lang": "en",
+   "quote": "Fossils of the genus have been found in the Glencartholm Volcanic Beds Formation of the Upper Border Group in Scotland.",
+   "quote_sha": "136e04696b67453a"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Deltoptychius had large eyes adapted for hunting in deep waters and crushed shellfish using solid tooth plates.",
+   "category": "paleobiology",
+   "chunk_id": "deltoptychius:enwiki:2",
+   "lang": "en",
+   "quote": "Deltoptychius's large eyes allowed it to hunt in deep waters, crushing shellfish between solid tooth plates in its mouth.",
+   "quote_sha": "adc9b89c50ac3650"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Deltoptychius belongs to the family Deltoptychiidae.",
+   "category": "classification",
+   "chunk_id": "deltoptychius:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Deltoptychiidae",
+   "quote_sha": "848a370c12655bcb"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Deltoptychius is classified within the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "deltoptychius:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Deltoptychius lived between 346.7 and 298.9 million years ago, spanning the Visean to Gzhelian stages.",
+   "category": "time_and_habitat",
+   "chunk_id": "deltoptychius:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Visean to Gzhelian (346.7 to 298.9 million years ago)",
+   "quote_sha": "ed124db2c7f0757b"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The type species of the genus Deltoptychius is Cochliodus acutus.",
+   "category": "classification",
+   "chunk_id": "deltoptychius:pbdb:1",
+   "lang": "en",
+   "quote": "Type species: Cochliodus acutus",
+   "quote_sha": "58dff6708587d529"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "deltoptychius:enwiki:2",
+   "statement": "Deltoptychius is an extinct cartilaginous fish related to modern chimaeras, named for its triangular and folded appearance.",
+   "category": "description",
+   "quote": "Deltoptychius (from Greek, 'triangle' and 'fold') is an extinct species of cartilaginous fish related to the modern chimaeras.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "deltoptychius:enwiki:2",
+   "statement": "Emerging over 300 million years ago, Deltoptychius possessed a long, whip-like tail and large, wing-like pectoral fins likely used for gliding.",
+   "category": "description",
+   "quote": "Although it emerged over 300 million years ago, Deltoptychius was similar in appearance to modern-day chimaeras, possessing a long, whip-like tail and large, wing-like pectoral fins that it probably used to glide through the water.",
+   "reason": "statement copies the source wording: 'a long whip-like tail and large wing-like pectoral'"
+  }
+ ]
+}

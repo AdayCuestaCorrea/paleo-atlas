@@ -1,0 +1,114 @@
+{
+ "taxon": "Winnicavis",
+ "taxon_key": "winnicavis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "fc159a419f235b6c",
+ "generated_at": "2026-11-12T03:15:48+00:00",
+ "citations": {
+  "winnicavis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Winnicavis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Winnicavis?oldid=1323112893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "winnicavis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Winnicavis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Winnicavis?oldid=1323112893",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "winnicavis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Winnicavis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=376958",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Winnicavis was described by Bocheński and colleagues in 2018.",
+   "category": "discovery",
+   "chunk_id": "winnicavis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Bocheński et al., 2018",
+   "quote_sha": "eda67ee7e992257f"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Fossils of Winnicavis date to the Early Oligocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "winnicavis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Early Oligocene",
+   "quote_sha": "d3e5b91989e3c19c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Winnicavis lived between 33.9 and 27.3 million years ago during the Rupelian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "winnicavis:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Rupelian to Rupelian (33.9 to 27.3 million years ago)",
+   "quote_sha": "80843067ea63d104"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "This extinct bird genus was found in Poland during the Early Oligocene.",
+   "category": "time_and_habitat",
+   "chunk_id": "winnicavis:enwiki:2",
+   "lang": "en",
+   "quote": "Winnicavis is a genus of passerine bird from the Early Oligocene of Poland.",
+   "quote_sha": "118e472e0ae64a36"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Winnicavis is classified as a member of the passerine birds.",
+   "category": "classification",
+   "chunk_id": "winnicavis:enwiki:2",
+   "lang": "en",
+   "quote": "Winnicavis is a genus of passerine bird",
+   "quote_sha": "72f7618c916abd0a"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The parent group for Winnicavis is the order Passeriformes.",
+   "category": "classification",
+   "chunk_id": "winnicavis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Passeriformes",
+   "quote_sha": "48701575d2cd4fef"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The type species of the genus Winnicavis is Winnicavis gorskii.",
+   "category": "discovery",
+   "chunk_id": "winnicavis:enwiki:1",
+   "lang": "en",
+   "quote": "type_species: Winnicavis gorskii",
+   "quote_sha": "f4d82487904efadf"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Only one fossil occurrence of Winnicavis has been recorded in the database.",
+   "category": "discovery",
+   "chunk_id": "winnicavis:pbdb:1",
+   "lang": "en",
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "winnicavis:pbdb:1",
+   "statement": "Winnicavis belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

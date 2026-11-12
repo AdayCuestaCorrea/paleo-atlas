@@ -1,0 +1,92 @@
+{
+ "taxon": "Breagyps",
+ "taxon_key": "breagyps",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "831d9457dd1b5db3",
+ "generated_at": "2026-11-12T03:11:58+00:00",
+ "citations": {
+  "breagyps:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Breagyps (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Breagyps?oldid=1370556318",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "breagyps:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Breagyps (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Breagyps?oldid=1370556318",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "breagyps:eswiki:1": {
+   "source": "wikipedia_article",
+   "title": "Breagyps (taxobox)",
+   "url": "https://es.wikipedia.org/wiki/Breagyps?oldid=154484993",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "breagyps:eswiki:2": {
+   "source": "wikipedia_article",
+   "title": "Breagyps (introduction)",
+   "url": "https://es.wikipedia.org/wiki/Breagyps?oldid=154484993",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "breagyps:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Breagyps",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39648",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Breagyps is named after the La Brea Tar Pits in California, where its fossils were found.",
+   "category": "discovery",
+   "chunk_id": "breagyps:enwiki:2",
+   "lang": "en",
+   "quote": "The genus takes its name from the La Brea Tar Pits in California, where its remains have been recovered.",
+   "quote_sha": "2f1108309a7ce0ce"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Breagyps is an extinct genus of New World vulture belonging to the family Cathartidae.",
+   "category": "classification",
+   "chunk_id": "breagyps:enwiki:2",
+   "lang": "en",
+   "quote": "Breagyps is an extinct genus of New World vulture in the family Cathartidae.",
+   "quote_sha": "0d1f1de1154d9b78"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The only known species in the genus is Breagyps clarki.",
+   "category": "classification",
+   "chunk_id": "breagyps:eswiki:1",
+   "lang": "es",
+   "quote": "binomial: † Breagyps clarki",
+   "quote_sha": "87a1203943458085"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Breagyps lived from the Chibanian to the Late Pleistocene, between 0.21 and 0.0117 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "breagyps:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Chibanian to Late Pleistocene (0.21 to 0.0117 million years ago)",
+   "quote_sha": "dac345c06ba3793a"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "breagyps:enwiki:2",
+   "statement": "Breagyps clarki is one of three vulture species known from La Brea Tar Pits fossils, alongside the living Turkey vulture.",
+   "category": "description",
+   "quote": "Breagyps clarki is one of three vulture species represented by fossil material from the tar pits, including the extant Turkey vulture.",
+   "reason": "statement copies the source wording: 'Breagyps clarki is one of three vulture species'"
+  }
+ ]
+}

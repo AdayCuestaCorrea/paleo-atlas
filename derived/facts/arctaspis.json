@@ -1,0 +1,105 @@
+{
+ "taxon": "Arctaspis",
+ "taxon_key": "arctaspis",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "25fd910066759e2e",
+ "generated_at": "2026-11-12T03:28:46+00:00",
+ "citations": {
+  "arctaspis:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Arctaspis (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Arctaspis?oldid=1353783373",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arctaspis:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Arctaspis (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Arctaspis?oldid=1353783373",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arctaspis:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Arctaspis",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=420925",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Arctaspis lived during the Devonian period.",
+   "category": "time_and_habitat",
+   "chunk_id": "arctaspis:enwiki:1",
+   "lang": "en",
+   "quote": "fossil_range: Devonian",
+   "quote_sha": "36f509f130ef3a5b"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The genus Arctaspis was described by Heintz in 1929.",
+   "category": "discovery",
+   "chunk_id": "arctaspis:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Heintz, 1929",
+   "quote_sha": "c421f06edebb49ad"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Three species are known within the genus Arctaspis: A. hoeli, A. kiaeri, and A. maximus.",
+   "category": "classification",
+   "chunk_id": "arctaspis:enwiki:1",
+   "lang": "en",
+   "quote": "subdivision: A. hoeli A. kiaeri A. maximus",
+   "quote_sha": "524f8a75f139ed6b"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Arctaspis lived in what is now Norway during the Devonian period.",
+   "category": "time_and_habitat",
+   "chunk_id": "arctaspis:enwiki:2",
+   "lang": "en",
+   "quote": "which lived during the Devonian period in what is now Norway",
+   "quote_sha": "8fee8903765b59ca"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Arctaspis belongs to the parent group Arctaspididae.",
+   "category": "classification",
+   "chunk_id": "arctaspis:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Arctaspididae",
+   "quote_sha": "e5866250f2174803"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Arctaspis is classified in the family Arctaspididae.",
+   "category": "classification",
+   "chunk_id": "arctaspis:pbdb:1",
+   "lang": "en",
+   "quote": "Family: Arctaspididae",
+   "quote_sha": "a30e44d038e8af7f"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "Arctaspis is a member of the class Placodermi.",
+   "category": "classification",
+   "chunk_id": "arctaspis:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Placodermi",
+   "quote_sha": "bcefd0eb1ff8cd59"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "arctaspis:enwiki:2",
+   "statement": "Arctaspis is an extinct genus of placoderm fish.",
+   "category": "description",
+   "quote": "Arctaspis is an extinct genus of placoderm fish",
+   "reason": "statement copies the source wording: 'Arctaspis is an extinct genus of placoderm fish'"
+  }
+ ]
+}

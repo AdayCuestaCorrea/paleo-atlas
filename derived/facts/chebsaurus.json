@@ -1,0 +1,148 @@
+{
+ "taxon": "Chebsaurus",
+ "taxon_key": "chebsaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "8dcace021579b687",
+ "generated_at": "2026-11-12T01:33:02+00:00",
+ "citations": {
+  "chebsaurus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Chebsaurus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Chebsaurus?oldid=1315980645",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chebsaurus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Chebsaurus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Chebsaurus?oldid=1315980645",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "chebsaurus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Chebsaurus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=81009",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species of the genus is Chebsaurus algeriensis.",
+   "category": "classification",
+   "chunk_id": "chebsaurus:enwiki:1",
+   "lang": "en",
+   "quote": "species: algeriensis",
+   "quote_sha": "4f2bf304a4bb964f"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Chebsaurus belongs to the family Cetiosauridae.",
+   "category": "classification",
+   "chunk_id": "chebsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Cetiosauridae",
+   "quote_sha": "058b9ce0da94e064"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Chebsaurus is classified within the class Saurischia.",
+   "category": "classification",
+   "chunk_id": "chebsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Saurischia",
+   "quote_sha": "8e64a48e9ac37acb"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Chebsaurus lived in present-day Algeria during the Callovian stage of the Jurassic period.",
+   "category": "time_and_habitat",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It lived in present-day Algeria, in the Callovian aged Aïssa Formation.",
+   "quote_sha": "4d627bf6eb439ece"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Chebsaurus lived between 165.3 and 161.5 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "chebsaurus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Callovian to Callovian (165.3 to 161.5 million years ago)",
+   "quote_sha": "02107d609a6ab00d"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Chebsaurus was approximately 8 to 9 meters long.",
+   "category": "description",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "It was around 8 to 9 m long.",
+   "quote_sha": "877acf01a028956b"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The name Chebsaurus means \"young man\" in colloquial Arabic because the fossils were thought to belong to a juvenile.",
+   "category": "description",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The word cheb (شاب) is colloquial Arabic for \"young man\", as the fossils found were believed to be from a juvenile.",
+   "quote_sha": "467307f9188d9480"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Skeletal remains of Chebsaurus were discovered in the Ksour Mountains within the Occidental Saharan Atlas.",
+   "category": "discovery",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "Both skeletons, including cranial material, were found in the Ksour Mountains, part of the Occidental Saharan Atlas (Algerian High Atlas).",
+   "quote_sha": "0dee0a2b83a0d886"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "The species Chebsaurus algeriensis was named in 2005 by Mahammed et al.",
+   "category": "discovery",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The type species, C. algeriensis, was named in 2005 by Mahammed et al.",
+   "quote_sha": "cfe8f16a0639b25d"
+  },
+  {
+   "fact_id": "F010",
+   "statement": "A second juvenile skeleton of Chebsaurus is known from the same region.",
+   "category": "discovery",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "A second skeleton, also from a juvenile of a similar ontogenetic stage, is also known.",
+   "quote_sha": "9a896f785b8ebcac"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "The original description of Chebsaurus gave it the nickname \"the Giant of Ksour\".",
+   "category": "paleobiology",
+   "chunk_id": "chebsaurus:enwiki:2",
+   "lang": "en",
+   "quote": "The original publication by Mahammed et al., gave Chebsaurus the nickname \"the Giant of Ksour\".",
+   "quote_sha": "e53e773b2541d1d3"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "chebsaurus:enwiki:1",
+   "statement": "The genus Chebsaurus was described by Mahammed et al. in 2005.",
+   "category": "classification",
+   "quote": "genus: Chebsaurus",
+   "reason": "numbers not in the quote: ['2005']"
+  },
+  {
+   "chunk_id": "chebsaurus:enwiki:2",
+   "statement": "Chebsaurus is the most complete sauropod dinosaur known from Algeria.",
+   "category": "discovery",
+   "quote": "It is the most complete Algerian sauropod known.",
+   "reason": "quote not found verbatim in the source"
+  }
+ ]
+}

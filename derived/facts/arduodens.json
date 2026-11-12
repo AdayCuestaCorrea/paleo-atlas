@@ -1,0 +1,94 @@
+{
+ "taxon": "Arduodens",
+ "taxon_key": "arduodens",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "a20a3d88d9e69261",
+ "generated_at": "2026-11-12T02:46:39+00:00",
+ "citations": {
+  "arduodens:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Arduodens (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Arduodens?oldid=1304375718",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arduodens:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Arduodens (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Arduodens?oldid=1304375718",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "arduodens:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Arduodens",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=245140",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Arduodens was described based on isolated cladodont teeth discovered in central Iran.",
+   "category": "discovery",
+   "chunk_id": "arduodens:enwiki:2",
+   "lang": "en",
+   "quote": "It was described from isolated cladodont teeth found in deposits from the upper Frasnian to lower Fammenian of central Iran.",
+   "quote_sha": "ac82af506a3e792c"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "The name Arduodens comes from the Latin words for 'steep' and 'tooth'.",
+   "category": "discovery",
+   "chunk_id": "arduodens:enwiki:2",
+   "lang": "en",
+   "quote": "Its name is derived from the Latin Arduus meaning steep and dens meaning tooth.",
+   "quote_sha": "a86d56c543bd4934"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Arduodens belongs to the parent group Elasmobranchii.",
+   "category": "classification",
+   "chunk_id": "arduodens:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Elasmobranchii",
+   "quote_sha": "be6b9308c3a69cad"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Arduodens is classified in the class Chondrichthyes.",
+   "category": "classification",
+   "chunk_id": "arduodens:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Chondrichthyes",
+   "quote_sha": "8763ce845b1d86ed"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The genus Arduodens is currently known from only one species, A. flammeus.",
+   "category": "time_and_habitat",
+   "chunk_id": "arduodens:enwiki:2",
+   "lang": "en",
+   "quote": "It is currently known from a singular species, A. flammeus.",
+   "quote_sha": "1eb5782ef66a7353"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "arduodens:enwiki:2",
+   "statement": "The species name flammeus is derived from the Latin word for 'flamming'.",
+   "category": "discovery",
+   "quote": "The specific epithet is derived from the Latin for 'flamming.'",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "arduodens:enwiki:2",
+   "statement": "Arduodens is an extinct genus of ctenacanth fish that lived during the Devonian period.",
+   "category": "classification",
+   "quote": "Arduodens is an extinct genus of ctenacanth fish from the Devonian period.",
+   "reason": "statement copies the source wording: 'Arduodens is an extinct genus of ctenacanth fish'"
+  }
+ ]
+}

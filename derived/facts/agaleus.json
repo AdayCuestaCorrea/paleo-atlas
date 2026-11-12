@@ -1,0 +1,110 @@
+{
+ "taxon": "Agaleus",
+ "taxon_key": "agaleus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5b1454cd1d27dd4e",
+ "generated_at": "2026-11-12T01:19:06+00:00",
+ "citations": {
+  "agaleus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Agaleus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Agaleus?oldid=1307187328",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agaleus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Agaleus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Agaleus?oldid=1307187328",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agaleus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Agaleus (Taxonomy)",
+   "url": "https://en.wikipedia.org/wiki/Agaleus?oldid=1307187328",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agaleus:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Agaleus (Distribution)",
+   "url": "https://en.wikipedia.org/wiki/Agaleus?oldid=1307187328",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "agaleus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Agaleus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34575",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species Agaleus dorsetensis is known only from isolated teeth.",
+   "category": "discovery",
+   "chunk_id": "agaleus:enwiki:2",
+   "lang": "en",
+   "quote": "This species is currently only known from isolated teeth.",
+   "quote_sha": "50336703b512ced6"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Agaleus is an extinct stem-galeomorph shark that lived during the Early Jurassic Epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "agaleus:enwiki:2",
+   "lang": "en",
+   "quote": "Agaleus is an extinct genus of stem-galeomorph shark from the Early Jurassic Epoch.",
+   "quote_sha": "2a4955a8e2d6e170"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "While some authorities once placed Agaleus as a basal member of the order Orectolobiformes, later research classified it as a stem-galeomorph outside that crown group.",
+   "category": "classification",
+   "chunk_id": "agaleus:enwiki:3",
+   "lang": "en",
+   "quote": "Some authorities have placed this species as a basal member of the order Orectolobiformes, but subsequent researchers have found it to be a stem-galeomorph just outside the crown group of Orectolobiformes.",
+   "quote_sha": "1be2013c6358e8f0"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Fossils of Agaleus have been found in the Hettangian-Sinemurian of Lyme Regis, England, and the Pliensbachian-aged Hasle Formation of Denmark and Grimmen clay pit in north-eastern Germany.",
+   "category": "time_and_habitat",
+   "chunk_id": "agaleus:enwiki:4",
+   "lang": "en",
+   "quote": "It is known from the Hettangian-Sinemurian of Lyme Regis, England and the Pliensbachian-aged Hasle Formation of Denmark and Grimmen clay pit of north-eastern Germany.",
+   "quote_sha": "1a4f2d0b91a4ac8e"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Agaleus fossils have also been discovered in Northern Ireland, France, Belgium, and Sweden.",
+   "category": "time_and_habitat",
+   "chunk_id": "agaleus:enwiki:4",
+   "lang": "en",
+   "quote": "Other places which have produced this species include Northern Ireland, France, Belgium, and Sweden.",
+   "quote_sha": "f2e17febd5275168"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Agaleus lived from the Sinemurian to the Toarcian stages, between 199.5 and 174.7 million years ago.",
+   "category": "time_and_habitat",
+   "chunk_id": "agaleus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Sinemurian to Toarcian (199.5 to 174.7 million years ago)",
+   "quote_sha": "8eeeac292dfa3cde"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "agaleus:enwiki:2",
+   "statement": "Agaleus is the oldest known unambiguous crown group shark.",
+   "category": "classification",
+   "quote": "It is the oldest known unambiguous crown group shark.",
+   "reason": "statement copies the source wording: 'is the oldest known unambiguous crown group shark'"
+  }
+ ]
+}

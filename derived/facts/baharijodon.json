@@ -1,0 +1,96 @@
+{
+ "taxon": "Baharijodon",
+ "taxon_key": "baharijodon",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "29853a9531d7515f",
+ "generated_at": "2026-11-12T02:56:53+00:00",
+ "citations": {
+  "baharijodon:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Baharijodon (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Baharijodon?oldid=1282227282",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baharijodon:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Baharijodon (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Baharijodon?oldid=1282227282",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "baharijodon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Baharijodon",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=38383",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus is known from a single tooth that was first figured by Ernst Stromer in 1933 and named by Oskar Kuhn in 1936.",
+   "category": "discovery",
+   "chunk_id": "baharijodon:enwiki:2",
+   "lang": "en",
+   "quote": "The genus is known from a single tooth, which was first figured by Ernst Stromer in 1933, and then named as a new genus of the family Goniopholididae by Oskar Kuhn in 1936.",
+   "quote_sha": "8339707574bda857"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "In 1979, Éric Buffetaut and P. Taquet reclassified the tooth as belonging to the family Trematochampsidae.",
+   "category": "discovery",
+   "chunk_id": "baharijodon:enwiki:2",
+   "lang": "en",
+   "quote": "In 1979, Éric Buffetaut and P. Taquet instead referred the tooth to Trematochampsidae.",
+   "quote_sha": "51cb89e6d04a3bea"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Fossils of Baharijodon come from the Bahariya Formation in Egypt, dating to the Cenomanian stage of the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "baharijodon:enwiki:2",
+   "lang": "en",
+   "quote": "It is known from the Bahariya Formation in Egypt, which dates back to the Cenomanian stage of the Late Cretaceous.",
+   "quote_sha": "0dd2f9c3a7efa694"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Baharijodon lived between 100.5 and 93.9 million years ago during the Cenomanian.",
+   "category": "time_and_habitat",
+   "chunk_id": "baharijodon:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Cenomanian to Cenomanian (100.5 to 93.9 million years ago)",
+   "quote_sha": "ff16862b0c6874e7"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "Baharijodon belongs to the parent group Crocodylia.",
+   "category": "classification",
+   "chunk_id": "baharijodon:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Crocodylia",
+   "quote_sha": "53c866691de919c4"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Baharijodon is classified within the class Reptilia.",
+   "category": "classification",
+   "chunk_id": "baharijodon:pbdb:1",
+   "lang": "en",
+   "quote": "Class: Reptilia",
+   "quote_sha": "cdcaa2922520f735"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "baharijodon:enwiki:2",
+   "statement": "Baharijodon is an extinct genus of trematochampsid crocodylomorph.",
+   "category": "description",
+   "quote": "Baharijodon is an extinct genus of trematochampsid crocodylomorph.",
+   "reason": "statement copies the source wording: 'Baharijodon is an extinct genus of trematochampsid crocodylomorph'"
+  }
+ ]
+}

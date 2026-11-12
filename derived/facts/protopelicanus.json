@@ -1,0 +1,112 @@
+{
+ "taxon": "Protopelicanus",
+ "taxon_key": "protopelicanus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "4b08e5db68a28cec",
+ "generated_at": "2026-11-12T02:19:29+00:00",
+ "citations": {
+  "protopelicanus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Protopelicanus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Protopelicanus?oldid=1380594633",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "protopelicanus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Protopelicanus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Protopelicanus?oldid=1380594633",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "protopelicanus:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Protopelicanus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=39674",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "Protopelicanus cuvierii is a fossil waterbird with uncertain classification.",
+   "category": "description",
+   "chunk_id": "protopelicanus:enwiki:2",
+   "lang": "en",
+   "quote": "Protopelicanus cuvierii is a putative fossil waterbird of uncertain affinities.",
+   "quote_sha": "ea1861039a599664"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Georges Cuvier briefly described the fossil in 1822, but Ludwig Reichenbach formally named it in 1852.",
+   "category": "discovery",
+   "chunk_id": "protopelicanus:enwiki:2",
+   "lang": "en",
+   "quote": "It was briefly described and figured by Georges Cuvier in 1822 from Late Eocene material from Montmartre, France, though not formally described and named until 1852 by German botanist and ornithologist Ludwig Reichenbach as an early pelecanid.",
+   "quote_sha": "59eeeaaee20a5757"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Michel Brunet suggested in 1970 that the lectotype femur belonged to a pelican.",
+   "category": "discovery",
+   "chunk_id": "protopelicanus:enwiki:2",
+   "lang": "en",
+   "quote": "The lectotype femur was thought by Michel Brunet in 1970 to be typical of a pelican.",
+   "quote_sha": "6dee28fc79348a99"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "Colin Harrison proposed in 1979 that the fossil belonged to the Sulidae, while Storrs Olson suggested in 1995 it might be a pelagornithid.",
+   "category": "debate",
+   "chunk_id": "protopelicanus:enwiki:2",
+   "lang": "en",
+   "quote": "However, Colin Harrison in 1979 considered that it belonged to the Sulidae, and Storrs Olson in 1995 thought it might be a pelagornithid.",
+   "quote_sha": "f1fa030b2983c79d"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The fossil was found in Late Eocene deposits in Montmartre, France.",
+   "category": "time_and_habitat",
+   "chunk_id": "protopelicanus:enwiki:2",
+   "lang": "en",
+   "quote": "It was briefly described and figured by Georges Cuvier in 1822 from Late Eocene material from Montmartre, France",
+   "quote_sha": "74ebf8de84a56de2"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The animal lived between 37.71 and 33.9 million years ago during the Priabonian stage.",
+   "category": "time_and_habitat",
+   "chunk_id": "protopelicanus:pbdb:1",
+   "lang": "en",
+   "quote": "Time range: Priabonian to Priabonian (37.71 to 33.9 million years ago)",
+   "quote_sha": "b818740c208466cf"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The genus is classified within the order Pelecaniformes.",
+   "category": "classification",
+   "chunk_id": "protopelicanus:pbdb:1",
+   "lang": "en",
+   "quote": "Parent group: Pelecaniformes",
+   "quote_sha": "4f5312b6560ff6c0"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "protopelicanus:enwiki:2",
+   "statement": "The original fossil material consists of a fragment of the left scapula and a nearly complete left femur.",
+   "category": "description",
+   "quote": "The original material comprised the cranial part of a left scapula and a nearly complete left femur.",
+   "reason": "statement copies the source wording: 'left scapula and a nearly complete left femur'"
+  },
+  {
+   "chunk_id": "protopelicanus:pbdb:1",
+   "statement": "The animal belongs to the class Aves.",
+   "category": "classification",
+   "quote": "Class: Aves",
+   "reason": "quote too short"
+  }
+ ]
+}

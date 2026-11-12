@@ -119,6 +119,22 @@ def test_gives_up_after_the_last_retry():
         get_json(c, "https://example.org/api", retries=2, sleep=lambda s: None)
 
 
+def test_a_long_retry_after_is_not_waited_for():
+    # An LLM's daily quota answers 429 with a wait of half an hour: give up at once.
+    replies = [
+        httpx.Response(429, headers={"Retry-After": "30"}),
+        httpx.Response(429, headers={"Retry-After": "2141"}),
+    ]
+    waits: list[float] = []
+    with (
+        make_client(httpx.MockTransport(lambda r: replies.pop(0))) as c,
+        pytest.raises(HttpError, match="asked to wait 2141s") as err,
+    ):
+        get_json(c, "https://example.org/api", sleep=waits.append)
+    assert waits == [30.0]
+    assert err.value.status_code == 429
+
+
 def test_client_errors_are_not_retried():
     calls = []
 

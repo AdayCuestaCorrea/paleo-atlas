@@ -19,6 +19,9 @@ from paleo.config import USER_AGENT
 log = logging.getLogger(__name__)
 
 RETRY_STATUS = {429, 500, 502, 503, 504}
+# A server asking for a longer pause (an LLM's daily quota, say) is not a transient
+# failure: waiting would only run the scheduled job into its timeout.
+MAX_RETRY_AFTER = 300.0
 
 
 class HttpError(RuntimeError):
@@ -64,7 +67,8 @@ def _request(
 ) -> Any:
     """Send a request and return what ``read`` makes of the response, retrying
     transient failures: HTTP 429/5xx, network errors and whatever ``read`` reports as
-    not ready (``(False, None, reason)``). ``Retry-After`` is honoured. Client errors
+    not ready (``(False, None, reason)``). ``Retry-After`` is honoured up to
+    ``MAX_RETRY_AFTER``; a longer one is raised at once. Client errors
     (4xx) are raised at once with the start of the response body, for debugging."""
     last_error = "unknown error"
     for attempt in range(retries + 1):
@@ -80,6 +84,11 @@ def _request(
             if response.status_code in RETRY_STATUS:
                 last_error = f"HTTP {response.status_code}: {response.text[:300]}"
                 if (retry_after := _retry_after(response)) is not None:
+                    if retry_after > MAX_RETRY_AFTER:
+                        raise HttpError(
+                            f"Not retrying {url}: asked to wait {retry_after:.0f}s ({last_error})",
+                            response.status_code,
+                        )
                     wait = max(wait, retry_after)
             elif response.is_error:
                 raise HttpError(

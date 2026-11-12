@@ -4,7 +4,7 @@
 
 > **English summary of [`ALCANCE.md`](ALCANCE.md)**, which is canonical and much longer (phases with every checkbox, decisions, risks, the full change log). This summary is updated when a phase closes, not on every change. If the two do not match, `ALCANCE.md` wins. Section numbers follow `ALCANCE.md`, so `ALCANCE.md` §N is the detail of §N here.
 
-**Summarised from version:** 46 (2026-11-08) · **Status:** Phases 0, 2, 4, 5 and 6 done; Phase 1 completing its 2 unattended weeks (until 2026-11-21); Phase 3 published, with narrative pages for the whole encyclopedia still growing in batches.
+**Summarised from version:** 52 (2026-11-12) · **Status:** Phases 0, 2, 3, 4, 5 and 6 done; Phase 1 completing its 2 unattended weeks (until 2026-11-21).
 
 Website: https://adaycuestacorrea.github.io/paleo-atlas/ · Interview pack: [`docs/interview-pack/`](docs/interview-pack/one-pager.md)
 
@@ -73,7 +73,7 @@ Ten decisions, each with an ADR in [`docs/adr/`](docs/adr/README.md): D1 no Spar
 | 0 — Setup | Repo published | Done |
 | 1 — MVP (archosaurs, bilingual) | The public site shows the 2026 archosaur species in both languages, with verified narrative page, image, reliability signals and history, and has updated itself **2 weeks in a row** unattended | Built; the 2 weeks count from the 2026-11-07 merge (until 2026-11-21) |
 | 2 — Airflow | The DAGs produce exactly the same result as Actions | Done (0 differences in 33 tables and 97 site files) |
-| 3 — Encyclopedia, expansion and Spark | The three blocks are published and the benchmark is documented with real figures | Published; narrative pages for all 2,743 genera with an article grow in overnight GPU batches (598 EN / 582 ES so far); the Databricks variant moved to the backlog |
+| 3 — Encyclopedia, expansion and Spark | The three blocks are published and the benchmark is documented with real figures | Done (2026-11-12): narrative pages for 2,721 EN / 2,703 ES of the 2,743 genera with an article (99 %), written in eight overnight GPU batches; the Databricks variant moved to the backlog |
 | 4 — Portfolio | The project is on the CV with URL and verifiable metrics | Done: bilingual README, ADRs, one-pager, postmortem, STAR stories, CV entry, GitHub profile and LinkedIn project |
 | 5 — AI and news | News classification metrics are in the README and the glossary is on the pages with its sample accuracy | Done |
 | 6 — Size comparator | The comparator follows §11.3 and is published | Done (3D models moved to the backlog in v40) |
@@ -96,7 +96,7 @@ Spanish and English under `/es/` and `/en/`, every page linked to its twin. Page
 
 ## 12. AI: narrative pages and glossary
 
-- **Narrative pages:** the LLM extracts facts with their source, writes in English citing one fact per sentence and adapts to Spanish sentence by sentence. Only what passes the checks is published (faithfulness of numbers, names and dates; no 8-word copies; one citation per sentence; repetitions; length); otherwise a fallback text built from the data.
+- **Narrative pages:** the LLM extracts facts with their source, writes in English citing one fact per sentence and adapts to Spanish sentence by sentence. Only what passes the checks is published (faithfulness of numbers, names and dates; no 8-word copies; one citation per sentence; repetitions; length). The Spanish text must also keep the English sentence's stages, part of the period and clade names. A page may leave out up to 3 failed sentences, or a fifth of a long page; otherwise a fallback text built from the data.
 - **Models:** Qwen 3.5 9B on the local GPU for large batches, Groq's free plan in Actions.
 - **Glossary:** each definition is written from the term's Wikipedia article (cited by revision), checked the same way and judged by a model from another family; a hand-reviewed sample of 20 is published with its accuracy.
 
@@ -123,10 +123,10 @@ Out of scope since v40 (backlog); the design in `ALCANCE.md` §13 still holds if
 Measured, never estimated, with a date: see the table in [`ALCANCE.md` §17](ALCANCE.md#17-métricas-del-proyecto-para-cv-y-entrevistas). On 2026-11-08:
 
 - 4,890 pages (10,260 web pages) and 19,541 history events;
-- 302 pytest and 196 dbt tests;
+- 311 pytest and 196 dbt tests;
 - 932,494 GBIF specimens processed (138,388 reconciled);
 - DuckDB 0.86 s against Spark 13.7 s;
-- 598 / 582 verified narrative pages;
+- 2,803 / 2,784 verified narrative pages (EN / ES, on 2026-11-12);
 - blind news classification at 74 % agreement (the person with themselves, 84 %);
 - ~3 min per daily run;
 - 0 € a month.

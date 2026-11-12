@@ -2,7 +2,7 @@
 
 > Alcance y casillas: [`ALCANCE.md` §7, Fase 3](../../ALCANCE.md#fase-3--enciclopedia-ampliación-y-spark). Este documento explica el porqué.
 >
-> **Estado (2026-11-07): publicada, sin cerrar.** Hitos 1–5, 7 y 8 hechos y en la web desde el merge del 2026-11-07; el hito 6 (fichas narrativas de los géneros) avanza en lotes nocturnos. Se termina de escribir al cerrar la fase.
+> **Estado (2026-11-12): cerrada.** Los ocho hitos están hechos. Los hitos 1–5, 7 y 8 se publicaron con el merge del 2026-11-07, y el hito 6 (fichas narrativas de los géneros) terminó su cola el 2026-11-12, tras ocho lotes nocturnos y un repaso final sin modelo.
 
 ## 1. En una frase
 
@@ -77,7 +77,7 @@ flowchart LR
 | H3 | Reptiles marinos (358 géneros) y peces fósiles (1.353) | `paleo/scope.py` (la regla de alcance en un solo sitio), seed `featured_fishes` |
 | H4 | Historial hacia atrás: opiniones de PBDB y páginas anuales 2009–2025 | `int_opinion_events`, `int_backfill_events`, `raw/wikipedia_past` |
 | H5 | GBIF, el job en DuckDB y en Spark, el benchmark, el mapa y los museos, y el DAG mensual | `paleo/gbif_job/`, `spark/jobs/gbif_reconcile.py`, [`benchmarks/gbif/`](../../benchmarks/gbif/results.md) |
-| H6 | Fichas narrativas de los géneros con artículo (2.743), con la GPU local *(en curso)*, y rescate de las adaptaciones al español que fallaban por 1–3 frases | `paleo narrate --scope genera --until HH:MM`, `genus_chunks_for`, `paleo narrate --resalvage` |
+| H6 | Fichas narrativas de los géneros con artículo (2.743), con la GPU local; rescate sin modelo de las fichas que fallaban por pocas frases; comprobación de pisos, periodos y clados en el español | `paleo narrate --scope genera --until HH:MM`, `genus_chunks_for`, `paleo narrate --resalvage`, `--recheck-es`, `--es-missing` |
 | H7 | Clasificación completa y parientes sobre un eje de millones de años | `int_genus_lineage`, `fct_taxon_neighborhood`, `paleo/site/taxon_page.py` (sustituye al cladograma de `tree.py`) |
 | H8 | La web de una enciclopedia: portada con explorador, ficha nueva y página «Estado de los datos» | `paleo/site/explore.py`, `site/static/home.js`, `paleo/site/taxon_page.py`, `paleo/site/status.py`, `fct_source_freshness` |
 
@@ -108,7 +108,11 @@ flowchart LR
 - **Una sola regla de facetas para el explorador y los índices** (`site/explore.py`). El explorador de la portada filtra por periodo, grupo y país en el navegador, y los índices de la enciclopedia son páginas estáticas. Si cada uno tuviera su regla, darían cifras distintas para «Jurásico + España»; con la misma función, dan las mismas. El explorador carga su JSON (132 KB comprimido) solo al llegar a él, y sin JavaScript los filtros enlazan a los índices.
 - **El estado del pipeline, a la vista y desde el almacén.** El informe de cada ejecución (`runs/`) ya estaba en git; ahora pasa por dbt como cualquier otra fuente (`stg_pipeline__runs`), y la frescura de cada fuente se compara con su ritmo, que es un seed y no código. La página pública enseña la duración por paso, los tests (los avisos explicados en lenguaje llano), la cobertura y una bitácora de 30 días. Para un perfil de datos, la observabilidad y la calidad son justo lo que suele quedar invisible.
 - **El texto de los géneros, con la GPU de casa.** Con la cuota de Groq, 2.743 géneros tardarían meses. Ollama con Qwen 3.5 9B tardaba ~137 s por género; con las fichas más ricas de la v26 (fuentes por secciones y curiosidades) pasó a ~3,4 min, unas 130 fichas por noche.
-- **Rescatar en vez de regenerar.** Cada ficha guarda la versión de su prompt, y cambiar el prompt obliga a rehacer todas las fichas ya verificadas. Por eso las mejoras del español fueron en las comprobaciones (que eran demasiado literales) y en el feedback de los reintentos, no en el prompt. Una adaptación que falla por 1–3 frases se publica sin ellas (`_salvage`), y `paleo narrate --resalvage` aplica las reglas nuevas a los fallos guardados sin llamar a ningún modelo. El lote es **reanudable** (caché del LLM por contenido y salto de lo ya hecho), para **a una hora fija** y apaga el PC. Un vigilante lo detiene si la GPU pasa de 85 °C. El wikitext de los géneros (65 MB) se queda en la caché local; cada hecho cita la revisión exacta (`oldid`), así que no hace falta versionarlo.
+- **Rescatar en vez de regenerar.** Cada ficha guarda la versión de su prompt, y cambiar el prompt obliga a rehacer todas las fichas ya verificadas. Por eso las mejoras del español fueron en las comprobaciones (que eran demasiado literales) y en el feedback de los reintentos, no en el prompt. Una adaptación que falla por 1–3 frases se publica sin ellas (`_salvage`), y `paleo narrate --resalvage` aplica las reglas nuevas a los fallos guardados sin llamar a ningún modelo. El lote es **reanudable** (caché del LLM por contenido y salto de lo ya hecho), para **a una hora fija** y apaga el PC. Corre bajo `systemd-inhibit`, para que el PC no se suspenda a mitad, y un vigilante lo detiene si la GPU pasa de 85 °C. El wikitext de los géneros (65 MB) se queda en la caché local; cada hecho cita la revisión exacta (`oldid`), así que no hace falta versionarlo.
+- **Cerrar con reglas, no con otra noche de GPU** (decisiones del usuario del 2026-11-12, con las cifras medidas antes):
+  - Las **417 fichas en español rescatadas** sin la pasada de gramática **no se reescriben**. Los calcos medidos aparecen igual con o sin esa pasada («grupo padre/parental» en el 21–23 % de las fichas, «etapa X-iense» en el 22–26 %), así que reescribirlas habría costado GPU sin cambiar lo que se ve.
+  - Los **54 géneros sin ficha en inglés** fallaban por poco: entre 4 y 9 frases malas de 20–38, casi todas copias de la fuente o hechos repetidos, frente a un tope de 3. Otro intento con el mismo prompt habría dado poco. El tope pasa a ser **3 frases o la quinta parte de la ficha**, y así se rescatan 32 sin modelo. Su español se escribe después con la GPU (`--es-missing`, 26 min).
+  - **La calidad del español entra en la fase, en versión reducida y sin GPU.** Hay una comprobación nueva entre el inglés y el español: los pisos, la parte del periodo (Inferior/Superior) y los nombres de los clados («sauropodomorfo», no «saurópodo»). También hay sustituciones fijas para el calco más frecuente: «la etapa campaniense» pasa a «el piso campaniense», con su artículo. `paleo narrate --recheck-es` lo aplica a lo ya verificado sin llamar al modelo. «Grupo padre» y los nombres propios traducidos van al backlog: el primero no se arregla sin reformular la frase y los segundos no se pueden medir con fiabilidad.
 - **Lecturas opcionales en dbt.** La rama `data` y el fixture del CI aún no tienen opiniones ni clados de PBDB, y DuckDB falla si un patrón de archivos no encuentra nada. Las macros comprueban primero con `glob()` y, si no hay archivos, devuelven una tabla vacía con los mismos tipos. El merge no rompe el pipeline diario.
 
 ## 6. Cómo se comprueba
@@ -123,6 +127,7 @@ flowchart LR
 - **Paridad de motores:** `tests/test_gbif_job.py` exige que DuckDB y Spark den los mismos extractos con el fixture; con los datos reales se comparan las huellas.
 - **CI con el fixture:** cada cambio se prueba también en un directorio vacío, con los datos del fixture del CI (sin opiniones, clados ni páginas antiguas), para asegurar que el pipeline diario sigue en verde tras el merge.
 - **Las fuentes del texto no cambian sin querer.** Un script compara el `sources_hash` guardado en cada ficha de hechos con el de sus fuentes actuales. Después de H4 y de H7 dio 0 de 280: ningún hito obligó a rehacer los textos.
+- **Antes de aplicar una regla a los datos, se prueba en una copia.** `--recheck-es` se ejecutó primero sobre una copia de `derived/`, y de cada pasada se leyó una muestra de las frases que quitaba. Así salieron tres falsos positivos antes de tocar los datos: rangos como «Middle to Late Eocene», el epíteto *A. tortonica* leído como Tortoniense y el género *Pleiosaurus*, que la sustitución de «pleiosaurio» habría cambiado.
 - **Lectura humana:** el primer lote de la GPU se leyó a mano en inglés y en español; de ahí salieron nuevas reglas en los prompts (§8). La web se revisa en el navegador, también con el ancho de móvil.
 - **La lógica de la web, en funciones puras con tests:** las facetas del explorador (también su JavaScript, que se prueba con Node desde pytest), las piezas de la ficha (`srcset`, franja del tiempo, historial por décadas) y las de la página de estado (agrupación de pasos, calendario, frescura). Las plantillas solo pintan, y un test exige que la página en español y en inglés tengan la misma estructura.
 
@@ -148,6 +153,16 @@ flowchart LR
 | Historial | 19.541 eventos y 8.195 estudios |
 | Fichas narrativas | Tras tres lotes nocturnos (3, 4 y 5 nov) y el rescate: 397 verificadas en inglés y 389 en español (362 → 389 con las v32 y v33) |
 | Ejecución diaria | ~45 s en GitHub Actions; GitHub lanza el cron de las 06:23 UTC entre 7 y 8,5 h tarde |
+
+**Al cerrar (2026-11-12):**
+
+| Qué | Resultado |
+|---|---|
+| Lotes de géneros | 8 noches (3–12 nov) más un repaso de 26 min por la tarde; los 2.743 géneros con artículo tienen intento. Media de la GPU: 72 °C (máximo 78 °C) |
+| Fichas narrativas verificadas | EN 2.803 · ES 2.784. De géneros: **2.721 en EN y 2.703 en ES de 2.743 (99 % / 99 %)**. Por bloques (EN/ES): arcosaurios 2.089/2.074, reptiles marinos 271/270, peces 361/359; más 82/81 especies nuevas |
+| Siguen en revisión | 28 en inglés (22 géneros con más de la quinta parte de sus frases mal, la ficha se queda con el texto de respaldo) y 18 en español |
+| Repaso del español sin modelo | 517 fichas solo con sustituciones fijas; 173 pierden 223 frases con un piso, una parte del periodo o un clado cambiados (110 de clado, 85 de piso, 28 de periodo); quedan 0 «etapa X-iense» |
+| Coste | 0 € |
 
 ## 8. Qué salió mal y qué se aprendió
 
@@ -179,6 +194,10 @@ flowchart LR
   Con las reglas arregladas, 43 fichas en español se rescataron sin volver a llamar al modelo (y 3 más en un piloto con la GPU). *Lección:* antes de culpar al modelo, leer los fallos uno a uno; una comprobación estricta que falla por motivos tontos esconde los fallos de verdad.
 - **El registro de ejecuciones perdía pasos.** `paleo report finish` corre dentro del propio job y pregunta a la API de GitHub por sus pasos; el de la web a veces aún no constaba como terminado, y se descartaba. Lo destapó la maqueta de la página de estado, al no cuadrar las duraciones. Ahora se apunta como parcial, y lo que no se reparte por pasos se enseña como «sin desglose» en vez de esconderlo.
 - **El cron de GitHub llega tarde.** Programado a las 06:23 UTC, se lanza entre 7 y 8,5 h después. No importa para una web que cambia una vez al día, pero la página de estado lo dice con las cifras de cada ejecución. *Lección:* el cron de Actions es «como mucho una vez al día», no una hora.
+- **El PC se suspendió a mitad de un lote** (2026-11-08, 06:21): el lote se cortó con 227 géneros. Desde la noche siguiente corre bajo `systemd-inhibit --what=sleep:idle`, y ningún lote más se cortó.
+- **El vigilante de temperatura no vigilaba.** El driver NVIDIA 620 escribe la temperatura con decimales (`53.61`) y el script solo aceptaba enteros, así que nunca habría parado el lote. Se arregló el 2026-11-10 (`${temp%%.*}`). *Lección:* una salvaguarda que nunca ha saltado hay que probarla a propósito.
+- **Lo que la verificación no ve.** El español podía pasar todas las comprobaciones con un piso cambiado (*Halisaurus*: «Cenomaniense» por Santoniense) o con «saurópodo» por *sauropodomorph*, porque solo se miraban cifras y nombres científicos. Lo destapó la muestra de 3 fichas que se leía cada mañana. Medido en las 2.739 fichas, el piso cambiado es raro (4 fichas) y el clado cambiado no tanto (44). *Lección:* medir con grep antes de decidir si un fallo de la muestra es un caso o una pauta.
+- **Una sustitución «segura» tocaba un nombre científico.** «pleiosaurio» → «plesiosaurio» también habría cambiado el género *Pleiosaurus*. Lo destapó la muestra de la prueba en una copia, no un test. Ahora la regla solo toca el nombre común en español, y un test lo fija.
 - **La caché del navegador engaña al revisar.** Tras reconstruir la web, el navegador seguía sirviendo el CSS y el JavaScript viejos, y un arreglo parecía no funcionar. Ahora la revisión fuerza la recarga de los estáticos.
 
 ## 9. Preguntas de entrevista
@@ -206,8 +225,8 @@ Con una CTE recursiva sobre los enlaces padre-hijo de PBDB: unas 4.750 × 40 fil
 
 ## 10. Límites y lo que queda
 
-- **H6 en curso:** quedan unos 2.350 géneros. A unas 130 fichas por noche son 2–3 semanas de lotes nocturnos con la GPU. Las 82 especies nuevas las reescribe Groq con los prompts nuevos tras el merge, al ritmo de su cuota gratuita.
-- **Las fichas en español rescatadas** (sin las frases que fallaban) no han pasado la revisión de gramática; queda una pasada solo para ellas, con la GPU.
+- **22 géneros sin ficha en inglés** (más de la quinta parte de sus frases fallan) y 18 fichas en español en revisión: se quedan con el texto de respaldo hasta que cambien sus hechos o el prompt.
+- **Calcos del español que no se arreglan con reglas:** «grupo padre/parental» (593 fichas) y nombres propios traducidos («El ermitaño Cowles Case»), en el backlog. Las 417 fichas rescatadas sin la pasada de gramática se quedan así (decisión del usuario).
 - **Unos 2.000 géneros sin artículo en Wikipedia** se quedan con el texto de respaldo (§11.4): no hay fuente suficiente para una ficha narrativa.
 - **Databricks Free Edition** (opcional): el mismo job de Spark en un entorno gestionado.
 - **El benchmark con 5 y 10 veces el volumen** quedó descartado: confirmaría lo que ya se sabe. Spark se lucirá mejor en un proyecto aparte, con un volumen que lo justifique.

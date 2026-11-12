@@ -1,15 +1,29 @@
 {
  "taxon": "Hintighernia",
  "taxon_key": "hintighernia",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "e547f5f1fafecb8b",
- "generated_at": "2026-11-02T01:04:17+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "545576c32923611d",
+ "generated_at": "2026-11-12T16:31:11+00:00",
  "citations": {
   "hintighernia:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1385002080",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hintighernia:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Hintighernia (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Hintighernia?oldid=1383795672",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "hintighernia:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Hintighernia (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Hintighernia?oldid=1383795672",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -31,25 +45,25 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Hintighernia was described by Pêgas and colleagues.",
-   "category": "discovery",
-   "chunk_id": "hintighernia:table:1",
-   "lang": "en",
-   "quote": "Authors: Pêgas et al.",
-   "quote_sha": "457813833ab4569b"
-  },
-  {
-   "fact_id": "F002",
-   "statement": "Hintighernia is a new genus and new species.",
-   "category": "discovery",
+   "statement": "Hintighernia is a newly described genus and species of tapejarid pterosaur.",
+   "category": "description",
    "chunk_id": "hintighernia:table:1",
    "lang": "en",
    "quote": "Novelty: Gen. et sp. nov",
    "quote_sha": "e39d78823e43c99c"
   },
   {
+   "fact_id": "F002",
+   "statement": "Hintighernia lived during the Cretaceous period.",
+   "category": "time_and_habitat",
+   "chunk_id": "hintighernia:table:1",
+   "lang": "en",
+   "quote": "Age: Cretaceous",
+   "quote_sha": "b1fec5704d4099b7"
+  },
+  {
    "fact_id": "F003",
-   "statement": "The type locality of Hintighernia is the Cambridge Greensand.",
+   "statement": "Its fossils were found in the Cambridge Greensand of the United Kingdom.",
    "category": "discovery",
    "chunk_id": "hintighernia:table:1",
    "lang": "en",
@@ -58,52 +72,52 @@
   },
   {
    "fact_id": "F004",
-   "statement": "Hintighernia was found in the United Kingdom.",
-   "category": "discovery",
-   "chunk_id": "hintighernia:table:1",
+   "statement": "Hintighernia’s fossil range is the Early Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "hintighernia:enwiki:1",
    "lang": "en",
-   "quote": "Country: United Kingdom",
-   "quote_sha": "c4853fb85bcc0e27"
+   "quote": "fossil_range: Early Cretaceous",
+   "quote_sha": "e26631f15b968f3e"
   },
   {
    "fact_id": "F005",
-   "statement": "Hintighernia lived during the Cretaceous period.",
-   "category": "discovery",
-   "chunk_id": "hintighernia:table:1",
+   "statement": "Hintighernia is a tapejarid pterosaur from the Early Cretaceous Cambridge Greensand, United Kingdom.",
+   "category": "description",
+   "chunk_id": "hintighernia:enwiki:2",
    "lang": "en",
-   "quote": "Age: Cretaceous",
-   "quote_sha": "b1fec5704d4099b7"
+   "quote": "Hintighernia is a genus of tapejarid pterosaur from the Early Cretaceous of the Cambridge Greensand, United Kingdom.",
+   "quote_sha": "d3ea422f6a70951f"
   },
   {
    "fact_id": "F006",
-   "statement": "Hintighernia is classified as a member of the family Tapejaridae.",
+   "statement": "The type species of the genus is Hintighernia edingerae.",
    "category": "classification",
-   "chunk_id": "hintighernia:table:1",
+   "chunk_id": "hintighernia:enwiki:2",
    "lang": "en",
-   "quote": "A member of the family Tapejaridae.",
-   "quote_sha": "dcff38b9d708a511"
+   "quote": "The type species is H. edingerae.",
+   "quote_sha": "469edbc25abf8842"
   },
   {
    "fact_id": "F007",
-   "statement": "The partial cranium CAMSM B54406, previously referred to as Ornithostoma sedgwicki, is identified as a sinopterine tapejarid.",
-   "category": "discovery",
+   "statement": "The genus name derives from a cranium that had previously been assigned to Ornithostoma.",
+   "category": "description",
+   "chunk_id": "hintighernia:enwiki:2",
+   "lang": "en",
+   "quote": "It was named from a cranium originally referred to the genus Ornithostoma.",
+   "quote_sha": "f5fc622781628a4c"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "The partial cranium CAMSM B54406, formerly linked to Ornithostoma sedgwicki, is identified as a sinopterine tapejarid and assigned to Hintighernia edingerae.",
+   "category": "description",
    "chunk_id": "hintighernia:abstract:1",
    "lang": "en",
    "quote": null,
    "quote_sha": "70137373a1d32869"
   },
   {
-   "fact_id": "F008",
-   "statement": "The new species is named Hintighernia edingerae.",
-   "category": "discovery",
-   "chunk_id": "hintighernia:abstract:1",
-   "lang": "en",
-   "quote": null,
-   "quote_sha": "79aba036c919b3de"
-  },
-  {
    "fact_id": "F009",
-   "statement": "Micro-CT scanning shows that the neuroanatomy of Hintighernia closely resembles that of Tapejara wellnhoferi.",
+   "statement": "Micro‑CT scanning shows that Hintighernia’s neuroanatomy closely resembles that of Tapejara wellnhoferi.",
    "category": "paleobiology",
    "chunk_id": "hintighernia:abstract:1",
    "lang": "en",
@@ -112,37 +126,55 @@
   },
   {
    "fact_id": "F010",
-   "statement": "Ornithostoma sedgwicki is considered a chaoyangopterid azhdarchoid known only from four jaw fragments.",
+   "statement": "Additional Cambridge Greensand remains are also referred to Tapejaridae, and an isolated rostrum fragment is tentatively assigned to cf. Hintighernia.",
    "category": "paleobiology",
    "chunk_id": "hintighernia:abstract:1",
    "lang": "en",
    "quote": null,
-   "quote_sha": "3d7625724f1ccfa4"
+   "quote_sha": "300c84a3e860fe08"
   },
   {
    "fact_id": "F011",
-   "statement": "Researchers suggest the existence of a third azhdarchoid species in the Cambridge Greensand based on jaw and cervical remains.",
-   "category": "paleobiology",
+   "statement": "Ornithostoma sedgwicki is considered a chaoyangopterid azhdarchoid with a hypodigm limited to four jaw fragments.",
+   "category": "classification",
    "chunk_id": "hintighernia:abstract:1",
    "lang": "en",
    "quote": null,
-   "quote_sha": "1dcb5fadc29390e6"
+   "quote_sha": "6d31fe8b7d80b33f"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Researchers suggest that a third, non‑azhdarchid azhdarchoid species may also be present in the Cambridge Greensand.",
+   "category": "debate",
+   "chunk_id": "hintighernia:abstract:1",
+   "lang": "en",
+   "quote": null,
+   "quote_sha": "ff77f3b043620caf"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Europe is proposed as an early hotspot of tapejarid phylogenetic diversity and a possible origin point for sinopterines and tapejarines.",
+   "category": "curiosities",
+   "chunk_id": "hintighernia:abstract:1",
+   "lang": "en",
+   "quote": null,
+   "quote_sha": "671c1099d424b1d5"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "hintighernia:abstract:1",
-   "statement": "Hintighernia is diagnosed by traits including the shape of the upper temporal fenestra margins and a robust, elongate supraoccipital median ridge.",
-   "category": "paleobiology",
-   "quote": "Diagnostic traits, including the shape of the upper temporal fenestra margins and a robust, elongate supraoccipital median ridge, lead us to diagnose a new taxon",
-   "reason": "statement copies the source wording: 'traits including the shape of the upper temporal'"
+   "chunk_id": "hintighernia:table:1",
+   "statement": "The genus was named by Pêgas et al. in 2026.",
+   "category": "discovery",
+   "quote": "Authors: Pêgas et al.",
+   "reason": "numbers not in the quote: ['2026']"
   },
   {
    "chunk_id": "hintighernia:abstract:1",
-   "statement": "Europe is suggested to have been an early hotspot of phylogenetic diversity for tapejarids and a potential origin point for sinopterines in Eastern Laurasia and tapejarines in South America.",
-   "category": "time_and_habitat",
-   "quote": "Europe appears to have been an early hotspot of phylogenetic diversity for this group and a potential point of origin for the sinopterines of Eastern Laurasia and tapejarines of South America.",
-   "reason": "statement copies the source wording: 'to have been an early hotspot of phylogenetic'"
+   "statement": "Diagnostic features include the shape of the upper temporal fenestra margins and a robust, elongate supraoccipital median ridge.",
+   "category": "description",
+   "quote": "Diagnostic traits, including the shape of the upper temporal fenestra margins and a robust, elongate supraoccipital median ridge",
+   "reason": "statement copies the source wording: 'the shape of the upper temporal fenestra margins'"
   }
  ]
 }

@@ -1,0 +1,131 @@
+{
+ "taxon": "Panjiangosteus",
+ "taxon_key": "panjiangosteus",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "5d3fff6e8f9ce9c8",
+ "generated_at": "2026-11-12T16:41:07+00:00",
+ "citations": {
+  "panjiangosteus:table:1": {
+   "source": "wikipedia_table",
+   "title": "2026 in paleoichthyology (table of new taxa)",
+   "url": "https://en.wikipedia.org/wiki/2026_in_paleoichthyology?oldid=1385090570",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "panjiangosteus:enwiki:1": {
+   "source": "wikipedia_article",
+   "title": "Panjiangosteus (taxobox)",
+   "url": "https://en.wikipedia.org/wiki/Panjiangosteus?oldid=1359787221",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "panjiangosteus:enwiki:2": {
+   "source": "wikipedia_article",
+   "title": "Panjiangosteus (introduction)",
+   "url": "https://en.wikipedia.org/wiki/Panjiangosteus?oldid=1359787221",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "panjiangosteus:enwiki:3": {
+   "source": "wikipedia_article",
+   "title": "Panjiangosteus (Description)",
+   "url": "https://en.wikipedia.org/wiki/Panjiangosteus?oldid=1359787221",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "panjiangosteus:study:1": {
+   "source": "crossref",
+   "title": "A new antarctaspid (Placodermi, Arthrodira) from the Lower Devonian of Yunnan, China (Journal of Vertebrate Paleontology, 2025)",
+   "url": "https://doi.org/10.1080/02724634.2026.2621682",
+   "doi": "10.1080/02724634.2026.2621682",
+   "license": "metadata (Crossref)"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The type species of Panjiangosteus is P. eurycephala.",
+   "category": "classification",
+   "chunk_id": "panjiangosteus:table:1",
+   "lang": "en",
+   "quote": "The type species is P. eurycephala.",
+   "quote_sha": "059213b34fb6d2d4"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Panjiangosteus fossils come from the Posongchong Formation in China.",
+   "category": "discovery",
+   "chunk_id": "panjiangosteus:table:1",
+   "lang": "en",
+   "quote": "Type locality: Posongchong Formation",
+   "quote_sha": "534a4808d728b56c"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Panjiangosteus lived during the Pragian stage of the Devonian period.",
+   "category": "time_and_habitat",
+   "chunk_id": "panjiangosteus:table:1",
+   "lang": "en",
+   "quote": "Age: Devonian (Pragian)",
+   "quote_sha": "721118c71f012bf4"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The type species Panjiangosteus eurycephala had a broad skull roof.",
+   "category": "description",
+   "chunk_id": "panjiangosteus:enwiki:3",
+   "lang": "en",
+   "quote": "possessed a broad skull roof",
+   "quote_sha": "4ed32fbd2ba0ff70"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The neck joint of Panjiangosteus resembles that of petalichthyids.",
+   "category": "curiosities",
+   "chunk_id": "panjiangosteus:enwiki:3",
+   "lang": "en",
+   "quote": "its neck joint bore a resemblance to those of petalichthyids",
+   "quote_sha": "b0023f6b69cc17bf"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The genus Panjiangosteus and its species eurycephala were formally authored by Xue et al. in 2026.",
+   "category": "classification",
+   "chunk_id": "panjiangosteus:enwiki:1",
+   "lang": "en",
+   "quote": "authority: Xue et al., 2026",
+   "quote_sha": "1ebcb885b7f53fc1"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "panjiangosteus:table:1",
+   "statement": "Panjiangosteus is a newly named genus and species of antarctaspid placoderm described in 2026.",
+   "category": "discovery",
+   "quote": "Novelty: Gen. et sp. nov",
+   "reason": "numbers not in the quote: ['2026']"
+  },
+  {
+   "chunk_id": "panjiangosteus:enwiki:2",
+   "statement": "Panjiangosteus is an extinct monotypic genus of antarctaspid arthrodire that lived in what is now China during the Early Devonian Pragian stage.",
+   "category": "description",
+   "quote": "Panjiangosteus is an extinct monotypic genus of antarctaspid arthrodire that lived in what is now China during the Pragian stage of the Early Devonian period.",
+   "reason": "statement copies the source wording: 'Panjiangosteus is an extinct monotypic genus of antarctaspid'"
+  },
+  {
+   "chunk_id": "panjiangosteus:enwiki:3",
+   "statement": "Its neck joint featured a ventral laminar ridge and a vertical dermal articular facet, a combination unique among arthrodires.",
+   "category": "curiosities",
+   "quote": "had a ventral laminar ridge and a vertical dermal articular facet",
+   "reason": "statement copies the source wording: 'a ventral laminar ridge and a vertical dermal'"
+  },
+  {
+   "chunk_id": "panjiangosteus:study:1",
+   "statement": "The description of Panjiangosteus was published in a 2025 Journal of Vertebrate Paleontology paper authored by Qinyuan Xue and colleagues.",
+   "category": "discovery",
+   "quote": "Study title: A new antarctaspid (Placodermi, Arthrodira) from the Lower Devonian of Yunnan, China",
+   "reason": "numbers not in the quote: ['2025']"
+  }
+ ]
+}

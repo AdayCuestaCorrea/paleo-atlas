@@ -1,43 +1,50 @@
 {
  "taxon": "Invictibellatrix",
  "taxon_key": "invictibellatrix",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "d128d3d3a93de11b",
- "generated_at": "2026-11-02T01:06:04+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "95d161fa13207904",
+ "generated_at": "2026-11-12T16:32:15+00:00",
  "citations": {
   "invictibellatrix:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1385002080",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "invictibellatrix:enwiki:1": {
    "source": "wikipedia_article",
    "title": "Invictibellatrix (taxobox)",
-   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1381451322",
+   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1383292957",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "invictibellatrix:enwiki:2": {
    "source": "wikipedia_article",
    "title": "Invictibellatrix (introduction)",
-   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1381451322",
+   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1383292957",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "invictibellatrix:enwiki:3": {
    "source": "wikipedia_article",
    "title": "Invictibellatrix (Discovery and naming)",
-   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1381451322",
+   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1383292957",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "invictibellatrix:enwiki:4": {
    "source": "wikipedia_article",
    "title": "Invictibellatrix (Description)",
-   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1381451322",
+   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1383292957",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "invictibellatrix:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Invictibellatrix (Phylogeny)",
+   "url": "https://en.wikipedia.org/wiki/Invictibellatrix?oldid=1383292957",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -66,70 +73,79 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus Invictibellatrix contains only one species, I. amberina, which is known from a single braincase fossil.",
-   "category": "description",
-   "chunk_id": "invictibellatrix:enwiki:2",
+   "statement": "The type locality of Invictibellatrix is the Barremian-aged Wessex Formation in the United Kingdom.",
+   "category": "time_and_habitat",
+   "chunk_id": "invictibellatrix:table:1",
    "lang": "en",
-   "quote": "The genus contains a single species, Invictibellatrix amberina, known from a single braincase.",
-   "quote_sha": "3c881089f38af7d8"
+   "quote": "Type locality: Wessex Formation",
+   "quote_sha": "6e720251e75e6deb"
   },
   {
    "fact_id": "F002",
-   "statement": "The fossil material of Invictibellatrix was discovered in the Wessex Formation on the Isle of Wight, United Kingdom.",
-   "category": "discovery",
-   "chunk_id": "invictibellatrix:enwiki:3",
+   "statement": "Invictibellatrix lived during the Early Cretaceous Barremian age.",
+   "category": "time_and_habitat",
+   "chunk_id": "invictibellatrix:table:1",
    "lang": "en",
-   "quote": "The Invictibellatrix fossil material was discovered in outcrops of the Wessex Formation on the Isle of Wight, United Kingdom.",
-   "quote_sha": "0e8e85e51ec6eacf"
+   "quote": "Age: Early Cretaceous (Barremian)",
+   "quote_sha": "38d348a66f03de6b"
   },
   {
    "fact_id": "F003",
-   "statement": "The holotype specimen was sold to the Natural History Museum in London in May 1924 by the widow of collector Reginald Walter Hooley.",
-   "category": "discovery",
-   "chunk_id": "invictibellatrix:enwiki:3",
+   "statement": "Invictibellatrix means \"unconquered warrior\" in Latin.",
+   "category": "description",
+   "chunk_id": "invictibellatrix:enwiki:2",
    "lang": "en",
-   "quote": "It was sold to the museum in May 1924 by the widow of the collector Reginald Walter Hooley.",
-   "quote_sha": "4700b76e69bfe953"
+   "quote": "Invictibellatrix (Latin: \"unconquered warrior\")",
+   "quote_sha": "fff057595b096c2a"
   },
   {
    "fact_id": "F004",
-   "statement": "Cassius Morrison and colleagues formally described Invictibellatrix amberina as a new genus and species in 2026, designating specimen NHMUK PV R 6775 as the holotype.",
+   "statement": "Invictibellatrix is known from a single braincase discovered in the Early Cretaceous Wessex Formation of England.",
    "category": "discovery",
-   "chunk_id": "invictibellatrix:enwiki:3",
+   "chunk_id": "invictibellatrix:enwiki:2",
    "lang": "en",
-   "quote": "In 2026, Cassius Morrison and colleagues described Invictibellatrix amberina as a new genus and species of megaraptoran theropod based on these fossil remains, designating NHMUK PV R 6775 as the holotype specimen.",
-   "quote_sha": "7368744004e0829d"
+   "quote": "known from a single braincase",
+   "quote_sha": "3fc5f4a5e3d17105"
   },
   {
    "fact_id": "F005",
-   "statement": "Invictibellatrix is estimated to have had a body mass of 200 to 300 kg and a body length of approximately 4 meters.",
-   "category": "description",
-   "chunk_id": "invictibellatrix:enwiki:4",
+   "statement": "Invictibellatrix amberina was formally described as a new genus and species by Cassius Morrison and colleagues in 2026.",
+   "category": "discovery",
+   "chunk_id": "invictibellatrix:enwiki:3",
    "lang": "en",
-   "quote": "Invictibellatrix is estimated to have a body mass between 200–300 kg and a body length of around 4 m.",
-   "quote_sha": "5825797d72b2cae8"
+   "quote": "In 2026, Cassius Morrison and colleagues described Invictibellatrix amberina as a new genus and species",
+   "quote_sha": "d4a8076c6cc0575d"
   },
   {
    "fact_id": "F006",
-   "statement": "The crest on the back of the Invictibellatrix skull is lightly transversely compressed with an hourglass profile.",
+   "statement": "Invictibellatrix is estimated to have weighed between 200 and 300 kilograms and measured about 4 meters in length.",
    "category": "description",
    "chunk_id": "invictibellatrix:enwiki:4",
    "lang": "en",
-   "quote": "The crest on the back of the skull is lightly tranvsersely compressed and has an hourglass profile.",
-   "quote_sha": "a5bdaa26e3cf36ff"
+   "quote": "estimated to have a body mass between 200–300 kg and a body length of around 4 m",
+   "quote_sha": "9b226353af471ccb"
   },
   {
    "fact_id": "F007",
-   "statement": "The genus Invictibellatrix was established by Morrison et al. in 2026.",
-   "category": "classification",
-   "chunk_id": "invictibellatrix:enwiki:1",
+   "statement": "One autapomorphy of Invictibellatrix is a lightly transversely compressed skull crest with an hourglass profile.",
+   "category": "description",
+   "chunk_id": "invictibellatrix:enwiki:4",
    "lang": "en",
-   "quote": "parent_authority: Morrison et al., 2026",
-   "quote_sha": "954d78f1d5c20644"
+   "quote": "The crest on the back of the skull is lightly transversely compressed and has an hourglass profile",
+   "quote_sha": "903e1d35dd78b65f"
   },
   {
    "fact_id": "F008",
-   "statement": "Invictibellatrix is classified within the parent group Megaraptora.",
+   "statement": "A third autapomorphy is a pair of lightly curved depressions along the midline of the skull crest.",
+   "category": "description",
+   "chunk_id": "invictibellatrix:enwiki:4",
+   "lang": "en",
+   "quote": "On the crest, distinctive, lightly curved depressions are present on the midline",
+   "quote_sha": "e6f3e6823474997e"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Invictibellatrix is classified within the clade Megaraptora of the class Reptilia.",
    "category": "classification",
    "chunk_id": "invictibellatrix:pbdb:1",
    "lang": "en",
@@ -137,8 +153,8 @@
    "quote_sha": "6cf0d376d6bcd1fe"
   },
   {
-   "fact_id": "F009",
-   "statement": "Invictibellatrix lived during the Barremian stage, between 125.77 and 121.4 million years ago.",
+   "fact_id": "F010",
+   "statement": "The known fossil range of Invictibellatrix is the Barremian stage, approximately 125.77 to 121.4 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "invictibellatrix:pbdb:1",
    "lang": "en",
@@ -146,38 +162,68 @@
    "quote_sha": "f6dbeeac620b8f2e"
   },
   {
-   "fact_id": "F010",
-   "statement": "Invictibellatrix lived in the Wessex Formation of the Isle of Wight, UK, during the Barremian age of the Lower Cretaceous.",
-   "category": "time_and_habitat",
+   "fact_id": "F011",
+   "statement": "Neurocranial characters of Invictibellatrix, such as a sub‑circular occipital condyle and a sagittal nuchal crest, support its referral to Megaraptora.",
+   "category": "paleobiology",
    "chunk_id": "invictibellatrix:abstract:1",
    "lang": "en",
    "quote": null,
-   "quote_sha": "ac5b6b75b8d26e10"
+   "quote_sha": "4c581e2ea0276cdf"
   },
   {
-   "fact_id": "F011",
-   "statement": "The discovery of Invictibellatrix adds to the known diversity of Early Cretaceous European coelurosaurs, which now includes tyrannosauroids, maniraptoriforms, and megaraptorans.",
+   "fact_id": "F012",
+   "statement": "Invictibellatrix represents an early‑diverging Eurasian megaraptoran, suggesting a cosmopolitan distribution of non‑megaraptorid megaraptorans in the Early Cretaceous.",
+   "category": "paleobiology",
+   "chunk_id": "invictibellatrix:abstract:1",
+   "lang": "en",
+   "quote": null,
+   "quote_sha": "1ae4352acdfebbe8"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "The study proposes that the absence of megaraptorans in Late Cretaceous Laurasia is best explained by regional extinction.",
    "category": "debate",
    "chunk_id": "invictibellatrix:abstract:1",
    "lang": "en",
    "quote": null,
-   "quote_sha": "6740fa6fc4e7b46a"
+   "quote_sha": "353d19c3eb5f83b6"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "invictibellatrix:enwiki:2",
-   "statement": "Invictibellatrix is an extinct genus of megaraptoran theropod dinosaur whose name means \"unconquered warrior\".",
-   "category": "description",
-   "quote": "Invictibellatrix (Latin: \"unconquered warrior\") is an extinct genus of megaraptoran theropod dinosaur known from the Early Cretaceous (Barremian age) Wessex Formation of England.",
-   "reason": "statement copies the source wording: 'is an extinct genus of megaraptoran theropod dinosaur'"
+   "chunk_id": "invictibellatrix:table:1",
+   "statement": "Invictibellatrix is a newly described genus and species of megaraptoran theropod named by Morrison et al. in 2026.",
+   "category": "discovery",
+   "quote": "Novelty: Gen. et sp. nov",
+   "reason": "numbers not in the quote: ['2026']"
   },
   {
-   "chunk_id": "invictibellatrix:abstract:1",
-   "statement": "Phylogenetic analysis suggests that Invictibellatrix is distantly related to all previously named theropods found in the same stratigraphic unit.",
+   "chunk_id": "invictibellatrix:enwiki:3",
+   "statement": "The holotype specimen NHMUK PV R 6775, an isolated braincase, was purchased by the Natural History Museum in May 1924.",
+   "category": "discovery",
+   "quote": "It consists of an isolated braincase ... It was sold to the museum in May 1924",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "invictibellatrix:enwiki:4",
+   "statement": "Another unique trait is the presence of small recessus basipterygoideus on each side of the parabasisphenoíd in front of the recessus tympanicus anterior.",
+   "category": "description",
+   "quote": "On each side of the parabasisphenoíd in front of the recessus tympanicus anterior, a small recessus basipterygoideus is present",
+   "reason": "statement copies the source wording: 'on each side of the parabasisphenoíd in front'"
+  },
+  {
+   "chunk_id": "invictibellatrix:enwiki:5",
+   "statement": "Phylogenetic analyses generally place Invictibellatrix as a derived member of the megaraptoran family Megaraptoridae.",
+   "category": "classification",
+   "quote": "generally recovered Invictibellatrix as a derived member of the megaraptoran family Megaraptoridae",
+   "reason": "statement copies the source wording: 'as a derived member of the megaraptoran family'"
+  },
+  {
+   "chunk_id": "invictibellatrix:enwiki:5",
+   "statement": "Some analyses recover Invictibellatrix in a more basal position within Megaraptora, outside Megaraptoridae, reflecting its early age.",
    "category": "debate",
-   "quote": "Phylogenetic analysis and comparative anatomy indicate that Invictibellatrix is distantly related to all previously named theropods from this stratigraphic unit.",
-   "reason": "statement copies the source wording: 'that Invictibellatrix is distantly related to all previously'"
+   "quote": "Invictibellatrix was instead recovered in a more basal position within Megaraptora, outside of the Megaraptoridae, a position much more consistent with its early occurrence",
+   "reason": "statement copies the source wording: 'in a more basal position within Megaraptora outside'"
   }
  ]
 }

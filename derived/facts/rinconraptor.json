@@ -1,36 +1,57 @@
 {
  "taxon": "Rinconraptor",
  "taxon_key": "rinconraptor",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "1e3e0b47486d2abf",
- "generated_at": "2026-11-02T01:21:27+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "9a9c882749f302cd",
+ "generated_at": "2026-11-12T16:51:49+00:00",
  "citations": {
   "rinconraptor:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1385002080",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "rinconraptor:enwiki:1": {
    "source": "wikipedia_article",
    "title": "Rinconraptor (taxobox)",
-   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383173614",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "rinconraptor:enwiki:2": {
    "source": "wikipedia_article",
    "title": "Rinconraptor (introduction)",
-   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383173614",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "rinconraptor:enwiki:3": {
    "source": "wikipedia_article",
-   "title": "Rinconraptor (Paleoenvironment)",
-   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383173614",
+   "title": "Rinconraptor (Discovery and naming)",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rinconraptor:enwiki:4": {
+   "source": "wikipedia_article",
+   "title": "Rinconraptor (Description)",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rinconraptor:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Rinconraptor (Classification)",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "rinconraptor:enwiki:6": {
+   "source": "wikipedia_article",
+   "title": "Rinconraptor (Paleoecology)",
+   "url": "https://en.wikipedia.org/wiki/Rinconraptor?oldid=1383350688",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -52,106 +73,79 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Rinconraptor is classified as a megaraptorid theropod dinosaur.",
-   "category": "classification",
+   "statement": "Rinconraptor is a newly named genus and species of megaraptorid theropod dinosaur.",
+   "category": "description",
    "chunk_id": "rinconraptor:table:1",
    "lang": "en",
-   "quote": "A megaraptorid theropod.",
-   "quote_sha": "e3235dacdae78518"
+   "quote": "A megaraptorid theropod. The type species is R. pipoae.",
+   "quote_sha": "bbd1f3df60ef7774"
   },
   {
    "fact_id": "F002",
-   "statement": "The genus Rinconraptor was described by Méndez and colleagues.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:table:1",
-   "lang": "en",
-   "quote": "Authors: Méndez et al.",
-   "quote_sha": "00bfc50c8488f989"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "Rinconraptor was described as a new genus and new species.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:table:1",
-   "lang": "en",
-   "quote": "Novelty: Gen. et sp. nov",
-   "quote_sha": "e39d78823e43c99c"
-  },
-  {
-   "fact_id": "F004",
-   "statement": "The type locality for Rinconraptor is the Bajo de la Carpa Formation.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:table:1",
-   "lang": "en",
-   "quote": "Type locality: Bajo de la Carpa Formation",
-   "quote_sha": "4661139814794bcf"
-  },
-  {
-   "fact_id": "F005",
-   "statement": "Rinconraptor fossils were found in Argentina.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:table:1",
-   "lang": "en",
-   "quote": "Country: Argentina",
-   "quote_sha": "1cc81d63df243b3d"
-  },
-  {
-   "fact_id": "F006",
-   "statement": "The scientific name of the genus is Rinconraptor.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:enwiki:1",
-   "lang": "en",
-   "quote": "genus: Rinconraptor",
-   "quote_sha": "e16dbca661dfc5dd"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "The only known species in the genus is Rinconraptor pipoae.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:enwiki:1",
-   "lang": "en",
-   "quote": "species: pipoae",
-   "quote_sha": "1405fe97963beb25"
-  },
-  {
-   "fact_id": "F008",
-   "statement": "The genus Rinconraptor was established by Méndez et al. in 2026.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:enwiki:1",
-   "lang": "en",
-   "quote": "parent_authority: Méndez et al., 2026",
-   "quote_sha": "b94cd134774f25a1"
-  },
-  {
-   "fact_id": "F009",
-   "statement": "Rinconraptor lived during the Santonian age of the Late Cretaceous.",
+   "statement": "Rinconraptor lived during the Late Cretaceous Santonian age in the Bajo de la Carpa Formation of Argentina.",
    "category": "time_and_habitat",
    "chunk_id": "rinconraptor:enwiki:2",
    "lang": "en",
-   "quote": "known from the Late Cretaceous (Santonian age) Bajo de la Carpa Formation of Argentina.",
-   "quote_sha": "13c726414f4f2003"
+   "quote": "Rinconraptor () is an extinct genus of megaraptorid theropod dinosaur known from the Late Cretaceous (Santonian age) Bajo de la Carpa Formation of Argentina.",
+   "quote_sha": "abc3d1581ede2587"
   },
   {
-   "fact_id": "F010",
-   "statement": "The Bajo de la Carpa Formation where Rinconraptor was found consists of sandstone and muddy sediments representing fluvial and aeolian systems.",
-   "category": "time_and_habitat",
+   "fact_id": "F003",
+   "statement": "Rinconraptor was described as a new genus and species by Ariel H. Méndez and colleagues in 2026.",
+   "category": "discovery",
    "chunk_id": "rinconraptor:enwiki:3",
    "lang": "en",
-   "quote": "characterized by dominantly sandstone and muddy sediments, representing Santonian-aged fluvial and aeolian systems.",
-   "quote_sha": "5f47f9712b052a54"
+   "quote": "In 2026, Ariel H. Méndez and colleagues described Rinconraptor pipoae as a new genus and species of megaraptoran dinosaur",
+   "quote_sha": "e92a2699001b72ea"
   },
   {
-   "fact_id": "F011",
-   "statement": "The paleoenvironment of Rinconraptor was semi-arid and supported a diverse ecosystem including turtles, crocodyliforms, ornithopods, abelisaurids, and other megaraptorans.",
-   "category": "time_and_habitat",
-   "chunk_id": "rinconraptor:enwiki:3",
+   "fact_id": "F004",
+   "statement": "Rinconraptor is estimated to have been about 7 metres long, placing it in the medium‑to‑large size range for megaraptorans.",
+   "category": "description",
+   "chunk_id": "rinconraptor:enwiki:4",
    "lang": "en",
-   "quote": "This formation indicates a semi-arid paleoenvironment that supported a rich terrestrial ecosystem including turtles, peirosaurid crocodyliforms, ornithopods, abelisaurids, and megaraptorans.",
-   "quote_sha": "29f44f9f9667b4a3"
+   "quote": "Rinconraptor is regarded as a medium- to large-sized megaraptoran, with an estimated body length of 7 m.",
+   "quote_sha": "f5cb68749cc3444a"
   },
   {
-   "fact_id": "F012",
-   "statement": "Rinconraptor lived between 85.7 and 83.6 million years ago during the Santonian stage.",
+   "fact_id": "F005",
+   "statement": "Rinconraptor has a unique combination of humeral and tibial features, including a separated ectepicondyle, a straight lateral tibial margin, and a subrectangular cnemial crest and medial condyle.",
+   "category": "description",
+   "chunk_id": "rinconraptor:enwiki:4",
+   "lang": "en",
+   "quote": "Autapomorphies (unique derived features) of R. pipoae include the ectepicondyle being separated from the distal end of the humerus, the lateral (outer) margin of the tibia being straight when seen from above (proximal view), and the tibia's cnemial crest and medial condyle having a subrectangular shape.",
+   "quote_sha": "b4203d981f65b334"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "Rinconraptor also possesses an anterodistally‑oriented ridge on the humerus and a right‑angled incisura tibialis, traits otherwise known only from Megaraptor and Fukuiraptor respectively.",
+   "category": "description",
+   "chunk_id": "rinconraptor:enwiki:4",
+   "lang": "en",
+   "quote": "It can further be distinguished from most other megaraptorans by having an anterodistally-oriented ridge on the humerus (a feature otherwise seen only in Megaraptor) and an incisura tibialis (a notch near the lateral condyle) that forms a right angle (only seen in Fukuiraptor).",
+   "quote_sha": "805ab96c3d87635d"
+  },
+  {
+   "fact_id": "F007",
+   "statement": "The sediments of the Bajo de la Carpa Formation where Rinconraptor was found represent fluvial and aeolian systems in a semi‑arid paleoenvironment.",
+   "category": "paleobiology",
+   "chunk_id": "rinconraptor:enwiki:6",
+   "lang": "en",
+   "quote": "Its sediments represent fluvial and aeolian systems, with a semi-arid paleoenvironment.",
+   "quote_sha": "a78066005ce715bb"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "Rinconraptor coexisted with other theropods such as the megaraptorid Tratayenia, abelisauroids Velocisaurus, Llukalkan and Viavenator, alvarezsaurids Achillesaurus and Alvarezsaurus, the unenlagiine Diuqin, and avialans Neuquenornis and Patagopteryx.",
+   "category": "paleobiology",
+   "chunk_id": "rinconraptor:enwiki:6",
+   "lang": "en",
+   "quote": "Theropods include the fellow megaraptorid Tratayenia, abelisauroids (Velocisaurus, Llukalkan, and Viavenator), alvarezsaurids (Achillesaurus and Alvarezsaurus), the unenlagiine paravian Diuqin, and the avialans (birds, in the broad sense) Neuquenornis and Patagopteryx.",
+   "quote_sha": "a7f25d407dd178b6"
+  },
+  {
+   "fact_id": "F009",
+   "statement": "Rinconraptor lived during the Santonian stage, approximately 85.7 to 83.6 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "rinconraptor:pbdb:1",
    "lang": "en",
@@ -159,72 +153,50 @@
    "quote_sha": "ea55b8ba6369358f"
   },
   {
-   "fact_id": "F013",
-   "statement": "The parent group of Rinconraptor is the family Megaraptoridae.",
-   "category": "classification",
+   "fact_id": "F010",
+   "statement": "Only a single fossil occurrence of Rinconraptor has been recorded in the Paleobiology Database.",
+   "category": "paleobiology",
    "chunk_id": "rinconraptor:pbdb:1",
    "lang": "en",
-   "quote": "Parent group: Megaraptoridae",
-   "quote_sha": "d58478961dc33b46"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "Rinconraptor belongs to the family Megaraptoridae.",
-   "category": "classification",
-   "chunk_id": "rinconraptor:pbdb:1",
-   "lang": "en",
-   "quote": "Family: Megaraptoridae",
-   "quote_sha": "d2276b6f9a6a0532"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "Rinconraptor is classified within the class Reptilia.",
-   "category": "classification",
-   "chunk_id": "rinconraptor:pbdb:1",
-   "lang": "en",
-   "quote": "Class: Reptilia",
-   "quote_sha": "cdcaa2922520f735"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "The description of Rinconraptor was authored by a team including Ariel H. Méndez and Ariana Paulina-Carabajal.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:study:1",
-   "lang": "en",
-   "quote": "Authors: Ariel H. Méndez, Ariana Paulina-Carabajal, Leonardo S. Filippi, Federico A. Gianechini, Javier González-Dionis, Lucía F. Vettorazzi, E. Emanuel Seculi-Pereyra, Karen Ulloa-Guaiquin, Francisco T. Barrios, Penélope Cruzado-Caballero, Flavio Bellardini, M. Elena Previtera",
-   "quote_sha": "47889a712d1a8b7d"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "The description of Rinconraptor was published in the journal Palaeontologia Electronica.",
-   "category": "discovery",
-   "chunk_id": "rinconraptor:study:1",
-   "lang": "en",
-   "quote": "Journal: Palaeontologia Electronica",
-   "quote_sha": "c2b90e3e296bf293"
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "rinconraptor:enwiki:2",
-   "statement": "Rinconraptor is an extinct genus of megaraptorid theropod dinosaur known from the Late Cretaceous of Argentina.",
+   "chunk_id": "rinconraptor:enwiki:3",
+   "statement": "The holotype specimen MAU-Pv-CO-659 was discovered in the Cerro Overo locality of the Bajo de la Carpa Formation between 2014 and 2025, about 50 km southwest of Rincón de Los Sauces, Neuquén Province, Argentina.",
    "category": "discovery",
-   "quote": "Rinconraptor () is an extinct genus of megaraptorid theropod dinosaur known from the Late Cretaceous (Santonian age) Bajo de la Carpa Formation of Argentina.",
-   "reason": "statement copies the source wording: 'Rinconraptor is an extinct genus of megaraptorid theropod'"
+   "quote": "The Rinconraptor fossil material was discovered during a series of successive expeditions in outcrops of the Bajo de la Carpa Formation (Cerro Overo locality) in 2014, 2015, 2019, 2023, and 2025, 50 km southwest of Rincón de Los Sauces in Neuquén Province, Argentina.",
+   "reason": "numbers not in the quote: ['659']"
   },
   {
-   "chunk_id": "rinconraptor:enwiki:2",
-   "statement": "The genus Rinconraptor contains only one species, Rinconraptor pipoae, known from a partial postcranial skeleton.",
-   "category": "discovery",
-   "quote": "The genus contains a single species, Rinconraptor pipoae, known from a partial postcranial skeleton.",
-   "reason": "statement copies the source wording: 'species Rinconraptor pipoae known from a partial postcranial'"
+   "chunk_id": "rinconraptor:enwiki:3",
+   "statement": "The holotype consists of the distal end of the left humerus, the proximal end of the right tibia, ten isolated caudal vertebral centra, and the upper half of a chevron.",
+   "category": "description",
+   "quote": "It consists of the distal (lower) end of the left humerus, the proximal end of the right tibia, the isolated centra of ten caudal vertebrae, and the upper half of a chevron.",
+   "reason": "statement copies the source wording: 'end of the left humerus the proximal end'"
   },
   {
-   "chunk_id": "rinconraptor:study:1",
-   "statement": "Rinconraptor was formally described in the year 2026.",
-   "category": "discovery",
-   "quote": "Year: 2026",
-   "reason": "quote too short"
+   "chunk_id": "rinconraptor:enwiki:3",
+   "statement": "The generic name combines a reference to the discovery near Rincón de Los Sauces with the Latin word raptor meaning thief.",
+   "category": "curiosities",
+   "quote": "The generic name, Rinconraptor, combines a reference to the discovery of the only known specimen near Rincón de Los Sauces with the Latin word raptor, meaning thief.",
+   "reason": "statement copies the source wording: 'Sauces with the Latin word raptor meaning thief'"
+  },
+  {
+   "chunk_id": "rinconraptor:enwiki:3",
+   "statement": "The specific name pipoae honors Laura Pipo, a PhD student who assisted with the fieldwork.",
+   "category": "curiosities",
+   "quote": "The specific name, pipoae, honors Laura Pipo, a PhD student who assisted with the fieldwork that resulted in the holotype's discovery.",
+   "reason": "statement copies the source wording: 'The specific name pipoae honors Laura Pipo a'"
+  },
+  {
+   "chunk_id": "rinconraptor:enwiki:5",
+   "statement": "Phylogenetic analysis places Rinconraptor as the sister taxon to Megaraptor within Megaraptoridae, which is recovered as a member of Coelurosauria and the sister group to Tyrannosauroidea.",
+   "category": "classification",
+   "quote": "The implied weighting tree ... placed Rinconraptor as the sister taxon to Megaraptor, in a clade also including Murusraptor ... Their analysis recovered megaraptorans as part of the theropod clade Coelurosauria, as the sister group to the Tyrannosauroidea.",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

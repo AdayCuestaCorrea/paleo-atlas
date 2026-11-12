@@ -1,0 +1,76 @@
+{
+ "taxon": "Magwayodus",
+ "taxon_key": "magwayodus",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "232a147e04cdb831",
+ "generated_at": "2026-11-12T16:35:29+00:00",
+ "citations": {
+  "magwayodus:table:1": {
+   "source": "wikipedia_table",
+   "title": "2026 in paleoichthyology (table of new taxa)",
+   "url": "https://en.wikipedia.org/wiki/2026_in_paleoichthyology?oldid=1385090570",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "magwayodus:study:1": {
+   "source": "crossref",
+   "title": "Upper Eocene elasmobranch assemblages from Myanmar: Evidence for the easternmost dispersal pathways across the Neotethys (Palaeoworld, 2026)",
+   "url": "https://doi.org/10.1016/j.palwor.2026.201169",
+   "doi": "10.1016/j.palwor.2026.201169",
+   "license": "metadata (Crossref)"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The genus Magwayodus was named by Adnet and colleagues.",
+   "category": "discovery",
+   "chunk_id": "magwayodus:table:1",
+   "lang": "en",
+   "quote": "Authors: Adnet et al.",
+   "quote_sha": "1903081d606768f7"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Magwayodus lived during the Priabonian stage of the Eocene epoch.",
+   "category": "time_and_habitat",
+   "chunk_id": "magwayodus:table:1",
+   "lang": "en",
+   "quote": "Age: Eocene (Priabonian)",
+   "quote_sha": "ec0ad1202ff2dbaf"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The type locality of Magwayodus is the Yaw Formation in Myanmar.",
+   "category": "discovery",
+   "chunk_id": "magwayodus:table:1",
+   "lang": "en",
+   "quote": "Type locality: Yaw Formation\nCountry: Myanmar",
+   "quote_sha": "798b1cbeaebb3796"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "magwayodus:table:1",
+   "statement": "Magwayodus is a newly described genus and species of requiem shark.",
+   "category": "description",
+   "quote": "Name: Magwayodus\nNovelty: Gen. et sp. nov\nNotes: A requiem shark. The type species is M. boboi.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "magwayodus:study:1",
+   "statement": "Magwayodus was included in a 2026 study of Upper Eocene elasmobranch assemblages from Myanmar.",
+   "category": "paleobiology",
+   "quote": "Study title: Upper Eocene elasmobranch assemblages from Myanmar: Evidence for the easternmost dispersal pathways across the Neotethys",
+   "reason": "numbers not in the quote: ['2026']"
+  },
+  {
+   "chunk_id": "magwayodus:study:1",
+   "statement": "The 2026 study on Upper Eocene elasmobranchs from Myanmar was authored by Sylvain Adnet, Xavier Valentin, Yaowalak Chaimanee, Aung Naing Soe, Chit Sein, and Jean-Jacques Jaeger.",
+   "category": "discovery",
+   "quote": "Authors: Sylvain Adnet, Xavier Valentin, Yaowalak Chaimanee, Aung Naing Soe, Chit Sein, Jean-Jacques Jaeger",
+   "reason": "numbers not in the quote: ['2026']"
+  }
+ ]
+}

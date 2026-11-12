@@ -1,0 +1,71 @@
+{
+ "taxon": "Polyacrodus microdon",
+ "taxon_key": "polyacrodus-microdon",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "2ba6af3e03cfe5f8",
+ "generated_at": "2026-11-12T16:45:25+00:00",
+ "citations": {
+  "polyacrodus-microdon:table:1": {
+   "source": "wikipedia_table",
+   "title": "2026 in paleoichthyology (table of new taxa)",
+   "url": "https://en.wikipedia.org/wiki/2026_in_paleoichthyology?oldid=1385090570",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "polyacrodus-microdon:pbdb:1": {
+   "source": "pbdb",
+   "title": "Paleobiology Database: Polyacrodus",
+   "url": "https://paleobiodb.org/classic/checkTaxonInfo?taxon_no=34508",
+   "doi": null,
+   "license": "CC BY 4.0"
+  }
+ },
+ "facts": [
+  {
+   "fact_id": "F001",
+   "statement": "The species was named by Wen and colleagues.",
+   "category": "discovery",
+   "chunk_id": "polyacrodus-microdon:table:1",
+   "lang": "en",
+   "quote": "Authors: Wen et al.",
+   "quote_sha": "e0e45ce2c2da8918"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Polyacrodus microdon lived during the Early Triassic.",
+   "category": "time_and_habitat",
+   "chunk_id": "polyacrodus-microdon:table:1",
+   "lang": "en",
+   "quote": "Age: Early Triassic",
+   "quote_sha": "34129118bc287974"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "Its type locality is the Luolou Formation in China.",
+   "category": "discovery",
+   "chunk_id": "polyacrodus-microdon:table:1",
+   "lang": "en",
+   "quote": "Type locality: Luolou Formation\nCountry: China",
+   "quote_sha": "e56c19b72ed1ee69"
+  },
+  {
+   "fact_id": "F004",
+   "statement": "The species belongs to the order Hybodontiformes.",
+   "category": "classification",
+   "chunk_id": "polyacrodus-microdon:table:1",
+   "lang": "en",
+   "quote": "Notes: A member of Hybodontiformes.",
+   "quote_sha": "a16de32b763b99f1"
+  }
+ ],
+ "rejected": [
+  {
+   "chunk_id": "polyacrodus-microdon:table:1",
+   "statement": "Polyacrodus microdon was described as a new species in 2026.",
+   "category": "discovery",
+   "quote": "Novelty: Sp. nov",
+   "reason": "numbers not in the quote: ['2026']"
+  }
+ ]
+}

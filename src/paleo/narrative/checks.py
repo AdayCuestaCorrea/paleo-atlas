@@ -562,9 +562,226 @@ def numbers_match(src: str, dst: str) -> bool:
     return not missing and not extra
 
 
+# ICS stages, the ones that end in -ian in English. A Spanish sentence must not name
+# a stage that its English sentence does not ("Santonian" -> "Cenomaniense").
+_STAGES = [
+    "Meghalayan",
+    "Northgrippian",
+    "Greenlandian",
+    "Tarantian",
+    "Chibanian",
+    "Calabrian",
+    "Gelasian",
+    "Piacenzian",
+    "Zanclean",
+    "Messinian",
+    "Tortonian",
+    "Serravallian",
+    "Langhian",
+    "Burdigalian",
+    "Aquitanian",
+    "Chattian",
+    "Rupelian",
+    "Priabonian",
+    "Bartonian",
+    "Lutetian",
+    "Ypresian",
+    "Thanetian",
+    "Selandian",
+    "Danian",
+    "Maastrichtian",
+    "Campanian",
+    "Santonian",
+    "Coniacian",
+    "Turonian",
+    "Cenomanian",
+    "Albian",
+    "Aptian",
+    "Barremian",
+    "Hauterivian",
+    "Valanginian",
+    "Berriasian",
+    "Tithonian",
+    "Kimmeridgian",
+    "Oxfordian",
+    "Callovian",
+    "Bathonian",
+    "Bajocian",
+    "Aalenian",
+    "Toarcian",
+    "Pliensbachian",
+    "Sinemurian",
+    "Hettangian",
+    "Rhaetian",
+    "Norian",
+    "Carnian",
+    "Ladinian",
+    "Anisian",
+    "Olenekian",
+    "Induan",
+    "Changhsingian",
+    "Wuchiapingian",
+    "Capitanian",
+    "Wordian",
+    "Roadian",
+    "Kungurian",
+    "Artinskian",
+    "Sakmarian",
+    "Asselian",
+    "Gzhelian",
+    "Kasimovian",
+    "Moscovian",
+    "Bashkirian",
+    "Serpukhovian",
+    "Tournaisian",
+    "Famennian",
+    "Frasnian",
+    "Givetian",
+    "Eifelian",
+    "Emsian",
+    "Pragian",
+    "Lochkovian",
+    "Ludfordian",
+    "Gorstian",
+    "Homerian",
+    "Sheinwoodian",
+    "Telychian",
+    "Aeronian",
+    "Rhuddanian",
+    "Hirnantian",
+    "Katian",
+    "Sandbian",
+    "Darriwilian",
+    "Dapingian",
+    "Floian",
+    "Tremadocian",
+]
+# Spanish spellings that do not start like the English name ("rético", "bayociense").
+_STAGE_ALIASES = {"Rhaetian": ("ret",), "Ypresian": ("ipres",), "Lutetian": ("lutec",),
+                  "Bajocian": ("bayoc",), "Piacenzian": ("plasenc",)}  # fmt: skip
+
+
+def _stage_form(word: str) -> str:
+    """A spelling-tolerant form: no accents, no h, no double letters."""
+    return re.sub(r"(.)\1", r"\1", _fold(word).replace("h", ""))
+
+
+_STAGE_STEMS = {
+    stage: (re.sub(r"(?:ian|ean|an)$", "", _stage_form(stage)), *_STAGE_ALIASES.get(stage, ()))
+    for stage in _STAGES
+}
+_ES_STAGE_ENDING = re.compile(r"(?:u?iense|ense|ico|ica|iano|iana)s?")
+_ES_STAGE_WORDS = {"danes": "Danian", "danesa": "Danian"}  # "el Danés" (Danian)
+
+
+def stages_en(text: str) -> set[str]:
+    return {w for w in re.findall(r"\b[A-Z][a-z]+(?:ian|ean|an)\b", text) if w in _STAGE_STEMS}
+
+
+def stages_es(text: str, keep: str = "") -> set[str]:
+    """Stages named in a Spanish text: stem of the English name + a Spanish ending
+    ("Maastrichtiense", "titónico", "Danés"), so "norteamericana" is not Norian. Words
+    also in ``keep`` (the English sentence) are names, not stages ("A. tortonica")."""
+    found = set()
+    kept = set(re.findall(r"[^\W\d_]+", keep))
+    for word in re.findall(r"[^\W\d_]+", text):
+        if word in kept:
+            continue
+        form = _stage_form(word)
+        found |= {
+            stage
+            for stage, stems in _STAGE_STEMS.items()
+            for stem in stems
+            if form.startswith(stem) and _ES_STAGE_ENDING.fullmatch(form[len(stem) :])
+        }
+        if form in _ES_STAGE_WORDS:
+            found.add(_ES_STAGE_WORDS[form])
+    return found
+
+
+_PERIODS = {"Cambrian": "cambrico", "Ordovician": "ordovicico", "Silurian": "silurico",
+            "Devonian": "devonico", "Carboniferous": "carbonifero", "Permian": "permico",
+            "Triassic": "triasico", "Jurassic": "jurasico", "Cretaceous": "cretacico",
+            "Paleocene": "paleoceno", "Eocene": "eoceno", "Oligocene": "oligoceno",
+            "Miocene": "mioceno", "Pliocene": "plioceno", "Pleistocene": "pleistoceno"}  # fmt: skip
+_EN_PART = {"early": "E", "lower": "E", "middle": "M", "late": "L", "upper": "L"}
+_ES_PART = {"inferior": "E", "temprano": "E", "medio": "M", "superior": "L", "tardio": "L"}
+_ES_PART_BEFORE = {"principios": "E", "inicios": "E", "comienzos": "E", "mediados": "M",
+                   "finales": "L", "final": "L"}  # fmt: skip
+
+
+def epochs_en(text: str) -> set[tuple[str, str]]:
+    """(period, E/M/L) of "Late Cretaceous", "Lower Jurassic"…"""
+    names = "|".join(_PERIODS)
+    part = r"(?:Early|Lower|Middle|Late|Upper)"
+    found = set()
+    # Ranges too: "Middle to Late Eocene", "Early or Middle Miocene", "Early-Middle".
+    for m in re.finditer(rf"\b({part}(?:\s*(?:to|or|and|-|\u2013)\s*{part})?) ({names})\b", text):
+        for q in re.findall(part, m[1]):
+            found.add((_PERIODS[m[2]], _EN_PART[q.lower()]))
+    return found
+
+
+def epochs_es(text: str) -> set[tuple[str, str]]:
+    """(period, E/M/L) of "Cretácico Superior", "Jurásico tardío", "finales del Triásico"."""
+    folded = _fold(text)
+    names = "|".join(_PERIODS.values())
+    after = re.findall(rf"\b({names})\s+({'|'.join(_ES_PART)})\b", folded)
+    before = re.findall(rf"\b({'|'.join(_ES_PART_BEFORE)})\s+del\s+({names})\b", folded)
+    return {(p, _ES_PART[q]) for p, q in after} | {(p, _ES_PART_BEFORE[q]) for q, p in before}
+
+
+# Common names of clades: an adaptation must keep the one of its English sentence and
+# not swap it for another ("sauropodomorph" -> "saurópodo").
+_CLADE_WORDS = {
+    r"\bsauropodomorphs?\b": r"sauropodomorf",
+    r"\bsauropods?\b": r"sauropod(?!omorf)",
+    r"\btheropods?\b": r"teropod",
+    r"\bornithopods?\b": r"ornitopod",
+    r"\bplesiosaurs?\b": r"plesiosaur",
+    r"\bpliosaurs?\b": r"pliosaur",
+    r"\bichthyosaurs?\b": r"ictiosaur",
+    r"\bmosasaurs?\b": r"mosasaur",
+    r"\bpterosaurs?\b": r"pterosaur",
+    r"\bornithischians?\b": r"ornitisqui",
+    r"\bsaurischians?\b": r"saurisqui",
+    r"\bhadrosaurs?\b": r"hadrosaur",
+    r"\bceratopsians?\b": r"ceratops",
+    r"\bankylosaurs?\b": r"anquilosaur",
+    r"\bstegosaurs?\b": r"estegosaur",
+    r"\bcrocodylomorphs?\b": r"cocodrilomorf",
+    r"\barchosaurs?\b": r"arcosaur",
+}
+
+
+def clade_swaps(src: str, dst: str) -> list[str]:
+    """English clade words whose Spanish form is missing while the Spanish sentence
+    names another clade of the list that the English one does not."""
+    folded = _fold(dst)
+    in_src = {en: es for en, es in _CLADE_WORDS.items() if re.search(en, src, re.I)}
+    if not in_src:
+        return []
+    others = [es for en, es in _CLADE_WORDS.items() if en not in in_src and re.search(es, folded)]
+    missing = [en for en, es in in_src.items() if not re.search(es, folded)]
+    if not (missing and others):
+        return []
+    return [re.search(en, src, re.I).group(0) for en in missing]  # type: ignore[union-attr]
+
+
 def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
     """What an adapted sentence lost from its source sentence (empty if nothing)."""
     problems = []
+    if extra := sorted(stages_es(dst, keep=src) - stages_en(src)):
+        problems.append(
+            f"stages not in the English sentence {extra} (English: {sorted(stages_en(src))})"
+        )
+    en_epochs = epochs_en(src)
+    if wrong := sorted(
+        e for e in epochs_es(dst) - en_epochs if any(p == e[0] for p, _ in en_epochs)
+    ):
+        problems.append(f"other part of the period {wrong} (English: {sorted(en_epochs)})")
+    if swapped := clade_swaps(src, dst):
+        problems.append(f"clade swapped for another {swapped}")
     if not numbers_match(src, dst):
         problems.append(f"numbers differ ({sorted(numbers(src))} vs {sorted(numbers(dst))})")
     # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.

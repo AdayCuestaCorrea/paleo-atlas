@@ -425,3 +425,92 @@ def test_a_failed_spanish_attempt_gets_concrete_instructions():
 
     _adapt_es(Stub(), "Testosaurus", [("It weighed 3.45 t.", ["F1"], "description")], ["x"])
     assert "NO conviertas unidades" in seen["user"] and "reescríbela de verdad" in seen["user"]
+
+
+def test_long_pages_may_leave_out_a_fifth_of_their_sentences():
+    from paleo.narrative.checks import SentenceReport, TextReport
+    from paleo.narrative.write import _salvage
+
+    sentences = [(f"S{i}", ["F1"], "description") for i in range(25)]
+
+    def report(failed):
+        return TextReport([SentenceReport(i, f"S{i}", ["bad"] if i in failed else [])
+                           for i in range(25)])  # fmt: skip
+
+    assert len(_salvage(sentences, report({0, 1, 2, 3, 4}))) == 20  # 5 of 25: a fifth
+    assert _salvage(sentences, report(set(range(6)))) is None  # 6 of 25: too many
+
+
+def test_spanish_stages_periods_and_clades_must_match_the_english():
+    from paleo.narrative.checks import check_alignment, stages_es
+
+    assert stages_es("el piso maastrichtiense, el Rético y el Danés") == {
+        "Maastrichtian", "Rhaetian", "Danian"}  # fmt: skip
+    assert not stages_es("una especie norteamericana que comía carnes")
+
+    def problems(en, es):
+        return check_alignment([(en, ["F1"])], [es], set())
+
+    assert problems("It lived in the Santonian.", "Vivió en el Santoniense.") == []
+    assert "stages" in problems("It lived in the Santonian.", "Vivió en el Cenomaniense.")[0]
+    assert problems("It lived in the Late Cretaceous.", "Vivió a finales del Cretácico.") == []
+    assert "part of the period" in problems(
+        "It lived in the Late Cretaceous.", "Vivió en el Cretácico Inferior.")[0]  # fmt: skip
+    assert problems("In the Middle to Late Eocene.", "En el Eoceno Medio al Tardío.") == []
+    assert problems("The species A. tortonica.", "La especie A. tortonica.") == []
+    assert "clade" in problems("A basal sauropodomorph.", "Un saurópodo basal.")[0]
+    assert problems("A basal sauropodomorph.", "Un sauropodomorfo basal.") == []
+    assert problems("A basal sauropodomorph.", "Un dinosaurio basal.") == []  # lost, not swapped
+
+
+def test_fixed_spanish_replacements():
+    from paleo.narrative.write import fix_es
+
+    assert fix_es("Vivió durante la etapa campaniense temprana.") == (
+        "Vivió durante el piso campaniense temprano.")  # fmt: skip
+    assert fix_es("Data de la etapa Maastrichtiense.") == "Data del piso Maastrichtiense."
+    assert fix_es("Etapa Aptiense-Albiense") == "Piso Aptiense-Albiense"
+    assert fix_es("una etapa de crecimiento") == "una etapa de crecimiento"
+    assert fix_es("Los pleiosaurios") == "Los plesiosaurios"
+    assert fix_es("Pleiosaurus") == "Pleiosaurus"  # a genus
+
+
+def test_spanish_texts_are_rechecked_without_a_model(tmp_path):
+    import json
+
+    from paleo.narrative.write import facts_hash, recheck_es
+
+    facts = [{"fact_id": f"F{i}", "statement": f"Fact {i} about the Santonian.",
+              "category": "description", "chunk_id": "c1"} for i in range(1, 7)]  # fmt: skip
+    h = facts_hash(facts)
+
+    def doc(lang, texts, ids=range(1, 7)):
+        sentences = [{"text": t, "fact_ids": [f"F{i}"]} for i, t in zip(ids, texts, strict=True)]
+        return {"taxon": "Testosaurus", "taxon_key": "testosaurus", "lang": lang,
+                "status": "verified", "generator": "ollama/test", "prompt_version": "v",
+                "facts_hash": h, "problems": [], "review": "accepted",
+                "sections": [{"section": "description", "sentences": sentences}]}  # fmt: skip
+
+    derived = tmp_path / "derived"
+    for folder in ("texts", "texts_review", "facts"):
+        (derived / folder).mkdir(parents=True)
+    (derived / "facts" / "testosaurus.json").write_text(
+        json.dumps({"taxon": "Testosaurus", "taxon_key": "testosaurus", "facts": facts})
+    )
+    english = [f"In the Santonian it did thing number {i} of a long list." for i in range(1, 7)]
+    (derived / "texts" / "testosaurus.en.json").write_text(json.dumps(doc("en", english)))
+    spanish = [
+        f"En el Santoniense hizo la cosa número {i} de una larga lista." for i in (1, 2, 4, 5, 6)
+    ]
+    spanish[1] = "En la etapa santoniense hizo la cosa número 2 de una larga lista."
+    spanish[2] = "En el Cenomaniense hizo la cosa número 4 de una larga lista."  # wrong stage
+    (derived / "texts" / "testosaurus.es.json").write_text(
+        json.dumps(doc("es", spanish, ids=(1, 2, 4, 5, 6)))  # sentence 3 left out earlier
+    )
+    out = recheck_es(derived, lambda genus: [], set())
+    assert out["dropped"] == ["testosaurus"]
+    saved = json.loads((derived / "texts" / "testosaurus.es.json").read_text())
+    texts = [s["text"] for s in saved["sections"][0]["sentences"]]
+    assert len(texts) == 4 and "el piso santoniense" in texts[1]
+    assert not any("Cenomaniense" in t for t in texts) and saved["review"] == "accepted"
+    assert recheck_es(derived, lambda genus: [], set())["dropped"] == []  # nothing left

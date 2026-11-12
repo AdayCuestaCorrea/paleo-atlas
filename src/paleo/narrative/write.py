@@ -178,6 +178,42 @@ def _tidy(text: str) -> str:
     return " ".join(text.translate(_SPACES).split())
 
 
+_ES_DETERMINERS = {"de la": "del", "a la": "al", "la": "el", "una": "un", "esta": "este",
+                   "dicha": "dicho", "misma": "mismo", "las": "los", "estas": "estos",
+                   "unas": "unos"}  # fmt: skip
+_ES_AGREEMENT = {"temprana": "temprano", "tardía": "tardío", "media": "medio"}
+_ETAPA = re.compile(
+    r"(?:\b(?P<det>de la|a la|la|una|esta|dicha|misma|las|estas|unas)\s+)?"
+    r"\b(?P<word>[Ee]tapa)(?P<plural>s?)"
+    r"(?P<stage>\s+[^\s,.;:()]+iense)\b"
+    r"(?:\s+(?P<adj>temprana|tardía|media)\b)?",
+    re.IGNORECASE,
+)
+
+
+def _capital_like(word: str, model: str) -> str:
+    return word[:1].upper() + word[1:] if model[:1].isupper() else word
+
+
+def fix_es(text: str) -> str:
+    """Fixed Spanish replacements, the same in every page (no model): "etapa
+    Campaniense" is "piso Campaniense" (with its article) and "pleiosaurio" is
+    "plesiosaurio". Measured when closing Phase 3: 671 and 15 pages."""
+
+    def etapa(m: re.Match[str]) -> str:
+        det = m["det"]
+        out = _capital_like(_ES_DETERMINERS[det.lower()], det) + " " if det else ""
+        out += _capital_like("piso", m["word"]) + ("s" if m["plural"] else "") + m["stage"]
+        if m["adj"]:
+            out += " " + _ES_AGREEMENT[m["adj"].lower()]
+        return out
+
+    text = _ETAPA.sub(etapa, text)
+    # Only the Spanish common noun: *Pleiosaurus* is a real genus.
+    text = re.sub(r"\bPleiosauria\b", "Plesiosauria", text)  # not a taxon
+    return re.sub(r"\b([Pp])leiosaurio(s?)\b", r"\1lesiosaurio\2", text)
+
+
 def _canonical_id(fact_id: str) -> str:
     """ "F0113" -> "F113": with more than 99 facts the model sometimes pads the id like
     the two-digit ones ("F013"). Ids are F + at least three digits."""
@@ -201,6 +237,13 @@ def _flatten(text: WrittenText) -> list[tuple[str, list[str], str]]:
 
 
 MAX_DROPPED_SENTENCES = 3
+MAX_DROPPED_SHARE = 0.2  # a long page may lose up to a fifth of its sentences
+
+
+def _max_dropped(total: int) -> int:
+    """How many failed sentences a page can leave out: 3, or a fifth of a long page
+    (decided when closing Phase 3: 54 genera failed with 4-9 bad sentences of 20-38)."""
+    return max(MAX_DROPPED_SENTENCES, int(MAX_DROPPED_SHARE * total))
 
 
 def _salvage(sentences: list, report: TextReport) -> list | None:
@@ -208,7 +251,7 @@ def _salvage(sentences: list, report: TextReport) -> list | None:
     problem (length…): a long page is not lost for one unsourced number. None when the
     failures are too many or text-level. What remains is checked again by the caller."""
     failed = {r.index for r in report.sentences if r.problems}
-    if report.problems or not failed or len(failed) > MAX_DROPPED_SENTENCES:
+    if report.problems or not failed or len(failed) > _max_dropped(len(sentences)):
         return None
     kept = [x for i, x in enumerate(sentences) if i not in failed]
     return kept if len(kept) >= 3 else None
@@ -228,7 +271,7 @@ def _salvage_es(
     if misaligned is None or report.problems:
         return None
     failed = {r.index for r in report.sentences if r.problems} | misaligned
-    if not failed or len(failed) > MAX_DROPPED_SENTENCES:
+    if not failed or len(failed) > _max_dropped(len(es)):
         return None
     kept = [x for i, x in enumerate(es) if i not in failed]
     return kept if len(kept) >= 3 else None
@@ -282,7 +325,7 @@ def _adapt_es(
             "palabra suelta.",
         ]
     result = llm.complete_json(system, "\n".join(lines), AdaptedText, max_tokens=3_000)
-    by_index = {s.index: _tidy(s.text) for s in result.sentences}
+    by_index = {s.index: fix_es(_tidy(s.text)) for s in result.sentences}
     return [by_index.get(i, "") for i in range(1, len(sentences) + 1)] if by_index else []
 
 
@@ -295,7 +338,7 @@ def _review_es(
     for i, ((english, _, _), spanish) in enumerate(zip(en, es, strict=True), start=1):
         lines += [f"{i}. {spanish}", f"   (inglés: {english})"]
     result = llm.complete_json(system, "\n".join(lines), AdaptedText, max_tokens=3_000)
-    by_index = {s.index: _tidy(s.text) for s in result.sentences}
+    by_index = {s.index: fix_es(_tidy(s.text)) for s in result.sentences}
     return [by_index.get(i, "") for i in range(1, len(es) + 1)]
 
 
@@ -393,13 +436,46 @@ def write_page(
     if not en_report.passed:
         return result  # no Spanish adaptation of an unverified text
 
+    _write_es(
+        llm,
+        taxon=taxon,
+        key=key,
+        en=en,
+        fact_texts=fact_texts,
+        es_sources=sources["es"],
+        scientific_names=scientific_names,
+        retries=retries,
+        derived_root=derived_root,
+        version=es_version,
+        facts_hash_=current_hash,
+        result=result,
+    )
+    return result
+
+
+def _write_es(
+    llm: LLM,
+    *,
+    taxon: str,
+    key: str,
+    en: list[tuple[str, list[str], str]],
+    fact_texts: dict[str, str],
+    es_sources: list[str],
+    scientific_names: set[str],
+    retries: int,
+    derived_root: Path,
+    version: str,
+    facts_hash_: str,
+    result: WriteResult,
+) -> WriteResult:
+    """The Spanish adaptation of a verified English text, with its checks, rescue and
+    grammar pass, saved in texts/ or texts_review/."""
+
     # Spanish adapted from the verified English, sentence by sentence.
     def check_es(adapted: list[str]) -> tuple[list, TextReport, list[str]]:
         problems = check_alignment([(t, f) for t, f, _ in en], adapted, scientific_names)
         es = [(text, f, s) for text, (_, f, s) in zip(adapted, en, strict=False)]
-        report = check_text(
-            [(t, f) for t, f, _ in es], fact_texts, sources["es"], check_names=False
-        )
+        report = check_text([(t, f) for t, f, _ in es], fact_texts, es_sources, check_names=False)
         return es, report, problems + report.summary()
 
     feedback = None
@@ -411,9 +487,7 @@ def write_page(
             break
         feedback = problems
     if problems and (kept := _salvage_es(en, adapted, es, es_report, scientific_names)) is not None:
-        report = check_text(
-            [(t, f) for t, f, _ in kept], fact_texts, sources["es"], check_names=False
-        )
+        report = check_text([(t, f) for t, f, _ in kept], fact_texts, es_sources, check_names=False)
         if report.passed:  # aligned, but a few Spanish sentences failed: leave them out
             es, es_report, problems = kept, report, []
             salvaged = True
@@ -438,8 +512,8 @@ def write_page(
         lang="es",
         status=es_status,
         llm=llm,
-        version=es_version,
-        facts_hash=current_hash,
+        version=version,
+        facts_hash=facts_hash_,
         sentences=es,
         report=es_report,
         problems=problems,
@@ -450,6 +524,45 @@ def write_page(
     result.problems["es"] = problems
     result.words["es"] = es_report.word_count
     return result
+
+
+def adapt_es_page(
+    llm: LLM,
+    facts_path: Path,
+    chunks: list[Chunk],
+    *,
+    derived_root: Path,
+    scientific_names: set[str],
+    retries: int = 2,
+) -> WriteResult | None:
+    """Only the Spanish adaptation, from the verified English text already saved (for
+    pages rescued without a model). None when that English text is missing or was
+    written from other facts."""
+    facts_doc = json.loads(facts_path.read_text(encoding="utf-8"))
+    key = facts_doc["taxon_key"]
+    en_path = derived_root / "texts" / f"{key}.en.json"
+    current = facts_hash(facts_doc["facts"])
+    if not en_path.exists():
+        return None
+    en_doc = json.loads(en_path.read_text(encoding="utf-8"))
+    if en_doc.get("status") != "verified" or en_doc.get("facts_hash") != current:
+        return None
+    result = WriteResult(key)
+    result.status["en"] = "verified"
+    return _write_es(
+        llm,
+        taxon=facts_doc["taxon"],
+        key=key,
+        en=_stored_sentences(en_doc),
+        fact_texts=_fact_texts(select_facts(facts_doc["facts"])),
+        es_sources=[c.text for c in chunks if c.lang == "es" and c.public_quote],
+        scientific_names=scientific_names,
+        retries=retries,
+        derived_root=derived_root,
+        version=prompt_versions()["es"],
+        facts_hash_=current,
+        result=result,
+    )
 
 
 def _stored_sentences(doc: dict[str, Any]) -> list[tuple[str, list[str], str]]:
@@ -528,3 +641,127 @@ def resalvage_es(
         )
         out["salvaged"].append(key)
     return out
+
+
+def resalvage_en(
+    derived_root: Path, en_sources: Callable[[str], list[str]]
+) -> dict[str, list[str]]:
+    """As resalvage_es, for the failed English texts (texts_review) of the current facts:
+    those that pass after leaving out their failed sentences (up to _max_dropped) are
+    saved as verified. Their Spanish adaptation is still to write (`adapt_es_page`)."""
+    out: dict[str, list[str]] = {"salvaged": [], "still_failed": [], "skipped": []}
+    for path in sorted((derived_root / "texts_review").glob("*.en.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        key = doc["taxon_key"]
+        facts_path = derived_root / "facts" / f"{key}.json"
+        if (derived_root / "texts" / path.name).exists() or not facts_path.exists():
+            out["skipped"].append(key)
+            continue
+        facts_doc = json.loads(facts_path.read_text(encoding="utf-8"))
+        current = facts_hash(facts_doc["facts"])
+        if doc.get("facts_hash") != current:
+            out["skipped"].append(key)
+            continue
+        en = _stored_sentences(doc)
+        fact_texts = _fact_texts(select_facts(facts_doc["facts"]))
+        sources = en_sources(doc["taxon"])
+        report = check_text([(t, f) for t, f, _ in en], fact_texts, sources)
+        kept: list | None = en if report.passed else _salvage(en, report)
+        if kept is not None and kept is not en:
+            report = check_text([(t, f) for t, f, _ in kept], fact_texts, sources)
+            kept = kept if report.passed else None
+        if kept is None:
+            out["still_failed"].append(key)
+            continue
+        _save(
+            derived_root / "texts" / path.name,
+            taxon=doc["taxon"],
+            key=key,
+            lang="en",
+            status="verified",
+            llm=SimpleNamespace(label=doc["generator"]),
+            version=doc["prompt_version"],
+            facts_hash=current,
+            sentences=kept,
+            report=report,
+            problems=[],
+        )
+        out["salvaged"].append(key)
+    return out
+
+
+def _match_kept(
+    en: list[tuple[str, list[str], str]], es: list[tuple[str, list[str], str]]
+) -> list[int] | None:
+    """Index of the English sentence of each Spanish one, when the Spanish text left
+    some out (same fact ids and section, in order); None if they do not match."""
+    out, j = [], 0
+    for _, fact_ids, section in es:
+        while j < len(en) and (en[j][1], en[j][2]) != (fact_ids, section):
+            j += 1
+        if j == len(en):
+            return None
+        out.append(j)
+        j += 1
+    return out
+
+
+def recheck_es(
+    derived_root: Path,
+    es_sources: Callable[[str], list[str]],
+    scientific_names: set[str],
+) -> dict[str, list[str]]:
+    """No model: the verified Spanish texts get the fixed replacements (fix_es) and are
+    aligned again with their English text under today's checks (stages, part of the
+    period, clade names). Sentences that fail are left out (up to _max_dropped); a text
+    with more failures goes to texts_review. Only changed files are written."""
+    out: dict[str, list[str]] = {"fixed": [], "dropped": [], "failed": [], "unmatched": []}
+    for path in sorted((derived_root / "texts").glob("*.es.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        en_path = derived_root / "texts" / f"{doc['taxon_key']}.en.json"
+        if doc.get("status") != "verified" or not en_path.exists():
+            continue
+        en = _stored_sentences(json.loads(en_path.read_text(encoding="utf-8")))
+        es = _stored_sentences(doc)
+        index = _match_kept(en, es)
+        if index is None:
+            out["unmatched"].append(doc["taxon_key"])
+            continue
+        fixed = [(fix_es(t), f, s) for t, f, s in es]
+        source = [(en[i][0], en[i][1]) for i in index]
+        bad = alignment_failures(source, [t for t, _, _ in fixed], scientific_names) or set()
+        if fixed == es and not bad:
+            continue
+        kept = [x for i, x in enumerate(fixed) if i not in bad]
+        key = doc["taxon_key"]
+        problems = check_alignment(source, [t for t, _, _ in fixed], scientific_names)
+        fact_texts = _fact_texts(select_facts(_facts_of(derived_root, key)))
+        report = check_text(
+            [(t, f) for t, f, _ in kept], fact_texts, es_sources(doc["taxon"]), check_names=False
+        )
+        too_many = len(bad) > _max_dropped(len(es)) or len(kept) < 3
+        if too_many or not report.passed:
+            _save(
+                derived_root / "texts_review" / path.name,
+                taxon=doc["taxon"], key=key, lang="es", status="failed",
+                llm=SimpleNamespace(label=doc["generator"]), version=doc["prompt_version"],
+                facts_hash=doc["facts_hash"], sentences=fixed, report=report,
+                problems=problems + report.summary(), review=doc.get("review"),
+            )  # fmt: skip
+            path.unlink()
+            out["failed"].append(key)
+            continue
+        _save(
+            path,
+            taxon=doc["taxon"], key=key, lang="es", status="verified",
+            llm=SimpleNamespace(label=doc["generator"]), version=doc["prompt_version"],
+            facts_hash=doc["facts_hash"], sentences=kept, report=report, problems=[],
+            review=doc.get("review"),
+        )  # fmt: skip
+        out["dropped" if bad else "fixed"].append(key)
+    return out
+
+
+def _facts_of(derived_root: Path, key: str) -> list[dict[str, Any]]:
+    path = derived_root / "facts" / f"{key}.json"
+    return json.loads(path.read_text(encoding="utf-8"))["facts"] if path.exists() else []

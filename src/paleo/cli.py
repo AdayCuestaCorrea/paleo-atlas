@@ -771,6 +771,20 @@ def narrate(
             "and save those that pass, or pass leaving out a few sentences."
         ),
     ] = False,
+    recheck_es: Annotated[
+        bool,
+        typer.Option(
+            help="No model: apply the fixed Spanish replacements and today's alignment "
+            "checks to the verified Spanish texts; failed sentences are left out."
+        ),
+    ] = False,
+    es_missing: Annotated[
+        bool,
+        typer.Option(
+            help="Only the Spanish adaptation of genera whose verified English text has "
+            "no verified Spanish one (English rescued with --resalvage, failed Spanish)."
+        ),
+    ] = False,
 ) -> None:
     """Facts, EN text and ES adaptation, one genus page at a time (Phase 3 batches on
     the local GPU). Resumable: pages whose sources, facts and prompts did not change
@@ -778,7 +792,7 @@ def narrate(
     import time
 
     from paleo.llm import LLM, QuotaExhausted
-    from paleo.narrative.sources import catalog_index, genus_chunks_for, taxon_key
+    from paleo.narrative.sources import catalog_index, chunks_for, genus_chunks_for, taxon_key
     from paleo.narrative.write import is_up_to_date
 
     if scope != "genera":
@@ -788,19 +802,33 @@ def narrate(
     names = _scientific_names() | {
         word for name in catalog_index(paths.raw) for word in name.split() if word[:1].isupper()
     }
-    if resalvage:
-        from paleo.narrative.write import resalvage_es
+    if resalvage or recheck_es:
+        from paleo.narrative.write import recheck_es as recheck
+        from paleo.narrative.write import resalvage_en, resalvage_es
 
-        def es_sources(genus: str) -> list[str]:
-            chunks = genus_chunks_for(
-                genus, interim_root=paths.interim, raw_root=paths.raw,
-                cache_root=paths.data / "cache",
-            )  # fmt: skip
-            return [c.text for c in chunks if c.lang == "es" and c.public_quote]
+        def sources_of(lang: str):
+            def get(taxon: str) -> list[str]:
+                roots = {"interim_root": paths.interim, "raw_root": paths.raw,
+                         "cache_root": paths.data / "cache"}  # fmt: skip
+                try:
+                    chunks = genus_chunks_for(taxon, **roots)
+                except LookupError:  # a new species (Phase 1 page), not a genus
+                    chunks = chunks_for(taxon, **roots)
+                return [c.text for c in chunks if c.lang == lang and c.public_quote]
 
-        out = resalvage_es(paths.data / "derived", es_sources, names)
-        for kind, keys in out.items():
-            typer.echo(f"{kind}: {len(keys)}" + (f" ({', '.join(keys)})" if keys else ""))
+            return get
+
+        derived = paths.data / "derived"
+        runs = (
+            [("en", lambda: resalvage_en(derived, sources_of("en"))),
+             ("es", lambda: resalvage_es(derived, sources_of("es"), names))]
+            if resalvage else []
+        ) + ([("recheck es", lambda: recheck(derived, sources_of("es"), names))]
+             if recheck_es else [])  # fmt: skip
+        for label, run in runs:
+            for kind, keys in run().items():
+                shown = f" ({', '.join(keys)})" if keys and len(keys) <= 80 else ""
+                typer.echo(f"{label} {kind}: {len(keys)}{shown}")
         return
     llm = LLM(provider, model or DEFAULT_MODELS[provider])
     queue = genus_queue(only)
@@ -813,10 +841,36 @@ def narrate(
         if deadline and dt.datetime.now() >= deadline:
             typer.echo(f"Deadline {until} reached; the rest stay pending.")
             break
+        derived = paths.data / "derived"
+        if es_missing and (
+            not (derived / "texts" / f"{taxon_key(genus)}.en.json").exists()
+            or (derived / "texts" / f"{taxon_key(genus)}.es.json").exists()
+        ):
+            skipped += 1  # checked before loading the sources: most genera are done
+            continue
         chunks = genus_chunks_for(
             genus, interim_root=paths.interim, raw_root=paths.raw, cache_root=paths.data / "cache"
         )
-        facts_path = paths.data / "derived" / "facts" / f"{taxon_key(genus)}.json"
+        facts_path = derived / "facts" / f"{taxon_key(genus)}.json"
+        if es_missing:
+            from paleo.narrative.write import adapt_es_page
+
+            done += 1
+            start = time.monotonic()
+            try:
+                res = adapt_es_page(
+                    llm, facts_path, chunks, derived_root=derived, scientific_names=names
+                )
+                state = res.status.get("es", "skipped") if res else "skipped"
+            except QuotaExhausted as exc:
+                typer.echo(f"Quota exhausted ({exc}); the rest stay pending.")
+                break
+            except Exception as exc:
+                typer.echo(f"{genus}: skipped ({type(exc).__name__}: {str(exc)[:200]})")
+                state = "skipped"
+            statuses[f"es:{state}"] = statuses.get(f"es:{state}", 0) + 1
+            typer.echo(f"{genus}: es {state}, {time.monotonic() - start:.0f} s [{done}]")
+            continue
         fresh_facts = _facts_unchanged(genus, chunks)
         failed = retry_failed and any(
             (paths.data / "derived" / "texts_review" / f"{taxon_key(genus)}.{lang}.json").exists()

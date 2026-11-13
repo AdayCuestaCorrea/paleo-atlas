@@ -1,43 +1,50 @@
 {
  "taxon": "Yeneen",
  "taxon_key": "yeneen",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "6c18d689bb71b10c",
- "generated_at": "2026-11-02T01:24:38+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "4aa22f22531fbf45",
+ "generated_at": "2026-11-13T14:56:47+00:00",
  "citations": {
   "yeneen:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1385311630",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "yeneen:enwiki:1": {
    "source": "wikipedia_article",
    "title": "Yeneen (taxobox)",
-   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1336280968",
+   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1383346412",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "yeneen:enwiki:2": {
    "source": "wikipedia_article",
    "title": "Yeneen (introduction)",
-   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1336280968",
+   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1383346412",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "yeneen:enwiki:3": {
    "source": "wikipedia_article",
    "title": "Yeneen (Discovery and naming)",
-   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1336280968",
+   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1383346412",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "yeneen:enwiki:4": {
    "source": "wikipedia_article",
    "title": "Yeneen (Classification)",
-   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1336280968",
+   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1383346412",
+   "doi": null,
+   "license": "CC BY-SA 4.0"
+  },
+  "yeneen:enwiki:5": {
+   "source": "wikipedia_article",
+   "title": "Yeneen (Paleoecology)",
+   "url": "https://en.wikipedia.org/wiki/Yeneen?oldid=1383346412",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -59,8 +66,8 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "Yeneen is classified as a titanosaur sauropod dinosaur.",
-   "category": "classification",
+   "statement": "Yeneen is a titanosaur sauropod dinosaur genus.",
+   "category": "description",
    "chunk_id": "yeneen:table:1",
    "lang": "en",
    "quote": "A titanosaur sauropod.",
@@ -68,133 +75,97 @@
   },
   {
    "fact_id": "F002",
-   "statement": "The type species of the genus Yeneen is Yeneen houssayi.",
-   "category": "classification",
+   "statement": "Yeneen lived during the Late Cretaceous Santonian age.",
+   "category": "time_and_habitat",
    "chunk_id": "yeneen:table:1",
    "lang": "en",
-   "quote": "The type species is Y. houssayi.",
-   "quote_sha": "f39aab374792ed0a"
+   "quote": "Age: Late Cretaceous (Santonian)",
+   "quote_sha": "208c72d7ba51b331"
   },
   {
    "fact_id": "F003",
-   "statement": "Yeneen was described by Filippi et al. in 2026.",
+   "statement": "The type locality of Yeneen is the Bajo de la Carpa Formation in Argentina.",
    "category": "discovery",
-   "chunk_id": "yeneen:enwiki:1",
+   "chunk_id": "yeneen:table:1",
    "lang": "en",
-   "quote": "parent_authority: Filippi et al., 2026",
-   "quote_sha": "c8f36d53d836893e"
+   "quote": "Type locality: Bajo de la Carpa Formation",
+   "quote_sha": "4661139814794bcf"
   },
   {
    "fact_id": "F004",
-   "statement": "Yeneen lived during the Late Cretaceous period.",
-   "category": "time_and_habitat",
+   "statement": "The genus Yeneen contains the single species Yeneen houssayi.",
+   "category": "description",
    "chunk_id": "yeneen:enwiki:1",
    "lang": "en",
-   "quote": "fossil_range: Late Cretaceous,",
-   "quote_sha": "cd43b061a39a58fb"
+   "quote": "species: houssayi",
+   "quote_sha": "edfea916c8039a6c"
   },
   {
    "fact_id": "F005",
-   "statement": "Yeneen is known from the Santonian age of the Late Cretaceous in Argentina.",
-   "category": "time_and_habitat",
+   "statement": "Yeneen is known from at least one partial skeleton.",
+   "category": "paleobiology",
    "chunk_id": "yeneen:enwiki:2",
    "lang": "en",
-   "quote": "Yeneen is an extinct genus of titanosaurian sauropod dinosaurs known from the Late Cretaceous (Santonian age) Bajo de la Carpa Formation of Argentina.",
-   "quote_sha": "1808d459954317b0"
+   "quote": "known from at least one partial skeleton",
+   "quote_sha": "3e67c6726c861c01"
   },
   {
    "fact_id": "F006",
-   "statement": "The genus Yeneen contains only one known species, Yeneen houssayi, based on at least one partial skeleton.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:2",
+   "statement": "A third specimen, MAU-Pv-LI-731, contains disarticulated axial and appendicular bones and has not yet been referred to Yeneen houssayi.",
+   "category": "description",
+   "chunk_id": "yeneen:enwiki:3",
    "lang": "en",
-   "quote": "The genus contains a single species, Yeneen houssayi, known from at least one partial skeleton.",
-   "quote_sha": "7c530fc2b4c549cb"
+   "quote": "MAU-Pv-LI-731, includes disarticulated axial and appendicular bones and is still undergoing preparation",
+   "quote_sha": "14404a364dfbcd24"
   },
   {
    "fact_id": "F007",
-   "statement": "Yeneen fossils were discovered at the La Invernada site within the Bajo de la Carpa Formation in Argentina.",
-   "category": "discovery",
+   "statement": "The generic name Yeneen comes from a Tehuelche word referring to cold and winter weather.",
+   "category": "curiosities",
    "chunk_id": "yeneen:enwiki:3",
    "lang": "en",
-   "quote": "The Yeneen fossil material was discovered in outcrops at the La Invernada site, part of the Bajo de la Carpa Formation (Neuquén Group) of Argentina.",
-   "quote_sha": "202cd19e78f5256f"
+   "quote": "The generic name, Yeneen, is the name of an entity in Tehuelche (Aonikenk) culture tied to the cold and winter weather",
+   "quote_sha": "19f8cc84367052ba"
   },
   {
    "fact_id": "F008",
-   "statement": "Three Yeneen specimens are housed in the Museo Municipal Argentino Urquiza.",
-   "category": "discovery",
+   "statement": "The specific epithet houssayi honors Nobel laureate Bernardo Alberto Houssay.",
+   "category": "curiosities",
    "chunk_id": "yeneen:enwiki:3",
    "lang": "en",
-   "quote": "Three specimens were collected, which are housed in the Museo Municipal Argentino Urquiza.",
-   "quote_sha": "b75274db1f016fcc"
+   "quote": "The specific name, houssayi, honors Bernardo Alberto Houssay, a recipient of the Nobel Prize in Physiology or Medicine",
+   "quote_sha": "c367f3471855dc89"
   },
   {
    "fact_id": "F009",
-   "statement": "A second specimen, MAU-Pv-LI-539, consists of a single right ilium from a smaller individual.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "A second specimen found in association with MAU-Pv-LI-538 but belonging to an individual of a smaller size is a single right ilium, accessioned as MAU-Pv-LI-539.",
-   "quote_sha": "cbce20f7d7916c9b"
-  },
-  {
-   "fact_id": "F010",
-   "statement": "A third specimen (MAU-Pv-LI-731) contains disarticulated bones and is currently being prepared for study.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "A third specimen, MAU-Pv-LI-731, includes disarticulated axial and appendicular bones and is still undergoing preparation to better study the skeletal anatomy.",
-   "quote_sha": "91f4eb58e569b242"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "Leonardo S. Filippi and colleagues described Yeneen houssayi in 2026, designating MAU-Pv-LI-538 as the holotype.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "In 2026, Leonardo S. Filippi and colleagues described Yeneen houssayi as a new genus and species of titanosaurian sauropod dinosaurs based on these fossil remains, establishing MAU-Pv-LI-538 as the holotype specimen.",
-   "quote_sha": "96282e173980e96a"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "Researchers assigned the isolated ilium (MAU-Pv-LI-539) to cf. Yeneen houssayi because it shares some characters with the holotype but lacks enough shared anatomical features for a confident assignment.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "MAU-Pv-LI-539, the isolated ilium, was assigned to cf. Yeneen houssayi, meaning the researchers could not confidently assign it to this species based on anatomical characters shared with the holotype, but it still bears characters distinguishing it from other titanosaur taxa.",
-   "quote_sha": "e1f9a0f6dc62870b"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "The genus name Yeneen comes from an entity in Tehuelche culture associated with cold and winter weather.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "The generic name, Yeneen, is the name of an entity in Tehuelche (Aonikenk) culture tied to the cold and winter weather.",
-   "quote_sha": "d90345a1a0840502"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "The species name houssayi honors Nobel laureate Bernardo Alberto Houssay for his role in promoting CONICET.",
-   "category": "discovery",
-   "chunk_id": "yeneen:enwiki:3",
-   "lang": "en",
-   "quote": "The specific name, houssayi, honors Bernardo Alberto Houssay, a recipient of the Nobel Prize in Physiology or Medicine, who was involved in promoting the creation of the National Scientific and Technical Research Council (CONICET), an Argentinian agency that directs much of the academic scientific research performed in the country.",
-   "quote_sha": "6fad69cdfc3d44f1"
-  },
-  {
-   "fact_id": "F015",
-   "statement": "Phylogenetic analysis places Yeneen in the clade Saltasauroidea, specifically in a subgroup called \"Clade A\" where it diverges after Narambuenatitan and before Overosaurus.",
+   "statement": "Phylogenetic analysis places Yeneen within Saltasauroidea, in a subgroup referred to as \"Clade A\", diverging after Narambuenatitan and before Overosaurus.",
    "category": "classification",
    "chunk_id": "yeneen:enwiki:4",
    "lang": "en",
-   "quote": "These results placed Yeneen as part of the clade Saltasauroidea, in a more exclusive group the researchers referred to as \"Clade A\", where it diverges after Narambuenatitan but before Overosaurus.",
-   "quote_sha": "b3b42ea0904ccb87"
+   "quote": "placed Yeneen as part of the clade Saltasauroidea, in a more exclusive group the researchers referred to as \"Clade A\", where it diverges after Narambuenatitan but before Overosaurus",
+   "quote_sha": "868a79b25d920e53"
   },
   {
-   "fact_id": "F016",
-   "statement": "Yeneen lived between 85.7 and 83.6 million years ago during the Santonian age.",
+   "fact_id": "F010",
+   "statement": "Yeneen lived in a semi‑arid fluvial and aeolian paleoenvironment.",
+   "category": "time_and_habitat",
+   "chunk_id": "yeneen:enwiki:5",
+   "lang": "en",
+   "quote": "Its sediments represent fluvial and aeolian systems, with a semi-arid paleoenvironment",
+   "quote_sha": "478339a4d18824eb"
+  },
+  {
+   "fact_id": "F011",
+   "statement": "Other titanosaurs from the same formation include Bonitasaura, Inawentu, Overosaurus, Rinconsaurus, and Traukutitan.",
+   "category": "paleobiology",
+   "chunk_id": "yeneen:enwiki:5",
+   "lang": "en",
+   "quote": "Sauropods include the diverse fellow titanosaurs Bonitasaura, Inawentu, Overosaurus, Rinconsaurus, and Traukutitan",
+   "quote_sha": "cf78cb30b98dc97d"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "Yeneen is dated to the Santonian stage, approximately 85.7 to 83.6 million years ago.",
    "category": "time_and_habitat",
    "chunk_id": "yeneen:pbdb:1",
    "lang": "en",
@@ -202,22 +173,36 @@
    "quote_sha": "ea55b8ba6369358f"
   },
   {
-   "fact_id": "F017",
-   "statement": "The description of Yeneen houssayi was authored by L. S. Filippi, F. Bellardini, J. l. Carballido, A. H. Méndez, and A. C. Garrido.",
-   "category": "discovery",
-   "chunk_id": "yeneen:study:1",
+   "fact_id": "F013",
+   "statement": "The Paleobiology Database records a single fossil occurrence of Yeneen.",
+   "category": "paleobiology",
+   "chunk_id": "yeneen:pbdb:1",
    "lang": "en",
-   "quote": "Authors: L. S. Filippi, F. Bellardini, J. l. Carballido, A. H. Méndez, A. C. Garrido",
-   "quote_sha": "0691106b241b662f"
+   "quote": "Fossil occurrences recorded: 1",
+   "quote_sha": "d4b39ecead669d91"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "yeneen:enwiki:3",
-   "statement": "The holotype specimen (MAU-Pv-LI-538) includes a partial skeleton with six cervical, ten dorsal, and one caudal vertebrae, plus the sacrum, ilia, and ribs.",
+   "chunk_id": "yeneen:table:1",
+   "statement": "Yeneen was described as a new genus and species by Filippi et al. in 2026.",
    "category": "discovery",
-   "quote": "One specimen, permanently accessioned as MAU-Pv-LI-538/1–30 consists of a partial disarticulated skeleton, comprising six cervical, ten dorsal, and one caudal vertebrae, in addition to the sacrum articulated with both ilia, and several ribs.",
-   "reason": "statement copies the source wording: 'six cervical ten dorsal and one caudal vertebrae'"
+   "quote": "Authors: Filippi et al.",
+   "reason": "numbers not in the quote: ['2026']"
+  },
+  {
+   "chunk_id": "yeneen:enwiki:3",
+   "statement": "The holotype specimen MAU-Pv-LI-538 includes six cervical, ten dorsal, and one caudal vertebrae, a sacrum with both ilia, and several ribs.",
+   "category": "description",
+   "quote": "consists of a partial disarticulated skeleton, comprising six cervical, ten dorsal, and one caudal vertebrae, in addition to the sacrum articulated with both ilia, and several ribs",
+   "reason": "numbers not in the quote: ['538']"
+  },
+  {
+   "chunk_id": "yeneen:enwiki:3",
+   "statement": "A second specimen, MAU-Pv-LI-539, is a single right ilium from a smaller individual.",
+   "category": "description",
+   "quote": "A second specimen ... is a single right ilium, accessioned as MAU-Pv-LI-539",
+   "reason": "quote not found verbatim in the source"
   }
  ]
 }

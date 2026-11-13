@@ -3,11 +3,11 @@
  "taxon_key": "carinthiasuchus",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
  "facts_hash": "067e012fbff0771c",
- "generated_at": "2026-11-01T23:50:08+00:00",
- "word_count": 251,
+ "generated_at": "2026-11-13T15:12:01+00:00",
+ "word_count": 249,
  "problems": [],
  "review": "accepted",
  "sections": [
@@ -15,19 +15,19 @@
    "section": "description",
    "sentences": [
     {
-     "text": "Este animal poseía una serie distintiva de placas óseas, conocidas como osteodermos, que se extendían a lo largo de su cola.",
+     "text": "Carinthiasuchus llevaba una serie de placas óseas, conocidas como osteodermos, a lo largo de su cola.",
      "fact_ids": [
       "F008"
      ]
     },
     {
-     "text": "Estos osteodermos de la cola tenían forma de lágrima, eran más largos que anchos y presentaban una cresta media con denticulaciones en sus márgenes exteriores irregulares.",
+     "text": "Estos osteodermos caudales tenían forma de gota, eran más largos que anchos y presentaban una cresta central con pequeñas proyecciones denticuladas en los bordes exteriores irregulares.",
      "fact_ids": [
       "F009"
      ]
     },
     {
-     "text": "Las placas se disponían en doble fila a lo largo de la espina dorsal, con cada vértebra correspondiendo a dos o tres pares de placas.",
+     "text": "Estaban dispuestos en dos hileras paralelas, y cada vértebra sostenía dos o tres pares de placas.",
      "fact_ids": [
       "F010"
      ]
@@ -38,14 +38,44 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "El holotipo, la base para la especie, fue descubierto por Georg Kandutsch cerca de Jadersdorf, en los Alpes del Gailtal de Carintia, Austria. Contiene partes del cráneo, vértebras caudales y una cola distal articulada. El nombre específico kandutschi rinde homenaje al descubridor. Los fósiles provienen de la Formación Partnach y el taxón se considera actualmente válido como un nuevo género y especie.",
+     "text": "Georg Kandutsch descubrió el holotipo cerca de Jadersdorf, en los Alpes Gailtal de Carintia, Austria.",
      "fact_ids": [
-      "F001",
-      "F002",
-      "F003",
-      "F014",
-      "F015",
-      "F016",
+      "F001"
+     ]
+    },
+    {
+     "text": "El holotipo comprende fragmentos del cráneo, varias vértebras caudales y una cola distal articulada.",
+     "fact_ids": [
+      "F002"
+     ]
+    },
+    {
+     "text": "El epíteto específico *kandutschi* conmemora al descubridor Georg Kandutsch.",
+     "fact_ids": [
+      "F003"
+     ]
+    },
+    {
+     "text": "La localidad de tipo se registra como la Formación Partnach.",
+     "fact_ids": [
+      "F014"
+     ]
+    },
+    {
+     "text": "Todos los fósiles atribuidos a este taxón fueron hallados en Austria.",
+     "fact_ids": [
+      "F015"
+     ]
+    },
+    {
+     "text": "Actualmente, *Carinthiasuchus* se considera un taxón válido.",
+     "fact_ids": [
+      "F016"
+     ]
+    },
+    {
+     "text": "La descripción original introdujo tanto un nuevo género como una nueva especie.",
+     "fact_ids": [
       "F017"
      ]
     }
@@ -55,11 +85,18 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "El cráneo conservado mide 53 mm, lo que lleva a estimar una longitud corporal total de hasta 65 mm para el ejemplar juvenil. La falta de fusión en ciertas vértebras y huesos del cráneo indica que el holotipo no había alcanzado la madurez completa.",
+     "text": "El cráneo conservado mide 53 mm, lo que indica una longitud total juvenil de hasta 65 mm.",
      "fact_ids": [
-      "F006",
+      "F006"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Las vértebras y los huesos del cráneo no fusionados demuestran que el ejemplar aún no había alcanzado la madurez completa.",
+     "fact_ids": [
       "F007"
-     ]
+     ],
+     "topic": "growth"
     }
    ]
   },
@@ -67,10 +104,20 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "Carinthiasuchus se clasifica como miembro del clado Poposauroidea. Los análisis filogenéticos lo sitúan como miembro del clado de divergencia temprana Poposauroidea dentro de los pseudocóscidos. Los estudios indican que colocar a Carinthiasuchus en el Poposauroidea es más óptimo que vincularlo con otros cocodrilomorfos europeos o rauisucios.",
+     "text": "Se ubica dentro del clado Poposauroidea.",
      "fact_ids": [
-      "F011",
-      "F012",
+      "F011"
+     ]
+    },
+    {
+     "text": "Los estudios filogenéticos sitúan a *Carinthiasuchus* entre los miembros de divergencia temprana de Poposauroidea dentro de los pseudosuquios.",
+     "fact_ids": [
+      "F012"
+     ]
+    },
+    {
+     "text": "Los análisis sugieren que asignarlo a Poposauroidea se ajusta mejor a los datos que relacionarlo con otros crocodilomorfos europeos o rauisquios.",
+     "fact_ids": [
       "F013"
      ]
     }
@@ -80,9 +127,14 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Carinthiasuchus vivió durante las etapas Ladinense y Carniense del periodo Triásico. Este animal habitó la Formación Partnach de Carintia, Austria, desde el Ladinense hasta el Carniense temprano.",
+     "text": "El animal vivió durante las etapas Ladiniano y Carniano del periodo Triásico.",
      "fact_ids": [
-      "F004",
+      "F004"
+     ]
+    },
+    {
+     "text": "Sus restos provienen de la Formación Partnach de Carintia, Austria, que abarca desde el Ladiniano hasta el Carniano temprano.",
+     "fact_ids": [
       "F005"
      ]
     }

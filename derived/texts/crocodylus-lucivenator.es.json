@@ -3,11 +3,11 @@
  "taxon_key": "crocodylus-lucivenator",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "8f5db323f4dfb2dd",
- "generated_at": "2026-11-01T23:50:39+00:00",
- "word_count": 375,
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "cc6f840cfb3d4569",
+ "generated_at": "2026-11-14T13:45:49+00:00",
+ "word_count": 605,
  "problems": [],
  "review": "accepted",
  "sections": [
@@ -15,33 +15,65 @@
    "section": "description",
    "sentences": [
     {
-     "text": "El nombre de la especie, *lucivenator*, combina dos palabras latinas que significan 'luz' y 'cazador'.",
-     "fact_ids": [
-      "F013"
-     ]
-    },
-    {
-     "text": "Una característica notable es un bulto rostral, una estructura craneal ampliada que se extiende a lo largo de la superficie dorsal justo antes de los ojos.",
+     "text": "Crocodylus lucivenator se distingue por una protuberancia rostral, una ampliación de la estructura del cráneo que recorre la superficie dorsal justo antes de los ojos.",
      "fact_ids": [
       "F015"
      ]
     },
     {
-     "text": "El segundo botón posterior del maxilar se describe como más pronunciado que el bulto rostral medio.",
+     "text": "El segundo nudo posterior de la maxila es más pronunciado que la protuberancia medio-rostral, lo que contribuye a la ornamentación craneal característica.",
      "fact_ids": [
       "F016"
      ]
     },
     {
-     "text": "La mesa craneal es trapezoidal y está formada principalmente por los huesos frontal, parietal, postorbitario y escamoso.",
+     "text": "Su tabla craneal es trapezoidal y está formada principalmente por los huesos frontal, parietal, postorbital y escamoso.",
      "fact_ids": [
       "F017"
      ]
     },
     {
-     "text": "Los huesos postorbitarios forman cuernos escamosos pronunciados, más desarrollados en los ejemplares de mayor tamaño.",
+     "text": "Los prominentes cuernos escamosos, producidos por los huesos postorbitales, están más desarrollados en los individuos de mayor tamaño.",
      "fact_ids": [
       "F018"
+     ]
+    },
+    {
+     "text": "Los cuartos dientes premaxilares y los quintos y décimos dientes maxilares son los más grandes de la mandíbula superior, encajando en un patrón clásico de interbloqueo.",
+     "fact_ids": [
+      "F023",
+      "F024"
+     ]
+    },
+    {
+     "text": "Los osteodermos aislados atribuidos a esta especie varían en forma; algunos elementos circulares o en forma de D probablemente formaban parte de un escudo nucal o de la armadura de los flancos.",
+     "fact_ids": [
+      "F026",
+      "F027"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Los ejemplares más grandes alcanzaban longitudes de 4 a 5 metros y pesaban entre 300 y 600 kilogramos, situándose entre los cocodrilos más grandes del Plioceno.",
+     "fact_ids": [
+      "F030"
+     ]
+    },
+    {
+     "text": "Un fósil conserva cinco surcos y una herida punzante en la mandíbula inferior, con hueso cicatrizado que indica que el animal sobrevivió a la lesión durante un tiempo considerable.",
+     "fact_ids": [
+      "F034",
+      "F035"
+     ]
+    },
+    {
+     "text": "El nombre de especie lucivenator combina palabras latinas para «luz» y «cazador», reflejando su supuesto papel como depredador destacado.",
+     "fact_ids": [
+      "F013"
      ]
     }
    ]
@@ -50,29 +82,24 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Brochu y sus colaboradores nombraron formalmente esta especie en 2026.",
+     "text": "Crocodylus lucivenator fue nombrado formalmente en 2026 por Brochu y colaboradores, quienes también describieron la especie en la revista Journal of Systematic Palaeontology.",
      "fact_ids": [
-      "F001",
-      "F007"
+      "F007",
+      "F050"
      ]
     },
     {
-     "text": "Los fósiles fueron hallados en Etiopía en la localidad tipo conocida como Formación Hadar.",
+     "text": "El holotipo, espécimen A.L. 138-16, consiste en un cráneo completo con su mandíbula inferior correspondiente y procede del submiembro SH-1 del miembro Sidi Hakoma.",
      "fact_ids": [
-      "F004",
-      "F003"
+      "F010",
+      "F011"
      ]
     },
     {
-     "text": "El holotipo, el ejemplar sobre el que se basa la especie, está catalogado como A.L. 138-16 e incluye un cráneo completo con una mandíbula inferior correspondiente.",
+     "text": "El yacimiento tipo se encuentra en la Formación Hadar, Etiopía, sitio también conocido por el estudio titulado «Lucy’s peril».",
      "fact_ids": [
-      "F010"
-     ]
-    },
-    {
-     "text": "Los restos aparecen en tres de los cuatro miembros de la Formación Hadar: Sidi Hakoma, Denen Dora y Kada Hadar.",
-     "fact_ids": [
-      "F041"
+      "F003",
+      "F049"
      ]
     }
    ]
@@ -81,34 +108,33 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Los individuos más grandes alcanzaron longitudes de 4 a 5 metros y pesos de 300 a 600 kilogramos.",
+     "text": "Crocodylus lucivenator actuaba como un gran depredador generalista de emboscada, probablemente ocupando la posición de depredador ápice en su ecosistema.",
      "fact_ids": [
-      "F030"
-     ]
+      "F039"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "Un ejemplar conserva cinco surcos y una herida punzante en su mandíbula inferior.",
-     "fact_ids": [
-      "F034"
-     ]
-    },
-    {
-     "text": "La textura ósea de la cicatrización sugiere que el cocodrilo sobrevivió a la lesión y vivió durante un tiempo significativo después del encuentro.",
-     "fact_ids": [
-      "F035"
-     ]
-    },
-    {
-     "text": "Las pruebas indican que las heridas fueron causadas por otro cocodrilo en lugar de un mamífero.",
-     "fact_ids": [
-      "F036"
-     ]
-    },
-    {
-     "text": "Los patrones de lesión sugieren que el cocodrilo utilizó maniobras de alimentación como el rodar de la muerte o el sacudido de cabeza durante el ataque.",
+     "text": "Lesiones en un espécimen sugieren que practicaba conductas alimenticias agresivas como el giro mortal o la sacudida de cabeza, típicas de la depredación de los cocodrilos.",
      "fact_ids": [
       "F037"
-     ]
+     ],
+     "topic": "behavior"
+    },
+    {
+     "text": "La herida punzante y los surcos asociados fueron causados por otro cocodrilo y no por un mamífero, lo que indica que el conflicto intraspecífico era la principal amenaza.",
+     "fact_ids": [
+      "F036",
+      "F038"
+     ],
+     "topic": "health"
+    },
+    {
+     "text": "La textura ósea cicatrizada muestra que el animal sobrevivió a la lesión, lo que implica una capacidad de recuperación tras un trauma severo.",
+     "fact_ids": [
+      "F035"
+     ],
+     "topic": "health"
     }
    ]
   },
@@ -116,22 +142,29 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "Este cocodrilo extinto pertenece al género *Crocodylus* con el epíteto específico *lucivenator*.",
+     "text": "Crocodylus lucivenator pertenece al género Crocodylus, nombrado por Laurenti en 1768.",
      "fact_ids": [
       "F005",
-      "F006"
+      "F044"
      ]
     },
     {
-     "text": "Parece estar estrechamente relacionado con especies de *Crocodylus* paleoafroafricanas del este de África en lugar de con los cocodrilos africanos modernos.",
+     "text": "Su epíteto específico es lucivenator, y se sitúa dentro del clado Palaeoafricano de Crocodylus, un grupo distinto de las especies neoafricanas modernas como el cocodrilo del Nilo y el cocodrilo sagrado.",
+     "fact_ids": [
+      "F006",
+      "F031"
+     ]
+    },
+    {
+     "text": "El análisis filogenético lo posiciona de forma basal dentro del género, ramificándose antes del clado Indo-pacífico y de la división entre los taxones neoafricanos y neotrópicos.",
+     "fact_ids": [
+      "F032"
+     ]
+    },
+    {
+     "text": "Parece estar más estrechamente relacionado con otras especies paleoafricanas de Crocodylus de África Oriental que con los cocodrilos africanos modernos.",
      "fact_ids": [
       "F009"
-     ]
-    },
-    {
-     "text": "Perteneció al clado *Crocodylus* paleoafroafricano, que está distalmente relacionado con los cocodrilos neoafricanos modernos como el cocodrilo del Nilo y el cocodrilo sagrado.",
-     "fact_ids": [
-      "F031"
      ]
     }
    ]
@@ -140,16 +173,34 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "*Crocodylus lucivenator* vivió durante el Plioceno como un cocodrilo extinto de la Formación Hadar del Plioceno tardío en Etiopía.",
+     "text": "Crocodylus lucivenator vivió durante el Plioceno Superior en la Formación Hadar, Etiopía.",
      "fact_ids": [
       "F002",
       "F008"
      ]
     },
     {
-     "text": "El entorno de la Formación Hadar consistía en bosques mixtos y sabanas con grandes paleolagos en ciertos momentos.",
+     "text": "La Formación Hadar estaba compuesta por bosques mixtos y praderas, con grandes paleolagos presentes en ciertos intervalos.",
      "fact_ids": [
       "F040"
+     ]
+    },
+    {
+     "text": "Los fósiles de la especie se encuentran en tres de los cuatro miembros de la formación —Sidi Hakoma, Denen Dora y Kada Hadar— lo que refleja su persistencia a lo largo de ambientes cambiantes.",
+     "fact_ids": [
+      "F041"
+     ]
+    },
+    {
+     "text": "El miembro más antiguo de la formación era más húmedo y boscoso, mientras que los miembros más jóvenes registran condiciones progresivamente más secas.",
+     "fact_ids": [
+      "F042"
+     ]
+    },
+    {
+     "text": "El género Crocodylus, en su conjunto, abarca desde el Campaniano hasta el Holoceno, un rango de 83,6 a 0 millones de años.",
+     "fact_ids": [
+      "F048"
      ]
     }
    ]
@@ -158,7 +209,7 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Se debate si el grupo paleoafroafricano que incluye a *Crocodylus lucivenator* debería agruparse con los *Crocodylus* neotrópicos modernos, ya que existen resultados filogenéticos alternativos posibles.",
+     "text": "Existe un debate continuo sobre si el grupo paleoafricano que incluye a Crocodylus lucivenator debería agruparse con los Crocodylus neotrópicos modernos, ya que son posibles resultados filogenéticos alternativos.",
      "fact_ids": [
       "F033"
      ]

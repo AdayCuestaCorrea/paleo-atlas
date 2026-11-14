@@ -3,44 +3,76 @@
  "taxon_key": "crocodylus-lucivenator",
  "lang": "en",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "write-en-v5",
- "facts_hash": "8f5db323f4dfb2dd",
- "generated_at": "2026-11-01T23:50:29+00:00",
- "word_count": 335,
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "write-en-v8",
+ "facts_hash": "cc6f840cfb3d4569",
+ "generated_at": "2026-11-14T13:43:39+00:00",
+ "word_count": 548,
  "problems": [],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "The species name lucivenator combines Latin words for 'light' and 'hunter'.",
-     "fact_ids": [
-      "F013"
-     ]
-    },
-    {
-     "text": "A notable feature is a rostral boss, an expanded skull structure stretching along the dorsal surface just before the eyes.",
+     "text": "Crocodylus lucivenator is distinguished by a rostral boss, an expanded skull structure that runs along the dorsal surface just before the eyes.",
      "fact_ids": [
       "F015"
      ]
     },
     {
-     "text": "The second posterior knob on the maxilla is described as more pronounced than the midrostral boss.",
+     "text": "The second posterior knob on the maxilla is more pronounced than the midrostral boss, adding to the distinctive cranial ornamentation.",
      "fact_ids": [
       "F016"
      ]
     },
     {
-     "text": "The skull table is trapezoidal and primarily formed by the frontal, parietal, postorbital, and squamosal bones.",
+     "text": "Its skull table is trapezoidal and formed mainly by the frontal, parietal, postorbital, and squamosal bones.",
      "fact_ids": [
       "F017"
      ]
     },
     {
-     "text": "The postorbital bones form pronounced squamosal horns that are most developed in the largest specimens.",
+     "text": "Pronounced squamosal horns, produced by the postorbital bones, are most developed in the largest individuals.",
      "fact_ids": [
       "F018"
+     ]
+    },
+    {
+     "text": "The fourth premaxillary teeth and the fifth and tenth maxillary teeth are the largest in the upper jaw, fitting into a classic interlocking pattern.",
+     "fact_ids": [
+      "F023",
+      "F024"
+     ]
+    },
+    {
+     "text": "Isolated osteoderms attributed to this species vary in shape, with some circular or D-shaped elements likely forming part of a nuchal shield or flank armor.",
+     "fact_ids": [
+      "F026",
+      "F027"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "The largest specimens reached lengths of 4 to 5 meters and weighed between 300 and 600 kilograms, making them among the biggest crocodiles of the Pliocene.",
+     "fact_ids": [
+      "F030"
+     ]
+    },
+    {
+     "text": "A fossil preserves five furrows and a puncture wound on the lower jaw, with healed bone indicating the animal survived the injury for a considerable time.",
+     "fact_ids": [
+      "F034",
+      "F035"
+     ]
+    },
+    {
+     "text": "The species name lucivenator combines Latin words for “light” and “hunter,” reflecting its presumed role as a prominent predator.",
+     "fact_ids": [
+      "F013"
      ]
     }
    ]
@@ -49,29 +81,24 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Brochu and colleagues formally named this species in 2026.",
+     "text": "Crocodylus lucivenator was formally named in 2026 by Brochu and colleagues, who also described the species in the Journal of Systematic Palaeontology.",
      "fact_ids": [
-      "F001",
-      "F007"
+      "F007",
+      "F050"
      ]
     },
     {
-     "text": "Fossils were found in Ethiopia at the type locality known as the Hadar Formation.",
+     "text": "The holotype, specimen A.L. 138-16, consists of a complete cranium with a matching lower jaw and originates from the SH-1 submember of the Sidi Hakoma Member.",
      "fact_ids": [
-      "F004",
-      "F003"
+      "F010",
+      "F011"
      ]
     },
     {
-     "text": "The holotype, the specimen the species is based on, is cataloged as A.L. 138-16 and includes a complete cranium with a matching lower jaw.",
+     "text": "The type locality is the Hadar Formation in Ethiopia, a site also known from the study titled “Lucy’s peril.”",
      "fact_ids": [
-      "F010"
-     ]
-    },
-    {
-     "text": "Remains occur in three of the four members of the Hadar Formation: Sidi Hakoma, Denen Dora, and Kada Hadar.",
-     "fact_ids": [
-      "F041"
+      "F003",
+      "F049"
      ]
     }
    ]
@@ -80,34 +107,33 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "The largest individuals reached lengths of 4 to 5 meters and weights of 300 to 600 kilograms.",
+     "text": "Crocodylus lucivenator functioned as a large generalist ambush predator, likely occupying the apex position in its ecosystem.",
      "fact_ids": [
-      "F030"
-     ]
+      "F039"
+     ],
+     "topic": "diet"
     },
     {
-     "text": "One specimen preserves five furrows and a puncture wound on its lower jaw.",
-     "fact_ids": [
-      "F034"
-     ]
-    },
-    {
-     "text": "Healing bone texture suggests the crocodile survived the injury and lived for a significant time after the encounter.",
-     "fact_ids": [
-      "F035"
-     ]
-    },
-    {
-     "text": "Evidence indicates the wounds were caused by another crocodile rather than a mammal.",
-     "fact_ids": [
-      "F036"
-     ]
-    },
-    {
-     "text": "The injury patterns suggest the crocodile used feeding maneuvers like the death roll or head thrashing during an attack.",
+     "text": "Injuries on a specimen suggest it engaged in aggressive feeding behaviors such as the death roll or head thrashing, typical of crocodilian predation.",
      "fact_ids": [
       "F037"
-     ]
+     ],
+     "topic": "behavior"
+    },
+    {
+     "text": "The puncture wound and associated furrows were caused by another crocodile rather than a mammal, indicating intraspecific conflict was a primary threat.",
+     "fact_ids": [
+      "F036",
+      "F038"
+     ],
+     "topic": "health"
+    },
+    {
+     "text": "Healed bone texture shows the animal survived the injury, implying a capacity for recovery after severe trauma.",
+     "fact_ids": [
+      "F035"
+     ],
+     "topic": "health"
     }
    ]
   },
@@ -115,22 +141,29 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "This extinct crocodile belongs to the genus Crocodylus with the specific epithet lucivenator.",
+     "text": "Crocodylus lucivenator belongs to the genus Crocodylus, which was named by Laurenti in 1768.",
      "fact_ids": [
       "F005",
-      "F006"
+      "F044"
      ]
     },
     {
-     "text": "It appears to be closely related to Paleoafrican Crocodylus species from East Africa rather than modern African crocodiles.",
+     "text": "Its specific epithet is lucivenator, and it is placed within the Palaeoafrican Crocodylus clade, a group distinct from modern Neoafrican species such as the Nile and Sacred crocodiles.",
+     "fact_ids": [
+      "F006",
+      "F031"
+     ]
+    },
+    {
+     "text": "Phylogenetic analysis positions it basally within the genus, branching off before the Indopacific clade and the split between Neoafrican and Neotropic taxa.",
+     "fact_ids": [
+      "F032"
+     ]
+    },
+    {
+     "text": "It appears more closely related to other Paleoafrican Crocodylus species from East Africa than to modern African crocodiles.",
      "fact_ids": [
       "F009"
-     ]
-    },
-    {
-     "text": "It belongs to the Palaeoafrican Crocodylus clade, which is distantly related to modern Neoafrican crocodiles like the Nile and Sacred crocodiles.",
-     "fact_ids": [
-      "F031"
      ]
     }
    ]
@@ -139,16 +172,34 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Crocodylus lucivenator lived during the Pliocene epoch as an extinct crocodile from the Late Pliocene Hadar Formation in Ethiopia.",
+     "text": "Crocodylus lucivenator lived during the Late Pliocene epoch in the Hadar Formation of Ethiopia.",
      "fact_ids": [
       "F002",
       "F008"
      ]
     },
     {
-     "text": "The Hadar Formation environment consisted of mixed woodlands and grasslands with large paleolakes at certain times.",
+     "text": "The Hadar Formation comprised mixed woodlands and grasslands, with large paleolakes present at certain intervals.",
      "fact_ids": [
       "F040"
+     ]
+    },
+    {
+     "text": "Fossils of the species are found in three of the four members of the formation—Sidi Hakoma, Denen Dora, and Kada Hadar—reflecting its persistence across changing environments.",
+     "fact_ids": [
+      "F041"
+     ]
+    },
+    {
+     "text": "The oldest member of the formation was wetter and more wooded, while younger members record increasingly drier conditions.",
+     "fact_ids": [
+      "F042"
+     ]
+    },
+    {
+     "text": "The genus Crocodylus as a whole spans from the Campanian to the Holocene, a range of 83.6 to 0 million years ago.",
+     "fact_ids": [
+      "F048"
      ]
     }
    ]
@@ -157,7 +208,7 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "It is debated whether the Palaeoafrican group including Crocodylus lucivenator should clade with modern Neotropic Crocodylus, as alternative phylogenetic results are possible.",
+     "text": "There is ongoing debate about whether the Palaeoafrican group that includes Crocodylus lucivenator should be grouped with modern Neotropic Crocodylus, as alternative phylogenetic results are possible.",
      "fact_ids": [
       "F033"
      ]

@@ -3,11 +3,11 @@
  "taxon_key": "infernogallus",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "8dcaf29e1183702b",
- "generated_at": "2026-11-02T01:31:45+00:00",
- "word_count": 303,
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "29294381aea987a9",
+ "generated_at": "2026-11-17T16:24:56+00:00",
+ "word_count": 463,
  "problems": [],
  "review": "accepted",
  "sections": [
@@ -15,25 +15,69 @@
    "section": "description",
    "sentences": [
     {
-     "text": "El animal se conoce como *Infernogallus*, un género que contiene únicamente una especie, *Infernogallus jamesi*.",
+     "text": "Infernogallus es un pequeño terópodo caenagnátido, cuyo peso se estima en unos 12 kg.",
      "fact_ids": [
-      "F002",
-      "F003"
+      "F014"
      ]
     },
     {
-     "text": "Este pequeño dinosaurio tenía una masa corporal estimada de aproximadamente 12 kg, siendo el ejemplar holotipo un individuo que pesaba entre 9 y 15 kg.",
+     "text": "El holotipo presenta una longitud del fémur de 18,5 cm y sugiere una masa entre 9 y 15 kg.",
      "fact_ids": [
-      "F014",
       "F016"
      ]
     },
     {
-     "text": "El material fósil incluye un cráneo y esqueleto parcialmente articulados, caracterizados por una gran órbita circular que ocupa casi el 40 % de la longitud del cráneo y una fenestra infratemporal extremadamente pequeña, que mide solo el 25 % del diámetro de la órbita.",
+     "text": "Su cráneo conserva una gran órbita circular que ocupa casi el 40 % de la longitud del cráneo.",
      "fact_ids": [
-      "F013",
-      "F020",
+      "F020"
+     ]
+    },
+    {
+     "text": "Detrás del ojo, la fenestra infratemporal está muy reducida, apenas un cuarto del diámetro de la órbita.",
+     "fact_ids": [
       "F021"
+     ]
+    },
+    {
+     "text": "Las mandíbulas inferiores izquierda y derecha están fusionadas y se curvan pronunciadamente hacia arriba cuando se observan de lado.",
+     "fact_ids": [
+      "F022"
+     ]
+    },
+    {
+     "text": "El cuello largo está formado por doce vértebras cervicales más el atlas y el axis, y las vértebras son huecas con extensos espacios aéreos.",
+     "fact_ids": [
+      "F025",
+      "F026"
+     ]
+    },
+    {
+     "text": "Las manos son alargadas y capaces de agarrar.",
+     "fact_ids": [
+      "F027"
+     ]
+    },
+    {
+     "text": "El material conocido incluye un cráneo y esqueleto parcialmente articulados, junto con varios fragmentos craneales aislados.",
+     "fact_ids": [
+      "F013"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Los músculos de la mandíbula parecen reorganizados de modo que podrían haberle facilitado la alimentación a base de fruta, característica no observada en otros terópodos no aviares.",
+     "fact_ids": [
+      "F015"
+     ]
+    },
+    {
+     "text": "No se hallaron gastrolitos —piedras que algunos dinosaurios utilizaban para triturar alimentos— entre los fósiles.",
+     "fact_ids": [
+      "F038"
      ]
     }
    ]
@@ -42,17 +86,21 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Los fósiles de este animal se han encontrado en Estados Unidos, específicamente dentro de la Formación Hell Creek en Montana, Dakota del Norte y Dakota del Sur.",
+     "text": "Infernogallus jamesi fue nombrado formalmente en octubre de 2026 por Gregory F. Funston y colaboradores.",
      "fact_ids": [
-      "F005",
-      "F006",
-      "F007",
-      "F008"
+      "F010"
      ]
     },
     {
-     "text": "Actualmente, cinco especímenes de *Infernogallus* son conocidos por la ciencia.",
+     "text": "El yacimiento tipo se encuentra dentro de la Formación Hell Creek, en Estados Unidos.",
      "fact_ids": [
+      "F005"
+     ]
+    },
+    {
+     "text": "Se han recuperado fósiles de varios sitios de Montana, Dakota del Norte y Dakota del Sur, sumando cinco ejemplares.",
+     "fact_ids": [
+      "F007",
       "F009"
      ]
     }
@@ -62,18 +110,47 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "El análisis histológico de los huesos reveló marcas de crecimiento que indican la madurez esquelética, sugiriendo que el animal tenía al menos 6, probablemente 7, años cuando murió.",
+     "text": "El análisis de anillos de crecimiento de los huesos muestra un sistema fundamental externo, lo que indica que el animal había alcanzado la madurez esquelética.",
      "fact_ids": [
-      "F017",
-      "F018"
-     ]
+      "F017"
+     ],
+     "topic": "growth"
     },
     {
-     "text": "Probablemente tenía una dieta herbívora especializada, compuesta en gran medida por frutos carnosos de angiospermas, procesados mediante el movimiento anteroposterior de la mandíbula y crestas en los elementos opuestos de la mandíbula.",
+     "text": "La histología sugiere que el individuo tenía al menos seis, probablemente siete años al morir, habiendo completado su crecimiento.",
+     "fact_ids": [
+      "F018"
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "La estructura mandibular permitía un movimiento anteroposterior y presentaba superficies acanaladas para triturar y cortar alimentos blandos.",
      "fact_ids": [
       "F033",
+      "F037"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Los músculos del paladar ampliados, combinados con músculos temporales reducidos, implican una fuerza de mordida más débil en comparación con otros oviraptorosaurios.",
+     "fact_ids": [
+      "F036"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Estas características apuntan a una dieta herbívora especializada centrada en frutos carnosos de angiospermas.",
+     "fact_ids": [
       "F034"
-     ]
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Probablemente el animal despegaba la pulpa de la fruta de forma similar a las cotorras modernas.",
+     "fact_ids": [
+      "F039"
+     ],
+     "topic": "behavior"
     }
    ]
   },
@@ -81,10 +158,22 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "*Infernogallus* se clasifica como un terópodo caenagnátido de la familia Caenagnathidae y es un terópodo oviraptorosaurio.",
+     "text": "Infernogallus pertenece a la familia Caenagnathidae dentro de los terópodos oviraptorosaurios.",
      "fact_ids": [
-      "F001",
       "F004"
+     ]
+    },
+    {
+     "text": "Se sitúa en el género Infernogallus, con la única especie Infernogallus jamesi.",
+     "fact_ids": [
+      "F002",
+      "F003"
+     ]
+    },
+    {
+     "text": "Los análisis filogenéticos lo ubican entre los caenagnátidos derivados, agrupado con taxones como Anzu, Caenagnathus y Chirostenotes en un clado a veces llamado Eucaenagnathinae.",
+     "fact_ids": [
+      "F029"
      ]
     }
    ]
@@ -93,7 +182,7 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Este animal vivió durante el Cretácico Superior, específicamente en la edad mastrichtiense, una época en la que los caenagnátidos surgieron poco después de la aparición de frutos carnosos de angiospermas conocidos como drupas.",
+     "text": "Vivió durante la edad maastrichtiana del Cretácico Superior, poco después de la aparición de drupas carnosas de angiospermas.",
      "fact_ids": [
       "F012",
       "F040"
@@ -105,22 +194,21 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Aunque la disposición de los músculos de la mandíbula podría representar una adaptación para la alimentación de frutos, se debate si esta característica específica tenía realmente ese propósito.",
+     "text": "Los científicos discrepan sobre si la reorganización de los músculos mandibulares refleja realmente una adaptación al consumo de fruta.",
      "fact_ids": [
-      "F015",
       "F019"
      ]
     },
     {
-     "text": "Los investigadores advirtieron contra la creación formal de subclados como 'elmisaurinos' y 'caenagnátinos' debido a la inestabilidad e inconsistencia en las relaciones interfiléticas, aunque señalaron que ciertas agrupaciones persistieron.",
+     "text": "El papel de los caenagnátidos como Infernogallus en la expansión de los frutos durante el Cretácico Superior sigue sin estar claro.",
      "fact_ids": [
-      "F030"
+      "F035"
      ]
     },
     {
-     "text": "Permanece incierto qué papel jugaron los caenagnátidos como *Infernogallus* en la proliferación de frutos durante el Cretácico Superior.",
+     "text": "Los investigadores advierten contra nombrar formalmente subclados como \"elmisaurinos\" debido a la inestabilidad de sus relaciones, aunque algunos agrupamientos parecen consistentes.",
      "fact_ids": [
-      "F035"
+      "F030"
      ]
     }
    ]

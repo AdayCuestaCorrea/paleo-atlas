@@ -1,15 +1,15 @@
 {
  "taxon": "Asio pythiotus",
  "taxon_key": "asio-pythiotus",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "7c5413a440b52cb5",
- "generated_at": "2026-11-01T23:48:20+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "d86c23f3f7d2f5b1",
+ "generated_at": "2026-11-17T16:15:18+00:00",
  "citations": {
   "asio-pythiotus:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1386083998",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -31,52 +31,7 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The species is named Asio pythiotus.",
-   "category": "discovery",
-   "chunk_id": "asio-pythiotus:table:1",
-   "lang": "en",
-   "quote": "Name: Asio pythiotus",
-   "quote_sha": "84406e7c2ee2cfce"
-  },
-  {
-   "fact_id": "F002",
-   "statement": "Asio pythiotus is a newly described species.",
-   "category": "discovery",
-   "chunk_id": "asio-pythiotus:table:1",
-   "lang": "en",
-   "quote": "Novelty: Sp. nov",
-   "quote_sha": "9f6b657c8edb5b7f"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "The species was described by Zelenkov.",
-   "category": "discovery",
-   "chunk_id": "asio-pythiotus:table:1",
-   "lang": "en",
-   "quote": "Authors: Zelenkov",
-   "quote_sha": "19a5063be1b32256"
-  },
-  {
-   "fact_id": "F004",
-   "statement": "The fossil dates to the Pleistocene epoch.",
-   "category": "discovery",
-   "chunk_id": "asio-pythiotus:table:1",
-   "lang": "en",
-   "quote": "Age: Pleistocene",
-   "quote_sha": "0150e56c564f0601"
-  },
-  {
-   "fact_id": "F005",
-   "statement": "The fossil was found in Crimea.",
-   "category": "time_and_habitat",
-   "chunk_id": "asio-pythiotus:table:1",
-   "lang": "en",
-   "quote": "Country: Crimea",
-   "quote_sha": "fcc60ffb56e773dc"
-  },
-  {
-   "fact_id": "F006",
-   "statement": "Asio pythiotus is an owl belonging to the genus Asio.",
+   "statement": "Asio pythiotus is a newly described species of owl in the genus Asio.",
    "category": "description",
    "chunk_id": "asio-pythiotus:table:1",
    "lang": "en",
@@ -84,47 +39,65 @@
    "quote_sha": "34f27fbd4403d61b"
   },
   {
-   "fact_id": "F007",
-   "statement": "The genus Asio belongs to the family Strigidae.",
+   "fact_id": "F002",
+   "statement": "Asio pythiotus is considered a valid taxon.",
    "category": "classification",
-   "chunk_id": "asio-pythiotus:pbdb:1",
+   "chunk_id": "asio-pythiotus:table:1",
    "lang": "en",
-   "quote": "Family: Strigidae",
-   "quote_sha": "7dd68a205d4a7837"
+   "quote": "Status: Valid",
+   "quote_sha": "d9aa877dd30593a3"
   },
   {
-   "fact_id": "F008",
-   "statement": "The genus Asio lived from the Tortonian to the Holocene, between 11.63 and 0 million years ago.",
+   "fact_id": "F003",
+   "statement": "Fossils of Asio pythiotus date to the Pleistocene epoch.",
    "category": "time_and_habitat",
-   "chunk_id": "asio-pythiotus:pbdb:1",
+   "chunk_id": "asio-pythiotus:table:1",
    "lang": "en",
-   "quote": "Time range: Tortonian to Holocene (11.63 to 0 million years ago)",
-   "quote_sha": "5f7abe0e842c9d5a"
+   "quote": "Age: Pleistocene",
+   "quote_sha": "0150e56c564f0601"
   },
   {
-   "fact_id": "F009",
-   "statement": "The study focuses on larger owls from the Lower Pleistocene of Crimea.",
+   "fact_id": "F004",
+   "statement": "The remains of Asio pythiotus were found in Crimea.",
+   "category": "time_and_habitat",
+   "chunk_id": "asio-pythiotus:table:1",
+   "lang": "en",
+   "quote": "Country: Crimea",
+   "quote_sha": "fcc60ffb56e773dc"
+  },
+  {
+   "fact_id": "F005",
+   "statement": "The Paleobiology Database currently has no specific record for Asio pythiotus.",
+   "category": "discovery",
+   "chunk_id": "asio-pythiotus:pbdb:1",
+   "lang": "en",
+   "quote": "NOTE: PBDB has no record for Asio pythiotus yet.",
+   "quote_sha": "2f638bc68bda9865"
+  },
+  {
+   "fact_id": "F006",
+   "statement": "The species was described in the 2026 paper \"Larger Owls (Aves: Strigidae) from the Lower Pleistocene of Crimea\" published in Doklady Biological Sciences.",
    "category": "discovery",
    "chunk_id": "asio-pythiotus:study:1",
    "lang": "en",
-   "quote": "Study title: Larger Owls (Aves: Strigidae) from the Lower Pleistocene of Crimea",
-   "quote_sha": "de1c9bf49807929d"
+   "quote": "Study title: Larger Owls (Aves: Strigidae) from the Lower Pleistocene of Crimea\nJournal: Doklady Biological Sciences\nYear: 2026",
+   "quote_sha": "fd6e7524600653e5"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "asio-pythiotus:pbdb:1",
-   "statement": "The genus Asio belongs to the class Aves.",
-   "category": "classification",
-   "quote": "Class: Aves",
-   "reason": "quote too short"
+   "chunk_id": "asio-pythiotus:table:1",
+   "statement": "The species Asio pythiotus was formally named as a new species (sp. nov) by Zelenkov.",
+   "category": "discovery",
+   "quote": "Novelty: Sp. nov\nAuthors: Zelenkov",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "asio-pythiotus:study:1",
-   "statement": "The study was published in 2026.",
+   "statement": "The 2026 study on Asio pythiotus was authored by N. V. Zelenkov.",
    "category": "discovery",
-   "quote": "Year: 2026",
-   "reason": "quote too short"
+   "quote": "Authors: N. V. Zelenkov",
+   "reason": "numbers not in the quote: ['2026']"
   }
  ]
 }

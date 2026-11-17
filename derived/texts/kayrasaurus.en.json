@@ -3,50 +3,78 @@
  "taxon_key": "kayrasaurus",
  "lang": "en",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "write-en-v5",
- "facts_hash": "d650ca7ba315d8b0",
- "generated_at": "2026-11-02T01:32:57+00:00",
- "word_count": 231,
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "write-en-v8",
+ "facts_hash": "d917e38c90c8ea1d",
+ "generated_at": "2026-11-17T16:37:39+00:00",
+ "word_count": 352,
  "problems": [],
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "Kayrasaurus possessed a complete furcula, a wishbone-like bone, with a gracile V-shape typical of therizinosaurs.",
+     "text": "Kayrasaurus was a medium-sized therizinosaur, reaching at least 3.6 meters in length and weighing between 117 and 274 kilograms.",
      "fact_ids": [
-      "F044"
+      "F068",
+      "F069"
      ]
     },
     {
-     "text": "The angle between the ends of this furcula was broad, measuring approximately 140 degrees.",
+     "text": "Its furcula formed a broad V shape with an angle of about 140 degrees, a typical feature of therizinosaurs.",
      "fact_ids": [
+      "F044",
       "F045"
      ]
     },
     {
-     "text": "The humerus, or upper arm bone, was unusually robust, resembling those found in Erliansaurus and Nothronychus graffami.",
+     "text": "The humerus was notably stout and straight, unlike the curved version seen in Falcarius, and resembled that of Erliansaurus and Nothronychus graffami.",
      "fact_ids": [
-      "F046"
+      "F046",
+      "F047",
+      "F071",
+      "F072"
      ]
     },
     {
-     "text": "Unlike the bowed shaft seen in Falcarius, the shaft of the Kayrasaurus humerus was straight.",
-     "fact_ids": [
-      "F047"
-     ]
-    },
-    {
-     "text": "The radius, a forearm bone, was straight and slender, consistent with basal therizinosaurs.",
+     "text": "The radius was slender and straight, matching the condition in basal therizinosaurs.",
      "fact_ids": [
       "F048"
      ]
     },
     {
-     "text": "Like other therizinosaurs, the front of the Kayrasaurus jaws were toothless.",
+     "text": "The iliac blade displayed a sub-parallelogram outline in side view, a shape shared with basal therizinosaurs, early birds, and dromaeosaurids.",
      "fact_ids": [
-      "F039"
+      "F052"
+     ]
+    },
+    {
+     "text": "Its ischiadic peduncle was peg-like, differing from the more derived square or circular forms.",
+     "fact_ids": [
+      "F053"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "CT scans show the skull was extremely flattened, measuring only 3 to 5 millimeters in thickness.",
+     "fact_ids": [
+      "F024"
+     ]
+    },
+    {
+     "text": "Ten neck vertebrae are preserved in their original order, providing a rare glimpse of the cervical series.",
+     "fact_ids": [
+      "F031"
+     ]
+    },
+    {
+     "text": "The neck bones were pneumatized, indicated by air-filled openings on their sides.",
+     "fact_ids": [
+      "F042"
      ]
     }
    ]
@@ -55,27 +83,37 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "This dinosaur was found in China.",
+     "text": "Fossils were recovered from outcrops near Dabangou village, close to Beipiao in Liaoning Province, China, within the Yixian Formation.",
      "fact_ids": [
-      "F002"
+      "F014",
+      "F060"
      ]
     },
     {
-     "text": "The type locality of Kayrasaurus is the Yixian Formation.",
+     "text": "The type locality for the species is the Yixian Formation, and the genus was formally named by Liao and colleagues in 2026.",
      "fact_ids": [
-      "F001"
+      "F001",
+      "F007",
+      "F064"
      ]
     },
     {
-     "text": "The species was described by Liao and colleagues.",
+     "text": "Only a single species, Kayrasaurus changliensis, is known, based on a nearly complete skeleton that includes the skull.",
      "fact_ids": [
-      "F004"
+      "F054",
+      "F065"
      ]
     },
     {
-     "text": "Kayrasaurus is a newly described genus and species.",
+     "text": "The specimen lacks most of the leg bones and much of the pelvis, leaving those parts unknown.",
      "fact_ids": [
-      "F005"
+      "F009"
+     ]
+    },
+    {
+     "text": "The Paleobiology Database records just one fossil occurrence of this taxon.",
+     "fact_ids": [
+      "F081"
      ]
     }
    ]
@@ -84,22 +122,26 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Kayrasaurus is closely related to the contemporary Beipiaosaurus and Jianchangosaurus.",
-     "fact_ids": [
-      "F040"
-     ]
-    },
-    {
-     "text": "Most Kayrasaurus teeth were similar in size, though those closest to the front were likely larger.",
+     "text": "Most teeth were uniform in size, although the anterior teeth were probably larger, suggesting a gradation in feeding function.",
      "fact_ids": [
       "F041"
-     ]
+     ],
+     "topic": "diet"
     },
     {
-     "text": "Kayrasaurus neck vertebrae were pneumatized, indicated by foramina on the lateral surfaces of the centra.",
+     "text": "The front of the jaws lacked teeth, a condition shared with other therizinosaurs.",
      "fact_ids": [
-      "F042"
-     ]
+      "F039"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Its close relatives include the contemporaneous Beipiaosaurus and Jianchangosaurus, indicating a diverse therizinosaur community in the Jehol Biota.",
+     "fact_ids": [
+      "F040",
+      "F067"
+     ],
+     "topic": "behavior"
     }
    ]
   },
@@ -107,19 +149,14 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "The species Kayrasaurus changliensis was described by Liao et al. in 2026.",
+     "text": "Kayrasaurus occupies an early-branching position within Therizinosauria, the broader therizinosaur group.",
      "fact_ids": [
-      "F065"
-     ]
-    },
-    {
-     "text": "Kayrasaurus belongs to the parent group Therizinosauria.",
-     "fact_ids": [
+      "F037",
       "F078"
      ]
     },
     {
-     "text": "Kayrasaurus is classified within the class Reptilia.",
+     "text": "It belongs to the class Reptilia.",
      "fact_ids": [
       "F079"
      ]
@@ -130,15 +167,11 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Kayrasaurus is an extinct genus of therizinosaurian dinosaur known from the Lower Cretaceous Yixian Formation of China.",
+     "text": "The animal lived during the Early Cretaceous Barremian to Aptian ages, roughly 125.77 to 119.57 million years ago, in what is now the Yixian Formation of China.",
      "fact_ids": [
+      "F038",
+      "F080",
       "F066"
-     ]
-    },
-    {
-     "text": "Kayrasaurus lived during the Barremian to Aptian stages, from 125.77 to 119.57 million years ago.",
-     "fact_ids": [
-      "F080"
      ]
     }
    ]
@@ -147,7 +180,7 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "It is debated whether Kayrasaurus reached full adult size, as the specimen was likely a subadult.",
+     "text": "Scientists are uncertain whether the known specimen represents a fully grown adult, as it may have been a subadult individual.",
      "fact_ids": [
       "F043"
      ]

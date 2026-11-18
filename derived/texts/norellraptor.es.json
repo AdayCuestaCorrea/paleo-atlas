@@ -3,11 +3,11 @@
  "taxon_key": "norellraptor",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
  "facts_hash": "e1f0193ab8e0f819",
- "generated_at": "2026-11-12T12:51:10+00:00",
- "word_count": 134,
+ "generated_at": "2026-11-18T16:11:46+00:00",
+ "word_count": 174,
  "problems": [],
  "review": "accepted",
  "sections": [
@@ -15,21 +15,20 @@
    "section": "description",
    "sentences": [
     {
-     "text": "El esqueleto completo de este dinosaurio medía aproximadamente 57 centímetros de longitud.",
+     "text": "El único ejemplar conocido conserva un esqueleto completo de aproximadamente 57 cm de longitud.",
      "fact_ids": [
       "F007"
      ]
     },
     {
-     "text": "Sus plumas de la cola presentaban una morfología única dominada por la raquis, lo que sugiere propiedades aerodinámicas especializadas.",
+     "text": "Sus plumas caudales se caracterizan por una raíl central que domina la estructura de la pluma.",
      "fact_ids": [
       "F008"
      ]
     },
     {
-     "text": "Este único ejemplar, conocido por preservar impresiones de plumaje, lleva el nombre de la especie barsboldi en honor al paleontólogo mongol Rinchen Barsbold.",
+     "text": "El nombre de la especie rinde homenaje al paleontólogo mongol Rinchen Barsbold.",
      "fact_ids": [
-      "F006",
       "F011"
      ]
     }
@@ -39,17 +38,36 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Los fósiles fueron hallados en China en la localidad tipo de la Formación Jiufotang.",
+     "text": "Los fósiles de Norellraptor se recuperaron de la Formación Jiufotang, en China.",
      "fact_ids": [
       "F002",
       "F003"
      ]
     },
     {
-     "text": "Las evidencias sugieren que el individuo falleció siendo postjuvenil.",
+     "text": "El género está representado por un único ejemplar que conserva impresiones de su plumaje.",
+     "fact_ids": [
+      "F006"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "paleobiology",
+   "sentences": [
+    {
+     "text": "El individuo parece haber sido un postjuvenil al momento de su muerte, lo que indica que aún no había alcanzado su tamaño adulto completo.",
      "fact_ids": [
       "F009"
-     ]
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "Vivía junto a un conjunto diverso que incluía al gran terópodo Sinotyrannus, al mamífero primitivo Liaoconodon, al dinosaurio herbívoro Psittacosaurus y a una variedad de aves y pterosaurios.",
+     "fact_ids": [
+      "F013"
+     ],
+     "topic": "behavior"
     }
    ]
   },
@@ -57,13 +75,19 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "Norellraptor se clasifica como un dromaeosáurido microráptorino.",
+     "text": "Norellraptor pertenece a la subfamilia microraptorina de los dinosaurios dromeosáuridos.",
      "fact_ids": [
       "F004"
      ]
     },
     {
-     "text": "Fue asignado a la subfamilia Microraptorini y se considera un taxón hermano de Zhongjianosaurus.",
+     "text": "Es la única especie de su género, denominada Norellraptor barsboldi.",
+     "fact_ids": [
+      "F005"
+     ]
+    },
+    {
+     "text": "Dentro de los Microraptorini se considera el taxón hermano de Zhongjianosaurus.",
      "fact_ids": [
       "F010"
      ]
@@ -74,21 +98,10 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Este animal vivió durante el Cretácico Inferior, específicamente en los pisos Barremiense y Aptiense.",
+     "text": "El animal vivió durante el Cretácico Inferior, en los estadios Barremiano a Aptiano, en un entorno templado y boscoso de la Formación Jiufotang.",
      "fact_ids": [
-      "F001"
-     ]
-    },
-    {
-     "text": "Habitó un entorno forestal templado dentro de la Formación Jiufotang.",
-     "fact_ids": [
+      "F001",
       "F012"
-     ]
-    },
-    {
-     "text": "Su entorno incluía a Sinotyrannus, Liaoconodon, Psittacosaurus y diversas aves y pterosaurios.",
-     "fact_ids": [
-      "F013"
      ]
     }
    ]

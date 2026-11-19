@@ -3,36 +3,75 @@
  "taxon_key": "pinacosaurus-hilwitnorum",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
- "facts_hash": "7bf576741afbdd51",
- "generated_at": "2026-11-02T01:38:02+00:00",
- "word_count": 386,
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
+ "facts_hash": "3f7397782df8a91a",
+ "generated_at": "2026-11-19T15:58:57+00:00",
+ "word_count": 618,
  "problems": [],
- "review": "unchanged",
+ "review": "accepted",
  "sections": [
   {
    "section": "description",
    "sentences": [
     {
-     "text": "Pinacosaurus era un anquilosaurino de construcción ligera y tamaño medio, un tipo de dinosaurio blindado que alcanzaba unos 5 metros de longitud y pesaba hasta 1,9 toneladas métricas.",
+     "text": "Pinacosaurus era un ankilosaurino de tamaño medio que medía unos cinco metros de longitud y alcanzaba una masa de hasta 1,9 toneladas métricas.",
      "fact_ids": [
-      "F008",
+      "F008"
+     ]
+    },
+    {
+     "text": "Al alcanzar la madurez, alcanzó una longitud total de cinco metros, un tamaño comparable al de un autobús grande.",
+     "fact_ids": [
       "F021"
      ]
     },
     {
-     "text": "Su nombre, que significa «lagarto de tabla», alude a las placas óseas que protegían su cabeza, mientras que su cuello, espalda y cola estaban blindados con una armadura de osteodermos quillados, es decir, placas óseas incrustadas en la piel.",
+     "text": "Los cráneos adultos medían aproximadamente treinta centímetros de largo, ofreciendo una amplia plataforma para su pico y su armadura.",
      "fact_ids": [
-      "F009",
-      "F011"
+      "F024"
      ]
     },
     {
-     "text": "Este animal utilizaba un pico liso para morder plantas de bajo crecimiento, que eran cortadas por pequeños dientes y procesadas en un intestino posterior enorme, probablemente ayudado por lenguas musculares y huesos de lengua dado que sus dientes crecían lentamente.",
+     "text": "La mayor parte del material postcraneal corresponde a juveniles, y el holotipo de *P. mephistocephalus* medía poco menos de tres metros.",
      "fact_ids": [
-      "F010",
-      "F035"
+      "F031"
+     ]
+    },
+    {
+     "text": "Las estimaciones de peso varían; Gregory S. Paul sugiere alrededor de 1,9 toneladas y Thomas R. Holtz propone un rango entre 454 y 907 kilogramos.",
+     "fact_ids": [
+      "F049"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "Una laringe fosilizada de un ejemplar juvenil indica que el animal podía producir llamados fuertes, posiblemente semejantes a los de las aves.",
+     "fact_ids": [
+      "F041",
+      "F042"
+     ]
+    },
+    {
+     "text": "A diferencia de muchos ankilosaurios que se hallan sobre su lomo, los juveniles de Pinacosaurus se descubren con frecuencia acostados sobre el vientre y con las piernas recogidas hacia dentro.",
+     "fact_ids": [
+      "F017"
+     ]
+    },
+    {
+     "text": "Su cola terminaba en un pesado mazo que podía ser balanceado activamente para ahuyentar a los depredadores.",
+     "fact_ids": [
+      "F012"
+     ]
+    },
+    {
+     "text": "El nombre del género proviene de la palabra griega que significa «tabla», en referencia a las pequeñas placas rectangulares de la armadura en la cabeza.",
+     "fact_ids": [
+      "F013"
      ]
     }
    ]
@@ -41,17 +80,27 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "La localidad tipo de Pinacosaurus hilwitnorum es la Formación Djadochta en Mongolia, donde se halló esta nueva especie descrita.",
+     "text": "El yacimiento tipo de *Pinacosaurus hilwitnorum* se encuentra dentro de la Formación Djadochta, en Mongolia.",
      "fact_ids": [
-      "F001",
-      "F002"
+      "F001"
      ]
     },
     {
-     "text": "A diferencia de muchos anquilosaurios conservados sobre la espalda, la mayoría de los juveniles de Pinacosaurus se encuentran sobre el vientre en una postura de reposo con las patas recogidas, lo que sugiere que formaban parte de una manada en marcha que fue abatida y enterrada por una tormenta de arena en Bayan Mandahu.",
+     "text": "La especie fue nombrada formalmente por Penkalski en 2026.",
      "fact_ids": [
-      "F017",
-      "F038"
+      "F006"
+     ]
+    },
+    {
+     "text": "Los primeros restos de Pinacosaurus fueron descubiertos en 1923, y la especie tipo *P. grangeri* fue descrita por Gilmore en 1933.",
+     "fact_ids": [
+      "F046"
+     ]
+    },
+    {
+     "text": "El holotipo se recuperó de una capa de la Formación Djadokhta que data del piso Campaniense.",
+     "fact_ids": [
+      "F085"
      ]
     }
    ]
@@ -60,10 +109,67 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Pinacosaurus podía defenderse activamente utilizando un garrote caudal.",
+     "text": "Pinacosaurus utilizaba un pico liso para recortar la vegetación baja, que luego era cortada por pequeños dientes y procesada en un enorme intestino posterior.",
      "fact_ids": [
-      "F012"
-     ]
+      "F010"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Sus dientes pequeños, que se reemplazaban lentamente, sugieren una dependencia de una lengua muscular y de los huesos linguales asociados para manipular los alimentos.",
+     "fact_ids": [
+      "F035"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Los investigadores infieren que se alimentaba de hojas duras y frutos pulposos, evitando los tallos fibrosos y las agujas de pino.",
+     "fact_ids": [
+      "F036"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Probablemente prefería helechos suaves y bajos, fáciles de cortar y digerir.",
+     "fact_ids": [
+      "F051"
+     ],
+     "topic": "diet"
+    },
+    {
+     "text": "Durante el crecimiento, las costillas comenzaron a fusionarse con las vértebras, y los miembros anteriores se volvieron lo suficientemente robustos como para soportar la mayor parte del peso del cuerpo.",
+     "fact_ids": [
+      "F040"
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "Los miembros anteriores crecieron de forma desproporcionada respecto a los posteriores, lo que indica que los brazos sostenían la mayor parte de la masa del animal.",
+     "fact_ids": [
+      "F103"
+     ],
+     "topic": "growth"
+    },
+    {
+     "text": "Su constitución relativamente ligera pudo haberle permitido enfrentarse a pequeños terópodos como *Velociraptor*, golpeándolos con el mazo de su cola.",
+     "fact_ids": [
+      "F044"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Los grandes terópodos están ausentes de su ecosistema, aunque estaban presentes depredadores menores como *Velociraptor*.",
+     "fact_ids": [
+      "F100"
+     ],
+     "topic": "locomotion_senses"
+    },
+    {
+     "text": "Los grupos de juveniles parecen haberse desplazado juntos en manadas que fueron sepultadas repentinamente por tormentas de arena, conservándolos en una postura de reposo.",
+     "fact_ids": [
+      "F038"
+     ],
+     "topic": "behavior"
     }
    ]
   },
@@ -71,23 +177,21 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "El género Pinacosaurus fue nombrado por Gilmore en 1933. Originalmente colocado en la familia Nodosauridae, ahora se considera un anquilosáurido y un probable miembro de la subfamilia Ankylosaurinae.",
+     "text": "El propio género fue establecido por Gilmore en 1933.",
      "fact_ids": [
-      "F045",
-      "F034"
+      "F045"
      ]
     },
     {
-     "text": "En 2026, Paul Penkalski trasladó a Pinacosaurus mephistocephalus al género Eopinacosaurus basándose en diferencias del cráneo y los osteodermos craneales, aunque Robert Hill consideró a Pinacosaurus mephistocephalus una especie válida en 2012 basándose en cuernos dérmicos secundarios y características nasales, aunque este estatus fue posteriormente cuestionado.",
-     "fact_ids": [
-      "F018",
-      "F020"
-     ]
-    },
-    {
-     "text": "En 1952, Maleev nombró un nuevo anquilosáurido, Syrmosaurus viminicaudus, pero ahora se considera un sinónimo junior de P. grangeri.",
+     "text": "*Syrmosaurus viminicaudus* de Maleev, nombrado en 1952, se considera actualmente un sinónimo junior de *P. grangeri*.",
      "fact_ids": [
       "F092"
+     ]
+    },
+    {
+     "text": "En 2026 Penkalski reasignó *P. mephistocephalus* al género separado *Eopinacosaurus* basándose en rasgos distintivos del cráneo y de la armadura craneal.",
+     "fact_ids": [
+      "F018"
      ]
     }
    ]
@@ -96,22 +200,15 @@
    "section": "time_and_habitat",
    "sentences": [
     {
-     "text": "Pinacosaurus vivió durante el Cretácico Superior, específicamente en Mongolia y China durante el piso Campaniense, hace aproximadamente entre 75 y 71 millones de años.",
+     "text": "Pinacosaurus habitó Mongolia y China durante el estadio Campaniense del Cretácico Superior, hace aproximadamente entre 75 y 71 millones de años.",
      "fact_ids": [
-      "F003",
       "F007"
      ]
     },
     {
-     "text": "Habituaba en un hábitat de semiárido salpicado de oasis.",
+     "text": "Su entorno era un paisaje semidesértico salpicado de fuentes de agua tipo oasis.",
      "fact_ids": [
       "F043"
-     ]
-    },
-    {
-     "text": "Investigaciones posteriores indicaron que los sedimentos que contenían fósiles de Pinacosaurus en Alag Teeg se depositaron durante una inundación, no en una charca en secado.",
-     "fact_ids": [
-      "F039"
      ]
     }
    ]
@@ -120,21 +217,27 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Se debate si Heishansaurus pachycephalus es una especie válida, ya que Arbour y Currie concluyeron en 2015 que es un nomen dubium.",
+     "text": "Arbour y Currie (2015) argumentaron que *Heishansaurus pachycephalus* es un nomen dubium, cuestionando su validez como especie distinta.",
      "fact_ids": [
       "F019"
      ]
     },
     {
-     "text": "Se debate si Pinacosaurus exhibía un comportamiento insectívoro similar al de los hormigueros.",
+     "text": "Algunos investigadores han propuesto que Pinacosaurus pudo haber mostrado un comportamiento insectívoro similar al de los osos hormigueros, una hipótesis que sigue siendo controvertida.",
      "fact_ids": [
       "F037"
      ]
     },
     {
-     "text": "La función precisa de la disposición de las aberturas nasales es incierta.",
+     "text": "La función precisa de la disposición de las aberturas nasales en Pinacosaurus aún no está clara.",
      "fact_ids": [
       "F075"
+     ]
+    },
+    {
+     "text": "Gregory S. Paul (2010) sugirió que *P. mephistopheles* podría ser un sinónimo junior de *P. grangeri*, una opinión que no ha alcanzado consenso.",
+     "fact_ids": [
+      "F095"
      ]
     }
    ]

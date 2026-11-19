@@ -3,11 +3,11 @@
  "taxon_key": "plumadraco",
  "lang": "es",
  "status": "verified",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "adapt-es-v3+review-es-v2",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "adapt-es-v5+review-es-v4",
  "facts_hash": "4a1513f1761318f7",
- "generated_at": "2026-11-02T01:38:39+00:00",
- "word_count": 248,
+ "generated_at": "2026-11-19T16:03:09+00:00",
+ "word_count": 260,
  "problems": [],
  "review": "accepted",
  "sections": [
@@ -15,29 +15,46 @@
    "section": "description",
    "sentences": [
     {
-     "text": "Plumadraco fue un ave de tamaño medio de la familia Bohaiornithidae, perteneciente a los enantiornítidos.",
+     "text": "Plumadraco era un ave enantiornithine de tamaño medio que pertenecía a la familia Bohaiornithidae.",
      "fact_ids": [
-      "F010"
+      "F010",
+      "F017"
      ]
     },
     {
-     "text": "Los científicos calculan que su masa corporal osciló entre 112 y 144 gramos.",
+     "text": "Se estima que su masa corporal se situaba entre 112 y 144 gramos.",
      "fact_ids": [
       "F011"
      ]
     },
     {
-     "text": "Los fósiles muestran plumas preservadas alrededor de las alas y la cola, incluyendo un par de plumas caudales alargadas.",
+     "text": "Se conservan plumas tanto en las alas como en la cola, incluida una pareja de plumas caudales extremadamente alargadas que miden aproximadamente el doble de la longitud del cuerpo del animal.",
      "fact_ids": [
-      "F008",
-      "F009"
+      "F009",
+      "F012"
      ]
     },
     {
-     "text": "La cola presentaba plumas extremadamente largas, aproximadamente el doble de la longitud del cuerpo, que terminaban en raquetas distintivas en sus puntas.",
+     "text": "Estas plumas caudales terminan en estructuras distintivas en forma de raqueta en sus puntas.",
      "fact_ids": [
-      "F012",
       "F013"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "curiosities",
+   "sentences": [
+    {
+     "text": "El holotipo preserva tejidos blandos, ofreciendo una visión inusualmente completa de su plumaje.",
+     "fact_ids": [
+      "F006"
+     ]
+    },
+    {
+     "text": "Las plumas caudales alargadas se encuentran entre las más largas conocidas en aves del Cretácico Inferior.",
+     "fact_ids": [
+      "F012"
      ]
     }
    ]
@@ -46,28 +63,18 @@
    "section": "discovery",
    "sentences": [
     {
-     "text": "Este organismo se halló en China, dentro de la Formación Jiufotang del Aptiense del Cretácico Inferior.",
+     "text": "Plumadraco fue descubierto en China, en la Formación Jiufotang, que data del Aptiano del Cretácico Inferior.",
      "fact_ids": [
-      "F002",
       "F001",
+      "F002",
+      "F003",
       "F005"
      ]
     },
     {
-     "text": "Clark y sus colegas describieron formalmente la especie.",
+     "text": "La especie fue descrita por Clark y colaboradores, y el espécimen holotipo (acceso STM11-4) está conservado en el Museo de la Naturaleza Shandong Tianyu.",
      "fact_ids": [
-      "F004"
-     ]
-    },
-    {
-     "text": "El género contiene únicamente una especie, P. bankoorum, conocida por un esqueleto completo que conserva tejidos blandos.",
-     "fact_ids": [
-      "F006"
-     ]
-    },
-    {
-     "text": "El holotipo, el ejemplar específico sobre el que se basa la especie, se conserva en el Museo de Ciencias de Shandong Tianyu bajo el número de acceso STM11-4.",
-     "fact_ids": [
+      "F004",
       "F007"
      ]
     }
@@ -77,16 +84,18 @@
    "section": "paleobiology",
    "sentences": [
     {
-     "text": "Los investigadores sugieren que las plumas caudales alargadas se utilizaron principalmente para comportamientos de exhibición y rituales de cortejo.",
+     "text": "Se interpreta que las inusualmente largas plumas de la cola funcionaban como estructuras de exhibición empleadas en rituales de cortejo.",
      "fact_ids": [
       "F014"
-     ]
+     ],
+     "topic": "behavior"
     },
     {
-     "text": "Los autores plantean la hipótesis de que el holotipo pertenecía a un macho basándose en la probabilidad de dimorfismo sexual en estructuras similares.",
+     "text": "Los autores deducen que el espécimen probablemente representa a un macho, basándose en el supuesto dimorfismo sexual de esas plumas ornamentales.",
      "fact_ids": [
       "F015"
-     ]
+     ],
+     "topic": "behavior"
     }
    ]
   },
@@ -94,16 +103,21 @@
    "section": "classification",
    "sentences": [
     {
-     "text": "Plumadraco se clasifica como un miembro de los Enantiornithes y se sitúa en la familia Bohaiornithidae.",
-     "fact_ids": [
-      "F016",
-      "F017"
-     ]
-    },
-    {
-     "text": "El análisis filogenético recuperó a Plumadraco como taxón hermano de un bohaiornítido inmaduro sin nombre (CUGB-P1202) dentro de un clado que también incluye a Sulcavis.",
+     "text": "El análisis filogenético lo sitúa como el taxón hermano de un bohaiornithido inmaduro no nombrado (CUGB-P1202) dentro de un grupo que también incluye a Sulcavis.",
      "fact_ids": [
       "F018"
+     ]
+    }
+   ]
+  },
+  {
+   "section": "time_and_habitat",
+   "sentences": [
+    {
+     "text": "La Formación Jiufotang, donde vivía Plumadraco, corresponde a ambientes marginales de lagos del Aptiano del Cretácico Inferior.",
+     "fact_ids": [
+      "F001",
+      "F003"
      ]
     }
    ]
@@ -112,7 +126,7 @@
    "section": "debate",
    "sentences": [
     {
-     "text": "Es difícil determinar las presiones de selección específicas que moldearon las plumas ornamentales en los enantiornítidos debido a los datos limitados de tejidos blandos.",
+     "text": "Dado que la preservación de tejidos blandos es limitada para la mayoría de los enantiornithines, resulta complicado precisar con exactitud las presiones selectivas que impulsaron la evolución de plumas ornamentales en este grupo.",
      "fact_ids": [
       "F019"
      ]

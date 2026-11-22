@@ -47,4 +47,14 @@ Other figures:
 - a text row is gone when none of its sentences remain, or when the problem is fixed;
 - a panel row is gone when the page no longer shows the problem.
 
+## Results
+
+`results.csv` records the outcome of each fix per finding:
+- `fixed`: the problem is gone;
+- `partly`: some of it remains;
+- `mitigated`: the data is unchanged but the page now says what it is;
+- `open`: not fixed yet.
+
+**Step 2, data panels (2026-11-22):** of the 50 panel findings, 30 are fixed, 8 partly, 7 mitigated and 7 open. All 9 high-severity ones are fixed. One finding was itself out of date. The reviewer expected *Giganotosaurus* to be Cenomanian, but English Wikipedia now gives early Albian, 111–106 Ma, after a 2026 study, and that is what the page shows.
+
 The same set will be used to measure the automatic reviewer (Phase 7, step 5): which of these problems it finds, and how many sentences it flags that aren't problems.

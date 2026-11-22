@@ -38,6 +38,15 @@ models:
         data_tests: [unique, not_null]
       - name: main_fact_id
         data_tests: [not_null]
+  - name: stg_wikipedia__fossil_ranges
+    description: Age of each genus from its English Wikipedia taxobox (paleo ranges).
+    columns:
+      - name: taxon_name
+        data_tests: [unique, not_null]
+      - name: max_ma
+        data_tests: [not_null]
+      - name: min_ma
+        data_tests: [not_null]
   - name: stg_news__groups
     columns:
       - name: news_key

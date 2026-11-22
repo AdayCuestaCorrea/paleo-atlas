@@ -46,6 +46,13 @@ seeds:
         data_tests: [not_null]
       - name: image_uuid
         data_tests: [not_null]
+  - name: opinion_exclusions
+    description: >
+      PBDB references whose taxonomic opinions give no history events: reports outside
+      peer review that the rest of the literature does not follow (ALCANCE.md, Phase 7).
+    columns:
+      - name: reference_id
+        data_tests: [unique, not_null]
   - name: image_exclusions
     description: >
       Commons files that must not be the picture or a gallery image of one taxon page,

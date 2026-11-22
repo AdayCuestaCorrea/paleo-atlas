@@ -29,10 +29,11 @@ pbdb as (
         family_name,
         taxon_name as genus_name,
         occurrence_count,
-        first_appearance_max_ma,
-        last_appearance_min_ma,
-        early_interval,
-        late_interval
+        -- PBDB's own range: the taxobox age is applied below, for every genus page
+        pbdb_max_ma as first_appearance_max_ma,
+        pbdb_min_ma as last_appearance_min_ma,
+        pbdb_early_interval as early_interval,
+        pbdb_late_interval as late_interval
     from {{ ref('int_catalog_genera') }}
     where taxon_name not in (select queried_name from by_name)
 ),
@@ -68,10 +69,19 @@ select
     coalesce(own.order_name, genus.order_name, nf.order_name) as order_name,
     coalesce(own.class_name, genus.class_name, nf.class_name) as class_name,
     coalesce(own.phylum, genus.phylum, nf.phylum) as phylum,
-    own.first_appearance_max_ma,
-    own.last_appearance_min_ma,
-    own.early_interval,
-    own.late_interval,
+    -- Genus pages: the Wikipedia taxobox's age when it has one (int_catalog_genera);
+    -- PBDB's range stays in pbdb_* for the "fossil record in PBDB" line.
+    coalesce(wr.max_ma, own.first_appearance_max_ma) as first_appearance_max_ma,
+    case when wr.taxon_name is not null then wr.min_ma else own.last_appearance_min_ma end
+        as last_appearance_min_ma,
+    case when wr.taxon_name is not null then wr.early_interval else own.early_interval end
+        as early_interval,
+    case when wr.taxon_name is not null then wr.late_interval else own.late_interval end
+        as late_interval,
+    case when wr.taxon_name is not null then 'wikipedia'
+         when own.first_appearance_max_ma is not null then 'pbdb' end as age_source,
+    own.first_appearance_max_ma as pbdb_max_ma,
+    own.last_appearance_min_ma as pbdb_min_ma,
     own.occurrence_count,
     case
         when own.found then 'pbdb'
@@ -86,3 +96,5 @@ left join pbdb as genus
    and pg.taxon_name like '% %'
    and genus.taxon_rank = 'genus'
 left join note_family as nf on nf.taxon_key = pg.taxon_key
+left join {{ ref('stg_wikipedia__fossil_ranges') }} as wr
+    on wr.taxon_name = pg.taxon_name and pg.taxon_name not like '% %'

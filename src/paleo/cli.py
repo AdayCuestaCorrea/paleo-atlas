@@ -497,6 +497,18 @@ def news_classify(provider: Provider = "ollama", model: Model = None, limit: Lim
     typer.echo(f"{llm.label}: {llm.stats}")
 
 
+@app.command("ranges")
+def ranges_cmd() -> None:
+    """Age of each genus from its English Wikipedia taxobox (fossil_range), read from
+    the local cache of genus articles, into data/derived/ranges (ALCANCE.md, Phase 7)."""
+    from paleo import ranges
+
+    rows = ranges.fossil_ranges()
+    path = ranges.write_ranges(rows, get_paths().data / "derived")
+    named = sum(1 for r in rows if r["early_interval"])
+    typer.echo(f"{len(rows)} genera with a taxobox range ({named} name their stages) → {path}")
+
+
 @sizes_app.command("extract")
 def sizes_extract(
     provider: Provider = "groq",

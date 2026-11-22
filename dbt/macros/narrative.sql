@@ -7,7 +7,8 @@
   $PALEO_DATA_DIR/derived/news/labels.json and groups.json (paleo news classify and
   dedup; optional), and $PALEO_DATA_DIR/derived/glossary/<term>.<lang>.json (paleo
   glossary write; optional), and $PALEO_DATA_DIR/derived/sizes/sizes.json (paleo sizes
-  extract; optional).
+  extract; optional), and $PALEO_DATA_DIR/derived/ranges/fossil_ranges.json (paleo
+  ranges; optional).
 #}
 {% macro read_narrative(kind) -%}
     {%- if kind == 'texts' -%}
@@ -115,6 +116,22 @@
             cast(null as double) as span_min_m, cast(null as double) as span_max_m,
             cast(null as boolean) as partial_remains, cast(null as boolean) as only_old_estimates,
             cast(null as json) as estimates limit 0)
+    {%- endif -%}
+    {%- elif kind == 'ranges' -%}
+    {%- set path = env_var("PALEO_DATA_DIR", "../data") ~ "/derived/ranges/fossil_ranges.json" -%}
+    {%- set found = 0 -%}
+    {%- if execute -%}
+        {%- set found = run_query("select count(*) from glob('" ~ path ~ "')").columns[0].values()[0] -%}
+    {%- endif -%}
+    {%- if found > 0 -%}
+    read_json('{{ path }}', format = 'array', columns = {
+        taxon_name: 'VARCHAR', max_ma: 'DOUBLE', min_ma: 'DOUBLE', early_interval: 'VARCHAR',
+        late_interval: 'VARCHAR', label: 'VARCHAR', title: 'VARCHAR', revid: 'BIGINT'})
+    {%- else -%}
+    (select cast(null as varchar) as taxon_name, cast(null as double) as max_ma,
+            cast(null as double) as min_ma, cast(null as varchar) as early_interval,
+            cast(null as varchar) as late_interval, cast(null as varchar) as label,
+            cast(null as varchar) as title, cast(null as bigint) as revid limit 0)
     {%- endif -%}
     {%- else -%}
     {{ exceptions.raise_compiler_error("Unknown narrative kind: " ~ kind) }}

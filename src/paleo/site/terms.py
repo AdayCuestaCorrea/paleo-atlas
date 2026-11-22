@@ -388,6 +388,28 @@ TIME_UNITS = [  # (oldest Ma, youngest Ma, English, Spanish); ICS chart, each pe
 ]
 
 
+# Well-known clades for the short classification line when PBDB gives no order
+# (dinosaurs: "Dromaeosauridae > Reptilia" skipped Theropoda and Dinosauria).
+LANDMARK_CLADES = (
+    "Theropoda", "Sauropodomorpha", "Ornithischia", "Dinosauria", "Aves", "Pterosauria",
+    "Crocodylomorpha", "Pseudosuchia", "Archosauria", "Plesiosauria", "Ichthyosauria",
+    "Mosasauroidea", "Sauropterygia", "Chondrichthyes", "Actinopterygii", "Sarcopterygii",
+    "Placodermi",
+)  # fmt: skip
+
+
+def short_lineage(taxon: dict) -> list[str]:
+    """Family, then order and class; when PBDB has no order, the two nearest
+    well-known clades of the full classification instead."""
+    parts = [taxon.get("family_name")]
+    if taxon.get("order_name") or not taxon.get("classification"):
+        parts += [taxon.get("order_name"), taxon.get("class_name")]
+    else:
+        names = [c["name"] for c in taxon["classification"]]
+        parts += [n for n in reversed(names) if n in LANDMARK_CLADES][:2]
+    return [p for p in parts if p]
+
+
 PERIODS = {
     "Ordovician", "Silurian", "Devonian", "Carboniferous", "Permian",
     "Triassic", "Jurassic", "Cretaceous", "Paleogene", "Neogene", "Quaternary",

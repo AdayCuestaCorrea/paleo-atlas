@@ -56,7 +56,7 @@
       <div><small>{{ T.glance_fossils }}</small><b>{{ count(taxon.occurrence_count) }}</b><span>{{ T.glance_fossils_note }}</span></div>
       {% endif %}
       {% if taxon.family_name or taxon.order_name %}
-      <div><small>{{ T.glance_family }}</small><b>{{ taxon.family_name or taxon.order_name }}</b><span>{{ [taxon.order_name if taxon.family_name else None, taxon.class_name] | select | join(' › ') }}</span></div>
+      <div><small>{{ T.glance_family }}</small><b>{{ taxon.family_name or taxon.order_name }}</b><span>{{ (terms.short_lineage(taxon)[1:] if taxon.family_name else [taxon.class_name] | select | list) | join(' › ') }}</span></div>
       {% endif %}
     </div>
 
@@ -281,23 +281,28 @@
           {% if taxon.country_codes %}
             {%- macro country(c) -%}{% if c | lower in indices.countries %}<a href="{{ url('country_index', c | lower) }}">{{ terms.country_name(c, lang) }}</a>{% else %}{{ terms.country_name(c, lang) }}{% endif %}{%- endmacro -%}
             {%- set links = [] %}{% for c in taxon.country_codes %}{% set _ = links.append(country(c)) %}{% endfor -%}
-            <dt>{{ T.field_country }}</dt><dd>{{ folded(links, t('and_n_more', n=links | length - 12)) }}</dd>
+            <dt>{{ T.field_country }}</dt><dd>{{ folded(links, t('and_n_more', n=links | length - 12)) }}
+              {%- if taxon.doubtful_country_codes %}<br><span class="note">{{ T.doubtful_countries }} {% for c in taxon.doubtful_country_codes %}{{ terms.country_name(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}</dd>
           {% elif taxon.countries %}<dt>{{ T.field_country }}</dt><dd>{% for c in taxon.countries %}{{ terms.place(c, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}{% if taxon.regions %} ({% for r in taxon.regions %}{{ terms.place(r, lang) }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>{% endif %}
           {% if taxon.genus_key %}<dt>{{ T.field_genus }}</dt><dd><a href="{{ url('taxon', taxon.genus_key) }}"><i>{{ taxon.genus_name }}</i></a></dd>{% endif %}
           {% if taxon.species_names %}<dt>{{ t('field_species', n=taxon.species_count) }}</dt><dd>{% for s in taxon.species_names %}<i>{{ s }}</i>{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endif %}
           {% if taxon.family_name or taxon.order_name or taxon.class_name %}
             <dt>{{ T.field_classification }}</dt>
-            <dd>{% for part in [taxon.family_name, taxon.order_name, taxon.class_name] if part %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}
+            <dd>{% for part in terms.short_lineage(taxon) %}{{ part }}{% if not loop.last %} › {% endif %}{% endfor %}
             {% if taxon.classification %}<details class="lineage"><summary>{{ T.classification_full }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}{% if c.rank and c.rank != 'unranked clade' %} <span class="muted">({{ T['rank_' ~ c.rank] if ('rank_' ~ c.rank) in T else c.rank }})</span>{% endif %}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details>{% endif %}</dd>
           {% elif taxon.classification %}
             <dt>{{ T.field_classification }}</dt>
             <dd><details class="lineage"><summary>{{ taxon.classification[-1].name }}</summary><ol>{% for c in taxon.classification %}<li>{{ c.name }}</li>{% endfor %}</ol><p class="note">{{ T.classification_source }}</p></details></dd>
           {% endif %}
           {% if early and taxon.first_appearance_max_ma is not none %}
-            <dt>{{ T.field_time_range }}</dt>
-            <dd>{{ t('time_range', early=early, late=late, max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma)) }}
+            <dt>{{ T.field_lived if taxon.age_source == 'wikipedia' else T.field_time_range }}</dt>
+            <dd>{{ t('time_range' if late and late != early else 'time_range_one', early=early, late=late, max=num(taxon.first_appearance_max_ma), min=num(taxon.last_appearance_min_ma if taxon.last_appearance_min_ma is not none else taxon.first_appearance_max_ma)) }}
               {%- set ps = terms.time_units(taxon.first_appearance_max_ma, taxon.last_appearance_min_ma) | selectattr(0, 'in', terms.PERIODS) | list %}
               {%- if ps %}<br>{% for en, es in ps %}{% set k = unit_key(en) %}{% if k in indices.periods %}<a href="{{ url('period_index', k) }}">{{ es if lang == 'es' else en }}</a>{% else %}{{ es if lang == 'es' else en }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}{% endif %}</dd>
+          {% endif %}
+          {% if taxon.age_source == 'wikipedia' and taxon.pbdb_max_ma is not none and (taxon.pbdb_max_ma - taxon.first_appearance_max_ma > 1 or (taxon.last_appearance_min_ma or 0) - (taxon.pbdb_min_ma or 0) > 1) %}
+            <dt>{{ T.field_pbdb_range }}</dt>
+            <dd>{{ t('glance_when_ma', max=num(taxon.pbdb_max_ma), min=num(taxon.pbdb_min_ma if taxon.pbdb_min_ma is not none else taxon.pbdb_max_ma)) }}<br><span class="note">{{ T.pbdb_range_note }}</span></dd>
           {% endif %}
           {% if taxon.occurrence_count %}<dt>{{ T.field_occurrences }}</dt><dd>{{ taxon.occurrence_count }}</dd>{% endif %}
         </dl>

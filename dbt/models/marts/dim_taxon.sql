@@ -33,7 +33,8 @@ genera as (
 ),
 
 occurrences as (
-    select genus_name, countries as occurrence_countries, country_codes, points as pbdb_points
+    select genus_name, countries as occurrence_countries, country_codes, doubtful_country_codes,
+        points as pbdb_points
     from {{ ref('int_genus_occurrences') }}
 ),
 
@@ -106,6 +107,9 @@ select
     c.last_appearance_min_ma,
     c.early_interval,
     c.late_interval,
+    c.age_source,
+    c.pbdb_max_ma,
+    c.pbdb_min_ma,
     c.occurrence_count,
     coalesce(n.wikipedia_article, w.en_title) as wikipedia_article,
     w.es_title as wikipedia_article_es,
@@ -120,6 +124,7 @@ select
     coalesce(n.countries, case when c.taxon_rank = 'genus' then o.occurrence_countries end)
         as countries,
     case when c.taxon_rank = 'genus' then o.country_codes end as country_codes,
+    case when c.taxon_rank = 'genus' then o.doubtful_country_codes end as doubtful_country_codes,
     n.regions,
     n.notes_text,
     n.naming_doi,

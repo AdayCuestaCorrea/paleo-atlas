@@ -45,11 +45,15 @@ classified as (
         *,
         -- The file name says more than the description (which may mention a
         -- holotype, a scale bar...), so it decides first.
+        -- A bare "reconstruction" in either text only counts when the other says
+        -- nothing more precise (a skeletal reconstruction is a skeleton).
         case
             when {{ image_kind('name_text') }} = 'excluded' or {{ image_kind('description_text') }} = 'excluded'
                 then 'excluded'
-            when {{ image_kind('name_text') }} <> 'other' then {{ image_kind('name_text') }}
-            else {{ image_kind('description_text') }}
+            when {{ image_kind('name_text') }} not in ('other', 'reconstruction') then {{ image_kind('name_text') }}
+            when {{ image_kind('description_text') }} not in ('other', 'reconstruction') then {{ image_kind('description_text') }}
+            when 'reconstruction' in ({{ image_kind('name_text') }}, {{ image_kind('description_text') }}) then 'life'
+            else 'other'
         end as image_kind
     from candidates
     -- Category files must be about the taxon by their own name: Commons categories

@@ -70,16 +70,22 @@
 <span class="event__claim">{{ claim(T['claim_' ~ e.event_type], e.subject_name or page_name, e.related_name) }}</span>
 {%- elif e.event_type == 'description' and e.subject_name -%}
 <span class="event__claim">{{ claim(T.claim_description, e.subject_name) }}</span>
-{%- elif e.event_type in ['new_study', 'study_corrected', 'study_retracted'] and e.subject_name -%}
+{%- elif e.event_type in ['new_study', 'study_corrected', 'study_retracted'] and e.subject_name and mentions_only(e, page_name) != 'True' -%}
 <span class="event__claim">{{ claim(T.claim_about, e.subject_name) }}</span>
 {%- endif -%}
+{%- endmacro %}
+
+{#- A study whose title does not name the page's genus only mentions it (a comparison
+    with other theropods, a fauna list): it is not "about" it (Phase 7). -#}
+{% macro mentions_only(e, page_name) -%}
+{{- e.event_type == 'new_study' and page_name and e.title and ((e.subject_name or page_name).split(' ')[0] | lower) not in (e.title | lower) -}}
 {%- endmacro %}
 
 {% macro event(e, T, fmt_date, url=None, show_taxon=False, page_name=None, new=False) -%}
 <li class="event event--{{ e.event_type }}">
   {{ event_date(e, T, fmt_date) }}
   {% if new %}<span class="tag-new">{{ T.tag_new }}</span>{% endif %}
-  <span class="event__type">{{ T['event_' ~ e.event_type] }}</span>
+  <span class="event__type">{{ T.event_new_study_mention if mentions_only(e, page_name) == 'True' else T['event_' ~ e.event_type] }}</span>
   {% if show_taxon and e.taxon %}<a class="event__taxon" href="{{ url('taxon', e.taxon.taxon_key) }}"><em>{{ e.taxon.taxon_name }}</em></a>{% endif %}
   {{ event_claim(e, T, page_name) }}
   {% if e.event_type == 'entry_changed' %}

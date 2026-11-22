@@ -124,10 +124,33 @@ unit_tests:
           - {base_name: Avialae, pbdb_taxon_no: "2", pbdb_name: Archaeopteryx lithographica, taxon_rank: species, genus_name: Archaeopteryx, version_date: "2026-11-01"}
           - {base_name: Dinosauria, pbdb_taxon_no: "3", pbdb_name: Spinosaurus, taxon_rank: genus, version_date: "2026-11-01"}
           - {base_name: Placodermi, pbdb_taxon_no: "4", pbdb_name: Dunkleosteus, taxon_rank: genus, version_date: "2026-11-01"}
+      - input: ref('stg_wikipedia__fossil_ranges')
+        rows: []
     expect:
       rows:
         - {taxon_key: archaeopteryx, taxon_group: birds, species_count: 1}
         - {taxon_key: spinosaurus, taxon_group: non_avian_dinosaurs, species_count: 0}
+  - name: the_taxobox_age_replaces_the_pbdb_range
+    description: >
+      PBDB spans every occurrence filed under Spinosaurus (Barremian–Campanian,
+      125.77–72.2 Ma); the Wikipedia taxobox says Cenomanian. The page shows the
+      taxobox's age and keeps PBDB's apart. A genus without a taxobox range keeps PBDB's.
+    model: int_catalog_genera
+    given:
+      - input: ref('scope_clades')
+        rows:
+          - {pbdb_base_name: Dinosauria, block: archosaurs, taxon_group: non_avian_dinosaurs, priority: 2, enabled: true}
+      - input: ref('stg_pbdb__catalog')
+        rows:
+          - {base_name: Dinosauria, pbdb_taxon_no: "3", pbdb_name: Spinosaurus, taxon_rank: genus, first_appearance_max_ma: 125.77, last_appearance_min_ma: 72.2, early_interval: Barremian, late_interval: Campanian, version_date: "2026-11-01"}
+          - {base_name: Dinosauria, pbdb_taxon_no: "5", pbdb_name: Irritator, taxon_rank: genus, first_appearance_max_ma: 113.2, last_appearance_min_ma: 100.5, early_interval: Albian, version_date: "2026-11-01"}
+      - input: ref('stg_wikipedia__fossil_ranges')
+        rows:
+          - {taxon_name: Spinosaurus, max_ma: 100.5, min_ma: 93.9, early_interval: Cenomanian, late_interval: Cenomanian}
+    expect:
+      rows:
+        - {taxon_key: spinosaurus, first_appearance_max_ma: 100.5, last_appearance_min_ma: 93.9, early_interval: Cenomanian, age_source: wikipedia, pbdb_max_ma: 125.77, pbdb_min_ma: 72.2}
+        - {taxon_key: irritator, first_appearance_max_ma: 113.2, last_appearance_min_ma: 100.5, early_interval: Albian, age_source: pbdb, pbdb_max_ma: 113.2, pbdb_min_ma: 100.5}
   - name: genus_articles_need_the_pbdb_id_and_the_right_branch_of_the_tree
     description: >
       The moth Coloradia's Wikidata item carries the dinosaur's PBDB id by mistake but
@@ -167,6 +190,8 @@ unit_tests:
         rows:
           - {reference_id: "ref:2", title: Structure of Apatosaurus, journal: Field Columbian Museum, doi: null}
           - {reference_id: "ref:5", title: Revision of Diplodocidae, journal: PeerJ, doi: 10.7717/peerj.857}
+      - input: ref('opinion_exclusions')
+        rows: []
     expect:
       rows:
         - {event_type: description, opinion_year: 1879, related_name: null, study_id: "pbdb:ref:1", reference_journal: null}

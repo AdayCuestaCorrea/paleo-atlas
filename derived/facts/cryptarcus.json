@@ -1,57 +1,57 @@
 {
  "taxon": "Cryptarcus",
  "taxon_key": "cryptarcus",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "1ed0ccaccf510632",
- "generated_at": "2026-11-01T18:57:16+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "dac76c7abc717182",
+ "generated_at": "2026-11-22T14:56:07+00:00",
  "citations": {
   "cryptarcus:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1386727174",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:1": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (taxobox)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:2": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (introduction)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:3": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (History of research)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:4": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (Description)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:5": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (Description, part 2)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "cryptarcus:enwiki:6": {
    "source": "wikipedia_article",
    "title": "Cryptarcus (Classification)",
-   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1374377321",
+   "url": "https://en.wikipedia.org/wiki/Cryptarcus?oldid=1386237537",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -73,7 +73,25 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The species was first described in 1940 by Charles Mortram Sternberg as Chasmosaurus russelli.",
+   "statement": "The genus name Cryptarcus means “hidden arch”.",
+   "category": "description",
+   "chunk_id": "cryptarcus:enwiki:2",
+   "lang": "en",
+   "quote": "Cryptarcus (meaning \"hidden arch\")",
+   "quote_sha": "fc8087bea0562d77"
+  },
+  {
+   "fact_id": "F002",
+   "statement": "Cryptarcus is known from the Dinosaur Park Formation and dates to the middle Campanian of the Late Cretaceous.",
+   "category": "time_and_habitat",
+   "chunk_id": "cryptarcus:enwiki:2",
+   "lang": "en",
+   "quote": "found in the Dinosaur Park Formation of Alberta, dating to the middle Campanian age of the Late Cretaceous.",
+   "quote_sha": "6e9f9a314086906d"
+  },
+  {
+   "fact_id": "F003",
+   "statement": "The type species, Cryptarcus russelli, was originally described as Chasmosaurus russelli by Charles Mortram Sternberg in 1940.",
    "category": "discovery",
    "chunk_id": "cryptarcus:enwiki:2",
    "lang": "en",
@@ -81,116 +99,26 @@
    "quote_sha": "e9ca5047349ddf2c"
   },
   {
-   "fact_id": "F002",
-   "statement": "A 2026 study by Holmes, Mallon, Ryan, and Evans reprepared the holotype to clarify anatomy obscured by plaster reconstruction.",
-   "category": "discovery",
-   "chunk_id": "cryptarcus:enwiki:3",
-   "lang": "en",
-   "quote": "In 2026, a study by Robert B. Holmes, Jordan C. Mallon, Michael J. Ryan, and David C. Evans reevaluated the holotype and reprepared it to clarify the anatomy obscured by plaster reconstruction.",
-   "quote_sha": "4aac773dfb80c7b0"
-  },
-  {
-   "fact_id": "F003",
-   "statement": "The partial parietal TMP 2013.019.0038 was recognized as belonging to the species in addition to the holotype.",
-   "category": "discovery",
-   "chunk_id": "cryptarcus:enwiki:3",
-   "lang": "en",
-   "quote": "In addition to the holotype, they recognized the partial parietal TMP 2013.019.0038 as belonging to the species.",
-   "quote_sha": "70cf9ff8c20f21e1"
-  },
-  {
    "fact_id": "F004",
-   "statement": "Cryptarcus is a genus of ceratopsid dinosaur from the middle Campanian age of the Late Cretaceous found in Alberta.",
+   "statement": "The holotype consists of most of an articulated skull, though the front snout, lower jaws, right half of the frill, and parts of the left face were missing and later reconstructed in plaster.",
    "category": "description",
-   "chunk_id": "cryptarcus:enwiki:2",
+   "chunk_id": "cryptarcus:enwiki:3",
    "lang": "en",
-   "quote": "Cryptarcus (meaning \"hidden arch\") is a genus of ceratopsid dinosaur found in the Dinosaur Park Formation of Alberta, dating to the middle Campanian age of the Late Cretaceous.",
-   "quote_sha": "c8fe577f4356163c"
+   "quote": "Most of the skull was preserved and fully articulated, but the front of the snout, the lower jaws, the right half of the frill, and various portions of the left side of the face were missing and were reconstructed with plaster",
+   "quote_sha": "f136ff4cfe067c55"
   },
   {
    "fact_id": "F005",
-   "statement": "The skull is distinguished by a deep embayment on the back of the parietal frill and dome-shaped ornamentation along the edge of this embayment.",
+   "statement": "The median embayment angle of Cryptarcus frills ranges between 89° and 128°, a metric used to separate it from Chasmosaurus belli.",
    "category": "description",
-   "chunk_id": "cryptarcus:enwiki:2",
+   "chunk_id": "cryptarcus:enwiki:3",
    "lang": "en",
-   "quote": "Amongst other traits of the skull, it can be distinguished by the deep embayment on the back of its parietal frill and the dome-shape of the ornamentation along the edge of this embayment.",
-   "quote_sha": "a49576a175fbc9bc"
+   "quote": "C. russelli had embayments formed by left and right posterior parietal bars meeting at angle between 89° and 128°, whereas those of C. belli met an angle between 136° and 180°.",
+   "quote_sha": "3908e8e824714103"
   },
   {
    "fact_id": "F006",
-   "statement": "Cryptarcus is a chasmosaurine ceratopsid that was established as a new genus for Chasmosaurus russelli.",
-   "category": "classification",
-   "chunk_id": "cryptarcus:table:1",
-   "lang": "en",
-   "quote": "A chasmosaurine ceratopsid; a new genus for \"Chasmosaurus\" russelli Sternberg (1940).",
-   "quote_sha": "d047fa17aa48b3c1"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "Its relationships are uncertain, but it may be more closely related to Utahceratops and Pentaceratops than to Chasmosaurus.",
-   "category": "classification",
-   "chunk_id": "cryptarcus:enwiki:2",
-   "lang": "en",
-   "quote": "While its relationships remain uncertain, it may be more closely related to animals such as Utahceratops and Pentaceratops rather than Chasmosaurus.",
-   "quote_sha": "5ddd3e8ab66d1877"
-  },
-  {
-   "fact_id": "F008",
-   "statement": "Cryptarcus lived during the Late Cretaceous (Campanian) period.",
-   "category": "time_and_habitat",
-   "chunk_id": "cryptarcus:table:1",
-   "lang": "en",
-   "quote": "Age: Late Cretaceous (Campanian)",
-   "quote_sha": "1a02caf917353a17"
-  },
-  {
-   "fact_id": "F009",
-   "statement": "The type locality of Cryptarcus is the Dinosaur Park Formation.",
-   "category": "time_and_habitat",
-   "chunk_id": "cryptarcus:table:1",
-   "lang": "en",
-   "quote": "Type locality: Dinosaur Park Formation",
-   "quote_sha": "c5aa25d481a42823"
-  },
-  {
-   "fact_id": "F010",
-   "statement": "Cryptarcus fossils have been found in Canada.",
-   "category": "time_and_habitat",
-   "chunk_id": "cryptarcus:table:1",
-   "lang": "en",
-   "quote": "Country: Canada",
-   "quote_sha": "92b42bf80f14048b"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "Cryptarcus fossils have been found in the region of Alberta.",
-   "category": "time_and_habitat",
-   "chunk_id": "cryptarcus:table:1",
-   "lang": "en",
-   "quote": "Region: Alberta",
-   "quote_sha": "f10d5322675ab2dc"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "It was previously debated that Chasmosaurus russelli came from lower layers of the Dinosaur Park Formation while C. belli came from upper layers, but this was later challenged.",
-   "category": "debate",
-   "chunk_id": "cryptarcus:enwiki:3",
-   "lang": "en",
-   "quote": "Ostensibly, C. russelli was found in the lower layers of the Dinosaur Park Formation (making it older in geologic time), whereas those belonging to C. belli were from the upper layers of the formation.",
-   "quote_sha": "07ee435787f38e4e"
-  },
-  {
-   "fact_id": "F013",
-   "statement": "Rediscovery of the holotype quarry revealed it to be from a high layer of the Dinosaur Park Formation, contradicting earlier assumptions.",
-   "category": "debate",
-   "chunk_id": "cryptarcus:enwiki:3",
-   "lang": "en",
-   "quote": "Furthermore, rediscovery of the quarry where Sternberg discovered the holotype revealed it to be from a high layer of the Dinosaur Park Formation.",
-   "quote_sha": "3094564c010d1588"
-  },
-  {
-   "fact_id": "F014",
-   "statement": "In 2010, Nick Longrich argued that many specimens referred to C. russelli represented Mojoceratops perifania, but this view was rejected by most researchers.",
+   "statement": "Researchers have debated whether the specimens previously referred to Chasmosaurus russelli represent a separate genus, with Nick Longrich proposing Mojoceratops perifania in 2010, a view largely rejected by other scientists.",
    "category": "debate",
    "chunk_id": "cryptarcus:enwiki:3",
    "lang": "en",
@@ -198,26 +126,8 @@
    "quote_sha": "b1177546ca7b9660"
   },
   {
-   "fact_id": "F015",
-   "statement": "Researchers noted that definitive classification of chasmosaurs is difficult and that Cryptarcus might later be associated with another genus due to the lack of a definite link to Chasmosaurus.",
-   "category": "debate",
-   "chunk_id": "cryptarcus:enwiki:3",
-   "lang": "en",
-   "quote": "They noted that ongoing issues in the taxonomy of chasmosaurs made definitive classification difficult, and noted it was possible Cryptarcus may later become associated with another genus, the lack of any definite link to Chasmosaurus made it most responsible to give it a distinct genus.",
-   "quote_sha": "8ecefa5a16e7eb7b"
-  },
-  {
-   "fact_id": "F016",
-   "statement": "Cryptarcus was a large, four-legged plant-eating dinosaur with a massive skull.",
-   "category": "description",
-   "chunk_id": "cryptarcus:enwiki:4",
-   "lang": "en",
-   "quote": "As a chasmosaurine ceratopsid, Cryptarcus would have been a large, quadrupedal herbivore with a massive skull.",
-   "quote_sha": "a56b1109f60d8190"
-  },
-  {
-   "fact_id": "F017",
-   "statement": "The holotype skull of Cryptarcus measures approximately 94 centimeters in length, but the rest of its skeleton is unknown.",
+   "fact_id": "F007",
+   "statement": "The holotype skull of Cryptarcus measures about 94 cm in length.",
    "category": "description",
    "chunk_id": "cryptarcus:enwiki:4",
    "lang": "en",
@@ -225,8 +135,8 @@
    "quote_sha": "e1f853950826318d"
   },
   {
-   "fact_id": "F018",
-   "statement": "The frill of Cryptarcus is about 120% of the length of the rest of the skull.",
+   "fact_id": "F008",
+   "statement": "The parietosquamosal frill of Cryptarcus is about 120 % as long as the rest of the skull.",
    "category": "description",
    "chunk_id": "cryptarcus:enwiki:4",
    "lang": "en",
@@ -234,145 +144,182 @@
    "quote_sha": "36569fa811d8f3d0"
   },
   {
-   "fact_id": "F019",
-   "statement": "Each squamosal bone of Cryptarcus bears eight episquamosals.",
+   "fact_id": "F009",
+   "statement": "Cryptarcus had a short, broad‑based nasal horn positioned over the back of the naris.",
    "category": "description",
-   "chunk_id": "cryptarcus:enwiki:5",
+   "chunk_id": "cryptarcus:enwiki:4",
    "lang": "en",
-   "quote": "Each squamosal bears eight episquamosals.",
-   "quote_sha": "6bea50fd5217385a"
+   "quote": "Located about the naris was a short and broad-based nasal horn.",
+   "quote_sha": "5b08c8a36008f333"
   },
   {
-   "fact_id": "F020",
-   "statement": "Cryptarcus possesses only three epiparietal bones.",
+   "fact_id": "F010",
+   "statement": "The postorbital horns are preserved only as small stumps in the holotype, possibly pathological, but may have been long in life.",
    "category": "description",
-   "chunk_id": "cryptarcus:enwiki:5",
+   "chunk_id": "cryptarcus:enwiki:4",
    "lang": "en",
-   "quote": "Only three epiparietals are present.",
-   "quote_sha": "7b04e9275335967c"
+   "quote": "Though preserved as small stumps in the holotype (which may be pathological), they may have been quite long in life.",
+   "quote_sha": "ac133207f7a0dc17"
   },
   {
-   "fact_id": "F021",
-   "statement": "Taxonomic revisions found that the holotype of Cryptarcus cannot be definitively resolved as closer to either Chasmosaurus or Pentaceratops, with alternative methods supporting both possibilities.",
+   "fact_id": "F011",
+   "statement": "Cryptarcus possesses a prominent rugosity on the palpebral bone in front of each eye.",
+   "category": "description",
+   "chunk_id": "cryptarcus:enwiki:4",
+   "lang": "en",
+   "quote": "Underneath these horns, a bone in front of the eye known as the palpebral bears a prominent rugosity unique to Cryptarcus.",
+   "quote_sha": "bcaa4a668bcf770b"
+  },
+  {
+   "fact_id": "F012",
+   "statement": "The frontoparietal fontanelle in the holotype is especially wide and has a unique bone bridge between the postorbital bones, likely due to old age.",
+   "category": "description",
+   "chunk_id": "cryptarcus:enwiki:4",
+   "lang": "en",
+   "quote": "This is a typical feature of ceratopsids, but is especially wide in the holotype of Cryptarcus, and possesses a unique bridge of bone between the postorbital bones on either side, possibly due to the old age of the individual rather than distinguishing the species.",
+   "quote_sha": "eb35730d5346b61f"
+  },
+  {
+   "fact_id": "F013",
+   "statement": "Phylogenetic analyses place Cryptarcus in an unresolved polytomy, sometimes closer to Pentaceratops and other times closer to Chasmosaurus, depending on the methodological iteration.",
    "category": "classification",
-   "chunk_id": "cryptarcus:enwiki:6",
-   "lang": "en",
-   "quote": "Revision of the material and taxonomy of Cryptarcus found that CMN 8800 was not able to be resolved as closer to either Chasmosaurus or Pentaceratops, with alternative methodologies finding both options possible.",
-   "quote_sha": "816c3f2d51236e1b"
-  },
-  {
-   "fact_id": "F022",
-   "statement": "A 2026 reassessment by Holmes and colleagues produced phylogenetic results based on iterations with and without weighting.",
-   "category": "classification",
-   "chunk_id": "cryptarcus:enwiki:6",
-   "lang": "en",
-   "quote": "Phylogenetic results following the reassessment of Holmes and colleagues (2026) are shown below, based on Iterations 1 and 2 (no weighting).",
-   "quote_sha": "e0bbfa3e7fc21997"
-  },
-  {
-   "fact_id": "F023",
-   "statement": "Phylogenetic analyses yield conflicting results, with some iterations placing Cryptarcus closer to Pentaceratops and others placing it closer to Chasmosaurus.",
-   "category": "debate",
    "chunk_id": "cryptarcus:enwiki:6",
    "lang": "en",
    "quote": "Iterations 3 and 5 (k = 3) recovered Cryptarcus in an unresolved polytomy with Agujaceratops spp., more closely related to Pentaceratops than Chasmosaurus, while Iterations 4 and 6 (k = 12) recovered it closer to Chasmosaurus than Pentaceratops.",
    "quote_sha": "948844904791d767"
   },
   {
-   "fact_id": "F024",
-   "statement": "The genus Cryptarcus was established in 2026 by Holmes, Mallon, Ryan, and Evans in the Canadian Journal of Earth Sciences.",
-   "category": "discovery",
-   "chunk_id": "cryptarcus:study:1",
+   "fact_id": "F014",
+   "statement": "Features once thought to unite Cryptarcus with Chasmosaurus, such as a low facial profile and thin parietal strut, are also found in other chasmosaurines and may be affected by taphonomic distortion.",
+   "category": "debate",
+   "chunk_id": "cryptarcus:enwiki:6",
    "lang": "en",
-   "quote": "Journal: Canadian Journal of Earth Sciences Year: 2026 Authors: Robert B. Holmes, Jordan C. Mallon, Michael J. Ryan, David C. Evans",
-   "quote_sha": "72d61be7928c66e1"
+   "quote": "Anatomical features that were believed to unite Cryptarcus with Chasmosaurus (low facial profile, rear maxilla hidden below jugal, thin parietal strut) can also be seen among other chasmosaurines and can be subject to taphonomic distortion.",
+   "quote_sha": "e1ebb6c1ed105312"
   },
   {
-   "fact_id": "F025",
-   "statement": "Recent hypotheses suggesting an evolutionary trend from Cryptarcus russelli through Pentaceratops to produce Terminocavus are not supported by the phylogenetic analysis presented in this study.",
+   "fact_id": "F015",
+   "statement": "Phylogenetic analysis of only the holotype produced three consensus topologies, placing it variously closer to Chasmosaurus, closer to Pentaceratops, or unresolved.",
+   "category": "classification",
+   "chunk_id": "cryptarcus:abstract:1",
+   "lang": "en",
+   "quote": null,
+   "quote_sha": "e663c52076695b52"
+  },
+  {
+   "fact_id": "F016",
+   "statement": "The authors found no phylogenetic support for an anagenetic sequence from Cryptarcus russelli through Pentaceratops to Terminocavus as previously hypothesized.",
    "category": "debate",
    "chunk_id": "cryptarcus:abstract:1",
    "lang": "en",
    "quote": null,
-   "quote_sha": "443b91e9f88fba3b"
+   "quote_sha": "1dca36108aa1916b"
   }
  ],
  "rejected": [
   {
-   "chunk_id": "cryptarcus:enwiki:2",
-   "statement": "The specific name russelli honors Loris Shano Russell, who discovered the first known specimen.",
-   "category": "discovery",
-   "quote": "The specific name honored Loris Shano Russell, who discovered the first known specimen.",
-   "reason": "statement copies the source wording: 'Loris Shano Russell who discovered the first known'"
+   "chunk_id": "cryptarcus:table:1",
+   "statement": "Cryptarcus is a valid genus of chasmosaurine ceratopsid named by Holmes et al. in 2026.",
+   "category": "classification",
+   "quote": "Status: Valid\nAuthors: Holmes et al.",
+   "reason": "numbers not in the quote: ['2026']"
   },
   {
-   "chunk_id": "cryptarcus:enwiki:3",
-   "statement": "The holotype specimen was discovered in 1936 by Loris Shano Russell while working for the Geological Survey of Canada.",
-   "category": "discovery",
-   "quote": "The specimen that would become the holotype of Cryptarcus was discovered in 1936 by palaeontologist Loris Shano Russell during his work for the Geological Survey of Canada.",
+   "chunk_id": "cryptarcus:table:1",
+   "statement": "Cryptarcus lived during the Late Cretaceous Campanian age in what is now Alberta, Canada.",
+   "category": "time_and_habitat",
+   "quote": "Age: Late Cretaceous (Campanian)\nCountry: Canada\nRegion: Alberta",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "cryptarcus:enwiki:3",
-   "statement": "The holotype was found near the former Onefour Research Station southeast of Manyberries, Alberta, and has the specimen number CMNFV 8800.",
+   "statement": "The holotype specimen (CMNFV 8800) was discovered in 1936 by Loris Shano Russell near the Onefour Research Station, southeast of Manyberries, Alberta.",
    "category": "discovery",
-   "quote": "It was found near the former Onefour Research Station southeast of Manyberries, Alberta, and bears the specimen number CMNFV 8800.",
-   "reason": "statement copies the source wording: 'found near the former Onefour Research Station southeast'"
+   "quote": "The specimen that would become the holotype ... was discovered in 1936 by palaeontologist Loris Shano Russell ... near the former Onefour Research Station southeast of Manyberries, Alberta",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "cryptarcus:enwiki:2",
+   "statement": "Cryptarcus can be distinguished by a deep embayment on the back of its parietal frill and a dome‑shaped ornamentation along the edge of that embayment.",
+   "category": "description",
+   "quote": "Amongst other traits of the skull, it can be distinguished by the deep embayment on the back of its parietal frill and the dome-shape of the ornamentation along the edge of this embayment.",
+   "reason": "statement copies the source wording: 'deep embayment on the back of its parietal'"
   },
   {
    "chunk_id": "cryptarcus:enwiki:3",
-   "statement": "The partial parietal TMP 2013.019.0038 was discovered in 2013 by Wendy Sloboda on the Sage Creek Grazing Reserve, 5.7 km east of the holotype quarry.",
+   "statement": "A partial parietal (TMP 2013.019.0038) discovered in 2013 near the holotype quarry is also assigned to Cryptarcus russelli.",
    "category": "discovery",
-   "quote": "It was discovered in 2013 in the Onefour area by Wendy Sloboda on the Sage Creek Grazing Reserve, 5.7 km east of the holotype quarry and slightly higher in the Dinosaur Park Formation.",
-   "reason": "numbers not in the quote: ['2013019.0038']"
+   "quote": "In addition to the holotype, they recognized the partial parietal TMP 2013.019.0038 as belonging to the species.",
+   "reason": "numbers not in the quote: ['2013']"
   },
   {
    "chunk_id": "cryptarcus:enwiki:3",
-   "statement": "Only one specimen other than the holotype has a definitively known stratigraphic height within the Dinosaur Park Formation.",
-   "category": "debate",
-   "quote": "However, only one specimen other than the holotype has a definitively known stratigraphic height within the formation.",
-   "reason": "statement copies the source wording: 'Only one specimen other than the holotype has'"
+   "statement": "A large isolated horn (CMNFV 55193) from the Onefour area may belong to Cryptarcus, though it lacks diagnostic characters of the holotype.",
+   "category": "paleobiology",
+   "quote": "A large isolated horn, CMNFV 55193, was also discovered ... and was noted as possibly representing C. russelli as it does not conform to any other known ceratopsid from its horizon, though it contains no diagnostic characters of the holotype.",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "cryptarcus:enwiki:3",
+   "statement": "The precise phylogenetic position of Cryptarcus remains uncertain, but it may be more closely related to Utahceratops and Pentaceratops than to Chasmosaurus.",
+   "category": "classification",
+   "quote": "While its relationships remain uncertain, it may be more closely related to animals such as Utahceratops and Pentaceratops rather than Chasmosaurus.",
+   "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "cryptarcus:enwiki:4",
-   "statement": "Cryptarcus had a large, broadly rectangular frill made of squamosal and parietal bones.",
+   "statement": "Cryptarcus was a large, quadrupedal herbivore with a massive skull.",
    "category": "description",
-   "quote": "Projecting from the back of the head was a large, broadly rectangular frill composed of the squamosal and parietal bones.",
+   "quote": "As a chasmosaurine ceratopsid, Cryptarcus would have been a large, quadrupedal herbivore with a massive skull.",
+   "reason": "statement copies the source wording: 'a large quadrupedal herbivore with a massive skull'"
+  },
+  {
+   "chunk_id": "cryptarcus:enwiki:5",
+   "statement": "Each squamosal of Cryptarcus bears eight episquamosals, with the second from the top being especially large and the eighth markedly smaller, a pattern unique among chasmosaurs.",
+   "category": "description",
+   "quote": "Each squamosal bears eight episquamosals. They are smallest along the base of the squamosal, and grow significantly in size as the progress upward. The second episquamosal (second from the top) is especially large, and followed by a distinctly smaller eighth episquamosal. This arrangement is unique among chasmosaurs.",
    "reason": "quote not found verbatim in the source"
   },
   {
    "chunk_id": "cryptarcus:enwiki:5",
-   "statement": "The first and second epiparietals of Cryptarcus are rooted on the front surface of the frill within the central embayment instead of projecting along the edge.",
+   "statement": "Cryptarcus has only three epiparietals, the first two are rooted on the front surface of the frill, oval, dome‑shaped and prominently keeled, unlike any other chasmosaur.",
    "category": "description",
-   "quote": "The first and second epiparietals were located within the central embayment and are aberrant in that they are rooted on the front surface of the frill, rather than projecting along its edge.",
+   "quote": "Only three epiparietals are present. The first and second epiparietals were located within the central embayment and are aberrant in that they are rooted on the front surface of the frill, rather than projecting along its edge. They are oval, dome-shaped, and prominently keeled, unlike those of any other chasmosaurs.",
    "reason": "statement copies the source wording: 'are rooted on the front surface of the'"
   },
   {
    "chunk_id": "cryptarcus:study:1",
-   "statement": "A 2026 study concluded that new information on the holotype of \"Chasmosaurus russelli\" necessitated the creation of a new genus, Cryptarcus.",
+   "statement": "The genus Cryptarcus was established in 2026 by Holmes, Mallon, Ryan, and Evans in the Canadian Journal of Earth Sciences.",
    "category": "discovery",
-   "quote": "Study title: New information on the holotype of \" Chasmosaurus \" russelli (Ornithischia: Ceratopsidae) necessitates the establishment of a new genus to receive the species",
+   "quote": "Authors: Robert B. Holmes, Jordan C. Mallon, Michael J. Ryan, David C. Evans",
    "reason": "numbers not in the quote: ['2026']"
   },
   {
    "chunk_id": "cryptarcus:abstract:1",
-   "statement": "The holotype specimen CMNFV 8800 was originally identified as Chasmosaurus russelli by Sternberg in 1940 and comes from the upper Dinosaur Park Formation in southern Alberta.",
+   "statement": "The holotype specimen CMNFV 8800, originally named Chasmosaurus russelli by Sternberg in 1940, comes from the upper Dinosaur Park Formation of southern Alberta.",
    "category": "discovery",
-   "quote": "the holotype of Chasmosaurus russelli Sternberg, 1940, from the upper Dinosaur Park Formation of southern Alberta",
+   "quote": "Although the holotype of Chasmosaurus russelli Sternberg, 1940, from the upper Dinosaur Park Formation of southern Alberta",
    "reason": "numbers not in the quote: ['8800']"
   },
   {
    "chunk_id": "cryptarcus:abstract:1",
-   "statement": "Researchers established the new genus Cryptarcus to house the species C. russelli because the holotype does not fit within Chasmosaurus or any other known chasmosaurine genus under current definitions.",
-   "category": "classification",
-   "quote": "Under current definitions, CMNFV 8800 cannot be accommodated within Chasmosaurus or any other known chasmosaurine genus. Consequently, we erect Cryptarcus gen. nov. to receive it.",
-   "reason": "statement copies the source wording: 'within Chasmosaurus or any other known chasmosaurine genus'"
+   "statement": "CMNFV 8800 displays unique features of the premaxilla and frill epiossifications that differentiate it from other Chasmosaurus specimens.",
+   "category": "description",
+   "quote": "it also possesses unique features of the premaxilla and frill epiossifications",
+   "reason": "numbers not in the quote: ['8800']"
   },
   {
    "chunk_id": "cryptarcus:abstract:1",
-   "statement": "It is debated whether Cryptarcus russelli originated from the southern Pentaceratops clade as a migrant or if it belongs to a lineage closely related to Chasmosaurus that evolved Pentaceratops-like features through convergence.",
+   "statement": "Because CMNFV 8800 cannot be accommodated within Chasmosaurus or any other known chasmosaurine genus, a new genus Cryptarcus was erected for it.",
+   "category": "discovery",
+   "quote": "Under current definitions, CMNFV 8800 cannot be accommodated within Chasmosaurus or any other known chasmosaurine genus. Consequently, we erect Cryptarcus gen. nov. to receive it.",
+   "reason": "statement copies the source wording: '8800 cannot be accommodated within Chasmosaurus or any'"
+  },
+  {
+   "chunk_id": "cryptarcus:abstract:1",
+   "statement": "Researchers suggest that Cryptarcus russelli may represent a migrant from the southern Pentaceratops clade or belong to a lineage more closely related to Chasmosaurus with convergent Pentaceratops‑like frill features.",
    "category": "debate",
-   "quote": "Cryptarcus russelli comb. nov. may represent a migrant originating from the southern \" Pentaceratops clade\", but it may also be part of a lineage more closely related to Chasmosaurus in which Pentaceratops-like features evolved convergently.",
+   "quote": "Cryptarcus russelli comb. nov. may represent a migrant originating from the southern “ Pentaceratops clade”, but it may also be part of a lineage more closely related to Chasmosaurus in which Pentaceratops-like features ... evolved convergently",
    "reason": "quote not found verbatim in the source"
   }
  ]

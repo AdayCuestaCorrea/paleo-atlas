@@ -1,36 +1,36 @@
 {
  "taxon": "Herugavialis",
  "taxon_key": "herugavialis",
- "generator": "ollama/paleo-qwen3.5-9b",
- "prompt_version": "extract-facts-v2",
- "sources_hash": "bcf74d91811d3e8c",
- "generated_at": "2026-11-02T01:04:08+00:00",
+ "generator": "groq/openai/gpt-oss-120b",
+ "prompt_version": "extract-facts-v3",
+ "sources_hash": "e9a42a07a77e8465",
+ "generated_at": "2026-11-22T14:58:23+00:00",
  "citations": {
   "herugavialis:table:1": {
    "source": "wikipedia_table",
    "title": "2026 in archosaur paleontology (table of new taxa)",
-   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1383165113",
+   "url": "https://en.wikipedia.org/wiki/2026_in_archosaur_paleontology?oldid=1386727174",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "herugavialis:enwiki:1": {
    "source": "wikipedia_article",
    "title": "Herugavialis (taxobox)",
-   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1379099211",
+   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1386200318",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "herugavialis:enwiki:2": {
    "source": "wikipedia_article",
    "title": "Herugavialis (introduction)",
-   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1379099211",
+   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1386200318",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
   "herugavialis:enwiki:3": {
    "source": "wikipedia_article",
    "title": "Herugavialis (Classification)",
-   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1379099211",
+   "url": "https://en.wikipedia.org/wiki/Herugavialis?oldid=1386200318",
    "doi": null,
    "license": "CC BY-SA 4.0"
   },
@@ -52,17 +52,17 @@
  "facts": [
   {
    "fact_id": "F001",
-   "statement": "The genus contains a single species, Herugavialis cairensis, found near Cairo, Egypt.",
+   "statement": "Herugavialis is an extinct marine gavialoid crocodilian from the Eocene (Lutetian) Mokattam Formation of Egypt.",
    "category": "description",
    "chunk_id": "herugavialis:enwiki:2",
    "lang": "en",
-   "quote": "It contains a single species, Herugavialis cairensis, known from near Cairo, Egypt.",
-   "quote_sha": "e89d79e75d65b427"
+   "quote": "Herugavialis (\"Horus gharial\") is an extinct genus of marine gavialoid crocodilian known from the Eocene (Lutetian stage) Mokattam Formation of Egypt.",
+   "quote_sha": "0fb7fa6ec02e47e3"
   },
   {
    "fact_id": "F002",
    "statement": "Herugavialis lacked a maxilla process within its lacrimal gland, a feature present in all living crocodilians.",
-   "category": "description",
+   "category": "curiosities",
    "chunk_id": "herugavialis:enwiki:2",
    "lang": "en",
    "quote": "Herugavialis did not have a maxilla process within its lacrimal gland, whereas all extant (living) crocodilians do.",
@@ -70,7 +70,7 @@
   },
   {
    "fact_id": "F003",
-   "statement": "The species was moved to the new genus Herugavialis in a 2026 study.",
+   "statement": "In 2026 the species was reassigned to the new genus Herugavialis by Burke and colleagues.",
    "category": "discovery",
    "chunk_id": "herugavialis:enwiki:2",
    "lang": "en",
@@ -79,34 +79,25 @@
   },
   {
    "fact_id": "F004",
-   "statement": "Herugavialis is classified as a member of Gavialoidea.",
-   "category": "classification",
-   "chunk_id": "herugavialis:table:1",
+   "statement": "The genus name references the Egyptian god Horus and the Great Sphinx’s missing nose, alluding to the missing premaxilla of the holotype skull.",
+   "category": "curiosities",
+   "chunk_id": "herugavialis:enwiki:2",
    "lang": "en",
-   "quote": "A member of Gavialoidea.",
-   "quote_sha": "466ee053d071d520"
+   "quote": "This genus name references the Ancient Egyptian god Horus, widely thought to be depicted in the Great Sphinx (built from the same geological formation that Herugavialis was identified from), as well as the Sphinx's lack of a nose, referencing the missing nasal region (premaxilla) of the holotype skull of Herugavialis.",
+   "quote_sha": "801f9d8aa36d4146"
   },
   {
    "fact_id": "F005",
-   "statement": "The table lists the age as Middle Miocene, though other sources specify Eocene.",
-   "category": "time_and_habitat",
-   "chunk_id": "herugavialis:table:1",
+   "statement": "Phylogenetic analysis places Herugavialis within Gavialidae, more closely related to the gharial than to the false gharial.",
+   "category": "classification",
+   "chunk_id": "herugavialis:enwiki:3",
    "lang": "en",
-   "quote": "Age: Middle Miocene",
-   "quote_sha": "20382fff5386c835"
+   "quote": "Herugavialis was recovered more closely related to the gharial than the false gharial, within Gavialidae.",
+   "quote_sha": "385e6c2b4c346b30"
   },
   {
    "fact_id": "F006",
-   "statement": "The fossil range of Herugavialis is the Eocene, specifically the Lutetian stage.",
-   "category": "time_and_habitat",
-   "chunk_id": "herugavialis:enwiki:1",
-   "lang": "en",
-   "quote": "fossil_range: Eocene (Lutetian),",
-   "quote_sha": "fc5d00ea8aa2aa0c"
-  },
-  {
-   "fact_id": "F007",
-   "statement": "The type locality is the Mokattam Formation.",
+   "statement": "The type locality for Herugavialis is the Mokattam Formation in Egypt.",
    "category": "time_and_habitat",
    "chunk_id": "herugavialis:table:1",
    "lang": "en",
@@ -114,44 +105,26 @@
    "quote_sha": "7a6dd4d416758c7f"
   },
   {
-   "fact_id": "F008",
-   "statement": "The fossil was found in Egypt.",
+   "fact_id": "F007",
+   "statement": "The table lists the age of Herugavialis as Middle Miocene.",
    "category": "time_and_habitat",
    "chunk_id": "herugavialis:table:1",
    "lang": "en",
-   "quote": "Country: Egypt",
-   "quote_sha": "0a9afed5f2b0442c"
+   "quote": "Age: Middle Miocene",
+   "quote_sha": "20382fff5386c835"
+  },
+  {
+   "fact_id": "F008",
+   "statement": "CT scans revealed telescoped orbits as a diagnostic feature of Herugavialis cairensis.",
+   "category": "paleobiology",
+   "chunk_id": "herugavialis:abstract:1",
+   "lang": "en",
+   "quote": null,
+   "quote_sha": "4108232994d23464"
   },
   {
    "fact_id": "F009",
-   "statement": "CT scans revealed numerous anatomical differences between Herugavialis and contemporaneous Egyptian species like Eogavialis africanum and Paratomistoma courti.",
-   "category": "paleobiology",
-   "chunk_id": "herugavialis:abstract:1",
-   "lang": "en",
-   "quote": null,
-   "quote_sha": "b80306ed8dd188a2"
-  },
-  {
-   "fact_id": "F010",
-   "statement": "Herugavialis cairensis is diagnosed by characteristics including telescoped orbits.",
-   "category": "paleobiology",
-   "chunk_id": "herugavialis:abstract:1",
-   "lang": "en",
-   "quote": null,
-   "quote_sha": "a6e9bb9dc3074908"
-  },
-  {
-   "fact_id": "F011",
-   "statement": "It is debated whether the decline in Mediterranean gavialoid diversity was driven by habitat reduction due to global cooling and declining sea levels.",
-   "category": "debate",
-   "chunk_id": "herugavialis:abstract:1",
-   "lang": "en",
-   "quote": null,
-   "quote_sha": "f41bb1e5203adbf5"
-  },
-  {
-   "fact_id": "F012",
-   "statement": "It is debated whether Miocene warming facilitated a rebound in diversity before Late Miocene extirpation caused by the Messinian Salinity Crisis.",
+   "statement": "The authors hypothesize that warming in the Miocene allowed a rebound of gavialoid diversity before their eventual extinction in the Late Miocene, possibly caused by the Messinian Salinity Crisis.",
    "category": "debate",
    "chunk_id": "herugavialis:abstract:1",
    "lang": "en",
@@ -162,45 +135,38 @@
  "rejected": [
   {
    "chunk_id": "herugavialis:enwiki:2",
-   "statement": "Herugavialis is an extinct genus of marine gavialoid crocodilian from the Eocene Lutetian stage of Egypt.",
+   "statement": "The genus contains a single species, Herugavialis cairensis, known from near Cairo, Egypt.",
    "category": "description",
-   "quote": "Herugavialis (\"Horus gharial\") is an extinct genus of marine gavialoid crocodilian known from the Eocene (Lutetian stage) Mokattam Formation of Egypt.",
-   "reason": "statement copies the source wording: 'is an extinct genus of marine gavialoid crocodilian'"
+   "quote": "It contains a single species, Herugavialis cairensis, known from near Cairo, Egypt.",
+   "reason": "statement copies the source wording: 'contains a single species Herugavialis cairensis known from'"
   },
   {
    "chunk_id": "herugavialis:enwiki:2",
-   "statement": "The species was originally described in the genus Tomistoma and remained there for nearly a century before being moved to its own genus.",
+   "statement": "The species was originally described as Tomistoma cairense by Müller in 1927 and remained in that genus for nearly a century.",
    "category": "discovery",
-   "quote": "The species was originally described in the genus Tomistoma... and remained there for nearly a century, even after more comprehensive studies found it to not belong to the genus.",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "herugavialis:enwiki:2",
-   "statement": "The genus name references the Ancient Egyptian god Horus and the Great Sphinx.",
-   "category": "discovery",
-   "quote": "This genus name references the Ancient Egyptian god Horus, widely thought to be depicted in the Great Sphinx...",
-   "reason": "quote not found verbatim in the source"
-  },
-  {
-   "chunk_id": "herugavialis:enwiki:2",
-   "statement": "The genus name also references the missing nasal region (premaxilla) of the holotype skull.",
-   "category": "discovery",
-   "quote": "...as well as the Sphinx's lack of a nose, referencing the missing nasal region (premaxilla) of the holotype skull of Herugavialis.",
-   "reason": "quote not found verbatim in the source"
+   "quote": "The species was originally described in the genus Tomistoma, which contains a single living species, the false gharial, and remained there for nearly a century",
+   "reason": "numbers not in the quote: ['1927']"
   },
   {
    "chunk_id": "herugavialis:enwiki:3",
-   "statement": "Herugavialis is recovered as more closely related to the gharial than the false gharial within the family Gavialidae.",
+   "statement": "Lee & Yates (2018) recovered Tomistoma cairense as a basal gavialoid, more basal than the last common ancestor of Gavialis gangeticus and Tomistoma schlegelii.",
    "category": "classification",
-   "quote": "Herugavialis was recovered more closely related to the gharial than the false gharial, within Gavialidae.",
-   "reason": "statement copies the source wording: 'more closely related to the gharial than the'"
+   "quote": "They recovered Tomistoma cairense as a gavialoid, more basal than the last common ancestor of both the gharial (Gavialis gangeticus) and the false gharial (Tomistoma schlegelii).",
+   "reason": "quote not found verbatim in the source"
+  },
+  {
+   "chunk_id": "herugavialis:table:1",
+   "statement": "Herugavialis was formally named as a new genus and combination by Burke et al. in 2026.",
+   "category": "discovery",
+   "quote": "Authors: Burke et al.",
+   "reason": "numbers not in the quote: ['2026']"
   },
   {
    "chunk_id": "herugavialis:abstract:1",
-   "statement": "The species was re-evaluated from the Middle Eocene Mokattam Formation of Egypt.",
-   "category": "time_and_habitat",
-   "quote": "Here, we present a detailed re-evaluation of one of these species, Tomistoma cairense from the Middle Eocene Mokattam Formation of Egypt...",
-   "reason": "quote not found verbatim in the source"
+   "statement": "Researchers suggest that a decline in Mediterranean gavialoid diversity during the Late Eocene–Oligocene was driven by habitat reduction due to global cooling and falling sea level.",
+   "category": "debate",
+   "quote": "An apparent decline in Mediterranean gavialoid diversity during the Late Eocene–Oligocene is potentially driven by a reduction in habitat, as a result of global cooling and declining eustatic sea level.",
+   "reason": "statement copies the source wording: 'decline in Mediterranean gavialoid diversity during the Late'"
   }
  ]
 }

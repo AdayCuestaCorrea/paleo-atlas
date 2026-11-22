@@ -509,6 +509,24 @@ def ranges_cmd() -> None:
     typer.echo(f"{len(rows)} genera with a taxobox range ({named} name their stages) → {path}")
 
 
+@app.command("recheck-texts")
+def recheck_texts() -> None:
+    """No model: check every verified text again with the Phase 7 checks (ages that the
+    taxobox rules out, stages in the wrong epoch, Spanish words and clades changed,
+    English left untranslated) and the fixed Spanish replacements; failed sentences
+    are left out (ALCANCE.md, Phase 7). Run after `paleo ranges`."""
+    from paleo import ranges
+    from paleo.narrative.write import recheck_quality
+
+    derived = get_paths().data / "derived"
+    path = ranges.ranges_path(derived)
+    rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    ages = {r["taxon_name"]: (r["max_ma"], r["min_ma"]) for r in rows}
+    for kind, keys in recheck_quality(derived, ages).items():
+        shown = f" ({', '.join(keys)})" if keys and len(keys) <= 40 else ""
+        typer.echo(f"{kind}: {len(keys)}{shown}")
+
+
 @sizes_app.command("extract")
 def sizes_extract(
     provider: Provider = "groq",

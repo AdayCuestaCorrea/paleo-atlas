@@ -22,10 +22,16 @@ from pydantic import BaseModel, Field
 from paleo.llm import LLM
 from paleo.narrative.checks import (
     MAX_WORDS,
+    MIN_WORDS,
     TextReport,
+    _align_one,
     alignment_failures,
     check_alignment,
     check_text,
+    en_time_problems,
+    eswiki_conflicts,
+    fix_clade_rank,
+    words,
 )
 from paleo.narrative.facts import Category, prompt
 from paleo.narrative.sources import Chunk
@@ -211,7 +217,74 @@ def fix_es(text: str) -> str:
     text = _ETAPA.sub(etapa, text)
     # Only the Spanish common noun: *Pleiosaurus* is a real genus.
     text = re.sub(r"\bPleiosauria\b", "Plesiosauria", text)  # not a taxon
-    return re.sub(r"\b([Pp])leiosaurio(s?)\b", r"\1lesiosaurio\2", text)
+    text = re.sub(r"\b([Pp])leiosaurio(s?)\b", r"\1lesiosaurio\2", text)
+    for pattern, repl in _ES_FIXED:
+        text = re.sub(pattern, repl, text)
+    text = _CUERNA.sub(_cuernos, text)
+    # adjectives and participles a word or two after: "cuernos frontales alargadas"
+    return _CUERNO_TAIL.sub(lambda m: m[1] + _FEMININE_END.sub(r"\1o\2", m[2]), text)
+
+
+_CUERNO_TAIL = re.compile(r"(\b[Cc]uernos?)((?:\s+[a-záéíóúñ]+){1,2})")
+_FEMININE_END = re.compile(r"(?<=\w)((?:ad|id|iv|os|arg|ich|nt|ect|ort|it|ad))a(s?)\b")
+
+
+_CUERNA = re.compile(
+    r"\b(?:(?P<det>[Ll]as|[Ll]a|[Uu]nas|[Uu]na|[Ee]stas|[Ee]sta|[Dd]e las|[Dd]e la)\s+)?"
+    r"(?P<noun>[Cc]uerna)(?P<pl>s?)\b"
+    r"(?:\s+(?P<adj>[a-záéíóúñ]+?)(?P<adjend>as?)\b)?"
+    r"(?:\s+(?P<verb>estaban|estaba|eran|era|fueron|fue|están|está|son|es)\s+"
+    r"(?P<part>[a-záéíóúñ]+?)(?P<partend>as?)\b)?"
+)
+_NOT_ADJECTIVES = {"par", "nar", "estab", "er", "fuer", "esp", "c"}
+
+
+def _cuernos(m: re.Match[str]) -> str:
+    """ "las cuernas distintivas" -> "los cuernos distintivos": a horn is a cuerno
+    (cuerna is a drinking horn), with its article and adjective agreeing."""
+    det = m["det"]
+    out = ""
+    if det:
+        masc = {"las": "los", "la": "el", "unas": "unos", "una": "un", "estas": "estos",
+                "esta": "este", "de las": "de los", "de la": "del"}[det.lower()]  # fmt: skip
+        out = _capital_like(masc, det) + " "
+    out += _capital_like("cuerno", m["noun"]) + m["pl"]
+    if m["adj"]:
+        word = m["adj"]
+        ending = m["adjend"]
+        out += " " + word + (("o" + ending[1:]) if word not in _NOT_ADJECTIVES else ending)
+    if m["verb"]:
+        out += f" {m['verb']} {m['part']}" + "o" + m["partend"][1:]
+    return out
+
+
+# Fixed replacements found reviewing 15 pages (Phase 7): spellings, calques and false
+# friends that are wrong in every context. Meaning changes ("pastar" for browse) are
+# not replaced: the alignment check leaves those sentences out.
+_ES_FIXED: list[tuple[str, str]] = [
+    (r"\b([Ee])sp[eé]c[ií]?men(?=\b|[^\w])", r"\1spécimen"),  # especimen, especímen
+    (r"\b([Ee])spécime\b", r"\1spécimen"),
+    (r"\bTithoniense\b", "Titoniense"),
+    (r"\b([Cc])o-?oss?ificad", r"\1oosificad"),
+    (r"\b([Cc])oelurosaur", r"\1elurosaur"),
+    (r"\b([Aa])llosáurid", r"\1losáurid"),
+    (r"\bmanirráptidos\b", "maniraptores"),
+    (r"\b([Pp])achicéfalo(s?)\b", r"\1aquicefalosaurio\2"),
+    (r"\bkilogramas\b", "kilogramos"),
+    (r"\b([Uu])nas (\d[\d.,]*(?: (?:a|y) \d[\d.,]*)? kilogramos)\b", r"\1nos \2"),
+    (r"\blagartos monitores\b", "varanos"),
+    (r"\bdepredador(es)? ápice\b", r"superdepredador\1"),
+    (r"\bsinónimos juniors?\b", "sinónimos posteriores"),
+    (r"\bsinónimo junior\b", "sinónimo posterior"),
+    (r"\bsin serraciones\b", "sin dentículos"),
+    (r"\b([Dd])os otr([oa])s\b", lambda m: ("O" if m[1] == "D" else "o") + f"tr{m[2]}s dos"),
+    (r"\b([Ee])l garrote caudal\b", lambda m: ("L" if m[1] == "E" else "l") + "a maza caudal"),
+    (r"\b([Uu])n garrote caudal\b", lambda m: m[1] + "na maza caudal"),
+    (r"\bdel garrote caudal\b", "de la maza caudal"),
+    (r"\bgarrotes caudales\b", "mazas caudales"),
+    (r"\bgarrote caudal\b", "maza caudal"),
+    (r"\b([Gg])rupo (?:padre|parental)\b", r"\1rupo superior"),
+]
 
 
 def _canonical_id(fact_id: str) -> str:
@@ -759,6 +832,115 @@ def recheck_es(
             review=doc.get("review"),
         )  # fmt: skip
         out["dropped" if bad else "fixed"].append(key)
+    return out
+
+
+def _word_count(sentences: list[tuple[str, list[str], str]]) -> int:
+    return sum(len(words(t)) for t, _, _ in sentences)
+
+
+def recheck_quality(
+    derived_root: Path, ages: dict[str, tuple[float, float]]
+) -> dict[str, list[str]]:
+    """No model (ALCANCE.md, Phase 7): every verified text checked again with the checks
+    found reviewing 15 pages. English sentences about the taxon's own time that its age
+    (the Wikipedia taxobox, ``ages`` by genus) rules out, or with a stage in the wrong part
+    of its period, are left out, and so are their Spanish sentences. The Spanish ones get
+    the fixed replacements (fix_es), their clade word at the English rank (fix_clade_rank)
+    and are aligned again; those that still fail are left out. A text that would lose
+    more than _max_dropped sentences, or keep fewer than 3 or under MIN_WORDS words, goes
+    to texts_review with its pair. Only changed files are written."""
+    out: dict[str, list[str]] = {"en_dropped": [], "es_changed": [], "failed": [],
+                                 "unmatched": []}  # fmt: skip
+    texts = derived_root / "texts"
+    for en_path in sorted(texts.glob("*.en.json")):
+        en_doc = json.loads(en_path.read_text(encoding="utf-8"))
+        if en_doc.get("status") != "verified":
+            continue
+        key, taxon = en_doc["taxon_key"], en_doc["taxon"]
+        en = _stored_sentences(en_doc)
+        age = ages.get(taxon) if " " not in taxon else None
+        facts = _facts_of(derived_root, key)
+        by_id = {f["fact_id"]: f for f in facts}
+        bad_en = {
+            i for i, (t, ids, _) in enumerate(en)
+            if en_time_problems(t, taxon, age)
+            or eswiki_conflicts(t, [by_id[x] for x in ids if x in by_id], facts)
+        }  # fmt: skip
+        kept_en = [x for i, x in enumerate(en) if i not in bad_en]
+
+        es_path = texts / f"{key}.es.json"
+        es_doc = json.loads(es_path.read_text(encoding="utf-8")) if es_path.exists() else None
+        es = fixed = kept_es = None
+        if es_doc and es_doc.get("status") == "verified":
+            es = _stored_sentences(es_doc)
+            index = _match_kept(en, es)
+            if index is None:
+                out["unmatched"].append(key)
+                es = None
+            else:
+                fixed = [
+                    (fix_clade_rank(en[index[j]][0], fix_es(t)), f, s)
+                    for j, (t, f, s) in enumerate(es)
+                ]
+                bad_es = {
+                    j for j, (t, _, _) in enumerate(fixed)
+                    if index[j] in bad_en or _align_one(en[index[j]][0], t, set())
+                }  # fmt: skip
+                kept_es = [x for j, x in enumerate(fixed) if j not in bad_es]
+
+        def holds(kept: list, total: list) -> bool:
+            return (
+                len(total) - len(kept) <= _max_dropped(len(total))
+                and len(kept) >= 3
+                and _word_count(kept) >= MIN_WORDS
+            )
+
+        en_ok = not bad_en or holds(kept_en, en)
+        es_ok = es is None or holds(kept_es, es)  # type: ignore[arg-type]
+        if not en_ok:
+            # the English page fails, and its Spanish adaptation with it
+            for path, doc, sents in ((en_path, en_doc, en), (es_path, es_doc, fixed or es)):
+                if doc is None or sents is None:
+                    continue
+                _save(
+                    derived_root / "texts_review" / path.name,
+                    taxon=taxon, key=key, lang=doc["lang"], status="failed",
+                    llm=SimpleNamespace(label=doc["generator"]), version=doc["prompt_version"],
+                    facts_hash=doc["facts_hash"], sentences=sents,
+                    report=SimpleNamespace(word_count=_word_count(sents)),  # type: ignore[arg-type]
+                    problems=["Phase 7 recheck: too many sentences outside the taxon's age"],
+                    review=doc.get("review"),
+                )  # fmt: skip
+                path.unlink()
+            out["failed"].append(key)
+            continue
+        if bad_en:
+            _save(
+                en_path, taxon=taxon, key=key, lang="en", status="verified",
+                llm=SimpleNamespace(label=en_doc["generator"]), version=en_doc["prompt_version"],
+                facts_hash=en_doc["facts_hash"], sentences=kept_en,
+                report=SimpleNamespace(word_count=_word_count(kept_en)),  # type: ignore[arg-type]
+                problems=[],
+            )  # fmt: skip
+            out["en_dropped"].append(key)
+        if es is None or kept_es == es:
+            continue
+        status, target = ("verified", es_path) if es_ok else ("failed", None)
+        _save(
+            target or derived_root / "texts_review" / es_path.name,
+            taxon=taxon, key=key, lang="es", status=status,
+            llm=SimpleNamespace(label=es_doc["generator"]), version=es_doc["prompt_version"],
+            facts_hash=es_doc["facts_hash"], sentences=kept_es if es_ok else fixed,
+            report=SimpleNamespace(word_count=_word_count(kept_es)),  # type: ignore[arg-type]
+            problems=[] if es_ok else ["Phase 7 recheck: too many sentences failed"],
+            review=es_doc.get("review"),
+        )  # fmt: skip
+        if not es_ok:
+            es_path.unlink()
+            out["failed"].append(f"{key}.es")
+        else:
+            out["es_changed"].append(key)
     return out
 
 

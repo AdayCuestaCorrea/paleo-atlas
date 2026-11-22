@@ -57,4 +57,14 @@ Other figures:
 
 **Step 2, data panels (2026-11-22):** of the 50 panel findings, 30 are fixed, 8 partly, 7 mitigated and 7 open. All 9 high-severity ones are fixed. One finding was itself out of date. The reviewer expected *Giganotosaurus* to be Cenomanian, but English Wikipedia now gives early Albian, 111–106 Ma, after a 2026 study, and that is what the page shows.
 
+**Step 3, text checks (2026-11-22):** `paleo recheck-texts` runs the new checks over every verified text, with no model, and leaves out or puts right what they catch. Of the 89 text findings, 38 are gone, including 9 of the 11 high-severity ones. The two high ones left are misreadings of the source (*Allosaurus*'s skin, *Parasaurolophus*'s growth), which no rule catches.
+
+Sentences of the 15 texts with a problem from this set, before and after:
+
+| | English | Spanish |
+|---|---|---|
+| High | 1.7 % → 0.5 % | 3.1 % → 0.5 % |
+| High or medium | 5.2 % → 4.1 % | 13.2 % → 6.8 % |
+| Any | 8.6 % → 7.5 % | 23.0 % → 11.9 % |
+
 The same set will be used to measure the automatic reviewer (Phase 7, step 5): which of these problems it finds, and how many sentences it flags that aren't problems.

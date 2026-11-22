@@ -745,12 +745,24 @@ _CLADE_WORDS = {
     r"\bpterosaurs?\b": r"pterosaur",
     r"\bornithischians?\b": r"ornitisqui",
     r"\bsaurischians?\b": r"saurisqui",
-    r"\bhadrosaurs?\b": r"hadrosaur",
+    # "hadrosaur" in English is a hadrosaurid; a hadrosaurine is a subfamily
+    r"\bhadrosaurs?\b": r"hadrosaur(?!in)",
+    r"\bhadrosaurines?\b": r"hadrosaurin",
     r"\bceratopsians?\b": r"ceratops",
-    r"\bankylosaurs?\b": r"anquilosaur",
+    r"\bceratosaurs?\b": r"ceratosaur",
+    # an ankylosaur (Ankylosauria) is not an ankylosaurid (one family of it)
+    r"\bankylosaurs?\b": r"anquilosaurio",
+    r"\bankylosaurids?\b": r"anquilosaurid",
     r"\bstegosaurs?\b": r"estegosaur",
     r"\bcrocodylomorphs?\b": r"cocodrilomorf",
+    r"\bcrocodyliforms?\b": r"crocodiliform|cocodriliform",
     r"\barchosaurs?\b": r"arcosaur",
+    r"\btyrannosauroids?\b": r"tiranosauroide",
+    r"\btyrannosaurids?\b": r"tiranosaurid",
+    r"\bdiplodocines?\b": r"diplodocin",
+    r"\bdiplodocids?\b": r"diplodocid",
+    r"\babelisauroids?\b|\bAbelisauroidea\b": r"abelisauroide",
+    r"\babelisaurids?\b|\bAbelisauridae\b": r"abelisaurid",
 }
 
 
@@ -768,6 +780,177 @@ def clade_swaps(src: str, dst: str) -> list[str]:
     return [re.search(en, src, re.I).group(0) for en in missing]  # type: ignore[union-attr]
 
 
+# Words of the English sentence whose Spanish form must stay (on folded text): animals
+# and plants that get swapped for another ("magpie" -> "gorrión", "horsetails" ->
+# "helechos"), opposite meanings ("flightless" -> "voladores", "browse" -> "pastar")
+# and places ("Missouri" -> "Misisipi"). Found reviewing 15 pages (Phase 7).
+_KEEP_WORDS = {
+    r"\bmagpies?\b": r"urraca",
+    r"\bsparrows?\b": r"gorrion",
+    r"\balligators?\b": r"aligator|caiman",
+    r"\bcrocodiles?\b": r"cocodrilo",
+    r"\bthresher sharks?\b": r"tiburon(?:es)? zorro",
+    r"\bhorsetails?\b": r"colas? de caballo|equiset",
+    r"\bferns?\b": r"helech",
+    r"\bsails?\b": r"\bvelas?\b",
+    r"\bhumps?\b": r"joroba",
+    r"\bhorns?\b": r"cuerno|cornamenta",
+    r"\bantlers?\b": r"\bastas?\b|cornamenta",
+    r"\bbrows(?:e|es|ed|er|ers|ing)\b": r"ramone",
+    r"\bgraz(?:e|es|ed|er|ers|ing)\b": r"\bpast(?:a|an|ar|aba|aban|o|os|oreo)\b|pastador",
+    r"\bflightless\b": r"no volador|incapa\w* de volar|sin capacidad de vuelo|no pod\w* volar",
+    r"\bgizzards?\b": r"molleja",
+    r"\bamateur\b": r"aficionad",
+    r"\bbattering ram\b": r"ariete",
+    r"\bMissouri\b": r"misuri|missouri",
+    r"\bMississippi\b": r"misisipi|mississippi",
+    r"\bMorocco\b": r"marruecos",
+    r"\bEgypt\b": r"egipto",
+    r"\bGermany\b": r"alemania",
+    r"\bEngland\b": r"inglaterra",
+    r"\bBrazil\b": r"brasil",
+    r"\bSpain\b": r"espana",
+    r"\bBelgium\b": r"belgica",
+    r"\bJapan\b": r"japon",
+    r"\bRussia\b": r"rusia",
+    r"\bAntarctica\b": r"antartida",
+    r"\bSouth Dakota\b": r"dakota del sur|south dakota",
+    r"\bNorth Dakota\b": r"dakota del norte|north dakota",
+    r"\bNew Mexico\b": r"nuevo mexico|new mexico",
+}
+_KEEP_CASE = re.compile(r"^\\b[A-Z]")  # places are matched case-sensitively
+
+
+def words_lost(src: str, dst: str) -> list[str]:
+    """English words of _KEEP_WORDS whose Spanish form is missing. Common words are
+    matched in lower case (or capitalised at the start): "North Horn Formation" is a
+    name, not a horn."""
+    folded = _fold(dst)
+    start = src[:1].lower() + src[1:]
+    lost = []
+    for en, es in _KEEP_WORDS.items():
+        text = src if _KEEP_CASE.match(en) else start
+        if (m := re.search(en, text)) and not re.search(es, folded):
+            lost.append(m.group(0))
+    return lost
+
+
+# A Spanish clade word one rank off, put right when its English sentence names the
+# narrower clade (and not the one the Spanish used): same gender and number, so the
+# rest of the sentence agrees. "crocodyliform" -> "cocodrilomorfo" -> "crocodiliforme".
+_CLADE_FIXES = [
+    (r"\bcrocodyliforms?\b", r"\bcrocodylomorphs?\b",
+     r"\b([Cc])ocodrilomorfo(s?)\b", r"\1rocodiliforme\2"),
+    (r"\btyrannosauroids?\b", r"\btyrannosaurids?\b",
+     r"\b([Tt])iranos[aá]urido(s?)\b", r"\1iranosauroideo\2"),
+    (r"\bankylosaurs?\b", r"\bankylosaurids?\b",
+     r"\b([Aa])nquilos[aá]urido(s?)\b", r"\1nquilosaurio\2"),
+    (r"\bceratosaurs?\b", r"\bceratopsids?\b|\bceratopsians?\b",
+     r"\b([Cc])erat[oó]psido(s?)\b", r"\1eratosaurio\2"),
+    (r"\bhadrosaurines?\b", r"\bhadrosaurids?\b|\bhadrosaurs?\b",
+     r"\b([Hh])adros[aá]urido(s?)\b", r"\1adrosaurino\2"),
+    (r"\babelisauroids?\b", r"\babelisaurids?\b",
+     r"\b([Aa])belis[aá]urido(s?)\b", r"\1belisauroideo\2"),
+    (r"\bdiplodocines?\b", r"\bdiplodocids?\b",
+     r"\b([Dd])iplod[oó]cido(s?)\b", r"\1iplodocino\2"),
+]  # fmt: skip
+
+
+def fix_clade_rank(src: str, dst: str) -> str:
+    """The Spanish sentence with its clade word put at the English sentence's rank."""
+    for narrow, other, wrong, right in _CLADE_FIXES:
+        if re.search(narrow, src, re.I) and not re.search(other, src, re.I):
+            dst = re.sub(wrong, right, dst)
+    return dst
+
+
+# English words that never belong in a Spanish sentence ("noting que los fragmentos").
+_EN_ONLY = {"noting", "the", "and", "with", "which", "from", "that", "were", "was", "been",
+            "their", "however", "although", "being", "whose", "while", "suggesting"}  # fmt: skip
+_QUOTED = re.compile(r"«[^»]*»|\"[^\"]*\"|“[^”]*”|\*[^*]*\*|_[^_]*_")
+
+
+def english_left(dst: str, src: str = "") -> list[str]:
+    """English words left untranslated in a Spanish sentence (quoted titles, italic
+    names and words of the English sentence's own proper names aside)."""
+    plain = _QUOTED.sub(" ", dst)
+    tokens = re.findall(r"[^\W\d_]+", plain)
+    src_tokens = " ".join(re.findall(r"[^\W\d_]+", src)).lower()
+    left = set()
+    for i, w in enumerate(tokens):
+        if w.lower() not in _EN_ONLY:
+            continue
+        # inside an English name or title copied as is ("Garden of the Gods", "The
+        # Science of Nature"): the word and a neighbour appear together in the source
+        pairs = [tokens[j : j + 2] for j in (i - 1, i) if j >= 0 and j + 1 < len(tokens)]
+        if not any(f" {' '.join(p).lower()} " in f" {src_tokens} " for p in pairs):
+            left.add(w)
+    return sorted(left)
+
+
+def _epoch_bounds() -> dict[tuple[str, str], tuple[float, float]]:
+    """(folded Spanish period, E/M/L) -> (oldest, youngest) Ma, from the ICS table."""
+    from paleo.site.terms import TIME_UNITS
+
+    out = {}
+    for old, young, en, _ in TIME_UNITS:
+        part, _, period = en.partition(" ")
+        if period in _PERIODS and part in ("Early", "Middle", "Late"):
+            out[(_PERIODS[period], _EN_PART[part.lower()])] = (old, young)
+    return out
+
+
+def _stage_bounds(stage: str) -> tuple[float, float] | None:
+    from paleo.ranges import STAGES
+
+    return next(((o, y) for o, y, n in STAGES if n == stage), None)
+
+
+def _period_of(stage: str) -> str | None:
+    """Folded Spanish name of the period a stage belongs to."""
+    from paleo.site.terms import TIME_UNITS
+
+    if not (b := _stage_bounds(stage)):
+        return None
+    for old, young, en, _ in TIME_UNITS:
+        if en in _PERIODS and old >= b[0] - 1e-6 and young <= b[1] + 1e-6:
+            return _PERIODS[en]
+    return None
+
+
+_CONTRAST = re.compile(
+    r"\b(?:while|whereas|originally|thought|suggest\w*|argue\w*|disagree\w*|others?|before"
+    r"|after|than|but|instead|rather|re-?dated|mientras|originalmente|se pensaba|sugier\w*"
+    r"|antes|despu[eé]s|que el|pero|otros|otras|discrep\w*)\b",
+    re.IGNORECASE,
+)
+
+
+def stage_epoch_conflicts(
+    stages: set[str], epochs: set[tuple[str, str]], text: str = ""
+) -> list[str]:
+    """Stages named next to an epoch of their own period that does not contain them:
+    "the Cenomanian stage of the Early Cretaceous" (the Cenomanian is Late). Not in a
+    sentence that contrasts views or times ("originally thought Late Cretaceous, re-dated
+    to the Albian"), where both may be right."""
+    if text and _CONTRAST.search(text):
+        return []
+    bounds = _epoch_bounds()
+    out, fits = [], False
+    for stage in sorted(stages):
+        sb, period = _stage_bounds(stage), _period_of(stage)
+        named = [bounds[e] for e in epochs if e[0] == period and e in bounds]
+        if not (sb and named):
+            continue
+        if any(sb[0] > y and sb[1] < o for o, y in named):
+            fits = True
+        else:
+            out.append(stage)
+    # "Middle Devonian... from the Givetian to the Frasnian": one stage fits, the
+    # sentence is about a range; only a sentence where none fits is wrong.
+    return [] if fits else out
+
+
 def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
     """What an adapted sentence lost from its source sentence (empty if nothing)."""
     problems = []
@@ -782,6 +965,17 @@ def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
         problems.append(f"other part of the period {wrong} (English: {sorted(en_epochs)})")
     if swapped := clade_swaps(src, dst):
         problems.append(f"clade swapped for another {swapped}")
+    if lost := words_lost(src, dst):
+        problems.append(f"words not kept {lost}")
+    if left := english_left(dst, src):
+        problems.append(f"English words left untranslated {left}")
+    if wrong := stage_epoch_conflicts(stages_es(dst, keep=src), epochs_es(dst), dst):
+        problems.append(f"stage in another part of its period {wrong}")
+    # a qualifier the English sentence does not use ("el grupo parafilético")
+    folded = _fold(dst)
+    qualifiers = {"parafil": "paraphyl", "monofil": "monophyl", "polifil": "polyphyl"}
+    if extra := [es for es, en in qualifiers.items() if es in folded and en not in src.lower()]:
+        problems.append(f"qualifier not in the English sentence {extra}")
     if not numbers_match(src, dst):
         problems.append(f"numbers differ ({sorted(numbers(src))} vs {sorted(numbers(dst))})")
     # "5,650 kg" in English is five thousand; in Spanish it reads as 5.65.
@@ -827,3 +1021,131 @@ def alignment_failures(
         for i, ((src, _), dst) in enumerate(zip(source, adapted, strict=True))
         if _align_one(src, dst, scientific_names)
     }
+
+
+# --- The page's own taxon against its age (Phase 7) ---------------------------------
+
+_MA = re.compile(
+    r"(\d+(?:\.\d+)?)(?:\s*(?:to|and|or|-|\u2013)\s*(\d+(?:\.\d+)?))?\s*"
+    r"(?:million years ago|million years before present|Ma\b|mya\b)",
+    re.IGNORECASE,
+)
+_ABOUT_IT = re.compile(
+    r"\b(?:it|its|the genus|the species|fossils?|remains|specimens?|holotype)\b", re.I
+)
+_WHEN = re.compile(r"\b(?:lived|living|existed|dat(?:e|es|ed|ing)|age|ages|known from"
+                   r"|time range|fossil record|stage|stages|epoch|period)\b", re.I)  # fmt: skip
+
+
+def age_conflicts(text: str, taxon: str, max_ma: float, min_ma: float) -> list[str]:
+    """What an English sentence about the taxon's own time says that its age (the
+    Wikipedia taxobox) rules out: ages in Ma beyond it, or only stages outside it.
+    *Iguanodon* (126-122 Ma) "lived from the Kimmeridgian to the Maastrichtian, 154.8 to
+    66 million years ago" (PBDB's range); *Carnotaurus* (69-66) "69 to 64 million years
+    ago" (its formation's). Only sentences about the taxon itself are judged."""
+    genus = taxon.split()[0]
+    if not (_WHEN.search(text) and (genus in text or _ABOUT_IT.search(text))):
+        return []
+    # Estimates differ by a few million years between sources: only a clear
+    # contradiction counts. A range that does not touch the age at all; one far wider
+    # than it (PBDB's every-occurrence range); or a Mesozoic animal past 66 Ma.
+    slack = 1.0 + 0.1 * (max_ma - min_ma)
+    span = max(max_ma - min_ma, 1.0)
+    out = []
+    for m in _MA.finditer(text):
+        values = [float(v) for v in m.groups() if v]
+        hi, lo = max(values), min(values)
+        # "approximately 125 million years ago": a single figure is a rounded one
+        margin = max(slack, 4.0, 0.05 * hi) if len(values) == 1 else slack
+        apart = lo > max_ma + margin or hi < min_ma - margin
+        too_wide = (
+            (hi - lo) > 3 * span
+            and (hi - lo) - span > 10
+            and (hi > max_ma + slack or lo < min_ma - slack)
+        )
+        past_kpg = min_ma >= 66.0 and lo < 66.0 - 0.5
+        if apart or too_wide or past_kpg:
+            out.append(m.group(0))
+    stages = stages_en(text)
+    bounds = [b for st in stages if (b := _stage_bounds(st))]
+    # a single figure in the taxobox is often one species' age (Brodavis: 80.5 Ma, its
+    # other species are Maastrichtian): stages are only judged against a real range
+    if (
+        max_ma - min_ma >= 1
+        and bounds
+        and not any(o > min_ma - 2 and y < max_ma + 2 for o, y in bounds)
+    ):
+        out.append(", ".join(sorted(stages)))
+    return out
+
+
+def en_time_problems(text: str, taxon: str, age: tuple[float, float] | None) -> list[str]:
+    """Problems of an English sentence with time: a stage in the wrong part of its
+    period, or ages and stages the taxon's own age rules out."""
+    problems = []
+    if wrong := stage_epoch_conflicts(stages_en(text), epochs_en(text), text):
+        problems.append(f"stage in another part of its period {wrong}")
+    if age and (clash := age_conflicts(text, taxon, *age)):
+        problems.append(f"outside the taxon's age {age[0]}-{age[1]} Ma: {clash}")
+    return problems
+
+
+# --- Spanish Wikipedia against the English one (Phase 7) ----------------------------
+
+_BODY_LENGTH = re.compile(
+    r"(\d+(?:[.,]\d+)?)(?:\s*(?:to|and|or|-|\u2013)\s*(\d+(?:[.,]\d+)?))?\s*"
+    r"(?:meters|metres|m)\b(?:\s+(?:long|in length))?",
+    re.IGNORECASE,
+)
+_PART = re.compile(
+    r"\b(?:femur|humerus|tibia|fibula|skull|tooth|teeth|vertebra\w*|bone|ulna|radius|"
+    r"scapula|pelvis|ilium|neck|tail|limb|leg|arm|jaw|mandible|claw|crest|frill|horn|"
+    r"spine|sail|egg|track|footprint|heights?|tall|high|hip|wing|wingspan)\b",
+    re.IGNORECASE,
+)
+
+
+_ATTRIBUTED = re.compile(
+    r"\b(?:suggest\w*|propos\w*|according|some|other|later|study|studies|publication|"
+    r"researchers?|authors?|argued|considered|juveniles?|hatchlings?|young|subadults?|"
+    r"nest\w*|specimens?|species|individuals?|holotype|largest|smallest|maximum|minimum|"
+    r"age of|over|more than|at least|exceed\w*)\b"
+    r"|\b(?!The\b|This\b|Its\b|An?\b)[A-Z][a-z]+ (?:and \w+ )?"
+    r"(?:estimated|suggested|proposed|calculated)\b",
+    re.IGNORECASE,
+)
+
+
+def _body_lengths(text: str) -> list[float]:
+    """Body lengths in metres a statement gives ("reached 18 to 22 meters long"), not
+    the size of a bone, a part, a height or a wingspan."""
+    out = []
+    # clause by clause: "lengths of 18 to 22 meters and heights of 9.4 to 13 meters"
+    for clause in re.split(r";|, | and (?=[^\W\d])", text):
+        about_length = re.search(r"\b(?:lengths?|long|measur\w*|reach\w*)\b", clause)
+        if _PART.search(clause) or not about_length:
+            continue
+        for m in _BODY_LENGTH.finditer(clause):
+            out += [float(v.replace(",", ".")) for v in m.groups() if v]
+    return out
+
+
+def eswiki_conflicts(sentence: str, cited: list[dict], facts: list[dict]) -> list[str]:
+    """An English sentence whose figure comes only from the Spanish Wikipedia while the
+    English one, the cited source, gives a clearly different one for the same measure:
+    *Brachiosaurus* "26 meters" (eswiki) against 18-22 m (enwiki)."""
+    if not cited or not all(":eswiki:" in f.get("chunk_id", "") for f in cited):
+        return []
+    # An attributed estimate ("Holtz suggested", "some estimates") or the size of a
+    # juvenile, a specimen or one species is another figure, not a contradiction.
+    if _ATTRIBUTED.search(sentence):
+        return []
+    said = _body_lengths(sentence)
+    english = [v for f in facts if ":enwiki:" in f.get("chunk_id", "")
+               for v in _body_lengths(f.get("statement", ""))]  # fmt: skip
+    if not said or not english:
+        return []
+    lo, hi = min(english), max(english)
+    if all(v > hi * 1.15 or v < lo * 0.85 for v in said):
+        return [f"{said} m from the Spanish Wikipedia; the English one gives {lo}-{hi} m"]
+    return []

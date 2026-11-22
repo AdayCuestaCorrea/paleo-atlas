@@ -1,0 +1,45 @@
+name: Error en una ficha / Error on a page
+description: Algo está mal en una ficha del atlas / Something is wrong on an atlas page
+labels: ["ficha"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Si el error viene de Wikipedia, se puede corregir allí y la ficha se actualiza sola en un día.
+        Thanks for reporting. If the mistake comes from Wikipedia, fixing it there updates the page within a day.
+  - type: input
+    id: page
+    attributes:
+      label: Ficha / Page
+      description: Dirección de la ficha / Page address
+    validations:
+      required: true
+  - type: input
+    id: lang
+    attributes:
+      label: Idioma / Language
+      description: es / en
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tipo de error / Kind of error
+      options:
+        - Dato incorrecto / Wrong fact
+        - Texto mal escrito / Badly written
+        - Mala traducción / Bad translation
+        - Imagen equivocada / Wrong image
+        - Otro / Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué está mal? / What is wrong?
+      description: Copia la frase si puedes / Quote the sentence if you can
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Fuente (opcional) / Source (optional)
+      description: Dónde está el dato correcto (artículo, DOI, enlace) / Where the correct information is (paper, DOI, link)

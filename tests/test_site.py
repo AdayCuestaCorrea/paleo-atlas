@@ -373,3 +373,19 @@ def test_paleobiology_gets_sub_headings_only_when_long_enough():
     assert groups(short) == [(None, short)]
     one_topic = [s("diet")] * 5 + [s("growth")]  # only one topic with two sentences
     assert groups(one_topic) == [(None, one_topic)]
+
+
+def test_each_page_links_to_the_error_report_form():
+    from urllib.parse import parse_qs, urlsplit
+
+    from paleo.site.build import report_url
+
+    url = report_url("Error en la ficha de Tyrannosaurus", "https://x.io/es/taxones/t.html", "es")
+    parts = urlsplit(url)
+    assert parts.path.endswith("/paleo-atlas/issues/new")
+    query = parse_qs(parts.query)
+    assert query["template"] == ["error-report.yml"]
+    assert query["page"] == ["https://x.io/es/taxones/t.html"]
+    assert query["lang"] == ["es"] and query["title"] == ["Error en la ficha de Tyrannosaurus"]
+    for lang in ("es", "en"):
+        assert builder().i18n[lang]["report_error"]  # the link text exists in both languages

@@ -104,6 +104,7 @@
           {% if taxon.page_type == 'new' %}<p class="note">{{ T.fallback_note }}</p>{% endif %}</div>
         {% endif %}
         {% if not text and taxon.page_type == 'known' %}<p class="note">{{ T.known_note }}</p>{% endif %}
+        <p class="note report"><a href="{{ report_url(taxon.taxon_name) }}" target="_blank" rel="noopener">{{ T.report_error }}</a></p>
       </section>
 
       {% if has_points or taxon.gbif_top_institutions %}

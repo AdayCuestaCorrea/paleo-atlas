@@ -18,12 +18,12 @@ from dataclasses import dataclass
 from functools import cached_property
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 from markupsafe import Markup, escape
 
-from paleo.config import enabled_pages, get_paths, project_root
+from paleo.config import REPO_URL, enabled_pages, get_paths, project_root
 from paleo.ingest.pbdb import scope_clades
 from paleo.names import GENUS_LIKE
 from paleo.site import compare, explore, news, status, taxon_page, terms
@@ -36,6 +36,16 @@ from paleo.site.search import build_index, card_meta
 LANGS = ("es", "en")
 HOME_CARDS = 12  # cards the home page draws before the explorer's JS takes over
 I18N_DIR = Path(__file__).parent / "i18n"
+ISSUES_URL = f"{REPO_URL}/issues/new"
+
+
+def report_url(title: str, page: str, lang: str) -> str:
+    """Link to the repo's error-report issue form, filled in with the page and language."""
+    query = {"template": "error-report.yml", "labels": "ficha", "title": title, "page": page,
+             "lang": lang}  # fmt: skip
+    return f"{ISSUES_URL}?{urlencode(query)}"
+
+
 SITE_URL = os.environ.get("PALEO_SITE_URL", "https://adaycuestacorrea.github.io/paleo-atlas")
 
 PATHS = {
@@ -608,6 +618,11 @@ class SiteBuilder:
             self_url=self.url(lang, page.kind, page.key),
             canonical=f"{SITE_URL}/{self.path(lang, page.kind, page.key)}",
             alternate_absolute=f"{SITE_URL}/{self.path(other, page.kind, page.key)}",
+            report_url=lambda name, lang=lang: report_url(
+                f"{self.i18n[lang]['report_error_title']} {name}",
+                f"{SITE_URL}/{self.path(lang, page.kind, page.key)}",
+                lang,
+            ),
             base=self.base,
             fmt_date=lambda d, precision="day": fmt_date(d, lang, precision),
             num=lambda v: (

@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 54 · **Estado:** Fase 1 cerrada (2026-11-21: 2 semanas sola, 30 de 30 ejecuciones programadas en verde); Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
+**Creado:** 2026-10-31 · **Versión:** 55 · **Estado:** Fase 1 cerrada (2026-11-21: 2 semanas sola, 30 de 30 ejecuciones programadas en verde); Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
 
 ---
 
@@ -439,6 +439,7 @@ No juzgamos la ciencia: **mostramos señales verificables** y explicamos qué si
 | Mapa de hallazgos *(Fase 3)* | PBDB + GBIF | Ocultar |
 | Museos con especímenes *(Fase 3)* | GBIF | Ocultar |
 | Fuentes y fecha de última actualización | Pipeline | Siempre visible |
+| «¿Ves un error?»: enlace a un formulario de GitHub (`.github/ISSUE_TEMPLATE/error-report.yml`) con la ficha y el idioma ya rellenos *(v55)* | Repositorio | Siempre visible |
 
 ### 11.2 Árbol de parentesco (Fase 3)
 Lo que buscas se llama **cladograma** o, con el eje del tiempo, **árbol filogenético calibrado en el tiempo**.
@@ -808,6 +809,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-22 | v55: **«¿Ves un error?» en cada ficha.** Enlace a un formulario de GitHub en dos idiomas (ficha, idioma, tipo de error, qué está mal y fuente), con la dirección de la ficha y el idioma ya rellenos y la etiqueta `ficha`. Antes de pedir opiniones fuera (Reddit), para que cada aviso quede ligado a su ficha | Decisión del usuario: publicar la web en comunidades de paleontología |
 | 2026-11-22 | v54: **Fase 1 cerrada.** Del 2026-11-07 al 2026-11-21 la web se actualizó sola: 30 de 30 ejecuciones programadas en verde. Groq clasificó noticias y reescribió fichas a diario, agotó la cuota el 13 y el 20 de noviembre sin parar la publicación (v53) y reescribió las 3 fichas apartadas el 12 de noviembre. Las intervenciones del 2026-11-12 (secreto de Groq, v53) no reinician el plazo | Decisión del usuario (2026-11-12): el plazo se mantiene |
 | 2026-11-12 | v53: **arreglos del pipeline diario.** (1) El secreto `GROQ_API_KEY` llegaba vacío a Actions desde el 2026-11-01: el paso de Groq fallaba siempre sin que la ejecución saliera en rojo (`continue-on-error`), y desde el 2026-11-07 no se clasificaba ninguna noticia; el usuario lo puso de nuevo y se clasificaron las 34 pendientes. (2) Al ponerse al día, Groq volvió a extraer los hechos de las especies nuevas y se quedó sin cuota antes de los textos; las citas rotas pararon la publicación en dbt. Ahora `fct_taxon_text` no publica un texto que cite hechos inexistentes (la ficha enseña el respaldo) y un aviso de dbt lo cuenta (`assert_texts_waiting_for_rewrite`). (3) Los estudios sin fecha de publicación se fechaban con la última revisión de la página de Wikipedia (16 estudios «se movían» cada día); ahora, con la primera en que aparecen | Revisión del usuario: «En los medios» no publicaba desde el 2 de noviembre |
 | 2026-11-12 | v52: **Fase 3 cerrada** (§7, §12.1, §17, §24; `docs/fases/fase-3.md`). Tope de rescate proporcional (3 frases o la quinta parte de la ficha): 32 de los 54 géneros sin ficha en inglés se rescatan sin modelo. Comprobación nueva entre el inglés y el español (pisos, Inferior/Superior, nombres de clado) y sustituciones fijas («etapa X-iense» → «piso X-iense», «pleiosaurio» → «plesiosaurio»), aplicadas a lo ya verificado sin modelo (`paleo narrate --recheck-es`): 517 fichas con sustituciones y 173 que pierden 223 frases erróneas. Español de 54 géneros con la GPU (`--es-missing`, 26 min, máx. 72 °C): 36 verificadas. Final: EN 2.803 · ES 2.784; de géneros, 2.721 y 2.703 de 2.743 | Decisiones del usuario con las cifras medidas: no reescribir las 417 fichas en español rescatadas sin la pasada de gramática (no reduce los calcos); rescate intermedio de los 54; calidad del español en la Fase 3 en versión reducida, y «grupo padre» y los nombres propios al backlog |

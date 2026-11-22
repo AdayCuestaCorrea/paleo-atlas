@@ -449,6 +449,23 @@ def write(
             typer.echo(f"{taxon}: skipped, invalid model output ({exc})")
             continue
     typer.echo(f"{llm.label}: {llm.stats}")
+    if done:
+        _recheck_texts()
+
+
+def _recheck_texts() -> None:
+    """The Phase 7 checks over the texts just written (and every other, unchanged ones
+    are not rewritten): `paleo recheck-texts`, so the daily pipeline runs them too."""
+    from paleo import ranges
+    from paleo.narrative.write import recheck_quality
+
+    derived = get_paths().data / "derived"
+    path = ranges.ranges_path(derived)
+    rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    ages = {r["taxon_name"]: (r["max_ma"], r["min_ma"]) for r in rows}
+    for kind, keys in recheck_quality(derived, ages).items():
+        shown = f" ({', '.join(keys)})" if keys and len(keys) <= 40 else ""
+        typer.echo(f"recheck {kind}: {len(keys)}{shown}")
 
 
 @app.command()
@@ -515,16 +532,7 @@ def recheck_texts() -> None:
     taxobox rules out, stages in the wrong epoch, Spanish words and clades changed,
     English left untranslated) and the fixed Spanish replacements; failed sentences
     are left out (ALCANCE.md, Phase 7). Run after `paleo ranges`."""
-    from paleo import ranges
-    from paleo.narrative.write import recheck_quality
-
-    derived = get_paths().data / "derived"
-    path = ranges.ranges_path(derived)
-    rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
-    ages = {r["taxon_name"]: (r["max_ma"], r["min_ma"]) for r in rows}
-    for kind, keys in recheck_quality(derived, ages).items():
-        shown = f" ({', '.join(keys)})" if keys and len(keys) <= 40 else ""
-        typer.echo(f"{kind}: {len(keys)}{shown}")
+    _recheck_texts()
 
 
 @sizes_app.command("extract")
@@ -931,6 +939,8 @@ def narrate(
         typer.echo(f"{genus}: {time.monotonic() - start:.0f} s [{done}]", err=False)
     typer.echo(f"Done: {done} processed, {skipped} up to date, {statuses}")
     typer.echo(f"{llm.label}: {llm.stats}")
+    if done:
+        _recheck_texts()
 
 
 @eval_app.command("validate-gold")

@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 55 · **Estado:** Fase 1 cerrada (2026-11-21: 2 semanas sola, 30 de 30 ejecuciones programadas en verde); Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
+**Creado:** 2026-10-31 · **Versión:** 56 · **Estado:** Fase 1 cerrada (2026-11-21: 2 semanas sola, 30 de 30 ejecuciones programadas en verde); Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 7 (calidad de las fichas) abierta el 2026-11-22; Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
 
 ---
 
@@ -320,6 +320,25 @@ Los DAGs no publican: trabajan sobre un clon local de la rama `data` (`airflow/w
 - [x] Documento de fase (`docs/fases/fase-6.md`) *(2026-11-08)*
 
 **Terminado cuando:** el comparador cumple las reglas de §11.3 y está publicado.
+
+### Fase 7 — Calidad de las fichas *(v56, antes de pedir opiniones fuera)*
+Una revisión a mano de 15 fichas famosas (2026-11-22, un agente por ficha: *Tyrannosaurus*, *Triceratops*, *Velociraptor*, *Spinosaurus*, *Stegosaurus*, *Brachiosaurus*, *Diplodocus*, *Allosaurus*, *Ankylosaurus*, *Parasaurolophus*, *Pachycephalosaurus*, *Archaeopteryx*, *Iguanodon*, *Carnotaurus*, *Giganotosaurus*) encontró errores visibles en todas. Casi todos tienen unas pocas causas que se repiten, así que se arreglan **por causa y para las 4.891 fichas**, no ficha a ficha, y cada arreglo se mide contra esas 15 fichas.
+- [ ] **Conjunto de evaluación:** los hallazgos de las 15 fichas en `eval/fichas/` (frase o elemento, causa, gravedad, versión correcta y dónde se comprobó). Cifra de partida: frases con problemas por ficha y por gravedad
+- [ ] **Paneles de datos** (sin LLM, en dbt y en la web):
+  - edad de la cabecera: la del texto verificado y el resumen de Wikipedia; el rango de PBDB solo como «registro fósil (PBDB)», con su aviso, y nunca como hecho del texto (*Iguanodon*: 154,8–66 Ma dentro de la prosa);
+  - países, museos y «Especies válidas»: solo lo que coincide con el texto, o rotulado como registros de PBDB/GBIF (dientes mal atribuidos, sinónimos como *Giraffatitan*);
+  - historial: fuera los eventos de contabilidad de PBDB («Revalidado» de géneros que nunca fueron inválidos, «Nombre inválido» de la especie tipo) y los DOI cuyo título no coincide con el estudio;
+  - parientes ordenados por cercanía de verdad, o sin la frase «los más cercanos primero»; tipos de imagen que no coinciden con Commons, fuera
+- [ ] **Comprobaciones nuevas del texto** (sin LLM; la frase que falla se quita, como en el rescate):
+  - fechas y pisos de una frase frente a la edad del taxón (resumen de Wikipedia); un piso en la época equivocada («Cenomaniense del Cretácico Inferior»);
+  - Wikipedia en español frente a la inglesa: si discrepan en una cifra o un periodo, manda la inglesa (*Brachiosaurus* «26 m»);
+  - español: más pares de clados que se confunden (ceratosaurio/ceratópsido, anquilosaurio/anquilosáurido…), palabras en inglés sin traducir («noting»), sentido opuesto («voladores» frente a *flightless*), topónimos (Misuri/Misisipi), y reglas fijas para los calcos repetidos (`fix_es`: «ramonear», «grupo parental», «Titoniense», «espécimen»)
+- [ ] **Textos escritos con hechos antiguos** (6 géneros: *facts_hash* distinto del actual): reescribirlos con la GPU y un test que lo detecte
+- [ ] **Revisor automático medido:** comprobar si el modelo local, como revisor, encuentra los errores graves del conjunto de evaluación (lectura equivocada de la fuente, como «madurez en un año»). Solo si llega a una cifra acordada se pasa por todas las fichas en lotes nocturnos (Groq no tiene cuota para 2.800 fichas)
+- [ ] **Transparencia:** sección «¿Cuánto fiarse?» en la página de estado: cómo se escriben y comprueban los textos, la tasa de error medida antes y después, qué detecta cada comprobación y qué no, y el enlace «¿Ves un error?» de cada ficha
+- [ ] Documento de fase (`docs/fases/fase-7.md`)
+
+**Terminado cuando:** en las 15 fichas evaluadas no queda ningún error grave, la tasa de error medida antes y después está publicada en la página de estado, y las comprobaciones nuevas corren en el pipeline diario. Solo entonces se publica en Reddit y otras comunidades.
 
 ---
 
@@ -809,6 +828,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-22 | v56: **Fase 7 — Calidad de las fichas.** La revisión de 15 fichas famosas (un agente por ficha) encontró errores visibles en todas: sobre todo los paneles de PBDB/GBIF (edad, países, museos, especies válidas, historial), y además frases mal leídas de la fuente, errores heredados de la Wikipedia en español y español que cambia el sentido. Se arreglan por causa para todas las fichas, midiendo contra esas 15, y se publica la tasa de error antes de pedir opiniones fuera | Decisión del usuario: no esperar a que los lectores encuentren los errores |
 | 2026-11-22 | v55: **«¿Ves un error?» en cada ficha.** Enlace a un formulario de GitHub en dos idiomas (ficha, idioma, tipo de error, qué está mal y fuente), con la dirección de la ficha y el idioma ya rellenos y la etiqueta `ficha`. Antes de pedir opiniones fuera (Reddit), para que cada aviso quede ligado a su ficha | Decisión del usuario: publicar la web en comunidades de paleontología |
 | 2026-11-22 | v54: **Fase 1 cerrada.** Del 2026-11-07 al 2026-11-21 la web se actualizó sola: 30 de 30 ejecuciones programadas en verde. Groq clasificó noticias y reescribió fichas a diario, agotó la cuota el 13 y el 20 de noviembre sin parar la publicación (v53) y reescribió las 3 fichas apartadas el 12 de noviembre. Las intervenciones del 2026-11-12 (secreto de Groq, v53) no reinician el plazo | Decisión del usuario (2026-11-12): el plazo se mantiene |
 | 2026-11-12 | v53: **arreglos del pipeline diario.** (1) El secreto `GROQ_API_KEY` llegaba vacío a Actions desde el 2026-11-01: el paso de Groq fallaba siempre sin que la ejecución saliera en rojo (`continue-on-error`), y desde el 2026-11-07 no se clasificaba ninguna noticia; el usuario lo puso de nuevo y se clasificaron las 34 pendientes. (2) Al ponerse al día, Groq volvió a extraer los hechos de las especies nuevas y se quedó sin cuota antes de los textos; las citas rotas pararon la publicación en dbt. Ahora `fct_taxon_text` no publica un texto que cite hechos inexistentes (la ficha enseña el respaldo) y un aviso de dbt lo cuenta (`assert_texts_waiting_for_rewrite`). (3) Los estudios sin fecha de publicación se fechaban con la última revisión de la página de Wikipedia (16 estudios «se movían» cada día); ahora, con la primera en que aparecen | Revisión del usuario: «En los medios» no publicaba desde el 2 de noviembre |

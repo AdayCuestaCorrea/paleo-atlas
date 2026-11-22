@@ -4,7 +4,7 @@
 
 > **English summary of [`ALCANCE.md`](ALCANCE.md)**, which is canonical and much longer (phases with every checkbox, decisions, risks, the full change log). This summary is updated when a phase closes, not on every change. If the two do not match, `ALCANCE.md` wins. Section numbers follow `ALCANCE.md`, so `ALCANCE.md` §N is the detail of §N here.
 
-**Summarised from version:** 54 (2026-11-22) · **Status:** Phases 0–6 done; Phase 1 closed on 2026-11-21 after 2 unattended weeks (30 of 30 scheduled runs green).
+**Summarised from version:** 56 (2026-11-22) · **Status:** Phases 0–6 done; Phase 1 closed on 2026-11-21 after 2 unattended weeks (30 of 30 scheduled runs green); Phase 7 (page quality) opened on 2026-11-22.
 
 Website: https://adaycuestacorrea.github.io/paleo-atlas/ · Interview pack: [`docs/interview-pack/`](docs/interview-pack/one-pager.md)
 
@@ -77,6 +77,7 @@ Ten decisions, each with an ADR in [`docs/adr/`](docs/adr/README.md): D1 no Spar
 | 4 — Portfolio | The project is on the CV with URL and verifiable metrics | Done: bilingual README, ADRs, one-pager, postmortem, STAR stories, CV entry, GitHub profile and LinkedIn project |
 | 5 — AI and news | News classification metrics are in the README and the glossary is on the pages with its sample accuracy | Done |
 | 6 — Size comparator | The comparator follows §11.3 and is published | Done (3D models moved to the backlog in v40) |
+| 7 — Page quality | No serious error left on the 15 hand-reviewed pages, the error rate before and after is published on the status page, and the new checks run in the daily pipeline; only then is the site shared on Reddit | Open (2026-11-22) |
 
 Each phase has a document explaining the why, in Spanish: [`docs/fases/`](docs/fases/README.md).
 
@@ -193,3 +194,5 @@ The full log (v1 on 2026-10-31 to v46 on 2026-11-08) is in [`ALCANCE.md` §25](A
 | v46 | 2026-11-08 | Phase 4: interview pack, CV, GitHub profile; Databricks to the backlog |
 | v52–v53 | 2026-11-12 | Phase 3 closed; daily pipeline fixes (Groq secret, quota, held-back texts) |
 | v54 | 2026-11-22 | Phase 1 closed after 2 unattended weeks |
+| v55 | 2026-11-22 | "Spotted a mistake?" link on every page (GitHub issue form) |
+| v56 | 2026-11-22 | Phase 7: page quality. A hand review of 15 famous pages found visible errors on all of them; they are fixed by cause for every page, measured against those 15, and the error rate is published before asking for outside feedback |

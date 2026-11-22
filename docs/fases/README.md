@@ -26,3 +26,4 @@ Cada documento se escribe al cerrar su fase. Va en español primero y en inglés
 | 4 — Portfolio | [fase-4.md](fase-4.md) | Hecha (2026-11-08) |
 | 5 — IA y noticias | [fase-5.md](fase-5.md) | Hecha (noticias y glosario publicados el 2026-11-08; enlace a fichas corregido en la v41) |
 | 6 — Comparador de tamaños (el 3D pasó al backlog) | [fase-6.md](fase-6.md) | Hecha y publicada (2026-11-08) |
+| 7 — Calidad de las fichas | — | Abierta (2026-11-22) |

@@ -7,7 +7,7 @@
 > Las ideas nuevas van primero al [Backlog](#24-backlog-de-ideas); solo entran en el alcance cuando se mueven con una entrada en el registro.
 > Las casillas `[ ]` se marcan `[x]` al terminar.
 
-**Creado:** 2026-10-31 · **Versión:** 53 · **Estado:** Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 1 cumpliendo sus 2 semanas autónomas desde el merge del 2026-11-07 (hasta el 2026-11-21); Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
+**Creado:** 2026-10-31 · **Versión:** 54 · **Estado:** Fase 1 cerrada (2026-11-21: 2 semanas sola, 30 de 30 ejecuciones programadas en verde); Fase 3 cerrada (2026-11-12); Fase 4 hecha (2026-11-08); Fase 5 hecha (2026-11-08); glosario y noticias publicados el 2026-11-08; Fase 2 (Airflow) hecha; comparador de tamaños (Fase 6, sin 3D) el 2026-11-08
 
 ---
 
@@ -256,7 +256,7 @@ Cada fase tiene **criterio de terminado**. No se empieza una fase sin terminar l
 - [x] Buscador (pasa del backlog, decisión del usuario): alias en español (abelisáuridos, espinosaurio), periodos, erratas, facetas y `?q=` compartible
 - [x] Galería de imágenes con visor ampliado: archivos de los artículos y de la categoría de Commons, tipo de imagen, lista blanca de licencias
 - [x] CI: tests en cada push/PR (lint, pytest, parse + dbt build sobre el fixture)
-- [ ] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(workflow listo; el cron de las 06:00 no se lanzó el 2026-11-02 → horario movido a 06:23 con reserva a las 10:47; desde el 2026-11-04 se lanza a diario, aunque GitHub lo retrasa unas 8 h. Las 2 semanas sin intervención se cuentan desde el merge del 2026-11-07: hasta el 2026-11-21)*
+- [x] Ejecución programada diaria con detección de cambios + recap semanal (§15) *(el cron de las 06:00 no se lanzó el 2026-11-02 → horario movido a 06:23 con reserva a las 10:47; desde el 2026-11-04 se lanza a diario, aunque GitHub lo retrasa unas 8 h. 2 semanas sin intervención del 2026-11-07 al 2026-11-21: 30 de 30 ejecuciones programadas en verde. El 2026-11-12 se repuso el secreto de Groq y se arreglaron tres fallos del pipeline (v53); el usuario decidió que el plazo no se reiniciaba)*
 - [x] Informe de ejecución por cada run (`paleo report`: registro en `runs/` de la rama `data` y resumen en Actions)
 - [x] Web publicada en GitHub Pages
 - [x] Documento de fase ([`docs/fases/fase-1.md`](docs/fases/fase-1.md))
@@ -621,7 +621,7 @@ Se rellenan con datos reales; **nunca se estiman en el CV**.
 | % con imagen (Commons / silueta del taxón o género / clado / grupo) | 100 %: Commons 43 % · PhyloPic del taxón o género 1 % · clado 50 % · grupo 6 % | 2026-11-08 |
 | % de estudios revisados por pares / preprints / retractados | De los 586 seguidos desde 2026: 94 % / 0 % / 0 % (6 corregidos; 29 % en revistas DOAJ) | 2026-11-08 |
 | Retraso medio publicación → web (horas) | — | — |
-| Semanas seguidas sin intervención manual | 0 completas: cuentan desde el merge del 2026-11-07 (hasta el 2026-11-21). Las 5 ejecuciones programadas del 4 al 8 nov, en verde | 2026-11-08 |
+| Semanas seguidas sin intervención manual | 2 (2026-11-07 → 2026-11-21): 30 de 30 ejecuciones programadas en verde; Groq se quedó sin cuota diaria 2 veces y la ejecución publicó igualmente | 2026-11-22 |
 | Nº de tests (pytest + dbt) | 311 + 196 (188 de datos, 8 de ellos avisos, y 8 unitarios; pytest a 2026-11-12) | 2026-11-12 |
 | Modelos dbt | 66 modelos y 13 seeds | 2026-11-08 |
 | Fuentes | 9 (Wikipedia, PBDB, GBIF, PhyloPic, Commons, Crossref, DOAJ, Wikidata y 3 medios por RSS), con 12 frescuras vigiladas | 2026-11-08 |
@@ -808,6 +808,7 @@ Ideas que **no** están en el alcance todavía. Para pasar una idea al alcance: 
 
 | Fecha | Cambio | Motivo |
 |---|---|---|
+| 2026-11-22 | v54: **Fase 1 cerrada.** Del 2026-11-07 al 2026-11-21 la web se actualizó sola: 30 de 30 ejecuciones programadas en verde. Groq clasificó noticias y reescribió fichas a diario, agotó la cuota el 13 y el 20 de noviembre sin parar la publicación (v53) y reescribió las 3 fichas apartadas el 12 de noviembre. Las intervenciones del 2026-11-12 (secreto de Groq, v53) no reinician el plazo | Decisión del usuario (2026-11-12): el plazo se mantiene |
 | 2026-11-12 | v53: **arreglos del pipeline diario.** (1) El secreto `GROQ_API_KEY` llegaba vacío a Actions desde el 2026-11-01: el paso de Groq fallaba siempre sin que la ejecución saliera en rojo (`continue-on-error`), y desde el 2026-11-07 no se clasificaba ninguna noticia; el usuario lo puso de nuevo y se clasificaron las 34 pendientes. (2) Al ponerse al día, Groq volvió a extraer los hechos de las especies nuevas y se quedó sin cuota antes de los textos; las citas rotas pararon la publicación en dbt. Ahora `fct_taxon_text` no publica un texto que cite hechos inexistentes (la ficha enseña el respaldo) y un aviso de dbt lo cuenta (`assert_texts_waiting_for_rewrite`). (3) Los estudios sin fecha de publicación se fechaban con la última revisión de la página de Wikipedia (16 estudios «se movían» cada día); ahora, con la primera en que aparecen | Revisión del usuario: «En los medios» no publicaba desde el 2 de noviembre |
 | 2026-11-12 | v52: **Fase 3 cerrada** (§7, §12.1, §17, §24; `docs/fases/fase-3.md`). Tope de rescate proporcional (3 frases o la quinta parte de la ficha): 32 de los 54 géneros sin ficha en inglés se rescatan sin modelo. Comprobación nueva entre el inglés y el español (pisos, Inferior/Superior, nombres de clado) y sustituciones fijas («etapa X-iense» → «piso X-iense», «pleiosaurio» → «plesiosaurio»), aplicadas a lo ya verificado sin modelo (`paleo narrate --recheck-es`): 517 fichas con sustituciones y 173 que pierden 223 frases erróneas. Español de 54 géneros con la GPU (`--es-missing`, 26 min, máx. 72 °C): 36 verificadas. Final: EN 2.803 · ES 2.784; de géneros, 2.721 y 2.703 de 2.743 | Decisiones del usuario con las cifras medidas: no reescribir las 417 fichas en español rescatadas sin la pasada de gramática (no reduce los calcos); rescate intermedio de los 54; calidad del español en la Fase 3 en versión reducida, y «grupo padre» y los nombres propios al backlog |
 | 2026-11-12 | v51: **cola de géneros terminada** (§7, §17). Último lote: 592 géneros (00:47 → 03:30, la cola se acabó antes del límite; GPU media 71 °C y máxima 74 °C): EN 532 verificadas y 60 fallidas, ES 502 y 30. Acumulado: EN 2.771 · ES 2.739. Los 2.743 géneros con artículo tienen intento; 54 se quedan con la ficha en inglés fallida | Falta cerrar la Fase 3 (`docs/fases/fase-3.md` y su casilla) y decidir si se reescribe con la GPU el español rescatado sin la pasada de gramática |

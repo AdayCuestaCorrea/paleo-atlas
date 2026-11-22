@@ -4,7 +4,7 @@
 
 > **English summary of [`ALCANCE.md`](ALCANCE.md)**, which is canonical and much longer (phases with every checkbox, decisions, risks, the full change log). This summary is updated when a phase closes, not on every change. If the two do not match, `ALCANCE.md` wins. Section numbers follow `ALCANCE.md`, so `ALCANCE.md` §N is the detail of §N here.
 
-**Summarised from version:** 52 (2026-11-12) · **Status:** Phases 0, 2, 3, 4, 5 and 6 done; Phase 1 completing its 2 unattended weeks (until 2026-11-21).
+**Summarised from version:** 54 (2026-11-22) · **Status:** Phases 0–6 done; Phase 1 closed on 2026-11-21 after 2 unattended weeks (30 of 30 scheduled runs green).
 
 Website: https://adaycuestacorrea.github.io/paleo-atlas/ · Interview pack: [`docs/interview-pack/`](docs/interview-pack/one-pager.md)
 
@@ -71,7 +71,7 @@ Ten decisions, each with an ADR in [`docs/adr/`](docs/adr/README.md): D1 no Spar
 | Phase | Done when | Status (2026-11-08) |
 |---|---|---|
 | 0 — Setup | Repo published | Done |
-| 1 — MVP (archosaurs, bilingual) | The public site shows the 2026 archosaur species in both languages, with verified narrative page, image, reliability signals and history, and has updated itself **2 weeks in a row** unattended | Built; the 2 weeks count from the 2026-11-07 merge (until 2026-11-21) |
+| 1 — MVP (archosaurs, bilingual) | The public site shows the 2026 archosaur species in both languages, with verified narrative page, image, reliability signals and history, and has updated itself **2 weeks in a row** unattended | Done 2026-11-21: 2 unattended weeks from the 2026-11-07 merge, 30 of 30 scheduled runs green |
 | 2 — Airflow | The DAGs produce exactly the same result as Actions | Done (0 differences in 33 tables and 97 site files) |
 | 3 — Encyclopedia, expansion and Spark | The three blocks are published and the benchmark is documented with real figures | Done (2026-11-12): narrative pages for 2,721 EN / 2,703 ES of the 2,743 genera with an article (99 %), written in eight overnight GPU batches; the Databricks variant moved to the backlog |
 | 4 — Portfolio | The project is on the CV with URL and verifiable metrics | Done: bilingual README, ADRs, one-pager, postmortem, STAR stories, CV entry, GitHub profile and LinkedIn project |
@@ -191,3 +191,5 @@ The full log (v1 on 2026-10-31 to v46 on 2026-11-08) is in [`ALCANCE.md` §25](A
 | v40–v44 | 2026-11-08 | Phase 6: size comparator; 3D to the backlog |
 | v43 | 2026-11-08 | New palette |
 | v46 | 2026-11-08 | Phase 4: interview pack, CV, GitHub profile; Databricks to the backlog |
+| v52–v53 | 2026-11-12 | Phase 3 closed; daily pipeline fixes (Groq secret, quota, held-back texts) |
+| v54 | 2026-11-22 | Phase 1 closed after 2 unattended weeks |

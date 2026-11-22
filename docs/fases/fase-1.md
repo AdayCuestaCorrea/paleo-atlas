@@ -182,6 +182,9 @@ PALEO_DATA_DIR=/tmp/ci uv run paleo site && PALEO_DATA_DIR=/tmp/ci uv run paleo 
 - **Mamíferos en una web de arcosaurios**, porque eran presas citadas en estudios de cocodrilos. Se filtran las clases fuera del alcance (§4).
 - **Previsión equivocada de la cuota de Groq.** Dije que la evaluación no terminaría en un día, y terminó gracias a la caché por contenido. *Lección:* medir antes de prever.
 
+- **El secreto de Groq llegó vacío a Actions del 1 al 12 de noviembre.** El paso de Groq puede fallar sin poner la ejecución en rojo (`continue-on-error`), así que durante 11 días no se clasificó ninguna noticia y nadie lo vio: la página de estado seguía «en verde». Se repuso el secreto el 2026-11-12. *Lección:* un paso que puede fallar en silencio necesita su propia señal (el número de llamadas al modelo).
+- **La cuota diaria de Groq cancelaba la ejecución.** Al agotarse, Groq pedía esperar 36 minutos y el cliente HTTP obedecía hasta el límite de 90 minutos del job. Ahora no espera más de 5 minutos: lo pendiente queda para el día siguiente y la web se publica igual.
+
 ## 9. Preguntas de entrevista
 
 **¿Por qué DuckDB y no Postgres o un *warehouse* en la nube?**
@@ -210,9 +213,17 @@ El historial no vive en el almacén, sino en las versiones crudas de git. El SCD
 **¿Cuánto cuesta?**
 0 €: GitHub Actions y Pages (repositorio público), APIs públicas, el plan gratuito de Groq con un limitador que nunca lo supera y la GPU propia para los lotes grandes.
 
-## 10. Límites y lo que queda
+## 10. Cierre (2026-11-21)
 
-- **Cierre pendiente:** que el cron se lance solo y 2 semanas seguidas sin intervención.
+La Fase 1 se cerró tras 2 semanas seguidas sin intervención, del 2026-11-07 al 2026-11-21:
+- 30 de 30 ejecuciones programadas en verde (cada día, una que trabaja y otra que solo refresca la web si no hay nada nuevo);
+- Groq clasificó entre 1 y 13 noticias y verificó entre 4 y 19 fichas al día; agotó la cuota el 13 y el 20 de noviembre y la ejecución publicó igualmente;
+- las 3 fichas apartadas el 12 de noviembre (*Phosphatotitan*, *Rinconraptor*, *Tenuicruris*) se reescribieron solas entre el 18 y el 20.
+
+El 2026-11-12 hubo que reponer el secreto de Groq y arreglar tres fallos del pipeline ([`ALCANCE.md` v53](../../ALCANCE.md#25-registro-de-cambios)). El usuario decidió que el plazo no se reiniciaba: los arreglos no eran para que el pipeline siguiera funcionando ese día, sino para que lo hiciera solo en adelante.
+
+## 11. Límites y lo que queda
+
 - 1 ficha en español con texto de respaldo (su versión copiaba 8 palabras de Wikipedia ES).
 - ZooBank no tiene API disponible. El distintivo «Nombre registrado» queda para la Fase 3.
 - Pasan a la [Fase 3](../../ALCANCE.md#fase-3--enciclopedia-ampliación-y-spark):

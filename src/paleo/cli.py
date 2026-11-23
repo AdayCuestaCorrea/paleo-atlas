@@ -40,6 +40,8 @@ news_app = typer.Typer(help="Paleontology news: categories, taxa, groups.", no_a
 app.add_typer(news_app, name="news")
 sizes_app = typer.Typer(help="Body sizes for the size comparator.", no_args_is_help=True)
 app.add_typer(sizes_app, name="sizes")
+review_app = typer.Typer(help="A model as reviewer of the pages (Phase 7).", no_args_is_help=True)
+app.add_typer(review_app, name="review")
 glossary_app = typer.Typer(help="Bilingual glossary (§12.2).", no_args_is_help=True)
 app.add_typer(glossary_app, name="glossary")
 
@@ -533,6 +535,76 @@ def recheck_texts() -> None:
     English left untranslated) and the fixed Spanish replacements; failed sentences
     are left out (ALCANCE.md, Phase 7). Run after `paleo ranges`."""
     _recheck_texts()
+
+
+def _review_eval(llm) -> dict:
+    from paleo.narrative.review import evaluate
+
+    paths = get_paths()
+    result = evaluate(llm, paths.data / "derived", project_root() / "eval" / "fichas")
+    out = project_root() / "eval" / "fichas" / "review_eval.json"
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    typer.echo(
+        f"reviewer {result['model']}: found {result['found']} of {result['expected']} "
+        f"(recall {result['recall']}), {result['false_flags']} flags on "
+        f"{result['clean_sentences']} clean sentences ({result['false_flag_rate']}); "
+        f"passes the bar: {result['passes']} → {out}"
+    )
+    return result
+
+
+@review_app.command("eval")
+def review_eval(provider: Provider = "ollama", model: Model = None) -> None:
+    """Measure the reviewer on the 15 hand-reviewed pages (eval/fichas/review_eval.json)."""
+    from paleo.llm import LLM
+
+    _review_eval(LLM(provider, model or DEFAULT_MODELS[provider]))
+
+
+@review_app.command("night")
+def review_night(
+    provider: Provider = "ollama",
+    model: Model = None,
+    until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
+    skip_eval: Annotated[bool, typer.Option(help="Do not measure first.")] = False,
+) -> None:
+    """Measure the reviewer on the 15 evaluated pages and, only if it meets the bar,
+    review every page, best known first, until --until. Flags are only recorded
+    (data/derived/review_flags): no text changes. Resumable."""
+    import time
+
+    from paleo.llm import LLM, LLMOutputError
+    from paleo.narrative.review import is_reviewed, page_pairs, review_page, save_flags
+    from paleo.narrative.sources import taxon_key
+
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    if not skip_eval and not _review_eval(llm)["passes"]:
+        typer.echo("The reviewer does not meet the bar: no other page is reviewed.")
+        return
+    derived = get_paths().data / "derived"
+    deadline = _deadline(until, dt.datetime.now())
+    keys = [taxon_key(g) for g in genus_queue()]
+    rest = sorted(p.name.removesuffix(".en.json") for p in (derived / "texts").glob("*.en.json"))
+    keys += [k for k in rest if k not in set(keys)]
+    done = 0
+    for key in keys:
+        if deadline and dt.datetime.now() >= deadline:
+            typer.echo(f"Deadline {until} reached")
+            break
+        pairs = page_pairs(derived, key)
+        if not pairs or is_reviewed(derived, key, pairs):
+            continue
+        taxon = json.loads((derived / "texts" / f"{key}.en.json").read_text("utf-8"))["taxon"]
+        start = time.monotonic()
+        try:
+            flags = review_page(llm, taxon, pairs)
+        except LLMOutputError as exc:
+            typer.echo(f"{taxon}: skipped ({exc})")
+            continue
+        save_flags(derived, key, taxon, llm, pairs, flags)
+        done += 1
+        typer.echo(f"{taxon}: {len(flags)} flags, {time.monotonic() - start:.0f} s [{done}]")
+    typer.echo(f"Reviewed {done} pages; {llm.label}: {llm.stats}")
 
 
 @sizes_app.command("extract")

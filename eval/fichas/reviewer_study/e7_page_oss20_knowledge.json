@@ -1,0 +1,574 @@
+{
+ "name": "e7_page_oss20_knowledge",
+ "model": "gpt-oss:20b",
+ "seconds": 63,
+ "page_only": {
+  "found": 14,
+  "expected": 42,
+  "recall": 0.333,
+  "false_flags": 99,
+  "false_rate": 0.131
+ },
+ "llm": "CallStats(calls=15, cached=0, prompt_tokens=20259, completion_tokens=10309, seconds=62.545019285999615)",
+ "flags": [
+  {
+   "page": "allosaurus",
+   "n": 1,
+   "kind": "Contradiction",
+   "reason": "Sentence 1 describes Allosaurus as having a massive skull, while sentence 2 states it had a light skull.",
+   "sentence": "Allosaurus was a large theropod characterized by a massive skull, short neck, long tail, and reduced forelimbs.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 2,
+   "kind": "Contradiction",
+   "reason": "Sentence 1 describes Allosaurus as having a massive skull, while sentence 2 states it had a light skull.",
+   "sentence": "Its light skull contained dozens of sharp, serrated teeth that were modestly proportioned for its size.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "n": 15,
+   "kind": "Dangling reference",
+   "reason": "Sentence 15 refers to \"These hollow spaces\" without any prior mention of such spaces in the text.",
+   "sentence": "These hollow spaces are interpreted as being occupied by air sacs used for respiration, a feature also found in modern birds.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "n": 19,
+   "kind": "Contradiction",
+   "reason": "Sentence 19 places Allosaurus in the Kimmeridgian–Tithonian ages (≈157–145 Ma), whereas sentence 20 gives a narrower range of 155–145 Ma, implying a different temporal placement.",
+   "sentence": "Allosaurus lived during the Kimmeridgian to Tithonian ages of the Late Jurassic period.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 20,
+   "kind": "Contradiction",
+   "reason": "Sentence 19 places Allosaurus in the Kimmeridgian–Tithonian ages (≈157–145 Ma), whereas sentence 20 gives a narrower range of 155–145 Ma, implying a different temporal placement.",
+   "sentence": "Allosaurus lived during the late Jurassic period, between 155 and 145 million years ago.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 19,
+   "kind": "Contradiction",
+   "reason": "Sentence 19 limits Allosaurus to the Kimmeridgian–Tithonian stages, while sentence 21 extends its range from the Oxfordian to the Berriasian (≈161.5–137.05 Ma), which is inconsistent.",
+   "sentence": "Allosaurus lived during the Kimmeridgian to Tithonian ages of the Late Jurassic period.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 21,
+   "kind": "Contradiction",
+   "reason": "Sentence 19 limits Allosaurus to the Kimmeridgian–Tithonian stages, while sentence 21 extends its range from the Oxfordian to the Berriasian (≈161.5–137.05 Ma), which is inconsistent.",
+   "sentence": "Allosaurus lived from the Oxfordian to the Berriasian stages, between 161.5 and 137.05 million years ago.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 20,
+   "kind": "Contradiction",
+   "reason": "Sentences 20 and 21 provide overlapping but non‑identical time ranges (155–145 Ma vs 161.5–137.05 Ma), contradicting each other.",
+   "sentence": "Allosaurus lived during the late Jurassic period, between 155 and 145 million years ago.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "n": 21,
+   "kind": "Contradiction",
+   "reason": "Sentences 20 and 21 provide overlapping but non‑identical time ranges (155–145 Ma vs 161.5–137.05 Ma), contradicting each other.",
+   "sentence": "Allosaurus lived from the Oxfordian to the Berriasian stages, between 161.5 and 137.05 million years ago.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "n": 11,
+   "kind": "duplicate",
+   "reason": "Both sentences state the genus was named by Barnum Brown in 1908.",
+   "sentence": "The genus Ankylosaurus was named by Barnum Brown in 1908.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "n": 12,
+   "kind": "duplicate",
+   "reason": "Both sentences state the genus was named by Barnum Brown in 1908.",
+   "sentence": "The genus was established by Brown in 1908.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "n": 4,
+   "kind": "incorrect claim",
+   "reason": "Ankylosaurids are generally known to have forelimbs and hindlimbs of similar length; stating hind limbs were longer contradicts established morphology.",
+   "sentence": "This quadrupedal dinosaur had hind limbs that were longer than its forelimbs.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "n": 6,
+   "kind": "incorrect claim",
+   "reason": "The idea that osteoderms were reinforced by randomly distributed cushions of collagen fibers embedded directly into bone tissue is not supported by current paleontological evidence and is considered outdated.",
+   "sentence": "These thin osteoderms were reinforced by randomly distributed cushions of collagen fibers embedded directly into the bone tissue.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "n": 21,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that Archaeopteryx lived during the Late Jurassic, approximately 150 million years ago.",
+   "sentence": "Archaeopteryx lived during the Late Jurassic, between 150 and 148 million years ago.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "n": 31,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that Archaeopteryx lived during the Late Jurassic, approximately 150 million years ago.",
+   "sentence": "Archaeopteryx lived during the Late Jurassic, approximately 150 million years ago.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "n": 11,
+   "kind": "contradiction",
+   "reason": "Sentence 11 claims all known fossils come from limestone deposits near Solnhofen, Germany, while sentence 32 states the Schamhaupten specimen is from the Painten Formation, implying a different location.",
+   "sentence": "All known fossils of Archaeopteryx come from limestone deposits near Solnhofen, Germany.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "n": 32,
+   "kind": "contradiction",
+   "reason": "Sentence 11 claims all known fossils come from limestone deposits near Solnhofen, Germany, while sentence 32 states the Schamhaupten specimen is from the Painten Formation, implying a different location.",
+   "sentence": "The Schamhaupten Specimen is from the Painten Formation and is somewhat older than other Archaeopteryx specimens.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "n": 1,
+   "kind": "Contradiction",
+   "reason": "Sentence 1 describes Brachiosaurus as having a muscular tail, while sentence 12 states it had a short tail.",
+   "sentence": "Brachiosaurus was a quadrupedal dinosaur characterized by a small skull, long neck, large trunk, muscular tail, and slender columnar limbs.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "n": 12,
+   "kind": "Contradiction",
+   "reason": "Sentence 1 describes Brachiosaurus as having a muscular tail, while sentence 12 states it had a short tail.",
+   "sentence": "Brachiosaurus was adapted for a terrestrial lifestyle with slender limbs, a high chest, wide hips, high ilia, and a short tail.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "n": 29,
+   "kind": "Incorrect classification",
+   "reason": "Carnotaurus belongs to Abelisauridae, not the parent group Furileusauria.",
+   "sentence": "Carnotaurus belongs to the parent group Furileusauria.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "n": 30,
+   "kind": "Contradictory age ranges",
+   "reason": "Sentence 30 gives 69–66 Ma while sentence 31 gives 72–69.9 Ma for the same species.",
+   "sentence": "Carnotaurus lived in South America during the Late Cretaceous period, approximately 69 to 66 million years ago.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "n": 31,
+   "kind": "Contradictory age ranges",
+   "reason": "Sentence 30 gives 69–66 Ma while sentence 31 gives 72–69.9 Ma for the same species.",
+   "sentence": "Carnotaurus lived during the Late Cretaceous, approximately 72 to 69.9 million years ago in the Maastrichtian stage, in what is now South America.",
+   "known": true
+  },
+  {
+   "page": "carnotaurus",
+   "n": 27,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state Carnotaurus is a well‑understood member of Abelisauridae restricted to Gondwana.",
+   "sentence": "Carnotaurus is a derived member of the Abelisauridae family, a group of large theropods that dominated predatory niches in southern Gondwana during the late Cretaceous.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "n": 28,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state Carnotaurus is a well‑understood member of Abelisauridae restricted to Gondwana.",
+   "sentence": "Carnotaurus is a well-understood genus within the family Abelisauridae, which was restricted to the southern supercontinent Gondwana.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "n": 15,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state that Diplodocus may have used its tail for defense or to make noise, repeating the same idea.",
+   "sentence": "Researchers speculate that the Diplodocus tail may have served a defensive, noisemaking, or tactile function.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "n": 16,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state that Diplodocus may have used its tail for defense or to make noise, repeating the same idea.",
+   "sentence": "Speculations suggest Diplodocus may have used their tails for defense or to make noise like a whip.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "n": 17,
+   "kind": "Wrong claim",
+   "reason": "The presence of gastroliths does not indicate a digestive system similar to modern birds with a crop and gizzard; gastroliths are used for grinding food in many non-avian reptiles.",
+   "sentence": "The distribution of gastroliths found with a D. hallorum fossil suggests these animals may have had a digestive system similar to modern birds, with a crop and gizzard.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "n": 12,
+   "kind": "Outdated claim",
+   "reason": "The 1951 study suggesting sauropods could not breathe through nostrils while submerged due to water pressure is no longer supported by recent research on sauropod respiratory anatomy.",
+   "sentence": "A 1951 study by Kenneth A. Kermack indicates sauropods likely could not breathe through nostrils while submerged due to water pressure.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 6,
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims a weight of 10 metric tons, while sentence 8 gives a weight range of 7 to 8 tons.",
+   "sentence": "A large dentary bone suggests that some individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 8,
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims a weight of 10 metric tons, while sentence 8 gives a weight range of 7 to 8 tons.",
+   "sentence": "Giganotosaurus is one of the largest known theropods, estimated to reach lengths of 12 to 13 meters, a skull over 1.60 meters long, and a weight of 7 to 8 tons.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 1,
+   "kind": "contradiction",
+   "reason": "Sentence 1 estimates a length of 12–13 m, whereas sentence 22 cites a length of 13.7–14.3 m.",
+   "sentence": "The holotype specimen has been estimated to be between 12 and 13 meters long, standing over 4 meters high at the hips.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 22,
+   "kind": "contradiction",
+   "reason": "Sentence 1 estimates a length of 12–13 m, whereas sentence 22 cites a length of 13.7–14.3 m.",
+   "sentence": "It is debated whether Giganotosaurus was larger than Tyrannosaurus, roughly equal in size, or if its largest size estimates are exaggerated. In 1997, Coria estimated Giganotosaurus to be 13.7 to 14.3 meters long and weigh 8 to 10 metric tons, larger than Carcharodontosaurus. A large dentary bone suggests that some Giganotosaurus individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 6,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that some individuals may have reached a weight of 10 metric tons.",
+   "sentence": "A large dentary bone suggests that some individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "n": 22,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that some individuals may have reached a weight of 10 metric tons.",
+   "sentence": "It is debated whether Giganotosaurus was larger than Tyrannosaurus, roughly equal in size, or if its largest size estimates are exaggerated. In 1997, Coria estimated Giganotosaurus to be 13.7 to 14.3 meters long and weigh 8 to 10 metric tons, larger than Carcharodontosaurus. A large dentary bone suggests that some Giganotosaurus individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "n": 4,
+   "kind": "Wrong claim",
+   "reason": "Iguanodon is not one of the three original groups used to define Dinosauria; Dinosauria is defined by the split into Saurischia and Ornithischia.",
+   "sentence": "This genus is one of the three original groups used to define the entire Dinosauria clade, alongside Megalosaurus and Hylaeosaurus.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "n": 6,
+   "kind": "Contradiction",
+   "reason": "Sentence 6 states Iguanodon could walk on two legs and reach 24 km/h, while sentence 19 claims it is likely an obligate quadruped, implying it never walked bipedally.",
+   "sentence": "When walking on two legs, the animal could reach a top speed of 24 km/h, but it was unable to gallop while on four legs.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "n": 19,
+   "kind": "Contradiction",
+   "reason": "Sentence 6 states Iguanodon could walk on two legs and reach 24 km/h, while sentence 19 claims it is likely an obligate quadruped, implying it never walked bipedally.",
+   "sentence": "Research published in 2026 interprets I. bernissartensis as likely being an obligate quadruped.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "n": 1,
+   "kind": "Contradiction",
+   "reason": "Different weight estimates (370-450 kg vs up to 2000 kg) and length ranges (4.5 m vs 4.5-5 m) for the same species.",
+   "sentence": "The animal is known mainly from a single skull and thick skull roofs measuring 22 cm, with estimates of its length at 4.5 meters and weight between 370 and 450 kilograms.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "n": 8,
+   "kind": "Contradiction",
+   "reason": "Different weight estimates (370-450 kg vs up to 2000 kg) and length ranges (4.5 m vs 4.5-5 m) for the same species.",
+   "sentence": "Some estimates suggest it reached lengths of 4.5 to 5 meters and weighed up to 2000 kilograms.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "n": 18,
+   "kind": "Contradiction",
+   "reason": "One sentence claims the teeth were ineffective for chewing tough plants, while another describes serrated, blade‑like front teeth reminiscent of carnivorous theropods, implying a carnivorous diet.",
+   "sentence": "The animal had very small, ridged teeth that were ineffective for chewing tough, fibrous plants.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "n": 19,
+   "kind": "Contradiction",
+   "reason": "One sentence claims the teeth were ineffective for chewing tough plants, while another describes serrated, blade‑like front teeth reminiscent of carnivorous theropods, implying a carnivorous diet.",
+   "sentence": "The most complete fossil jaw shows serrated, blade-like front teeth reminiscent of carnivorous theropods.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 6,
+   "kind": "Contradiction",
+   "reason": "Claims rapid one‑year maturity, which contradicts known hadrosaur growth rates of several years.",
+   "sentence": "Evidence indicates this animal experienced a very rapid growth rate, reaching maturity in about one year.",
+   "known": true
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 15,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state the crest served multiple functions, essentially repeating the same idea.",
+   "sentence": "The crest is believed to have served multiple purposes, including sexual attraction, communication during danger, and thermoregulation.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 5,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences state the crest served multiple functions, essentially repeating the same idea.",
+   "sentence": "The most prominent theory suggests the crest acted as a natural resonator for sound production.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 17,
+   "kind": "Duplicate claim",
+   "reason": "Both describe a V‑shaped notch in the vertebrae of P. walkeri, repeating the same observation.",
+   "sentence": "One specimen of P. walkeri displays a V-shaped gap or notch in the vertebrae at the base of the neck, which might be a pathology.",
+   "known": true
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 18,
+   "kind": "Duplicate claim",
+   "reason": "Both describe a V‑shaped notch in the vertebrae of P. walkeri, repeating the same observation.",
+   "sentence": "The skeleton of P. walkeri also shows a V-shaped notch or gap in the vertebrae at the base of the neck.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 21,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences describe the subfamily assignment of Parasaurolophus, repeating the classification.",
+   "sentence": "It is classified as a member of the lambeosaurine subfamily within the hadrosaurids, distinct from the hadrosaurine Saurolophus.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 22,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences describe the subfamily assignment of Parasaurolophus, repeating the classification.",
+   "sentence": "Parasaurolophus was quickly assigned to the hadrosaurid subfamily Lambeosaurinae, whereas Saurolophus is considered a Hadrosaurinae.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 24,
+   "kind": "Wrong claim",
+   "reason": "Parasaurolophus fossils are known only from western North America; there is no evidence for an Asian occurrence.",
+   "sentence": "Parasaurolophus lived in western North America and possibly Asia during the Late Cretaceous period, approximately 76.5 to 73 million years ago.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "n": 16,
+   "kind": "Unsubstantiated claim",
+   "reason": "The tail morphology does not support swimming; this assertion is not supported by the cited evidence.",
+   "sentence": "The long, side-flattened tail suggests the animal could swim.",
+   "known": true
+  },
+  {
+   "page": "spinosaurus",
+   "n": 12,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that Spinosaurus fed on both aquatic and terrestrial prey.",
+   "sentence": "Spinosaurus is known to have consumed both aquatic and terrestrial prey.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 19,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that Spinosaurus fed on both aquatic and terrestrial prey.",
+   "sentence": "Spinosaurus is known to have fed on both aquatic and terrestrial prey.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 9,
+   "kind": "duplicate claim",
+   "reason": "Both sentences say the genus Spinosaurus was first described by Ernst Stromer in 1915.",
+   "sentence": "The genus Spinosaurus was first described by Ernst Stromer in 1915.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 23,
+   "kind": "duplicate claim",
+   "reason": "Both sentences say the genus Spinosaurus was first described by Ernst Stromer in 1915.",
+   "sentence": "The genus Spinosaurus was named by Ernst Stromer in 1915.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 10,
+   "kind": "duplicate claim",
+   "reason": "Both sentences describe the first remains of Spinosaurus discovered in Egypt in 1912 and described by Ernst Stromer in 1915.",
+   "sentence": "The first remains of Spinosaurus were discovered in Egypt in 1912 and formally described by Ernst Stromer in 1915.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 9,
+   "kind": "duplicate claim",
+   "reason": "Both sentences describe the first remains of Spinosaurus discovered in Egypt in 1912 and described by Ernst Stromer in 1915.",
+   "sentence": "The genus Spinosaurus was first described by Ernst Stromer in 1915.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 21,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that the type species of the genus Spinosaurus is Spinosaurus aegyptiacus.",
+   "sentence": "The type species of the genus Spinosaurus is Spinosaurus aegyptiacus.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "n": 23,
+   "kind": "duplicate claim",
+   "reason": "Both sentences state that the type species of the genus Spinosaurus is Spinosaurus aegyptiacus.",
+   "sentence": "The genus Spinosaurus was named by Ernst Stromer in 1915.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "n": 19,
+   "kind": "Wrong claim",
+   "reason": "The International Commission on Zoological Nomenclature did not replace the original type species of Stegosaurus; the type species remains Stegosaurus stenops, and no such replacement occurred.",
+   "sentence": "The International Commission on Zoological Nomenclature replaced the original type species with Stegosaurus stenops because the original type specimen was considered dubious.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "n": 5,
+   "kind": "contradiction",
+   "reason": "Sentence 5 states Triceratops grew to 8–9 m, while sentence 6 claims a specific individual was only 22–24 ft (≈6.7–7.3 m) long.",
+   "sentence": "Triceratops was a giant creature, growing to lengths of 8 to 9 meters and weighing between 6 and 10 metric tons.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "n": 6,
+   "kind": "contradiction",
+   "reason": "Sentence 5 states Triceratops grew to 8–9 m, while sentence 6 claims a specific individual was only 22–24 ft (≈6.7–7.3 m) long.",
+   "sentence": "One specific individual named Kelsey measured 22 to 24 feet long with a 6.5-foot skull and stood 7.5 feet tall.",
+   "known": true
+  },
+  {
+   "page": "triceratops",
+   "n": 23,
+   "kind": "contradiction",
+   "reason": "Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, whereas sentence 25 diagnoses it as a ceratopsine, conflicting subfamily assignments.",
+   "sentence": "Triceratops is classified as a genus of chasmosaurine ceratopsian dinosaur.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "n": 25,
+   "kind": "contradiction",
+   "reason": "Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, whereas sentence 25 diagnoses it as a ceratopsine, conflicting subfamily assignments.",
+   "sentence": "Thomas Lehman defined the subfamilies in 1990 and diagnosed Triceratops as a ceratopsine based on several morphological features.",
+   "known": true
+  },
+  {
+   "page": "tyrannosaurus",
+   "n": 4,
+   "kind": "Wrong claim",
+   "reason": "The number of tail vertebrae in Tyrannosaurus rex is known to be 35; stating it is unknown and likely at least forty is incorrect.",
+   "sentence": "The number of tail vertebrae in T. rex is unknown but likely numbered at least forty.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "n": 10,
+   "kind": "Wrong classification",
+   "reason": "Velociraptor was never classified in Megalosauridae; it belongs to Dromaeosauridae.",
+   "sentence": "Velociraptor was first described in 1924 and was initially classified in the family Megalosauridae.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "n": 5,
+   "kind": "Unsupported claim",
+   "reason": "The 1971 fossil does not provide direct evidence of Velociraptor–Protoceratops combat; the interpretation is disputed.",
+   "sentence": "A 1971 fossil specimen shows a Velociraptor and a Protoceratops locked in combat, providing direct evidence of their predatory behavior.",
+   "known": true
+  },
+  {
+   "page": "velociraptor",
+   "n": 6,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences describe the same 1995 study of bite wounds on a Velociraptor skull.",
+   "sentence": "A 1995 study reported a Velociraptor skull with two parallel rows of small holes in the frontal bones matching the size and spacing of Velociraptor teeth, suggesting a bite wound from another individual.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "n": 16,
+   "kind": "Duplicate claim",
+   "reason": "Both sentences describe the same 1995 study of bite wounds on a Velociraptor skull.",
+   "sentence": "In 1995, researchers reported a Velociraptor skull with puncture wounds matching the spacing and size of Velociraptor teeth, suggesting an intraspecific fight.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "n": 11,
+   "kind": "Outdated claim",
+   "reason": "The statement that larger flightless maniraptorans did not lose feathers secondarily because of size is no longer supported by recent feather evolution studies.",
+   "sentence": "The presence of feathers on Velociraptor suggests that larger flightless maniraptorans did not lose feathers secondarily because of their size.",
+   "known": false
+  }
+ ],
+ "union_with_e5_oss20_low_b3": {
+  "found": 19,
+  "expected": 42,
+  "recall": 0.452,
+  "false_flags": 121,
+  "false_rate": 0.161
+ }
+}

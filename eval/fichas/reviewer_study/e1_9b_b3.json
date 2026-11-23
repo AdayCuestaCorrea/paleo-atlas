@@ -1,0 +1,354 @@
+{
+ "name": "e1_9b_b3",
+ "model": "paleo-qwen3.5-9b",
+ "effort": "none",
+ "batch": 3,
+ "prompt": "/home/adaycc/Proyectos/paleo-atlas/src/paleo/narrative/prompts/review_text.md",
+ "pages": 15,
+ "seconds": 0,
+ "expected": 42,
+ "found": 5,
+ "recall": 0.119,
+ "clean": 753,
+ "false_flags": 34,
+ "false_rate": 0.045,
+ "by_lang": {
+  "en": "1/16",
+  "es": "4/26"
+ },
+ "by_cause": {
+  "misread_source": "3/20",
+  "es_meaning": "1/5",
+  "contradiction": "0/5",
+  "outdated": "0/4",
+  "es_grammar": "1/3",
+  "eswiki_error": "0/2",
+  "outdated_term": "0/2",
+  "es_spelling": "0/1",
+  "es_calque": "0/1",
+  "en_es_mismatch": "0/1"
+ },
+ "llm": "CallStats(calls=0, cached=150, prompt_tokens=0, completion_tokens=0, seconds=0.0)",
+ "flags": [
+  {
+   "page": "allosaurus",
+   "index": 2,
+   "lang": "en",
+   "sentence": "Skin impressions reveal scales up to two centimeters wide on the tail and neck of juvenile specimens.",
+   "reason": "The English sentence claims scales up to 2 cm are found on the tail AND neck of juvenile specimens. The quotes show the 2 cm scales are on the tail of 'Big Al Two' (an adult specimen, not specified as juvenile), while the neck scales (0.5 cm) are on a different fossil (also not specified as juvenile). The sentence incorrectly merges an adult tail finding with a juvenile label and conflates the two distinct locations/specimens.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 2,
+   "lang": "es",
+   "sentence": "Las impresiones de piel revelan escamas de hasta dos centímetros de ancho en la cola y el cuello de los especímenes juveniles.",
+   "reason": "La frase en español afirma que las escamas de hasta 2 cm se encuentran en la cola Y el cuello de especímenes juveniles. Las citas muestran que las escamas de 2 cm están en la cola de 'Big Al Two' (un especimen adulto, no especificado como juvenil), mientras que las escamas del cuello (0.5 cm) están en un fósil diferente (tampoco especificado como juvenil). La frase en español comete el mismo error que la inglesa al fusionar un hallazgo de cola de adulto con la etiqueta juvenil y confundir las dos ubicaciones/especímenes distintos.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 9,
+   "lang": "es",
+   "sentence": "La investigación considera improbable el ataque con mandíbula en forma de hacha, reinterpretando la apertura amplia como una adaptación para administrar mordeduras impulsadas por músculos a presas grandes, siendo los músculos mandibulares más débiles un contrapunto a la apertura ampliada.",
+   "reason": "The English text uses 'trade-off' (sacrifice/compromise), while the Spanish text uses 'contrapunto' (counterpoint), which changes the meaning from a biological cost to a mere contrast.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 18,
+   "lang": "en",
+   "sentence": "Allosaurus lived during the Kimmeridgian to Tithonian ages of the Late Jurassic period.",
+   "reason": "The sentence claims Allosaurus lived during the Kimmeridgian to Tithonian ages, but the quote for F139 (which contradicts F082 in the provided text block) states the range is Oxfordian to Berriasian. Furthermore, the quote for F082 says 'Both the North American and European occurrences date to the Kimmeridgian to Tithonian', implying Allosaurus (North American) fits this, but the sentence ignores the conflicting F139 fact provided in the input which defines the range as Oxfordian to Berriasian. More critically, the Spanish translation 'edades kimerídgica y titoniense' matches the English claim, but the English claim contradicts the specific F139 quote provided in the input data for the same sentence index, which lists a different range (Oxfordian to Berriasian). The sentence presents the Kimmeridgian-Tithonian range as fact, while the provided F139 quote explicitly defines the range as Oxfordian-Berriasian, creating a direct contradiction within the provided evidence for that sentence.",
+   "known": false
+  },
+  {
+   "page": "allosaurus",
+   "index": 18,
+   "lang": "es",
+   "sentence": "El Allosaurus vivió durante las edades kimerídgica y titoniense del periodo Jurásico Superior.",
+   "reason": "The Spanish translation incorrectly translates 'Kimmeridgian' as 'kimerídgica' (misspelling of Kimmeridgian) and 'Tithonian' as 'titoniense', but the main error is that it mirrors the English error. The English sentence claims Kimmeridgian-Tithonian, but the provided F139 quote says Oxfordian-Berriasian. The Spanish sentence should reflect the correct geological stages if the English were corrected, but as it stands, it propagates the error of the English sentence which contradicts the F139 quote provided in the input.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 24,
+   "lang": "es",
+   "sentence": "Los autores especularon que el Archaeopteryx y el kiwi, incapaz de volar, tenían tasas metabólicas basales similares.",
+   "reason": "The Spanish text adds 'incapaz de volar' (flightless) to the kiwi, which is not in the English sentence or the source quote. The quote only mentions 'el kiwi' without specifying it is flightless.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 15,
+   "lang": "en",
+   "sentence": "Brachiosaurus used a bird-like respiratory system with air sacs to achieve unidirectional airflow in its lungs.",
+   "reason": "The quote states the system 'made use of air sacs' but does not confirm it achieved 'unidirectional airflow' or that this was the specific mechanism used by Brachiosaurus; this is an unsupported claim of function/result.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 15,
+   "lang": "es",
+   "sentence": "Brachiosaurus utilizaba un sistema respiratorio similar al de las aves, con sacos aéreos, para lograr un flujo de aire unidireccional en sus pulmones.",
+   "reason": "The Spanish translation adds 'para lograr un flujo de aire unidireccional' (to achieve unidirectional airflow), which is not present in the English sentence or the source quote, changing the meaning by adding a specific functional result not cited.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 16,
+   "lang": "en",
+   "sentence": "In 2012, Carballido and colleagues reconstructed the growth of Brachiosaurus using a 2-meter-long juvenile skeleton named Toni.",
+   "reason": "The quote describes Toni as a 'postcranial skeleton' (lacking the skull), whereas the sentence claims it is a 'skeleton' (implying a complete one). This is a factual error regarding the completeness of the specimen.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 16,
+   "lang": "es",
+   "sentence": "En 2012, Carballido y sus colegas reconstruyeron el crecimiento de Brachiosaurus utilizando un esqueleto juvenil de 2 metros de largo llamado Toni.",
+   "reason": "The Spanish translation omits the crucial detail that it is a 'postcranial' skeleton, simply calling it 'esqueleto juvenil' (juvenile skeleton), which implies a complete skeleton and changes the meaning of the specimen's state.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 17,
+   "lang": "en",
+   "sentence": "The name Giraffatitan was elevated to full genus status by George Olshevsky in 1991 based on differences in vertebral variation.",
+   "reason": "The quote states Olshevsky referred to vertebral variation while raising the genus, but does not state the elevation was 'based on' (i.e., caused by) those differences; this turns a reference into a stated basis/causality.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 17,
+   "lang": "es",
+   "sentence": "El nombre Giraffatitan fue elevado al estatus de género completo por George Olshevsky en 1991 basándose en diferencias en la variación vertebral.",
+   "reason": "The Spanish translation uses 'basándose en' (based on), which implies causality ('because of'), whereas the English sentence and the quote only state he referred to the variation, not that it was the basis for the decision.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 21,
+   "lang": "en",
+   "sentence": "There is a debate regarding neck length, with Gregory S. Paul suggesting it was shorter than Giraffatitan's in 1988, while Mike P. Taylor argued in 2009 that vertebrae proportions indicated otherwise.",
+   "reason": "The quote attributes the 2009 finding to 'two cervical vertebrae likely belonging to Brachiosaurus', but the sentence generalizes this to 'vertebrae proportions' without specifying they were from specific specimens, potentially implying a general rule for the whole animal rather than a specific comparison of two vertebrae.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 21,
+   "lang": "es",
+   "sentence": "Existe un debate sobre la longitud del cuello, con Gregory S. Paul sugiriendo en 1988 que era más corto que el de Giraffatitan, mientras que Mike P. Taylor argumentó en 2009 que las proporciones de las vértebras indicaban lo contrario.",
+   "reason": "The Spanish translation generalizes 'two cervical vertebrae' to 'las proporciones de las vértebras' (the proportions of the vertebrae), losing the specific detail that it was about two specific vertebrae, which changes the meaning from a specific observation to a general characteristic.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 24,
+   "lang": "en",
+   "sentence": "In 2001, Lawrence M. Witmer argued that the fleshy nostrils of Brachiosaurus were likely placed at the front of the bony opening, similar to modern land animals.",
+   "reason": "The sentence states Witmer argued the nostrils were 'likely placed at the front', but the quote says he 'rejected this reconstruction' because living animals have them at the front, implying he argued against the idea that Brachiosaurus had them at the front (or at least rejected the specific reconstruction being discussed in that context). The sentence misrepresents the direction of the argument: Witmer rejected the reconstruction, he didn't argue the nostrils were likely at the front as a positive claim for Brachiosaurus in this specific phrasing context, though the quote implies he thought they *were* at the front based on analogy. However, the critical error is the sentence presents his argument as supporting the 'front' placement for Brachiosaurus as a likely fact, whereas the quote frames it as a rejection of a previous reconstruction based on the fact that *living* animals have them there. More precisely, the sentence says he argued they were 'likely placed at the front', while the quote says he 'rejected this reconstruction' (which presumably placed them elsewhere or was the one being critiqued) by pointing out living animals have them at the front. The sentence misses the 'rejected this reconstruction' part which is the core of his 2001 argument in the source.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "index": 33,
+   "lang": "en",
+   "sentence": "François Therrien and colleagues (2005) questioned earlier interpretations, suggesting Carnotaurus had a bite force twice that of the American alligator.",
+   "reason": "The sentence states Carnotaurus 'had' a bite force twice that of the alligator as a fact, whereas the quote uses the tentative phrasing 'may have the strongest bite', turning a possibility into a settled fact.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 0,
+   "lang": "en",
+   "sentence": "The holotype specimen has been estimated to be between 12 and 13 meters long, standing over 4 meters high at the hips.",
+   "reason": "The English sentence claims the animal stood 'over 4 meters high at the hips', but the supporting quotes only mention length (12-13m) and weight (6.1-6.9 tons); the hip height is only mentioned in the Spanish translation's source quote, not the English source quote.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 9,
+   "lang": "en",
+   "sentence": "The holotype specimen was discovered in the Candeleros Formation of Patagonia in 1993 by the fossil hunter Rubén Darío Carolini.",
+   "reason": "The sentence claims Rubén Darío Carolini was a 'fossil hunter', but the source quote explicitly describes him as an 'amateur Argentine fossil hunter', which is a specific subset; more critically, the sentence omits the crucial detail that he discovered a 'tibia' (lower leg bone) while driving a 'dune buggy', presenting the discovery context as a general fact without the specific circumstances cited in the source. However, the primary error is the misattribution of his role: the source says 'amateur fossil hunter', the sentence says 'fossil hunter' (acceptable), but the sentence implies he found the *holotype* specifically, whereas the source says he discovered the 'first remains' (the tibia), and the holotype status is a separate deduction not in the quote. Actually, looking closer: The sentence says 'The holotype specimen... was discovered... by... Carolini'. The quote says 'the amateur... discovered the tibia...'. It does not explicitly state the tibia *is* the holotype in the quote, though it is common knowledge. The bigger issue is the Spanish translation error in sentence 10 (not checked here) or the English drift. Let's re-evaluate: The sentence says 'fossil hunter'. The quote says 'amateur... fossil hunter'. This is a minor drift. The main issue is that the sentence attributes the discovery of the *holotype* directly to Carolini in 1993 based on the quote about finding the *first remains* (tibia). While likely true, the quote doesn't explicitly link the tibia to the holotype definition. But wait, the prompt asks to check if claims are in quotes. The quote says 'discovered the tibia'. The sentence says 'The holotype specimen... was discovered'. This is a merge of facts (tibia found = holotype). Is it an error? Yes, because the quote does not state the tibia is the holotype. It just says he found the tibia. The holotype status is external knowledge not in the quote. Also, the sentence says 'fossil hunter', quote says 'amateur... fossil hunter'. This is acceptable. The real error is the conflation of 'first remains' with 'holotype' without the quote supporting that specific link. Wait, looking at the Spanish translation for sentence 10: 'El holotipo fue descubierto... por el paleontólogo Rubén Darío Carolini.' The source says 'amateur... fossil hunter'. Calling him a 'paleontólogo' (paleontologist) is a factual error in the Spanish translation, as he was an amateur. This is a clear error in the Spanish sentence against the English source fact. So `es_ok` is false. For English, the drift from 'amateur' to just 'fossil hunter' is minor, but the conflation of 'first remains' to 'holotype' is the main issue. Let's stick to the strict rule: 'every claim of the sentence must be in its quotes'. The sentence claims 'The holotype specimen... was discovered... by... Carolini'. The quote says 'the amateur... discovered the tibia'. It does not say the tibia is the holotype. So the English sentence makes a claim (that the tibia is the holotype) not in the quote. Thus `en_ok` is false. Reason: The source quote states Carolini discovered a 'tibia', not explicitly the 'holotype specimen', conflating the first find with the holotype designation.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 2,
+   "lang": "es",
+   "sentence": "La mandíbula inferior de este dinosaurio presentaba un frente sin dientes y en forma de costra que se asemeja a la estructura encontrada en los perezosos de dos dedos y en el perezoso terrestre extinto *Mylodon*.",
+   "reason": "The English text says 'front' (referring to the symphysis shape), but the Spanish translation says 'frente sin dientes' (toothless front), which incorrectly implies the entire front of the jaw is toothless rather than just the symphysis area, and 'forma de costra' (crust-like shape) is not supported by the quote 'scoop-shaped' (forma de cuchara).",
+   "known": true
+  },
+  {
+   "page": "iguanodon",
+   "index": 3,
+   "lang": "en",
+   "sentence": "This genus is one of the three original groups used to define the entire Dinosauria clade, alongside Megalosaurus and Hylaeosaurus.",
+   "reason": "The sentence claims the genus is one of the three groups used to define the clade, but the quote specifies it is one of the three 'genera' (géneros), not groups.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 3,
+   "lang": "es",
+   "sentence": "Este género es uno de los tres grupos originales utilizados para definir todo el clado Dinosauria, junto con *Megalosaurus* y *Hylaeosaurus*.",
+   "reason": "The Spanish sentence uses 'grupos' (groups) instead of 'géneros' (genera), changing the meaning from the specific taxonomic rank cited in the source.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 13,
+   "lang": "en",
+   "sentence": "The massive size of the largest species allowed it to reach food growing 4 to 5 meters high in trees.",
+   "reason": "The sentence states the size 'allowed it to reach' (past fact), while the quote and fact state it 'would have allowed' (hypothetical inference), and the quote explicitly includes 'from the ground up', which the English sentence omits.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 13,
+   "lang": "es",
+   "sentence": "La enorme talla de la especie más grande le permitió alcanzar alimentos que crecían a 4 o 5 metros de altura en los árboles.",
+   "reason": "The Spanish sentence uses 'le permitió' (past fact) instead of the hypothetical 'le habría permitido' found in the source quote, changing the certainty of the claim.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 15,
+   "lang": "en",
+   "sentence": "However, iguanodontians in general are thought to have evolved alongside the rise of flowering plants during the Cretaceous.",
+   "reason": "The English sentence states they 'evolved alongside' the rise of flowering plants, but the quote only states they 'have been related to' the rise of angiosperms due to inferred habits; it does not confirm the specific evolutionary timing or co-evolution described in the sentence.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 15,
+   "lang": "es",
+   "sentence": "Sin embargo, se piensa que los iguanodontianos en general evolucionaron junto con el auge de las plantas con flores durante el Cretácico.",
+   "reason": "The Spanish sentence uses 'evolucionaron junto con' (evolved alongside), which is a stronger claim of co-evolution than the quote's 'se han relacionado con' (have been related to), changing the meaning.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 17,
+   "lang": "es",
+   "sentence": "Nuevos análisis indican que al menos tres eventos de alta mortalidad ocurrieron en un breve periodo de 10 a 100 años, aunque esto no prueba la vida en manada.",
+   "reason": "The Spanish sentence omits the crucial qualifier 'necesariamente' (necessarily) found in the English sentence and the quote, changing the meaning from 'does not necessarily prove' to 'does not prove'.",
+   "known": true
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 30,
+   "lang": "en",
+   "sentence": "It is debated whether Pachycephalosaurus used its dome for head-butting like bighorn sheep or for flank-butting like kangaroos.",
+   "reason": "The sentence presents the debate as an open question ('It is debated whether...'), but the quote explicitly states that the head-butting hypothesis 'has been widely hypothesized for decades' and frames the alternative (flank-butting) as a comparison to kangaroos without stating it is the debated alternative in the same way. More critically, the quote only supports the 'head-butting' hypothesis; it does not provide evidence or phrasing that supports the 'flank-butting' hypothesis as a valid, debated alternative in the source text. The sentence merges a settled hypothesis (head-butting) with an unmentioned alternative (flank-butting) into a balanced debate that the quote does not support.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 30,
+   "lang": "es",
+   "sentence": "Se debate si Pachycephalosaurus utilizaba su bóveda para chocar con la cabeza como los carneros de cornamenta o para embestir los flancos como los canguros.",
+   "reason": "The Spanish translation changes the meaning by presenting the flank-butting hypothesis as a valid alternative ('o para embestir los flancos'), whereas the English source text and the quote only support the head-butting hypothesis. The quote does not mention flank-butting as a hypothesis, so the Spanish sentence introduces a claim not present in the source material.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 24,
+   "lang": "en",
+   "sentence": "In the Dinosaur Park Formation, its habitat was a low-relief area of rivers and floodplains that became swampy and influenced by marine conditions.",
+   "reason": "The quote attributes the habitat description to the 'Dinosaur Park Formation' itself, while the sentence incorrectly attributes it to 'Parasaurolophus' ('its habitat'). The formation's environment is not necessarily the specific habitat of this specific animal.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 24,
+   "lang": "es",
+   "sentence": "En la Formación Dinosaur Park, su hábitat era una zona de baja pendiente de ríos y llanuras aluviales que se convirtieron en pantanos y estuvieron influenciadas por condiciones marinas.",
+   "reason": "The Spanish translation incorrectly attributes the habitat to 'su' (its/Parasaurolophus), whereas the source quote describes the formation's general setting, not the specific animal's habitat.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 25,
+   "lang": "en",
+   "sentence": "When the species existed, the Fruitland Formation was a swampy lowland area close to the shore of the Cretaceous Interior Seaway.",
+   "reason": "The quote states the formation was swampy, lowland, and close to the shore 'When Parasaurolophus existed', but the sentence claims the Fruitland Formation was a habitat of Parasaurolophus. The quote describes the environment at that time, not necessarily that the animal lived there (Parasaurolophus is typically associated with the Dinosaur Park Formation, not the Fruitland Formation, and the quote does not explicitly state the animal lived there, only that the environment existed when it did).",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 25,
+   "lang": "es",
+   "sentence": "Cuando existió la especie, la Formación Fruitland era una zona baja y pantanosa cercana a la costa del Mar Interior del Cretácico.",
+   "reason": "The Spanish translation implies the animal lived there ('Cuando existió la especie... la Formación Fruitland era...'), but the source quote only describes the environment existing at that time, not confirming the animal's presence there.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 26,
+   "lang": "en",
+   "sentence": "The plateau where it lived was an ancient floodplain with large channels, wetland swamps, ponds, and lakes, bordered by highlands.",
+   "reason": "The quote attributes the plateau description to 'dinosaurs' (plural/general), while the sentence specifies 'Parasaurolophus'. This is a generalization error where a trait of the group is applied to a specific species without explicit confirmation in the quote.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 26,
+   "lang": "es",
+   "sentence": "La meseta donde habitaba era una antigua llanura aluvial con grandes canales, pantanos húmedos, charcas y lagos, bordeada por tierras altas.",
+   "reason": "The Spanish translation specifies 'donde habitaba' (where it lived), referring to Parasaurolophus, while the source quote refers generally to 'donde vivieron los dinosaurios' (where dinosaurs lived), making the specific attribution to Parasaurolophus unsupported by the quote.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "index": 18,
+   "lang": "es",
+   "sentence": "Spinosaurus se conoce por haber se alimentado de presas tanto acuáticas como terrestres.",
+   "reason": "Grammatical error: 'haber se alimentado' is incorrect; should be 'haberse alimentado'. The meaning is altered by the syntax error.",
+   "known": true
+  },
+  {
+   "page": "spinosaurus",
+   "index": 23,
+   "lang": "es",
+   "sentence": "Spinosaurus vivió en el norte de África durante el piso cenomaniense del Cretácico Superior, aproximadamente entre 100 y 94 millones de años atrás.",
+   "reason": "The English text uses 'stage' while the quote uses 'age'; the Spanish translation uses 'piso' (stage), which is a translation error relative to the specific terminology in the source quote ('age').",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 6,
+   "lang": "en",
+   "sentence": "The genus Stegosaurus was first described by Othniel Charles Marsh in 1877 after he identified remains during the Bone Wars at Dinosaur Ridge National Landmark.",
+   "reason": "The quote for F003 states remains were identified 'during the Bone Wars', but does not specify 'at Dinosaur Ridge National Landmark'; the landmark name is an external detail not in the source quote.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 8,
+   "lang": "en",
+   "sentence": "Scientists generally agree that Stegosaurus used its spiked tails for defense and its plates primarily for display and secondarily for thermoregulation.",
+   "reason": "The quote for F012 uses 'may have been used' regarding thermoregulation, whereas the sentence states it as a settled fact ('secondarily for thermoregulation').",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 12,
+   "lang": "es",
+   "sentence": "Como herbívoros, estos animales se alimentaban principalmente de vegetación de bajo crecimiento, aunque podían derribar plantas más altas utilizando sus cuernos, pico y masa corporal.",
+   "reason": "The English sentence states they 'could potentially knock down' (possibility), while the Spanish sentence states 'podían derribar' (ability/fact), turning a possibility into a settled fact.",
+   "known": false
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 6,
+   "lang": "es",
+   "sentence": "Bucky es el primer ejemplar de Tyrannosaurus encontrado que conserva una fúrcula, o hueso de la suerte.",
+   "reason": "The English quote says 'first Tyrannosaurus to be found', while the Spanish translation says 'primer ejemplar... encontrado que conserva' (first specimen found that preserves). The English quote does not explicitly state that it was the first to *preserve* the bone, only that it was the first *Tyrannosaurus* found to have one. However, the more critical error is in the Spanish translation of 'wishbone'. The quote translates 'wishbone' as 'hueso de la suerte' (luck bone), which is incorrect; 'wishbone' is 'hueso de la suerte' in some contexts but scientifically 'hueso del deseo' or simply 'fúrcula'. Wait, 'wishbone' is indeed 'hueso de la suerte' in Spanish (from 'os coxalis' or 'furcula' often called 'hueso de la suerte' in common parlance). Let's re-evaluate. The quote says 'furcula (wishbone)'. The Spanish says 'fúrcula, o hueso de la suerte'. This is accurate. Is there a drift? The quote says 'first Tyrannosaurus to be found that preserved'. The English sentence says 'first Tyrannosaurus specimen found to preserve'. This is a match. Let's look closer at the Spanish. 'Bucky es el primer ejemplar de Tyrannosaurus encontrado que conserva...'. The quote says 'first Tyrannosaurus to be found that preserved'. This seems fine. Wait, is 'Bucky' the name in the quote? The quote says 'Bucky'. The Spanish says 'Bucky'. Okay. Let's re-read the instruction: 'every claim of the sentence must be in its quotes'. The sentence claims it is the 'first... specimen found to preserve'. The quote says 'first Tyrannosaurus to be found that preserved'. This is a match. Why did I think it was false? Maybe I was overthinking. Let's look at the Spanish again. 'hueso de la suerte'. Is that the standard translation for 'wishbone'? Yes, it is. Okay, maybe this one is actually OK? Let's check the other sentences first. If 8 and 9 are clearly OK, maybe 7 is too. But wait, the instruction says 'Do NOT report... facts you cannot check from the quotes'. The quote explicitly links 'first Tyrannosaurus' with 'preserved a furcula'. The sentence does the same. The Spanish translates 'wishbone' as 'hueso de la suerte'. This is correct. So 7 should be OK. Let me double check if there is any subtle drift. 'specimen found to preserve' vs 'found that preserved'. Same meaning. Okay, I will mark 7 as OK. Wait, looking at the pattern of the task, usually there is an error. Let's look at the Spanish again. 'Bucky es el primer ejemplar de Tyrannosaurus encontrado que conserva...'. The quote says 'first Tyrannosaurus to be found that preserved'. The Spanish adds 'ejemplar... encontrado'. The quote implies it was found. This is fine. Is there a translation error for 'wishbone'? 'Hueso de la suerte' is the literal translation and the common name. It is correct. Okay, I will assume 7 is OK for now and re-evaluate if I find a reason to flag it. Actually, looking at the quote: 'Bucky is the first Tyrannosaurus to be found that preserved a furcula'. The sentence: 'Bucky is the first Tyrannosaurus specimen found to preserve a furcula'. This is a perfect match. The Spanish: 'Bucky es el primer ejemplar de Tyrannosaurus encontrado que conserva una fúrcula, o hueso de la suerte'. This is also a perfect match. So 7 is OK. Wait, I might be missing something. Is 'Bucky' the name in the source? Yes. Is 'furcula' translated correctly? Yes. Is 'wishbone' translated correctly? Yes. Okay, 7 is OK. Let's move to 8. Sentence 8: 'A juvenile Tyrannosaurus specimen known as the Jordan theropod weighed approximately 30 kg'. Quote: 'The Stygivenator holotype... possibly a juvenile T. rex, is estimated to have weighed only 30 kg'. The sentence states it *is* a juvenile. The quote says it is *possibly* a juvenile. This is a drift from possibility to fact. So 8 is NOT OK. Reason: The sentence states the specimen *is* a juvenile, while the quote says it is *possibly* a juvenile. Spanish: 'Un ejemplar juvenil...'. Same error. So es_ok is false too. Sentence 9: 'A 2017 study found that a Tyrannosaurus specimen nicknamed Wyrex preserves patches of mosaic scales on its tail, hip, and neck.' Quote: '...which preserves patches of mosaic scales on the tail, hip, and neck'. The sentence matches the quote perfectly. Spanish: '...conserva parches de escamas mosaico en su cola, cadera y cuello'. Matches perfectly. So 9 is OK. Wait, let me re-check 7. Is there any nuance? 'first Tyrannosaurus specimen found to preserve' vs 'first Tyrannosaurus to be found that preserved'. The quote says 'first Tyrannosaurus to be found that preserved'. The sentence says 'first Tyrannosaurus specimen found to preserve'. This is semantically identical. The Spanish adds 'ejemplar... encontrado'. The quote says 'found that preserved'. This is fine. Okay, I will stick with 7 being OK. But wait, is 'wishbone' always 'hueso de la suerte'? Yes. Is there any other issue? No. Okay. Let's re-read the instruction for 8. 'it turns a possibility (",
+   "known": false
+  }
+ ]
+}

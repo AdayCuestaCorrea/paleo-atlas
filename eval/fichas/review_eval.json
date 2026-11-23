@@ -1,0 +1,40 @@
+{
+ "model": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "review-text-v2",
+ "expected": 42,
+ "found": 5,
+ "recall": 0.119,
+ "clean_sentences": 753,
+ "false_flags": 34,
+ "false_flag_rate": 0.045,
+ "flags_per_page": {
+  "allosaurus": 5,
+  "ankylosaurus": 0,
+  "archaeopteryx": 1,
+  "brachiosaurus": 9,
+  "carnotaurus": 1,
+  "diplodocus": 0,
+  "giganotosaurus": 2,
+  "iguanodon": 8,
+  "pachycephalosaurus": 2,
+  "parasaurolophus": 6,
+  "spinosaurus": 2,
+  "stegosaurus": 2,
+  "triceratops": 1,
+  "tyrannosaurus": 1,
+  "velociraptor": 0
+ },
+ "found_list": [
+  "allosaurus | en | Skin impressions reveal scales up to two centimeters wide on the tail and neck of juvenile specimens.",
+  "allosaurus | es | Las impresiones de piel revelan escamas de hasta dos centímetros de ancho en la cola y el cuello de los especímenes juveniles.",
+  "iguanodon | es | La mandíbula inferior de este dinosaurio presentaba un frente sin dientes y en forma de costra que se asemeja a la estructura encontrada en los perezosos de dos dedos y en el perezoso terrestre extinto *Mylodon*.",
+  "iguanodon | es | Nuevos análisis indican que al menos tres eventos de alta mortalidad ocurrieron en un breve periodo de 10 a 100 años, aunque esto no prueba la vida en manada.",
+  "spinosaurus | es | Spinosaurus se conoce por haber se alimentado de presas tanto acuáticas como terrestres."
+ ],
+ "passes": false,
+ "bar": {
+  "min_recall": 0.4,
+  "max_false_flag_rate": 0.1
+ },
+ "measured_at": "2026-11-23T00:22:30+00:00"
+}

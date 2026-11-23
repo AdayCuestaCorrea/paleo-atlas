@@ -1,0 +1,474 @@
+{
+ "name": "e4_9b_cot_b3",
+ "model": "paleo-qwen3.5-9b",
+ "effort": "none",
+ "batch": 3,
+ "prompt": "/tmp/claude-1000/-home-adaycc/141a5f38-a5c2-42bf-bf73-4ede6b99e582/scratchpad/prompt_cot.md",
+ "pages": 15,
+ "seconds": 683,
+ "expected": 42,
+ "found": 5,
+ "recall": 0.119,
+ "clean": 753,
+ "false_flags": 45,
+ "false_rate": 0.06,
+ "by_lang": {
+  "en": "3/16",
+  "es": "2/26"
+ },
+ "by_cause": {
+  "misread_source": "4/20",
+  "es_meaning": "1/5",
+  "contradiction": "0/5",
+  "outdated": "0/4",
+  "es_grammar": "0/3",
+  "eswiki_error": "0/2",
+  "outdated_term": "0/2",
+  "es_calque": "0/1",
+  "en_es_mismatch": "0/1",
+  "es_spelling": "0/1"
+ },
+ "llm": "CallStats(calls=151, cached=0, prompt_tokens=171767, completion_tokens=81485, seconds=682.0732511349995)",
+ "flags": [
+  {
+   "page": "allosaurus",
+   "index": 2,
+   "lang": "en",
+   "sentence": "Skin impressions reveal scales up to two centimeters wide on the tail and neck of juvenile specimens.",
+   "reason": "Claim: 'Skin impressions reveal scales up to two centimeters wide on the tail and neck of juvenile specimens.' - Quote F051 supports 'scales up to 2 centimeters in diameter' on the 'base of the tail' of the 'Big Al Two' specimen. However, Quote F051 does not state that 'Big Al Two' is a juvenile; it just says 'Big Al Two'. Quote F050 mentions a 'juvenile specimen' but does not mention 2cm scales or the tail. Quote F053 mentions a 'ventral neck' but the scales are '0.5 centimeters wide', not up to two. The sentence attributes the 2cm scales to 'juvenile specimens' generally and combines the tail finding (F051) with the juvenile label from F050/F053 context without explicit confirmation that the 2cm scales are on a juvenile (F051's specimen status is not defined as juvenile in the quote, though often 'Big Al Two' is known to be a juvenile in literature, the quote provided does not say 'juvenile'). More critically, the sentence claims scales on the 'neck' are up to two centimeters wide. Quote F053 says neck scales are '0.5 centimeters wide'. Quote F051 says tail scales are 'up to 2 centimeters'. The sentence merges the 'up to 2cm' from the tail (F051) and applies it to both tail and neck, and applies the 'juvenile' label to the 2cm scales which are only confirmed on the tail in the provided quotes (F051), while the neck scales (F053) are explicitly 0.5cm. Thus, the claim 'scales up to two centimeters wide... on the... neck' is not supported by the quotes (F053 says 0.5cm). Also, the quote F051 does not explicitly state the specimen is a juvenile, so linking 'juvenile' to the 2cm scales is an inference not in the quote.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 11,
+   "lang": "en",
+   "sentence": "Evidence for cannibalism in Allosaurus includes shed teeth found among rib fragments and tooth marks on shoulder blades.",
+   "reason": "The sentence claims 'Evidence for cannibalism in Allosaurus includes shed teeth found among rib fragments'. The quote states 'including Allosaurus shed teeth found among rib fragments'. This matches. The sentence claims 'and tooth marks on shoulder blades'. The quote states 'possible tooth marks on a shoulder blade'. The sentence presents 'tooth marks on shoulder blades' as a fact, whereas the quote qualifies them as 'possible'. This is an error of certainty.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 11,
+   "lang": "es",
+   "sentence": "La evidencia de canibalismo en el Allosaurus incluye dientes desprendidos encontrados entre fragmentos de costillas y marcas de mordedura en las escápulas.",
+   "reason": "The Spanish text says 'marcas de mordedura en las escápulas' (tooth marks on shoulder blades) without the qualifier 'posibles' (possible) found in the English sentence (which itself drifted from the quote). The Spanish text is consistent with the erroneous English sentence, but since the English sentence is factually incorrect regarding certainty, the translation perpetuates the error. However, the instruction asks to report if the Spanish changes the meaning relative to the English. Here the Spanish matches the English error, but misses the nuance of the original quote. The primary error is in the English sentence turning a possibility into a fact.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 18,
+   "lang": "en",
+   "sentence": "Allosaurus lived during the Kimmeridgian to Tithonian ages of the Late Jurassic period.",
+   "reason": "Claim: Allosaurus lived during the Kimmeridgian to Tithonian ages. Quote F082 supports this for 'occurrences' (fossils), not explicitly the animal's life span in a way that contradicts other data, but F139 explicitly states the range is Oxfordian to Berriasian. The sentence merges the range of the fossils found (Kimmeridgian-Tithonian per F082) with the animal's actual time range (Oxfordian-Berriasian per F139) or presents conflicting data as a single fact. Specifically, F139 says the time range is Oxfordian to Berriasian, while the sentence says Kimmeridgian to Tithonian. These are different stages (Oxfordian is earlier than Kimmeridgian; Berriasian is earlier than Tithonian). The sentence presents the Kimmeridgian-Tithonian range as the animal's life span, which contradicts F139's explicit time range for the animal.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 5,
+   "lang": "en",
+   "sentence": "These thin osteoderms were reinforced by randomly distributed cushions of collagen fibers embedded directly into the bone tissue.",
+   "reason": "Claim: 'Ankylosaurus had thin osteoderms' is supported by quote 'The osteoderms of ankylosaurids were thin'. Claim: 'reinforced by randomly distributed cushions of collagen fibers' is supported by quote 'strengthened by randomly distributed cushions of collagen fibers'. Claim: 'embedded directly into the bone tissue' is NOT supported by the quote; the quote says 'strengthened by... fibers' but does not explicitly state the fibers were 'embedded directly into the bone tissue' (it implies the osteoderms were strengthened by them, but the specific phrasing of the embedding location is an extrapolation not in the verbatim text).",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 18,
+   "lang": "en",
+   "sentence": "The U-shaped zygapophyses and neural spines of tail vertebrae differ from the V-shape of most other ankylosaurids, possibly due to a wider tail handle.",
+   "reason": "The sentence claims 'The U-shaped zygapophyses and neural spines of tail vertebrae'. The quote specifies 'The interlocked zygapophyses (articular processes) and neural spines of the handle vertebrae'. The sentence omits the crucial qualifier 'handle vertebrae' (the specific part of the tail where the club is), making the claim about 'tail vertebrae' in general inaccurate based on the quote which restricts the shape to the handle region.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 23,
+   "lang": "en",
+   "sentence": "Ankylosaurus belongs to the family Ankylosauridae, with Anodontosaurus and Euoplocephalus as its closest relatives.",
+   "reason": "Claim: 'Ankylosaurus belongs to the family Ankylosauridae, with Anodontosaurus and Euoplocephalus as its closest relatives.' - Quote states: 'Ankylosaurus is a member of the family Ankylosauridae, and its closest relatives appear to be Anodontosaurus and Euoplocephalus'. The sentence omits 'appear to be', turning a tentative statement into a definitive one. This is an error as it changes a possibility/settled point nuance into a fact.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 5,
+   "lang": "en",
+   "sentence": "A 2011 study used scanning electron microscopy to analyze a single isolated feather, and comparisons with 87 modern bird species led researchers to calculate a 95% likelihood that the analyzed feather was originally black.",
+   "reason": "Claim: 'A 2011 study used scanning electron microscopy to analyze a single isolated feather' -> Quote F055 mentions 'first colour study on an Archaeopteryx specimen' but does not specify 'scanning electron microscopy' or 'single isolated feather' (it implies a specimen, not necessarily a single isolated feather in the quote text provided, though the fact statement adds detail). However, the instruction says 'read the quotes, not only the fact statements'. The quote F055 does not mention the method (SEM) or the specific object ('single isolated feather'). The fact statement F055 adds this info. The sentence relies on the fact statement for these details. Is this an error? The prompt says 'every claim of the sentence must be in its quotes'. The sentence claims 'used scanning electron microscopy' and 'analyze a single isolated feather'. Quote F055 says 'performed the first colour study on an Archaeopteryx specimen'. It does not explicitly state 'single isolated feather' or 'scanning electron microscopy'. This is a drift from the quote provided. Claim: 'comparisons with 87 modern bird species' -> Supported by quote F056. Claim: 'calculate a 95% likelihood that the analyzed feather was originally black' -> Supported by quote F056.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 12,
+   "lang": "en",
+   "sentence": "The Mühlheim Specimen was initially considered a thirteenth Archaeopteryx but was reassigned to the distinct genus Alcmonavis upon its 2019 description.",
+   "reason": "Claim: 'initially considered a thirteenth Archaeopteryx'. Quote does not state it was considered the 'thirteenth' specimen, only that it was 'initially considered a thirteenth Archaeopteryx' in the fact statement, but the quote only says 'When the specimen was scientifically described in 2019, it was thus reassigned to a distinct genus Alcmonavis.' The quote does not mention the number 'thirteenth' or the initial consideration status explicitly in the text provided.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 19,
+   "lang": "en",
+   "sentence": "A 2006 study found that Archaeopteryx's leg feathers formed up to 12% of its total airfoil.",
+   "reason": "Claim: 'A 2006 study found that Archaeopteryx's leg feathers formed up to 12% of its total airfoil.' Quote states: 'suggested that the structures formed up to 12% of the total airfoil.' The sentence presents the finding as a fact ('found'), while the quote explicitly uses the tentative language 'suggested'. This turns a possibility/suggestion into a settled fact.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 23,
+   "lang": "en",
+   "sentence": "All known skeletons of Archaeopteryx are believed to come from juvenile specimens.",
+   "reason": "Claim: All known skeletons of Archaeopteryx are believed to come from juvenile specimens. The quote states: \"Todos los esqueletos conocidos de Archaeopteryx vienen de ejemplares juveniles\". The English sentence presents this as a fact ('are believed to come'), whereas the Spanish translation correctly includes the epistemic modality ('Se cree que...'). However, the instruction asks to report errors in the English sentence against its quotes. The quote itself does not contain the words 'Se cree que' (It is believed that); it states the fact directly. Therefore, the English sentence adds the nuance of belief ('believed') which is not explicitly in the provided quote text, although the fact statement includes it. Wait, looking closer at the prompt's instruction: 'every claim of the sentence must be in its quotes'. The quote provided is: \"Todos los esqueletos conocidos de Archaeopteryx vienen de ejemplares juveniles\". This quote asserts the fact directly. The English sentence says 'are believed to come'. This is a mismatch: the quote asserts it as a fact, the English sentence hedges it as a belief. Conversely, the Spanish translation adds 'Se cree que' (It is believed that), which is NOT in the English sentence nor the quote. This is a translation error in Spanish (adding a modality not present in the source text/English). Let's re-evaluate the English. If the quote is a direct statement of fact, the English sentence adding 'believed' is a slight drift, but often 'believed' is used to reflect the scientific consensus nature. However, the Spanish translation explicitly adds 'Se cree que' which changes the meaning from the English (which is a statement of the consensus) to a statement of belief. The prompt asks to report 'Spanish sentence against the English one'. The Spanish adds 'Se cree que' which is not in the English. Is this an error? Yes, if the English is the target truth. But wait, the quote itself doesn't have 'believed'. So both English and Spanish deviate from the strict quote text if we assume the quote is the absolute truth. However, usually, these fact cards imply the quote supports the statement. The bigger issue is the Spanish adding 'Se cree que' when the English does not. The English says 'are believed to come', the Spanish says 'It is believed that...'. They are semantically equivalent. The quote is the only source. The quote says 'come from'. It does not say 'it is believed they come from'. So technically, both sentences add 'believed' not in the quote. But the instruction says 'Report ONLY clear errors... Spanish sentence against the English one... it changes the meaning'. Does 'Se cree que' change the meaning compared to 'are believed to come'? No. Does the Spanish change the meaning compared to the English? No. Does the English change the meaning compared to the quote? Yes, by adding 'believed'. But the instruction says 'Report... English sentence against its quotes... every claim... must be in its quotes'. The claim 'are believed' is not in the quote 'vienen'. So the English sentence has an error relative to the quote. The Spanish sentence also has an error relative to the quote. But the specific check for Spanish vs English: does Spanish change meaning from English? No. So `es_ok` should be true. But `en_ok` should be false because 'believed' is not in the quote. Wait, let's look at the quote again. \"Todos los esqueletos conocidos de Archaeopteryx vienen de ejemplares juveniles\". This is a definitive statement. The English sentence says \"are believed to come\". This is a softening. If the quote is the source of truth, the English sentence is inaccurate because it introduces uncertainty not present in the source. The Spanish sentence \"Se cree que...\" also introduces uncertainty. So both are technically errors against the quote. But the prompt asks to report errors. I will flag the English sentence for adding 'believed' which is not in the quote. And for Spanish vs English, since both add 'believed', there is no change in meaning between them, so `es_ok` is true. However, looking at the Spanish translation of the quote provided in the fact card: \"Todos los esqueletos conocidos de Archaeopteryx vienen de ejemplares juveniles\". The Spanish translation in the fact card matches the English quote style (definitive). The Spanish sentence in the text to be checked adds 'Se cree que'. This is a deviation from the fact card's Spanish quote. The English sentence adds 'believed'. This is a deviation from the fact card's English quote. So both are errors against the quote. But the instruction says 'Report ONLY clear errors... English sentence against its quotes... Spanish sentence against the English one'. So I must report the English error. For Spanish vs English, since they match in their deviation (both use 'believed'), there is no conflict between them. So `es_ok` is true. Wait, is 'believed' in the quote? No. So `en_ok` is false. Is the Spanish different from English? No. So `es_ok` is true. Let's refine. The quote is definitive. The English sentence hedges. This is an error. The Spanish sentence hedges. This matches the English. So no error in Spanish relative to English. But is the Spanish error relative to the quote? Yes, but the instruction for `es_vs_en` is 'what the Spanish says that the English does not'. It doesn't say 'what the Spanish says that the quote does not'. It says 'Spanish sentence against the English one'. So if Spanish matches English, `es_ok` is true. The error is in English against the quote. So `en_ok` is false.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 24,
+   "lang": "es",
+   "sentence": "Los autores especularon que el Archaeopteryx y el kiwi, incapaz de volar, tenían tasas metabólicas basales similares.",
+   "reason": "The Spanish sentence adds 'incapaz de volar' (flightless) to describe the kiwi, which is not in the English sentence. While factually true for kiwis, it is an addition not present in the English source text being checked against.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 2,
+   "lang": "en",
+   "sentence": "Researchers D'Emic and Carrano estimated the Brachiosaurus skull to be 70 centimeters long, 55 centimeters tall, and 35 centimeters wide.",
+   "reason": "Claim: Researchers D'Emic and Carrano estimated the Brachiosaurus skull to be 70 cm long, 55 cm tall, and 35 cm wide. Quote: The quote states 'D'Emic and Carrano instead estimated the skull to have been 70 cm long, and if proportionally similar to that of Giraffatitan, about 55 cm tall, and 35 cm wide'. The quote explicitly conditions the height (55 cm) and width (35 cm) on the assumption that the skull is 'proportionally similar to that of Giraffatitan'. The English sentence presents these dimensions as a direct estimation for Brachiosaurus without stating this crucial condition, effectively merging the conditional hypothesis into a settled fact.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 8,
+   "lang": "en",
+   "sentence": "A Brachiosaurus skull was discovered in 1883 by farmer Marshall Parker Felch near Garden Park, Colorado.",
+   "reason": "Claim: A Brachiosaurus skull was discovered in 1883 by farmer Marshall Parker Felch near Garden Park, Colorado. Quote: 'In 1883, farmer Marshall Parker Felch... reported the discovery of a sauropod skull in Felch Quarry 1, near Garden Park, Colorado.' The quote says 'sauropod skull', not specifically 'Brachiosaurus skull'. The identification as Brachiosaurus came later (Riggs described it in 1903). The sentence attributes the specific identification to the 1883 discovery event, which is an error of attribution (giving a later identification to the initial discovery event).",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 14,
+   "lang": "en",
+   "sentence": "In 2001, Gunga and Kirsch concluded that Brachiosaurus moved its neck laterally more often than vertically while feeding.",
+   "reason": "Claim: Gunga and Kirsch concluded that Brachiosaurus moved its neck laterally more often than vertically while feeding. Quote: 'In studying the inner ear of Giraffatitan, Gunga & Kirsch (2001) concluded that brachiosaurids would have moved their necks in lateral directions more often than in dorsal-ventral directions while feeding.' The claim attributes the conclusion specifically to 'Brachiosaurus', whereas the quote specifies the study was on 'Giraffatitan' and the conclusion applies to 'brachiosaurids' (the group). This is a specific-to-general error (giving a group's trait to a specific specimen mentioned in the sentence, or vice versa depending on interpretation, but strictly speaking, the quote does not state the conclusion for Brachiosaurus specifically, only for the group based on Giraffatitan).",
+   "known": true
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 15,
+   "lang": "en",
+   "sentence": "Brachiosaurus used a bird-like respiratory system with air sacs to achieve unidirectional airflow in its lungs.",
+   "reason": "The sentence claims Brachiosaurus used a bird-like system with air sacs to achieve unidirectional airflow. The quote states the system 'made use of air sacs' and compares it to birds, but does not explicitly state it achieved 'unidirectional airflow' or that this was the purpose of the air sacs.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 15,
+   "lang": "es",
+   "sentence": "Brachiosaurus utilizaba un sistema respiratorio similar al de las aves, con sacos aéreos, para lograr un flujo de aire unidireccional en sus pulmones.",
+   "reason": "The Spanish translation is semantically identical to the English sentence, preserving the unverified claim about unidirectional airflow.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 16,
+   "lang": "en",
+   "sentence": "In 2012, Carballido and colleagues reconstructed the growth of Brachiosaurus using a 2-meter-long juvenile skeleton named Toni.",
+   "reason": "The sentence claims the skeleton named Toni was '2-meter-long'. The quote specifies the skeleton was '2 m' but clarifies this is the 'estimated total body length', whereas the sentence implies the skeleton itself was 2 meters long.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 16,
+   "lang": "es",
+   "sentence": "En 2012, Carballido y sus colegas reconstruyeron el crecimiento de Brachiosaurus utilizando un esqueleto juvenil de 2 metros de largo llamado Toni.",
+   "reason": "The Spanish translation says 'esqueleto juvenil de 2 metros de largo' (juvenile skeleton 2 meters long), which matches the English error of attributing the total body length to the skeleton's physical length.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 17,
+   "lang": "en",
+   "sentence": "The name Giraffatitan was elevated to full genus status by George Olshevsky in 1991 based on differences in vertebral variation.",
+   "reason": "The sentence claims the elevation was 'based on differences in vertebral variation'. The quote says it was done 'while referring to the vertebral variation', which implies the variation was noted but does not explicitly state it was the basis for the decision.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 17,
+   "lang": "es",
+   "sentence": "El nombre Giraffatitan fue elevado al estatus de género completo por George Olshevsky en 1991 basándose en diferencias en la variación vertebral.",
+   "reason": "The Spanish translation says 'basándose en' (based on), which strengthens the causal link found in the English sentence, potentially drifting further from the quote's 'while referring to' phrasing.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "index": 5,
+   "lang": "en",
+   "sentence": "Carnotaurus is the first known theropod dinosaur to have a significant number of fossil skin impressions found on its skeleton.",
+   "reason": "The claim that Carnotaurus is the 'first known theropod dinosaur to have a significant number of fossil skin impressions found on its skeleton' is NOT fully supported by the quote. The quote states it was the 'first theropod dinosaur discovered with a significant number of fossil skin impressions'. The sentence changes the criterion from 'discovered' (temporal order of discovery) to 'known' (which could imply existence regardless of discovery order, though often used interchangeably, the specific phrasing 'found on its skeleton' in the sentence vs 'discovered with' in the quote is a slight drift, but the main issue is the shift from 'discovered' to 'known' which changes the meaning from a historical fact about discovery to a general fact about existence). However, looking closer at the instruction: 'it says the opposite of what the quotes say' or 'gives the age, size or place of something else'. The quote says 'discovered', the sentence says 'known'. If a species is known but not discovered yet (impossible), or if the distinction matters. Actually, the bigger issue is usually 'known' vs 'discovered'. But let's look at the Spanish translation. The Spanish says 'conocido' (known) and 'descubierto' (discovered) in the quote? No, the quote is in English. The quote says 'discovered'. The sentence says 'known'. This is a subtle shift. But wait, is there a clearer error? The quote says 'first theropod dinosaur discovered'. The sentence says 'first known theropod dinosaur'. These are effectively the same in this context. Let's re-read the quote carefully: 'Carnotaurus was the first theropod dinosaur discovered with a significant number of fossil skin impressions.' The sentence: 'Carnotaurus is the first known theropod dinosaur to have a significant number of fossil skin impressions found on its skeleton.' The phrase 'found on its skeleton' is added. The quote says 'discovered with'. This implies the impressions were found. The sentence specifies 'on its skeleton'. The quote doesn't explicitly say 'on its skeleton', just 'with'. This is a minor addition. Is it an error? The instruction says 'every claim of the sentence must be in its quotes'. The claim 'found on its skeleton' is not in the quote. The quote says 'discovered with'. It does not specify location 'on its skeleton'. This is a potential error. Let's check the Spanish. The Spanish says 'sobre su esqueleto' (on its skeleton). The quote does not say 'on its skeleton'. So both English and Spanish add 'on its skeleton' which is not in the quote. This is an error.",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "index": 8,
+   "lang": "en",
+   "sentence": "Carnotaurus had a safety factor of 92, suggesting its skull was over-engineered compared to the forces generated by its bite.",
+   "reason": "Claim: Carnotaurus had a safety factor of 92. Supported by quote: '...Esto le da un factor de seguridad de 92...'. Claim: This suggests its skull was over-engineered. Supported by quote: '...que sugiere que el cráneo de Carnotaurus podría haber estado sobrediseñado.' The English turns the possibility ('could have been') into a statement of fact ('was over-engineered').",
+   "known": false
+  },
+  {
+   "page": "carnotaurus",
+   "index": 27,
+   "lang": "es",
+   "sentence": "Carnotaurus es un género bien conocido dentro de la familia Abelisauridae, la cual estaba restringida al supercontinente sur de Gondwana.",
+   "reason": "The Spanish sentence translates 'well-understood' as 'bien conocido' (well-known) instead of 'bien comprendido' (well-understood). While related, 'well-known' does not strictly mean 'well-understood' in a scientific context (understanding implies knowledge of details/mechanisms, not just fame). However, given the context of 'best-understood' in the source, 'bien conocido' is a common translation for the concept of being well-studied/known in paleontology, but it is a slight drift. More importantly, the Spanish says 'supercontinente sur de Gondwana' (southern continent OF Gondwana). Gondwana IS the southern supercontinent. The phrasing 'southern continent of Gondwana' implies Gondwana contains a southern continent, which is geologically inaccurate (Gondwana is the southern supercontinent). The English says 'southern supercontinent Gondwana'. The Spanish translation adds 'de' (of) and drops 'super', changing the geological definition.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "index": 22,
+   "lang": "en",
+   "sentence": "Sauropod footprints found in the 1930s disproved the theory that Diplodocus had a sprawling, lizard-like gait.",
+   "reason": "Claim: 'Sauropod footprints found in the 1930s' - Quote states 'Finds of sauropod footprints in the 1930s' (Match). Claim: 'disproved the theory that Diplodocus had a sprawling, lizard-like gait' - Quote states 'eventually put Hay's theory to rest'. The quote does not explicitly mention 'Diplodocus' or describe the gait as 'sprawling, lizard-like', only that it put 'Hay's theory' to rest. While historically accurate that Hay's theory was about Diplodocus, the quote provided does not contain the specific details of the gait or the specific animal name, making the sentence's specific claims not fully supported by the verbatim quote provided.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "index": 23,
+   "lang": "en",
+   "sentence": "Matthew Cobley et al. (2013) disputed the idea that Diplodocus could feed from submerged plants, arguing that large muscles and cartilage limited neck movement.",
+   "reason": "Claim: 'Matthew Cobley et al. (2013) disputed the idea that Diplodocus could feed from submerged plants' - Quote states 'disputed this' (referring to the previous context of submerged feeding) but does not explicitly name 'Diplodocus' in the quote snippet provided. Claim: 'arguing that large muscles and cartilage limited neck movement' - Quote states 'finding that large muscles and cartilage would have limited neck movements' (Match).",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 7,
+   "lang": "en",
+   "sentence": "Giganotosaurus is one of the largest known theropods, estimated to reach lengths of 12 to 13 meters, a skull over 1.60 meters long, and a weight of 7 to 8 tons.",
+   "reason": "The English sentence states 'a skull over 1.60 meters long' as a fact. The quote says 'con un cráneo de posiblemente de más de 1,60m de largo' (with a skull of possibly more than 1.60m long). The English sentence omits the word 'possibly' (or 'posiblemente'), turning a possibility into a settled fact.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 9,
+   "lang": "en",
+   "sentence": "The holotype specimen was discovered in the Candeleros Formation of Patagonia in 1993 by the fossil hunter Rubén Darío Carolini.",
+   "reason": "Claim: 'discovered... by the fossil hunter Rubén Darío Carolini'. Quote F003 does not mention the discoverer. Quote F004 mentions Rubén Darío Carolini but states he discovered the 'first remains' (a tibia), not the 'holotype specimen' (which implies the complete set of bones defining the species). The sentence conflates the discovery of the first bone with the discovery of the holotype.",
+   "known": false
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 22,
+   "lang": "en",
+   "sentence": "Coria suggested that a bonebed of Giganotosaurus relatives was the result of a catastrophic event and that the mix of ages indicated these large theropods hunted in packs.",
+   "reason": "The sentence claims 'Coria suggested that a bonebed of Giganotosaurus relatives was the result of a catastrophic event'. The quote states 'Coria stated that the bonebed was probably the result of a catastrophic event'. The sentence claims 'the mix of ages indicated these large theropods hunted in packs'. The quote states 'the presence of mainly medium-sized individuals, with very few young or old, is normal for animals that form packs'. The sentence attributes the 'mix of ages' to the indication of pack hunting, whereas the quote attributes the 'presence of mainly medium-sized individuals, with very few young or old' (which is a specific type of age/size distribution, not just a general 'mix') to pack hunting. The sentence simplifies the quote's specific observation ('mainly medium-sized... very few young or old') into a generic 'mix of ages'. While 'mix of ages' is technically true if there are young and old, the quote specifically highlights the *lack* of young and old as the indicator. More importantly, the quote says the *presence* of medium-sized individuals *with* few young/old is the indicator. The sentence says 'the mix of ages indicated...'. This is a slight distortion, but the bigger issue is the translation in the next step. Let's look closer at the quote: 'presence of mainly medium-sized individuals, with very few young or old'. The sentence says 'mix of ages'. A 'mix of ages' usually implies a range. The quote says 'very few young or old', implying a narrow range (mostly adults). The sentence's 'mix of ages' is a poor summary of 'very few young or old', potentially misleading a reader into thinking there was a wide variety of ages. However, the prompt asks for clear errors. Is 'mix of ages' an error? The quote says 'very few young or old', which means the ages are *not* mixed in a broad sense. The sentence says 'mix of ages indicated...'. This contradicts the specific detail in the quote which emphasizes the *lack* of young and old. The quote says the *specific composition* (mostly medium, few young/old) indicates packs. The sentence says 'mix of ages' indicates packs. This is a distortion of the specific evidence cited.",
+   "known": true
+  },
+  {
+   "page": "giganotosaurus",
+   "index": 22,
+   "lang": "es",
+   "sentence": "Coria sugirió que un lecho de huesos de parientes de *Giganotosaurus* fue el resultado de un evento catastrófico y que la mezcla de edades indicaba que estos grandes terópodos cazaban en manada.",
+   "reason": "The Spanish text says 'que la mezcla de edades indicaba que estos grandes terópodos cazaban en manada' (that the mix of ages indicated that these large theropods hunted in packs). This matches the English 'mix of ages'. However, the English itself is a distortion of the quote which specifies 'mainly medium-sized individuals, with very few young or old'. The Spanish faithfully translates the distorted English. Since the English is an error (misrepresenting the specific age distribution described in the quote as a general 'mix'), the Spanish is also problematic, but the primary error is in the English interpretation of the quote.",
+   "known": true
+  },
+  {
+   "page": "iguanodon",
+   "index": 2,
+   "lang": "es",
+   "sentence": "La mandíbula inferior de este dinosaurio presentaba un frente sin dientes y en forma de costra que se asemeja a la estructura encontrada en los perezosos de dos dedos y en el perezoso terrestre extinto *Mylodon*.",
+   "reason": "The Spanish text says 'frente sin dientes y en forma de costra' (toothless front and in the form of a crust/scab). The English says 'scoop-shaped' (forma de cucharón). 'Costra' (crust/scab) is a mistranslation of 'scoop-shaped' and changes the meaning of the shape described.",
+   "known": true
+  },
+  {
+   "page": "iguanodon",
+   "index": 13,
+   "lang": "en",
+   "sentence": "The massive size of the largest species allowed it to reach food growing 4 to 5 meters high in trees.",
+   "reason": "Claim: 'allowed it to reach food' (fact) vs Quote: 'would have allowed it to access food' (possibility/hypothetical). The English sentence presents a hypothetical ability as a settled fact.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 15,
+   "lang": "en",
+   "sentence": "However, iguanodontians in general are thought to have evolved alongside the rise of flowering plants during the Cretaceous.",
+   "reason": "The English sentence claims 'evolved alongside the rise of flowering plants'. The quote states they 'have been related to the rise of angiosperm plants'. While 'related' is vague, the English interpretation of 'evolved alongside' is a specific causal or temporal correlation not explicitly stated in the quote, which attributes the relationship to 'inferred dinosaur habits'. However, given the context of 'thought to have evolved', this is a reasonable interpretation of the source's 'related to' in a scientific context, but strictly speaking, the quote does not state 'evolved alongside'. More critically, the quote attributes the relationship to 'inferred habits', whereas the English sentence presents the co-evolution as the primary thought without mentioning the 'inferred habits' caveat. This is a drift from the source's specific reasoning.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 17,
+   "lang": "en",
+   "sentence": "New analyses indicate at least three high-mortality events happened over a brief period of 10 to 100 years, though this does not prove herd living.",
+   "reason": "The English sentence claims 'New analyses indicate at least three high-mortality events happened over a brief period of 10 to 100 years'. The quote says 'se registran por lo menos tres sucesos de alta mortalidad y, aunque numerosos individuos habrían muerto en un periodo geológicamente breve, de entre 10 a 100 años' (at least three high-mortality events are recorded and, although numerous individuals would have died in a geologically brief period, between 10 to 100 years). The English omits the nuance that the 'brief period' applies to the death of numerous individuals in the context of the events, but the core claim of 3 events in 10-100 years is supported. The English says 'though this does not prove herd living'. The quote says 'no prueba necesariamente que estos iguanodontes vivieran en manadas' (does not necessarily prove that these iguanodontians lived in herds). The English drops the 'necessarily' (necesariamente), turning a qualified negative into an absolute one. This is a drift.",
+   "known": true
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 7,
+   "lang": "en",
+   "sentence": "Some estimates suggest it reached lengths of 4.5 to 5 meters and weighed up to 2000 kilograms.",
+   "reason": "The English sentence states 'Some estimates suggest', while the quote (from the Spanish PBDB entry) states as a fact 'reaching 4.5 to 5 meters... and weighing up to 2000 kilograms' without hedging language like 'estimates suggest' or 'may'. The English sentence correctly hedges the PBDB's definitive statement, which is acceptable, but strictly speaking, the quote does not contain the phrase 'Some estimates suggest'. However, the instruction says 'a statement may already have drifted from its quote'. The English sentence adds 'Some estimates suggest' which is not in the quote. Is this an error? The quote is from a database entry which often states facts definitively. The English sentence is more cautious. This is usually preferred in science writing. However, the instruction says 'every claim of the sentence must be in its quotes'. The claim 'Some estimates suggest' is not in the quote. But the underlying data (4.5-5m, 2000kg) is in the quote. The addition of 'Some estimates suggest' is a linguistic adjustment to reflect scientific uncertainty where the source might be definitive. This is generally not an error in fact-checking unless the source explicitly says 'It is certain that...'. Let's look closer. The quote says 'reaching...'. The English says 'Some estimates suggest it reached...'. This is a shift from a definitive statement to a tentative one. The instruction says: 'turns a possibility into a fact' is an error. Here it turns a fact (in the quote) into a possibility (in the text). This is a potential error if the quote is treated as the absolute truth. However, the quote itself is a translation of a database entry. The database entry might be summarizing estimates. The English sentence is safer. But strictly, the quote does not say 'Some estimates suggest'. Let's consider if this is a 'clear error'. The prompt says 'Report ONLY clear errors'. Adding 'Some estimates suggest' to a definitive quote is a softening, not necessarily a factual error, but it does mean the sentence's claim ('Some estimates suggest') is not verbatim in the quote. However, the core data is there. Let's look at the Spanish. The Spanish says 'Algunas estimaciones sugieren...' which matches the English. The quote is in Spanish in the source: 'Pachycephalosaurus es el paquicefalosáurido más grande conocido, con 4,5 a 5 metros de longitud y hasta 2000 kilogramos de peso'. The quote does NOT say 'Algunas estimaciones sugieren'. It states it as a fact. The English and Spanish sentences both add the hedge 'Some estimates suggest'. This hedge is NOT in the quote. Therefore, the sentence claims something ('Some estimates suggest') that is not in the quote. This fits the rule: 'every claim of the sentence must be in its quotes'. The claim 'Some estimates suggest' is not in the quote. The quote just states the numbers. So this is an error.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 7,
+   "lang": "es",
+   "sentence": "Algunas estimaciones sugieren que alcanzaba longitudes de 4,5 a 5 metros y pesaba hasta 2000 kilogramos.",
+   "reason": "The Spanish sentence matches the English sentence ('Algunas estimaciones sugieren...'). Both add the hedge 'Some estimates suggest' which is not present in the source quote (which states the measurements as facts).",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 8,
+   "lang": "en",
+   "sentence": "Research found that 22% of examined domes had lesions consistent with osteomyelitis, supporting the use of domes in combat.",
+   "reason": "The English sentence claims 'Research found that 22% of examined domes had lesions... supporting the use of domes in combat.' The quote states 'Peterson et al. (2013) studied cranial pathologies among Pachycephalosauridae and found that 22% of all domes examined had lesions that are consistent with osteomyelitis'. The quote does NOT mention 'supporting the use of domes in combat'. The interpretation of the lesions as evidence for combat is an inference not stated in the quote. The sentence turns an interpretation (which might be the authors' conclusion) into a fact without the quote supporting that specific conclusion. The quote only mentions the finding of lesions. The 'supporting the use of domes in combat' part is not in the quote. This is an error.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 8,
+   "lang": "es",
+   "sentence": "La investigación reveló que el 22 % de las bóvedas examinadas presentaban lesiones compatibles con osteomielitis, lo que respalda el uso de las bóvedas en combates.",
+   "reason": "The Spanish sentence includes 'lo que respalda el uso de las bóvedas en combates' (which supports the use of domes in combat), matching the English. Both English and Spanish add this interpretation which is NOT in the source quote. The quote only mentions the finding of lesions consistent with osteomyelitis.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 14,
+   "lang": "en",
+   "sentence": "A 2012 study suggested that cranial pathologies in a specimen were caused by aggressive behavior.",
+   "reason": "Claim: A 2012 study suggested that cranial pathologies in a specimen were caused by aggressive behavior. Quote: 'In 2012, a study showed that cranial pathologies in a P. wyomingensis specimen were likely due to agonistic behavior.' The claim states 'suggested' and 'caused by aggressive behavior'. The quote states 'showed' and 'likely due to agonistic behavior'. While 'suggested' is weaker than 'showed', the main issue is the translation of 'agonistic' vs 'aggressive' in the next step, but strictly in English: 'agonistic' is a specific term often equated to aggressive in general contexts, but the quote says 'likely due to' while the claim says 'were caused by' (removing the likelihood). However, the instruction says 'turns a possibility into a fact'. 'Likely due to' is a high probability, 'were caused by' is a fact. This is a minor drift. Let's look closer. The quote says 'likely due to agonistic behavior'. The claim says 'were caused by aggressive behavior'. 'Agonistic' is the precise term for aggressive/combative behavior. The shift from 'likely' to 'were' is a shift from possibility/likelihood to fact. This is an error.",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 20,
+   "lang": "es",
+   "sentence": "Se sospecha que el dinosaurio incluía carne en su dieta.",
+   "reason": "The English says 'may have included' (possibility). The Spanish says 'incluía' (imperfect indicative, stating it as a fact/habit). This changes the meaning from a possibility to a settled fact.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 28,
+   "lang": "en",
+   "sentence": "It has been debated whether P. cyrtocristatus represents a female of P. walkeri or P. tubicen, though some studies argue against this due to differences in age and anatomy.",
+   "reason": "Claim: 'debated whether P. cyrtocristatus represents a female' is supported by quote 'speculated that it was a female'. Claim: 'some studies argue against this' is NOT supported by the quote; the quote states 'P. tubicen lived approximately a million years later' as a reason for the speculation being wrong, but does not explicitly mention 'studies arguing against this' or 'differences in age and anatomy' as the reason for the argument against the female hypothesis (the quote attributes the age difference to the species comparison, not necessarily as the specific evidence used to argue against the female hypothesis in the way the fact states). However, looking closer at the quote: 'although P. tubicen lived approximately a million years later'. The fact says 'due to differences in age and anatomy'. The quote mentions the age difference (1 million years later) which implies a difference in age, but does not mention 'anatomy' as the reason for arguing against it, nor does it explicitly say 'studies argue against this' (it says 'often been speculated... which were all thought to be males'). The fact merges the speculation and the counter-argument into a single sentence structure that implies the counter-argument is based on 'differences in age and anatomy'. The quote only provides the age difference as a fact ('lived approximately a million years later') and implies the male/female distinction was the issue ('which were all thought to be males'). The fact's phrasing 'due to differences in age and anatomy' is an interpretation/summary not verbatim in the quote. The quote does not mention 'anatomy' as a reason for the argument against the female hypothesis. It just states the age difference. Therefore, the claim that studies argue against it 'due to differences in age and anatomy' is not fully supported by the quote which only mentions the age difference.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "index": 24,
+   "lang": "en",
+   "sentence": "The subadult Spinosaurus skeleton was found in the Douria Formation of the Kem Kem Beds in Zrigat, Morocco, dating to the Cenomanian stage of the mid-Cretaceous period.",
+   "reason": "The claim that the skeleton is 'subadult' is not in the quote (the quote only says 'This skeleton'). The claim that it was found in 'Zrigat' is not in the quote (the quote says 'a locality of... in Zrigat', implying the locality is in Zrigat, but the specific name 'Zrigat' is not explicitly linked to the skeleton's find spot in the quote text provided, though it is in the fact statement. However, the most glaring error is the age/size classification). The quote does not state the skeleton is 'subadult'.",
+   "known": true
+  },
+  {
+   "page": "spinosaurus",
+   "index": 27,
+   "lang": "en",
+   "sentence": "Russell distinguished S. maroccanus from S. aegyptiacus by a neck vertebra ratio of 1.5 versus 1.1, but later authors dispute this due to specimen variability and destruction of the holotype.",
+   "reason": "Claim: Russell distinguished S. maroccanus from S. aegyptiacus by a neck vertebra ratio of 1.5 versus 1.1. Quote: 'Specifically, Russell claimed that the ratio of the length of the centrum (body of vertebra) to the height of the posterior articular facet was 1.1 in S. aegyptiacus and 1.5 in S. maroccanus.' (Matches). Claim: Later authors dispute this due to specimen variability and destruction of the holotype. Quote: The quote mentions 'later authors dispute this' but does NOT state the reasons 'specimen variability' or 'destruction of the holotype'.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 1,
+   "lang": "en",
+   "sentence": "The animal possessed a long, narrow skull that was small relative to its massive body size.",
+   "reason": "The sentence claims the skull was 'small relative to its massive body size'. Quote F065 states the skull was 'small in proportion to the body'. The English adds 'massive' to describe the body, which is not in the quote.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 18,
+   "lang": "en",
+   "sentence": "The International Commission on Zoological Nomenclature replaced the original type species with Stegosaurus stenops because the original type specimen was considered dubious.",
+   "reason": "The claim that the IZN replaced the type species 'because the original type specimen was considered dubious' is not supported by the quote. The quote states the replacement was done 'Because of this' (referring to the specimen being 'dubious' in the context of the sentence, but the quote itself only says 'Because of this' and then states the decision to replace with the more well-known species. However, the quote does not explicitly state the reason was that the specimen was 'dubious', it just says 'Because of this'. Wait, looking closer at the prompt's instruction: 'every claim of the sentence must be in its quotes'. The sentence says 'because the original type specimen was considered dubious'. The quote says 'Because of this...'. The 'this' refers to the previous sentence in the source text which likely describes the specimen as dubious. But strictly reading the provided quote alone: 'Because of this, the International Commission on Zoological Nomenclature decided to replace the type species with the more well known species Stegosaurus stenops.' The quote does NOT contain the words 'dubious' or the explicit reason 'because the original type specimen was considered dubious'. It relies on an antecedent 'this' not present in the quote. Therefore, the specific causal claim in the English sentence is not fully contained in the verbatim quote provided.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 0,
+   "lang": "en",
+   "sentence": "This dinosaur featured a massive quadrupedal body supported by a large bony frill and three prominent skull horns.",
+   "reason": "The claim that the body was 'massive' is not in the quote (quote says 'large'). The claim that the frill 'supported' the body is not in the quote (quote says 'Bearing a... frill'). The claim that the horns were 'prominent' is not in the quote (quote says 'three horns').",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 12,
+   "lang": "es",
+   "sentence": "Como herbívoros, estos animales se alimentaban principalmente de vegetación de bajo crecimiento, aunque podían derribar plantas más altas utilizando sus cuernos, pico y masa corporal.",
+   "reason": "The Spanish sentence says 'podían derribar' (they could/were able to), whereas the English says 'could potentially' (possibility). The Spanish version removes the uncertainty ('potentially'/'may') and states it as a capability. This is a change in meaning from possibility to fact.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 20,
+   "lang": "en",
+   "sentence": "Researchers suggest that the bone in ceratopsian skulls is metaplastic, allowing it to change shape over time.",
+   "reason": "The English sentence claims 'Researchers suggest that the bone in ceratopsian skulls is metaplastic, allowing it to change shape over time.' The quote provided is: 'A characteristic of metaplastic bone is that it lengthens and shortens over time, extending and resorbing to form new shapes'. The quote defines the property of metaplastic bone generally, but does not explicitly state that 'Researchers suggest' this specific property applies to 'ceratopsian skulls' (though the fact label F071 implies the context). However, the English sentence attributes the suggestion to researchers regarding ceratopsian skulls, while the quote only defines metaplastic bone. The English sentence makes a specific claim about ceratopsians that the quote does not explicitly contain (the quote is a general definition). More critically, the English sentence says 'allowing it to change shape', while the quote says 'lengthens and shortens... to form new shapes'. This is a slight drift but acceptable. The main issue is the attribution: the quote doesn't mention 'Researchers suggest' or 'ceratopsian skulls', it just states a fact about metaplastic bone. If F071 is the source for the whole sentence, the quote is insufficient to support the specific claim about ceratopsians without external knowledge. However, looking strictly at the instruction 'read the quotes, not only the fact statements', the quote does not mention ceratopsians. Therefore, the claim that 'the bone in ceratopsian skulls is metaplastic' is not in the quote.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 20,
+   "lang": "es",
+   "sentence": "Los investigadores sugieren que el hueso en los cráneos de los ceratopsios es metaplástico, lo que le permite cambiar de forma con el tiempo.",
+   "reason": "The Spanish sentence mirrors the English: 'Los investigadores sugieren que el hueso en los cráneos de los ceratopsios es metaplástico...'. It adds the same unsupported claim about ceratopsians. Since the English is flagged for not matching the quote, the Spanish is also problematic for the same reason.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 28,
+   "lang": "es",
+   "sentence": "El análisis isotópico sugiere que los ejemplares de Triceratops del Yacimiento Óseo Darnell Triceratops probablemente habitaron llanuras de inundación de agua dulce, aunque no estaban restringidos a un solo entorno.",
+   "reason": "The Spanish sentence says 'probablemente habitaron' (likely inhabited) which matches 'could've inhabited' (possibility) in the quote, but the English sentence uses 'likely' as well. The Spanish sentence says 'aunque no estaban restringidos' (although they were not restricted), dropping the 'probablemente' (likely) or 'probably' nuance found in the English 'probably not restricted' and the quote 'likely wasn't'. However, the instruction says 'Do NOT report... facts you cannot check from the quotes'. The quote says 'likely wasn't'. The English says 'probably not'. The Spanish says 'no estaban' (definite). This is a slight drift in certainty, but often acceptable in translation unless strict. Let's look closer. English: 'probably not restricted'. Spanish: 'no estaban restringidos' (were not restricted). The Spanish makes it a fact, the English makes it probable. The quote makes it 'likely'. This is a potential error in Spanish vs English (loss of probability).",
+   "known": true
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 28,
+   "lang": "en",
+   "sentence": "Tyrannosaurus lived in western North America on the island continent of Laramidia during the Late Cretaceous.",
+   "reason": "The English sentence claims that Tyrannosaurus lived in 'western North America' on 'the island continent of Laramidia' during the 'Late Cretaceous'. The quote states: 'It lived throughout what is now western North America, on what was then an island continent known as Laramidia.' The quote does not explicitly mention the time period 'Late Cretaceous' in the provided text, but the fact statement (F001) includes it. However, the instruction says to read the quotes, not only fact statements. The quote does not state the age. Furthermore, the quote says 'what is now western North America' and 'what was then an island continent', while the English sentence says 'western North America' and 'the island continent'. While semantically similar, the English sentence presents the location as a definitive fact without the 'what is now' qualifier found in the quote, though this is a minor stylistic drift. The main issue is the missing temporal constraint in the quote. Wait, looking closer at the prompt: 'every claim of the sentence must be in its quotes'. The quote does not contain 'Late Cretaceous'. Therefore, the age claim is not in the quote.",
+   "known": false
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 28,
+   "lang": "es",
+   "sentence": "El Tyrannosaurus vivía en América del Norte occidental en el continente insular de Laramidia durante el Cretácico Superior.",
+   "reason": "The Spanish sentence includes 'durante el Cretácico Superior' (during the Late Cretaceous), matching the English sentence. Since the English sentence has an error regarding the quote's content (missing age), the Spanish sentence also carries this error relative to the quote.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "index": 5,
+   "lang": "en",
+   "sentence": "A 1995 study reported a Velociraptor skull with two parallel rows of small holes in the frontal bones matching the size and spacing of Velociraptor teeth, suggesting a bite wound from another individual.",
+   "reason": "The English sentence claims 'A 1995 study reported a Velociraptor skull with two parallel rows of small holes in the frontal bones matching the size and spacing of Velociraptor teeth, suggesting a bite wound from another individual.' The quote says 'En 1995, Norell y sus colegas informaron de un cráneo de Velociraptor mongoliensis que tiene dos hileras paralelas de pequeñas perforaciones en sus huesos frontales que, tras un examen más detenido, encajan con el tamaño y espacio de los dientes de Velociraptor'. The English sentence omits the specific author 'Norell and colleagues', but uses 'A 1995 study', which is consistent with 'En 1995, Norell y sus colegas informaron'. The English sentence says 'matching the size and spacing', the quote says 'encajan con el tamaño y espacio' (match the size and space). This is consistent. The English sentence says 'suggesting a bite wound from another individual'. The quote does NOT mention 'bite wound' or 'another individual'. The quote only says the holes match the teeth size and spacing. The suggestion of a bite wound is an interpretation not present in the quote. The instruction says: 'every claim of the sentence must be in its quotes: a result, a cause, an age, a size or a stage of life that the quotes do not state is an error'. The claim 'suggesting a bite wound from another individual' is NOT in the quote. The quote stops at 'encajan con el tamaño y espacio de los dientes de Velociraptor'. Therefore, this is an error.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "index": 17,
+   "lang": "en",
+   "sentence": "Velociraptor had an elongated snout indicating a selective feeding strategy of picking up small, fast prey.",
+   "reason": "The sentence claims Velociraptor had an elongated snout. The quote says 'la mayoría de las especies asiáticas tienen hocicos alargados basados en el maxilar, es decir, velociraptorinos...'. The quote attributes the elongated snout to 'most Asian species' (velociraptorines), not specifically to Velociraptor alone, although it mentions Velociraptor in the context of the strategy. The sentence then claims this indicates a selective feeding strategy of picking up small, fast prey. The quote says 'lo que indica una alimentación selectiva en Velociraptor y parientes, como recoger presas pequeñas y rápidas'. The quote attributes the indication of the strategy to 'Velociraptor and relatives'. The English sentence attributes the elongated snout specifically to Velociraptor ('Velociraptor had an elongated snout'). While the quote mentions Velociraptor has this trait in the context of the group, the primary subject of the 'elongated snout' claim in the quote is 'most Asian species' (velociraptorines). Attributing the elongated snout solely to Velociraptor without mentioning it is a trait of the group (velociraptorines) or 'most Asian species' is a slight drift, but acceptable if Velociraptor is a representative. However, the bigger issue is the quote says 'most Asian species... have elongated snouts... which indicates a selective feeding strategy in Velociraptor and relatives'. The English sentence says 'Velociraptor had an elongated snout indicating...'. This is a reasonable simplification. Let's look closer. The quote says 'la mayoría de las especies asiáticas tienen hocicos alargados... es decir, velociraptorinos'. This defines the group. Then it says 'lo que indica una alimentación selectiva en Velociraptor y parientes'. The English sentence says 'Velociraptor had an elongated snout indicating...'. This implies the snout belongs to Velociraptor. The quote implies the snout belongs to the group (velociraptorines) and the strategy applies to Velociraptor and relatives. The English sentence is slightly imprecise by making the snout a specific trait of Velociraptor rather than the group, but it's not a hard error. Wait, the quote says 'most Asian species... have elongated snouts... which indicates... in Velociraptor and relatives'. The English sentence says 'Velociraptor had an elongated snout indicating...'. This is a minor generalization. Is it an error? The prompt says 'gives one specimen's or one juvenile's trait to the whole animal' or 'merges separate findings'. Here it merges the group trait to the specific animal. But Velociraptor is part of that group. Let's re-read the quote carefully: 'la mayoría de las especies asiáticas tienen hocicos alargados basados en el maxilar, es decir, velociraptorinos, lo que indica una alimentación selectiva en Velociraptor y parientes'. The elongated snout is the trait of 'most Asian species' (velociraptorines). The strategy is indicated in 'Velociraptor and relatives'. The English sentence says 'Velociraptor had an elongated snout indicating...'. This attributes the snout to Velociraptor. Since Velociraptor is a velociraptorine, it likely has it, but the quote emphasizes the group trait. This is a potential error of specificity. However, the bigger issue might be the 'indicating' part. The quote says the snout 'indicates' the strategy. The English says the snout 'indicating' the strategy. This matches. The main issue is whether the quote supports 'Velociraptor had an elongated snout' as a standalone fact. The quote says 'most Asian species... have elongated snouts... i.e., velociraptorines'. It does not explicitly state 'Velociraptor has an elongated snout', but implies it by grouping it. This is a weak support. Let's look for a clearer error. The quote says 'most Asian species... have elongated snouts... which indicates a selective feeding strategy in Velociraptor and relatives'. The English sentence says 'Velociraptor had an elongated snout indicating a selective feeding strategy...'. This is a reasonable paraphrase. Is there a contradiction? No. Is it a drift? Slightly, but not a clear error. Let's check the Spanish. 'Velociraptor tenía un hocico alargado que indicaba...'. Same issue. Okay, let's look at the 'small, fast prey' part. Quote: 'recoger presas pequeñas y rápidas'. English: 'picking up small, fast prey'. Matches. Okay, is there any other error? The quote says 'most Asian species... have elongated snouts... i.e., velociraptorines'. The English sentence says 'Velociraptor had an elongated snout'. This is a generalization from the group to the specific species. In paleontology, this is often considered an error if the trait is not confirmed for the specific species in the source. The source says 'most Asian species... i.e., velociraptorines'. It does not explicitly confirm Velociraptor has it, though it's implied. But the instruction says 'every claim of the sentence must be in its quotes'. The quote does not explicitly say 'Velociraptor had an elongated snout'. It says 'most Asian species... have elongated snouts... i.e., velociraptorines'. The English sentence makes a specific claim about Velociraptor that is only supported by a general statement about the group. This is a 'merges separate findings' or 'gives group trait to specific animal' type error. I will flag this.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "index": 17,
+   "lang": "es",
+   "sentence": "Velociraptor tenía un hocico alargado que indicaba una estrategia de alimentación selectiva de recoger presas pequeñas y rápidas.",
+   "reason": "The Spanish sentence says 'Velociraptor tenía un hocico alargado que indicaba...'. This matches the English sentence's claim and the same issue with the quote.",
+   "known": false
+  }
+ ]
+}

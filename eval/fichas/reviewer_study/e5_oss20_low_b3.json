@@ -1,0 +1,346 @@
+{
+ "name": "e5_oss20_low_b3",
+ "model": "gpt-oss:20b",
+ "effort": "low",
+ "batch": 3,
+ "prompt": "/home/adaycc/Proyectos/paleo-atlas/src/paleo/narrative/prompts/review_text.md",
+ "pages": 15,
+ "seconds": 232,
+ "expected": 42,
+ "found": 5,
+ "recall": 0.119,
+ "clean": 753,
+ "false_flags": 32,
+ "false_rate": 0.042,
+ "by_lang": {
+  "en": "3/16",
+  "es": "2/26"
+ },
+ "by_cause": {
+  "misread_source": "5/20",
+  "es_meaning": "0/5",
+  "contradiction": "0/5",
+  "outdated": "0/4",
+  "es_grammar": "0/3",
+  "outdated_term": "0/2",
+  "eswiki_error": "0/2",
+  "es_calque": "0/1",
+  "en_es_mismatch": "0/1",
+  "es_spelling": "0/1"
+ },
+ "llm": "CallStats(calls=151, cached=0, prompt_tokens=165624, completion_tokens=37136, seconds=231.8796799199979)",
+ "flags": [
+  {
+   "page": "allosaurus",
+   "index": 2,
+   "lang": "en",
+   "sentence": "Skin impressions reveal scales up to two centimeters wide on the tail and neck of juvenile specimens.",
+   "reason": "The quotes do not support scales up to two centimeters wide on the neck; only 0.5 cm wide scales are reported for the neck, while the 2 cm scale size applies only to the tail base.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 2,
+   "lang": "es",
+   "sentence": "Las impresiones de piel revelan escamas de hasta dos centímetros de ancho en la cola y el cuello de los especímenes juveniles.",
+   "reason": "El texto español repite la afirmación incorrecta de que las escamas en el cuello miden hasta dos centímetros; la fuente indica solo 0.5 cm en el cuello.",
+   "known": true
+  },
+  {
+   "page": "allosaurus",
+   "index": 18,
+   "lang": "es",
+   "sentence": "El Allosaurus vivió durante las edades kimerídgica y titoniense del periodo Jurásico Superior.",
+   "reason": "Spanish omits the Oxfordian stage, mentioning only Kimmeridgian and Tithonian, which is incomplete.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 5,
+   "lang": "en",
+   "sentence": "These thin osteoderms were reinforced by randomly distributed cushions of collagen fibers embedded directly into the bone tissue.",
+   "reason": "Adds that the collagen cushions are embedded directly into the bone tissue, a detail not present in the quoted source.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 5,
+   "lang": "es",
+   "sentence": "Estos osteodermos delgados estaban reforzados por cojines de fibras de colágeno distribuidos al azar e incrustados directamente en el tejido óseo.",
+   "reason": "Adds that the collagen cushions are embedded directly into the bone tissue, a detail not present in the quoted source.",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 16,
+   "lang": "en",
+   "sentence": "It likely fed as a non-selective browser, indicated by its broad muzzle.",
+   "reason": "The quote states the feeding behavior as a fact, not a likelihood; the sentence incorrectly adds \"likely\".",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 25,
+   "lang": "es",
+   "sentence": "Ankylosaurus vivió entre hace 68 y 66 millones de años durante el piso Maastrichtiense del período Cretácico Superior.",
+   "reason": "Uses \"piso Maastrichtiense\" which incorrectly translates \"Maastrichtian stage\" as \"floor\" instead of \"stage\".",
+   "known": false
+  },
+  {
+   "page": "ankylosaurus",
+   "index": 26,
+   "lang": "en",
+   "sentence": "It likely inhabited upland areas, as its ecological niche did not overlap with the nodosaurid Denversaurus.",
+   "reason": "States \"likely inhabited\" while the quote says \"may have inhabited\", turning a possibility into a fact.",
+   "known": true
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 5,
+   "lang": "en",
+   "sentence": "A 2011 study used scanning electron microscopy to analyze a single isolated feather, and comparisons with 87 modern bird species led researchers to calculate a 95% likelihood that the analyzed feather was originally black.",
+   "reason": "The quote does not state that scanning electron microscopy was used, nor that a single isolated feather was analyzed; it only mentions a colour study on an Archaeopteryx specimen.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 19,
+   "lang": "en",
+   "sentence": "A 2006 study found that Archaeopteryx's leg feathers formed up to 12% of its total airfoil.",
+   "reason": "The quote states the study \"suggested\" that leg feathers formed up to 12% of the total airfoil, not that it \"found\" this fact.",
+   "known": false
+  },
+  {
+   "page": "archaeopteryx",
+   "index": 24,
+   "lang": "es",
+   "sentence": "Los autores especularon que el Archaeopteryx y el kiwi, incapaz de volar, tenían tasas metabólicas basales similares.",
+   "reason": "Adds \"flightless\" to kiwi, which is not in the quote.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 0,
+   "lang": "es",
+   "sentence": "Brachiosaurus fue un dinosaurio cuadrúpedo caracterizado por un cráneo pequeño, un cuello largo, un cuerpo robusto, una cola muscular y extremidades columnares esbeltas.",
+   "reason": "Spanish translation says \"cuerpo robusto\" instead of \"large trunk\" as in the quote.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 8,
+   "lang": "en",
+   "sentence": "A Brachiosaurus skull was discovered in 1883 by farmer Marshall Parker Felch near Garden Park, Colorado.",
+   "reason": "The quote only states that Felch reported a sauropod skull, not that it was a Brachiosaurus skull.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 8,
+   "lang": "es",
+   "sentence": "Un cráneo de Brachiosaurus fue descubierto en 1883 por el granjero Marshall Parker Felch cerca de Garden Park, Colorado.",
+   "reason": "Same issue: the quote does not confirm the skull was of Brachiosaurus.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 15,
+   "lang": "en",
+   "sentence": "Brachiosaurus used a bird-like respiratory system with air sacs to achieve unidirectional airflow in its lungs.",
+   "reason": "The quote does not state that sauropods had unidirectional airflow; it only mentions air sacs.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 21,
+   "lang": "en",
+   "sentence": "There is a debate regarding neck length, with Gregory S. Paul suggesting it was shorter than Giraffatitan's in 1988, while Mike P. Taylor argued in 2009 that vertebrae proportions indicated otherwise.",
+   "reason": "The quote does not state that vertebrae proportions indicated the neck was longer; it only notes identical proportions, so the claim that Taylor argued otherwise is unsupported.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 25,
+   "lang": "en",
+   "sentence": "Czerkas speculated that the large nasal opening of Brachiosaurus may have housed tissue for enhanced smelling, noting that the exact location of the nostrils remains inconclusive without skin impressions.",
+   "reason": "The quote does not state that the nasal opening housed tissue for enhanced smelling; it only mentions speculation about function and lack of conclusive location.",
+   "known": false
+  },
+  {
+   "page": "brachiosaurus",
+   "index": 25,
+   "lang": "es",
+   "sentence": "Czerkas especuló que la gran abertura nasal de Brachiosaurus podría haber alojado tejido para un olfato mejorado, señalando que la ubicación exacta de las fosas nasales sigue siendo inconclusa sin impresiones de piel.",
+   "reason": "The Spanish translation repeats the unsupported claim about tissue for enhanced smelling.",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "index": 3,
+   "lang": "es",
+   "sentence": "A pesar de su enorme tamaño, el Diplodocus ponía huevos y nidadas sorprendentemente pequeñas.",
+   "reason": "\"nidadas\" is not a correct Spanish word for nests; should be \"nidos\".",
+   "known": false
+  },
+  {
+   "page": "diplodocus",
+   "index": 15,
+   "lang": "en",
+   "sentence": "Speculations suggest Diplodocus may have used their tails for defense or to make noise like a whip.",
+   "reason": "Uses plural pronoun \"their tails\" for singular Diplodocus; should be \"its tail\".",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 3,
+   "lang": "en",
+   "sentence": "This genus is one of the three original groups used to define the entire Dinosauria clade, alongside Megalosaurus and Hylaeosaurus.",
+   "reason": "Uses \"groups\" instead of \"genera\" as in the quote.",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 3,
+   "lang": "es",
+   "sentence": "Este género es uno de los tres grupos originales utilizados para definir todo el clado Dinosauria, junto con *Megalosaurus* y *Hylaeosaurus*.",
+   "reason": "Uses \"grupos\" instead of \"géneros\".",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 27,
+   "lang": "en",
+   "sentence": "In 2026, Rotatori and colleagues suggested that Delapparentia is a distinct taxon related to Magnamanus and I. galvensis, proposing a new genus name for the latter.",
+   "reason": "The quote spells the taxon as \"Delapperantia\" (with an extra \"p\"), whereas the sentence uses \"Delapparentia\".",
+   "known": false
+  },
+  {
+   "page": "iguanodon",
+   "index": 27,
+   "lang": "es",
+   "sentence": "En 2026, Rotatori y colegas sugirieron que *Delapparentia* es un taxón distinto relacionado con *Magnamanus* e *I. galvensis*, proponiendo un nuevo nombre de género para este último.",
+   "reason": "The Spanish translation uses \"Delapparentia\", matching the incorrect English spelling; it should reflect the quote’s spelling \"Delapperantia\".",
+   "known": false
+  },
+  {
+   "page": "pachycephalosaurus",
+   "index": 30,
+   "lang": "en",
+   "sentence": "It is debated whether Pachycephalosaurus used its dome for head-butting like bighorn sheep or for flank-butting like kangaroos.",
+   "reason": "The quote only states that Pachycephalosaurus was hypothesized to ram each other headlong, not that it used its dome for flank‑butting like kangaroos. The claim of flank‑butting is not supported by the cited quote.",
+   "known": false
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 19,
+   "lang": "es",
+   "sentence": "La especie tipo, P. walkeri, fue nombrada por William Parks en honor al sir Byron Edmund Walker.",
+   "reason": "The Spanish translation uses \"al sir Byron Edmund Walker\" instead of the correct title \"Sir Byron Edmund Walker\" and omits the capitalization of the honorific.",
+   "known": true
+  },
+  {
+   "page": "parasaurolophus",
+   "index": 28,
+   "lang": "en",
+   "sentence": "It has been debated whether P. cyrtocristatus represents a female of P. walkeri or P. tubicen, though some studies argue against this due to differences in age and anatomy.",
+   "reason": "The claim that some studies argue against the female hypothesis due to differences in age and anatomy is not supported by the quoted source, which only mentions a one‑million‑year age difference and does not discuss anatomy.",
+   "known": false
+  },
+  {
+   "page": "spinosaurus",
+   "index": 19,
+   "lang": "en",
+   "sentence": "Fossil evidence suggests Spinosaurus may have preyed on crocodyliforms such as Aegisuchus and Laganosuchus found in the Kem Kem Beds.",
+   "reason": "The quote only states that Spinosaurus may have preyed on Aegisuchus, not on Laganosuchus; the sentence claims both.",
+   "known": true
+  },
+  {
+   "page": "spinosaurus",
+   "index": 19,
+   "lang": "es",
+   "sentence": "La evidencia fósil sugiere que Spinosaurus pudo haber depredado sobre crocodiliformes como Aegisuchus y Laganosuchus encontrados en los Kem Kem Beds.",
+   "reason": "The Spanish sentence extends the claim to Laganosuchus, which is not supported by the quote.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 13,
+   "lang": "en",
+   "sentence": "The sacro-lumbar expansion found in Stegosaurus is a structure also present in birds and other ornithischians, and in birds, this expansion contains a glycogen body, a structure postulated to supply glycogen to the nervous system.",
+   "reason": "The quote does not state that the sacro‑lumbar expansion is present in other ornithischians; it only says it is present in birds, so the claim that it is also present in other ornithischians is unsupported.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 18,
+   "lang": "en",
+   "sentence": "The International Commission on Zoological Nomenclature replaced the original type species with Stegosaurus stenops because the original type specimen was considered dubious.",
+   "reason": "The quote does not state that the original type specimen was considered dubious; it only says the type species was replaced with the more well‑known species.",
+   "known": false
+  },
+  {
+   "page": "stegosaurus",
+   "index": 21,
+   "lang": "en",
+   "sentence": "Stegosaurus lived alongside Apatosaurus, Diplodocus, Camarasaurus, and Allosaurus, which may have preyed on it.",
+   "reason": "The English sentence implies all four dinosaurs may have preyed on Stegosaurus, whereas the quote specifies only Allosaurus (the latter) as a potential predator.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 7,
+   "lang": "es",
+   "sentence": "La piel fosilizada de un ejemplar llamado Lane se conservó mediante un proceso único denominado modelado con arcilla.",
+   "reason": "Spanish translation uses \"modelado con arcilla\" instead of the specific term \"clay templating\", altering the technical meaning.",
+   "known": false
+  },
+  {
+   "page": "triceratops",
+   "index": 19,
+   "lang": "es",
+   "sentence": "Tyrannosaurus se sabe que consumía Triceratops, lo que se evidencia en un ilion y un sacro de Triceratops con profundas marcas dentales.",
+   "reason": "\"ilion\" is a misspelling of \"ilium\"; the Spanish translation uses an incorrect word for the bone.",
+   "known": false
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 6,
+   "lang": "es",
+   "sentence": "Bucky es el primer ejemplar de Tyrannosaurus encontrado que conserva una fúrcula, o hueso de la suerte.",
+   "reason": "\"hueso de la suerte\" is not the standard Spanish translation of \"wishbone\"; it should be \"hueso de la diana\" or similar.",
+   "known": false
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 21,
+   "lang": "en",
+   "sentence": "Histological analysis revealed that the juvenile Jordan theropod was only 2 years old when it died.",
+   "reason": "The quote refers to T. rex bone LACM 28471, not a juvenile Jordan theropod.",
+   "known": true
+  },
+  {
+   "page": "tyrannosaurus",
+   "index": 21,
+   "lang": "es",
+   "sentence": "El análisis histológico reveló que el juvenil terópodo de Jordan solo tenía 2 años cuando murió.",
+   "reason": "Spanish repeats the same incorrect reference to a Jordan theropod.",
+   "known": true
+  },
+  {
+   "page": "velociraptor",
+   "index": 5,
+   "lang": "en",
+   "sentence": "A 1995 study reported a Velociraptor skull with two parallel rows of small holes in the frontal bones matching the size and spacing of Velociraptor teeth, suggesting a bite wound from another individual.",
+   "reason": "The quote does not state that the holes suggest a bite wound from another individual; it only notes that the holes match the size and spacing of Velociraptor teeth.",
+   "known": false
+  },
+  {
+   "page": "velociraptor",
+   "index": 5,
+   "lang": "es",
+   "sentence": "Un estudio de 1995 reportó un cráneo de Velociraptor con dos filas paralelas de pequeños agujeros en los huesos frontales que coincidían con el tamaño y la separación de los dientes de Velociraptor, sugiriendo una herida de mordedura provocada por otro individuo.",
+   "reason": "The Spanish translation adds the claim of a bite wound, which is not present in the quoted source.",
+   "known": false
+  }
+ ]
+}

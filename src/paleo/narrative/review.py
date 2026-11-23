@@ -22,7 +22,7 @@ from pydantic import BaseModel
 from paleo.narrative.facts import prompt
 from paleo.store import _atomic_write
 
-BATCH = 8  # sentences per call: short enough for a 9B model to keep track
+BATCH = 3  # sentences per call: with 8 the 9B model passed every sentence (measured 2026-11-23)
 
 
 class SentenceReview(BaseModel):

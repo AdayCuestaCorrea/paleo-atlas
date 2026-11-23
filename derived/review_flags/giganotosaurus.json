@@ -1,0 +1,23 @@
+{
+ "taxon": "Giganotosaurus",
+ "taxon_key": "giganotosaurus",
+ "generator": "ollama/paleo-qwen3.5-9b",
+ "prompt_version": "review-text-v2",
+ "text_hash": "1b4b8f7893bbcb94",
+ "reviewed_at": "2026-11-23T00:20:30+00:00",
+ "sentences": 23,
+ "flags": [
+  {
+   "index": 0,
+   "lang": "en",
+   "sentence": "The holotype specimen has been estimated to be between 12 and 13 meters long, standing over 4 meters high at the hips.",
+   "reason": "The English sentence claims the animal stood 'over 4 meters high at the hips', but the supporting quotes only mention length (12-13m) and weight (6.1-6.9 tons); the hip height is only mentioned in the Spanish translation's source quote, not the English source quote."
+  },
+  {
+   "index": 9,
+   "lang": "en",
+   "sentence": "The holotype specimen was discovered in the Candeleros Formation of Patagonia in 1993 by the fossil hunter Rubén Darío Carolini.",
+   "reason": "The sentence claims Rubén Darío Carolini was a 'fossil hunter', but the source quote explicitly describes him as an 'amateur Argentine fossil hunter', which is a specific subset; more critically, the sentence omits the crucial detail that he discovered a 'tibia' (lower leg bone) while driving a 'dune buggy', presenting the discovery context as a general fact without the specific circumstances cited in the source. However, the primary error is the misattribution of his role: the source says 'amateur fossil hunter', the sentence says 'fossil hunter' (acceptable), but the sentence implies he found the *holotype* specifically, whereas the source says he discovered the 'first remains' (the tibia), and the holotype status is a separate deduction not in the quote. Actually, looking closer: The sentence says 'The holotype specimen... was discovered... by... Carolini'. The quote says 'the amateur... discovered the tibia...'. It does not explicitly state the tibia *is* the holotype in the quote, though it is common knowledge. The bigger issue is the Spanish translation error in sentence 10 (not checked here) or the English drift. Let's re-evaluate: The sentence says 'fossil hunter'. The quote says 'amateur... fossil hunter'. This is a minor drift. The main issue is that the sentence attributes the discovery of the *holotype* directly to Carolini in 1993 based on the quote about finding the *first remains* (tibia). While likely true, the quote doesn't explicitly link the tibia to the holotype definition. But wait, the prompt asks to check if claims are in quotes. The quote says 'discovered the tibia'. The sentence says 'The holotype specimen... was discovered'. This is a merge of facts (tibia found = holotype). Is it an error? Yes, because the quote does not state the tibia is the holotype. It just says he found the tibia. The holotype status is external knowledge not in the quote. Also, the sentence says 'fossil hunter', quote says 'amateur... fossil hunter'. This is acceptable. The real error is the conflation of 'first remains' with 'holotype' without the quote supporting that specific link. Wait, looking at the Spanish translation for sentence 10: 'El holotipo fue descubierto... por el paleontólogo Rubén Darío Carolini.' The source says 'amateur... fossil hunter'. Calling him a 'paleontólogo' (paleontologist) is a factual error in the Spanish translation, as he was an amateur. This is a clear error in the Spanish sentence against the English source fact. So `es_ok` is false. For English, the drift from 'amateur' to just 'fossil hunter' is minor, but the conflation of 'first remains' to 'holotype' is the main issue. Let's stick to the strict rule: 'every claim of the sentence must be in its quotes'. The sentence claims 'The holotype specimen... was discovered... by... Carolini'. The quote says 'the amateur... discovered the tibia'. It does not say the tibia is the holotype. So the English sentence makes a claim (that the tibia is the holotype) not in the quote. Thus `en_ok` is false. Reason: The source quote states Carolini discovered a 'tibia', not explicitly the 'holotype specimen', conflating the first find with the holotype designation."
+  }
+ ]
+}

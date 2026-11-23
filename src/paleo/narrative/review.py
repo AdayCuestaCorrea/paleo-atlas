@@ -15,7 +15,7 @@ import datetime as dt
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel
 
@@ -197,3 +197,153 @@ def evaluate(llm: Any, derived_root: Path, eval_dir: Path) -> dict[str, Any]:
         "bar": {"min_recall": MIN_RECALL, "max_false_flag_rate": MAX_FALSE_FLAG_RATE},
         "measured_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
     }  # fmt: skip
+
+
+# --- whole-page review (step 5, chosen in eval/fichas/reviewer_study.md) -------------
+
+PAGE_MODEL = "gpt-oss:20b"  # reasoning "low": 14/42 found on the 15 pages, 19/23 flags real
+Kind = Literal["contradiction", "repetition", "missing_context", "about_something_else"]
+
+
+REWRITE_KINDS = ("contradiction", "missing_context")
+
+
+class PageProblem(BaseModel):
+    sentences: list[int]
+    kind: Kind
+    reason: str
+
+
+class PageProblems(BaseModel):
+    problems: list[PageProblem]
+
+
+def pages_dir(derived_root: Path) -> Path:
+    return derived_root / "review_pages"
+
+
+def review_whole_page(llm: Any, taxon: str, pairs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Problems of one page read as a whole: [{sentences (from 0), kind, reason}]."""
+    system, _ = prompt("review_page")
+    user = f"Page: {taxon}\n\n" + "\n".join(f"[{i}] {p['en']}" for i, p in enumerate(pairs, 1))
+    result = llm.complete_json(system, user, PageProblems, max_tokens=6_000)
+    out = []
+    for p in result.problems:
+        idx = sorted({n - 1 for n in p.sentences if 1 <= n <= len(pairs)})
+        if idx:
+            out.append({"sentences": idx, "kind": p.kind, "reason": p.reason})
+    return out
+
+
+def page_record(derived_root: Path, key: str) -> dict[str, Any] | None:
+    path = pages_dir(derived_root) / f"{key}.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+
+
+def save_page_record(derived_root: Path, key: str, record: dict[str, Any]) -> None:
+    path = pages_dir(derived_root) / f"{key}.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    _atomic_write(path, json.dumps(record, ensure_ascii=False, indent=1) + "\n")
+
+
+def is_page_reviewed(derived_root: Path, key: str, pairs: list[dict[str, Any]]) -> bool:
+    doc = page_record(derived_root, key)
+    return (
+        bool(doc)
+        and doc.get("text_hash") == _text_hash(pairs)
+        and (doc.get("prompt_version") == prompt("review_page")[1])
+    )
+
+
+def drop_repetitions(derived_root: Path, key: str, problems: list[dict[str, Any]]) -> int:
+    """Leave out the later sentences of each repeated claim, in English and in Spanish
+    (no model). Within the page's limit of dropped sentences; returns how many."""
+    from types import SimpleNamespace
+
+    from paleo.narrative.write import (
+        _match_kept,
+        _max_dropped,
+        _save,
+        _stored_sentences,
+        _word_count,
+    )
+
+    later = {i for p in problems if p["kind"] == "repetition" for i in p["sentences"][1:]}
+    if not later:
+        return 0
+    texts = derived_root / "texts"
+    en_doc = json.loads((texts / f"{key}.en.json").read_text(encoding="utf-8"))
+    en = _stored_sentences(en_doc)
+    if len(later) > _max_dropped(len(en)) or len(en) - len(later) < 3:
+        return 0
+    docs = [("en", en_doc, en, set(later))]
+    es_path = texts / f"{key}.es.json"
+    if es_path.exists():
+        es_doc = json.loads(es_path.read_text(encoding="utf-8"))
+        es = _stored_sentences(es_doc)
+        index = _match_kept(en, es)
+        if index is not None:
+            docs.append(("es", es_doc, es, {j for j, i in enumerate(index) if i in later}))
+    for lang, doc, sents, drop in docs:
+        kept = [x for i, x in enumerate(sents) if i not in drop]
+        _save(
+            texts / f"{key}.{lang}.json", taxon=doc["taxon"], key=key, lang=lang,
+            status="verified", llm=SimpleNamespace(label=doc["generator"]),
+            version=doc["prompt_version"], facts_hash=doc["facts_hash"], sentences=kept,
+            report=SimpleNamespace(word_count=_word_count(kept)),  # type: ignore[arg-type]
+            problems=[], review=doc.get("review"),
+        )  # fmt: skip
+    return len(later)
+
+
+def review_notes(pairs: list[dict[str, Any]], problems: list[dict[str, Any]]) -> list[str]:
+    """The reviewer's problems as notes for the writer, quoting the sentences."""
+    notes = []
+    for p in problems:
+        # repetitions are already left out without a model; "about something else" is
+        # often useful context (a relative, the group's history): recorded, not rewritten
+        if p["kind"] not in REWRITE_KINDS:
+            continue
+        quoted = " / ".join(f'"{pairs[i]["en"]}"' for i in p["sentences"])
+        notes.append(f"- {p['kind'].replace('_', ' ')}: {quoted}: {p['reason']}")
+    return notes
+
+
+def rewrite_page(
+    llm: Any,
+    key: str,
+    chunks: list[Any],
+    notes: list[str],
+    *,
+    derived_root: Path,
+    scientific_names: set[str],
+    ages: dict[str, tuple[float, float]],
+) -> str:
+    """Write the page again with the reviewer's notes, in a scratch folder, through
+    every check and the Phase 7 recheck. The published texts are replaced only when the
+    new English and Spanish are verified (Spanish only if the page had it): a failed
+    rewrite never makes a page worse. Returns "replaced" or why not."""
+    import shutil
+    import tempfile
+
+    from paleo.narrative.write import recheck_quality, write_page
+
+    texts = derived_root / "texts"
+    had_es = (texts / f"{key}.es.json").exists()
+    with tempfile.TemporaryDirectory(prefix="paleo-rewrite-") as tmp_name:
+        tmp = Path(tmp_name)
+        (tmp / "facts").mkdir()
+        shutil.copy(derived_root / "facts" / f"{key}.json", tmp / "facts" / f"{key}.json")
+        write_page(llm, tmp / "facts" / f"{key}.json", chunks, derived_root=tmp,
+                   scientific_names=scientific_names, review_notes=notes)  # fmt: skip
+        recheck_quality(tmp, ages)
+        new = {lang: tmp / "texts" / f"{key}.{lang}.json" for lang in ("en", "es")}
+        if not new["en"].exists():
+            return "english failed"
+        if had_es and not new["es"].exists():
+            return "spanish failed"
+        for path in new.values():
+            if path.exists():
+                shutil.copy(path, texts / path.name)
+                (derived_root / "texts_review" / path.name).unlink(missing_ok=True)
+    return "replaced"

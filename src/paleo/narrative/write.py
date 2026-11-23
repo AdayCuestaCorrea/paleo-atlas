@@ -356,7 +356,11 @@ def _fact_texts(facts: list[dict[str, Any]]) -> dict[str, str]:
 
 
 def _write_en(
-    llm: LLM, taxon: str, facts: list[dict[str, Any]], feedback: list[str] | None
+    llm: LLM,
+    taxon: str,
+    facts: list[dict[str, Any]],
+    feedback: list[str] | None,
+    review_notes: list[str] | None = None,
 ) -> WrittenText:
     system, _ = prompt("write_en")
     target = target_words(len(facts))
@@ -374,6 +378,18 @@ def _write_en(
             "not round it) or the sentence must drop it; a name must appear in the facts; a "
             "copied run of words must be rephrased in your own words; a too-long text must "
             "leave out less important facts.",
+        ]
+    if review_notes:  # Phase 7: a reviewer read the published page (paleo review)
+        lines += [
+            "",
+            "A reviewer read the current version of this page and found these problems. "
+            "The new text must not have them:",
+            *review_notes,
+            "",
+            "How to avoid them: say each fact once; when facts give different figures for "
+            "the same thing, say they are different estimates and who gave each, or keep "
+            "one; never refer to something the text has not said before; and say so when a "
+            "fact is about a formation, a relative or a group, not the animal itself.",
         ]
     return llm.complete_json(system, "\n".join(lines), WrittenText, max_tokens=3_000)
 
@@ -463,6 +479,7 @@ def write_page(
     derived_root: Path,
     scientific_names: set[str],
     retries: int = 2,
+    review_notes: list[str] | None = None,
 ) -> WriteResult:
     facts_doc = json.loads(facts_path.read_text(encoding="utf-8"))
     taxon, key = facts_doc["taxon"], facts_doc["taxon_key"]
@@ -479,7 +496,7 @@ def write_page(
     # English from the facts.
     feedback: list[str] | None = None
     for _attempt in range(retries + 1):
-        en = _flatten(_write_en(llm, taxon, facts, feedback))
+        en = _flatten(_write_en(llm, taxon, facts, feedback, review_notes))
         en_report = check_text([(t, f) for t, f, _ in en], fact_texts, sources["en"])
         if en_report.passed:
             break

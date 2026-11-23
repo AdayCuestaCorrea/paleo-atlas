@@ -607,6 +607,136 @@ def review_night(
     typer.echo(f"Reviewed {done} pages; {llm.label}: {llm.stats}")
 
 
+def _review_keys(derived) -> list[str]:  # derived: Path
+    """Every page with a verified English text, best known genera first."""
+    from paleo.narrative.sources import taxon_key
+
+    keys = [taxon_key(g) for g in genus_queue()]
+    seen = set(keys)
+    rest = sorted(p.name.removesuffix(".en.json") for p in (derived / "texts").glob("*.en.json"))
+    return keys + [k for k in rest if k not in seen]
+
+
+@review_app.command("pages")
+def review_pages(
+    until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
+    limit: Limit = None,
+) -> None:
+    """Review every page as a whole with gpt-oss 20B (contradictions, repetitions,
+    missing context, claims about something else): data/derived/review_pages. Repeated
+    claims are left out at once (no model); the rest wait for `paleo review rewrite`.
+    Resumable: pages already reviewed with this prompt and text are skipped."""
+    import time
+
+    from paleo.llm import LLM, PROVIDERS, LLMOutputError, Provider
+    from paleo.narrative import review as rv
+
+    derived = get_paths().data / "derived"
+    provider = Provider("ollama", PROVIDERS["ollama"].base_url,
+                        extra_body={"reasoning_effort": "low"})  # fmt: skip
+    llm = LLM(provider, rv.PAGE_MODEL, timeout=1200)
+    deadline = _deadline(until, dt.datetime.now())
+    done = dropped = flagged = 0
+    for key in _review_keys(derived):
+        if deadline and dt.datetime.now() >= deadline:
+            typer.echo(f"Deadline {until} reached")
+            break
+        if limit is not None and done >= limit:
+            break
+        pairs = rv.page_pairs(derived, key)
+        if not pairs or rv.is_page_reviewed(derived, key, pairs):
+            continue
+        start = time.monotonic()
+        try:
+            problems = rv.review_whole_page(llm, key, pairs)
+        except LLMOutputError as exc:
+            typer.echo(f"{key}: skipped ({exc})")
+            continue
+        n = rv.drop_repetitions(derived, key, problems)
+        rest = [p for p in problems if p["kind"] in rv.REWRITE_KINDS]
+        pairs_now = rv.page_pairs(derived, key) or pairs
+        rv.save_page_record(derived, key, {
+            "taxon_key": key, "generator": llm.label,
+            "prompt_version": rv.prompt("review_page")[1], "text_hash": rv._text_hash(pairs_now),
+            "reviewed_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+            "problems": problems, "repetitions_dropped": n,
+            "notes": rv.review_notes(pairs, rest), "rewrite": "pending" if rest else "none",
+        })  # fmt: skip
+        done += 1
+        dropped += n
+        flagged += bool(rest)
+        typer.echo(f"{key}: {len(problems)} problems, {n} repeated sentences left out, "
+                   f"{time.monotonic() - start:.0f} s [{done}]")  # fmt: skip
+    typer.echo(f"Reviewed {done} pages: {flagged} to rewrite, {dropped} repeated sentences "
+               f"left out; {llm.label}: {llm.stats}")  # fmt: skip
+
+
+@review_app.command("rewrite")
+def review_rewrite(
+    provider: Provider = "ollama",
+    model: Model = None,
+    until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
+    limit: Limit = None,
+) -> None:
+    """Write again, with the reviewer's notes, the pages `paleo review pages` flagged,
+    best known first. A rewrite replaces the page only if it passes every check in both
+    languages; otherwise the current text stays. Resumable."""
+    import time
+
+    from paleo import ranges
+    from paleo.llm import LLM, LLMOutputError, QuotaExhausted
+    from paleo.narrative import review as rv
+    from paleo.narrative.sources import catalog_index, chunks_for, genus_chunks_for
+
+    paths = get_paths()
+    derived = paths.data / "derived"
+    llm = LLM(provider, model or DEFAULT_MODELS[provider])
+    names = _scientific_names() | {
+        w for name in catalog_index(paths.raw) for w in name.split() if w[:1].isupper()
+    }
+    rpath = ranges.ranges_path(derived)
+    rows = json.loads(rpath.read_text(encoding="utf-8")) if rpath.exists() else []
+    ages = {r["taxon_name"]: (r["max_ma"], r["min_ma"]) for r in rows}
+    roots = {
+        "interim_root": paths.interim,
+        "raw_root": paths.raw,
+        "cache_root": paths.data / "cache",
+    }
+    deadline = _deadline(until, dt.datetime.now())
+    done = 0
+    outcomes: dict[str, int] = {}
+    for key in _review_keys(derived):
+        if deadline and dt.datetime.now() >= deadline:
+            typer.echo(f"Deadline {until} reached")
+            break
+        if limit is not None and done >= limit:
+            break
+        record = rv.page_record(derived, key)
+        if not record or record.get("rewrite") != "pending":
+            continue
+        taxon = json.loads((derived / "texts" / f"{key}.en.json").read_text("utf-8"))["taxon"]
+        start = time.monotonic()
+        try:
+            try:
+                chunks = genus_chunks_for(taxon, **roots)
+            except LookupError:  # a new species, not a genus
+                chunks = chunks_for(taxon, **roots)
+            outcome = rv.rewrite_page(llm, key, chunks, record["notes"], derived_root=derived,
+                                      scientific_names=names, ages=ages)  # fmt: skip
+        except QuotaExhausted as exc:
+            typer.echo(f"Quota exhausted ({exc})")
+            break
+        except (LLMOutputError, LookupError, OSError) as exc:
+            outcome = f"skipped ({type(exc).__name__})"
+        record["rewrite"] = outcome
+        record["rewritten_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
+        rv.save_page_record(derived, key, record)
+        done += 1
+        outcomes[outcome] = outcomes.get(outcome, 0) + 1
+        typer.echo(f"{taxon}: {outcome}, {time.monotonic() - start:.0f} s [{done}]")
+    typer.echo(f"Rewrote {done} pages: {outcomes}; {llm.label}: {llm.stats}")
+
+
 @sizes_app.command("extract")
 def sizes_extract(
     provider: Provider = "groq",

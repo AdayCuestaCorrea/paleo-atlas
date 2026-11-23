@@ -84,3 +84,29 @@ def test_the_measurement_counts_found_and_false_flags(tmp_path):
     assert (result["expected"], result["found"], result["false_flags"]) == (2, 1, 0)
     assert result["recall"] == 0.5 and result["passes"]
     assert SimpleNamespace(**result).clean_sentences == 2
+
+
+def test_repeated_claims_are_left_out_in_both_languages(tmp_path):
+    from paleo.narrative.review import drop_repetitions, review_notes
+
+    en = [f"Sentence number {i} says something different about this animal." for i in range(6)]
+    es = [f"La frase número {i} dice algo distinto de este animal." for i in range(6)]
+    for lang, sentences in (("en", en), ("es", es)):
+        doc = {"taxon": "X", "taxon_key": "x", "lang": lang, "status": "verified",
+               "generator": "t", "prompt_version": "v", "facts_hash": "h", "problems": [],
+               "sections": [{"section": "description", "sentences": [
+                   {"text": t, "fact_ids": [f"F00{i}"]}
+                   for i, t in enumerate(sentences)]}]}  # fmt: skip
+        (tmp_path / "texts").mkdir(exist_ok=True)
+        (tmp_path / "texts" / f"x.{lang}.json").write_text(json.dumps(doc), "utf-8")
+    problems = [{"sentences": [1, 4], "kind": "repetition", "reason": "same claim"},
+                {"sentences": [2], "kind": "about_something_else", "reason": "a relative"},
+                {"sentences": [0, 3], "kind": "contradiction", "reason": "two sizes"}]  # fmt: skip
+    assert drop_repetitions(tmp_path, "x", problems) == 1
+    for lang, sentences in (("en", en), ("es", es)):
+        doc = json.loads((tmp_path / "texts" / f"x.{lang}.json").read_text("utf-8"))
+        now = [s["text"] for sec in doc["sections"] for s in sec["sentences"]]
+        assert now == [t for i, t in enumerate(sentences) if i != 4]
+    pairs = [{"en": t} for t in en]
+    notes = review_notes(pairs, problems)  # only the contradiction goes to the writer
+    assert len(notes) == 1 and notes[0].startswith("- contradiction:") and en[3] in notes[0]

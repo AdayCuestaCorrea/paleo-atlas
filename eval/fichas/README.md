@@ -68,3 +68,28 @@ Sentences of the 15 texts with a problem from this set, before and after:
 | Any | 8.6 % → 7.5 % | 23.0 % → 11.9 % |
 
 The same set will be used to measure the automatic reviewer (Phase 7, step 5): which of these problems it finds, and how many sentences it flags that aren't problems.
+
+**Step 5, whole-page reviewer (night of 2026-11-23):** `paleo review pages` read all 2,827 pages with gpt-oss 20B. It left out 1,524 repeated sentences and marked 1,269 pages for a rewrite because of contradictions or missing context. `paleo review rewrite` then went through 302 of them, best known first:
+- 291 rewrites passed every check and replaced the page;
+- 9 failed in Spanish and 1 in English, so those pages kept their text;
+- 1 got an answer the run couldn't read.
+
+The other 967 wait for later nights.
+
+On the 15 pages, 10 were rewritten and 5 only lost repeated sentences or weren't touched. Of the 51 text findings still open after step 3:
+- **14 are gone:** 13 fixed, including the last-but-one high one (*Allosaurus*'s skin, now three separate finds), and 1 partly fixed. Each was checked by hand: the problem is gone, not just reworded.
+- **37 remain:** 1 high (*Parasaurolophus*'s growth), 20 medium and 16 low. Several rewritten pages kept the same faulty claim in new words, for example "this light skull" after "a massive skull", or *Kelsey*'s size given only in feet.
+
+**New problems.** The rewrites wrote 109 new English sentences on these pages. Reading them by hand found 8 new problems:
+- **medium (3):**
+  - *Ankylosaurus*: "a broad and low back" put inside the skull sentence;
+  - *Velociraptor*: "a genus of two known dinosaurs", where the source means two species;
+  - *Pachycephalosaurus*: the dome is said to "cushion the brain".
+- **low (5):**
+  - a repeated naming date (*Allosaurus*);
+  - a repeated age (*Pachycephalosaurus*);
+  - "Other remains" with nothing before it (*Triceratops*);
+  - two *Archaeopteryx* sentences that join unrelated claims with "while";
+  - *Velociraptor*'s claws compared with bird wing bones.
+
+**Net effect.** About 14 problems gone against 3 new medium and 5 new low ones. *Archaeopteryx*'s page went from 32 to 19 sentences, so a rewrite can also lose content. The Spanish of the new sentences was not reviewed by hand.

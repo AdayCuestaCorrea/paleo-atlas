@@ -729,6 +729,8 @@ def review_rewrite(
         except (LLMOutputError, LookupError, OSError) as exc:
             outcome = f"skipped ({type(exc).__name__})"
         record["rewrite"] = outcome
+        if outcome == "replaced":  # the new text counts as reviewed: no second round
+            record["text_hash"] = rv._text_hash(rv.page_pairs(derived, key))
         record["rewritten_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
         rv.save_page_record(derived, key, record)
         done += 1

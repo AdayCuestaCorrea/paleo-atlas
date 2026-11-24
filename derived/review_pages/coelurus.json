@@ -1,0 +1,31 @@
+{
+ "taxon_key": "coelurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "d59249edd6f77de4",
+ "reviewed_at": "2026-11-24T00:09:04+00:00",
+ "problems": [
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 classifies Coelurus as a coelurosaurian, while sentence 13 states it is a ceratosaurian."
+  },
+  {
+   "sentences": [
+    6,
+    10
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that only one species, C. fragilis, is valid for the genus."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Since the 1980s, Coelurus has generally been classified as a coelurosaurian with uncertain affinities that does not fit well into better-known Cretaceous clades.\" / \"Coelurus is the only known species of the extinct Coelurus genus, a ceratosaurian dinosaur.\": Sentence 12 classifies Coelurus as a coelurosaurian, while sentence 13 states it is a ceratosaurian."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T04:55:34+00:00"
+}

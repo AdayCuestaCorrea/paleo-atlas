@@ -1,0 +1,40 @@
+{
+ "taxon_key": "rhamphosuchus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "295c5235746da469",
+ "reviewed_at": "2026-11-23T23:56:04+00:00",
+ "problems": [
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Rhamphosuchus could reach body lengths of 8 to 11 meters."
+  },
+  {
+   "sentences": [
+    5,
+    6,
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 claims a length of 15 to 18 meters, which contradicts the 8 to 11 meter range given in sentences 6 and 7."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 13 mentions bite marks found on Miocene Gavialis fossils without any prior introduction or context for those fossils in the page."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Rhamphosuchus crassidens could reach body lengths of 8 to 11 meters based on rigorous estimates of known specimens.\" / \"However, a more recent study suggests the animal measured 8 to 11 meters in length, and therefore is not the largest known crocodilian.\" / \"Early researcher Richard Lydekker estimated Rhamphosuchus crassidens reached a length of 15 to 18 meters.\": Sentence 12 claims a length of 15 to 18 meters, which contradicts the 8 to 11 meter range given in sentences 6 and 7.",
+  "- missing context: \"Researchers suggest Rhamphosuchus had a generalist diet due to its robust build and large size, unlike the mostly fish-eating gharial. It is possible that Rhamphosuchus attacked other crocodilians, supported by bite marks found on Miocene Gavialis fossils.\": Sentence 13 mentions bite marks found on Miocene Gavialis fossils without any prior introduction or context for those fossils in the page."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T02:55:14+00:00"
+}

@@ -1,0 +1,47 @@
+{
+ "taxon_key": "ulughbegsaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "7f8cec714fb5835f",
+ "reviewed_at": "2026-11-24T01:03:40+00:00",
+ "problems": [
+  {
+   "sentences": [
+    0,
+    2
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 estimates a body length of ~7.4 m, while sentence 3 reports the holotype’s preserved length as only 242 mm, a vast discrepancy."
+  },
+  {
+   "sentences": [
+    1,
+    2
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 gives a length range of 7.5–8 m, again contradicting the 242 mm length in sentence 3."
+  },
+  {
+   "sentences": [
+    26,
+    27
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences 27 and 28 state that a 2022 study debated or suggested Ulughbegsaurus is a nomen dubium due to a lack of diagnostic features."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 10 refers to “the window” without any prior explanation of what this window is, leaving the statement unclear."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Averianov and colleagues revised the estimated size of Ulughbegsaurus to approximately 7.4 meters based on a new overlapping specimen.\" / \"The holotype specimen, which is the specific example the species is based on, has a preserved length of 242 millimeters.\": Sentence 1 estimates a body length of ~7.4 m, while sentence 3 reports the holotype’s preserved length as only 242 mm, a vast discrepancy.",
+  "- contradiction: \"The animal is estimated to have had a body length between 7.5 and 8 meters and a weight of more than 1000 kilograms.\" / \"The holotype specimen, which is the specific example the species is based on, has a preserved length of 242 millimeters.\": Sentence 2 gives a length range of 7.5–8 m, again contradicting the 242 mm length in sentence 3.",
+  "- missing context: \"The inner side of the posterior ramus contribution to the window has pneumatic recesses projecting forward and downward into the bone.\": Sentence 10 refers to “the window” without any prior explanation of what this window is, leaving the statement unclear."
+ ],
+ "rewrite": "pending"
+}

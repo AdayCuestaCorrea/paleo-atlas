@@ -1,0 +1,38 @@
+{
+ "taxon_key": "carnotaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "d7724830dc51ae68",
+ "reviewed_at": "2026-11-23T23:56:28+00:00",
+ "problems": [
+  {
+   "sentences": [
+    0,
+    1
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Carnotaurus measured between 7.5 and 8 meters in length."
+  },
+  {
+   "sentences": [
+    29,
+    30
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 30 gives an age range of 69–66 Ma, while sentence 31 gives 72–69.9 Ma for the same time period."
+  },
+  {
+   "sentences": [
+    28
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 29 claims Carnotaurus belongs to the parent group Furileusauria, which is a taxonomic group rather than a description of the animal itself."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Carnotaurus lived in South America during the Late Cretaceous period, approximately 69 to 66 million years ago.\" / \"Carnotaurus lived during the Late Cretaceous, approximately 72 to 69.9 million years ago in the Maastrichtian stage, in what is now South America.\": Sentence 30 gives an age range of 69–66 Ma, while sentence 31 gives 72–69.9 Ma for the same time period."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T02:59:55+00:00"
+}

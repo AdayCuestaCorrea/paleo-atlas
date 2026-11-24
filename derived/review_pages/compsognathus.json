@@ -1,0 +1,55 @@
+{
+ "taxon_key": "compsognathus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "321e8f43ee8e2ec0",
+ "reviewed_at": "2026-11-23T23:59:33+00:00",
+ "problems": [
+  {
+   "sentences": [
+    12,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "identical claim about lagoon location repeated"
+  },
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "two different species named as prey in the same stomach"
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "refers to \"animal's body cavity\" without prior mention"
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "describes distribution of the group, not the animal itself"
+  },
+  {
+   "sentences": [
+    0,
+    1
+   ],
+   "kind": "contradiction",
+   "reason": "size claim of a chicken (~0.8m) conflicts with French specimen length up to 1.4m"
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The lizard found in the stomach of the German Compsognathus specimen was identified as a new species named Schoenesmahl dyspepsia.\" / \"Ostrom identified the prey as a Bavarisaurus lizard, and biomechanical simulations suggest Compsognathus was an agile runner capable of reaching speeds near 64 km/h.\": two different species named as prey in the same stomach",
+  "- missing context: \"Excavators discovered 10mm diameter eggs near the fossil remains of the German specimen, though later researchers have doubted the assignment of these eggs to Compsognathus because they were found outside the animal's body cavity.\": refers to \"animal's body cavity\" without prior mention",
+  "- contradiction: \"Compsognathus longipes was a tiny dinosaur, roughly the size of a modern chicken.\" / \"The German specimen stood about 70 to 75 centimeters tall and measured 89 centimeters long, while the French individual reached lengths between 1.25 and 1.4 meters.\": size claim of a chicken (~0.8m) conflicts with French specimen length up to 1.4m"
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T03:20:40+00:00"
+}

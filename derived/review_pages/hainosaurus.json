@@ -1,0 +1,30 @@
+{
+ "taxon_key": "hainosaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "7a166c474f318193",
+ "reviewed_at": "2026-11-24T00:33:14+00:00",
+ "problems": [
+  {
+   "sentences": [
+    2,
+    3
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims its tail is shorter because it has fewer vertebrae bearing chevrons."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to “fewer vertebrae that bear these chevron structures” implying a comparison to Tylosaurus, but the preceding context does not explicitly establish that comparison."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Its skeleton includes 53 vertebrae extending from the neck to the tail region where chevrons are found, a count significantly higher than the 35 vertebrae seen in the related genus Tylosaurus.\" / \"Consequently, the tail of Hainosaurus is shorter than that of Tylosaurus because it possesses fewer vertebrae that bear these chevron structures.\": Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims its tail is shorter because it has fewer vertebrae bearing chevrons.",
+  "- missing context: \"Consequently, the tail of Hainosaurus is shorter than that of Tylosaurus because it possesses fewer vertebrae that bear these chevron structures.\": Sentence 4 refers to “fewer vertebrae that bear these chevron structures” implying a comparison to Tylosaurus, but the preceding context does not explicitly establish that comparison."
+ ],
+ "rewrite": "pending"
+}

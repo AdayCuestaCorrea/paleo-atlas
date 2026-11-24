@@ -1,0 +1,57 @@
+{
+ "taxon_key": "thalassodromeus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "d91fc2ab3520153b",
+ "reviewed_at": "2026-11-23T23:57:34+00:00",
+ "problems": [
+  {
+   "sentences": [
+    1,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Different wingspan estimates for the same species"
+  },
+  {
+   "sentences": [
+    19,
+    21,
+    23
+   ],
+   "kind": "contradiction",
+   "reason": "Inconsistent age ranges for Thalassodromeus"
+  },
+  {
+   "sentences": [
+    5,
+    17
+   ],
+   "kind": "repetition",
+   "reason": "Both state the genus authority as Kellner & Campos, 2002"
+  },
+  {
+   "sentences": [
+    14,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both discuss classification within Tapejaridae/Azhdarchidae"
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions “help the animal momentarily store food” without prior explanation of the mechanism"
+  }
+ ],
+ "repetitions_dropped": 2,
+ "notes": [
+  "- contradiction: \"Although only the skull is known, Thalassodromeus is estimated to have had a wingspan between 4.2 and 4.5 meters.\" / \"A lower jaw fragment attributed to Thalassodromeus suggests an individual with a wingspan of 5.3 meters.\": Different wingspan estimates for the same species",
+  "- contradiction: \"Thalassodromeus lived approximately 110 million years ago during the Albian stage of the Early Cretaceous period.\" / \"Thalassodromeus lived approximately between 122 and 109 million years ago.\" / \"The Paleobiology Database records the time range of Thalassodromeus as the Aptian stage, from 119.57 to 113.2 million years ago.\": Inconsistent age ranges for Thalassodromeus",
+  "- missing context: \"The concave palatine bones of Thalassodromeus were hypothesized to help the animal momentarily store food while skimming.\": Mentions “help the animal momentarily store food” without prior explanation of the mechanism"
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T03:07:31+00:00"
+}

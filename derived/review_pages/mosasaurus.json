@@ -1,0 +1,45 @@
+{
+ "taxon_key": "mosasaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "be659cad70aa0623",
+ "reviewed_at": "2026-11-23T23:51:08+00:00",
+ "problems": [
+  {
+   "sentences": [
+    4,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 states the jaw length of M. hoffmanni was one‑tenth of its total body length, implying a body length of ~176 m if the jaw is ~17.6 m as estimated in sentence 6."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 9 repeats the information that the first Mosasaurus fossils were discovered as skulls near Maastricht in the late 18th century, which was already stated in sentence 1."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 7 mentions a 75‑million‑year‑old M. missouriensis, but the page never introduced or defined this species before."
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 25 discusses the genus Plotosaurus, which is a different taxon, not Mosasaurus itself."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Researchers once estimated that the jaw length of M. hoffmanni was one-tenth of its total body length.\" / \"Using a smaller partial jaw, another study estimated the maximum length of M. hoffmanni to be 17.6 meters.\": Sentence 5 states the jaw length of M. hoffmanni was one‑tenth of its total body length, implying a body length of ~176 m if the jaw is ~17.6 m as estimated in sentence 6.",
+  "- missing context: \"Only two Mosasaurus specimens with stomach contents are known, including a 75-million-year-old M. missouriensis containing dismembered remains of a 1-meter-long fish.\": Sentence 7 mentions a 75‑million‑year‑old M. missouriensis, but the page never introduced or defined this species before."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T02:09:33+00:00"
+}

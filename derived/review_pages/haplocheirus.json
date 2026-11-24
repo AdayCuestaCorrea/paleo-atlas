@@ -1,0 +1,55 @@
+{
+ "taxon_key": "haplocheirus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "620f9041bb520dc7",
+ "reviewed_at": "2026-11-24T00:10:27+00:00",
+ "problems": [
+  {
+   "sentences": [
+    1
+   ],
+   "kind": "contradiction",
+   "reason": "Weight estimate 21 kg conflicts with other estimates up to 10.56 kg."
+  },
+  {
+   "sentences": [
+    17,
+    18
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state Haplocheirus lived in the Oxfordian stage of the Late Jurassic."
+  },
+  {
+   "sentences": [
+    17,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Time range 161.5–154.8 Ma conflicts with the 161.2–158.7 Ma range given in sentence 18."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "The species name 'sollers' is introduced without prior mention of the name or its origin."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "missing_context",
+   "reason": "Reference to digging into tree trunks assumes knowledge of tree trunks that the page never provides."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Gregory S. Paul estimated the animal was about 2 meters long and weighed 21 kilograms, while other measurements suggest a length of 1.9 to 2.3 meters and a weight up to 10.56 kilograms.\": Weight estimate 21 kg conflicts with other estimates up to 10.56 kg.",
+  "- contradiction: \"Haplocheirus lived during the Late Jurassic, between 161.2 and 158.7 million years ago, in the Oxfordian stage.\" / \"The time range for Haplocheirus is from 161.5 to 154.8 million years ago.\": Time range 161.5–154.8 Ma conflicts with the 161.2–158.7 Ma range given in sentence 18.",
+  "- missing context: \"The species name 'sollers' refers to the hypothetical behavior of using its three-fingered hands for activities other alvarezsauroids could not perform, such as capturing prey.\": The species name 'sollers' is introduced without prior mention of the name or its origin.",
+  "- missing context: \"Some researchers hypothesize that the robust first finger was an adaptation for digging into tree trunks to access insects, similar to the modern aye-aye.\": Reference to digging into tree trunks assumes knowledge of tree trunks that the page never provides."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T05:05:14+00:00"
+}

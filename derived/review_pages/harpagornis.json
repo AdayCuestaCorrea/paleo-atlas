@@ -1,0 +1,38 @@
+{
+ "taxon_key": "harpagornis",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "30a1af11c7f3ca4b",
+ "reviewed_at": "2026-11-24T00:05:45+00:00",
+ "problems": [
+  {
+   "sentences": [
+    1,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 claims a wingspan up to 2.6 m (large), while sentence 14 states the bird had a short wingspan yet could fly."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 15 refers to the eagle arriving on the island and growing over time, but the page never explains when or how it arrived."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 16 describes Haast's eagles as occupying the niche of top mammalian predators, which is a statement about mammals rather than the bird itself."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"A grown female had a wingspan estimated at up to 2.6 meters, though some estimates suggest it could reach 3 meters.\" / \"Despite its short wingspan, evidence strongly suggests the bird was capable of flight.\": Sentence 2 claims a wingspan up to 2.6 m (large), while sentence 14 states the bird had a short wingspan yet could fly.",
+  "- missing context: \"The eagle's large size may have been an evolutionary response to its prey size, as it would have been substantially smaller when it arrived on the island before growing substantially over time due to a lack of competition.\": Sentence 15 refers to the eagle arriving on the island and growing over time, but the page never explains when or how it arrived."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T04:28:21+00:00"
+}

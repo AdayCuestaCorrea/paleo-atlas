@@ -1,0 +1,40 @@
+{
+ "taxon_key": "chungkingosaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "cc170acd72a7b70f",
+ "reviewed_at": "2026-11-24T01:13:52+00:00",
+ "problems": [
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the taxonomic placement of the dinosaur, repeating the claim that it belongs to the family/subfamily Stegosauridae."
+  },
+  {
+   "sentences": [
+    14,
+    16,
+    17
+   ],
+   "kind": "contradiction",
+   "reason": "Sentences 15, 17, and 18 give conflicting classifications: 15 places it in Stegosauridae, 17 moves it to Huayangosauridae, and 18 associates it with the subfamily Kentrosaurinae."
+  },
+  {
+   "sentences": [
+    19,
+    20
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 20 dates the species to the Oxfordian stage (~156 Ma), while sentence 21 claims its habitat spanned the Bathonian to Callovian stages (168.2–161.5 Ma), which are earlier than the Oxfordian."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The broader family group for this dinosaur is Stegosauridae.\" / \"In 2008, Maidment and colleagues moved the animal into the family Huayangosauridae.\" / \"The shape of its skin armor links it to relatives like Kentrosaurus and Dacentrurus in the subfamily Kentrosaurinae.\": Sentences 15, 17, and 18 give conflicting classifications: 15 places it in Stegosauridae, 17 moves it to Huayangosauridae, and 18 associates it with the subfamily Kentrosaurinae.",
+  "- contradiction: \"This creature lived during the Oxfordian stage of the Late Jurassic, about 156 million years ago.\" / \"Its habitat spanned the Bathonian to Callovian stages, ranging from 168.2 to 161.5 million years ago.\": Sentence 20 dates the species to the Oxfordian stage (~156 Ma), while sentence 21 claims its habitat spanned the Bathonian to Callovian stages (168.2–161.5 Ma), which are earlier than the Oxfordian."
+ ],
+ "rewrite": "pending"
+}

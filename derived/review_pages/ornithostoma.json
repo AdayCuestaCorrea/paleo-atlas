@@ -1,0 +1,49 @@
+{
+ "taxon_key": "ornithostoma",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "f8e61fb56dd195ca",
+ "reviewed_at": "2026-11-24T00:57:18+00:00",
+ "problems": [
+  {
+   "sentences": [
+    2,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Seeley placed fragments from the Lower Cretaceous (sentence 3) but later described the genus from Upper Cretaceous remains (sentence 5)."
+  },
+  {
+   "sentences": [
+    4,
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places Ornithostoma in Pteranodontidae, while sentence 9 also claims it is a valid genus in Pteranodontidae but gives a wingspan estimate; the classification is repeated but not contradicted, so this is not a contradiction. However, sentence 10 and 11 conflict on family assignment: sentence 10 assigns it to Azhdarchoidea, sentence 11 to Chaoyangopteridae. This is a contradiction. The classification in sentence 5 also conflicts with sentence 10/11. For clarity, we list the contradictions separately."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 assigns Ornithostoma to Azhdarchoidea, while sentence 11 assigns it to Chaoyangopteridae."
+  },
+  {
+   "sentences": [
+    4,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places Ornithostoma in Pteranodontidae, whereas sentence 10 places it in Azhdarchoidea."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Harry Govier Seeley initially placed three toothless snout fragments from the Lower Cretaceous Cambridge Greensand of England into the genus Ornithocheirus in 1869.\" / \"Seeley formally established the genus in 1871 for fragmented bone remains, mostly jaws, of a toothless pterosaur from the Upper Cretaceous of England.\": Seeley placed fragments from the Lower Cretaceous (sentence 3) but later described the genus from Upper Cretaceous remains (sentence 5).",
+  "- contradiction: \"Seeley formally established the genus in 1871 for fragmented bone remains, mostly jaws, of a toothless pterosaur from the Upper Cretaceous of England.\" / \"David Unwin rejected the nomen dubium status in 2001, arguing Ornithostoma is a valid genus in Pteranodontidae with a wingspan of 2-3 meters based on limited material.\": Sentence 5 places Ornithostoma in Pteranodontidae, while sentence 9 also claims it is a valid genus in Pteranodontidae but gives a wingspan estimate; the classification is repeated but not contradicted, so this is not a contradiction. However, sentence 10 and 11 conflict on family assignment: sentence 10 assigns it to Azhdarchoidea, sentence 11 to Chaoyangopteridae. This is a contradiction. The classification in sentence 5 also conflicts with sentence 10/11. For clarity, we list the contradictions separately.",
+  "- contradiction: \"In 2012, Alexander O. Averianov suggested Ornithostoma belongs to Azhdarchoidea based on a combination of jaw and postcranial traits.\" / \"Subsequent studies suggest Ornithostoma is a member of the family Chaoyangopteridae.\": Sentence 10 assigns Ornithostoma to Azhdarchoidea, while sentence 11 assigns it to Chaoyangopteridae.",
+  "- contradiction: \"Seeley formally established the genus in 1871 for fragmented bone remains, mostly jaws, of a toothless pterosaur from the Upper Cretaceous of England.\" / \"In 2012, Alexander O. Averianov suggested Ornithostoma belongs to Azhdarchoidea based on a combination of jaw and postcranial traits.\": Sentence 5 places Ornithostoma in Pteranodontidae, whereas sentence 10 places it in Azhdarchoidea."
+ ],
+ "rewrite": "pending"
+}

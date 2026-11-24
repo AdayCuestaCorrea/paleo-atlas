@@ -1,0 +1,48 @@
+{
+ "taxon_key": "anhuilong",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "63d4bf700933d44c",
+ "reviewed_at": "2026-11-24T01:40:49+00:00",
+ "problems": [
+  {
+   "sentences": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 estimates the entire forelimb at ~2 m, yet sentences 5‑7 give individual element lengths (105 cm humerus, ~52 cm radius, ~59 cm ulna) that sum to >2 m."
+  },
+  {
+   "sentences": [
+    4,
+    10
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the humerus is 105 cm long."
+  },
+  {
+   "sentences": [
+    16
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 17 refers to “the discoverer’s death” without identifying who the discoverer is."
+  },
+  {
+   "sentences": [
+    26
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 27 mentions “a copy of that taxon” but never explains what “that taxon” refers to."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The fossilized forelimb of Anhuilong is estimated to have been about 2 meters long.\" / \"The humerus of Anhuilong measures 105 centimeters in length.\" / \"The radius is only half the length of the humerus, representing the lowest ratio known among mamenchisaurids.\" / \"The ulna is only 56% the length of the humerus, the lowest value recorded for the group.\": Sentence 4 estimates the entire forelimb at ~2 m, yet sentences 5‑7 give individual element lengths (105 cm humerus, ~52 cm radius, ~59 cm ulna) that sum to >2 m.",
+  "- missing context: \"The discovery initially attracted little paleontological attention, but after the discoverer's death, a team from the Anhui Geological Museum examined the copy and concluded it was an unknown species.\": Sentence 17 refers to “the discoverer’s death” without identifying who the discoverer is.",
+  "- missing context: \"Some researchers suggest that Anhuilong may not be distinct from Huangshanlong, viewing it as merely a copy of that taxon.\": Sentence 27 mentions “a copy of that taxon” but never explains what “that taxon” refers to."
+ ],
+ "rewrite": "pending"
+}

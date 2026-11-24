@@ -1,0 +1,38 @@
+{
+ "taxon_key": "kaprosuchus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "de19aa668bfccfbd",
+ "reviewed_at": "2026-11-24T00:50:17+00:00",
+ "problems": [
+  {
+   "sentences": [
+    2,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Both sentences give body length estimates for Kaprosuchus, but [3] limits it to 2.42–3.77 m while [6] claims it could reach ~6 m, a direct conflict without noting different estimation methods."
+  },
+  {
+   "sentences": [
+    7,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Sentences [8] and [9] both assert that Kaprosuchus was primarily or exclusively terrestrial, repeating the same claim."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence [15] discusses “Dorsally positioned external nostrles” as a protective feature, but the term “nostrles” is not defined or introduced earlier in the page, leaving the reader unclear about what is being referred to."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Scientists estimate the total body length of this animal ranged from 2.42 to 3.77 meters.\" / \"Some estimates suggest the total length of Kaprosuchus could have reached around 6 meters.\": Both sentences give body length estimates for Kaprosuchus, but [3] limits it to 2.42–3.77 m while [6] claims it could reach ~6 m, a direct conflict without noting different estimation methods.",
+  "- missing context: \"Dorsally positioned external nostrles would have protected Kaprosuchus from impacts if it charged prey with its robust snout.\": Sentence [15] discusses “Dorsally positioned external nostrles” as a protective feature, but the term “nostrles” is not defined or introduced earlier in the page, leaving the reader unclear about what is being referred to."
+ ],
+ "rewrite": "pending"
+}

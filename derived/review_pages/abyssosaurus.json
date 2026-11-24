@@ -1,0 +1,49 @@
+{
+ "taxon_key": "abyssosaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "aeb8d221afbc7a0f",
+ "reviewed_at": "2026-11-24T00:36:33+00:00",
+ "problems": [
+  {
+   "sentences": [
+    19,
+    20
+   ],
+   "kind": "contradiction",
+   "reason": "Classifies Abyssosaurus in Aristonectidae in sentence 20 but lists Cryptoclididae as its parent group in sentence 21."
+  },
+  {
+   "sentences": [
+    17,
+    18,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 18 proposes Abyssosaurus as an aberrant member of Aristonectinae, sentence 19 later concludes it is a colymbosaurine sister to Colymbosaurus, and sentence 20 again places it in Aristonectidae."
+  },
+  {
+   "sentences": [
+    11,
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "All three sentences describe the same naming event by Alexander Yu Berezin in 2011."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions fossil remains tentatively identified as a fetus without prior introduction of the holotype or context for the find."
+  }
+ ],
+ "repetitions_dropped": 2,
+ "notes": [
+  "- contradiction: \"Abyssosaurus is classified within the family Aristonectidae.\" / \"The Paleobiology Database lists the parent group of Abyssosaurus as Cryptoclididae.\": Classifies Abyssosaurus in Aristonectidae in sentence 20 but lists Cryptoclididae as its parent group in sentence 21.",
+  "- contradiction: \"Berezin initially suggested Abyssosaurus was an aberrant member of the subfamily Aristonectinae within Cryptocleidoidea.\" / \"Later studies concluded that A. nataliae was a colymbosaurine, sister to Colymbosaurus, rather than an aristonectine.\" / \"Abyssosaurus is classified within the family Aristonectidae.\": Sentence 18 proposes Abyssosaurus as an aberrant member of Aristonectinae, sentence 19 later concludes it is a colymbosaurine sister to Colymbosaurus, and sentence 20 again places it in Aristonectidae.",
+  "- missing context: \"Fossil remains tentatively identified as a fetus were found alongside the holotype, suggesting the species reproduced by giving birth to live young.\": Mentions fossil remains tentatively identified as a fetus without prior introduction of the holotype or context for the find."
+ ],
+ "rewrite": "pending"
+}

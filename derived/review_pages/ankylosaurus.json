@@ -1,0 +1,38 @@
+{
+ "taxon_key": "ankylosaurus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "d158beeeef936b89",
+ "reviewed_at": "2026-11-23T23:57:04+00:00",
+ "problems": [
+  {
+   "sentences": [
+    0,
+    1
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim Ankylosaurus is the largest known ankylosaurid/ankylosaurine."
+  },
+  {
+   "sentences": [
+    10,
+    11
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the genus was named by Barnum Brown in 1908."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "The pronoun \"These\" refers to osteoderms, but the antecedent is not explicitly stated in the preceding sentence."
+  }
+ ],
+ "repetitions_dropped": 2,
+ "notes": [
+  "- missing context: \"These thin osteoderms were reinforced by randomly distributed cushions of collagen fibers embedded directly into the bone tissue.\": The pronoun \"These\" refers to osteoderms, but the antecedent is not explicitly stated in the preceding sentence."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T03:02:33+00:00"
+}

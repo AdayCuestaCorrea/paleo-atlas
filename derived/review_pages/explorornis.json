@@ -1,0 +1,44 @@
+{
+ "taxon_key": "explorornis",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "e195aea27e80b71d",
+ "reviewed_at": "2026-11-24T01:54:11+00:00",
+ "problems": [
+  {
+   "sentences": [
+    4,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Explorornis belongs to Alexornithidae, repeating the same claim."
+  },
+  {
+   "sentences": [
+    3,
+    4,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 says the phylogenetic position is unresolved due to limited fossils, yet sentences 5 and 6 assert a specific family placement."
+  },
+  {
+   "sentences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 7 classifies Explorornis within the class Reptilia, which contradicts the bird classification implied by the other sentences."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The phylogenetic position of Explorornis is unresolved because only coracoid fossils are known.\" / \"Explorornis belongs to the parent group Alexornithidae.\" / \"Explorornis is classified within the family Alexornithidae.\": Sentence 4 says the phylogenetic position is unresolved due to limited fossils, yet sentences 5 and 6 assert a specific family placement.",
+  "- contradiction: \"Most species were small birds about 15 to 20 cm long, while E. walkeri was likely over 25 cm long.\" / \"The two species of Explorornis are named after paleontologists Lev Alexandrovich Nesov and Alick Donald Walker.\" / \"The phylogenetic position of Explorornis is unresolved because only coracoid fossils are known.\" / \"Explorornis belongs to the parent group Alexornithidae.\" / \"Explorornis is classified within the family Alexornithidae.\" / \"Explorornis is classified under the class Reptilia.\": Sentence 7 classifies Explorornis within the class Reptilia, which contradicts the bird classification implied by the other sentences."
+ ],
+ "rewrite": "pending"
+}

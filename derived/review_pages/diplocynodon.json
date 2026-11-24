@@ -1,0 +1,31 @@
+{
+ "taxon_key": "diplocynodon",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "cf5b2e23b1220a9a",
+ "reviewed_at": "2026-11-24T00:26:29+00:00",
+ "problems": [
+  {
+   "sentences": [
+    1,
+    2
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 claims some Diplocynodon species were <1 m or up to 3 m, while sentence 3 states the largest species reached 5.9 m, which contradicts the size range given."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to “D. tormis” without any prior mention or definition of that species in the page."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"While some members of this genus could grow to three meters long, others remained smaller than one meter.\" / \"The largest known species, D. hantoniensis, measured 5.9 meters in length.\": Sentence 2 claims some Diplocynodon species were <1 m or up to 3 m, while sentence 3 states the largest species reached 5.9 m, which contradicts the size range given.",
+  "- missing context: \"CT scans of D. tormis have reconstructed internal snout and brain structures, providing insights into its sensory and cognitive capabilities.\": Sentence 12 refers to “D. tormis” without any prior mention or definition of that species in the page."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T07:22:56+00:00"
+}

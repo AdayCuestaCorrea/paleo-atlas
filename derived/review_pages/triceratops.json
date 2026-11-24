@@ -1,0 +1,31 @@
+{
+ "taxon_key": "triceratops",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "4eece1a60312cda0",
+ "reviewed_at": "2026-11-23T23:52:49+00:00",
+ "problems": [
+  {
+   "sentences": [
+    22,
+    24
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, while sentence 25 diagnoses it as a ceratopsine, presenting two incompatible subfamily assignments."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase \"large basement scales\" is introduced without prior explanation of what basement scales are or why they are significant."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Triceratops is classified as a genus of chasmosaurine ceratopsian dinosaur.\" / \"Thomas Lehman defined the subfamilies in 1990 and diagnosed Triceratops as a ceratopsine based on several morphological features.\": Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, while sentence 25 diagnoses it as a ceratopsine, presenting two incompatible subfamily assignments.",
+  "- missing context: \"Covering most of the body were large basement scales, the biggest known among ceratopsians, reaching up to 9 cm across.\": The phrase \"large basement scales\" is introduced without prior explanation of what basement scales are or why they are significant."
+ ],
+ "rewrite": "replaced",
+ "rewritten_at": "2026-11-24T02:20:14+00:00"
+}

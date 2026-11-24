@@ -1,0 +1,39 @@
+{
+ "taxon_key": "palaeospondylus",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "ebf38f78ca686231",
+ "reviewed_at": "2026-11-24T01:21:28+00:00",
+ "problems": [
+  {
+   "sentences": [
+    5,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims Palaeospondylus was a larval lungfish, while sentence 8 classifies it under Chondrichthyes, a different fish class."
+  },
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 proposes a lungfish affinity, whereas sentence 7 proposes a stem chondrichthyan affinity, which are incompatible."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to \"P. australis\" without any prior introduction or explanation of this taxon."
+  }
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"In 2004, researchers suggested that Palaeospondylus was a larval lungfish.\" / \"The Paleobi Database classifies Palaeospondylus under the class Chondrichthyes.\": Sentence 6 claims Palaeospondylus was a larval lungfish, while sentence 8 classifies it under Chondrichthyes, a different fish class.",
+  "- contradiction: \"In 2004, researchers suggested that Palaeospondylus was a larval lungfish.\" / \"A 2017 study proposed that Palaeospondylus was a stem chondrichthyan.\": Sentence 6 proposes a lungfish affinity, whereas sentence 7 proposes a stem chondrichthyan affinity, which are incompatible.",
+  "- missing context: \"A fossilized braincase of P. australis showed the animal lacked a postorbital process and an intracranial joint.\": Sentence 3 refers to \"P. australis\" without any prior introduction or explanation of this taxon."
+ ],
+ "rewrite": "pending"
+}

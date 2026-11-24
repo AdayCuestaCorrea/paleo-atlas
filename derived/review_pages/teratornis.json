@@ -1,0 +1,39 @@
+{
+ "taxon_key": "teratornis",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "e6dfcc23836e7990",
+ "reviewed_at": "2026-11-24T00:42:45+00:00",
+ "problems": [
+  {
+   "sentences": [
+    0,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 gives a height of ~75 cm, while sentence 5 claims Teratornis was the largest flying bird encountered by humans, implying a much larger size."
+  },
+  {
+   "sentences": [
+    11,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe Teratornis swallowing small prey and feeding on carrion, repeating the same claim."
+  },
+  {
+   "sentences": [
+    2,
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to “part of the index toe formed a platform” without prior explanation of the toe’s relevance, and sentence 10 states “Teratornis likely primarily inhabited cliff terrain” without establishing why cliffs were chosen."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Teratornis merriami stood approximately 75 cm tall with an estimated wingspan of 3.5 to 3.8 meters and a weight between 12.5 and 15.0 kg.\" / \"Teratornis merriami was the largest flying bird encountered by humans in its lifetime.\": Sentence 1 gives a height of ~75 cm, while sentence 5 claims Teratornis was the largest flying bird encountered by humans, implying a much larger size.",
+  "- missing context: \"Teratornis had fused toe bones like modern birds, but part of the index toe formed a platform that increased its wing loading.\" / \"Teratornis likely primarily inhabited cliff terrain to facilitate takeoff and soaring flight.\": Sentence 3 refers to “part of the index toe formed a platform” without prior explanation of the toe’s relevance, and sentence 10 states “Teratornis likely primarily inhabited cliff terrain” without establishing why cliffs were chosen."
+ ],
+ "rewrite": "pending"
+}

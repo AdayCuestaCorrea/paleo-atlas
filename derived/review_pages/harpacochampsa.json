@@ -1,0 +1,40 @@
+{
+ "taxon_key": "harpacochampsa",
+ "generator": "ollama/gpt-oss:20b",
+ "prompt_version": "review-page-v1",
+ "text_hash": "12f053a78023684a",
+ "reviewed_at": "2026-11-24T00:39:13+00:00",
+ "problems": [
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Gavialoidea is a superfamily while Crocodylidae is a family; the text simultaneously assigns Harpacochampsa to both, which are incompatible taxonomic levels."
+  },
+  {
+   "sentences": [
+    12,
+    13,
+    14
+   ],
+   "kind": "contradiction",
+   "reason": "The species is placed in the family Crocodylidae, yet its subfamily Mekosuchinae is uncertain and some experts doubt that assignment, implying conflicting family-level placement."
+  },
+  {
+   "sentences": [
+    0,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Harpacochampsa was a piscivore, repeating the same claim."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"It belongs to the parent group Gavialoidea.\" / \"The species is placed within the family Crocodylidae.\": Gavialoidea is a superfamily while Crocodylidae is a family; the text simultaneously assigns Harpacochampsa to both, which are incompatible taxonomic levels.",
+  "- contradiction: \"The species is placed within the family Crocodylidae.\" / \"Its placement in the subfamily Mekosuchinae is uncertain and often marked with question marks.\" / \"Some experts doubt this subfamily assignment because Harpacochampsa might be the only known mekosuchine with such a long, thin snout.\": The species is placed in the family Crocodylidae, yet its subfamily Mekosuchinae is uncertain and some experts doubt that assignment, implying conflicting family-level placement."
+ ],
+ "rewrite": "pending"
+}

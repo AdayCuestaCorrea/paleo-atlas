@@ -12,6 +12,7 @@ import logging
 import os
 import subprocess
 from collections import Counter
+from pathlib import Path
 from typing import Annotated
 
 import typer
@@ -617,10 +618,17 @@ def _review_keys(derived) -> list[str]:  # derived: Path
     return keys + [k for k in rest if k not in seen]
 
 
+StopFile = Annotated[
+    Path | None,
+    typer.Option(help="Finish the current page and stop when this file exists."),
+]
+
+
 @review_app.command("pages")
 def review_pages(
     until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
     limit: Limit = None,
+    stop_file: StopFile = None,
 ) -> None:
     """Review every page as a whole with gpt-oss 20B (contradictions, repetitions,
     missing context, claims about something else): data/derived/review_pages. Repeated
@@ -640,6 +648,9 @@ def review_pages(
     for key in _review_keys(derived):
         if deadline and dt.datetime.now() >= deadline:
             typer.echo(f"Deadline {until} reached")
+            break
+        if stop_file and stop_file.exists():
+            typer.echo(f"Stop requested ({stop_file})")
             break
         if limit is not None and done >= limit:
             break
@@ -677,6 +688,7 @@ def review_rewrite(
     model: Model = None,
     until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
     limit: Limit = None,
+    stop_file: StopFile = None,
 ) -> None:
     """Write again, with the reviewer's notes, the pages `paleo review pages` flagged,
     best known first. A rewrite replaces the page only if it passes every check in both
@@ -708,6 +720,9 @@ def review_rewrite(
     for key in _review_keys(derived):
         if deadline and dt.datetime.now() >= deadline:
             typer.echo(f"Deadline {until} reached")
+            break
+        if stop_file and stop_file.exists():
+            typer.echo(f"Stop requested ({stop_file})")
             break
         if limit is not None and done >= limit:
             break

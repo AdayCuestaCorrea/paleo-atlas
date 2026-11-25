@@ -171,6 +171,22 @@ def is_up_to_date(facts_path: Path, derived_root: Path) -> bool:
     return same("texts", "en") and (same("texts", "es") or same("texts_review", "es"))
 
 
+def stale_texts(derived_root: Path) -> list[str]:
+    """Verified texts written from older facts than today's (their facts_hash is not
+    the current one), as "key.lang": they stay published until rewritten, so the
+    daily recheck lists them (ALCANCE Phase 7: 6 genera were found by hand)."""
+    out = []
+    for path in sorted((derived_root / "texts").glob("*.json")):
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        facts = derived_root / "facts" / f"{doc['taxon_key']}.json"
+        if doc.get("status") != "verified" or not facts.exists():
+            continue
+        current = facts_hash(json.loads(facts.read_text(encoding="utf-8"))["facts"])
+        if doc["facts_hash"] != current:
+            out.append(path.name.removesuffix(".json"))
+    return out
+
+
 def target_words(fact_count: int) -> int:
     """~120 words for a sparse taxon, up to ~700 for a well documented one."""
     return max(120, min(700, 40 + 18 * fact_count))

@@ -514,3 +514,16 @@ def test_spanish_texts_are_rechecked_without_a_model(tmp_path):
     assert len(texts) == 4 and "el piso santoniense" in texts[1]
     assert not any("Cenomaniense" in t for t in texts) and saved["review"] == "accepted"
     assert recheck_es(derived, lambda genus: [], set())["dropped"] == []  # nothing left
+
+
+def test_texts_written_from_older_facts_are_listed(tmp_path):
+    from paleo.narrative.write import facts_hash, stale_texts
+
+    facts = [{"fact_id": "F001", "statement": "Rex was big.", "category": "description"}]
+    (tmp_path / "facts").mkdir()
+    (tmp_path / "texts").mkdir()
+    (tmp_path / "facts" / "rex.json").write_text(json.dumps({"facts": facts}), encoding="utf-8")
+    for lang, h, status in (("en", facts_hash(facts), "verified"), ("es", "old", "verified")):
+        doc = {"taxon_key": "rex", "status": status, "facts_hash": h, "sections": []}
+        (tmp_path / "texts" / f"rex.{lang}.json").write_text(json.dumps(doc), encoding="utf-8")
+    assert stale_texts(tmp_path) == ["rex.es"]

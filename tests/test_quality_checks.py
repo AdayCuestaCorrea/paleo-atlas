@@ -118,6 +118,7 @@ def test_clade_word_put_at_the_english_rank():
 
 def test_fixed_spanish_replacements_of_phase_7():
     assert fix_es("El especimen tipo") == "El espécimen tipo"
+    assert fix_es("pesaba 6 toneladas métricas") == "pesaba 6 toneladas"
     assert fix_es("piso Tithoniense") == "piso Titoniense"
     assert fix_es("Dos otras especies") == "Otras dos especies"
     assert fix_es("El garrote caudal servía") == "La maza caudal servía"

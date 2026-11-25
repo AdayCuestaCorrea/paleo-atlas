@@ -288,6 +288,7 @@ _ES_FIXED: list[tuple[str, str]] = [
     (r"\bmanirráptidos\b", "maniraptores"),
     (r"\b([Pp])achicéfalo(s?)\b", r"\1aquicefalosaurio\2"),
     (r"\bkilogramas\b", "kilogramos"),
+    (r"\btoneladas métricas\b", "toneladas"),  # "metric tons": a tonelada is already 1000 kg
     (r"\b([Uu])nas (\d[\d.,]*(?: (?:a|y) \d[\d.,]*)? kilogramos)\b", r"\1nos \2"),
     (r"\blagartos monitores\b", "varanos"),
     (r"\bdepredador(es)? ápice\b", r"superdepredador\1"),

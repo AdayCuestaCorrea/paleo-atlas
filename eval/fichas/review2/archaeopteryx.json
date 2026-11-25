@@ -1,0 +1,177 @@
+{
+ "taxon_key": "archaeopteryx",
+ "en_sentences": 19,
+ "es_sentences": 17,
+ "findings": [
+  {
+   "lang": "es",
+   "severity": "medium",
+   "cause": "en_es_mismatch",
+   "en_sentence": "Archaeopteryx was roughly the size of a Eurasian magpie or a raven, featuring broad wings with rounded ends and a long tail relative to its body length.",
+   "es_sentence": "Sus alas portaban plumas de vuelo bien desarrolladas y notablemente asimétricas, cuyas barbas se estabilizaban mediante una compleja disposición de barbas y barbúlas similar a la de las aves actuales, mientras que su cola también llevaba plumas anchas.",
+   "problem": "The Spanish page has no size/body-plan sentence, so it opens with 'Sus alas...' with no antecedent and never gives the animal's size.",
+   "correct": "Add the Spanish equivalent before it: 'Archaeopteryx tenía aproximadamente el tamaño de una urraca común (los individuos más grandes, quizá el de un cuervo), con alas anchas de extremos redondeados y una cola larga en relación con el cuerpo.'",
+   "checked_in": "F006, F007, F049, F100; es text section 1"
+  },
+  {
+   "lang": "es",
+   "severity": "medium",
+   "cause": "es_wrong_term",
+   "en_sentence": "",
+   "es_sentence": "Sus alas portaban plumas de vuelo bien desarrolladas y notablemente asimétricas, cuyas barbas se estabilizaban mediante una compleja disposición de barbas y barbúlas similar a la de las aves actuales, mientras que su cola también llevaba plumas anchas.",
+   "problem": "'cuyas barbas se estabilizaban mediante ... barbas y barbúlas' mistranslates 'vanes' as 'barbas' (so barbs stabilise barbs), misspells 'bárbulas' and drops the barbicels.",
+   "correct": "...cuyos vexilos se estabilizaban mediante una compleja disposición de barbas, bárbulas y barbicelos, similar a la de las aves actuales...",
+   "checked_in": "F051, F112 (eswiki: vexilos, barbillas, bárbulas, barbicelos)"
+  },
+  {
+   "lang": "es",
+   "severity": "high",
+   "cause": "es_meaning",
+   "en_sentence": "",
+   "es_sentence": "Un escenario de 2002 sugiere que el Archaeopteryx utilizaba planeos interrumpidos por batidas de cola poco profundas para escapar de los depredadores, mientras que un estudio de 2018 indicó que su ciclo de vuelo se asemejaba más al movimiento de agarre de los manirráptores que al de las aves modernas.",
+   "problem": "'batidas de cola poco profundas' turns the shallow wing downstrokes into tail strokes, which is a false claim. 'ciclo de vuelo' also loses 'stroke' (the wingbeat cycle).",
+   "correct": "...utilizaba planeos interrumpidos por aleteos descendentes poco profundos para escapar de los depredadores, mientras que un estudio de 2018 indicó que su ciclo de aleteo se asemejaba más al movimiento de agarre de los manirraptores...",
+   "checked_in": "F091 quote (glides punctuated with shallow downstrokes); enwiki Flight"
+  },
+  {
+   "lang": "both",
+   "severity": "low",
+   "cause": "overstated_certainty",
+   "en_sentence": "The genus Archaeopteryx was named by Meyer in 1861, originally based on a single feather found that same year.",
+   "es_sentence": "El género Archaeopteryx fue nombrado por Meyer en 1861, basándose originalmente en una sola pluma descubierta ese mismo año.",
+   "problem": "The source gives the feather's discovery as 1860 or 1861, not definitely 'that same year'.",
+   "correct": "...originally based on a single feather found in 1860 or 1861. / ...basándose originalmente en una sola pluma descubierta en 1860 o 1861.",
+   "checked_in": "F017; enwiki History of discovery"
+  },
+  {
+   "lang": "both",
+   "severity": "medium",
+   "cause": "misread_source",
+   "en_sentence": "The Unnumbered Specimen was originally classified as Compsognathus by the amateur collector Friedrich Müller before being recognized as Archaeopteryx.",
+   "es_sentence": "El ejemplar sin número fue clasificado inicialmente como Compsognathus por el coleccionista aficionado Friedrich Müller antes de ser reconocido como Archaeopteryx.",
+   "problem": "The specimen is the Solnhofen Specimen (Bürgermeister-Müller-Museum). 'Unnumbered Specimen' is only its parenthetical gloss, which the fact extraction picked up as its name, and the Spanish translates it as 'ejemplar sin número', a name no reader would recognise.",
+   "correct": "The Solnhofen Specimen was originally classified as Compsognathus by the amateur collector Friedrich Müller, the town's mayor, before being recognized as Archaeopteryx. / El ejemplar de Solnhofen fue clasificado inicialmente como Compsognathus por el coleccionista aficionado Friedrich Müller, alcalde de la localidad, antes de ser reconocido como Archaeopteryx.",
+   "checked_in": "enwiki History of discovery (oldid 1383015036): \"The Solnhofen Specimen ('Unnumbered Specimen')\"; F036, F045"
+  },
+  {
+   "lang": "both",
+   "severity": "low",
+   "cause": "contradiction",
+   "en_sentence": "All known fossils of Archaeopteryx come from limestone deposits near Solnhofen, Germany.",
+   "es_sentence": "Todos los fósiles conocidos de Archaeopteryx provienen de depósitos de piedra caliza cercanos a Solnhofen, en Alemania.",
+   "problem": "The sentence says every fossil comes from the limestones near Solnhofen, but two sentences later the page places the Schamhaupten Specimen in the Painten Formation (and the 13th specimen is from the Mörnsheim Formation). 'Solnhofen' only works in the broad regional sense, which the page doesn't explain.",
+   "correct": "All known fossils come from the Late Jurassic limestones of the Solnhofen region in Bavaria, southern Germany. / Todos los fósiles conocidos proceden de las calizas del Jurásico Superior de la región de Solnhofen, en Baviera (sur de Alemania).",
+   "checked_in": "F015, F042, F046; enwiki History of discovery"
+  },
+  {
+   "lang": "both",
+   "severity": "low",
+   "cause": "outdated",
+   "en_sentence": "The Mühlheim Specimen was initially considered a thirteenth Archaeopteryx but was reassigned to the distinct genus Alcmonavis upon its 2019 description.",
+   "es_sentence": "El ejemplar de Mühlheim fue considerado inicialmente como el decimotercer Archaeopteryx, pero fue reasignado al género distinto Alcmonavis tras su descripción en 2019.",
+   "problem": "The sentence presents the move to Alcmonavis as settled. The project's own 2026 fact (O'Connor & Marugán-Lobón) argues that Alcmonavis likely represents Archaeopteryx.",
+   "correct": "...was reassigned to the distinct genus Alcmonavis upon its 2019 description, although a 2026 revision argues it most likely belongs to Archaeopteryx. / ...fue reasignado a un género distinto, Alcmonavis, al describirse en 2019, aunque una revisión de 2026 sostiene que probablemente pertenece a Archaeopteryx.",
+   "checked_in": "F125; enwiki History of discovery"
+  },
+  {
+   "lang": "es",
+   "severity": "low",
+   "cause": "es_calque",
+   "en_sentence": "",
+   "es_sentence": "El ejemplar de Mühlheim fue considerado inicialmente como el decimotercer Archaeopteryx, pero fue reasignado al género distinto Alcmonavis tras su descripción en 2019.",
+   "problem": "'reasignado al género distinto Alcmonavis' copies the English word order. Spanish needs an indefinite article plus an apposition.",
+   "correct": "...pero fue reasignado a un género distinto, Alcmonavis, tras su descripción en 2019.",
+   "checked_in": "knowledge"
+  },
+  {
+   "lang": "es",
+   "severity": "medium",
+   "cause": "es_grammar",
+   "en_sentence": "",
+   "es_sentence": "La mayoría de los especímenes de Archaeopteryx probablemente flotan sobre la espalda en el mar antes de quedar incrustados en sedimentos anóxicos, resultando en una postura característica de muerte con la cabeza, el cuello y la cola doblados hacia abajo debido a la relajación muscular y la descomposición temprana.",
+   "problem": "'probablemente flotan' is in the present tense for a past event (it should be 'flotaron'), and 'resultando en' is an English calque.",
+   "correct": "La mayoría de los especímenes de Archaeopteryx probablemente flotaron boca arriba en el mar antes de quedar enterrados en sedimentos anóxicos, lo que dio lugar a la característica postura de muerte, con la cabeza, el cuello y la cola doblados hacia atrás por la relajación de tendones y músculos al inicio de la descomposición.",
+   "checked_in": "F053; knowledge"
+  },
+  {
+   "lang": "es",
+   "severity": "low",
+   "cause": "es_calque",
+   "en_sentence": "",
+   "es_sentence": "Se infiere que el Archaeopteryx tenía la capacidad de volar o planar, y más probablemente cazaba presas pequeñas agarrándolas con las mandíbulas o las garras.",
+   "problem": "'y más probablemente cazaba' is a literal rendering of 'most likely hunted'.",
+   "correct": "...y lo más probable es que cazara presas pequeñas atrapándolas con las mandíbulas o las garras.",
+   "checked_in": "knowledge"
+  },
+  {
+   "lang": "both",
+   "severity": "low",
+   "cause": "overstated_certainty",
+   "en_sentence": "A 2009 histological study showed that Archaeopteryx had a relatively slow growth rate compared to modern birds, and all known skeletons are believed to come from juvenile specimens.",
+   "es_sentence": "Un estudio histológico de 2009 demostró que el Archaeopteryx tenía una tasa de crecimiento relativamente lenta comparada con las aves modernas, y se cree que todos los esqueletos conocidos provienen de especímenes juveniles.",
+   "problem": "Erickson et al. (2009) only assumed that all known skeletons are juveniles; the study did not establish it. The sentence turns their working assumption into a general belief.",
+   "correct": "...and the authors assumed that all known skeletons come from juveniles. / ...y los autores asumieron que todos los esqueletos conocidos pertenecen a juveniles.",
+   "checked_in": "enwiki Paleobiology/Growth (\"They also assume that all known skeletons...\"); F118"
+  },
+  {
+   "lang": "both",
+   "severity": "medium",
+   "cause": "invented_contrast",
+   "en_sentence": "In 1960, Swinton proposed placing Archaeopteryx lithographica on the official genera list, rendering alternative names like Griphosaurus and Griphornis invalid, though a 2007 review concluded that two distinct species, A. lithographica and A. siemensii, could be supported based on well-preserved specimens including the Thermopolis find.",
+   "es_sentence": "En 1960, Swinton propuso incluir al Archaeopteryx lithographica en la lista oficial de géneros, invalidando nombres alternativos como Griphosaurus y Griphornis, aunque una revisión de 2007 concluyó que dos especies distintas, A. lithographica y A. siemensii, podían sostenerse basándose en especímenes bien conservados, incluido el hallazgo de Thermopolis.",
+   "problem": "The sentence joins two unrelated topics with 'though': Swinton's 1960 move to conserve the name and a 2007 review of how many species are valid. The 2007 result doesn't qualify the 1960 proposal. It also mentions 'the Thermopolis find', which the page never introduced.",
+   "correct": "In 1960, Swinton proposed adding the name Archaeopteryx lithographica to the ICZN Official List, which would invalidate alternative names such as Griphosaurus and Griphornis. A 2007 review of the well-preserved specimens, including the Thermopolis Specimen described in 2005, concluded that two species could be supported: A. lithographica and A. siemensii.",
+   "checked_in": "F060, F061, F039; enwiki Classification/Nomenclature"
+  },
+  {
+   "lang": "es",
+   "severity": "low",
+   "cause": "es_wrong_term",
+   "en_sentence": "",
+   "es_sentence": "En 1960, Swinton propuso incluir al Archaeopteryx lithographica en la lista oficial de géneros, invalidando nombres alternativos como Griphosaurus y Griphornis, aunque una revisión de 2007 concluyó que dos especies distintas, A. lithographica y A. siemensii, podían sostenerse basándose en especímenes bien conservados, incluido el hallazgo de Thermopolis.",
+   "problem": "'incluir al Archaeopteryx lithographica en la lista oficial de géneros' treats the name as a person (personal 'a') and garbles the ICZN list's name.",
+   "correct": "...propuso incluir el nombre Archaeopteryx lithographica en la Lista Oficial de Nombres Genéricos de la ICZN...",
+   "checked_in": "F060; enwiki Swinton 1960 ref (Opinion 1084, 'official lists')"
+  },
+  {
+   "lang": "en",
+   "severity": "low",
+   "cause": "missing_context",
+   "en_sentence": "In 2007, Phil Senter suggested that Jurapteryx, A. siemensii, and A. bavarica are junior synonyms of A. lithographica, arguing that their diagnostic features can be explained by ontogeny, while John Ostrom considered Archaeopteryx to be remarkably similar to the theropod family Dromaeosauridae.",
+   "es_sentence": "",
+   "problem": "'while' ties John Ostrom's 1970s view to Senter's 2007 synonymy as if they were contemporary and about the same question. Jurapteryx and A. bavarica are also never introduced on the page.",
+   "correct": "Split it into two sentences: 'In 2007, Phil Senter treated Jurapteryx, A. siemensii and A. bavarica, names proposed for individual specimens, as junior synonyms of A. lithographica... In the 1970s, John Ostrom had noted that Archaeopteryx was remarkably similar to dromaeosaurids.'",
+   "checked_in": "F035, F111; enwiki Classification"
+  },
+  {
+   "lang": "es",
+   "severity": "low",
+   "cause": "en_es_mismatch",
+   "en_sentence": "In 2007, Phil Senter suggested that Jurapteryx, A. siemensii, and A. bavarica are junior synonyms of A. lithographica, arguing that their diagnostic features can be explained by ontogeny, while John Ostrom considered Archaeopteryx to be remarkably similar to the theropod family Dromaeosauridae.",
+   "es_sentence": "",
+   "problem": "The Spanish page leaves out the whole Senter 2007 synonymy and Ostrom–dromaeosaurid sentence, so the two languages give different taxonomy content.",
+   "correct": "Add a Spanish counterpart: 'En 2007, Phil Senter consideró Jurapteryx, A. siemensii y A. bavarica sinónimos más modernos de A. lithographica, al atribuir sus rasgos diagnósticos a la ontogenia; en los años setenta, John Ostrom había señalado su gran parecido con los dromeosáuridos.'",
+   "checked_in": "F035, F111; es text section 5"
+  },
+  {
+   "lang": "es",
+   "severity": "low",
+   "cause": "es_calque",
+   "en_sentence": "",
+   "es_sentence": "El Archaeopteryx vivió durante el Jurásico Superior, hace aproximadamente 150 millones de años, con algunas estimaciones que sitúan su rango entre 150 y 148 millones de años atrás.",
+   "problem": "'su rango entre 150 y 148 millones de años atrás' uses 'rango', a calque of 'range'.",
+   "correct": "...con algunas estimaciones que sitúan su intervalo temporal entre hace 150 y 148 millones de años.",
+   "checked_in": "F099; knowledge"
+  },
+  {
+   "lang": "both",
+   "severity": "low",
+   "cause": "source_error",
+   "en_sentence": "A 2011 study used scanning electron microscopy to analyze a single isolated feather, and comparisons with 87 modern bird species led researchers to calculate a 95% likelihood that the analyzed feather was originally black.",
+   "es_sentence": "Un estudio de 2011 empleó microscopía electrónica de barrido para analizar una pluma aislada y, tras compararla con 87 especies de aves modernas, los investigadores calcularon que existía un 95 % de probabilidad de que dicha pluma fuera originalmente negra.",
+   "problem": "The Carney et al. colour study of the isolated feather was published in Nature Communications in January 2012. Wikipedia's '2011' is the year it was announced.",
+   "correct": "A study published in 2012 (Carney et al.)... / Un estudio publicado en 2012 (Carney et al.)...",
+   "checked_in": "enwiki Plumage/colour ref NatureComm (2012, vol. 3, art. 637); knowledge"
+  }
+ ]
+}

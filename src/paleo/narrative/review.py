@@ -475,9 +475,10 @@ def fix_sentences(
             continue
         rows = []
         for i, sent in enumerate(en):
-            if i not in changes:
+            text = _tidy(changes[i].text) if i in changes else sent[0]
+            if text == sent[0]:  # not changed, or returned as it was: keeps its Spanish
                 rows.append((sent, i, False))
-            elif text := _tidy(changes[i].text):
+            elif text:
                 ids = [_canonical_id(x) for x in changes[i].fact_ids]
                 rows.append(((text, ids, sent[2]), i, True))
         report = check(rows, "en")
@@ -494,6 +495,8 @@ def fix_sentences(
         rows = []
     if not rows:
         return "english failed"
+    if len(rows) == len(en) and not any(r[2] for r in rows):
+        return "unchanged"  # every flagged sentence came back as it was
     new_en = [r[0] for r in rows]
 
     # Spanish: the unchanged sentences keep theirs; only the new ones are adapted.

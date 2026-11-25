@@ -125,8 +125,12 @@ def test_flagged_sentences_are_renumbered_after_the_repetitions_left_out():
     assert flagged_now({**record, "repetitions_dropped": 0}, 7)[0]["sentences"] == [3, 6]
 
 
+_SAME = "The animal had a long tail and a small head on a long neck."
+
+
 class FixLLM:
-    """Writes sentence 2 again (fix prompt) and adapts what it gets to Spanish."""
+    """Returns sentence 1 as it was and sentence 2 written again (fix prompt), and
+    adapts what it gets to Spanish."""
 
     label = "fake/writer"
 
@@ -139,7 +143,8 @@ class FixLLM:
 
         self.calls.append(user)
         if output is FixedSentences:
-            return FixedSentences(sentences=[FixedSentence(index=2, text=self.fixed,
+            return FixedSentences(sentences=[FixedSentence(index=1, text=_SAME, fact_ids=["F001"]),
+                                         FixedSentence(index=2, text=self.fixed,
                                                            fact_ids=["F002"])])  # fmt: skip
         n = sum(line[:1].isdigit() for line in user.splitlines())
         return AdaptedText(sentences=[AdaptedSentence(
@@ -186,7 +191,7 @@ def test_only_the_flagged_sentence_is_written_again_in_both_languages(tmp_path):
     from paleo.narrative.review import fix_sentences
 
     en, es = _fix_page(tmp_path)
-    problems = [{"sentences": [1], "kind": "missing_context", "reason": "no hollow spaces before"}]
+    problems = [{"sentences": [0, 1], "kind": "missing_context", "reason": "no hollow spaces"}]
     llm = FixLLM()
     out = fix_sentences(llm, "xus", [], problems, derived_root=tmp_path,
                         scientific_names=set(), ages={})  # fmt: skip
@@ -198,7 +203,7 @@ def test_only_the_flagged_sentence_is_written_again_in_both_languages(tmp_path):
     es_doc, now_es = _texts(tmp_path, "es")
     assert now_es[0] == es[0] and now_es[2:] == es[2:] and now_es[1] != es[1]
     assert es_doc["review"] == "unchanged"
-    assert "TO FIX: sentences 2" in llm.calls[0]
+    assert "TO FIX: sentences 1, 2" in llm.calls[0]
     assert sum("ENGLISH SENTENCES" in c for c in llm.calls) == 1  # only the new one adapted
     assert llm.calls[1].count("\n1. ") == 1 and "\n2. " not in llm.calls[1]
 
@@ -217,3 +222,15 @@ def test_a_new_sentence_that_keeps_failing_is_left_out_after_the_retries(tmp_pat
     assert len(fixes) == 3 and "failed these automatic checks" in fixes[1]
     assert _texts(tmp_path, "en")[1] == [en[0], en[2], en[3]]
     assert _texts(tmp_path, "es")[1] == [es[0], es[2], es[3]]
+
+
+def test_a_fix_that_changes_nothing_leaves_the_files_alone(tmp_path):
+    from paleo.narrative.review import fix_sentences
+
+    _fix_page(tmp_path)
+    before = (tmp_path / "texts" / "xus.en.json").read_text("utf-8")
+    problems = [{"sentences": [0], "kind": "contradiction", "reason": "two sizes"}]
+    out = fix_sentences(FixLLM(), "xus", [], problems, derived_root=tmp_path,
+                        scientific_names=set(), ages={})  # fmt: skip
+    assert out == "unchanged"
+    assert (tmp_path / "texts" / "xus.en.json").read_text("utf-8") == before

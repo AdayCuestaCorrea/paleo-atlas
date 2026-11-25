@@ -255,6 +255,30 @@ def is_page_reviewed(derived_root: Path, key: str, pairs: list[dict[str, Any]]) 
     )
 
 
+MAX_ROUNDS = 2  # a rewritten page is reviewed once more; its fixes are not reviewed again
+
+
+def needs_review(derived_root: Path, key: str, pairs: list[dict[str, Any]]) -> bool:
+    """A page is reviewed when it has no review of its current text and prompt, and once
+    more after a rewrite replaced it (the rewrite may bring its own problems: on the 15
+    pages the whole-page rewrites fixed 14 known problems and added 8)."""
+    if not is_page_reviewed(derived_root, key, pairs):
+        return True
+    doc = page_record(derived_root, key) or {}
+    return doc.get("rewrite") == "replaced" and doc.get("round", 1) < MAX_ROUNDS
+
+
+def next_round(previous: dict[str, Any] | None) -> dict[str, Any]:
+    """The round of a new review and the earlier reviews of the page, oldest first."""
+    if not previous or previous.get("rewrite") != "replaced":
+        return {"round": 1}
+    earlier = previous.get("earlier", [])
+    keep = ("reviewed_at", "problems", "repetitions_dropped", "rewrite", "rewrite_mode",
+            "rewritten_at")  # fmt: skip
+    earlier = [*earlier, {k: previous[k] for k in keep if k in previous}]
+    return {"round": previous.get("round", 1) + 1, "earlier": earlier}
+
+
 def drop_repetitions(derived_root: Path, key: str, problems: list[dict[str, Any]]) -> int:
     """Leave out the later sentences of each repeated claim, in English and in Spanish
     (no model). Within the page's limit of dropped sentences; returns how many."""

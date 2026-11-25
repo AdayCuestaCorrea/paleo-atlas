@@ -234,3 +234,30 @@ def test_a_fix_that_changes_nothing_leaves_the_files_alone(tmp_path):
                         scientific_names=set(), ages={})  # fmt: skip
     assert out == "unchanged"
     assert (tmp_path / "texts" / "xus.en.json").read_text("utf-8") == before
+
+
+def test_a_rewritten_page_is_reviewed_once_more_and_no_more(tmp_path):
+    from paleo.narrative.review import (
+        _text_hash,
+        needs_review,
+        next_round,
+        page_pairs,
+        prompt,
+        save_page_record,
+    )
+
+    _page(tmp_path)
+    pairs = page_pairs(tmp_path, "parasaurolophus")
+    assert needs_review(tmp_path, "parasaurolophus", pairs)  # never reviewed
+    first = {"taxon_key": "parasaurolophus", "prompt_version": prompt("review_page")[1],
+             "text_hash": _text_hash(pairs), "reviewed_at": "t1", "problems": [],
+             "repetitions_dropped": 0, "rewrite": "none", **next_round(None)}  # fmt: skip
+    save_page_record(tmp_path, "parasaurolophus", first)
+    assert first["round"] == 1 and not needs_review(tmp_path, "parasaurolophus", pairs)
+    rewritten = {**first, "rewrite": "replaced", "rewrite_mode": "whole page"}
+    save_page_record(tmp_path, "parasaurolophus", rewritten)
+    assert needs_review(tmp_path, "parasaurolophus", pairs)  # once more after the rewrite
+    second = {**rewritten, "reviewed_at": "t2", "rewrite": "pending", **next_round(rewritten)}
+    assert second["round"] == 2 and second["earlier"][0]["rewrite_mode"] == "whole page"
+    save_page_record(tmp_path, "parasaurolophus", {**second, "rewrite": "replaced"})
+    assert not needs_review(tmp_path, "parasaurolophus", pairs)  # its fixes: not again

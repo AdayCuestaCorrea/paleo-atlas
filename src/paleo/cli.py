@@ -655,8 +655,9 @@ def review_pages(
         if limit is not None and done >= limit:
             break
         pairs = rv.page_pairs(derived, key)
-        if not pairs or rv.is_page_reviewed(derived, key, pairs):
+        if not pairs or not rv.needs_review(derived, key, pairs):
             continue
+        previous = rv.page_record(derived, key)
         start = time.monotonic()
         try:
             problems = rv.review_whole_page(llm, key, pairs)
@@ -672,6 +673,7 @@ def review_pages(
             "reviewed_at": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
             "problems": problems, "repetitions_dropped": n,
             "notes": rv.review_notes(pairs, rest), "rewrite": "pending" if rest else "none",
+            **rv.next_round(previous),
         })  # fmt: skip
         done += 1
         dropped += n

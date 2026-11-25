@@ -11,6 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import re
+from pathlib import Path
 from typing import Any
 
 SCHEDULE = dt.time(6, 23)  # cron of the daily run (pipeline.yml)
@@ -235,3 +236,59 @@ def line_chart(points: list[dict[str, Any]], keys=("en", "es"), height: int = 17
     return {"width": W, "height": height, "lines": lines, "grid": grid,
             "days": [d for i, d in enumerate(days) if i % every == 0 or i == len(days) - 1],
             "axis_y": height - 8}  # fmt: skip
+
+
+# ------------------------------------------------------- how far to trust the texts
+
+_SEVERITY = {"high": 3, "medium": 2, "low": 1}
+
+
+def trust(eval_dir: Path, texts_dir: Path) -> dict[str, Any] | None:
+    """Error rate of the texts measured on the 15 hand-reviewed pages (eval/fichas,
+    ALCANCE Phase 7): sentences with a problem from that review, at the review and
+    now (the last outcome of each finding in results.csv, over today's texts).
+    A sentence counts once, at its worst severity. None without the evaluation set."""
+    import csv
+
+    paths = [eval_dir / f"{n}.csv" for n in ("findings", "results", "pages")]
+    if not all(p.exists() for p in paths):
+        return None
+    findings, results, pages = (list(csv.DictReader(p.open(encoding="utf-8"))) for p in paths)
+    outcome = {r["id"]: r["outcome"] for r in results}  # rows are in date order
+    text = [f for f in findings if f["element"] == "text"]
+
+    def rates(still_open: Any, totals: dict[str, int]) -> dict[str, dict[str, Any]]:
+        out = {}
+        for lang in ("en", "es"):
+            worst: dict[tuple[str, str], int] = {}
+            for f in text:
+                if f["lang"] in (lang, "both") and still_open(f):
+                    for sentence in filter(None, f[f"{lang}_sentences"].split(" || ")):
+                        key = (f["taxon_key"], sentence)
+                        worst[key] = max(worst.get(key, 0), _SEVERITY[f["severity"]])
+            n = totals[lang]
+            counts = [sum(1 for s in worst.values() if s >= level) for level in (3, 2, 1)]
+            shares = zip(("high", "medium", "any"), counts, strict=True)
+            out[lang] = {
+                "sentences": n,
+                **{k: round(100 * c / n, 1) if n else 0.0 for k, c in shares},
+            }
+        return out
+
+    before = {lang: sum(int(p[f"{lang}_sentences"]) for p in pages) for lang in ("en", "es")}
+    now = {"en": 0, "es": 0}
+    for p in pages:
+        for lang in ("en", "es"):
+            path = texts_dir / f"{p['taxon_key']}.{lang}.json"
+            if path.exists():
+                doc = json.loads(path.read_text(encoding="utf-8"))
+                now[lang] += sum(len(s["sentences"]) for s in doc.get("sections", []))
+    gone = ("fixed", "mitigated")
+    return {
+        "pages": len(pages),
+        "findings": len(findings),
+        "text_findings": len(text),
+        "text_fixed": sum(1 for f in text if outcome.get(f["id"]) in gone),
+        "before": rates(lambda f: True, before),
+        "now": rates(lambda f: outcome.get(f["id"], "open") not in gone, now),
+    }

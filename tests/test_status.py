@@ -185,3 +185,36 @@ def test_status_page_explains_known_warnings_and_names_unknown_ones(builder):
     assert "aún no están en PBDB: 3" in es
     assert "<code>some_new_check</code>" in es
     assert "brand_new/kind" in es  # an unknown source is named, not hidden
+
+
+def test_trust_counts_each_sentence_once_at_its_worst_severity(tmp_path):
+    import json
+
+    ev, texts = tmp_path / "eval", tmp_path / "texts"
+    ev.mkdir()
+    texts.mkdir()
+    head = (
+        "id,taxon_key,severity,lang,element,cause,find,problem,correct,checked_in,"
+        "en_sentences,es_sentences\n"
+    )
+    (ev / "findings.csv").write_text(head
+        + "a-01,a,high,both,text,x,,,,,S1,E1\n"
+        + "a-02,a,low,en,text,x,,,,,S1 || S2,\n"
+        + "a-03,a,medium,es,text,x,,,,,,E3\n"
+        + "a-04,a,high,both,header_age,x,,,,,,\n", encoding="utf-8")  # fmt: skip
+    (ev / "results.csv").write_text("id,step,date,outcome,note\n"
+        "a-01,2,d,open,\na-01,6,d,fixed,\na-03,6,d,open,\n", encoding="utf-8")  # fmt: skip
+    (ev / "pages.csv").write_text("taxon_key,en_generated_at,en_sentences,facts_hash,en_flagged,"
+        "es_generated_at,es_sentences,es_flagged\na,,10,,,,10,\n", encoding="utf-8")  # fmt: skip
+    for lang, n in (("en", 8), ("es", 5)):
+        doc = {"sections": [{"sentences": [{"text": "x"}] * n}]}
+        (texts / f"a.{lang}.json").write_text(json.dumps(doc), encoding="utf-8")
+    t = status.trust(ev, texts)
+    assert t["text_findings"] == 3 and t["text_fixed"] == 1
+    # before: EN S1 high, S2 low; ES E1 high, E3 medium (of 10 sentences each)
+    assert t["before"]["en"] == {"sentences": 10, "high": 10.0, "medium": 10.0, "any": 20.0}
+    assert t["before"]["es"] == {"sentences": 10, "high": 10.0, "medium": 20.0, "any": 20.0}
+    # now a-01 is fixed: EN S1 and S2 low (a-02 has no outcome, so open); ES E3 medium
+    assert t["now"]["en"] == {"sentences": 8, "high": 0.0, "medium": 0.0, "any": 25.0}
+    assert t["now"]["es"] == {"sentences": 5, "high": 0.0, "medium": 20.0, "any": 20.0}
+    assert status.trust(tmp_path / "missing", texts) is None

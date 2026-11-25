@@ -96,6 +96,30 @@
     </div>
   </div>
 
+  {% if trust %}
+  <section class="st-card st-trust" id="fiarse">
+    <h2>{{ T.trust_title }}</h2>
+    <p>{{ T.trust_how | md }}</p>
+    <table class="st-trust-table">
+      <caption>{{ t('trust_caption', pages=trust.pages) }}</caption>
+      <thead><tr><th scope="col"></th><th scope="col">{{ T.trust_en }}</th><th scope="col">{{ T.trust_es }}</th></tr></thead>
+      <tbody>
+        {% for key in ('high', 'medium', 'any') %}
+        <tr><th scope="row">{{ T['trust_' ~ key] }}</th>
+          {% for lang in ('en', 'es') %}<td><s>{{ num(trust.before[lang][key]) }} %</s> → <b>{{ num(trust.now[lang][key]) }} %</b></td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.text_findings, fixed=trust.text_fixed) | md }}</p>
+    <div class="st-grid2">
+      <div><h3>{{ T.trust_catches }}</h3><ul>{% for i in range(1, 6) %}<li>{{ T['trust_catch_' ~ i] | md }}</li>{% endfor %}</ul></div>
+      <div><h3>{{ T.trust_misses }}</h3><ul>{% for i in range(1, 4) %}<li>{{ T['trust_miss_' ~ i] | md }}</li>{% endfor %}</ul></div>
+    </div>
+    <p>{{ T.trust_report }} <a href="{{ issues_url }}?template=error-report.yml" target="_blank" rel="noopener">{{ T.trust_report_link }}</a></p>
+  </section>
+  {% endif %}
+
   <section class="st-card st-log" data-runs>
     <div class="st-head">
       <h2>{{ T.status_log }}</h2>

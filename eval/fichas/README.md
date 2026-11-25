@@ -93,3 +93,22 @@ On the 15 pages, 10 were rewritten and 5 only lost repeated sentences or weren't
   - *Velociraptor*'s claws compared with bird wing bones.
 
 **Net effect.** About 14 problems gone against 3 new medium and 5 new low ones. *Archaeopteryx*'s page went from 32 to 19 sentences, so a rewrite can also lose content. The Spanish of the new sentences was not reviewed by hand.
+
+**Step 5, flagged sentences only (2026-11-25):** after nights 8 and 9, the rewrites change only the sentences the reviewer flagged (`paleo review rewrite`; the old way is `--whole-page`).
+
+The remaining 290 pages took 10 minutes:
+- 151 replaced;
+- 135 unchanged, because the model returned every flagged sentence as it was;
+- 4 failed in Spanish.
+
+The fixes are good at missing context ("the juvenile specimen" now names whose it is), but rarely solve contradictions.
+
+I checked 18 replaced pages, drawn at random, by hand:
+- **11 clearly better** and 4 about the same.
+- **4 with a new problem:**
+  - *Atlantosuchus*: the Spanish said "Eoceno Superior" where the English says Late Palaeocene.
+  - *Diogenornis*: "with recent estimates" is invented.
+  - *Gondwanasuchus*: "baurusáuridos" instead of "baurusúquidos".
+  - *Camarillasaurus*: two sentences now repeat the reinterpretation.
+
+The *Atlantosuchus* error led to a new alignment rule: a Spanish sentence may not name a period that its English sentence doesn't name. It also recognises the British spelling Palaeocene, Mississippian and Pennsylvanian, and Paleogene, Neogene and Tertiary. Run over every page, it left out 4 wrong Spanish sentences: *Atlantosuchus*, *Lithornis*, *Presbyornis* and *Antliodus*.

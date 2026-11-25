@@ -710,11 +710,45 @@ _ES_PART_BEFORE = {"principios": "E", "inicios": "E", "comienzos": "E", "mediado
                    "finales": "L", "final": "L"}  # fmt: skip
 
 
+# The North American subperiods of the Carboniferous, as its parts in Spanish.
+_SUBPERIODS = {"Mississippian": ("carbonifero", "E"), "Pennsylvanian": ("carbonifero", "L")}
+
+
+_TERTIARY = {"paleoceno", "eoceno", "oligoceno", "mioceno", "plioceno"}
+_WIDER = {
+    r"\bPaleogene\b": {"paleoceno", "eoceno", "oligoceno"},
+    r"\bNeogene\b": {"mioceno", "plioceno"},
+    r"\bTertiary\b": _TERTIARY,
+    r"\bEo-Oligocene\b": {"eoceno", "oligoceno"},
+}
+
+
+def _paleo(text: str) -> str:
+    return re.sub(r"\bPalaeo", "Paleo", text)  # British spelling: "Palaeocene"
+
+
+def periods_en(text: str) -> set[str]:
+    """Periods and epochs an English sentence names (as in _PERIODS' values)."""
+    text = _paleo(text)
+    found = {v for k, v in _PERIODS.items() if re.search(rf"\b{k}\b", text)}
+    found |= {p for k, (p, _) in _SUBPERIODS.items() if re.search(rf"\b{k}\b", text)}
+    for name, epochs in _WIDER.items():  # the K-Pg boundary is the start of the Paleocene
+        if re.search(name, text):
+            found |= epochs
+    return found
+
+
+def periods_es(text: str) -> set[str]:
+    folded = _fold(text)
+    return {v for v in _PERIODS.values() if re.search(rf"\b{v}\b", folded)}
+
+
 def epochs_en(text: str) -> set[tuple[str, str]]:
-    """(period, E/M/L) of "Late Cretaceous", "Lower Jurassic"…"""
+    """(period, E/M/L) of "Late Cretaceous", "Lower Jurassic", "Pennsylvanian"…"""
+    text = _paleo(text)
     names = "|".join(_PERIODS)
     part = r"(?:Early|Lower|Middle|Late|Upper)"
-    found = set()
+    found = {v for k, v in _SUBPERIODS.items() if re.search(rf"\b{k}\b", text)}
     # Ranges too: "Middle to Late Eocene", "Early or Middle Miocene", "Early-Middle".
     for m in re.finditer(rf"\b({part}(?:\s*(?:to|or|and|-|\u2013)\s*{part})?) ({names})\b", text):
         for q in re.findall(part, m[1]):
@@ -963,6 +997,11 @@ def _align_one(src: str, dst: str, scientific_names: set[str]) -> list[str]:
         e for e in epochs_es(dst) - en_epochs if any(p == e[0] for p, _ in en_epochs)
     ):
         problems.append(f"other part of the period {wrong} (English: {sorted(en_epochs)})")
+    # a sentence about the Palaeocene adapted as "Eoceno Superior" (found 2026-11-25)
+    if (en_periods := periods_en(src)) and (other := sorted(periods_es(dst) - en_periods)):
+        problems.append(
+            f"period not in the English sentence {other} (English: {sorted(en_periods)})"
+        )
     if swapped := clade_swaps(src, dst):
         problems.append(f"clade swapped for another {swapped}")
     if lost := words_lost(src, dst):

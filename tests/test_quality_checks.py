@@ -75,6 +75,34 @@ def test_spanish_that_changes_the_meaning():
                         "Se publicó en The Science of Nature.")  # fmt: skip
 
 
+def test_spanish_that_names_another_period():
+    def bad(en, es):
+        return [p for p in _align_one(en, es, set()) if "period" in p]
+
+    # found on 2026-11-25: Palaeocene (British spelling) adapted as Eocene, and back
+    assert bad("It lived during the Late Palaeocene, within the Danian stage.",
+               "Vivió durante el Eoceno Superior, dentro del piso daniano.")  # fmt: skip
+    assert bad("Fossils come from Early Eocene London Clay deposits.",
+               "Los fósiles proceden de la arcilla de Londres del Paleoceno Inferior.")  # fmt: skip
+    # the Mississippian is the Lower Carboniferous
+    assert bad("Fossils were found in Mississippian deposits of Belgium.",
+               "Se hallaron fósiles en depósitos del Carbonífero Superior de Bélgica.")  # fmt: skip
+    # naming the period of a stage the English gives is fine, and so are the right ones
+    assert not bad("It lived during the Late Maastrichtian stage.",
+                   "Vivió durante el piso maastrichtiense del Cretácico Superior.")  # fmt: skip
+    assert not bad("It lived during the Pennsylvanian and Permian periods.",
+                   "Vivió durante el Carbonífero Superior y el Pérmico.")  # fmt: skip
+    assert not bad("It lived in the Late Palaeocene.", "Vivió en el Paleoceno Superior.")
+    assert not bad(
+        "A jaw found at the Cretaceous-Paleogene boundary.",
+        "Una mandíbula hallada en el límite entre el Cretácico y el Paleoceno.",
+    )
+    assert not bad(
+        "Fossils date from the Eo-Oligocene boundary.",
+        "Los fósiles proceden del límite entre el Eoceno y el Oligoceno.",
+    )
+
+
 def test_clade_word_put_at_the_english_rank():
     fixed = fix_clade_rank(
         "Entradasuchus was a crocodyliform.", "Entradasuchus era un cocodrilomorfo."

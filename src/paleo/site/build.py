@@ -453,7 +453,8 @@ class SiteBuilder:
             + (data.stats or {}).get("unchecked_studies", 0),
             "event_total": sum(events.values()),
             "taxa_total": len(data.taxa),
-            "trust": status.trust(project_root() / "eval" / "fichas" / "review2"),
+            "trust": status.trust(project_root() / "eval" / "fichas" / "sample1"),
+            "trust_famous": status.trust(project_root() / "eval" / "fichas" / "review2"),
             "issues_url": ISSUES_URL,
         }
 

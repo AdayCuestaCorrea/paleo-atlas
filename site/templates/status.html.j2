@@ -101,17 +101,20 @@
     <h2>{{ T.trust_title }}</h2>
     <p>{{ T.trust_how | md }}</p>
     <table class="st-trust-table">
-      <caption>{{ t('trust_caption', pages=trust.pages) }}</caption>
-      <thead><tr><th scope="col"></th><th scope="col">{{ T.trust_en }}</th><th scope="col">{{ T.trust_es }}</th></tr></thead>
+      <caption>{{ T.trust_caption }}</caption>
+      <thead>
+        <tr><th scope="col" rowspan="2"></th><th scope="colgroup" colspan="2">{{ t('trust_random', pages=trust.pages) }}</th>{% if trust_famous %}<th scope="colgroup" colspan="2">{{ t('trust_famous', pages=trust_famous.pages) }}</th>{% endif %}</tr>
+        <tr>{% for _ in range(2 if trust_famous else 1) %}<th scope="col">{{ T.trust_en }}</th><th scope="col">{{ T.trust_es }}</th>{% endfor %}</tr>
+      </thead>
       <tbody>
         {% for key in ('high', 'medium', 'any') %}
         <tr><th scope="row">{{ T['trust_' ~ key] }}</th>
-          {% for l in ('en', 'es') %}<td><b>{{ ('%.1f' % trust.rates[l][key]) | replace('.', ',' if lang == 'es' else '.') }} %</b></td>{% endfor %}
+          {% for r in [trust, trust_famous] if r %}{% for l in ('en', 'es') %}<td><b>{{ ('%.1f' % r.rates[l][key]) | replace('.', ',' if lang == 'es' else '.') }} %</b></td>{% endfor %}{% endfor %}
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.findings, high=trust.severities.high, medium=trust.severities.medium, open=trust.open) | md }}</p>
+    <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.findings, high=trust.severities.high, medium=trust.severities.medium, famous=trust_famous.pages if trust_famous else 0) | md }}</p>
     <div class="st-grid2">
       <div><h3>{{ T.trust_catches }}</h3><ul>{% for i in range(1, 6) %}<li>{{ T['trust_catch_' ~ i] | md }}</li>{% endfor %}</ul></div>
       <div><h3>{{ T.trust_misses }}</h3><ul>{% for i in range(1, 4) %}<li>{{ T['trust_miss_' ~ i] | md }}</li>{% endfor %}</ul></div>

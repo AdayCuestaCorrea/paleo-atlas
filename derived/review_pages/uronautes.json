@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "43d64f0962b27da5",
- "reviewed_at": "2026-11-24T01:43:55+00:00",
+ "reviewed_at": "2026-11-25T13:56:54+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,22 +11,41 @@
     6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims Uronautes is closely related to rhomaleosaurids (Jurassic group), while sentence 7 states it lived in the Late Cretaceous, a temporal mismatch."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to “the specimen the species is based on” without naming or describing the specimen, leaving the reference unclear."
+   "reason": "Rhomaleosaurids are Early Jurassic, yet the text states Uronautes lived in the Late Cretaceous."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Uronautes was a short-necked plesiosaur, a marine reptile closely related to other rhomaleosaurids.\" / \"Uronautes lived during the Late Cretaceous period in the United States.\": Sentence 1 claims Uronautes is closely related to rhomaleosaurids (Jurassic group), while sentence 7 states it lived in the Late Cretaceous, a temporal mismatch.",
-  "- missing context: \"The type species of the genus is Uronautes cetiformis, the specimen the species is based on.\": Sentence 6 refers to “the specimen the species is based on” without naming or describing the specimen, leaving the reference unclear."
+  "- contradiction: \"Uronautes was a short-necked plesiosaur, similar to other rhomaleosaurids.\" / \"Uronautes lived during the Late Cretaceous period in the United States.\": Rhomaleosaurids are Early Jurassic, yet the text states Uronautes lived in the Late Cretaceous."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:43:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims Uronautes is closely related to rhomaleosaurids (Jurassic group), while sentence 7 states it lived in the Late Cretaceous, a temporal mismatch."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to “the specimen the species is based on” without naming or describing the specimen, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:28:04+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:28:04+00:00"
+ "rewritten_at": "2026-11-25T14:32:16+00:00"
 }

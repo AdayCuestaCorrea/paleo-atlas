@@ -2,29 +2,49 @@
  "taxon_key": "leonerasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b9b8fa9f1a9b384c",
- "reviewed_at": "2026-11-24T00:37:01+00:00",
+ "text_hash": "2c1eb585e2b51789",
+ "reviewed_at": "2026-11-25T13:31:47+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    15
+    12,
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that convergent evolution played a major role in the evolution of early sauropodomorphs."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"It\" in sentence 16 refers to an antecedent that is not explicitly mentioned in the preceding sentences, leaving the reader unclear about what is being debated."
+   "kind": "contradiction",
+   "reason": "Sentence 13 states the animal lived during the Sinemurian stage (~190 Ma, Early Jurassic), while sentence 14 suggests it may have lived in the Late Triassic, directly conflicting on the age of the species."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated whether Leonerasaurus lived in the Late Triassic, as the lower age limit of the Las Leoneras Formation is not well-defined, and it is suggested that the evolution of primitive sauropodomorphs involved significant convergent evolution among diverse lineages.\": The pronoun \"It\" in sentence 16 refers to an antecedent that is not explicitly mentioned in the preceding sentences, leaving the reader unclear about what is being debated."
+  "- contradiction: \"The animal lived approximately 190 million years ago during the Sinemurian stage in what is now South America.\" / \"It is debated whether Leonerasaurus lived in the Late Triassic, as the lower age limit of the Las Leoneras Formation is not well-defined.\": Sentence 13 states the animal lived during the Sinemurian stage (~190 Ma, Early Jurassic), while sentence 14 suggests it may have lived in the Late Triassic, directly conflicting on the age of the species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:53:43+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:37:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that convergent evolution played a major role in the evolution of early sauropodomorphs."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"It\" in sentence 16 refers to an antecedent that is not explicitly mentioned in the preceding sentences, leaving the reader unclear about what is being debated."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:53:43+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:27+00:00"
 }

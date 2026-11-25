@@ -2,30 +2,76 @@
  "taxon_key": "coelurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d59249edd6f77de4",
- "reviewed_at": "2026-11-24T00:09:04+00:00",
+ "text_hash": "6e75fe34e51190b6",
+ "reviewed_at": "2026-11-25T13:17:54+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    14,
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 classifies Coelurus as a coelurosaurian, while sentence 13 states it is a ceratosaurian."
+   "reason": "Different age ranges for the same species"
   },
   {
    "sentences": [
-    6,
+    8,
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Same dietary claim repeated"
+  },
+  {
+   "sentences": [
+    5,
     10
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that only one species, C. fragilis, is valid for the genus."
+   "reason": "Same statement about only valid species"
+  },
+  {
+   "sentences": [
+    11,
+    12,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Conflicting taxonomic placement: coelurosaurian vs ceratosaurian"
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Since the 1980s, Coelurus has generally been classified as a coelurosaurian with uncertain affinities that does not fit well into better-known Cretaceous clades.\" / \"Coelurus is the only known species of the extinct Coelurus genus, a ceratosaurian dinosaur.\": Sentence 12 classifies Coelurus as a coelurosaurian, while sentence 13 states it is a ceratosaurian."
+  "- contradiction: \"Coelurus lived during the Late Jurassic period, specifically between 155 and 152 million years ago.\" / \"Coelurus lived during the late Jurassic Period, approximately 152 to 145 million years ago, between the Kimmeridgian and Tithonian stages.\": Different age ranges for the same species",
+  "- contradiction: \"Since the 1980s, Coelurus has generally been classified as a coelurosaurian with uncertain affinities that does not fit well into better-known Cretaceous clades.\" / \"Coelurus is the only known species of the extinct Coelurus genus, a ceratosaurian dinosaur.\" / \"Coelurus belongs to the parent group Coelurosauria.\": Conflicting taxonomic placement: coelurosaurian vs ceratosaurian"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:55:34+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:09:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 classifies Coelurus as a coelurosaurian, while sentence 13 states it is a ceratosaurian."
+    },
+    {
+     "sentences": [
+      6,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that only one species, C. fragilis, is valid for the genus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:55:34+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:05:13+00:00"
 }

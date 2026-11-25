@@ -2,46 +2,86 @@
  "taxon_key": "itasuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ae596df913180dfe",
- "reviewed_at": "2026-11-24T00:04:25+00:00",
+ "text_hash": "6fe3672df57015e3",
+ "reviewed_at": "2026-11-25T13:15:28+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    14
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Type species described from Marília Formation in sentence 13, but sentence 15 states fossils were originally found in Serra da Galga Formation."
+   "kind": "repetition",
+   "reason": "Sentence 3 repeats the same information about Price describing the genus twice."
   },
   {
    "sentences": [
-    10,
-    23
+    4
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Price described the genus in 1955."
+   "reason": "Sentence 5 repeats the establishment of the family Itasuchidae and its authorship twice."
   },
   {
    "sentences": [
-    24,
-    25
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Carvalho and colleagues coining the family Itasuchidae in 2004."
+   "kind": "missing_context",
+   "reason": "Sentence 4 mentions a laterally flattened tail without any prior description of the tail in the page."
   },
   {
    "sentences": [
-    26,
-    27
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Pinheiro and colleagues redefining the clade Itasuchidae in 2018."
+   "kind": "about_something_else",
+   "reason": "Sentence 6 discusses the climate of the environment, which is about the surroundings rather than the animal itself."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type species, Itasuchus jesuinoi, was described from Maastrichtian-aged rocks in the Marília Formation of Uberaba, Brazil.\" / \"Fossils of the type species were originally found in the Serra da Galga Formation.\": Type species described from Marília Formation in sentence 13, but sentence 15 states fossils were originally found in Serra da Galga Formation."
+  "- missing context: \"Itasuchus is interpreted as a semi-aquatic animal, with osteoderms cited as evidence for this lifestyle. Marinho and colleagues argue that the keels on Itasuchus osteoderms made the animal hydrodynamic and stable when submerged. The laterally flattened tail and shifted keels effectively created a paddle. Marinho and colleagues hypothesize that Itasuchus had difficulty moving on land due to its heavy armor. The large surface area of Itasuchus osteoderms likely helped it absorb heat efficiently and become active quickly.\": Sentence 4 mentions a laterally flattened tail without any prior description of the tail in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:14:20+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:04:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Type species described from Marília Formation in sentence 13, but sentence 15 states fossils were originally found in Serra da Galga Formation."
+    },
+    {
+     "sentences": [
+      10,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Price described the genus in 1955."
+    },
+    {
+     "sentences": [
+      24,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Carvalho and colleagues coining the family Itasuchidae in 2004."
+    },
+    {
+     "sentences": [
+      26,
+      27
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Pinheiro and colleagues redefining the clade Itasuchidae in 2018."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:14:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:24+00:00"
 }

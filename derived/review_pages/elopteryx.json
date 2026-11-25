@@ -2,31 +2,66 @@
  "taxon_key": "elopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8740d895812831fb",
- "reviewed_at": "2026-11-24T00:35:58+00:00",
+ "text_hash": "6d10ac8f6b80360a",
+ "reviewed_at": "2026-11-25T13:31:06+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    7,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 claims the specimens were moved to a new family Bradycnemidae and described as gigantic two‑meter‑tall owls, while sentence 6 states that the bones actually belong to non‑avian dinosaurs."
+   "reason": "Sentence 8 classifies Elopteryx as a member of Maniraptora and Paraves, while sentence 9 lists its parent group as Alvarezsauridae, which is not within Paraves."
   },
   {
    "sentences": [
-    8,
-    9
+    9,
+    12,
+    14
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 lists Elopteryx’s parent group as Alvarezsauridae, whereas sentence 10 places it within Avialae, a different clade."
+   "kind": "repetition",
+   "reason": "All three sentences state that Elopteryx may be synonymous with Balaur bondoc."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 4 discusses the family Bradycnemidae and describes it as gigantic two‑meter‑tall owls, which is a statement about the family rather than about Elopteryx itself."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"In 1975, Harrison and Walker moved several specimens to the new family Bradycnemidae, describing them as gigantic two-meter-tall owls.\" / \"By 1978, Pierce Brodkorb proposed that these bones actually belonged to non-avian dinosaurs.\": Sentence 5 claims the specimens were moved to a new family Bradycnemidae and described as gigantic two‑meter‑tall owls, while sentence 6 states that the bones actually belong to non‑avian dinosaurs.",
-  "- contradiction: \"The Paleobi Database currently lists its parent group as Alvarezsauridae.\" / \"A 2024 study by Stoicescu and colleagues argued Elopteryx is a paravian member of Avialae and that Balaur bondoc is likely a junior synonym.\": Sentence 9 lists Elopteryx’s parent group as Alvarezsauridae, whereas sentence 10 places it within Avialae, a different clade."
+  "- contradiction: \"Since the 21st century, most studies have classified Elopteryx as a member of the Maniraptora and Paraves.\" / \"The Paleobi Database lists the parent group of Elopteryx as Alvarezsauridae.\": Sentence 8 classifies Elopteryx as a member of Maniraptora and Paraves, while sentence 9 lists its parent group as Alvarezsauridae, which is not within Paraves."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:42:47+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims the specimens were moved to a new family Bradycnemidae and described as gigantic two‑meter‑tall owls, while sentence 6 states that the bones actually belong to non‑avian dinosaurs."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 lists Elopteryx’s parent group as Alvarezsauridae, whereas sentence 10 places it within Avialae, a different clade."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:42:47+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:51+00:00"
 }

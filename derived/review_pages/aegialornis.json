@@ -3,21 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4e039c3fd4d2dcc4",
- "reviewed_at": "2026-11-24T01:39:21+00:00",
+ "reviewed_at": "2026-11-25T13:56:04+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    12
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 claims remains span Early to Late Eocene, while sentence 11 limits the time range to 41.03–37.71 Ma, which corresponds only to the Late Eocene."
+   "kind": "about_something_else",
+   "reason": "Sentence discusses the classification of Cypselavus, a different genus, not Aegialornis itself."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence addresses the controversial inclusion of the Jungornithidae family in Aegialornithidae, a taxonomic issue rather than a statement about the animal itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Remains of these birds date from the Early to Late Eocene epoch.\" / \"Scientists estimate their time range falls between 41.03 and 37.71 million years ago.\": Sentence 10 claims remains span Early to Late Eocene, while sentence 11 limits the time range to 41.03–37.71 Ma, which corresponds only to the Late Eocene."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:45:13+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:39:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims remains span Early to Late Eocene, while sentence 11 limits the time range to 41.03–37.71 Ma, which corresponds only to the Late Eocene."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:45:13+00:00"
+  }
+ ]
 }

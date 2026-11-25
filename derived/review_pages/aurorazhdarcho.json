@@ -2,44 +2,71 @@
  "taxon_key": "aurorazhdarcho",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7e505024da43732f",
- "reviewed_at": "2026-11-24T00:36:15+00:00",
+ "text_hash": "5db8095108f03ac1",
+ "reviewed_at": "2026-11-25T13:31:17+00:00",
  "problems": [
   {
    "sentences": [
-    2,
+    6,
+    8,
     12
    ],
+   "kind": "contradiction",
+   "reason": "The page alternately names the type species as Aurorazhdarcho primordius (sentences 9, 13) and as Aurorazhdarcho micronyx (sentence 7), and gives conflicting dates for the holotype (1757‑1779 vs 2011)."
+  },
+  {
+   "sentences": [
+    10
+   ],
    "kind": "repetition",
-   "reason": "Both sentences describe the holotype skeleton as a nearly complete specimen preserved on a single slab."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"missing skull and neck elements\" without having previously introduced that these elements are missing."
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "missing_context",
-   "reason": "It mentions \"fused ischiopubes\" and the absence of a wide birth canal without prior context explaining these anatomical features."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "about_something_else",
-   "reason": "It states the genus holds the distinction of being the oldest known azhdarchoid, which is a classification claim rather than a direct attribute of the animal itself."
+   "reason": "Sentence 11 repeats the same claim about the holotype being a subadult male, citing fused ischiopubes and lack of a wide egg‑laying canal twice."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The missing skull and neck elements are visible as impressions because their movement on the lake floor left a natural mold covered by organic remains, and subsequent swelling of the carcass may have caused the head to drift away.\": The sentence refers to \"missing skull and neck elements\" without having previously introduced that these elements are missing.",
-  "- missing context: \"Evidence suggests the animal died after a predator attack that nearly ripped off its head and neck, causing the body to sink quickly, and the individual was likely a subadult male indicated by fused ischiopubes and the absence of a wide birth canal.\": It mentions \"fused ischiopubes\" and the absence of a wide birth canal without prior context explaining these anatomical features."
+  "- contradiction: \"The holotype specimen of Aurorazhdarcho micronyx is considered one of the earliest, if not the very first, documented pterosaur fossils ever found, likely unearthed between 1757 and 1779.\" / \"The species Aurorazhdarcho primordius was named and described in 2011 by Eberhard Frey, Christian A. Meyer, and Helmut Tischlinger from the holotype specimen, NMB Sh 110, found in the upper part of the Eichstätt Formation dating to the early Tithonian of the Late Jurassic, about 150 million years ago.\" / \"The genus authority is Frey, Meyer & Tischlinger, 2011, the type species is Aurorazhdarcho micronyx, and synonyms include Pterodactylus micronyx von Meyer, 1856 and Aurorazhdarcho primordius Frey et al., 2011.\": The page alternately names the type species as Aurorazhdarcho primordius (sentences 9, 13) and as Aurorazhdarcho micronyx (sentence 7), and gives conflicting dates for the holotype (1757‑1779 vs 2011)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:46:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the holotype skeleton as a nearly complete specimen preserved on a single slab."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"missing skull and neck elements\" without having previously introduced that these elements are missing."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "missing_context",
+     "reason": "It mentions \"fused ischiopubes\" and the absence of a wide birth canal without prior context explaining these anatomical features."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "about_something_else",
+     "reason": "It states the genus holds the distinction of being the oldest known azhdarchoid, which is a classification claim rather than a direct attribute of the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:46:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:03+00:00"
 }

@@ -2,8 +2,8 @@
  "taxon_key": "taohelong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a321c4f53acff22a",
- "reviewed_at": "2026-11-24T01:34:44+00:00",
+ "text_hash": "eb55cec23a24de16",
+ "reviewed_at": "2026-11-25T13:54:44+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,7 +11,7 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentences 11 and 12 give conflicting age ranges for Taohelong – 113–110 Ma versus 125.77–113.2 Ma."
+   "reason": "Different age ranges for the same species"
   },
   {
    "sentences": [
@@ -19,13 +19,48 @@
     6
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Taohelong was named and described in 2013 by the same authors, repeating the same information."
+   "reason": "Both sentences state the 2013 naming of Taohelong with slightly different author spellings"
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes a sauropod found near the site, not about Taohelong itself"
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Taohelong jinchengensis lived during the mid-Cretaceous, approximately 113 to 110 million years ago in the Aptian stage, in what is now Asia.\" / \"Taohelon lived from the Barremian to the Aptian, spanning from 125.77 to 113.2 million years ago.\": Sentences 11 and 12 give conflicting age ranges for Taohelong – 113–110 Ma versus 125.77–113.2 Ma."
+  "- contradiction: \"Taohelong jinchengensis lived during the mid-Cretaceous, approximately 113 to 110 million years ago in the Aptian stage, in what is now Asia.\" / \"Other estimates suggest Taohelon lived from the Barremian to the Aptian, spanning from 125.77 to 113.2 million years ago.\": Different age ranges for the same species"
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:27:52+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:34:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 11 and 12 give conflicting age ranges for Taohelong – 113–110 Ma versus 125.77–113.2 Ma."
+    },
+    {
+     "sentences": [
+      4,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Taohelong was named and described in 2013 by the same authors, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:27:52+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:44+00:00"
 }

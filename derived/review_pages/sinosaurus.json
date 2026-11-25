@@ -2,31 +2,60 @@
  "taxon_key": "sinosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4f678c22792460e7",
- "reviewed_at": "2026-11-24T00:13:33+00:00",
+ "text_hash": "b7026119098e2e02",
+ "reviewed_at": "2026-11-25T13:20:18+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    19,
-    20
+    9,
+    11
    ],
-   "kind": "contradiction",
-   "reason": "The three sentences give mutually incompatible time ranges for Sinosaurus’s existence."
+   "kind": "repetition",
+   "reason": "Both sentences state that Sinosaurus could have been either a carnivore or a scavenger based on jaw power estimates."
   },
   {
    "sentences": [
-    11,
-    12
+    17,
+    18,
+    21
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same claim that jaw power estimates suggest Sinosaurus could have been either a carnivore or a scavenger."
+   "kind": "contradiction",
+   "reason": "The three sentences give conflicting age ranges for Sinosaurus: 196–183 Ma, 196–189 Ma, and 201.4–192.9 Ma."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Sinosaurus lived during the Sinemurian stage of the Jurassic period, approximately 196 to 183 million years ago.\" / \"Sinosaurus lived at the beginning of the Jurassic period, from the Sinemurian to Pliensbachian stages, approximately 196 to 189 million years ago.\" / \"Sinosaurus lived from the Hettangian to the Sinemurian stages, between 201.4 and 192.9 million years ago.\": The three sentences give mutually incompatible time ranges for Sinosaurus’s existence."
+  "- contradiction: \"Sinosaurus lived during the Sinemurian stage of the Jurassic period, approximately 196 to 183 million years ago.\" / \"Sinosaurus lived at the beginning of the Jurassic period, from the Sinemurian to Pliensbachian stages, approximately 196 to 189 million years ago.\" / \"Sinosaurus lived from the Hettangian to the Sinemurian stages, between 201.4 and 192.9 million years ago.\": The three sentences give conflicting age ranges for Sinosaurus: 196–183 Ma, 196–189 Ma, and 201.4–192.9 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:34:24+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:13:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "The three sentences give mutually incompatible time ranges for Sinosaurus’s existence."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same claim that jaw power estimates suggest Sinosaurus could have been either a carnivore or a scavenger."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:34:24+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:14+00:00"
 }

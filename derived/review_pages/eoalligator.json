@@ -2,30 +2,92 @@
  "taxon_key": "eoalligator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a46b42b8c7d3955d",
- "reviewed_at": "2026-11-24T00:14:16+00:00",
+ "text_hash": "d5f36362bb580757",
+ "reviewed_at": "2026-11-25T13:20:44+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    20
+    24,
+    25
    ],
    "kind": "contradiction",
-   "reason": "Sentence 18 states Eoalligator moved from alligatorine to crocodyloid to Orientalosuchina, while sentence 21 says it was reclassified as an alligatoroid when Orientalosuchina was established."
+   "reason": "One sentence claims Eoalligator may be the same species as Asiatosuchus nanlingensis, while the next states that this idea was rejected."
   },
   {
    "sentences": [
-    17,
-    20
+    28,
+    31
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 29 says the animal lived from Late Cretaceous to Paleocene, but sentence 32 limits its age to 60.9–57.5 Ma, which is entirely Paleocene."
+  },
+  {
+   "sentences": [
+    29,
+    31
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 30 lists fossils from Late Cretaceous and Lower Paleocene, yet sentence 32 states the species existed only during the Paleocene."
+  },
+  {
+   "sentences": [
+    23,
+    32
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the classification change of Eoalligator, repeating the same claim."
+   "reason": "Both sentences discuss the debate over whether Eoalligator chunyii and Asiatosuchus nanlingensis are the same species."
+  },
+  {
+   "sentences": [
+    20,
+    21
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the shifting classification of Eoalligator, essentially repeating the same information."
+  },
+  {
+   "sentences": [
+    26,
+    27
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences address the uncertain placement of Orientalosuchina, repeating the same point."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"The classification of Eoalligator has shifted over time, moving from alligatorine to crocodyloid and finally to the clade Orientalosuchina.\" / \"Eoalligator was reclassified as an alligatoroid when a new group called Orientalosuchina was established.\": Sentence 18 states Eoalligator moved from alligatorine to crocodyloid to Orientalosuchina, while sentence 21 says it was reclassified as an alligatoroid when Orientalosuchina was established."
+  "- contradiction: \"A 2016 study classified Eoalligator as a member of Crocodylidae and suggested it might be the same species as Asiatosuchus nanlingensis.\" / \"A later study disagreed with the idea that Eoalligator and Asiatosuchus nanlingensis are the same species, though both agreed Eoalligator is a crocodyloid.\": One sentence claims Eoalligator may be the same species as Asiatosuchus nanlingensis, while the next states that this idea was rejected.",
+  "- contradiction: \"Eoalligator is an extinct crocodilian found in Late Cretaceous to Paleocene sediments of China.\" / \"Eoalligator lived between 60.9 and 57.5 million years ago during the Selandian to Thanetian stages.\": Sentence 29 says the animal lived from Late Cretaceous to Paleocene, but sentence 32 limits its age to 60.9–57.5 Ma, which is entirely Paleocene.",
+  "- contradiction: \"Fossils of Eoalligator chunyii come from the Zhenshui Formation (Late Cretaceous) and the Shanghu Formation (Lower Paleocene).\" / \"Eoalligator lived between 60.9 and 57.5 million years ago during the Selandian to Thanetian stages.\": Sentence 30 lists fossils from Late Cretaceous and Lower Paleocene, yet sentence 32 states the species existed only during the Paleocene."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:41:25+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:14:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 states Eoalligator moved from alligatorine to crocodyloid to Orientalosuchina, while sentence 21 says it was reclassified as an alligatoroid when Orientalosuchina was established."
+    },
+    {
+     "sentences": [
+      17,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the classification change of Eoalligator, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:41:25+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:37+00:00"
 }

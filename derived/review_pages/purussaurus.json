@@ -3,36 +3,64 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "228cfc0b0b19620f",
- "reviewed_at": "2026-11-24T00:30:31+00:00",
+ "reviewed_at": "2026-11-25T13:28:13+00:00",
  "problems": [
   {
    "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the other two\" species and \"P. mirandai\" without having introduced those taxa earlier in the page."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "missing_context",
-   "reason": "Uses \"it\" to refer to the phorusrhacid, but the antecedent is not explicitly stated."
-  },
-  {
-   "sentences": [
-    3,
-    13
+    5
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Purussaurus’ large body size and strength made it an apex predator capable of hunting a wide range of prey."
+   "reason": "Sentence 6 repeats the same information about the type species being described in 1892."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 13 repeats classification details of Purussaurus, stating it belongs to Alligatoridae and Caimaninae multiple times."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 13 discusses taxonomic classification (family and subfamily) rather than traits or biology of the animal itself."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"While the Venezuelan species possessed a flattened skull much more than the other two, P. mirandai would measure around 10 meters in length.\": Refers to \"the other two\" species and \"P. mirandai\" without having introduced those taxa earlier in the page.",
-  "- missing context: \"Bite marks on a phorusrhacid tibia suggest it may have been killed by a young Purussaurus, though whether this was scavenging or active predation is debated.\": Uses \"it\" to refer to the phorusrhacid, but the antecedent is not explicitly stated."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:47:51+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:30:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the other two\" species and \"P. mirandai\" without having introduced those taxa earlier in the page."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "Uses \"it\" to refer to the phorusrhacid, but the antecedent is not explicitly stated."
+    },
+    {
+     "sentences": [
+      3,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Purussaurus’ large body size and strength made it an apex predator capable of hunting a wide range of prey."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:47:51+00:00"
+  }
+ ]
 }

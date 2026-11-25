@@ -3,38 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d001d4bdde9489e2",
- "reviewed_at": "2026-11-24T00:06:08+00:00",
+ "reviewed_at": "2026-11-25T13:16:14+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    20
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for Valdosaurus: 130–125 Ma vs 154.8–119.57 Ma."
-  },
-  {
-   "sentences": [
-    3,
-    20
-   ],
-   "kind": "contradiction",
-   "reason": "Mass estimates (10 kg vs 400 kg) conflict with the broader age range that includes the 400 kg estimate."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "The phrase \"overhang more than one following vertebra\" lacks a clear reference to what is overhanging."
+   "kind": "repetition",
+   "reason": "Sentence 14 repeats the same claim about the uncertainty of English specimens belonging to Valdosaurus twice within the same sentence."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Valdosaurus lived during the Early Cretaceous, approximately between 130 and 125 million years ago in the Barremian stage.\" / \"Some sources indicate Valdosaurus lived from the Kimmeridgian to the Aptian stages, between 154.8 and 119.57 million years ago.\": Different age ranges for Valdosaurus: 130–125 Ma vs 154.8–119.57 Ma.",
-  "- contradiction: \"Although the type specimens were small, reaching only 10 kilograms in mass, larger individuals like the Compton Bay find may have weighed as much as 400 kilograms.\" / \"Some sources indicate Valdosaurus lived from the Kimmeridgian to the Aptian stages, between 154.8 and 119.57 million years ago.\": Mass estimates (10 kg vs 400 kg) conflict with the broader age range that includes the 400 kg estimate.",
-  "- missing context: \"The tail vertebrae feature backswept neural spines that overhang more than one following vertebra, a trait distinct from other ornithischians.\": The phrase \"overhang more than one following vertebra\" lacks a clear reference to what is overhanging."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:30:38+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:06:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for Valdosaurus: 130–125 Ma vs 154.8–119.57 Ma."
+    },
+    {
+     "sentences": [
+      3,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Mass estimates (10 kg vs 400 kg) conflict with the broader age range that includes the 400 kg estimate."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"overhang more than one following vertebra\" lacks a clear reference to what is overhanging."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:30:38+00:00"
+  }
+ ]
 }

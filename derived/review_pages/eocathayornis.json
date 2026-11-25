@@ -2,21 +2,37 @@
  "taxon_key": "eocathayornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "425550dc68df0674",
- "reviewed_at": "2026-11-24T00:55:39+00:00",
+ "text_hash": "462cbe35116b3aa0",
+ "reviewed_at": "2026-11-25T13:41:18+00:00",
  "problems": [
   {
    "sentences": [
+    2,
     5
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 references a 2026 study as a comparison, but the page never mentions or describes that study earlier, leaving the reader without context for the comparison."
+   "kind": "repetition",
+   "reason": "Both sentences state that Eocathayornis belongs to Enantiornithes."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Recent studies show the phylogenetic position of Eocathayornis is labile, varying between affiliations with Bohaiornithidae, basal positions near Pengornithidae, or advanced positions depending on included taxa. A 2024 analysis supported a clade linking Cathayornis and Eocathayornis, though this was considered less comprehensive than a 2026 study.\": Sentence 6 references a 2026 study as a comparison, but the page never mentions or describes that study earlier, leaving the reader without context for the comparison."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:14:24+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:55:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 references a 2026 study as a comparison, but the page never mentions or describes that study earlier, leaving the reader without context for the comparison."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:14:24+00:00"
+  }
+ ]
 }

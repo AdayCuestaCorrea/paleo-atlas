@@ -2,8 +2,8 @@
  "taxon_key": "phasmagyps",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c75ec55fd6917502",
- "reviewed_at": "2026-11-24T01:32:54+00:00",
+ "text_hash": "973314ec9056a18d",
+ "reviewed_at": "2026-11-25T13:54:03+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,7 +11,7 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 claims Phasmagyps was one‑third larger than the modern Black vulture, while sentence 12 states it was not much larger, directly contradicting the size estimate."
+   "reason": "Sentence 3 claims Phasmagyps was one‑third larger than the modern Black vulture, while sentence 12 states it was not much larger."
   },
   {
    "sentences": [
@@ -19,13 +19,41 @@
     7
    ],
    "kind": "repetition",
-   "reason": "Sentences 7 and 8 both state that Phasmagyps belongs to the family Cathartidae, repeating the same classification claim."
+   "reason": "Both sentences state that Phasmagyps belongs to the family Cathartidae."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"When first described, Phasmagyps was estimated to be one-third larger than the modern Black vulture.\" / \"James Ducey's 1992 paper contradicts the original size estimate, stating Phasmagyps was not much larger than the Black Vulture.\": Sentence 3 claims Phasmagyps was one‑third larger than the modern Black vulture, while sentence 12 states it was not much larger, directly contradicting the size estimate."
+  "- contradiction: \"When first described, Phasmagyps was estimated to be one-third larger than the modern Black vulture.\" / \"James Ducey's 1992 paper contradicts the original size estimate, stating Phasmagyps was not much larger than the Black Vulture.\": Sentence 3 claims Phasmagyps was one‑third larger than the modern Black vulture, while sentence 12 states it was not much larger."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:19:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:32:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims Phasmagyps was one‑third larger than the modern Black vulture, while sentence 12 states it was not much larger, directly contradicting the size estimate."
+    },
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 7 and 8 both state that Phasmagyps belongs to the family Cathartidae, repeating the same classification claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:19:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:15+00:00"
 }

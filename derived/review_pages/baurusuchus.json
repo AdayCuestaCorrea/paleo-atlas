@@ -2,22 +2,52 @@
  "taxon_key": "baurusuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5755ba7ed64435bf",
- "reviewed_at": "2026-11-24T00:51:13+00:00",
+ "text_hash": "9355f1ea7a1e8e58",
+ "reviewed_at": "2026-11-25T13:39:21+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    22,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentences 14 and 15 give conflicting age ranges for Baurusuchus: 90–83.5 Ma versus 83.6–66 Ma."
+   "reason": "The page gives two mutually exclusive time ranges for Baurusuchus: 90–83.5 Ma (Late Cretaceous) and 83.6–66 Ma (Campanian–Maastrichtian)."
+  },
+  {
+   "sentences": [
+    3,
+    4,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 reports a bite force of 2542–3088 N, sentence 5 claims it is comparable to the American alligator (which has a higher bite force), and sentence 16 states the bite was somewhat weak, all of which conflict with each other."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Baurusuchus lived in Brazil between 90 and 83.5 million years ago during the Late Cretaceous period in a hot and arid climate.\" / \"Its time range extended from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.\": Sentences 14 and 15 give conflicting age ranges for Baurusuchus: 90–83.5 Ma versus 83.6–66 Ma."
+  "- contradiction: \"Baurusuchus lived in Brazil between 90 and 83.5 million years ago during the Late Cretaceous period.\" / \"Other estimates place its time range from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.\": The page gives two mutually exclusive time ranges for Baurusuchus: 90–83.5 Ma (Late Cretaceous) and 83.6–66 Ma (Campanian–Maastrichtian).",
+  "- contradiction: \"The species B. salgadoensis generated a bite force between 2542 and 3088 Newtons.\" / \"This power is comparable to that of the American alligator.\" / \"Although the highly curved pterygoid suggests a rapid bite, this bite was somewhat weak.\": Sentence 4 reports a bite force of 2542–3088 N, sentence 5 claims it is comparable to the American alligator (which has a higher bite force), and sentence 16 states the bite was somewhat weak, all of which conflict with each other."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:48:27+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 14 and 15 give conflicting age ranges for Baurusuchus: 90–83.5 Ma versus 83.6–66 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:48:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:24+00:00"
 }

@@ -3,35 +3,69 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "cda104e9ee8e3fa0",
- "reviewed_at": "2026-11-24T00:26:46+00:00",
+ "reviewed_at": "2026-11-25T13:26:30+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    3,
+    4
    ],
    "kind": "contradiction",
-   "reason": "Adult weight estimates conflict: sentence 5 says up to 240 kg, sentence 6 says 30 kg."
+   "reason": "Adult size and weight estimates conflict: sentence 4 gives 3–4 m and up to 240 kg, while sentence 5 gives 4 m and only 30 kg."
   },
   {
    "sentences": [
-    12
+    14
    ],
    "kind": "repetition",
-   "reason": "Sentence 13 repeats the same cladistic placement information twice."
+   "reason": "Sentence 15 repeats the claim that Emausaurus belongs to the family Scelidosauridae."
   },
   {
    "sentences": [
-    13
+    18
    ],
-   "kind": "repetition",
-   "reason": "Sentence 14 repeats the family assignment twice."
+   "kind": "about_something_else",
+   "reason": "Sentence 19 describes invertebrate and fish fossils from the site, which is about the sedimentary context rather than the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The juvenile holotype of Emausaurus was estimated to be 2 to 2.5 meters long and weigh between 50 and 90 kilograms, while adults reached lengths of 3 to 4 meters and weights up to 240 kilograms.\" / \"An adult Emausaurus was a small armored dinosaur measuring 4 meters long, 0.70 meters high, and weighing 30 kilograms.\": Adult weight estimates conflict: sentence 5 says up to 240 kg, sentence 6 says 30 kg."
+  "- contradiction: \"Estimates for the juvenile holotype suggest it was 2 to 2.5 meters long and weighed between 50 and 90 kilograms, whereas adults are estimated to have reached lengths of 3 to 4 meters and weights up to 240 kilograms.\" / \"However, other data describes an adult Emausaurus as a small armored dinosaur measuring 4 meters long, 0.70 meters high, and weighing 30 kilograms.\": Adult size and weight estimates conflict: sentence 4 gives 3–4 m and up to 240 kg, while sentence 5 gives 4 m and only 30 kg."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:23:50+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:26:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Adult weight estimates conflict: sentence 5 says up to 240 kg, sentence 6 says 30 kg."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 13 repeats the same cladistic placement information twice."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 14 repeats the family assignment twice."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:23:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:21+00:00"
 }

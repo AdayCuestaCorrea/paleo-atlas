@@ -2,22 +2,49 @@
  "taxon_key": "hauffiosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e0f0e578caf97ff5",
- "reviewed_at": "2026-11-24T00:51:01+00:00",
+ "text_hash": "545d8f8da6f69435",
+ "reviewed_at": "2026-11-25T13:39:13+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Hauffiosaurus lived during the Early Jurassic (early Toarcian stage), while sentence 11 gives a time range of 184.2–174.7 Ma, which extends slightly before the Toarcian start (~182.7 Ma) and slightly after its end (~174.1 Ma)."
+   "kind": "missing_context",
+   "reason": "Mentions Hauffiosaurus tomistomimus without prior introduction of that species."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions the holotype of Hauffiosaurus longirostris without prior context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Hauffiosaurus lived during the Early Jurassic (early Toarcian stage) and is known from fossil sites in Holzmaden, Germany, and Yorkshire, United Kingdom.\" / \"Hauffiosaurus lived from 184.2 to 174.7 million years ago during the Toarcian stage.\": Sentence 10 states Hauffiosaurus lived during the Early Jurassic (early Toarcian stage), while sentence 11 gives a time range of 184.2–174.7 Ma, which extends slightly before the Toarcian start (~182.7 Ma) and slightly after its end (~174.1 Ma)."
+  "- missing context: \"The holotype specimen of Hauffiosaurus tomistomimus measures 4.83 meters in length.\": Mentions Hauffiosaurus tomistomimus without prior introduction of that species.",
+  "- missing context: \"The individual belonging to the holotype of Hauffiosaurus longirostris is estimated to have measured approximately 4.83 meters in total body length.\": Mentions the holotype of Hauffiosaurus longirostris without prior context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:46:54+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Hauffiosaurus lived during the Early Jurassic (early Toarcian stage), while sentence 11 gives a time range of 184.2–174.7 Ma, which extends slightly before the Toarcian start (~182.7 Ma) and slightly after its end (~174.1 Ma)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:46:54+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:18+00:00"
 }

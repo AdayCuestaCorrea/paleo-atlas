@@ -3,20 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "702c8ff3cb657533",
- "reviewed_at": "2026-11-24T01:24:17+00:00",
+ "reviewed_at": "2026-11-25T13:50:54+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    1
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to the species \"P. ramonensis\" without any prior introduction or definition of that species on the page."
+   "kind": "about_something_else",
+   "reason": "Sentence 2 discusses the abundance of fossils in Middle Triassic limestone comparable to the Muschelkalk of Europe, which is about the geological formation rather than the animal itself."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 7 refers to the Beneckeia and Ceratites beds and their stratigraphic stages, describing the geological context instead of the animal."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The carapace osteoderms of P. ramonensis have smoother edges and lack the keel found in species like P. mosis.\": Sentence 6 refers to the species \"P. ramonensis\" without any prior introduction or definition of that species on the page."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:41:51+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:24:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to the species \"P. ramonensis\" without any prior introduction or definition of that species on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:41:51+00:00"
+  }
+ ]
 }

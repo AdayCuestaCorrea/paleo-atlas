@@ -2,8 +2,8 @@
  "taxon_key": "batrachotomus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f9e03f61382bb841",
- "reviewed_at": "2026-11-24T00:31:56+00:00",
+ "text_hash": "e1f9b021efd6e81e",
+ "reviewed_at": "2026-11-25T13:28:39+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,20 +11,36 @@
     14
    ],
    "kind": "repetition",
-   "reason": "Both sentences provide the age range for Batrachotomus, giving overlapping but slightly different ranges, effectively repeating the same claim."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to fossils previously being called \"Kupferzellia\" or \"rauisuchid\" without explaining what those terms refer to or how they relate to Batrachotomus."
+   "reason": "Both sentences provide overlapping time range information for Batrachotomus, making the second statement redundant."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"Fossils remained undescribed until 1999, at which point they were previously referred to by paleontologists as \"Kupferzellia\" or simply \"rauisuchid\".\": Sentence 9 refers to fossils previously being called \"Kupferzellia\" or \"rauisuchid\" without explaining what those terms refer to or how they relate to Batrachotomus."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:03:03+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:31:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences provide the age range for Batrachotomus, giving overlapping but slightly different ranges, effectively repeating the same claim."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to fossils previously being called \"Kupferzellia\" or \"rauisuchid\" without explaining what those terms refer to or how they relate to Batrachotomus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:03:03+00:00"
+  }
+ ]
 }

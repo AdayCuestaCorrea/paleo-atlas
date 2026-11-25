@@ -3,49 +3,99 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "2e773d4bbfd3df60",
- "reviewed_at": "2026-11-24T00:04:37+00:00",
+ "reviewed_at": "2026-11-25T13:15:34+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    4,
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Sir Richard Owen named the genus Cetiosaurus, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 5 claims Cetiosaurus was the first sauropod described in 1842, while sentence 6 states Owen named the genus in 1841, implying an earlier description."
   },
   {
    "sentences": [
-    19
+    7,
+    10
    ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"It\" refers to an unspecified subject; the sentence does not explain who or what determined the reclassification."
+   "kind": "contradiction",
+   "reason": "Sentence 8 says C. oxoniensis was named by Phillips in 1871 as the type species, whereas sentence 11 says it was officially designated as the type species in 2014."
   },
   {
    "sentences": [
-    18
+    10
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses vertebrae of a related species found in the Wessex Formation, which is not directly about Cetiosaurus itself."
+   "reason": "Sentence 11 discusses C. rigauxi as a pliosaurid, which is a different taxon and not part of the Cetiosaurus species."
   },
   {
    "sentences": [
-    19
+    13
    ],
    "kind": "about_something_else",
-   "reason": "The sentence refers to bones belonging to Iguanodontidae, a different group, rather than Cetiosaurus."
+   "reason": "Sentence 14 refers to vertebrae of a related species found in the Early Cretaceous Wessex Formation, not directly about Cetiosaurus."
   },
   {
    "sentences": [
-    22
+    16
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses dinosaurs of the London‑Brabant Massif, not Cetiosaurus specifically."
+   "reason": "Sentence 17 discusses dinosaurs of the London-Brabant Massif, unrelated to Cetiosaurus."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It was determined in 1849 that some bones previously assigned to Cetiosaurus actually belonged to Iguanodontidae rather than sauropods.\": The pronoun \"It\" refers to an unspecified subject; the sentence does not explain who or what determined the reclassification."
+  "- contradiction: \"Cetiosaurus holds the distinction of being the first sauropod dinosaur to be described from bones, named in 1842 by Sir Richard Owen.\" / \"Owen named the genus in 1841, one year before he coined the term Dinosauria, based on three more or less complete specimens discovered starting from 1868.\": Sentence 5 claims Cetiosaurus was the first sauropod described in 1842, while sentence 6 states Owen named the genus in 1841, implying an earlier description.",
+  "- contradiction: \"John Whitaker Hulke named Cetiosaurus humerocristatus in 1874 based on a humerus found at Sandsfoot near Weymouth in Dorset, while C. oxoniensis, named by Phillips in 1871, is the type species of the genus.\" / \"C. oxoniensis was officially designated as the type species of the genus Cetiosaurus in 2014, whereas C. brachyurus is considered a nomen dubium, and C. rigauxi is not a sauropod but a pliosaurid.\": Sentence 8 says C. oxoniensis was named by Phillips in 1871 as the type species, whereas sentence 11 says it was officially designated as the type species in 2014."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:17:20+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:04:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Sir Richard Owen named the genus Cetiosaurus, repeating the same claim."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"It\" refers to an unspecified subject; the sentence does not explain who or what determined the reclassification."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses vertebrae of a related species found in the Wessex Formation, which is not directly about Cetiosaurus itself."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence refers to bones belonging to Iguanodontidae, a different group, rather than Cetiosaurus."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses dinosaurs of the London‑Brabant Massif, not Cetiosaurus specifically."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:17:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:34+00:00"
 }

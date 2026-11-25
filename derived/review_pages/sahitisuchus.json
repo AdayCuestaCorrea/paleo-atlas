@@ -2,39 +2,92 @@
  "taxon_key": "sahitisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3dccfb4c93500e3c",
- "reviewed_at": "2026-11-24T00:48:14+00:00",
+ "text_hash": "e11c1a9066eb3140",
+ "reviewed_at": "2026-11-25T13:37:45+00:00",
  "problems": [
   {
    "sentences": [
-    30,
-    31
+    9,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Sahitisuchus is one of only two species formally described from the São José de Itaboraí Basin."
+  },
+  {
+   "sentences": [
+    10,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences give the same authorship information for the genus name."
+  },
+  {
+   "sentences": [
+    11,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the generic name honors the Xavante people."
+  },
+  {
+   "sentences": [
+    23,
+    25
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Sahitisuchus belongs to the family Sebecidae."
+  },
+  {
+   "sentences": [
+    27,
+    28,
+    29
    ],
    "kind": "contradiction",
-   "reason": "Sentence 31 states the animal lived during the late Itaboraian age of the Early Eocene (53–50 Ma), while sentence 32 claims it lived during the Paleocene, a different epoch."
-  },
-  {
-   "sentences": [
-    25,
-    26,
-    28
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences repeat the classification of Sahitisuchus as belonging to the family Sebecidae (a sebecid mesoeucrocodylian)."
-  },
-  {
-   "sentences": [
-    15,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 16 and 21 both state that the genus was named by Kellner, Pinheiro, and Campos in 2014, with the latter providing full names."
+   "reason": "Sentences 28, 29, and 30 give conflicting age ranges: 28 claims the Late Itaboraian age of the Early Eocene (≈53–50 Ma), 29 says Paleocene, and 30 gives a broader range from the Thanetian to Ypresian (≈59.24–48.07 Ma)."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 4,
  "notes": [
-  "- contradiction: \"The animal lived during the late Itaboraian age of the Early Eocene, approximately 53 to 50 million years ago.\" / \"It lived in the Rio de Janeiro state in southeastern Brazil during the Paleocene.\": Sentence 31 states the animal lived during the late Itaboraian age of the Early Eocene (53–50 Ma), while sentence 32 claims it lived during the Paleocene, a different epoch."
+  "- contradiction: \"The animal lived during the late Itaboraian age of the Early Eocene, approximately 53 to 50 million years ago.\" / \"It lived in the Rio de Janeiro state in southeastern Brazil during the Paleocene.\" / \"Sahitisuchus lived from the Thanetian to the Ypresian stages, between 59.24 and 48.07 million years ago.\": Sentences 28, 29, and 30 give conflicting age ranges: 28 claims the Late Itaboraian age of the Early Eocene (≈53–50 Ma), 29 says Paleocene, and 30 gives a broader range from the Thanetian to Ypresian (≈59.24–48.07 Ma)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:25:27+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:48:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      30,
+      31
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 31 states the animal lived during the late Itaboraian age of the Early Eocene (53–50 Ma), while sentence 32 claims it lived during the Paleocene, a different epoch."
+    },
+    {
+     "sentences": [
+      25,
+      26,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences repeat the classification of Sahitisuchus as belonging to the family Sebecidae (a sebecid mesoeucrocodylian)."
+    },
+    {
+     "sentences": [
+      15,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 16 and 21 both state that the genus was named by Kellner, Pinheiro, and Campos in 2014, with the latter providing full names."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:25:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:38+00:00"
 }

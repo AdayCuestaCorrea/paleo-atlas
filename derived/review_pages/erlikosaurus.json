@@ -3,38 +3,63 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "fbf563ad6c593fdd",
- "reviewed_at": "2026-11-24T00:01:33+00:00",
+ "reviewed_at": "2026-11-25T13:13:49+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences describe the discovery location and date of Erlikosaurus fossils, repeating the same information."
-  },
-  {
-   "sentences": [
-    26,
-    28
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 27 gives the formation age 95.9–89.6 Ma, while sentence 29 extends the species’ temporal range to 83.6 Ma, a later date not supported by the formation age."
-  },
-  {
-   "sentences": [
-    19
+    20
    ],
    "kind": "missing_context",
-   "reason": "Sentence 20 mentions a down‑turned tip of the lower jaws, symphyseal regions, and stress‑mitigating beaks without prior explanation of these anatomical features."
+   "reason": "Sentence 21 refers to a \"down‑turned tip of the lower jaws, symphyseal regions, and stress‑mitigating beaks\" without introducing or defining these anatomical features earlier in the text."
+  },
+  {
+   "sentences": [
+    27
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 28 discusses the sedimentary climate of the Bayan Shireh Formation, which is about the environment rather than a direct attribute of Erlikosaurus itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The Bayan Shireh Formation, where Erlikosaurus was found, dates from approximately 95.9 to 89.6 million years ago (Cenomanian to Santonian stages).\" / \"Erlikosaurus lived from the Turonian to the Santonian stages, between 93.9 and 83.6 million years ago.\": Sentence 27 gives the formation age 95.9–89.6 Ma, while sentence 29 extends the species’ temporal range to 83.6 Ma, a later date not supported by the formation age.",
-  "- missing context: \"Researchers suggest Erlikosaurus was aided by a down-turned tip of the lower jaws, symphyseal regions, and stress-mitigating beaks.\": Sentence 20 mentions a down‑turned tip of the lower jaws, symphyseal regions, and stress‑mitigating beaks without prior explanation of these anatomical features."
+  "- missing context: \"Researchers suggest Erlikosaurus was aided by a down-turned tip of the lower jaws, symphyseal regions, and stress-mitigating beaks.\": Sentence 21 refers to a \"down‑turned tip of the lower jaws, symphyseal regions, and stress‑mitigating beaks\" without introducing or defining these anatomical features earlier in the text."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:45:11+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe the discovery location and date of Erlikosaurus fossils, repeating the same information."
+    },
+    {
+     "sentences": [
+      26,
+      28
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 27 gives the formation age 95.9–89.6 Ma, while sentence 29 extends the species’ temporal range to 83.6 Ma, a later date not supported by the formation age."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 20 mentions a down‑turned tip of the lower jaws, symphyseal regions, and stress‑mitigating beaks without prior explanation of these anatomical features."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:45:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:45+00:00"
 }

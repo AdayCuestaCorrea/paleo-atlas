@@ -2,30 +2,65 @@
  "taxon_key": "susisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4ab402dff001ca7b",
- "reviewed_at": "2026-11-24T01:00:52+00:00",
+ "text_hash": "c89c4b64605b4534",
+ "reviewed_at": "2026-11-25T13:43:43+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    21
+    8,
+    20
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Susisuchus is closely related to Pachycheilosuchus and Isisfordia."
+   "reason": "Both sentences state that Susisuchus was an extinct crocodyliform that lived in Brazil during the Early Cretaceous period."
   },
   {
    "sentences": [
-    4,
-    7
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 says Susisuchus fossils are found in the Crato Formation (Araripe Basin), while sentence 8 says S. jaguaribensis was found 115 km from the discovery site of S. anatoceps in the Lima Campos Basin, implying a different location for S. anatoceps."
+   "kind": "missing_context",
+   "reason": "Sentence 7 refers to a holotype specimen without any prior mention of a holotype in the page."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 5 uses \"this species\" without specifying which species of Susisuchus it refers to."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Susisuchus was an extinct crocodyliform that lived in Brazil during the Early Cretaceous period, with fossils found in the Nova Olinda Member of the Aptian-age Crato Formation in northeastern Brazil.\" / \"The remains of S. jaguaribensis were found about 115 km from the discovery site of S. anatoceps in the Lima Campos Basin.\": Sentence 5 says Susisuchus fossils are found in the Crato Formation (Araripe Basin), while sentence 8 says S. jaguaribensis was found 115 km from the discovery site of S. anatoceps in the Lima Campos Basin, implying a different location for S. anatoceps."
+  "- missing context: \"Researchers believe the holotype specimen was a desiccated carcass before burial and fossilization.\": Sentence 7 refers to a holotype specimen without any prior mention of a holotype in the page.",
+  "- missing context: \"In this species, two rows of large osteoderms segment into four smaller ones, accompanied by two rows of accessory osteoderms on each side that did not form part of the main shield.\": Sentence 5 uses \"this species\" without specifying which species of Susisuchus it refers to."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:51:16+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Susisuchus is closely related to Pachycheilosuchus and Isisfordia."
+    },
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 says Susisuchus fossils are found in the Crato Formation (Araripe Basin), while sentence 8 says S. jaguaribensis was found 115 km from the discovery site of S. anatoceps in the Lima Campos Basin, implying a different location for S. anatoceps."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:51:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:50+00:00"
 }

@@ -2,8 +2,8 @@
  "taxon_key": "quasipetalichthys",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4a44e7a8a71e0daa",
- "reviewed_at": "2026-11-24T01:36:04+00:00",
+ "text_hash": "600669a692190e53",
+ "reviewed_at": "2026-11-25T13:55:09+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,30 +11,48 @@
     4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 states Quasipetalichthys is a basal member of Petalichthyidae, while sentence 5 places it in the family Quasipetalichthyidae, implying a different family classification."
-  },
-  {
-   "sentences": [
-    1,
-    6
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 locates fossils in the Haikou Formation (Early Cretaceous), yet sentence 7 mentions Devonian plants, implying a Devonian age."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 introduces the family Quasipetalichthyidae without prior mention or definition, leaving the reader without context for this taxonomic term."
+   "reason": "Sentence 4 places Quasipetalichthys in the family Petalichthyidae, while sentence 5 places the related taxon Eurycaraspis in a family named Quasipetalichthyidae, implying a different family assignment for the same genus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Quasipetalichthys is considered a basal member of the Petalichthyidae, though some researchers once called it aberrant.\" / \"Eurycaraspis is placed in the family Quasipetalichthyidae as a sister taxon to Quasipetalichthys.\": Sentence 4 states Quasipetalichthys is a basal member of Petalichthyidae, while sentence 5 places it in the family Quasipetalichthyidae, implying a different family classification.",
-  "- contradiction: \"Quasipetalichthys haikouensis is the only known species of the genus, and its fossils are found exclusively in the Haikou Formation in south-central China.\" / \"The presence of Devonian plants alongside these fossils suggests Quasipetalichthys lived in a near-shore or freshwater environment.\": Sentence 2 locates fossils in the Haikou Formation (Early Cretaceous), yet sentence 7 mentions Devonian plants, implying a Devonian age.",
-  "- missing context: \"Eurycaraspis is placed in the family Quasipetalichthyidae as a sister taxon to Quasipetalichthys.\": Sentence 5 introduces the family Quasipetalichthyidae without prior mention or definition, leaving the reader without context for this taxonomic term."
+  "- contradiction: \"Quasipetalichthys is considered a basal member of the Petalichthyidae, though some researchers once called it aberrant.\" / \"Eurycaraspis is placed in the family Quasipetalichthyidae as a sister taxon to Quasipetalichthys.\": Sentence 4 places Quasipetalichthys in the family Petalichthyidae, while sentence 5 places the related taxon Eurycaraspis in a family named Quasipetalichthyidae, implying a different family assignment for the same genus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:33:38+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:36:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states Quasipetalichthys is a basal member of Petalichthyidae, while sentence 5 places it in the family Quasipetalichthyidae, implying a different family classification."
+    },
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 locates fossils in the Haikou Formation (Early Cretaceous), yet sentence 7 mentions Devonian plants, implying a Devonian age."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 introduces the family Quasipetalichthyidae without prior mention or definition, leaving the reader without context for this taxonomic term."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:33:38+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:01+00:00"
 }

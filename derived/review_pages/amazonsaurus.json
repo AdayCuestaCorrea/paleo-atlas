@@ -2,56 +2,110 @@
  "taxon_key": "amazonsaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4beb4dea50a0a257",
- "reviewed_at": "2026-11-24T00:58:17+00:00",
+ "text_hash": "777175557c497af1",
+ "reviewed_at": "2026-11-25T13:42:25+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    2,
+    3,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Different size and weight estimates for the same species are presented without indicating they are alternative hypotheses."
+  },
+  {
+   "sentences": [
+    18,
+    19,
+    20,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "The species is simultaneously classified as Rebbachisauridae (a rebbachisaurid) and as a diplodocoid sauropod, which are mutually exclusive clades."
+  },
+  {
+   "sentences": [
+    2,
+    3,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the animal’s size (length) and weight, repeating the same information."
+   "reason": "The claim that Amazonsaurus was likely no more than 12 m long is repeated in sentences 3 and 4."
   },
   {
    "sentences": [
-    4,
-    6
+    27,
+    28
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 gives a weight of 10 tons (10,000 kg) while sentence 7 gives 5 tons (5,000 kg)."
+   "kind": "about_something_else",
+   "reason": "These sentences describe the depositional environment and associated fauna, not characteristics of Amazonsaurus itself."
   },
   {
    "sentences": [
-    14,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 15 places Amazonsaurus in the family Rebbachisauridae, whereas sentence 16 claims its high dorsal spines identify it as a diplodocoid sauropod, implying a different family."
-  },
-  {
-   "sentences": [
-    14,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 18 states Amazonsaurus is more derived than rebbachisaurids, contradicting its placement in the Rebbachisauridae family in sentence 15."
-  },
-  {
-   "sentences": [
-    18
+    11
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to “the geological formation” and “the middle of the Cretaceous Period” without specifying which formation or period, leaving the context unclear."
+   "reason": "The sentence refers to “lower weight” and swimming ability without previously establishing the weight or providing context for the claim."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Estimates suggest it was a relatively small herbivorous sauropod with a length of about 11 meters, a height of 4.5 meters, and a weight of only 10 tons.\" / \"Gregory S. Paul estimated that this dinosaur weighed 5000 kg.\": Sentence 5 gives a weight of 10 tons (10,000 kg) while sentence 7 gives 5 tons (5,000 kg).",
-  "- contradiction: \"The parent group for Amazonsaurus is Rebbachisauridae, and the animal belongs to the family Rebbachisauridae.\" / \"High dorsal spines on the tail vertebrae identify Amazonsaurus as a diplodocoid sauropod, though the fragmentary nature of the single specimen makes specific placement difficult.\": Sentence 15 places Amazonsaurus in the family Rebbachisauridae, whereas sentence 16 claims its high dorsal spines identify it as a diplodocoid sauropod, implying a different family.",
-  "- contradiction: \"The parent group for Amazonsaurus is Rebbachisauridae, and the animal belongs to the family Rebbachisauridae.\" / \"At least one published cladistic analysis shows Amazonsaurus as more derived than rebbachisaurids but more basal than dicraeosaurids and diplodocids within Diplodocoidea.\": Sentence 18 states Amazonsaurus is more derived than rebbachisaurids, contradicting its placement in the Rebbachisauridae family in sentence 15.",
-  "- missing context: \"Amazonsaurus lived during the Early Cretaceous Period, specifically between 125 and 100 million years ago during the Aptian and Albian epochs. The time range for Amazonsaurus is from the Aptian to the Albian, between 119.57 and 106.3 million years ago. The geological formation dates to the Aptian and Albian stages of the Early Cretaceous, approximately 125 to 100 million years ago. It lived in the middle of the Cretaceous Period, about 100 million years ago, in what is now South America.\": The sentence refers to “the geological formation” and “the middle of the Cretaceous Period” without specifying which formation or period, leaving the context unclear."
+  "- contradiction: \"Estimates of its size vary, with Elver Luiz Mayer suggesting a length of around 10 meters, while Gregory S. Paul proposed it reached 12 meters.\" / \"Other researchers have described it as a relatively small herbivorous sauropod with a length of about 11 meters, a height of 4.5 meters, and a weight of only 10 tons.\" / \"In contrast, Gregory S. Paul estimated in 2010 that the dinosaur weighed 5000 kg.\": Different size and weight estimates for the same species are presented without indicating they are alternative hypotheses.",
+  "- contradiction: \"Amazonsaurus is classified in the class Saurischia.\" / \"The animal belongs to the family Rebbachisauridae, with Rebbachisauridae serving as its parent group.\" / \"High dorsal spines on the tail vertebrae identify Amazonsaurus as a diplodocoid sauropod, though the fragmentary nature of the single specimen makes specific placement difficult.\" / \"At least one published cladistic analysis shows Amazonsaurus as more derived than rebbachisaurids but more basal than dicraeosaurids and diplodocids within Diplodocoidea.\": The species is simultaneously classified as Rebbachisauridae (a rebbachisaurid) and as a diplodocoid sauropod, which are mutually exclusive clades.",
+  "- missing context: \"Researchers speculate that Amazonsaurus could swim due to its lower weight, which would be advantageous for defending against predators or navigating the environment.\": The sentence refers to “lower weight” and swimming ability without previously establishing the weight or providing context for the claim."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:31:52+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:58:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the animal’s size (length) and weight, repeating the same information."
+    },
+    {
+     "sentences": [
+      4,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 gives a weight of 10 tons (10,000 kg) while sentence 7 gives 5 tons (5,000 kg)."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 places Amazonsaurus in the family Rebbachisauridae, whereas sentence 16 claims its high dorsal spines identify it as a diplodocoid sauropod, implying a different family."
+    },
+    {
+     "sentences": [
+      14,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 states Amazonsaurus is more derived than rebbachisaurids, contradicting its placement in the Rebbachisauridae family in sentence 15."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to “the geological formation” and “the middle of the Cretaceous Period” without specifying which formation or period, leaving the context unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:31:52+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:05+00:00"
 }

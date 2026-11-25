@@ -2,37 +2,73 @@
  "taxon_key": "tenontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6b46ab3996181685",
- "reviewed_at": "2026-11-24T00:05:04+00:00",
+ "text_hash": "f134a5b674d45413",
+ "reviewed_at": "2026-11-25T13:15:49+00:00",
  "problems": [
   {
    "sentences": [
-    1,
+    0,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims an individual did not reach full adult size before dying at 8 years old, while sentence 1 describes Tenontosaurus as a medium‑sized adult dinosaur."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to “this individual Tenontosaurus” without any prior mention of a specific specimen."
+  },
+  {
+   "sentences": [
+    6,
     13
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the same U‑shaped beak and angled teeth of Tenontosaurus."
-  },
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that medullary bone tissue was found and used for reproduction."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "missing_context",
-   "reason": "The specimen from which the medullary bone was found is never identified or described earlier in the page."
+   "reason": "Both sentences discuss the presence of medullary bone in Tenontosaurus, repeating the same claim."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Medullary bone tissue found in a specimen indicates it used this tissue for reproduction, suggesting early-diverging lineages reached maturity before maximum size.\": The specimen from which the medullary bone was found is never identified or described earlier in the page."
+  "- contradiction: \"Tenontosaurus was a medium-sized ornithopod dinosaur that measured between 6.5 and 8 meters in length, stood 2.2 meters tall, and weighed approximately 1000 kg, though estimates suggest a weight range up to 2 tons.\" / \"Like Tyrannosaurus and Allosaurus, this individual Tenontosaurus did not reach full adult size before dying at just 8 years old.\": Sentence 6 claims an individual did not reach full adult size before dying at 8 years old, while sentence 1 describes Tenontosaurus as a medium‑sized adult dinosaur.",
+  "- missing context: \"Like Tyrannosaurus and Allosaurus, this individual Tenontosaurus did not reach full adult size before dying at just 8 years old.\": Sentence 6 refers to “this individual Tenontosaurus” without any prior mention of a specific specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:22:49+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:05:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the same U‑shaped beak and angled teeth of Tenontosaurus."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that medullary bone tissue was found and used for reproduction."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "The specimen from which the medullary bone was found is never identified or described earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:22:49+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:47+00:00"
 }

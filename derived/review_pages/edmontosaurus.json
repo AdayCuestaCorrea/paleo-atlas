@@ -2,44 +2,71 @@
  "taxon_key": "edmontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6bac4dc4bb645c4f",
- "reviewed_at": "2026-11-23T23:52:34+00:00",
+ "text_hash": "1523bff0deb8ddd5",
+ "reviewed_at": "2026-11-25T13:08:50+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 states Edmontosaurus annectens reached up to 12 m, while sentence 5 claims exceptionally large specimens measured ~15 m."
-  },
-  {
-   "sentences": [
-    1,
-    4
+    2,
+    32
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the maximum size of Edmontosaurus annectens, repeating the claim with different figures."
+   "reason": "Both sentences state that Edmontosaurus did not have a bony crest."
   },
   {
    "sentences": [
-    20
+    21
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 21 discusses the geological setting of the Lance Formation, not a characteristic of the animal itself."
-  },
-  {
-   "sentences": [
-    17
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 18 compares the tail height of an Edmontosaurus specimen to that of T. rex, thereby referencing another species rather than the animal in question."
+   "kind": "missing_context",
+   "reason": "Mentions the Denver specimen’s tail height without prior introduction of the specimen."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Edmontosaurus annectens was one of the largest duck-billed dinosaurs to ever exist, reaching lengths of up to 12 meters and an average weight of 5.6 metric tons.\" / \"Exceptionally large specimens measured approximately 15 meters in length and weighed around 15.9 metric tons, while others at the Royal Tyrrell Museum suggest a maximum size of 10 tons or even larger, possibly rivaling Shantungosaurus.\": Sentence 2 states Edmontosaurus annectens reached up to 12 m, while sentence 5 claims exceptionally large specimens measured ~15 m."
+  "- missing context: \"The top of the tail of the Denver specimen was at least 2.9 meters high, a height only reachable by T. rex from the same rock formation.\": Mentions the Denver specimen’s tail height without prior introduction of the specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:18:36+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:52:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 states Edmontosaurus annectens reached up to 12 m, while sentence 5 claims exceptionally large specimens measured ~15 m."
+    },
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the maximum size of Edmontosaurus annectens, repeating the claim with different figures."
+    },
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 21 discusses the geological setting of the Lance Formation, not a characteristic of the animal itself."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 18 compares the tail height of an Edmontosaurus specimen to that of T. rex, thereby referencing another species rather than the animal in question."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:18:36+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:30+00:00"
 }

@@ -2,30 +2,58 @@
  "taxon_key": "psilopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6ec7ef28c64f2e92",
- "reviewed_at": "2026-11-24T00:23:04+00:00",
+ "text_hash": "eaca54d5777e2594",
+ "reviewed_at": "2026-11-25T13:24:18+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    17
+    14
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same temporal range for the genus."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Psilopterus lived from the Middle Oligocene to the Late Pleistocene, while sentence 15 claims the genus lived from the Aquitanian (early Miocene) to the Late Pleistocene, giving conflicting temporal ranges."
   },
   {
    "sentences": [
-    0,
-    18
+    12,
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 gives a range from the Middle Oligocene, while sentence 19 gives a range from the Aquitanian (early Miocene), which are inconsistent."
+   "kind": "repetition",
+   "reason": "Both sentences state that the genus Psilopterus is divided into four species, repeating the same claim."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Psilopterus is an extinct genus of terror birds, a name derived from Greek meaning \"naked wing\", that inhabited Argentina and Uruguay from the Middle Oligocene to possibly the Late Pleistocene.\" / \"The genus lived from the Aquitanian to the Late Pleistocene, approximately 23.04 to 0.0117 million years ago.\": Sentence 1 gives a range from the Middle Oligocene, while sentence 19 gives a range from the Aquitanian (early Miocene), which are inconsistent."
+  "- contradiction: \"Psilopterus is an extinct genus of terror birds known in Greek as \"naked wing\" that lived in Argentina and Uruguay from the Middle Oligocene to possibly the Late Pleistocene.\" / \"Psilopterus lived from the middle Oligocene to the late Pleistocene in Argentina, while other sources state the genus lived from the Aquitanian to the Late Pleistocene, approximately 23.04 to 0.0117 million years ago.\": Sentence 1 states Psilopterus lived from the Middle Oligocene to the Late Pleistocene, while sentence 15 claims the genus lived from the Aquitanian (early Miocene) to the Late Pleistocene, giving conflicting temporal ranges."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:46:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:23:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same temporal range for the genus."
+    },
+    {
+     "sentences": [
+      0,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 gives a range from the Middle Oligocene, while sentence 19 gives a range from the Aquitanian (early Miocene), which are inconsistent."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:46:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:54+00:00"
 }

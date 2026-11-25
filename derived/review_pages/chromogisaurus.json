@@ -3,21 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "43ec413431be90d6",
- "reviewed_at": "2026-11-24T01:49:10+00:00",
+ "reviewed_at": "2026-11-25T13:57:28+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    3,
+    4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to the Painted Valley, but the page never mentions or describes this location before."
+   "reason": "Sentence 4 mentions Painted Valley, a location, but the page never introduced or described Painted Valley before this reference."
+  },
+  {
+   "sentences": [
+    5,
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims Chromogisaurus is one of the oldest known dinosaurs, while sentence 9 places it at about 220 Ma, which is younger than the earliest known dinosaurs (~230–240 Ma)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The genus name Chromogisaurus means \"color of the earth\" in Greek, referencing the Painted Valley where the fossils were found, while the species name novasi honors the Argentine paleontologist Fernando Emilio Novas.\": Sentence 4 refers to the Painted Valley, but the page never mentions or describes this location before."
+  "- missing context: \"The genus name Chromogisaurus means \"color of the earth\" in Greek, referencing the Painted Valley, a location in South America where the fossils were found, while the species name novasi honors the Argentine paleontologist Fernando Emilio Novas.\" / \"The holotype specimen, cataloged as PVSJ 845, was discovered in the Cancha de Bochas Member of the Ischigualasto Formation.\": Sentence 4 mentions Painted Valley, a location, but the page never introduced or described Painted Valley before this reference.",
+  "- contradiction: \"Chromogisaurus is considered one of the oldest known dinosaurs.\" / \"Chromogisaurus lived in South America about 220 million years ago during the Carnian age of the Late Triassic, with a time range estimated between 237 and 227.3 million years ago.\": Sentence 6 claims Chromogisaurus is one of the oldest known dinosaurs, while sentence 9 places it at about 220 Ma, which is younger than the earliest known dinosaurs (~230–240 Ma)."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:49:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to the Painted Valley, but the page never mentions or describes this location before."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:29:37+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:29:37+00:00"
+ "rewritten_at": "2026-11-25T14:32:40+00:00"
 }

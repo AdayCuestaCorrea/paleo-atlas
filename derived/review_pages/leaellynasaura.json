@@ -2,8 +2,8 @@
  "taxon_key": "leaellynasaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9b1bc165591bc31a",
- "reviewed_at": "2026-11-24T00:59:49+00:00",
+ "text_hash": "546a64af4c2d07c8",
+ "reviewed_at": "2026-11-25T13:43:15+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,21 +11,72 @@
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states total length up to 3 m, while sentence 4 claims the tail alone is three times the length of the rest of the body, implying a tail length of ~5.4 m, which exceeds the total length given."
+   "reason": "Sentence 3 gives a total length of up to 3 m, but sentence 4 states the tail alone is three times the length of the rest of the body, which would make the total length far greater than 3 m if the body is 180 cm."
   },
   {
    "sentences": [
-    13,
-    14
+    7,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences discuss the dinosaur’s classification, with sentence 14 asserting it is a member of Elasmaria and sentence 15 noting that recent studies have not reached a consensus, effectively repeating the classification issue."
+   "reason": "Both sentences describe an enlarged eye socket and large optic lobes as an adaptation to low‑light conditions."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase “except for some hadrosaurs” refers to a comparison that is never introduced or explained earlier in the page."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "The claim that the dinosaur lived further south than any modern reptile could survive lacks any prior mention of the geographic context or comparison."
+  },
+  {
+   "sentences": [
+    19
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 20 discusses the location of Victoria, Australia, within the Antarctic Circle, which is about a geographic region rather than a characteristic of the animal itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"While recent estimates suggest a body length of roughly 180 centimeters, the total length including the tail could reach up to 3 meters.\" / \"Its tail was exceptionally long, measuring three times the length of the rest of its body and containing more vertebrae than any other ornithischian except certain hadrosaurs.\": Sentence 3 states total length up to 3 m, while sentence 4 claims the tail alone is three times the length of the rest of the body, implying a tail length of ~5.4 m, which exceeds the total length given."
+  "- contradiction: \"Recent estimates suggest the body length was roughly 180 centimeters, though some sources estimate the total length including the tail could reach up to 3 meters.\" / \"The tail was exceptionally long, measuring three times the length of the rest of the body.\": Sentence 3 gives a total length of up to 3 m, but sentence 4 states the tail alone is three times the length of the rest of the body, which would make the total length far greater than 3 m if the body is 180 cm.",
+  "- missing context: \"It had more tail vertebrae than any other ornithischian, except for some hadrosaurs.\": The phrase “except for some hadrosaurs” refers to a comparison that is never introduced or explained earlier in the page.",
+  "- missing context: \"This dinosaur lived and thrived further south than any modern reptile could survive.\": The claim that the dinosaur lived further south than any modern reptile could survive lacks any prior mention of the geographic context or comparison."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:42:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:59:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states total length up to 3 m, while sentence 4 claims the tail alone is three times the length of the rest of the body, implying a tail length of ~5.4 m, which exceeds the total length given."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences discuss the dinosaur’s classification, with sentence 14 asserting it is a member of Elasmaria and sentence 15 noting that recent studies have not reached a consensus, effectively repeating the classification issue."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:42:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:30+00:00"
 }

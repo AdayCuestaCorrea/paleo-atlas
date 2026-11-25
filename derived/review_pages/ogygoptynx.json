@@ -2,29 +2,49 @@
  "taxon_key": "ogygoptynx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a7eb4335a8746d6f",
- "reviewed_at": "2026-11-24T01:50:39+00:00",
+ "text_hash": "a1434826404d00ec",
+ "reviewed_at": "2026-11-25T13:57:40+00:00",
  "problems": [
   {
    "sentences": [
+    6,
     7
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 8 refers to \"similar advanced owls\" without any prior mention or definition of these owls."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses the disappearance of other advanced owls, not Ogygoptynx wetmorei itself."
+   "kind": "contradiction",
+   "reason": "Sentences 7 and 8 give conflicting descriptions of European owls at the same time—one calls them primitive, the other advanced."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated why similar advanced owls disappear from the North American fossil record for a long time after this species.\": Sentence 8 refers to \"similar advanced owls\" without any prior mention or definition of these owls."
+  "- contradiction: \"Researchers note a contrast between the modern ankle structure of this North American owl and primitive forms found in Europe at the same time.\" / \"It is debated why similar advanced owls, such as those found in Europe at the same time, disappear from the North American fossil record for a long time after Ogygoptynx wetmorei.\": Sentences 7 and 8 give conflicting descriptions of European owls at the same time—one calls them primitive, the other advanced."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:50:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 refers to \"similar advanced owls\" without any prior mention or definition of these owls."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the disappearance of other advanced owls, not Ogygoptynx wetmorei itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:30:13+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:30:13+00:00"
+ "rewritten_at": "2026-11-25T14:32:44+00:00"
 }

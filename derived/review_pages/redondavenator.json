@@ -2,21 +2,48 @@
  "taxon_key": "redondavenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5cf0fef3cc94b826",
- "reviewed_at": "2026-11-24T01:38:32+00:00",
+ "text_hash": "07eddea34d987a86",
+ "reviewed_at": "2026-11-25T13:55:51+00:00",
  "problems": [
   {
    "sentences": [
     4
    ],
    "kind": "missing_context",
-   "reason": "Mentions a species name honoring Quay County without previously introducing Quay County or explaining its relevance."
+   "reason": "The sentence mentions naming the type species after Quay County, but the page never introduces or explains Quay County."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to the disappearance of rauisuchians, yet the page never mentions rauisuchians before this point."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Scientists named the genus in 2005, choosing a species name that honors Quay County.\": Mentions a species name honoring Quay County without previously introducing Quay County or explaining its relevance."
+  "- missing context: \"Sterling Nesbitt and colleagues formally described the genus in 2005, naming the type species after Quay County.\": The sentence mentions naming the type species after Quay County, but the page never introduces or explains Quay County.",
+  "- missing context: \"Scientists believe it acted as a major land predator following the disappearance of rauisuchians.\": The sentence refers to the disappearance of rauisuchians, yet the page never mentions rauisuchians before this point."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:42:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:38:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a species name honoring Quay County without previously introducing Quay County or explaining its relevance."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:42:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:37+00:00"
 }

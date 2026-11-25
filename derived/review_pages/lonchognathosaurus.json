@@ -2,22 +2,42 @@
  "taxon_key": "lonchognathosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f0bf894bfaac2ad7",
- "reviewed_at": "2026-11-24T01:28:39+00:00",
+ "text_hash": "1d05c2fdee33dadb",
+ "reviewed_at": "2026-11-25T13:52:16+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    7,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 states Lonchognathosaurus lived during the Aptian to Albian stages, while sentence 10 gives a time range of 137.05–100.5 Ma covering Valanginian to Albian, which includes an earlier stage (Valanginian) not mentioned in sentence 9."
+   "reason": "Sentence 8 states Lonchognathosaurus lived during the Aptian to Albian stages, while sentence 9 claims the time range spans the Valanginian to Albian stages (137.05–100.5 Ma), which includes an earlier stage not mentioned in sentence 8."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Lonchognathosaurus lived during the Aptian to Albian stages of the Early Cretaceous in the Lianmuqin Formation of Xinjiang, China.\" / \"The time range for Lonchognathosaurus is estimated from 137.05 to 100.5 million years ago, spanning the Valanginian to Albian stages.\": Sentence 9 states Lonchognathosaurus lived during the Aptian to Albian stages, while sentence 10 gives a time range of 137.05–100.5 Ma covering Valanginian to Albian, which includes an earlier stage (Valanginian) not mentioned in sentence 9."
+  "- contradiction: \"Lonchognathosaurus lived during the Aptian to Albian stages of the Early Cretaceous in the Lianmuqin Formation of Xinjiang, China.\" / \"However, the time range for the animal is estimated from 137.05 to 100.5 million years ago, spanning the Valanginian to Albian stages.\": Sentence 8 states Lonchognathosaurus lived during the Aptian to Albian stages, while sentence 9 claims the time range spans the Valanginian to Albian stages (137.05–100.5 Ma), which includes an earlier stage not mentioned in sentence 8."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:00:04+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:28:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 states Lonchognathosaurus lived during the Aptian to Albian stages, while sentence 10 gives a time range of 137.05–100.5 Ma covering Valanginian to Albian, which includes an earlier stage (Valanginian) not mentioned in sentence 9."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:00:04+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:21+00:00"
 }

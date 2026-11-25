@@ -2,37 +2,60 @@
  "taxon_key": "sinocalliopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "169e6f2d65346f33",
- "reviewed_at": "2026-11-24T00:32:04+00:00",
+ "text_hash": "6131bb85b784b2ac",
+ "reviewed_at": "2026-11-25T13:28:49+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    12
+    1,
+    2
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Sinocalliopteryx was a carnivorous theropod dinosaur"
+   "reason": "Both sentences state the size of the holotype specimen, effectively repeating the same claim."
   },
   {
    "sentences": [
-    3,
-    11
+    17
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim a notable status (largest known member and last member of the family) without indicating they refer to different contexts"
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions a preserved dromaeosaurid leg inside the abdominal cavity but the page never previously introduced the concept of a prey item or explained why a leg would be present"
+   "kind": "about_something_else",
+   "reason": "Sentence 18 describes the flora of the habitat, which is about the environment rather than the animal itself."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- missing context: \"The holotype skeleton contained a preserved dromaeosaurid leg inside its abdominal cavity, including a tibia fragment measuring 15.5 cm in length.\": Sentence 5 mentions a preserved dromaeosaurid leg inside the abdominal cavity but the page never previously introduced the concept of a prey item or explained why a leg would be present"
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:05:32+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:32:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Sinocalliopteryx was a carnivorous theropod dinosaur"
+    },
+    {
+     "sentences": [
+      3,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim a notable status (largest known member and last member of the family) without indicating they refer to different contexts"
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions a preserved dromaeosaurid leg inside the abdominal cavity but the page never previously introduced the concept of a prey item or explained why a leg would be present"
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:05:32+00:00"
+  }
+ ]
 }

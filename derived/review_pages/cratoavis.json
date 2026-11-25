@@ -2,28 +2,54 @@
  "taxon_key": "cratoavis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ebfb97b7782d86fc",
- "reviewed_at": "2026-11-24T01:22:02+00:00",
+ "text_hash": "685c54d7112bcf8c",
+ "reviewed_at": "2026-11-25T13:50:11+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    4
    ],
    "kind": "missing_context",
-   "reason": "refers to the holotype's intestine without prior mention of the intestine"
+   "reason": "Refers to the gut of the holotype without prior mention of the gut."
   },
   {
    "sentences": [
-    8
+    7
    ],
    "kind": "about_something_else",
-   "reason": "describes lake environment rather than the bird itself"
+   "reason": "Describes the lake environment of the formation, not a characteristic of the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fish remains found near the holotype's intestine provide direct evidence that Cratoavis ate fish.\": refers to the holotype's intestine without prior mention of the intestine"
+  "- missing context: \"Fish remains found near the gut of the holotype provide direct evidence that Cratoavis ate fish.\": Refers to the gut of the holotype without prior mention of the gut."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:29:41+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:22:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "refers to the holotype's intestine without prior mention of the intestine"
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "about_something_else",
+     "reason": "describes lake environment rather than the bird itself"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:29:41+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:37+00:00"
 }

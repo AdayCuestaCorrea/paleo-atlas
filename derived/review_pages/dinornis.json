@@ -2,30 +2,58 @@
  "taxon_key": "dinornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8a98c84c29490279",
- "reviewed_at": "2026-11-24T00:32:01+00:00",
+ "text_hash": "e8bdb11136d1bf8a",
+ "reviewed_at": "2026-11-25T13:28:44+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    7
+    3
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe long necks as a dietary adaptation, repeating the same claim."
+   "reason": "Both sentences state that Dinornis had large, powerful feet."
   },
   {
    "sentences": [
     12,
-    15
+    17
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 states Dinornis existed up to the present Holocene, while sentence 16 claims all species went extinct by 1500."
+   "reason": "Sentence 13 claims all species went extinct by 1500, while sentence 18 states the time range extends to the present."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The time range for Dinornis extends from 0.129 million years ago to the present Holocene.\" / \"All species of Dinornis went extinct by the year 1500.\": Sentence 13 states Dinornis existed up to the present Holocene, while sentence 16 claims all species went extinct by 1500."
+  "- contradiction: \"All species of Dinornis went extinct by the year 1500.\" / \"The time range for Dinornis is from 0.129 million years ago to the present (Holocene).\": Sentence 13 claims all species went extinct by 1500, while sentence 18 states the time range extends to the present."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:04:40+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:32:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe long necks as a dietary adaptation, repeating the same claim."
+    },
+    {
+     "sentences": [
+      12,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states Dinornis existed up to the present Holocene, while sentence 16 claims all species went extinct by 1500."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:04:40+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:38+00:00"
 }

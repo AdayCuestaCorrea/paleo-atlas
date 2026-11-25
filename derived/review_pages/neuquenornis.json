@@ -2,21 +2,37 @@
  "taxon_key": "neuquenornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a6db72f794f1d1f0",
- "reviewed_at": "2026-11-24T00:53:02+00:00",
+ "text_hash": "013c43f8791c2512",
+ "reviewed_at": "2026-11-25T13:40:18+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    0,
+    6
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 refers to \"its eggs\" and a nesting behavior, but the page never mentions eggs or nesting before this point."
+   "kind": "repetition",
+   "reason": "Both sentences state the same age range for Neuquenornis, repeating the information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Evidence suggests Neuquenornis lived in nesting colonies and buried its eggs in a behavior similar to megapodes.\": Sentence 3 refers to \"its eggs\" and a nesting behavior, but the page never mentions eggs or nesting before this point."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:58:19+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:53:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to \"its eggs\" and a nesting behavior, but the page never mentions eggs or nesting before this point."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:58:19+00:00"
+  }
+ ]
 }

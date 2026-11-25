@@ -2,29 +2,56 @@
  "taxon_key": "austriadraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cd1c639dd7976468",
- "reviewed_at": "2026-11-24T01:15:06+00:00",
+ "text_hash": "ac57f530fa12b605",
+ "reviewed_at": "2026-11-25T13:48:36+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    0,
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"fused frontal bones\" and \"breast bone\" without prior introduction of these bones."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states the humerus is about 4 cm (≈40 mm), yet sentence 3 claims the shinbone is 57.7 mm long and equals 70 % of the humerus length, which would require a humerus of ≈82 mm, inconsistent with sentence 1."
   },
   {
    "sentences": [
-    6
+    2
    ],
    "kind": "missing_context",
-   "reason": "Mentions the holotype of Eudimorphodon ranzii as a reference point, but the page never introduced that species’ holotype."
+   "reason": "Sentence 3 refers to the shinbone and the first wing‑finger phalanx without having introduced or defined those elements earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Early analysis incorrectly identified the fused frontal bones as a breast bone.\": Refers to \"fused frontal bones\" and \"breast bone\" without prior introduction of these bones.",
-  "- missing context: \"In 2003, Peter Wellnhofer initially identified the fossil as a juvenile specimen of Eudimorphodon ranzii because it was 10 to 25% shorter than the holotype of that species.\": Mentions the holotype of Eudimorphodon ranzii as a reference point, but the page never introduced that species’ holotype."
+  "- contradiction: \"Austriadraco dallavecchiai is an extinct genus of pterosaur known from a small species with a humerus length of about four centimetres.\" / \"Its shoulder blade is 62% longer than the coracoid, while the shinbone is 57.7 millimetres long, reaching 70% of the humerus length and 92% of the first wing finger phalanx length.\": Sentence 1 states the humerus is about 4 cm (≈40 mm), yet sentence 3 claims the shinbone is 57.7 mm long and equals 70 % of the humerus length, which would require a humerus of ≈82 mm, inconsistent with sentence 1.",
+  "- missing context: \"Its shoulder blade is 62% longer than the coracoid, while the shinbone is 57.7 millimetres long, reaching 70% of the humerus length and 92% of the first wing finger phalanx length.\": Sentence 3 refers to the shinbone and the first wing‑finger phalanx without having introduced or defined those elements earlier in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:06:07+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:15:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"fused frontal bones\" and \"breast bone\" without prior introduction of these bones."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the holotype of Eudimorphodon ranzii as a reference point, but the page never introduced that species’ holotype."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:06:07+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:18+00:00"
 }

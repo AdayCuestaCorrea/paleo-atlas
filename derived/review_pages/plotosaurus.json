@@ -2,29 +2,71 @@
  "taxon_key": "plotosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9613d16a1cca8240",
- "reviewed_at": "2026-11-24T00:36:18+00:00",
+ "text_hash": "bfb1544ce440e7f4",
+ "reviewed_at": "2026-11-25T13:31:19+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    7
+    5
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Plotosaurus was likely one of the fastest mosasaurs due to its specialized body shape and tail."
+   "reason": "Both sentences claim Plotosaurus was likely one of the fastest mosasaurs due to its specialized body shape and tail."
   },
   {
    "sentences": [
-    10
+    3
    ],
    "kind": "missing_context",
-   "reason": "The pronoun \"it\" in sentence 11 refers to an unspecified entity; the preceding context does not clearly identify whether it is P. tuckeri, P. bennisoni, or another taxon."
+   "reason": "Sentence 4 introduces several facts (e.g., discovery dates, locations) without prior context or explanation of their relevance."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 5 mentions a second species, P. tuckeri, but the page has not previously introduced or described this species."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses classification hierarchy (subfamily, parent group, family) as if describing the animal itself, rather than its taxonomic placement."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"It is debated whether Plotosaurus had a wider distribution beyond North America, as fragmentary specimens from Japan may belong to the genus. A fossil from Chile initially identified as Plotosaurus-like was reidentified in 2019 as possibly belonging to Halisaurus because it did not match Plotosaurus diagnostics. Although not as adapted to marine life as P. bennisoni, it was nearly 40% larger, reaching lengths of nearly 13 meters. However, a cladistic analysis by Lindgren, Caldwell, and Jagt (2008) considers P. tuckeri to be a junior synonym.\": The pronoun \"it\" in sentence 11 refers to an unspecified entity; the preceding context does not clearly identify whether it is P. tuckeri, P. bennisoni, or another taxon."
+  "- missing context: \"Charles Lewis Camp described Plotosaurus in 1942 based on fossil specimens found in California, USA. The earliest specimens of Plotosaurus were found in the Moreno Formation along the San Joaquin Valley, California, in the early 20th century. Allan Bennison discovered a partial Plotosaurus skeleton near Pacheco Pass in 1937. The type species, P. bennisoni, was named by fossil collector Allan Bennison who discovered the first remains in 1937.\": Sentence 4 introduces several facts (e.g., discovery dates, locations) without prior context or explanation of their relevance.",
+  "- missing context: \"A 2008 study by Lindgren, Caldwell, and Jagt redescribed Plotosaurus using Camp's original specimens and newly uncovered fossils. A second species, P. tuckeri, was also found in 1937 by Frank Paiva and Professor William M. Tucker. However, a cladistic analysis by Lindgren, Caldwell, and Jagt (2008) considers P. tuckeri to be a junior synonym.\": Sentence 5 mentions a second species, P. tuckeri, but the page has not previously introduced or described this species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:46:41+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Plotosaurus was likely one of the fastest mosasaurs due to its specialized body shape and tail."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"it\" in sentence 11 refers to an unspecified entity; the preceding context does not clearly identify whether it is P. tuckeri, P. bennisoni, or another taxon."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:46:41+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:07+00:00"
 }

@@ -2,72 +2,107 @@
  "taxon_key": "ornithoprion",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ce82599b61405db0",
- "reviewed_at": "2026-11-23T23:59:16+00:00",
+ "text_hash": "eb2910beb866f2f7",
+ "reviewed_at": "2026-11-25T13:12:27+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    4,
+    11
    ],
-   "kind": "repetition",
-   "reason": "Sentence 7 repeats the information that Ornithoprion was described by Rainer Zangerl in 1966, which is already stated in sentence 7 itself."
+   "kind": "contradiction",
+   "reason": "Sentence 5 claims the mouth was likely incapable of closing, while sentence 12 states the mandibular rostrum articulated with Meckel's cartilages at a flexible joint, implying the ability to close."
   },
   {
    "sentences": [
-    12,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 13 and 14 both state that Ornithoprion is classified in the family Caseodontidae and order Eugeneodontiformes, repeating the same classification."
-  },
-  {
-   "sentences": [
+    0,
     9
    ],
    "kind": "repetition",
-   "reason": "Sentence 10 repeats the claim that Ornithoprion was durophagous and fed on shelled invertebrates, which is already stated earlier in the same sentence."
+   "reason": "Both sentences describe the rounded, broad tooth crowns; sentence 10 repeats the claim made in sentence 1."
   },
   {
    "sentences": [
-    8,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 places Ornithoprion in the Moscovian stage of the Pennsylvanian subperiod (≈307–305 Ma), while sentence 15 places it at approximately 315.2 Ma, an earlier time within the Carboniferous."
-  },
-  {
-   "sentences": [
-    10
+    12
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 11 discusses feeding traces on other fish skeletons from the Logan Quarry, which is not about Ornithoprion itself."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 compares Ornithoprion to living sharks and discusses its classification, treating it as a relative rather than focusing on the animal itself."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 16 discusses chondrichthyans found with Ornithoprion, focusing on other taxa rather than Ornithoprion itself."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 20 discusses the debate over the formation of shales containing Ornithoprion, addressing the sedimentary environment rather than the animal itself."
+   "reason": "Sentence 13 discusses feeding traces on other fish skeletons from the Logan Quarry, not directly about Ornithoprion."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The only known species, Ornithoprion hertwigi, lived during the Moscovian stage of the Pennsylvanian subperiod. Fossils of Ornithoprion are preserved in black shales from the area that is now the Midwestern United States. All known specimens of Ornithoprion are preserved in carbonaceous shale.\" / \"Ornithoprion lived during the Carboniferous period approximately 315.2 million years ago. Ornithoprion fossils were found in deposits from the North American Midcontinent Sea, a large inland sea.\": Sentence 9 places Ornithoprion in the Moscovian stage of the Pennsylvanian subperiod (≈307–305 Ma), while sentence 15 places it at approximately 315.2 Ma, an earlier time within the Carboniferous."
+  "- contradiction: \"Due to the shape of the Meckel's cartilages, the mouth of Ornithoprion was likely incapable of closing.\" / \"The mandibular rostrum articulated with the Meckel's cartilages at a flexible joint.\": Sentence 5 claims the mouth was likely incapable of closing, while sentence 12 states the mandibular rostrum articulated with Meckel's cartilages at a flexible joint, implying the ability to close."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:17:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:59:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 7 repeats the information that Ornithoprion was described by Rainer Zangerl in 1966, which is already stated in sentence 7 itself."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 13 and 14 both state that Ornithoprion is classified in the family Caseodontidae and order Eugeneodontiformes, repeating the same classification."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 10 repeats the claim that Ornithoprion was durophagous and fed on shelled invertebrates, which is already stated earlier in the same sentence."
+    },
+    {
+     "sentences": [
+      8,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 places Ornithoprion in the Moscovian stage of the Pennsylvanian subperiod (≈307–305 Ma), while sentence 15 places it at approximately 315.2 Ma, an earlier time within the Carboniferous."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 discusses feeding traces on other fish skeletons from the Logan Quarry, which is not about Ornithoprion itself."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 12 compares Ornithoprion to living sharks and discusses its classification, treating it as a relative rather than focusing on the animal itself."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 16 discusses chondrichthyans found with Ornithoprion, focusing on other taxa rather than Ornithoprion itself."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 20 discusses the debate over the formation of shales containing Ornithoprion, addressing the sedimentary environment rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:17:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:01+00:00"
 }

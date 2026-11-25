@@ -3,30 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "694c3fd2c9290615",
- "reviewed_at": "2026-11-24T01:00:48+00:00",
- "problems": [
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims the animal was a scavenger because its teeth were small, while sentence 6 states that bony fish scales found in a stomach region imply a diet of other fish."
-  },
-  {
-   "sentences": [
-    5,
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentences 6 and 10 refer to specific anatomical or species details (stomach region, Diademodus utahensis) without prior introduction or explanation in the page."
-  }
- ],
+ "reviewed_at": "2026-11-25T13:43:39+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"John E. Harris suggested the animal acted as a scavenger because its teeth were small.\" / \"However, Harris also noted that bony fish scales found in a stomach region imply a diet of other fish.\": Sentence 5 claims the animal was a scavenger because its teeth were small, while sentence 6 states that bony fish scales found in a stomach region imply a diet of other fish.",
-  "- missing context: \"However, Harris also noted that bony fish scales found in a stomach region imply a diet of other fish.\" / \"Michał Ginter argued in 2008 that the teeth of Diademodus utahensis might have been weakly attached, restricting its ability to catch large prey.\": Sentences 6 and 10 refer to specific anatomical or species details (stomach region, Diademodus utahensis) without prior introduction or explanation in the page."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:50:01+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims the animal was a scavenger because its teeth were small, while sentence 6 states that bony fish scales found in a stomach region imply a diet of other fish."
+    },
+    {
+     "sentences": [
+      5,
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 6 and 10 refer to specific anatomical or species details (stomach region, Diademodus utahensis) without prior introduction or explanation in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:50:01+00:00"
+  }
+ ]
 }

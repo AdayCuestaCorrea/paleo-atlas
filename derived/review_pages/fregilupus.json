@@ -2,22 +2,81 @@
  "taxon_key": "fregilupus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "022690686e2ee7ba",
- "reviewed_at": "2026-11-24T00:05:36+00:00",
+ "text_hash": "cfa83eb4a39a599a",
+ "reviewed_at": "2026-11-25T13:16:01+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    18
+    8,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the bird lived in large flocks and inhabited wetlands and marshes."
+  },
+  {
+   "sentences": [
+    9,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the bird as an omnivore feeding on plant matter and insects."
+  },
+  {
+   "sentences": [
+    10,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe robust pelvic elements, long legs and claws indicating ground foraging."
+  },
+  {
+   "sentences": [
+    2,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe a long, thin, pointed tongue used for feeding on fruits, nectar, pollen, and invertebrates."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses sea-level increases during the last interglacial period, which is a geological event rather than a characteristic of the bird itself."
+  },
+  {
+   "sentences": [
+    21,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 18 states the species disappeared around 1850, while sentence 19 claims it lived throughout the Holocene epoch from 0.0117 to 0 million years ago, implying it still existed in the present."
+   "reason": "Sentence 24 claims the bird lived from 0.0117 to 0 million years ago (a nonsensical time range), while sentence 22 states it went extinct around 1850, implying a much later existence."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"This species inhabited the island of Réunion and disappeared around the year 1850.\" / \"It lived throughout the Holocene epoch, spanning from 0.0117 to 0 million years ago.\": Sentence 18 states the species disappeared around 1850, while sentence 19 claims it lived throughout the Holocene epoch from 0.0117 to 0 million years ago, implying it still existed in the present."
+  "- contradiction: \"The hoopoe starling lived on the island of Réunion and went extinct around 1850.\" / \"It lived during the Holocene, from 0.0117 to 0 million years ago.\": Sentence 24 claims the bird lived from 0.0117 to 0 million years ago (a nonsensical time range), while sentence 22 states it went extinct around 1850, implying a much later existence."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:26:58+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:05:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 states the species disappeared around 1850, while sentence 19 claims it lived throughout the Holocene epoch from 0.0117 to 0 million years ago, implying it still existed in the present."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:26:58+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:57+00:00"
 }

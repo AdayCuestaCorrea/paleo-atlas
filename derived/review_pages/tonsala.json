@@ -2,22 +2,45 @@
  "taxon_key": "tonsala",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "03122ddc345493a0",
- "reviewed_at": "2026-11-24T00:22:22+00:00",
+ "text_hash": "f45f0768f74d97d4",
+ "reviewed_at": "2026-11-25T13:23:52+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    26
+    20,
+    21
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 claims Tonsala was larger than its relative Plotopterum, while sentence 27 states it was one of the smallest plotopterids."
+   "kind": "repetition",
+   "reason": "Both sentences state that Mayr and Goedert proposed the clade Tonsalinae in 2017, repeating the same claim."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 5 compares the pelvis of Tonsala to that of modern darters, which are fish, not birds, making the comparison about a different group."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Tonsala hildegardae was a large, flightless seabird comparable in size to a great penguin and larger than its relative Plotopterum.\" / \"Tonsala was one of the smallest and most common plotopterids living along the Pacific Northwest coast during the Oligocene.\": Sentence 1 claims Tonsala was larger than its relative Plotopterum, while sentence 27 states it was one of the smallest plotopterids."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:37:42+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:22:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims Tonsala was larger than its relative Plotopterum, while sentence 27 states it was one of the smallest plotopterids."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:37:42+00:00"
+  }
+ ]
 }

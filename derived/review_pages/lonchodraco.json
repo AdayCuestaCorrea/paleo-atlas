@@ -2,30 +2,56 @@
  "taxon_key": "lonchodraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5aef2aa469a67d0e",
- "reviewed_at": "2026-11-24T00:36:20+00:00",
+ "text_hash": "8aee553371cf1f82",
+ "reviewed_at": "2026-11-25T13:31:22+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    2,
-    3
+    12
    ],
-   "kind": "repetition",
-   "reason": "All three sentences describe a crest on the snout or lower jaw, repeating the same morphological feature."
+   "kind": "missing_context",
+   "reason": "Refers to \"the original specimen\" without specifying which specimen or providing prior context."
   },
   {
    "sentences": [
-    14
+    13
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 15 states the animal lived from Valanginian to Turonian without citing evidence or specifying which specimen or study supports this range."
+   "kind": "about_something_else",
+   "reason": "Describes how researchers treat Lonchodraco as a group, which is about the taxonomic group rather than the individual animal."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The animal lived from the Valanginian to the Turonian, spanning from 137.05 to 89.8 million years ago.\": Sentence 15 states the animal lived from Valanginian to Turonian without citing evidence or specifying which specimen or study supports this range."
+  "- missing context: \"The original specimen was discovered in the Chalk Formation.\": Refers to \"the original specimen\" without specifying which specimen or providing prior context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:48:04+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe a crest on the snout or lower jaw, repeating the same morphological feature."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 15 states the animal lived from Valanginian to Turonian without citing evidence or specifying which specimen or study supports this range."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:48:04+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:09+00:00"
 }

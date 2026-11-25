@@ -2,54 +2,66 @@
  "taxon_key": "achelousaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "539b277e5b024a45",
- "reviewed_at": "2026-11-23T23:55:11+00:00",
+ "text_hash": "7805526b0ef7d6b3",
+ "reviewed_at": "2026-11-25T13:10:08+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    14,
+    17
    ],
-   "kind": "missing_context",
-   "reason": "Refers to specimen MOR 591 without prior introduction."
-  },
-  {
-   "sentences": [
-    17,
-    18
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions a population bottleneck and rapid evolution without earlier context."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "missing_context",
-   "reason": "Discusses succession of fossils as anagenesis without prior mention of the fossil sequence."
-  },
-  {
-   "sentences": [
-    20
-   ],
-   "kind": "missing_context",
-   "reason": "References Brachyceratops quarry and Einiosaurus beds without earlier context."
-  },
-  {
-   "sentences": [
-    21
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions Stellasaurus and its intermediate status without prior introduction."
+   "kind": "repetition",
+   "reason": "Both sentences state that Achelousaurus lived during the Campanian age of the Late Cretaceous, providing the same temporal information twice."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"If specimen MOR 591 belongs to Achelousaurus, the genus may have reached adult size faster than Einiosaurus, as it was the same size as a larger Einiosaurus skull but younger.\": Refers to specimen MOR 591 without prior introduction.",
-  "- missing context: \"These animals lived on a narrow coastal strip on the east coast of Laramidia, bordered by the Western Interior Seaway and the 3 to 4 km high proto-Rocky Mountains, during the phase when the coastal habitat was at its narrowest, experiencing the strongest selection pressures.\" / \"The reduced habitat size caused a population bottleneck, which Horner suggested made rapid evolution possible.\": Mentions a population bottleneck and rapid evolution without earlier context.",
-  "- missing context: \"Horner proposed that the succession of fossils represented anagenesis, where later forms were simply evolved versions of earlier ones rather than distinct species.\": Discusses succession of fossils as anagenesis without prior mention of the fossil sequence.",
-  "- missing context: \"In 1995, Sampson revised the timeline, estimating 860,000 years passed after the Brachyceratops quarry and 640,000 years after the Einiosaurus beds, contradicting Horner's shorter timeframe.\": References Brachyceratops quarry and Einiosaurus beds without earlier context.",
-  "- missing context: \"Wilson and colleagues attributed the differences between Einiosaurus and Achelousaurus to heterochrony, or differential development speeds of traits during an individual's lifetime, and in 2020 found Stellasaurus intermediate between Styracosaurus and Einiosaurus in morphology and stratigraphy, supporting its role in an anagenetic lineage.\": Mentions Stellasaurus and its intermediate status without prior introduction."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:46:15+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:55:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to specimen MOR 591 without prior introduction."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a population bottleneck and rapid evolution without earlier context."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "Discusses succession of fossils as anagenesis without prior mention of the fossil sequence."
+    },
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "missing_context",
+     "reason": "References Brachyceratops quarry and Einiosaurus beds without earlier context."
+    },
+    {
+     "sentences": [
+      21
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Stellasaurus and its intermediate status without prior introduction."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:46:15+00:00"
+  }
+ ]
 }

@@ -3,31 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "af141288e3d7f61e",
- "reviewed_at": "2026-11-24T00:41:08+00:00",
+ "reviewed_at": "2026-11-25T13:34:23+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    17
+    4,
+    10,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 states the species had gone extinct by 1623, while sentence 18 lists 1603 as the extinction date."
-  },
-  {
-   "sentences": [
-    5,
-    15,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 claims the species lived from 0.129 to 0 million years ago (i.e., into the present), which contradicts the extinction dates given in sentences 6 and 18."
+   "reason": "Sentences 5 and 12 state the Bermuda hawk was extinct by the early 17th century (1603–1623), while sentence 11 claims it lived from the Late Pleistocene to the Holocene up to 0 million years ago (i.e., the present), which directly contradicts the extinction dates."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Captain John Smith reported a lack of endemic hawks in 1623, suggesting the species had gone extinct by then.\" / \"The Bermuda hawk is listed as extinct by the IUCN with a rough date of 1603, though the exact date of extinction is unknown, and 1603 is cited based on explorer sightings.\": Sentence 6 states the species had gone extinct by 1623, while sentence 18 lists 1603 as the extinction date.",
-  "- contradiction: \"Captain John Smith reported a lack of endemic hawks in 1623, suggesting the species had gone extinct by then.\" / \"The Bermuda hawk lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\" / \"The Bermuda hawk is listed as extinct by the IUCN with a rough date of 1603, though the exact date of extinction is unknown, and 1603 is cited based on explorer sightings.\": Sentence 16 claims the species lived from 0.129 to 0 million years ago (i.e., into the present), which contradicts the extinction dates given in sentences 6 and 18."
+  "- contradiction: \"Captain John Smith reported a lack of endemic hawks in 1623, suggesting the species had gone extinct by then.\" / \"The Bermuda hawk lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\" / \"The exact date of extinction is unknown, though 1603 is cited based on explorer sightings. Hunting and the introduction of invasive species like feral pigs in the 17th century likely caused the extinction of the Bermuda hawk. Deforestation and burning of native forests after European settlement may have contributed to the hawk's extinction.\": Sentences 5 and 12 state the Bermuda hawk was extinct by the early 17th century (1603–1623), while sentence 11 claims it lived from the Late Pleistocene to the Holocene up to 0 million years ago (i.e., the present), which directly contradicts the extinction dates."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:27:48+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:41:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states the species had gone extinct by 1623, while sentence 18 lists 1603 as the extinction date."
+    },
+    {
+     "sentences": [
+      5,
+      15,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 claims the species lived from 0.129 to 0 million years ago (i.e., into the present), which contradicts the extinction dates given in sentences 6 and 18."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:27:48+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:58+00:00"
 }

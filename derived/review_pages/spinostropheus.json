@@ -2,30 +2,57 @@
  "taxon_key": "spinostropheus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "24dcc5231dc6ecce",
- "reviewed_at": "2026-11-24T00:56:32+00:00",
+ "text_hash": "dee00ade894d3973",
+ "reviewed_at": "2026-11-25T13:41:33+00:00",
  "problems": [
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Refers to \"the specimen\" without having introduced it earlier."
+  },
   {
    "sentences": [
     11,
     12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 states Spinostropheus lived in the Middle Jurassic, while sentence 13 lists a time range from Oxfordian to Cenomanian (Late Jurassic to Late Cretaceous)."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to “the specimen” without having previously identified or described which specimen is being named."
+   "reason": "Sentence 12 states Spinostropheus lived during the Middle Jurassic, while sentence 13 lists a time range from Oxfordian (Late Jurassic) to Cenomanian (Late Cretaceous)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Spinostropheus lived during the Middle Jurassic in the Tiourarén Formation of Niger.\" / \"The Paleobiology Database lists the time range as Oxfordian to Cenomanian (161.5 to 93.9 million years ago).\": Sentence 12 states Spinostropheus lived in the Middle Jurassic, while sentence 13 lists a time range from Oxfordian to Cenomanian (Late Jurassic to Late Cretaceous).",
-  "- missing context: \"In 1960, Albert-Félix de Lapparent named the specimen as a second species of Elaphrosaurus.\": Sentence 5 refers to “the specimen” without having previously identified or described which specimen is being named."
+  "- missing context: \"In 1960, Albert-Félix de Lapparent named the specimen as a second species of Elaphrosaurus.\": Refers to \"the specimen\" without having introduced it earlier.",
+  "- contradiction: \"Spinostropheus lived during the Middle Jurassic in the Tiourarén Formation of Niger.\" / \"The Paleobiology Database lists the time range as Oxfordian to Cenomanian (161.5 to 93.9 million years ago).\": Sentence 12 states Spinostropheus lived during the Middle Jurassic, while sentence 13 lists a time range from Oxfordian (Late Jurassic) to Cenomanian (Late Cretaceous)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:20:13+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:56:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states Spinostropheus lived in the Middle Jurassic, while sentence 13 lists a time range from Oxfordian to Cenomanian (Late Jurassic to Late Cretaceous)."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to “the specimen” without having previously identified or described which specimen is being named."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:20:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:37+00:00"
 }

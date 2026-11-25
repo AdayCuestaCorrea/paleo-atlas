@@ -3,55 +3,88 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "8fdb63b456de9edd",
- "reviewed_at": "2026-11-24T00:26:16+00:00",
+ "reviewed_at": "2026-11-25T13:26:20+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    11
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the first fossil of Anchisaurus was discovered in 1818 by Solomon Ellsworth in East Windsor, Connecticut."
+   "kind": "missing_context",
+   "reason": "refers to \"large eyes\" and \"skull\" without any prior mention of a skull"
   },
   {
    "sentences": [
-    8,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the initial misidentification of the bones as human remains before being reclassified as dinosaur."
-  },
-  {
-   "sentences": [
-    6,
     7
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 claims the initial discovery of Anchisaurus predates the description of any other dinosaur, while sentence 8 states sauropodomorph remains were first found in North America in 1818, implying an earlier discovery."
+   "kind": "missing_context",
+   "reason": "mentions \"the bones\" and \"tail vertebrae\" without specifying which bones were discovered"
   },
   {
    "sentences": [
-    7,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 says the first sauropodomorph remains were found in 1818 in East Windsor, Connecticut, whereas sentence 11 says fossils of Anchisaurus were first found in the Portland Formation of the Newark Supergroup, suggesting a different location and possibly a later date."
-  },
-  {
-   "sentences": [
-    7,
-    10,
-    11
+    6
    ],
    "kind": "about_something_else",
-   "reason": "Sentences 8, 11, and 12 discuss sauropodomorph remains or general fossil discoveries in a broader context, not specifically about Anchisaurus itself."
+   "reason": "describes sauropodomorph remains in general, not specifically Anchisaurus"
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The initial discovery of this animal predates the description of any other dinosaur and is possibly the first known dinosaur from North America.\" / \"Sauropodomorph remains were first found in North America in 1818 in East Windsor, Connecticut, when Solomon Ellsworth Jr. uncovered bones nearly six feet long while digging a well.\": Sentence 7 claims the initial discovery of Anchisaurus predates the description of any other dinosaur, while sentence 8 states sauropodomorph remains were first found in North America in 1818, implying an earlier discovery.",
-  "- contradiction: \"Sauropodomorph remains were first found in North America in 1818 in East Windsor, Connecticut, when Solomon Ellsworth Jr. uncovered bones nearly six feet long while digging a well.\" / \"Fossils of Anchisaurus were first found in the Portland Formation of the Newark Supergroup in the Connecticut River Valley.\": Sentence 8 says the first sauropodomorph remains were found in 1818 in East Windsor, Connecticut, whereas sentence 11 says fossils of Anchisaurus were first found in the Portland Formation of the Newark Supergroup, suggesting a different location and possibly a later date."
+  "- missing context: \"This dinosaur possessed a large thumb claw and large eyes that were not entirely on the sides of the skull.\": refers to \"large eyes\" and \"skull\" without any prior mention of a skull",
+  "- missing context: \"When first discovered, the bones were initially mistaken for human remains until tail vertebrae proved otherwise.\": mentions \"the bones\" and \"tail vertebrae\" without specifying which bones were discovered"
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:21:17+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:26:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the first fossil of Anchisaurus was discovered in 1818 by Solomon Ellsworth in East Windsor, Connecticut."
+    },
+    {
+     "sentences": [
+      8,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the initial misidentification of the bones as human remains before being reclassified as dinosaur."
+    },
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 claims the initial discovery of Anchisaurus predates the description of any other dinosaur, while sentence 8 states sauropodomorph remains were first found in North America in 1818, implying an earlier discovery."
+    },
+    {
+     "sentences": [
+      7,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 says the first sauropodomorph remains were found in 1818 in East Windsor, Connecticut, whereas sentence 11 says fossils of Anchisaurus were first found in the Portland Formation of the Newark Supergroup, suggesting a different location and possibly a later date."
+    },
+    {
+     "sentences": [
+      7,
+      10,
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentences 8, 11, and 12 discuss sauropodomorph remains or general fossil discoveries in a broader context, not specifically about Anchisaurus itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:21:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:13+00:00"
 }

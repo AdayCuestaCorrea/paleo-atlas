@@ -3,21 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "cbb0ebc3224c2844",
- "reviewed_at": "2026-11-24T01:42:18+00:00",
+ "reviewed_at": "2026-11-25T13:56:42+00:00",
  "problems": [
   {
    "sentences": [
     5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 6 refers to the lost holotype of Jibeinia, but the page never introduced or described that holotype earlier."
+   "reason": "Sentence 6 refers to the lost holotype of Jibeinia, but the page never introduced or described that holotype before this reference."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated whether Vescornis is a synonym of the genera Jibeinia or Hebeiornis. There is no scientific consensus on the synonymy of Vescornis, Jibeinia, and Hebeiornis, with some researchers treating them as distinct species. Researchers conclude that verifying if Vescornis and Jibeinia are the same species is impossible without rediscovering the lost holotype of Jibeinia.\": Sentence 6 refers to the lost holotype of Jibeinia, but the page never introduced or described that holotype earlier."
+  "- missing context: \"It is debated whether Vescornis is a synonym of the genera Jibeinia or Hebeiornis. There is no scientific consensus on the synonymy of Vescornis, Jibeinia, and Hebeiornis, with some researchers treating them as distinct species. Researchers conclude that verifying if Vescornis and Jibeinia are the same species is impossible without rediscovering the lost holotype of Jibeinia, a specimen that was never formally described or located in the scientific record.\": Sentence 6 refers to the lost holotype of Jibeinia, but the page never introduced or described that holotype before this reference."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:42:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to the lost holotype of Jibeinia, but the page never introduced or described that holotype earlier."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:27:33+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:27:33+00:00"
+ "rewritten_at": "2026-11-25T14:32:08+00:00"
 }

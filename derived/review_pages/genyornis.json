@@ -2,22 +2,45 @@
  "taxon_key": "genyornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "51f89ee66f979611",
- "reviewed_at": "2026-11-24T00:21:36+00:00",
+ "text_hash": "974ba3e9466db01f",
+ "reviewed_at": "2026-11-25T13:23:25+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    0,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 says Genyornis lived until 50,000 years ago, while sentence 13 limits its existence to the Pleistocene up to ~11,700 years ago."
+   "kind": "repetition",
+   "reason": "Both sentences describe Genyornis newtoni as a flightless bird, repeating the same claim."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses the family Dromornithidae’s temporal range, which is about the family, not the specific animal Genyornis."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Genyornis newtoni was a flightless bird that lived in Australia until 50,000 years ago.\" / \"The genus lived from the Gelasian to the Late Pleistocene, between 2.58 and 0.0117 million years ago, with fossils found in South Australia and New South Wales dating to the Pleistocene Epoch.\": Sentence 12 says Genyornis lived until 50,000 years ago, while sentence 13 limits its existence to the Pleistocene up to ~11,700 years ago."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:30:54+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:21:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 says Genyornis lived until 50,000 years ago, while sentence 13 limits its existence to the Pleistocene up to ~11,700 years ago."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:30:54+00:00"
+  }
+ ]
 }

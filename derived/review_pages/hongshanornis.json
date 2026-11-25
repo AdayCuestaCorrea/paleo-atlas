@@ -2,29 +2,56 @@
  "taxon_key": "hongshanornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a1010221ac480cc6",
- "reviewed_at": "2026-11-24T00:46:37+00:00",
+ "text_hash": "e8f5ec301338b3d0",
+ "reviewed_at": "2026-11-25T13:37:06+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    8,
+    9
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"first\" and \"second specimen\" without earlier mention of specimens."
+   "kind": "contradiction",
+   "reason": "Sentence 9 claims absence of wing slots indicates high flight speeds, while sentence 10 states the bird flapped continuously at low speeds and switched to bounding flight at higher speeds."
   },
   {
    "sentences": [
-    8
+    10,
+    11
    ],
-   "kind": "missing_context",
-   "reason": "Mentions \"slots in the wings\" without prior context explaining what slots are."
+   "kind": "repetition",
+   "reason": "Sentences 11 and 12 both state that Hongshanornis belongs to the family Hongshanornithidae."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"While the original description proposed a large feathered crest, a second specimen showed shorter feathers near the snout, suggesting the first might be a preservation artifact.\": Refers to \"first\" and \"second specimen\" without earlier mention of specimens.",
-  "- missing context: \"The lack of slots in the wings indicates the bird likely flew at relatively high speeds.\": Mentions \"slots in the wings\" without prior context explaining what slots are."
+  "- contradiction: \"The absence of slots in the wings indicates the bird likely flew at relatively high speeds.\" / \"Hongshanornis likely flapped continuously at low speeds and switched to bounding flight at higher speeds.\": Sentence 9 claims absence of wing slots indicates high flight speeds, while sentence 10 states the bird flapped continuously at low speeds and switched to bounding flight at higher speeds."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:14:00+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:46:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"first\" and \"second specimen\" without earlier mention of specimens."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"slots in the wings\" without prior context explaining what slots are."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:14:00+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:06+00:00"
 }

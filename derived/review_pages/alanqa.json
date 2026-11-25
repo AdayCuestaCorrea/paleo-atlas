@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "1d7fc57d0df9e94c",
- "reviewed_at": "2026-11-24T01:00:21+00:00",
+ "reviewed_at": "2026-11-25T13:43:28+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
+    3,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Both sentences claim different wingspan estimates for the same species—4 m versus 6 m—without indicating they are separate hypotheses."
+   "reason": "Sentences 4 and 9 give different wingspan estimates (4 m vs 6 m) for the same species without indicating they are separate estimates."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Comparisons with related species suggest that individuals known from jaw specimens likely possessed wingspans of about 4 meters.\" / \"A vertebra possibly belonging to the same species indicates an individual with a wingspan of about 6 meters.\": Both sentences claim different wingspan estimates for the same species—4 m versus 6 m—without indicating they are separate hypotheses."
+  "- contradiction: \"Comparisons with related species suggest that individuals known from jaw specimens likely possessed wingspans of about 4 meters.\" / \"According to Ibrahim and colleagues, a vertebra likely from the same species suggests an individual with a wingspan of about 6 meters.\": Sentences 4 and 9 give different wingspan estimates (4 m vs 6 m) for the same species without indicating they are separate estimates."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:47:13+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences claim different wingspan estimates for the same species—4 m versus 6 m—without indicating they are separate hypotheses."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:47:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:45+00:00"
 }

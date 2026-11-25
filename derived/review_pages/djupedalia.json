@@ -2,8 +2,8 @@
  "taxon_key": "djupedalia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b2c56d93c3c74429",
- "reviewed_at": "2026-11-24T01:49:19+00:00",
+ "text_hash": "81a1d1acc4996230",
+ "reviewed_at": "2026-11-25T13:57:31+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,42 @@
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 states the fossils are dated to the middle Volgian stage, while sentence 6 states the genus lived during the Tithonian stage—different Jurassic sub‑stages with no explanation of how both apply."
+   "reason": "Sentence 5 states fossils are dated to the middle Volgian stage, while sentence 6 says the genus lived during the Tithonian stage, which are different geological stages."
+  },
+  {
+   "sentences": [
+    4,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 5 and 6 repeat the same claim about the age of the genus."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The fossils are dated to the middle Volgian stage, and the animal lived in the uppermost Jurassic in central Spitsbergen, Norway.\" / \"The genus lived between 149.2 and 143.1 million years ago during the Tithonian stage.\": Sentence 5 states the fossils are dated to the middle Volgian stage, while sentence 6 states the genus lived during the Tithonian stage—different Jurassic sub‑stages with no explanation of how both apply."
+  "- contradiction: \"The fossils are dated to the middle Volgian stage, while the genus lived between 149.2 and 143.1 million years ago during the Tithonian stage.\" / \"The genus lived between 149.2 and 143.1 million years ago during the Tithonian stage.\": Sentence 5 states fossils are dated to the middle Volgian stage, while sentence 6 says the genus lived during the Tithonian stage, which are different geological stages."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:49:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states the fossils are dated to the middle Volgian stage, while sentence 6 states the genus lived during the Tithonian stage—different Jurassic sub‑stages with no explanation of how both apply."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:29:46+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:29:46+00:00"
+ "rewritten_at": "2026-11-25T14:32:41+00:00"
 }

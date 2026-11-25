@@ -2,30 +2,59 @@
  "taxon_key": "scansoriopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "221c70b38ec41200",
- "reviewed_at": "2026-11-24T00:29:26+00:00",
+ "text_hash": "a40273a7cf9690c0",
+ "reviewed_at": "2026-11-25T13:27:44+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    19
+    9,
+    10,
+    18
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states the specimen is a hatchling from the Yixian Formation (Early Cretaceous), while sentence 20 claims the fossil range of Scansoriopteryx spans the Callovian to Oxfordian stages (Middle to Late Jurassic)."
+   "reason": "Sentences 10 and 11 state that the only known specimen of Scansoriopteryx comes from the Yixian Formation (Early Cretaceous), whereas sentence 19 claims the fossil range of Scansoriopteryx spans the Callovian to Oxfordian stages (Middle to Late Jurassic). The two statements cannot both be true for the same taxon."
   },
   {
    "sentences": [
-    7,
-    15
+    19,
+    20
    ],
-   "kind": "repetition",
-   "reason": "Both sentences attribute the naming and interpretation of Scansoriopteryx to Czerkas and Yuan, repeating the same claim."
+   "kind": "about_something_else",
+   "reason": "Sentences 20 and 21 discuss the holotype of Epidendrosaurus and the age of the Daohugou beds, which are about a different genus and a geological formation, not directly about Scansoriopteryx itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The known specimen of Scansoriopteryx heilmanni represents the remains of a hatchling maniraptoran dinosaur that was roughly the size of a sparrow.\" / \"The fossil range of Scansoriopteryx spans from the Callovian to the Oxfordian stages.\": Sentence 1 states the specimen is a hatchling from the Yixian Formation (Early Cretaceous), while sentence 20 claims the fossil range of Scansoriopteryx spans the Callovian to Oxfordian stages (Middle to Late Jurassic)."
+  "- contradiction: \"It is known from a single juvenile fossil specimen discovered in Liaoning, China.\" / \"Czerkas and Yuan initially reported that the specimen likely came from the Yixian Formation.\" / \"The fossil range of Scansoriopteryx spans from the Callovian to the Oxfordian stages.\": Sentences 10 and 11 state that the only known specimen of Scansoriopteryx comes from the Yixian Formation (Early Cretaceous), whereas sentence 19 claims the fossil range of Scansoriopteryx spans the Callovian to Oxfordian stages (Middle to Late Jurassic). The two statements cannot both be true for the same taxon."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:37:06+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:29:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states the specimen is a hatchling from the Yixian Formation (Early Cretaceous), while sentence 20 claims the fossil range of Scansoriopteryx spans the Callovian to Oxfordian stages (Middle to Late Jurassic)."
+    },
+    {
+     "sentences": [
+      7,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences attribute the naming and interpretation of Scansoriopteryx to Czerkas and Yuan, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:37:06+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:03+00:00"
 }

@@ -2,22 +2,38 @@
  "taxon_key": "gondwanasuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ce2c4a91a869edb0",
- "reviewed_at": "2026-11-24T01:54:40+00:00",
+ "text_hash": "3e39f9a21260c6fb",
+ "reviewed_at": "2026-11-25T13:58:21+00:00",
  "problems": [
   {
    "sentences": [
+    0,
     5
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"a juvenile specimen\" without any prior mention of a specific specimen in the page."
+   "kind": "repetition",
+   "reason": "Both sentences state that the fossil remains consist of a skull with a jaw."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Recent studies concluded that Gondwanasuchus is a juvenile specimen of a larger Baurusuchid species, making it a nomen dubium.\": Sentence 6 refers to \"a juvenile specimen\" without any prior mention of a specific specimen in the page."
- ],
- "rewrite": "replaced",
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:54+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:54:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"a juvenile specimen\" without any prior mention of a specific specimen in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:54+00:00"
+  }
+ ]
 }

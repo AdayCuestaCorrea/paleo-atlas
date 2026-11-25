@@ -2,31 +2,79 @@
  "taxon_key": "caseosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0dd73cdb31f74c1e",
- "reviewed_at": "2026-11-24T01:22:44+00:00",
+ "text_hash": "c5e32ce44380e39e",
+ "reviewed_at": "2026-11-25T13:50:24+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    1
+    1,
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Caseosaurus could reach a length of 2 meters."
+   "kind": "contradiction",
+   "reason": "Sentence 6 states Caseosaurus is outside Dinosauria, while sentences 1 and 2 describe it as a ground‑dwelling dinosaur."
   },
   {
    "sentences": [
-    5,
-    6,
-    7
+    0,
+    1,
+    2,
+    3,
+    4,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 claims Caseosaurus is outside Dinosauria, while sentences 7 and 8 place it within the dinosaur family Herrerasauridae or reassign it to Chindesaurus, a dinosaur."
+   "reason": "Sentence 11 declares Caseosaurus a nomen dubium, contradicting earlier statements that it was a valid, described species."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 9 discusses other archosaurs and tracks, not characteristics of Caseosaurus itself."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 refers to an ilium assigned to Eucoelophysis, not to Caseosaurus."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"In 2018, Caseosaurus was re-evaluated as a valid species identified as a relative of Herrerasaurus, placing it outside the Dinosauria.\" / \"It is classified within the family Herrerasauridae.\" / \"In 2004, Langer examined the holotype ilium and reassigned it to the genus Chindesaurus, leading to suggestions that Caseosaurus might be the same dinosaur as Chindesaurus.\": Sentence 6 claims Caseosaurus is outside Dinosauria, while sentences 7 and 8 place it within the dinosaur family Herrerasauridae or reassign it to Chindesaurus, a dinosaur."
+  "- contradiction: \"Caseosaurus was a small, lightly built, bipedal, ground-dwelling carnivore that could reach a length of 2 meters.\" / \"Size estimates indicate Caseosaurus grew up to 2 meters long and weighed no more than 50 kilograms.\" / \"In 2018, Caseosaurus was re-evaluated as a valid species identified as a relative of Herrerasaurus, placing it outside the Dinosauria.\": Sentence 6 states Caseosaurus is outside Dinosauria, while sentences 1 and 2 describe it as a ground‑dwelling dinosaur.",
+  "- contradiction: \"Caseosaurus was a small, lightly built, bipedal, ground-dwelling carnivore that could reach a length of 2 meters.\" / \"Size estimates indicate Caseosaurus grew up to 2 meters long and weighed no more than 50 kilograms.\" / \"The genus Caseosaurus was formally described and named by Hunt, Lucas, Heckert, Sullivan, and Lockley in 1998.\" / \"The genus name Caseosaurus means \"Case's lizard\" and honors the scientist Ermine Cowles Case.\" / \"The specific name crosbyensis refers to Crosby County in Texas, where the fossils were discovered.\" / \"A recent review classified Caseosaurus as a nomen dubium, contradicting earlier studies that validated it.\": Sentence 11 declares Caseosaurus a nomen dubium, contradicting earlier statements that it was a valid, described species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:33:48+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:22:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Caseosaurus could reach a length of 2 meters."
+    },
+    {
+     "sentences": [
+      5,
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims Caseosaurus is outside Dinosauria, while sentences 7 and 8 place it within the dinosaur family Herrerasauridae or reassign it to Chindesaurus, a dinosaur."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:33:48+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:54+00:00"
 }

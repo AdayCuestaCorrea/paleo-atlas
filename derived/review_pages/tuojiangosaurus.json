@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "42bc6a2f5481d9d4",
- "reviewed_at": "2026-11-24T00:48:57+00:00",
+ "reviewed_at": "2026-11-25T13:37:59+00:00",
  "problems": [
   {
    "sentences": [
-    21,
-    22
+    20,
+    21
    ],
    "kind": "contradiction",
-   "reason": "Sentences 22 and 23 give conflicting age ranges for Tuojiangosaurus: 22 cites the Oxfordian stage (~160 Ma, Late Jurassic), while 23 cites the Bathonian–Callovian stages (168.2–161.5 Ma, Middle Jurassic)."
+   "reason": "The page states Tuojiangosaurus lived at the end of the Jurassic (Oxfordian, ~160 Ma) but also that it lived during the Bathonian–Callovian stages (168.2–161.5 Ma), giving conflicting age ranges."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Tuojiangosaurus lived at the end of the Jurassic Period, approximately 160 million years ago during the Oxfordian stage.\" / \"Tuojiangosaurus lived during the Bathonian to Callovian stages, approximately 168.2 to 161.5 million years ago.\": Sentences 22 and 23 give conflicting age ranges for Tuojiangosaurus: 22 cites the Oxfordian stage (~160 Ma, Late Jurassic), while 23 cites the Bathonian–Callovian stages (168.2–161.5 Ma, Middle Jurassic)."
+  "- contradiction: \"Tuojiangosaurus lived at the end of the Jurassic Period, approximately 160 million years ago during the Oxfordian stage.\" / \"Other sources indicate it lived during the Bathonian to Callovian stages, approximately 168.2 to 161.5 million years ago.\": The page states Tuojiangosaurus lived at the end of the Jurassic (Oxfordian, ~160 Ma) but also that it lived during the Bathonian–Callovian stages (168.2–161.5 Ma), giving conflicting age ranges."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:29:11+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:48:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 22 and 23 give conflicting age ranges for Tuojiangosaurus: 22 cites the Oxfordian stage (~160 Ma, Late Jurassic), while 23 cites the Bathonian–Callovian stages (168.2–161.5 Ma, Middle Jurassic)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:29:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:44+00:00"
 }

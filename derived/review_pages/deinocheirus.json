@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "321d132008dcd317",
- "reviewed_at": "2026-11-23T23:59:22+00:00",
+ "reviewed_at": "2026-11-25T13:12:32+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    14
+    15,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 classifies Deinocheirus as a primitive ornithomimosaurian in the family Deinocheiridae, while sentence 15 states the family Deinocheiridae was created within Carnosauria, implying a different higher-level placement."
+   "reason": "Sentence 16 classifies Deinocheirus as a primitive ornithomimosaurian closely related to Garudimimus and Beishanlong, forming the family Deinocheiridae, while sentence 17 states that Osmólska and Roniewicz created the new family Deinocheiridae within Carnosauria because they believed Deinocheirus did not fit existing theropod families, implying a different higher‑level classification."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Deinocheirus is classified as a primitive ornithomimosaurian closely related to Garudimimus and Beishanlong, forming the family Deinocheiridae.\" / \"Osmólska and Roniewicz created the new family Deinocheiridae within Carnosauria because they believed Deinocheirus did not fit existing theropod families.\": Sentence 13 classifies Deinocheirus as a primitive ornithomimosaurian in the family Deinocheiridae, while sentence 15 states the family Deinocheiridae was created within Carnosauria, implying a different higher-level placement."
+  "- contradiction: \"Deinocheirus is classified as a primitive ornithomimosaurian closely related to Garudimimus and Beishanlong, forming the family Deinocheiridae.\" / \"Osmólska and Roniewicz created the new family Deinocheiridae within Carnosauria because they believed Deinocheirus did not fit existing theropod families.\": Sentence 16 classifies Deinocheirus as a primitive ornithomimosaurian closely related to Garudimimus and Beishanlong, forming the family Deinocheiridae, while sentence 17 states that Osmólska and Roniewicz created the new family Deinocheiridae within Carnosauria because they believed Deinocheirus did not fit existing theropod families, implying a different higher‑level classification."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:19:16+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:59:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 classifies Deinocheirus as a primitive ornithomimosaurian in the family Deinocheiridae, while sentence 15 states the family Deinocheiridae was created within Carnosauria, implying a different higher-level placement."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:19:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:03+00:00"
 }

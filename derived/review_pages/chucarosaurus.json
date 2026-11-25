@@ -2,30 +2,53 @@
  "taxon_key": "chucarosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e113c032d3a69df7",
- "reviewed_at": "2026-11-24T01:02:50+00:00",
+ "text_hash": "85f764f3ef3486bc",
+ "reviewed_at": "2026-11-25T13:44:08+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    5
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Chucarosaurus lived in the Early Cretaceous, while sentence 6 claims it lived in the Early Cretaceous Huincul Formation, which is actually Late Cretaceous."
+   "kind": "repetition",
+   "reason": "Both sentences state that Chucarosaurus lived in the Early Cretaceous Huincul Formation of Río Negro Province, Argentina."
   },
   {
    "sentences": [
-    0,
-    5
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim that Chucarosaurus lived in the Early Cretaceous."
+   "kind": "about_something_else",
+   "reason": "Sentence 5 describes fossils found in the Huincul Formation, which is about the formation, not directly about Chucarosaurus."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Chucarosaurus was an extinct genus of titanosaurian dinosaur that lived in Argentina during the Early Cretaceous. This large creature possessed slender limbs.\" / \"Chucarosaurus lived in the Early Cretaceous Huincul Formation of Río Negro Province, Argentina. Chucarosaurus lived between 110.1 and 106.3 million years ago during the Albian stage.\": Sentence 1 states Chucarosaurus lived in the Early Cretaceous, while sentence 6 claims it lived in the Early Cretaceous Huincul Formation, which is actually Late Cretaceous."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:57:31+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:02:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Chucarosaurus lived in the Early Cretaceous, while sentence 6 claims it lived in the Early Cretaceous Huincul Formation, which is actually Late Cretaceous."
+    },
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim that Chucarosaurus lived in the Early Cretaceous."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:57:31+00:00"
+  }
+ ]
 }

@@ -3,20 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "261329fdb3dd63f7",
- "reviewed_at": "2026-11-24T00:24:18+00:00",
+ "reviewed_at": "2026-11-25T13:25:05+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    12,
+    13
    ],
-   "kind": "missing_context",
-   "reason": "The sentence mentions a specimen with fur but no prior mention of which specimen or context."
+   "kind": "contradiction",
+   "reason": "Sentence 13 states no juveniles are known, while sentence 14 claims Dorygnathus grew rapidly as a juvenile."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"One specimen reportedly showed signs of fur, suggesting the animal had hair and a high metabolic rate.\": The sentence mentions a specimen with fur but no prior mention of which specimen or context."
+  "- contradiction: \"The smallest known Dorygnathus specimen has a wingspan of sixty centimetres, and no juveniles are known.\" / \"Researcher Padian concluded that Dorygnathus grew rapidly as a juvenile and continued growing slowly after maturity, potentially reaching a wingspan of 1.7 metres.\": Sentence 13 states no juveniles are known, while sentence 14 claims Dorygnathus grew rapidly as a juvenile."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:00:11+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:24:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions a specimen with fur but no prior mention of which specimen or context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:00:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:19+00:00"
 }

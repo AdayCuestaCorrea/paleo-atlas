@@ -2,16 +2,25 @@
  "taxon_key": "laornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4573a1c0487847ea",
- "reviewed_at": "2026-11-24T01:33:41+00:00",
+ "text_hash": "56ccea270de246f5",
+ "reviewed_at": "2026-11-25T13:54:26+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    4,
+    7,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same classification of Laornis as belonging to Graculavidae."
+   "kind": "contradiction",
+   "reason": "Sentence 5 places Laornis in its own family Laornithidae, while sentences 8 and 9 state it belongs to the family Graculavidae."
+  },
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentences 6 and 7 propose two different, mutually exclusive families (Presbyornithidae vs. pseudotooth birds)."
   },
   {
    "sentences": [
@@ -19,13 +28,51 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 gives a time range of 66–63 Ma, while sentence 12 gives 72.2–66 Ma for the same species."
+   "reason": "Sentence 11 gives a fossil age range of 66–63 Ma, whereas sentence 12 gives 72.2–66 Ma, conflicting age ranges for the same species."
+  },
+  {
+   "sentences": [
+    7,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the Paleobiology Database lists Laornis within the family Graculavidae."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The sediments containing Laornis fossils were deposited approximately 66 to 63 million years ago.\" / \"The Paleobiology Database records the time range of Laornis as the Maastrichtian stage, from 72.2 to 66 million years ago.\": Sentence 11 gives a time range of 66–63 Ma, while sentence 12 gives 72.2–66 Ma for the same species."
+  "- contradiction: \"Laornis has been variously allied with the orders Charadriiformes and Gruiformes and is tentatively placed in its own family, Laornithidae.\" / \"The Paleobiology Database lists the parent group of Laornis as Graculavidae.\" / \"The Paleobiology Database classifies Laornis within the family Graculavidae.\": Sentence 5 places Laornis in its own family Laornithidae, while sentences 8 and 9 state it belongs to the family Graculavidae.",
+  "- contradiction: \"Laornis might have belonged to the extinct family of stilt-legged waterfowl known as Presbyornithidae.\" / \"It is possible that Laornis was an ancient pseudotooth bird, a group of seabirds with unclear affiliations.\": Sentences 6 and 7 propose two different, mutually exclusive families (Presbyornithidae vs. pseudotooth birds).",
+  "- contradiction: \"The sediments containing Laornis fossils were deposited approximately 66 to 63 million years ago.\" / \"The Paleobiology Database records the time range of Laornis as the Maastrichtian stage, from 72.2 to 66 million years ago.\": Sentence 11 gives a fossil age range of 66–63 Ma, whereas sentence 12 gives 72.2–66 Ma, conflicting age ranges for the same species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:23:25+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:33:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same classification of Laornis as belonging to Graculavidae."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 gives a time range of 66–63 Ma, while sentence 12 gives 72.2–66 Ma for the same species."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:23:25+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:28+00:00"
 }

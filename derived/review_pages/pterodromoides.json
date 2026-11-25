@@ -2,22 +2,46 @@
  "taxon_key": "pterodromoides",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "40e20bb4c4c6b913",
- "reviewed_at": "2026-11-24T01:00:37+00:00",
+ "text_hash": "ed68f2268a037f26",
+ "reviewed_at": "2026-11-25T13:43:35+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    16
+    1,
+    3
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 states the genus lived during the Late Miocene epoch, while sentence 17 gives a time range (5.333–2.58 Ma) that extends into the Pliocene (Zanclean to Piacenzian), contradicting the earlier claim."
+   "kind": "repetition",
+   "reason": "Both sentences state that a curved and narrow impression of a salt gland is present on the skull."
+  },
+  {
+   "sentences": [
+    2,
+    4
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the round humeral shaft without flattening and tarsometatarsus proportions resembling Cookilaria, repeating the same morphological comparison."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The genus lived during the Late Miocene epoch.\" / \"The species lived between 5.333 and 2.58 million years ago during the Zanclean to Piacenzian ages.\": Sentence 16 states the genus lived during the Late Miocene epoch, while sentence 17 gives a time range (5.333–2.58 Ma) that extends into the Pliocene (Zanclean to Piacenzian), contradicting the earlier claim."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:48:59+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 states the genus lived during the Late Miocene epoch, while sentence 17 gives a time range (5.333–2.58 Ma) that extends into the Pliocene (Zanclean to Piacenzian), contradicting the earlier claim."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:48:59+00:00"
+  }
+ ]
 }

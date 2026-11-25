@@ -2,29 +2,80 @@
  "taxon_key": "adynomosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8c63e0604a151a3b",
- "reviewed_at": "2026-11-24T00:15:12+00:00",
+ "text_hash": "cefe5c8f603521e5",
+ "reviewed_at": "2026-11-25T13:21:12+00:00",
  "problems": [
   {
    "sentences": [
-    19
+    25,
+    28,
+    29
    ],
    "kind": "contradiction",
-   "reason": "The age range 72.2–66 Ma spans both Early and Late Maastrichtian, which is inconsistent with the stated Early Maastrichtian stage."
+   "reason": "All three state different temporal ranges for Adynomosaurus (Early, upper, and entire Maastrichtian 72.2–66 Ma)."
   },
   {
    "sentences": [
-    7,
-    8
+    14,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 15 claims coexistence with a rhabdodontid (Pareisactus), while sentence 16 claims coexistence with a pareiasaurid (Pareisactus)."
+  },
+  {
+   "sentences": [
+    12,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that remains of Adynomosaurus were found in Catalonia, repeating the same geographic information."
+   "reason": "Both sentences state that the reduced scapula implies reduced arm musculature."
+  },
+  {
+   "sentences": [
+    14,
+    15,
+    18,
+    19,
+    31,
+    32,
+    33
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences describe formation ecology, microfossils, or faunal replacement dynamics, not traits or facts about Adynomosaurus itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Adynomosaurus lived during the Early Maastrichtian stage of the Late Cretaceous, specifically between 72.2 and 66 million years ago.\": The age range 72.2–66 Ma spans both Early and Late Maastrichtian, which is inconsistent with the stated Early Maastrichtian stage."
+  "- contradiction: \"Adynomosaurus lived during the Early Maastrichtian stage of the Late Cretaceous.\" / \"Adynomosaurus lived during the upper Maastrichtian stage.\" / \"Adynomosaurus lived during the Maastrichtian stage, between 72.2 and 66 million years ago.\": All three state different temporal ranges for Adynomosaurus (Early, upper, and entire Maastrichtian 72.2–66 Ma).",
+  "- contradiction: \"The Conques Formation ecosystem represents one of only two known instances where a rhabdodontid (Pareisactus) coexisted with hadrosaurs.\" / \"The Conques Formation ecosystem is one of only two known instances where a pareiasaurid, specifically Pareisactus, coexisted with hadrosaurids.\": Sentence 15 claims coexistence with a rhabdodontid (Pareisactus), while sentence 16 claims coexistence with a pareiasaurid (Pareisactus)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:48:01+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:15:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "The age range 72.2–66 Ma spans both Early and Late Maastrichtian, which is inconsistent with the stated Early Maastrichtian stage."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that remains of Adynomosaurus were found in Catalonia, repeating the same geographic information."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:48:01+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:55+00:00"
 }

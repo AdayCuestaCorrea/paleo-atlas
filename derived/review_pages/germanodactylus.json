@@ -2,29 +2,48 @@
  "taxon_key": "germanodactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "076511b145275bed",
- "reviewed_at": "2026-11-24T00:35:49+00:00",
+ "text_hash": "4c3d348e32a010cb",
+ "reviewed_at": "2026-11-25T13:30:49+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 4 and 9 repeat the same description of G. cristatus and G. rhamphastinus teeth and beak characteristics."
-  },
-  {
-   "sentences": [
-    5
+    6
    ],
    "kind": "missing_context",
-   "reason": "Sentence 6 mentions a \"tentatively referred hindlimb\" but no earlier sentence introduces or describes any hindlimb, leaving the reference unclear."
+   "reason": "Sentence 7 refers to a \"tentatively referred hindlimb\" without any prior mention or description of a hindlimb in the page."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A tentatively referred hindlimb suggests that G. cristatus may have reached sizes larger than the known specimens.\": Sentence 6 mentions a \"tentatively referred hindlimb\" but no earlier sentence introduces or describes any hindlimb, leaving the reference unclear."
+  "- missing context: \"A tentatively referred hindlimb implies that G. cristatus could have grown larger than the currently known specimens.\": Sentence 7 refers to a \"tentatively referred hindlimb\" without any prior mention or description of a hindlimb in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:40:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 4 and 9 repeat the same description of G. cristatus and G. rhamphastinus teeth and beak characteristics."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 mentions a \"tentatively referred hindlimb\" but no earlier sentence introduces or describes any hindlimb, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:40:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:49+00:00"
 }

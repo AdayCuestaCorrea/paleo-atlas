@@ -2,46 +2,95 @@
  "taxon_key": "amargatitanis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4dac8ba908231d0d",
- "reviewed_at": "2026-11-24T00:14:42+00:00",
+ "text_hash": "0cbb2ef1c8fee5ac",
+ "reviewed_at": "2026-11-25T13:20:57+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
+    3,
+    4
    ],
    "kind": "contradiction",
-   "reason": "Different mass estimates for the same species without indicating they are separate studies"
+   "reason": "Mass estimates differ: 3.5 metric tons vs 11.406 metric tons."
   },
   {
    "sentences": [
-    8,
-    14
+    19,
+    20,
+    21,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "Different age ranges for the same species: 129–123 Ma, ~130 Ma, 125.77–121.4 Ma, and Barremian + late Aptian."
+  },
+  {
+   "sentences": [
+    3,
+    4
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the 1983 discovery by José Bonaparte"
+   "reason": "Both sentences state mass estimates for Amargatitanis."
   },
   {
    "sentences": [
-    12,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the 2007 formal description by Sebastián Apesteguía"
-  },
-  {
-   "sentences": [
+    19,
+    20,
     21,
     22
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the classification within the family Dicraeosauridae"
+   "reason": "All four sentences give age information for Amargatitanis."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 4,
  "notes": [
-  "- contradiction: \"One estimate suggests Amargatitanis reached around 12 meters (39.7 feet) in length and weighed 3.5 metric tons.\" / \"However, another study estimated Amargatitanis's mass at 11.406 metric tons, which is slightly larger than the estimate for Amargasaurus in the same research.\": Different mass estimates for the same species without indicating they are separate studies"
+  "- contradiction: \"One estimate suggests Amargatitanis reached around 12 meters (39.7 feet) in length and weighed 3.5 metric tons.\" / \"However, another study estimated Amargatitanis's mass at 11.406 metric tons, which is slightly larger than the estimate for Amargasaurus in the same research.\": Mass estimates differ: 3.5 metric tons vs 11.406 metric tons.",
+  "- contradiction: \"Amargatitanis lived approximately 129 to 123 million years ago in the Barremian-aged Puesto Antigual Member of the La Amarga Formation.\" / \"Amargatitanis lived approximately 130 million years ago during the Early Cretaceous Barremian stage in what is now South America.\" / \"Amargatitanis fossils come from the La Amarga Formation in the Neuquén Basin, dating to the Barremian and late Aptian of the Early Cretaceous.\" / \"Amargatitanis lived between 125.77 and 121.4 million years ago during the Barremian stage.\": Different age ranges for the same species: 129–123 Ma, ~130 Ma, 125.77–121.4 Ma, and Barremian + late Aptian."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:45:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:14:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Different mass estimates for the same species without indicating they are separate studies"
+    },
+    {
+     "sentences": [
+      8,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the 1983 discovery by José Bonaparte"
+    },
+    {
+     "sentences": [
+      12,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the 2007 formal description by Sebastián Apesteguía"
+    },
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the classification within the family Dicraeosauridae"
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:45:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:49+00:00"
 }

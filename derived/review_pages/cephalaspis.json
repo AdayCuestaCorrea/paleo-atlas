@@ -2,37 +2,83 @@
  "taxon_key": "cephalaspis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e628b70fc33dda05",
- "reviewed_at": "2026-11-24T00:20:50+00:00",
+ "text_hash": "1c2b22c4d02cb613",
+ "reviewed_at": "2026-11-25T13:23:07+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Cephalaspis fed by filtering over the sea floor because its mouth was located directly under its head."
+  },
+  {
+   "sentences": [
+    14,
+    15,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 15, 16, and 17 all describe the same plow‑like head movement used to stir up sand and mud to uncover worms and crustaceans."
+  },
+  {
+   "sentences": [
+    23,
+    25
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 states Cephalaspis lived during the Early Devonian, yet gives a time range (422.7–393.47 Ma) that includes the Late Devonian Pridoli stage."
+   "reason": "Sentence 24 claims Cephalaspis lived during the Early Devonian, while sentence 26 states it lived from the Pridoli (Late Devonian) to the Emsian (Early Devonian), a broader and conflicting time range."
   },
   {
    "sentences": [
-    9,
-    10
+    26,
+    27
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Cephalaspis belongs to the class Osteostraci."
-  },
-  {
-   "sentences": [
-    6,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the animal as a bottom‑feeder with its mouth situated directly beneath its head."
+   "kind": "contradiction",
+   "reason": "Sentence 27 suggests Cephalaspis or a relative was an ancestor of jawed fishes, whereas sentence 28 states Cephalaspis belongs to Osteostraci, a sister group to all jawed vertebrates, implying it is not ancestral."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Cephalaspis lived during the Early Devonian period. Cephalaspis lived from the Pridoli to the Emsian, between 422.7 and 393.47 million years ago.\": Sentence 12 states Cephalaspis lived during the Early Devonian, yet gives a time range (422.7–393.47 Ma) that includes the Late Devonian Pridoli stage."
+  "- contradiction: \"Cephalaspis lived during the Early Devonian period.\" / \"Cephalaspis lived from the Pridoli to the Emsian, between 422.7 and 393.47 million years ago.\": Sentence 24 claims Cephalaspis lived during the Early Devonian, while sentence 26 states it lived from the Pridoli (Late Devonian) to the Emsian (Early Devonian), a broader and conflicting time range.",
+  "- contradiction: \"Creators of the documentary Walking with Monsters suggested that Cephalaspis or a relative was an ancestor of jawed fishes.\" / \"However, Cephalaspis belongs to the class Osteostraci, which is believed to be a sister group to all jawed vertebrates.\": Sentence 27 suggests Cephalaspis or a relative was an ancestor of jawed fishes, whereas sentence 28 states Cephalaspis belongs to Osteostraci, a sister group to all jawed vertebrates, implying it is not ancestral."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:24:25+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:20:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states Cephalaspis lived during the Early Devonian, yet gives a time range (422.7–393.47 Ma) that includes the Late Devonian Pridoli stage."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Cephalaspis belongs to the class Osteostraci."
+    },
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the animal as a bottom‑feeder with its mouth situated directly beneath its head."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:24:25+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:52+00:00"
 }

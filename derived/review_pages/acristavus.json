@@ -2,37 +2,52 @@
  "taxon_key": "acristavus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f627b23ab7aa015c",
- "reviewed_at": "2026-11-24T00:35:30+00:00",
+ "text_hash": "6efa2223ccf57038",
+ "reviewed_at": "2026-11-25T13:30:29+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    10
+    6,
+    12
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 states the holotype was recovered from the Two Medicine Formation, while sentence 11 claims fossils were found in the Wahweap Formation, giving two different locations for the same species."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 refers to “this region” and “primitive mammals and dinosaurs” without specifying which region or species, leaving the context unclear."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 4 discusses predator-prey interactions between mammals and dinosaurs in general, not specifically about Acristavus, so it is about something else presented as if it were about the animal itself."
+   "kind": "repetition",
+   "reason": "Both sentences list the same set of contemporaneous dinosaurs (Adelolophus, Diabloceratops, Lythronax) as co‑habitants of Acristavus, repeating the claim about its environment."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The type species A. gagslarsoni was named in 2011 based on the holotype specimen MOR 1155, which was recovered from the Two Medicine Formation in Teton County, Montana.\" / \"At that time, the Western Interior Seaway was at its widest, isolating southern Laramidia, and the Wahweap Formation where fossils were found has been radiometrically dated between 81 and 76 million years ago.\": Sentence 5 states the holotype was recovered from the Two Medicine Formation, while sentence 11 claims fossils were found in the Wahweap Formation, giving two different locations for the same species.",
-  "- missing context: \"A fossil trackway found in 2010 indicates that primitive mammals and dinosaurs interacted as predators and prey in this region.\": Sentence 4 refers to “this region” and “primitive mammals and dinosaurs” without specifying which region or species, leaving the context unclear."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:36:25+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states the holotype was recovered from the Two Medicine Formation, while sentence 11 claims fossils were found in the Wahweap Formation, giving two different locations for the same species."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to “this region” and “primitive mammals and dinosaurs” without specifying which region or species, leaving the context unclear."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 4 discusses predator-prey interactions between mammals and dinosaurs in general, not specifically about Acristavus, so it is about something else presented as if it were about the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:36:25+00:00"
+  }
+ ]
 }

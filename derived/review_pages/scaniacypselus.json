@@ -2,21 +2,41 @@
  "taxon_key": "scaniacypselus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6052c9a79a531946",
- "reviewed_at": "2026-11-24T00:56:52+00:00",
+ "text_hash": "59ee41b8ef69cab9",
+ "reviewed_at": "2026-11-25T13:41:41+00:00",
  "problems": [
   {
    "sentences": [
-    16
+    1,
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 17 refers to an incision on the sternum, but the page never mentions the sternum or any related anatomy earlier."
+   "kind": "contradiction",
+   "reason": "Sentence 2 claims many well‑preserved specimens with plumage were found in the Messel Pit, while sentence 3 states the type species S. wardi is known only from a single, almost complete left wing specimen, implying no additional specimens of that species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated whether the incision on the sternum of Scaniacypselus has a specific function, as it appears inconsistently across specimens.\": Sentence 17 refers to an incision on the sternum, but the page never mentions the sternum or any related anatomy earlier."
+  "- contradiction: \"Many well-preserved specimens with preserved plumage were found in the Messel Pit near Darmstadt, Germany.\" / \"The first remains were recovered by D.J. Ward from the Røsnæs Clay in Denmark. The type species S. wardi is known only from a single, almost complete left wing specimen.\": Sentence 2 claims many well‑preserved specimens with plumage were found in the Messel Pit, while sentence 3 states the type species S. wardi is known only from a single, almost complete left wing specimen, implying no additional specimens of that species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:21:24+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:56:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 17 refers to an incision on the sternum, but the page never mentions the sternum or any related anatomy earlier."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:21:24+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:41+00:00"
 }

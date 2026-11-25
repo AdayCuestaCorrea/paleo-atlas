@@ -2,16 +2,16 @@
  "taxon_key": "olorotitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "48379b6a1d41850d",
- "reviewed_at": "2026-11-24T01:10:14+00:00",
+ "text_hash": "e2e33278e50de8dc",
+ "reviewed_at": "2026-11-25T13:46:36+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    12
+    13
    ],
    "kind": "contradiction",
-   "reason": "The article states Olorotitan reached up to 8 m in length (sentence 3) but also suggests lengths of 11–12 m (sentence 13)."
+   "reason": "two different length estimates for the same species"
   },
   {
    "sentences": [
@@ -19,20 +19,73 @@
     5
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the large, flaring hollow crest of Olorotitan, essentially repeating the same claim."
+   "reason": "both describe the crest as a hatchet/fan shape"
   },
   {
    "sentences": [
-    18
+    14,
+    15
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 19 discusses climatic or ecological differences among Asian lambeosaurines, which is about the group rather than the specific species Olorotitan."
+   "kind": "contradiction",
+   "reason": "different formations cited as the discovery site for the same specimen"
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "mentions zygomatic bone length without prior introduction of the bone"
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "states femur size relative to tibia without earlier mention of tibia"
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"This large hadrosaurid reached up to 8 meters in length, stood 3.5 meters tall, and weighed between 2.6 and 3.4 metric tons.\" / \"Some sources suggest the animal may have reached lengths of 11 to 12 meters.\": The article states Olorotitan reached up to 8 m in length (sentence 3) but also suggests lengths of 11–12 m (sentence 13)."
+  "- contradiction: \"This large hadrosaurid reached up to 8 meters in length, stood 3.5 meters tall, and weighed between 2.6 and 3.4 metric tons.\" / \"Some sources suggest the animal may have reached lengths of 11 to 12 meters.\": two different length estimates for the same species",
+  "- contradiction: \"Fossils of Olorotitan were discovered in the Udurchukan Formation near the Amur River in Eastern Russia.\" / \"The holotype specimen of Olorotitan was discovered in the Tsagayan Formation in the Amur region of eastern Russia.\": different formations cited as the discovery site for the same specimen",
+  "- missing context: \"The zygomatic bone was 0.9 meters long, featuring a very high alveolar crest and an extremely straight anterior margin.\": mentions zygomatic bone length without prior introduction of the bone",
+  "- missing context: \"The femur of Olorotitan did not differ in size from the tibia.\": states femur size relative to tibia without earlier mention of tibia"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:40:18+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:10:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "The article states Olorotitan reached up to 8 m in length (sentence 3) but also suggests lengths of 11–12 m (sentence 13)."
+    },
+    {
+     "sentences": [
+      3,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the large, flaring hollow crest of Olorotitan, essentially repeating the same claim."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 19 discusses climatic or ecological differences among Asian lambeosaurines, which is about the group rather than the specific species Olorotitan."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:40:18+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:05+00:00"
 }

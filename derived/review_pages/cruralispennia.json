@@ -2,21 +2,59 @@
  "taxon_key": "cruralispennia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "79462100bf2ffacd",
- "reviewed_at": "2026-11-24T00:42:58+00:00",
+ "text_hash": "f9dcac8bcede08e1",
+ "reviewed_at": "2026-11-25T13:35:30+00:00",
  "problems": [
   {
    "sentences": [
-    18
+    21,
+    22,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 19 states the species lived during the Barremian stage (~130.7 Ma) but then claims it is within the Hauterivian stage range (132.6–125.77 Ma), which is inconsistent."
+   "reason": "The page gives three different age ranges for Cruralispennia: Early Cretaceous period (22), Barremian stage (~130.7 Ma) (23), and Hauterivian stage (132.6–125.77 Ma) (24)."
+  },
+  {
+   "sentences": [
+    3,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 describes the pygostyle as short and broad tapering into an upturned tip, while sentence 8 describes it as short and plow‑shaped, a different morphology."
+  },
+  {
+   "sentences": [
+    20,
+    21
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Cruralispennia is an extinct genus of enantiornithine bird."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Cruralispennia lived during the Early Cretaceous period, specifically the Barremian stage, approximately 130.7 million years ago, within the Hauterivian stage range of 132.6 to 125.77 million years ago.\": Sentence 19 states the species lived during the Barremian stage (~130.7 Ma) but then claims it is within the Hauterivian stage range (132.6–125.77 Ma), which is inconsistent."
+  "- contradiction: \"Cruralispennia lived during the Early Cretaceous period.\" / \"The only known species, Cruralispennia multidonta, lived during the Early Cretaceous Barremian stage, approximately 130.7 million years ago, in the Huanjiying Formation of Hebei province, China.\" / \"The genus Cruralispennia lived during the Hauterivian stage, from 132.6 to 125.77 million years ago.\": The page gives three different age ranges for Cruralispennia: Early Cretaceous period (22), Barremian stage (~130.7 Ma) (23), and Hauterivian stage (132.6–125.77 Ma) (24).",
+  "- contradiction: \"Its pygostyle is short and broad, tapering into an upturned tip.\" / \"It possessed a short, plow-shaped pygostyle, a feature generally associated with more derived birds in the Ornithuromorpha group.\": Sentence 4 describes the pygostyle as short and broad tapering into an upturned tip, while sentence 8 describes it as short and plow‑shaped, a different morphology."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:43:16+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:42:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 states the species lived during the Barremian stage (~130.7 Ma) but then claims it is within the Hauterivian stage range (132.6–125.77 Ma), which is inconsistent."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:43:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:45+00:00"
 }

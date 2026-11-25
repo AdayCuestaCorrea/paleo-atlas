@@ -2,60 +2,94 @@
  "taxon_key": "romundina",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "634309aa146e88c4",
- "reviewed_at": "2026-11-24T00:25:22+00:00",
+ "text_hash": "df76e4d8024ac446",
+ "reviewed_at": "2026-11-25T13:25:37+00:00",
  "problems": [
   {
    "sentences": [
-    2,
+    17,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 18 gives a time range of 400–419 Ma, while sentence 20 claims the first specimen dates to the Lochkovian age of the Silurian period, which is chronologically impossible."
+  },
+  {
+   "sentences": [
+    9,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the first Romundina specimen, repeating the discovery information."
+  },
+  {
+   "sentences": [
     6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that star-shaped tubercles decorated the armor."
-  },
-  {
-   "sentences": [
-    8,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe tooth-like structures on the upper jaw plates."
-  },
-  {
-   "sentences": [
-    7
-   ],
    "kind": "missing_context",
-   "reason": "Mentions a vascular spine behind the head without prior introduction of spines."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to “the surrounding rock” without specifying which rock was previously mentioned."
-  },
-  {
-   "sentences": [
-    17
-   ],
-   "kind": "missing_context",
-   "reason": "States a middle position within the Placoderm grade without explaining the criteria or context."
-  },
-  {
-   "sentences": [
-    23
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the position of Prince of Wales Island during the Silurian, which is about the island’s geography, not the animal itself."
+   "reason": "Sentence 7 mentions a vascular spine behind the head without any prior introduction of a spine in the text."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"It likely grew a vascular spine just behind the head to deter attackers.\": Mentions a vascular spine behind the head without prior introduction of spines.",
-  "- missing context: \"Ørvig used a mixture of formic and acetic acid to dissolve the surrounding rock and reveal the three-dimensional specimen.\": Refers to “the surrounding rock” without specifying which rock was previously mentioned.",
-  "- missing context: \"It is characterized as occupying a middle position within the Placoderm grade.\": States a middle position within the Placoderm grade without explaining the criteria or context."
+  "- contradiction: \"Romundina lived between 400 and 419 million years ago during the Early Devonian, though other sources state it lived between 419.62 and 393.47 million years ago, spanning from the Lochkovian to the Emsian stages.\" / \"The first Romundina specimen was found in rock dating to the Lochkovian age of the Silurian period, during which time Prince of Wales Island was located close to the equator.\": Sentence 18 gives a time range of 400–419 Ma, while sentence 20 claims the first specimen dates to the Lochkovian age of the Silurian period, which is chronologically impossible.",
+  "- missing context: \"Research suggests Romundina likely possessed a vascular spine growing just behind the head that served a defensive role.\": Sentence 7 mentions a vascular spine behind the head without any prior introduction of a spine in the text."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:10:07+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that star-shaped tubercles decorated the armor."
+    },
+    {
+     "sentences": [
+      8,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe tooth-like structures on the upper jaw plates."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a vascular spine behind the head without prior introduction of spines."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to “the surrounding rock” without specifying which rock was previously mentioned."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "States a middle position within the Placoderm grade without explaining the criteria or context."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the position of Prince of Wales Island during the Silurian, which is about the island’s geography, not the animal itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:10:07+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:42+00:00"
 }

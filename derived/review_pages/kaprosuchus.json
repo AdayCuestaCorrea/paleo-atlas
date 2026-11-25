@@ -2,38 +2,81 @@
  "taxon_key": "kaprosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "10a05b7a52fedec6",
- "reviewed_at": "2026-11-24T00:50:17+00:00",
+ "text_hash": "a04be659a5b9e145",
+ "reviewed_at": "2026-11-25T13:38:36+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    5
+    6
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give body length estimates for Kaprosuchus, but [3] limits it to 2.42–3.77 m while [6] claims it could reach ~6 m, a direct conflict without noting different estimation methods."
+   "reason": "Sentence 3 estimates body length 2.42–3.77 m, while sentence 7 claims it could reach ~6 m."
   },
   {
    "sentences": [
-    7,
-    8
+    8,
+    24
    ],
    "kind": "repetition",
-   "reason": "Sentences [8] and [9] both assert that Kaprosuchus was primarily or exclusively terrestrial, repeating the same claim."
+   "reason": "Both sentences state that Kaprosuchus was primarily or exclusively terrestrial."
   },
   {
    "sentences": [
-    14
+    11,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "Sentence [15] discusses “Dorsally positioned external nostrles” as a protective feature, but the term “nostrles” is not defined or introduced earlier in the page, leaving the reader unclear about what is being referred to."
+   "kind": "repetition",
+   "reason": "Both sentences claim fused nasal bones reinforced the jaws against compression."
+  },
+  {
+   "sentences": [
+    12,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe dorsally positioned external nares as protection against impact."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Scientists estimate the total body length of this animal ranged from 2.42 to 3.77 meters.\" / \"Some estimates suggest the total length of Kaprosuchus could have reached around 6 meters.\": Both sentences give body length estimates for Kaprosuchus, but [3] limits it to 2.42–3.77 m while [6] claims it could reach ~6 m, a direct conflict without noting different estimation methods.",
-  "- missing context: \"Dorsally positioned external nostrles would have protected Kaprosuchus from impacts if it charged prey with its robust snout.\": Sentence [15] discusses “Dorsally positioned external nostrles” as a protective feature, but the term “nostrles” is not defined or introduced earlier in the page, leaving the reader unclear about what is being referred to."
+  "- contradiction: \"Based on the skull size, scientists estimate the total body length of Kaprosuchus ranged from 2.42 to 3.77 meters.\" / \"Some estimates suggest the total length of Kaprosuchus could have reached around 6 meters.\": Sentence 3 estimates body length 2.42–3.77 m, while sentence 7 claims it could reach ~6 m."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:40:52+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:50:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give body length estimates for Kaprosuchus, but [3] limits it to 2.42–3.77 m while [6] claims it could reach ~6 m, a direct conflict without noting different estimation methods."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentences [8] and [9] both assert that Kaprosuchus was primarily or exclusively terrestrial, repeating the same claim."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence [15] discusses “Dorsally positioned external nostrles” as a protective feature, but the term “nostrles” is not defined or introduced earlier in the page, leaving the reader unclear about what is being referred to."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:40:52+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:00+00:00"
 }

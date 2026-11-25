@@ -2,53 +2,91 @@
  "taxon_key": "kritosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d904cea857e8686b",
- "reviewed_at": "2026-11-24T00:04:30+00:00",
+ "text_hash": "9df636e44db5985d",
+ "reviewed_at": "2026-11-25T13:15:30+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the crest was used for sex identification, species recognition, and social grading."
-  },
-  {
-   "sentences": [
-    18,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the crest may have consisted of inflatable air sacs for communication."
-  },
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the diet including vegetation up to about 4 meters in height."
-  },
-  {
-   "sentences": [
-    10,
+    3,
+    4,
+    5,
     16
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the animal alternating between bipedal and quadrupedal stances while processing food."
+   "kind": "contradiction",
+   "reason": "Sentences 4, 5, 6 and 17 give conflicting body length estimates for Kritosaurus (11 m, 10 m, 11–12 m, and 9 m)."
   },
   {
    "sentences": [
-    9
+    20
    ],
-   "kind": "missing_context",
-   "reason": "The phrase \"starting in the 1930s\" refers to a time period but the preceding context does not explain what began in that decade."
+   "kind": "contradiction",
+   "reason": "Sentence 21 gives two different age ranges for the species (74.5–66 Ma and 73 Ma)."
+  },
+  {
+   "sentences": [
+    3,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe a large Sabinas Basin specimen of Kritosaurus, repeating the same claim."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Brown also described an unnamed species of Kritosaurus, likely Kritosaurus navajovius, from rocks in the Ojo Alamo, Javelina, and El Picacho formations starting in the 1930s.\": The phrase \"starting in the 1930s\" refers to a time period but the preceding context does not explain what began in that decade."
+  "- contradiction: \"A partial skeleton from the Sabinas Basin is around 11 meters long, about 20% larger than other known specimens, and represents one of the largest well-documented North American saurolophines.\" / \"The type species K. navajovius measured 10 meters in length and weighed around 4 tons.\" / \"A specimen found in Sabinas, Coahuila, Mexico, originally known as 'Sabinosaurio,' measures 11 to 12 meters in length, making it larger than the type species.\" / \"The remains indicate that Kritosaurus reached a body length of 9 meters and a mass of 4 metric tons.\": Sentences 4, 5, 6 and 17 give conflicting body length estimates for Kritosaurus (11 m, 10 m, 11–12 m, and 9 m).",
+  "- contradiction: \"Kritosaurus lived approximately 74.5 to 66 million years ago during the Late Cretaceous period in North America, specifically at the end of the Cretaceous Period, approximately 73 million years ago during the Campanian.\": Sentence 21 gives two different age ranges for the species (74.5–66 Ma and 73 Ma)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:16:08+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:04:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the crest was used for sex identification, species recognition, and social grading."
+    },
+    {
+     "sentences": [
+      18,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the crest may have consisted of inflatable air sacs for communication."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the diet including vegetation up to about 4 meters in height."
+    },
+    {
+     "sentences": [
+      10,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the animal alternating between bipedal and quadrupedal stances while processing food."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"starting in the 1930s\" refers to a time period but the preceding context does not explain what began in that decade."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:16:08+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:31+00:00"
 }

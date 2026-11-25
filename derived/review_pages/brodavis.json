@@ -3,21 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "aa0f886ce2a9b7ad",
- "reviewed_at": "2026-11-24T01:30:39+00:00",
+ "reviewed_at": "2026-11-25T13:53:13+00:00",
  "problems": [
   {
    "sentences": [
-    1,
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 claims flight was likely lost by the end of the Early Cretaceous, yet Brodavis is a Late Cretaceous species and the text suggests it might still have some flying ability, contradicting the earlier statement that flight was lost."
+   "reason": "Sentence 3 states that flight was likely lost by the end of the Early Cretaceous, yet it also suggests that Brodavis may still have had some flying ability, which is contradictory."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This animal is considered the first freshwater species and the latest known record of its order.\" / \"Although flight was likely lost by the end of the Early Cretaceous, minimal bone density in Brodavis suggests the possibility of some flying ability.\": Sentence 3 claims flight was likely lost by the end of the Early Cretaceous, yet Brodavis is a Late Cretaceous species and the text suggests it might still have some flying ability, contradicting the earlier statement that flight was lost."
+  "- contradiction: \"Although flight was likely lost by the end of the Early Cretaceous, minimal bone density in Brodavis suggests the possibility of some flying ability.\": Sentence 3 states that flight was likely lost by the end of the Early Cretaceous, yet it also suggests that Brodavis may still have had some flying ability, which is contradictory."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:10:43+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims flight was likely lost by the end of the Early Cretaceous, yet Brodavis is a Late Cretaceous species and the text suggests it might still have some flying ability, contradicting the earlier statement that flight was lost."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:10:43+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:53+00:00"
 }

@@ -2,21 +2,45 @@
  "taxon_key": "neoaetosauroides",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "39bba012f1841067",
- "reviewed_at": "2026-11-24T01:34:25+00:00",
+ "text_hash": "ab94933deb057b55",
+ "reviewed_at": "2026-11-25T13:54:41+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    3,
+    8
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the first find of an aetosaur in this specific rock layer\" without having previously identified or described that rock layer."
+   "kind": "repetition",
+   "reason": "Both sentences state that fossils of Neoaetosauroides were found in the Los Colorados Formation."
+  },
+  {
+   "sentences": [
+    8,
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences give the Norian age of the fossils."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Remains were uncovered in the 1960s, marking the first find of an aetosaur in this specific rock layer.\": Refers to \"the first find of an aetosaur in this specific rock layer\" without having previously identified or described that rock layer."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:26:42+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:34:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the first find of an aetosaur in this specific rock layer\" without having previously identified or described that rock layer."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:26:42+00:00"
+  }
+ ]
 }

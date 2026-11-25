@@ -3,30 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "a1c0242b6b705b00",
- "reviewed_at": "2026-11-24T00:02:28+00:00",
+ "reviewed_at": "2026-11-25T13:14:26+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    20
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 claims Barosaurus had a long whip‑like tail, while sentence 5 states it had a shorter tail than Diplodocus."
+   "kind": "about_something_else",
+   "reason": "States that diplodocid fossils, including those of Barosaurus, are found in Europe and Africa, which refers to the broader group rather than the species itself, contradicting earlier claims that Barosaurus lived only in North America."
   },
   {
    "sentences": [
-    22,
     23
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 23 says Barosaurus lived only in present‑day North America, whereas sentence 24 says its fossils are found in North America, Europe, and Africa."
+   "kind": "about_something_else",
+   "reason": "Mentions Barosaurus africanus as a distinct species, but the page never introduced or discussed an African species of Barosaurus, treating it as a separate entity unrelated to the main subject."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"It was a large but typical diplodocid with a long neck and a long whip-like tail.\" / \"Compared to Diplodocus, Barosaurus had a relatively longer neck but a shorter tail.\": Sentence 2 claims Barosaurus had a long whip‑like tail, while sentence 5 states it had a shorter tail than Diplodocus.",
-  "- contradiction: \"Barosaurus lived in present-day North America during the Late Jurassic period, approximately 150 million years ago during the late Kimmeridgian to early Tithonian stages.\" / \"Diplodocid fossils, including those of Barosaurus, are found in North America, Europe, and Africa.\": Sentence 23 says Barosaurus lived only in present‑day North America, whereas sentence 24 says its fossils are found in North America, Europe, and Africa."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:59:09+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:02:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 claims Barosaurus had a long whip‑like tail, while sentence 5 states it had a shorter tail than Diplodocus."
+    },
+    {
+     "sentences": [
+      22,
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 says Barosaurus lived only in present‑day North America, whereas sentence 24 says its fossils are found in North America, Europe, and Africa."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:59:09+00:00"
+  }
+ ]
 }

@@ -2,32 +2,69 @@
  "taxon_key": "shastasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3d3c41a3bab3b43e",
- "reviewed_at": "2026-11-24T00:36:49+00:00",
+ "text_hash": "8cd0e16516b0eab8",
+ "reviewed_at": "2026-11-25T13:31:44+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    17
+    11,
+    14
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Shastasaurus was a specialized predator of fish and shell‑less cephalopods that hunted using suction feeding."
+   "kind": "contradiction",
+   "reason": "Sentences 12-14 describe Shastasaurus as a suction feeder, while sentence 15 argues its jaws and hyoid bones were unsuitable for suction feeding and suggests a different diet."
   },
   {
    "sentences": [
-    15,
-    16,
-    17,
-    24
+    22
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 23 introduces the genus Guanlingsaurus without any prior mention or explanation of its relevance."
+  },
+  {
+   "sentences": [
+    10,
+    22
    ],
    "kind": "contradiction",
-   "reason": "Sentences 16–18 claim Shastasaurus was adapted for suction feeding, while sentence 25 argues its hyoid bones were unsuitable for suction, indicating a different diet."
+   "reason": "Sentence 11 states the hyoid bones were large, whereas sentence 23 claims Guanlingsaurus (formerly Shastasaurus liangae) should be considered distinct due to a shorter hyoid bone."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The short snout suggests Shastasaurus was likely a suction feeder that ate mainly soft-bodied cephalopods lacking shells for defense.\" / \"Shastasaurus likely created a sudden water flow to suck prey into its open mouth by rapidly opening its jaws and pulling its tongue back.\" / \"Shastasaurus has been interpreted as a specialized predator of fish and shell-less cephalopods that hunted using suction.\" / \"Current research suggests Shastasaurus jaws may not have been adapted for suction feeding because their hyoid bones were unsuitable for impact forces and related species possessed teeth and gut contents indicating a different diet.\": Sentences 16–18 claim Shastasaurus was adapted for suction feeding, while sentence 25 argues its hyoid bones were unsuitable for suction, indicating a different diet."
+  "- contradiction: \"The short snout suggests Shastasaurus was likely a suction feeder that ate mainly soft-bodied cephalopods lacking shells for defense.\" / \"Current research suggests Shastasaurus jaws may not have been adapted for suction feeding because their hyoid bones were unsuitable for impact forces and related species possessed teeth and gut contents indicating a different diet.\": Sentences 12-14 describe Shastasaurus as a suction feeder, while sentence 15 argues its jaws and hyoid bones were unsuitable for suction feeding and suggests a different diet.",
+  "- missing context: \"A 2013 discovery of a juvenile specimen suggested that Guanlingsaurus (formerly Shastasaurus liangae) should be considered a distinct genus due to its shorter hyoid bone.\": Sentence 23 introduces the genus Guanlingsaurus without any prior mention or explanation of its relevance.",
+  "- contradiction: \"The part of the Shastasaurus skull containing the jaw-opening muscles was particularly large, and the animal had large hyoid bones that allowed it to pull its tongue back abruptly.\" / \"A 2013 discovery of a juvenile specimen suggested that Guanlingsaurus (formerly Shastasaurus liangae) should be considered a distinct genus due to its shorter hyoid bone.\": Sentence 11 states the hyoid bones were large, whereas sentence 23 claims Guanlingsaurus (formerly Shastasaurus liangae) should be considered distinct due to a shorter hyoid bone."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:52:44+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Shastasaurus was a specialized predator of fish and shell‑less cephalopods that hunted using suction feeding."
+    },
+    {
+     "sentences": [
+      15,
+      16,
+      17,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 16–18 claim Shastasaurus was adapted for suction feeding, while sentence 25 argues its hyoid bones were unsuitable for suction, indicating a different diet."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:52:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:23+00:00"
 }

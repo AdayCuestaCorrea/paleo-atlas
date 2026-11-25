@@ -2,67 +2,135 @@
  "taxon_key": "aerosteon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8af84a8d0d46f279",
- "reviewed_at": "2026-11-24T00:42:37+00:00",
+ "text_hash": "323ba394e9c3fde3",
+ "reviewed_at": "2026-11-25T13:35:16+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    14,
+    23,
+    24
    ],
    "kind": "contradiction",
-   "reason": "Different length estimates (nine meters vs six meters) without indicating they are different estimates."
+   "reason": "All three sentences claim Aerosteon belongs to Megaraptoridae, but earlier sentences (18‑23) place it in Neovenatoridae, Tyrannosauroidea, or basal coelurosaurs, creating conflicting family assignments."
   },
   {
    "sentences": [
-    1,
-    5
+    23,
+    24
    ],
-   "kind": "contradiction",
-   "reason": "Different length estimates (nine meters vs seven point five meters) without indicating they are different estimates."
+   "kind": "repetition",
+   "reason": "Sentences 24 and 25 repeat the same claim that Aerosteon belongs to Megaraptoridae."
   },
   {
    "sentences": [
-    4,
-    5
+    26,
+    27,
+    28
    ],
    "kind": "contradiction",
-   "reason": "Different length estimates (six meters vs seven point five meters) without indicating they are different estimates."
+   "reason": "Sentences 27‑28 state Aerosteon lived 84 Ma (Santonian), while sentence 29 places it in the Campanian (83.6‑72.2 Ma), giving mutually exclusive age ranges."
   },
   {
    "sentences": [
-    21,
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to “its inflexible lungs” without having previously described the lungs or the respiratory system in detail."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 13 and 14 both claim the bird‑like respiratory system helped regulate body temperature and maintain stability while chasing prey."
+  },
+  {
+   "sentences": [
+    6,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 16 says Aerosteon was named by Sereno et al. in 2009, whereas sentence 7 says the species was first described in 2008, giving conflicting dates for the naming."
+  },
+  {
+   "sentences": [
     25
    ],
    "kind": "contradiction",
-   "reason": "Different taxonomic placement (Tyrannosauroidea vs Neovenatoridae) without indicating they are different analyses."
-  },
-  {
-   "sentences": [
-    29,
-    30
-   ],
-   "kind": "contradiction",
-   "reason": "Different age ranges (84 million years vs 83.6–72.2 million years) without indicating they are different estimates."
-  },
-  {
-   "sentences": [
-    17,
-    18,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Same claim that Aerosteon belongs to the family Megaraptoridae repeated three times."
+   "reason": "Sentence 26 classifies Aerosteon as a reptile, but earlier context identifies it as a dinosaur, a more specific clade within reptiles."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"This animal was a large meat-eating dinosaur reaching a length of nine meters.\" / \"A researcher named Gregory S. Paul later calculated its size at six meters long with a mass of five hundred kilograms.\": Different length estimates (nine meters vs six meters) without indicating they are different estimates.",
-  "- contradiction: \"This animal was a large meat-eating dinosaur reaching a length of nine meters.\" / \"Subsequent work by Molina-Pérez and Larramendi in 2016 revised the dimensions to seven point five meters and one metric ton.\": Different length estimates (nine meters vs seven point five meters) without indicating they are different estimates.",
-  "- contradiction: \"A researcher named Gregory S. Paul later calculated its size at six meters long with a mass of five hundred kilograms.\" / \"Subsequent work by Molina-Pérez and Larramendi in 2016 revised the dimensions to seven point five meters and one metric ton.\": Different length estimates (six meters vs seven point five meters) without indicating they are different estimates.",
-  "- contradiction: \"Later studies placed the Megaraptora, which includes Aerosteon, inside the group Tyrannosauroidea.\" / \"A 2016 study by Novas and colleagues returned the Megaraptora to the family Neovenatoridae.\": Different taxonomic placement (Tyrannosauroidea vs Neovenatoridae) without indicating they are different analyses.",
-  "- contradiction: \"It lived approximately eighty-four million years ago during the Santonian stage.\" / \"Other data places its existence in the Campanian stage, spanning from eighty-three point six to seventy-two point two million years ago.\": Different age ranges (84 million years vs 83.6–72.2 million years) without indicating they are different estimates."
+  "- contradiction: \"Aerosteon is classified in the family Megaraptoridae.\" / \"The parent group of Aerosteon is Megaraptoridae.\" / \"Aerosteon belongs to the family Megaraptoridae.\": All three sentences claim Aerosteon belongs to Megaraptoridae, but earlier sentences (18‑23) place it in Neovenatoridae, Tyrannosauroidea, or basal coelurosaurs, creating conflicting family assignments.",
+  "- contradiction: \"Aerosteon lived during the Late Cretaceous period in Argentina.\" / \"It lived approximately 84 million years ago during the Santonian stage of the Late Cretaceous in what is now South America.\" / \"Other data places its existence in the Campanian stage, spanning from 83.6 to 72.2 million years ago.\": Sentences 27‑28 state Aerosteon lived 84 Ma (Santonian), while sentence 29 places it in the Campanian (83.6‑72.2 Ma), giving mutually exclusive age ranges.",
+  "- missing context: \"These air sacs acted like bellows to move air through its inflexible lungs, unlike the expanding and contracting lungs of mammals.\": Sentence 12 refers to “its inflexible lungs” without having previously described the lungs or the respiratory system in detail.",
+  "- contradiction: \"The species was first described by Sereno and colleagues in a paper published in PLoS ONE in September 2008.\" / \"The genus Aerosteon was named by Sereno et al. in 2009.\": Sentence 16 says Aerosteon was named by Sereno et al. in 2009, whereas sentence 7 says the species was first described in 2008, giving conflicting dates for the naming.",
+  "- contradiction: \"Aerosteon is classified as a reptile.\": Sentence 26 classifies Aerosteon as a reptile, but earlier context identifies it as a dinosaur, a more specific clade within reptiles."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:39:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:42:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Different length estimates (nine meters vs six meters) without indicating they are different estimates."
+    },
+    {
+     "sentences": [
+      1,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Different length estimates (nine meters vs seven point five meters) without indicating they are different estimates."
+    },
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Different length estimates (six meters vs seven point five meters) without indicating they are different estimates."
+    },
+    {
+     "sentences": [
+      21,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "Different taxonomic placement (Tyrannosauroidea vs Neovenatoridae) without indicating they are different analyses."
+    },
+    {
+     "sentences": [
+      29,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges (84 million years vs 83.6–72.2 million years) without indicating they are different estimates."
+    },
+    {
+     "sentences": [
+      17,
+      18,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Same claim that Aerosteon belongs to the family Megaraptoridae repeated three times."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:39:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:37+00:00"
 }

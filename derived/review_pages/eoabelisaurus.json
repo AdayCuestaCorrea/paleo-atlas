@@ -2,23 +2,47 @@
  "taxon_key": "eoabelisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5e48bb1c24640322",
- "reviewed_at": "2026-11-24T00:30:59+00:00",
+ "text_hash": "ba74e2574f16f0cf",
+ "reviewed_at": "2026-11-25T13:28:28+00:00",
  "problems": [
   {
    "sentences": [
     18,
     19
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 19 states Eoabelisaurus lived during the Lower Jurassic, while sentence 20 claims it extended the clade’s temporal range into the Middle Jurassic."
+   "kind": "repetition",
+   "reason": "Sentences 19 and 20 state the same claim that Eoabelisaurus extends the temporal range of abelisaurids by more than 40 million years into the Middle Jurassic."
+  },
+  {
+   "sentences": [
+    17,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 18 and 20 both claim that Eoabelisaurus would be the oldest known abelisaurid for forty million years."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Eoabelisaurus lived during the Lower Jurassic in the Cañadón Asfalto Basin of Argentina.\" / \"The discovery of Eoabelisaurus extended the temporal range of the clade by more than 40 million years into the Middle Jurassic.\": Sentence 19 states Eoabelisaurus lived during the Lower Jurassic, while sentence 20 claims it extended the clade’s temporal range into the Middle Jurassic."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T12:25:46+00:00",
- "rewrite_mode": "sentences"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:30:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 states Eoabelisaurus lived during the Lower Jurassic, while sentence 20 claims it extended the clade’s temporal range into the Middle Jurassic."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:25:46+00:00"
+  }
+ ]
 }

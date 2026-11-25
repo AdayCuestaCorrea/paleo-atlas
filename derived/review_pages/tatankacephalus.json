@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "5ff3269019732400",
- "reviewed_at": "2026-11-24T01:39:46+00:00",
+ "reviewed_at": "2026-11-25T13:56:08+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,34 @@
     9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 assigns Tatankacephalus to the family Nodosauridae, while sentence 10 places it as a basal member of Ankylosauridae, two mutually exclusive families."
+   "reason": "Sentence 9 assigns Tatankacephalus to the family Nodosauridae, while sentence 10 places it as a basal member of Ankylosauridae, two distinct families within Ankylosauria."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"It belongs to the family Nodosauridae.\" / \"Cladistic analysis places it as a basal member of Ankylosauridae closely related to Gastonia.\": Sentence 9 assigns Tatankacephalus to the family Nodosauridae, while sentence 10 places it as a basal member of Ankylosauridae, two mutually exclusive families."
+  "- contradiction: \"It belongs to the family Nodosauridae.\" / \"Cladistic analysis places it as a basal member of Ankylosauridae closely related to Gastonia, while a 2011 analysis by Thompson et al. suggests it is a basal nodosaurid.\": Sentence 9 assigns Tatankacephalus to the family Nodosauridae, while sentence 10 places it as a basal member of Ankylosauridae, two distinct families within Ankylosauria."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:39:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 assigns Tatankacephalus to the family Nodosauridae, while sentence 10 places it as a basal member of Ankylosauridae, two mutually exclusive families."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:26:29+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:26:29+00:00"
+ "rewritten_at": "2026-11-25T14:31:51+00:00"
 }

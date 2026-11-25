@@ -2,29 +2,55 @@
  "taxon_key": "similicaudipteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "180cf63ecfde51d2",
- "reviewed_at": "2026-11-24T01:27:50+00:00",
+ "text_hash": "1e54bf48db743968",
+ "reviewed_at": "2026-11-25T13:51:58+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    4,
+    9
    ],
-   "kind": "missing_context",
-   "reason": "The sentence speculates that feathers were present, but the page never previously mentioned feathers or feather preservation."
+   "kind": "repetition",
+   "reason": "Both sentences state that researchers speculate feathers were present because the pygostyle serves as an anchor point for tail feathers in modern birds."
   },
   {
    "sentences": [
-    8
+    11
    ],
-   "kind": "missing_context",
-   "reason": "It refers to juvenile specimens with feather preservation, yet the page has not introduced the concept of feather preservation before this sentence."
+   "kind": "contradiction",
+   "reason": "Sentence 12 gives two different time ranges for the species: 124–120 Ma and 121.4–113.2 Ma, which contradict each other."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Researchers speculate feathers were present because the pygostyle serves as an anchor point for tail feathers in modern birds.\": The sentence speculates that feathers were present, but the page never previously mentioned feathers or feather preservation.",
-  "- missing context: \"In 2010, two additional juvenile specimens with feather preservation were referred to Similicaudipteryx, but have since been re-interpreted as belonging to Incisivosaurus gauthieri.\": It refers to juvenile specimens with feather preservation, yet the page has not introduced the concept of feather preservation before this sentence."
+  "- contradiction: \"Similicaudipteryx lived during the middle Cretaceous Period, approximately 124 to 120 million years ago, in what is now Asia, with a time range estimated between 121.4 and 113.2 million years ago.\": Sentence 12 gives two different time ranges for the species: 124–120 Ma and 121.4–113.2 Ma, which contradict each other."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:57:13+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:27:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence speculates that feathers were present, but the page never previously mentioned feathers or feather preservation."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "It refers to juvenile specimens with feather preservation, yet the page has not introduced the concept of feather preservation before this sentence."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:57:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:07+00:00"
 }

@@ -2,38 +2,66 @@
  "taxon_key": "eremosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d57a69dbc4d7c4a9",
- "reviewed_at": "2026-11-24T00:05:18+00:00",
+ "text_hash": "1fb48da823a86d55",
+ "reviewed_at": "2026-11-25T13:15:55+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    11
+    1,
+    17
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the teeth as serrated and blade‑like, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 2 states the genus is placed within the family Sebecosuchia, while sentence 18 states it was originally assigned to the family Trematochampsidae."
   },
   {
    "sentences": [
-    4,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the backward curve of the fibula is a unique trait of this animal."
-  },
-  {
-   "sentences": [
-    12,
-    13
+    4
    ],
    "kind": "missing_context",
-   "reason": "Sentences 13 and 14 refer to a juvenile specimen and the holotype, but the page never introduced these specific specimens."
+   "reason": "Sentence 5 mentions the lower half of the fibula but no prior mention of the fibula, leaving the reader without context for this anatomical reference."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A gap between the seventh and eighth dentary teeth in the juvenile specimen could be a shared feature or simply individual variation.\" / \"However, researchers question whether tooth diameter is a reliable indicator of size because the holotype is poorly preserved.\": Sentences 13 and 14 refer to a juvenile specimen and the holotype, but the page never introduced these specific specimens."
+  "- contradiction: \"The type species for this genus is E. elkoholicus, and it is currently placed within the family Sebecosuchia.\" / \"In 1989, Eric Buffetaut originally assigned the genus to the family Trematochampsidae.\": Sentence 2 states the genus is placed within the family Sebecosuchia, while sentence 18 states it was originally assigned to the family Trematochampsidae.",
+  "- missing context: \"A unique feature of this skeleton is that the lower half of the fibula curves backward, a trait not seen in other related crocodylomorphs.\": Sentence 5 mentions the lower half of the fibula but no prior mention of the fibula, leaving the reader without context for this anatomical reference."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:24:58+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:05:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the teeth as serrated and blade‑like, repeating the same claim."
+    },
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the backward curve of the fibula is a unique trait of this animal."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 13 and 14 refer to a juvenile specimen and the holotype, but the page never introduced these specific specimens."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:24:58+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:55+00:00"
 }

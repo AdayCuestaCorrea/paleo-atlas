@@ -3,27 +3,46 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "e75043de739de402",
- "reviewed_at": "2026-11-24T00:17:25+00:00",
+ "reviewed_at": "2026-11-25T13:21:45+00:00",
  "problems": [
   {
    "sentences": [
-    15
+    16
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to the holotype of Teyuwasu barberenai and a species name Staurikosaurus pricei without any prior introduction or explanation of these taxa."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "about_something_else",
-   "reason": "It discusses a specimen of another genus (Teyuwasu) and a different species name, treating it as if it were about Staurikosaurus itself."
+   "reason": "Refers to \"Staurikosaurus pricei\" without prior introduction of that species name."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Garcia et al. (2019) referred the holotype of Teyuwasu barberenai as a second specimen of Staurikosaurus pricei, a proposal that remains controversial.\": The sentence refers to the holotype of Teyuwasu barberenai and a species name Staurikosaurus pricei without any prior introduction or explanation of these taxa."
+  "- missing context: \"Garcia et al. (2019) referred the holotype of Teyuwasu barberenai as a second specimen of Staurikosaurus pricei, a proposal that remains controversial.\": Refers to \"Staurikosaurus pricei\" without prior introduction of that species name."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:57:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:17:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to the holotype of Teyuwasu barberenai and a species name Staurikosaurus pricei without any prior introduction or explanation of these taxa."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "about_something_else",
+     "reason": "It discusses a specimen of another genus (Teyuwasu) and a different species name, treating it as if it were about Staurikosaurus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:57:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:23+00:00"
 }

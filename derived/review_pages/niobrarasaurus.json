@@ -3,38 +3,52 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "726c2d2844adfe98",
- "reviewed_at": "2026-11-24T00:59:33+00:00",
+ "reviewed_at": "2026-11-25T13:43:05+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
-   ],
-   "kind": "contradiction",
-   "reason": "Sentences 2 and 3 give conflicting estimates for length and weight of Niobrarasaurus."
-  },
-  {
-   "sentences": [
-    11,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentences 12 and 13 provide different age ranges for the species' existence."
-  },
-  {
-   "sentences": [
-    13,
-    14
+    8
    ],
    "kind": "repetition",
-   "reason": "Sentences 14 and 15 repeat the same information about fossil location."
+   "reason": "Sentence 9 repeats the same time range information (Coniacian to Santonian stages, 89.8–83.6 Ma) that is already stated earlier in the same sentence."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"This armored dinosaur measured roughly 5 meters in length, stood 1.8 meters tall, and weighed between 227 and 453 kilograms.\" / \"However, a higher estimate by Paul suggests the animal reached 6.5 meters in length and weighed 4 tons.\": Sentences 2 and 3 give conflicting estimates for length and weight of Niobrarasaurus.",
-  "- contradiction: \"The dinosaur lived at the end of the Cretaceous period, between 87 and 83 million years ago, during the Coniacian and Santonian stages.\" / \"The fossil record indicates a time range from the Coniacian to Santonian stages, between 89.8 and 83.6 million years ago.\": Sentences 12 and 13 provide different age ranges for the species' existence."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:39:50+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:59:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 2 and 3 give conflicting estimates for length and weight of Niobrarasaurus."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 12 and 13 provide different age ranges for the species' existence."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 14 and 15 repeat the same information about fossil location."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:39:50+00:00"
+  }
+ ]
 }

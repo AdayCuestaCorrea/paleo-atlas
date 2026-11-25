@@ -2,37 +2,60 @@
  "taxon_key": "magyarosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1b9b5a575d00f63c",
- "reviewed_at": "2026-11-24T01:22:32+00:00",
+ "text_hash": "c8c43359696c0253",
+ "reviewed_at": "2026-11-25T13:50:19+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    10,
+    11,
+    12
    ],
-   "kind": "missing_context",
-   "reason": "The sentence mentions leg bones but never specifies which bones or how they were measured."
+   "kind": "repetition",
+   "reason": "All three sentences state the taxonomic placement of Magyarosuchus within Thalattosuchia/Metriorhynchoidea, repeating the same classification."
   },
   {
    "sentences": [
-    3
+    13,
+    14
    ],
-   "kind": "missing_context",
-   "reason": "It refers to “one tail bone” without any prior mention of tail bones or context for the measurement."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "The fragmentary skeleton is said to have been uncovered in 1996, but the text never states who uncovered it or how it relates to the earlier description."
+   "kind": "about_something_else",
+   "reason": "Sentences 14 and 15 describe the environment inferred from the Kisgerecse Marl Formation, not a direct attribute of Magyarosuchus itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The leg bones measured 36 centimeters and 21 centimeters in length.\": The sentence mentions leg bones but never specifies which bones or how they were measured.",
-  "- missing context: \"One tail bone possessed a notably larger spine, suggesting a rudimentary vertical tail expansion.\": It refers to “one tail bone” without any prior mention of tail bones or context for the measurement.",
-  "- missing context: \"A fragmentary skeleton was uncovered in 1996.\": The fragmentary skeleton is said to have been uncovered in 1996, but the text never states who uncovered it or how it relates to the earlier description."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:32:55+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:22:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions leg bones but never specifies which bones or how they were measured."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "It refers to “one tail bone” without any prior mention of tail bones or context for the measurement."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The fragmentary skeleton is said to have been uncovered in 1996, but the text never states who uncovered it or how it relates to the earlier description."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:32:55+00:00"
+  }
+ ]
 }

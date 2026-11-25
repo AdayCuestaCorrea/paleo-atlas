@@ -2,37 +2,56 @@
  "taxon_key": "martinectes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "189adddb8b5f389a",
- "reviewed_at": "2026-11-24T01:05:03+00:00",
+ "text_hash": "acd9be3b97ac2747",
+ "reviewed_at": "2026-11-25T13:44:51+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    15
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Martinectes belongs to the family Polycotylidae."
-  },
-  {
-   "sentences": [
-    14,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the parent group of Martinectes as the clade Dolichorhynchia."
-  },
-  {
-   "sentences": [
-    20
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 21 refers to the Sharon Springs Formation without any prior mention of that formation in the page."
+   "kind": "contradiction",
+   "reason": "States the type species of Martinectes is Trinacromerum bonneri, contradicting earlier statements that the new genus was erected for Dolichorhynchops bonneri (now Martinectes bonneri)."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In 2023, Clark, O'Keefe, and Slack assigned Dolichorhynchops bonneri from the Sharon Springs Formation to the new genus Martinectes, meaning \"Martin's swimmer\". In 2025, polycotylid teeth from the Rybushka Formation of European Russia were referred to cf. Martinectes.\": Sentence 21 refers to the Sharon Springs Formation without any prior mention of that formation in the page."
+  "- contradiction: \"The type species of the genus Martinectes is Trinacromerum bonneri.\": States the type species of Martinectes is Trinacromerum bonneri, contradicting earlier statements that the new genus was erected for Dolichorhynchops bonneri (now Martinectes bonneri)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:09:41+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:05:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Martinectes belongs to the family Polycotylidae."
+    },
+    {
+     "sentences": [
+      14,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the parent group of Martinectes as the clade Dolichorhynchia."
+    },
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 21 refers to the Sharon Springs Formation without any prior mention of that formation in the page."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:09:41+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:48+00:00"
 }

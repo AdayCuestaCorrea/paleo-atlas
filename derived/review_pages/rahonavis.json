@@ -3,29 +3,67 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "177203e3ba84c3f3",
- "reviewed_at": "2026-11-24T00:33:21+00:00",
+ "reviewed_at": "2026-11-25T13:29:19+00:00",
  "problems": [
   {
    "sentences": [
+    15,
     16
    ],
    "kind": "contradiction",
-   "reason": "Sentence 17 states Rahonavis is a reptile, while earlier sentences classify it as a bird or avialan, directly contradicting its taxonomic status."
+   "reason": "Sentence 16 states Rahonavis belongs to the parent group Unenlagiinae, while sentence 17 classifies it within the family Dromaeosauridae, which are mutually exclusive taxonomic levels."
   },
   {
    "sentences": [
-    13,
-    19,
-    20
+    16,
+    17
    ],
-   "kind": "repetition",
-   "reason": "Sentences 14, 21, and 20 all repeat the claim that there is historical uncertainty about Rahonavis’s placement within Avialae or dromaeosaurids, making the same point three times."
+   "kind": "contradiction",
+   "reason": "Sentence 17 places Rahonavis in the dinosaur family Dromaeosauridae, whereas sentence 18 labels it as a reptile, implying a different broader clade."
+  },
+  {
+   "sentences": [
+    18,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 19 locates Rahonavis in northwestern Madagascar during the Late Cretaceous (70–66 Ma), while sentence 20 specifies the Maastrichtian stage (72.2–66 Ma), creating an inconsistent temporal range."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Rahonavis is classified as a reptile.\": Sentence 17 states Rahonavis is a reptile, while earlier sentences classify it as a bird or avialan, directly contradicting its taxonomic status."
+  "- contradiction: \"Rahonavis belongs to the parent group Unenlagiinae.\" / \"Rahonavis is classified within the family Dromaeosauridae.\": Sentence 16 states Rahonavis belongs to the parent group Unenlagiinae, while sentence 17 classifies it within the family Dromaeosauridae, which are mutually exclusive taxonomic levels.",
+  "- contradiction: \"Rahonavis is classified within the family Dromaeosauridae.\" / \"Rahonavis is classified as a reptile.\": Sentence 17 places Rahonavis in the dinosaur family Dromaeosauridae, whereas sentence 18 labels it as a reptile, implying a different broader clade.",
+  "- contradiction: \"Rahonavis lived in northwestern Madagascar during the Late Cretaceous period, approximately 70 to 66 million years ago.\" / \"Rahonavis lived during the Maastrichtian stage, between 72.2 and 66 million years ago.\": Sentence 19 locates Rahonavis in northwestern Madagascar during the Late Cretaceous (70–66 Ma), while sentence 20 specifies the Maastrichtian stage (72.2–66 Ma), creating an inconsistent temporal range."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:17:23+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:33:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 17 states Rahonavis is a reptile, while earlier sentences classify it as a bird or avialan, directly contradicting its taxonomic status."
+    },
+    {
+     "sentences": [
+      13,
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 14, 21, and 20 all repeat the claim that there is historical uncertainty about Rahonavis’s placement within Avialae or dromaeosaurids, making the same point three times."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:17:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:06+00:00"
 }

@@ -2,70 +2,96 @@
  "taxon_key": "argyrosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "02b2359bb9aa5f54",
- "reviewed_at": "2026-11-24T01:03:25+00:00",
+ "text_hash": "cee3e97f5c28e7ab",
+ "reviewed_at": "2026-11-25T13:44:28+00:00",
  "problems": [
   {
    "sentences": [
     3,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Two weight estimates for Argyrosaurus differ widely (12 t vs 43.5–50.8 t) without indicating they are different estimates."
-  },
-  {
-   "sentences": [
     4,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "Length estimates conflict (21 m vs 30 m) without noting they are separate estimates."
-  },
-  {
-   "sentences": [
-    4,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that in 2012 Argyrosaurus was placed in the family Argyrosauridae."
-  },
-  {
-   "sentences": [
-    4,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences mention a 2012 study about Argyrosaurus."
-  },
-  {
-   "sentences": [
     5
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to a “probable nest” without any prior mention of nests."
+   "kind": "contradiction",
+   "reason": "Sentences 4, 5, and 6 give mutually incompatible estimates for the weight and length of Argyrosaurus, yet none of them explicitly state that they are different estimates."
   },
   {
    "sentences": [
-    8
+    6,
+    7
    ],
-   "kind": "missing_context",
-   "reason": "It mentions a “complete skeleton” that was destroyed, but no earlier reference to such a skeleton."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses the age of the area where the holotype was found, which is about the geological context rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Sentences 7 and 8 both describe the holotype forelimb of Argyrosaurus superbus, essentially repeating the same claim."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"One estimate suggested the creature weighed up to 12 tonnes.\" / \"In 2012, Thomas Holtz estimated Argyrosaurus could reach 28 meters in length and weigh between 43.5 and 50.8 tonnes.\": Two weight estimates for Argyrosaurus differ widely (12 t vs 43.5–50.8 t) without indicating they are different estimates.",
-  "- contradiction: \"In 2012, Thomas Holtz estimated Argyrosaurus could reach 28 meters in length and weigh between 43.5 and 50.8 tonnes.\" / \"Argyrosaurus is estimated to have reached about 21 meters in length, though some estimates suggest it could have reached 30 meters.\": Length estimates conflict (21 m vs 30 m) without noting they are separate estimates.",
-  "- missing context: \"A forelimb that likely belongs to this genus and a probable nest have been found in Entre Ríos Province.\": The sentence refers to a “probable nest” without any prior mention of nests.",
-  "- missing context: \"The holotype forelimb was originally part of a complete skeleton, but the rest of the remains were destroyed during excavation.\": It mentions a “complete skeleton” that was destroyed, but no earlier reference to such a skeleton."
+  "- contradiction: \"One estimate suggests the creature weighed up to 12 tonnes.\" / \"In 2012, Thomas Holtz estimated Argyrosaurus could reach 28 meters in length and weigh between 43.5 and 50.8 tonnes.\" / \"More recent estimates list Argyrosaurus at 21 meters long and 26 tonnes.\": Sentences 4, 5, and 6 give mutually incompatible estimates for the weight and length of Argyrosaurus, yet none of them explicitly state that they are different estimates."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:02:56+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:03:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Two weight estimates for Argyrosaurus differ widely (12 t vs 43.5–50.8 t) without indicating they are different estimates."
+    },
+    {
+     "sentences": [
+      4,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Length estimates conflict (21 m vs 30 m) without noting they are separate estimates."
+    },
+    {
+     "sentences": [
+      4,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that in 2012 Argyrosaurus was placed in the family Argyrosauridae."
+    },
+    {
+     "sentences": [
+      4,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences mention a 2012 study about Argyrosaurus."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a “probable nest” without any prior mention of nests."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "It mentions a “complete skeleton” that was destroyed, but no earlier reference to such a skeleton."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the age of the area where the holotype was found, which is about the geological context rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:02:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:32+00:00"
 }

@@ -2,22 +2,49 @@
  "taxon_key": "caviramus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a8ed936224f790a0",
- "reviewed_at": "2026-11-24T01:16:51+00:00",
+ "text_hash": "fbae93478fe325bb",
+ "reviewed_at": "2026-11-25T13:48:54+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    6
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims Caviramus was a land-based forager due to long limbs, while sentence 7 states it may have hunted fish and pursued prey underwater, implying aquatic activity."
+   "kind": "missing_context",
+   "reason": "Refers to holes in the lower jaw without earlier mention of such holes."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Claims long limbs as evidence for terrestrial foraging, but the text never describes limb length."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Scientists propose it was a land-based forager because of its long limbs.\" / \"It may have hunted fish and potentially pursued prey underwater.\": Sentence 5 claims Caviramus was a land-based forager due to long limbs, while sentence 7 states it may have hunted fish and pursued prey underwater, implying aquatic activity."
+  "- missing context: \"Holes in the front of the lower jaw suggest Caviramus had a soft-tissue structure or keratin covering.\": Refers to holes in the lower jaw without earlier mention of such holes.",
+  "- missing context: \"Researchers suggest Caviramus may have been a terrestrial forager based on its long limbs.\": Claims long limbs as evidence for terrestrial foraging, but the text never describes limb length."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:11:04+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:16:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims Caviramus was a land-based forager due to long limbs, while sentence 7 states it may have hunted fish and pursued prey underwater, implying aquatic activity."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:11:04+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:35+00:00"
 }

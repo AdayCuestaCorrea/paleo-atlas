@@ -3,20 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0b2be71b98311e79",
- "reviewed_at": "2026-11-24T01:09:19+00:00",
+ "reviewed_at": "2026-11-25T13:46:06+00:00",
  "problems": [
   {
    "sentences": [
+    0,
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 names the type species as Alligator gaudryi, whereas the genus is Arambourgia and the species should be Arambourgia gaudryi, contradicting the species name used elsewhere."
+   "reason": "Sentence 4 names the type species as Alligator gaudryi, while sentence 1 states that Arambourgia contains only one species of alligatorine crocodile, implying the species should be Arambourgia gaudryi."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type species of the genus Arambourgia is Alligator gaudryi, which was originally described by de Stefano in 1905.\": Sentence 4 names the type species as Alligator gaudryi, whereas the genus is Arambourgia and the species should be Arambourgia gaudryi, contradicting the species name used elsewhere."
+  "- contradiction: \"Arambourgia is an extinct genus containing only one species of alligatorine crocodile found in Europe.\" / \"The type species of the genus Arambourgia is Alligator gaudryi, which was originally described by de Stefano in 1905.\": Sentence 4 names the type species as Alligator gaudryi, while sentence 1 states that Arambourgia contains only one species of alligatorine crocodile, implying the species should be Arambourgia gaudryi."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:34:36+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:09:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 names the type species as Alligator gaudryi, whereas the genus is Arambourgia and the species should be Arambourgia gaudryi, contradicting the species name used elsewhere."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:34:36+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:44+00:00"
 }

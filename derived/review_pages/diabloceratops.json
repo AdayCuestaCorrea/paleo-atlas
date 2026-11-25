@@ -2,30 +2,57 @@
  "taxon_key": "diabloceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3146bc0dcf2db9b6",
- "reviewed_at": "2026-11-24T00:27:41+00:00",
+ "text_hash": "e076be614f826b08",
+ "reviewed_at": "2026-11-25T13:26:43+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    2,
+    5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 states that two specimens of Diabloceratops eatoni have been found, while sentence 8 claims that only a single specimen is known."
+   "kind": "repetition",
+   "reason": "Both sentences state that Diabloceratops had a pair of very long spikes on its frill."
   },
   {
    "sentences": [
-    7,
-    8
+    12
    ],
-   "kind": "repetition",
-   "reason": "Sentences 8 and 9 repeat the same information about the type specimen UMNH VP 16699 and the second specimen UMNH VP 16704, respectively."
+   "kind": "missing_context",
+   "reason": "The sentence refers to a trace fossil and its features without having previously introduced or defined the trace fossil."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Only two specimens of Diabloceratops eatoni have been found in the Wahweap Formation in Kane County, Utah. The only known specimen of Diabloceratops eatoni was found in the Last Chance Creek Member of the Wahweap Formation in Kane County, Utah.\" / \"The type specimen UMNH VP 16699 was collected by Don DeBlieux in 2002 from intraclastic sandstone deposited during the Campanian stage of the Cretaceous. The holotype specimen UMNH VP 16699 was collected by Don Deblieux in 2002 at the Last Chance Creek locality.\": Sentence 7 states that two specimens of Diabloceratops eatoni have been found, while sentence 8 claims that only a single specimen is known."
+  "- missing context: \"The trace fossil includes mammalian den complexes and digging grooves presumably made by a maniraptoran dinosaur.\": The sentence refers to a trace fossil and its features without having previously introduced or defined the trace fossil."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:30:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:27:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states that two specimens of Diabloceratops eatoni have been found, while sentence 8 claims that only a single specimen is known."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 8 and 9 repeat the same information about the type specimen UMNH VP 16699 and the second specimen UMNH VP 16704, respectively."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:30:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:26+00:00"
 }

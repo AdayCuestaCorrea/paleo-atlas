@@ -2,53 +2,73 @@
  "taxon_key": "pachyrhinosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "37eceef024da56b7",
- "reviewed_at": "2026-11-24T00:08:09+00:00",
+ "text_hash": "7c39d0bb5ea2282a",
+ "reviewed_at": "2026-11-25T13:17:04+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    6
    ],
-   "kind": "missing_context",
-   "reason": "Refers to skull 'Harvey' without prior introduction."
+   "kind": "repetition",
+   "reason": "Both sentences state that Pachyrhinosaurus was named by Charles M. Sternberg in 1950."
   },
   {
    "sentences": [
-    12
+    13,
+    14
    ],
-   "kind": "missing_context",
-   "reason": "Claims caring behavior without prior context."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions Albertosaurus sarcophagus without earlier mention."
-  },
-  {
-   "sentences": [
-    20
-   ],
-   "kind": "missing_context",
-   "reason": "Discusses hadrosaurs without prior context."
-  },
-  {
-   "sentences": [
-    22
-   ],
-   "kind": "missing_context",
-   "reason": "States uncertainty about nasal horn without prior mention of skull completeness."
+   "kind": "about_something_else",
+   "reason": "Sentences 14 and 15 discuss other species (Albertosaurus and hadrosaurs) and their ecological roles, not characteristics of Pachyrhinosaurus itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"One skull known as 'Harvey' displayed a massive lesion 195 millimeters wide on its right face that likely caused blindness in that eye.\": Refers to skull 'Harvey' without prior introduction.",
-  "- missing context: \"The presence of skeletons ranging from juveniles to adults in the Pipestone Creek bonebed suggests that Pachyrhinosaurus cared for its young.\": Claims caring behavior without prior context.",
-  "- missing context: \"In the ecosystem of the St. Mary River Formation, the tyrannosaurid Albertosaurus was likely the apex predator alongside Pachyrhinosaurus, while in the Horseshoe Canyon Formation, the tyrannosaurid Albertosaurus sarcophagus was the apex predator of the paleoenvironment.\": Mentions Albertosaurus sarcophagus without earlier mention.",
-  "- missing context: \"In the Horseshoe Canyon Formation, hadrosaurs dominated the dinosaur population, making up half of all dinosaurs in the region.\": Discusses hadrosaurs without prior context.",
-  "- missing context: \"Scientists are not very sure if it had a nasal horn because no complete skulls have been found.\": States uncertainty about nasal horn without prior mention of skull completeness."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:43:57+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:08:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to skull 'Harvey' without prior introduction."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Claims caring behavior without prior context."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Albertosaurus sarcophagus without earlier mention."
+    },
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "missing_context",
+     "reason": "Discusses hadrosaurs without prior context."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "missing_context",
+     "reason": "States uncertainty about nasal horn without prior mention of skull completeness."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:43:57+00:00"
+  }
+ ]
 }

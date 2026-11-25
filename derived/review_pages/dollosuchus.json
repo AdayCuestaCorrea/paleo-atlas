@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "83d225bdd55f5c18",
- "reviewed_at": "2026-11-24T01:24:53+00:00",
+ "reviewed_at": "2026-11-25T13:51:08+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,21 +11,40 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Dollosuchus contains only one species, while sentence 9 suggests multiple species (Dollosuchus dixoni) may belong to the same genus."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to Dollosuchus dixoni without any prior introduction or definition of that species."
+   "reason": "Sentence 1 states that Dollosuchus contains only one species, yet sentence 9 introduces a second species, Dollosuchus dixoni, implying more than one species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Dollosuchus is an extinct genus containing only one species of tomistomine crocodilian, a group of long-snouted relatives.\" / \"Researchers have suggested that Kentisuchus spenceri, Megadontosuchus arduini, and Dollosuchus dixoni might belong to the same genus.\": Sentence 1 states Dollosuchus contains only one species, while sentence 9 suggests multiple species (Dollosuchus dixoni) may belong to the same genus.",
-  "- missing context: \"Researchers have suggested that Kentisuchus spenceri, Megadontosuchus arduini, and Dollosuchus dixoni might belong to the same genus.\": Sentence 9 refers to Dollosuchus dixoni without any prior introduction or definition of that species."
+  "- contradiction: \"Dollosuchus is an extinct genus containing only one species of tomistomine crocodilian.\" / \"Researchers have suggested that Kentisuchus spenceri, Megadontosuchus arduini, and Dollosuchus dixoni might belong to the same genus.\": Sentence 1 states that Dollosuchus contains only one species, yet sentence 9 introduces a second species, Dollosuchus dixoni, implying more than one species."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:45:59+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:24:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Dollosuchus contains only one species, while sentence 9 suggests multiple species (Dollosuchus dixoni) may belong to the same genus."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to Dollosuchus dixoni without any prior introduction or definition of that species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:45:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:34+00:00"
 }

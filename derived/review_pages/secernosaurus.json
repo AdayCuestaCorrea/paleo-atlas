@@ -2,48 +2,78 @@
  "taxon_key": "secernosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fc1b15b9b8e118fc",
- "reviewed_at": "2026-11-24T00:33:31+00:00",
+ "text_hash": "b02ab184acd9490f",
+ "reviewed_at": "2026-11-25T13:29:23+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences state membership in Hadrosauridae/Ornithischia, repeating the same classification."
-  },
-  {
-   "sentences": [
-    13,
-    14,
-    15,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 14-17 repeat classification details, with overlapping and conflicting subfamily/tribe assignments."
-  },
-  {
-   "sentences": [
-    14,
-    16
+    2,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 15 assigns Secernosaurus to tribe Kritosaurini, while sentence 17 incorrectly assigns it to subfamily Kritosaurini."
+   "reason": "Sentence 3 states the holotype is 4–5 m long, while sentence 6 claims the holotype was only about 3 m long."
   },
   {
    "sentences": [
-    22
+    11,
+    12,
+    14,
+    15
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 23 discusses climate of the formation, not characteristics of Secernosaurus itself."
+   "kind": "repetition",
+   "reason": "Sentences 12, 13, 15 and 16 all repeat the classification of Secernosaurus within Hadrosauridae, Kritosaurini and Saurolophinae."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Secernosaurus belongs to the tribe Kritosaurini.\" / \"Secernosaurus belongs to the subfamily Kritosaurini.\": Sentence 15 assigns Secernosaurus to tribe Kritosaurini, while sentence 17 incorrectly assigns it to subfamily Kritosaurini."
+  "- contradiction: \"The holotype specimen measures approximately 4 to 5 meters in length and likely represents a mature individual rather than a subadult.\" / \"Initial analysis of the holotype suggested Secernosaurus was a small duck-billed dinosaur about 3 meters long, 1.2 meters high, and weighing between 200 and 400 kilograms.\": Sentence 3 states the holotype is 4–5 m long, while sentence 6 claims the holotype was only about 3 m long."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:18:20+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:33:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state membership in Hadrosauridae/Ornithischia, repeating the same classification."
+    },
+    {
+     "sentences": [
+      13,
+      14,
+      15,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 14-17 repeat classification details, with overlapping and conflicting subfamily/tribe assignments."
+    },
+    {
+     "sentences": [
+      14,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 assigns Secernosaurus to tribe Kritosaurini, while sentence 17 incorrectly assigns it to subfamily Kritosaurini."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 23 discusses climate of the formation, not characteristics of Secernosaurus itself."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:18:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:09+00:00"
 }

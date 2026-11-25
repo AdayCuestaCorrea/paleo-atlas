@@ -3,29 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "22c76a8dba3c6847",
- "reviewed_at": "2026-11-24T00:01:49+00:00",
+ "reviewed_at": "2026-11-25T13:13:59+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    9
+    21
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states the first specimen was discovered in 1996 and formally named in 2004, while sentence 1 claims the genus was formally described in 2005."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the 2010 classification of Nemegtomaia within the Oviraptoridae family and Ingeniinae subfamily."
+   "kind": "about_something_else",
+   "reason": "Sentence 22 lists various other organisms and habitats as if they belong to Nemegtomaia, rather than describing the broader ecosystem."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"The genus Nemegtomaia was formally described by Lü and colleagues in the year 2005.\" / \"The first specimen of Nemegtomaia was discovered in 1996 and formally named in 2004.\": Sentence 10 states the first specimen was discovered in 1996 and formally named in 2004, while sentence 1 claims the genus was formally described in 2005."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:49:29+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states the first specimen was discovered in 1996 and formally named in 2004, while sentence 1 claims the genus was formally described in 2005."
+    },
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the 2010 classification of Nemegtomaia within the Oviraptoridae family and Ingeniinae subfamily."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:49:29+00:00"
+  }
+ ]
 }

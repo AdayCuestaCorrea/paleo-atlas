@@ -2,47 +2,75 @@
  "taxon_key": "aquilops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "29dde8ea3bd3868e",
- "reviewed_at": "2026-11-23T23:59:03+00:00",
+ "text_hash": "6d4e5ea50269046d",
+ "reviewed_at": "2026-11-25T13:12:21+00:00",
  "problems": [
   {
    "sentences": [
+    17,
+    18
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 18 places Aquilops in the Early Cretaceous (Albian), while sentence 19 states the Cloverly Formation is dated to either the Albian or Cenomanian stages, with Cenomanian being Late Cretaceous, contradicting the earlier age assignment."
+  },
+  {
+   "sentences": [
     7,
-    9,
-    10
+    16
    ],
    "kind": "repetition",
-   "reason": "All three sentences describe the discovery of the same Aquilops specimen in 1997, repeating the same claim."
-  },
-  {
-   "sentences": [
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Aquilops was a plant‑eater that used its hooked beak to nip at vegetation."
-  },
-  {
-   "sentences": [
-    21,
-    25,
-    26
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences give overlapping age ranges for Aquilops, repeating the same temporal claim."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to Auroraceratops, which has not been introduced earlier in the page, leaving the reference unclear."
+   "reason": "Both sentences state that the presence of Aquilops indicates a migration of Early Cretaceous neoceratopsians from Asia to North America."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"In both Aquilops and Auroraceratops, the jugal bone is wider than deep below the orbit.\": Sentence 5 refers to Auroraceratops, which has not been introduced earlier in the page, leaving the reference unclear."
+  "- contradiction: \"Aquilops lived in North America during the Early Cretaceous, approximately 109 to 98 million years ago, though a 2019 study by Michael D'Emic and colleagues revised the age of the formation to between 109 and 98 million years ago, while other sources place it in the Albian stage, approximately 110.1 to 100.5 million years ago, or specifically 109 to 104 million years ago.\" / \"The Cloverly Formation, where Aquilops was found, is dated to either the Albian or Cenomanian stages of the Early Cretaceous, and the Himes Member of the Cloverly Formation, the specific layer containing Aquilops, represents a braided river system.\": Sentence 18 places Aquilops in the Early Cretaceous (Albian), while sentence 19 states the Cloverly Formation is dated to either the Albian or Cenomanian stages, with Cenomanian being Late Cretaceous, contradicting the earlier age assignment."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:16:20+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:59:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      9,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe the discovery of the same Aquilops specimen in 1997, repeating the same claim."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Aquilops was a plant‑eater that used its hooked beak to nip at vegetation."
+    },
+    {
+     "sentences": [
+      21,
+      25,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences give overlapping age ranges for Aquilops, repeating the same temporal claim."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to Auroraceratops, which has not been introduced earlier in the page, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:16:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:55+00:00"
 }

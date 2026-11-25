@@ -3,38 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "3c317f14de8b39ac",
- "reviewed_at": "2026-11-24T01:35:08+00:00",
+ "reviewed_at": "2026-11-25T13:54:49+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Both sentences give age ranges for Protosuchus, but 12 claims Early Jurassic while 13 gives 200–184 Ma (Late Triassic Norian–Rhaetian), which are inconsistent."
-  },
-  {
-   "sentences": [
-    11,
     13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 states fossils date to the Early Jurassic, whereas sentence 14 says they span from the Rhaetian to the Sinemurian (Late Triassic to Early Jurassic), overlapping but not matching the earlier claim."
-  },
-  {
-   "sentences": [
-    15
-   ],
    "kind": "missing_context",
-   "reason": "Sentence 16 mentions the holotype of Erythrochampsa longipes, but the page never introduced or described this taxon before."
+   "reason": "Refers to the holotype of Erythrochampsa longipes without any prior introduction of that species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Protosuchus fossils date to the Early Jurassic period.\" / \"The animal lived approximately 200 to 184 million years ago during the Norian and Rhaetian stages.\": Both sentences give age ranges for Protosuchus, but 12 claims Early Jurassic while 13 gives 200–184 Ma (Late Triassic Norian–Rhaetian), which are inconsistent.",
-  "- contradiction: \"Protosuchus fossils date to the Early Jurassic period.\" / \"Protosuchus existed from the Rhaetian to the Sinemurian, between 205.7 and 192.9 million years ago.\": Sentence 12 states fossils date to the Early Jurassic, whereas sentence 14 says they span from the Rhaetian to the Sinemurian (Late Triassic to Early Jurassic), overlapping but not matching the earlier claim.",
-  "- missing context: \"Researchers interpreting the holotype of Erythrochampsa longipes suggest it may belong to or be a relative of Protosuchus.\": Sentence 16 mentions the holotype of Erythrochampsa longipes, but the page never introduced or described this taxon before."
+  "- missing context: \"Researchers interpreting the holotype of Erythrochampsa longipes suggest it may belong to or be a relative of Protosuchus.\": Refers to the holotype of Erythrochampsa longipes without any prior introduction of that species."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:29:16+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:35:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give age ranges for Protosuchus, but 12 claims Early Jurassic while 13 gives 200–184 Ma (Late Triassic Norian–Rhaetian), which are inconsistent."
+    },
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states fossils date to the Early Jurassic, whereas sentence 14 says they span from the Rhaetian to the Sinemurian (Late Triassic to Early Jurassic), overlapping but not matching the earlier claim."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 16 mentions the holotype of Erythrochampsa longipes, but the page never introduced or described this taxon before."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:29:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:49+00:00"
 }

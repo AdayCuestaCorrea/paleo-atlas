@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f3ee917709b7b79d",
- "reviewed_at": "2026-11-24T01:27:37+00:00",
+ "reviewed_at": "2026-11-25T13:51:56+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    8
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states the genus was first described in 1942, while sentence 9 claims three species were originally described for the genus in 1934, implying an earlier description of the genus."
+   "reason": "Sentence 3 states the genus was first described in 1942, while sentence 4 claims three species were originally described for the genus in 1934, implying an earlier description of the genus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The genus Kujdanowiaspis was first described by Stensiö in 1942.\" / \"Three species were originally described for the genus in 1934: K. buczacziensis, K. podolica, and K. rectiformis.\": Sentence 3 states the genus was first described in 1942, while sentence 9 claims three species were originally described for the genus in 1934, implying an earlier description of the genus."
+  "- contradiction: \"The genus Kujdanowiaspis was first described by Stensiö in 1942.\" / \"Three species were originally described for the genus in 1934: K. buczacziensis, K. podolica, and K. rectiformis.\": Sentence 3 states the genus was first described in 1942, while sentence 4 claims three species were originally described for the genus in 1934, implying an earlier description of the genus."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:56:18+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:27:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states the genus was first described in 1942, while sentence 9 claims three species were originally described for the genus in 1934, implying an earlier description of the genus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:56:18+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:03+00:00"
 }

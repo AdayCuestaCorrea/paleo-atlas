@@ -2,31 +2,50 @@
  "taxon_key": "sinopliosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "80f8bce9db229913",
- "reviewed_at": "2026-11-24T01:44:55+00:00",
+ "text_hash": "5163c3dc304e72cf",
+ "reviewed_at": "2026-11-25T13:57:07+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    5
+    2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Sinopliosaurus is a pliosauroid plesiosaur, while sentence 6 reclassifies a species of the genus as a spinosaurid relative, implying it is not a plesiosaur."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 introduces the species Sinopliosaurus fusuiensis without any prior mention or definition of that species on the page."
+   "reason": "Sentence 3 claims Sinopliosaurus weiyuanensis was a freshwater plesiosaur, while sentence 1 describes it as a marine reptile, presenting conflicting habitat information."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Sinopliosaurus is a dubious genus of pliosauroid plesiosaur, meaning its validity as a distinct group is questioned by scientists.\" / \"In 2008, researchers reclassified Sinopliosaurus fusuiensis as a spinosaurid relative to Siamosaurus.\": Sentence 1 states Sinopliosaurus is a pliosauroid plesiosaur, while sentence 6 reclassifies a species of the genus as a spinosaurid relative, implying it is not a plesiosaur.",
-  "- missing context: \"In 2008, researchers reclassified Sinopliosaurus fusuiensis as a spinosaurid relative to Siamosaurus.\": Sentence 6 introduces the species Sinopliosaurus fusuiensis without any prior mention or definition of that species on the page."
+  "- contradiction: \"Sinopliosaurus is a dubious genus of pliosauroid plesiosaur, meaning its validity as a distinct group is questioned by scientists.\" / \"The species Sinopliosaurus weiyuanensis was considered to be a freshwater plesiosaur, a surprising habitat for such a creature.\": Sentence 3 claims Sinopliosaurus weiyuanensis was a freshwater plesiosaur, while sentence 1 describes it as a marine reptile, presenting conflicting habitat information."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:44:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Sinopliosaurus is a pliosauroid plesiosaur, while sentence 6 reclassifies a species of the genus as a spinosaurid relative, implying it is not a plesiosaur."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 introduces the species Sinopliosaurus fusuiensis without any prior mention or definition of that species on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:28:32+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:28:32+00:00"
+ "rewritten_at": "2026-11-25T14:32:25+00:00"
 }

@@ -2,54 +2,109 @@
  "taxon_key": "indosinosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c7260eef8ec444af",
- "reviewed_at": "2026-11-24T00:15:42+00:00",
+ "text_hash": "bcdc3a4d450468c6",
+ "reviewed_at": "2026-11-25T13:21:16+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    17
+    12,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Indosinosuchus potamosiamensis had the highest jaw‑opening speed among teleosaurs."
+   "reason": "Both sentences state that the genus Indosinosuchus was described by Martin and colleagues in 2019."
   },
   {
    "sentences": [
-    18
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"the animal\" is used without a preceding explicit reference to Indosinosuchus."
+   "kind": "repetition",
+   "reason": "Both sentences describe ten individuals of Indosinosuchus potamosiamensis found at Phu Noi."
   },
   {
    "sentences": [
+    9,
     19
    ],
-   "kind": "missing_context",
-   "reason": "\"The carcasses\" is mentioned without specifying that they belong to Indosinosuchus specimens."
+   "kind": "repetition",
+   "reason": "Both sentences claim Indosinosuchus potamosiamensis is the only named teleosaurid genus known from a freshwater environment / first confirmed teleosaurid that lived in freshwater habitats."
   },
   {
    "sentences": [
-    17
+    20
    ],
    "kind": "missing_context",
-   "reason": "The phrase \"suggesting a faster bite\" is ambiguous about which species it refers to."
+   "reason": "The sentence refers to “the animal” and “its head” without having previously introduced the specific specimen or context."
   },
   {
    "sentences": [
-    24,
+    21
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence mentions dermestid beetle marks and carcasses but does not specify which fossils or specimens are being discussed."
+  },
+  {
+   "sentences": [
     25
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 25 claims the species lived in the Jurassic, while sentence 26 states it lived in the Late Jurassic or Early Cretaceous, presenting conflicting temporal ranges."
+   "kind": "about_something_else",
+   "reason": "The sentence discusses the Phu Kradung Formation and the replacement of freshwater teleosaurs by other groups, treating the formation’s history as if it were a property of Indosinosuchus itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"One nearly complete specimen with an articulated vertebral column may have been preserved after the animal floated on water, lost its head, and was rapidly buried.\": The pronoun \"the animal\" is used without a preceding explicit reference to Indosinosuchus.",
-  "- missing context: \"Marks from dermestid beetles on fossils suggest the carcasses dried out for at least 8 weeks, indicating preservation during a dry season.\": \"The carcasses\" is mentioned without specifying that they belong to Indosinosuchus specimens.",
-  "- missing context: \"I. potamosiamensis had the highest jaw-opening speed among teleosaurs, whereas I. kalasinensis had a lower opening mechanical advantage, suggesting a faster bite.\": The phrase \"suggesting a faster bite\" is ambiguous about which species it refers to.",
-  "- contradiction: \"Indosinosuchus is an extinct teleosaurid crocodilomorph that lived in Thailand during the Jurassic.\" / \"It lived in what is now Thailand during the Late Jurassic or Early Cretaceous.\": Sentence 25 claims the species lived in the Jurassic, while sentence 26 states it lived in the Late Jurassic or Early Cretaceous, presenting conflicting temporal ranges."
+  "- missing context: \"One nearly complete specimen with an articulated vertebral column may have been preserved after the animal floated on water, lost its head, and was rapidly buried.\": The sentence refers to “the animal” and “its head” without having previously introduced the specific specimen or context.",
+  "- missing context: \"Marks from dermestid beetles on fossils suggest the carcasses dried out for at least 8 weeks, indicating preservation during a dry season.\": The sentence mentions dermestid beetle marks and carcasses but does not specify which fossils or specimens are being discussed."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:48:50+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:15:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Indosinosuchus potamosiamensis had the highest jaw‑opening speed among teleosaurs."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"the animal\" is used without a preceding explicit reference to Indosinosuchus."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "\"The carcasses\" is mentioned without specifying that they belong to Indosinosuchus specimens."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"suggesting a faster bite\" is ambiguous about which species it refers to."
+    },
+    {
+     "sentences": [
+      24,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 25 claims the species lived in the Jurassic, while sentence 26 states it lived in the Late Jurassic or Early Cretaceous, presenting conflicting temporal ranges."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:48:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:57+00:00"
 }

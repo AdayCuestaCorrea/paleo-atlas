@@ -2,29 +2,44 @@
  "taxon_key": "malawania",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d97f0e973051850e",
- "reviewed_at": "2026-11-24T00:25:05+00:00",
+ "text_hash": "27823339a8754030",
+ "reviewed_at": "2026-11-25T13:25:25+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    0,
+    13
    ],
-   "kind": "missing_context",
-   "reason": "refers to \"intermedium bone\" without prior introduction"
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "mentions \"first digit\" and a notch without defining the digit or context"
+   "kind": "repetition",
+   "reason": "Both sentences state that Malawania is a basal thunnosaurian ichthyosaur, repeating the same classification."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Malawania had four digits in its foreflippers, with two originating from each intermedium bone.\": refers to \"intermedium bone\" without prior introduction",
-  "- missing context: \"The first digit of Malawania would have had more than nine phalanges when complete, with the first bearing a notch.\": mentions \"first digit\" and a notch without defining the digit or context"
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:06:24+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "refers to \"intermedium bone\" without prior introduction"
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "mentions \"first digit\" and a notch without defining the digit or context"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:06:24+00:00"
+  }
+ ]
 }

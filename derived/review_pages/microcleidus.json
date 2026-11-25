@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "782afb54aab8c783",
- "reviewed_at": "2026-11-24T01:14:17+00:00",
+ "reviewed_at": "2026-11-25T13:48:11+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,49 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 states Microcleidus belongs to the family Plesiosauridae, while sentence 12 claims it is the most primitive and oldest member of the elasmosaurids, a family that is taxonomically distinct from Plesiosauridae. The two statements cannot both be true without additional context."
+   "reason": "Sentence 10 assigns Microcleidus to the family Plesiosauridae, while sentence 12 claims it is the most primitive and oldest member of the elasmosaurids, a different clade."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentences 12 and 13 discuss the group of elasmosaurids and its relatives, presenting information about the broader clade rather than directly about Microcleidus."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to “the anterior shoulder bone branches” without prior definition or context, making it unclear what structure is meant."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Microcleidus belongs to the family Plesiosauridae.\" / \"Microcleidus was later considered the most primitive and oldest member of the elasmosaurids, a group of plesiosaurs with exceptionally long necks that spread during the Cretaceous.\": Sentence 10 states Microcleidus belongs to the family Plesiosauridae, while sentence 12 claims it is the most primitive and oldest member of the elasmosaurids, a family that is taxonomically distinct from Plesiosauridae. The two statements cannot both be true without additional context."
+  "- contradiction: \"Microcleidus belongs to the family Plesiosauridae.\" / \"Microcleidus was later considered the most primitive and oldest member of the elasmosaurids, a group of plesiosaurs with exceptionally long necks that spread during the Cretaceous.\": Sentence 10 assigns Microcleidus to the family Plesiosauridae, while sentence 12 claims it is the most primitive and oldest member of the elasmosaurids, a different clade.",
+  "- missing context: \"It had unusually long, tiny anterior cervical vertebrae and a clavicle reduced to a thin leaf attached to the dorsal surface of the anterior shoulder bone branches.\": Sentence 3 refers to “the anterior shoulder bone branches” without prior definition or context, making it unclear what structure is meant."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:01:02+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:14:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Microcleidus belongs to the family Plesiosauridae, while sentence 12 claims it is the most primitive and oldest member of the elasmosaurids, a family that is taxonomically distinct from Plesiosauridae. The two statements cannot both be true without additional context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:01:02+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:06+00:00"
 }

@@ -3,21 +3,45 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "bd66f37736fa67a9",
- "reviewed_at": "2026-11-23T23:53:25+00:00",
+ "reviewed_at": "2026-11-25T13:09:19+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    9
+    24,
+    25
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states the genus was first described based on two lost teeth, implying the main specimen is a Carcharodontosaurus skull, while sentence 10 claims the main specimen was redescribed as a distinct genus named Tameryraptor, contradicting the earlier identification."
+   "kind": "about_something_else",
+   "reason": "Sentences 25 and 26 discuss the subfamily and its geographic range as if describing the animal itself, rather than the group"
+  },
+  {
+   "sentences": [
+    26,
+    27
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentences 27 and 28 refer to fossil attribution and taxonomic reassignment, treating the group’s history as if it were a property of the species"
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The genus was first described in 1925 by Charles Depéret and Justin Savornin based on two lost fossil teeth found in Algeria.\" / \"In 2025, the main specimen was redescribed as the holotype of a distinct genus named Tameryraptor.\": Sentence 8 states the genus was first described based on two lost teeth, implying the main specimen is a Carcharodontosaurus skull, while sentence 10 claims the main specimen was redescribed as a distinct genus named Tameryraptor, contradicting the earlier identification."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:25:53+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:53:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states the genus was first described based on two lost teeth, implying the main specimen is a Carcharodontosaurus skull, while sentence 10 claims the main specimen was redescribed as a distinct genus named Tameryraptor, contradicting the earlier identification."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:25:53+00:00"
+  }
+ ]
 }

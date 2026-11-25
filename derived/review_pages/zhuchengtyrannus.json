@@ -2,22 +2,52 @@
  "taxon_key": "zhuchengtyrannus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6abe7077363abce7",
- "reviewed_at": "2026-11-24T00:39:39+00:00",
+ "text_hash": "2f0304d58f573000",
+ "reviewed_at": "2026-11-25T13:33:26+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 states Zhuchengtyrannus is the closest relative to Tarbosaurus, while sentence 8 claims it is the nearest living relative of Tarbosaurus, which is impossible because Tarbosaurus is extinct."
+   "kind": "about_something_else",
+   "reason": "Sentence describes other dinosaur species found at the site, not the animal itself."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence discusses teeth of a related species, not Zhuchengtyannus."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the same debate about whether isolated teeth named Tyrannosaurus zhuchengensis belong to Zhuchengtyannus or a related species."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"A 2013 study identified Zhuchengtyrannus as the closest relative to Tarbosaurus.\" / \"Later research in 2024 confirmed that Zhuchengtyrannus is the nearest living relative of Tarbosaurus.\": Sentence 7 states Zhuchengtyrannus is the closest relative to Tarbosaurus, while sentence 8 claims it is the nearest living relative of Tarbosaurus, which is impossible because Tarbosaurus is extinct."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:15:12+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:39:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states Zhuchengtyrannus is the closest relative to Tarbosaurus, while sentence 8 claims it is the nearest living relative of Tarbosaurus, which is impossible because Tarbosaurus is extinct."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:15:12+00:00"
+  }
+ ]
 }

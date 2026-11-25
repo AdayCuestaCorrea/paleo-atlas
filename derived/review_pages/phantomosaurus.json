@@ -2,39 +2,54 @@
  "taxon_key": "phantomosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8dd04fc7c7a89a75",
- "reviewed_at": "2026-11-24T00:41:06+00:00",
+ "text_hash": "3a6896458daefe9a",
+ "reviewed_at": "2026-11-25T13:34:18+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states the genus was named in 1997, while sentence 11 claims it was actually coined earlier in 2000, which is later, creating a direct conflict."
-  },
-  {
-   "sentences": [
-    13,
-    14
+    12,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences assert that Phantomosaurus belongs to Cymbospondylidae, repeating the same classification."
-  },
-  {
-   "sentences": [
-    2,
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentences 3 and 4 refer to limb bones and hollow spaces without any prior mention or explanation of these anatomical features in the page."
+   "reason": "Both sentences state the same classification of Phantomosaurus within Cymbospondylidae."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Fossils were unearthed in 1965, but the genus was not officially named until 1997 by Sander.\" / \"However, the genus name was actually coined earlier by Maisch and Matzke in the year 2000.\": Sentence 10 states the genus was named in 1997, while sentence 11 claims it was actually coined earlier in 2000, which is later, creating a direct conflict.",
-  "- missing context: \"The rear fin is exceptionally long and thin, containing stretched-out thigh, shin, and ankle bones.\" / \"Each spinal bone has two matching hollow spaces at the front, likely helping the animal float.\": Sentences 3 and 4 refer to limb bones and hollow spaces without any prior mention or explanation of these anatomical features in the page."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:27:23+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:41:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states the genus was named in 1997, while sentence 11 claims it was actually coined earlier in 2000, which is later, creating a direct conflict."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences assert that Phantomosaurus belongs to Cymbospondylidae, repeating the same classification."
+    },
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 3 and 4 refer to limb bones and hollow spaces without any prior mention or explanation of these anatomical features in the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:27:23+00:00"
+  }
+ ]
 }

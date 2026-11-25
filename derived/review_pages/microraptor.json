@@ -2,38 +2,71 @@
  "taxon_key": "microraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bc94ab2f23f17db8",
- "reviewed_at": "2026-11-23T23:59:56+00:00",
+ "text_hash": "4591386cc4055bc5",
+ "reviewed_at": "2026-11-25T13:12:56+00:00",
  "problems": [
-  {
-   "sentences": [
-    3,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 states Microraptor was \"one of the most abundant\" non‑avian dinosaurs, while sentence 5 claims it was the \"most abundant\" non‑avian dinosaur fossil type, which are mutually exclusive."
-  },
   {
    "sentences": [
     7
    ],
    "kind": "missing_context",
-   "reason": "Sentence 8 refers to an \"initial specimen\" that has not been previously introduced or described on the page."
+   "reason": "The sentence refers to an \"initial Microraptor specimen\" that has never been introduced or described earlier in the page."
   },
   {
    "sentences": [
     18
    ],
    "kind": "missing_context",
-   "reason": "Sentence 19 mentions a mammal in Microraptor’s gut, but no earlier sentence discusses gut contents or the specimen’s stomach contents."
+   "reason": "The sentence mentions a \"mammal in Microraptor's gut\" without specifying which specimen or context the gut belongs to."
+  },
+  {
+   "sentences": [
+    19
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to the \"type specimen of M. zhaoianus\" without any prior mention or definition of that specimen in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Microraptor was one of the most abundant non-avian dinosaurs in its ecosystem, with over 300 fossil specimens found across museums.\" / \"It remains the most abundant non-avian dinosaur fossil type found in the Jiufotang Formation.\": Sentence 4 states Microraptor was \"one of the most abundant\" non‑avian dinosaurs, while sentence 5 claims it was the \"most abundant\" non‑avian dinosaur fossil type, which are mutually exclusive.",
-  "- missing context: \"The initial specimen was a chimeric patchwork of different dinosaur species assembled from multiple specimens and smuggled to the USA.\": Sentence 8 refers to an \"initial specimen\" that has not been previously introduced or described on the page.",
-  "- missing context: \"The mammal in Microraptor's gut had an estimated snout-to-vent length of 80 mm and a mass of 13–43 g.\": Sentence 19 mentions a mammal in Microraptor’s gut, but no earlier sentence discusses gut contents or the specimen’s stomach contents."
+  "- missing context: \"The initial Microraptor specimen was a chimeric patchwork of different dinosaur species assembled from multiple specimens and smuggled to the USA.\": The sentence refers to an \"initial Microraptor specimen\" that has never been introduced or described earlier in the page.",
+  "- missing context: \"The mammal in Microraptor's gut had an estimated snout-to-vent length of 80 mm and a mass of 13–43 g.\": The sentence mentions a \"mammal in Microraptor's gut\" without specifying which specimen or context the gut belongs to.",
+  "- missing context: \"In 2010, researchers announced that additional preparation of the type specimen of M. zhaoianus revealed preserved stomach contents consisting of mammal bones, including possible skull fragments, limb parts, vertebrae, and an entire foot.\": The sentence refers to the \"type specimen of M. zhaoianus\" without any prior mention or definition of that specimen in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:27:23+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:59:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states Microraptor was \"one of the most abundant\" non‑avian dinosaurs, while sentence 5 claims it was the \"most abundant\" non‑avian dinosaur fossil type, which are mutually exclusive."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 refers to an \"initial specimen\" that has not been previously introduced or described on the page."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 19 mentions a mammal in Microraptor’s gut, but no earlier sentence discusses gut contents or the specimen’s stomach contents."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:27:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:15+00:00"
 }

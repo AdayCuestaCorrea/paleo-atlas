@@ -2,21 +2,40 @@
  "taxon_key": "mullerornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "89c1dca24f4a6281",
- "reviewed_at": "2026-11-24T01:06:28+00:00",
+ "text_hash": "c06e6181310022ae",
+ "reviewed_at": "2026-11-25T13:45:17+00:00",
  "problems": [
   {
    "sentences": [
     7
    ],
-   "kind": "missing_context",
-   "reason": "Refers to optic lobes without prior mention of the brain or anatomy."
+   "kind": "contradiction",
+   "reason": "Sentence 8 states the species lived from 0.129 to 0 million years ago, implying a range of up to 129,000 years, which contradicts sentence 2 that it went extinct about one millennium ago."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The size of its optic lobes implies it was likely nocturnal, though it may have also been active during twilight.\": Refers to optic lobes without prior mention of the brain or anatomy."
+  "- contradiction: \"Mullerornis lived during the Late Pleistocene to Holocene, from 0.129 to 0 million years ago, with radiocarbon dating of a bone suggesting it survived until approximately 1260 years before present.\": Sentence 8 states the species lived from 0.129 to 0 million years ago, implying a range of up to 129,000 years, which contradicts sentence 2 that it went extinct about one millennium ago."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:17:37+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:06:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to optic lobes without prior mention of the brain or anatomy."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:17:37+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:11+00:00"
 }

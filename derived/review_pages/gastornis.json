@@ -2,22 +2,15 @@
  "taxon_key": "gastornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f06897c78cff935e",
- "reviewed_at": "2026-11-24T00:03:03+00:00",
+ "text_hash": "1019159476c20ece",
+ "reviewed_at": "2026-11-25T13:14:51+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    9
    ],
-   "kind": "missing_context",
-   "reason": "The feather is mentioned without linking it to Gastornis or explaining its relevance."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Eggshell fragments are cited but no connection to Gastornis is established."
+   "kind": "repetition",
+   "reason": "Sentence 10 repeats the same claim about Gastornis being herbivorous multiple times within the same sentence."
   },
   {
    "sentences": [
@@ -25,22 +18,54 @@
     10
    ],
    "kind": "contradiction",
-   "reason": "One sentence states Gastornis was herbivorous, while another claims it preyed on small mammals."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "repetition",
-   "reason": "The debate about Diatryma/Gastornis synonymy is stated twice in the same sentence."
+   "reason": "Sentence 10 states Gastornis was herbivorous, while sentence 11 claims Gastornis species were traditionally considered predators of small mammals."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A single isolated feather found in the Green River Formation resembles the broad, vaned body feathers of flighted birds.\": The feather is mentioned without linking it to Gastornis or explaining its relevance.",
-  "- missing context: \"Huge eggshell fragments were found in Late Paleocene deposits in Spain and early Eocene deposits in France.\": Eggshell fragments are cited but no connection to Gastornis is established.",
-  "- contradiction: \"Evidence such as the absence of hooked claws and bone isotopic signatures suggests Gastornis was likely herbivorous, feeding on tough plants and seeds.\" / \"Gastornis species have traditionally been considered predators of small mammals, the most famous of which is the primitive horse Eohippus.\": One sentence states Gastornis was herbivorous, while another claims it preyed on small mammals."
+  "- contradiction: \"Evidence such as the absence of hooked claws and bone isotopic signatures suggests Gastornis was likely herbivorous, feeding on tough plants and seeds. Studies of calcium isotopes in Gastornis specimens conducted by Thomas Tutken and colleagues did not show the presence of meat in their diet. The absence of raptor-like claws supports the hypothesis that Gastornis was a herbivore rather than a predator or scavenger. Evidence including the lack of sharp claws and beak structure studies has led scientists to reinterpret Gastornis as herbivores that likely ate hard plant material and seeds. It may also have used its strong beak to eat large or very hard vegetation.\" / \"Gastornis species have traditionally been considered predators of small mammals, the most famous of which is the primitive horse Eohippus.\": Sentence 10 states Gastornis was herbivorous, while sentence 11 claims Gastornis species were traditionally considered predators of small mammals."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:05:56+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:03:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The feather is mentioned without linking it to Gastornis or explaining its relevance."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Eggshell fragments are cited but no connection to Gastornis is established."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "One sentence states Gastornis was herbivorous, while another claims it preyed on small mammals."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "repetition",
+     "reason": "The debate about Diatryma/Gastornis synonymy is stated twice in the same sentence."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:05:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:14+00:00"
 }

@@ -2,38 +2,65 @@
  "taxon_key": "sylviornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "eeeddfeea7e13368",
- "reviewed_at": "2026-11-24T00:59:03+00:00",
+ "text_hash": "1f4b51f0ffa9f29e",
+ "reviewed_at": "2026-11-25T13:42:46+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    5,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 says wings are reduced to small stubs, while sentence 5 says the bird used its wings for balance."
+   "reason": "Sentence 6 claims Sylviornis built incubation mounds, whereas sentence 11 states it was unlikely to be a mound‑builder."
   },
   {
    "sentences": [
-    15,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same taxonomic information about the genus and family."
-  },
-  {
-   "sentences": [
-    19
+    15
    ],
    "kind": "missing_context",
-   "reason": "The time range \"0.0117 to 0 million years ago\" is incomplete and lacks context for the upper bound."
+   "reason": "Sentence 16 gives a time range of \"0.0117 to 0 million years ago,\" which is ambiguous and lacks context for what the lower bound represents."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Its anatomy featured a large skull with a high, laterally compressed beak topped by a bony knob, while its wings were reduced to small stubs.\" / \"Native accounts describe the bird as reddish with a star-shaped head marking, capable of running fast using its wings for balance.\": Sentence 2 says wings are reduced to small stubs, while sentence 5 says the bird used its wings for balance.",
-  "- missing context: \"The time range for Sylviornis is the Holocene, from 0.0117 to 0 million years ago.\": The time range \"0.0117 to 0 million years ago\" is incomplete and lacks context for the upper bound."
+  "- contradiction: \"Large tumuli on Île des Pins, initially thought to be graves, are hypothesized to be incubation mounds built by Sylviornis.\" / \"It is hypothesized that Sylviornis did not incubate its eggs but instead built large mounds similar to megapodes, though recent assessments suggest it is unlikely that Sylviornis was a mound-builder because it is not closely related to megapodes.\": Sentence 6 claims Sylviornis built incubation mounds, whereas sentence 11 states it was unlikely to be a mound‑builder.",
+  "- missing context: \"Fossils of Sylviornis date to the Holocene epoch, with a time range from 0.0117 to 0 million years ago.\": Sentence 16 gives a time range of \"0.0117 to 0 million years ago,\" which is ambiguous and lacks context for what the lower bound represents."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:37:23+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:59:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 says wings are reduced to small stubs, while sentence 5 says the bird used its wings for balance."
+    },
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same taxonomic information about the genus and family."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "The time range \"0.0117 to 0 million years ago\" is incomplete and lacks context for the upper bound."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:37:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:20+00:00"
 }

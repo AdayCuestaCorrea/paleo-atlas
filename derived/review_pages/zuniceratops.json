@@ -2,30 +2,57 @@
  "taxon_key": "zuniceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e7ae73d70f3b22fd",
- "reviewed_at": "2026-11-24T00:57:33+00:00",
+ "text_hash": "f33930a927b5616e",
+ "reviewed_at": "2026-11-25T13:41:56+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    2
    ],
-   "kind": "contradiction",
-   "reason": "[12] states Zuniceratops lived during the Turonian stage of the Late Cretaceous, while [13] says it lived in the middle of the Cretaceous period, which conflicts with the Late Cretaceous designation."
+   "kind": "missing_context",
+   "reason": "Refers to \"larger fossils\" without prior mention of any fossils."
   },
   {
    "sentences": [
-    11,
-    12
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim that Zuniceratops lived during the Turonian stage, providing the same age information twice."
+   "kind": "missing_context",
+   "reason": "Mentions \"brow horns\" without earlier introduction of that feature."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Zuniceratops lived during the Turonian stage of the Late Cretaceous in what is now New Mexico, United States.\" / \"Zuniceratops lived in the middle of the Cretaceous period, approximately 94 million years ago during the Turonian, in what is now North America.\": [12] states Zuniceratops lived during the Turonian stage of the Late Cretaceous, while [13] says it lived in the middle of the Cretaceous period, which conflicts with the Late Cretaceous designation."
+  "- missing context: \"Larger fossils show double-rooted teeth, indicating that teeth became double-rooted with age.\": Refers to \"larger fossils\" without prior mention of any fossils.",
+  "- missing context: \"Researchers believe that the brow horns of Zuniceratops would have grown much larger with age.\": Mentions \"brow horns\" without earlier introduction of that feature."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:25:30+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:57:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "[12] states Zuniceratops lived during the Turonian stage of the Late Cretaceous, while [13] says it lived in the middle of the Cretaceous period, which conflicts with the Late Cretaceous designation."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim that Zuniceratops lived during the Turonian stage, providing the same age information twice."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:25:30+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:51+00:00"
 }

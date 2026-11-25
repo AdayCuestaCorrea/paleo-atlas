@@ -2,30 +2,72 @@
  "taxon_key": "miogallus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "127a93f5823bccd9",
- "reviewed_at": "2026-11-24T01:53:05+00:00",
+ "text_hash": "ea24527a760f45c3",
+ "reviewed_at": "2026-11-25T13:58:03+00:00",
  "problems": [
   {
    "sentences": [
+    5,
     6
    ],
    "kind": "contradiction",
-   "reason": "Paleobiology Database classifies Miogallus as Reptilia, while earlier sentences describe it as a bird (family Phasianidae, genus of pheasants)."
+   "reason": "Sentence 6 states Miogallus belongs to the bird family Phasianidae, while sentence 7 claims the Paleobiology Database classifies it under the class Reptilia."
+  },
+  {
+   "sentences": [
+    3,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences assert that Miogallus longaevus is a likely junior synonym of Miogallus altus."
   },
   {
    "sentences": [
     7
    ],
-   "kind": "contradiction",
-   "reason": "The type species is stated as Gallus longaevus, contradicting earlier statements that the genus contains only Miogallus altus and that Miogallus longaevus is a junior synonym of Miogallus altus."
+   "kind": "missing_context",
+   "reason": "Sentence 8 refers to the type species Gallus longaevus without any prior mention of the genus Gallus or its relevance."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses Gallus longaevus, a species of a different genus, as if it were directly about Miogallus."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The Paleobiology Database classifies Miogallus under the class Reptilia.\": Paleobiology Database classifies Miogallus as Reptilia, while earlier sentences describe it as a bird (family Phasianidae, genus of pheasants).",
-  "- contradiction: \"The type species for the genus Miogallus is listed as Gallus longaevus.\": The type species is stated as Gallus longaevus, contradicting earlier statements that the genus contains only Miogallus altus and that Miogallus longaevus is a junior synonym of Miogallus altus."
+  "- contradiction: \"Miogallus belongs to the family Phasianidae.\" / \"The Paleobiology Database classifies Miogallus under the class Reptilia, which contradicts the classification of Miogallus as a bird in other sources.\": Sentence 6 states Miogallus belongs to the bird family Phasianidae, while sentence 7 claims the Paleobiology Database classifies it under the class Reptilia.",
+  "- missing context: \"The type species for the genus Miogallus is listed as Gallus longaevus, although researchers consider Miogallus longaevus to be a likely junior synonym of Miogallus altus.\": Sentence 8 refers to the type species Gallus longaevus without any prior mention of the genus Gallus or its relevance."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:53:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Paleobiology Database classifies Miogallus as Reptilia, while earlier sentences describe it as a bird (family Phasianidae, genus of pheasants)."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "The type species is stated as Gallus longaevus, contradicting earlier statements that the genus contains only Miogallus altus and that Miogallus longaevus is a junior synonym of Miogallus altus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:10+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:10+00:00"
+ "rewritten_at": "2026-11-25T14:32:52+00:00"
 }

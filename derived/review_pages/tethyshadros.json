@@ -2,22 +2,38 @@
  "taxon_key": "tethyshadros",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f5a18c78933ba11f",
- "reviewed_at": "2026-11-24T00:27:30+00:00",
+ "text_hash": "54b0c7c947429e9e",
+ "reviewed_at": "2026-11-25T13:26:41+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    1,
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 states the adult specimen Bruno weighed 514–584 kg, while sentence 6 claims Bruno was only 15–20 % larger than Antonio (338 kg), implying a weight of about 389–405 kg."
+   "kind": "repetition",
+   "reason": "Sentence 10 repeats the nickname \"Antonio\" already introduced in sentence 2."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The subadult \"Antonio\" weighed approximately 338 kg, whereas the adult \"Bruno\" weighed between 514 and 584 kg.\" / \"Bruno was between 15% and 20% larger than Antonio and showed adult traits like a more robust skull.\": Sentence 5 states the adult specimen Bruno weighed 514–584 kg, while sentence 6 claims Bruno was only 15–20 % larger than Antonio (338 kg), implying a weight of about 389–405 kg."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:29:38+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:27:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states the adult specimen Bruno weighed 514–584 kg, while sentence 6 claims Bruno was only 15–20 % larger than Antonio (338 kg), implying a weight of about 389–405 kg."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:29:38+00:00"
+  }
+ ]
 }

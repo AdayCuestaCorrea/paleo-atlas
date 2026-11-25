@@ -2,16 +2,16 @@
  "taxon_key": "tendaguripterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d32b543cc016f6db",
- "reviewed_at": "2026-11-24T00:14:09+00:00",
+ "text_hash": "0f03f2ff0f1b4410",
+ "reviewed_at": "2026-11-25T13:20:33+00:00",
  "problems": [
   {
    "sentences": [
     1,
     4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 gives the dentary length as 25.9 cm, while sentence 5 states the complete skull length is only 20 cm, which is inconsistent for the same animal."
+   "kind": "repetition",
+   "reason": "Both sentences state the fragment measures 25.9 cm in length and 9.9 cm deep at its deepest point."
   },
   {
    "sentences": [
@@ -19,38 +19,73 @@
     5
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the jaw becoming over 1.5 times deeper at the back than at the front, repeating the same claim."
+   "reason": "Both sentences describe the teeth of Tendaguripterus projecting backward rather than upward or forward."
   },
   {
    "sentences": [
-    4,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences estimate the wingspan at about 1 m based on Germanodactylus comparisons."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Tendaguripterus fed on hard‑shelled invertebrates such as bivalves."
-  },
-  {
-   "sentences": [
-    17,
-    18
+    13,
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 18 places the animal between 152.21 and 149.2 Ma during the Kimmeridgian stage, whereas sentence 19 says it lived during the late Kimmeridgian age within the Middle Saurian Member, implying a narrower, later time frame that conflicts with the broader range."
+   "reason": "Sentence 14 claims the species lived from Late Kimmeridgian to Early Tithonian, while sentence 15 limits its age to the Kimmeridgian stage only."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"This preserved dentary is short, robust, and tall, measuring 25.9 cm in length and reaching a depth of 9.9 cm near its rear.\" / \"Comparisons with Germanodactylus suggest the wingspan of this animal was about 1 meter wide, while the complete skull length is estimated at 20 cm.\": Sentence 2 gives the dentary length as 25.9 cm, while sentence 5 states the complete skull length is only 20 cm, which is inconsistent for the same animal.",
-  "- contradiction: \"Tendaguripterus lived during the Late Kimmeridgian to Early Tithonian stages of the Late Jurassic period, specifically between 152.21 and 149.2 million years ago during the Kimmeridgian stage.\" / \"Tendaguripterus fossils come from the Late Jurassic Tendaguru Formation in southeastern Tanzania, where it lived specifically during the late Kimmeridgian age within the Middle Saurian Member of the formation.\": Sentence 18 places the animal between 152.21 and 149.2 Ma during the Kimmeridgian stage, whereas sentence 19 says it lived during the late Kimmeridgian age within the Middle Saurian Member, implying a narrower, later time frame that conflicts with the broader range."
+  "- contradiction: \"Tendaguripterus lived during the Late Kimmeridgian to Early Tithonian stages of the Late Jurassic period. Tendaguripterus lived between 152.21 and 149.2 million years ago during the Kimmeridgian stage.\" / \"Tendaguripterus fossils come from the Late Jurassic Tendaguru Formation in southeastern Tanzania. Tendaguripterus lived specifically during the late Kimmeridgian age within the Middle Saurian Member of the formation.\": Sentence 14 claims the species lived from Late Kimmeridgian to Early Tithonian, while sentence 15 limits its age to the Kimmeridgian stage only."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:38:30+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:14:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 gives the dentary length as 25.9 cm, while sentence 5 states the complete skull length is only 20 cm, which is inconsistent for the same animal."
+    },
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the jaw becoming over 1.5 times deeper at the back than at the front, repeating the same claim."
+    },
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences estimate the wingspan at about 1 m based on Germanodactylus comparisons."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Tendaguripterus fed on hard‑shelled invertebrates such as bivalves."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 places the animal between 152.21 and 149.2 Ma during the Kimmeridgian stage, whereas sentence 19 says it lived during the late Kimmeridgian age within the Middle Saurian Member, implying a narrower, later time frame that conflicts with the broader range."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:38:30+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:29+00:00"
 }

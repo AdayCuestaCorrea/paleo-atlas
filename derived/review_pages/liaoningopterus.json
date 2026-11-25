@@ -2,21 +2,37 @@
  "taxon_key": "liaoningopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e92ce6e06e61151d",
- "reviewed_at": "2026-11-24T01:19:17+00:00",
+ "text_hash": "ef49e75387b935ea",
+ "reviewed_at": "2026-11-25T13:49:42+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    1,
+    4
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"the group\" without previously defining or naming the group."
+   "kind": "repetition",
+   "reason": "Both sentences state the snout crest is 12 cm long."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The species Liaoningopterus gui serves as the type species for the group.\": The sentence refers to \"the group\" without previously defining or naming the group."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:21:30+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:19:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"the group\" without previously defining or naming the group."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:21:30+00:00"
+  }
+ ]
 }

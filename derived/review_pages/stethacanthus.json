@@ -2,22 +2,52 @@
  "taxon_key": "stethacanthus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7add557722346475",
- "reviewed_at": "2026-11-24T00:23:49+00:00",
+ "text_hash": "9c6f02b514154097",
+ "reviewed_at": "2026-11-25T13:24:46+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    7
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Stethacanthus died around 298.9 Ma, while sentence 8 reports fossils dated to ~360 Ma, which is inconsistent."
+   "reason": "Sentence 1 states Stethacanthus died out around 298.9 Ma, while sentence 13 reports fossils dated to ~360 Ma."
+  },
+  {
+   "sentences": [
+    21,
+    22,
+    23,
+    24
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 22‑25 all repeat the classification hierarchy of Stethacanthus."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Stethacanthus was an extinct genus of shark-like cartilaginous fish that died out around 298.9 million years ago.\" / \"Stethacanthus fossils have been found in New Mexico approximately 360 million years ago.\": Sentence 1 states Stethacanthus died around 298.9 Ma, while sentence 8 reports fossils dated to ~360 Ma, which is inconsistent."
+  "- contradiction: \"Stethacanthus was an extinct genus of shark-like cartilaginous fish that died out around 298.9 million years ago.\" / \"Stethacanthus fossils have been found in New Mexico approximately 360 million years ago.\": Sentence 1 states Stethacanthus died out around 298.9 Ma, while sentence 13 reports fossils dated to ~360 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:55:28+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:23:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Stethacanthus died around 298.9 Ma, while sentence 8 reports fossils dated to ~360 Ma, which is inconsistent."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:55:28+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:09+00:00"
 }

@@ -3,28 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4a10d2a070529d63",
- "reviewed_at": "2026-11-24T01:25:38+00:00",
+ "reviewed_at": "2026-11-25T13:51:18+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    10,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 states Pepesuchus lived during the Campanian and Maastrichtian stages, while the same sentence also claims it lived from the Turonian to the Maastrichtian, which are different time ranges."
-  },
-  {
-   "sentences": [
-    0,
-    3
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the teeth as laterally compressed and serrated, repeating the same claim."
+   "reason": "The age range for Pepesuchus is given as Campanian–Maastrichtian in sentence 11 but as Turonian–Maastrichtian in sentence 12, which are inconsistent."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Pepesuchus was a semiaquatic crocodylomorph that lived during the Campanian and Maastrichtian stages of the Late Cretaceous in what is now the state of São Paulo, Brazil. This creature lived from the Turonian to the Maastrichtian, between 93.9 and 66 million years ago.\": Sentence 7 states Pepesuchus lived during the Campanian and Maastrichtian stages, while the same sentence also claims it lived from the Turonian to the Maastrichtian, which are different time ranges."
+  "- contradiction: \"Pepesuchus lived during the Campanian and Maastrichtian stages of the Late Cretaceous in what is now the state of São Paulo, Brazil.\" / \"Other estimates suggest it lived from the Turonian to the Maastrichtian, between 93.9 and 66 million years ago.\": The age range for Pepesuchus is given as Campanian–Maastrichtian in sentence 11 but as Turonian–Maastrichtian in sentence 12, which are inconsistent."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:48:59+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:25:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states Pepesuchus lived during the Campanian and Maastrichtian stages, while the same sentence also claims it lived from the Turonian to the Maastrichtian, which are different time ranges."
+    },
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the teeth as laterally compressed and serrated, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:48:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:44+00:00"
 }

@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "60eb5e89f1090dbf",
- "reviewed_at": "2026-11-24T01:18:14+00:00",
+ "reviewed_at": "2026-11-25T13:49:25+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    6,
+    7
    ],
    "kind": "contradiction",
-   "reason": "The two sentences give different age ranges for the species without indicating they are alternative estimates."
+   "reason": "Sentence 7 states the specimen is the most basal known plesiosauroid, while sentence 8 places it as a basal plesiosaur outside the group Plesiosauroidea, giving conflicting phylogenetic positions."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This animal lived between 199.6 and 198 million years ago during the earliest Hettangian stage.\" / \"Other records place its time range within the Hettangian stage from 201.4 to 199.5 million years ago.\": The two sentences give different age ranges for the species without indicating they are alternative estimates."
+  "- contradiction: \"A 2012 study identified it as the most basal known plesiosauroid.\" / \"However, a later analysis by Benson and Druckenmiller in 2014 placed it as a basal plesiosaur outside the group Plesiosauroidea.\": Sentence 7 states the specimen is the most basal known plesiosauroid, while sentence 8 places it as a basal plesiosaur outside the group Plesiosauroidea, giving conflicting phylogenetic positions."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:18:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:18:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "The two sentences give different age ranges for the species without indicating they are alternative estimates."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:18:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:04+00:00"
 }

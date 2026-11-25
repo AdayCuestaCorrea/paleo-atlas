@@ -2,37 +2,70 @@
  "taxon_key": "quetzalcoatlus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e66a054e4f2f4cdf",
- "reviewed_at": "2026-11-23T23:53:02+00:00",
+ "text_hash": "a2eb875bd07c831d",
+ "reviewed_at": "2026-11-25T13:09:05+00:00",
  "problems": [
   {
    "sentences": [
-    21,
-    22
-   ],
-   "kind": "contradiction",
-   "reason": "Sentences 22 and 23 give conflicting age ranges for Quetzalcoatlus (67–66 Ma vs 68–66 Ma)."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 8 repeats the claim that the genus was described and named by Douglas Lawson in 1975, which is already stated in sentence 9. In fact, sentence 8 is redundant. "
-  },
-  {
-   "sentences": [
-    9
+    5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 10 mentions structures that were initially thought to be pycnofibres but later confirmed to be conifer needles, yet it never specifies what structures or where they were found. "
+   "reason": "refers to weight distribution in flight posture without prior explanation of posture"
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "mentions taking off from limited open spaces without context of launch conditions"
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "describes structures (pycnofibres/needles) rather than the animal itself"
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Quetzalcoatlus lived during the Maastrichtian age of the Late Cretaceous. Quetzalcoatlus lived around 67 to 66 million years ago during the latest Maastrichtian.\" / \"Quetzalcoatlus lived in North America during the Late Cretaceous, specifically the Maastrichtian stage between 68 and 66 million years ago.\": Sentences 22 and 23 give conflicting age ranges for Quetzalcoatlus (67–66 Ma vs 68–66 Ma).",
-  "- missing context: \"Structures initially thought to be pycnofibres were later confirmed to be conifer needles.\": Sentence 10 mentions structures that were initially thought to be pycnofibres but later confirmed to be conifer needles, yet it never specifies what structures or where they were found. "
+  "- missing context: \"In any case, the weight distribution in flight posture allowed at least short flights and a spectacular landing by re-balancing the weight on land.\": refers to weight distribution in flight posture without prior explanation of posture",
+  "- missing context: \"Quetzalcoatlus likely used a pacing gait on the ground, moving limbs on one side simultaneously before switching to the opposite side, and must have been capable of taking off from limited open spaces because no nearby trees or elevations were available for launch.\": mentions taking off from limited open spaces without context of launch conditions"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:21:01+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:53:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 22 and 23 give conflicting age ranges for Quetzalcoatlus (67–66 Ma vs 68–66 Ma)."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 8 repeats the claim that the genus was described and named by Douglas Lawson in 1975, which is already stated in sentence 9. In fact, sentence 8 is redundant. "
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 mentions structures that were initially thought to be pycnofibres but later confirmed to be conifer needles, yet it never specifies what structures or where they were found. "
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:21:01+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:37+00:00"
 }

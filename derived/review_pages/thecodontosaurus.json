@@ -2,38 +2,58 @@
  "taxon_key": "thecodontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "14b98803e12696f3",
- "reviewed_at": "2026-11-24T00:34:11+00:00",
+ "text_hash": "8a883e960beae2b9",
+ "reviewed_at": "2026-11-25T13:29:43+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    3
+    14,
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims the animal measured about two meters in total length, while sentence 4 states the average length was only 1.2 meters."
-  },
-  {
-   "sentences": [
-    22,
-    28
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Michael Benton’s 2000 observation of a robust morph that might be a second species or sexual dimorphism."
-  },
-  {
-   "sentences": [
-    25,
-    28
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 26 and 29 repeat the same claim about Michael Benton’s 2000 observation of a robust morph."
+   "reason": "Sentence 15 states that only T. antiquus is a valid species, while sentence 16 claims that in 2007 the taxon became the separate genus Pantydraco caducus, implying a split or new valid species."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Thecodontosaurus was a small, two-legged creature measuring about two meters in total length.\" / \"On average, this species stood thirty centimeters tall, weighed eleven kilograms, and measured one point two meters long.\": Sentence 1 claims the animal measured about two meters in total length, while sentence 4 states the average length was only 1.2 meters."
+  "- contradiction: \"Currently, the only valid species is T. antiquus.\" / \"In 2007 it became the separate genus Pantydraco caducus.\": Sentence 15 states that only T. antiquus is a valid species, while sentence 16 claims that in 2007 the taxon became the separate genus Pantydraco caducus, implying a split or new valid species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:24:32+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:34:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims the animal measured about two meters in total length, while sentence 4 states the average length was only 1.2 meters."
+    },
+    {
+     "sentences": [
+      22,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Michael Benton’s 2000 observation of a robust morph that might be a second species or sexual dimorphism."
+    },
+    {
+     "sentences": [
+      25,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 26 and 29 repeat the same claim about Michael Benton’s 2000 observation of a robust morph."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:24:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:17+00:00"
 }

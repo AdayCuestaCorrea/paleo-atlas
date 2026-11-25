@@ -3,15 +3,15 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7c55cbc3a004f970",
- "reviewed_at": "2026-11-24T01:34:18+00:00",
+ "reviewed_at": "2026-11-25T13:54:35+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    4
+    0,
+    1
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 states Bogolubovia was moved to its own genus within the family Pteranodontidae, while sentence 5 says the genus was assigned to the family Azhdarchidae."
+   "reason": "Sentence 1 claims the species lived during the early Campanian, while sentence 2 states its fossil record spans 83.6–72.2 Ma, covering late Campanian to early Maastrichtian."
   },
   {
    "sentences": [
@@ -19,14 +19,42 @@
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 assigns the genus to Azhdarchidae, whereas sentence 6 claims Bogolubovia is a valid pteranodontid, implying it belongs to Pteranodontidae."
+   "reason": "Sentence 5 says the genus was moved to its own genus within Pteranodontidae, whereas sentence 6 says it was assigned to Azhdarchidae."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The species was later reclassified as Pteranodon before being moved to its own genus within the family Pteranodontidae by Nessov and Yarkov in 1989.\" / \"In 1991, the genus was assigned to the family Azhdarchidae, though Wellnhofer retained it as a Pteranodontidae.\": Sentence 4 states Bogolubovia was moved to its own genus within the family Pteranodontidae, while sentence 5 says the genus was assigned to the family Azhdarchidae.",
-  "- contradiction: \"In 1991, the genus was assigned to the family Azhdarchidae, though Wellnhofer retained it as a Pteranodontidae.\" / \"New remains described in 2022 suggested that both Bogolubovia and Volgadraco are valid species of pteranodontids.\": Sentence 5 assigns the genus to Azhdarchidae, whereas sentence 6 claims Bogolubovia is a valid pteranodontid, implying it belongs to Pteranodontidae."
+  "- contradiction: \"This pterosaur lived during the early Campanian stage of the Upper Cretaceous in the Rybushka Formation of Petrovsk, Saratov Oblast, Russia.\" / \"The fossil record for this genus spans from 83.6 to 72.2 million years ago during the Campanian stage.\": Sentence 1 claims the species lived during the early Campanian, while sentence 2 states its fossil record spans 83.6–72.2 Ma, covering late Campanian to early Maastrichtian.",
+  "- contradiction: \"The species was later reclassified as Pteranodon before being moved to its own genus within the family Pteranodontidae by Nessov and Yarkov in 1989.\" / \"In 1991, the genus was assigned to the family Azhdarchidae, though Wellnhofer retained it as a Pteranodontidae.\": Sentence 5 says the genus was moved to its own genus within Pteranodontidae, whereas sentence 6 says it was assigned to Azhdarchidae."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:25:39+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:34:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states Bogolubovia was moved to its own genus within the family Pteranodontidae, while sentence 5 says the genus was assigned to the family Azhdarchidae."
+    },
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 assigns the genus to Azhdarchidae, whereas sentence 6 claims Bogolubovia is a valid pteranodontid, implying it belongs to Pteranodontidae."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:25:39+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:40+00:00"
 }

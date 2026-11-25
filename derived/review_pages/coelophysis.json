@@ -2,38 +2,81 @@
  "taxon_key": "coelophysis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9b384ca6996f9d57",
- "reviewed_at": "2026-11-23T23:53:42+00:00",
+ "text_hash": "cdf4c253bdd11f90",
+ "reviewed_at": "2026-11-25T13:09:25+00:00",
  "problems": [
   {
    "sentences": [
-    16,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 claims Coelophysis was the second dinosaur to travel to space, which is historically inaccurate and contradicts the factual context of the page."
+  },
+  {
+   "sentences": [
+    2,
+    8,
     20
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that some researchers debate the validity of Coelophysis as a distinct genus, suggesting it is a metataxon lacking unique characteristics."
+   "reason": "Sentences 3, 9, and 21 all describe the Ghost Ranch excavation and its significance, repeating the same claim about the concentration of Coelophysis skeletons."
   },
   {
    "sentences": [
-    18,
-    19
+    22
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 19 claims Coelophysis fossils were found in the Chinle Formation of Norian age, while sentence 20 argues the species lived in the Revueltian-age Petrified Forest Formation, presenting conflicting age assignments for the same taxon."
+   "kind": "about_something_else",
+   "reason": "Sentence 23 discusses Eucoelophysis, a silesaurid, which is not Coelophysis itself but is presented as part of the Coelophysis narrative."
   },
   {
    "sentences": [
-    12
+    23,
+    24,
+    25
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 13 refers to a \"tail's lattice structure\" without any prior explanation or description of this structure in the page."
+   "kind": "about_something_else",
+   "reason": "Sentences 24–26 refer to various geological formations and other taxa (Rioarribasaurus, Megapnosaurus) rather than directly describing Coelophysis, treating them as if they were about the animal itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Coelophysis fossils from Ghost Ranch were found in the Chinle Formation, which was believed to be of Norian age at the time of discovery.\" / \"Hunt and Lucas argued that Coelophysis lived in the Revueltian-age Petrified Forest Formation, while C. rhodesiensis fossils have been recovered from the Upper Elliot Formation in South Africa and the Forest Sandstone Formation in Zimbabwe.\": Sentence 19 claims Coelophysis fossils were found in the Chinle Formation of Norian age, while sentence 20 argues the species lived in the Revueltian-age Petrified Forest Formation, presenting conflicting age assignments for the same taxon.",
-  "- missing context: \"The tail's lattice structure may have helped the animal maneuver at high speeds.\": Sentence 13 refers to a \"tail's lattice structure\" without any prior explanation or description of this structure in the page."
+  "- contradiction: \"Coelophysis was the second dinosaur to travel to space, with a skull from the Carnegie Museum of Natural History aboard the Space Shuttle Endeavour mission STS-89 on January 22, 1998.\": Sentence 5 claims Coelophysis was the second dinosaur to travel to space, which is historically inaccurate and contradicts the factual context of the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:29:32+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:53:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that some researchers debate the validity of Coelophysis as a distinct genus, suggesting it is a metataxon lacking unique characteristics."
+    },
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 claims Coelophysis fossils were found in the Chinle Formation of Norian age, while sentence 20 argues the species lived in the Revueltian-age Petrified Forest Formation, presenting conflicting age assignments for the same taxon."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 13 refers to a \"tail's lattice structure\" without any prior explanation or description of this structure in the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:29:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:54+00:00"
 }

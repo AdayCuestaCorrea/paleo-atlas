@@ -2,23 +2,61 @@
  "taxon_key": "portugalosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "36c1495c73c1dc63",
- "reviewed_at": "2026-11-24T01:29:22+00:00",
+ "text_hash": "ed6e0f13fa7dcc67",
+ "reviewed_at": "2026-11-25T13:52:35+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    4,
-    6
+    2,
+    9
    ],
    "kind": "contradiction",
-   "reason": "Sentences 1 and 5 classify Portugalosuchus within Gavialidae (a Crocodylia family), while sentence 7 states it may lie outside Crocodylia as a sister to Allodaposuchidae."
+   "reason": "Sentence 3 classifies Portugalosuchus within the family Gavialidae (inside Crocodylia), while sentence 10 places it outside Crocodylia as the sister taxon to Allodaposuchidae."
+  },
+  {
+   "sentences": [
+    4,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 states Portugalosuchus is a member of Gavialidae within Crocodylia, whereas sentence 10 suggests it is outside Crocodylia."
+  },
+  {
+   "sentences": [
+    3,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims that if Portugalosuchus were a basal crocodylian it would be the oldest known crocodylian, but sentence 10 places it outside Crocodylia, making the claim about being the oldest crocodylian irrelevant."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Portugalosuchus is an extinct genus of eusuchian crocodyliform, a group of crocodile-like reptiles, classified within the family Gavialidae.\" / \"The type species of the genus is Portugalosuchus azenhae, and a 2021 study placed it within Crocodylia as a member of Gavialidae closely related to thoracosaurs like Thoracosaurus.\" / \"Researchers have noted that Portugalosuchus might possibly fall outside of Crocodylia entirely, as a 2022 analysis using morphological and DNA data suggested it is outside Crocodylia as the sister taxon to Allodaposuchidae.\": Sentences 1 and 5 classify Portugalosuchus within Gavialidae (a Crocodylia family), while sentence 7 states it may lie outside Crocodylia as a sister to Allodaposuchidae."
+  "- contradiction: \"It is classified within the family Gavialidae.\" / \"A 2022 analysis using morphological and DNA data suggested Portugalosuchus is outside Crocodylia as the sister taxon to Allodaposuchidae.\": Sentence 3 classifies Portugalosuchus within the family Gavialidae (inside Crocodylia), while sentence 10 places it outside Crocodylia as the sister taxon to Allodaposuchidae.",
+  "- contradiction: \"A 2021 study placed Portugalosuchus within Crocodylia as a member of Gavialidae closely related to thoracosaurs like Thoracosaurus.\" / \"A 2022 analysis using morphological and DNA data suggested Portugalosuchus is outside Crocodylia as the sister taxon to Allodaposuchidae.\": Sentence 5 states Portugalosuchus is a member of Gavialidae within Crocodylia, whereas sentence 10 suggests it is outside Crocodylia.",
+  "- contradiction: \"If classified as a basal crocodylian, Portugalosuchus would be the oldest known crocodylian.\" / \"A 2022 analysis using morphological and DNA data suggested Portugalosuchus is outside Crocodylia as the sister taxon to Allodaposuchidae.\": Sentence 4 claims that if Portugalosuchus were a basal crocodylian it would be the oldest known crocodylian, but sentence 10 places it outside Crocodylia, making the claim about being the oldest crocodylian irrelevant."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:04:12+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:29:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      4,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 1 and 5 classify Portugalosuchus within Gavialidae (a Crocodylia family), while sentence 7 states it may lie outside Crocodylia as a sister to Allodaposuchidae."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:04:12+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:39+00:00"
 }

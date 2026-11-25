@@ -3,28 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "52f358fd5f3d0e80",
- "reviewed_at": "2026-11-24T01:14:14+00:00",
+ "reviewed_at": "2026-11-25T13:48:07+00:00",
  "problems": [
   {
    "sentences": [
-    18
+    5
    ],
-   "kind": "missing_context",
-   "reason": "Refers to lower limb bones without prior mention of them."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions Ajancingenia without any earlier introduction of that genus."
+   "kind": "about_something_else",
+   "reason": "Sentence 6 discusses the genus’s name length record, which is about the genus name rather than the biology or characteristics of the animal itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"A reduction in the third metacarpal bone is a unique trait of Khaan mckennai, unless the lower limb bones are not specialized.\": Refers to lower limb bones without prior mention of them.",
-  "- missing context: \"Unlike Ajancingenia, the first metacarpal of Khaan is not extremely wide.\": Mentions Ajancingenia without any earlier introduction of that genus."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:00:21+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:14:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to lower limb bones without prior mention of them."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Ajancingenia without any earlier introduction of that genus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:00:21+00:00"
+  }
+ ]
 }

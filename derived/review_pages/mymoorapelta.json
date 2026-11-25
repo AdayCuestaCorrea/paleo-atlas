@@ -2,30 +2,72 @@
  "taxon_key": "mymoorapelta",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6d1635a22717a721",
- "reviewed_at": "2026-11-23T23:59:44+00:00",
+ "text_hash": "256246a5bb73e0ca",
+ "reviewed_at": "2026-11-25T13:12:45+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    4
+    1,
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the largest known Mymoorapelta individual was 3 m long."
+   "reason": "Both sentences describe the narrow snout as an adaptation for selective browsing rather than grazing."
   },
   {
    "sentences": [
-    20,
-    21
+    4,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 21 gives a temporal range of 155–150 Ma for Mymoorapelta, while sentence 22 gives 150–145 Ma, which are mutually exclusive ranges."
+   "kind": "repetition",
+   "reason": "Both sentences discuss the tail’s function, first as defense and later as possible intraspecific combat."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions “category 1 sacral shields” and “category 2 shields” without any prior explanation of these categories."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes bite marks on Allosaurus fossils, which is about another species rather than Mymoorapelta itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Mymoorapelta lived during the Late Jurassic, approximately 155 to 150 million years ago, and nodosaurids first evolved in the Late Jurassic (ca. 155 mya), with Mymoorapelta being an early member of this evolutionary radiation.\" / \"Mymoorapelta lived during the late Jurassic period, approximately 150 to 145 million years ago, in the Kimmeridgian and Tithonian stages, and has a limited known distribution found at two sites in Western Colorado, plus the Hanksville-Burpee and potential Albuquerque specimens.\": Sentence 21 gives a temporal range of 155–150 Ma for Mymoorapelta, while sentence 22 gives 150–145 Ma, which are mutually exclusive ranges."
+  "- missing context: \"It is debated whether an osteoderm from New Mexico belongs to Mymoorapelta, as it is morphologically similar but stratigraphically closer to Gargoyleosaurus. Researchers suggest that category 1 sacral shields might represent a growth stage of category 2 shields, similar to traits seen in modern armadillos and alligators. It is debated whether Mymoorapelta may be an ankylosaur outside both Nodosauridae and Ankylosauridae, and there is currently some controversy regarding the position of this ankylosaurian within Ankylosauria.\": Mentions “category 1 sacral shields” and “category 2 shields” without any prior explanation of these categories."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:24:32+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:59:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the largest known Mymoorapelta individual was 3 m long."
+    },
+    {
+     "sentences": [
+      20,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 21 gives a temporal range of 155–150 Ma for Mymoorapelta, while sentence 22 gives 150–145 Ma, which are mutually exclusive ranges."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:24:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:10+00:00"
 }

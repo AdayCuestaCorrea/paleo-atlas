@@ -2,38 +2,65 @@
  "taxon_key": "barapasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "958a91eb3f7b8418",
- "reviewed_at": "2026-11-24T00:43:02+00:00",
+ "text_hash": "c6b2599b12750479",
+ "reviewed_at": "2026-11-25T13:35:33+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that at least six individuals were present based on six left femurs."
-  },
-  {
-   "sentences": [
-    16,
+    17,
     18
    ],
    "kind": "repetition",
-   "reason": "Both sentences explain the absence of skulls as lighter bone parts being carried away by water currents."
+   "reason": "Both sentences give age ranges for the fossils, effectively repeating the same information."
   },
   {
    "sentences": [
-    22,
-    23
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 23 gives an age range of 184–200 Ma, while sentence 24 extends the range to 176.5 Ma, which lies outside the earlier range."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"the one-hundredth year of Tagore's birth\" without providing the birth year or context for that calculation."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The species generally dates to the Early Jurassic, specifically the Sinemurian to Pliensbachian stages, roughly 184 to 200 million years ago.\" / \"More precise dating places the animal in the Toarcian stage, approximately 189.6 to 176.5 million years ago, on the Indian subcontinent.\": Sentence 23 gives an age range of 184–200 Ma, while sentence 24 extends the range to 176.5 Ma, which lies outside the earlier range."
+  "- missing context: \"Excavations to uncover these remains commenced during the one-hundredth year of Tagore's birth.\": The sentence refers to \"the one-hundredth year of Tagore's birth\" without providing the birth year or context for that calculation."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:44:03+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:43:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that at least six individuals were present based on six left femurs."
+    },
+    {
+     "sentences": [
+      16,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences explain the absence of skulls as lighter bone parts being carried away by water currents."
+    },
+    {
+     "sentences": [
+      22,
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 gives an age range of 184–200 Ma, while sentence 24 extends the range to 176.5 Ma, which lies outside the earlier range."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:44:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:47+00:00"
 }

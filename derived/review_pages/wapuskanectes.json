@@ -2,21 +2,45 @@
  "taxon_key": "wapuskanectes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "754ee6746266c646",
- "reviewed_at": "2026-11-24T01:27:59+00:00",
+ "text_hash": "59c693805853cd28",
+ "reviewed_at": "2026-11-25T13:52:05+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    10,
+    12
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 states that Wapuskanectes was ten times heavier than Nichollsaura and that its gastroliths weighed five times as much, but no reference is given to the actual masses or to what the five‑fold comparison is relative to, leaving the claim unsupported and unclear."
+   "kind": "repetition",
+   "reason": "Both sentences state the age of Wapuskanectes (112 Ma and 113.2–110.1 Ma), repeating the same age information."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the same temporal context (Albian stage of the Early Cretaceous), repeating the age information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Despite being ten times heavier than the similar reptile Nichollsaura, Wapuskanectes carried gastroliths weighing five times as much.\": Sentence 4 states that Wapuskanectes was ten times heavier than Nichollsaura and that its gastroliths weighed five times as much, but no reference is given to the actual masses or to what the five‑fold comparison is relative to, leaving the claim unsupported and unclear."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:57:54+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:27:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 states that Wapuskanectes was ten times heavier than Nichollsaura and that its gastroliths weighed five times as much, but no reference is given to the actual masses or to what the five‑fold comparison is relative to, leaving the claim unsupported and unclear."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:57:54+00:00"
+  }
+ ]
 }

@@ -2,8 +2,8 @@
  "taxon_key": "camelotia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "424774ee09d400f0",
- "reviewed_at": "2026-11-24T00:31:22+00:00",
+ "text_hash": "eb0ef6bae237dba2",
+ "reviewed_at": "2026-11-25T13:28:30+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,36 +11,72 @@
     6
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the estimated body length of Camelotia as 8-10 meters."
+   "reason": "Both sentences state that Camelotia reached a body length of 8‑10 m and a mass of 3.8 t."
   },
   {
    "sentences": [
-    23,
-    24
+    1,
+    2
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Camelotia’s temporal range as the latest Triassic (Rhaetian) in southwest England/Europe."
+   "kind": "contradiction",
+   "reason": "Sentence 2/7 gives a maximum length of 8‑10 m, while sentence 3 claims the largest individuals were 12 m long."
   },
   {
    "sentences": [
-    25,
-    26
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give overlapping age ranges for Camelotia fossils (208.5–201.3 Ma and 205.7–201.4 Ma)."
-  },
-  {
-   "sentences": [
+    7,
     8
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to Camelotia being the only known melanorosaurid in the Northern Hemisphere, but the term melanorosaurid is not introduced or defined earlier in the page."
+   "kind": "about_something_else",
+   "reason": "Sentences 8 and 9 describe the etymology of the genus and species names, which is about the naming origin rather than the animal itself."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The specific name C. borealis means \"northern\" and refers to Camelotia being the only known melanorosaurid in the Northern Hemisphere according to Galton.\": Sentence 9 refers to Camelotia being the only known melanorosaurid in the Northern Hemisphere, but the term melanorosaurid is not introduced or defined earlier in the page."
+  "- contradiction: \"The holotype femur is approximately 1 meter long, suggesting the animal was roughly 8-10 meters in length based on scaling comparisons.\" / \"The largest individuals of Camelotia borealis had an estimated length of 12 meters.\": Sentence 2/7 gives a maximum length of 8‑10 m, while sentence 3 claims the largest individuals were 12 m long."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:58:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:31:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the estimated body length of Camelotia as 8-10 meters."
+    },
+    {
+     "sentences": [
+      23,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Camelotia’s temporal range as the latest Triassic (Rhaetian) in southwest England/Europe."
+    },
+    {
+     "sentences": [
+      25,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give overlapping age ranges for Camelotia fossils (208.5–201.3 Ma and 205.7–201.4 Ma)."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to Camelotia being the only known melanorosaurid in the Northern Hemisphere, but the term melanorosaurid is not introduced or defined earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:58:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:22+00:00"
 }

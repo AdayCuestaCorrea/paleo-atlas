@@ -2,30 +2,58 @@
  "taxon_key": "yamatosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "18d1517deaf534d1",
- "reviewed_at": "2026-11-24T01:36:43+00:00",
+ "text_hash": "f8fa301ca15bba14",
+ "reviewed_at": "2026-11-25T13:55:16+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    7
+    3,
+    5
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the genus was established by Kobayashi et al. in 2021."
+   "reason": "Both sentences state that Yamatosaurus lived around 71 million years ago, repeating the same temporal claim."
   },
   {
    "sentences": [
-    8,
-    9
+    3,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 gives a narrow age range (71.94–71.69 Ma) while sentence 10 gives a broader range (72.2–66 Ma) for the same genus, without indicating they are different estimates."
+   "reason": "Sentence 4 gives a narrow range of 71.94–71.69 Ma, while sentence 6 gives a broader range of 72.2–66 Ma, contradicting each other on the species’ temporal range."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Yamatosaurus izanagii lived during the early Maastrichtian stage of the Late Cretaceous, approximately 71.94 to 71.69 million years ago, in what is now Asia.\" / \"The estimated time range for the genus spans from 72.2 to 66 million years ago.\": Sentence 9 gives a narrow age range (71.94–71.69 Ma) while sentence 10 gives a broader range (72.2–66 Ma) for the same genus, without indicating they are different estimates."
+  "- contradiction: \"Yamatosaurus lived during the early Maastrichtian stage of the Late Cretaceous, approximately 71.94 to 71.69 million years ago.\" / \"Yamatosaurus izanagii lived at the end of the Cretaceous period, approximately 71 million years ago, in what is now Asia. The time range for the genus is estimated from 72.2 to 66 million years ago, representing a broader span than the specific stage mentioned earlier.\": Sentence 4 gives a narrow range of 71.94–71.69 Ma, while sentence 6 gives a broader range of 72.2–66 Ma, contradicting each other on the species’ temporal range."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:35:00+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:36:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus was established by Kobayashi et al. in 2021."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 gives a narrow age range (71.94–71.69 Ma) while sentence 10 gives a broader range (72.2–66 Ma) for the same genus, without indicating they are different estimates."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:35:00+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:07+00:00"
 }

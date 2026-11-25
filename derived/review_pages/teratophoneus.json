@@ -2,30 +2,50 @@
  "taxon_key": "teratophoneus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d20b5085c1af2d45",
- "reviewed_at": "2026-11-24T00:27:55+00:00",
+ "text_hash": "3c1eca0342ad8d70",
+ "reviewed_at": "2026-11-25T13:26:48+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    4
+    3
    ],
    "kind": "contradiction",
-   "reason": "Both describe the subadult specimen’s size and mass but give different values (667 kg vs 1 t)."
-  },
-  {
-   "sentences": [
-    6,
-    10
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that a bone bed of four or five individuals was found and described."
+   "reason": "Both sentences give different measurements and masses for the same subadult specimen without indicating they are separate estimates."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype, which is the specimen the species is based on, was not fully grown and measured roughly 6 meters in length with a mass of 667 kilograms.\" / \"Later analysis of the frontal bone size suggested the subadult was approximately 6.1 meters long and weighed 1 metric ton.\": Both describe the subadult specimen’s size and mass but give different values (667 kg vs 1 t)."
+  "- contradiction: \"The holotype, which is the specimen the species is based on, was not fully grown and measured roughly 6 meters in length with a mass of 667 kilograms.\" / \"Later analysis of the frontal bone size suggested the subadult was approximately 6.1 meters long and weighed 1 metric ton.\": Both sentences give different measurements and masses for the same subadult specimen without indicating they are separate estimates."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:33:27+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:27:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Both describe the subadult specimen’s size and mass but give different values (667 kg vs 1 t)."
+    },
+    {
+     "sentences": [
+      6,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that a bone bed of four or five individuals was found and described."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:33:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:29+00:00"
 }

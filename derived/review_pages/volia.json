@@ -2,31 +2,102 @@
  "taxon_key": "volia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "adc4a972e7d6ef1b",
- "reviewed_at": "2026-11-24T00:25:41+00:00",
+ "text_hash": "9b878602adc6d765",
+ "reviewed_at": "2026-11-25T13:25:51+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    13
+    1,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 claims Volia lived only during the Pleistocene, while sentence 14 extends its range from the Late Pliocene to the Holocene."
+   "reason": "Both claim Volia was the largest predator, but sentence 11 adds “despite its small size” which contradicts the earlier assertion of it being the largest."
   },
   {
    "sentences": [
-    13,
-    14
+    21,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 14 gives a time range ending 0.129 million years ago, whereas sentence 15 states extinction around 1000 BC (≈0.001 Ma)."
+   "reason": "Sentence 22 places Volia from Late Pliocene to Late Pleistocene, while sentence 24 places it from Late Pleistocene to Holocene."
+  },
+  {
+   "sentences": [
+    22,
+    23,
+    24
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 23 says extinction around 1000 BC (~3,000 years ago), but sentence 24 says extinction at 0.129 Ma (129,000 years ago) and sentence 25 gives a Holocene date of 2,900–2,700 years ago."
+  },
+  {
+   "sentences": [
+    9,
+    11
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state Volia likely fed on iguanas, large birds, or fish."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim Volia was more terrestrial than modern crocodiles."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 15 refers to the “distal ulnare” without having introduced or described this anatomical element earlier in the page."
+  },
+  {
+   "sentences": [
+    15,
+    16
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 17 places Volia in the family Crocodylidae, while sentence 16 identifies it as a mekosuchine crocodylian (a subfamily within Crocodylidae), creating a conflicting classification."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Volia was approximately 2 to 3 meters long, making it the largest predator and likely apex predator of Pleistocene Fiji.\" / \"Volia lived during the Pleistocene and possibly the Holocene, ranging from the Late Pliocene to the Late Pleistocene, and specifically from the Late Pleistocene to the Holocene between 0.129 and 0 million years ago.\": Sentence 6 claims Volia lived only during the Pleistocene, while sentence 14 extends its range from the Late Pliocene to the Holocene.",
-  "- contradiction: \"Volia lived during the Pleistocene and possibly the Holocene, ranging from the Late Pliocene to the Late Pleistocene, and specifically from the Late Pleistocene to the Holocene between 0.129 and 0 million years ago.\" / \"Volia went extinct around 1000 BC, and fossil material tentatively assigned to Volia from Naigani dates to the Holocene, around 2,900 to 2,700 years ago.\": Sentence 14 gives a time range ending 0.129 million years ago, whereas sentence 15 states extinction around 1000 BC (≈0.001 Ma)."
+  "- contradiction: \"Volia was approximately 2 to 3 meters long, making it the largest predator and likely apex predator of Pleistocene Fiji.\" / \"Despite its small size, Volia was likely the largest predator in the Pleistocene ecosystems of Fiji.\": Both claim Volia was the largest predator, but sentence 11 adds “despite its small size” which contradicts the earlier assertion of it being the largest.",
+  "- contradiction: \"Volia lived from the Late Pliocene to the Late Pleistocene.\" / \"Volia lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": Sentence 22 places Volia from Late Pliocene to Late Pleistocene, while sentence 24 places it from Late Pleistocene to Holocene.",
+  "- contradiction: \"Volia went extinct around 1000 BC.\" / \"Volia lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\" / \"Fossil material tentatively assigned to Volia from Naigani dates to the Holocene, around 2,900 to 2,700 years ago.\": Sentence 23 says extinction around 1000 BC (~3,000 years ago), but sentence 24 says extinction at 0.129 Ma (129,000 years ago) and sentence 25 gives a Holocene date of 2,900–2,700 years ago.",
+  "- missing context: \"The hinge-like joint motion of the distal ulnare suggests Volia was better adapted to move on land than modern saltwater crocodiles.\": Sentence 15 refers to the “distal ulnare” without having introduced or described this anatomical element earlier in the page.",
+  "- contradiction: \"Volia is an extinct genus containing only one species and is a mekosuchine crocodylian related to Mekosuchus and Trilophosuchus.\" / \"Volia belongs to the crocodile family Crocodylidae.\": Sentence 17 places Volia in the family Crocodylidae, while sentence 16 identifies it as a mekosuchine crocodylian (a subfamily within Crocodylidae), creating a conflicting classification."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:13:56+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims Volia lived only during the Pleistocene, while sentence 14 extends its range from the Late Pliocene to the Holocene."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 gives a time range ending 0.129 million years ago, whereas sentence 15 states extinction around 1000 BC (≈0.001 Ma)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:13:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:59+00:00"
 }

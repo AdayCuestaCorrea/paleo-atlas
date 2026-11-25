@@ -2,8 +2,8 @@
  "taxon_key": "necrosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ec6788926a2095c3",
- "reviewed_at": "2026-11-24T00:44:34+00:00",
+ "text_hash": "d36b58a2c8346c97",
+ "reviewed_at": "2026-11-25T13:36:11+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,33 @@
     12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 states Necrosuchus lived ~60 Ma, while sentence 13 gives a range of 66–61.66 Ma, which conflicts without acknowledging different estimates."
+   "reason": "Sentence 11 states Necrosuchus lived ~60 Ma in the Paleocene, while sentence 13 gives a range of 66–61.66 Ma, which conflicts with the earlier age estimate."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Necrosuchus lived approximately 60 million years ago during the Paleocene epoch in what is now Argentina.\" / \"The time range for Necrosuchus is estimated to be between 66 and 61.66 million years ago.\": Sentence 11 states Necrosuchus lived ~60 Ma, while sentence 13 gives a range of 66–61.66 Ma, which conflicts without acknowledging different estimates."
+  "- contradiction: \"Necrosuchus lived approximately 60 million years ago during the Paleocene epoch in what is now Argentina.\" / \"The time range for Necrosuchus is estimated to be between 66 and 61.66 million years ago.\": Sentence 11 states Necrosuchus lived ~60 Ma in the Paleocene, while sentence 13 gives a range of 66–61.66 Ma, which conflicts with the earlier age estimate."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:56:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:44:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states Necrosuchus lived ~60 Ma, while sentence 13 gives a range of 66–61.66 Ma, which conflicts without acknowledging different estimates."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:56:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:11+00:00"
 }

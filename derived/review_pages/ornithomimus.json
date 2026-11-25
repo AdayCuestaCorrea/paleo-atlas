@@ -2,56 +2,94 @@
  "taxon_key": "ornithomimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c14a96df6aec3b7c",
- "reviewed_at": "2026-11-24T00:12:40+00:00",
+ "text_hash": "b053c482b0dd78ae",
+ "reviewed_at": "2026-11-25T13:20:06+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 14 states Ornithomimus edmontonicus is the type species, while sentence 7 says the type species is Ornithomimus velox."
-  },
-  {
-   "sentences": [
-    16,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 17 gives a time range of 83.6–66 Ma, whereas sentence 18 limits the range to 70–66 Ma."
-  },
-  {
-   "sentences": [
-    1,
-    2
+    9
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim the dinosaur had bird‑like skulls."
+   "reason": "Sentence 10 repeats the claim that body shape suggests an omnivorous or herbivorous lifestyle twice."
   },
   {
    "sentences": [
-    5,
+    11
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 12 repeats the same claim about large eye sockets and nocturnality."
+  },
+  {
+   "sentences": [
     12
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to “the fourth feathered specimen” without earlier establishing how many feathered specimens had been described."
+   "kind": "repetition",
+   "reason": "Sentence 13 repeats the same study and result twice."
   },
   {
    "sentences": [
-    17,
-    19
+    9
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 20 discusses a Kaiparowits Formation specimen, which is a geological formation rather than the animal itself."
+   "kind": "missing_context",
+   "reason": "Sentence 10 uses the pronoun \"their\" referring to Ornithomimus, which is singular, creating ambiguous context."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The first fossils were found in 1889 by George Lyman Cannon, and the type species Ornithomimus velox was named in 1890 by Othniel Charles Marsh.\" / \"Ornithomimus is usually classified into two species: Ornithomimus velox and Ornithomimus edmontonicus, with the latter being the type species.\": Sentence 14 states Ornithomimus edmontonicus is the type species, while sentence 7 says the type species is Ornithomimus velox.",
-  "- contradiction: \"Ornithomimus lived during the Campanian to Maastrichtian ages of the Late Cretaceous, between 83.6 and 66 million years ago.\" / \"It lived during the late Cretaceous, approximately 70 to 66 million years ago in the Maastrichtian stage, in what is now North America.\": Sentence 17 gives a time range of 83.6–66 Ma, whereas sentence 18 limits the range to 70–66 Ma.",
-  "- missing context: \"A fourth feathered specimen described in October 2015 was the first to preserve tail feathers.\" / \"Starting in 1995, several specimens preserving feather evidence were found, with a 2012 study concluding adults had moderate wing structures likely used for mating displays.\": Sentence 6 refers to “the fourth feathered specimen” without earlier establishing how many feathered specimens had been described."
+  "- missing context: \"The diet of Ornithomimus is debated; while theropods might have been carnivorous, its body shape suggests a largely omnivorous lifestyle, and their body shape also suggests a partially or largely herbivorous lifestyle.\": Sentence 10 uses the pronoun \"their\" referring to Ornithomimus, which is singular, creating ambiguous context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:29:03+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:12:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 states Ornithomimus edmontonicus is the type species, while sentence 7 says the type species is Ornithomimus velox."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 17 gives a time range of 83.6–66 Ma, whereas sentence 18 limits the range to 70–66 Ma."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the dinosaur had bird‑like skulls."
+    },
+    {
+     "sentences": [
+      5,
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to “the fourth feathered specimen” without earlier establishing how many feathered specimens had been described."
+    },
+    {
+     "sentences": [
+      17,
+      19
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 20 discusses a Kaiparowits Formation specimen, which is a geological formation rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:29:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:47+00:00"
 }

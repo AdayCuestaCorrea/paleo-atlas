@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7c6e0804b647bf22",
- "reviewed_at": "2026-11-24T01:58:43+00:00",
+ "reviewed_at": "2026-11-25T13:58:49+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,34 @@
     6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 states Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous, while sentence 7 cites a time range from the Campanian to the Maastrichtian, which are Late Cretaceous stages."
+   "reason": "Sentence 6 states that Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous, while sentence 7 cites a time range from the Campanian to the Maastrichtian (Late Cretaceous), which are mutually exclusive time periods."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous.\" / \"However, records in the Paleobiology Database indicate a time range spanning from the Campanian to the Maastrichtian.\": Sentence 6 states Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous, while sentence 7 cites a time range from the Campanian to the Maastrichtian, which are Late Cretaceous stages."
+  "- contradiction: \"Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous.\" / \"However, records in the Paleobiology Database indicate a time range spanning from the Campanian to the Maastrichtian (83.6 to 66 million years ago).\": Sentence 6 states that Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous, while sentence 7 cites a time range from the Campanian to the Maastrichtian (Late Cretaceous), which are mutually exclusive time periods."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:58:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states Chiayusuchus lived during the Barremian and Aptian stages of the Early Cretaceous, while sentence 7 cites a time range from the Campanian to the Maastrichtian, which are Late Cretaceous stages."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:33:34+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:33:34+00:00"
+ "rewritten_at": "2026-11-25T14:33:25+00:00"
 }

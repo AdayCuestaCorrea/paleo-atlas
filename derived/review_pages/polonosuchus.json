@@ -3,28 +3,35 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "1f33f6c89fafa39d",
- "reviewed_at": "2026-11-24T01:00:08+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:43:23+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    19,
-    21
+   "reviewed_at": "2026-11-24T01:00:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Polonosuchus is classified in the order Rauisuchia, repeating the same classification claim."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence compares maxillae sizes (165 mm vs 245 mm) without specifying which measurement belongs to Polonosuchus and which to the reference species, leaving the comparison ambiguous."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Polonosuchus is classified in the order Rauisuchia, repeating the same classification claim."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence compares maxillae sizes (165 mm vs 245 mm) without specifying which measurement belongs to Polonosuchus and which to the reference species, leaving the comparison ambiguous."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:45:25+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"Polonosuchus had a larger first tooth socket, smaller overall maxillae measuring 165 mm versus 245 mm, and a unique ridge between the palatal process and tooth sockets not found in Teratosaurus.\": The sentence compares maxillae sizes (165 mm vs 245 mm) without specifying which measurement belongs to Polonosuchus and which to the reference species, leaving the comparison ambiguous."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:45:25+00:00"
+ ]
 }

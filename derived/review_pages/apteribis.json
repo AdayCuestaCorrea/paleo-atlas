@@ -2,30 +2,67 @@
  "taxon_key": "apteribis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "607b0f8fc6065418",
- "reviewed_at": "2026-11-24T01:32:19+00:00",
+ "text_hash": "0531e44351a7a913",
+ "reviewed_at": "2026-11-25T13:53:54+00:00",
  "problems": [
   {
    "sentences": [
-    15
+    0,
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 16 states Apteribis lived until the present, contradicting earlier statements that it is extinct and that its fossils are only from the Late Pleistocene to Holocene."
+   "reason": "Sentence 1 places Apteribis in the ibis subfamily (family Threskiornithidae), while sentence 15 assigns it to the family Plataleidae."
+  },
+  {
+   "sentences": [
+    0,
+    16
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Apteribis is extinct, yet sentence 17 claims it lived until the present."
   },
   {
    "sentences": [
     14,
-    15
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentence 15 says the islands were part of Maui Nui until ~200,000 years ago, while sentence 16 says Apteribis existed until the present, implying the islands remained Maui Nui beyond that time."
+   "reason": "Sentence 15 places Apteribis in Plataleidae, while sentence 17 implies it is a modern ibis, inconsistent with the family assignment."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Apteribis lived during the Late Pleistocene to the Holocene, from 0.129 million years ago until the present.\": Sentence 16 states Apteribis lived until the present, contradicting earlier statements that it is extinct and that its fossils are only from the Late Pleistocene to Holocene.",
-  "- contradiction: \"The islands where Apteribis fossils were found were once part of the prehistoric landmass Maui Nui until approximately 200,000 years ago.\" / \"Apteribis lived during the Late Pleistocene to the Holocene, from 0.129 million years ago until the present.\": Sentence 15 says the islands were part of Maui Nui until ~200,000 years ago, while sentence 16 says Apteribis existed until the present, implying the islands remained Maui Nui beyond that time."
+  "- contradiction: \"Apteribis was an extinct genus of flightless birds belonging to the ibis subfamily, found only in the Hawaiian Islands.\" / \"Apteribis belongs to the family Plataleidae.\": Sentence 1 places Apteribis in the ibis subfamily (family Threskiornithidae), while sentence 15 assigns it to the family Plataleidae.",
+  "- contradiction: \"Apteribis was an extinct genus of flightless birds belonging to the ibis subfamily, found only in the Hawaiian Islands.\" / \"Apteribis lived during the Late Pleistocene to the Holocene, from 0.129 million years ago until the present.\": Sentence 1 states Apteribis is extinct, yet sentence 17 claims it lived until the present.",
+  "- contradiction: \"Apteribis belongs to the family Plataleidae.\" / \"Apteribis lived during the Late Pleistocene to the Holocene, from 0.129 million years ago until the present.\": Sentence 15 places Apteribis in Plataleidae, while sentence 17 implies it is a modern ibis, inconsistent with the family assignment."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:16:28+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:32:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 states Apteribis lived until the present, contradicting earlier statements that it is extinct and that its fossils are only from the Late Pleistocene to Holocene."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 says the islands were part of Maui Nui until ~200,000 years ago, while sentence 16 says Apteribis existed until the present, implying the islands remained Maui Nui beyond that time."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:16:28+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:12+00:00"
 }

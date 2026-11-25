@@ -2,31 +2,58 @@
  "taxon_key": "bactrosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ef349d6b3e3ee1d7",
- "reviewed_at": "2026-11-24T01:05:40+00:00",
+ "text_hash": "9697fb6b366e5144",
+ "reviewed_at": "2026-11-25T13:44:59+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
+    0,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 claims fragments of a crest base were found, implying a crest, while sentence 7 states Bactrosaurus was likely crestless."
+   "reason": "The age ranges for Bactrosaurus differ: 96–85 Ma vs 93.9–72.2 Ma."
   },
   {
    "sentences": [
     0,
-    13
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 gives a time range of 96–85 Ma, whereas sentence 14 extends the range to 93.9–72.2 Ma, a broader interval that conflicts with the earlier, narrower range."
+   "kind": "repetition",
+   "reason": "Both sentences state that Bactrosaurus was a herbivorous hadrosauroid dinosaur."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"A subsequent study revealed fragments that appear to be the base of an incompletely preserved crest on Bactrosaurus.\" / \"Recent studies suggest Bactrosaurus was likely crestless because basal hadrosauromorphs do not preserve hollow crests.\": Sentence 6 claims fragments of a crest base were found, implying a crest, while sentence 7 states Bactrosaurus was likely crestless.",
-  "- contradiction: \"Bactrosaurus was a herbivorous hadrosauroid dinosaur that lived in Asia between 96 and 85 million years ago.\" / \"The time range for Bactrosaurus is recorded as extending from the Turonian to the Campanian stages, between 93.9 and 72.2 million years ago.\": Sentence 1 gives a time range of 96–85 Ma, whereas sentence 14 extends the range to 93.9–72.2 Ma, a broader interval that conflicts with the earlier, narrower range."
+  "- contradiction: \"Bactrosaurus was a large herbivorous dinosaur measuring between 6 and 6.5 meters in length, with some estimates placing its weight between 1,100 and 1,500 kilograms.\" / \"Bactrosaurus was a herbivorous hadrosauroid dinosaur that lived in Asia between 96 and 85 million years ago, with the time range recorded as extending from the Turonian to the Campanian stages, between 93.9 and 72.2 million years ago.\": The age ranges for Bactrosaurus differ: 96–85 Ma vs 93.9–72.2 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:12:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:05:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims fragments of a crest base were found, implying a crest, while sentence 7 states Bactrosaurus was likely crestless."
+    },
+    {
+     "sentences": [
+      0,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 gives a time range of 96–85 Ma, whereas sentence 14 extends the range to 93.9–72.2 Ma, a broader interval that conflicts with the earlier, narrower range."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:12:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:56+00:00"
 }

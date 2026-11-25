@@ -3,28 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ccb92fffd7f463ef",
- "reviewed_at": "2026-11-24T00:38:39+00:00",
+ "reviewed_at": "2026-11-25T13:32:47+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    4
+    4,
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Hesperonychus is the smallest/first small carnivorous theropod in the region, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 5 claims Hesperonychus is the first microraptor described in North America, implying microraptor existed there, while sentence 11 states Microraptorinae were previously thought restricted to the Early Cretaceous of Asia."
   },
   {
    "sentences": [
-    1
+    4
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 2 refers to \"may also belong to this animal\" without specifying which animal or providing context for the toe bones."
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses microraptor, a different taxon, rather than Hesperonychus itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A series of very small toe bones, including sickle claws, in the Royal Tyrrell Museum collection may also belong to this animal.\": Sentence 2 refers to \"may also belong to this animal\" without specifying which animal or providing context for the toe bones."
+  "- contradiction: \"It was the first small carnivorous theropod found at the site, weighing less than 10 kg, and the first microraptor described in North America.\" / \"Longrich and Currie classified Hesperonychus as a member of the Microraptorinae, a group previously thought to be restricted to the Early Cretaceous of Asia.\": Sentence 5 claims Hesperonychus is the first microraptor described in North America, implying microraptor existed there, while sentence 11 states Microraptorinae were previously thought restricted to the Early Cretaceous of Asia."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:05:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:38:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Hesperonychus is the smallest/first small carnivorous theropod in the region, repeating the same claim."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 2 refers to \"may also belong to this animal\" without specifying which animal or providing context for the toe bones."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:05:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:10+00:00"
 }

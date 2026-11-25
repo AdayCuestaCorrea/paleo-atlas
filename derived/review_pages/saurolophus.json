@@ -3,29 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0f2cbaebce490226",
- "reviewed_at": "2026-11-24T00:07:35+00:00",
+ "reviewed_at": "2026-11-25T13:16:49+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 claims S. osborni weighed ~3 tonnes, while sentence 3 suggests S. angustirostris could have grown as large as Shantungosaurus, which is considerably larger, implying a larger weight."
+   "kind": "missing_context",
+   "reason": "Sentence 14 mentions Tarbosaurus without any prior introduction or context for that taxon."
   },
   {
    "sentences": [
-    11,
     13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Saurolophus comprises two valid species, repeating the same fact."
+   "kind": "about_something_else",
+   "reason": "The claim in sentence 14 concerns the behavior of Tarbosaurus, not Saurolophus itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Scientists estimated the weight of S. osborni to be around three tonnes.\" / \"Footprints attributed to S. angustirostris suggest it might have grown as large as Shantungosaurus.\": Sentence 2 claims S. osborni weighed ~3 tonnes, while sentence 3 suggests S. angustirostris could have grown as large as Shantungosaurus, which is considerably larger, implying a larger weight."
+  "- missing context: \"The Saurolophus humerus bears three distinctive feeding marks interpreted as punctures, drag marks, and bite-and-drag marks, while the lack of large wounds on the rest of the skeleton suggests that the Tarbosaurus scavenged an already dead Saurolophus angustirostris.\": Sentence 14 mentions Tarbosaurus without any prior introduction or context for that taxon."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:38:33+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:07:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 claims S. osborni weighed ~3 tonnes, while sentence 3 suggests S. angustirostris could have grown as large as Shantungosaurus, which is considerably larger, implying a larger weight."
+    },
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Saurolophus comprises two valid species, repeating the same fact."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:38:33+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:04:32+00:00"
 }

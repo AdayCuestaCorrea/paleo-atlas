@@ -2,23 +2,65 @@
  "taxon_key": "brancasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3194d1293a69055e",
- "reviewed_at": "2026-11-24T00:09:11+00:00",
+ "text_hash": "1346d6044c653616",
+ "reviewed_at": "2026-11-25T13:18:01+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    7,
-    13
+    4
    ],
-   "kind": "contradiction",
-   "reason": "The specimen is described as coming from the Isterberg Formation (sentence 8) but also from the Bückeberg Group (sentence 14), which are distinct geological units."
+   "kind": "missing_context",
+   "reason": "Refers to the pubis being damaged into 176 pieces without prior mention of the pubis."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions the Bückeberg Group without earlier context of that formation."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "References Wealden 5 and 6 layers without prior introduction of the Wealden layers."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes deposition of Wealden layers, a geological formation, as if it were about the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The known specimen is a fairly complete skeleton of a subadult individual measuring 3.26 meters in total length.\" / \"This specimen, cataloged as GPMM A3.B4, is now held at the University of Münster and comes from the Isterberg Formation.\" / \"Its fossils come from the Bückeberg Group, which likely formed in a large continental freshwater lake that later expanded and became brackish due to marine transgression.\": The specimen is described as coming from the Isterberg Formation (sentence 8) but also from the Bückeberg Group (sentence 14), which are distinct geological units."
+  "- missing context: \"Workers discovered the holotype near Gronau in northwestern Germany in July 1910 using pickaxes, an event that damaged the pubis into 176 pieces.\": Refers to the pubis being damaged into 176 pieces without prior mention of the pubis.",
+  "- missing context: \"Plesiosaurs of the Bückeberg Group, including Brancasaurus, were presumably preserved after sinking to the oxygen-poor bottom of the lake.\": Mentions the Bückeberg Group without earlier context of that formation.",
+  "- missing context: \"During the deposition of the Wealden 5 and Wealden 6 layers, the lake expanded and became more brackish due to marine transgression.\": References Wealden 5 and 6 layers without prior introduction of the Wealden layers."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:57:22+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:09:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      7,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "The specimen is described as coming from the Isterberg Formation (sentence 8) but also from the Bückeberg Group (sentence 14), which are distinct geological units."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:57:22+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:05:18+00:00"
 }

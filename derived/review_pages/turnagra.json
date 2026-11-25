@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "67f7ec65d093994f",
- "reviewed_at": "2026-11-24T01:25:33+00:00",
+ "reviewed_at": "2026-11-25T13:51:17+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    2,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 states the piopio lived during the Holocene epoch, while sentence 11 claims the genus existed from the Late Pleistocene to the Holocene (0.129–0 million years ago), implying a Pleistocene presence that contradicts the exclusive Holocene claim."
+   "reason": "Sentence 3 states the South Island piopio was last recorded in 1905, implying extinction, while sentence 9 claims the piopio were split into separate North Island and South Island species in 2012, which would require the species to still exist at that time."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The piopio lived during the Holocene epoch.\" / \"The genus Turnagra existed from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": Sentence 10 states the piopio lived during the Holocene epoch, while sentence 11 claims the genus existed from the Late Pleistocene to the Holocene (0.129–0 million years ago), implying a Pleistocene presence that contradicts the exclusive Holocene claim."
+  "- contradiction: \"The South Island piopio was last recorded in 1905.\" / \"The piopio were split into separate North Island and South Island species in 2012.\": Sentence 3 states the South Island piopio was last recorded in 1905, implying extinction, while sentence 9 claims the piopio were split into separate North Island and South Island species in 2012, which would require the species to still exist at that time."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:48:35+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:25:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states the piopio lived during the Holocene epoch, while sentence 11 claims the genus existed from the Late Pleistocene to the Holocene (0.129–0 million years ago), implying a Pleistocene presence that contradicts the exclusive Holocene claim."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:48:35+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:43+00:00"
 }

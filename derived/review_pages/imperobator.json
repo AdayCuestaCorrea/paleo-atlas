@@ -2,58 +2,103 @@
  "taxon_key": "imperobator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "86e515d0d54fe520",
- "reviewed_at": "2026-11-24T00:13:21+00:00",
+ "text_hash": "1288fb67a531f0c4",
+ "reviewed_at": "2026-11-25T13:20:15+00:00",
  "problems": [
   {
    "sentences": [
-    22,
-    23,
-    24
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences state that Imperobator lived during the Late Cretaceous Maastrichtian age."
-  },
-  {
-   "sentences": [
-    11,
-    25
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the fossils as belonging to the Cape Lamb Member of the Snow Hill Island Formation on James Ross Island."
-  },
-  {
-   "sentences": [
-    29,
-    30
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences discuss the debate over whether Imperobator is a dromaeosaur and its size relative to other taxa."
-  },
-  {
-   "sentences": [
-    31,
-    32
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences mention ongoing debate about the classification of Imperobator."
-  },
-  {
-   "sentences": [
-    17,
-    18,
-    19,
-    20,
+    3,
     21
    ],
    "kind": "contradiction",
-   "reason": "Sentences 21 and 22 state that the Paleobiology Database places Imperobator in Dromaeosauridae, while sentences 18, 19, and 20 describe it as a Paraves, basal deinonychosaur, or possible unenlagiine, which conflicts with the Dromaeosauridae assignment."
+   "reason": "Sentence 4 estimates body length 2–3 m, while sentence 22 states it was smaller, comparable to Neuquenraptor and Deinonychus, implying a shorter length."
+  },
+  {
+   "sentences": [
+    9,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 classifies Imperobator within Paraves, whereas sentence 14 cites the Paleobiology Database listing it under Dromaeosauridae."
+  },
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Imperobator lived during the Maastrichtian stage of the Late Cretaceous."
+  },
+  {
+   "sentences": [
+    7,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences refer to the Cape Lamb Member of the Snow Hill Island Formation as the sole location of Imperobator fossils."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The formal description assigned Imperobator to the clade Paraves.\" / \"A 2019 analysis by Hartman et al. recovered Imperobator as a basal deinonychosaur outside the subgroups Dromaeosauridae, Unenlagiinae, and Troodontidae.\" / \"Researchers studying the unenlagiine Diuqin in 2024 considered Imperobator to be a possible member of that group.\" / \"The Paleobi Database lists the parent group of Imperobator as Dromaeosauridae.\" / \"The Paleobi Database classifies Imperobator within the family Dromaeosauridae.\": Sentences 21 and 22 state that the Paleobiology Database places Imperobator in Dromaeosauridae, while sentences 18, 19, and 20 describe it as a Paraves, basal deinonychosaur, or possible unenlagiine, which conflicts with the Dromaeosauridae assignment."
+  "- contradiction: \"While the holotype measures approximately 45 centimeters in length, reexaminations of specific bones revised the estimated body length of the animal to between 2 and 3 meters.\" / \"There is a debate regarding the size of Imperobator; while initially thought to be as large as Utahraptor, later revisions suggest it was smaller, comparable to Neuquenraptor and Deinonychus.\": Sentence 4 estimates body length 2–3 m, while sentence 22 states it was smaller, comparable to Neuquenraptor and Deinonychus, implying a shorter length.",
+  "- contradiction: \"Imperobator is classified within the clade Paraves rather than Dromaeosauridae due to traits such as the absence of a sickle claw and a smooth distal metatarsal II.\" / \"Despite the scientific consensus shifting toward Paraves, the Paleobi Database lists the parent group of Imperobator as Dromaeosauridae and classifies the animal within the family Dromaeosauridae.\": Sentence 10 classifies Imperobator within Paraves, whereas sentence 14 cites the Paleobiology Database listing it under Dromaeosauridae."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:32:53+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:13:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      22,
+      23,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that Imperobator lived during the Late Cretaceous Maastrichtian age."
+    },
+    {
+     "sentences": [
+      11,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the fossils as belonging to the Cape Lamb Member of the Snow Hill Island Formation on James Ross Island."
+    },
+    {
+     "sentences": [
+      29,
+      30
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences discuss the debate over whether Imperobator is a dromaeosaur and its size relative to other taxa."
+    },
+    {
+     "sentences": [
+      31,
+      32
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences mention ongoing debate about the classification of Imperobator."
+    },
+    {
+     "sentences": [
+      17,
+      18,
+      19,
+      20,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 21 and 22 state that the Paleobiology Database places Imperobator in Dromaeosauridae, while sentences 18, 19, and 20 describe it as a Paraves, basal deinonychosaur, or possible unenlagiine, which conflicts with the Dromaeosauridae assignment."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:32:53+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:06+00:00"
 }

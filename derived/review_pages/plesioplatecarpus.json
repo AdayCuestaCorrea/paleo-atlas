@@ -3,21 +3,49 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "417d94f33d41f00c",
- "reviewed_at": "2026-11-24T01:53:10+00:00",
+ "reviewed_at": "2026-11-25T13:58:05+00:00",
  "problems": [
+  {
+   "sentences": [
+    1,
+    3
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 states the species was originally named Clidastes planifrons, while sentence 4 claims it was originally named Platecarpus planifrons."
+  },
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to \"Platecarpus planifrons\" without having introduced that name earlier, creating a reference that the page never defined."
+   "reason": "Sentence 4 refers to “the species originally named Platecarpus planifrons” without having introduced that name earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Scientists created this new genus because phylogenetic analysis revealed that Platecarpus planifrons was distinct from the genus Platecarpus.\": Sentence 4 refers to \"Platecarpus planifrons\" without having introduced that name earlier, creating a reference that the page never defined."
+  "- contradiction: \"Originally named Clidastes planifrons by Cope in 1874, the genus was later reclassified as Plesioplatecarpus by Takuya Konishi and Michael W. Caldwell in 2011.\" / \"Scientists created this new genus because phylogenetic analysis revealed that the species originally named Platecarpus planifrons was distinct from the genus Platecarpus.\": Sentence 2 states the species was originally named Clidastes planifrons, while sentence 4 claims it was originally named Platecarpus planifrons.",
+  "- missing context: \"Scientists created this new genus because phylogenetic analysis revealed that the species originally named Platecarpus planifrons was distinct from the genus Platecarpus.\": Sentence 4 refers to “the species originally named Platecarpus planifrons” without having introduced that name earlier in the page."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:53:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to \"Platecarpus planifrons\" without having introduced that name earlier, creating a reference that the page never defined."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:11+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:11+00:00"
+ "rewritten_at": "2026-11-25T14:32:53+00:00"
 }

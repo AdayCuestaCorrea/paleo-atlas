@@ -2,47 +2,91 @@
  "taxon_key": "arcovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "00cea4e27d2ba6da",
- "reviewed_at": "2026-11-24T00:25:18+00:00",
+ "text_hash": "9506daf19f26e3b4",
+ "reviewed_at": "2026-11-25T13:25:35+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
+    2,
+    18,
+    19
    ],
    "kind": "contradiction",
-   "reason": "Different age ranges for Arcovenator fossils (74–72 Ma vs 72–76 Ma)."
-  },
-  {
-   "sentences": [
-    19,
-    21
-   ],
-   "kind": "contradiction",
-   "reason": "Arcovenator dated to 74–72 Ma but also to 83.6–66 Ma (Campanian–Maastrichtian)."
+   "reason": "The age ranges for Arcovenator are inconsistent: sentence 3 gives a size estimate, while sentences 19 and 20 provide conflicting time ranges (72–76 Ma vs 74–72 Ma and 83.6–66 Ma)."
   },
   {
    "sentences": [
     0,
-    17
+    15
    ],
    "kind": "repetition",
-   "reason": "Both sentences state Arcovenator is the only known species in its genus and belongs to Abelisauridae."
+   "reason": "Both sentences state that Arcovenator is a theropod in the family Abelisauridae."
   },
   {
    "sentences": [
-    3,
-    6
+    0,
+    16
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe a unique midline opening on the skull roof that likely housed the pineal gland."
+   "reason": "Sentence 1 and sentence 17 both classify Arcovenator as an abelisaurid theropod."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to a maxilla found at Pourcieux, but the page never previously mentioned Pourcieux or provided context for this locality."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Arcovenator lived during the Late Cretaceous period, specifically between 74 and 72 million years ago.\" / \"The fossils date to between 72 and 76 million years ago in the Aix-en-Provence Basin of southeastern France.\": Different age ranges for Arcovenator fossils (74–72 Ma vs 72–76 Ma).",
-  "- contradiction: \"Arcovenator lived during the Late Cretaceous period, specifically between 74 and 72 million years ago.\" / \"The animal lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.\": Arcovenator dated to 74–72 Ma but also to 83.6–66 Ma (Campanian–Maastrichtian)."
+  "- contradiction: \"While the nearly complete skull initially suggested a length of 5 to 6 meters, later estimates in 2016 revised this size to 4.8 meters.\" / \"Arcovenator lived between 72 and 76 million years ago in the Aix-en-Provence Basin of southeastern France, while other sources place it between 74 and 72 million years ago.\" / \"The animal lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.\": The age ranges for Arcovenator are inconsistent: sentence 3 gives a size estimate, while sentences 19 and 20 provide conflicting time ranges (72–76 Ma vs 74–72 Ma and 83.6–66 Ma).",
+  "- missing context: \"A single maxilla found at Pourcieux is likely referable to Arcovenator based on its proximity in time and space and phylogenetic analysis.\": The sentence refers to a maxilla found at Pourcieux, but the page never previously mentioned Pourcieux or provided context for this locality."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:09:10+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for Arcovenator fossils (74–72 Ma vs 72–76 Ma)."
+    },
+    {
+     "sentences": [
+      19,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Arcovenator dated to 74–72 Ma but also to 83.6–66 Ma (Campanian–Maastrichtian)."
+    },
+    {
+     "sentences": [
+      0,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state Arcovenator is the only known species in its genus and belongs to Abelisauridae."
+    },
+    {
+     "sentences": [
+      3,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe a unique midline opening on the skull roof that likely housed the pineal gland."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:09:10+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:40+00:00"
 }

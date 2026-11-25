@@ -2,8 +2,8 @@
  "taxon_key": "jidapterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "76949c05fceb7cfb",
- "reviewed_at": "2026-11-24T01:07:39+00:00",
+ "text_hash": "ec6398fc3df0c584",
+ "reviewed_at": "2026-11-25T13:45:35+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,7 +11,7 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "One sentence states Jidapterus is classified within Chaoyangopteridae, while another states the Paleobiology Database lists Tapejaridae as its family."
+   "reason": "Both sentences state the family assignment of Jidapterus, but one says Chaoyangopteridae while the other says Tapejaridae."
   },
   {
    "sentences": [
@@ -19,7 +19,7 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "The database lists Chaoyangopterinae as the parent group, but also lists Tapejaridae as the family, conflicting taxonomic ranks."
+   "reason": "The Paleobiology Database lists Chaoyangopterinae as the parent group (implying Chaoyangopteridae) but also lists Tapejaridae as the family, which are incompatible."
   },
   {
    "sentences": [
@@ -27,14 +27,50 @@
     9
    ],
    "kind": "repetition",
-   "reason": "Both sentences assert that Jidapterus belongs to the family Chaoyangopteridae."
+   "reason": "Both sentences assert that Jidapterus belongs to Chaoyangopteridae."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The genus is classified within the family Chaoyangopteridae.\" / \"The Paleobiology Database lists Tapejaridae as the family for Jidapterus.\": One sentence states Jidapterus is classified within Chaoyangopteridae, while another states the Paleobiology Database lists Tapejaridae as its family.",
-  "- contradiction: \"The Paleobiology Database lists Chaoyangopterinae as the parent group for Jidapterus.\" / \"The Paleobiology Database lists Tapejaridae as the family for Jidapterus.\": The database lists Chaoyangopterinae as the parent group, but also lists Tapejaridae as the family, conflicting taxonomic ranks."
+  "- contradiction: \"The genus is classified within the family Chaoyangopteridae.\" / \"The Paleobiology Database lists Tapejaridae as the family for Jidapterus.\": Both sentences state the family assignment of Jidapterus, but one says Chaoyangopteridae while the other says Tapejaridae.",
+  "- contradiction: \"The Paleobiology Database lists Chaoyangopterinae as the parent group for Jidapterus.\" / \"The Paleobiology Database lists Tapejaridae as the family for Jidapterus.\": The Paleobiology Database lists Chaoyangopterinae as the parent group (implying Chaoyangopteridae) but also lists Tapejaridae as the family, which are incompatible."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:23:08+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:07:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "One sentence states Jidapterus is classified within Chaoyangopteridae, while another states the Paleobiology Database lists Tapejaridae as its family."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "The database lists Chaoyangopterinae as the parent group, but also lists Tapejaridae as the family, conflicting taxonomic ranks."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences assert that Jidapterus belongs to the family Chaoyangopteridae."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:23:08+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:25+00:00"
 }

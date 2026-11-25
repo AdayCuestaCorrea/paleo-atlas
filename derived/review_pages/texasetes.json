@@ -2,51 +2,77 @@
  "taxon_key": "texasetes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5c2244828352f32c",
- "reviewed_at": "2026-11-24T00:56:55+00:00",
+ "text_hash": "d1cde8f2af196266",
+ "reviewed_at": "2026-11-25T13:41:42+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    7
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to the animal dying near a river or shore without any prior mention of the environment."
+   "kind": "contradiction",
+   "reason": "Sentence 1 classifies Texasetes as Ankylosauria, while sentence 8 classifies it as Nodosauridae."
   },
   {
    "sentences": [
-    6
+    8,
+    11
    ],
-   "kind": "missing_context",
-   "reason": "It mentions the genus Animantarx without having introduced it earlier on the page."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "It discusses Pawpawsaurus as a possible synonym of Texasetes without any prior context about Pawpawsaurus."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence focuses on a trait of Animantarx, a different genus, rather than on Texasetes itself."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "about_something_else",
-   "reason": "It discusses the taxonomic status of Pawpawsaurus, which is not the subject of the page."
+   "kind": "repetition",
+   "reason": "Both sentences state that Vickaryous et al. consider Texasetes an Ankylosauria incertae sedis."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The holotype specimen USNM 337987 includes a skull fragment, teeth, vertebrae, partial limbs, and osteoderms, suggesting the animal died near a river or shore.\": The sentence refers to the animal dying near a river or shore without any prior mention of the environment.",
-  "- missing context: \"Its cervical vertebrae are concave, a trait shared with Animantarx that might be a unique feature for both.\": It mentions the genus Animantarx without having introduced it earlier on the page.",
-  "- missing context: \"It is debated whether Pawpawsaurus is a synonym of Texasetes, though a 2016 analysis found them closer to different relatives.\": It discusses Pawpawsaurus as a possible synonym of Texasetes without any prior context about Pawpawsaurus."
+  "- contradiction: \"Texasetes was an armored dinosaur belonging to the group Ankylosauria, reaching about 3 meters in length and 1.2 meters in height.\" / \"Texasetes belongs to the dinosaur class Ornithischia and is classified within the family Nodosauridae, with the type species Texasetes pleurohalio.\": Sentence 1 classifies Texasetes as Ankylosauria, while sentence 8 classifies it as Nodosauridae."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:22:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:56:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to the animal dying near a river or shore without any prior mention of the environment."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "It mentions the genus Animantarx without having introduced it earlier on the page."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "It discusses Pawpawsaurus as a possible synonym of Texasetes without any prior context about Pawpawsaurus."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence focuses on a trait of Animantarx, a different genus, rather than on Texasetes itself."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "about_something_else",
+     "reason": "It discusses the taxonomic status of Pawpawsaurus, which is not the subject of the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:22:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:46+00:00"
 }

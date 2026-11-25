@@ -2,37 +2,53 @@
  "taxon_key": "graciliceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "22a3401bc1e24c0b",
- "reviewed_at": "2026-11-24T00:42:22+00:00",
+ "text_hash": "6f0de5417495be99",
+ "reviewed_at": "2026-11-25T13:35:06+00:00",
  "problems": [
   {
    "sentences": [
     9,
+    10,
     22
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the original classification of the specimen as Microceratops was debated or considered a nomen dubium."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"the formation\" without specifying which formation was previously mentioned."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "missing_context",
-   "reason": "The locality \"Shireegiin Gashuun\" is introduced without prior context or description."
+   "reason": "The same claim about the original classification as Microceratops and its status as a nomen dubium is repeated in sentences 10, 11, and 23."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"Fossilized fruits found in the formation suggest the existence of angiosperm plants in the environment.\": The sentence refers to \"the formation\" without specifying which formation was previously mentioned.",
-  "- missing context: \"The Shireegiin Gashuun locality is likely from the early Late Cretaceous, older than the Djadokhta Formation where Protoceratops was found.\": The locality \"Shireegiin Gashuun\" is introduced without prior context or description."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:37:34+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:42:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the original classification of the specimen as Microceratops was debated or considered a nomen dubium."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"the formation\" without specifying which formation was previously mentioned."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "The locality \"Shireegiin Gashuun\" is introduced without prior context or description."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:37:34+00:00"
+  }
+ ]
 }

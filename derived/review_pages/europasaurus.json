@@ -2,8 +2,8 @@
  "taxon_key": "europasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2688cb9107d40375",
- "reviewed_at": "2026-11-23T23:58:47+00:00",
+ "text_hash": "2bb64cdbd9a23d53",
+ "reviewed_at": "2026-11-25T13:12:16+00:00",
  "problems": [
   {
    "sentences": [
@@ -12,39 +12,82 @@
     30
    ],
    "kind": "contradiction",
-   "reason": "The three sentences give mutually inconsistent age ranges for Europasaurus (154–151 Ma, early Oxfordian to late Kimmeridgian, and 152.21–149.2 Ma)."
+   "reason": "The stated age ranges for Europasaurus overlap inconsistently: 154–151 Ma (sentence 29) versus early Oxfordian to late Kimmeridgian (~163–152 Ma, sentence 30) and 152.21–149.2 Ma (sentence 31)."
   },
   {
    "sentences": [
-    23,
+    8
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 9 discusses diagnostic teeth of the Brachiosauridae family, which is a taxonomic group rather than a feature of Europasaurus itself."
+  },
+  {
+   "sentences": [
+    12,
     26
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 24 classifies Europasaurus as a basal macronarian sauropod, while sentence 27 places it as a basal camarasauromorph more closely related to titanosaurs, which are not macronarians."
+   "kind": "repetition",
+   "reason": "Both sentences state that the genus was named by Sander et al. in 2006."
   },
   {
    "sentences": [
     11,
-    12,
     13
    ],
    "kind": "repetition",
-   "reason": "Sentences 12, 13 and 14 all refer to the discovery and naming of the species, repeating the same information about Holger Lüdtke and the species name."
-  },
-  {
-   "sentences": [
-    17,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 18 and 19 both explain the cause of Europasaurus’s small size, stating reduced growth rate and pedomorphism respectively, which repeat the same claim."
+   "reason": "Both sentences refer to Holger Lüdtke as the discoverer of the initial fossils and the eponym for the species name."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Europasaurus lived in northern Germany during the Late Jurassic, specifically between 154 and 151 million years ago.\" / \"Europasaurus lived in an island ecosystem in northern Germany during the late Jurassic, from the early Oxfordian to late Kimmeridgian.\" / \"Europasaurus lived during the Kimmeridgian stage, between 152.21 and 149.2 million years ago.\": The three sentences give mutually inconsistent age ranges for Europasaurus (154–151 Ma, early Oxfordian to late Kimmeridgian, and 152.21–149.2 Ma).",
-  "- contradiction: \"Europasaurus is classified as a basal macronarian sauropod, a type of quadrupedal herbivorous dinosaur.\" / \"Later phylogenetic analyses placed Europasaurus as a basal camarasauromorph that is more closely related to titanosaurs than to Camarasaurus.\": Sentence 24 classifies Europasaurus as a basal macronarian sauropod, while sentence 27 places it as a basal camarasauromorph more closely related to titanosaurs, which are not macronarians."
+  "- contradiction: \"Europasaurus lived in northern Germany during the Late Jurassic, specifically between 154 and 151 million years ago.\" / \"Europasaurus lived in an island ecosystem in northern Germany during the late Jurassic, from the early Oxfordian to late Kimmeridgian.\" / \"Europasaurus lived during the Kimmeridgian stage, between 152.21 and 149.2 million years ago.\": The stated age ranges for Europasaurus overlap inconsistently: 154–151 Ma (sentence 29) versus early Oxfordian to late Kimmeridgian (~163–152 Ma, sentence 30) and 152.21–149.2 Ma (sentence 31)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:14:53+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:58:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      28,
+      29,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "The three sentences give mutually inconsistent age ranges for Europasaurus (154–151 Ma, early Oxfordian to late Kimmeridgian, and 152.21–149.2 Ma)."
+    },
+    {
+     "sentences": [
+      23,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 24 classifies Europasaurus as a basal macronarian sauropod, while sentence 27 places it as a basal camarasauromorph more closely related to titanosaurs, which are not macronarians."
+    },
+    {
+     "sentences": [
+      11,
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 12, 13 and 14 all refer to the discovery and naming of the species, repeating the same information about Holger Lüdtke and the species name."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 18 and 19 both explain the cause of Europasaurus’s small size, stating reduced growth rate and pedomorphism respectively, which repeat the same claim."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:14:53+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:50+00:00"
 }

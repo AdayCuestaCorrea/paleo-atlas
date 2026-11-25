@@ -2,53 +2,77 @@
  "taxon_key": "scipionyx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "35e149b7679be8df",
- "reviewed_at": "2026-11-24T00:00:33+00:00",
+ "text_hash": "4e80e1d373231b93",
+ "reviewed_at": "2026-11-25T13:13:20+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    0,
+    9
    ],
-   "kind": "missing_context",
-   "reason": "refers to an unclosed fontanelle without specifying the specimen or individual"
+   "kind": "repetition",
+   "reason": "Both sentences state that the holotype provides unique direct information about the animal’s physiology and internal organs."
   },
   {
    "sentences": [
-    19,
-    21
+    22,
+    23
    ],
-   "kind": "repetition",
-   "reason": "both state that Scipionyx is placed within the coelurosaur group"
-  },
-  {
-   "sentences": [
-    20,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "both assert that Scipionyx belongs to the family Compsognathidae"
-  },
-  {
-   "sentences": [
-    23,
-    24
-   ],
-   "kind": "repetition",
-   "reason": "both describe the geographic and temporal context of Scipionyx"
-  },
-  {
-   "sentences": [
-    26,
-    27
-   ],
-   "kind": "repetition",
-   "reason": "both mention the Albian stage as the time period for Scipionyx"
+   "kind": "about_something_else",
+   "reason": "Sentences 23 and 24 discuss geological and biogeographical context (Apulian Plate, Paratethys sea, North Africa) rather than characteristics of Scipionyx itself."
   }
  ],
- "repetitions_dropped": 4,
- "notes": [
-  "- missing context: \"The unclosed fontanelle suggests an age limit of about five weeks.\": refers to an unclosed fontanelle without specifying the specimen or individual"
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:34:16+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:00:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "refers to an unclosed fontanelle without specifying the specimen or individual"
+    },
+    {
+     "sentences": [
+      19,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "both state that Scipionyx is placed within the coelurosaur group"
+    },
+    {
+     "sentences": [
+      20,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "both assert that Scipionyx belongs to the family Compsognathidae"
+    },
+    {
+     "sentences": [
+      23,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "both describe the geographic and temporal context of Scipionyx"
+    },
+    {
+     "sentences": [
+      26,
+      27
+     ],
+     "kind": "repetition",
+     "reason": "both mention the Albian stage as the time period for Scipionyx"
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:34:16+00:00"
+  }
+ ]
 }

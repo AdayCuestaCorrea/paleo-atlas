@@ -2,39 +2,76 @@
  "taxon_key": "hylaeosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bb2da2c57cff32d1",
- "reviewed_at": "2026-11-24T00:18:03+00:00",
+ "text_hash": "26c797f6673f6334",
+ "reviewed_at": "2026-11-25T13:21:55+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    14
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Hylaeosaurus was about five meters long, while sentence 15 says Gideon Mantell estimated it to be about 7.6 meters long."
+   "reason": "Sentence 1 gives a length range up to 6 m, while sentence 9 claims a length of 7.6 m."
   },
   {
    "sentences": [
-    0,
-    14
+    4,
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the same length estimate for Hylaeosaurus, repeating the information."
+   "kind": "contradiction",
+   "reason": "Sentence 5 states the skeleton was the most complete non‑avian dinosaur known, whereas sentence 11 says only limited remains have been found."
   },
   {
    "sentences": [
-    8,
-    16
+    5,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 claims the skeleton was the most complete non‑avian dinosaur known at the time, whereas sentence 17 says only limited remains have been found, leaving much of its anatomy unknown."
+   "reason": "Sentence 6 says Hylaeosaurus was one of the first dinosaurs discovered, while sentence 12 says it was the first ankylosaurian discovered, implying a different priority."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Hylaeosaurus was about five meters long.\" / \"Gideon Mantell originally estimated that Hylaeosaurus was about 7.6 meters long.\": Sentence 1 states Hylaeosaurus was about five meters long, while sentence 15 says Gideon Mantell estimated it to be about 7.6 meters long.",
-  "- contradiction: \"The skeleton was the most complete non-avian dinosaur known at the time of its discovery.\" / \"Only limited remains of Hylaeosaurus have been found, leaving much of its anatomy unknown.\": Sentence 9 claims the skeleton was the most complete non‑avian dinosaur known at the time, whereas sentence 17 says only limited remains have been found, leaving much of its anatomy unknown."
+  "- contradiction: \"Estimates for the length of Hylaeosaurus vary significantly among researchers, ranging from 3 to 4 meters up to 6 meters, though a 2010 estimate by Gregory S. Paul suggests a length of 5 meters and a weight of 2 tonnes.\" / \"Gideon Mantell originally estimated that Hylaeosaurus was about 7.6 meters long.\": Sentence 1 gives a length range up to 6 m, while sentence 9 claims a length of 7.6 m.",
+  "- contradiction: \"The skeleton was the most complete non-avian dinosaur known at the time of its discovery.\" / \"Only limited remains of Hylaeosaurus have been found, leaving much of its anatomy unknown.\": Sentence 5 states the skeleton was the most complete non‑avian dinosaur known, whereas sentence 11 says only limited remains have been found.",
+  "- contradiction: \"Hylaeosaurus was one of the first dinosaurs discovered, found on July 20, 1832, by Gideon Mantell in boulders freed by a gunpowder explosion at a quarry in Tilgate Forest.\" / \"Richard Owen based the classification of Dinosauria on Hylaeosaurus in 1842, and Coombs assigned the animal to the family Nodosauridae in 1978. The genus Hylaeosaurus was named by Mantell in 1833, and Hylaeosaurus armatus is currently the only valid species recognized in the genus. Hylaeosaurus was the first ankylosaurian discovered, but its taxonomic affinities remained uncertain for a long time, with its parental group being the family Nodosauridae.\": Sentence 6 says Hylaeosaurus was one of the first dinosaurs discovered, while sentence 12 says it was the first ankylosaurian discovered, implying a different priority."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:02:20+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:18:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Hylaeosaurus was about five meters long, while sentence 15 says Gideon Mantell estimated it to be about 7.6 meters long."
+    },
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the same length estimate for Hylaeosaurus, repeating the information."
+    },
+    {
+     "sentences": [
+      8,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 claims the skeleton was the most complete non‑avian dinosaur known at the time, whereas sentence 17 says only limited remains have been found, leaving much of its anatomy unknown."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:02:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:44+00:00"
 }

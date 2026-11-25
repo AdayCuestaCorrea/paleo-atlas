@@ -2,22 +2,51 @@
  "taxon_key": "patagonykus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "11cd3167a467178b",
- "reviewed_at": "2026-11-24T01:02:51+00:00",
+ "text_hash": "6d5a17cb72cea226",
+ "reviewed_at": "2026-11-25T13:44:09+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    8
+    2,
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states the dinosaur lived roughly 92 million years ago, while sentence 9 gives a range of 93.9–85.7 million years ago."
+   "reason": "Different size and mass estimates for the same animal."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Different age ranges for the same species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Patagonykus puertai is the sole species of this extinct alvarezsauroid theropod, a group of dinosaurs that lived roughly 92 million years ago in South America.\" / \"This dinosaur lived from the Turonian to the Coniacian stages, between 93.9 and 85.7 million years ago.\": Sentence 1 states the dinosaur lived roughly 92 million years ago, while sentence 9 gives a range of 93.9–85.7 million years ago."
+  "- contradiction: \"Gregory S. Paul estimated in 2010 that Patagonykus was 1 meter long and weighed 3.5 kilograms.\" / \"However, other estimates suggest it could have reached two meters in length and weighed 47 kilograms.\": Different size and mass estimates for the same animal.",
+  "- contradiction: \"Patagonykus puertai is the only known species of the extinct genus Patagonykus, an alvarezsauroid theropod that lived about 92 million years ago during the Turonian in what is now South America.\" / \"Patagonykus lived from the Turonian to the Coniacian, between 93.9 and 85.7 million years ago.\": Different age ranges for the same species."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:58:11+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:02:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states the dinosaur lived roughly 92 million years ago, while sentence 9 gives a range of 93.9–85.7 million years ago."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:58:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:19+00:00"
 }

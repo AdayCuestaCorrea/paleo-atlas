@@ -2,22 +2,50 @@
  "taxon_key": "angoumeius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2bc642326c99427f",
- "reviewed_at": "2026-11-24T01:56:38+00:00",
+ "text_hash": "d7c8b12b3a7bcbc9",
+ "reviewed_at": "2026-11-25T13:58:36+00:00",
  "problems": [
   {
    "sentences": [
+    1,
     5
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"unusual dentition\" of Angoumeius, but no earlier sentence describes or mentions the animal’s dentition."
+   "kind": "contradiction",
+   "reason": "Sentence 2 states Angoumeius belongs to the family Dalatiidae, while sentence 6 says its familial placement is debated."
+  },
+  {
+   "sentences": [
+    3,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the same fact that Angoumeius is known from many isolated teeth found in the Lutetian stage."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"It is debated whether the unusual dentition of Angoumeius allows for a certain familial placement and relationship with other genera.\": Sentence 6 refers to \"unusual dentition\" of Angoumeius, but no earlier sentence describes or mentions the animal’s dentition."
+  "- contradiction: \"This animal belongs to the family Dalatiidae, which contains modern mako and porbeagle sharks.\" / \"It is debated whether the unusual dentition of Angoumeius, known from many isolated teeth found in the Lutetian stage, allows for a certain familial placement and relationship with other genera.\": Sentence 2 states Angoumeius belongs to the family Dalatiidae, while sentence 6 says its familial placement is debated."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:56:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"unusual dentition\" of Angoumeius, but no earlier sentence describes or mentions the animal’s dentition."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:32:40+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:32:40+00:00"
+ "rewritten_at": "2026-11-25T14:33:14+00:00"
 }

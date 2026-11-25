@@ -2,29 +2,77 @@
  "taxon_key": "ampelosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "771ce818d6d9f40f",
- "reviewed_at": "2026-11-24T00:01:40+00:00",
+ "text_hash": "f93ca457d299d94d",
+ "reviewed_at": "2026-11-25T13:13:58+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    4,
+    9
    ],
-   "kind": "contradiction",
-   "reason": "The ages of the Late Cretaceous period for Ampelosaurus are given as 71.5 Ma in sentence 13 and 70 Ma in sentence 14, which are inconsistent."
+   "kind": "repetition",
+   "reason": "Both sentences describe a delayed or slower growth onset for Ampelosaurus."
   },
   {
    "sentences": [
-    14
+    9
    ],
-   "kind": "repetition",
-   "reason": "Sentence 15 repeats the same information about recent studies and species attribution multiple times, making the claim redundant."
+   "kind": "missing_context",
+   "reason": "Sentence 10 mentions EFS without prior explanation of what EFS stands for."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses dinosaur eggshells and nests, which are not directly about Ampelosaurus."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence focuses on geological formations rather than the animal itself."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence refers to reports of remains in specific locations, which is about distribution rather than the animal's biology."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Ampelosaurus lived during the Late Cretaceous Period, specifically the Early Maastrichtian epoch, approximately 71.5 million years ago.\" / \"Ampelosaurus remains were recovered from the lower levels of the Marnes Rouges Inférieures Formation, dating to approximately 70 million years ago.\": The ages of the Late Cretaceous period for Ampelosaurus are given as 71.5 Ma in sentence 13 and 70 Ma in sentence 14, which are inconsistent."
+  "- missing context: \"The onset of growth in Ampelosaurus was clearly delayed compared to other sauropods where it typically starts around sexual maturity. No growth marks have been found on any bone samples of Ampelosaurus, and the dinosaur has not been found to possess EFS, a feature common in most non-titanosaurian sauropods. Researchers suggest that Ampelosaurus might have had EFS because larger specimens were not tested in the study that reported its absence. Most Ampelosaurus specimens show secondary osteons densely placed in the inner bone regions and lightly in the outer regions. No medullary cavity has been found in any bones of Ampelosaurus.\": Sentence 10 mentions EFS without prior explanation of what EFS stands for."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:48:21+00:00"
+ "rewrite": "nothing to fix",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "The ages of the Late Cretaceous period for Ampelosaurus are given as 71.5 Ma in sentence 13 and 70 Ma in sentence 14, which are inconsistent."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 15 repeats the same information about recent studies and species attribution multiple times, making the claim redundant."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:48:21+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:47+00:00"
 }

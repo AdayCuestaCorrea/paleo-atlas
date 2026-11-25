@@ -2,21 +2,47 @@
  "taxon_key": "yuanmousaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bdf297999eca12de",
- "reviewed_at": "2026-11-24T01:28:28+00:00",
+ "text_hash": "c255875763162b0e",
+ "reviewed_at": "2026-11-25T13:52:14+00:00",
  "problems": [
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 7 discusses the family Euhelopodidae, not the animal itself."
+  },
   {
    "sentences": [
     1
    ],
    "kind": "missing_context",
-   "reason": "Sentence 2 refers to the upper arm bone, but the page never mentions any arm bones in the fossil record."
+   "reason": "Sentence 2 refers to the humerus and femur without any prior mention of these bones."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Measurements show the upper arm bone was 0.72 times the length of the thigh bone.\": Sentence 2 refers to the upper arm bone, but the page never mentions any arm bones in the fossil record."
+  "- missing context: \"Measurements indicate the humerus was 0.72 times the length of the femur.\": Sentence 2 refers to the humerus and femur without any prior mention of these bones."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:59:44+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:28:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 2 refers to the upper arm bone, but the page never mentions any arm bones in the fossil record."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:59:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:18+00:00"
 }

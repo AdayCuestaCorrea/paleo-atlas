@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "38e089aad778aaf0",
- "reviewed_at": "2026-11-24T00:43:41+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:35:49+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    3,
-    4
+   "reviewed_at": "2026-11-24T00:43:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus Helodus was named based on isolated bead‑like teeth from the late Paleozoic era."
+    },
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims the skeleton is composed entirely of cartilage, while sentence 2 states the first dorsal fin spine was made of osteodentin, a tooth‑like tissue, not cartilage."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the genus Helodus was named based on isolated bead‑like teeth from the late Paleozoic era."
-  },
-  {
-   "sentences": [
-    0,
-    1
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 claims the skeleton is composed entirely of cartilage, while sentence 2 states the first dorsal fin spine was made of osteodentin, a tooth‑like tissue, not cartilage."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:47:30+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"The complete skeleton of Helodus simplex is known from multiple articulated specimens, revealing an endoskeleton composed entirely of cartilage rather than bone.\" / \"Its first dorsal fin featured a short, smooth spine supported by the synarcual, a specialized structure at the base of the skull, and this spine was made of osteodentin, a tooth-like tissue.\": Sentence 1 claims the skeleton is composed entirely of cartilage, while sentence 2 states the first dorsal fin spine was made of osteodentin, a tooth‑like tissue, not cartilage."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:47:30+00:00"
+ ]
 }

@@ -2,40 +2,76 @@
  "taxon_key": "chungkingosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "202ad57ade41899a",
- "reviewed_at": "2026-11-24T01:13:52+00:00",
+ "text_hash": "aea6626056411159",
+ "reviewed_at": "2026-11-25T13:48:01+00:00",
  "problems": [
+  {
+   "sentences": [
+    0,
+    1
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 claims the holotype was less than four metres long, while sentence 2 states it reached approximately 4.00 metres."
+  },
+  {
+   "sentences": [
+    0,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Chungkingosaurus was one of the smallest stegosaurs, measuring less than four metres in length."
+  },
   {
    "sentences": [
     14,
     15
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the taxonomic placement of the dinosaur, repeating the claim that it belongs to the family/subfamily Stegosauridae."
-  },
-  {
-   "sentences": [
-    14,
-    16,
-    17
-   ],
    "kind": "contradiction",
-   "reason": "Sentences 15, 17, and 18 give conflicting classifications: 15 places it in Stegosauridae, 17 moves it to Huayangosauridae, and 18 associates it with the subfamily Kentrosaurinae."
-  },
-  {
-   "sentences": [
-    19,
-    20
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 20 dates the species to the Oxfordian stage (~156 Ma), while sentence 21 claims its habitat spanned the Bathonian to Callovian stages (168.2–161.5 Ma), which are earlier than the Oxfordian."
+   "reason": "Sentence 15 gives a Late Jurassic Oxfordian age of about 156 Ma, whereas sentence 16 cites a Bathonian–Callovian range of 168.2–161.5 Ma."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The broader family group for this dinosaur is Stegosauridae.\" / \"In 2008, Maidment and colleagues moved the animal into the family Huayangosauridae.\" / \"The shape of its skin armor links it to relatives like Kentrosaurus and Dacentrurus in the subfamily Kentrosaurinae.\": Sentences 15, 17, and 18 give conflicting classifications: 15 places it in Stegosauridae, 17 moves it to Huayangosauridae, and 18 associates it with the subfamily Kentrosaurinae.",
-  "- contradiction: \"This creature lived during the Oxfordian stage of the Late Jurassic, about 156 million years ago.\" / \"Its habitat spanned the Bathonian to Callovian stages, ranging from 168.2 to 161.5 million years ago.\": Sentence 20 dates the species to the Oxfordian stage (~156 Ma), while sentence 21 claims its habitat spanned the Bathonian to Callovian stages (168.2–161.5 Ma), which are earlier than the Oxfordian."
+  "- contradiction: \"The holotype — the specimen the species is based on — was one of the smallest stegosaurs, measuring less than four meters in length despite being an adult.\" / \"This individual reached approximately 4.00 meters in length, stood 1.80 meters high, and weighed about 1 tonne.\": Sentence 1 claims the holotype was less than four metres long, while sentence 2 states it reached approximately 4.00 metres.",
+  "- contradiction: \"Chungkingosaurus is a stegosaurian dinosaur from the Late Jurassic Upper Shaximiao Formation in modern-day China, living during the Late Jurassic Oxfordian stage, approximately 156 million years ago, in what is now Asia.\" / \"Other sources indicate the creature lived during the Bathonian to Callovian stages, from 168.2 to 161.5 million years ago.\": Sentence 15 gives a Late Jurassic Oxfordian age of about 156 Ma, whereas sentence 16 cites a Bathonian–Callovian range of 168.2–161.5 Ma."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:57:56+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:13:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the taxonomic placement of the dinosaur, repeating the claim that it belongs to the family/subfamily Stegosauridae."
+    },
+    {
+     "sentences": [
+      14,
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 15, 17, and 18 give conflicting classifications: 15 places it in Stegosauridae, 17 moves it to Huayangosauridae, and 18 associates it with the subfamily Kentrosaurinae."
+    },
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 20 dates the species to the Oxfordian stage (~156 Ma), while sentence 21 claims its habitat spanned the Bathonian to Callovian stages (168.2–161.5 Ma), which are earlier than the Oxfordian."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:57:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:02+00:00"
 }

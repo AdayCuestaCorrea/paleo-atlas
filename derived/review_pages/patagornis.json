@@ -2,28 +2,56 @@
  "taxon_key": "patagornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e7ca66b6516e11fb",
- "reviewed_at": "2026-11-23T23:55:09+00:00",
+ "text_hash": "0cb806af3183564b",
+ "reviewed_at": "2026-11-25T13:10:04+00:00",
  "problems": [
   {
    "sentences": [
-    9
+    0,
+    1
    ],
-   "kind": "missing_context",
-   "reason": "refers to \"enhanced sensitivity to low‑amplitude motions\" without explaining what is being sensed or how it relates to the animal."
+   "kind": "contradiction",
+   "reason": "Sentence 1 claims Patagornis was 15 % larger than a modern rhea (≈1.75 m tall), whereas sentence 2 states it stood only 0.9–1 m tall."
   },
   {
    "sentences": [
-    13
+    3,
+    4
    ],
-   "kind": "about_something_else",
-   "reason": "describes the genus Tolmodus, which is a separate taxon, not a feature or attribute of Patagornis."
+   "kind": "repetition",
+   "reason": "Both sentences give the skull length range, essentially repeating the same measurement."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Due to its body mass, the animal likely exhibited sluggish head movements but had enhanced sensitivity to low-amplitude motions.\": refers to \"enhanced sensitivity to low‑amplitude motions\" without explaining what is being sensed or how it relates to the animal."
+  "- contradiction: \"Patagornis was a small terror bird, standing up to 15% larger than a modern rhea.\" / \"The animal stood approximately 0.9 to 1 meter tall at the back and weighed between 45 and 50 kilograms.\": Sentence 1 claims Patagornis was 15 % larger than a modern rhea (≈1.75 m tall), whereas sentence 2 states it stood only 0.9–1 m tall."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:44:46+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:55:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "refers to \"enhanced sensitivity to low‑amplitude motions\" without explaining what is being sensed or how it relates to the animal."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "describes the genus Tolmodus, which is a separate taxon, not a feature or attribute of Patagornis."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:44:46+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:17+00:00"
 }

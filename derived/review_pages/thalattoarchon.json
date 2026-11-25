@@ -3,28 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "5b2cdbe4aa0ef799",
- "reviewed_at": "2026-11-24T00:12:33+00:00",
+ "reviewed_at": "2026-11-25T13:20:00+00:00",
  "problems": [
   {
    "sentences": [
-    15
+    19
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 claims Thalattoarchon was one of the most abundant marine reptiles found in the Fossil Hill Member, yet earlier sentences state it is known from a single partial skeleton."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 16 refers to the Fossil Hill Member without any prior mention or explanation of that formation, leaving the reader without context."
+   "kind": "about_something_else",
+   "reason": "Sentence 20 refers to the Fossil Hill Member, a geological formation, as if it were an attribute of Thalattoarchon itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Thalattoarchon was one of the most abundant marine reptiles found in the Fossil Hill Member.\": Sentence 16 claims Thalattoarchon was one of the most abundant marine reptiles found in the Fossil Hill Member, yet earlier sentences state it is known from a single partial skeleton.",
-  "- missing context: \"Thalattoarchon was one of the most abundant marine reptiles found in the Fossil Hill Member.\": Sentence 16 refers to the Fossil Hill Member without any prior mention or explanation of that formation, leaving the reader without context."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:28:05+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:12:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 claims Thalattoarchon was one of the most abundant marine reptiles found in the Fossil Hill Member, yet earlier sentences state it is known from a single partial skeleton."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 16 refers to the Fossil Hill Member without any prior mention or explanation of that formation, leaving the reader without context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:28:05+00:00"
+  }
+ ]
 }

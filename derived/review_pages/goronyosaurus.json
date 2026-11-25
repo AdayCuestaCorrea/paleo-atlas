@@ -2,38 +2,148 @@
  "taxon_key": "goronyosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f467dabbd560eb01",
- "reviewed_at": "2026-11-24T00:16:32+00:00",
+ "text_hash": "cfbb2f51fd31de11",
+ "reviewed_at": "2026-11-25T13:21:33+00:00",
  "problems": [
+  {
+   "sentences": [
+    0,
+    1
+   ],
+   "kind": "contradiction",
+   "reason": "Two different length estimates for the same species are presented without indicating they are alternative hypotheses."
+  },
+  {
+   "sentences": [
+    16,
+    17
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 17 claims teeth were better for cutting meat, while sentence 18 says they were straight with rounded apices for smashing food, implying different functions."
+  },
   {
    "sentences": [
     18,
     19
    ],
    "kind": "contradiction",
-   "reason": "Claims about tooth function conflict: one says adapted for cutting meat, the other says designed for smashing food."
+   "reason": "Sentence 19 describes a crocodile‑like skull suited for hunting in murky settings, whereas sentence 20 states it inhabited turbid waters like estuaries, suggesting different ecological contexts."
   },
   {
    "sentences": [
-    27,
-    28
+    24,
+    25
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that all known fossils come from the Dukamaje and Farin Doutchi Formations."
+   "reason": "Both sentences state the species lived during the Late Maastrichtian, repeating the same temporal information."
   },
   {
    "sentences": [
-    32
+    26,
+    27
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences list the same formations and basin as the only fossil localities."
+  },
+  {
+   "sentences": [
+    9,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences refer to Swinton and colleagues describing the species in 1930, repeating the same fact."
+  },
+  {
+   "sentences": [
+    10,
+    11,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 11, 12, and 13 all describe the naming and reclassification history of the genus, repeating the same information."
+  },
+  {
+   "sentences": [
+    13,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences mention the type specimen and its description by Swinton and colleagues, repeating the same detail."
+  },
+  {
+   "sentences": [
+    28,
+    29,
+    30
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 29–31 all discuss the jugal bone interpretation, repeating the same debate."
+  },
+  {
+   "sentences": [
+    5
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"the structure\" without specifying which structure was being discussed."
+   "reason": "The phrase \"inter-arch articulations are absent in both\" lacks a clear antecedent for \"both\"."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "The description of \"holes in the opposite jaw\" is unclear without prior context about the jaw structure."
+  },
+  {
+   "sentences": [
+    31
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 32 discusses freshwater river adaptation, which is about ecological context rather than a direct anatomical claim about Goronyosaurus."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Studies indicate Goronyosaurus teeth were better adapted for cutting meat than piercing bones.\" / \"Unlike most mosasaurs with cutting teeth, Goronyosaurus had straight teeth with rounded apices designed for smashing food.\": Claims about tooth function conflict: one says adapted for cutting meat, the other says designed for smashing food.",
-  "- missing context: \"Halstead and Middleton doubted the identity of the jugal bones in 1982, leading Soliar to propose in 1988 that the structure was a taphonomic mix of the jugal and mandible.\": Refers to \"the structure\" without specifying which structure was being discussed."
+  "- contradiction: \"Goronyosaurus is a small mosasaur that measured up to 5.14 meters in length, a size estimate derived by Soliar from a skull length of 0.71 meters.\" / \"However, other estimates suggest the animal reached a length of about seven meters with a skull measuring 62 centimeters.\": Two different length estimates for the same species are presented without indicating they are alternative hypotheses.",
+  "- contradiction: \"Studies indicate Goronyosaurus teeth were better adapted for cutting meat than piercing bones.\" / \"Unlike most mosasaurs with cutting teeth, Goronyosaurus had straight teeth with rounded apices designed for smashing food.\": Sentence 17 claims teeth were better for cutting meat, while sentence 18 says they were straight with rounded apices for smashing food, implying different functions.",
+  "- contradiction: \"Goronyosaurus specialized in a crocodile-like skull with an elongated rigid build and interlocking teeth, suited for hunting in murky settings.\" / \"Goronyosaurus likely inhabited turbid waters like estuaries and fed on large fish and other marine reptiles.\": Sentence 19 describes a crocodile‑like skull suited for hunting in murky settings, whereas sentence 20 states it inhabited turbid waters like estuaries, suggesting different ecological contexts.",
+  "- missing context: \"Zygapophyses are weakly present in dorsal vertebrae, unlike in the cervical vertebrae, but inter-arch articulations are absent in both.\": The phrase \"inter-arch articulations are absent in both\" lacks a clear antecedent for \"both\".",
+  "- missing context: \"The skull and teeth resemble crocodiles, featuring ten elongated canine-like teeth that interlocked with holes in the opposite jaw.\": The description of \"holes in the opposite jaw\" is unclear without prior context about the jaw structure."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:55:29+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:16:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Claims about tooth function conflict: one says adapted for cutting meat, the other says designed for smashing food."
+    },
+    {
+     "sentences": [
+      27,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that all known fossils come from the Dukamaje and Farin Doutchi Formations."
+    },
+    {
+     "sentences": [
+      32
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the structure\" without specifying which structure was being discussed."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:55:29+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:17+00:00"
 }

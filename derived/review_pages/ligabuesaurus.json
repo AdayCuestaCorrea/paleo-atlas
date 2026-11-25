@@ -2,30 +2,56 @@
  "taxon_key": "ligabuesaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "134ba4196dbf8ec2",
- "reviewed_at": "2026-11-24T00:43:32+00:00",
+ "text_hash": "49faba5d02df1c6d",
+ "reviewed_at": "2026-11-25T13:35:42+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12,
-    13
+    8
    ],
-   "kind": "repetition",
-   "reason": "Sentences 12, 13 and 14 all state the age of the animal in overlapping ranges, repeating the same information."
+   "kind": "missing_context",
+   "reason": "Sentence 9 refers to \"multiple fragmentary specimens\" without prior introduction of those specimens."
   },
   {
    "sentences": [
-    14
+    13
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 15 begins with \"The habitat shared with other sauropods\" but does not specify what is sharing the habitat."
+   "kind": "about_something_else",
+   "reason": "Sentence 14 discusses the habitat shared with other sauropods, which is about other taxa rather than the animal itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The habitat shared with other sauropods like Limaysaurus, Comahuesaurus, and Agustinia.\": Sentence 15 begins with \"The habitat shared with other sauropods\" but does not specify what is sharing the habitat."
+  "- missing context: \"Researchers suggest that multiple fragmentary specimens found at the site likely belong to a single individual due to a lack of repeated bone elements.\": Sentence 9 refers to \"multiple fragmentary specimens\" without prior introduction of those specimens."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:45:41+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:43:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 12, 13 and 14 all state the age of the animal in overlapping ranges, repeating the same information."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 15 begins with \"The habitat shared with other sauropods\" but does not specify what is sharing the habitat."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:45:41+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:53+00:00"
 }

@@ -3,29 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "03c40e09373c78ac",
- "reviewed_at": "2026-11-24T01:36:34+00:00",
+ "reviewed_at": "2026-11-25T13:55:12+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    9
+    11,
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 8 states Meridiocichla lived from the Late Pleistocene to the Holocene (0.129–0 Ma), implying survival into the Holocene, while sentence 10 claims it went extinct during the Late Pleistocene extinctions."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 8 gives a time range of \"between 0.129 and 0 million years ago\" without specifying the unit (e.g., million years ago) or clarifying that the upper bound is 0 Ma, which is ambiguous and likely a typographical error."
+   "reason": "Sentence 12 claims Meridiocichla lived until the Holocene (0.129–0 Ma), while sentence 15 states it went extinct during the Late Pleistocene extinctions."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Meridiocichla lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\" / \"Meridiocichla was already rare during the Late Pleistocene and went extinct during the Late Pleistocene extinctions.\": Sentence 8 states Meridiocichla lived from the Late Pleistocene to the Holocene (0.129–0 Ma), implying survival into the Holocene, while sentence 10 claims it went extinct during the Late Pleistocene extinctions.",
-  "- missing context: \"Meridiocichla lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": Sentence 8 gives a time range of \"between 0.129 and 0 million years ago\" without specifying the unit (e.g., million years ago) or clarifying that the upper bound is 0 Ma, which is ambiguous and likely a typographical error."
+  "- contradiction: \"Meridiocichla lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\" / \"Meridiocichla was already rare during the Late Pleistocene and went extinct during the Late Pleistocene extinctions.\": Sentence 12 claims Meridiocichla lived until the Holocene (0.129–0 Ma), while sentence 15 states it went extinct during the Late Pleistocene extinctions."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:34:33+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:36:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states Meridiocichla lived from the Late Pleistocene to the Holocene (0.129–0 Ma), implying survival into the Holocene, while sentence 10 claims it went extinct during the Late Pleistocene extinctions."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 gives a time range of \"between 0.129 and 0 million years ago\" without specifying the unit (e.g., million years ago) or clarifying that the upper bound is 0 Ma, which is ambiguous and likely a typographical error."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:34:33+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:04+00:00"
 }

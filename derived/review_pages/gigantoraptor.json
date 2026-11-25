@@ -3,45 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "1e5e2f22f2df4636",
- "reviewed_at": "2026-11-24T00:11:14+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:19:08+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    10,
-    11,
-    18
+   "reviewed_at": "2026-11-24T00:11:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Growth ring age and growth rate information repeated across sentences 11, 12, and 19."
+    },
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe a shearing bite; the claim is repeated."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to a comparison of body mass to “smaller feathered dinosaurs” without specifying which dinosaurs."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 19 mentions growth rings in the perone but earlier growth rings were described in the fibula; the reference to the perone is not introduced."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Growth ring age and growth rate information repeated across sentences 11, 12, and 19."
-  },
-  {
-   "sentences": [
-    15,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe a shearing bite; the claim is repeated."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 refers to a comparison of body mass to “smaller feathered dinosaurs” without specifying which dinosaurs."
-  },
-  {
-   "sentences": [
-    18
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 19 mentions growth rings in the perone but earlier growth rings were described in the fibula; the reference to the perone is not introduced."
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:15:20+00:00"
   }
- ],
- "repetitions_dropped": 3,
- "notes": [
-  "- missing context: \"Researchers proposed in 2007 that Gigantoraptor was likely partially naked, as its body mass was 300 times greater than that of smaller feathered dinosaurs.\": Sentence 4 refers to a comparison of body mass to “smaller feathered dinosaurs” without specifying which dinosaurs.",
-  "- missing context: \"The specimen has advanced ossification and growth rings in the perone indicating it was probably 11 years old when it died.\": Sentence 19 mentions growth rings in the perone but earlier growth rings were described in the fibula; the reference to the perone is not introduced."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:15:20+00:00"
+ ]
 }

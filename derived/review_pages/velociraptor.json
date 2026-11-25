@@ -2,36 +2,60 @@
  "taxon_key": "velociraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1da3a16a34e0c3af",
- "reviewed_at": "2026-11-23T23:55:25+00:00",
+ "text_hash": "b6ad46c0110c47bf",
+ "reviewed_at": "2026-11-25T13:10:29+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    15
+    9,
+    23
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe a Velociraptor skull with puncture wounds matching teeth spacing, repeating the same claim."
+   "reason": "Both sentences describe bite wounds on a Velociraptor skull suggesting an intraspecific fight."
   },
   {
    "sentences": [
-    16
+    0,
+    27
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"depending on the animal's age\" without specifying which animal or context."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "about_something_else",
-   "reason": "It discusses larger flightless maniraptorans, which is not directly about Velociraptor itself."
+   "kind": "repetition",
+   "reason": "Both sentences state that Velociraptor lived between 75 and 71 million years ago in Asia."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"Fossil evidence suggests Velociraptor was an opportunistic and active predator that also scavenged during droughts, famines, illness, or depending on the animal's age.\": The sentence refers to \"depending on the animal's age\" without specifying which animal or context."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:49:41+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:55:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe a Velociraptor skull with puncture wounds matching teeth spacing, repeating the same claim."
+    },
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"depending on the animal's age\" without specifying which animal or context."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "It discusses larger flightless maniraptorans, which is not directly about Velociraptor itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:49:41+00:00"
+  }
+ ]
 }

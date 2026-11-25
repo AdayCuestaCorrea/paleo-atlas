@@ -3,20 +3,35 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "e2b82021d8e96676",
- "reviewed_at": "2026-11-24T00:29:44+00:00",
+ "reviewed_at": "2026-11-25T13:27:54+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to Chinshakiangosaurus without any prior mention or explanation of that taxon."
+   "kind": "repetition",
+   "reason": "Sentence 3 repeats the gait description twice: \"Aardonyx had a slower gait compared to more basal sauropodomorphs\" and again \"Aardonyx exhibited entaxony, indicating reduced running ability and a wide gait\"."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"It is debated whether the wide, cheekless gape evolved independently in Aardonyx and in later sauropods, as suggested by the more derived state of Chinshakiangosaurus.\": Sentence 7 refers to Chinshakiangosaurus without any prior mention or explanation of that taxon."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:40:42+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:29:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to Chinshakiangosaurus without any prior mention or explanation of that taxon."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:40:42+00:00"
+  }
+ ]
 }

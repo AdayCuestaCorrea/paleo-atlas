@@ -2,21 +2,49 @@
  "taxon_key": "falcarius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "675bc676ff8b1ddb",
- "reviewed_at": "2026-11-24T00:19:44+00:00",
+ "text_hash": "00009ad8612b736f",
+ "reviewed_at": "2026-11-25T13:22:51+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    0,
+    1
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"less basal Asian therizinosaur specimens\" without any prior mention of Asian specimens or context for comparison."
+   "kind": "contradiction",
+   "reason": "Sentence 1 claims Falcarius is a transitional form toward the Therizinosauridae family, while sentence 2 states it likely does not belong to that specific family but only to the broader Therizinosauria group."
+  },
+  {
+   "sentences": [
+    9,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat that the genus Falcarius contains two species, making the statement redundant."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"It is assumed that Falcarius was covered in quill-like feathers, similar to less basal Asian therizinosaur specimens.\": The sentence refers to \"less basal Asian therizinosaur specimens\" without any prior mention of Asian specimens or context for comparison."
+  "- contradiction: \"Falcarius was a primitive therizinosaurian theropod dinosaur that lived in North America during the Early Cretaceous period, serving as a transitional form between typical theropods and the more derived Therizinosauridae.\" / \"This animal resembles dinosaurs belonging to the Therizinosauridae subgroup within Maniraptora, yet it likely does not belong to that specific family but is part of the broader group Therizinosauria, which is characterized by wider hips, a large braincase, and long necks typical of plant-eaters.\": Sentence 1 claims Falcarius is a transitional form toward the Therizinosauridae family, while sentence 2 states it likely does not belong to that specific family but only to the broader Therizinosauria group."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:19:13+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:19:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"less basal Asian therizinosaur specimens\" without any prior mention of Asian specimens or context for comparison."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:19:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:33+00:00"
 }

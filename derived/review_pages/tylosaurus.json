@@ -2,66 +2,107 @@
  "taxon_key": "tylosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "137d3d0a3d636b9f",
- "reviewed_at": "2026-11-23T23:51:19+00:00",
+ "text_hash": "4036c404ca1e9ec8",
+ "reviewed_at": "2026-11-25T13:08:26+00:00",
  "problems": [
-  {
-   "sentences": [
-    1
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 refers to \"T. rex\" as the largest species of Tylosaurus, which is a different genus (Tyrannosaurus) and contradicts the rest of the page."
-  },
   {
    "sentences": [
     2,
     5
    ],
    "kind": "repetition",
-   "reason": "Sentences 3 and 6 both state that the largest known Tylosaurus specimen is the \"Bunker\" specimen."
+   "reason": "Both sentences state that the largest well-known Tylosaurus specimen is nicknamed \"Bunker\"."
   },
   {
    "sentences": [
-    13,
-    18
+    11
    ],
-   "kind": "repetition",
-   "reason": "Sentences 14 and 19 both claim that Tylosaurus was endothermic, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Mentions a fossil skeleton identified as a 45‑foot‑long fish without prior introduction of the fossil or its significance."
   },
   {
    "sentences": [
     12
    ],
    "kind": "missing_context",
-   "reason": "Sentence 13 mentions a fossil skeleton discovered by the Lewis and Clark Expedition but provides no context linking it to Tylosaurus or explaining its relevance."
+   "reason": "References the species Hainosaurus bernardi and its discovery without explaining its relevance to Tylosaurus."
   },
   {
    "sentences": [
-    12
+    23
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 13 describes a 45‑foot‑long fish found along the Missouri River, which is unrelated to Tylosaurus and is presented as if it were about the animal."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 discusses Hainosaurus bernardi, a different genus, and is presented as if it were about Tylosaurus."
-  },
-  {
-   "sentences": [
-    30
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 31 refers to the genus Liodon and its species T. nepaeolicus, which are not Tylosaurus."
+   "reason": "Describes bite marks on a hadrosaur fossil, which is unrelated to the animal itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The largest species, T. rex, is estimated to have reached over 13 meters in length and weighed nearly 8.4 tonnes.\": Sentence 2 refers to \"T. rex\" as the largest species of Tylosaurus, which is a different genus (Tyrannosaurus) and contradicts the rest of the page.",
-  "- missing context: \"In 1804, the Lewis and Clark Expedition discovered a fossil skeleton along the Missouri River that was identified as a 45-foot-long fish.\": Sentence 13 mentions a fossil skeleton discovered by the Lewis and Clark Expedition but provides no context linking it to Tylosaurus or explaining its relevance."
+  "- missing context: \"In 1804, the Lewis and Clark Expedition discovered a fossil skeleton along the Missouri River that was identified as a 45-foot-long fish.\": Mentions a fossil skeleton identified as a 45‑foot‑long fish without prior introduction of the fossil or its significance.",
+  "- missing context: \"Louis Dollo described the species Hainosaurus bernardi in 1885 based on a skeleton found in a phosphate quarry in the Ciply Basin of Mesvin, Belgium.\": References the species Hainosaurus bernardi and its discovery without explaining its relevance to Tylosaurus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:11:20+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:51:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 refers to \"T. rex\" as the largest species of Tylosaurus, which is a different genus (Tyrannosaurus) and contradicts the rest of the page."
+    },
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 3 and 6 both state that the largest known Tylosaurus specimen is the \"Bunker\" specimen."
+    },
+    {
+     "sentences": [
+      13,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 14 and 19 both claim that Tylosaurus was endothermic, repeating the same claim."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 13 mentions a fossil skeleton discovered by the Lewis and Clark Expedition but provides no context linking it to Tylosaurus or explaining its relevance."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 13 describes a 45‑foot‑long fish found along the Missouri River, which is unrelated to Tylosaurus and is presented as if it were about the animal."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 12 discusses Hainosaurus bernardi, a different genus, and is presented as if it were about Tylosaurus."
+    },
+    {
+     "sentences": [
+      30
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 31 refers to the genus Liodon and its species T. nepaeolicus, which are not Tylosaurus."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:11:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:11+00:00"
 }

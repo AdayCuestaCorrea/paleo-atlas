@@ -2,55 +2,83 @@
  "taxon_key": "lingwulong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fbf2931124ac66c3",
- "reviewed_at": "2026-11-24T00:53:57+00:00",
+ "text_hash": "22ffd6b55898dd9d",
+ "reviewed_at": "2026-11-25T13:40:40+00:00",
  "problems": [
   {
    "sentences": [
     3,
-    10
+    8
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim Lingwulong is the only definitive diplodocoid known from East Asia."
+   "reason": "Both sentences state Lingwulong is the earliest known neosauropod and the only definitive diplodocoid in East Asia."
   },
   {
    "sentences": [
-    4,
-    9
+    13,
+    15,
+    17,
+    18
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 says the species name translates to 'amazing' in Mandarin, while sentence 10 says the species name means 'dragon' in Chinese."
-  },
-  {
-   "sentences": [
-    12,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 states the immediate ancestral group is Flagellicaudata, whereas sentence 15 suggests Lingwulong may sit outside the Flagellicaudata clade."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to 'Studies from 2025' without specifying the study or its authors, leaving the source unclear."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentences 22 and 23 discuss the East Asia Isolation Hypothesis and its implications, which are about a hypothesis rather than directly about Lingwulong."
+   "reason": "The age ranges given are inconsistent: 178–168 Ma (early–middle Jurassic), 174–? Ma, 174.7–161.5 Ma, and Bathonian to early Oxfordian (later)."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Its specific name translates to 'amazing' in Mandarin because finding a relative of the Dicraeosauridae family in this region was completely unexpected.\" / \"The genus name honors the place of Lingwu, while the species name means 'dragon' in Chinese.\": Sentence 5 says the species name translates to 'amazing' in Mandarin, while sentence 10 says the species name means 'dragon' in Chinese.",
-  "- contradiction: \"Its immediate ancestral group is Flagellicaudata.\" / \"Studies from 2025 suggest it is closely related to Cetiosauriscus and may sit outside the Flagellicaudata clade or within Diplodocidae.\": Sentence 13 states the immediate ancestral group is Flagellicaudata, whereas sentence 15 suggests Lingwulong may sit outside the Flagellicaudata clade.",
-  "- missing context: \"Studies from 2025 suggest it is closely related to Cetiosauriscus and may sit outside the Flagellicaudata clade or within Diplodocidae.\": The sentence refers to 'Studies from 2025' without specifying the study or its authors, leaving the source unclear."
+  "- contradiction: \"Lingwulong lived during the early to middle Jurassic, approximately 178 to 168 million years ago, in what is now Asia.\" / \"Its exact age is uncertain, but it lived between the late Toarcian and Bajocian, with an estimated midpoint age of 174 million years.\" / \"The time range for Lingwulong is from the Aalenian to the Callovian, between 174.7 and 161.5 million years ago.\" / \"Some researchers argue the fossils came from the Zhiluo Formation, which would make Lingwulong younger, dating to the Bathonian to early Oxfordian.\": The age ranges given are inconsistent: 178–168 Ma (early–middle Jurassic), 174–? Ma, 174.7–161.5 Ma, and Bathonian to early Oxfordian (later)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:03:57+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:53:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Lingwulong is the only definitive diplodocoid known from East Asia."
+    },
+    {
+     "sentences": [
+      4,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 says the species name translates to 'amazing' in Mandarin, while sentence 10 says the species name means 'dragon' in Chinese."
+    },
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states the immediate ancestral group is Flagellicaudata, whereas sentence 15 suggests Lingwulong may sit outside the Flagellicaudata clade."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to 'Studies from 2025' without specifying the study or its authors, leaving the source unclear."
+    },
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentences 22 and 23 discuss the East Asia Isolation Hypothesis and its implications, which are about a hypothesis rather than directly about Lingwulong."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:03:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:58+00:00"
 }

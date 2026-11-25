@@ -2,39 +2,65 @@
  "taxon_key": "kank",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9b7adcc689bc842b",
- "reviewed_at": "2026-11-24T02:04:55+00:00",
+ "text_hash": "ff216df43db83862",
+ "reviewed_at": "2026-11-25T13:59:20+00:00",
  "problems": [
   {
    "sentences": [
     0,
     1
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 describes Kank as medium‑sized, while sentence 2 gives a weight of only ~27 kg, which is more typical of a small theropod, creating a size–weight mismatch."
+   "kind": "repetition",
+   "reason": "Both sentences state that Neuquenraptor is estimated to have weighed about 27 kg."
   },
   {
    "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 compares lower‑jaw teeth to Austroraptor, but Austroraptor has not been introduced earlier in the page."
-  },
-  {
-   "sentences": [
+    5,
     6
    ],
    "kind": "missing_context",
-   "reason": "Sentence 7 mentions Buitreraptor as a comparison, yet Buitreraptor is never defined or described previously on the page."
+   "reason": "Sentences 6 and 7 refer to Austroraptor and Buitreraptor, respectively, but those taxa are never introduced earlier in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Kank was a medium-sized unenlagiid dinosaur whose bones are comparable in size to those of Neuquenraptor.\" / \"The similar Neuquenraptor is estimated to have weighed about 27 kg.\": Sentence 1 describes Kank as medium‑sized, while sentence 2 gives a weight of only ~27 kg, which is more typical of a small theropod, creating a size–weight mismatch.",
-  "- missing context: \"Lower-jaw teeth possessed ridges on the front side that were confined to the upper third of the crown, a condition similar to that seen in Austroraptor.\": Sentence 6 compares lower‑jaw teeth to Austroraptor, but Austroraptor has not been introduced earlier in the page.",
-  "- missing context: \"Like Buitreraptor, the upper-jaw teeth were laterally compressed in cross-section.\": Sentence 7 mentions Buitreraptor as a comparison, yet Buitreraptor is never defined or described previously on the page."
+  "- missing context: \"Lower-jaw teeth possessed ridges on the front side that were confined to the upper third of the crown, a condition similar to that seen in Austroraptor.\" / \"Like Buitreraptor, the upper-jaw teeth were laterally compressed in cross-section.\": Sentences 6 and 7 refer to Austroraptor and Buitreraptor, respectively, but those taxa are never introduced earlier in the page."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:04:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 describes Kank as medium‑sized, while sentence 2 gives a weight of only ~27 kg, which is more typical of a small theropod, creating a size–weight mismatch."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 compares lower‑jaw teeth to Austroraptor, but Austroraptor has not been introduced earlier in the page."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 mentions Buitreraptor as a comparison, yet Buitreraptor is never defined or described previously on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:35:07+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:35:07+00:00"
+ "rewritten_at": "2026-11-25T14:33:40+00:00"
 }

@@ -2,22 +2,38 @@
  "taxon_key": "mnyamawamtuka",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1d8659c97587c73c",
- "reviewed_at": "2026-11-24T01:32:32+00:00",
+ "text_hash": "83a2ea413170ec7b",
+ "reviewed_at": "2026-11-25T13:53:55+00:00",
  "problems": [
   {
    "sentences": [
-    2,
+    0,
     3
    ],
-   "kind": "missing_context",
-   "reason": "Sentences 3 and 4 refer to “a sauropod skeleton” and “the skeleton” without previously specifying that it is the holotype of Mnyamawamtuka, leaving the reader unclear which specimen is being described."
+   "kind": "repetition",
+   "reason": "Both sentences state that the holotype specimen was found in the Mtuka Member of the Galula Formation, describing the same fact twice."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"A sauropod skeleton was found at the Mtuka River, twenty kilometres from Lake Rukwa, in 2004.\" / \"The skeleton was excavated between 2005 and 2008.\": Sentences 3 and 4 refer to “a sauropod skeleton” and “the skeleton” without previously specifying that it is the holotype of Mnyamawamtuka, leaving the reader unclear which specimen is being described."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:16:43+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:32:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 3 and 4 refer to “a sauropod skeleton” and “the skeleton” without previously specifying that it is the holotype of Mnyamawamtuka, leaving the reader unclear which specimen is being described."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:16:43+00:00"
+  }
+ ]
 }

@@ -2,8 +2,8 @@
  "taxon_key": "cretoxyrhina",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d73d294334d0fa32",
- "reviewed_at": "2026-11-23T23:51:26+00:00",
+ "text_hash": "4664d2bf5d1cf35e",
+ "reviewed_at": "2026-11-25T13:08:36+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,7 +11,15 @@
     30
    ],
    "kind": "contradiction",
-   "reason": "The page states Cretoxyrhina lived between 100 and 73 Ma, but also claims the earliest fossils date to about 107 Ma."
+   "reason": "Sentence 1 states the genus lived between 100 and 73 Ma, while sentence 31 claims the earliest fossils date to about 107 Ma."
+  },
+  {
+   "sentences": [
+    7,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences assert a maximum length of 8 m for C. mantelli."
   },
   {
    "sentences": [
@@ -19,21 +27,56 @@
     26
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim the shark reached a maximum length of 8 m."
+   "reason": "Both sentences refer to a maximum length of 8 m (or exceeding 7 m) for the species."
   },
   {
    "sentences": [
-    27,
-    28
+    29
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the family placement of the genus, repeating the same information."
+   "kind": "about_something_else",
+   "reason": "Sentence 30 discusses a taxonomic amendment involving another genus (Isurus), presented as a statement about the animal itself rather than its classification."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Cretoxyrhina was an extinct genus of large shark that lived during the Late Cretaceous, between 100 and 73 million years ago.\" / \"The earliest fossils of Cretoxyrhina date back to about 107 million years ago and belong to the species C. vraconensis.\": The page states Cretoxyrhina lived between 100 and 73 Ma, but also claims the earliest fossils date to about 107 Ma."
+  "- contradiction: \"Cretoxyrhina was an extinct genus of large shark that lived during the Late Cretaceous, between 100 and 73 million years ago.\" / \"The earliest fossils of Cretoxyrhina date back to about 107 million years ago and belong to the species C. vraconensis.\": Sentence 1 states the genus lived between 100 and 73 Ma, while sentence 31 claims the earliest fossils date to about 107 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:13:39+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:51:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "The page states Cretoxyrhina lived between 100 and 73 Ma, but also claims the earliest fossils date to about 107 Ma."
+    },
+    {
+     "sentences": [
+      13,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the shark reached a maximum length of 8 m."
+    },
+    {
+     "sentences": [
+      27,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the family placement of the genus, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:13:39+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:18+00:00"
 }

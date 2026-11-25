@@ -3,21 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d7a4ec64a71603b4",
- "reviewed_at": "2026-11-24T01:33:44+00:00",
+ "reviewed_at": "2026-11-25T13:54:28+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    5,
+    6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 states Normanniasaurus lived during the middle Cretaceous (113–107 Ma), while sentence 8 places it in the Albian stage (110.1–106.3 Ma), which is early Cretaceous; the two age ranges conflict."
+   "reason": "The time range given in sentence 6 (middle Cretaceous 113–107 Ma) conflicts with the range in sentence 7 (Albian stage 110.1–106.3 Ma, which is late Early Cretaceous)."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses the broader biogeographic radiation of basal Titanosauria, not a characteristic or fact about Normanniasaurus itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Normanniasaurus lived during the middle of the Cretaceous period, approximately 113 to 107 million years ago, in what is now Europe.\" / \"Its time range corresponds to the Albian stage, from 110.1 to 106.3 million years ago.\": Sentence 7 states Normanniasaurus lived during the middle Cretaceous (113–107 Ma), while sentence 8 places it in the Albian stage (110.1–106.3 Ma), which is early Cretaceous; the two age ranges conflict."
+  "- contradiction: \"Normanniasaurus lived during the middle of the Cretaceous period, approximately 113 to 107 million years ago, in what is now Europe.\" / \"However, other estimates place its time range within the Albian stage, from 110.1 to 106.3 million years ago.\": The time range given in sentence 6 (middle Cretaceous 113–107 Ma) conflicts with the range in sentence 7 (Albian stage 110.1–106.3 Ma, which is late Early Cretaceous)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:23:45+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:33:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states Normanniasaurus lived during the middle Cretaceous (113–107 Ma), while sentence 8 places it in the Albian stage (110.1–106.3 Ma), which is early Cretaceous; the two age ranges conflict."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:23:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:30+00:00"
 }

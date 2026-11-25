@@ -2,47 +2,100 @@
  "taxon_key": "lythronax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5b37e337eedffe2a",
- "reviewed_at": "2026-11-24T00:01:05+00:00",
+ "text_hash": "2c05c278bfbb6ac0",
+ "reviewed_at": "2026-11-25T13:13:28+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    4,
-    12,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "All four sentences describe the same skull feature (forward‑facing eyes and related vision) in different words."
-  },
-  {
-   "sentences": [
-    20,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Lythronax belongs to the family Tyrannosauridae, repeating the same classification."
-  },
-  {
-   "sentences": [
-    24,
+    26,
     27
    ],
+   "kind": "contradiction",
+   "reason": "The age of the rocks is given as 81.49 Ma with a range 81.86–81.45 Ma, yet sentence 28 states Lythronax lived about 80 Ma, a noticeably younger age."
+  },
+  {
+   "sentences": [
+    2,
+    3,
+    4
+   ],
    "kind": "repetition",
-   "reason": "Both sentences give the age of the animal in the Campanian stage, repeating the same temporal information."
+   "reason": "Sentences 3, 4 and 5 all describe the skull shape and eye orientation in essentially the same way."
+  },
+  {
+   "sentences": [
+    13,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences discuss forward‑facing eyes providing depth perception for hunting."
   },
   {
    "sentences": [
     10
    ],
    "kind": "missing_context",
-   "reason": "Sentence 11 refers to locality UMNH VP 1501 without any prior explanation of what that locality is or how it relates to the specimen."
+   "reason": "Sentence 11 refers to locality UMNH VP 1501 without having introduced this site earlier."
+  },
+  {
+   "sentences": [
+    18,
+    19
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentences 19 and 20 list other vertebrates and mammals as if they were characteristics of Lythronax itself, rather than describing its ecosystem."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"The holotype specimen UMNH VP 20200 was recovered from locality UMNH VP 1501 in the Wahweap Formation within the Grand Staircase-Escalante National Monument in Kane County, southern Utah.\": Sentence 11 refers to locality UMNH VP 1501 without any prior explanation of what that locality is or how it relates to the specimen."
+  "- contradiction: \"The rocks containing Lythronax fossils are estimated to be 81.49 million years old, with an uncertainty range of 81.86 to 81.45 million years.\" / \"Lythronax lived approximately 80 million years ago during the Campanian stage.\": The age of the rocks is given as 81.49 Ma with a range 81.86–81.45 Ma, yet sentence 28 states Lythronax lived about 80 Ma, a noticeably younger age.",
+  "- missing context: \"This holotype was recovered from locality UMNH VP 1501, a specific site within the Wahweap Formation in Kane County, southern Utah.\": Sentence 11 refers to locality UMNH VP 1501 without having introduced this site earlier."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:38:31+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4,
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "All four sentences describe the same skull feature (forward‑facing eyes and related vision) in different words."
+    },
+    {
+     "sentences": [
+      20,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Lythronax belongs to the family Tyrannosauridae, repeating the same classification."
+    },
+    {
+     "sentences": [
+      24,
+      27
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give the age of the animal in the Campanian stage, repeating the same temporal information."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 refers to locality UMNH VP 1501 without any prior explanation of what that locality is or how it relates to the specimen."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:38:31+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:36+00:00"
 }

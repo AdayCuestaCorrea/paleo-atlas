@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "e68053262151930b",
- "reviewed_at": "2026-11-24T02:02:43+00:00",
+ "reviewed_at": "2026-11-25T13:59:06+00:00",
  "problems": [
   {
    "sentences": [
@@ -16,9 +16,29 @@
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Currently, no fossil occurrences for the genus are recorded in the Paleobiology Database.\" / \"Fossils of this bird date to the Pleistocene epoch, a time when it lived.\": Sentence 3 states that no fossil occurrences for the genus are recorded, while sentence 4 claims fossils of the bird date to the Pleistocene epoch."
+  "- contradiction: \"Currently, no fossil occurrences for the genus are recorded in the Paleobiology Database.\" / \"Fossils of this bird date to the Pleistocene epoch.\": Sentence 3 states that no fossil occurrences for the genus are recorded, while sentence 4 claims fossils of the bird date to the Pleistocene epoch."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:02:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states that no fossil occurrences for the genus are recorded, while sentence 4 claims fossils of the bird date to the Pleistocene epoch."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:34+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:34+00:00"
+ "rewritten_at": "2026-11-25T14:33:32+00:00"
 }

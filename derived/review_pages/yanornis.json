@@ -3,20 +3,39 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f77c6d78c8028ffb",
- "reviewed_at": "2026-11-24T00:36:12+00:00",
+ "reviewed_at": "2026-11-25T13:31:12+00:00",
  "problems": [
   {
    "sentences": [
-    13
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 14 classifies Yanornis within the class Reptilia, contradicting earlier statements that it is a bird (Aves)."
+   "reason": "Sentence 15 classifies Yanornis within the class Reptilia, whereas earlier statements (e.g., 14) place it within the ornithuromorph lineage, a clade of birds (class Aves)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Taxonomically, Yanornis is classified within the class Reptilia.\": Sentence 14 classifies Yanornis within the class Reptilia, contradicting earlier statements that it is a bird (Aves)."
+  "- contradiction: \"In broader taxonomic terms, the animal is classified within the class Reptilia.\": Sentence 15 classifies Yanornis within the class Reptilia, whereas earlier statements (e.g., 14) place it within the ornithuromorph lineage, a clade of birds (class Aves)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:44:54+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 classifies Yanornis within the class Reptilia, contradicting earlier statements that it is a bird (Aves)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:44:54+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:55+00:00"
 }

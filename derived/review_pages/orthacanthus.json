@@ -3,45 +3,62 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "2a7b1135f3fe4a85",
- "reviewed_at": "2026-11-24T00:22:07+00:00",
+ "reviewed_at": "2026-11-25T13:23:44+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    19
+    3,
+    4
    ],
    "kind": "contradiction",
-   "reason": "The species list in sentence 14 names O. cylindricus as a member of Orthacanthus, while sentence 20 states the type species is Pleuracanthus cylindricus, implying a different genus."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 discusses dorsal spines of O. platypternus, but the page never introduced the species O. platypternus before this mention."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to a corkscrew-shaped rectum producing spiral feces, yet no prior description of Orthacanthus’ rectum or digestive anatomy is provided."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 16 mentions O. buxieri, a species not previously listed or described in the page."
+   "reason": "Sentence 4 lists the recognized species of Orthacanthus as O. arcuatus, O. cylindricus, and O. senckenbergianus, while sentence 5 states that the type species for the genus Orthacanthus is Pleuracanthus cylindricus, a different genus name, creating a direct conflict about the type species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The genus Orthacanthus contains three species: O. arcuatus, O. cylindricus, and O. senckenbergianus.\" / \"The type species for the genus Orthacanthus is Pleuracanthus cylindricus.\": The species list in sentence 14 names O. cylindricus as a member of Orthacanthus, while sentence 20 states the type species is Pleuracanthus cylindricus, implying a different genus.",
-  "- missing context: \"Dorsal spines of O. platypternus preserve a highly vascularized wall composed mainly of centrifugally growing dentine that grows from a deep dermal position forming trabecular dentine to a superficial location forming lamellar dentine.\": Sentence 6 discusses dorsal spines of O. platypternus, but the page never introduced the species O. platypternus before this mention.",
-  "- missing context: \"Orthacanthus produced spiral-shaped feces because of its corkscrew-shaped rectum.\": Sentence 9 refers to a corkscrew-shaped rectum producing spiral feces, yet no prior description of Orthacanthus’ rectum or digestive anatomy is provided.",
-  "- missing context: \"Isotopic analysis suggests that O. buxieri inhabited freshwater lakes.\": Sentence 16 mentions O. buxieri, a species not previously listed or described in the page."
+  "- contradiction: \"The genus contains three recognized species: O. arcuatus, O. cylindricus, and O. senckenbergianus.\" / \"The type species for the genus Orthacanthus is Pleuracanthus cylindricus.\": Sentence 4 lists the recognized species of Orthacanthus as O. arcuatus, O. cylindricus, and O. senckenbergianus, while sentence 5 states that the type species for the genus Orthacanthus is Pleuracanthus cylindricus, a different genus name, creating a direct conflict about the type species."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:35:08+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:22:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "The species list in sentence 14 names O. cylindricus as a member of Orthacanthus, while sentence 20 states the type species is Pleuracanthus cylindricus, implying a different genus."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 discusses dorsal spines of O. platypternus, but the page never introduced the species O. platypternus before this mention."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to a corkscrew-shaped rectum producing spiral feces, yet no prior description of Orthacanthus’ rectum or digestive anatomy is provided."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 16 mentions O. buxieri, a species not previously listed or described in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:35:08+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:34+00:00"
 }

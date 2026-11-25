@@ -2,22 +2,100 @@
  "taxon_key": "sinornithosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "43979c57d1969da8",
- "reviewed_at": "2026-11-24T00:19:13+00:00",
+ "text_hash": "f353043ac355bc92",
+ "reviewed_at": "2026-11-25T13:22:28+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    3
+    1,
+    2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states Sinornithosaurus reached a length of about 90 cm, while sentence 4 reports the holotype measured 1.2 m long."
+   "reason": "The holotype is stated to be 1.2 m long, yet another description claims the animal was only about 90 cm long."
+  },
+  {
+   "sentences": [
+    20,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "Both sentences claim the species lived 125 Ma, but 23 repeats the same age while 21 also states it is one of the earliest known dromaeosaurids, creating redundant but conflicting emphasis."
+  },
+  {
+   "sentences": [
+    21,
+    23
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 22 gives a single age of ~122 Ma for the fossils, whereas sentence 24 provides a range of 125.77–119.57 Ma for the species’ temporal range."
+  },
+  {
+   "sentences": [
+    17,
+    18
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Xu Xing’s phylogenetic analysis shows Sinornithosaurus is basal/primitive among dromaeosaurs."
+  },
+  {
+   "sentences": [
+    24,
+    25
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat that Turner, Makovicky, and Norell argued the distinguishing features of S. haoiana are present in S. millenii or variable."
+  },
+  {
+   "sentences": [
+    26,
+    28
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe a 2009 study led by Gong that suggested Sinornithosaurus was the first identified venomous dinosaur."
+  },
+  {
+   "sentences": [
+    26
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase \"possible venom gland cavity\" refers to a feature without prior introduction or explanation in the page."
+  },
+  {
+   "sentences": [
+    27
+   ],
+   "kind": "missing_context",
+   "reason": "The claim that Sinornithosaurus was probably too heavy to fly lacks context such as its weight or flight capability."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"It was among the smallest members of its family, reaching a length of about 90 centimeters, and featured proportionally very long arms and hands.\" / \"The holotype, which is the specimen the species is based on, measured 1.2 meters long and weighed between 3 and 5 kilograms.\": Sentence 3 states Sinornithosaurus reached a length of about 90 cm, while sentence 4 reports the holotype measured 1.2 m long."
+  "- contradiction: \"The holotype — the specimen the species is based on — measured 1.2 meters in length and weighed between 3 and 5 kilograms.\" / \"However, other descriptions note that the animal was among the smallest dromaeosaurids, with a length of about 90 centimeters.\": The holotype is stated to be 1.2 m long, yet another description claims the animal was only about 90 cm long.",
+  "- contradiction: \"Sinornithosaurus millenii lived approximately 125 million years ago during the Barremian age of the Early Cretaceous, making it one of the earliest known dromaeosaurids.\" / \"Sinornithosaurus lived 125 million years ago during the Barremian (Early Cretaceous), making it one of the oldest and most primitive members of its family.\": Both sentences claim the species lived 125 Ma, but 23 repeats the same age while 21 also states it is one of the earliest known dromaeosaurids, creating redundant but conflicting emphasis.",
+  "- contradiction: \"Fossils of Sinornithosaurus haoiana and the specimen NGMC 91 date to approximately 122 million years ago.\" / \"Sinornithosaurus lived during the Barremian to Aptian stages, from 125.77 to 119.57 million years ago.\": Sentence 22 gives a single age of ~122 Ma for the fossils, whereas sentence 24 provides a range of 125.77–119.57 Ma for the species’ temporal range.",
+  "- missing context: \"In 2009, a team led by Empu Gong suggested Sinornithosaurus was the first identified venomous dinosaur based on grooved teeth and a possible venom gland cavity.\": The phrase \"possible venom gland cavity\" refers to a feature without prior introduction or explanation in the page.",
+  "- missing context: \"Longrich and Currie (2009) expressed the opinion that Sinornithosaurus was probably too heavy to fly.\": The claim that Sinornithosaurus was probably too heavy to fly lacks context such as its weight or flight capability."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:15:06+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:19:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states Sinornithosaurus reached a length of about 90 cm, while sentence 4 reports the holotype measured 1.2 m long."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:15:06+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:23+00:00"
 }

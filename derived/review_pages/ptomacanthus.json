@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ab6fc9febda13f7f",
- "reviewed_at": "2026-11-24T01:40:26+00:00",
+ "reviewed_at": "2026-11-25T13:56:20+00:00",
  "problems": [
   {
    "sentences": [
+    0,
     4
    ],
-   "kind": "missing_context",
-   "reason": "Mentions \"Two other uncertain species\" without naming them or providing prior context."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states there is only one well‑known species of Ptomacanthus, while sentence 5 claims two additional indeterminate species are known."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Two other uncertain species were identified from shoulder bones found in Herefordshire and Ukraine.\": Mentions \"Two other uncertain species\" without naming them or providing prior context."
+  "- contradiction: \"The single well-known species, P. anglicus, measured about 25 centimeters in length.\" / \"Two indeterminate species of Ptomacanthus are known from shoulder-girdle fossils found in Castle Mattock Quarry, Herefordshire, and Zaleszychi, Ukraine.\": Sentence 1 states there is only one well‑known species of Ptomacanthus, while sentence 5 claims two additional indeterminate species are known."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:40:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"Two other uncertain species\" without naming them or providing prior context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:26:52+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:26:52+00:00"
+ "rewritten_at": "2026-11-25T14:31:58+00:00"
 }

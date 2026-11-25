@@ -2,52 +2,98 @@
  "taxon_key": "mauriciosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "73f2e9cb2337d300",
- "reviewed_at": "2026-11-24T00:01:24+00:00",
+ "text_hash": "6cae5bbf35ae356e",
+ "reviewed_at": "2026-11-25T13:13:37+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    10
+    24,
+    25,
+    26,
+    27,
+    29,
+    31
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the specimen is a juvenile approximately 2 m long."
+   "reason": "All these sentences state the same classification of Mauriciosaurus as a polycotylid plesiosaur, repeating the claim multiple times."
   },
   {
    "sentences": [
-    1,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the animal’s similarity to Trinacromerum and Dolichorhynchops."
-  },
-  {
-   "sentences": [
-    14
+    3
    ],
    "kind": "missing_context",
-   "reason": "Mentions peritoneal pigmentation protecting reproductive organs without any prior mention of reproductive anatomy."
+   "reason": "The sentence refers to “the underside of the creature” without having previously described or mentioned the underside."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "missing_context",
+   "reason": "It mentions a “preserved soft tissue cone” on the tail, but no earlier sentence introduces or describes this cone."
   },
   {
    "sentences": [
     22
    ],
    "kind": "missing_context",
-   "reason": "Refers to the body cavity and gastralia collapsing, but the page never introduced these anatomical terms."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes ownership of the specimen by a politician, which is unrelated to the animal’s biology."
+   "reason": "It refers to “the top half of Mauriciosaurus's body” without prior context describing the top half."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 5,
  "notes": [
-  "- missing context: \"In modern desert squamates, peritoneal pigmentation protects reproductive organs from solar radiation, a function hypothesized for this ancient marine reptile.\": Mentions peritoneal pigmentation protecting reproductive organs without any prior mention of reproductive anatomy.",
-  "- missing context: \"The animal fell into soft, water-soaked, anoxic sediment at temperatures between 21 and 37 degrees Celsius, conditions that preserved its skin. Anoxic conditions allowed subcutaneous fat to turn into adipocere, preserving the skin on the top half of Mauriciosaurus's body. Exposed parts of Mauriciosaurus's belly decayed before burial, causing the body cavity and gastralia to collapse.\": Refers to the body cavity and gastralia collapsing, but the page never introduced these anatomical terms."
+  "- missing context: \"Dark grey, rectangular structures found in the type specimen likely represent scale-like tubercles that covered the underside of the creature.\": The sentence refers to “the underside of the creature” without having previously described or mentioned the underside.",
+  "- missing context: \"Small neural spines and weak tail muscles suggest the preserved soft tissue cone on Mauriciosaurus's tail was contour fat used for stabilization, similar to fat-tailed geckos.\": It mentions a “preserved soft tissue cone” on the tail, but no earlier sentence introduces or describes this cone.",
+  "- missing context: \"Anoxic conditions allowed subcutaneous fat to turn into adipocere, preserving the skin on the top half of Mauriciosaurus's body.\": It refers to “the top half of Mauriciosaurus's body” without prior context describing the top half."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:43:16+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the specimen is a juvenile approximately 2 m long."
+    },
+    {
+     "sentences": [
+      1,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the animal’s similarity to Trinacromerum and Dolichorhynchops."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions peritoneal pigmentation protecting reproductive organs without any prior mention of reproductive anatomy."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the body cavity and gastralia collapsing, but the page never introduced these anatomical terms."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes ownership of the specimen by a politician, which is unrelated to the animal’s biology."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:43:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:43+00:00"
 }

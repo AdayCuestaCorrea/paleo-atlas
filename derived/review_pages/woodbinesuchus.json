@@ -2,30 +2,55 @@
  "taxon_key": "woodbinesuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ff49805dae2795c7",
- "reviewed_at": "2026-11-24T01:53:56+00:00",
+ "text_hash": "a335cb2cd387a239",
+ "reviewed_at": "2026-11-25T13:58:12+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 assigns Woodbinesuchus to Goniopholidae, while the Paleobiology Database lists it under Pholidosauridae, presenting two conflicting family assignments."
+   "reason": "Sentence 4 assigns Woodbinesuchus to Goniopholidae, while the Paleobiology Database lists its parent group as Pholidosauridae, presenting conflicting taxonomic placement."
   },
   {
    "sentences": [
-    2
+    5
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 mentions “the formation” without previously naming it; the only formation referenced later is the Woodbine Formation, but it is not introduced before this sentence."
+   "kind": "about_something_else",
+   "reason": "Sentence 6 discusses the distribution of crocodyliform fossils in the Woodbine Formation, which is about the formation and other fossils rather than Woodbinesuchus itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Yuong-Nam Lee tentatively assigned Woodbinesuchus to the family Goniopholidae, though the Paleobiology Database lists the parent group as Pholidosauridae.\": Sentence 4 assigns Woodbinesuchus to Goniopholidae, while the Paleobiology Database lists it under Pholidosauridae, presenting two conflicting family assignments.",
-  "- missing context: \"The holotype, SMU 74626, was found near the base of the formation in Tarrant County by Johnny Allen Byers and J. Maurice in May 1990.\": Sentence 3 mentions “the formation” without previously naming it; the only formation referenced later is the Woodbine Formation, but it is not introduced before this sentence."
+  "- contradiction: \"Yuong-Nam Lee tentatively assigned Woodbinesuchus to the family Goniopholidae, though the Paleobiology Database lists the parent group as Pholidosauridae.\": Sentence 4 assigns Woodbinesuchus to Goniopholidae, while the Paleobiology Database lists its parent group as Pholidosauridae, presenting conflicting taxonomic placement."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:53:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 assigns Woodbinesuchus to Goniopholidae, while the Paleobiology Database lists it under Pholidosauridae, presenting two conflicting family assignments."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions “the formation” without previously naming it; the only formation referenced later is the Woodbine Formation, but it is not introduced before this sentence."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:30+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:30+00:00"
+ "rewritten_at": "2026-11-25T14:33:00+00:00"
 }

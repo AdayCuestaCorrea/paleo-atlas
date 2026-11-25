@@ -3,29 +3,56 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "3bc5f427d3582ba5",
- "reviewed_at": "2026-11-24T01:26:51+00:00",
+ "reviewed_at": "2026-11-25T13:51:43+00:00",
  "problems": [
   {
    "sentences": [
     4,
-    8
+    5
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give different length estimates for Genyodectes without indicating they are separate estimates."
+   "reason": "Sentence 5 claims a length of ~9 m, while sentence 6 gives a different estimate of 6.25 m for the same species."
   },
   {
    "sentences": [
-    7
+    8
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to an “artificial matrix” without explaining what it is or why it matters."
+   "reason": "Sentence 9 refers to the holotype being removed from an artificial matrix, but the text never previously mentioned that the holotype was displayed in such a matrix."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Some estimates suggest Genyodectes could have reached a length of around 9 meters.\" / \"In 2016, Genyodectes was estimated to reach a length of 6.25 meters and a weight of 790 kilograms.\": Both sentences give different length estimates for Genyodectes without indicating they are separate estimates.",
-  "- missing context: \"The taxonomic validity of Genyodectes was strengthened after the holotype was removed from the artificial matrix in which it had been displayed for a long time.\": The sentence refers to an “artificial matrix” without explaining what it is or why it matters."
+  "- contradiction: \"Some estimates suggest Genyodectes could have reached a length of around 9 meters.\" / \"In 2016, Genyodectes was estimated to reach a length of 6.25 meters and a weight of 790 kilograms.\": Sentence 5 claims a length of ~9 m, while sentence 6 gives a different estimate of 6.25 m for the same species.",
+  "- missing context: \"The taxonomic validity of Genyodectes was strengthened after the holotype was removed from the artificial matrix in which it had been displayed for a long time.\": Sentence 9 refers to the holotype being removed from an artificial matrix, but the text never previously mentioned that the holotype was displayed in such a matrix."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:53:14+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:26:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give different length estimates for Genyodectes without indicating they are separate estimates."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to an “artificial matrix” without explaining what it is or why it matters."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:53:14+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:59+00:00"
 }

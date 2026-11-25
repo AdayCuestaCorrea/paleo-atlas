@@ -2,47 +2,95 @@
  "taxon_key": "taurovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8af2ec823ce425d5",
- "reviewed_at": "2026-11-24T00:06:50+00:00",
+ "text_hash": "9bdba864ac699281",
+ "reviewed_at": "2026-11-25T13:16:41+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    6
+    2,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 claims Taurovenator is one of the largest theropods, while sentence 7 states the orbital section length indicates it is a medium-sized theropod."
+   "reason": "Sentence 3 estimates a 135 cm skull, implying a very large theropod, while sentence 6 cites a 12 cm orbital section and labels the animal a medium‑sized theropod."
   },
   {
    "sentences": [
-    19,
-    20
+    3,
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 20 gives a Cenomanian–Turonian or Early Turonian–Late Santonian age range, whereas sentence 21 assigns an Albian age (110–106 Ma)."
+   "kind": "repetition",
+   "reason": "Both sentences describe the postorbital horn-like projection as a unique feature of Taurovenator."
   },
   {
    "sentences": [
     4,
-    8
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the interlocking cervical vertebrae as resembling overlapping roof tiles."
+   "reason": "Both sentences describe the neck vertebrae forming an interlocking roof‑tile structure."
   },
   {
    "sentences": [
-    6
+    8
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to an \"orbital section length\" and a measurement that has not been previously mentioned or defined."
+   "kind": "about_something_else",
+   "reason": "Sentence 9 discusses fossil pollen and plant community, which is about the environment, not the animal itself."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 15 describes the lithology of the Huincul Formation, not a feature of Taurovenator."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"It ranks among the largest known theropod dinosaurs and stands as one of the biggest terrestrial carnivores.\" / \"Despite its massive size, the orbital horn is relatively robust but small and rounded, clearly disconnected from the edge, while an orbital section length of 12 centimeters suggests it is considered a medium-sized theropod based on that specific measurement.\": Sentence 2 claims Taurovenator is one of the largest theropods, while sentence 7 states the orbital section length indicates it is a medium-sized theropod.",
-  "- contradiction: \"The age of Taurovenator's deposits was previously estimated to be between the Cenomanian and Turonian, or possibly the Early Turonian to Late Santonian.\" / \"The Paleobi Database records the time range of Taurovenator as the Albian, between 110.1 and 106.3 million years ago.\": Sentence 20 gives a Cenomanian–Turonian or Early Turonian–Late Santonian age range, whereas sentence 21 assigns an Albian age (110–106 Ma).",
-  "- missing context: \"Despite its massive size, the orbital horn is relatively robust but small and rounded, clearly disconnected from the edge, while an orbital section length of 12 centimeters suggests it is considered a medium-sized theropod based on that specific measurement.\": Sentence 7 refers to an \"orbital section length\" and a measurement that has not been previously mentioned or defined."
+  "- contradiction: \"Estimates based on comparisons with related species suggest the skull of Taurovenator was around 135 cm long.\" / \"However, other researchers noted that based on an orbital section length of 12 centimeters, the animal might be considered a medium-sized theropod, describing the orbital horn as relatively robust but small and rounded.\": Sentence 3 estimates a 135 cm skull, implying a very large theropod, while sentence 6 cites a 12 cm orbital section and labels the animal a medium‑sized theropod."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:35:42+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:06:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 claims Taurovenator is one of the largest theropods, while sentence 7 states the orbital section length indicates it is a medium-sized theropod."
+    },
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 20 gives a Cenomanian–Turonian or Early Turonian–Late Santonian age range, whereas sentence 21 assigns an Albian age (110–106 Ma)."
+    },
+    {
+     "sentences": [
+      4,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the interlocking cervical vertebrae as resembling overlapping roof tiles."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to an \"orbital section length\" and a measurement that has not been previously mentioned or defined."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:35:42+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:04:27+00:00"
 }

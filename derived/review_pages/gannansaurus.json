@@ -3,37 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "bb2b46238ccce070",
- "reviewed_at": "2026-11-24T01:32:06+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:53:49+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    2,
-    3
+   "reviewed_at": "2026-11-24T01:32:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states only one dorsal vertebra was reconstructed, while sentence 4 claims two preserved vertebrae are stored."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to “two preserved vertebrae” without prior mention of a second vertebra, creating a missing context."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 8 and 9 both provide the same time range for Gannansaurus, repeating the information."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 states only one dorsal vertebra was reconstructed, while sentence 4 claims two preserved vertebrae are stored."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 refers to “two preserved vertebrae” without prior mention of a second vertebra, creating a missing context."
-  },
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 8 and 9 both provide the same time range for Gannansaurus, repeating the information."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:16:02+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Most of the original specimen was destroyed during construction, but one dorsal vertebra was reconstructed from fragments.\" / \"The two preserved vertebrae are stored at the Ganzhou Museum of Natural History with the catalog number GMNH F10001.\": Sentence 3 states only one dorsal vertebra was reconstructed, while sentence 4 claims two preserved vertebrae are stored.",
-  "- missing context: \"The two preserved vertebrae are stored at the Ganzhou Museum of Natural History with the catalog number GMNH F10001.\": Sentence 4 refers to “two preserved vertebrae” without prior mention of a second vertebra, creating a missing context."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:16:02+00:00"
+ ]
 }

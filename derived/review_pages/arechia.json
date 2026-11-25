@@ -2,15 +2,24 @@
  "taxon_key": "arechia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a095b31af76de711",
- "reviewed_at": "2026-11-24T01:18:56+00:00",
+ "text_hash": "648fab3c1a2f2095",
+ "reviewed_at": "2026-11-25T13:49:38+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    1
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to \"males\" and \"females\" without any prior mention of sex differentiation for the species."
+   "kind": "contradiction",
+   "reason": "Sentence 1 claims Arechia is a stingaree genus, while sentence 2 says females are placed in a different genus (Merabatis), contradicting the classification."
+  },
+  {
+   "sentences": [
+    6,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 7 limits Arechia to the Early Eocene, but sentence 8 gives a range from 59.24 to 37.71 Ma, which includes the Paleocene and extends beyond the Early Eocene."
   },
   {
    "sentences": [
@@ -18,14 +27,42 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 8 states the species existed only between 59.24 and 37.71 Ma, while sentence 9 suggests isolated teeth may date as late as the Early Oligocene (~33.9–23 Ma), extending beyond the stated range."
+   "reason": "Sentence 8 limits the existence to 59.24–37.71 Ma, yet sentence 9 suggests isolated teeth may date into the Early Oligocene, which is later than 37.71 Ma."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Cappetta later separated males from females, placing the latter in the genus Merabatis.\": Sentence 5 refers to \"males\" and \"females\" without any prior mention of sex differentiation for the species.",
-  "- contradiction: \"Its existence spanned a period between 59.24 and 37.71 million years ago.\" / \"Some researchers suggest isolated teeth may date as late as the Early Oligocene, though this remains unconfirmed.\": Sentence 8 states the species existed only between 59.24 and 37.71 Ma, while sentence 9 suggests isolated teeth may date as late as the Early Oligocene (~33.9–23 Ma), extending beyond the stated range."
+  "- contradiction: \"Arechia is recognized as the oldest known genus of stingaree.\" / \"Researchers separated males from females, placing the latter in the genus Merabatis.\": Sentence 1 claims Arechia is a stingaree genus, while sentence 2 says females are placed in a different genus (Merabatis), contradicting the classification.",
+  "- contradiction: \"Arechia inhabited the northern Tethys Ocean during the Early Eocene.\" / \"Its existence spanned a period between 59.24 and 37.71 million years ago.\": Sentence 7 limits Arechia to the Early Eocene, but sentence 8 gives a range from 59.24 to 37.71 Ma, which includes the Paleocene and extends beyond the Early Eocene.",
+  "- contradiction: \"Its existence spanned a period between 59.24 and 37.71 million years ago.\" / \"Some researchers suggest isolated teeth may date as late as the Early Oligocene, though this remains unconfirmed.\": Sentence 8 limits the existence to 59.24–37.71 Ma, yet sentence 9 suggests isolated teeth may date into the Early Oligocene, which is later than 37.71 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:20:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:18:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to \"males\" and \"females\" without any prior mention of sex differentiation for the species."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states the species existed only between 59.24 and 37.71 Ma, while sentence 9 suggests isolated teeth may date as late as the Early Oligocene (~33.9–23 Ma), extending beyond the stated range."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:20:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:09+00:00"
 }

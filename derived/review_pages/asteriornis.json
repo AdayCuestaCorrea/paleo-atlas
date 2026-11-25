@@ -2,8 +2,8 @@
  "taxon_key": "asteriornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e9186de59fc806ac",
- "reviewed_at": "2026-11-24T00:28:31+00:00",
+ "text_hash": "a1f9f9f13333ab83",
+ "reviewed_at": "2026-11-25T13:27:08+00:00",
  "problems": [
   {
    "sentences": [
@@ -12,29 +12,63 @@
     17
    ],
    "kind": "contradiction",
-   "reason": "Age range for Asteriornis is given as 66.8–66.7 Ma in sentences 15–16, but the Paleobiology Database records a broader range of 72.2–66 Ma in sentence 18."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 suggests Asteriornis may be a paleognath related to tinamous and lithornithids, whereas sentence 14 places it within Galloanserae as a stem‑galliform."
+   "reason": "The age range given in sentence 18 (72.2–66 Ma) conflicts with the Late Maastrichtian dates in sentences 15 and 16 (66.8–66.7 Ma)."
   },
   {
    "sentences": [
     16
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 17 discusses the Maastricht Formation itself, not a characteristic of Asteriornis."
+   "reason": "Sentence 17 discusses the naming of the Maastricht Formation, not a characteristic of Asteriornis itself."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 18 cites the Paleobiology Database’s time range for the species, which is a database entry rather than a trait of the bird."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Asteriornis lived during the Late Maastrichtian stage of the Cretaceous period.\" / \"It lived approximately 66.8 to 66.7 million years ago.\" / \"The Paleobiology Database records the time range of Asteriornis as 72.2 to 66 million years ago.\": Age range for Asteriornis is given as 66.8–66.7 Ma in sentences 15–16, but the Paleobiology Database records a broader range of 72.2–66 Ma in sentence 18.",
-  "- contradiction: \"Some studies suggest Asteriornis might be a paleognath related to tinamous and lithornithids, though this classification has limited support.\" / \"Recent analyses in 2025 placed Asteriornis within Galloanserae as a stem-galliform, but researchers could not confirm a specific jaw feature previously thought to be present.\": Sentence 13 suggests Asteriornis may be a paleognath related to tinamous and lithornithids, whereas sentence 14 places it within Galloanserae as a stem‑galliform."
+  "- contradiction: \"Asteriornis lived during the Late Maastrichtian stage of the Cretaceous period.\" / \"It lived approximately 66.8 to 66.7 million years ago.\" / \"The Paleobiology Database records the time range of Asteriornis as 72.2 to 66 million years ago.\": The age range given in sentence 18 (72.2–66 Ma) conflicts with the Late Maastrichtian dates in sentences 15 and 16 (66.8–66.7 Ma)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:39:30+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:28:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Age range for Asteriornis is given as 66.8–66.7 Ma in sentences 15–16, but the Paleobiology Database records a broader range of 72.2–66 Ma in sentence 18."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 suggests Asteriornis may be a paleognath related to tinamous and lithornithids, whereas sentence 14 places it within Galloanserae as a stem‑galliform."
+    },
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 17 discusses the Maastricht Formation itself, not a characteristic of Asteriornis."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:39:30+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:41+00:00"
 }

@@ -2,22 +2,59 @@
  "taxon_key": "eodromaeus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a371532a6dc58f8b",
- "reviewed_at": "2026-11-24T00:21:53+00:00",
+ "text_hash": "e4a0c40e8777c177",
+ "reviewed_at": "2026-11-25T13:23:37+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    13
+    6,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the 2011 naming of the genus and species by the same authors."
+  },
+  {
+   "sentences": [
+    14,
+    16,
+    17
+   ],
+   "kind": "repetition",
+   "reason": "All three sentences give overlapping time ranges for the Late Triassic Carnian stage, repeating the same claim about the age of Eodromaeus."
+  },
+  {
+   "sentences": [
+    18,
+    19
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 claims Eodromaeus was the earliest known member of the Theropoda, while sentence 14 states a later study placed it as a basal herrerasaurian and moved the family Herrerasauridae outside of Dinosauria, implying it is not a theropod."
+   "reason": "Sentence 19 claims Eodromaeus was the earliest member of Theropoda, while sentence 20 reports a later study placing it outside Dinosauria as a basal herrerasaurian."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"When initially described in 2011, it was considered the earliest known member of the Theropoda.\" / \"A later study by Baron et al. (2017) placed Eodromaeus as a basal herrerasaurian and moved the family Herrerasauridae outside of Dinosauria.\": Sentence 11 claims Eodromaeus was the earliest known member of the Theropoda, while sentence 14 states a later study placed it as a basal herrerasaurian and moved the family Herrerasauridae outside of Dinosauria, implying it is not a theropod."
+  "- contradiction: \"When first described in 2011, Eodromaeus was considered the earliest member of the Theropoda.\" / \"A later study by Baron et al. (2017) placed Eodromaeus as a basal herrerasaurian and moved the family Herrerasauridae outside of Dinosauria.\": Sentence 19 claims Eodromaeus was the earliest member of Theropoda, while sentence 20 reports a later study placing it outside Dinosauria as a basal herrerasaurian."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:33:55+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:21:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 claims Eodromaeus was the earliest known member of the Theropoda, while sentence 14 states a later study placed it as a basal herrerasaurian and moved the family Herrerasauridae outside of Dinosauria, implying it is not a theropod."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:33:55+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:27+00:00"
 }

@@ -2,8 +2,8 @@
  "taxon_key": "volgadraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d16b373b6b22971f",
- "reviewed_at": "2026-11-24T01:11:57+00:00",
+ "text_hash": "3cf2bdb3d72bff21",
+ "reviewed_at": "2026-11-25T13:47:10+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,33 @@
     4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 classifies Volgadraco as Pteranodontidae, while sentence 5 lists it as Azhdarchidae."
+   "reason": "Sentences 4 and 5 give conflicting family assignments for Volgadraco (Pteranodontidae vs. Azhdarchidae)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"In 2020, Averianov and Arkhangelsky classified Volgadraco as a member of the family Pteranodontidae.\" / \"However, the Spanish taxobox lists Volgadraco as belonging to the family Azhdarchidae.\": Sentence 4 classifies Volgadraco as Pteranodontidae, while sentence 5 lists it as Azhdarchidae."
+  "- contradiction: \"In 2020, Averianov and Arkhangelsky classified Volgadraco as a member of the family Pteranodontidae.\" / \"However, the Spanish taxobox lists Volgadraco as belonging to the family Azhdarchidae.\": Sentences 4 and 5 give conflicting family assignments for Volgadraco (Pteranodontidae vs. Azhdarchidae)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:46:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:11:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 classifies Volgadraco as Pteranodontidae, while sentence 5 lists it as Azhdarchidae."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:46:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:27+00:00"
 }

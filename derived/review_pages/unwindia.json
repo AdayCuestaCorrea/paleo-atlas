@@ -3,22 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4bf8baac2b4815a5",
- "reviewed_at": "2026-11-24T01:34:46+00:00",
+ "reviewed_at": "2026-11-25T13:54:45+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    12,
-    13
+    10,
+    11
    ],
    "kind": "contradiction",
-   "reason": "The page states Unwindia lived in the Early Cretaceous (sentence 1) and that its holotype was dated to the Cenomanian stage (sentence 13), which is Late Cretaceous. The age range given (119.57–113.2 Ma, sentence 14) also falls in the Late Cretaceous, contradicting the Early Cretaceous claim."
+   "reason": "Sentence 11 states Unwindia lived during the Early Cretaceous, while sentence 12 specifies the Cenomanian stage, which is Late Cretaceous."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Unwindia was a pterodactyloid pterosaur that inhabited the Early Cretaceous period in present-day Brazil.\" / \"The holotype was recovered from the Santana Formation of the Araripe Basin, a site dated to the Cenomanian stage.\" / \"The estimated time range for Unwindia spans between 119.57 and 113.2 million years ago.\": The page states Unwindia lived in the Early Cretaceous (sentence 1) and that its holotype was dated to the Cenomanian stage (sentence 13), which is Late Cretaceous. The age range given (119.57–113.2 Ma, sentence 14) also falls in the Late Cretaceous, contradicting the Early Cretaceous claim."
+  "- contradiction: \"Unwindia was a pterodactyloid pterosaur that lived during the Early Cretaceous period in what is now Brazil.\" / \"The holotype was recovered from the Santana Formation of the Araripe Basin, dated to the Cenomanian stage.\": Sentence 11 states Unwindia lived during the Early Cretaceous, while sentence 12 specifies the Cenomanian stage, which is Late Cretaceous."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:28:20+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:34:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "The page states Unwindia lived in the Early Cretaceous (sentence 1) and that its holotype was dated to the Cenomanian stage (sentence 13), which is Late Cretaceous. The age range given (119.57–113.2 Ma, sentence 14) also falls in the Late Cretaceous, contradicting the Early Cretaceous claim."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:28:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:45+00:00"
 }

@@ -2,29 +2,46 @@
  "taxon_key": "coloradisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bd1b8915be47f54d",
- "reviewed_at": "2026-11-24T00:30:43+00:00",
+ "text_hash": "751f00414b66e996",
+ "reviewed_at": "2026-11-25T13:28:19+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
+    8,
+    9,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Coloradisaurus is closely related to Lufengosaurus and Glacialisaurus, repeating the same classification claim."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 refers to Mussaurus without any prior mention or context of that genus on the page."
+   "reason": "All three sentences state the same classification relationship of Coloradisaurus to other taxa."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"It is possible that Coloradisaurus is an adult specimen of Mussaurus.\": Sentence 10 refers to Mussaurus without any prior mention or context of that genus on the page."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:50:26+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:30:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Coloradisaurus is closely related to Lufengosaurus and Glacialisaurus, repeating the same classification claim."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 refers to Mussaurus without any prior mention or context of that genus on the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:50:26+00:00"
+  }
+ ]
 }

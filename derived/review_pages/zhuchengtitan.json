@@ -2,38 +2,81 @@
  "taxon_key": "zhuchengtitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2cdb3f0ed8092c3a",
- "reviewed_at": "2026-11-24T00:44:11+00:00",
+ "text_hash": "ff941772d3fafa91",
+ "reviewed_at": "2026-11-25T13:36:01+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
+    2,
+    4
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Zhuchengtitan is known from a single humerus."
+   "reason": "Both sentences state the same claim about the extreme width of the humerus top end due to inner edge angles."
   },
   {
    "sentences": [
-    8,
-    9
+    3,
+    5
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the discovery of the humerus at the Zangjiazhuang Quarry in 2008."
+   "reason": "Both sentences describe the deltopectoral crest bearing a hook-like process."
   },
   {
    "sentences": [
-    16,
-    17
+    13,
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 17 gives an age of 73.5 Ma for the Hongtuya Member, while sentence 18 states Zhuchengtitan lived approximately 72 Ma."
+   "reason": "Sentence 14 gives an age of 73.5 Ma for the Hongtuya Member, while sentence 15 states Zhuchengtitan lived about 72 Ma."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses Shantungosaurus fossils, not Zhuchengtitan, yet appears in the Zhuchengtitan page."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Dating of a basalt layer places the Hongtuya Member at 73.5 million years old, corresponding to the Campanian age of the Cretaceous.\" / \"Zhuchengtitan lived at the end of the Cretaceous period, approximately 72 million years ago, during the Maastrichtian.\": Sentence 17 gives an age of 73.5 Ma for the Hongtuya Member, while sentence 18 states Zhuchengtitan lived approximately 72 Ma."
+  "- contradiction: \"Dating of a basalt layer places the Hongtuya Member at 73.5 million years old, corresponding to the Campanian age of the Cretaceous.\" / \"Zhuchengtitan lived at the end of the Cretaceous period, approximately 72 million years ago, during the Maastrichtian.\": Sentence 14 gives an age of 73.5 Ma for the Hongtuya Member, while sentence 15 states Zhuchengtitan lived about 72 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:51:49+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:44:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Zhuchengtitan is known from a single humerus."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the discovery of the humerus at the Zangjiazhuang Quarry in 2008."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 17 gives an age of 73.5 Ma for the Hongtuya Member, while sentence 18 states Zhuchengtitan lived approximately 72 Ma."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:51:49+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:03+00:00"
 }

@@ -2,8 +2,8 @@
  "taxon_key": "lepidotes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "713c8e86c41fcfbe",
- "reviewed_at": "2026-11-24T00:28:35+00:00",
+ "text_hash": "71ed09dc6e080eb0",
+ "reviewed_at": "2026-11-25T13:27:12+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,21 +11,41 @@
     5
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give maximum lengths for Lepidotes, but L. gigas is a species of Lepidotes; one claims up to 75 cm while the other limits the entire genus to 30 cm."
-  },
-  {
-   "sentences": [
-    3,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that L. semiserratus is known from the Upper Lias of Yorkshire, England, specifically the Toarcian‑aged Whitby Mudstone Formation."
+   "reason": "Sentence 5 claims L. gigas could reach 75 cm, while sentence 6 claims Lepidotes could reach only 30 cm, contradicting each other on maximum size."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Based on some specimens, L. gigas could measure up to 75 cm in length.\" / \"Lepidotes could reach a maximum length of 30 centimeters.\": Both sentences give maximum lengths for Lepidotes, but L. gigas is a species of Lepidotes; one claims up to 75 cm while the other limits the entire genus to 30 cm."
+  "- contradiction: \"Based on some specimens, L. gigas could measure up to 75 cm in length.\" / \"Other estimates suggest Lepidotes could reach a maximum length of 30 centimeters.\": Sentence 5 claims L. gigas could reach 75 cm, while sentence 6 claims Lepidotes could reach only 30 cm, contradicting each other on maximum size."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:40:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:28:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give maximum lengths for Lepidotes, but L. gigas is a species of Lepidotes; one claims up to 75 cm while the other limits the entire genus to 30 cm."
+    },
+    {
+     "sentences": [
+      3,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that L. semiserratus is known from the Upper Lias of Yorkshire, England, specifically the Toarcian‑aged Whitby Mudstone Formation."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:40:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:45+00:00"
 }

@@ -2,29 +2,92 @@
  "taxon_key": "morrosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0d3ef946f829b181",
- "reviewed_at": "2026-11-24T00:30:40+00:00",
+ "text_hash": "a10634b1d5978b60",
+ "reviewed_at": "2026-11-25T13:28:18+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    19
+    0,
+    1
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims Elasmaria members, including Morrosaurus, have high‑speed running adaptations, while sentence 20 states that it cannot be determined whether Morrosaurus possessed these characteristics due to fragmentary remains."
+   "kind": "repetition",
+   "reason": "Both sentences state the size of Morrosaurus, with [1] giving a range and [2] comparing it to Trinisaura, repeating the size claim."
   },
   {
    "sentences": [
-    7
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 13 repeats the same classification statement twice."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 14 repeats the same list of related taxa and the definition of Elasmaria."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 16 repeats the same time‑range information multiple times."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 gives two different years (2016 and 2015) for the species description, contradicting each other."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 7 gives two different formations (Snow Hill Island Formation and López de Bertodano Formation) for the holotype layer, contradicting each other."
+  },
+  {
+   "sentences": [
+    3
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 8 describes a partial skeleton of a euornithopod discovered in Antarctica, which is not Morrosaurus and is presented as part of the page about Morrosaurus."
+   "reason": "Sentence 4 describes a partial skeleton of a euornithopod found in Antarctica, but does not specify that it is Morrosaurus, thus referring to a different animal."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Members of the Elasmaria group, including Morrosaurus, show adaptations for a high-speed running lifestyle indicated by a narrow foot with a thin fourth metatarsal.\" / \"It is debated whether Morrosaurus possessed the specific running adaptations of the Elasmaria clade due to the fragmentary nature of the fossil remains, and it cannot be determined whether Morrosaurus itself possessed these characteristics due to its limited remains.\": Sentence 5 claims Elasmaria members, including Morrosaurus, have high‑speed running adaptations, while sentence 20 states that it cannot be determined whether Morrosaurus possessed these characteristics due to fragmentary remains."
+  "- contradiction: \"The species Morrosaurus antarcticus was named and described in 2016 by a team including Sebastian Rozadilla and Fernando Novas, although some records state the description occurred in 2015.\": Sentence 5 gives two different years (2016 and 2015) for the species description, contradicting each other.",
+  "- contradiction: \"The holotype specimen MACN Pv 197 was found in the Snow Hill Island Formation at Cape Lambe and dates to the Maastrichtian age. The holotype specimen MACN Pv 197 was found in a layer of the Snow Hill Island Formation at Cabo Lambe, deposited in the López de Bertodano Formation.\": Sentence 7 gives two different formations (Snow Hill Island Formation and López de Bertodano Formation) for the holotype layer, contradicting each other."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:49:29+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:30:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims Elasmaria members, including Morrosaurus, have high‑speed running adaptations, while sentence 20 states that it cannot be determined whether Morrosaurus possessed these characteristics due to fragmentary remains."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 8 describes a partial skeleton of a euornithopod discovered in Antarctica, which is not Morrosaurus and is presented as part of the page about Morrosaurus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:49:29+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:17+00:00"
 }

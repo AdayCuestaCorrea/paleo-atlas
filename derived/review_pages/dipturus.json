@@ -3,21 +3,28 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "e81712f3c9cb9ab0",
- "reviewed_at": "2026-11-24T01:23:25+00:00",
- "problems": [
-  {
-   "sentences": [
-    3,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 states the type species of Dipturus is Raja batis, yet sentence 5 says species formerly classified within Raja were moved to Dipturus, implying Raja batis is not a Dipturus species. The two statements conflict on the classification of Raja batis."
-  }
- ],
+ "reviewed_at": "2026-11-25T13:50:42+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The type species of the genus Dipturus is Raja batis.\" / \"Species in the genus Dipturus were formerly classified within the genus Raja, though some were later moved to Dentiraja, Spiniraja, and Zearaja.\": Sentence 4 states the type species of Dipturus is Raja batis, yet sentence 5 says species formerly classified within Raja were moved to Dipturus, implying Raja batis is not a Dipturus species. The two statements conflict on the classification of Raja batis."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:38:41+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:23:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states the type species of Dipturus is Raja batis, yet sentence 5 says species formerly classified within Raja were moved to Dipturus, implying Raja batis is not a Dipturus species. The two statements conflict on the classification of Raja batis."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:38:41+00:00"
+  }
+ ]
 }

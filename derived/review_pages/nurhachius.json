@@ -2,30 +2,58 @@
  "taxon_key": "nurhachius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e01f5a7e4a16cecc",
- "reviewed_at": "2026-11-24T00:59:59+00:00",
+ "text_hash": "d1882c94df030910",
+ "reviewed_at": "2026-11-25T13:43:18+00:00",
  "problems": [
-  {
-   "sentences": [
-    1,
-    3
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the size of the nasoantorbital fenestra as occupying more than half of the skull length."
-  },
   {
    "sentences": [
     0,
     1
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 gives a wingspan estimate of 2.4–2.5 m, while sentence 2 cites a 2008 estimate of 228 cm (2.28 m), which is lower than the stated range."
+   "reason": "The wingspan ranges 2.4–2.5 m in sentence 1 but sentence 2 gives a separate estimate of 2.28 m, a value outside that range."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to “54 individuals” of teeth but never explains what those individuals are or how they were counted."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Nurhachius was a pterosaur with an estimated wingspan between 2.4 and 2.5 meters, though a 2008 estimate placed the span at 228 centimeters and the weight at 4 kilograms.\" / \"Its skull featured a large nasoantorbital fenestra, an opening that occupied 58 percent of the skull length, while the lower jaws measured 290 millimeters in length.\": Sentence 1 gives a wingspan estimate of 2.4–2.5 m, while sentence 2 cites a 2008 estimate of 228 cm (2.28 m), which is lower than the stated range."
+  "- contradiction: \"Nurhachius possessed an estimated wingspan ranging from 2.4 to 2.5 meters.\" / \"A separate calculation from 2008 suggested the span was 228 centimeters and the weight was 4 kilograms.\": The wingspan ranges 2.4–2.5 m in sentence 1 but sentence 2 gives a separate estimate of 2.28 m, a value outside that range.",
+  "- missing context: \"These teeth were limited to the front of the jaws, totaling 54 individuals across both the upper and lower mandibles.\": Sentence 6 refers to “54 individuals” of teeth but never explains what those individuals are or how they were counted."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:44:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:59:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the size of the nasoantorbital fenestra as occupying more than half of the skull length."
+    },
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 gives a wingspan estimate of 2.4–2.5 m, while sentence 2 cites a 2008 estimate of 228 cm (2.28 m), which is lower than the stated range."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:44:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:35+00:00"
 }

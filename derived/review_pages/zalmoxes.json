@@ -2,38 +2,73 @@
  "taxon_key": "zalmoxes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "98ddb590d1a74797",
- "reviewed_at": "2026-11-24T00:23:15+00:00",
+ "text_hash": "fd5421b5d60423fc",
+ "reviewed_at": "2026-11-25T13:24:32+00:00",
  "problems": [
   {
    "sentences": [
-    2,
+    0,
     4
    ],
-   "kind": "contradiction",
-   "reason": "Adult size estimates conflict: sentence 3 gives 2.5 m and 45 kg, while sentence 5 states an unnamed species reached 2.9 m."
+   "kind": "repetition",
+   "reason": "Both sentences state that Zalmoxes had a large triangular head with a beak."
   },
   {
    "sentences": [
-    12,
-    14
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the same diet composition of Zalmoxes."
+   "kind": "missing_context",
+   "reason": "The sentence refers to a juvenile specimen of Z. shqiperorum, but no earlier mention of a juvenile specimen is provided."
   },
   {
    "sentences": [
-    15,
-    17
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the hypothesis that Zalmoxes was smaller due to insular dwarfism."
+   "kind": "missing_context",
+   "reason": "The sentence claims Zalmoxes was more robust than its precursors and advanced relatives, yet no precursors or relatives are defined earlier in the page."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Subadult Zalmoxes robustus measured between 2 and 2.4 meters in total body length, while adults reached up to 2.5 meters and 45 kilograms in body mass.\" / \"An unnamed species of Zalmoxes is known from adults reaching 2.9 meters in length.\": Adult size estimates conflict: sentence 3 gives 2.5 m and 45 kg, while sentence 5 states an unnamed species reached 2.9 m."
+  "- missing context: \"Ossified tendons were found in the juvenile specimen of Z. shqiperorum, showing they were circular or elliptical in cross-section with fine striations.\": The sentence refers to a juvenile specimen of Z. shqiperorum, but no earlier mention of a juvenile specimen is provided.",
+  "- missing context: \"Zalmoxes was a more robust animal than its precursors and advanced relatives, possessing a very strong morphology.\": The sentence claims Zalmoxes was more robust than its precursors and advanced relatives, yet no precursors or relatives are defined earlier in the page."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:50:35+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:23:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Adult size estimates conflict: sentence 3 gives 2.5 m and 45 kg, while sentence 5 states an unnamed species reached 2.9 m."
+    },
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the same diet composition of Zalmoxes."
+    },
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the hypothesis that Zalmoxes was smaller due to insular dwarfism."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:50:35+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:57+00:00"
 }

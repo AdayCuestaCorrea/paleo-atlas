@@ -3,28 +3,47 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "775e6fdd699aa8c0",
- "reviewed_at": "2026-11-24T01:12:59+00:00",
+ "reviewed_at": "2026-11-25T13:47:35+00:00",
  "problems": [
   {
    "sentences": [
     8
    ],
    "kind": "contradiction",
-   "reason": "Two different time ranges are given for the same genus"
-  },
-  {
-   "sentences": [
-    2,
-    5
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Australornis is among the oldest known flying seabirds"
+   "reason": "Two different time ranges are given for the same species' existence."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Australornis lived during the Paleocene epoch, between 60.5 and 61.6 million years ago, with the time range for the genus estimated from 61.66 to 56 million years ago.\": Two different time ranges are given for the same genus"
+  "- contradiction: \"Australornis lived during the Paleocene epoch, between 60.5 and 61.6 million years ago, though the genus time range is estimated from 61.66 to 56 million years ago.\": Two different time ranges are given for the same species' existence."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:52:31+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:12:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Two different time ranges are given for the same genus"
+    },
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Australornis is among the oldest known flying seabirds"
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:52:31+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:41+00:00"
 }

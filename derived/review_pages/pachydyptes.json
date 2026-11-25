@@ -3,29 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "fc2c722e665e36f7",
- "reviewed_at": "2026-11-24T01:48:02+00:00",
+ "reviewed_at": "2026-11-25T13:57:24+00:00",
  "problems": [
-  {
-   "sentences": [
-    0,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the full taxonomic classification and species name of Pachydyptes, repeating the same information."
-  },
   {
    "sentences": [
     5
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to \"two clades located near the base of a phylogenetic tree\" without explaining what those clades are or how they relate to Pachydyptes."
+   "reason": "Sentence 6 refers to \"two clades located near the base of a phylogenetic tree\" without explaining what those clades are or how they relate to Pachydyptes, leaving the statement unsupported by earlier context."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"These fossils were found in two clades located near the base of a phylogenetic tree.\": The sentence refers to \"two clades located near the base of a phylogenetic tree\" without explaining what those clades are or how they relate to Pachydyptes."
+  "- missing context: \"The fossils of Pachydyptes were found in two clades located near the base of a phylogenetic tree.\": Sentence 6 refers to \"two clades located near the base of a phylogenetic tree\" without explaining what those clades are or how they relate to Pachydyptes, leaving the statement unsupported by earlier context."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:48:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the full taxonomic classification and species name of Pachydyptes, repeating the same information."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"two clades located near the base of a phylogenetic tree\" without explaining what those clades are or how they relate to Pachydyptes."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:29:21+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:29:21+00:00"
+ "rewritten_at": "2026-11-25T14:32:37+00:00"
 }

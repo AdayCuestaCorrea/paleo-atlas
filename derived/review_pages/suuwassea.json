@@ -3,37 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "3a9e917b45930d1d",
- "reviewed_at": "2026-11-24T01:29:59+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:52:49+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    9,
-    13
+   "reviewed_at": "2026-11-24T01:29:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states the discovery is in the northern Morrison Formation, while sentence 14 places the animal in southern Carbon County, Montana."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences provide overlapping age ranges for the species, making the information redundant."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to a bone protruding from the ground found by William Donawick, but the page never explains the significance or context of this find."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states the discovery is in the northern Morrison Formation, while sentence 14 places the animal in southern Carbon County, Montana."
-  },
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences provide overlapping age ranges for the species, making the information redundant."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to a bone protruding from the ground found by William Donawick, but the page never explains the significance or context of this find."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:06:38+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Its discovery coincides with other medium-sized sauropod finds in the northern Morrison Formation, contrasting with large animal finds in the southern sectors.\" / \"Suuwassea lived during the Upper Jurassic in the Morrison Formation of southern Carbon County, Montana, USA.\": Sentence 10 states the discovery is in the northern Morrison Formation, while sentence 14 places the animal in southern Carbon County, Montana.",
-  "- missing context: \"A veterinary professor named William Donawick found a bone protruding from the ground while riding with his son-in-law.\": Sentence 9 refers to a bone protruding from the ground found by William Donawick, but the page never explains the significance or context of this find."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:06:38+00:00"
+ ]
 }

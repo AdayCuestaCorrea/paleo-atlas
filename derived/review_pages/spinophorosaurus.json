@@ -2,21 +2,61 @@
  "taxon_key": "spinophorosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2e757eae76b26d4a",
- "reviewed_at": "2026-11-23T23:56:15+00:00",
+ "text_hash": "09311288ff82270f",
+ "reviewed_at": "2026-11-25T13:10:54+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    15,
+    16
    ],
-   "kind": "missing_context",
-   "reason": "Refers to an adult specimen without specifying which specimen or providing context for its identification."
+   "kind": "repetition",
+   "reason": "Both sentences state that Spinophorosaurus was a high browser."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences describe the logistics of the excavation campaign, not the animal itself."
+  },
+  {
+   "sentences": [
+    13,
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences discuss teeth and tracks of other species found near the site, not the animal."
+  },
+  {
+   "sentences": [
+    25,
+    27
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences describe geological formation and climate conditions, not the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"An adult specimen was found to contain radial fibrolamellar bone in the outermost layer of its humerus, a feature previously unreported in sauropods.\": Refers to an adult specimen without specifying which specimen or providing context for its identification."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:57:05+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:56:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to an adult specimen without specifying which specimen or providing context for its identification."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:57:05+00:00"
+  }
+ ]
 }

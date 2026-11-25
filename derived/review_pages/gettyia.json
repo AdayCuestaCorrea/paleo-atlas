@@ -2,29 +2,57 @@
  "taxon_key": "gettyia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5cc1c7fad5464524",
- "reviewed_at": "2026-11-24T01:33:01+00:00",
+ "text_hash": "920fb85efd1320f5",
+ "reviewed_at": "2026-11-25T13:54:08+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    7
+    11,
+    12
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the position of the tibialis cranialis tubercule indicates a more specialized lifestyle than other avisaurids."
+   "kind": "contradiction",
+   "reason": "Sentence 12 classifies Gettyia as an enantiornithean bird in the family Avisauridae, while sentence 13 classifies it as an avialan belonging to the clade Enantiornithes, which are mutually exclusive taxonomic positions."
   },
   {
    "sentences": [
-    2
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 describes a skeleton with multiple metatarsals, yet the page only mentions a single tarsometatarsus bone, leaving the reference to a full skeleton unsupported."
+   "kind": "repetition",
+   "reason": "Both sentences state that Gettyia is classified within the family Avisauridae, repeating the same claim."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The skeleton possessed a knob-like structure on the front edge of its second metatarsal and featured extensively fused third and fourth metatarsals near the ankle and toes.\": Sentence 3 describes a skeleton with multiple metatarsals, yet the page only mentions a single tarsometatarsus bone, leaving the reference to a full skeleton unsupported."
+  "- contradiction: \"Gettyia is an extinct genus of enantiornithean bird belonging to the family Avisauridae that lived in North America during the Late Cretaceous.\" / \"Gettyia is an extinct genus of avialan belonging to the clade Enantiornithes.\": Sentence 12 classifies Gettyia as an enantiornithean bird in the family Avisauridae, while sentence 13 classifies it as an avialan belonging to the clade Enantiornithes, which are mutually exclusive taxonomic positions."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:20:58+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:33:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the position of the tibialis cranialis tubercule indicates a more specialized lifestyle than other avisaurids."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 describes a skeleton with multiple metatarsals, yet the page only mentions a single tarsometatarsus bone, leaving the reference to a full skeleton unsupported."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:20:58+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:18+00:00"
 }

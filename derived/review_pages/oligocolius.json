@@ -2,29 +2,48 @@
  "taxon_key": "oligocolius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3f454faa084573c8",
- "reviewed_at": "2026-11-24T01:09:59+00:00",
+ "text_hash": "2e8b82b97a6b1c83",
+ "reviewed_at": "2026-11-25T13:46:28+00:00",
  "problems": [
   {
    "sentences": [
-    1,
     4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Oligocolius’s beak/skull resembles parrots, repeating the same claim."
-  },
-  {
-   "sentences": [
-    6
-   ],
    "kind": "missing_context",
-   "reason": "Sentence 7 mentions fruit stones inside the body without prior explanation of what those stones are or why they are significant."
+   "reason": "Sentence 5 refers to the species \"O. psittacocephalon\" and to \"these stones\" without having introduced the species or explained what the stones are, making the statement unclear to a reader."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fossil evidence shows the species contained many fruit stones inside its body, mostly clustered beneath the skull.\": Sentence 7 mentions fruit stones inside the body without prior explanation of what those stones are or why they are significant."
+  "- missing context: \"Fossil evidence shows O. psittacocephalon contained many fruit stones inside its body, mostly clustered beneath the skull, and these stones were about 0.5 mm in size and completely intact.\": Sentence 5 refers to the species \"O. psittacocephalon\" and to \"these stones\" without having introduced the species or explained what the stones are, making the statement unclear to a reader."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:38:29+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:09:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Oligocolius’s beak/skull resembles parrots, repeating the same claim."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 mentions fruit stones inside the body without prior explanation of what those stones are or why they are significant."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:38:29+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:54+00:00"
 }

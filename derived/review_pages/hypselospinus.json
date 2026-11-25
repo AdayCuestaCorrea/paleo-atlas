@@ -3,29 +3,54 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "6736e65072ae1af8",
- "reviewed_at": "2026-11-24T00:47:39+00:00",
+ "reviewed_at": "2026-11-25T13:37:30+00:00",
  "problems": [
-  {
-   "sentences": [
-    8,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 states Hypselospinus lived only during the lower Valanginian (~140 Ma), while sentence 10 gives a time range from the Berriasian to the Valanginian (139.1–132.6 Ma), implying a longer span that includes the Berriasian."
-  },
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 mentions the type specimen was found “over a distance of 50 yards” without specifying what is 50 yards apart, leaving the reader unclear about the reference."
+   "reason": "Sentence 4 refers to a location “over a distance of 50 yards” without explaining what is being measured or compared."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 7 discusses Iguanodon species (I. hollingtoniensis, I. fittoni) and their reclassification, which is about a different taxon than the page’s focus on Hypselospinus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Hypselospinus lived during the lower Valanginian stage, approximately 140 million years ago.\" / \"The time range for Hypselospinus spans from the Berriasian to the Valanginian, between 139.1 and 132.6 million years ago.\": Sentence 9 states Hypselospinus lived only during the lower Valanginian (~140 Ma), while sentence 10 gives a time range from the Berriasian to the Valanginian (139.1–132.6 Ma), implying a longer span that includes the Berriasian.",
-  "- missing context: \"The type specimen was found in Shornden Quarry, located over a distance of 50 yards.\": Sentence 4 mentions the type specimen was found “over a distance of 50 yards” without specifying what is 50 yards apart, leaving the reader unclear about the reference."
+  "- missing context: \"The type specimen was found in Shornden Quarry, located over a distance of 50 yards.\": Sentence 4 refers to a location “over a distance of 50 yards” without explaining what is being measured or compared."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:21:44+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:47:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 states Hypselospinus lived only during the lower Valanginian (~140 Ma), while sentence 10 gives a time range from the Berriasian to the Valanginian (139.1–132.6 Ma), implying a longer span that includes the Berriasian."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 mentions the type specimen was found “over a distance of 50 yards” without specifying what is 50 yards apart, leaving the reader unclear about the reference."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:21:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:26+00:00"
 }

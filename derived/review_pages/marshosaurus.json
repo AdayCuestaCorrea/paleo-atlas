@@ -2,47 +2,118 @@
  "taxon_key": "marshosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ce3f706c2262d1fc",
- "reviewed_at": "2026-11-24T00:37:13+00:00",
+ "text_hash": "8b106f899fb0e2cb",
+ "reviewed_at": "2026-11-25T13:31:59+00:00",
  "problems": [
-  {
-   "sentences": [
-    13,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Classifies Marshosaurus as both a megalosauroid and a member of Piatnitzkysauridae, two incompatible phylogenetic placements."
-  },
-  {
-   "sentences": [
-    6,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Age ranges conflict: [7] gives 155–152 Ma, while [18] extends to 143.1 Ma, beyond the Tithonian stage."
-  },
   {
    "sentences": [
     11,
     12
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that a 2001 study found no stress fractures in five foot bones."
+   "reason": "Both sentences state the same study by Bruce Rothschild found no stress fractures in five Marshosaurus foot bones."
+  },
+  {
+   "sentences": [
+    17,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "Both describe the Morrison Formation age range and stages."
   },
   {
    "sentences": [
     18,
-    19
+    21
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the Morrison Formation environment as semi‑arid with distinct wet and dry seasons."
+   "reason": "Both describe the Morrison Formation environment as semi‑arid with wet and dry seasons."
+  },
+  {
+   "sentences": [
+    13,
+    14
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 14 classifies Marshosaurus as a megalosauroid, while sentence 15 places it in the family Piatnitzkysauridae, a different clade."
+  },
+  {
+   "sentences": [
+    9,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 gives a range of 155–152 Ma, whereas sentence 20 extends the age to 143.1 Ma, implying a longer temporal range."
+  },
+  {
+   "sentences": [
+    22
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 23 discusses the geographic extent of the Morrison Basin, not a characteristic of Marshosaurus itself."
+  },
+  {
+   "sentences": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences describe co‑existing fauna, predators, mammals, flora, and vegetation, which are about the paleoenvironment rather than Marshosaurus."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Roger Benson classified Marshosaurus as a megalosauroid in a 2010 phylogenetic analysis.\" / \"Marshosaurus is currently classified as a member of the family Piatnitzkysauridae.\": Classifies Marshosaurus as both a megalosauroid and a member of Piatnitzkysauridae, two incompatible phylogenetic placements.",
-  "- contradiction: \"The holotype specimen was discovered in the Brushy Basin Member of the Morrison Formation, dating to approximately 155 to 152 million years ago.\" / \"This dinosaur lived between 154.8 and 143.1 million years ago during the Kimmeridgian and Tithonian stages.\": Age ranges conflict: [7] gives 155–152 Ma, while [18] extends to 143.1 Ma, beyond the Tithonian stage."
+  "- contradiction: \"Roger Benson classified Marshosaurus as a megalosauroid in a 2010 phylogenetic analysis.\" / \"Marshosaurus is classified as a member of the family Piatnitzkysauridae.\": Sentence 14 classifies Marshosaurus as a megalosauroid, while sentence 15 places it in the family Piatnitzkysauridae, a different clade.",
+  "- contradiction: \"The holotype specimen was found in the Brushy Basin Member of the Morrison Formation dating to approximately 155 to 152 million years ago.\" / \"Marshosaurus lived between 154.8 and 143.1 million years ago during the Kimmeridgian and Tithonian stages.\": Sentence 10 gives a range of 155–152 Ma, whereas sentence 20 extends the age to 143.1 Ma, implying a longer temporal range."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:57:05+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:37:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Classifies Marshosaurus as both a megalosauroid and a member of Piatnitzkysauridae, two incompatible phylogenetic placements."
+    },
+    {
+     "sentences": [
+      6,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Age ranges conflict: [7] gives 155–152 Ma, while [18] extends to 143.1 Ma, beyond the Tithonian stage."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that a 2001 study found no stress fractures in five foot bones."
+    },
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the Morrison Formation environment as semi‑arid with distinct wet and dry seasons."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:57:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:36+00:00"
 }

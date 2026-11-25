@@ -3,29 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "57853e9402471b8f",
- "reviewed_at": "2026-11-24T01:31:30+00:00",
+ "reviewed_at": "2026-11-25T13:53:39+00:00",
  "problems": [
   {
    "sentences": [
-    3,
     4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims Proardea is a direct ancestor of modern herons because related genera appear only from the Miocene onward, yet sentence 4 states Proardea fossils are from the Late Oligocene (earlier than the Miocene)."
-  },
-  {
-   "sentences": [
-    5,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 6 and 7 both state that Proardea is closely related to the subfamily Ardeinae, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to \"the original fossil\" without any prior mention of an original fossil, leaving the reference unclear."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Fossils of Proardea have been found in fragmentary form in Quercy, France, with dated remains from the Late Oligocene at Pech Desse, though the original fossil may date back to the Late Eocene.\" / \"Researchers suggest that Proardea may have been a direct ancestor of modern herons and egrets because related genera only appear in the fossil record from the Miocene onwards.\": Sentence 5 claims Proardea is a direct ancestor of modern herons because related genera appear only from the Miocene onward, yet sentence 4 states Proardea fossils are from the Late Oligocene (earlier than the Miocene)."
+  "- missing context: \"Fossils of Proardea have been found in fragmentary form in Quercy, France, with dated remains from the Late Oligocene at Pech Desse, though the original fossil may date back to the Late Eocene. Proardea lived during the Rupelian stage, approximately 33.9 to 27.3 million years ago.\": Sentence 5 refers to \"the original fossil\" without any prior mention of an original fossil, leaving the reference unclear."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:14:13+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:31:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims Proardea is a direct ancestor of modern herons because related genera appear only from the Miocene onward, yet sentence 4 states Proardea fossils are from the Late Oligocene (earlier than the Miocene)."
+    },
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 6 and 7 both state that Proardea is closely related to the subfamily Ardeinae, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:14:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:04+00:00"
 }

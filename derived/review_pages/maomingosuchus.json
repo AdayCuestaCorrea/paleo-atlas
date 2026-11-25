@@ -3,30 +3,49 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "b18f32f2d451ece3",
- "reviewed_at": "2026-11-24T01:38:50+00:00",
+ "reviewed_at": "2026-11-25T13:55:57+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 states Maomingosuchus belongs to the family Gavialidae, while sentence 5 claims its parent group is the subfamily Tomistominae, which is a different taxonomic rank and group."
-  },
-  {
-   "sentences": [
-    3,
+    4,
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 assigns Maomingosuchus to Gavialidae, whereas sentence 6 proposes it is either a basal member of Gavialoidea or belongs to Tomistominae, contradicting the family assignment."
+   "reason": "Sentence 5 states the species could be a basal member of Gavialoidea or belong to Tomistominae, while sentence 6 asserts its parent group is Tomistominae, contradicting the alternative possibility."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"It belongs to the family Gavialidae.\" / \"Its parent group is classified as Tomistominae.\": Sentence 4 states Maomingosuchus belongs to the family Gavialidae, while sentence 5 claims its parent group is the subfamily Tomistominae, which is a different taxonomic rank and group.",
-  "- contradiction: \"It belongs to the family Gavialidae.\" / \"Scientists propose it is either a basal member of Gavialoidea or belongs to the family Tomistominae.\": Sentence 4 assigns Maomingosuchus to Gavialidae, whereas sentence 6 proposes it is either a basal member of Gavialoidea or belongs to Tomistominae, contradicting the family assignment."
+  "- contradiction: \"Scientists propose it is either a basal member of Gavialoidea or belongs to the family Tomistominae.\" / \"Its parent group is classified as Tomistominae.\": Sentence 5 states the species could be a basal member of Gavialoidea or belong to Tomistominae, while sentence 6 asserts its parent group is Tomistominae, contradicting the alternative possibility."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:43:49+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:38:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states Maomingosuchus belongs to the family Gavialidae, while sentence 5 claims its parent group is the subfamily Tomistominae, which is a different taxonomic rank and group."
+    },
+    {
+     "sentences": [
+      3,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 assigns Maomingosuchus to Gavialidae, whereas sentence 6 proposes it is either a basal member of Gavialoidea or belongs to Tomistominae, contradicting the family assignment."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:43:49+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:44+00:00"
 }

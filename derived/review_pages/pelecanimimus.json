@@ -2,23 +2,46 @@
  "taxon_key": "pelecanimimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f6824e13fe542da4",
- "reviewed_at": "2026-11-24T00:49:43+00:00",
+ "text_hash": "fa0e927552d4fea5",
+ "reviewed_at": "2026-11-25T13:38:15+00:00",
  "problems": [
   {
    "sentences": [
     17,
     18
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 18 claims Pelecanimimus lived at the beginning of the Cretaceous (~145 Ma) but gives an age of ~125 Ma and identifies the Barremian stage, while sentence 19 correctly places it in the Barremian (125.77–121.4 Ma). The two statements conflict on the temporal placement."
+   "kind": "repetition",
+   "reason": "Both sentences state the Barremian age of Pelecanimimus."
+  },
+  {
+   "sentences": [
+    21
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 22 discusses the Rambla de Las Cruces II limestone unit, a geological formation, not a feature of the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Pelecanimimus lived in Spain during the Early Cretaceous period, specifically at the beginning of the Cretaceous period, about 125 million years ago, during the Barremian.\" / \"Pelecanimimus lived during the Barremian stage, between 125.77 and 121.4 million years ago.\": Sentence 18 claims Pelecanimimus lived at the beginning of the Cretaceous (~145 Ma) but gives an age of ~125 Ma and identifies the Barremian stage, while sentence 19 correctly places it in the Barremian (125.77–121.4 Ma). The two statements conflict on the temporal placement."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T12:26:05+00:00",
- "rewrite_mode": "sentences"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:49:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 claims Pelecanimimus lived at the beginning of the Cretaceous (~145 Ma) but gives an age of ~125 Ma and identifies the Barremian stage, while sentence 19 correctly places it in the Barremian (125.77–121.4 Ma). The two statements conflict on the temporal placement."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:26:05+00:00"
+  }
+ ]
 }

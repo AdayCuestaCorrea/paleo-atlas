@@ -2,8 +2,8 @@
  "taxon_key": "paleopsilopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "def53ae1d003636b",
- "reviewed_at": "2026-11-24T01:52:45+00:00",
+ "text_hash": "86ef2e175d1f18a0",
+ "reviewed_at": "2026-11-25T13:57:59+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,42 @@
     4
    ],
    "kind": "contradiction",
-   "reason": "Order Cariamiformes conflicts with family Phorusrhacidae, which belongs to a different order."
+   "reason": "Cariamiformes is an order of raptorial birds, while Phorusrhacidae is a family of ostrich‑like “terror birds”; the two cannot both be correct for the same taxon."
+  },
+  {
+   "sentences": [
+    3,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the taxonomic placement of Paleopsilopterus remains debated."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Paleopsilopterus belongs to the order Cariamiformes.\" / \"The genus is generally placed in the subfamily Psilopterinae and the family Phorusrhacidae.\": Order Cariamiformes conflicts with family Phorusrhacidae, which belongs to a different order."
+  "- contradiction: \"Paleopsilopterus belongs to the order Cariamiformes, though its precise taxonomic placement remains debated.\" / \"The genus is generally placed in the subfamily Psilopterinae and the family Phorusrhacidae, although this classification is not universally accepted.\": Cariamiformes is an order of raptorial birds, while Phorusrhacidae is a family of ostrich‑like “terror birds”; the two cannot both be correct for the same taxon."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:52:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Order Cariamiformes conflicts with family Phorusrhacidae, which belongs to a different order."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:03+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:03+00:00"
+ "rewritten_at": "2026-11-25T14:32:51+00:00"
 }

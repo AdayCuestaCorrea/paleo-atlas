@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "123e9466a07def0c",
- "reviewed_at": "2026-11-24T01:43:22+00:00",
+ "reviewed_at": "2026-11-25T13:56:46+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,21 +11,41 @@
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 places Dendrorhynchus in the gregarine family Dactylophoridae, while sentence 3 lists it as a parent group within the pterosaur family Rhamphorhynchidae, giving two incompatible taxonomic assignments."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 3 refers to Dendrorhynchus as a parent group within Rhamphorhynchidae, a family of pterosaurs, which is unrelated to the gregarine parasite described in the page."
+   "reason": "Sentence 1 assigns Dendrorhynchus to family Dactylophoridae, while sentence 3 assigns it to family Rhamphorhynchidae, giving two conflicting taxonomic placements."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Dendrorhynchus is a genus of gregarines, which are microscopic parasites, belonging to the family Dactylophoridae.\" / \"However, the Paleobiology Database also lists Dendrorhynchus as a parent group within the family Rhamphorhynchidae.\": Sentence 1 places Dendrorhynchus in the gregarine family Dactylophoridae, while sentence 3 lists it as a parent group within the pterosaur family Rhamphorhynchidae, giving two incompatible taxonomic assignments."
+  "- contradiction: \"Dendrorhynchus is a genus of gregarines, which are microscopic parasites, belonging to the family Dactylophoridae.\" / \"However, the Paleobiology Database also lists Dendrorhynchus as a parent group within the family Rhamphorhynchidae, representing a different taxonomic assignment.\": Sentence 1 assigns Dendrorhynchus to family Dactylophoridae, while sentence 3 assigns it to family Rhamphorhynchidae, giving two conflicting taxonomic placements."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:43:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 places Dendrorhynchus in the gregarine family Dactylophoridae, while sentence 3 lists it as a parent group within the pterosaur family Rhamphorhynchidae, giving two incompatible taxonomic assignments."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 3 refers to Dendrorhynchus as a parent group within Rhamphorhynchidae, a family of pterosaurs, which is unrelated to the gregarine parasite described in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:27:49+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:27:49+00:00"
+ "rewritten_at": "2026-11-25T14:32:11+00:00"
 }

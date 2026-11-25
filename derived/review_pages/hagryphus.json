@@ -2,31 +2,59 @@
  "taxon_key": "hagryphus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4bc97c9c57057678",
- "reviewed_at": "2026-11-24T00:39:32+00:00",
+ "text_hash": "6de3ff3c31c86afb",
+ "reviewed_at": "2026-11-25T13:33:16+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    1,
-    2
+    1
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims Hagryphus reached about 3 m, while sentences 2 and 3 give a smaller size of ~2.4 m (8 ft) and 50 kg."
+   "reason": "Sentence 1 claims Hagryphus reached about three meters in length, while sentence 2 states later estimates reduced its length to eight feet (≈2.44 m)."
   },
   {
    "sentences": [
-    1,
-    2
+    2,
+    16
    ],
    "kind": "repetition",
-   "reason": "Sentences 2 and 3 repeat the same size and weight estimate for Hagryphus."
+   "reason": "Both sentences state that the elaborate crests of oviraptorosaurs, including Hagryphus, have an unknown function."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Hagryphus giganteus was considered one of the largest oviraptorosaurs, reaching about three meters in length.\" / \"Later estimates by Gregory S. Paul in 2010 reduced the size of Hagryphus to eight feet in length and fifty kilograms in weight.\" / \"The animal is estimated to have been between 2.4 and 3 meters long and weighed about 50 kilograms.\": Sentence 1 claims Hagryphus reached about 3 m, while sentences 2 and 3 give a smaller size of ~2.4 m (8 ft) and 50 kg."
+  "- contradiction: \"Hagryphus giganteus is a monospecific genus of caenagnathid dinosaur that lived 75.95 million years ago in southern Utah. It was once considered one of the largest oviraptorosaurs, reaching about three meters in length.\" / \"However, later estimates by Gregory S. Paul in 2010 reduced the size of Hagryphus to eight feet in length and fifty kilograms in weight.\": Sentence 1 claims Hagryphus reached about three meters in length, while sentence 2 states later estimates reduced its length to eight feet (≈2.44 m)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:13:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:39:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims Hagryphus reached about 3 m, while sentences 2 and 3 give a smaller size of ~2.4 m (8 ft) and 50 kg."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 2 and 3 repeat the same size and weight estimate for Hagryphus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:13:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:36+00:00"
 }

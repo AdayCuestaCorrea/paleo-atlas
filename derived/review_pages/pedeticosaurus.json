@@ -2,45 +2,66 @@
  "taxon_key": "pedeticosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "45c2a8bfd9dd02b0",
- "reviewed_at": "2026-11-24T01:35:21+00:00",
+ "text_hash": "fa5e545f34d79ed6",
+ "reviewed_at": "2026-11-25T13:54:51+00:00",
  "problems": [
   {
    "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to a \"second skeleton\" that has not been introduced earlier on the page."
-  },
-  {
-   "sentences": [
+    5,
     7
    ],
-   "kind": "missing_context",
-   "reason": "Mentions the second skeleton again without re‑introducing it or explaining its significance."
+   "kind": "repetition",
+   "reason": "Both sentences state that Pedeticosaurus is classified as a sphenosuchian."
   },
   {
    "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Introduces the species name \"Pedeticosaurus leviseuri\" without prior mention of it on the page."
-  },
-  {
-   "sentences": [
+    9,
     10
    ],
-   "kind": "missing_context",
-   "reason": "Continues discussion of \"Pedeticosaurus leviseuri\" without having defined that species earlier."
+   "kind": "repetition",
+   "reason": "Both sentences discuss the synonymy/nomen dubium status of Pedeticosaurus leviseuri."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"In 1988, researchers C. E. Gow and James Kitching referred a second skeleton found in the Elliot Formation to the genus Pedeticosaurus.\": Refers to a \"second skeleton\" that has not been introduced earlier on the page.",
-  "- missing context: \"In 2002, Clark and Sues reassigned the second skeleton to a new genus and species named Litargosuchus leptorhynchus.\": Mentions the second skeleton again without re‑introducing it or explaining its significance.",
-  "- missing context: \"In 1986, James M. Clark proposed that Pedeticosaurus leviseuri was a synonym of Protosuchus haughtoni based on shared features like a broad scapula and large squamosal bone.\": Introduces the species name \"Pedeticosaurus leviseuri\" without prior mention of it on the page.",
-  "- missing context: \"In 2002, Clark and Sues proposed that Pedeticosaurus leviseuri is a nomen dubium because the features of the holotype are too poorly preserved to distinguish it as a valid species.\": Continues discussion of \"Pedeticosaurus leviseuri\" without having defined that species earlier."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:29:43+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:35:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a \"second skeleton\" that has not been introduced earlier on the page."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the second skeleton again without re‑introducing it or explaining its significance."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Introduces the species name \"Pedeticosaurus leviseuri\" without prior mention of it on the page."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Continues discussion of \"Pedeticosaurus leviseuri\" without having defined that species earlier."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:29:43+00:00"
+  }
+ ]
 }

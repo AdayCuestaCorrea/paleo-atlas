@@ -2,30 +2,64 @@
  "taxon_key": "paraphysornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "593a91e7f9908d65",
- "reviewed_at": "2026-11-24T00:35:46+00:00",
+ "text_hash": "b1ea0271a0358261",
+ "reviewed_at": "2026-11-25T13:30:45+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    3,
+    3
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Paraphysornis’s wings were heavily reduced beyond other phorusrhacids."
+  },
+  {
+   "sentences": [
     4
    ],
    "kind": "repetition",
-   "reason": "Sentences 3, 4, and 5 all repeat the same claims that Paraphysornis had heavily reduced wings and lacked quill knobs."
+   "reason": "Sentence 5 repeats the claim that Paraphysornis lacks preserved quill knobs, identical to sentence 5."
   },
   {
    "sentences": [
     5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 6’s second clause refers to an excavation yielding a 75% complete skeleton, but the excavation itself is never introduced or described earlier in the page."
+   "reason": "The second sentence refers to “Excavation yielded a 75% complete skeleton” without specifying the subject or location of the excavation."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The only known fossil of Paraphysornis is a nearly complete skeleton discovered between 1977 and 1978. Excavation yielded a 75% complete skeleton that lacked most of the cranium, pelvis, and sternum.\": Sentence 6’s second clause refers to an excavation yielding a 75% complete skeleton, but the excavation itself is never introduced or described earlier in the page."
+  "- missing context: \"The only known fossil of Paraphysornis is a nearly complete skeleton discovered between 1977 and 1978. Excavation yielded a 75% complete skeleton that lacked most of the cranium, pelvis, and sternum.\": The second sentence refers to “Excavation yielded a 75% complete skeleton” without specifying the subject or location of the excavation."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:39:47+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 3, 4, and 5 all repeat the same claims that Paraphysornis had heavily reduced wings and lacked quill knobs."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6’s second clause refers to an excavation yielding a 75% complete skeleton, but the excavation itself is never introduced or described earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:39:47+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:47+00:00"
 }

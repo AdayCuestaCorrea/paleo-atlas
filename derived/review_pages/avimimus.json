@@ -2,40 +2,54 @@
  "taxon_key": "avimimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "44f7bb1794b485e5",
- "reviewed_at": "2026-11-24T00:29:40+00:00",
+ "text_hash": "e46bccafebf6f054",
+ "reviewed_at": "2026-11-25T13:27:53+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    16,
-    18,
-    19
+    1,
+    4
    ],
-   "kind": "contradiction",
-   "reason": "The page states that the initial specimens were found in the Djadokhta Formation (9) and that the dinosaur lived in the Barun Goyot Formation (17), yet also says it coexisted with dinosaurs in the Nemegt Formation (19) and later debates that it likely originated from the Nemegt Formation (20). These conflicting formation references contradict each other."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 mentions a \"keel and other structures\" on the ulna without explaining what the keel refers to or providing context for its significance."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 refers to \"the same area\" where footprints were found, but the page never previously defined or described this area, leaving the reference unclear."
+   "kind": "repetition",
+   "reason": "Both sentences state that the skull had large bones protecting a large brain, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The initial specimens were found in the Djadokhta Formation before being formally named Avimimus portentosus.\" / \"The dinosaur lived approximately 70 million years ago during the Campanian stage in what is now Asia, specifically in the Barun Goyot Formation.\" / \"It coexisted with other dinosaurs such as the tyrannosaurid Tarbosaurus and the hadrosaurid Saurolophus in the Nemegt Formation.\" / \"It is debated whether Avimimus originated from the Djadokhta Formation as originally thought, with evidence suggesting it likely hailed from the more recent Nemegt Formation.\": The page states that the initial specimens were found in the Djadokhta Formation (9) and that the dinosaur lived in the Barun Goyot Formation (17), yet also says it coexisted with dinosaurs in the Nemegt Formation (19) and later debates that it likely originated from the Nemegt Formation (20). These conflicting formation references contradict each other.",
-  "- missing context: \"Bumps on the ulna were confirmed in 1987, yet their specific purpose remains unclear despite reports of a keel and other structures.\": Sentence 4 mentions a \"keel and other structures\" on the ulna without explaining what the keel refers to or providing context for its significance.",
-  "- missing context: \"Footprints in the same area likely belonged to the animal, offering clues about its movement.\": Sentence 11 refers to \"the same area\" where footprints were found, but the page never previously defined or described this area, leaving the reference unclear."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:40:13+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:29:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      16,
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "The page states that the initial specimens were found in the Djadokhta Formation (9) and that the dinosaur lived in the Barun Goyot Formation (17), yet also says it coexisted with dinosaurs in the Nemegt Formation (19) and later debates that it likely originated from the Nemegt Formation (20). These conflicting formation references contradict each other."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 mentions a \"keel and other structures\" on the ulna without explaining what the keel refers to or providing context for its significance."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 refers to \"the same area\" where footprints were found, but the page never previously defined or described this area, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:40:13+00:00"
+  }
+ ]
 }

@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "52c812dd3573bea6",
- "reviewed_at": "2026-11-24T00:34:52+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:30:09+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    14,
-    16
+   "reviewed_at": "2026-11-24T00:34:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for the same species: 237–228 Ma vs 237–227.3 Ma."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the diet based on tooth shape."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for the same species: 237–228 Ma vs 237–227.3 Ma."
-  },
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the diet based on tooth shape."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:31:05+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Buriolestes lived approximately between 237 and 228 million years ago in what is now South America.\" / \"Buriolestes lived during the Carnian stage, between 237 and 227.3 million years ago.\": Different age ranges for the same species: 237–228 Ma vs 237–227.3 Ma."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:31:05+00:00"
+ ]
 }

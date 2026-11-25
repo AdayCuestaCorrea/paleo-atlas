@@ -2,8 +2,8 @@
  "taxon_key": "bistahieversor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f3dfb880142793d3",
- "reviewed_at": "2026-11-24T00:35:24+00:00",
+ "text_hash": "18b7de1627be0f00",
+ "reviewed_at": "2026-11-25T13:30:21+00:00",
  "problems": [
   {
    "sentences": [
@@ -36,5 +36,41 @@
   "- missing context: \"Geographical barriers such as the formation of the Rocky Mountains may have isolated southern Bistahieversor populations from more advanced northern tyrannosaurs.\": The sentence refers to “more advanced northern tyrannosaurs” without having introduced or defined that group earlier in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:34:45+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state Bistahieversor’s length as 9 m, repeating the same claim."
+    },
+    {
+     "sentences": [
+      12,
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "The classification of Bistahieversor shifts between Tyrannosaurinae (derived tyrannosaur), the tyrannosaurine clade Teratophoneini, and the basal Albertosaurinae, presenting mutually exclusive phylogenetic placements."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to “more advanced northern tyrannosaurs” without having introduced or defined that group earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:34:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:38+00:00"
 }

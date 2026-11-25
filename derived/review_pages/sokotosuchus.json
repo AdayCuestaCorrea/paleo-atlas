@@ -2,8 +2,8 @@
  "taxon_key": "sokotosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8ede45c007208427",
- "reviewed_at": "2026-11-24T01:52:25+00:00",
+ "text_hash": "65a4a05f2c93cb9f",
+ "reviewed_at": "2026-11-25T13:57:53+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,22 +11,41 @@
     7
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 gives a time range of 72.2–56 Ma, while sentence 8 states the animal lived during the Maastrichtian stage (≈72.1–66 Ma), which ends before 56 Ma."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 mentions skull parts, but the page never previously introduced or described any skull material."
+   "reason": "Sentence 7 gives a time range of 72.2–56 Ma, spanning the Maastrichtian into the Paleocene, while sentence 8 limits the animal to the Maastrichtian stage (≈72–66 Ma)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The creature inhabited the region between 72.2 and 56 million years ago.\" / \"It lived during the Maastrichtian stage in western Africa.\": Sentence 7 gives a time range of 72.2–56 Ma, while sentence 8 states the animal lived during the Maastrichtian stage (≈72.1–66 Ma), which ends before 56 Ma.",
-  "- missing context: \"Some skull parts may also exist in collections from Mali.\": Sentence 3 mentions skull parts, but the page never previously introduced or described any skull material."
+  "- contradiction: \"The creature inhabited the region between 72.2 and 56 million years ago.\" / \"It lived during the Maastrichtian stage in western Africa.\": Sentence 7 gives a time range of 72.2–56 Ma, spanning the Maastrichtian into the Paleocene, while sentence 8 limits the animal to the Maastrichtian stage (≈72–66 Ma)."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:52:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 gives a time range of 72.2–56 Ma, while sentence 8 states the animal lived during the Maastrichtian stage (≈72.1–66 Ma), which ends before 56 Ma."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions skull parts, but the page never previously introduced or described any skull material."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:30:53+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:30:53+00:00"
+ "rewritten_at": "2026-11-25T14:32:47+00:00"
 }

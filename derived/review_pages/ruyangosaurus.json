@@ -2,22 +2,51 @@
  "taxon_key": "ruyangosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "013ff605e495ee09",
- "reviewed_at": "2026-11-24T01:00:19+00:00",
+ "text_hash": "d84e43a1a906ea3c",
+ "reviewed_at": "2026-11-25T13:43:27+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    4
+    0
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Ruyangosaurus was found in the Haoling Formation, while sentence 5 states fossils were recovered from the Mangchuan Formation, giving two different geological formations for the same species."
+   "reason": "Sentence 1 claims the dinosaur was found in the Haoling Formation, yet states its fossils were recovered from the Mangchuan Formation—two mutually exclusive locations."
+  },
+  {
+   "sentences": [
+    7,
+    8,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentences 8, 9, and 10 give conflicting taxonomic assignments: Andesauridae (now obsolete), a non‑titanosauriform macronarian, and Euhelopodidae, respectively."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Ruyangosaurus is a genus of titanosauriform sauropod dinosaur found in the Early Cretaceous Haoling Formation of China.\" / \"Ruyangosaurus fossils were recovered from the Mangchuan Formation in Ruyang County, Henan Province, China.\": Sentence 1 states Ruyangosaurus was found in the Haoling Formation, while sentence 5 states fossils were recovered from the Mangchuan Formation, giving two different geological formations for the same species."
+  "- contradiction: \"Ruyangosaurus is a genus of titanosauriform sauropod dinosaur found in the Early Cretaceous Haoling Formation of China, though its fossils were recovered from the Mangchuan Formation in Ruyang County, Henan Province.\": Sentence 1 claims the dinosaur was found in the Haoling Formation, yet states its fossils were recovered from the Mangchuan Formation—two mutually exclusive locations.",
+  "- contradiction: \"The original describers assigned Ruyangosaurus to Andesauridae, but this family is no longer used because it is not monophyletic.\" / \"A smaller phylogenetic dataset based on additional material from the type locality found Ruyangosaurus to be a non-titanosauriform macronarian.\" / \"The Paleobiology Database lists the parent group of Ruyangosaurus as Euhelopodidae.\": Sentences 8, 9, and 10 give conflicting taxonomic assignments: Andesauridae (now obsolete), a non‑titanosauriform macronarian, and Euhelopodidae, respectively."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:46:32+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Ruyangosaurus was found in the Haoling Formation, while sentence 5 states fossils were recovered from the Mangchuan Formation, giving two different geological formations for the same species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:46:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:44+00:00"
 }

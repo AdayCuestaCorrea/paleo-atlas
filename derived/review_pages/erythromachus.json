@@ -2,51 +2,84 @@
  "taxon_key": "erythromachus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "52ba3fce12495507",
- "reviewed_at": "2026-11-24T00:10:32+00:00",
+ "text_hash": "71f1701053c2c4ef",
+ "reviewed_at": "2026-11-25T13:18:33+00:00",
  "problems": [
   {
    "sentences": [
-    12
+    8
    ],
    "kind": "repetition",
-   "reason": "Sentence 13 repeats the description of the Rodrigues rail as flightless and feeding on tortoise eggs, which was already stated in sentences 1–3 and 6."
+   "reason": "Sentence 9 repeats the fact that the Rodrigues rail was flightless and fed on tortoise eggs, which was already stated in sentence 1 and 4."
   },
   {
    "sentences": [
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 14 repeats the feeding habits of the Rodrigues rail, already mentioned in sentences 6, 13, and 15."
-  },
-  {
-   "sentences": [
-    7,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 claims the bird was attracted to red objects, while sentence 16 states it had no fear of humans, implying it would not be easily attracted or caught."
-  },
-  {
-   "sentences": [
-    17
+    8
    ],
    "kind": "missing_context",
-   "reason": "Sentence 18 refers to “the fat of birds that had fed on turtle eggs” without prior introduction of such birds or context for the remedy."
+   "reason": "The pronoun \"they\" in sentence 9 refers to the Rodrigues rail, but the antecedent is not explicitly stated in that sentence."
   },
   {
    "sentences": [
-    22
+    11
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 23 gives an implausible time range (0.0117 to 0 million years ago) for the genus, which conflicts with the Holocene context and lacks supporting context in the page."
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to \"birds\" in plural, but the page has only discussed the Rodrigues rail as a single species, creating an ambiguous reference."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Reports suggest the bird was attracted to red objects, which made it easier for humans to catch them.\" / \"They had no fear of humans because they evolved in the absence of predators, allowing hunters to catch them in large numbers.\": Sentence 8 claims the bird was attracted to red objects, while sentence 16 states it had no fear of humans, implying it would not be easily attracted or caught.",
-  "- missing context: \"The fat of birds that had fed on turtle eggs was bright orange and used as a remedy for people recovering from illness.\": Sentence 18 refers to “the fat of birds that had fed on turtle eggs” without prior introduction of such birds or context for the remedy."
+  "- missing context: \"The Rodrigues rail was flightless and fed on tortoise eggs, and they had no fear of humans because they evolved in the absence of predators, allowing hunters to catch them in large numbers.\": The pronoun \"they\" in sentence 9 refers to the Rodrigues rail, but the antecedent is not explicitly stated in that sentence.",
+  "- missing context: \"The fat of birds that had fed on turtle eggs was bright orange and used as a remedy for people recovering from illness.\": Sentence 12 refers to \"birds\" in plural, but the page has only discussed the Rodrigues rail as a single species, creating an ambiguous reference."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:06:02+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:10:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 13 repeats the description of the Rodrigues rail as flightless and feeding on tortoise eggs, which was already stated in sentences 1–3 and 6."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 14 repeats the feeding habits of the Rodrigues rail, already mentioned in sentences 6, 13, and 15."
+    },
+    {
+     "sentences": [
+      7,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 claims the bird was attracted to red objects, while sentence 16 states it had no fear of humans, implying it would not be easily attracted or caught."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 18 refers to “the fat of birds that had fed on turtle eggs” without prior introduction of such birds or context for the remedy."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 23 gives an implausible time range (0.0117 to 0 million years ago) for the genus, which conflicts with the Holocene context and lacks supporting context in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:06:02+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:05:50+00:00"
 }

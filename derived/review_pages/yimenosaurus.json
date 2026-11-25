@@ -2,22 +2,41 @@
  "taxon_key": "yimenosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bb7baafca41f227b",
- "reviewed_at": "2026-11-24T01:39:51+00:00",
+ "text_hash": "1f08e3fa1e358dbc",
+ "reviewed_at": "2026-11-25T13:56:15+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    6
    ],
    "kind": "missing_context",
-   "reason": "Sentence 6 mentions \"Paul\" estimating size, but no earlier reference to who Paul is or why his estimate is relevant."
+   "reason": "Sentence 7 refers to a \"discovery\" and material prepared by an academy, but no prior mention of what the discovery is or who prepared the material."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Paul estimated the animal's length at 9 meters and its weight at 2 tonnes.\": Sentence 6 mentions \"Paul\" estimating size, but no earlier reference to who Paul is or why his estimate is relevant."
+  "- missing context: \"The discovery consisted of 3 tonnes of material prepared by the regional culture academy.\": Sentence 7 refers to a \"discovery\" and material prepared by an academy, but no prior mention of what the discovery is or who prepared the material."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:39:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 mentions \"Paul\" estimating size, but no earlier reference to who Paul is or why his estimate is relevant."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:26:32+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:26:32+00:00"
+ "rewritten_at": "2026-11-25T14:31:53+00:00"
 }

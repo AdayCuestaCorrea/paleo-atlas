@@ -2,29 +2,72 @@
  "taxon_key": "kazaklambia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "beb0b38abbbc0ee5",
- "reviewed_at": "2026-11-24T00:47:46+00:00",
+ "text_hash": "43c56d2cbb5b35c4",
+ "reviewed_at": "2026-11-25T13:37:32+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    3
+    1,
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the specimen is the most complete dinosaur known from the former Soviet Union, repeating the same assertion."
+   "kind": "contradiction",
+   "reason": "Both describe the holotype missing different sets of elements (2 lists lower jaw front and some dorsal vertebrae; 5 lists hands and left foot)."
   },
   {
    "sentences": [
-    2
+    1,
+    4
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 refers to \"that geological horizon\" without any prior mention of a specific horizon, leaving the reference unclear."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same holotype specimen and its missing parts."
+  },
+  {
+   "sentences": [
+    2,
+    4
+   ],
+   "kind": "repetition",
+   "reason": "Both claim the specimen was the most complete dinosaur ever found in the Soviet Union."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 4 describes a different hadrosaurid skeleton from Syuk‑Syuk, not Kazaklambia itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The species name 'convincens' refers to the specimen being the most complete dinosaur ever found in the Soviet Union at the time, proving dinosaurs existed in that geological horizon.\": Sentence 3 refers to \"that geological horizon\" without any prior mention of a specific horizon, leaving the reference unclear."
+  "- contradiction: \"The animal is known from the juvenile holotype specimen PIN 2230, which lacks the snout, lower jaw front, some dorsal vertebrae, and the tail tip.\" / \"The holotype specimen PIN 2230 is an almost complete skeleton missing only the snout, hands, left foot, and tail tip, making it the most complete dinosaur known from the former Soviet Union.\": Both describe the holotype missing different sets of elements (2 lists lower jaw front and some dorsal vertebrae; 5 lists hands and left foot)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:22:15+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:47:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the specimen is the most complete dinosaur known from the former Soviet Union, repeating the same assertion."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to \"that geological horizon\" without any prior mention of a specific horizon, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:22:15+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:27+00:00"
 }

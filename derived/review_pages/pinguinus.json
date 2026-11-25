@@ -2,40 +2,55 @@
  "taxon_key": "pinguinus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bb019c2dd13889bd",
- "reviewed_at": "2026-11-23T23:55:21+00:00",
+ "text_hash": "0c22e32726e66ca1",
+ "reviewed_at": "2026-11-25T13:10:22+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    17,
-    23
+    23,
+    24
    ],
    "kind": "repetition",
-   "reason": "All three sentences state the great auk’s main diet consisted of fish 12–20 cm long and 40–50 g, repeating the same claim."
-  },
-  {
-   "sentences": [
-    10,
-    13,
-    22
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 23 says the great auk was never observed or described by modern scientists during its existence, yet it was formally described by Linnaeus in 1758 and declared extinct in 1852, both modern scientific events."
-  },
-  {
-   "sentences": [
-    30
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 31 claims that after Pinguinus alfrednewtoni went extinct, the great auk expanded into its former territory, which is impossible because Pinguinus alfrednewtoni is the great auk itself."
+   "reason": "Both sentences state that the earliest fossils date to about 400,000 years ago."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"The species was officially declared extinct in 1852.\" / \"Carl Linnaeus formally described the great auk in 1758.\" / \"The great auk was never observed or described by modern scientists during its existence; it is known only through accounts from non-experts like sailors, making its behavior poorly documented and difficult to reconstruct.\": Sentence 23 says the great auk was never observed or described by modern scientists during its existence, yet it was formally described by Linnaeus in 1758 and declared extinct in 1852, both modern scientific events.",
-  "- contradiction: \"After Pinguinus alfrednewtoni went extinct, the great auk expanded into its former territory.\": Sentence 31 claims that after Pinguinus alfrednewtoni went extinct, the great auk expanded into its former territory, which is impossible because Pinguinus alfrednewtoni is the great auk itself."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:48:30+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:55:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      17,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state the great auk’s main diet consisted of fish 12–20 cm long and 40–50 g, repeating the same claim."
+    },
+    {
+     "sentences": [
+      10,
+      13,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 says the great auk was never observed or described by modern scientists during its existence, yet it was formally described by Linnaeus in 1758 and declared extinct in 1852, both modern scientific events."
+    },
+    {
+     "sentences": [
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 31 claims that after Pinguinus alfrednewtoni went extinct, the great auk expanded into its former territory, which is impossible because Pinguinus alfrednewtoni is the great auk itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:48:30+00:00"
+  }
+ ]
 }

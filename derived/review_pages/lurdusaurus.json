@@ -3,47 +3,82 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d5143fd18ca71ad0",
- "reviewed_at": "2026-11-24T00:25:53+00:00",
+ "reviewed_at": "2026-11-25T13:26:01+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    25,
-    26
+    22,
+    23,
+    24
    ],
    "kind": "contradiction",
-   "reason": "The time ranges for the species’ existence conflict: middle Cretaceous (121–112 Ma) vs fossils dated to 112 Ma (late Aptian/early Albian) vs Albian stage (113.2–115 Ma)."
-  },
-  {
-   "sentences": [
-    11,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Taquet and Russell established the genus in 1999."
-  },
-  {
-   "sentences": [
-    12,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences refer to the informal name Gravisaurus tenerensis proposed by Chabli in 1988."
+   "reason": "The age ranges for the species’ existence conflict: sentence 23 cites 121–112 Ma (middle Cretaceous), sentence 24 cites ~112 Ma (late Aptian/early Albian, Early Cretaceous), and sentence 25 cites 113.2–115 Ma (Albian), which is later than the 112 Ma stated in sentence 24."
   },
   {
    "sentences": [
     7
    ],
    "kind": "missing_context",
-   "reason": "The sentence mentions “long foot bones did not touch each other” without any prior description of the foot bones or their arrangement."
+   "reason": "Sentence 8 refers to the foot’s unusual construction and a fleshy pad, but no prior sentence mentions the foot or its anatomy."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses how early researchers compared the dinosaur’s appearance to an ankylosaur, focusing on the ankylosaur rather than the dinosaur itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This creature lived in Africa during the middle Cretaceous period, between one hundred twenty-one and one hundred twelve million years ago.\" / \"The fossils date to the late Aptian and early Albian stages of the Early Cretaceous, approximately one hundred twelve million years ago.\" / \"The genus time range is recorded as the Albian stage, spanning from one hundred thirteen point two to one hundred point five million years ago.\": The time ranges for the species’ existence conflict: middle Cretaceous (121–112 Ma) vs fossils dated to 112 Ma (late Aptian/early Albian) vs Albian stage (113.2–115 Ma).",
-  "- missing context: \"The foot structure was unique because the long foot bones did not touch each other, suggesting a thick pad of flesh supported most of the weight.\": The sentence mentions “long foot bones did not touch each other” without any prior description of the foot bones or their arrangement."
+  "- contradiction: \"This creature lived in Africa during the middle Cretaceous period, between one hundred twenty-one and one hundred twelve million years ago.\" / \"The fossils date to the late Aptian and early Albian stages of the Early Cretaceous, approximately one hundred twelve million years ago.\" / \"The genus time range is recorded as the Albian stage, spanning from one hundred thirteen point two to one hundred point five million years ago.\": The age ranges for the species’ existence conflict: sentence 23 cites 121–112 Ma (middle Cretaceous), sentence 24 cites ~112 Ma (late Aptian/early Albian, Early Cretaceous), and sentence 25 cites 113.2–115 Ma (Albian), which is later than the 112 Ma stated in sentence 24.",
+  "- missing context: \"The foot was unusually constructed because the metatarsals lacked solid contact with each other, suggesting a fleshy pad supported most of the weight.\": Sentence 8 refers to the foot’s unusual construction and a fleshy pad, but no prior sentence mentions the foot or its anatomy."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T12:25:39+00:00",
- "rewrite_mode": "sentences"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      25,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "The time ranges for the species’ existence conflict: middle Cretaceous (121–112 Ma) vs fossils dated to 112 Ma (late Aptian/early Albian) vs Albian stage (113.2–115 Ma)."
+    },
+    {
+     "sentences": [
+      11,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Taquet and Russell established the genus in 1999."
+    },
+    {
+     "sentences": [
+      12,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences refer to the informal name Gravisaurus tenerensis proposed by Chabli in 1988."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions “long foot bones did not touch each other” without any prior description of the foot bones or their arrangement."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:25:39+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:01+00:00"
 }

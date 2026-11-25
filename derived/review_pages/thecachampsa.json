@@ -2,28 +2,63 @@
  "taxon_key": "thecachampsa",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "119f606670d91971",
- "reviewed_at": "2026-11-24T00:25:24+00:00",
+ "text_hash": "c1e4a6d6a222922d",
+ "reviewed_at": "2026-11-25T13:25:40+00:00",
  "problems": [
   {
    "sentences": [
-    12
+    6
    ],
    "kind": "missing_context",
-   "reason": "Mentions T. antiqua without prior introduction of that species."
+   "reason": "Mentions synonymization of Gavialosuchus americanus with T. antiqua, but T. antiqua has not been introduced earlier in the page."
   },
   {
    "sentences": [
-    19
+    7
    ],
-   "kind": "about_something_else",
-   "reason": "Discusses North American forms within Gavialosuchus, treating them as if they were Thecachampsa."
+   "kind": "missing_context",
+   "reason": "Introduces Tomistoma americanus without prior mention or context of this taxon."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Refers to “these variations” and “complete skulls showing these variations” without specifying which variations or skulls were previously referred to Gavialosuchus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In 2001, A.C. Myrick synonymized Gavialosuchus americanus with T. antiqua.\": Mentions T. antiqua without prior introduction of that species."
+  "- missing context: \"The genus was synonymized with Crocodylus in 1973 but is now considered valid, and in 2001, A.C. Myrick synonymized Gavialosuchus americanus with T. antiqua.\": Mentions synonymization of Gavialosuchus americanus with T. antiqua, but T. antiqua has not been introduced earlier in the page.",
+  "- missing context: \"A younger species was first described as Tomistoma americanus in 1915 from Florida, with remains found in formations across New Jersey, Maryland, Virginia, and North Carolina.\": Introduces Tomistoma americanus without prior mention or context of this taxon.",
+  "- missing context: \"Some studies have placed North American forms within Gavialosuchus, but most analyses show a broad phylogenetic separation between these forms and Gavialosuchus eggenburgensis. It is debated whether different tooth shapes represent distinct species or variations within a single species, as complete skulls showing these variations were previously referred to Gavialosuchus. Most subsequent analyses reject the suggestion that T. americana and T. sericodon are the same species, citing clear differences between T. americana and T. antiqua.\": Refers to “these variations” and “complete skulls showing these variations” without specifying which variations or skulls were previously referred to Gavialosuchus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:10:35+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions T. antiqua without prior introduction of that species."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "about_something_else",
+     "reason": "Discusses North American forms within Gavialosuchus, treating them as if they were Thecachampsa."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:10:35+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:48+00:00"
 }

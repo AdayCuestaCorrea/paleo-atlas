@@ -3,28 +3,56 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4a79173edc457be6",
- "reviewed_at": "2026-11-24T00:34:41+00:00",
+ "reviewed_at": "2026-11-25T13:30:01+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    8
    ],
-   "kind": "missing_context",
-   "reason": "Refers to a humerus and a robustness index without any prior mention of a humerus in the page."
+   "kind": "about_something_else",
+   "reason": "Sentence 9 describes a new fauna across 2,000 km², which is about the broader faunal community, not specifically about Nullotitan."
   },
   {
    "sentences": [
-    12
+    9
    ],
-   "kind": "missing_context",
-   "reason": "Mentions epaxial tendons, Musculus caudofemoralis, and the sixteenth vertebra without earlier context or explanation of these anatomical features."
+   "kind": "about_something_else",
+   "reason": "Sentence 10 mentions titanosaur eggshells and sauropod teeth found in the same formation, a statement about other fossils rather than Nullotitan itself."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 12 reports a cervical vertebra identified as cf. Antarctosaurus, which concerns a different genus and is not a statement about Nullotitan."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The first tail vertebra measures approximately 25 centimeters in length and 40 centimeters in width, while a referred humerus is 114 centimeters long with a robustness index of 0.28.\": Refers to a humerus and a robustness index without any prior mention of a humerus in the page.",
-  "- missing context: \"Researchers suggest that epaxial tendons may have been anchored to the tail, holding it upward, while the large retractor muscle Musculus caudofemoralis, which pushed the femur backward, extended to the sixteenth vertebra.\": Mentions epaxial tendons, Musculus caudofemoralis, and the sixteenth vertebra without earlier context or explanation of these anatomical features."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:28:35+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:34:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a humerus and a robustness index without any prior mention of a humerus in the page."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions epaxial tendons, Musculus caudofemoralis, and the sixteenth vertebra without earlier context or explanation of these anatomical features."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:28:35+00:00"
+  }
+ ]
 }

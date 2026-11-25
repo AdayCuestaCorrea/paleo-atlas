@@ -3,27 +3,47 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "1ee3648bc9539153",
- "reviewed_at": "2026-11-24T01:25:29+00:00",
+ "reviewed_at": "2026-11-25T13:51:16+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    8,
+    9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 states fossils are from the Carnian age (Late Triassic) but also says Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
-  },
-  {
-   "sentences": [
-    1
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 2 repeats the initial classification information twice, using \"Initially\" twice and restating the same taxonomic assignments."
+   "reason": "Sentence 9 states fossils are from the Carnian age, while sentence 10 claims Procerosuchus lived during the Ladinian stage, which are distinct time intervals of the Late Triassic."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Fossils of Procerosuchus come from the Late Triassic Santa Maria Formation in the Paleorrota Geopark of Rio Grande do Sul, Brazil, which dates to the Carnian age. Procerosuchus lived during the Ladinian stage, between 241.464 and 237 million years ago.\": Sentence 4 states fossils are from the Carnian age (Late Triassic) but also says Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
+  "- contradiction: \"Fossils of Procerosuchus come from the Late Triassic Santa Maria Formation in the Paleorrota Geopark of Rio Grande do Sul, Brazil, which dates to the Carnian age.\" / \"Procerosuchus lived during the Ladinian stage, between 241.464 and 237 million years ago.\": Sentence 9 states fossils are from the Carnian age, while sentence 10 claims Procerosuchus lived during the Ladinian stage, which are distinct time intervals of the Late Triassic."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:47:54+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:25:29+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states fossils are from the Carnian age (Late Triassic) but also says Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 2 repeats the initial classification information twice, using \"Initially\" twice and restating the same taxonomic assignments."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:47:54+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:41+00:00"
 }

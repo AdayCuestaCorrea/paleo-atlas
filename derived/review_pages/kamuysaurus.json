@@ -2,29 +2,66 @@
  "taxon_key": "kamuysaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b6c4ffcb5080f786",
- "reviewed_at": "2026-11-24T01:28:47+00:00",
+ "text_hash": "76a0eb1c16f946a2",
+ "reviewed_at": "2026-11-25T13:52:20+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    8,
+    9,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the notch on the quadrate bone is unique, repeating the same claim."
+   "reason": "The classification of Kamuysaurus is stated multiple times as a member of Ornithischia, Hadrosauridae, and Hadrosaurinae, repeating the same taxonomic information."
   },
   {
    "sentences": [
-    7
+    3,
+    4
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to a tail of a euornithopod discovered at Shirafunezawa Creek, but the page never introduces or explains this find, leaving the reference unclear."
+   "reason": "Sentences 4 and 5 refer to a tail and a skeleton but do not specify that they belong to Kamuysaurus, leaving the reader uncertain about which specimen is being described."
+  },
+  {
+   "sentences": [
+    2,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim the notch on the quadrate bone is unique, repeating the same autapomorphy description."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"An amateur paleontologist discovered the tail of a euornithopod at Shirafunezawa Creek in 2003.\": The sentence refers to a tail of a euornithopod discovered at Shirafunezawa Creek, but the page never introduces or explains this find, leaving the reference unclear."
+  "- missing context: \"An amateur paleontologist discovered the tail of a euornithopod at Shirafunezawa Creek in 2003.\" / \"An entire skeleton was uncovered by museum teams in 2013 and 2014.\": Sentences 4 and 5 refer to a tail and a skeleton but do not specify that they belong to Kamuysaurus, leaving the reader uncertain about which specimen is being described."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:00:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:28:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the notch on the quadrate bone is unique, repeating the same claim."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a tail of a euornithopod discovered at Shirafunezawa Creek, but the page never introduces or explains this find, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:00:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:25+00:00"
 }

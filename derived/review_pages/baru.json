@@ -2,56 +2,90 @@
  "taxon_key": "baru",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d2d10e1a71d42222",
- "reviewed_at": "2026-11-24T00:02:13+00:00",
+ "text_hash": "e41b1c6b5cd07bae",
+ "reviewed_at": "2026-11-25T13:14:18+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 states Baru skulls reach 50 cm, while sentence 7 estimates adult length around 4 m."
-  },
-  {
-   "sentences": [
-    5,
+    28,
     29
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 gives a skull length of 50 cm, whereas sentence 30 claims B. darrowi reached 4 m in length."
+   "reason": "The fossil age range for Baru is stated as Late Oligocene to Late Miocene in sentence 29, but as Late Oligocene to Middle Miocene in sentence 30."
   },
   {
    "sentences": [
-    28,
+    7,
     30
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 29 says fossils date from Late Oligocene to Late Miocene, but sentence 31 limits the range to Late Oligocene to Middle Miocene."
+   "kind": "repetition",
+   "reason": "Both sentences claim that Baru adults reached a length of around 4 meters."
   },
   {
    "sentences": [
-    6,
-    29
+    19,
+    22
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that B. darrowi reached a length of about 4 m."
-  },
-  {
-   "sentences": [
-    5,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give skull length estimates (50 cm and 58.8 cm) for Baru."
+   "reason": "Both sentences describe Baru as hunting in shallower waters than modern saltwater crocodiles."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Baru was among the larger mekosuchines, with adult skulls reaching 50 cm in length.\" / \"A 1997 review estimated Baru adults reached a length of around 4 meters.\": Sentence 6 states Baru skulls reach 50 cm, while sentence 7 estimates adult length around 4 m.",
-  "- contradiction: \"Baru was among the larger mekosuchines, with adult skulls reaching 50 cm in length.\" / \"B. darrowi reached 4 meters in length and dates to the Middle Miocene.\": Sentence 6 gives a skull length of 50 cm, whereas sentence 30 claims B. darrowi reached 4 m in length.",
-  "- contradiction: \"Baru fossils date from the Late Oligocene to the Late Miocene.\" / \"Fossils of Baru date from the Late Oligocene to the Middle Miocene.\": Sentence 29 says fossils date from Late Oligocene to Late Miocene, but sentence 31 limits the range to Late Oligocene to Middle Miocene."
+  "- contradiction: \"Baru fossils date from the Late Oligocene to the Late Miocene.\" / \"Fossils of Baru date from the Late Oligocene to the Middle Miocene.\": The fossil age range for Baru is stated as Late Oligocene to Late Miocene in sentence 29, but as Late Oligocene to Middle Miocene in sentence 30."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:55:11+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:02:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states Baru skulls reach 50 cm, while sentence 7 estimates adult length around 4 m."
+    },
+    {
+     "sentences": [
+      5,
+      29
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 gives a skull length of 50 cm, whereas sentence 30 claims B. darrowi reached 4 m in length."
+    },
+    {
+     "sentences": [
+      28,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 29 says fossils date from Late Oligocene to Late Miocene, but sentence 31 limits the range to Late Oligocene to Middle Miocene."
+    },
+    {
+     "sentences": [
+      6,
+      29
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that B. darrowi reached a length of about 4 m."
+    },
+    {
+     "sentences": [
+      5,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give skull length estimates (50 cm and 58.8 cm) for Baru."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:55:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:54+00:00"
 }

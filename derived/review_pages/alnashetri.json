@@ -2,31 +2,57 @@
  "taxon_key": "alnashetri",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4abb5bd8aca4db2b",
- "reviewed_at": "2026-11-24T01:05:14+00:00",
+ "text_hash": "cbb31b194de7d93e",
+ "reviewed_at": "2026-11-25T13:44:54+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11,
-    12
+    0,
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 places Alnashetri within Alvarezsauroidea, sentence 12 states it is a basal alvarezsauroid outside Alvarezsauridae, yet sentence 13 claims its parent group is Alvarezsauridae."
+   "kind": "repetition",
+   "reason": "Both sentences claim Alnashetri is the smallest alvarezsauroid."
   },
   {
    "sentences": [
-    9
+    3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 10 refers to specimen MPCA Pv377 as female, but MPCA Pv377 was not introduced or described earlier in the page."
+   "reason": "The phrase \"perfectly connected to each other\" is unclear without prior explanation of what is connected."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Phylogenetic analysis initially placed Alnashetri within the group Alvarezsauroidea.\" / \"Later studies recovered Alnashetri as a basal alvarezsauroid, more derived than Xiyunykus and Bannykus but outside the family Alvarezsauridae.\" / \"The parent group of the genus Alnashetri is Alvarezsauridae.\": Sentence 11 places Alnashetri within Alvarezsauroidea, sentence 12 states it is a basal alvarezsauroid outside Alvarezsauridae, yet sentence 13 claims its parent group is Alvarezsauridae.",
-  "- missing context: \"A more complete specimen, MPCA Pv377, was inferred to be a female.\": Sentence 10 refers to specimen MPCA Pv377 as female, but MPCA Pv377 was not introduced or described earlier in the page."
+  "- missing context: \"The original discovery included a specimen with hind limbs that were perfectly connected to each other.\": The phrase \"perfectly connected to each other\" is unclear without prior explanation of what is connected."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:10:19+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:05:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 places Alnashetri within Alvarezsauroidea, sentence 12 states it is a basal alvarezsauroid outside Alvarezsauridae, yet sentence 13 claims its parent group is Alvarezsauridae."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 refers to specimen MPCA Pv377 as female, but MPCA Pv377 was not introduced or described earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:10:19+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:49+00:00"
 }

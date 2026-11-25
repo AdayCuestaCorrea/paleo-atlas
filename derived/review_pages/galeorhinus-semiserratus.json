@@ -3,22 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0879c276bd765aaf",
- "reviewed_at": "2026-11-24T02:03:57+00:00",
+ "reviewed_at": "2026-11-25T13:59:15+00:00",
  "problems": [
   {
    "sentences": [
-    0,
     3
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states that only a single fossil occurrence of Galeorhinus semiserratus has been documented, while sentence 4 claims that sharks of the order Carcharhiniformes, which includes Galeorhinus, represent the most diverse group in the Tupelo Bay Formation with twelve taxa identified—implying multiple occurrences of the species."
+   "kind": "about_something_else",
+   "reason": "Sentence 4 discusses the diversity of the order Carcharhiniformes in the Tupelo Bay Formation, which is about the formation’s fauna rather than the specific species Galeorhinus semiserratus."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Only a single fossil occurrence of Galeorhinus semiserratus has been documented.\" / \"Sharks of the order Carcharhiniformes, to which Galeorhinus belongs, represent the most diverse group in the Tupelo Bay Formation, with twelve taxa identified.\": Sentence 1 states that only a single fossil occurrence of Galeorhinus semiserratus has been documented, while sentence 4 claims that sharks of the order Carcharhiniformes, which includes Galeorhinus, represent the most diverse group in the Tupelo Bay Formation with twelve taxa identified—implying multiple occurrences of the species."
- ],
- "rewrite": "replaced",
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:51+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:03:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states that only a single fossil occurrence of Galeorhinus semiserratus has been documented, while sentence 4 claims that sharks of the order Carcharhiniformes, which includes Galeorhinus, represent the most diverse group in the Tupelo Bay Formation with twelve taxa identified—implying multiple occurrences of the species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:51+00:00"
+  }
+ ]
 }

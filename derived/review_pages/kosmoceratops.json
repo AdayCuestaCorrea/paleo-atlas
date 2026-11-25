@@ -2,45 +2,75 @@
  "taxon_key": "kosmoceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4195270fb4732d31",
- "reviewed_at": "2026-11-23T23:56:01+00:00",
+ "text_hash": "006c0814daf62a17",
+ "reviewed_at": "2026-11-25T13:10:43+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the classification of Kosmoceratops as a chasmosaurine ceratopsid."
-  },
-  {
-   "sentences": [
-    22,
-    23
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the age of the Kaiparowits Formation and the time range of Kosmoceratops, repeating the same information."
-  },
-  {
-   "sentences": [
     23,
+    26
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Kosmoceratops lived during the Upper Cretaceous, with sentence 24 giving a specific age range and sentence 27 giving a generic period."
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 25 describes the Kaiparowits Formation’s age and depositional setting, which is about the geological formation rather than the animal itself."
+  },
+  {
+   "sentences": [
     25
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Kosmoceratops lived during the late Campanian/Upper Cretaceous, repeating the same time period."
-  },
-  {
-   "sentences": [
-    18
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions a specific specimen (UMNH VP 21339) without any prior introduction or context for that specimen."
+   "kind": "about_something_else",
+   "reason": "Sentence 26 discusses the geographic boundary between dinosaur provinces on Laramidia, a contextual detail about the continent rather than Kosmoceratops."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [
-  "- missing context: \"Evidence suggests a pond environment for the deposition of the broken bones of the subadult or adult specimen UMNH VP 21339.\": Mentions a specific specimen (UMNH VP 21339) without any prior introduction or context for that specimen."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:54:09+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:56:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the classification of Kosmoceratops as a chasmosaurine ceratopsid."
+    },
+    {
+     "sentences": [
+      22,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give the age of the Kaiparowits Formation and the time range of Kosmoceratops, repeating the same information."
+    },
+    {
+     "sentences": [
+      23,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Kosmoceratops lived during the late Campanian/Upper Cretaceous, repeating the same time period."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a specific specimen (UMNH VP 21339) without any prior introduction or context for that specimen."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:54:09+00:00"
+  }
+ ]
 }

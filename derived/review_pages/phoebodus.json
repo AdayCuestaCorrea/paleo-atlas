@@ -2,46 +2,99 @@
  "taxon_key": "phoebodus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1871b7ab3989b90e",
- "reviewed_at": "2026-11-24T01:21:36+00:00",
+ "text_hash": "9891f29c6a9acf1d",
+ "reviewed_at": "2026-11-25T13:50:07+00:00",
  "problems": [
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 4 compares Phoebodus teeth to those of frilled sharks, which is a different taxon, not a description of Phoebodus itself."
-  },
   {
    "sentences": [
     4,
     5,
-    6
+    6,
+    7
    ],
    "kind": "repetition",
-   "reason": "Sentences 5, 6 and 7 all state that Phoebodus was a predator that swallowed prey whole, repeating the same claim."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to the “long body” of Phoebodus saidelachus, but no previous sentence describes the body shape of this species."
+   "reason": "All four sentences repeat the claim that Phoebodus was a predatory animal that swallowed prey whole and used its teeth for grasping."
   },
   {
    "sentences": [
     2,
-    6
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 reports new fossil material of Phoebodus saidselachus from the Devonian, while sentence 7 describes Phoebodus saidelachus as having a long body suggesting a slow hunter; the two statements imply different ecological roles without reconciling them."
+   "reason": "Sentence 3 claims new fossil material was found in the Devonian strata of eastern Anti‑Atlas, Morocco, while sentence 11 states Phoebodus lived during the middle to late Devonian worldwide; the specific mention of Morocco’s Devonian strata is inconsistent with the general worldwide distribution."
+  },
+  {
+   "sentences": [
+    2,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 3 describes a new species from Devonian strata, whereas sentence 8 describes Phoebodus saidelachus as a slow hunter with a long body, implying a different ecological role than the predatory, whole‑prey swallowing described elsewhere."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 3 discusses the Devonian strata of eastern Anti‑Atlas, Morocco—a geological formation—presented as if it were about the animal itself."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 8 refers to the long body of Phoebodus saidelachus, but the page never previously introduced or described this species’ body length or morphology."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"The long body of Phoebodus saidelachus suggests it may have been a slow hunter that swallowed prey whole and held it with numerous three-pointed teeth.\": Sentence 7 refers to the “long body” of Phoebodus saidelachus, but no previous sentence describes the body shape of this species.",
-  "- contradiction: \"New fossil material of Phoebodus saidselachus was described from the Devonian strata of eastern Anti-Atlas, Morocco, by Klug et al. in 2026.\" / \"The long body of Phoebodus saidelachus suggests it may have been a slow hunter that swallowed prey whole and held it with numerous three-pointed teeth.\": Sentence 3 reports new fossil material of Phoebodus saidselachus from the Devonian, while sentence 7 describes Phoebodus saidelachus as having a long body suggesting a slow hunter; the two statements imply different ecological roles without reconciling them."
+  "- contradiction: \"New fossil material of Phoebodus saidselachus was described from the Devonian strata of eastern Anti-Atlas, Morocco, by Klug et al. in 2026.\" / \"Phoebodus lived during the middle to late Devonian periods and is found worldwide.\": Sentence 3 claims new fossil material was found in the Devonian strata of eastern Anti‑Atlas, Morocco, while sentence 11 states Phoebodus lived during the middle to late Devonian worldwide; the specific mention of Morocco’s Devonian strata is inconsistent with the general worldwide distribution.",
+  "- contradiction: \"New fossil material of Phoebodus saidselachus was described from the Devonian strata of eastern Anti-Atlas, Morocco, by Klug et al. in 2026.\" / \"The long body of Phoebodus saidelachus suggests it may have been a slow hunter that swallowed prey whole and held it with numerous three-pointed teeth.\": Sentence 3 describes a new species from Devonian strata, whereas sentence 8 describes Phoebodus saidelachus as a slow hunter with a long body, implying a different ecological role than the predatory, whole‑prey swallowing described elsewhere.",
+  "- missing context: \"The long body of Phoebodus saidelachus suggests it may have been a slow hunter that swallowed prey whole and held it with numerous three-pointed teeth.\": Sentence 8 refers to the long body of Phoebodus saidelachus, but the page never previously introduced or described this species’ body length or morphology."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:28:06+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:21:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 4 compares Phoebodus teeth to those of frilled sharks, which is a different taxon, not a description of Phoebodus itself."
+    },
+    {
+     "sentences": [
+      4,
+      5,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 5, 6 and 7 all state that Phoebodus was a predator that swallowed prey whole, repeating the same claim."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to the “long body” of Phoebodus saidelachus, but no previous sentence describes the body shape of this species."
+    },
+    {
+     "sentences": [
+      2,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 reports new fossil material of Phoebodus saidselachus from the Devonian, while sentence 7 describes Phoebodus saidelachus as having a long body suggesting a slow hunter; the two statements imply different ecological roles without reconciling them."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:28:06+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:29+00:00"
 }

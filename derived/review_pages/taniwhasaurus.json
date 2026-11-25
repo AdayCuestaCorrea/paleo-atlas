@@ -3,43 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "64d2572d4c05c12d",
- "reviewed_at": "2026-11-23T23:58:02+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:11:40+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    0,
-    23
+   "reviewed_at": "2026-11-23T23:58:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Taniwhasaurus lived during the Late Cretaceous Campanian stage."
+    },
+    {
+     "sentences": [
+      23,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the same fossil locality (Conway Formation at Haumuri Bluff) and the same age (Lower and Middle Campanian)."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to a cartilaginous cap supported by the neural spine spike, but no earlier sentence introduces or describes such a cap."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 describes a mosasaur specimen found on James Ross Island, but it does not specify that the specimen is Taniwhasaurus, making the statement about a different taxon presented as if it were about Taniwhasaurus."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Taniwhasaurus lived during the Late Cretaceous Campanian stage."
-  },
-  {
-   "sentences": [
-    23,
-    25
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the same fossil locality (Conway Formation at Haumuri Bluff) and the same age (Lower and Middle Campanian)."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to a cartilaginous cap supported by the neural spine spike, but no earlier sentence introduces or describes such a cap."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 11 describes a mosasaur specimen found on James Ross Island, but it does not specify that the specimen is Taniwhasaurus, making the statement about a different taxon presented as if it were about Taniwhasaurus."
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:09:32+00:00"
   }
- ],
- "repetitions_dropped": 2,
- "notes": [
-  "- missing context: \"The neural spine of the axis vertebra is stout and elongated, ending in a broad, flattened spike that likely supported a cartilaginous cap.\": Sentence 5 refers to a cartilaginous cap supported by the neural spine spike, but no earlier sentence introduces or describes such a cap."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:09:32+00:00"
+ ]
 }

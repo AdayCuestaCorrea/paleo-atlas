@@ -2,23 +2,43 @@
  "taxon_key": "parvodus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "177a2f65c2e71123",
- "reviewed_at": "2026-11-24T01:17:13+00:00",
+ "text_hash": "07edddf5f0705bc6",
+ "reviewed_at": "2026-11-25T13:49:05+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    8,
-    9
+    4,
+    13
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 claims Parvodus is classified within the parent group Lonchidiidae, a family unrelated to hybodont sharks, while sentence 9 states the type species of Parvodus is Lissodus rugianus, a species belonging to a different genus (Lissodus). Both statements conflict with the established taxonomy of hybodont sharks."
+   "reason": "Both sentences refer to the same species (P. rugianus/Lissodus rugianus) but give conflicting genus assignments for the type species of Parvodus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"It is classified within the parent group Lonchidiidae.\" / \"The type species of the genus Parvodus is Lissodus rugianus.\" / \"This type species was originally described by Ansorge in 1990.\": Sentence 3 claims Parvodus is classified within the parent group Lonchidiidae, a family unrelated to hybodont sharks, while sentence 9 states the type species of Parvodus is Lissodus rugianus, a species belonging to a different genus (Lissodus). Both statements conflict with the established taxonomy of hybodont sharks."
+  "- contradiction: \"The species P. rugianus was described by Ansorge in 1990 from Berriasian-Valanginian deposits in England, Germany, Denmark, and Sweden.\" / \"The type species of the genus Parvodus is Lissodus rugianus. This species was originally described by Ansorge in 1990.\": Both sentences refer to the same species (P. rugianus/Lissodus rugianus) but give conflicting genus assignments for the type species of Parvodus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:13:45+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:17:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims Parvodus is classified within the parent group Lonchidiidae, a family unrelated to hybodont sharks, while sentence 9 states the type species of Parvodus is Lissodus rugianus, a species belonging to a different genus (Lissodus). Both statements conflict with the established taxonomy of hybodont sharks."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:13:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:53+00:00"
 }

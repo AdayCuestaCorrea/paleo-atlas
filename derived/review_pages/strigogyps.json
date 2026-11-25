@@ -2,31 +2,50 @@
  "taxon_key": "strigogyps",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "897c42029a83ea16",
- "reviewed_at": "2026-11-24T01:13:21+00:00",
+ "text_hash": "0cce20559117f0bf",
+ "reviewed_at": "2026-11-25T13:47:49+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
-   ],
-   "kind": "contradiction",
-   "reason": "[8] places Strigogyps as a basal member of Cariamae, while [9] places it within Gruiformes as sister to Psophiidae."
-  },
-  {
-   "sentences": [
     9,
-    10
+    12
    ],
    "kind": "contradiction",
-   "reason": "[10] states fossils date from Middle Eocene to Early Oligocene, but [11] limits the age to 48.07–33.9 Ma (Lutetian to Priabonian), excluding the Early Oligocene."
+   "reason": "Sentence 10 places Strigogyps in the order Cariamiformes, while sentence 13 places it within Gruiformes as part of a clade with Salmila and Cariamae."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Recent studies suggest Strigogyps is a basal member of Cariamae and not closely related to phorusrhachids.\" / \"Salmila robusta is considered more basal than Strigogyps, with the clade of Salmila and Cariamae being the sister taxon to Psophiidae within Gruiformes.\": [8] places Strigogyps as a basal member of Cariamae, while [9] places it within Gruiformes as sister to Psophiidae.",
-  "- contradiction: \"Strigogyps fossils date from the Middle Eocene to the Early Oligocene periods and lived in France and Germany during these times.\" / \"The animal lived between 48.07 and 33.9 million years ago, from the Lutetian to the Priabonian stages.\": [10] states fossils date from Middle Eocene to Early Oligocene, but [11] limits the age to 48.07–33.9 Ma (Lutetian to Priabonian), excluding the Early Oligocene."
+  "- contradiction: \"Strigogyps belongs to the order Cariamiformes.\" / \"Salmila robusta is considered more basal than Strigogyps, with the clade of Salmila and Cariamae being the sister taxon to Psophiidae within Gruiformes.\": Sentence 10 places Strigogyps in the order Cariamiformes, while sentence 13 places it within Gruiformes as part of a clade with Salmila and Cariamae."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:54:44+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:13:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "[8] places Strigogyps as a basal member of Cariamae, while [9] places it within Gruiformes as sister to Psophiidae."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "[10] states fossils date from Middle Eocene to Early Oligocene, but [11] limits the age to 48.07–33.9 Ma (Lutetian to Priabonian), excluding the Early Oligocene."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:54:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:50+00:00"
 }

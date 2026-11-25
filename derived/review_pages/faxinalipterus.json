@@ -2,24 +2,44 @@
  "taxon_key": "faxinalipterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b1f53904aaa3f994",
- "reviewed_at": "2026-11-24T01:02:40+00:00",
+ "text_hash": "d02e71a4c896b204",
+ "reviewed_at": "2026-11-25T13:44:06+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    4,
-    5,
-    6
+    1,
+    7
    ],
    "kind": "contradiction",
-   "reason": "Sentences 3 and 5 assert Faxinalipterus is a pterosaur (oldest and most basal), while sentences 6 and 7 reclassify it as a non‑pterosaur clade (Lagerpetidae or basal pterosauromorph), directly contradicting the earlier claims."
+   "reason": "Sentence 2 claims Faxinalipterus is a pterosaur (oldest known), while sentence 8 reinterprets it as a Lagerpetidae, a non‑pterosaur clade."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Original describers considered Faxinalipterus perhaps the oldest known pterosaur, possibly predating European finds from the Norian.\" / \"Original describers concluded Faxinalipterus was the most basal known pterosaur, citing features like a lack of tibia-fibula fusion, a thin radius, and an unfused coracoid.\" / \"A 2022 study reinterpreted the fossils as belonging to the clade Lagerpetidae, a group of pterosauromorphs.\" / \"Alexander Kellner suggested Faxinalipterus might be a basal pterosauromorph or a sister taxon to Ornithodira rather than a pterosaur. Fabio Marco Dalla Vecchia (2013) stated he could not find unequivocal pterosaur features in the fossils and noted the purported humerus is unlike those of Triassic pterosaurs.\": Sentences 3 and 5 assert Faxinalipterus is a pterosaur (oldest and most basal), while sentences 6 and 7 reclassify it as a non‑pterosaur clade (Lagerpetidae or basal pterosauromorph), directly contradicting the earlier claims."
+  "- contradiction: \"Original describers considered Faxinalipterus perhaps the oldest known pterosaur, possibly predating European finds from the Norian.\" / \"A 2022 study reinterpreted the fossils as belonging to the clade Lagerpetidae, a group of pterosauromorphs.\": Sentence 2 claims Faxinalipterus is a pterosaur (oldest known), while sentence 8 reinterprets it as a Lagerpetidae, a non‑pterosaur clade."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:57:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:02:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4,
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 3 and 5 assert Faxinalipterus is a pterosaur (oldest and most basal), while sentences 6 and 7 reclassify it as a non‑pterosaur clade (Lagerpetidae or basal pterosauromorph), directly contradicting the earlier claims."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:57:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:10+00:00"
 }

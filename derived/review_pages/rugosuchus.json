@@ -2,28 +2,57 @@
  "taxon_key": "rugosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3092eefcee284a2d",
- "reviewed_at": "2026-11-24T01:29:01+00:00",
+ "text_hash": "d99a112795cf2f26",
+ "reviewed_at": "2026-11-25T13:52:25+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    5,
+    6
    ],
    "kind": "repetition",
-   "reason": "Sentence 4 states that Rugosuchus belongs to the family Paralligatoridae twice, once as the parent group and again as the family."
+   "reason": "Both sentences state that Rugosuchus belongs to the family Paralligatoridae."
   },
   {
    "sentences": [
-    4
+    9,
+    10,
+    11
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to “the formation where Rugosuchus was found” without naming or describing that formation earlier in the page."
+   "kind": "contradiction",
+   "reason": "Sentence 10 claims the formation age is latest Early Cretaceous, while sentences 11 and 12 state it has been reclassified to Late Cretaceous (Campanian)."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"At the time of its description, the age of the formation where Rugosuchus was found was thought to be the latest Early Cretaceous based on associated ostracode, bivalve, and fish fossils. Subsequent studies have generally reclassified the age of the Rugosuchus formation as the Late Cretaceous.\": Sentence 5 refers to “the formation where Rugosuchus was found” without naming or describing that formation earlier in the page."
+  "- contradiction: \"At the time of its description, the age of the formation where Rugosuchus was found was thought to be the latest Early Cretaceous based on associated ostracode, bivalve, and fish fossils.\" / \"Subsequent studies have generally reclassified the age of the Rugosuchus formation as the Late Cretaceous.\" / \"The time range for Rugosuchus is the Campanian stage, spanning from 83.6 to 72.2 million years ago.\": Sentence 10 claims the formation age is latest Early Cretaceous, while sentences 11 and 12 state it has been reclassified to Late Cretaceous (Campanian)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:01:57+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:29:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 4 states that Rugosuchus belongs to the family Paralligatoridae twice, once as the parent group and again as the family."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to “the formation where Rugosuchus was found” without naming or describing that formation earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:01:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:27+00:00"
 }

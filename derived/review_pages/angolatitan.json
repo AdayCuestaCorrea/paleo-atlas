@@ -2,30 +2,58 @@
  "taxon_key": "angolatitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6251c62580cb9795",
- "reviewed_at": "2026-11-24T01:20:36+00:00",
+ "text_hash": "97afd027a741c213",
+ "reviewed_at": "2026-11-25T13:49:55+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    1,
+    2
    ],
-   "kind": "contradiction",
-   "reason": "The ages given conflict: sentence 12 states ~90 Ma (mid‑Cretaceous), while sentence 13 gives 89.8–85.7 Ma (Coniacian, late Cretaceous)."
+   "kind": "repetition",
+   "reason": "Both sentences state that Angolatitan is the first dinosaur formally named from Angola."
   },
   {
    "sentences": [
-    3,
-    4
+    7,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Angolatitan is the first named dinosaur from Angola."
+   "kind": "contradiction",
+   "reason": "Sentence 8 places the animal in the Late Cretaceous, while sentence 10 places it in the mid-Cretaceous (~90 Ma)."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"It lived approximately 90 million years ago during the mid-Cretaceous in what is now Africa.\" / \"The animal lived between 89.8 and 85.7 million years ago during the Coniacian stage.\": The ages given conflict: sentence 12 states ~90 Ma (mid‑Cretaceous), while sentence 13 gives 89.8–85.7 Ma (Coniacian, late Cretaceous)."
+  "- contradiction: \"This basal titanosauriform lived during the Late Cretaceous, an era when more derived titanosaurs were dominant.\" / \"It lived approximately 90 million years ago during the mid-Cretaceous in what is now Africa.\": Sentence 8 places the animal in the Late Cretaceous, while sentence 10 places it in the mid-Cretaceous (~90 Ma)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:26:03+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:20:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "The ages given conflict: sentence 12 states ~90 Ma (mid‑Cretaceous), while sentence 13 gives 89.8–85.7 Ma (Coniacian, late Cretaceous)."
+    },
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Angolatitan is the first named dinosaur from Angola."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:26:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:21+00:00"
 }

@@ -3,30 +3,67 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "24e98055c269e225",
- "reviewed_at": "2026-11-24T00:28:14+00:00",
+ "reviewed_at": "2026-11-25T13:26:52+00:00",
  "problems": [
   {
    "sentences": [
     18,
-    22
+    21
    ],
    "kind": "contradiction",
-   "reason": "Sentence 19 states Lingyuanosaurus lived during the Early Cretaceous, while sentence 23 claims it lived during the mid‑Cretaceous (133–120 Ma), which is inconsistent."
+   "reason": "Both claim the age of Lingyuanosaurus but one says Early Cretaceous while the other says mid‑Cretaceous (133–120 Ma)."
   },
   {
    "sentences": [
-    22,
-    24
+    19,
+    20
    ],
    "kind": "contradiction",
-   "reason": "Sentence 23 gives an age range of 133–120 Ma, whereas sentence 25 records the range as 121.4–113.2 Ma, a mismatch in the time interval."
+   "reason": "Sentence 20 describes a cold environment (average 10 °C, cold winters) whereas sentence 21 describes a warm, humid climate with seasonal dry periods for the same Jehol Group. Inconsistent environmental description."
+  },
+  {
+   "sentences": [
+    21,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 22 gives a mid‑Cretaceous range (Barremian to Aptian, 133–120 Ma) while sentence 23 restricts the range to the Aptian (121.4–113.2 Ma), conflicting time intervals."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Lingyuanosaurus lived during the Early Cretaceous period in Liaoning Province, China.\" / \"Lingyuanosaurus lived during the mid-Cretaceous period, between 133 and 120 million years ago, from the Barremian to the Aptian.\": Sentence 19 states Lingyuanosaurus lived during the Early Cretaceous, while sentence 23 claims it lived during the mid‑Cretaceous (133–120 Ma), which is inconsistent.",
-  "- contradiction: \"Lingyuanosaurus lived during the mid-Cretaceous period, between 133 and 120 million years ago, from the Barremian to the Aptian.\" / \"The time range for Lingyuanosaurus is recorded as the Aptian, from 121.4 to 113.2 million years ago.\": Sentence 23 gives an age range of 133–120 Ma, whereas sentence 25 records the range as 121.4–113.2 Ma, a mismatch in the time interval."
+  "- contradiction: \"Lingyuanosaurus lived during the Early Cretaceous period in Liaoning Province, China.\" / \"Lingyuanosaurus lived during the mid-Cretaceous period, between 133 and 120 million years ago, from the Barremian to the Aptian.\": Both claim the age of Lingyuanosaurus but one says Early Cretaceous while the other says mid‑Cretaceous (133–120 Ma).",
+  "- contradiction: \"The environment where Lingyuanosaurus lived had an average yearly temperature of 10°C, featuring relatively cold winters.\" / \"The paleoenvironment of the Jehol Group, where Lingyuanosaurus lived, featured warm and humid conditions with seasonal dry periods.\": Sentence 20 describes a cold environment (average 10 °C, cold winters) whereas sentence 21 describes a warm, humid climate with seasonal dry periods for the same Jehol Group. Inconsistent environmental description.",
+  "- contradiction: \"Lingyuanosaurus lived during the mid-Cretaceous period, between 133 and 120 million years ago, from the Barremian to the Aptian.\" / \"The time range for Lingyuanosaurus is recorded as the Aptian, from 121.4 to 113.2 million years ago.\": Sentence 22 gives a mid‑Cretaceous range (Barremian to Aptian, 133–120 Ma) while sentence 23 restricts the range to the Aptian (121.4–113.2 Ma), conflicting time intervals."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:34:05+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:28:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 states Lingyuanosaurus lived during the Early Cretaceous, while sentence 23 claims it lived during the mid‑Cretaceous (133–120 Ma), which is inconsistent."
+    },
+    {
+     "sentences": [
+      22,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 gives an age range of 133–120 Ma, whereas sentence 25 records the range as 121.4–113.2 Ma, a mismatch in the time interval."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:34:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:33+00:00"
 }

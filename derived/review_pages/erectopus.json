@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ab539276d139412c",
- "reviewed_at": "2026-11-24T01:06:04+00:00",
+ "reviewed_at": "2026-11-25T13:45:09+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    1,
+    2
    ],
    "kind": "contradiction",
-   "reason": "Classifies Erectopus superbus within Allosauroidea (Carnosauria) in sentence 8, but lists its parent group as Metriacanthosauridae in sentence 9, which are incompatible taxonomic assignments."
+   "reason": "Weight estimates differ (200 kg vs 315 kg) without indicating different studies or ranges."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Allain (2005) classified Erectopus superbus within the Allosauroidea, a group equivalent to Carnosauria.\" / \"The Paleobi Database lists the parent group of Erectopus as Metriacanthosauridae.\": Classifies Erectopus superbus within Allosauroidea (Carnosauria) in sentence 8, but lists its parent group as Metriacanthosauridae in sentence 9, which are incompatible taxonomic assignments."
+  "- contradiction: \"One scientific estimate places the weight of this creature at 200 kilograms.\" / \"A later study suggested it could have been even larger, reaching five meters in length and weighing 315 kilograms.\": Weight estimates differ (200 kg vs 315 kg) without indicating different studies or ranges."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:15:22+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:06:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Classifies Erectopus superbus within Allosauroidea (Carnosauria) in sentence 8, but lists its parent group as Metriacanthosauridae in sentence 9, which are incompatible taxonomic assignments."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:15:22+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:01+00:00"
 }

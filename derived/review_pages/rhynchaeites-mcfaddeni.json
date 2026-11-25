@@ -2,30 +2,56 @@
  "taxon_key": "rhynchaeites-mcfaddeni",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3497a486e0f4fa5e",
- "reviewed_at": "2026-11-24T02:06:23+00:00",
+ "text_hash": "99eb20defc1f1b48",
+ "reviewed_at": "2026-11-25T13:59:25+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    5,
+    6
    ],
-   "kind": "missing_context",
-   "reason": "Refers to the contemporaneous R. messelensis without prior introduction."
+   "kind": "contradiction",
+   "reason": "Sentence 6 places Rhynchaeites in the stem‑group of threshkiornithids, while sentence 7 assigns it to the family Threskiornithidae, a conflicting taxonomic placement."
   },
   {
    "sentences": [
     8
    ],
-   "kind": "missing_context",
-   "reason": "Mentions Mopsitta tanta without any earlier context."
+   "kind": "about_something_else",
+   "reason": "Sentence 9 discusses the placement of another species, Mopsitta tanta, which is unrelated to Rhynchaeites mcfaddeni and therefore not about the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers propose that, unlike the contemporaneous R. messelensis which fed near lake margins, R. mcfaddeni may have hunted in streams.\": Refers to the contemporaneous R. messelensis without prior introduction.",
-  "- missing context: \"Some paleontologists question whether the parrot-like bird Mopsitta tanta should be placed within Rhynchaeites, indicating uncertainty about the genus’s broader relationships.\": Mentions Mopsitta tanta without any earlier context."
+  "- contradiction: \"Rhynchaeites mcfaddeni belongs to the genus Rhynchaeites, an extinct group of wading birds placed in the stem-group of the threshkiornithids.\" / \"The genus is assigned to the family Threskiornithidae and to the subfamily Rhynchaeitinae.\": Sentence 6 places Rhynchaeites in the stem‑group of threshkiornithids, while sentence 7 assigns it to the family Threskiornithidae, a conflicting taxonomic placement."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:06:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the contemporaneous R. messelensis without prior introduction."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Mopsitta tanta without any earlier context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:35:19+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:35:19+00:00"
+ "rewritten_at": "2026-11-25T14:33:42+00:00"
 }

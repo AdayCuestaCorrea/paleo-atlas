@@ -3,30 +3,76 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "57e5a3c2bbc0834f",
- "reviewed_at": "2026-11-24T01:27:54+00:00",
+ "reviewed_at": "2026-11-25T13:52:02+00:00",
  "problems": [
   {
    "sentences": [
     6,
-    9
+    7
    ],
    "kind": "contradiction",
-   "reason": "Sentences 7 and 10 state different geological stages for Gobititan’s existence (Aptian vs Albian)."
+   "reason": "Sentence 7 states Gobititan lived during the Aptian stage, while sentence 8 places it in the Albian stage."
   },
   {
    "sentences": [
-    7,
-    8
+    8,
+    9
    ],
    "kind": "contradiction",
-   "reason": "Sentences 8 and 9 give conflicting parent group classifications for Gobititan (Somphospondyli vs Euhelopodidae)."
+   "reason": "Sentence 9 classifies Gobititan as a titanosauriform/Somphospondyli, whereas sentence 10 lists its parent group as Euhelopodidae."
+  },
+  {
+   "sentences": [
+    8,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 9 places Gobititan in Somphospondyli, while sentence 11 still classifies it as a titanosaur."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 assigns Gobititan to Euhelopodidae, whereas sentence 11 assigns it to the titanosaur group."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Gobititan was a herbivorous sauropod dinosaur living during the Aptian stage of the Early Cretaceous.\" / \"Gobititan lived during the Albian stage, between 113.2 and 110.1 million years ago.\": Sentences 7 and 10 state different geological stages for Gobititan’s existence (Aptian vs Albian).",
-  "- contradiction: \"Recent research generally classifies Gobititan as a titanosauriform and a member of the Somphospondyli.\" / \"The Paleobi Database lists the parent group of Gobititan as Euhelopodidae.\": Sentences 8 and 9 give conflicting parent group classifications for Gobititan (Somphospondyli vs Euhelopodidae)."
+  "- contradiction: \"Gobititan was a herbivorous sauropod dinosaur living during the Aptian stage of the Early Cretaceous.\" / \"Other evidence places its existence during the Albian stage, between 113.2 and 110.1 million years ago.\": Sentence 7 states Gobititan lived during the Aptian stage, while sentence 8 places it in the Albian stage.",
+  "- contradiction: \"Recent research generally classifies Gobititan as a titanosauriform and a member of the Somphospondyli.\" / \"However, the Paleobi Database lists the parent group of Gobititan as Euhelopodidae.\": Sentence 9 classifies Gobititan as a titanosauriform/Somphospondyli, whereas sentence 10 lists its parent group as Euhelopodidae.",
+  "- contradiction: \"Recent research generally classifies Gobititan as a titanosauriform and a member of the Somphospondyli.\" / \"Some scientific analyses still classify Gobititan as a titanosaur despite recent trends placing it in Somphospondyli.\": Sentence 9 places Gobititan in Somphospondyli, while sentence 11 still classifies it as a titanosaur.",
+  "- contradiction: \"However, the Paleobi Database lists the parent group of Gobititan as Euhelopodidae.\" / \"Some scientific analyses still classify Gobititan as a titanosaur despite recent trends placing it in Somphospondyli.\": Sentence 10 assigns Gobititan to Euhelopodidae, whereas sentence 11 assigns it to the titanosaur group."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:57:32+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:27:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 7 and 10 state different geological stages for Gobititan’s existence (Aptian vs Albian)."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 8 and 9 give conflicting parent group classifications for Gobititan (Somphospondyli vs Euhelopodidae)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:57:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:10+00:00"
 }

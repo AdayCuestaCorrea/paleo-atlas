@@ -2,29 +2,65 @@
  "taxon_key": "barawertornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "702048446a7b50c1",
- "reviewed_at": "2026-11-24T00:41:20+00:00",
+ "text_hash": "9a3eba90aa0d5c4e",
+ "reviewed_at": "2026-11-25T13:34:31+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    14
+    10,
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Barawertornis was first described in 1979 by Patricia Vickers-Rich."
+   "kind": "contradiction",
+   "reason": "Sentence 11 claims Barawertornis was a browser that ate leaves and fruit, while sentence 12 suggests it may have had adaptations for an aquatic feeding style, presenting two incompatible dietary habits."
   },
   {
    "sentences": [
-    17
+    6,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe pathologies such as unhealed bite marks and fractures in Barawertornis fossils, repeating the same claim."
+  },
+  {
+   "sentences": [
+    3
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to a crocodilian predator like \"Baru\" without previously introducing or defining Baru."
+   "reason": "Sentence 4 refers to \"specimen QM F30352\" and \"most Dromornis stirtoni specimens\" without prior introduction or explanation of these references."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Researchers hypothesize that unhealed bite marks and fractures on a Barawertornis femur were caused by a crocodilian predator like Baru.\": The sentence refers to a crocodilian predator like \"Baru\" without previously introducing or defining Baru."
+  "- contradiction: \"Barawertornis was likely a browser that ate leaves and fruit, similar to other dromornithids.\" / \"A 2024 study suggests that Barawertornis, like other dromornithids, may have had adaptations for an aquatic feeding style.\": Sentence 11 claims Barawertornis was a browser that ate leaves and fruit, while sentence 12 suggests it may have had adaptations for an aquatic feeding style, presenting two incompatible dietary habits.",
+  "- missing context: \"Other skeletal traits include a caudal intermuscular line present on most femurs but absent in specimen QM F30352, a distal vascular foramen found in Barawertornis tedfordi but missing in most Dromornis stirtoni specimens, and a mandible lacking a caudal mandibular fenestra.\": Sentence 4 refers to \"specimen QM F30352\" and \"most Dromornis stirtoni specimens\" without prior introduction or explanation of these references."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:29:12+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:41:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Barawertornis was first described in 1979 by Patricia Vickers-Rich."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a crocodilian predator like \"Baru\" without previously introducing or defining Baru."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:29:12+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:07+00:00"
 }

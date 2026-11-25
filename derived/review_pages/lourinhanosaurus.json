@@ -2,47 +2,73 @@
  "taxon_key": "lourinhanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "97a80d3df8e355da",
- "reviewed_at": "2026-11-24T00:50:20+00:00",
+ "text_hash": "d20c428341693097",
+ "reviewed_at": "2026-11-25T13:38:39+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same classification relationship of Lourinhanosaurus to Allosauroidea."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"six females\" without previously introducing or specifying these individuals."
   },
   {
    "sentences": [
-    16,
-    17
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences give overlapping age ranges for the species, effectively repeating the same information."
-  },
-  {
-   "sentences": [
-    15,
-    19
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 places Lourinhanosaurus within Allosauroidea, while sentence 20 classifies it as a coelurosaur, which are mutually exclusive clades."
-  },
-  {
-   "sentences": [
-    15,
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 assigns it to Allosauroidea, whereas sentence 19 suggests it belongs to the more basal Megalosauroidea."
+   "kind": "missing_context",
+   "reason": "The pronoun \"they\" is used without a clear antecedent; the text has not previously mentioned a group of animals to which it refers."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Lourinhanosaurus is tentatively placed within the superfamily Allosauroidea.\" / \"A 2012 study by Carrano et al. classified Lourinhanosaurus as a coelurosaur.\": Sentence 16 places Lourinhanosaurus within Allosauroidea, while sentence 20 classifies it as a coelurosaur, which are mutually exclusive clades.",
-  "- contradiction: \"Lourinhanosaurus is tentatively placed within the superfamily Allosauroidea.\" / \"Some researchers suggest Lourinhanosaurus may not be an allosauroid but rather a member of the more basal group Megalosauroidea.\": Sentence 16 assigns it to Allosauroidea, whereas sentence 19 suggests it belongs to the more basal Megalosauroidea."
+  "- missing context: \"Researchers estimate that at least six females laid eggs simultaneously in an area of only 32 square meters.\": The sentence refers to \"six females\" without previously introducing or specifying these individuals.",
+  "- missing context: \"There is no evidence that Lourinhanosaurus excavated nests or buried eggs; they likely laid them directly on the ground in a sunny spot near a pond.\": The pronoun \"they\" is used without a clear antecedent; the text has not previously mentioned a group of animals to which it refers."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:41:39+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:50:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same classification relationship of Lourinhanosaurus to Allosauroidea."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give overlapping age ranges for the species, effectively repeating the same information."
+    },
+    {
+     "sentences": [
+      15,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 places Lourinhanosaurus within Allosauroidea, while sentence 20 classifies it as a coelurosaur, which are mutually exclusive clades."
+    },
+    {
+     "sentences": [
+      15,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 assigns it to Allosauroidea, whereas sentence 19 suggests it belongs to the more basal Megalosauroidea."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:41:39+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:04+00:00"
 }

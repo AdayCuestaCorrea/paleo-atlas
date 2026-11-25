@@ -2,8 +2,8 @@
  "taxon_key": "carnotaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d7724830dc51ae68",
- "reviewed_at": "2026-11-23T23:56:28+00:00",
+ "text_hash": "5d2b8b085cdd3299",
+ "reviewed_at": "2026-11-25T13:11:01+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,28 +11,79 @@
     1
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Carnotaurus measured between 7.5 and 8 meters in length."
+   "reason": "Both sentences state the same size range for Carnotaurus."
   },
   {
    "sentences": [
-    29,
-    30
+    9,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 30 gives an age range of 69–66 Ma, while sentence 31 gives 72–69.9 Ma for the same time period."
+   "kind": "repetition",
+   "reason": "Both describe the discovery of the holotype in 1984."
   },
   {
    "sentences": [
+    27,
     28
    ],
+   "kind": "repetition",
+   "reason": "Both assert Carnotaurus is a derived member of Abelisauridae."
+  },
+  {
+   "sentences": [
+    20,
+    21
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 21 claims a bite force twice that of an alligator, implying a very high force, while sentence 22 states it had rapid but not strong bites."
+  },
+  {
+   "sentences": [
+    29
+   ],
    "kind": "about_something_else",
-   "reason": "Sentence 29 claims Carnotaurus belongs to the parent group Furileusauria, which is a taxonomic group rather than a description of the animal itself."
+   "reason": "The claim that Carnotaurus belongs to the parent group Furileusauria is not supported by current phylogenetic consensus and presents a classification that may be incorrect."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Carnotaurus lived in South America during the Late Cretaceous period, approximately 69 to 66 million years ago.\" / \"Carnotaurus lived during the Late Cretaceous, approximately 72 to 69.9 million years ago in the Maastrichtian stage, in what is now South America.\": Sentence 30 gives an age range of 69–66 Ma, while sentence 31 gives 72–69.9 Ma for the same time period."
+  "- contradiction: \"François Therrien and colleagues (2005) questioned earlier interpretations, suggesting Carnotaurus had a bite force twice that of the American alligator.\" / \"Analysis by Mazzetta et al. suggests Carnotaurus was capable of rapid but not strong bites.\": Sentence 21 claims a bite force twice that of an alligator, implying a very high force, while sentence 22 states it had rapid but not strong bites."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:59:55+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:56:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Carnotaurus measured between 7.5 and 8 meters in length."
+    },
+    {
+     "sentences": [
+      29,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 30 gives an age range of 69–66 Ma, while sentence 31 gives 72–69.9 Ma for the same time period."
+    },
+    {
+     "sentences": [
+      28
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 29 claims Carnotaurus belongs to the parent group Furileusauria, which is a taxonomic group rather than a description of the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:59:55+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:30+00:00"
 }

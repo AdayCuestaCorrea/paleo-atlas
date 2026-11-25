@@ -2,30 +2,48 @@
  "taxon_key": "abrosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "be5ca3117aa81c53",
- "reviewed_at": "2026-11-24T01:30:27+00:00",
+ "text_hash": "1ae269b9a8e83281",
+ "reviewed_at": "2026-11-25T13:53:07+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    7
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states Abrosaurus is a basal member of Macronaria, while sentence 9 lists its parent group as Mamenchisauridae, a different clade."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 gives two conflicting age ranges for Abrosaurus: 168–161 Ma versus 170.9–154.8 Ma."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"these fossils\" without having previously introduced what fossils are being discussed."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"While originally classified as a camarasaurid, research suggests Abrosaurus is a basal member of Macronaria.\" / \"The Paleobiology Database lists the parent group of Abrosaurus as Mamenchisauridae.\": Sentence 8 states Abrosaurus is a basal member of Macronaria, while sentence 9 lists its parent group as Mamenchisauridae, a different clade.",
-  "- contradiction: \"Abrosaurus lived during the Middle Jurassic Period, approximately 168 to 161 million years ago, with the Paleobiology Database recording a range from 170.9 to 154.8 million years ago.\": Sentence 10 gives two conflicting age ranges for Abrosaurus: 168–161 Ma versus 170.9–154.8 Ma."
+  "- missing context: \"Today, these fossils are kept in a museum in Zigong.\": The sentence refers to \"these fossils\" without having previously introduced what fossils are being discussed."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:09:19+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states Abrosaurus is a basal member of Macronaria, while sentence 9 lists its parent group as Mamenchisauridae, a different clade."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 gives two conflicting age ranges for Abrosaurus: 168–161 Ma versus 170.9–154.8 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:09:19+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:50+00:00"
 }

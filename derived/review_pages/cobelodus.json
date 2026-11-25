@@ -2,29 +2,44 @@
  "taxon_key": "cobelodus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a8df071db186a8cc",
- "reviewed_at": "2026-11-24T01:37:47+00:00",
+ "text_hash": "b3b80c641ff2c540",
+ "reviewed_at": "2026-11-25T13:55:39+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    0,
+    1
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 refers to species S. aculeata without introducing the species name earlier."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 mentions the type specimen was originally assigned to genus Styptobasis but does not specify the species name, leaving the reference incomplete."
+   "kind": "repetition",
+   "reason": "Both sentences state that Cobelodus had long, flexible cartilaginous tentacles on its pectoral fins."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Rainer Zangerl reassigned the species S. aculeata to the genus Cobelodus in 1973.\": Sentence 4 refers to species S. aculeata without introducing the species name earlier.",
-  "- missing context: \"The type specimen, originally assigned to the genus Styptobasis, was discovered by Edward Drinker Cope in the Illinois Basin black coal shales.\": Sentence 3 mentions the type specimen was originally assigned to genus Styptobasis but does not specify the species name, leaving the reference incomplete."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:40:09+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:37:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to species S. aculeata without introducing the species name earlier."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions the type specimen was originally assigned to genus Styptobasis but does not specify the species name, leaving the reference incomplete."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:40:09+00:00"
+  }
+ ]
 }

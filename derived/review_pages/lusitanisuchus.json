@@ -3,21 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "6c793f5f3d9ffcea",
- "reviewed_at": "2026-11-24T01:31:55+00:00",
+ "reviewed_at": "2026-11-25T13:53:48+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    3
+    4,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 claims the genus lived from 152.21 to 149.2 Ma during the Kimmeridgian stage, but 149.2 Ma is in the Berriasian (Early Cretaceous), contradicting the earlier statement that the range extends into the Early Cretaceous and the Kimmeridgian is a Late Jurassic stage."
+   "reason": "Sentence 5 limits the temporal range to 152.21–149.2 Ma, while sentence 6 claims teeth in Berriasian strata extend the range by ~15 Ma into the Early Cretaceous."
+  },
+  {
+   "sentences": [
+    3,
+    4
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 states Lusitanisuchus coexisted with dinosaurs in the Late Jurassic and Early Cretaceous, but sentence 5 gives a range that ends in the Late Jurassic (149.2 Ma), not the Early Cretaceous."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Lusitanisuchus coexisted with many dinosaurs in the Lusitanian Basin during the Late Jurassic and Early Cretaceous.\" / \"Teeth found at Porto Dinheiro, Lourinhã in Berriasian strata extend the known temporal range of the taxon by about 15 million years. The genus lived from 152.21 to 149.2 million years ago during the Kimmeridgian stage.\": Sentence 4 claims the genus lived from 152.21 to 149.2 Ma during the Kimmeridgian stage, but 149.2 Ma is in the Berriasian (Early Cretaceous), contradicting the earlier statement that the range extends into the Early Cretaceous and the Kimmeridgian is a Late Jurassic stage."
+  "- contradiction: \"The genus lived from 152.21 to 149.2 million years ago during the Kimmeridgian stage.\" / \"Teeth found at Porto Dinheiro, Lourinhã in Berriasian strata extend the known temporal range of the taxon by about 15 million years.\": Sentence 5 limits the temporal range to 152.21–149.2 Ma, while sentence 6 claims teeth in Berriasian strata extend the range by ~15 Ma into the Early Cretaceous.",
+  "- contradiction: \"Lusitanisuchus coexisted with many dinosaurs in the Lusitanian Basin during the Late Jurassic and Early Cretaceous.\" / \"The genus lived from 152.21 to 149.2 million years ago during the Kimmeridgian stage.\": Sentence 4 states Lusitanisuchus coexisted with dinosaurs in the Late Jurassic and Early Cretaceous, but sentence 5 gives a range that ends in the Late Jurassic (149.2 Ma), not the Early Cretaceous."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:15:50+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:31:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 claims the genus lived from 152.21 to 149.2 Ma during the Kimmeridgian stage, but 149.2 Ma is in the Berriasian (Early Cretaceous), contradicting the earlier statement that the range extends into the Early Cretaceous and the Kimmeridgian is a Late Jurassic stage."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:15:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:09+00:00"
 }

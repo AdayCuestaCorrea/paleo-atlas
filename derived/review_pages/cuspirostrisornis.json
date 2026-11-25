@@ -2,22 +2,38 @@
  "taxon_key": "cuspirostrisornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4505fd585f61af5a",
- "reviewed_at": "2026-11-24T01:35:26+00:00",
+ "text_hash": "5983b1bbc39a8bc7",
+ "reviewed_at": "2026-11-25T13:54:54+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    13
+    0,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 assigns Cuspirostrisornis to the family Avisauridae, while sentence 14 assigns it to the parent group Cuspirostrisornithidae, implying two different higher‑level classifications for the same genus."
+   "kind": "repetition",
+   "reason": "Both sentences state that Cuspirostrisornis is an extinct bird."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The only known species, Cuspirostrisornis houi, is classified within the family Avisauridae.\" / \"The genus Cuspirostrisornis is part of the parent group Cuspirostrisornithidae.\": Sentence 2 assigns Cuspirostrisornis to the family Avisauridae, while sentence 14 assigns it to the parent group Cuspirostrisornithidae, implying two different higher‑level classifications for the same genus."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:30:58+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:35:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 assigns Cuspirostrisornis to the family Avisauridae, while sentence 14 assigns it to the parent group Cuspirostrisornithidae, implying two different higher‑level classifications for the same genus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:30:58+00:00"
+  }
+ ]
 }

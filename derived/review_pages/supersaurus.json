@@ -2,38 +2,74 @@
  "taxon_key": "supersaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e18449cb3db299eb",
- "reviewed_at": "2026-11-24T00:21:08+00:00",
+ "text_hash": "7129217ff27bc671",
+ "reviewed_at": "2026-11-25T13:23:12+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    14
+    23,
+    24,
+    25
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 claims the 'Jimbo' specimen is possibly the oldest known dinosaur, which conflicts with sentence 15 stating Supersaurus lived during the Late Jurassic (155.7–150.8 Ma), far later than the earliest dinosaurs."
+   "reason": "The three sentences give mutually inconsistent age ranges for Supersaurus (153–145 Ma, 155.7–150.8 Ma, and 154.8–143.1 Ma)."
   },
   {
    "sentences": [
-    11,
-    12
+    22,
+    24
    ],
    "kind": "repetition",
-   "reason": "Both sentences list the same synonyms for Supersaurus (Ultrasauros, Dystylosaurus, etc.), repeating the information unnecessarily."
+   "reason": "Both sentences state that Supersaurus lived during the Late Jurassic period, repeating the same claim."
   },
   {
    "sentences": [
-    17
+    7
    ],
    "kind": "missing_context",
-   "reason": "Sentence 18 refers to “this paradigm” without specifying which paradigm has been discussed earlier, leaving the reader unclear about what is being questioned."
+   "reason": "The sentence refers to the “Jimbo” specimen as possibly the oldest known dinosaur without providing context or evidence for that claim."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Despite unreliable dating methods, the 'Jimbo' specimen is considered possibly the oldest known dinosaur.\" / \"Supersaurus lived in North America during the Late Jurassic period, approximately 155.7 to 150.8 million years ago, in what is now North America and possibly Europe.\": Sentence 6 claims the 'Jimbo' specimen is possibly the oldest known dinosaur, which conflicts with sentence 15 stating Supersaurus lived during the Late Jurassic (155.7–150.8 Ma), far later than the earliest dinosaurs.",
-  "- missing context: \"However, some subsequent studies question this paradigm.\": Sentence 18 refers to “this paradigm” without specifying which paradigm has been discussed earlier, leaving the reader unclear about what is being questioned."
+  "- contradiction: \"The fossils of Supersaurus date between 153 and 145 million years ago.\" / \"Supersaurus lived during the late Jurassic period, approximately 155.7 to 150.8 million years ago, in what is now North America and possibly Europe.\" / \"Supersaurus lived from the Kimmeridgian to the Tithonian stages, between 154.8 and 143.1 million years ago.\": The three sentences give mutually inconsistent age ranges for Supersaurus (153–145 Ma, 155.7–150.8 Ma, and 154.8–143.1 Ma).",
+  "- missing context: \"Despite unreliable dating methods, the \"Jimbo\" specimen is considered possibly the oldest known dinosaur.\": The sentence refers to the “Jimbo” specimen as possibly the oldest known dinosaur without providing context or evidence for that claim."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:27:00+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:21:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims the 'Jimbo' specimen is possibly the oldest known dinosaur, which conflicts with sentence 15 stating Supersaurus lived during the Late Jurassic (155.7–150.8 Ma), far later than the earliest dinosaurs."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences list the same synonyms for Supersaurus (Ultrasauros, Dystylosaurus, etc.), repeating the information unnecessarily."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 18 refers to “this paradigm” without specifying which paradigm has been discussed earlier, leaving the reader unclear about what is being questioned."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:27:00+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:57+00:00"
 }

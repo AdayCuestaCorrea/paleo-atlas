@@ -2,30 +2,45 @@
  "taxon_key": "argentinonectes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cb289b03f459e92e",
- "reviewed_at": "2026-11-24T02:02:48+00:00",
+ "text_hash": "7b72693df857a43b",
+ "reviewed_at": "2026-11-25T13:59:07+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    12,
+    13
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the holotype\" before it has been introduced or defined on the page."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions \"the coracoid\" without prior introduction of the coracoid in the text."
+   "kind": "repetition",
+   "reason": "Both sentences state that Argentinonectes is within the clade Weddellonectia and belong to the family Elasmosauridae, repeating the same classification information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Shark teeth belonging to Protosqualus argentinensis, Notidanodon (or Xampylodon) dentatus, and Echinorhinus maremagnum were recovered close to the holotype.\": Refers to \"the holotype\" before it has been introduced or defined on the page.",
-  "- missing context: \"Parallel scratches on the coracoid are interpreted as marks left by scavenging sharks shedding teeth.\": Mentions \"the coracoid\" without prior introduction of the coracoid in the text."
- ],
- "rewrite": "replaced",
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:38+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:02:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the holotype\" before it has been introduced or defined on the page."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"the coracoid\" without prior introduction of the coracoid in the text."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:38+00:00"
+  }
+ ]
 }

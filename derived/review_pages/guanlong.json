@@ -2,37 +2,51 @@
  "taxon_key": "guanlong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a71542fedca8db38",
- "reviewed_at": "2026-11-24T00:57:04+00:00",
+ "text_hash": "f1ce0d6f7df9a862",
+ "reviewed_at": "2026-11-25T13:41:45+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    1,
+    10
    ],
-   "kind": "missing_context",
-   "reason": "Refers to a specimen lying on top of another without earlier introduction of any specimens."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions a juvenile individual without prior context or identification."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Discusses an immature and an adult specimen without having defined them earlier in the text."
+   "kind": "repetition",
+   "reason": "Both sentences state that Guanlong’s crest was used for display purposes."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"One specimen was found lying on top of another along with three other theropod dinosaurs.\": Refers to a specimen lying on top of another without earlier introduction of any specimens.",
-  "- missing context: \"The juvenile individual died at six years of age while still growing.\": Mentions a juvenile individual without prior context or identification.",
-  "- missing context: \"Researchers presume the immature specimen was trampled to death by the adult individual after both died.\": Discusses an immature and an adult specimen without having defined them earlier in the text."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:23:28+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:57:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a specimen lying on top of another without earlier introduction of any specimens."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a juvenile individual without prior context or identification."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Discusses an immature and an adult specimen without having defined them earlier in the text."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:23:28+00:00"
+  }
+ ]
 }

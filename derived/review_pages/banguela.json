@@ -2,38 +2,58 @@
  "taxon_key": "banguela",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "72cf29d606e1e288",
- "reviewed_at": "2026-11-24T01:10:05+00:00",
+ "text_hash": "27535cc283cd7e01",
+ "reviewed_at": "2026-11-25T13:46:32+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Banguela lived during the Early Cretaceous period."
-  },
-  {
-   "sentences": [
     7,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim that Banguela lived during the Early Cretaceous period."
-  },
-  {
-   "sentences": [
-    4,
-    9
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 claims the holotype dates to the Albian stage, while sentence 10 claims it dates from the Aptian to Albian stages."
+   "reason": "Sentence 8 claims Banguela is unique among dsungaripteroid pterosaurs because it has no teeth, yet sentence 11 places it in the family Dsungaripteridae, a group that characteristically possesses teeth."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype fossil was acquired by Swiss collector Urs Oberli from the Chapada do Araripe region. The holotype specimen NMSG SAO 251093 was found in the Romualdo Formation and dates to the Albian stage.\" / \"The holotype dates from the Aptian to Albian stages.\": Sentence 5 claims the holotype dates to the Albian stage, while sentence 10 claims it dates from the Aptian to Albian stages."
+  "- contradiction: \"Banguela is unique among dsungaripteroid pterosaurs due to its total absence of teeth.\" / \"In 2015, Headden and Campos classified Banguela in the family Dsungaripteridae in a basal position.\": Sentence 8 claims Banguela is unique among dsungaripteroid pterosaurs because it has no teeth, yet sentence 11 places it in the family Dsungaripteridae, a group that characteristically possesses teeth."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:39:13+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:10:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Banguela lived during the Early Cretaceous period."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim that Banguela lived during the Early Cretaceous period."
+    },
+    {
+     "sentences": [
+      4,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims the holotype dates to the Albian stage, while sentence 10 claims it dates from the Aptian to Albian stages."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:39:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:58+00:00"
 }

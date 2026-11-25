@@ -2,30 +2,62 @@
  "taxon_key": "conchoraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "19b8bc088ae33f84",
- "reviewed_at": "2026-11-24T00:51:35+00:00",
+ "text_hash": "21a2f0a288be2cce",
+ "reviewed_at": "2026-11-25T13:39:26+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6,
-    14
+    8,
+    9
    ],
    "kind": "repetition",
-   "reason": "All three sentences state that Barsbold described Conchoraptor gracilis in 1986."
+   "reason": "Both sentences state that the type species Conchoraptor gracilis was formally described and named by Barsbold in 1986."
   },
   {
    "sentences": [
-    4
+    16,
+    18
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to \"internal connections between its ears\" without any prior mention of ears or hearing."
+   "kind": "repetition",
+   "reason": "Both sentences describe the Late Cretaceous environment of the Baruun Goyot and Nemegt formations as arid with sand dune fields and intermittent streams."
+  },
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences refer to the same Barun Goyot (spelled differently) formation as the location where Conchoraptor fossils were found."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- missing context: \"Internal connections between its ears functioned as resonance chambers that improved its hearing.\": Sentence 5 refers to \"internal connections between its ears\" without any prior mention of ears or hearing."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:49:32+00:00"
+ "repetitions_dropped": 3,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that Barsbold described Conchoraptor gracilis in 1986."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to \"internal connections between its ears\" without any prior mention of ears or hearing."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:49:32+00:00"
+  }
+ ]
 }

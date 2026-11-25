@@ -3,29 +3,49 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0a94a9eeb4c1a82d",
- "reviewed_at": "2026-11-24T01:40:01+00:00",
+ "reviewed_at": "2026-11-25T13:56:18+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    5
+    4,
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Itemirus lived during the Turonian stage of the Late Cretaceous, repeating the same temporal claim."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to \"additional fossil material\" that has not been mentioned elsewhere on the page, leaving the source of that material unclear."
+   "kind": "contradiction",
+   "reason": "Sentence 5 places Itemirus in Dromaeosaurinae, while sentence 7 suggests it may belong to Tyrannosauroidea, conflicting classifications for the same genus."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A 2014 study placed the genus Itemirus within the subfamily Dromaeosaurinae based on additional fossil material.\": Sentence 5 refers to \"additional fossil material\" that has not been mentioned elsewhere on the page, leaving the source of that material unclear."
+  "- contradiction: \"A 2014 study placed the genus Itemirus within the subfamily Dromaeosaurinae based on additional fossil material found alongside the original braincase.\" / \"Thomas Holtz suggested that Itemirus might be a member of Tyrannosauroidea.\": Sentence 5 places Itemirus in Dromaeosaurinae, while sentence 7 suggests it may belong to Tyrannosauroidea, conflicting classifications for the same genus."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:40:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Itemirus lived during the Turonian stage of the Late Cretaceous, repeating the same temporal claim."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to \"additional fossil material\" that has not been mentioned elsewhere on the page, leaving the source of that material unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:26:41+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:26:41+00:00"
+ "rewritten_at": "2026-11-25T14:31:56+00:00"
 }

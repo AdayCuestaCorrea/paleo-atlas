@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "315309ff2617c34d",
- "reviewed_at": "2026-11-24T00:58:55+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:42:39+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    6,
-    7
+   "reviewed_at": "2026-11-24T00:58:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Nicholls and Brinkman discovered or named Parvinatator in 1995, repeating the same information."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 assigns Parvinatator to its own family Parvinatatoridae, while sentence 12 suggests it is a true ichthyosaur more derived than other ichthyosaurs, implying a different higher-level classification."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Nicholls and Brinkman discovered or named Parvinatator in 1995, repeating the same information."
-  },
-  {
-   "sentences": [
-    10,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 assigns Parvinatator to its own family Parvinatatoridae, while sentence 12 suggests it is a true ichthyosaur more derived than other ichthyosaurs, implying a different higher-level classification."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:35:05+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Parvinatator is classified within the family Parvinatatoridae.\" / \"Some researchers classify Parvinatator as a true ichthyosaur that is more derived than Utatsusaurus and Grippia.\": Sentence 11 assigns Parvinatator to its own family Parvinatatoridae, while sentence 12 suggests it is a true ichthyosaur more derived than other ichthyosaurs, implying a different higher-level classification."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:35:05+00:00"
+ ]
 }

@@ -2,30 +2,58 @@
  "taxon_key": "pachyornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0c3689411f257235",
- "reviewed_at": "2026-11-24T01:30:18+00:00",
+ "text_hash": "77f803f30b83e8a6",
+ "reviewed_at": "2026-11-25T13:53:06+00:00",
  "problems": [
   {
    "sentences": [
-    0,
     10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Pachyornis belongs to the moa family, while sentence 11 claims its parent group is the family Emeidae."
+   "reason": "Sentence 11 states the parent group of Pachyornis is the family Emeidae, while earlier sentences (1) and (3) place it in the moa family."
   },
   {
    "sentences": [
-    3,
-    5
+    12,
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences assert that P. elephantopus exhibits the most extreme physical form within the genus."
+   "kind": "contradiction",
+   "reason": "Sentence 13 claims Pachyornis lived from 2.58 to 0 million years ago (Gelasian to Holocene), whereas sentence 14 limits fossils to the Late Pleistocene to Holocene, a much narrower time span."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Pachyornis was an extinct genus of flightless ratites from New Zealand belonging to the moa family, sharing a sternum lacking a keel, a trait common to all ratites.\" / \"The parent group of the genus Pachyornis is the family Emeidae.\": Sentence 1 states Pachyornis belongs to the moa family, while sentence 11 claims its parent group is the family Emeidae."
+  "- contradiction: \"The parent group of the genus Pachyornis is the family Emeidae.\": Sentence 11 states the parent group of Pachyornis is the family Emeidae, while earlier sentences (1) and (3) place it in the moa family.",
+  "- contradiction: \"Pachyornis lived from the Gelasian epoch to the Holocene, spanning 2.58 to 0 million years ago.\" / \"Fossils of Pachyornis date from the Late Pleistocene to the Holocene.\": Sentence 13 claims Pachyornis lived from 2.58 to 0 million years ago (Gelasian to Holocene), whereas sentence 14 limits fossils to the Late Pleistocene to Holocene, a much narrower time span."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:08:48+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Pachyornis belongs to the moa family, while sentence 11 claims its parent group is the family Emeidae."
+    },
+    {
+     "sentences": [
+      3,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences assert that P. elephantopus exhibits the most extreme physical form within the genus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:08:48+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:48+00:00"
 }

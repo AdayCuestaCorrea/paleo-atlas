@@ -2,21 +2,78 @@
  "taxon_key": "prosaurolophus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7bae0aeb73b5b8fc",
- "reviewed_at": "2026-11-24T00:14:30+00:00",
+ "text_hash": "7867908037c31d14",
+ "reviewed_at": "2026-11-25T13:20:48+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses reclassification of other genera into Stephanosaurinae or Hadrosaurinae, which is about those groups rather than Prosaurolophus itself."
+  },
+  {
+   "sentences": [
+    28
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 29 refers to the Dinosaur Park Formation, a geological formation, not directly to the animal."
+  },
+  {
+   "sentences": [
+    27
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 28 mentions the Campanian stage, a geological time interval, not a feature of Prosaurolophus."
+  },
+  {
+   "sentences": [
+    17,
+    18
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the crest’s potential to support soft tissue structures for display."
+  },
+  {
+   "sentences": [
+    19,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that nasal diverticula were used for visual and auditory signaling."
+  },
+  {
+   "sentences": [
+    5,
+    6
    ],
    "kind": "missing_context",
-   "reason": "refers to a previously assigned hocked bone without explaining what it was or where it was found"
+   "reason": "Sentences 6 and 7 refer to specific ischium characteristics ('hocked', 'bare') without prior introduction of the ischium or context for these terms."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"A complete skeleton found in 1924 revealed a smooth ischium, proving that a previously assigned hocked bone belonged to a different genus.\": refers to a previously assigned hocked bone without explaining what it was or where it was found"
+  "- missing context: \"Charles Sternberg observed that a 'hocked' ischium once assigned to Saurolophus was not actually found with the holotype.\" / \"William Parks later discovered a complete Prosaurolophus skeleton in 1924 that showed a 'bare' ischium.\": Sentences 6 and 7 refer to specific ischium characteristics ('hocked', 'bare') without prior introduction of the ischium or context for these terms."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:42:51+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:14:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "refers to a previously assigned hocked bone without explaining what it was or where it was found"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:42:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:41+00:00"
 }

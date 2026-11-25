@@ -2,40 +2,111 @@
  "taxon_key": "quaesitosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e87edd0e51436d1c",
- "reviewed_at": "2026-11-24T00:31:59+00:00",
+ "text_hash": "16ed507fc38a7a6a",
+ "reviewed_at": "2026-11-25T13:28:41+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    17,
-    18
+    3,
+    20
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for Quaesitosaurus differ: 72–71 Ma (16), 85–71 Ma (18), and 83.6–72.2 Ma (19)."
+   "reason": "Different age ranges for the same species: 12 m long estimate vs 83.6–72.2 Ma"
   },
   {
    "sentences": [
-    12,
-    14
+    17,
+    19
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Quaesitosaurus belongs to Nemegtosauridae, repeating the classification."
+   "kind": "contradiction",
+   "reason": "Conflicting age ranges: 72–71 Ma vs 85–71 Ma"
   },
   {
    "sentences": [
-    12,
-    13,
-    14
+    14,
+    15,
+    16
+   ],
+   "kind": "contradiction",
+   "reason": "Different family assignments: Dicraeosauridae vs Nemegtosauridae"
+  },
+  {
+   "sentences": [
+    14,
+    16
    ],
    "kind": "repetition",
-   "reason": "Sentences 13, 14 and 15 all describe the taxonomic placement, repeating the same information."
+   "reason": "Both state the family of Quaesitosaurus"
+  },
+  {
+   "sentences": [
+    17,
+    19,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "All three give overlapping but inconsistent time ranges"
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions a channel in the basioccipital and basipterygoid without explaining its significance or context"
+  },
+  {
+   "sentences": [
+    18
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes the Barun Goyot Formation’s depositional environments as if it were a feature of the animal"
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Quaesitosaurus lived between 72 and 71 million years ago in the Late Cretaceous within the Barun Goyot Formation.\" / \"It lived at the end of the Cretaceous, approximately 85 to 71 million years ago during the Campanian, in what is now Asia.\" / \"The time range for Quaesitosaurus is estimated from 83.6 to 72.2 million years ago.\": The age ranges for Quaesitosaurus differ: 72–71 Ma (16), 85–71 Ma (18), and 83.6–72.2 Ma (19)."
+  "- contradiction: \"Based on related species, Quaesitosaurus is estimated to have been about 12 meters long.\" / \"The time range for Quaesitosaurus is estimated from 83.6 to 72.2 million years ago.\": Different age ranges for the same species: 12 m long estimate vs 83.6–72.2 Ma",
+  "- contradiction: \"Quaesitosaurus lived between 72 and 71 million years ago in the Late Cretaceous within the Barun Goyot Formation.\" / \"It lived at the end of the Cretaceous, approximately 85 to 71 million years ago during the Campanian, in what is now Asia.\": Conflicting age ranges: 72–71 Ma vs 85–71 Ma",
+  "- contradiction: \"Originally, Quaesitosaurus was classified in Dicraeosauridae with Dicraeosaurus because it was one of the few sauropods with preserved skulls.\" / \"Recent analysis has reclassified Quaesitosaurus into the family Nemegtosauridae alongside Nemegtosaurus.\" / \"Quaesitosaurus belongs to the family Nemegtosauridae.\": Different family assignments: Dicraeosauridae vs Nemegtosauridae",
+  "- missing context: \"A notable feature is a channel in the basioccipital and basipterygoid leading from the pituitary gland to the region below the occipital condyle.\": Mentions a channel in the basioccipital and basipterygoid without explaining its significance or context"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:03:58+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:31:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Quaesitosaurus differ: 72–71 Ma (16), 85–71 Ma (18), and 83.6–72.2 Ma (19)."
+    },
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Quaesitosaurus belongs to Nemegtosauridae, repeating the classification."
+    },
+    {
+     "sentences": [
+      12,
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 13, 14 and 15 all describe the taxonomic placement, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:03:58+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:34+00:00"
 }

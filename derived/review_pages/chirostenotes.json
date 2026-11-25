@@ -2,57 +2,93 @@
  "taxon_key": "chirostenotes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "eb449b4a47b0d806",
- "reviewed_at": "2026-11-24T00:28:28+00:00",
+ "text_hash": "561f6bd3a18b5c50",
+ "reviewed_at": "2026-11-25T13:27:06+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
-   ],
-   "kind": "contradiction",
-   "reason": "Different estimates of length and weight for the same species"
-  },
-  {
-   "sentences": [
-    3,
-    9,
-    10
-   ],
-   "kind": "repetition",
-   "reason": "All describe the second claw used to impale soft‑bodied prey"
-  },
-  {
-   "sentences": [
-    13,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 14 lists Macrophalangia and Caenagnathus as synonyms of Chirostenotes, while sentence 15 states they are not valid names for the animal"
-  },
-  {
-   "sentences": [
     11,
-    15
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 claims Chirostenotes’ jaws were misidentified and belong to a different animal, contradicting earlier statements that it is a toothless oviraptorosaur with its own jaws"
+   "kind": "repetition",
+   "reason": "Both sentences claim Chirostenotes could feed on soft‑bodied prey by impaling them with its second claw."
   },
   {
    "sentences": [
-    4,
-    19
+    23,
+    25
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the first fossils were found in the Dinosaur Park Formation of Alberta"
+   "reason": "Both sentences state that Caenagnathus jaws grouped with traditional caenagnathids but not necessarily with Chirostenotes."
+  },
+  {
+   "sentences": [
+    23
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses Caenagnathus jaws, not Chirostenotes itself."
+  },
+  {
+   "sentences": [
+    25
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses Caenagnathus jaws, not Chirostenotes itself."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [
-  "- contradiction: \"A 2016 study estimated Chirostenotes to be 2.5 meters long and weigh 100 kilograms.\" / \"Other measurements placed the animal at approximately 2.85 meters in length, 90 centimeters high at the hip, and an estimated 50 kilograms in weight.\": Different estimates of length and weight for the same species",
-  "- contradiction: \"Macrophalangia canadensis and Caenagnathus sternbergi are listed as synonyms of Chirostenotes.\" / \"Chirostenotes is the only valid genus name for this animal, despite earlier names like Macrophalangia and Caenagnathus being applied to its parts.\": Sentence 14 lists Macrophalangia and Caenagnathus as synonyms of Chirostenotes, while sentence 15 states they are not valid names for the animal",
-  "- contradiction: \"Chirostenotes belongs to the family Caenagnathidae.\" / \"It is now known that Chirostenotes was a toothless oviraptorosaur, meaning its jaws were originally misidentified and now belong to a different animal, likely a dromaeosaurid.\": Sentence 16 claims Chirostenotes’ jaws were misidentified and belong to a different animal, contradicting earlier statements that it is a toothless oviraptorosaur with its own jaws"
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:39:01+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:28:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Different estimates of length and weight for the same species"
+    },
+    {
+     "sentences": [
+      3,
+      9,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "All describe the second claw used to impale soft‑bodied prey"
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 lists Macrophalangia and Caenagnathus as synonyms of Chirostenotes, while sentence 15 states they are not valid names for the animal"
+    },
+    {
+     "sentences": [
+      11,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 claims Chirostenotes’ jaws were misidentified and belong to a different animal, contradicting earlier statements that it is a toothless oviraptorosaur with its own jaws"
+    },
+    {
+     "sentences": [
+      4,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the first fossils were found in the Dinosaur Park Formation of Alberta"
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:39:01+00:00"
+  }
+ ]
 }

@@ -2,30 +2,64 @@
  "taxon_key": "parahelicoprion",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e37180b98de83981",
- "reviewed_at": "2026-11-24T00:03:24+00:00",
+ "text_hash": "238d6ad8d6bb894b",
+ "reviewed_at": "2026-11-25T13:14:55+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    14
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the upper tips of Parahelicoprion tooth crowns are uniquely rounded and blunt, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 15 states Parahelicoprion lived between 298.9 and 293.52 Ma during the Asselian stage, yet earlier sentences (6, 4) place it in the Artinskian stage of the Permian and imply it persisted into the Cisuralian. The two time ranges conflict."
   },
   {
    "sentences": [
-    19,
-    20
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 20 says Parahelicoprion lived during the Early Permian, while sentence 21 claims it lived between 298.9 and 293.52 Ma during the Asselian stage, which is earlier than the Artinskian stage mentioned as its latest occurrence, creating an inconsistent age range."
+   "kind": "repetition",
+   "reason": "Sentence 14 repeats the species name but incorrectly identifies the type species as Helicoprion clerci, whereas earlier sentences (1, 2) correctly name it Parahelicoprion clerci. This is a repeated but erroneous claim."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 7 mentions tooth fragments damaged by mining, but the page never explains that the specimen was mined or how the damage occurred."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Parahelicoprion lived during the Early Permian.\" / \"The latest known occurrence of Parahelicoprion is the Artinskian stage of the Permian, and it is assumed to have gone extinct by the end of the Cisuralian, having lived between 298.9 and 293.52 million years ago during the Asselian stage.\": Sentence 20 says Parahelicoprion lived during the Early Permian, while sentence 21 claims it lived between 298.9 and 293.52 Ma during the Asselian stage, which is earlier than the Artinskian stage mentioned as its latest occurrence, creating an inconsistent age range."
+  "- contradiction: \"Parahelicoprion lived during the Early Permian. The latest known occurrence of Parahelicoprion is the Artinskian stage of the Permian, and it is assumed to have gone extinct by the end of the Cisuralian. Parahelicoprion lived between 298.9 and 293.52 million years ago during the Asselian stage.\": Sentence 15 states Parahelicoprion lived between 298.9 and 293.52 Ma during the Asselian stage, yet earlier sentences (6, 4) place it in the Artinskian stage of the Permian and imply it persisted into the Cisuralian. The two time ranges conflict.",
+  "- missing context: \"The holotype of P. clerci consists of tooth fragments that were damaged by mining and broken into pieces.\": Sentence 7 mentions tooth fragments damaged by mining, but the page never explains that the specimen was mined or how the damage occurred."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:07:03+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:03:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the upper tips of Parahelicoprion tooth crowns are uniquely rounded and blunt, repeating the same claim."
+    },
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 20 says Parahelicoprion lived during the Early Permian, while sentence 21 claims it lived between 298.9 and 293.52 Ma during the Asselian stage, which is earlier than the Artinskian stage mentioned as its latest occurrence, creating an inconsistent age range."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:07:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:17+00:00"
 }

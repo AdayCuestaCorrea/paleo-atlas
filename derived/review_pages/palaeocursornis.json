@@ -3,21 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "327be4f3479e0554",
- "reviewed_at": "2026-11-24T01:15:39+00:00",
+ "reviewed_at": "2026-11-25T13:48:44+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    7
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 classifies Palaeocursornis as an avemetatarsalian pterosaur within Azhdarchidae, while sentence 8 claims it is a dubious tapejaroid, a different clade."
+   "reason": "Sentence 1 classifies Palaeocursornis as a dubious azhdarchoid pterosaur, while sentence 9 labels it a dubious tapejaroid, two distinct clades."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 7 describes the archipelago and ocean location, which concerns the geological setting rather than the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Palaeocursornis is currently classified as a dubious genus of avemetatarsalian, a group that likely includes azhdarchoid pterosaurs. It belongs to the suborder Pterodactyloidea and is placed within the superfamily Azhdarchoidea and the family Azhdarchidae.\" / \"In 2025, Thomas and McDavid suggested that Palaeocursornis is a dubious genus of tapejaroid.\": Sentence 1 classifies Palaeocursornis as an avemetatarsalian pterosaur within Azhdarchidae, while sentence 8 claims it is a dubious tapejaroid, a different clade."
+  "- contradiction: \"Palaeocursornis is classified as a dubious genus of avemetatarsalian, likely an azhdarchoid pterosaur.\" / \"In 2025, Thomas and McDavid suggested that Palaeocursornis is a dubious genus of tapejaroid.\": Sentence 1 classifies Palaeocursornis as a dubious azhdarchoid pterosaur, while sentence 9 labels it a dubious tapejaroid, two distinct clades."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:08:26+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:15:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 classifies Palaeocursornis as an avemetatarsalian pterosaur within Azhdarchidae, while sentence 8 claims it is a dubious tapejaroid, a different clade."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:08:26+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:25+00:00"
 }

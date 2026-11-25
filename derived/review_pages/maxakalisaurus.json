@@ -2,36 +2,67 @@
  "taxon_key": "maxakalisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "04cf876cfd254eea",
- "reviewed_at": "2026-11-24T01:09:03+00:00",
+ "text_hash": "b004c0243cfd7e65",
+ "reviewed_at": "2026-11-25T13:46:02+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 claims Maxakalisaurus is the largest dinosaur ever described in Brazil, while sentence 2 suggests adults may have reached 20 m, implying it may not be the largest."
-  },
-  {
-   "sentences": [
-    6
+    0,
+    3
    ],
    "kind": "repetition",
-   "reason": "Sentence 7 repeats information already given in sentence 6 about the specimen being stored at the National Museum of Brazil before the 2018 fire."
+   "reason": "Both sentences state that Maxakalisaurus has unusually grooved teeth, repeating the same claim."
   },
   {
    "sentences": [
+    4,
     8
    ],
+   "kind": "repetition",
+   "reason": "Sentence 5 introduces the genus and species name, and sentence 9 restates the same information, repeating the claim about the name."
+  },
+  {
+   "sentences": [
+    7
+   ],
    "kind": "about_something_else",
-   "reason": "Sentence 9 discusses the evolution of South American sauropods in general, not specifically about Maxakalisaurus."
+   "reason": "Sentence 8 discusses the evolution of South American sauropods in general, not specifically about Maxakalisaurus, treating a broader group as if it were about the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The type specimen represents an animal approximately 12.1 meters long and weighing an estimated 5 tons, though a juvenile specimen was estimated at 13 meters long and 9 tons, suggesting adults may have reached 20 meters.\" / \"Alexander Kellner stated that Maxakalisaurus is the largest dinosaur ever described in Brazil.\": Sentence 3 claims Maxakalisaurus is the largest dinosaur ever described in Brazil, while sentence 2 suggests adults may have reached 20 m, implying it may not be the largest."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:32:53+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:09:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims Maxakalisaurus is the largest dinosaur ever described in Brazil, while sentence 2 suggests adults may have reached 20 m, implying it may not be the largest."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 7 repeats information already given in sentence 6 about the specimen being stored at the National Museum of Brazil before the 2018 fire."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 9 discusses the evolution of South American sauropods in general, not specifically about Maxakalisaurus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:32:53+00:00"
+  }
+ ]
 }

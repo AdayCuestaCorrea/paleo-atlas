@@ -2,29 +2,56 @@
  "taxon_key": "brighstoneus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b43cadaad7240163",
- "reviewed_at": "2026-11-24T00:12:15+00:00",
+ "text_hash": "1e5dad9afc0ff925",
+ "reviewed_at": "2026-11-25T13:19:48+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    6,
+    23
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 14 and 15 give conflicting phylogenetic placements: 14 places Brighstoneus within Hadrosauriformes, while 15 places it outside Hadrosauriformes as a sister to Ouranosaurus."
+   "kind": "repetition",
+   "reason": "Both sentences state that Brighstoneus was found in the Wessex Formation, repeating the same location claim."
   },
   {
    "sentences": [
-    15
+    19
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 16 states Brighstoneus is a sister taxon to a clade that contains Brighstoneus itself, which is logically impossible and indicates a mistake."
+   "kind": "contradiction",
+   "reason": "The sentence claims Brighstoneus is the sister taxon to a clade that includes Brighstoneus itself, which is logically inconsistent."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Phylogenetic analyses in 2021 placed Brighstoneus within the clade Iguanodontia, and most analyses suggest it is a basal member of Hadrosauriformes, forming a polytomy with Barilium, Hypselospinus, Iguanodon, and Mantellisaurus.\" / \"One analysis excluding specific nasal and ilium characters recovered Brighstoneus outside Hadrosauriformes as a sister species to Ouranosaurus.\": Sentences 14 and 15 give conflicting phylogenetic placements: 14 places Brighstoneus within Hadrosauriformes, while 15 places it outside Hadrosauriformes as a sister to Ouranosaurus."
+  "- contradiction: \"A 2025 study by Bertozzo et al. recovered Brighstoneus as the sister taxon to a clade containing Comptonatus and Brighstoneus, placing these taxa within Hadrosauroidea after the Iguanodontidae.\": The sentence claims Brighstoneus is the sister taxon to a clade that includes Brighstoneus itself, which is logically inconsistent."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:25:56+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:12:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 14 and 15 give conflicting phylogenetic placements: 14 places Brighstoneus within Hadrosauriformes, while 15 places it outside Hadrosauriformes as a sister to Ouranosaurus."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 16 states Brighstoneus is a sister taxon to a clade that contains Brighstoneus itself, which is logically impossible and indicates a mistake."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:25:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:38+00:00"
 }

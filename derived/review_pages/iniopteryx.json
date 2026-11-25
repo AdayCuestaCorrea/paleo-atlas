@@ -2,30 +2,73 @@
  "taxon_key": "iniopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a4b267f27f6efac5",
- "reviewed_at": "2026-11-24T00:18:49+00:00",
+ "text_hash": "b6da325156c81503",
+ "reviewed_at": "2026-11-25T13:22:20+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    14
+    2,
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 claims Iniopteryx ate arthropod exoskeletons, while sentence 15 states it had small fragile teeth that limited its diet to soft food."
+   "kind": "repetition",
+   "reason": "Both sentences state that male Iniopteryx had a recurved denticle on their pelvic fin functioning as a tenaculum."
   },
   {
    "sentences": [
-    7
+    2,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim the animal had fins similar to those of flying fish."
+  },
+  {
+   "sentences": [
+    3,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 says the fish had small, fragile teeth limiting its diet to soft food, while sentence 10 reports stomach contents of arthropod exoskeletons, conodonts, and plant matter."
+  },
+  {
+   "sentences": [
+    10
    ],
    "kind": "missing_context",
-   "reason": "Sentence 8 refers to a low number of female fossils and predation on females, but the page never previously mentioned female fossils or provided context for this comparison."
+   "reason": "Sentence 11 discusses higher predation on females and defense by males, but the page never mentions any data on female fossils or the relative numbers of male vs. female specimens."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Fossil evidence from stomach infills shows that Iniopteryx ate arthropod exoskeletons, conodonts, and plant matter.\" / \"Researchers suggest that Iniopteryx had small, fragile teeth that limited its diet to soft food.\": Sentence 9 claims Iniopteryx ate arthropod exoskeletons, while sentence 15 states it had small fragile teeth that limited its diet to soft food.",
-  "- missing context: \"Researchers theorize that the low number of female fossils compared to males was caused by higher predation on females, while males used their denticle-covered pectoral fins for defense.\": Sentence 8 refers to a low number of female fossils and predation on females, but the page never previously mentioned female fossils or provided context for this comparison."
+  "- contradiction: \"Researchers suggest that Iniopteryx had small, fragile teeth that limited its diet to soft food.\" / \"Fossil evidence from stomach infills in specimens PF6672 and PF6646 shows that Iniopteryx ate arthropod exoskeletons, conodonts, and plant matter.\": Sentence 4 says the fish had small, fragile teeth limiting its diet to soft food, while sentence 10 reports stomach contents of arthropod exoskeletons, conodonts, and plant matter.",
+  "- missing context: \"Researchers theorize that the low number of female fossils compared to males was caused by higher predation on females, while males used their denticle-covered pectoral fins for defense.\": Sentence 11 discusses higher predation on females and defense by males, but the page never mentions any data on female fossils or the relative numbers of male vs. female specimens."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:12:11+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:18:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 claims Iniopteryx ate arthropod exoskeletons, while sentence 15 states it had small fragile teeth that limited its diet to soft food."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 refers to a low number of female fossils and predation on females, but the page never previously mentioned female fossils or provided context for this comparison."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:12:11+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:07+00:00"
 }

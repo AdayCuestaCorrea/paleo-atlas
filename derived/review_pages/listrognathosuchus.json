@@ -2,28 +2,44 @@
  "taxon_key": "listrognathosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c225bacc1aa36fd3",
- "reviewed_at": "2026-11-24T01:37:42+00:00",
+ "text_hash": "c32c029521e6e93e",
+ "reviewed_at": "2026-11-25T13:55:38+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    5,
+    6
    ],
    "kind": "repetition",
-   "reason": "Sentence 4 states the parent group is Alligatoridae and also that it is classified in the family Alligatoridae, repeating the same classification."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 claims the fossils date to the middle Paleocene epoch, but the dates 63.4–60.9 Ma correspond to the early Paleocene (Danian–Selandian stages), contradicting the epoch description."
+   "reason": "Both sentences state that Listrognathosuchus is classified in the family Alligatoridae."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Fossils of Listrognathosuchus date back to the middle Paleocene epoch, when the animal lived from 63.4 to 60.9 million years ago during the Danian to Selandian stages.\": Sentence 6 claims the fossils date to the middle Paleocene epoch, but the dates 63.4–60.9 Ma correspond to the early Paleocene (Danian–Selandian stages), contradicting the epoch description."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:39:56+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:37:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 4 states the parent group is Alligatoridae and also that it is classified in the family Alligatoridae, repeating the same classification."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims the fossils date to the middle Paleocene epoch, but the dates 63.4–60.9 Ma correspond to the early Paleocene (Danian–Selandian stages), contradicting the epoch description."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:39:56+00:00"
+  }
+ ]
 }

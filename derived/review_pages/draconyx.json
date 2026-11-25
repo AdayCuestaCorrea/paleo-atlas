@@ -2,22 +2,38 @@
  "taxon_key": "draconyx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "43590e2b4b8e9073",
- "reviewed_at": "2026-11-24T01:34:56+00:00",
+ "text_hash": "d76b03aa6ce766d1",
+ "reviewed_at": "2026-11-25T13:54:46+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    8
+    3,
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 7 and 9 give conflicting classifications for Draconyx—first as Iguanodontia/Camptosauridae, then as Styracosterna."
+   "kind": "repetition",
+   "reason": "Both sentences state the specimen was found in 1991, repeating the same fact."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Mateus and Antunes classified Draconyx as a member of Iguanodontia and specifically Camptosauridae based on features of the teeth and femur.\" / \"A 2022 article places Draconyx within the clade Styracosterna, differing from earlier classifications.\": Sentences 7 and 9 give conflicting classifications for Draconyx—first as Iguanodontia/Camptosauridae, then as Styracosterna."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:28:38+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:34:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 7 and 9 give conflicting classifications for Draconyx—first as Iguanodontia/Camptosauridae, then as Styracosterna."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:28:38+00:00"
+  }
+ ]
 }

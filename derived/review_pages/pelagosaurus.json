@@ -3,21 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "25c1ba072f2d1942",
- "reviewed_at": "2026-11-24T00:51:38+00:00",
+ "reviewed_at": "2026-11-25T13:39:31+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    8
+    6,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 classifies Pelagosaurus as a basal metriorhynchoid, while sentence 9 states it was a primitive teleosaurid rather than a basal metriorhynchid."
+   "reason": "Sentence 7 classifies Pelagosaurus as a basal metriorhynchoid, while sentence 13 states it was a primitive teleosaurid, contradicting the earlier classification."
+  },
+  {
+   "sentences": [
+    7,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 8 places Pelagosaurus in the family Teleosauridae, whereas sentence 13 claims it was not a teleosaurid but a basal metriorhynchid, conflicting with the family assignment."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Later analyses consistently classify Pelagosaurus as a basal metriorhynchoid, a group of fully pelagic crocodyliforms with flippered limbs and smooth skin, and it is classified within the family Teleosauridae.\" / \"The evolutionary placement of Pelagosaurus within Thalattosuchia has historically been a subject of debate, though recent phylogenetic analyses suggest Pelagosaurus was a primitive teleosaurid rather than a basal metriorhynchid or thalattosuchian.\": Sentence 6 classifies Pelagosaurus as a basal metriorhynchoid, while sentence 9 states it was a primitive teleosaurid rather than a basal metriorhynchid."
+  "- contradiction: \"Later analyses consistently classify Pelagosaurus as a basal metriorhynchoid, a group of fully pelagic crocodyliforms with flippered limbs and smooth skin.\" / \"Recent phylogenetic analyses suggest Pelagosaurus was a primitive teleosaurid rather than a basal metriorhynchid or thalattosuchian.\": Sentence 7 classifies Pelagosaurus as a basal metriorhynchoid, while sentence 13 states it was a primitive teleosaurid, contradicting the earlier classification.",
+  "- contradiction: \"Pelagosaurus is classified within the family Teleosauridae.\" / \"Recent phylogenetic analyses suggest Pelagosaurus was a primitive teleosaurid rather than a basal metriorhynchid or thalattosuchian.\": Sentence 8 places Pelagosaurus in the family Teleosauridae, whereas sentence 13 claims it was not a teleosaurid but a basal metriorhynchid, conflicting with the family assignment."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:50:19+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 classifies Pelagosaurus as a basal metriorhynchoid, while sentence 9 states it was a primitive teleosaurid rather than a basal metriorhynchid."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:50:19+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:26+00:00"
 }

@@ -2,31 +2,78 @@
  "taxon_key": "phyllolepis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "74ba7f088460f081",
- "reviewed_at": "2026-11-24T00:32:19+00:00",
+ "text_hash": "82b3e14029e55e6e",
+ "reviewed_at": "2026-11-25T13:29:05+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7,
-    8
+    8,
+    9,
+    15
    ],
-   "kind": "repetition",
-   "reason": "All three sentences state that Phyllolepis was blind and used sensory organs in armor grooves to detect prey."
+   "kind": "contradiction",
+   "reason": "Sentences 9 and 10 claim Phyllolepis were blind and used electroreception, while sentence 16 states they had eyes."
   },
   {
    "sentences": [
-    6,
-    16
+    23,
+    24
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 claims Phyllolepis was blind, while sentence 17 states it had eyes on either side of its head."
+   "reason": "Sentence 24 names the family Phyllolepididae, whereas sentence 25 names the family Phyllolepida."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 9 refers to a “wooden surface appearance” without explaining what is meant by this term."
+  },
+  {
+   "sentences": [
+    14,
+    19,
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentences 15, 20 and 25 discuss classification of the group or order rather than describing the animal itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"These fish were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentence 7 claims Phyllolepis was blind, while sentence 17 states it had eyes on either side of its head."
+  "- contradiction: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden surface appearance.\" / \"The highly developed system of lateral ridges on Phyllolepis is suggested to have been used for electroreception to sense their surroundings in the absence of functional eyes.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentences 9 and 10 claim Phyllolepis were blind and used electroreception, while sentence 16 states they had eyes.",
+  "- contradiction: \"Phyllolepis is a member of the family Phyllolepididae.\" / \"Phyllolepis is the type genus of the extinct arthrodire placoderm family Phyllolepida, which lived during the middle to late Devonian periods.\": Sentence 24 names the family Phyllolepididae, whereas sentence 25 names the family Phyllolepida.",
+  "- missing context: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden surface appearance.\": Sentence 9 refers to a “wooden surface appearance” without explaining what is meant by this term."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:09:37+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:32:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that Phyllolepis was blind and used sensory organs in armor grooves to detect prey."
+    },
+    {
+     "sentences": [
+      6,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 claims Phyllolepis was blind, while sentence 17 states it had eyes on either side of its head."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:09:37+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:49+00:00"
 }

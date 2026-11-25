@@ -2,64 +2,90 @@
  "taxon_key": "palintropus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "776398b6f5245e50",
- "reviewed_at": "2026-11-24T01:28:22+00:00",
+ "text_hash": "b99c598543ae40ac",
+ "reviewed_at": "2026-11-25T13:52:11+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    9
+    4,
+    5,
+    6
    ],
    "kind": "contradiction",
-   "reason": "The Lance Formation coracoid is dated to 65.5 Ma, but the Paleobiology Database records Palintropus as Campanian (83.6–72.2 Ma)."
+   "reason": "Sentences 5, 6, and 7 give mutually incompatible taxonomic assignments for Palintropus (family Palintropiformes vs. Quercymegapodiidae and class Reptilia)."
   },
   {
    "sentences": [
-    5,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "A cladistic analysis places Palintropus in the family Palintropiformes, whereas the database assigns it to Quercymegapodiidae."
-  },
-  {
-   "sentences": [
-    5,
     7
    ],
-   "kind": "contradiction",
-   "reason": "The database classifies Palintropus under the class Reptilia, while the analysis identifies it as a primitive bird."
-  },
-  {
-   "sentences": [
-    10,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Palintropus is an early member of the Charadriiformes."
-  },
-  {
-   "sentences": [
-    11,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Palintropus is a Galliforme, possibly a quercymegapodiid."
-  },
-  {
-   "sentences": [
-    8,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the family assigned to Palintropus is Quercymegapodiidae."
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses other birds of the Western Interior Seaway and subtropical coastlands, not Palintropus itself."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The species Palintropus retusus is known from a single proximal coracoid bone discovered in the Lance Formation of Wyoming.\" / \"The time range for Palintropus is recorded as Campanian to Campanian, from 83.6 to 72.2 million years ago.\": The Lance Formation coracoid is dated to 65.5 Ma, but the Paleobiology Database records Palintropus as Campanian (83.6–72.2 Ma).",
-  "- contradiction: \"A 2009 cladistic analysis by Longrich and colleagues suggested Palintropus is a primitive bird related to Apsaravis and belongs in the family Palintropiformes.\" / \"The family assigned to Palintropus in the Paleobiology Database is Quercymegapodiidae.\": A cladistic analysis places Palintropus in the family Palintropiformes, whereas the database assigns it to Quercymegapodiidae.",
-  "- contradiction: \"A 2009 cladistic analysis by Longrich and colleagues suggested Palintropus is a primitive bird related to Apsaravis and belongs in the family Palintropiformes.\" / \"The Paleobiology Database classifies Palintropus under the class Reptilia.\": The database classifies Palintropus under the class Reptilia, while the analysis identifies it as a primitive bird."
+  "- contradiction: \"A 2009 cladistic analysis by Longrich and colleagues suggested Palintropus is a primitive bird related to Apsaravis and belongs in the family Palintropiformes, a conclusion supported by earlier work proposing the newly established group.\" / \"In contrast, the Paleobiology Database lists the parent group and family assigned to Palintropus as Quercymegapodiidae.\" / \"The Paleobiology Database also classifies Palintropus under the class Reptilia.\": Sentences 5, 6, and 7 give mutually incompatible taxonomic assignments for Palintropus (family Palintropiformes vs. Quercymegapodiidae and class Reptilia)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:59:31+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:28:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "The Lance Formation coracoid is dated to 65.5 Ma, but the Paleobiology Database records Palintropus as Campanian (83.6–72.2 Ma)."
+    },
+    {
+     "sentences": [
+      5,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "A cladistic analysis places Palintropus in the family Palintropiformes, whereas the database assigns it to Quercymegapodiidae."
+    },
+    {
+     "sentences": [
+      5,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "The database classifies Palintropus under the class Reptilia, while the analysis identifies it as a primitive bird."
+    },
+    {
+     "sentences": [
+      10,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Palintropus is an early member of the Charadriiformes."
+    },
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Palintropus is a Galliforme, possibly a quercymegapodiid."
+    },
+    {
+     "sentences": [
+      8,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the family assigned to Palintropus is Quercymegapodiidae."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:59:31+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:17+00:00"
 }

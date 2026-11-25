@@ -2,29 +2,48 @@
  "taxon_key": "koutalisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "810b7559f5101cb1",
- "reviewed_at": "2026-11-24T01:10:42+00:00",
+ "text_hash": "dd1fe667085c3231",
+ "reviewed_at": "2026-11-25T13:46:47+00:00",
  "problems": [
   {
    "sentences": [
-    2
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 3 repeats the naming of the genus and species by the same authors, stating both the genus and species names twice."
-  },
-  {
-   "sentences": [
-    4,
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 classifies Koutalisaurus within Lambeosaurinae and Tsintaosaurini, while sentence 6 and the database list it as belonging to Arenysaurini, presenting conflicting taxonomic placement."
+   "reason": "Sentence 6 claims Koutalisaurus is an arenysaurin, while earlier sentences classify it as a hadrosaurid, presenting conflicting taxonomic placement for the same animal."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Prieto-Marquez et al. (2006) classified the animal as a hadrosaurid but noted its uncertain placement within the family. Koutalisaurus is classified within the subfamily Lambeosaurinae. Koutalisaurus belongs to the tribe Tsintaosaurini.\" / \"Recent work by Prieto-Marquez and Wagner suggests that Koutalisaurus is the same genus as Pararhabdodon, as originally hypothesized. A 2020 study by Nick Longrich and colleagues classified Koutalisaurus as an arenysaurin. The Paleobiology Database lists the parent group of Koutalisaurus as Arenysaurini.\": Sentence 5 classifies Koutalisaurus within Lambeosaurinae and Tsintaosaurini, while sentence 6 and the database list it as belonging to Arenysaurini, presenting conflicting taxonomic placement."
+  "- contradiction: \"Recent work by Prieto-Marquez and Wagner suggests that Koutalisaurus is the same genus as Pararhabdodon, as originally hypothesized. A 2020 study by Nick Longrich and colleagues classified Koutalisaurus as an arenysaurin. The Paleobiology Database lists the parent group of Koutalisaurus as Arenysaurini.\": Sentence 6 claims Koutalisaurus is an arenysaurin, while earlier sentences classify it as a hadrosaurid, presenting conflicting taxonomic placement for the same animal."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:42:31+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:10:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 3 repeats the naming of the genus and species by the same authors, stating both the genus and species names twice."
+    },
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 classifies Koutalisaurus within Lambeosaurinae and Tsintaosaurini, while sentence 6 and the database list it as belonging to Arenysaurini, presenting conflicting taxonomic placement."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:42:31+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:13+00:00"
 }

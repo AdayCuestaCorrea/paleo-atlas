@@ -2,31 +2,51 @@
  "taxon_key": "erpetosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "884ffc6bffbe4dad",
- "reviewed_at": "2026-11-24T01:28:10+00:00",
+ "text_hash": "1985e49e81ba3e3b",
+ "reviewed_at": "2026-11-25T13:52:07+00:00",
  "problems": [
   {
    "sentences": [
     1,
-    6
+    3,
+    5
    ],
    "kind": "contradiction",
-   "reason": "[2] places Erpetosuchus in the latest Carnian, while [7] states it lived during the Norian stage (227.3–205.7 Ma)."
-  },
-  {
-   "sentences": [
-    5,
-    7
-   ],
-   "kind": "contradiction",
-   "reason": "[6] claims Erpetosuchus granti is a sister‑taxon to Crocodylomorpha, whereas [8] says its relationship is unresolved at the base of Archosauria."
+   "reason": "Sentences 2, 4, and 6 give conflicting age information: 2 claims the species lived 227.3–205.7 Ma (which includes the Rhaetian), 4 states the original specimens are from the latest Carnian, and 6 says the Connecticut specimen is from the Norian. These age ranges do not all overlap and contradict each other."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"E. T. Newton first described Erpetosuchus in 1894 based on four specimens from the latest Carnian Lossiemouth Sandstone Formation in northeastern Scotland.\" / \"This animal lived between 227.3 and 205.7 million years ago during the Late Triassic period, specifically in the Norian stage.\": [2] places Erpetosuchus in the latest Carnian, while [7] states it lived during the Norian stage (227.3–205.7 Ma).",
-  "- contradiction: \"An analysis by Olsen et al. in 2000 suggested Erpetosuchus granti is the sister-taxon to Crocodylomorpha.\" / \"It is debated whether Erpetosuchus is closely related to Crocodylomorpha, as some analyses suggest an unresolved relationship at the base of Archosauria instead.\": [6] claims Erpetosuchus granti is a sister‑taxon to Crocodylomorpha, whereas [8] says its relationship is unresolved at the base of Archosauria."
+  "- contradiction: \"This animal lived between 227.3 and 205.7 million years ago during the Norian stage.\" / \"The original description included four specimens from the latest Carnian Lossiemouth Sandstone Formation.\" / \"This Connecticut specimen was found in the New Haven Formation, which dates to the Norian age.\": Sentences 2, 4, and 6 give conflicting age information: 2 claims the species lived 227.3–205.7 Ma (which includes the Rhaetian), 4 states the original specimens are from the latest Carnian, and 6 says the Connecticut specimen is from the Norian. These age ranges do not all overlap and contradict each other."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:58:43+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:28:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "[2] places Erpetosuchus in the latest Carnian, while [7] states it lived during the Norian stage (227.3–205.7 Ma)."
+    },
+    {
+     "sentences": [
+      5,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "[6] claims Erpetosuchus granti is a sister‑taxon to Crocodylomorpha, whereas [8] says its relationship is unresolved at the base of Archosauria."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:58:43+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:13+00:00"
 }

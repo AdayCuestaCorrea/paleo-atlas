@@ -3,36 +3,57 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "3db0264cfbda5705",
- "reviewed_at": "2026-11-24T00:12:09+00:00",
+ "reviewed_at": "2026-11-25T13:19:45+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    5
+    23,
+    24,
+    26
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the dinosaur was about 11 m long and smaller than many sauropods."
-  },
-  {
-   "sentences": [
-    1,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the same mass estimate of 3.5 tonnes."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 13 refers to a carcass in a death pose, but the page never previously mentioned a carcass."
+   "kind": "contradiction",
+   "reason": "Sentences 24, 25 and 27 give mutually inconsistent geological age ranges for Vulcanodon: 24 cites Sinemurian–Pliensbachian, 25 claims the Toarcian stage, and 27 states a range of 199.5–184.2 Ma, which does not align with the earlier intervals."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Raath suggested in 1972 that the carcass lay in a death pose with the neck bent backward over the pelvis.\": Sentence 13 refers to a carcass in a death pose, but the page never previously mentioned a carcass."
+  "- contradiction: \"The animal lived during the Sinemurian to Pliensbachian stages of the Early Jurassic.\" / \"This corresponds to the early Jurassic period, approximately 183 to 175 million years ago, specifically in the Toarcian stage.\" / \"The total time range for the species spans from 199.5 to 184.2 million years ago.\": Sentences 24, 25 and 27 give mutually inconsistent geological age ranges for Vulcanodon: 24 cites Sinemurian–Pliensbachian, 25 claims the Toarcian stage, and 27 states a range of 199.5–184.2 Ma, which does not align with the earlier intervals."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:24:41+00:00"
+ "rewrite": "english failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:12:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the dinosaur was about 11 m long and smaller than many sauropods."
+    },
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give the same mass estimate of 3.5 tonnes."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 13 refers to a carcass in a death pose, but the page never previously mentioned a carcass."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:24:41+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:36+00:00"
 }

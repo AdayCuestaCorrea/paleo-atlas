@@ -2,29 +2,44 @@
  "taxon_key": "yingshanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b686ee9731748d84",
- "reviewed_at": "2026-11-24T00:10:41+00:00",
+ "text_hash": "310620ec26a577d8",
+ "reviewed_at": "2026-11-25T13:18:44+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    8
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions the species name refers to the location of the locality, Jichuan, but the page never explains what 'the locality' refers to or why the species name is derived from it."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 refers to a conference published in 1986 that is never mentioned elsewhere, leaving the reader unclear about its relevance."
+   "kind": "repetition",
+   "reason": "Both sentences state that Yingshanosaurus was a herbivore."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The genus name Yingshanosaurus is derived from the locality of Yingshan, while the species name refers to the location of the locality, Jichuan.\": Sentence 5 mentions the species name refers to the location of the locality, Jichuan, but the page never explains what 'the locality' refers to or why the species name is derived from it.",
-  "- missing context: \"Some researchers argue the name should be considered invalid because the original description was difficult to find. It was assumed for a long time that the name Yingshanosaurus would remain a nomen nudum due to insufficient description, despite the conference being published in 1986. Although the validity of the name has been reaffirmed, it is rarely cited in international scientific literature.\": Sentence 11 refers to a conference published in 1986 that is never mentioned elsewhere, leaving the reader unclear about its relevance."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:08:01+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:10:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions the species name refers to the location of the locality, Jichuan, but the page never explains what 'the locality' refers to or why the species name is derived from it."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 refers to a conference published in 1986 that is never mentioned elsewhere, leaving the reader unclear about its relevance."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:08:01+00:00"
+  }
+ ]
 }

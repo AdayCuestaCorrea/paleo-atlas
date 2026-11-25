@@ -3,28 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d492b48afc09944d",
- "reviewed_at": "2026-11-24T01:18:23+00:00",
+ "reviewed_at": "2026-11-25T13:49:30+00:00",
  "problems": [
   {
    "sentences": [
-    8
+    2,
+    3
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"adult jaws\" without any prior mention of jaws or adult specimens."
+   "kind": "contradiction",
+   "reason": "Sentence 3 names Paronychodon caperatus as a species, while sentence 4 claims a second species also named Paronychodon caperatus."
   },
   {
    "sentences": [
-    9
+    3
    ],
    "kind": "missing_context",
-   "reason": "Mentions \"lower jaw teeth\" and \"mandible suture\" without earlier context describing the jaw anatomy."
+   "reason": "Sentence 4 refers to P. lacustris without any prior mention of that species on the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"No adult jaws bearing identical teeth have ever been discovered.\": Refers to \"adult jaws\" without any prior mention of jaws or adult specimens.",
-  "- missing context: \"One early theory proposed by Othniel Charles Marsh suggested the teeth were pathological, formed when lower jaw teeth accidentally grew back-to-back on the mandible suture.\": Mentions \"lower jaw teeth\" and \"mandible suture\" without earlier context describing the jaw anatomy."
+  "- contradiction: \"The species Paronychodon caperatus is known from the Hell Creek Formation of North Dakota, Montana, and South Dakota, as well as the Lance Formation of Wyoming.\" / \"A second species, Paronychodon caperatus, is based on holotype YPM 10624, a tooth similar in form to P. lacustris but somewhat larger.\": Sentence 3 names Paronychodon caperatus as a species, while sentence 4 claims a second species also named Paronychodon caperatus.",
+  "- missing context: \"A second species, Paronychodon caperatus, is based on holotype YPM 10624, a tooth similar in form to P. lacustris but somewhat larger.\": Sentence 4 refers to P. lacustris without any prior mention of that species on the page."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:19:38+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:18:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"adult jaws\" without any prior mention of jaws or adult specimens."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"lower jaw teeth\" and \"mandible suture\" without earlier context describing the jaw anatomy."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:19:38+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:27:06+00:00"
 }

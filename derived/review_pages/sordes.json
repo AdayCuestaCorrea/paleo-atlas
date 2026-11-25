@@ -3,29 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "a1e946fbfb501e2c",
- "reviewed_at": "2026-11-24T01:27:36+00:00",
+ "reviewed_at": "2026-11-25T13:51:55+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    17
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 states the species is placed within the family Rhamphorhynchidae, while sentence 18 claims cladistic analyses show it does not belong to that family."
+   "reason": "Sentence 13 states Sordes lived during the late Jurassic (Oxfordian to Kimmeridgian stages) but then specifies only the Oxfordian stage (161.5–154.8 Ma), contradicting the earlier broader time range."
   },
   {
    "sentences": [
-    12,
-    13
+    11
    ],
    "kind": "repetition",
-   "reason": "Sentences 13 and 14 both assert that the species is placed within the family Rhamphorhynchidae."
+   "reason": "Sentence 12 repeats the classification of Sordes within the family Rhamphorhynchidae, making the statement redundant."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Traditionally, this animal has been placed within the pterosaur family Rhamphorhynchidae.\" / \"Some researchers argue that cladistic analyses indicate Sordes is a more basal pterosaur and does not belong to the family Rhamphorhynchidae.\": Sentence 13 states the species is placed within the family Rhamphorhynchidae, while sentence 18 claims cladistic analyses show it does not belong to that family."
+  "- contradiction: \"Sordes lived during the late Jurassic period (Oxfordian to Kimmeridgian stages) in what is now Kazakhstan, specifically between 161.5 and 154.8 million years ago during the Oxfordian stage.\": Sentence 13 states Sordes lived during the late Jurassic (Oxfordian to Kimmeridgian stages) but then specifies only the Oxfordian stage (161.5–154.8 Ma), contradicting the earlier broader time range."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:55:55+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:27:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states the species is placed within the family Rhamphorhynchidae, while sentence 18 claims cladistic analyses show it does not belong to that family."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 13 and 14 both assert that the species is placed within the family Rhamphorhynchidae."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:55:55+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:02+00:00"
 }

@@ -2,8 +2,8 @@
  "taxon_key": "raphus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ab3507939a8cf7a6",
- "reviewed_at": "2026-11-23T23:51:23+00:00",
+ "text_hash": "251efec248ef3eb8",
+ "reviewed_at": "2026-11-25T13:08:30+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,29 +11,87 @@
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 gives a weight range of 10.6–17.5 kg, while sentence 6 estimates male dodos at 21 kg."
+   "reason": "Weight ranges differ: sentence 2 gives 10.6–17.5 kg, while sentence 6 estimates male 21 kg and female 17 kg."
   },
   {
    "sentences": [
-    10,
-    30
+    30,
+    31
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 states the dodo went extinct in 1662, whereas sentence 31 estimates the extinction date as 1693."
+   "reason": "Extinction dates conflict: sentence 31 says 1662, sentence 32 gives 1693 (with confidence interval 1688–1715)."
   },
   {
    "sentences": [
-    14
+    15,
+    29
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the dodo’s habitat as the woods of drier coastal areas of Mauritius."
+  },
+  {
+   "sentences": [
+    26,
+    28
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the dodo’s placement within the pigeon family (Columbidae) alongside the Rodrigues solitaire."
+  },
+  {
+   "sentences": [
+    9
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 15 discusses the absence of competing mammalian herbivores on the Mascarene Islands, which is about the islands’ ecology rather than the dodo itself."
+   "reason": "Sentence 10 discusses the coat of arms of Mauritius, not a characteristic of the dodo itself."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 18 attributes the dodo’s evolution to the absence of competing mammalian herbivores on the Mascarene Islands, focusing on the islands rather than the dodo."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Subfossil evidence indicates the dodo stood between 62.6 and 75 cm tall and weighed between 10.6 and 17.5 kg.\" / \"A 1993 study by Bradley C. Livezey estimated male dodos weighed 21 kg and females 17 kg.\": Sentence 2 gives a weight range of 10.6–17.5 kg, while sentence 6 estimates male dodos at 21 kg.",
-  "- contradiction: \"The dodo became extinct in 1662.\" / \"A 2003 statistical analysis by biologists David L. Roberts and Andrew R. Solow estimated the dodo's extinction date to be 1693, with a 95% confidence interval of 1688–1715.\": Sentence 11 states the dodo went extinct in 1662, whereas sentence 31 estimates the extinction date as 1693."
+  "- contradiction: \"Subfossil evidence indicates the dodo stood between 62.6 and 75 cm tall and weighed between 10.6 and 17.5 kg.\" / \"A 1993 study by Bradley C. Livezey estimated male dodos weighed 21 kg and females 17 kg.\": Weight ranges differ: sentence 2 gives 10.6–17.5 kg, while sentence 6 estimates male 21 kg and female 17 kg.",
+  "- contradiction: \"The dodo became extinct in 1662.\" / \"A 2003 statistical analysis by biologists David L. Roberts and Andrew R. Solow estimated the dodo's extinction date to be 1693, with a 95% confidence interval of 1688–1715.\": Extinction dates conflict: sentence 31 says 1662, sentence 32 gives 1693 (with confidence interval 1688–1715)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:12:40+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:51:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 gives a weight range of 10.6–17.5 kg, while sentence 6 estimates male dodos at 21 kg."
+    },
+    {
+     "sentences": [
+      10,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states the dodo went extinct in 1662, whereas sentence 31 estimates the extinction date as 1693."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 15 discusses the absence of competing mammalian herbivores on the Mascarene Islands, which is about the islands’ ecology rather than the dodo itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:12:40+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:14+00:00"
 }

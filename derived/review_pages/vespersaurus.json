@@ -2,49 +2,101 @@
  "taxon_key": "vespersaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ede96ac5af416d71",
- "reviewed_at": "2026-11-24T00:54:14+00:00",
+ "text_hash": "a4f762c7f8b9afff",
+ "reviewed_at": "2026-11-25T13:40:49+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    20
+    11,
+    21
    ],
    "kind": "repetition",
    "reason": "Both sentences state that the genus Vespersaurus was named and described in 2019."
   },
   {
    "sentences": [
-    21,
     22,
+    26
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Vespersaurus belongs to the family Noasauridae."
+  },
+  {
+   "sentences": [
     23,
-    24,
     25
    ],
    "kind": "repetition",
-   "reason": "All five sentences repeat the classification of Vespersaurus within Noasauridae/Noasaurinae/Abelisauroidea."
+   "reason": "Both sentences state that Vespersaurus is classified within the subfamily Noasaurinae."
   },
   {
    "sentences": [
-    30
+    10
    ],
    "kind": "missing_context",
-   "reason": "The phrase \"these animals\" is used without prior definition of which animals are meant."
+   "reason": "The phrase \"these animals\" is used without prior introduction of the group being referred to."
   },
   {
    "sentences": [
-    18,
-    19,
-    32
+    30,
+    31
    ],
-   "kind": "about_something_else",
-   "reason": "These sentences discuss footprints, hip height, and ichnospecies that are about ichnological evidence or other taxa, not directly about Vespersaurus itself."
+   "kind": "contradiction",
+   "reason": "Sentence 31 places Vespersaurus in the Turonian stage (~90 Ma), while sentence 32 claims it lived from Aptian to Campanian (121.4–72.2 Ma), which is a broader and conflicting time range."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"A whole branch of these animals likely populated the 1.3 million square kilometer Botucatu Desert for millions of years.\": The phrase \"these animals\" is used without prior definition of which animals are meant."
+  "- missing context: \"A whole branch of these animals likely populated the 1.3 million square kilometer Botucatu Desert for millions of years.\": The phrase \"these animals\" is used without prior introduction of the group being referred to.",
+  "- contradiction: \"Vespersaurus lived during the mid-Cretaceous, approximately 90 million years ago in the Turonian stage, in what is now South America.\" / \"Vespersaurus lived from the Aptian to the Campanian stages, between 121.4 and 72.2 million years ago.\": Sentence 31 places Vespersaurus in the Turonian stage (~90 Ma), while sentence 32 claims it lived from Aptian to Campanian (121.4–72.2 Ma), which is a broader and conflicting time range."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:06:06+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:54:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus Vespersaurus was named and described in 2019."
+    },
+    {
+     "sentences": [
+      21,
+      22,
+      23,
+      24,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "All five sentences repeat the classification of Vespersaurus within Noasauridae/Noasaurinae/Abelisauroidea."
+    },
+    {
+     "sentences": [
+      30
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"these animals\" is used without prior definition of which animals are meant."
+    },
+    {
+     "sentences": [
+      18,
+      19,
+      32
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences discuss footprints, hip height, and ichnospecies that are about ichnological evidence or other taxa, not directly about Vespersaurus itself."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:06:06+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:07+00:00"
 }

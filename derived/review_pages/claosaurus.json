@@ -2,30 +2,56 @@
  "taxon_key": "claosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "38d2be60ef9692c6",
- "reviewed_at": "2026-11-24T01:13:43+00:00",
+ "text_hash": "be880158ac6fd09d",
+ "reviewed_at": "2026-11-25T13:47:58+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    0,
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 gives a mass estimate of ~475 kg, while sentence 6 claims the mass is similar to a lion (~250 kg)."
+   "kind": "repetition",
+   "reason": "Both sentences state that Claosaurus supported itself on all four limbs while feeding."
   },
   {
    "sentences": [
-    10
+    5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 11 refers to “the specimen” that has not been introduced earlier in the page."
+   "reason": "Sentence 6 refers to “the specimen” that had gastroliths, but no specimen has been introduced earlier in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Estimates suggest the creature measured about 3.5 meters in length and weighed about 475 kilograms.\" / \"Thomas Holtz estimated the mass of the animal to be similar to that of a lion.\": Sentence 5 gives a mass estimate of ~475 kg, while sentence 6 claims the mass is similar to a lion (~250 kg).",
-  "- missing context: \"Reports of gastroliths in Claosaurus are based on a probable double misidentification of the specimen.\": Sentence 11 refers to “the specimen” that has not been introduced earlier in the page."
+  "- missing context: \"Reports of gastroliths in Claosaurus are based on a probable double misidentification of the specimen. The specimen thought to have gastroliths was originally misidentified as Claosaurus by Barnum Brown in 1900 because Edmontosaurus annectens was then considered a species of Claosaurus.\": Sentence 6 refers to “the specimen” that had gastroliths, but no specimen has been introduced earlier in the page."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:57:03+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:13:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 gives a mass estimate of ~475 kg, while sentence 6 claims the mass is similar to a lion (~250 kg)."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 refers to “the specimen” that has not been introduced earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:57:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:59+00:00"
 }

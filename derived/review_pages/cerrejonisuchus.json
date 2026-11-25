@@ -2,21 +2,45 @@
  "taxon_key": "cerrejonisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ff189a41591b2562",
- "reviewed_at": "2026-11-24T00:40:52+00:00",
+ "text_hash": "632f1a8d067f372c",
+ "reviewed_at": "2026-11-25T13:34:15+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    3
    ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"This presence\" in sentence 5 refers to an earlier idea that is not explicitly stated, leaving the reader unsure what is being referenced."
+   "kind": "repetition",
+   "reason": "Both sentences claim Cerrejonisuchus has the shortest snout of any dyrosaurid."
+  },
+  {
+   "sentences": [
+    5,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Hastings et al. 2010 described the genus and provide the authority."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Its flat skull and compressed, uniform teeth suggest it lived on land as a predator. This presence in Colombia indicates that dyrosaurids diversified in South America after the mass extinction at the K–T boundary. It might have even been prey for the giant snake Titanoboa in their shared brackish waters.\": The pronoun \"This presence\" in sentence 5 refers to an earlier idea that is not explicitly stated, leaving the reader unsure what is being referenced."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:25:59+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:40:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"This presence\" in sentence 5 refers to an earlier idea that is not explicitly stated, leaving the reader unsure what is being referenced."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:25:59+00:00"
+  }
+ ]
 }

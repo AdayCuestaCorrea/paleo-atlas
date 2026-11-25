@@ -2,36 +2,54 @@
  "taxon_key": "dromicosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "88d7162e1540d28c",
- "reviewed_at": "2026-11-24T01:01:08+00:00",
+ "text_hash": "86d14b0c9620b7f9",
+ "reviewed_at": "2026-11-25T13:43:44+00:00",
  "problems": [
   {
    "sentences": [
-    8
+    6
    ],
    "kind": "missing_context",
-   "reason": "Refers to a larger predator without identifying it earlier in the page."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions the predator’s stomach contents without naming or describing the predator previously."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the contents of a predator’s stomach, which is about the predator rather than the animal itself."
+   "reason": "Sentence 7 refers to \"both animals\" without previously identifying the second animal; the page only mentions a single specimen of Dromicosuchus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A specimen was discovered beneath a larger predator with bite marks, indicating it was attacked before both died.\": Refers to a larger predator without identifying it earlier in the page.",
-  "- missing context: \"The predator's stomach contents revealed bones from an aetosaur, a cynodont, a dicynodont, and a possible temnospondyl.\": Mentions the predator’s stomach contents without naming or describing the predator previously."
+  "- missing context: \"Fossil evidence suggests a specimen was attacked by a larger predator before both animals died.\": Sentence 7 refers to \"both animals\" without previously identifying the second animal; the page only mentions a single specimen of Dromicosuchus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:51:44+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:01:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a larger predator without identifying it earlier in the page."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the predator’s stomach contents without naming or describing the predator previously."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the contents of a predator’s stomach, which is about the predator rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:51:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:52+00:00"
 }

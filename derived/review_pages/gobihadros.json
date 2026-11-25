@@ -3,28 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "78d691a05e362ea8",
- "reviewed_at": "2026-11-24T01:11:18+00:00",
+ "reviewed_at": "2026-11-25T13:46:53+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    4
    ],
-   "kind": "missing_context",
-   "reason": "Mentions the holotype specimen but the page never introduced the concept of a holotype before this sentence."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to a “large individual” without any prior description of that individual’s size or identity."
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses Life Science Identifiers required for the name, which is a procedural detail unrelated to the biology of Gobihadros itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The holotype specimen MPC-D100/746 was discovered in the Bayan Shireh Formation from the Cenomanian-Santonian stages.\": Mentions the holotype specimen but the page never introduced the concept of a holotype before this sentence.",
-  "- missing context: \"CT scans of a large individual revealed calcium pyrophosphate deposition disease in its tail vertebrae and foot bones.\": Refers to a “large individual” without any prior description of that individual’s size or identity."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:44:05+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:11:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the holotype specimen but the page never introduced the concept of a holotype before this sentence."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a “large individual” without any prior description of that individual’s size or identity."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:44:05+00:00"
+  }
+ ]
 }

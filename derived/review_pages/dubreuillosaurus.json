@@ -2,37 +2,72 @@
  "taxon_key": "dubreuillosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "678f038f34fe76f0",
- "reviewed_at": "2026-11-24T00:45:11+00:00",
+ "text_hash": "0d26f30e6dd1fc86",
+ "reviewed_at": "2026-11-25T13:36:21+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    18
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"these structures\" (crests or horns) without prior introduction of such structures."
+   "kind": "repetition",
+   "reason": "Both sentences state that Dubreuillosaurus valesdunensis is a carnivorous megalosaurid theropod dinosaur"
   },
   {
    "sentences": [
-    11
+    1,
+    3
    ],
-   "kind": "missing_context",
-   "reason": "Mentions \"a related species\" without naming or describing it earlier in the page."
+   "kind": "contradiction",
+   "reason": "Sentence 2 compares the animal to Eustreptospondylus, while sentence 4 describes the skull as unusually low and elongated, which is inconsistent with a typical Eustreptospondylus skull"
   },
   {
    "sentences": [
-    12
+    13,
+    14
    ],
-   "kind": "missing_context",
-   "reason": "References \"the adult Eustreptospondylus\" without having previously introduced or described that adult specimen."
+   "kind": "contradiction",
+   "reason": "Sentence 14 estimates the adult could reach up to 9 m, yet sentence 15 claims the animal did not exhibit insular dwarfism and its small size is due to being a subadult, implying it was never that large"
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Although the known juvenile specimen lacks crests or horns, it is possible these structures developed as the animal matured, leading to ongoing debate about whether Dubreuillosaurus possessed such ornaments.\": Refers to \"these structures\" (crests or horns) without prior introduction of such structures.",
-  "- missing context: \"The habitat suggests that Dubreuillosaurus may have hunted fish and other marine prey, a hypothesis initially proposed by Allain who described the animal as a fish eater influenced by fish remains found with a related species.\": Mentions \"a related species\" without naming or describing it earlier in the page.",
-  "- missing context: \"Despite living on an island, Dubreuillosaurus did not exhibit insular dwarfism; its small size is attributed to it being a subadult, unlike the adult Eustreptospondylus found in similar settings.\": References \"the adult Eustreptospondylus\" without having previously introduced or described that adult specimen."
+  "- contradiction: \"Physically, the animal was comparable to the dinosaur Eustreptospondylus.\" / \"The skull was unusually low and elongated, measuring three times longer than it was tall.\": Sentence 2 compares the animal to Eustreptospondylus, while sentence 4 describes the skull as unusually low and elongated, which is inconsistent with a typical Eustreptospondylus skull",
+  "- contradiction: \"Gregory S. Paul estimated the subadult holotype to be 5 meters long and weigh 250 kilograms, while other estimates indicate the adult could reach up to 9 meters.\" / \"Despite living on an island, Dubreuillosaurus did not exhibit insular dwarfism; its small size is attributed to it being a subadult, unlike the adult Eustreptospondylus found in similar settings.\": Sentence 14 estimates the adult could reach up to 9 m, yet sentence 15 claims the animal did not exhibit insular dwarfism and its small size is due to being a subadult, implying it was never that large"
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:58:50+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"these structures\" (crests or horns) without prior introduction of such structures."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"a related species\" without naming or describing it earlier in the page."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "References \"the adult Eustreptospondylus\" without having previously introduced or described that adult specimen."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:58:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:18+00:00"
 }

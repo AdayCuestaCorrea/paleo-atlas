@@ -2,29 +2,74 @@
  "taxon_key": "caulkicephalus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "97dec5e228fb4f8c",
- "reviewed_at": "2026-11-24T01:04:29+00:00",
+ "text_hash": "1eb1d9d5ec3bb1fa",
+ "reviewed_at": "2026-11-25T13:44:42+00:00",
  "problems": [
   {
    "sentences": [
     14,
     15
    ],
-   "kind": "contradiction",
-   "reason": "The age ranges for Caulkicephalus differ: sentence 15 gives 125.77–121.4 Ma, while sentence 16 states ~130 Ma."
+   "kind": "repetition",
+   "reason": "Both sentences state that the fossil layer contained terrestrial plant residues, implying a terrestrial habitat."
   },
   {
    "sentences": [
-    0
+    19,
+    24
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 1 describes pterosaurs as a group of flying dinosaurs, which incorrectly classifies pterosaurs as dinosaurs."
+   "kind": "repetition",
+   "reason": "Both sentences repeat the claim that the describers assigned Caulkicephalus to Ornithocheiridae based on snout narrowing."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "missing_context",
+   "reason": "Sentences 13 and 14 introduce the terms \"prey grab\" and \"trap\" as adaptations for catching fish, but the page never defines or explains these terms before using them."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 13 describes the adaptation as catching slippery prey like fish, while sentence 14 describes it as catching elusive prey like fish, implying a different functional interpretation."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Caulkicephalus lived during the Early Cretaceous period, specifically the Barremian, from approximately 125.77 to 121.4 million years ago.\" / \"The fossils were found in brown clay from the Wessex Formation of the Wealden Group, dating to the Early Cretaceous (Barremian), approximately 130 million years ago.\": The age ranges for Caulkicephalus differ: sentence 15 gives 125.77–121.4 Ma, while sentence 16 states ~130 Ma."
+  "- missing context: \"A constriction in the snout with larger teeth at the broad end, known as a \"prey grab,\" is interpreted as an adaptation for catching slippery prey like fish.\" / \"Small teeth were located in a compressed area of the snout ending in a wide tip with large teeth, forming a \"trap\" generally believed to be an adaptation for catching elusive prey like fish.\": Sentences 13 and 14 introduce the terms \"prey grab\" and \"trap\" as adaptations for catching fish, but the page never defines or explains these terms before using them.",
+  "- contradiction: \"A constriction in the snout with larger teeth at the broad end, known as a \"prey grab,\" is interpreted as an adaptation for catching slippery prey like fish.\" / \"Small teeth were located in a compressed area of the snout ending in a wide tip with large teeth, forming a \"trap\" generally believed to be an adaptation for catching elusive prey like fish.\": Sentence 13 describes the adaptation as catching slippery prey like fish, while sentence 14 describes it as catching elusive prey like fish, implying a different functional interpretation."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:07:47+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:04:29+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Caulkicephalus differ: sentence 15 gives 125.77–121.4 Ma, while sentence 16 states ~130 Ma."
+    },
+    {
+     "sentences": [
+      0
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 1 describes pterosaurs as a group of flying dinosaurs, which incorrectly classifies pterosaurs as dinosaurs."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:07:47+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:46+00:00"
 }

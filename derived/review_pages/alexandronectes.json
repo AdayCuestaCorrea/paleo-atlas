@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d78bfd0a4d44ee84",
- "reviewed_at": "2026-11-24T00:53:28+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:40:29+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    3,
-    10
+   "reviewed_at": "2026-11-24T00:53:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "The page states the fossils date to the Early Maastrichtian (sentence 4) but also says the fossil range includes the Campanian stage (sentence 11), which are different time intervals."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 8 and 9 both describe the classification of Alexandronectes within the Aristonectinae subfamily, repeating the same claim."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "The page states the fossils date to the Early Maastrichtian (sentence 4) but also says the fossil range includes the Campanian stage (sentence 11), which are different time intervals."
-  },
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 8 and 9 both describe the classification of Alexandronectes within the Aristonectinae subfamily, repeating the same claim."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:01:17+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Fossils of Alexandronectes were discovered in the Conway Formation of Canterbury, dating to the Early Maastrichtian stage of the Cretaceous.\" / \"The fossil range of Alexandronectes includes the Campanian stage.\": The page states the fossils date to the Early Maastrichtian (sentence 4) but also says the fossil range includes the Campanian stage (sentence 11), which are different time intervals."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:01:17+00:00"
+ ]
 }

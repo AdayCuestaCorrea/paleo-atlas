@@ -2,69 +2,134 @@
  "taxon_key": "eurotrochilus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ee835394585b0131",
- "reviewed_at": "2026-11-24T00:24:56+00:00",
+ "text_hash": "6da4d34269f1d464",
+ "reviewed_at": "2026-11-25T13:25:24+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Eurotrochilus is the closest known relative to the crown group Trochilidae."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 14 repeats the claim made in sentence 13 about Eurotrochilus being the closest known relative to Trochilidae."
-  },
-  {
-   "sentences": [
-    13,
-    14,
-    16
+    22,
+    25
    ],
    "kind": "contradiction",
-   "reason": "Sentences 14, 15, and 17 give overlapping but slightly different time ranges for Eurotrochilus, with 14 using “Rupelian age of the Early Oligocene epoch” and 15/17 giving specific numeric ranges (28–34 Ma or 33.9–27.3 Ma), creating inconsistent age statements."
+   "reason": "Sentence 26 states Eurotrochilus belongs to the family Trochilidae (crown group), while sentence 23 describes it as a stem‑group hummingbird and the closest known relative to the crown group Trochilidae."
   },
   {
    "sentences": [
-    3
+    11,
+    23
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 refers to “Large hyoid bones” without any prior mention or description of these bones in the text."
+   "kind": "repetition",
+   "reason": "Both sentences state that two distinct species of Eurotrochilus have been identified: E. inexpectatus and E. noniewiczi."
   },
   {
    "sentences": [
-    4
+    26,
+    27
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions “the bone” rotating during hovering flight, but it is unclear which bone is being referenced."
+   "kind": "repetition",
+   "reason": "Sentences 27 and 28 give the same information that Eurotrochilus lived during the Rupelian age of the Early Oligocene."
   },
   {
    "sentences": [
-    7
+    28,
+    30,
+    31,
+    32
+   ],
+   "kind": "repetition",
+   "reason": "All four sentences provide overlapping age ranges for Eurotrochilus fossils, repeating the same temporal information."
+  },
+  {
+   "sentences": [
+    29
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 8 discusses the origin of the hummingbird family in the Old World, which is about the family Trochilidae rather than the specific genus Eurotrochilus."
+   "reason": "Sentence 30 discusses the Paratethys Ocean, a geological formation, rather than a characteristic of the animal itself."
   },
   {
    "sentences": [
-    10
+    33
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 11 refers to “Old World bird‑pollinated flowers” and their evolution, which concerns plant species rather than Eurotrochilus itself."
+   "reason": "Sentence 34 attributes extinction causes to competition with long‑tongued bees, a hypothesis about ecological interactions rather than a direct attribute of Eurotrochilus."
+  },
+  {
+   "sentences": [
+    34
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 35 cites rapid climate change as a hypothesis for extinction, again focusing on external factors rather than the bird itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 5,
  "notes": [
-  "- contradiction: \"Eurotrochilus lived during the Rupelian age of the Early Oligocene epoch within the Paleogene period. Eurotrochilus lived during the Rupelian age of the early Oligocene era.\" / \"Specimens of Eurotrochilus date to between 28 and 34 million years ago, with German fossils estimated at 32 million years old. Eurotrochilus lived between 33.9 and 27.3 million years ago during the Rupelian stage.\" / \"Recent estimates suggest Eurotrochilus lived between 28 and 34 million years ago, though the exact timing is debated. It is debated exactly when Eurotrochilus was present, with recent estimates suggesting a range of 28 to 34 million years ago.\": Sentences 14, 15, and 17 give overlapping but slightly different time ranges for Eurotrochilus, with 14 using “Rupelian age of the Early Oligocene epoch” and 15/17 giving specific numeric ranges (28–34 Ma or 33.9–27.3 Ma), creating inconsistent age statements.",
-  "- missing context: \"The widely separated maxillary processes in the palatine bones indicate that Eurotrochilus possessed rhynchokinesis, the ability to flex the upper beak. Large hyoid bones are thought to have supported a long, protractile tongue used for lapping up nectar.\": Sentence 4 refers to “Large hyoid bones” without any prior mention or description of these bones in the text.",
-  "- missing context: \"Specializations in the humeri allowed the bone to rotate during hovering flight.\": Sentence 5 mentions “the bone” rotating during hovering flight, but it is unclear which bone is being referenced."
+  "- contradiction: \"Eurotrochilus is an extinct genus of stem-group hummingbirds and represents the closest known relatives to the crown group Trochilidae.\" / \"Eurotrochilus belongs to the family Trochilidae.\": Sentence 26 states Eurotrochilus belongs to the family Trochilidae (crown group), while sentence 23 describes it as a stem‑group hummingbird and the closest known relative to the crown group Trochilidae."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:05:52+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:24:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Eurotrochilus is the closest known relative to the crown group Trochilidae."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 14 repeats the claim made in sentence 13 about Eurotrochilus being the closest known relative to Trochilidae."
+    },
+    {
+     "sentences": [
+      13,
+      14,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 14, 15, and 17 give overlapping but slightly different time ranges for Eurotrochilus, with 14 using “Rupelian age of the Early Oligocene epoch” and 15/17 giving specific numeric ranges (28–34 Ma or 33.9–27.3 Ma), creating inconsistent age statements."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to “Large hyoid bones” without any prior mention or description of these bones in the text."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions “the bone” rotating during hovering flight, but it is unclear which bone is being referenced."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 8 discusses the origin of the hummingbird family in the Old World, which is about the family Trochilidae rather than the specific genus Eurotrochilus."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 refers to “Old World bird‑pollinated flowers” and their evolution, which concerns plant species rather than Eurotrochilus itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:05:52+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:28+00:00"
 }

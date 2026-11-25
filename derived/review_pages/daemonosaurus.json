@@ -2,21 +2,62 @@
  "taxon_key": "daemonosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4bce7edfc7f9bcbb",
- "reviewed_at": "2026-11-24T00:18:23+00:00",
+ "text_hash": "3b71410bff8b6533",
+ "reviewed_at": "2026-11-25T13:22:07+00:00",
  "problems": [
   {
    "sentences": [
-    19
+    0,
+    1
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the skull shape and tooth arrangement of Daemonosaurus in essentially the same way."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 8 gives two different length/weight estimates for the same animal, repeating the claim with different numbers."
+  },
+  {
+   "sentences": [
+    2
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"a large oval hole\" without prior mention of the hole or context for its significance."
+   "reason": "The sentence refers to a “large oval hole behind the rib articulations” without specifying where it was found or how it relates to the specimen."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 4 discusses South American dinosaurs (Eoraptor, Herrerasaurus) as if they were part of Daemonosaurus’s own lineage, rather than mentioning them as related taxa."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"A large oval hole behind the rib articulations in Daemonosaurus has been equated with pneumatic pockets seen in other dinosaurs.\": Refers to \"a large oval hole\" without prior mention of the hole or context for its significance."
+  "- missing context: \"A large oval hole behind the rib articulations in Daemonosaurus has been equated with pneumatic pockets seen in other dinosaurs.\": The sentence refers to a “large oval hole behind the rib articulations” without specifying where it was found or how it relates to the specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:05:50+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:18:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"a large oval hole\" without prior mention of the hole or context for its significance."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:05:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:53+00:00"
 }

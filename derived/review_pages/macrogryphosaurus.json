@@ -2,22 +2,50 @@
  "taxon_key": "macrogryphosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6dd8c8a8397b2d0b",
- "reviewed_at": "2026-11-24T00:46:47+00:00",
+ "text_hash": "f2c6d1e542c3f049",
+ "reviewed_at": "2026-11-25T13:37:12+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    3,
+    4
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Macrogryphosaurus is the largest known South American ornithopod and the largest known elasmarian species."
+  },
+  {
+   "sentences": [
+    7,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 refers to holotype MUCPv-321, while sentence 10 refers to holotype MUCPv-32, indicating inconsistent specimen numbering."
+   "reason": "Sentence 8 refers to the holotype as MUCPv-32, while sentence 9 refers to the holotype as MUCPv-321, giving two different specimen numbers for the same holotype."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The holotype specimen MUCPv-32 includes an essentially complete set of vertebrae, ribs, four thoracic plates, pectoral girdles, and a sternum.\" / \"The holotype MUCPv-321 is estimated at 6 meters long, and likely had not reached adult size due to unfused vertebrae.\": Sentence 11 refers to holotype MUCPv-321, while sentence 10 refers to holotype MUCPv-32, indicating inconsistent specimen numbering."
+  "- contradiction: \"The holotype specimen MUCPv-32 includes an essentially complete set of vertebrae, ribs, four thoracic plates, pectoral girdles, and a sternum.\" / \"The holotype MUCPv-321 is estimated at 6 meters long, and likely had not reached adult size due to unfused vertebrae. Dr. Stephen F. Poropat described the fossil preservation as \"amazing.\"\": Sentence 8 refers to the holotype as MUCPv-32, while sentence 9 refers to the holotype as MUCPv-321, giving two different specimen numbers for the same holotype."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:16:34+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:46:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 refers to holotype MUCPv-321, while sentence 10 refers to holotype MUCPv-32, indicating inconsistent specimen numbering."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:16:34+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:08+00:00"
 }

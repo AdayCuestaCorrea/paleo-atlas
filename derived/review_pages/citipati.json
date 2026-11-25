@@ -3,20 +3,58 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "dd1680822ebd03db",
- "reviewed_at": "2026-11-24T00:05:15+00:00",
+ "reviewed_at": "2026-11-25T13:15:51+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    17
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to a specific individual and its healed ulna while incubating, but no earlier mention of that individual or context for the injury."
+   "kind": "contradiction",
+   "reason": "Sentence 1 gives a size range for adults, while sentence 18 gives a time range for the taxon that conflicts with the later, narrower range in sentence 16."
+  },
+  {
+   "sentences": [
+    11,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 states Citipati likely fed on tougher vegetation, implying herbivory, whereas sentence 14 suggests an omnivorous diet based on juvenile troodontid remains."
+  },
+  {
+   "sentences": [
+    15,
+    17
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 16 places Citipati in the Late Cretaceous 75–71 Ma, but sentence 18 extends the taxon's range to 83.6–72.2 Ma, overlapping but not matching the earlier estimate."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Remarkably, a specific individual survived a healed injury to its ulna bone while still incubating its nest.\": Sentence 5 refers to a specific individual and its healed ulna while incubating, but no earlier mention of that individual or context for the injury."
+  "- contradiction: \"Citipati was among the largest members of its group, with adults reaching lengths between 2.5 and 2.9 meters and weighing from 75 to 110 kilograms.\" / \"The recorded time range for this taxon extends from 83.6 to 72.2 million years ago.\": Sentence 1 gives a size range for adults, while sentence 18 gives a time range for the taxon that conflicts with the later, narrower range in sentence 16.",
+  "- contradiction: \"Citipati likely fed on tougher vegetation than other herbivorous theropods found in its environment.\" / \"Juvenile troodontid remains found in a nest suggest that adults might have brought prey to feed their young, hinting at an omnivorous diet.\": Sentence 12 states Citipati likely fed on tougher vegetation, implying herbivory, whereas sentence 14 suggests an omnivorous diet based on juvenile troodontid remains.",
+  "- contradiction: \"Citipati lived in Asia during the Late Cretaceous, approximately 75 to 71 million years ago.\" / \"The recorded time range for this taxon extends from 83.6 to 72.2 million years ago.\": Sentence 16 places Citipati in the Late Cretaceous 75–71 Ma, but sentence 18 extends the taxon's range to 83.6–72.2 Ma, overlapping but not matching the earlier estimate."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:23:54+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:05:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to a specific individual and its healed ulna while incubating, but no earlier mention of that individual or context for the injury."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:23:54+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:03:51+00:00"
 }

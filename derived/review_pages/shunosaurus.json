@@ -2,29 +2,57 @@
  "taxon_key": "shunosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8ce6ea67d98312bc",
- "reviewed_at": "2026-11-24T00:39:08+00:00",
+ "text_hash": "087632e8e64fa5f1",
+ "reviewed_at": "2026-11-25T13:32:57+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    18,
+    19
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Dong assigned Shunosaurus to Shunosaurinae within Cetiosauridae in 1992."
+   "reason": "Sentences 19 and 20 state the same classification history of Shunosaurus."
   },
   {
    "sentences": [
-    10
+    25,
+    26
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to a long thumb claw without any prior mention of a thumb claw in the article."
+   "kind": "contradiction",
+   "reason": "Sentences 26 and 27 give conflicting age ranges and geological periods for Shunosaurus."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Researchers suggest Shunosaurus may have used its long thumb claw as a weapon.\": The sentence refers to a long thumb claw without any prior mention of a thumb claw in the article."
+  "- contradiction: \"Shunosaurus lived in Sichuan Province, China, during the Late Jurassic (Oxfordian) from 161 to 157 million years ago.\" / \"Shunosaurus is a genus of cetiosaurid sauropods that lived in Asia during the Late and Middle Jurassic, approximately between 165 and 159 million years ago.\": Sentences 26 and 27 give conflicting age ranges and geological periods for Shunosaurus."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:10:46+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:39:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Dong assigned Shunosaurus to Shunosaurinae within Cetiosauridae in 1992."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a long thumb claw without any prior mention of a thumb claw in the article."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:10:46+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:17+00:00"
 }

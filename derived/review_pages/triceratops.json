@@ -2,30 +2,49 @@
  "taxon_key": "triceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4eece1a60312cda0",
- "reviewed_at": "2026-11-23T23:52:49+00:00",
+ "text_hash": "3a6bd28e11d82062",
+ "reviewed_at": "2026-11-25T13:09:01+00:00",
  "problems": [
   {
    "sentences": [
-    22,
-    24
+    5,
+    6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, while sentence 25 diagnoses it as a ceratopsine, presenting two incompatible subfamily assignments."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "The phrase \"large basement scales\" is introduced without prior explanation of what basement scales are or why they are significant."
+   "reason": "Sentence 6 states Triceratops reached 8–9 m in length and weighed 6–10 t, while sentence 7 gives a specific specimen (Kelsey) that is only 22–24 ft (≈6.7–7.3 m) long and 5.4 t, contradicting the earlier size and weight ranges."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Triceratops is classified as a genus of chasmosaurine ceratopsian dinosaur.\" / \"Thomas Lehman defined the subfamilies in 1990 and diagnosed Triceratops as a ceratopsine based on several morphological features.\": Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, while sentence 25 diagnoses it as a ceratopsine, presenting two incompatible subfamily assignments.",
-  "- missing context: \"Covering most of the body were large basement scales, the biggest known among ceratopsians, reaching up to 9 cm across.\": The phrase \"large basement scales\" is introduced without prior explanation of what basement scales are or why they are significant."
+  "- contradiction: \"Triceratops was a massive animal, reaching lengths of 8 to 9 meters and weighing between 6 and 10 metric tons.\" / \"A specific specimen named Kelsey measured 22 to 24 feet long, had a 6.5-foot skull, stood 7.5 feet tall, and weighed approximately 5.4 metric tons.\": Sentence 6 states Triceratops reached 8–9 m in length and weighed 6–10 t, while sentence 7 gives a specific specimen (Kelsey) that is only 22–24 ft (≈6.7–7.3 m) long and 5.4 t, contradicting the earlier size and weight ranges."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:20:14+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:52:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      22,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 classifies Triceratops as a chasmosaurine ceratopsian, while sentence 25 diagnoses it as a ceratopsine, presenting two incompatible subfamily assignments."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"large basement scales\" is introduced without prior explanation of what basement scales are or why they are significant."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:20:14+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:33+00:00"
 }

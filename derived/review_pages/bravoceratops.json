@@ -2,30 +2,63 @@
  "taxon_key": "bravoceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d1408e9927974ed4",
- "reviewed_at": "2026-11-24T00:44:05+00:00",
+ "text_hash": "9c43bb5acbf218de",
+ "reviewed_at": "2026-11-25T13:35:56+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    4
    ],
-   "kind": "missing_context",
-   "reason": "Refers to a \"hollow in the parietal bar\" without having previously introduced the parietal bar."
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses the rarity of ceratopsian fossils in the Javelina Formation, focusing on the formation rather than on Bravoceratops itself."
   },
   {
    "sentences": [
-    14
+    7,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Bravoceratops lived about 70 million years ago in the Late Cretaceous Javelina Formation, repeating the same temporal and geographic information."
+  },
+  {
+   "sentences": [
+    12
    ],
    "kind": "missing_context",
-   "reason": "Mentions the parietal bar being reconstructed upside down, but the parietal bar has not been described earlier in the page."
+   "reason": "The term \"squatoyugal–squamosal articulation\" is introduced without prior definition or explanation, leaving the reader unclear about what it refers to."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The specific name references a hollow in the parietal bar shaped like an inverted tear, resembling the single eye of the cyclops Polyphemus.\": Refers to a \"hollow in the parietal bar\" without having previously introduced the parietal bar.",
-  "- missing context: \"In 2020, Fowler and Freedman Fowler suggested the genus was invalid because the parietal bar was likely reconstructed upside down, removing its distinguishing features.\": Mentions the parietal bar being reconstructed upside down, but the parietal bar has not been described earlier in the page."
+  "- missing context: \"The presence of a midline epiparietal on the distal margin of the frill and the bifurcated squatoyugal–squamosal articulation in the skull are considered derived traits.\": The term \"squatoyugal–squamosal articulation\" is introduced without prior definition or explanation, leaving the reader unclear about what it refers to."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T12:25:57+00:00",
- "rewrite_mode": "sentences"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:44:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a \"hollow in the parietal bar\" without having previously introduced the parietal bar."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the parietal bar being reconstructed upside down, but the parietal bar has not been described earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:25:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:58+00:00"
 }

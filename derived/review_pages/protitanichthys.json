@@ -3,29 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "e4e7b0e3ef4402fe",
- "reviewed_at": "2026-11-24T01:30:07+00:00",
+ "reviewed_at": "2026-11-25T13:53:02+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    9
+    8
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Protitanichthys belongs to the family Coccosteidae, while sentence 10 states the Paleobi Database classifies it as a member of the family Panxiosteidae."
-  },
-  {
-   "sentences": [
-    0,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences assert that Protitanichthys belongs to the family Coccosteidae."
+   "kind": "about_something_else",
+   "reason": "Sentence 9 describes geological formations (Delaware Limestone, Rockport Quarry Limestone) rather than characteristics of Protitanichthys itself."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Protitanichthys is an extinct genus of large arthrodire placoderms belonging to the family Coccosteidae.\" / \"The Paleobi Database classifies Protitanichthys as a member of the family Panxiosteidae.\": Sentence 1 states Protitanichthys belongs to the family Coccosteidae, while sentence 10 states the Paleobi Database classifies it as a member of the family Panxiosteidae."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:07:31+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Protitanichthys belongs to the family Coccosteidae, while sentence 10 states the Paleobi Database classifies it as a member of the family Panxiosteidae."
+    },
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences assert that Protitanichthys belongs to the family Coccosteidae."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:07:31+00:00"
+  }
+ ]
 }

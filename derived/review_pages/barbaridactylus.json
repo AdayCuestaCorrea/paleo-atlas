@@ -2,32 +2,53 @@
  "taxon_key": "barbaridactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9fb45e9fbf7d8df4",
- "reviewed_at": "2026-11-24T00:49:50+00:00",
+ "text_hash": "bb0900fd5ed898df",
+ "reviewed_at": "2026-11-25T13:38:22+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1,
-    8,
-    9
+    2,
+    9,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 states only one fossil occurrence of Barbaridactylus, while sentences 1, 2 and 9 describe multiple specimens and a three‑year excavation that recovered many fossils."
-  },
-  {
-   "sentences": [
-    10,
-    11
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 11 and 12 both state that the genus was named by Longrich and colleagues in 2018, repeating the same claim."
+   "reason": "Sentence 10 states that all known specimens of Barbaridactylus were found during a three‑year excavation that recovered about 200 pterosaur fossils, implying multiple specimens, whereas sentence 11 claims only one fossil occurrence of Barbaridactylus has been recorded. Sentence 3 further lists four additional specimens, directly contradicting sentence 11."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type specimen of this pterosaur, catalogued as FSAC-OB 232, preserves parts of the skull and lower jaw along with several limb bones including a femur, radius, ulna, humerus, and a fused shoulder blade structure.\" / \"Four other fossils attributed to this animal consist entirely of humeri.\" / \"All known specimens were found during a three-year excavation that recovered approximately 200 pterosaur fossils.\" / \"Only one fossil occurrence of Barbaridactylus has been recorded.\": Sentence 10 states only one fossil occurrence of Barbaridactylus, while sentences 1, 2 and 9 describe multiple specimens and a three‑year excavation that recovered many fossils."
+  "- contradiction: \"Four additional specimens referred to Barbaridactylus consist entirely of humeri.\" / \"All known specimens of Barbaridactylus were found during a three-year excavation that recovered approximately 200 pterosaur fossils.\" / \"Only one fossil occurrence of Barbaridactylus has been recorded.\": Sentence 10 states that all known specimens of Barbaridactylus were found during a three‑year excavation that recovered about 200 pterosaur fossils, implying multiple specimens, whereas sentence 11 claims only one fossil occurrence of Barbaridactylus has been recorded. Sentence 3 further lists four additional specimens, directly contradicting sentence 11."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:35:23+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:49:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1,
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states only one fossil occurrence of Barbaridactylus, while sentences 1, 2 and 9 describe multiple specimens and a three‑year excavation that recovered many fossils."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 11 and 12 both state that the genus was named by Longrich and colleagues in 2018, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:35:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:54+00:00"
 }

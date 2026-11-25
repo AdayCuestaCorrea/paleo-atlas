@@ -2,40 +2,77 @@
  "taxon_key": "ultrastenos",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b91e0ed8dd6d4a54",
- "reviewed_at": "2026-11-24T00:06:31+00:00",
+ "text_hash": "9b68bfdc051eedcd",
+ "reviewed_at": "2026-11-25T13:16:28+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    6
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 claims Ultrastenos measured up to 1.5 m, while sentence 7 gives skull lengths of 20–35 cm, inconsistent with the overall body length."
+   "kind": "repetition",
+   "reason": "Both sentences state that Ultrastenos reached a size of upwards of 1.5 m."
   },
   {
    "sentences": [
-    0,
-    6
+    1,
+    5
    ],
-   "kind": "contradiction",
-   "reason": "The 35 cm length cited in sentence 7 for the fossil material conflicts with the 1.5 m total length stated in sentence 1."
+   "kind": "repetition",
+   "reason": "Both describe the nostrils opening slightly forward rather than straight up."
   },
   {
    "sentences": [
-    4,
-    13
+    2,
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 describes Ultrastenos as similar to the species Baru wickeni, whereas sentence 14 states that Ultrastenos and Baru huberi are the same animal, implying they are not separate species."
+   "kind": "repetition",
+   "reason": "Both mention prominent teardrop‑shaped supratemporal openings."
+  },
+  {
+   "sentences": [
+    19
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 20 discusses Harpacochampsa, a different taxon, not Ultrastenos itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Ultrastenos was a small crocodilian that measured upwards of 1.5 meters in length and possessed a flattened, short snout.\" / \"The holotype skull of the species previously known as Baru huberi measures approximately 20 cm in length and 11 cm in width, while the fossil material used to establish the genus measured 16 to 18 cm wide between the quadrates and approximately 35 cm in length.\": Sentence 1 claims Ultrastenos measured up to 1.5 m, while sentence 7 gives skull lengths of 20–35 cm, inconsistent with the overall body length.",
-  "- contradiction: \"Ultrastenos was a small crocodilian that measured upwards of 1.5 meters in length and possessed a flattened, short snout.\" / \"The holotype skull of the species previously known as Baru huberi measures approximately 20 cm in length and 11 cm in width, while the fossil material used to establish the genus measured 16 to 18 cm wide between the quadrates and approximately 35 cm in length.\": The 35 cm length cited in sentence 7 for the fossil material conflicts with the 1.5 m total length stated in sentence 1.",
-  "- contradiction: \"Fossil evidence suggests it was a semi-aquatic generalist with a broad, platyrostral skull, similar to the species Baru wickeni.\" / \"Willis previously considered Ultrastenos and Baru to be the same genus, using skull features to distinguish between them, yet research suggests that the fossils of Ultrastenos and the previously named species Baru huberi belong to the same animal.\": Sentence 5 describes Ultrastenos as similar to the species Baru wickeni, whereas sentence 14 states that Ultrastenos and Baru huberi are the same animal, implying they are not separate species."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:33:53+00:00"
+ "repetitions_dropped": 3,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:06:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims Ultrastenos measured up to 1.5 m, while sentence 7 gives skull lengths of 20–35 cm, inconsistent with the overall body length."
+    },
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "The 35 cm length cited in sentence 7 for the fossil material conflicts with the 1.5 m total length stated in sentence 1."
+    },
+    {
+     "sentences": [
+      4,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 describes Ultrastenos as similar to the species Baru wickeni, whereas sentence 14 states that Ultrastenos and Baru huberi are the same animal, implying they are not separate species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:33:53+00:00"
+  }
+ ]
 }

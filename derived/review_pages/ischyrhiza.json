@@ -2,21 +2,41 @@
  "taxon_key": "ischyrhiza",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fe5444d3c5bb5f97",
- "reviewed_at": "2026-11-24T01:30:56+00:00",
+ "text_hash": "7a6efa89833157d4",
+ "reviewed_at": "2026-11-25T13:53:19+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    5,
+    7
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"the specimen the species is based on\" without naming or describing that specimen earlier in the page."
+   "kind": "contradiction",
+   "reason": "Both sentences claim to state the original authority of the genus, but give different names and dates (Leidy 1856 vs Cope 1875)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The type species of the genus Ischyrhiza is Ischyrhiza mira, the specimen the species is based on.\": Sentence 6 refers to \"the specimen the species is based on\" without naming or describing that specimen earlier in the page."
+  "- contradiction: \"The genus was first described by Leidy in 1856.\" / \"The genus was originally placed under the authority of Cope in 1875.\": Both sentences claim to state the original authority of the genus, but give different names and dates (Leidy 1856 vs Cope 1875)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:11:59+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"the specimen the species is based on\" without naming or describing that specimen earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:11:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:58+00:00"
 }

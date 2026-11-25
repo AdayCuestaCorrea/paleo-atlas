@@ -2,22 +2,42 @@
  "taxon_key": "fukuisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "406c37e42907591b",
- "reviewed_at": "2026-11-24T01:37:02+00:00",
+ "text_hash": "1f7560fa4eb6ff30",
+ "reviewed_at": "2026-11-25T13:55:24+00:00",
  "problems": [
   {
    "sentences": [
-    3,
+    4,
     7
    ],
    "kind": "contradiction",
-   "reason": "The remains are said to be from Barremian-aged rocks (≈129–125 Ma) while the species is stated to have lived during the Aptian stage (≈121–113 Ma), which are distinct geological intervals."
+   "reason": "The page states Fukuisaurus was found in Barremian-aged rocks (early Cretaceous) but also says it lived during the Aptian stage, a later interval; the two age ranges conflict."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Remains were discovered in 1989 in Katsuyama, Fukui Prefecture, within rocks from the Barremian-aged Kitadani Formation.\" / \"Fukuisaurus lived during the Aptian stage, between 121.4 and 113.2 million years ago.\": The remains are said to be from Barremian-aged rocks (≈129–125 Ma) while the species is stated to have lived during the Aptian stage (≈121–113 Ma), which are distinct geological intervals."
+  "- contradiction: \"Fukuisaurus remains were discovered in 1989 in Katsuyama, Fukui Prefecture, within rocks from the Barremian-aged Kitadani Formation.\" / \"Fukuisaurus lived during the Aptian stage, between 121.4 and 113.2 million years ago.\": The page states Fukuisaurus was found in Barremian-aged rocks (early Cretaceous) but also says it lived during the Aptian stage, a later interval; the two age ranges conflict."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:37:10+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:37:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "The remains are said to be from Barremian-aged rocks (≈129–125 Ma) while the species is stated to have lived during the Aptian stage (≈121–113 Ma), which are distinct geological intervals."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:37:10+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:18+00:00"
 }

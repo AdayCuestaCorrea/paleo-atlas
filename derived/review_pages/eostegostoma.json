@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "a7fcb198a7f4bc72",
- "reviewed_at": "2026-11-24T01:55:51+00:00",
+ "reviewed_at": "2026-11-25T13:58:32+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,34 @@
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 gives an age range of 85.7–27.3 Ma, stating the upper bound is 27.3 Ma but also that the genus appears in the Rupelian stage (ending 28 Ma). Sentence 4 reports fossils from the Eocene (56–33.9 Ma) and Oligocene (33.9–23 Ma), which does not match the 27.3 Ma upper limit and the Rupelian claim, creating a temporal inconsistency."
+   "reason": "Sentence 3 gives an age range of 85.7–27.3 Ma and states the range spans from the Santonian to the Rupelian stages, but the Rupelian stage ends at about 28.1 Ma, so the lower bound of 27.3 Ma is inconsistent with the stated stage."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"These animals lived between 85.7 and 27.3 million years ago, appearing in the Santonian to Rupelian stages.\" / \"Fossils have been found in the Eocene of Belgium and the Oligocene of Alabama, United States.\": Sentence 3 gives an age range of 85.7–27.3 Ma, stating the upper bound is 27.3 Ma but also that the genus appears in the Rupelian stage (ending 28 Ma). Sentence 4 reports fossils from the Eocene (56–33.9 Ma) and Oligocene (33.9–23 Ma), which does not match the 27.3 Ma upper limit and the Rupelian claim, creating a temporal inconsistency."
+  "- contradiction: \"Eostegostoma lived between 85.7 and 27.3 million years ago, spanning from the Santonian to the Rupelian stages.\" / \"Fossils of Eostegostoma have been found in the Eocene of Belgium and the Oligocene of Alabama, United States.\": Sentence 3 gives an age range of 85.7–27.3 Ma and states the range spans from the Santonian to the Rupelian stages, but the Rupelian stage ends at about 28.1 Ma, so the lower bound of 27.3 Ma is inconsistent with the stated stage."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:55:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 gives an age range of 85.7–27.3 Ma, stating the upper bound is 27.3 Ma but also that the genus appears in the Rupelian stage (ending 28 Ma). Sentence 4 reports fossils from the Eocene (56–33.9 Ma) and Oligocene (33.9–23 Ma), which does not match the 27.3 Ma upper limit and the Rupelian claim, creating a temporal inconsistency."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:32:24+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:32:24+00:00"
+ "rewritten_at": "2026-11-25T14:33:09+00:00"
 }

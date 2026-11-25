@@ -2,9 +2,41 @@
  "taxon_key": "haplocanthosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "38fa4794ce33eed0",
- "reviewed_at": "2026-11-24T00:37:38+00:00",
+ "text_hash": "fce4c3fd83fa9601",
+ "reviewed_at": "2026-11-25T13:32:19+00:00",
  "problems": [
+  {
+   "sentences": [
+    2,
+    3
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 3 claims Haplocanthosaurus is one of the smallest sauropods of the Morrison Formation, while sentence 4 gives a length of 14.8 m and a weight of 12.8 t, which is large for a sauropod."
+  },
+  {
+   "sentences": [
+    3,
+    4
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences provide similar length and weight estimates for the species."
+  },
+  {
+   "sentences": [
+    3,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 states a length of 14.8 m, whereas sentence 11 claims a specimen named \"Big Monty\" reached 33 m."
+  },
+  {
+   "sentences": [
+    20,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 21 says Haplocanthosaurus is the last of the cetiosaurids, while sentence 23 places it in the Diplodocoidea, a different clade."
+  },
   {
    "sentences": [
     24,
@@ -12,13 +44,53 @@
     26
    ],
    "kind": "contradiction",
-   "reason": "The three sentences give mutually inconsistent age ranges for Haplocanthosaurus (155–152 Ma, 156–144 Ma, and 154.8–143.1 Ma) without indicating that they are different estimates."
+   "reason": "The three sentences give inconsistent time ranges for the species: 155–152 Ma, 156–144 Ma, and 154.8–143.1 Ma."
+  },
+  {
+   "sentences": [
+    24,
+    25
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences provide overlapping but slightly different Late Jurassic age ranges for the species."
+  },
+  {
+   "sentences": [
+    25,
+    26
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences give time ranges that overlap and are essentially the same information."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Haplocanthosaurus lived in North America between 155 and 152 million years ago during the Late Jurassic.\" / \"Haplocanthosaurus lived during the Late Jurassic, approximately 156 to 144 million years ago.\" / \"The time range for Haplocanthosaurus is from the Kimmeridgian to the Tithonian, between 154.8 and 143.1 million years ago.\": The three sentences give mutually inconsistent age ranges for Haplocanthosaurus (155–152 Ma, 156–144 Ma, and 154.8–143.1 Ma) without indicating that they are different estimates."
+  "- contradiction: \"It was one of the smallest sauropods of the Morrison Formation.\" / \"This animal reached a length of 14.8 meters and a weight of 12.8 metric tons.\": Sentence 3 claims Haplocanthosaurus is one of the smallest sauropods of the Morrison Formation, while sentence 4 gives a length of 14.8 m and a weight of 12.8 t, which is large for a sauropod.",
+  "- contradiction: \"This animal reached a length of 14.8 meters and a weight of 12.8 metric tons.\" / \"A potential specimen nicknamed \"Big Monty\" discovered in Montana has been claimed to measure an incredible 33 meters in length.\": Sentence 4 states a length of 14.8 m, whereas sentence 11 claims a specimen named \"Big Monty\" reached 33 m.",
+  "- contradiction: \"Haplocanthosaurus is considered the last of the cetiosaurids.\" / \"The parent group of Haplocanthosaurus is Diplodocoidea.\": Sentence 21 says Haplocanthosaurus is the last of the cetiosaurids, while sentence 23 places it in the Diplodocoidea, a different clade.",
+  "- contradiction: \"Haplocanthosaurus lived in North America between 155 and 152 million years ago during the Late Jurassic.\" / \"Haplocanthosaurus lived during the Late Jurassic, approximately 156 to 144 million years ago.\" / \"The time range for Haplocanthosaurus is from the Kimmeridgian to the Tithonian, between 154.8 and 143.1 million years ago.\": The three sentences give inconsistent time ranges for the species: 155–152 Ma, 156–144 Ma, and 154.8–143.1 Ma."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:01:07+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:37:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      25,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "The three sentences give mutually inconsistent age ranges for Haplocanthosaurus (155–152 Ma, 156–144 Ma, and 154.8–143.1 Ma) without indicating that they are different estimates."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:01:07+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:15:54+00:00"
 }

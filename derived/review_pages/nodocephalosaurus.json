@@ -2,29 +2,72 @@
  "taxon_key": "nodocephalosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d911e1dfad7a1ff5",
- "reviewed_at": "2026-11-24T00:12:04+00:00",
+ "text_hash": "ee99cd16dded4abc",
+ "reviewed_at": "2026-11-25T13:19:32+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    16,
+    17
    ],
    "kind": "contradiction",
-   "reason": "Sentence 8 first states Nodocephalosaurus is Ankylosauridae incertae sedis (uncertain placement), then immediately claims it belongs to subfamily Ankylosaurinae within Ankylosauridae, giving a definite classification."
+   "reason": "Sentences 17 and 18 give conflicting age ranges for Nodocephalosaurus – 73.49–73.04 Ma versus 83.6–72.2 Ma, with different stage designations."
   },
   {
    "sentences": [
-    4,
+    11
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 12 lists contemporary non‑dinosaur species, which is about other organisms rather than the animal itself."
+  },
+  {
+   "sentences": [
     8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences 5 and 9 state that Nodocephalosaurus fossils come from the De‑na‑zin member of the Kirtland Formation, repeating the same location claim."
+   "kind": "missing_context",
+   "reason": "Sentence 9 mentions a “single pup‑tent scute” without explaining what a pup‑tent scute is or how it relates to the specimen."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 11 refers to “Its presence” without specifying what is being referred to, leaving the statement ambiguous."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Vickaryous et al. (2004) interpreted Nodocephalosaurus as Ankylosauridae incertae sedis, meaning its exact position within the family was uncertain. It belongs to the subfamily Ankylosaurinae and is classified within the family Ankylosauridae. The animal is a member of the class Ornithischia.\": Sentence 8 first states Nodocephalosaurus is Ankylosauridae incertae sedis (uncertain placement), then immediately claims it belongs to subfamily Ankylosaurinae within Ankylosauridae, giving a definite classification."
+  "- contradiction: \"The animal lived between 73.49 and 73.04 million years ago during the late Campanian to early Maastrichtian stages.\" / \"The genus existed from 83.6 to 72.2 million years ago during the Campanian stage.\": Sentences 17 and 18 give conflicting age ranges for Nodocephalosaurus – 73.49–73.04 Ma versus 83.6–72.2 Ma, with different stage designations.",
+  "- missing context: \"In 2000, Tracy Ford assigned a single pup-tent scute to Nodocephalosaurus.\": Sentence 9 mentions a “single pup‑tent scute” without explaining what a pup‑tent scute is or how it relates to the specimen.",
+  "- missing context: \"Its presence indicates that ankylosaurids were more diverse than nodosaurids in the San Juan Basin.\": Sentence 11 refers to “Its presence” without specifying what is being referred to, leaving the statement ambiguous."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:22:14+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:12:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 first states Nodocephalosaurus is Ankylosauridae incertae sedis (uncertain placement), then immediately claims it belongs to subfamily Ankylosaurinae within Ankylosauridae, giving a definite classification."
+    },
+    {
+     "sentences": [
+      4,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences 5 and 9 state that Nodocephalosaurus fossils come from the De‑na‑zin member of the Kirtland Formation, repeating the same location claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:22:14+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:25+00:00"
 }

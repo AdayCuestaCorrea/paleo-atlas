@@ -3,30 +3,59 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "1a5c824578cfad3a",
- "reviewed_at": "2026-11-24T01:26:23+00:00",
+ "reviewed_at": "2026-11-25T13:51:36+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    13
+    4,
+    14
    ],
    "kind": "contradiction",
-   "reason": "[1] states the dinosaur lived during the Early Cretaceous, while [14] specifies 103 million years ago during the Aptian stage, which is a different Early Cretaceous stage."
+   "reason": "The fossils are said to be from Albian-aged beds, yet the age is given as 103 million years ago during the Aptian stage, which are distinct Cretaceous intervals."
   },
   {
    "sentences": [
     11,
-    12
+    12,
+    13
    ],
    "kind": "contradiction",
-   "reason": "[12] classifies Koreaceratops within the family Archaeoceratopsidae, whereas [13] lists its parent group as Leptoceratopsidae, giving two incompatible taxonomic assignments."
+   "reason": "Koreaceratops is placed in the family Archaeoceratopsidae, but the Paleobiology Database lists it in Leptoceratopsidae, giving two incompatible family assignments."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Koreaceratops was a basal ceratopsian dinosaur that lived during the Early Cretaceous period in South Korea.\" / \"The animal lived approximately 103 million years ago during the Aptian stage of the Early Cretaceous in what is now Asia.\": [1] states the dinosaur lived during the Early Cretaceous, while [14] specifies 103 million years ago during the Aptian stage, which is a different Early Cretaceous stage.",
-  "- contradiction: \"Koreaceratops is classified within the family Archaeoceratopsidae.\" / \"The Paleobi Database lists the parent group of Koreaceratops as Leptoceratopsidae.\": [12] classifies Koreaceratops within the family Archaeoceratopsidae, whereas [13] lists its parent group as Leptoceratopsidae, giving two incompatible taxonomic assignments."
+  "- contradiction: \"The fossils were recovered from the Albian-aged Tando beds.\" / \"The animal lived approximately 103 million years ago during the Aptian stage of the Early Cretaceous in what is now Asia.\": The fossils are said to be from Albian-aged beds, yet the age is given as 103 million years ago during the Aptian stage, which are distinct Cretaceous intervals.",
+  "- contradiction: \"Koreaceratops is classified within the family Archaeoceratopsidae.\" / \"The Paleobi Database lists the parent group of Koreaceratops as Leptoceratopsidae.\" / \"The Paleobi Database classifies Koreaceratops in the family Leptoceratopsidae.\": Koreaceratops is placed in the family Archaeoceratopsidae, but the Paleobiology Database lists it in Leptoceratopsidae, giving two incompatible family assignments."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:51:27+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:26:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "[1] states the dinosaur lived during the Early Cretaceous, while [14] specifies 103 million years ago during the Aptian stage, which is a different Early Cretaceous stage."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "[12] classifies Koreaceratops within the family Archaeoceratopsidae, whereas [13] lists its parent group as Leptoceratopsidae, giving two incompatible taxonomic assignments."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:51:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:51+00:00"
 }

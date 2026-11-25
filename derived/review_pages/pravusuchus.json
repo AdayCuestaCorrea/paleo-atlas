@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "72045dbd814afde0",
- "reviewed_at": "2026-11-24T00:57:14+00:00",
+ "reviewed_at": "2026-11-25T13:41:47+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,33 @@
     15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 15 states Pravusuchus lived during the Late Triassic (Norian stage), while sentence 16 gives an age range of 227.3–205.7 Ma, which extends into the Rhaetian stage (early Late Triassic), contradicting the earlier statement."
+   "reason": "Sentence 15 states Pravusuchus lived during the Late Triassic (Norian stage), while sentence 16 gives an age range of 227.3 to 205.7 Ma, which extends into the Rhaetian stage (205.7 Ma), contradicting the exclusive Norian attribution."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Pravusuchus lived during the Late Triassic (Norian stage) in Arizona, United States.\" / \"The animal lived between 227.3 and 205.7 million years ago during the Norian stage.\": Sentence 15 states Pravusuchus lived during the Late Triassic (Norian stage), while sentence 16 gives an age range of 227.3–205.7 Ma, which extends into the Rhaetian stage (early Late Triassic), contradicting the earlier statement."
+  "- contradiction: \"Pravusuchus lived during the Late Triassic (Norian stage) in Arizona, United States.\" / \"Other estimates place its existence between 227.3 and 205.7 million years ago during the Norian stage.\": Sentence 15 states Pravusuchus lived during the Late Triassic (Norian stage), while sentence 16 gives an age range of 227.3 to 205.7 Ma, which extends into the Rhaetian stage (205.7 Ma), contradicting the exclusive Norian attribution."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:23:50+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:57:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 states Pravusuchus lived during the Late Triassic (Norian stage), while sentence 16 gives an age range of 227.3–205.7 Ma, which extends into the Rhaetian stage (early Late Triassic), contradicting the earlier statement."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:23:50+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:47+00:00"
 }

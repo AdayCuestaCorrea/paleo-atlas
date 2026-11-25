@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0c5f9aec6c972cd5",
- "reviewed_at": "2026-11-24T01:15:35+00:00",
+ "reviewed_at": "2026-11-25T13:48:41+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    6
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 places Elornis in the Late Oligocene, while sentence 7 states it lived during the Rupelian stage, which is the Early Oligocene."
+   "reason": "Sentence 1 places Elornis in the Late Oligocene, while sentence 6 places it in the Rupelian stage (Early Oligocene)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Elornis is an extinct genus of flamingo that lived in the Late Oligocene of Ronzon, France.\" / \"This animal lived during the Rupelian stage, from 33.9 to 27.3 million years ago.\": Sentence 1 places Elornis in the Late Oligocene, while sentence 7 states it lived during the Rupelian stage, which is the Early Oligocene."
+  "- contradiction: \"Elornis is an extinct genus of flamingo that lived in the Late Oligocene of Ronzon, France.\" / \"Elornis lived during the Rupelian stage, from 33.9 to 27.3 million years ago.\": Sentence 1 places Elornis in the Late Oligocene, while sentence 6 places it in the Rupelian stage (Early Oligocene)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:07:46+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:15:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 places Elornis in the Late Oligocene, while sentence 7 states it lived during the Rupelian stage, which is the Early Oligocene."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:07:46+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:24+00:00"
 }

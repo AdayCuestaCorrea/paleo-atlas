@@ -3,29 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "162566a3cbc7b8c1",
- "reviewed_at": "2026-11-24T00:32:16+00:00",
+ "reviewed_at": "2026-11-25T13:28:57+00:00",
  "problems": [
   {
    "sentences": [
-    2,
     3
    ],
-   "kind": "contradiction",
-   "reason": "Largest skull 130 mm (13 cm) contradicts species lengths of 81 cm and 1 m."
-  },
-  {
-   "sentences": [
-    14,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that recent analyses place Araripesuchus as a basal notosuchian."
+   "kind": "missing_context",
+   "reason": "Refers to species A. buitreraensis, which is never introduced or described elsewhere on the page."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The largest known skull measures 130 millimeters in length.\" / \"While one species reached 81 cm in length, another could grow up to one meter.\": Largest skull 130 mm (13 cm) contradicts species lengths of 81 cm and 1 m."
+  "- missing context: \"While one skull measures 130 millimeters, making it the largest Araripesuchus skull known, this specific measurement refers to the species A. buitreraensis.\": Refers to species A. buitreraensis, which is never introduced or described elsewhere on the page."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:08:24+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:32:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Largest skull 130 mm (13 cm) contradicts species lengths of 81 cm and 1 m."
+    },
+    {
+     "sentences": [
+      14,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that recent analyses place Araripesuchus as a basal notosuchian."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:08:24+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:44+00:00"
 }

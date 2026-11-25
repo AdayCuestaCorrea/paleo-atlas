@@ -3,20 +3,39 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "64481a93a8811850",
- "reviewed_at": "2026-11-24T01:33:10+00:00",
+ "reviewed_at": "2026-11-25T13:54:12+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 gives two conflicting age ranges for Afrotapejara (98–92.5 Ma vs. 106.3–93.9 Ma)."
+   "kind": "missing_context",
+   "reason": "Mentions a bone fragment from another taxon used to repair the holotype snout, but the other taxon is never identified or described earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Afrotapejara lived during the late Cretaceous, approximately 98 to 92.5 million years ago in the Cenomanian, in what is now Africa. Afrotapejara lived from the Albian to the Cenomanian, between 106.3 and 93.9 million years ago.\": Sentence 6 gives two conflicting age ranges for Afrotapejara (98–92.5 Ma vs. 106.3–93.9 Ma)."
+  "- missing context: \"CT scans revealed that a bone fragment from another taxon was used to repair damage on the upper edge of the holotype snout.\": Mentions a bone fragment from another taxon used to repair the holotype snout, but the other taxon is never identified or described earlier in the page."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:21:29+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:33:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 gives two conflicting age ranges for Afrotapejara (98–92.5 Ma vs. 106.3–93.9 Ma)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:21:29+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:19+00:00"
 }

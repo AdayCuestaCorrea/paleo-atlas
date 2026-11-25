@@ -2,30 +2,72 @@
  "taxon_key": "muraenosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7c58cd74774a14e7",
- "reviewed_at": "2026-11-24T00:37:46+00:00",
+ "text_hash": "fc84e19e50ced2a4",
+ "reviewed_at": "2026-11-25T13:32:26+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    16
+    15
    ],
    "kind": "contradiction",
-   "reason": "[16] gives a narrower time range (160–164 Ma, Callovian) while [17] gives a broader range (165.3–154.8 Ma, Callovian–Oxfordian)."
+   "reason": "Sentence 16 gives two different time ranges for Muraenosaurus (160–164 Ma vs. 165.3–154.8 Ma), which conflict without acknowledging differing estimates."
   },
   {
    "sentences": [
-    9
+    4
    ],
    "kind": "missing_context",
-   "reason": "[10] refers to \"swallowed stones\" and their effects without explicitly linking them to gastroliths or to Muraenosaurus, leaving the reader unsure what is being described."
+   "reason": "Sentence 5 mentions “the first recovered Muraenosaurus specimen” but no earlier reference to a first recovered specimen is provided."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 18 starts with “It is debated…” but the antecedent of “It” is not specified within the page."
+  },
+  {
+   "sentences": [
+    18
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 19 begins with “It was initially debated…” without clarifying what “It” refers to."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Muraenosaurus lived between 160 and 164 million years ago during the Callovian stage of the Middle Jurassic. The time range for Muraenosaurus is from the Callovian to the Oxfordian, between 165.3 and 154.8 million years ago.\" / \"Muraenosaurus lived in the shallow, warm Oxford Clay sea, which had an average depth of less than 50 meters. Fossils were discovered in the Oxford Clay Formation in England, a Middle Jurassic geological formation rich in marine reptiles.\": [16] gives a narrower time range (160–164 Ma, Callovian) while [17] gives a broader range (165.3–154.8 Ma, Callovian–Oxfordian).",
-  "- missing context: \"Gastroliths are frequently found in plesiosauromorph stomachs and are associated with this body type. Models indicate that swallowed stones may have reduced pivoting at depth and dampened neck oscillations, helping provide stability against underwater currents.\": [10] refers to \"swallowed stones\" and their effects without explicitly linking them to gastroliths or to Muraenosaurus, leaving the reader unsure what is being described."
+  "- contradiction: \"Muraenosaurus lived between 160 and 164 million years ago during the Callovian stage of the Middle Jurassic. The time range for Muraenosaurus is from the Callovian to the Oxfordian, between 165.3 and 154.8 million years ago.\": Sentence 16 gives two different time ranges for Muraenosaurus (160–164 Ma vs. 165.3–154.8 Ma), which conflict without acknowledging differing estimates.",
+  "- missing context: \"The original Muraenosaurus specimen may have been damaged due to the casual collection style of Charles Leeds. The first recovered Muraenosaurus specimen was missing pieces of the skull and many caudal vertebrae.\": Sentence 5 mentions “the first recovered Muraenosaurus specimen” but no earlier reference to a first recovered specimen is provided.",
+  "- missing context: \"It is debated whether Picrocleidus beloclis should be considered synonymous with Muraenosaurus due to doubts about their relationship.\": Sentence 18 starts with “It is debated…” but the antecedent of “It” is not specified within the page.",
+  "- missing context: \"It was initially debated that long-necked plesiosaurs were strictly fish-eaters based on their conical teeth.\": Sentence 19 begins with “It was initially debated…” without clarifying what “It” refers to."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:02:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:37:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "[16] gives a narrower time range (160–164 Ma, Callovian) while [17] gives a broader range (165.3–154.8 Ma, Callovian–Oxfordian)."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "[10] refers to \"swallowed stones\" and their effects without explicitly linking them to gastroliths or to Muraenosaurus, leaving the reader unsure what is being described."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:02:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:03+00:00"
 }

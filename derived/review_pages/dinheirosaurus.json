@@ -2,30 +2,74 @@
  "taxon_key": "dinheirosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b9e77e5c4dbd7257",
- "reviewed_at": "2026-11-24T00:10:38+00:00",
+ "text_hash": "4c7b363d3a7feb10",
+ "reviewed_at": "2026-11-25T13:18:37+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    4
+    18,
+    21,
+    22
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 says only two of the fifteen cervical vertebrae are preserved, while sentence 5 describes a preserved fourteenth cervical vertebra."
+   "reason": "Sentences 19, 22, and 23 give conflicting age ranges for Dinheirosaurus – early Tithonian versus Kimmeridgian (156 Ma and 152–149 Ma)."
   },
   {
    "sentences": [
-    10,
-    11
+    18,
+    19
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Dinheirosaurus was a non‑selective ground herbivore/feeder."
+   "reason": "Both sentences state that Dinheirosaurus lived in the Lourinhã Formation, repeating the same claim. Also sentences 22 and 23 repeat the Kimmeridgian age claim."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 12 mentions a gastrolith mass being far lower than the 1.05% typical of birds, but does not explain what the 1.05% refers to or provide context for the comparison. "
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 13 discusses Supersaurus’s tail, not Dinheirosaurus, yet is presented as if it pertains to the subject of the page."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Only two of the fifteen presumed cervical vertebrae have been preserved from the holotype, despite the animal likely having fifteen in total.\" / \"The preserved fourteenth cervical vertebra has a centrum length of 63 cm and is well-preserved with a concave bottom edge.\": Sentence 4 says only two of the fifteen cervical vertebrae are preserved, while sentence 5 describes a preserved fourteenth cervical vertebra."
+  "- contradiction: \"Dinheirosaurus lived during the early Tithonian stage of the Late Jurassic period.\" / \"Dinheirosaurus lived approximately 156 million years ago during the Kimmeridgian stage of the Late Jurassic in what is now Europe.\" / \"Dinheirosaurus lived during the Kimmeridgian stage, approximately 152.21 to 149.2 million years ago.\": Sentences 19, 22, and 23 give conflicting age ranges for Dinheirosaurus – early Tithonian versus Kimmeridgian (156 Ma and 152–149 Ma).",
+  "- missing context: \"Research suggests Dinheirosaurus likely used gastroliths to absorb minerals rather than for an avian-style gastric mill, as its gastrolith mass was far lower than the 1.05% typical of birds.\": Sentence 12 mentions a gastrolith mass being far lower than the 1.05% typical of birds, but does not explain what the 1.05% refers to or provide context for the comparison. "
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:07:26+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:10:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 says only two of the fifteen cervical vertebrae are preserved, while sentence 5 describes a preserved fourteenth cervical vertebra."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Dinheirosaurus was a non‑selective ground herbivore/feeder."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:07:26+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:05:53+00:00"
 }

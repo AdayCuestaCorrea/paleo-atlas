@@ -2,21 +2,40 @@
  "taxon_key": "acynodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3fc6a1f629d7b340",
- "reviewed_at": "2026-11-24T01:10:07+00:00",
+ "text_hash": "48ab4e02d54979a5",
+ "reviewed_at": "2026-11-25T13:46:33+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    1
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to \"a specimen's dorsal rib\" without having introduced or described the specimen earlier in the page."
+   "reason": "Sentence 2 refers to the species A. adriaticus without having previously introduced or defined that species in the text."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Histological analysis of a specimen's dorsal rib shows a thickened cortical layer and at least 31 Lines of Arrested Growth (LAGs) despite the specimen being somatically immature.\": The sentence refers to \"a specimen's dorsal rib\" without having introduced or described the specimen earlier in the page."
+  "- missing context: \"Articulated postcranial material is preserved in at least two specimens of the only known species, A. adriaticus.\": Sentence 2 refers to the species A. adriaticus without having previously introduced or defined that species in the text."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:39:26+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:10:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"a specimen's dorsal rib\" without having introduced or described the specimen earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:39:26+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:59+00:00"
 }

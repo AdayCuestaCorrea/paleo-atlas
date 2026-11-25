@@ -2,67 +2,146 @@
  "taxon_key": "labocania",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d694406041cff271",
- "reviewed_at": "2026-11-24T00:43:38+00:00",
+ "text_hash": "dbe28e04c937dc64",
+ "reviewed_at": "2026-11-25T13:35:47+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    12
+    21,
+    22
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Rivera‑Sylva and Longrich described a second species, Labocania aguillonae, in 2024 based on fragmentary remains from the Cerro del Pueblo Formation in Coahuila, Mexico."
+   "kind": "contradiction",
+   "reason": "Sentence 22 gives an age range of 73–93.6 Ma, while sentence 23 states 76–72 Ma for the same fossils."
   },
   {
    "sentences": [
-    11,
-    13
+    21,
+    23
    ],
-   "kind": "repetition",
-   "reason": "Both sentences explain that the specific name aguillonae honors Martha C. Aguillon, the discoverer of the specimen."
+   "kind": "contradiction",
+   "reason": "Sentence 22 allows ages up to 93.6 Ma, whereas sentence 24 fixes the holotype at ~73 Ma."
+  },
+  {
+   "sentences": [
+    21,
+    24
+   ],
+   "kind": "contradiction",
+   "reason": "Both sentences 22 and 25 present the same contradictory age range (up to 93.6 Ma) but sentence 25 repeats it."
+  },
+  {
+   "sentences": [
+    23,
+    26
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 24 cites ~73 Ma, while sentence 27 extends the genus to 85.7–72.2 Ma."
+  },
+  {
+   "sentences": [
+    24,
+    26
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 25 again allows ages as old as 93.6 Ma, conflicting with the 85.7–72.2 Ma range in sentence 27."
   },
   {
    "sentences": [
     5,
-    14
+    12
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the fossils as being broken/disarticulated and scattered over an area of about two square meters."
+   "reason": "Both sentences describe the fossils as disarticulated, weathered, and dispersed over about two square meters."
+  },
+  {
+   "sentences": [
+    27,
+    28
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the fragmentary nature of the material makes the affinities uncertain."
   },
   {
    "sentences": [
     17,
-    21
+    18
    ],
    "kind": "repetition",
-   "reason": "Both sentences note that Molnar (1974) observed similarities between Labocania and tyrannosaurids but classified it as Theropoda incertae sedis."
-  },
-  {
-   "sentences": [
-    3,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 gives a length of 7 m and weight of 1.5 t, while sentence 5 gives a length of 8.2 m and weight of 2.6 t for the same species."
-  },
-  {
-   "sentences": [
-    25,
-    26,
-    27,
-    28,
-    29,
-    30
-   ],
-   "kind": "contradiction",
-   "reason": "The age estimates for L. anomala vary widely: 73–93.6 Ma (26), 76–72 Ma (27), 73 Ma (28), 93.6 Ma (29), 75.8 Ma and 72.5–73 Ma (30), and 85.7–72.2 Ma (31), which are mutually inconsistent."
+   "reason": "Both sentences list possible family or tribe placements for Labocania, repeating the classification uncertainty."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Gregory S. Paul estimated the type species L. anomala to be 7 meters long and weigh 1.5 tonnes in 2010.\" / \"Molina-Pérez and Larramendi estimated L. anomala to be 8.2 meters long and weigh 2.6 tonnes in 2016.\": Sentence 4 gives a length of 7 m and weight of 1.5 t, while sentence 5 gives a length of 8.2 m and weight of 2.6 t for the same species.",
-  "- contradiction: \"The age of the L. anomala fossils is debated, with estimates ranging from about 73 million years old to as old as 93.6 million years old, though vertebrate remains suggest a younger date.\" / \"Labocania lived in North America during the Campanian stage of the Late Cretaceous, between 76 and 72 million years ago.\" / \"The holotype specimen was originally dated to the late Campanian, approximately 73 million years ago.\" / \"Recent research has provided contradictory dates, possibly as old as 93.6 million years, though vertebrate remains suggest a younger age.\" / \"In the description of the second species, L. anomala is dated to 75.8 million years ago and L. aguillonae to between 72.5 and 73 million years ago.\" / \"The genus lived from the Santonian to the Campanian stages, between 85.7 and 72.2 million years ago.\": The age estimates for L. anomala vary widely: 73–93.6 Ma (26), 76–72 Ma (27), 73 Ma (28), 93.6 Ma (29), 75.8 Ma and 72.5–73 Ma (30), and 85.7–72.2 Ma (31), which are mutually inconsistent."
+  "- contradiction: \"The age of the L. anomala fossils is debated, with estimates ranging from about 73 million years old to as old as 93.6 million years old, though vertebrate remains suggest a younger date.\" / \"Labocania lived in North America during the Campanian stage of the Late Cretaceous, between 76 and 72 million years ago.\": Sentence 22 gives an age range of 73–93.6 Ma, while sentence 23 states 76–72 Ma for the same fossils.",
+  "- contradiction: \"The age of the L. anomala fossils is debated, with estimates ranging from about 73 million years old to as old as 93.6 million years old, though vertebrate remains suggest a younger date.\" / \"The holotype specimen was originally dated to the late Campanian, approximately 73 million years ago.\": Sentence 22 allows ages up to 93.6 Ma, whereas sentence 24 fixes the holotype at ~73 Ma.",
+  "- contradiction: \"The age of the L. anomala fossils is debated, with estimates ranging from about 73 million years old to as old as 93.6 million years old, though vertebrate remains suggest a younger date.\" / \"Recent research has provided contradictory dates, possibly as old as 93.6 million years, though vertebrate remains suggest a younger age.\": Both sentences 22 and 25 present the same contradictory age range (up to 93.6 Ma) but sentence 25 repeats it.",
+  "- contradiction: \"The holotype specimen was originally dated to the late Campanian, approximately 73 million years ago.\" / \"The genus lived from the Santonian to the Campanian stages, between 85.7 and 72.2 million years ago.\": Sentence 24 cites ~73 Ma, while sentence 27 extends the genus to 85.7–72.2 Ma.",
+  "- contradiction: \"Recent research has provided contradictory dates, possibly as old as 93.6 million years, though vertebrate remains suggest a younger age.\" / \"The genus lived from the Santonian to the Campanian stages, between 85.7 and 72.2 million years ago.\": Sentence 25 again allows ages as old as 93.6 Ma, conflicting with the 85.7–72.2 Ma range in sentence 27."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:47:05+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:43:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Rivera‑Sylva and Longrich described a second species, Labocania aguillonae, in 2024 based on fragmentary remains from the Cerro del Pueblo Formation in Coahuila, Mexico."
+    },
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences explain that the specific name aguillonae honors Martha C. Aguillon, the discoverer of the specimen."
+    },
+    {
+     "sentences": [
+      5,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the fossils as being broken/disarticulated and scattered over an area of about two square meters."
+    },
+    {
+     "sentences": [
+      17,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences note that Molnar (1974) observed similarities between Labocania and tyrannosaurids but classified it as Theropoda incertae sedis."
+    },
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 gives a length of 7 m and weight of 1.5 t, while sentence 5 gives a length of 8.2 m and weight of 2.6 t for the same species."
+    },
+    {
+     "sentences": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "The age estimates for L. anomala vary widely: 73–93.6 Ma (26), 76–72 Ma (27), 73 Ma (28), 93.6 Ma (29), 75.8 Ma and 72.5–73 Ma (30), and 85.7–72.2 Ma (31), which are mutually inconsistent."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:47:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:56+00:00"
 }

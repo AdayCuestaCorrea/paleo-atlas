@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "71d78ce6cbea20e2",
- "reviewed_at": "2026-11-24T01:12:46+00:00",
+ "reviewed_at": "2026-11-25T13:47:30+00:00",
  "problems": [
   {
    "sentences": [
-    21,
-    22
+    22,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 22 states Arcusaurus lived in the Early Jurassic Pliensbachian stage, while sentence 23 gives a time range of 201.4–192.9 Ma, which corresponds to the Late Triassic. The two statements cannot both be true for the same species."
+   "reason": "Sentence 23 places Arcusaurus in the Pliensbachian stage (≈190–183 Ma), while sentence 24 gives a time range of 201.4–192.9 Ma, which extends earlier than the Pliensbachian and is inconsistent with the stated stage."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Arcusaurus lived in South Africa during the Early Jurassic period, specifically the Pliensbachian stage.\" / \"The time range for this animal is estimated to be between 201.4 and 192.9 million years ago.\": Sentence 22 states Arcusaurus lived in the Early Jurassic Pliensbachian stage, while sentence 23 gives a time range of 201.4–192.9 Ma, which corresponds to the Late Triassic. The two statements cannot both be true for the same species."
+  "- contradiction: \"Arcusaurus lived in South Africa during the Early Jurassic period, specifically the Pliensbachian stage.\" / \"The time range for Arcusaurus is estimated to be between 201.4 and 192.9 million years ago.\": Sentence 23 places Arcusaurus in the Pliensbachian stage (≈190–183 Ma), while sentence 24 gives a time range of 201.4–192.9 Ma, which extends earlier than the Pliensbachian and is inconsistent with the stated stage."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:51:16+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:12:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 22 states Arcusaurus lived in the Early Jurassic Pliensbachian stage, while sentence 23 gives a time range of 201.4–192.9 Ma, which corresponds to the Late Triassic. The two statements cannot both be true for the same species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:51:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:25:38+00:00"
 }

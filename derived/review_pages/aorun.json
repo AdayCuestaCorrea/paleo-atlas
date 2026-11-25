@@ -2,43 +2,80 @@
  "taxon_key": "aorun",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "81eabd7a02b241e0",
- "reviewed_at": "2026-11-24T00:28:25+00:00",
+ "text_hash": "bbae172432fe8c6a",
+ "reviewed_at": "2026-11-25T13:27:00+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    7
+    13,
+    14,
+    15
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the scleral ring in the eye socket."
+   "reason": "Sentences 14, 15 and 16 all repeat the claim that Aorun is a basal member of Coelurosauria/Coeluridae, providing essentially the same classification information."
   },
   {
    "sentences": [
-    16,
-    17,
-    19,
-    20,
-    24,
-    26,
-    27
-   ],
-   "kind": "contradiction",
-   "reason": "Different sentences assign Aorun to Coelurosauria, Coeluridae, Alvarezsauria, and Allosauroidea, conflicting classifications."
-  },
-  {
-   "sentences": [
+    14,
+    15,
     22
    ],
    "kind": "contradiction",
-   "reason": "Radiometric dating gives 161.6 Ma, while the stated Callovian range ends at 161.5 Ma, a mismatch."
+   "reason": "Sentences 15 and 16 place Aorun within Coelurosauria/Coeluridae, while sentence 23 places it as a basal member of Allosauroidea, a different clade."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 18 states the radiometric age is 161.6 Ma at the Oxfordian–Callovian boundary, yet the Callovian stage range given (165.3–161.5 Ma) excludes 161.6 Ma, creating an age inconsistency."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The original authors classified Aorun as a basal member of Coelurosauria and a member of Coeluridae.\" / \"Aorun is classified within the unranked group Coelurosauria.\" / \"It is possible that Aorun is a member of Coeluridae, which is the most basal clade of Maniraptora.\" / \"The parent group listed for Aorun in the Paleobiology Database is Alvarezsauria.\" / \"Some researchers debate whether Aorun should be classified as a carnosaurian rather than a coelurosaurian.\" / \"Some analyses suggest Aorun may be a basal alvarezsaur, a classification that has been questioned by other researchers.\" / \"A 2024 analysis by Cau recovered Aorun as a basal member of the superfamily Allosauroidea.\": Different sentences assign Aorun to Coelurosauria, Coeluridae, Alvarezsauria, and Allosauroidea, conflicting classifications.",
-  "- contradiction: \"Radiometric dating places the fossil deposits at approximately 161.6 million years old, at the boundary of the Oxfordian and Callovian stages, while the time range for Aorun is the Callovian stage, from 165.3 to 161.5 million years ago.\": Radiometric dating gives 161.6 Ma, while the stated Callovian range ends at 161.5 Ma, a mismatch."
+  "- contradiction: \"Authors placed Aorun in a basal position within Coelurosauria, but in any case it is more derived than Tyrannosauroidea.\" / \"It is possible that Aorun is a member of Coeluridae, which is the most basal clade of Maniraptora.\" / \"A 2024 analysis by Cau recovered Aorun as a basal member of the superfamily Allosauroidea.\": Sentences 15 and 16 place Aorun within Coelurosauria/Coeluridae, while sentence 23 places it as a basal member of Allosauroidea, a different clade.",
+  "- contradiction: \"Radiometric dating places the fossil deposits at approximately 161.6 million years old, at the boundary of the Oxfordian and Callovian stages, while the time range for Aorun is the Callovian stage, from 165.3 to 161.5 million years ago.\": Sentence 18 states the radiometric age is 161.6 Ma at the Oxfordian–Callovian boundary, yet the Callovian stage range given (165.3–161.5 Ma) excludes 161.6 Ma, creating an age inconsistency."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:37:26+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:28:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the scleral ring in the eye socket."
+    },
+    {
+     "sentences": [
+      16,
+      17,
+      19,
+      20,
+      24,
+      26,
+      27
+     ],
+     "kind": "contradiction",
+     "reason": "Different sentences assign Aorun to Coelurosauria, Coeluridae, Alvarezsauria, and Allosauroidea, conflicting classifications."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Radiometric dating gives 161.6 Ma, while the stated Callovian range ends at 161.5 Ma, a mismatch."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:37:26+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:37+00:00"
 }

@@ -2,36 +2,70 @@
  "taxon_key": "struthiosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ed17edbda83a976b",
- "reviewed_at": "2026-11-24T00:32:23+00:00",
+ "text_hash": "bc5aa379da1d397d",
+ "reviewed_at": "2026-11-25T13:29:06+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    9,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences repeat the same information about the age and geographic range of Struthiosaurus."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 12 repeats classification details multiple times within itself."
+   "reason": "Both sentences state that Struthiosaurus was slow and solitary based on brain features."
   },
   {
    "sentences": [
     2
    ],
    "kind": "missing_context",
-   "reason": "Sentence 3 refers to “the vertebra” without previously introducing which vertebra is meant."
+   "reason": "The phrase \"upper head\" and the reference to a rib fragment lack preceding explanation of what is being described."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence describes a geologist finding a dinosaur tooth, which is about the discovery event rather than a characteristic of Struthiosaurus itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Bunzel discovered two rib fragments with a confusing construction; they had two heads, but the upper head was short and positioned so it could not touch the vertebra if the axis was in the usual vertical orientation.\": Sentence 3 refers to “the vertebra” without previously introducing which vertebra is meant."
+  "- missing context: \"Researchers found two rib fragments with a confusing structure where the upper head was short and could not touch the vertebra in a normal upright position.\": The phrase \"upper head\" and the reference to a rib fragment lack preceding explanation of what is being described."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:10:26+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:32:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the same information about the age and geographic range of Struthiosaurus."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 12 repeats classification details multiple times within itself."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to “the vertebra” without previously introducing which vertebra is meant."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:10:26+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:51+00:00"
 }

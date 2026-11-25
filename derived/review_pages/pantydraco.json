@@ -2,29 +2,47 @@
  "taxon_key": "pantydraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "819e0b45db48ec44",
- "reviewed_at": "2026-11-24T01:23:20+00:00",
+ "text_hash": "5dfc7b0fd99aeb96",
+ "reviewed_at": "2026-11-25T13:50:39+00:00",
  "problems": [
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to a fourth digit embedded within the hands without explaining its significance or context."
-  },
   {
    "sentences": [
     9
    ],
    "kind": "missing_context",
-   "reason": "Mentions fossil material NHMUK PV RUP 24 without prior introduction or description of this specimen."
+   "reason": "Sentence 10 refers to a species name (Thecodontosaurus caducus) and a specimen (NHMUK PV RUP 24) without having previously introduced or explained these terms in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The hands possessed three movable digits with a fourth digit embedded within them.\": Refers to a fourth digit embedded within the hands without explaining its significance or context.",
-  "- missing context: \"Adam Yates named the species Thecodontosaurus caducus in 2003 based on fossil material NHMUK PV RUP 24.\": Mentions fossil material NHMUK PV RUP 24 without prior introduction or description of this specimen."
+  "- missing context: \"Adam Yates named the species Thecodontosaurus caducus in 2003 based on fossil material NHMUK PV RUP 24.\": Sentence 10 refers to a species name (Thecodontosaurus caducus) and a specimen (NHMUK PV RUP 24) without having previously introduced or explained these terms in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:37:47+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:23:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a fourth digit embedded within the hands without explaining its significance or context."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions fossil material NHMUK PV RUP 24 without prior introduction or description of this specimen."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:37:47+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:07+00:00"
 }

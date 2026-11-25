@@ -2,45 +2,72 @@
  "taxon_key": "luperosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9b079a5986d14af2",
- "reviewed_at": "2026-11-24T00:29:49+00:00",
+ "text_hash": "bf4df85090b5d989",
+ "reviewed_at": "2026-11-25T13:27:56+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Luperosuchus was one of the largest carnivores and one of the few large animals in the Chañares Formation."
+   "kind": "missing_context",
+   "reason": "refers to \"early environment\" without prior definition of the time period"
   },
   {
    "sentences": [
-    1,
-    4
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe a tall, mediolaterally compressed crest on the front of the snout."
-  },
-  {
-   "sentences": [
-    7,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 gives a minimum age of 236.1 ± 0.6 Ma (≈235.5–236.7 Ma), while sentence 10 places the animal between 241.464 and 237 Ma, which conflicts with the earlier range."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 11 discusses the braided river environment and volcanic deposits, which is about the geological setting rather than the animal itself."
+   "kind": "missing_context",
+   "reason": "mentions specimen PULR-V 057 without earlier introduction of that specimen"
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Growth: The locality where the fossils were found provides a minimum age of 236.1 +/- 0.6 million years.\" / \"Luperosuchus lived during the latest Ladinian stage of the late Middle Triassic or the earliest Carnian of the Late Triassic, specifically between 241.464 and 237 million years ago.\": Sentence 8 gives a minimum age of 236.1 ± 0.6 Ma (≈235.5–236.7 Ma), while sentence 10 places the animal between 241.464 and 237 Ma, which conflicts with the earlier range."
+  "- missing context: \"The early environment was a braided river system with periodic flooding, which later changed to include volcanic deposits like tuff and ash.\": refers to \"early environment\" without prior definition of the time period",
+  "- missing context: \"It is debated whether specimen PULR-V 057 belongs to Luperosuchus or represents a distinct taxon, with some researchers suggesting the differences are taxonomic rather than due to age.\": mentions specimen PULR-V 057 without earlier introduction of that specimen"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:41:13+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:29:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Luperosuchus was one of the largest carnivores and one of the few large animals in the Chañares Formation."
+    },
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe a tall, mediolaterally compressed crest on the front of the snout."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 gives a minimum age of 236.1 ± 0.6 Ma (≈235.5–236.7 Ma), while sentence 10 places the animal between 241.464 and 237 Ma, which conflicts with the earlier range."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 discusses the braided river environment and volcanic deposits, which is about the geological setting rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:41:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:08+00:00"
 }

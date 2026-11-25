@@ -2,21 +2,49 @@
  "taxon_key": "kairuku",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e3af2aa730122d82",
- "reviewed_at": "2026-11-24T00:45:58+00:00",
+ "text_hash": "11eb741e6c66f584",
+ "reviewed_at": "2026-11-25T13:36:44+00:00",
  "problems": [
   {
    "sentences": [
-    16
+    1,
+    3,
+    4
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 2, 4, and 5 all repeat the claim that K. grebneffi had the longest humerus bone and longer, more flexible flippers relative to its body size."
+  },
+  {
+   "sentences": [
+    2
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to \"rock outcrops\" providing breeding grounds, but the page never previously mentioned rock outcrops or their significance."
+   "reason": "Sentence 3 uses the pronoun \"this species\" without specifying which species it refers to, creating ambiguity."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"Researchers believe that rock outcrops provided safe breeding grounds and access to rich food resources for K. grebneffi.\": The sentence refers to \"rock outcrops\" providing breeding grounds, but the page never previously mentioned rock outcrops or their significance."
+  "- missing context: \"Relative to its size, this species had flippers that were longer and likely more flexible than those of extant penguin species, whereas K. waewaeroa could reach a height of 1.38 meters.\": Sentence 3 uses the pronoun \"this species\" without specifying which species it refers to, creating ambiguity."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:04:36+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"rock outcrops\" providing breeding grounds, but the page never previously mentioned rock outcrops or their significance."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:04:36+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:38+00:00"
 }

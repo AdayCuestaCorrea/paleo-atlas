@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4b7e41c670a6c39a",
- "reviewed_at": "2026-11-24T01:30:14+00:00",
+ "reviewed_at": "2026-11-25T13:53:04+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    5
+    4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 classifies Rhamphocephalus as a marine crocodyliform, while sentence 6 claims the species formerly assigned to it belong to a monophyletic pterosaur genus."
+   "reason": "Sentence 1 classifies Rhamphocephalus as a marine crocodyliform, while sentence 5 reassigns its species to a pterosaur genus, directly contradicting the earlier taxonomic placement."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This animal belongs to the suborder Thalattosuchia, a group of marine crocodyliforms.\" / \"Andres (2021) suggests resurrecting the genus name Dolicorhamphus for species formerly assigned to Rhamphocephalus, finding them to belong to a monophyletic pterosaur genus closely related to Klobiodon.\": Sentence 1 classifies Rhamphocephalus as a marine crocodyliform, while sentence 6 claims the species formerly assigned to it belong to a monophyletic pterosaur genus."
+  "- contradiction: \"The genus Rhamphocephalus is classified within the suborder Thalattosuchia, a group of marine crocodyliforms.\" / \"Andres (2021) suggests resurrecting the genus name Dolicorhamphus for species formerly assigned to Rhamphocephalus, finding them to belong to a monophyletic pterosaur genus closely related to Klobiodon.\": Sentence 1 classifies Rhamphocephalus as a marine crocodyliform, while sentence 5 reassigns its species to a pterosaur genus, directly contradicting the earlier taxonomic placement."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:08:20+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 classifies Rhamphocephalus as a marine crocodyliform, while sentence 6 claims the species formerly assigned to it belong to a monophyletic pterosaur genus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:08:20+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:45+00:00"
 }

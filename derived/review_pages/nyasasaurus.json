@@ -2,30 +2,110 @@
  "taxon_key": "nyasasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5f11904bd686149e",
- "reviewed_at": "2026-11-24T00:19:16+00:00",
+ "text_hash": "1af1adcd8b610d49",
+ "reviewed_at": "2026-11-25T13:22:35+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    25
+    3,
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 25 states Nyasasaurus lived 243 Ma (Anisian), while sentence 26 claims it would be Carnian (~237 Ma) if radiometric dating is correct, giving two conflicting ages for the same specimen."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same collection location of the holotype."
   },
   {
    "sentences": [
-    26,
-    29
+    5,
+    6
    ],
    "kind": "repetition",
-   "reason": "Both sentences repeat the claim that a 1986 hypothesis suggested Nyasasaurus was a primitive prosauropod dinosaur."
+   "reason": "Both sentences state the remains were first described in 1956 by Charig and refer to Specimen 50b."
+  },
+  {
+   "sentences": [
+    7,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences report a new description published by the same authors in 2012/2013 and the validation of the name."
+  },
+  {
+   "sentences": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "All six sentences give overlapping classification statements about Nyasasaurus within Archosauria, Dinosauriformes, Dinosauromorpha, and Dinosauria."
+  },
+  {
+   "sentences": [
+    22,
+    25
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences mention the 1986 hypothesis that Nyasasaurus was a primitive prosauropod dinosaur."
+  },
+  {
+   "sentences": [
+    19,
+    20,
+    21
+   ],
+   "kind": "contradiction",
+   "reason": "Sentences 20 and 22 state the age is Anisian (243 Ma), while sentence 21 claims a younger Carnian age, contradicting the earlier dates."
+  },
+  {
+   "sentences": [
+    1
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 2 refers to “dinosaur ancestors” without specifying which ancestors or providing context."
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 25 discusses SHRIMP dating methods for the Río Seco de la Quebrada Formation, which is about the formation, not the animal itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The animal lived approximately 243 million years ago during the Anisian stage of the Middle Triassic in what is now Africa.\" / \"If radiometric dating is correct, the creature would be Carnian in age, significantly reducing the time gap between it and other early dinosaurs.\": Sentence 25 states Nyasasaurus lived 243 Ma (Anisian), while sentence 26 claims it would be Carnian (~237 Ma) if radiometric dating is correct, giving two conflicting ages for the same specimen."
+  "- contradiction: \"Nyasasaurus lived approximately 243 million years ago during the Anisian stage of the Middle Triassic in what is now Africa.\" / \"If radiometric dating is correct, Nyasasaurus would be Carnian in age, significantly reducing the time gap between it and other early dinosaurs.\" / \"A 2012 analysis suggests Nyasasaurus may be the oldest known dinosaur, dating to the Middle Triassic or late Anisian age, about 243 million years ago, 10 million years before other dinosaur species like Herrerasaurus.\": Sentences 20 and 22 state the age is Anisian (243 Ma), while sentence 21 claims a younger Carnian age, contradicting the earlier dates.",
+  "- missing context: \"The internal bone structure of Nyasasaurus resembles that of the primitive dinosaur Coelophysis more than dinosaur ancestors, suggesting it was closer to dinosaur ancestry than other archosaurs of the time.\": Sentence 2 refers to “dinosaur ancestors” without specifying which ancestors or providing context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:16:37+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:19:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 25 states Nyasasaurus lived 243 Ma (Anisian), while sentence 26 claims it would be Carnian (~237 Ma) if radiometric dating is correct, giving two conflicting ages for the same specimen."
+    },
+    {
+     "sentences": [
+      26,
+      29
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim that a 1986 hypothesis suggested Nyasasaurus was a primitive prosauropod dinosaur."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:16:37+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:28+00:00"
 }

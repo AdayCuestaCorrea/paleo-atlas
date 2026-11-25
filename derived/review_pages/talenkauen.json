@@ -2,37 +2,80 @@
  "taxon_key": "talenkauen",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9906ef6035b1db2d",
- "reviewed_at": "2026-11-24T00:41:50+00:00",
+ "text_hash": "149c9f62fae83593",
+ "reviewed_at": "2026-11-25T13:34:48+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    16
+    20,
+    24
    ],
    "kind": "contradiction",
-   "reason": "one sentence says Talenkauen lived from Campanian to Maastrichtian, the other says only Campanian."
+   "reason": "One sentence states Talenkauen lived from Campanian to Maastrichtian, another limits it to the Campanian stage only."
   },
   {
    "sentences": [
-    1,
-    8
+    13,
+    14
    ],
    "kind": "repetition",
-   "reason": "both claim wear on 1.7‑mm teeth indicates a newborn that had begun feeding."
+   "reason": "Both sentences claim the rib plates functioned like uncinate processes in birds."
   },
   {
    "sentences": [
-    18
+    5,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both describe wear on 1.7‑mm teeth indicating a newborn juvenile."
+  },
+  {
+   "sentences": [
+    17
    ],
    "kind": "about_something_else",
-   "reason": "the sentence discusses other dinosaurs (Puertasaurus, Orkoraptor) found in the same formation, not Talenkauen itself."
+   "reason": "The sentence discusses Macrogryphosaurus and its relation to Talenkauen, focusing on another taxon rather than Talenkauen itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Talenkauen lived during the Campanian to Maastrichtian stages of the Late Cretaceous.\" / \"Talenkauen lived during the Campanian stage, between 83.6 and 72.2 million years ago.\": one sentence says Talenkauen lived from Campanian to Maastrichtian, the other says only Campanian."
+  "- contradiction: \"Talenkauen lived during the Campanian to Maastrichtian stages of the Late Cretaceous.\" / \"Talenkauen lived during the Campanian stage, between 83.6 and 72.2 million years ago.\": One sentence states Talenkauen lived from Campanian to Maastrichtian, another limits it to the Campanian stage only."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:33:03+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:41:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "one sentence says Talenkauen lived from Campanian to Maastrichtian, the other says only Campanian."
+    },
+    {
+     "sentences": [
+      1,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "both claim wear on 1.7‑mm teeth indicates a newborn that had begun feeding."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "the sentence discusses other dinosaurs (Puertasaurus, Orkoraptor) found in the same formation, not Talenkauen itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:33:03+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:14+00:00"
 }

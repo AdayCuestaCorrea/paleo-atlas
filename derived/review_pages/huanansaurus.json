@@ -2,24 +2,44 @@
  "taxon_key": "huanansaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "953679fc0e8b0b1f",
- "reviewed_at": "2026-11-24T01:08:00+00:00",
+ "text_hash": "b1c9a9ad0fab6145",
+ "reviewed_at": "2026-11-25T13:45:40+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14,
     15,
-    16
+    17
    ],
    "kind": "contradiction",
-   "reason": "The text states the animal belongs to subfamily Oviraptorinae and is a sister genus to Citipati, yet the Paleobiology Database lists its parent group as Citipatinae, a different subfamily."
+   "reason": "Sentences 16 and 18 give conflicting subfamily assignments for Huanansaurus: 16 places it in Oviraptorinae, while 18 lists Citipatinae as its parent group."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Taxonomically, this animal belongs to the family Oviraptoridae.\" / \"It is placed within the subfamily Oviraptorinae.\" / \"Research suggests it is a sister genus to Citipati inside the subfamily Oviraptorinae.\" / \"However, the Paleobiology Database lists the parent group of this species as Citipatinae.\": The text states the animal belongs to subfamily Oviraptorinae and is a sister genus to Citipati, yet the Paleobiology Database lists its parent group as Citipatinae, a different subfamily."
+  "- contradiction: \"It is placed within the subfamily Oviraptorinae.\" / \"However, the Paleobiology Database lists the parent group of this species as Citipatinae.\": Sentences 16 and 18 give conflicting subfamily assignments for Huanansaurus: 16 places it in Oviraptorinae, while 18 lists Citipatinae as its parent group."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:25:31+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:08:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14,
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "The text states the animal belongs to subfamily Oviraptorinae and is a sister genus to Citipati, yet the Paleobiology Database lists its parent group as Citipatinae, a different subfamily."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:25:31+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:32+00:00"
 }

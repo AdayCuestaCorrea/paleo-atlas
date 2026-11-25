@@ -2,22 +2,42 @@
  "taxon_key": "yunguisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a3792b0f519ecde0",
- "reviewed_at": "2026-11-24T01:36:52+00:00",
+ "text_hash": "b4751f3aaa565661",
+ "reviewed_at": "2026-11-25T13:55:22+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11
+    11,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 states Yunguisaurus lived during the Carnian stage, while sentence 12 claims it lived during the Ladinian stage, which are distinct time intervals."
+   "reason": "Sentence 12 states Yunguisaurus lived during the Carnian stage of the early Late Triassic, while sentence 13 claims it lived between 241.464 and 237 million years ago during the Ladinian stage, which is earlier than the Carnian."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Yunguisaurus lived during the Carnian stage of the early Late Triassic.\" / \"However, other data suggest it lived between 241.464 and 237 million years ago during the Ladinian stage.\": Sentence 11 states Yunguisaurus lived during the Carnian stage, while sentence 12 claims it lived during the Ladinian stage, which are distinct time intervals."
+  "- contradiction: \"Yunguisaurus lived during the Carnian stage of the early Late Triassic.\" / \"However, other data suggest it lived between 241.464 and 237 million years ago during the Ladinian stage.\": Sentence 12 states Yunguisaurus lived during the Carnian stage of the early Late Triassic, while sentence 13 claims it lived between 241.464 and 237 million years ago during the Ladinian stage, which is earlier than the Carnian."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:36:27+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:36:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states Yunguisaurus lived during the Carnian stage, while sentence 12 claims it lived during the Ladinian stage, which are distinct time intervals."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:36:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:16+00:00"
 }

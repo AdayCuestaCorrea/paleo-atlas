@@ -2,31 +2,81 @@
  "taxon_key": "spicomellus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b116aa161eab8c2f",
- "reviewed_at": "2026-11-24T00:27:20+00:00",
+ "text_hash": "3afab05a958b61a7",
+ "reviewed_at": "2026-11-25T13:26:39+00:00",
  "problems": [
   {
    "sentences": [
-    20,
-    22,
-    23
+    7,
+    8,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 21 limits Spicomellus to the Bathonian age, while sentences 23 and 24 extend its range to include the Callovian stage."
+   "kind": "repetition",
+   "reason": "All three sentences describe the naming and description of Spicomellus afer in 2021, repeating the same information."
   },
   {
    "sentences": [
-    26,
-    27
+    9,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that ankylosaurs and stegosaurs coexisted for over 20 million years."
+   "reason": "Both sentences state that the holotype consists of a single T‑shaped rib with fused spines, repeating the same fact."
+  },
+  {
+   "sentences": [
+    22,
+    23,
+    24
+   ],
+   "kind": "repetition",
+   "reason": "All three sentences give the age range of Spicomellus, each restating the same time interval in slightly different wording."
+  },
+  {
+   "sentences": [
+    25,
+    26
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the geographic location of Spicomellus, repeating that it lived in Morocco/now Africa."
+  },
+  {
+   "sentences": [
+    29,
+    30
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences discuss the coexistence of ankylosaurs and stegosaurs, repeating the same claim about a 20‑million‑year overlap."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Spicomellus lived during the Bathonian age of the Middle Jurassic in Morocco.\" / \"The species lived during the Middle Jurassic, between the Bathonian and Callovian stages, approximately 168 to 164 million years ago.\" / \"The precise time range for Spicomellus is from the Bathonian to Callovian, between 168.2 and 161.5 million years ago.\": Sentence 21 limits Spicomellus to the Bathonian age, while sentences 23 and 24 extend its range to include the Callovian stage."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:28:14+00:00"
+ "repetitions_dropped": 6,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:27:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      20,
+      22,
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 21 limits Spicomellus to the Bathonian age, while sentences 23 and 24 extend its range to include the Callovian stage."
+    },
+    {
+     "sentences": [
+      26,
+      27
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that ankylosaurs and stegosaurs coexisted for over 20 million years."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:28:14+00:00"
+  }
+ ]
 }

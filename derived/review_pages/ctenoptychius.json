@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4d3965c758bf66db",
- "reviewed_at": "2026-11-24T00:45:42+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:36:30+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    2,
-    5
+   "reviewed_at": "2026-11-24T00:45:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Ctenoptychius as having a flattened body."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states the species lived only during the Late Carboniferous, while sentence 12 extends its existence from the Serpukhovian to the Kungurian stages, covering both Late Carboniferous and Early Permian."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Ctenoptychius as having a flattened body."
-  },
-  {
-   "sentences": [
-    10,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 states the species lived only during the Late Carboniferous, while sentence 12 extends its existence from the Serpukhovian to the Kungurian stages, covering both Late Carboniferous and Early Permian."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:01:45+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"C. apicalis lived during the Late Carboniferous period, with fossils found in the United Kingdom and potentially the United States.\" / \"The genus Ctenoptychius existed from the Serpukhovian to the Kungurian stages, between 330.3 and 274.4 million years ago.\": Sentence 11 states the species lived only during the Late Carboniferous, while sentence 12 extends its existence from the Serpukhovian to the Kungurian stages, covering both Late Carboniferous and Early Permian."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:01:45+00:00"
+ ]
 }

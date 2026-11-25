@@ -2,37 +2,73 @@
  "taxon_key": "kentrosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "112152a38d8918c1",
- "reviewed_at": "2026-11-24T00:00:17+00:00",
+ "text_hash": "fe3d3f8aec4ad528",
+ "reviewed_at": "2026-11-25T13:13:11+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    10,
+    11
    ],
    "kind": "repetition",
-   "reason": "Sentences 13 and 14 state the same fact about German expeditions in East Africa between 1909 and 1912."
+   "reason": "Both sentences describe the same German expeditions in East Africa yielding hundreds of skeletal remains."
   },
   {
    "sentences": [
-    10,
+    5,
+    17
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim the tail spikes were used for defense, with similar wording."
+  },
+  {
+   "sentences": [
+    0,
     26
    ],
-   "kind": "repetition",
-   "reason": "Sentences 11 and 27 both claim that Edwin Hennig described Kentrosaurus in 1915."
-  },
-  {
-   "sentences": [
-    27
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 28 refers to fossils named in 1914 and classified in 1993 without explaining the change or context of the reclassification."
+   "kind": "contradiction",
+   "reason": "Sentence 1 says Kentrosaurus was discovered in the Lindi Region, while sentence 27 says it inhabited the Tendaguru Formation, a different locality in Tanzania."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"In 1993, fragmentary Wyoming fossils named Stegosaurus longispinus by Charles Gilmore in 1914 were classified as a North American species of Kentrosaurus, K. longispinus.\": Sentence 28 refers to fossils named in 1914 and classified in 1993 without explaining the change or context of the reclassification."
+  "- contradiction: \"Kentrosaurus was a genus of stegosaurid dinosaur discovered in the Lindi Region of Tanzania.\" / \"It inhabited what is now Tanzania during the Late Jurassic in the Tendaguru Formation.\": Sentence 1 says Kentrosaurus was discovered in the Lindi Region, while sentence 27 says it inhabited the Tendaguru Formation, a different locality in Tanzania."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:30:59+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:00:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 13 and 14 state the same fact about German expeditions in East Africa between 1909 and 1912."
+    },
+    {
+     "sentences": [
+      10,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 11 and 27 both claim that Edwin Hennig described Kentrosaurus in 1915."
+    },
+    {
+     "sentences": [
+      27
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 28 refers to fossils named in 1914 and classified in 1993 without explaining the change or context of the reclassification."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:30:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:24+00:00"
 }

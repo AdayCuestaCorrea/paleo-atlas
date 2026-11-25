@@ -2,63 +2,116 @@
  "taxon_key": "sunosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b354c8ec3f703928",
- "reviewed_at": "2026-11-24T00:45:55+00:00",
+ "text_hash": "d75a636ba05b3bbe",
+ "reviewed_at": "2026-11-25T13:36:40+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    13,
-    14
+    19,
+    20
    ],
-   "kind": "repetition",
-   "reason": "All three sentences describe the same fauna (temnospondyl amphibians and Xinjiangchelyidae turtles) indicating freshwater or estuarine environments, repeating the claim."
+   "kind": "contradiction",
+   "reason": "Sentence 20 limits Sunosuchus to the Bajocian–Tithonian (170.9–143.1 Ma), while sentence 21 allows fossils from the Early Jurassic, earlier than the Bajocian."
   },
   {
    "sentences": [
-    15,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Sunosuchus shares features with goniopholidids despite similarities to pholidosaurids, repeating the same classification claim."
-  },
-  {
-   "sentences": [
-    11,
     12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 claims the Kyrgyzstan fauna indicates freshwater environments, while sentence 13 states the presence of marine hybodont sharks and dipnoans suggests an estuarine setting, contradicting each other."
+   "reason": "Sentence 13 states “up to four species” but then lists five species (S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, S. thailandicus)."
   },
   {
    "sentences": [
+    13,
+    23
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim the fauna found with Sunosuchus indicates freshwater environments."
+  },
+  {
+   "sentences": [
+    14,
+    24
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences claim marine hybodont sharks and dipnoans indicate an estuarine environment."
+  },
+  {
+   "sentences": [
+    13,
+    14,
     23,
     24
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 24 says fossils date from Middle Jurassic to Early Cretaceous with possible Early Jurassic occurrences, whereas sentence 25 says fossils are Jurassic in age but some may be Early Cretaceous, presenting conflicting age ranges."
-  },
-  {
-   "sentences": [
-    5,
-    26
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Kyrgyzstan represents the westernmost record of Sunosuchus's geographic range, repeating the same claim."
-  },
-  {
-   "sentences": [
-    11
-   ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses the fauna found with Sunosuchus to infer environmental conditions, which is about the surrounding fauna and environment rather than the animal itself."
+   "reason": "These sentences discuss environmental context and associated fauna rather than traits of Sunosuchus itself."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The fauna found with Sunosuchus in Kyrgyzstan, including temnospondyl amphibians and xinjiangchelyid turtles, indicates freshwater environments.\" / \"The presence of marine hybodont sharks and dipnoans in Kyrgyzstan strata suggests the area was estuarine rather than entirely freshwater.\": Sentence 12 claims the Kyrgyzstan fauna indicates freshwater environments, while sentence 13 states the presence of marine hybodont sharks and dipnoans suggests an estuarine setting, contradicting each other.",
-  "- contradiction: \"Sunosuchus fossils date from the Middle Jurassic to the Early Cretaceous, with possible Early Jurassic occurrences.\" / \"Fossils of Sunosuchus have been found in China, Kyrgyzstan, and Thailand and are Jurassic in age, though some may be Early Cretaceous.\": Sentence 24 says fossils date from Middle Jurassic to Early Cretaceous with possible Early Jurassic occurrences, whereas sentence 25 says fossils are Jurassic in age but some may be Early Cretaceous, presenting conflicting age ranges."
+  "- contradiction: \"Sunosuchus lived from the Bajocian to the Tithonian stages, between 170.9 and 143.1 million years ago.\" / \"Fossils date from the Middle Jurassic to the Early Cretaceous, with possible Early Jurassic occurrences.\": Sentence 20 limits Sunosuchus to the Bajocian–Tithonian (170.9–143.1 Ma), while sentence 21 allows fossils from the Early Jurassic, earlier than the Bajocian.",
+  "- contradiction: \"Up to four species have been assigned to the genus Sunosuchus, including S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, and S. thailandicus.\": Sentence 13 states “up to four species” but then lists five species (S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, S. thailandicus)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:04:12+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe the same fauna (temnospondyl amphibians and Xinjiangchelyidae turtles) indicating freshwater or estuarine environments, repeating the claim."
+    },
+    {
+     "sentences": [
+      15,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Sunosuchus shares features with goniopholidids despite similarities to pholidosaurids, repeating the same classification claim."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 claims the Kyrgyzstan fauna indicates freshwater environments, while sentence 13 states the presence of marine hybodont sharks and dipnoans suggests an estuarine setting, contradicting each other."
+    },
+    {
+     "sentences": [
+      23,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 24 says fossils date from Middle Jurassic to Early Cretaceous with possible Early Jurassic occurrences, whereas sentence 25 says fossils are Jurassic in age but some may be Early Cretaceous, presenting conflicting age ranges."
+    },
+    {
+     "sentences": [
+      5,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Kyrgyzstan represents the westernmost record of Sunosuchus's geographic range, repeating the same claim."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the fauna found with Sunosuchus to infer environmental conditions, which is about the surrounding fauna and environment rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:04:12+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:36+00:00"
 }

@@ -2,21 +2,40 @@
  "taxon_key": "ibirania",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e0e53f71f0692538",
- "reviewed_at": "2026-11-24T01:00:28+00:00",
+ "text_hash": "764938c219b147a8",
+ "reviewed_at": "2026-11-25T13:43:29+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    3
    ],
    "kind": "missing_context",
-   "reason": "Refers to a \"bone lesion\" that has not been previously described on the page."
+   "reason": "The sentence refers to a bone lesion, but the page never previously described or introduced a lesion before mentioning it."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fossilized parasites were found preserved inside the vascular canals of an Ibirania bone lesion, representing the first such report in a dinosaur.\": Refers to a \"bone lesion\" that has not been previously described on the page."
+  "- missing context: \"Fossilized parasites were found preserved inside the vascular canals of a bone lesion, marking the first such report in a dinosaur.\": The sentence refers to a bone lesion, but the page never previously described or introduced a lesion before mentioning it."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:47:40+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:00:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a \"bone lesion\" that has not been previously described on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:47:40+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:47+00:00"
 }

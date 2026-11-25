@@ -2,39 +2,87 @@
  "taxon_key": "ohmdenosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d7c453dc17f63bab",
- "reviewed_at": "2026-11-24T00:20:06+00:00",
+ "text_hash": "6c48405c895c647f",
+ "reviewed_at": "2026-11-25T13:22:58+00:00",
  "problems": [
   {
    "sentences": [
+    23
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 24 states Ohmdenosaurus lived on islands in the Bohemia region, whereas earlier sentences locate it in Germany."
+  },
+  {
+   "sentences": [
     1,
-    7
-   ],
-   "kind": "contradiction",
-   "reason": "Length estimates conflict: sentence 2 gives 3–4 m, while sentence 8 proposes 6.7 m."
-  },
-  {
-   "sentences": [
-    15,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 places the animal in Germany (early Toarcian), whereas sentence 18 claims it lived on islands in the Bohemia region."
-  },
-  {
-   "sentences": [
-    8,
-    9
+    2
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Rupert Wild named the genus and species in 1978."
+   "reason": "Both sentences describe quadrupedal locomotion and columnar limbs, repeating the same claim."
+  },
+  {
+   "sentences": [
+    3,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences mention a body length of 4 m, repeating the same measurement."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses the Posidonia Shale as a formation, not the animal itself."
+  },
+  {
+   "sentences": [
+    23
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 24 describes islands in the Bohemia region, a geographic context rather than a trait of the animal."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Possessing quadrupedal locomotion and columnar limbs, this animal was one of the earliest known sauropods. Rupert Wild estimated the total body length of Ohmdenosaurus at 3 to 4 meters.\" / \"A re-evaluation suggests a body length of 6.7 meters and a weight of 1.3 tonnes.\": Length estimates conflict: sentence 2 gives 3–4 m, while sentence 8 proposes 6.7 m.",
-  "- contradiction: \"Ohmdenosaurus lived during the early Toarcian age. The fossil dates to the early Toarcian, approximately 182 million years ago.\" / \"It lived on a series of islands in what is now the Bohemia region. The nearest landmass was probably the Black Forest Massif about 100 km to the southwest.\": Sentence 16 places the animal in Germany (early Toarcian), whereas sentence 18 claims it lived on islands in the Bohemia region."
+  "- contradiction: \"It lived on a series of islands in what is now the Bohemia region, where the nearest landmass was probably the Black Forest Massif about 100 km to the southwest.\": Sentence 24 states Ohmdenosaurus lived on islands in the Bohemia region, whereas earlier sentences locate it in Germany."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:21:38+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:20:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Length estimates conflict: sentence 2 gives 3–4 m, while sentence 8 proposes 6.7 m."
+    },
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 places the animal in Germany (early Toarcian), whereas sentence 18 claims it lived on islands in the Bohemia region."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Rupert Wild named the genus and species in 1978."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:21:38+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:44+00:00"
 }

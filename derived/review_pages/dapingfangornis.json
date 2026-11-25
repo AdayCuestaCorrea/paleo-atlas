@@ -2,22 +2,51 @@
  "taxon_key": "dapingfangornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5bf91077bdd21187",
- "reviewed_at": "2026-11-24T02:00:36+00:00",
+ "text_hash": "efa11e0147c46567",
+ "reviewed_at": "2026-11-25T13:59:00+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    5,
+    8
    ],
    "kind": "contradiction",
-   "reason": "The sentence claims Dapingfangornis is assigned to both the family Longipterygidae and the family Eoenantiornithidae, which cannot simultaneously be true for a single taxon."
+   "reason": "Sentence 6 identifies Dapingfangornis as an extinct avialan (bird) within the Enantiornithes clade, while sentence 9 classifies it under the class Reptilia, which is inconsistent with avialan status."
+  },
+  {
+   "sentences": [
+    6,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 7 assigns Dapingfangornis to the family Longipterygidae, whereas sentence 8 states that the Paleobiology Database lists Eoenantiornithidae as its parent group, presenting conflicting family-level classifications."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Dapingfangornis is assigned to the family Longipterygidae and also classified within the family Eoenantiornithidae.\": The sentence claims Dapingfangornis is assigned to both the family Longipterygidae and the family Eoenantiornithidae, which cannot simultaneously be true for a single taxon."
+  "- contradiction: \"It is an extinct avialan belonging to the Enantiornithes clade.\" / \"The Paleobiology Database classifies Dapingfangornis under the class Reptilia.\": Sentence 6 identifies Dapingfangornis as an extinct avialan (bird) within the Enantiornithes clade, while sentence 9 classifies it under the class Reptilia, which is inconsistent with avialan status.",
+  "- contradiction: \"Dapingfangornis is assigned to the family Longipterygidae, while the Paleobiology Database classifies it within the family Eoenantiornithidae.\" / \"The Paleobiology Database lists Eoenantiornithidae as the parent group for Dapingfangornis.\": Sentence 7 assigns Dapingfangornis to the family Longipterygidae, whereas sentence 8 states that the Paleobiology Database lists Eoenantiornithidae as its parent group, presenting conflicting family-level classifications."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:00:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "The sentence claims Dapingfangornis is assigned to both the family Longipterygidae and the family Eoenantiornithidae, which cannot simultaneously be true for a single taxon."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:06+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:06+00:00"
+ "rewritten_at": "2026-11-25T14:33:29+00:00"
 }

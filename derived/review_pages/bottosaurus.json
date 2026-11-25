@@ -2,38 +2,60 @@
  "taxon_key": "bottosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e6f143b6f239fcfb",
- "reviewed_at": "2026-11-24T01:18:12+00:00",
+ "text_hash": "5ccdaf945f8c2013",
+ "reviewed_at": "2026-11-25T13:49:22+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
-   ],
-   "kind": "contradiction",
-   "reason": "Both sentences claim a different taxonomic placement for Bottosaurus, one in subfamily Caimaninae and the other in family Crocodylidae."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "The phrase \"at the boundary\" is not defined or referenced earlier in the page."
-  },
-  {
-   "sentences": [
-    9,
-    11
+    1,
+    2
    ],
    "kind": "repetition",
-   "reason": "Both sentences list the same geographic and stratigraphic occurrences of Bottosaurus."
+   "reason": "Both sentences describe the teeth of Bottosaurus, repeating the same claim."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses the classification in a Spanish Wikipedia entry, which is about a source rather than the animal itself."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Phylogenetic studies from the 2010s classify Bottosaurus within the subfamily Caimaninae, making it more closely related to modern caimans than to alligators.\" / \"The Spanish Wikipedia entry classifies Bottosaurus within the family Crocodylidae.\": Both sentences claim a different taxonomic placement for Bottosaurus, one in subfamily Caimaninae and the other in family Crocodylidae.",
-  "- missing context: \"A juvenile jaw found at the boundary likely represents a mass death event following the extinction.\": The phrase \"at the boundary\" is not defined or referenced earlier in the page."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:18:27+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:18:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences claim a different taxonomic placement for Bottosaurus, one in subfamily Caimaninae and the other in family Crocodylidae."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"at the boundary\" is not defined or referenced earlier in the page."
+    },
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences list the same geographic and stratigraphic occurrences of Bottosaurus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:18:27+00:00"
+  }
+ ]
 }

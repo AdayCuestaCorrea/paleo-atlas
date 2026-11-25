@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "58ae35058699d689",
- "reviewed_at": "2026-11-24T00:45:46+00:00",
+ "reviewed_at": "2026-11-25T13:36:31+00:00",
  "problems": [
   {
    "sentences": [
-    9,
+    8,
     10
    ],
    "kind": "contradiction",
-   "reason": "Age range for Indosaurus is given as 69–66 Ma in sentence 10, but sentence 11 states 72.2–66 Ma, which conflicts with the earlier estimate."
+   "reason": "Age ranges for Indosaurus differ: 69–66 Ma vs 72.2–66 Ma."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Indosaurus lived in what is now India between 69 and 66 million years ago during the Late Cretaceous.\" / \"The time range for the animal is estimated from 72.2 to 66 million years ago.\": Age range for Indosaurus is given as 69–66 Ma in sentence 10, but sentence 11 states 72.2–66 Ma, which conflicts with the earlier estimate."
+  "- contradiction: \"Indosaurus lived in what is now India between 69 and 66 million years ago during the Late Cretaceous.\" / \"The time range for Indosaurus is estimated from 72.2 to 66 million years ago.\": Age ranges for Indosaurus differ: 69–66 Ma vs 72.2–66 Ma."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:02:23+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Age range for Indosaurus is given as 69–66 Ma in sentence 10, but sentence 11 states 72.2–66 Ma, which conflicts with the earlier estimate."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:02:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:29+00:00"
 }

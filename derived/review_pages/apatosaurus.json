@@ -2,44 +2,89 @@
  "taxon_key": "apatosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "523a21ebc8027bce",
- "reviewed_at": "2026-11-23T23:54:08+00:00",
+ "text_hash": "6479d3e88a96a3a0",
+ "reviewed_at": "2026-11-25T13:09:42+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same average length and mass for Apatosaurus."
-  },
-  {
-   "sentences": [
-    0,
+    1,
     6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 gives an average mass of 16.4–22.4 t, while sentence 7 gives a mass estimate for the type specimen of 21.8–38.2 t."
+   "reason": "Both sentences give conflicting mass ranges for specimen CM 3018 (16.4–22.4 t vs 21.8–38.2 t)."
   },
   {
    "sentences": [
-    20
+    19,
+    25
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 21 discusses Allosaurus, not Apatosaurus, yet it appears in the Apatosaurus page."
+   "kind": "contradiction",
+   "reason": "Sentence 20 states Apatosaurus and Brontosaurus belong to the same genus, while sentence 26 claims Brontosaurus is a distinct genus. In the same page they contradict each other."
   },
   {
    "sentences": [
-    11
+    1,
+    6
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 describes a sculpture of an Apatosaurus skull based on a Camarasaurus jaw, which is about the artwork rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Both sentences repeat the claim that CM 3018 is the basis for size estimates, but provide different mass ranges."
+  },
+  {
+   "sentences": [
+    7,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences discuss giant specimens exceeding the type specimen in length and mass, essentially repeating the same claim."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The average length of Apatosaurus was 21 to 23 meters with an average mass of 16.4 to 22.4 tonnes.\" / \"A 2015 volumetric study estimated the type specimen CM 3018 weighed between 21.8 and 38.2 tonnes, a mass similar to the Argentine titanosaur Dreadnoughtus.\": Sentence 1 gives an average mass of 16.4–22.4 t, while sentence 7 gives a mass estimate for the type specimen of 21.8–38.2 t."
+  "- contradiction: \"Most size estimates for this dinosaur are based on specimen CM 3018, which measures 21 to 23 meters in length and weighs 16.4 to 22.4 tonnes.\" / \"A 2015 volumetric study estimated the type specimen CM 3018 weighed between 21.8 and 38.2 tonnes, a mass similar to the Argentine titanosaur Dreadnoughtus.\": Both sentences give conflicting mass ranges for specimen CM 3018 (16.4–22.4 t vs 21.8–38.2 t).",
+  "- contradiction: \"Most modern paleontologists agree that Apatosaurus and Brontosaurus belong to the same genus, with Apatosaurus having priority as the name.\" / \"A 2015 study concluded that Brontosaurus is a distinct genus from Apatosaurus, though this classification is not universally accepted.\": Sentence 20 states Apatosaurus and Brontosaurus belong to the same genus, while sentence 26 claims Brontosaurus is a distinct genus. In the same page they contradict each other."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:33:27+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:54:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same average length and mass for Apatosaurus."
+    },
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 gives an average mass of 16.4–22.4 t, while sentence 7 gives a mass estimate for the type specimen of 21.8–38.2 t."
+    },
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 21 discusses Allosaurus, not Apatosaurus, yet it appears in the Apatosaurus page."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 12 describes a sculpture of an Apatosaurus skull based on a Camarasaurus jaw, which is about the artwork rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:33:27+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:00:59+00:00"
 }

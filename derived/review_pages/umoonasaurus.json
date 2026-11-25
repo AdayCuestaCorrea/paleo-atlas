@@ -3,38 +3,57 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "506bdb5288808309",
- "reviewed_at": "2026-11-24T00:26:00+00:00",
+ "reviewed_at": "2026-11-25T13:26:14+00:00",
  "problems": [
   {
    "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions an \"opalized specimen\" without prior introduction of any specimen."
-  },
-  {
-   "sentences": [
-    5,
-    9
+    14,
+    15,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Specimen in sentence 6 is from Andamooka opal fields, while sentence 10 claims all known specimens are from the Bulldog Shale."
-  },
-  {
-   "sentences": [
-    7,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Holotype in sentence 8 is from Zorba Extension Opal Field, contradicting sentence 10’s claim that all specimens are from Bulldog Shale."
+   "reason": "Sentence 15 states Umoonasaurus is a plesiosaur, while sentences 16 and 17 reclassify it as a member of Leptocleididae within Pliosauroidea and Plesiosauroidea respectively, giving conflicting higher‑level taxonomic placement."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Another opalized specimen, cataloged as SAM P2381, was found in the Andamooka opal fields.\": Mentions an \"opalized specimen\" without prior introduction of any specimen.",
-  "- contradiction: \"Another opalized specimen, cataloged as SAM P2381, was found in the Andamooka opal fields.\" / \"All known specimens come from the Bulldog Shale in the Eromanga Basin of South Australia.\": Specimen in sentence 6 is from Andamooka opal fields, while sentence 10 claims all known specimens are from the Bulldog Shale.",
-  "- contradiction: \"The holotype was discovered by local miners in the Zorba Extension Opal Field near Coober Pedy.\" / \"All known specimens come from the Bulldog Shale in the Eromanga Basin of South Australia.\": Holotype in sentence 8 is from Zorba Extension Opal Field, contradicting sentence 10’s claim that all specimens are from Bulldog Shale."
+  "- contradiction: \"Umoonasaurus is classified as a plesiosaur.\" / \"In 2008, Smith and Dyke reclassified Umoonasaurus as a member of Leptocleididae within Pliosauroidea.\" / \"In 2010, Ketchum and Benson placed Umoonasaurus in Leptocleididae, which they classified within Plesiosauroidea.\": Sentence 15 states Umoonasaurus is a plesiosaur, while sentences 16 and 17 reclassify it as a member of Leptocleididae within Pliosauroidea and Plesiosauroidea respectively, giving conflicting higher‑level taxonomic placement."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:19:51+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:26:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions an \"opalized specimen\" without prior introduction of any specimen."
+    },
+    {
+     "sentences": [
+      5,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Specimen in sentence 6 is from Andamooka opal fields, while sentence 10 claims all known specimens are from the Bulldog Shale."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Holotype in sentence 8 is from Zorba Extension Opal Field, contradicting sentence 10’s claim that all specimens are from Bulldog Shale."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:19:51+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:08+00:00"
 }

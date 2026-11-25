@@ -2,23 +2,52 @@
  "taxon_key": "tambatitanis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fced7caf7525af1e",
- "reviewed_at": "2026-11-24T00:45:01+00:00",
+ "text_hash": "a75d9f31538a8c2e",
+ "reviewed_at": "2026-11-25T13:36:15+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13,
-    14
+    9,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentences 13, 14, and 15 give conflicting information about the age and geographic location of Tambatitanis: 13 claims it lived in the lower Albian in Japan, 14 states a mid‑Cretaceous range (112–109 Ma) in Asia, and 15 lists an Albian range (113.2–110.1 Ma) that overlaps but does not resolve the discrepancy."
+   "reason": "Sentence 10 states Tambatitanis lived during the Lower Cretaceous (lower Albian) in Japan, while sentence 11 claims it lived during the mid‑Cretaceous (112–109 Ma) in Asia, giving conflicting age ranges and geographic locations."
+  },
+  {
+   "sentences": [
+    0,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), whereas sentence 8’s phylogenetic analysis places it within Euhelopodidae, a different clade."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Tambatitanis lived during the Lower Cretaceous (lower Albian) in what is now Japan.\" / \"Tambatitanis amicitiae lived during the mid-Cretaceous, between 112 and 109 million years ago, in what is now Asia.\" / \"The time range for Tambatitanis is the Albian, from 113.2 to 110.1 million years ago.\": Sentences 13, 14, and 15 give conflicting information about the age and geographic location of Tambatitanis: 13 claims it lived in the lower Albian in Japan, 14 states a mid‑Cretaceous range (112–109 Ma) in Asia, and 15 lists an Albian range (113.2–110.1 Ma) that overlaps but does not resolve the discrepancy."
+  "- contradiction: \"Tambatitanis lived during the Lower Cretaceous (lower Albian) in what is now Japan.\" / \"Tambatitanis amicitiae lived during the mid-Cretaceous, between 112 and 109 million years ago, in what is now Asia. The time range for Tambatitanis is the Albian, from 113.2 to 110.1 million years ago.\": Sentence 10 states Tambatitanis lived during the Lower Cretaceous (lower Albian) in Japan, while sentence 11 claims it lived during the mid‑Cretaceous (112–109 Ma) in Asia, giving conflicting age ranges and geographic locations.",
+  "- contradiction: \"Tambatitanis is an extinct genus of sauropod dinosaur classified as a titanosauriform, possibly a titanosaurian. The genus is known from a single species, Tambatitanis amicitiae, represented by a partial skeleton.\" / \"Phylogenetic analysis suggests Tambatitanis belonged to Euhelopodidae, but its specific placement within the group remains uncertain.\": Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), whereas sentence 8’s phylogenetic analysis places it within Euhelopodidae, a different clade."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:57:59+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 13, 14, and 15 give conflicting information about the age and geographic location of Tambatitanis: 13 claims it lived in the lower Albian in Japan, 14 states a mid‑Cretaceous range (112–109 Ma) in Asia, and 15 lists an Albian range (113.2–110.1 Ma) that overlaps but does not resolve the discrepancy."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:57:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:15+00:00"
 }

@@ -2,38 +2,66 @@
  "taxon_key": "xericeps",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f353f06670c0e8f4",
- "reviewed_at": "2026-11-24T01:06:37+00:00",
+ "text_hash": "6baae5640a485760",
+ "reviewed_at": "2026-11-25T13:45:23+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Xericeps has five pairs of elongated holes serving as openings for venous ducts."
-  },
-  {
-   "sentences": [
     0,
-    3
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the holotype specimen as consisting only of fragmented jaws."
+   "reason": "Both sentences state that Xericeps is known only from a single holotype specimen."
   },
   {
    "sentences": [
-    10,
-    11
+    11,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 limits Xericeps to the Cenomanian stage (100.5–93.9 Ma), while sentence 12 extends its existence to the Albian (up to 113.0 Ma), conflicting age ranges."
+   "reason": "Sentence 12 gives a Cenomanian age range (100.5–93.9 Ma), while sentence 13 extends the age back to 113.0 Ma, covering the Albian, which contradicts the earlier age range."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Xericeps lived during the Cenomanian stage of the Late Cretaceous, and the time range for Xericeps is recorded as the Cenomanian, from 100.5 to 93.9 million years ago.\" / \"Researchers believe Xericeps lived between 93.9 and 113.0 million years ago during the Albian to Cenomanian ages.\": Sentence 11 limits Xericeps to the Cenomanian stage (100.5–93.9 Ma), while sentence 12 extends its existence to the Albian (up to 113.0 Ma), conflicting age ranges."
+  "- contradiction: \"Xericeps lived during the Cenomanian stage of the Late Cretaceous, a time range recorded as the Cenomanian, from 100.5 to 93.9 million years ago.\" / \"However, researchers believe Xericeps lived between 93.9 and 113.0 million years ago during the Albian to Cenomanian ages.\": Sentence 12 gives a Cenomanian age range (100.5–93.9 Ma), while sentence 13 extends the age back to 113.0 Ma, covering the Albian, which contradicts the earlier age range."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:19:40+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:06:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Xericeps has five pairs of elongated holes serving as openings for venous ducts."
+    },
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the holotype specimen as consisting only of fragmented jaws."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 limits Xericeps to the Cenomanian stage (100.5–93.9 Ma), while sentence 12 extends its existence to the Albian (up to 113.0 Ma), conflicting age ranges."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:19:40+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:24:16+00:00"
 }

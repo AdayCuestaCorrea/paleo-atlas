@@ -2,22 +2,42 @@
  "taxon_key": "koshisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1050a2d42c396e47",
- "reviewed_at": "2026-11-24T01:55:27+00:00",
+ "text_hash": "5053cfce4d34edf6",
+ "reviewed_at": "2026-11-25T13:58:28+00:00",
  "problems": [
   {
    "sentences": [
+    3,
     4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 gives an approximate age of 128 million years ago, yet also states a time range of 121.4–113.2 million years ago, which are inconsistent."
+   "reason": "Sentence 4 states Koshisaurus lived in the Early Cretaceous, while sentence 5 says it lived in the middle of the Cretaceous, yet gives a time range (121.4–113.2 Ma) that corresponds to the Early Cretaceous Aptian age."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The animal lived in what is now Asia during the middle of the Cretaceous period, approximately 128 million years ago in the Aptian age, with a time range estimated between 121.4 and 113.2 million years ago.\": Sentence 5 gives an approximate age of 128 million years ago, yet also states a time range of 121.4–113.2 million years ago, which are inconsistent."
+  "- contradiction: \"Koshisaurus belongs to the superfamily Hadrosauroidea, and its discovery suggests that hadrosauroids were more diverse along the eastern edge of Asia during the Early Cretaceous.\" / \"The animal lived in what is now Asia during the middle of the Cretaceous period, with a time range estimated between 121.4 and 113.2 million years ago, corresponding to the Aptian age.\": Sentence 4 states Koshisaurus lived in the Early Cretaceous, while sentence 5 says it lived in the middle of the Cretaceous, yet gives a time range (121.4–113.2 Ma) that corresponds to the Early Cretaceous Aptian age."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:55:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 gives an approximate age of 128 million years ago, yet also states a time range of 121.4–113.2 million years ago, which are inconsistent."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:32:11+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:32:11+00:00"
+ "rewritten_at": "2026-11-25T14:33:08+00:00"
 }

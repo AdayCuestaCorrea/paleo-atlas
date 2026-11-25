@@ -3,46 +3,52 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "a02a0904b3b41ac4",
- "reviewed_at": "2026-11-24T01:32:48+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:54:01+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    0,
-    19
+   "reviewed_at": "2026-11-24T01:32:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same geographic and temporal range for Tehuelchesaurus."
+    },
+    {
+     "sentences": [
+      1,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences give the same length estimate of about 15 m for the animal."
+    },
+    {
+     "sentences": [
+      2,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims all dorsal vertebrae are opisthocoelous, while sentence 19 describes dorsal vertebrae as opistocoelous with deep pseudopleurocoels, which are incompatible traits."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 places Tehuelchesaurus as a basal member of Turiasauria, whereas sentence 15 places it within Camarasauromorpha, a different clade."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same geographic and temporal range for Tehuelchesaurus."
-  },
-  {
-   "sentences": [
-    1,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the same length estimate of about 15 m for the animal."
-  },
-  {
-   "sentences": [
-    2,
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 claims all dorsal vertebrae are opisthocoelous, while sentence 19 describes dorsal vertebrae as opistocoelous with deep pseudopleurocoels, which are incompatible traits."
-  },
-  {
-   "sentences": [
-    13,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 14 places Tehuelchesaurus as a basal member of Turiasauria, whereas sentence 15 places it within Camarasauromorpha, a different clade."
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:18:20+00:00"
   }
- ],
- "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"All dorsal vertebrae and all presacral vertebrae possess opisthocoelous centra, a trait that distinguishes it from related genera like Barapasaurus and Patagosaurus.\" / \"It differs from Omeisaurus in the shape of the coracoid, radius, and ulna, as well as the pubis and ischium, and possesses dorsal vertebrae with deep pseudopleurocoels and opistocoelous centra, unlike Barapasaurus and Patagosaurus.\": Sentence 3 claims all dorsal vertebrae are opisthocoelous, while sentence 19 describes dorsal vertebrae as opistocoelous with deep pseudopleurocoels, which are incompatible traits.",
-  "- contradiction: \"A 2019 analysis by Mannion et al. classified Tehuelchesaurus as a basal member of Turiasauria.\" / \"Recent phylogenetic analysis places the genus within Camarasauromorpha, related to Camarasaurus and Galveosaurus, but outside Titanosauriformes.\": Sentence 14 places Tehuelchesaurus as a basal member of Turiasauria, whereas sentence 15 places it within Camarasauromorpha, a different clade."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:18:20+00:00"
+ ]
 }

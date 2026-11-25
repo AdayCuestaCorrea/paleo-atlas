@@ -3,21 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "b9cfc517fa37c9c4",
- "reviewed_at": "2026-11-24T01:54:45+00:00",
+ "reviewed_at": "2026-11-25T13:58:23+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    0,
+    5
    ],
    "kind": "contradiction",
-   "reason": "The species name \"Avalonia sanfordi\" does not match the genus name \"Avalonianus\", indicating a factual inconsistency."
+   "reason": "Sentence 1 classifies Avalonianus as an archosaur, while sentence 6 places it in Saurischia, a dinosaur clade, creating a conflicting classification."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type species for the genus is Avalonia sanfordi.\": The species name \"Avalonia sanfordi\" does not match the genus name \"Avalonianus\", indicating a factual inconsistency."
+  "- contradiction: \"Avalonianus is considered a dubious or invalid genus of archosaur from the Late Triassic Westbury Formation of England.\" / \"The genus is classified within the parent group Saurischia.\": Sentence 1 classifies Avalonianus as an archosaur, while sentence 6 places it in Saurischia, a dinosaur clade, creating a conflicting classification."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:54:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "The species name \"Avalonia sanfordi\" does not match the genus name \"Avalonianus\", indicating a factual inconsistency."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:31:55+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:55+00:00"
+ "rewritten_at": "2026-11-25T14:33:04+00:00"
 }

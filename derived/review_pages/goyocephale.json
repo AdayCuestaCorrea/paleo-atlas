@@ -3,41 +3,61 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "c45e7b9e3bd726d0",
- "reviewed_at": "2026-11-24T01:01:31+00:00",
+ "reviewed_at": "2026-11-25T13:43:51+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14,
     15,
-    16,
-    17,
-    18
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentences 14–19 present mutually inconsistent views on the family placement of Goyocephale, alternating between Homalocephalidae, Pachycephalosauridae, paraphyly, and monophyly."
-  },
-  {
-   "sentences": [
-    14,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Homalocephalidae is paraphyletic and its genera are early branches of Pachycephalosauridae."
-  },
-  {
-   "sentences": [
-    15,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim a single Homalocephalidae family with Goyocephale, Homalocephale, and Wannanosaurus as the most derived members."
+   "reason": "Sentence 16 states Goyocephale lived approximately 76 million years ago (Late Cretaceous), while sentence 17 gives a broader range of 85.7–66 million years ago (Santonian to Maastrichtian), which contradicts the more specific age."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Originally, it was placed in the family Homalocephalidae alongside the genus Homalocephale.\" / \"Modern studies often view Homalocephalidae as a paraphyletic group, positioning Goyocephale as a sister branch to Pachycephalosauridae.\" / \"However, one analysis supports a single Homalocephalidae family, listing Goyocephale, Homalocephale, and Wannanosaurus as the most advanced members.\" / \"It is also described as a primitive pachycephalosaurid originally assigned to Homalocephalidae.\" / \"Many recent analyses suggest Homalocephalidae is paraphyletic, with its genera acting as early branches within Pachycephalosauridae leading to Prenocephale.\" / \"Another study identified Goyocephale, Homalocephale, and Wannanosaurus as the most derived pachycephalosaurids within a monophyletic Homalocephalidae.\": Sentences 14–19 present mutually inconsistent views on the family placement of Goyocephale, alternating between Homalocephalidae, Pachycephalosauridae, paraphyly, and monophyly."
+  "- contradiction: \"Goyocephale lived in Mongolia during the Late Cretaceous approximately 76 million years ago.\" / \"The animal lived from the Santonian to the Maastrichtian stages, between 85.7 and 66 million years ago.\": Sentence 16 states Goyocephale lived approximately 76 million years ago (Late Cretaceous), while sentence 17 gives a broader range of 85.7–66 million years ago (Santonian to Maastrichtian), which contradicts the more specific age."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:53:28+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:01:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 14–19 present mutually inconsistent views on the family placement of Goyocephale, alternating between Homalocephalidae, Pachycephalosauridae, paraphyly, and monophyly."
+    },
+    {
+     "sentences": [
+      14,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Homalocephalidae is paraphyletic and its genera are early branches of Pachycephalosauridae."
+    },
+    {
+     "sentences": [
+      15,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim a single Homalocephalidae family with Goyocephale, Homalocephale, and Wannanosaurus as the most derived members."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:53:28+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:55+00:00"
 }

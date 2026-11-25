@@ -2,37 +2,79 @@
  "taxon_key": "brontornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8b5e0696255501db",
- "reviewed_at": "2026-11-24T00:29:23+00:00",
+ "text_hash": "538cf907830d8c57",
+ "reviewed_at": "2026-11-25T13:27:37+00:00",
  "problems": [
   {
    "sentences": [
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 claims Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then states it is currently the third heaviest after Aepyornis and Dromornis stirtoni."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "The claim that Brontornis was the dominant carnivore in Patagonia and could kill large animals is made without any preceding evidence or context establishing its carnivorous nature."
+   "reason": "Sentence 6 states Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then immediately says it is currently the third heaviest after Aepyornis and Dromornis stirtoni."
   },
   {
    "sentences": [
     11
    ],
-   "kind": "missing_context",
-   "reason": "The suggestion that Brontornis hunted by jumping on prey and knocking it down is presented without any prior discussion of its hunting behavior or anatomical adaptations."
+   "kind": "contradiction",
+   "reason": "Sentence 12 claims the lower jaw was likely not suitable for tearing animal food, which contradicts earlier statements that Brontornis was a predatory carnivore."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 13 lists Brontornis as possibly a cariamiform, phorusrhacid, or anserimorph, while sentence 14 cites studies placing it as a basal relative of geese, sister taxon of Cariamiformes, and as a Gastornithiform, showing inconsistent taxonomic positions."
+  },
+  {
+   "sentences": [
+    0,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Brontornis lived during the Early to Middle Miocene, repeating the same information."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Brontornis is considered the fourth-heaviest bird ever found, after Aepyornis maximus, Dromornis, and Pachystruthio, though it is currently the third heaviest bird known after Aepyornis maximus and Dromornis stirtoni.\": Sentence 6 claims Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then states it is currently the third heaviest after Aepyornis and Dromornis stirtoni.",
-  "- missing context: \"It was the dominant carnivore in Patagonia during the Miocene, capable of killing large animals like the elephant-like mammal Astrapotherium and the predator Thylacosmilus.\": The claim that Brontornis was the dominant carnivore in Patagonia and could kill large animals is made without any preceding evidence or context establishing its carnivorous nature.",
-  "- missing context: \"Researchers suggest it may have hunted by jumping on prey and knocking it down with attack force after a short chase.\": The suggestion that Brontornis hunted by jumping on prey and knocking it down is presented without any prior discussion of its hunting behavior or anatomical adaptations."
+  "- contradiction: \"Brontornis is considered the fourth-heaviest bird ever found, after Aepyornis maximus, Dromornis, and Pachystruthio, though it is currently the third heaviest bird known after Aepyornis maximus and Dromornis stirtoni.\": Sentence 6 states Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then immediately says it is currently the third heaviest after Aepyornis and Dromornis stirtoni.",
+  "- contradiction: \"Studies on the lower jaw indicate it was likely not suitable for tearing animal food.\": Sentence 12 claims the lower jaw was likely not suitable for tearing animal food, which contradicts earlier statements that Brontornis was a predatory carnivore.",
+  "- contradiction: \"The taxonomic position of Brontornis is controversial, with it being alternatively classified as a cariamiform, a phorusrhacid (terror bird), or an anserimorph, though it has traditionally been included in the family Phorusrhacidae due to its large size and predatory lifestyle.\" / \"Cladistic studies have suggested that Brontornis is a basal relative of geese, a 2017 study suggested that Brontornis belongs to the sister taxon of Cariamiformes, and a 2021 study classified Brontornis as a Gastornithiform.\": Sentence 13 lists Brontornis as possibly a cariamiform, phorusrhacid, or anserimorph, while sentence 14 cites studies placing it as a basal relative of geese, sister taxon of Cariamiformes, and as a Gastornithiform, showing inconsistent taxonomic positions."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:35:56+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:29:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then states it is currently the third heaviest after Aepyornis and Dromornis stirtoni."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The claim that Brontornis was the dominant carnivore in Patagonia and could kill large animals is made without any preceding evidence or context establishing its carnivorous nature."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The suggestion that Brontornis hunted by jumping on prey and knocking it down is presented without any prior discussion of its hunting behavior or anatomical adaptations."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:35:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:59+00:00"
 }

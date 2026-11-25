@@ -3,21 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4810d09e429a2ab8",
- "reviewed_at": "2026-11-24T01:33:24+00:00",
+ "reviewed_at": "2026-11-25T13:54:22+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 claims Eocaiman species ranged from the Early Paleocene to the Miocene (ending ~5.3 Ma), yet it limits the time span to the Tortonian (≈11 Ma). Sentence 10 lists species ages only up to the Eocene, contradicting the stated Miocene presence."
+   "kind": "about_something_else",
+   "reason": "Sentence 3 discusses Notocaiman stromeri, a species of a different genus, as if it were an Eocaiman species, which is about a different taxon."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Species of Eocaiman lived from the Early Paleocene to the Miocene in what is now Argentina, Brazil, and Colombia. Their time range spans from the Danian to the Tortonian, covering approximately 66 to 11 million years ago.\" / \"While the genus spans the Paleocene and Miocene, specific dating varies by species: Eocaiman cavernensis dates to the Eocene, Eocaiman palaeocenicus to the Paleocene, and Eocaiman itaboraiensis to both the Paleocene and Eocene.\": Sentence 9 claims Eocaiman species ranged from the Early Paleocene to the Miocene (ending ~5.3 Ma), yet it limits the time span to the Tortonian (≈11 Ma). Sentence 10 lists species ages only up to the Eocene, contradicting the stated Miocene presence."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:22:45+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:33:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 claims Eocaiman species ranged from the Early Paleocene to the Miocene (ending ~5.3 Ma), yet it limits the time span to the Tortonian (≈11 Ma). Sentence 10 lists species ages only up to the Eocene, contradicting the stated Miocene presence."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:22:45+00:00"
+  }
+ ]
 }

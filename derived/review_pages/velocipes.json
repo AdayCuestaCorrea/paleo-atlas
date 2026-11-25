@@ -3,29 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "b9c51f0e58a24301",
- "reviewed_at": "2026-11-24T01:20:19+00:00",
- "problems": [
+ "reviewed_at": "2026-11-25T13:49:52+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    4,
-    5
+   "reviewed_at": "2026-11-24T01:20:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the fossil bone was described in 1884, repeating the same claim."
+    },
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 says Velocipes was first described by Huene in 1932, while sentence 6 says the fossil bone was described but not named until 1884, conflicting on the year of description."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the fossil bone was described in 1884, repeating the same claim."
-  },
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 says Velocipes was first described by Huene in 1932, while sentence 6 says the fossil bone was described but not named until 1884, conflicting on the year of description."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:24:51+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"The type species Velocipes guerichi was first described by Huene in 1932 based on a poorly preserved fibula discovered in southern Poland around 1884.\" / \"The fossil bone was described but not named until 1884.\": Sentence 5 says Velocipes was first described by Huene in 1932, while sentence 6 says the fossil bone was described but not named until 1884, conflicting on the year of description."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:24:51+00:00"
+ ]
 }

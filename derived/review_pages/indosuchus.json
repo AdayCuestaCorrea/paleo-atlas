@@ -2,30 +2,54 @@
  "taxon_key": "indosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a79d36ca21322569",
- "reviewed_at": "2026-11-24T01:32:57+00:00",
+ "text_hash": "020ff05602935dff",
+ "reviewed_at": "2026-11-25T13:54:07+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    0,
+    1
    ],
-   "kind": "contradiction",
-   "reason": "The age ranges for Indosuchus differ: sentence 14 gives 70–66 Ma, while sentence 15 gives 72.2–66 Ma."
+   "kind": "repetition",
+   "reason": "Both sentences state the animal’s mass as 1.2 tons (1,200 kg)."
   },
   {
    "sentences": [
-    13,
-    14
+    14,
+    15
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the species’ age range, repeating the same information."
+   "reason": "Both sentences give the species’ age range, but with different lower bounds (70 Ma vs 72.2 Ma)."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Indosuchus inhabited India during the Late Cretaceous, specifically the Maastrichtian age, between approximately 70 and 66 million years ago.\" / \"The time range for this species is the Maastrichtian, spanning from 72.2 to 66 million years ago.\": The age ranges for Indosuchus differ: sentence 14 gives 70–66 Ma, while sentence 15 gives 72.2–66 Ma."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:20:04+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:32:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Indosuchus differ: sentence 14 gives 70–66 Ma, while sentence 15 gives 72.2–66 Ma."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the species’ age range, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:20:04+00:00"
+  }
+ ]
 }

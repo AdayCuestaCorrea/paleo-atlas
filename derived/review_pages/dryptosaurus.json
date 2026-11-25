@@ -2,36 +2,73 @@
  "taxon_key": "dryptosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f5fca61dfce3fc38",
- "reviewed_at": "2026-11-23T23:55:57+00:00",
+ "text_hash": "8e304fca7e076f14",
+ "reviewed_at": "2026-11-25T13:10:39+00:00",
  "problems": [
   {
    "sentences": [
-    7
-   ],
-   "kind": "repetition",
-   "reason": "The two sentences in entry 8 repeat the same claim about Dryptosaurus using arms and jaws as weapons."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Entry 16 repeats the same information about the age and location of Dryptosaurus three times."
-  },
-  {
-   "sentences": [
-    0,
-    14
+    1,
+    17
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Dryptosaurus had three fingers, while sentence 15 suggests it may have had only two functional digits."
+   "reason": "Sentence 2 claims Dryptosaurus had three fingers, while sentence 18 states that the phalange shape suggests it may have had only two functional digits."
+  },
+  {
+   "sentences": [
+    7,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentences 8 and 9 describe the New Egypt Formation as a terrestrial marl deposit mined for fertilizer, whereas sentence 20 claims it is a marine formation where dinosaur carcasses floated out to sea."
+  },
+  {
+   "sentences": [
+    16,
+    21
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences discuss the debate over the validity of the family Dryptosauridae, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Unlike other tyrannosaurs, Dryptosaurus possessed relatively long arms compared to more derived tyrannosaurs like Tyrannosaurus, similar to its relative Eotyrannus. This dinosaur was believed to have had large hands with three fingers and claws nearly 20 centimeters long.\" / \"While earlier beliefs suggested Dryptosaurus had three fingers, Brusatte et al. (2011) noted the phalange shape suggests it may have had only two functional digits.\": Sentence 1 states Dryptosaurus had three fingers, while sentence 15 suggests it may have had only two functional digits."
+  "- contradiction: \"The dinosaur is believed to have had large hands with three fingers and claws nearly 20 centimeters long.\" / \"While earlier beliefs suggested Dryptosaurus had three fingers, Brusatte et al. (2011) noted the phalange shape suggests it may have had only two functional digits.\": Sentence 2 claims Dryptosaurus had three fingers, while sentence 18 states that the phalange shape suggests it may have had only two functional digits.",
+  "- contradiction: \"Fossils of Dryptosaurus were discovered by fertilizer miners in New Jersey within the New Egypt Formation while mining glauconitic marl for fertilizer at the West Jersey Marl Company Pit.\" / \"Dryptosaurus fossils come from the marine New Egypt Formation, where dinosaur carcasses floated out to sea and were fossilized.\": Sentences 8 and 9 describe the New Egypt Formation as a terrestrial marl deposit mined for fertilizer, whereas sentence 20 claims it is a marine formation where dinosaur carcasses floated out to sea."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:52:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:55:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "repetition",
+     "reason": "The two sentences in entry 8 repeat the same claim about Dryptosaurus using arms and jaws as weapons."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Entry 16 repeats the same information about the age and location of Dryptosaurus three times."
+    },
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Dryptosaurus had three fingers, while sentence 15 suggests it may have had only two functional digits."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:52:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:25+00:00"
 }

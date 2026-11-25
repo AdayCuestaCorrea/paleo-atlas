@@ -2,46 +2,87 @@
  "taxon_key": "dicraeosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "489a733130d3528c",
- "reviewed_at": "2026-11-24T01:31:13+00:00",
+ "text_hash": "d5aa0f885bb31a2a",
+ "reviewed_at": "2026-11-25T13:53:35+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11
+    1,
+    19
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the tall neural spines served as attachment points for neck muscles."
+   "reason": "Both sentences state the neck length (2.4 m) and total body length (up to 20 m) for Dicraeosaurus."
   },
   {
    "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence describes the tail’s function without any prior mention of the tail’s anatomy or role."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence provides detailed physiological data (air volume, heart mass, blood volume) without any preceding context about the animal’s internal anatomy."
-  },
-  {
-   "sentences": [
-    3,
-    27
+    2,
+    4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 claims Dicraeosaurus was 13–20 m long and 15 tons, implying a large sauropod, while sentence 28 describes it as a mid‑sized herbivore, which is inconsistent with the size implied in sentence 4."
+   "reason": "Sentence 3 gives a weight of ~15 t, while sentence 5 lists a mass range of 10–40 t."
+  },
+  {
+   "sentences": [
+    23
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 24 discusses sexual selection for long necks in sauropods, which is not a property of Dicraeosaurus, which has a short neck."
+  },
+  {
+   "sentences": [
+    23
+   ],
+   "kind": "contradiction",
+   "reason": "It contradicts earlier statements that Dicraeosaurus had a short neck (sentence 2)."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The tail of Dicraeosaurus, which acted like a whip, could be used for defense or to make loud sounds.\": The sentence describes the tail’s function without any prior mention of the tail’s anatomy or role.",
-  "- missing context: \"Calculations indicate that Dicraeosaurus contained 974 liters of air, with a 48-kilogram heart pumping 641 liters of blood at a rate of 23 beats per minute.\": The sentence provides detailed physiological data (air volume, heart mass, blood volume) without any preceding context about the animal’s internal anatomy.",
-  "- contradiction: \"Dicraeosaurus measured between 13 and 20 meters in length, up to 6 meters in height, and weighed 15 tons.\" / \"Dicraeosaurus was a mid-sized herbivore found in the Tendaguru Formation of Tanzania, which dates to the Late Jurassic.\": Sentence 4 claims Dicraeosaurus was 13–20 m long and 15 tons, implying a large sauropod, while sentence 28 describes it as a mid‑sized herbivore, which is inconsistent with the size implied in sentence 4."
+  "- contradiction: \"A crest or comb-like structure sat on the back of its head, and the animal stood up to 6 meters tall, weighing approximately 15 tons.\" / \"Numerous attempts to estimate its mass yielded varied results, placing the weight of D. hansemanni between 10 and 40 tons.\": Sentence 3 gives a weight of ~15 t, while sentence 5 lists a mass range of 10–40 t.",
+  "- contradiction: \"The long neck of sauropods like Dicraeosaurus may have evolved as a result of sexual selection.\": It contradicts earlier statements that Dicraeosaurus had a short neck (sentence 2)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:13:23+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:31:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the tall neural spines served as attachment points for neck muscles."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence describes the tail’s function without any prior mention of the tail’s anatomy or role."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence provides detailed physiological data (air volume, heart mass, blood volume) without any preceding context about the animal’s internal anatomy."
+    },
+    {
+     "sentences": [
+      3,
+      27
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 claims Dicraeosaurus was 13–20 m long and 15 tons, implying a large sauropod, while sentence 28 describes it as a mid‑sized herbivore, which is inconsistent with the size implied in sentence 4."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:13:23+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:02+00:00"
 }

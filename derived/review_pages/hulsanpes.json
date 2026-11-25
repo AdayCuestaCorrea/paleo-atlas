@@ -2,21 +2,73 @@
  "taxon_key": "hulsanpes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cd3ce49bd0819078",
- "reviewed_at": "2026-11-24T00:36:06+00:00",
+ "text_hash": "d61a2bdde758536b",
+ "reviewed_at": "2026-11-25T13:31:10+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    4,
+    8
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"subcursorial adaptations\" without previously explaining what that term means or how it relates to the animal’s morphology."
+   "kind": "repetition",
+   "reason": "Both sentences state the third metatarsal measures 39 mm."
+  },
+  {
+   "sentences": [
+    5,
+    6,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "All three sentences repeat that the braincase is 1 cm long and that the specimen was a post‑hatchling chick."
+  },
+  {
+   "sentences": [
+    10,
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 11 claims Hulsanpes was aquatic, while sentence 12 claims it was terrestrial."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 12 repeats the same statement as sentence 11."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 16 gives two incompatible age ranges: 75–72 Ma and 83.6–72.2 Ma for the Campanian stage."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"Researchers identified subcursorial adaptations for Hulsanpes, suggesting it may have had a more terrestrial lifestyle despite evidence that it likely spent much of its time in aquatic environments like rivers, swimming using both forelimbs and hindlimbs.\": The sentence refers to \"subcursorial adaptations\" without previously explaining what that term means or how it relates to the animal’s morphology."
+  "- contradiction: \"Hulsanpes likely spent much of its time in aquatic environments like rivers, swimming using both forelimbs and hindlimbs.\" / \"Researchers identified subcursorial adaptations for Hulsanpes, suggesting it may have had a more terrestrial, subcursorial lifestyle despite evidence that it likely spent much of its time in aquatic environments like rivers, swimming using both forelimbs and hindlimbs.\": Sentence 11 claims Hulsanpes was aquatic, while sentence 12 claims it was terrestrial.",
+  "- contradiction: \"Hulsanpes lived in the Barun Goyot Formation of Mongolia approximately 75 to 72 million years ago during the Late Cretaceous, specifically within the Campanian stage from 83.6 to 72.2 million years ago.\": Sentence 16 gives two incompatible age ranges: 75–72 Ma and 83.6–72.2 Ma for the Campanian stage."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:43:55+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:36:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"subcursorial adaptations\" without previously explaining what that term means or how it relates to the animal’s morphology."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:43:55+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:14:54+00:00"
 }

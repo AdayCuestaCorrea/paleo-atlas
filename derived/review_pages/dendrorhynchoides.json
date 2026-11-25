@@ -2,31 +2,120 @@
  "taxon_key": "dendrorhynchoides",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "12acd3a1c983801b",
- "reviewed_at": "2026-11-24T00:45:36+00:00",
+ "text_hash": "d27da3ab623eadd0",
+ "reviewed_at": "2026-11-25T13:36:29+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    28
+    8,
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that a second juvenile specimen proved an elongated tail was present, not as long as the falsified tail of the holotype, measuring about 85% of the femur length."
+   "kind": "contradiction",
+   "reason": "Sentence 9 states the preserved tail length is only five centimeters, while sentence 11 claims a second juvenile specimen had a tail about 85% of the femur length, implying a much longer tail."
+  },
+  {
+   "sentences": [
+    18,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 19 classifies Dendrorhynchoides as an anurognathid pterosaur, whereas sentence 20 says the original authors classified it as a long‑tailed rhamphorhynchid."
+  },
+  {
+   "sentences": [
+    20,
+    21
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 21 places Dendrorhynchoides within the subfamily Anurognathinae, while sentence 22 identifies it as sister to a clade of Asiaticognathidae, which is incompatible."
+  },
+  {
+   "sentences": [
+    26,
+    27
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 27 reports the holotype might be Middle Jurassic, whereas sentence 28 says the author reversed this view and placed it in the Early Cretaceous."
+  },
+  {
+   "sentences": [
+    28,
+    29
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 29 states the fossil range spans Middle Jurassic to Early Cretaceous, but sentence 30 lists only the Yixian (Early Cretaceous) and Tiaojishan (Middle Jurassic) formations, implying a narrower range."
   },
   {
    "sentences": [
     24,
-    25,
-    26
+    30
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 25 and 26 date the holotype to ~124.5–124.6 Ma (Early Cretaceous Yixian Formation), while sentence 27 suggests the holotype may actually come from Middle Jurassic deposits, directly contradicting the earlier age assignment."
+   "kind": "repetition",
+   "reason": "Both sentences provide the same information that the type species is from the Early Cretaceous Yixian Formation in Liaoning."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the holotype GMV2128 as discovered around 1995 and obtained by illegal fossil dealers."
+  },
+  {
+   "sentences": [
+    15,
+    16,
+    17
+   ],
+   "kind": "repetition",
+   "reason": "All three sentences describe the inferred lifestyle of Dendrorhynchoides as arboreal insectivorous."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase “part of this is attributed to a section likely added to increase the fossil’s value” refers to an unspecified section of the tail, but no prior mention of such a section exists."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 4,
  "notes": [
-  "- contradiction: \"The holotype specimen is dated to approximately 124.6 million years old.\" / \"The holotype of the type species was found in the Jianshangou Bed of the Yixian Formation, dating to 124.5 million years ago.\" / \"In 2012, researchers David Hone and Lü Junchang suggested the holotype might actually come from Middle Jurassic deposits rather than the Early Cretaceous.\": Sentences 25 and 26 date the holotype to ~124.5–124.6 Ma (Early Cretaceous Yixian Formation), while sentence 27 suggests the holotype may actually come from Middle Jurassic deposits, directly contradicting the earlier age assignment."
+  "- contradiction: \"The preserved tail length is five centimeters, though part of this is attributed to a section likely added to increase the fossil's value.\" / \"A second juvenile specimen proved that an elongated tail was present, though not as long as the falsified tail of the holotype, measuring about 85% of the femur length.\": Sentence 9 states the preserved tail length is only five centimeters, while sentence 11 claims a second juvenile specimen had a tail about 85% of the femur length, implying a much longer tail.",
+  "- contradiction: \"Dendrorhynchoides is classified as a genus of anurognathid pterosaur.\" / \"The original authors classified Dendrorhynchoides as a long-tailed rhamphorhynchid rather than an anurognathid due to its presumed long tail.\": Sentence 19 classifies Dendrorhynchoides as an anurognathid pterosaur, whereas sentence 20 says the original authors classified it as a long‑tailed rhamphorhynchid.",
+  "- contradiction: \"A 2021 phylogenetic analysis placed Dendrorhynchoides within the subfamily Anurognathinae.\" / \"A 2006 phylogenetic analysis by Lü Junchang identified Dendrorhynchoides as the sister taxon to the clade formed by the other two species of Asiaticognathidae.\": Sentence 21 places Dendrorhynchoides within the subfamily Anurognathinae, while sentence 22 identifies it as sister to a clade of Asiaticognathidae, which is incompatible.",
+  "- contradiction: \"In 2012, researchers David Hone and Lü Junchang suggested the holotype might actually come from Middle Jurassic deposits rather than the Early Cretaceous.\" / \"In a 2020 paper, David Hone reversed his earlier opinion and considered the holotype to be from the Early Cretaceous.\": Sentence 27 reports the holotype might be Middle Jurassic, whereas sentence 28 says the author reversed this view and placed it in the Early Cretaceous.",
+  "- contradiction: \"The fossil range of Dendrorhynchoides spans from the Middle Jurassic to the Early Cretaceous.\" / \"Dendrorhynchoides fossils are found in the Early Cretaceous Yixian Formation in Liaoning and the Middle Jurassic Tiaojishan Formation in Hebei, China.\": Sentence 29 states the fossil range spans Middle Jurassic to Early Cretaceous, but sentence 30 lists only the Yixian (Early Cretaceous) and Tiaojishan (Middle Jurassic) formations, implying a narrower range.",
+  "- missing context: \"The preserved tail length is five centimeters, though part of this is attributed to a section likely added to increase the fossil's value.\": The phrase “part of this is attributed to a section likely added to increase the fossil’s value” refers to an unspecified section of the tail, but no prior mention of such a section exists."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:01:17+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:45:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      28
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that a second juvenile specimen proved an elongated tail was present, not as long as the falsified tail of the holotype, measuring about 85% of the femur length."
+    },
+    {
+     "sentences": [
+      24,
+      25,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 25 and 26 date the holotype to ~124.5–124.6 Ma (Early Cretaceous Yixian Formation), while sentence 27 suggests the holotype may actually come from Middle Jurassic deposits, directly contradicting the earlier age assignment."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:01:17+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:28+00:00"
 }

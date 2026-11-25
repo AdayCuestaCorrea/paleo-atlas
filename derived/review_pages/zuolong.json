@@ -2,23 +2,39 @@
  "taxon_key": "zuolong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "928a3e92e1098b3b",
- "reviewed_at": "2026-11-24T00:03:52+00:00",
+ "text_hash": "939525c65a904f9f",
+ "reviewed_at": "2026-11-25T13:15:19+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11,
-    12
+    13,
+    15
    ],
-   "kind": "contradiction",
-   "reason": "Adult length and mass estimates differ among sentences 11, 12, and 13."
+   "kind": "repetition",
+   "reason": "Both sentences state that Zuolong’s length was estimated at 3 meters, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Gregory S. Paul hypothesized that the holotype is a juvenile and estimated an adult length of 3 meters and a mass of 50 kg.\" / \"Some authors suggest an adult Zuolong reached a length of 3.35 meters and a mass of 43 kg.\" / \"In 2016, Gregory S. Paul estimated Zuolong's length at 3 meters and its weight at 60 kilograms.\": Adult length and mass estimates differ among sentences 11, 12, and 13."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:11:38+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:03:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Adult length and mass estimates differ among sentences 11, 12, and 13."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:11:38+00:00"
+  }
+ ]
 }

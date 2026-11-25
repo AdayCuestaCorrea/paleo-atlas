@@ -2,32 +2,55 @@
  "taxon_key": "stenonychosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "886ac50fd718a767",
- "reviewed_at": "2026-11-24T00:17:45+00:00",
+ "text_hash": "07633b4eea3c838b",
+ "reviewed_at": "2026-11-25T13:21:48+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    10
+    3,
+    12
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 claims Stenonychosaurus was a predator based on its sickle-shaped toe claw, while sentence 11 describes its jaws as U‑shaped and similar to a plant‑eating iguana, implying a herbivorous diet."
+   "kind": "repetition",
+   "reason": "Both sentences claim Stenonychosaurus had an unusually large brain relative to its body size."
   },
   {
    "sentences": [
-    13,
-    14,
-    15,
-    20
+    6
    ],
    "kind": "about_something_else",
-   "reason": "These sentences discuss taxonomic grouping, family assignment, synonymy, and classification changes, which are about the animal’s taxonomic context rather than its biology or morphology."
+   "reason": "Sentence 7 discusses a life‑size sculpture and its fame, which is about an artistic representation rather than the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Stenonychosaurus is believed to have been a predator, supported by its sickle-shaped toe claw, though a comparative study of the feeding apparatus suggests it may have been an omnivore.\" / \"The jaws of Stenonychosaurus met in a broad, U-shaped symphysis similar to that of an iguana adapted to a plant-eating lifestyle.\": Sentence 7 claims Stenonychosaurus was a predator based on its sickle-shaped toe claw, while sentence 11 describes its jaws as U‑shaped and similar to a plant‑eating iguana, implying a herbivorous diet."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:59:20+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:17:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 claims Stenonychosaurus was a predator based on its sickle-shaped toe claw, while sentence 11 describes its jaws as U‑shaped and similar to a plant‑eating iguana, implying a herbivorous diet."
+    },
+    {
+     "sentences": [
+      13,
+      14,
+      15,
+      20
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences discuss taxonomic grouping, family assignment, synonymy, and classification changes, which are about the animal’s taxonomic context rather than its biology or morphology."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:59:20+00:00"
+  }
+ ]
 }

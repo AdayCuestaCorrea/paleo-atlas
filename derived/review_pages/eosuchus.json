@@ -2,22 +2,41 @@
  "taxon_key": "eosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bba10907a6282c9e",
- "reviewed_at": "2026-11-24T00:47:13+00:00",
+ "text_hash": "78d4dfec95aa4618",
+ "reviewed_at": "2026-11-25T13:37:21+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    9
+    7
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 states that Eosuchus minor was originally discovered in 1870, while sentence 10 claims a second species named E. minor was described in 2006, implying the same species was named twice at different times."
+   "kind": "missing_context",
+   "reason": "Refers to \"Thecachampsoides minor\" without prior introduction or context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The species Eosuchus minor was originally discovered in 1870 by Othniel Charles Marsh but was initially classified under the genus Gavialis.\" / \"A second species, E. minor, was named in 2006 based on material found in the United States that had previously been referred to various different crocodile genera.\": Sentence 7 states that Eosuchus minor was originally discovered in 1870, while sentence 10 claims a second species named E. minor was described in 2006, implying the same species was named twice at different times."
+  "- missing context: \"The name Eosuchus was officially applied to the specimens of Thecachampsoides minor in 2006.\": Refers to \"Thecachampsoides minor\" without prior introduction or context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:19:14+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:47:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states that Eosuchus minor was originally discovered in 1870, while sentence 10 claims a second species named E. minor was described in 2006, implying the same species was named twice at different times."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:19:14+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:20+00:00"
 }

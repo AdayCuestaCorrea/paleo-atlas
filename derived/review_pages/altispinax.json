@@ -2,39 +2,72 @@
  "taxon_key": "altispinax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5fe7e964e9eb4823",
- "reviewed_at": "2026-11-24T00:39:48+00:00",
+ "text_hash": "3dd248bdaec3f34b",
+ "reviewed_at": "2026-11-25T13:33:29+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    11
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 estimates Altispinax as a one‑tonne predator, while sentence 12 describes it as a large predatory theropod, implying a much larger size."
+   "kind": "missing_context",
+   "reason": "Refers to vertebrae closest to the skull and an injury to a back frill, but the holotype contains only three posterior dorsal vertebrae and no frill is described."
   },
   {
    "sentences": [
-    0,
-    1,
-    9
+    7
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 claims the type specimen is a tooth that is not diagnostic, whereas sentences 1 and 2 state the holotype is a set of three posterior dorsal vertebrae."
+   "kind": "missing_context",
+   "reason": "Discusses a gap between front spines, yet the holotype consists of only posterior dorsal vertebrae, leaving the front spines undefined."
   },
   {
    "sentences": [
     10
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 11 discusses the genus Becklespinax and its species, which is a separate taxon; it is presented as if it were about Altispinax itself."
+   "reason": "Describes the naming of a new genus (Becklespinax) and a synonym (Metriacanthosaurus) rather than providing information about Altispinax itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Gregory Paul once estimated that this predator weighed one tonne and was shorter than the eight-meter-long type specimen of Acrocanthosaurus atokensis.\" / \"Altispinax was a large predatory theropod dinosaur that lived between 140 and 133 million years ago in what is now East Sussex, England, during the early Cretaceous period in the Valanginian stage.\": Sentence 4 estimates Altispinax as a one‑tonne predator, while sentence 12 describes it as a large predatory theropod, implying a much larger size.",
-  "- contradiction: \"The defining feature of the holotype is a set of three posterior dorsal vertebrae catalogued as NHMUK PV R 1828.\" / \"Friedrich von Huene established the genus in 1923 based on these vertebrae, which possess very high spines that inspired the Latin name meaning 'high with spines'.\" / \"It is debated whether Altispinax is valid, as later research suggested the type specimen, a tooth, was not diagnostic, making it a nomen dubium with no probable connection to the spines.\": Sentence 10 claims the type specimen is a tooth that is not diagnostic, whereas sentences 1 and 2 state the holotype is a set of three posterior dorsal vertebrae."
+  "- missing context: \"Ralph Molnar suggested that the two vertebrae closest to the skull in Altispinax are fused and interpreted this fusion as evidence of an injury to a back frill that healed from behind.\": Refers to vertebrae closest to the skull and an injury to a back frill, but the holotype contains only three posterior dorsal vertebrae and no frill is described.",
+  "- missing context: \"Darren Naish proposed in 2003 that the gap between the front spines was natural rather than the result of injury.\": Discusses a gap between front spines, yet the holotype consists of only posterior dorsal vertebrae, leaving the front spines undefined."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:15:40+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:39:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 estimates Altispinax as a one‑tonne predator, while sentence 12 describes it as a large predatory theropod, implying a much larger size."
+    },
+    {
+     "sentences": [
+      0,
+      1,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims the type specimen is a tooth that is not diagnostic, whereas sentences 1 and 2 state the holotype is a set of three posterior dorsal vertebrae."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 discusses the genus Becklespinax and its species, which is a separate taxon; it is presented as if it were about Altispinax itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:15:40+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:16:39+00:00"
 }

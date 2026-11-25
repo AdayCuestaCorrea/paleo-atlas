@@ -2,44 +2,87 @@
  "taxon_key": "canardia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "df62b8b66fed6752",
- "reviewed_at": "2026-11-24T00:16:36+00:00",
+ "text_hash": "2181c0ff81ddaee5",
+ "reviewed_at": "2026-11-25T13:21:38+00:00",
  "problems": [
   {
    "sentences": [
-    12
+    0,
+    1
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 states the species lived between 67.5–66 Ma but also gives a range of 72.2–66 Ma, which are inconsistent."
+   "reason": "Sentence 1 claims a maxilla is present in juvenile fossils, while sentence 2 states no maxilla is preserved in juvenile specimens."
   },
   {
    "sentences": [
-    0,
-    12
+    1,
+    2
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Canardia lived during the Late Cretaceous period."
+   "kind": "contradiction",
+   "reason": "Sentence 2 says no maxilla is preserved in juvenile specimens, yet sentence 3 describes a juvenile specimen with an 11.5 cm maxilla."
   },
   {
    "sentences": [
-    17
+    10
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 18 refers to “It” without a clear antecedent regarding the creature being discussed."
+   "kind": "contradiction",
+   "reason": "Sentence 11 gives two conflicting age ranges for Canardia (67.5–66 Ma and 72.2–66 Ma)."
   },
   {
    "sentences": [
-    18
+    15
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 19 discusses a sauropod, which is unrelated to the duck‑billed dinosaur Canardia."
+   "reason": "Sentence 16 refers to a sauropod, which is unrelated to the lambeosaurine Canardia discussed in the page."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Canardia lived during the late Cretaceous period, between approximately 67.5 and 66 million years ago in the late Maastrichtian stage, with a time range extending from 72.2 to 66 million years ago.\": Sentence 13 states the species lived between 67.5–66 Ma but also gives a range of 72.2–66 Ma, which are inconsistent.",
-  "- missing context: \"It is unknown whether Canardia possessed a hollow bony crest on its skull.\": Sentence 18 refers to “It” without a clear antecedent regarding the creature being discussed."
+  "- contradiction: \"All known fossils of Canardia belong to juvenile individuals, and the maxilla features a prominent subrectangular flange rising vertically above the rostroventral process.\" / \"Because no maxilla is preserved in the juvenile specimens, it is not possible to confirm if they belong to Canardia or another lambeosaurine.\": Sentence 1 claims a maxilla is present in juvenile fossils, while sentence 2 states no maxilla is preserved in juvenile specimens.",
+  "- contradiction: \"Because no maxilla is preserved in the juvenile specimens, it is not possible to confirm if they belong to Canardia or another lambeosaurine.\" / \"A juvenile Canardia specimen with an 11.5 cm maxilla was transported by a river to marine deposits.\": Sentence 2 says no maxilla is preserved in juvenile specimens, yet sentence 3 describes a juvenile specimen with an 11.5 cm maxilla.",
+  "- contradiction: \"Canardia lived during the late Cretaceous period, between approximately 67.5 and 66 million years ago in the late Maastrichtian stage, with a time range extending from 72.2 to 66 million years ago.\": Sentence 11 gives two conflicting age ranges for Canardia (67.5–66 Ma and 72.2–66 Ma)."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:55:57+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:16:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states the species lived between 67.5–66 Ma but also gives a range of 72.2–66 Ma, which are inconsistent."
+    },
+    {
+     "sentences": [
+      0,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim Canardia lived during the Late Cretaceous period."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 18 refers to “It” without a clear antecedent regarding the creature being discussed."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 19 discusses a sauropod, which is unrelated to the duck‑billed dinosaur Canardia."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:55:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:21+00:00"
 }

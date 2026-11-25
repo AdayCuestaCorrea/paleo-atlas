@@ -2,21 +2,90 @@
  "taxon_key": "physornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f7c770e7b2dfe067",
- "reviewed_at": "2026-11-24T00:06:19+00:00",
+ "text_hash": "252a0eeb5ed1e937",
+ "reviewed_at": "2026-11-25T13:16:19+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    19,
+    20
+   ],
+   "kind": "contradiction",
+   "reason": "Both claim the temporal range of Physornis, but 20 says Oligocene–Miocene while 21 says only Oligocene."
+  },
+  {
+   "sentences": [
+    19,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "20 gives Oligocene–Miocene, whereas 23 cites a range from Rupelian to Late Pleistocene."
+  },
+  {
+   "sentences": [
+    20,
+    22
+   ],
+   "kind": "contradiction",
+   "reason": "21 states only Oligocene, conflicting with 23’s broader range."
+  },
+  {
+   "sentences": [
+    12
    ],
    "kind": "missing_context",
-   "reason": "Sentence 3 refers to \"mandible branches are further apart from the median\" without explaining what \"median\" refers to or providing context for the comparison."
+   "reason": "Mentions FM‑P13619 limb bones without prior introduction of the specimen."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "missing_context",
+   "reason": "References P. fortis, a species not previously mentioned on the page."
+  },
+  {
+   "sentences": [
+    18
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions P. brasiliensis, which has not been introduced earlier."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes an Amherst College expedition, not directly about Physornis."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The fragmentary nature of the fossils makes determining the size of Physornis difficult, though its mandible branches are further apart from the median, suggesting a wider skull base compared to Phorusrhacos.\": Sentence 3 refers to \"mandible branches are further apart from the median\" without explaining what \"median\" refers to or providing context for the comparison."
+  "- contradiction: \"Physornis fossils date from the Oligocene to the Miocene epochs.\" / \"The animal lived during the Oligocene epoch in what is now Argentina and South America.\": Both claim the temporal range of Physornis, but 20 says Oligocene–Miocene while 21 says only Oligocene.",
+  "- contradiction: \"Physornis fossils date from the Oligocene to the Miocene epochs.\" / \"There is a discrepancy in the recorded time range for Physornis, with one source citing the Oligocene while the Paleobiology Database lists a range from the Rupelian to the Late Pleistocene.\": 20 gives Oligocene–Miocene, whereas 23 cites a range from Rupelian to Late Pleistocene.",
+  "- contradiction: \"The animal lived during the Oligocene epoch in what is now Argentina and South America.\" / \"There is a discrepancy in the recorded time range for Physornis, with one source citing the Oligocene while the Paleobiology Database lists a range from the Rupelian to the Late Pleistocene.\": 21 states only Oligocene, conflicting with 23’s broader range.",
+  "- missing context: \"Dreyer and colleagues used ground-section microscopy on bone samples from the FM-P13619 limb bones to study growth, revealing a pattern of rapid growth similar to modern birds indicated by a transition from vascularized to laminar bone tissue, with fossils lacking lines of arrested growth that would indicate pauses.\": Mentions FM‑P13619 limb bones without prior introduction of the specimen.",
+  "- missing context: \"Brodkorb and other studies have considered Aucornis eurhynchus a synonym of P. fortis.\": References P. fortis, a species not previously mentioned on the page.",
+  "- missing context: \"The species formerly known as P. brasiliensis is now classified in the genus Paraphysornis.\": Mentions P. brasiliensis, which has not been introduced earlier."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:31:35+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:06:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to \"mandible branches are further apart from the median\" without explaining what \"median\" refers to or providing context for the comparison."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:31:35+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:04:16+00:00"
 }

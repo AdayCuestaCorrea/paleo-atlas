@@ -2,22 +2,38 @@
  "taxon_key": "palaeocarcharodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3b81d20f4b9139cf",
- "reviewed_at": "2026-11-24T01:24:44+00:00",
+ "text_hash": "175c6e216b1a74bc",
+ "reviewed_at": "2026-11-25T13:51:04+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    10
+    2,
+    19
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 states Palaeocarcharodon is classified within the family Cretoxyrhinidae, while sentence 11 lists its parent group as Otodontidae, presenting two different family assignments for the same genus."
+   "kind": "repetition",
+   "reason": "Both sentences state that Palaeocarcharodon is classified in the family Cretoxyrhinidae."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This animal belongs to the class Chondrichthyes and is classified within the family Cretoxyrhinidae.\" / \"The Paleobiology Database lists the parent group of Palaeocarcharodon as Otodontidae.\": Sentence 2 states Palaeocarcharodon is classified within the family Cretoxyrhinidae, while sentence 11 lists its parent group as Otodontidae, presenting two different family assignments for the same genus."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:45:44+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:24:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 states Palaeocarcharodon is classified within the family Cretoxyrhinidae, while sentence 11 lists its parent group as Otodontidae, presenting two different family assignments for the same genus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:45:44+00:00"
+  }
+ ]
 }

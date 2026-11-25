@@ -3,58 +3,107 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "558fe52e34470705",
- "reviewed_at": "2026-11-24T00:55:19+00:00",
+ "reviewed_at": "2026-11-25T13:41:11+00:00",
  "problems": [
   {
    "sentences": [
     11,
     13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Hesperornithoides was placed in the family Troodontidae in a relatively basal position in 2019."
-  },
-  {
-   "sentences": [
-    12,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim that the parent group of Hesperornithoides is Troodontidae."
+   "kind": "contradiction",
+   "reason": "Sentence 12 places Hesperornithoides in the dinosaur family Troodontidae, while sentence 14 classifies it under the class Reptilia, which is inconsistent with its theropod dinosaur status."
   },
   {
    "sentences": [
     14
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to a specimen named \"Lori\" without any prior introduction or explanation of who or what Lori is."
+   "reason": "Sentence 15 mentions a specimen called \"Lori\" without any prior introduction or explanation of what or who \"Lori\" is."
   },
   {
    "sentences": [
     15
    ],
    "kind": "missing_context",
-   "reason": "The sentence mentions an \"advanced maniraptoran\" and a \"temporal paradox\" without providing context or defining the terms within the page."
+   "reason": "Sentence 16 refers to \"this advanced maniraptoran\" without identifying which taxon it describes."
   },
   {
    "sentences": [
-    17
+    14
    ],
    "kind": "about_something_else",
-   "reason": "Classifying Hesperornithoides under the class Reptilia is incorrect for a dinosaur and presents a classification that is unrelated to the specific animal discussed."
+   "reason": "Sentence 15 discusses the specimen \"Lori\" as a relative of Sinovenator, which is a different taxon and not the subject of the page."
   },
   {
    "sentences": [
-    7
+    15
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses the discovery location of Supersaurus vivianae, which is unrelated to Hesperornithoides and is presented as part of the Hesperornithoides description."
+   "reason": "Sentence 16 mentions Anchiornis and Eosinopteryx, genera unrelated to Hesperornithoides, in a context that is not directly about the focal animal."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Unpublished phylogenetic analyses presented at the 2017 SVP conference determined that the specimen known as \"Lori\" was a relative of Sinovenator.\": The sentence refers to a specimen named \"Lori\" without any prior introduction or explanation of who or what Lori is.",
-  "- missing context: \"The presence of this advanced maniraptoran alongside other genera like Anchiornis and Eosinopteryx in Jurassic sediments refutes the argument of the \"temporal paradox\" used by those opposing the consensus that birds evolved from dinosaurs.\": The sentence mentions an \"advanced maniraptoran\" and a \"temporal paradox\" without providing context or defining the terms within the page."
+  "- contradiction: \"In 2019, Hesperornithoides was classified within the Troodontidae family in a relatively basal position alongside Daliansaurus, Xixiasaurus, and Sinusonasus.\" / \"Hesperornithoides is classified under the class Reptilia.\": Sentence 12 places Hesperornithoides in the dinosaur family Troodontidae, while sentence 14 classifies it under the class Reptilia, which is inconsistent with its theropod dinosaur status.",
+  "- missing context: \"Unpublished phylogenetic analyses presented at the 2017 SVP conference determined that the specimen known as \"Lori\" was a relative of Sinovenator.\": Sentence 15 mentions a specimen called \"Lori\" without any prior introduction or explanation of what or who \"Lori\" is.",
+  "- missing context: \"The presence of this advanced maniraptoran alongside other genera like Anchiornis and Eosinopteryx in Jurassic sediments refutes the argument of the \"temporal paradox\" used by those opposing the consensus that birds evolved from dinosaurs.\": Sentence 16 refers to \"this advanced maniraptoran\" without identifying which taxon it describes."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:12:39+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:55:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Hesperornithoides was placed in the family Troodontidae in a relatively basal position in 2019."
+    },
+    {
+     "sentences": [
+      12,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim that the parent group of Hesperornithoides is Troodontidae."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a specimen named \"Lori\" without any prior introduction or explanation of who or what Lori is."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions an \"advanced maniraptoran\" and a \"temporal paradox\" without providing context or defining the terms within the page."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "about_something_else",
+     "reason": "Classifying Hesperornithoides under the class Reptilia is incorrect for a dinosaur and presents a classification that is unrelated to the specific animal discussed."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the discovery location of Supersaurus vivianae, which is unrelated to Hesperornithoides and is presented as part of the Hesperornithoides description."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:12:39+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:22+00:00"
 }

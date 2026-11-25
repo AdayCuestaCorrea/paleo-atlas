@@ -2,8 +2,8 @@
  "taxon_key": "nqwebasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a98daecd2d8ca61c",
- "reviewed_at": "2026-11-24T00:51:03+00:00",
+ "text_hash": "44881edff088903a",
+ "reviewed_at": "2026-11-25T13:39:17+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,41 @@
     10
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for Nqwebasaurus conflict: 145–140 Ma vs 143.1–132.6 Ma, with no overlap."
+   "reason": "Sentences 10 and 11 give conflicting age ranges for Nqwebasaurus (145–140 Ma vs. 143.1–132.6 Ma)."
+  },
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the dinosaur had reduced dentition and contained gastroliths, repeating the same morphological evidence."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Nqwebasaurus lived approximately 145 to 140 million years ago during the Berriasian stage of the Early Cretaceous in what is now Africa.\" / \"The fossil record indicates Nqwebasaurus lived between 143.1 and 132.6 million years ago.\": The age ranges for Nqwebasaurus conflict: 145–140 Ma vs 143.1–132.6 Ma, with no overlap."
+  "- contradiction: \"Nqwebasaurus lived approximately 145 to 140 million years ago during the Berriasian stage of the Early Cretaceous in what is now Africa.\" / \"The fossil record indicates Nqwebasaurus lived between 143.1 and 132.6 million years ago.\": Sentences 10 and 11 give conflicting age ranges for Nqwebasaurus (145–140 Ma vs. 143.1–132.6 Ma)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:47:15+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Nqwebasaurus conflict: 145–140 Ma vs 143.1–132.6 Ma, with no overlap."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:47:15+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:19+00:00"
 }

@@ -3,20 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ad038d1b444ebd09",
- "reviewed_at": "2026-11-24T00:18:19+00:00",
+ "reviewed_at": "2026-11-25T13:22:05+00:00",
  "problems": [
   {
    "sentences": [
-    14
+    22,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 15 claims Mourasuchus lived during the Mid‑Late Miocene but gives a time range (23.04–2.58 Ma) that extends into the Pliocene (Aquitanian to Piacenzian stages), contradicting the stated epoch."
+   "reason": "Sentence 23 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 24 gives a temporal range extending to 2.58 Ma (Pliocene), which contradicts the earlier claim."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Mourasuchus lived during the Mid-Late Miocene epoch, specifically between 23.04 and 2.58 million years ago during the Aquitanian to Piacenzian stages.\": Sentence 15 claims Mourasuchus lived during the Mid‑Late Miocene but gives a time range (23.04–2.58 Ma) that extends into the Pliocene (Aquitanian to Piacenzian stages), contradicting the stated epoch."
+  "- contradiction: \"Mourasuchus lived during the Mid-Late Miocene epoch.\" / \"The animal lived between 23.04 and 2.58 million years ago during the Aquitanian to Piacenzian stages.\": Sentence 23 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 24 gives a temporal range extending to 2.58 Ma (Pliocene), which contradicts the earlier claim."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:05:12+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:18:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 claims Mourasuchus lived during the Mid‑Late Miocene but gives a time range (23.04–2.58 Ma) that extends into the Pliocene (Aquitanian to Piacenzian stages), contradicting the stated epoch."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:05:12+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:50+00:00"
 }

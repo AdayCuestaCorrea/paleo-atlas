@@ -2,21 +2,40 @@
  "taxon_key": "hulkepholis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ed54db80466909c3",
- "reviewed_at": "2026-11-24T01:01:23+00:00",
+ "text_hash": "94c23a914f9ccd80",
+ "reviewed_at": "2026-11-25T13:43:49+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to the holotype of H. willetti before that specimen has been introduced or described elsewhere on the page."
+   "reason": "Sentence 5 claims the genus name honors John Whitaker Hulke, who originally described the specimen, but the page never states that Hulke actually described Hulkepholis or any specimen of it."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Although considered lost by the research community, the holotype of H. willetti was found to be safely accessioned at the Booth Museum in Brighton.\": Sentence 4 refers to the holotype of H. willetti before that specimen has been introduced or described elsewhere on the page."
+  "- missing context: \"The genus name Hulkepholis honors John Whitaker Hulke, who originally described the specimen.\": Sentence 5 claims the genus name honors John Whitaker Hulke, who originally described the specimen, but the page never states that Hulke actually described Hulkepholis or any specimen of it."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:52:36+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:01:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to the holotype of H. willetti before that specimen has been introduced or described elsewhere on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:52:36+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:22:54+00:00"
 }

@@ -2,37 +2,72 @@
  "taxon_key": "necropsar",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ba8bc7c7d0d0f041",
- "reviewed_at": "2026-11-24T00:11:34+00:00",
+ "text_hash": "9f32fd5764a6e563",
+ "reviewed_at": "2026-11-25T13:19:16+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the Rodrigues starling was an extinct species endemic to Rodrigues Island."
-  },
-  {
-   "sentences": [
-    21,
-    22
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 22 claims the species lived until 0 million years ago (present), while sentence 23 says it was extinct by 1761."
+   "reason": "The time range \"0.0117 to 0 million years ago\" is nonsensical and contradicts the Holocene context of the species."
   },
   {
    "sentences": [
+    12,
     13
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 14 discusses pigeons and parrots, not the Rodrigues starling itself."
+   "kind": "repetition",
+   "reason": "Both sentences describe the bird’s diet of eggs, tortoises, snails, and carrion, repeating the same claim."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "missing_context",
+   "reason": "The islet of Gombrani is mentioned without any prior introduction or explanation of its relevance to the Rodrigues starling."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"It lived during the Holocene, from 0.0117 to 0 million years ago.\" / \"The species was extinct by the time of the 1761 French Transit of Venus expedition.\": Sentence 22 claims the species lived until 0 million years ago (present), while sentence 23 says it was extinct by 1761."
+  "- contradiction: \"It lived during the Holocene, from 0.0117 to 0 million years ago.\": The time range \"0.0117 to 0 million years ago\" is nonsensical and contradicts the Holocene context of the species.",
+  "- missing context: \"Tafforet observed that the bird lived on the islet of Gombrani located south of Rodrigues.\": The islet of Gombrani is mentioned without any prior introduction or explanation of its relevance to the Rodrigues starling."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:18:34+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:11:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the Rodrigues starling was an extinct species endemic to Rodrigues Island."
+    },
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 22 claims the species lived until 0 million years ago (present), while sentence 23 says it was extinct by 1761."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 14 discusses pigeons and parrots, not the Rodrigues starling itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:18:34+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:17+00:00"
 }

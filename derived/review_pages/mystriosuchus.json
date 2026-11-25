@@ -2,39 +2,57 @@
  "taxon_key": "mystriosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "499ebe60f79e8048",
- "reviewed_at": "2026-11-24T00:53:26+00:00",
+ "text_hash": "321d525690cdcbf8",
+ "reviewed_at": "2026-11-25T13:40:28+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Mystriosuchus was first named by Eberhard Fraas in 1896."
-  },
-  {
-   "sentences": [
-    15,
-    16
+    4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 16 limits the temporal range to the Late Triassic (middle Norian), while sentence 17 extends it from the Norian to the Hettangian (227.3–199.5 Ma), which includes the Early Jurassic."
-  },
-  {
-   "sentences": [
-    11,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 places Mystriosuchus in the subfamily Pseudopalatinae, whereas sentence 15 states that Pseudopalatinae was synonymized with Mystriosuchini, implying a different taxonomic rank and priority."
+   "reason": "States the tail is 51% of total length yet exceeds the combined length of all other body parts, which is impossible."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Mystriosuchus lived in Europe and Greenland during the Late Triassic (middle Norian).\" / \"Mystriosuchus lived from the Norian to the Hettangian, between 227.3 and 199.5 million years ago.\": Sentence 16 limits the temporal range to the Late Triassic (middle Norian), while sentence 17 extends it from the Norian to the Hettangian (227.3–199.5 Ma), which includes the Early Jurassic.",
-  "- contradiction: \"Mystriosuchus is classified within the subfamily Pseudopalatinae.\" / \"Christian Kammerer and colleagues synonymized Pseudopalatinae with Mystriosuchini because the latter has priority.\": Sentence 12 places Mystriosuchus in the subfamily Pseudopalatinae, whereas sentence 15 states that Pseudopalatinae was synonymized with Mystriosuchini, implying a different taxonomic rank and priority."
+  "- contradiction: \"The tail accounts for 51% of the total body length, exceeding the combined length of all other body parts.\": States the tail is 51% of total length yet exceeds the combined length of all other body parts, which is impossible."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:01:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:53:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Mystriosuchus was first named by Eberhard Fraas in 1896."
+    },
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 limits the temporal range to the Late Triassic (middle Norian), while sentence 17 extends it from the Norian to the Hettangian (227.3–199.5 Ma), which includes the Early Jurassic."
+    },
+    {
+     "sentences": [
+      11,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 places Mystriosuchus in the subfamily Pseudopalatinae, whereas sentence 15 states that Pseudopalatinae was synonymized with Mystriosuchini, implying a different taxonomic rank and priority."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:01:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:55+00:00"
 }

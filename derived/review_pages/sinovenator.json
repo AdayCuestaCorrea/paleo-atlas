@@ -2,21 +2,47 @@
  "taxon_key": "sinovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "aa1e625d9c61b251",
- "reviewed_at": "2026-11-24T00:44:15+00:00",
+ "text_hash": "2a87cc357ba8164c",
+ "reviewed_at": "2026-11-25T13:36:04+00:00",
  "problems": [
   {
    "sentences": [
-    20
+    6
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to \"this group\" (the synapomorphy uniting the group) without specifying which group has been previously mentioned."
+   "reason": "The pronoun \"This\" in sentence 7 refers to the preservation detail in sentence 6, not to the size of Sinovenator, creating a missing context for the claim about size."
+  },
+  {
+   "sentences": [
+    22
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 23 discusses a synapomorphy of a broader clade (basal troodontids, dromaeosaurids, and basal Avialae) rather than a specific trait of Sinovenator, yet it is presented as if it were about the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It was found that a wide and flattened fourth metatarsal was a synapomorphy uniting this group.\": The sentence refers to \"this group\" (the synapomorphy uniting the group) without specifying which group has been previously mentioned."
+  "- missing context: \"This makes Sinovenator one of the largest troodontid species found in the Yixian Formation ecosystem.\": The pronoun \"This\" in sentence 7 refers to the preservation detail in sentence 6, not to the size of Sinovenator, creating a missing context for the claim about size."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:53:09+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:44:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      20
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"this group\" (the synapomorphy uniting the group) without specifying which group has been previously mentioned."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:53:09+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:05+00:00"
 }

@@ -2,28 +2,55 @@
  "taxon_key": "alexornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e96d8c38addd8e26",
- "reviewed_at": "2026-11-24T01:30:46+00:00",
+ "text_hash": "af4897ad7f6b3ac7",
+ "reviewed_at": "2026-11-25T13:53:14+00:00",
  "problems": [
   {
    "sentences": [
-    1
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the film\" without naming or describing it."
+   "kind": "about_something_else",
+   "reason": "Sentence 3 discusses a film character’s accent, which is unrelated to the fossil animal itself."
   },
   {
    "sentences": [
-    1
+    5,
+    7
    ],
-   "kind": "about_something_else",
-   "reason": "Describes a film setting rather than the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 6 places Alexornis in the Campanian stage (~73 Ma), while sentence 8 places its fossil record in the Santonian stage (85.7–83.6 Ma), which are mutually exclusive time intervals."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The character 'Alex' was given a Mexican accent in the film to reflect the bird's geographic origin, despite the movie's setting in Alaska.\": Refers to \"the film\" without naming or describing it."
+  "- contradiction: \"Alexornis lived during the Late Cretaceous in the La Bocana Roja Formation of Baja California, Mexico.\" / \"The fossil record for Alexornis spans from 85.7 to 83.6 million years ago during the Santonian stage.\": Sentence 6 places Alexornis in the Campanian stage (~73 Ma), while sentence 8 places its fossil record in the Santonian stage (85.7–83.6 Ma), which are mutually exclusive time intervals."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:11:05+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:30:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the film\" without naming or describing it."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes a film setting rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:11:05+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:56+00:00"
 }

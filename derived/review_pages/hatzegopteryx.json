@@ -2,31 +2,98 @@
  "taxon_key": "hatzegopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "049f9d9ee26c93e8",
- "reviewed_at": "2026-11-24T00:08:16+00:00",
+ "text_hash": "6f69416cbed1b50e",
+ "reviewed_at": "2026-11-25T13:17:13+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    7,
+    8
    ],
-   "kind": "contradiction",
-   "reason": "Both sentences give different wingspan ranges for the same species without indicating they refer to different individuals."
+   "kind": "repetition",
+   "reason": "Both sentences state that Buffetaut and colleagues named the taxon in 2002."
   },
   {
    "sentences": [
-    18,
-    19,
-    20
+    13,
+    14
    ],
    "kind": "repetition",
-   "reason": "All three sentences state that Hatzegopteryx was the apex predator of Hațeg Island, repeating the same claim."
+   "reason": "Both sentences claim the robust anatomy indicates it could prey on animals too large to swallow whole."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions \"animal's body weight\" without providing a weight estimate elsewhere."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Refers to a \"preserved section measuring 240 mm\" without explaining what is preserved."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Introduces the RR specimen without prior mention or description."
+  },
+  {
+   "sentences": [
+    26
+   ],
+   "kind": "missing_context",
+   "reason": "Discusses the RR specimen again without clarifying its identity or context."
+  },
+  {
+   "sentences": [
+    24,
+    25
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes island climate and habitat, which are not directly about the animal itself."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The biggest known bones suggest a wingspan ranging from 10 to 12 meters, ranking it among the largest flying reptiles.\" / \"A medium-sized shoulder bone found in the Sânpetru Formation likely belonged to an individual with a wingspan of 4.5 to 5 meters.\": Both sentences give different wingspan ranges for the same species without indicating they refer to different individuals."
+  "- missing context: \"The posterior neck vertebrae could withstand between five and ten times the animal's body weight.\": Mentions \"animal's body weight\" without providing a weight estimate elsewhere.",
+  "- missing context: \"A single large neck vertebra is short and unusually robust, with the preserved section measuring 240 mm.\": Refers to a \"preserved section measuring 240 mm\" without explaining what is preserved.",
+  "- missing context: \"A single large neck vertebra known as the RR specimen or EME 215 was found at the Râpa Roșie locality of the Sebeș Formation.\": Introduces the RR specimen without prior mention or description.",
+  "- missing context: \"It is debated whether the RR specimen belongs to Hatzegopteryx thambema due to a lack of overlapping elements, though its bone structure warrants referral to at least H. sp.\": Discusses the RR specimen again without clarifying its identity or context."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:46:45+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:08:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give different wingspan ranges for the same species without indicating they refer to different individuals."
+    },
+    {
+     "sentences": [
+      18,
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that Hatzegopteryx was the apex predator of Hațeg Island, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:46:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:04:51+00:00"
 }

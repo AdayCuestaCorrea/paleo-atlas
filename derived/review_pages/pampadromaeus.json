@@ -3,37 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ce389fb470fe838f",
- "reviewed_at": "2026-11-24T01:13:01+00:00",
+ "reviewed_at": "2026-11-25T13:47:36+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 states Pampadromaeus is a basal sauropodomorph, while sentence 16 says that this classification is not strongly supported."
-  },
-  {
-   "sentences": [
-    11,
-    12
+    9
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim the genus belongs to the family Saturnaliidae."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions an air sac system inside bones without any prior context about such a system."
+   "reason": "Sentence 10 repeats the classification of the species within Saturnaliidae twice (parent group and family)."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Cladistic analyses have identified Pampadromaeus as a basal sauropodomorph.\" / \"Researchers note that the classification of Pampadromaeus as a basal sauropodomorph is not strongly supported due to difficulties in determining its affinities with early dinosaur groups.\": Sentence 11 states Pampadromaeus is a basal sauropodomorph, while sentence 16 says that this classification is not strongly supported.",
-  "- missing context: \"Recent research indicates this species did not have an air sac system inside its bones.\": Sentence 5 mentions an air sac system inside bones without any prior context about such a system."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:52:54+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:13:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states Pampadromaeus is a basal sauropodomorph, while sentence 16 says that this classification is not strongly supported."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the genus belongs to the family Saturnaliidae."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions an air sac system inside bones without any prior context about such a system."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:52:54+00:00"
+  }
+ ]
 }

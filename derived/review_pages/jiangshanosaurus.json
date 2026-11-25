@@ -2,8 +2,8 @@
  "taxon_key": "jiangshanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2c812127df5ea07a",
- "reviewed_at": "2026-11-24T01:35:27+00:00",
+ "text_hash": "7a87a09893778294",
+ "reviewed_at": "2026-11-25T13:54:57+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,41 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "Sentences 8 and 9 give conflicting time ranges for Jiangshanosaurus: 92–88 Ma versus 100.5–89.8 Ma."
+   "reason": "Sentences 8 and 9 give conflicting age ranges for Jiangshanosaurus (92–88 Ma vs. 100.5–89.8 Ma)."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to a sauropod skeleton excavated in 1977–78 but never states that it is the holotype or specimen of Jiangshanosaurus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Jiangshanosaurus was a herbivorous sauropod that lived in China between 92 and 88 million years ago during the Late Cretaceous.\" / \"The fossil record indicates Jiangshanosaurus lived from the Cenomanian to the Turonian stages, between 100.5 and 89.8 million years ago.\": Sentences 8 and 9 give conflicting time ranges for Jiangshanosaurus: 92–88 Ma versus 100.5–89.8 Ma."
+  "- contradiction: \"Jiangshanosaurus was a herbivorous sauropod that lived in China between 92 and 88 million years ago during the Late Cretaceous.\" / \"The fossil record indicates Jiangshanosaurus lived from the Cenomanian to the Turonian stages, between 100.5 and 89.8 million years ago.\": Sentences 8 and 9 give conflicting age ranges for Jiangshanosaurus (92–88 Ma vs. 100.5–89.8 Ma).",
+  "- missing context: \"A sauropod skeleton was excavated in 1977 and 1978 from the Jinhua Formation in Lixian Village, Zhejiang province, China.\": Sentence 4 refers to a sauropod skeleton excavated in 1977–78 but never states that it is the holotype or specimen of Jiangshanosaurus."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:31:15+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:35:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 8 and 9 give conflicting time ranges for Jiangshanosaurus: 92–88 Ma versus 100.5–89.8 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:31:15+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:30:54+00:00"
 }

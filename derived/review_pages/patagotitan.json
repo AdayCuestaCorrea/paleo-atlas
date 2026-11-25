@@ -2,37 +2,73 @@
  "taxon_key": "patagotitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "751b8bc9b7c50272",
- "reviewed_at": "2026-11-24T00:01:59+00:00",
+ "text_hash": "b02fcc5c1271641f",
+ "reviewed_at": "2026-11-25T13:14:06+00:00",
  "problems": [
+  {
+   "sentences": [
+    13,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe Patagotitan’s forested habitat in essentially the same way."
+  },
   {
    "sentences": [
     22
    ],
-   "kind": "contradiction",
-   "reason": "Patagotitan is known from the Late Cretaceous (Cenomanian–Maastrichtian), yet sentence 23 claims it lived during the Early Cretaceous (Albian)."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"the animals\" without previously specifying which animals are meant."
   },
   {
    "sentences": [
-    11,
-    12
+    15,
+    16,
+    29
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Patagotitan lived in a forested environment, repeating the same claim."
-  },
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe tree heights near Patagotitan, repeating the same information."
+   "kind": "about_something_else",
+   "reason": "These sentences discuss a genus of cypress and tree heights, which are about plants, not directly about Patagotitan itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Patagotitan lived during the Early Cretaceous period, specifically the Albian stage.\": Patagotitan is known from the Late Cretaceous (Cenomanian–Maastrichtian), yet sentence 23 claims it lived during the Early Cretaceous (Albian)."
+  "- missing context: \"The animals were approximately the same size, differing by no more than 5% in length.\": The sentence refers to \"the animals\" without previously specifying which animals are meant."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:52:00+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:01:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Patagotitan is known from the Late Cretaceous (Cenomanian–Maastrichtian), yet sentence 23 claims it lived during the Early Cretaceous (Albian)."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Patagotitan lived in a forested environment, repeating the same claim."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe tree heights near Patagotitan, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:52:00+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:50+00:00"
 }

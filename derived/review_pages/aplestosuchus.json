@@ -3,20 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "0f71e2a25c5d6678",
- "reviewed_at": "2026-11-24T01:02:57+00:00",
+ "reviewed_at": "2026-11-25T13:44:11+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to an unidentified sphagesaurid crocodyliform inside the abdominal cavity, but the page never introduces or explains what a sphagesaurid is or why it is relevant to Aplestosuchus."
+   "kind": "contradiction",
+   "reason": "The age ranges for Aplestosuchus’ existence conflict: sentence 15 gives 93.5–83.5 Ma, while sentence 16 gives 83.6–66 Ma, which do not overlap and present contradictory temporal estimates."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The skeleton preserves the remains of an unidentified sphagesaurid crocodyliform inside its abdominal cavity.\": Sentence 6 refers to an unidentified sphagesaurid crocodyliform inside the abdominal cavity, but the page never introduces or explains what a sphagesaurid is or why it is relevant to Aplestosuchus."
+  "- contradiction: \"Aplestosuchus lived during the Late Cretaceous, approximately 93.5 to 83.5 million years ago.\" / \"Other estimates place its existence during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.\": The age ranges for Aplestosuchus’ existence conflict: sentence 15 gives 93.5–83.5 Ma, while sentence 16 gives 83.6–66 Ma, which do not overlap and present contradictory temporal estimates."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:59:00+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:02:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to an unidentified sphagesaurid crocodyliform inside the abdominal cavity, but the page never introduces or explains what a sphagesaurid is or why it is relevant to Aplestosuchus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:59:00+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:21+00:00"
 }

@@ -2,22 +2,48 @@
  "taxon_key": "changchengornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "11b51a76c7d115c2",
- "reviewed_at": "2026-11-24T01:37:31+00:00",
+ "text_hash": "0cdef6e0603fa1a5",
+ "reviewed_at": "2026-11-25T13:55:34+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    9
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 places the holotype in the Jianshangou Beds of the Hengdaozi Member, while sentence 10 claims remains were found in the Chaomidianzi Formation—different geological units, implying conflicting locality information."
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses a Confuciusornis specimen, not Changchengornis, and is presented as part of the Changchengornis page."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to a head crest that might be a conservation artifact, but it does not explain what the artifact is or how it relates to the specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype specimen GMV-2129 was discovered near the village of Jianshangou in Liaoning province within the Jianshangou Beds of the Hengdaozi Member.\" / \"Remains of Changchengornis have been found in the Chaomidianzi Formation in China, dating to the Barremian-Aptian boundary approximately 125 million years ago.\": Sentence 7 places the holotype in the Jianshangou Beds of the Hengdaozi Member, while sentence 10 claims remains were found in the Chaomidianzi Formation—different geological units, implying conflicting locality information."
+  "- missing context: \"Evidence suggests a head crest resembling modern turacos, though this feature might be a conservation artifact.\": Sentence 4 refers to a head crest that might be a conservation artifact, but it does not explain what the artifact is or how it relates to the specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:39:25+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:37:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 places the holotype in the Jianshangou Beds of the Hengdaozi Member, while sentence 10 claims remains were found in the Chaomidianzi Formation—different geological units, implying conflicting locality information."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:39:25+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:31:24+00:00"
 }

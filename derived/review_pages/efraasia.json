@@ -2,43 +2,89 @@
  "taxon_key": "efraasia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3864b27f5fed5a84",
- "reviewed_at": "2026-11-24T00:46:28+00:00",
+ "text_hash": "5799d157a9bb53e9",
+ "reviewed_at": "2026-11-25T13:36:59+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11
+    0,
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Efraasia lived during the Late Triassic, repeating the same age claim."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Efraasia was 6–7 m long, while sentence 7 claims it was only 2–3 m long."
   },
   {
    "sentences": [
-    2
+    1,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe a slender build with graceful hands and feet."
+  },
+  {
+   "sentences": [
+    15,
+    17,
+    18,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "All four sentences discuss Efraasia’s bipedal/quadrupedal locomotion and limb adaptations."
+  },
+  {
+   "sentences": [
+    7
    ],
    "kind": "missing_context",
-   "reason": "Sentence 3 mentions a \"vaulted bony web between braincase extensions\" without any prior explanation of what braincase extensions are."
-  },
-  {
-   "sentences": [
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 16 repeats the same argument about the lower arm preventing pronation, essentially stating the same point twice."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 5 discusses quarry exploitation and individuals, which is about the quarry and people rather than the animal itself."
+   "reason": "Sentence 8 refers to “the specimen” and gastroliths, but no specimen has been introduced earlier in the page."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 4,
  "notes": [
-  "- missing context: \"The skeleton displays two unique autapomorphies: a raised crescent-like ridge on the inner pubis shaft and a vaulted bony web between braincase extensions with a central platform.\": Sentence 3 mentions a \"vaulted bony web between braincase extensions\" without any prior explanation of what braincase extensions are."
+  "- contradiction: \"Efraasia was a lightly built, medium-sized sauropodomorph measuring about 6 to 7 meters in length.\" / \"Efraasia was once considered a tiny dinosaur, roughly 2 to 3 meters long, because the most complete fossils belonged to juveniles.\": Sentence 1 states Efraasia was 6–7 m long, while sentence 7 claims it was only 2–3 m long.",
+  "- missing context: \"Stones found near the specimen suggest the animal swallowed gastroliths to help digest its plant food.\": Sentence 8 refers to “the specimen” and gastroliths, but no specimen has been introduced earlier in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:12:10+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:46:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Efraasia lived during the Late Triassic, repeating the same age claim."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions a \"vaulted bony web between braincase extensions\" without any prior explanation of what braincase extensions are."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 16 repeats the same argument about the lower arm preventing pronation, essentially stating the same point twice."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 5 discusses quarry exploitation and individuals, which is about the quarry and people rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:12:10+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:01+00:00"
 }

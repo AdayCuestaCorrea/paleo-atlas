@@ -3,42 +3,61 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f8dab984abaaa608",
- "reviewed_at": "2026-11-24T00:21:51+00:00",
+ "reviewed_at": "2026-11-25T13:23:30+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15,
-    16,
-    17,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "The same facts about the formal description and naming of Noasaurus leali are repeated in multiple sentences."
-  },
-  {
-   "sentences": [
-    9,
-    22
-   ],
-   "kind": "missing_context",
-   "reason": "Sentences 10 and 23 refer to a cervical vertebra and a hand claw respectively without previously introducing the specific specimen or context."
-  },
-  {
-   "sentences": [
-    27,
-    28,
-    31
+    4,
+    14
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for the Maastrichtian stage given in sentences 28, 29, and 32 differ (70–68 Ma, 70 Ma between Campanian and Maastrichtian, and 72.2–66 Ma)."
+   "reason": "Sentence 5 claims the curved fore‑limb claws were used to catch fish, while sentence 15 states that the same hand claws were used to disembowel prey, presenting conflicting functional interpretations of the same anatomical feature."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A cervical vertebra found at the site was initially identified in 1999 as oviraptorosaurian, suggesting a rare presence of that group in Gondwana.\" / \"In 2004, one of the hand claws was re-identified as belonging to the hand rather than the foot.\": Sentences 10 and 23 refer to a cervical vertebra and a hand claw respectively without previously introducing the specific specimen or context.",
-  "- contradiction: \"Noasaurus lived during the Maastrichtian stage of the Late Cretaceous, approximately 70 to 68 million years ago.\" / \"Noasaurus lived during the late Cretaceous period, approximately 70 million years ago between the Campanian and Maastrichtian stages, in what is now South America.\" / \"Noasaurus lived during the Maastrichtian stage, from 72.2 to 66 million years ago.\": The age ranges for the Maastrichtian stage given in sentences 28, 29, and 32 differ (70–68 Ma, 70 Ma between Campanian and Maastrichtian, and 72.2–66 Ma)."
+  "- contradiction: \"Curved claws initially thought to be foot claws were later identified as belonging to the forelimbs, resembling those of spinosaurids and possibly used to catch fish.\" / \"There was a debate over whether the large curved claws belonged to the feet or hands, with later studies confirming they were hand claws. Paul hypothesized that noasaurines were South American counterparts of dromaeosaurids through convergent evolution, a view later undermined by the discovery that the claws were on the hands. Paul also hypothesized that Noasaurus might have used a kicking technique to disembowel prey due to short forelimbs, assuming it used foot claws like dromaeosaurids, but this was disproven when the claws were identified as hand claws.\": Sentence 5 claims the curved fore‑limb claws were used to catch fish, while sentence 15 states that the same hand claws were used to disembowel prey, presenting conflicting functional interpretations of the same anatomical feature."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:32:45+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:21:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15,
+      16,
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "The same facts about the formal description and naming of Noasaurus leali are repeated in multiple sentences."
+    },
+    {
+     "sentences": [
+      9,
+      22
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 10 and 23 refer to a cervical vertebra and a hand claw respectively without previously introducing the specific specimen or context."
+    },
+    {
+     "sentences": [
+      27,
+      28,
+      31
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for the Maastrichtian stage given in sentences 28, 29, and 32 differ (70–68 Ma, 70 Ma between Campanian and Maastrichtian, and 72.2–66 Ma)."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:32:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:25+00:00"
 }

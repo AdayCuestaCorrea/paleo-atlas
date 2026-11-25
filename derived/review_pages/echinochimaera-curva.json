@@ -3,22 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "01194ad5d12b7230",
- "reviewed_at": "2026-11-24T02:03:27+00:00",
+ "reviewed_at": "2026-11-25T13:59:12+00:00",
  "problems": [
   {
    "sentences": [
     7,
+    8,
     9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 8 states the species lived during the Viséan stage, while sentence 10 places its broader temporal range in the Serpukhovian stage (326.9–323.6 Ma), which is a different Carboniferous substage."
+   "reason": "The ages given for the genus are inconsistent: Viséan stage (346–330 Ma) in sentence 8, 355 Ma in sentence 9, and 326.9–323.6 Ma (Serpukhovian) in sentence 10."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The species lived during the Viséan stage of the Carboniferous period.\" / \"Its broader temporal range extends from 326.9 to 323.6 million years ago in the Serpukhovian stage.\": Sentence 8 states the species lived during the Viséan stage, while sentence 10 places its broader temporal range in the Serpukhovian stage (326.9–323.6 Ma), which is a different Carboniferous substage."
+  "- contradiction: \"The species lived during the Viséan stage of the Carboniferous period.\" / \"The genus as a whole is known from the Lower Carboniferous, about 355 million years ago.\" / \"The genus as a whole ranges from 326.9 to 323.6 million years ago in the Serpukhovian stage.\": The ages given for the genus are inconsistent: Viséan stage (346–330 Ma) in sentence 8, 355 Ma in sentence 9, and 326.9–323.6 Ma (Serpukhovian) in sentence 10."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:03:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states the species lived during the Viséan stage, while sentence 10 places its broader temporal range in the Serpukhovian stage (326.9–323.6 Ma), which is a different Carboniferous substage."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:45+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:45+00:00"
+ "rewritten_at": "2026-11-25T14:33:34+00:00"
 }

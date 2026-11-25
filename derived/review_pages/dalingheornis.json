@@ -3,21 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "9110ed743eeb3022",
- "reviewed_at": "2026-11-24T01:41:51+00:00",
+ "reviewed_at": "2026-11-25T13:56:38+00:00",
  "problems": [
   {
    "sentences": [
     4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 5 mentions \"the long tail\" without any prior description of a tail for Dalingheornis."
+   "reason": "The sentence mentions a \"long tail\" but no earlier description of the tail was provided."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"remains\" and a \"private collection\" without any prior mention of the specimen or its storage."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Scientists debate whether the long tail was a specific feature of the species or merely a juvenile characteristic.\": Sentence 5 mentions \"the long tail\" without any prior description of a tail for Dalingheornis."
+  "- missing context: \"It is debated whether the long tail of Dalingheornis was a specific feature of the species or merely a juvenile characteristic.\": The sentence mentions a \"long tail\" but no earlier description of the tail was provided.",
+  "- missing context: \"In 2009, Jingmai O'Connor considered Dalingheornis to be a nomen dubium because its remains were stored in a private collection.\": The sentence refers to \"remains\" and a \"private collection\" without any prior mention of the specimen or its storage."
  ],
- "rewrite": "replaced",
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:41:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions \"the long tail\" without any prior description of a tail for Dalingheornis."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:27:25+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:27:25+00:00"
+ "rewritten_at": "2026-11-25T14:32:04+00:00"
 }

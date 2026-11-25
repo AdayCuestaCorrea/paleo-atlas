@@ -2,36 +2,70 @@
  "taxon_key": "amphicotylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "19399412aaa2fea3",
- "reviewed_at": "2026-11-24T00:51:51+00:00",
+ "text_hash": "c7b2b7deef57c9fe",
+ "reviewed_at": "2026-11-25T13:39:38+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    3
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states Amphicotylus lived only during the Tithonian stage, whereas sentence 9 extends its range from the Kimmeridgian to the Tithonian."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to \"A. milesi\" which is not introduced earlier; the species name is not defined on this page."
   },
   {
    "sentences": [
     2
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 3 describes a goniopholidid skeleton from the East Camarasaurus Quarry, which is not Amphicotylus."
+   "reason": "Sentence 3 discusses the East Camarasaurus Quarry and a goniopholidid skeleton, but does not relate it to Amphicotylus, making it about a different subject."
   },
   {
    "sentences": [
-    3
+    6
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 4 discusses the species A. milesi, not Amphicotylus."
+   "kind": "missing_context",
+   "reason": "Sentence 7 mentions \"This adaptation\" without specifying which adaptation was previously described, leaving the reference unclear."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Amphicotylus lived during the Tithonian stage of the Late Jurassic in Colorado, Wyoming, and Oklahoma.\" / \"Amphicotylus lived from the Kimmeridgian to the Tithonian, between 152.21 and 143.1 million years ago.\": Sentence 8 states Amphicotylus lived only during the Tithonian stage, whereas sentence 9 extends its range from the Kimmeridgian to the Tithonian."
+  "- missing context: \"The hyoid apparatus morphology suggests A. milesi could raise the ventral fold of the gular valve to separate narial and oral passages.\": Sentence 4 refers to \"A. milesi\" which is not introduced earlier; the species name is not defined on this page.",
+  "- missing context: \"This adaptation allowed Amphicotylus to open its mouth underwater while breathing, provided its nostrils remained above the surface.\": Sentence 7 mentions \"This adaptation\" without specifying which adaptation was previously described, leaving the reference unclear."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:51:36+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:51:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states Amphicotylus lived only during the Tithonian stage, whereas sentence 9 extends its range from the Kimmeridgian to the Tithonian."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 3 describes a goniopholidid skeleton from the East Camarasaurus Quarry, which is not Amphicotylus."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 4 discusses the species A. milesi, not Amphicotylus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:51:36+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:30+00:00"
 }

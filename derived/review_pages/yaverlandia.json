@@ -2,39 +2,73 @@
  "taxon_key": "yaverlandia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f8d5e9fb839d30cd",
- "reviewed_at": "2026-11-24T00:18:11+00:00",
+ "text_hash": "a1ceddf324838dca",
+ "reviewed_at": "2026-11-25T13:22:02+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    9,
-    10,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "different statements assign Yaverlandia to Pachycephalosauridae, Maniraptora, and a general theropod, conflicting classifications."
-  },
-  {
-   "sentences": [
-    6,
     9
    ],
-   "kind": "repetition",
-   "reason": "both sentences state Yaverlandia was considered the oldest member of Pachycephalosauridae."
+   "kind": "contradiction",
+   "reason": "Sentence 10 classifies Yaverlandia as belonging to the parent group Theropoda, yet Theropoda is a clade within Dinosauria, not a parent group; this contradicts standard taxonomic hierarchy."
   },
   {
    "sentences": [
-    12
+    6,
+    8
    ],
-   "kind": "about_something_else",
-   "reason": "describes geological formations rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Both sentences 7 and 9 state that Peter Galton recognized Yaverlandia as a distinct genus and classified it within Pachycephalosauridae, repeating the same claim."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 15 repeats the claim that Darren Naish suggested Yaverlandia may be related to maniraptoran theropods, later proposing it was a maniraptoran theropod, and in 2011 proposing it was a troodontid, which is already covered in earlier sentences."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Peter Galton recognized Yaverlandia as a distinct genus in 1971 after re-examining the remains, creating a cast of the specimen to aid his examination and naming the fossil as a pachycephalosaurid.\" / \"Peter Galton believed Yaverlandia was the oldest member of the family Pachycephalosauridae.\" / \"Yaverlandia is classified within the superorder Dinosauria, belongs to the parent group Theropoda, and is classified in the class Reptilia.\" / \"Yaverlandia is tentatively classified within the unranked family Maniraptora, a classification supported by works ranging from 2000 to 2008 by Sullivan, Sereno, and Naish.\": different statements assign Yaverlandia to Pachycephalosauridae, Maniraptora, and a general theropod, conflicting classifications."
+  "- contradiction: \"Yaverlandia is classified within the superorder Dinosauria, belongs to the parent group Theropoda, and is classified in the class Reptilia.\": Sentence 10 classifies Yaverlandia as belonging to the parent group Theropoda, yet Theropoda is a clade within Dinosauria, not a parent group; this contradicts standard taxonomic hierarchy."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:03:56+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:18:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      9,
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "different statements assign Yaverlandia to Pachycephalosauridae, Maniraptora, and a general theropod, conflicting classifications."
+    },
+    {
+     "sentences": [
+      6,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "both sentences state Yaverlandia was considered the oldest member of Pachycephalosauridae."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "describes geological formations rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:03:56+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:08:46+00:00"
 }

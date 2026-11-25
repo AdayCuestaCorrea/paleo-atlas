@@ -2,28 +2,65 @@
  "taxon_key": "alvarezsaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "becb6f444a4137b6",
- "reviewed_at": "2026-11-24T01:29:04+00:00",
+ "text_hash": "453b58e1bcda35e9",
+ "reviewed_at": "2026-11-25T13:52:29+00:00",
  "problems": [
   {
    "sentences": [
-    8
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to \"hollow bones\" without prior mention of bone structure or hollowness."
+   "kind": "contradiction",
+   "reason": "Age ranges for Alvarezsaurus differ: 86–83 Ma vs 89–85 Ma."
   },
   {
    "sentences": [
-    9
+    15,
+    16
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 10 discusses the naming of a species (A. calvoi) rather than describing Alvarezsaurus itself."
+   "kind": "contradiction",
+   "reason": "Age ranges conflict: 89–85 Ma vs 85.7–83.6 Ma."
+  },
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the age of Alvarezsaurus, repeating the claim."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"After uncovering part of the fossil, Jorge Calvo confirmed it was the leg of an animal with hollow bones.\": Sentence 9 refers to \"hollow bones\" without prior mention of bone structure or hollowness."
+  "- contradiction: \"Alvarezsaurus lived in Argentina approximately 86 to 83 million years ago during the Late Cretaceous.\" / \"Alvarezsaurus lived during the Late Cretaceous, between 89 and 85 million years ago in the Coniacian stage, in what is now South America.\": Age ranges for Alvarezsaurus differ: 86–83 Ma vs 89–85 Ma.",
+  "- contradiction: \"Alvarezsaurus lived during the Late Cretaceous, between 89 and 85 million years ago in the Coniacian stage, in what is now South America.\" / \"The fossil record for Alvarezsaurus dates from 85.7 to 83.6 million years ago during the Santonian age.\": Age ranges conflict: 89–85 Ma vs 85.7–83.6 Ma."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T07:02:45+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:29:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to \"hollow bones\" without prior mention of bone structure or hollowness."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 10 discusses the naming of a species (A. calvoi) rather than describing Alvarezsaurus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T07:02:45+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:29:31+00:00"
 }

@@ -2,37 +2,87 @@
  "taxon_key": "garudimimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6a3a301af5fedad9",
- "reviewed_at": "2026-11-24T00:00:36+00:00",
+ "text_hash": "03e190e27c86b54d",
+ "reviewed_at": "2026-11-25T13:13:23+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    5
+    8,
+    23
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the same size and weight for Garudimimus."
+   "reason": "Both sentences state that Barsbold described Garudimimus in 1981."
   },
   {
    "sentences": [
-    4
+    9,
+    26
    ],
-   "kind": "missing_context",
-   "reason": "Mentions \"holotype specimen\" without prior introduction of the specimen."
+   "kind": "repetition",
+   "reason": "Both sentences mention the Bayan Shireh Formation at the Bayshin Tsav locality."
+  },
+  {
+   "sentences": [
+    24,
+    25
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe Garudimimus as living during the Late Cretaceous in Asia."
   },
   {
    "sentences": [
     27
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"tail bones\" and \"front neural arches\" without earlier context about the tail anatomy."
+   "reason": "The sentence refers to a nasal horn but no prior mention of such a feature."
+  },
+  {
+   "sentences": [
+    28
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence discusses tail bone air-spacing but no earlier context about tail anatomy."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 3,
  "notes": [
-  "- missing context: \"Unfused vertebrae suggest the holotype specimen was a still-growing sub-adult animal.\": Mentions \"holotype specimen\" without prior introduction of the specimen.",
-  "- missing context: \"It is debated whether large holes and deep depressions on the front neural arches indicate that the tail bones were air-spaced.\": Refers to \"tail bones\" and \"front neural arches\" without earlier context about the tail anatomy."
+  "- missing context: \"Some researchers claimed Garudimimus possessed a nasal horn similar to that of Pelecanimimus.\": The sentence refers to a nasal horn but no prior mention of such a feature.",
+  "- missing context: \"It is debated whether large holes and deep depressions on the front neural arches indicate that the tail bones were air-spaced.\": The sentence discusses tail bone air-spacing but no earlier context about tail anatomy."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:35:42+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:00:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same size and weight for Garudimimus."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"holotype specimen\" without prior introduction of the specimen."
+    },
+    {
+     "sentences": [
+      27
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"tail bones\" and \"front neural arches\" without earlier context about the tail anatomy."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:35:42+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:31+00:00"
 }

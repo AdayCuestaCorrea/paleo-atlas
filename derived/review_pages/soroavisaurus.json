@@ -2,22 +2,74 @@
  "taxon_key": "soroavisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3bcd95145f990431",
- "reviewed_at": "2026-11-24T00:22:51+00:00",
+ "text_hash": "70ba7806935e6679",
+ "reviewed_at": "2026-11-25T13:24:04+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    30
+    0,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Age ranges 71–69 Ma (S25) vs 72.2–66 Ma (S31) do not overlap."
+   "reason": "Sentence 1 estimates a length of about 40 cm, while sentence 12 gives the holotype length as 46.9 mm (4.69 cm), a clear mismatch."
+  },
+  {
+   "sentences": [
+    3,
+    6
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that a distinct gap between metatarsals III and IV is a unique defining feature of Soroavisaurus."
+  },
+  {
+   "sentences": [
+    1,
+    15
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat that Soroavisaurus is an extinct member of the avian clade Enantiornithes."
+  },
+  {
+   "sentences": [
+    19,
+    20
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the same coastal plain environment with ponds and lagoons where Soroavisaurus lived."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 3 mentions “the upper portion” of the tarsometatarsus without previously defining what that refers to."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 3,
  "notes": [
-  "- contradiction: \"Soroavisaurus lived in South America during the Late Cretaceous period, approximately 71 to 69 million years ago.\" / \"The time range for Soroavisaurus is estimated from 72.2 to 66 million years ago.\": Age ranges 71–69 Ma (S25) vs 72.2–66 Ma (S31) do not overlap."
+  "- contradiction: \"Soroavisaurus was a small bird estimated to be about 40 cm long, though size variation suggests some individuals were larger.\" / \"The holotype of Soroavisaurus is the left tarsometatarsus specimen PVL-4690, measuring 46.9 mm in length.\": Sentence 1 estimates a length of about 40 cm, while sentence 12 gives the holotype length as 46.9 mm (4.69 cm), a clear mismatch.",
+  "- missing context: \"The tarsometatarsus is a slender bone formed by the fusion of tarsal and metatarsal bones only in the upper portion.\": Sentence 3 mentions “the upper portion” of the tarsometatarsus without previously defining what that refers to."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:41:15+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:22:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Age ranges 71–69 Ma (S25) vs 72.2–66 Ma (S31) do not overlap."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:41:15+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:10:39+00:00"
 }

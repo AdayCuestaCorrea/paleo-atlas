@@ -2,66 +2,91 @@
  "taxon_key": "antarctosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "36528578026d1ea0",
- "reviewed_at": "2026-11-24T00:08:51+00:00",
+ "text_hash": "a0824e7ffeef943a",
+ "reviewed_at": "2026-11-25T13:17:52+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    16,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 4, 17, and 18 all state that Friedrich von Huene established the genus Antarctosaurus in 1929."
-  },
-  {
-   "sentences": [
-    24,
-    30
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 25 and 31 both state that Antarctosaurus lived during the Late Cretaceous period."
-  },
-  {
-   "sentences": [
-    1,
-    2
+    18
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 claims Antarctosaurus is a genus of four species, while sentence 2 indicates that no species is known from complete remains and the association of bones is questionable, implying uncertainty about species count."
+   "reason": "Sentence 19 states fossils are found in South America and possibly Asia, whereas earlier sentences (1, 20) describe Antarctosaurus as a South American genus with remains only from Argentina."
   },
   {
    "sentences": [
-    6,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 gives the type species length as up to 18 m, whereas sentence 10 states the total estimated length of A. wichmannianus is around 17 m."
-  },
-  {
-   "sentences": [
-    10,
-    23
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 11 and 24 both describe femurs of Antarctosaurus giganteus measuring 2.35 m in length."
-  },
-  {
-   "sentences": [
-    25,
-    26,
-    33
+    13
    ],
    "kind": "missing_context",
-   "reason": "Sentences 26, 27, and 34 refer to the squared‑off jaws of A. wichmannianus and comparisons to other taxa without previously introducing the jaw morphology or the referenced taxa."
+   "reason": "Sentence 14 refers to the squared‑off jaws of A. wichmannianus, but no prior sentence introduces or describes jaws, leaving the reference unclear."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Describing Antarctosaurus is problematic because no species is known from complete remains and the association of bones is questionable.\" / \"Antarctosaurus was a genus of four species of sauropod dinosaur belonging to the titanosaur group.\": Sentence 3 claims Antarctosaurus is a genus of four species, while sentence 2 indicates that no species is known from complete remains and the association of bones is questionable, implying uncertainty about species count.",
-  "- contradiction: \"The type species of Antarctosaurus measured up to 18 meters in length and weighed around 34 tons.\" / \"The total estimated length of Antarctosaurus wichmannianus is around 17 meters.\": Sentence 7 gives the type species length as up to 18 m, whereas sentence 10 states the total estimated length of A. wichmannianus is around 17 m.",
-  "- missing context: \"Researchers suggest the squared-off jaws of A. wichmannianus indicate specialized feeding habits, possibly involving low vegetation or floating plants.\" / \"It is debated whether the square jaw shape is a convergence with rebbachisaurids or truly belongs to Antarctosaurus, as the recent discovery of Bonitasaura suggests the latter.\" / \"It is debated whether the square lower jaw of A. wichmannianus belongs to the species or to a rebbachisaurid sauropod similar to Nigersaurus.\": Sentences 26, 27, and 34 refer to the squared‑off jaws of A. wichmannianus and comparisons to other taxa without previously introducing the jaw morphology or the referenced taxa."
+  "- contradiction: \"Antarctosaurus fossils date to the Late Cretaceous Period, specifically approximately 83 to 78 million years ago, in what is now South America and possibly Asia.\": Sentence 19 states fossils are found in South America and possibly Asia, whereas earlier sentences (1, 20) describe Antarctosaurus as a South American genus with remains only from Argentina.",
+  "- missing context: \"Researchers suggest the squared-off jaws of A. wichmannianus indicate specialized feeding habits, possibly involving low vegetation or floating plants.\": Sentence 14 refers to the squared‑off jaws of A. wichmannianus, but no prior sentence introduces or describes jaws, leaving the reference unclear."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T04:54:16+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:08:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      16,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 4, 17, and 18 all state that Friedrich von Huene established the genus Antarctosaurus in 1929."
+    },
+    {
+     "sentences": [
+      24,
+      30
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 25 and 31 both state that Antarctosaurus lived during the Late Cretaceous period."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims Antarctosaurus is a genus of four species, while sentence 2 indicates that no species is known from complete remains and the association of bones is questionable, implying uncertainty about species count."
+    },
+    {
+     "sentences": [
+      6,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 gives the type species length as up to 18 m, whereas sentence 10 states the total estimated length of A. wichmannianus is around 17 m."
+    },
+    {
+     "sentences": [
+      10,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 11 and 24 both describe femurs of Antarctosaurus giganteus measuring 2.35 m in length."
+    },
+    {
+     "sentences": [
+      25,
+      26,
+      33
+     ],
+     "kind": "missing_context",
+     "reason": "Sentences 26, 27, and 34 refer to the squared‑off jaws of A. wichmannianus and comparisons to other taxa without previously introducing the jaw morphology or the referenced taxa."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T04:54:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:05:08+00:00"
 }

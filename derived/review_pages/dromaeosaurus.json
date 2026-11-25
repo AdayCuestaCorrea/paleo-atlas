@@ -2,21 +2,48 @@
  "taxon_key": "dromaeosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7c051bc325042174",
- "reviewed_at": "2026-11-24T00:25:28+00:00",
+ "text_hash": "a5373def5e9fe4d3",
+ "reviewed_at": "2026-11-25T13:25:42+00:00",
  "problems": [
   {
    "sentences": [
-    16
+    20,
+    21
    ],
-   "kind": "contradiction",
-   "reason": "The page claims Dromaeosaurus lived from the Albian to the Maastrichtian (110–66 Ma), but the species is only known from Late Cretaceous deposits (~70 Ma), making the stated temporal range too broad."
+   "kind": "repetition",
+   "reason": "Both sentences state that the exact evolutionary relationships of Dromaeosaurus remain unclear."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to Dakotaraptor and its flexor tubercle as evidence, but Dakotaraptor is never introduced or described earlier in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Dromaeosaurus lived from the Albian to the Maastrichtian stages, between 110.1 and 66 million years ago.\": The page claims Dromaeosaurus lived from the Albian to the Maastrichtian (110–66 Ma), but the species is only known from Late Cretaceous deposits (~70 Ma), making the stated temporal range too broad."
+  "- missing context: \"The discovery of the sister species Dakotaraptor, which has a larger flexor tubercle than most other dromaeosaurids, supports the suggestion that Dromaeosaurus used its sickle claw less than other dromaeosaurids.\": The sentence refers to Dakotaraptor and its flexor tubercle as evidence, but Dakotaraptor is never introduced or described earlier in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:12:07+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:25:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "The page claims Dromaeosaurus lived from the Albian to the Maastrichtian (110–66 Ma), but the species is only known from Late Cretaceous deposits (~70 Ma), making the stated temporal range too broad."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:12:07+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:50+00:00"
 }

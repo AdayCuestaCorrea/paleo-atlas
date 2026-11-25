@@ -3,45 +3,70 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d34a1b595afc6cd2",
- "reviewed_at": "2026-11-24T00:00:03+00:00",
+ "reviewed_at": "2026-11-25T13:13:02+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    11
+    18
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the forelimbs/arms did not contact the ground and were used for hunting rather than walking."
+   "kind": "contradiction",
+   "reason": "The age range given (125–99.6 Ma) conflicts with the stated Barremian (≈129–125 Ma) and Cenomanian (≈99.6–93.9 Ma) periods, creating an inconsistent temporal range."
   },
   {
    "sentences": [
-    19,
-    20,
-    21
+    19
    ],
-   "kind": "repetition",
-   "reason": "Sentences 20, 21, and 22 all repeat the classification of Acrocanthosaurus within the superfamily Allosauroidea and the family Carcharodontosauridae."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to an “unusual hook-like structure” on the third tail vertebra without explaining its significance or context."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 mentions the arm’s inability to reach a vertical position when swinging down but provides no context for what this refers to or why it matters."
+   "kind": "about_something_else",
+   "reason": "Sentence 20 describes the depositional environment of the fossils, which is about the geological setting rather than a biological characteristic of Acrocanthosaurus itself."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The holotype specimen displays a fractured and healed neural spine on the eleventh vertebra alongside an unusual hook-like structure on the third tail vertebra.\": Sentence 7 refers to an “unusual hook-like structure” on the third tail vertebra without explaining its significance or context.",
-  "- missing context: \"The arm could not reach a vertical position when swinging down but could swing up to 9 degrees above horizontal.\": Sentence 11 mentions the arm’s inability to reach a vertical position when swinging down but provides no context for what this refers to or why it matters."
+  "- contradiction: \"Acrocanthosaurus lived during the Early Cretaceous (Barremian) and Late Cretaceous (Cenomanian) periods, existing between 125 and 99.6 million years ago, specifically from the Aptian to Cenomanian stages between 121.4 and 93.9 million years ago.\": The age range given (125–99.6 Ma) conflicts with the stated Barremian (≈129–125 Ma) and Cenomanian (≈99.6–93.9 Ma) periods, creating an inconsistent temporal range."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T03:28:13+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:00:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the forelimbs/arms did not contact the ground and were used for hunting rather than walking."
+    },
+    {
+     "sentences": [
+      19,
+      20,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 20, 21, and 22 all repeat the classification of Acrocanthosaurus within the superfamily Allosauroidea and the family Carcharodontosauridae."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to an “unusual hook-like structure” on the third tail vertebra without explaining its significance or context."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 mentions the arm’s inability to reach a vertical position when swinging down but provides no context for what this refers to or why it matters."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T03:28:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:02:17+00:00"
 }

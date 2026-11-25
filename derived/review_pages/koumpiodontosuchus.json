@@ -2,29 +2,47 @@
  "taxon_key": "koumpiodontosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "75f6f52baa194d8c",
- "reviewed_at": "2026-11-24T01:23:57+00:00",
+ "text_hash": "e3d15dc671ac17bc",
+ "reviewed_at": "2026-11-25T13:50:51+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    1
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"holotype teeth\" without earlier mention of a holotype"
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions \"small, button-shaped teeth\" without prior context"
+   "reason": "Refers to \"holotype teeth\" without earlier introduction of a holotype specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"An isolated tooth found by Megan Jacobs was twice the size of the holotype teeth.\": Refers to \"holotype teeth\" without earlier mention of a holotype",
-  "- missing context: \"Initial identification suggested the small, button-shaped teeth belonged to Bernissartia fagesii.\": Mentions \"small, button-shaped teeth\" without prior context"
+  "- missing context: \"Megan Jacobs discovered an isolated tooth that was twice the size of the holotype teeth.\": Refers to \"holotype teeth\" without earlier introduction of a holotype specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:41:13+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:23:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"holotype teeth\" without earlier mention of a holotype"
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"small, button-shaped teeth\" without prior context"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:41:13+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:21+00:00"
 }

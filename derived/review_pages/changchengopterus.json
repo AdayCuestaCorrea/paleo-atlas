@@ -2,31 +2,57 @@
  "taxon_key": "changchengopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "01b218f585ca3947",
- "reviewed_at": "2026-11-24T01:17:31+00:00",
+ "text_hash": "b52c9bfb464129be",
+ "reviewed_at": "2026-11-25T13:49:11+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    2,
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 10 and 11 state conflicting classifications: one places Changchengopterus in the unranked group Monofenestrata, the other places it in the family Wukongopteridae."
+   "kind": "repetition",
+   "reason": "Both sentences state that Changchengopterus fossils come from the Callovian stage of the Middle Jurassic."
   },
   {
    "sentences": [
-    7,
-    9
+    1
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 claims Changchengopterus is outside the group Monofenestrata, while sentence 10 claims it is within Monofenestrata."
+   "kind": "missing_context",
+   "reason": "Sentence 2 refers to a \"second adult specimen\" but no prior mention of a first specimen is provided in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Changchengopterus is classified within the unranked group Monofenestrata.\" / \"Changchengopterus is classified within the family Wukongopteridae.\": Sentences 10 and 11 state conflicting classifications: one places Changchengopterus in the unranked group Monofenestrata, the other places it in the family Wukongopteridae.",
-  "- contradiction: \"A 2017 analysis recovered Changchengopterus outside the group Monofenestrata.\" / \"Changchengopterus is classified within the unranked group Monofenestrata.\": Sentence 8 claims Changchengopterus is outside the group Monofenestrata, while sentence 10 claims it is within Monofenestrata."
+  "- missing context: \"Scientists later described a second adult specimen containing lower jaws from the Paleontological Museum of Liaoning.\": Sentence 2 refers to a \"second adult specimen\" but no prior mention of a first specimen is provided in the page."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:14:44+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:17:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 10 and 11 state conflicting classifications: one places Changchengopterus in the unranked group Monofenestrata, the other places it in the family Wukongopteridae."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 claims Changchengopterus is outside the group Monofenestrata, while sentence 10 claims it is within Monofenestrata."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:14:44+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:26:55+00:00"
 }

@@ -2,31 +2,49 @@
  "taxon_key": "igai",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cbb54d87b92c78af",
- "reviewed_at": "2026-11-24T00:52:15+00:00",
+ "text_hash": "953dfb0cda9d595a",
+ "reviewed_at": "2026-11-25T13:39:53+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
+    11
    ],
    "kind": "contradiction",
-   "reason": "Both claim the same formation but different oasis locations"
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for the same species"
+   "reason": "Sentence 12 states Igai lived in the Quseir Formation of Kharga Oasis, while also stating it was found in the Quseir Formation of the Upper Cretaceous in the Jariyá Oasis—two different locations for the same specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Igai lived during the Late Cretaceous in the Quseir Formation of Kharga Oasis, Egypt.\" / \"The dinosaur was found in the Quseir Formation of the Upper Cretaceous in the Jariyá Oasis, Egypt.\": Both claim the same formation but different oasis locations",
-  "- contradiction: \"Igai lived approximately 74 to 72 million years ago during the Campanian and Maastrichtian stages in what is now Africa.\" / \"Igai lived during the Campanian stage, between 83.6 and 72.2 million years ago.\": Different age ranges for the same species"
+  "- contradiction: \"Igai lived during the Late Cretaceous in the Quseir Formation of Kharga Oasis, Egypt, and the dinosaur was found in the Quseir Formation of the Upper Cretaceous in the Jariyá Oasis, Egypt.\": Sentence 12 states Igai lived in the Quseir Formation of Kharga Oasis, while also stating it was found in the Quseir Formation of the Upper Cretaceous in the Jariyá Oasis—two different locations for the same specimen."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:53:32+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:52:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Both claim the same formation but different oasis locations"
+    },
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for the same species"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:53:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:39+00:00"
 }

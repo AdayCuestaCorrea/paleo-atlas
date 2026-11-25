@@ -2,22 +2,42 @@
  "taxon_key": "eothoracosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dcf6e8852f183de4",
- "reviewed_at": "2026-11-24T00:46:01+00:00",
+ "text_hash": "b79fd9b64c7438bf",
+ "reviewed_at": "2026-11-25T13:36:45+00:00",
  "problems": [
   {
    "sentences": [
     10,
-    13
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 places Eothoracosaurus in the family Gavialidae (a gavialoid), while sentence 14 states that recent studies suggest thoracosaurs like Eothoracosaurus were basal, non‑crocodylian eusuchians rather than gavialoids."
+   "reason": "Sentence 11 places Eothoracosaurus in the family Gavialidae, while sentence 12 states it is a basal, non‑crocodylian eusuchian, not a gavialoid."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Eothoracosaurus is classified within the family Gavialidae.\" / \"Recent studies combining morphological, molecular, and stratigraphic data suggest that thoracosaurs like Eothoracosaurus were basal, non-crocodylian eusuchians rather than gavialoids.\": Sentence 11 places Eothoracosaurus in the family Gavialidae (a gavialoid), while sentence 14 states that recent studies suggest thoracosaurs like Eothoracosaurus were basal, non‑crocodylian eusuchians rather than gavialoids."
+  "- contradiction: \"Eothoracosaurus is classified within the family Gavialidae and belongs to the class Reptilia.\" / \"Recent studies combining morphological, molecular, and stratigraphic data suggest that thoracosaurs like Eothoracosaurus were basal, non-crocodylian eusuchians rather than gavialoids.\": Sentence 11 places Eothoracosaurus in the family Gavialidae, while sentence 12 states it is a basal, non‑crocodylian eusuchian, not a gavialoid."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:05:09+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:46:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 places Eothoracosaurus in the family Gavialidae (a gavialoid), while sentence 14 states that recent studies suggest thoracosaurs like Eothoracosaurus were basal, non‑crocodylian eusuchians rather than gavialoids."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:05:09+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:18:41+00:00"
 }

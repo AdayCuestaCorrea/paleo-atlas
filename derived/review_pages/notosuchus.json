@@ -2,38 +2,90 @@
  "taxon_key": "notosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0693edc3e6039312",
- "reviewed_at": "2026-11-24T01:23:01+00:00",
+ "text_hash": "3cb0ae0d145358db",
+ "reviewed_at": "2026-11-25T13:50:34+00:00",
  "problems": [
-  {
-   "sentences": [
-    0,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Notosuchus lived during the Santonian stage, while sentence 15 claims it lived during the Coniacian or Santonian stages, presenting conflicting age ranges."
-  },
   {
    "sentences": [
     9,
     10
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the heterodont dentition of N. terrestris, repeating the same claim."
+   "reason": "Both sentences state that Notosuchus terrestris had heterodont dentition with varied posterior teeth."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to N. terrestris before the species is introduced in sentence 8."
   },
   {
    "sentences": [
     14
    ],
    "kind": "missing_context",
-   "reason": "Sentence 15 refers to “These terrestrial animals” without previously introducing a plural subject, leaving the reference unclear."
+   "reason": "Sentence 15 uses “These terrestrial animals” without specifying which animals are meant."
+  },
+  {
+   "sentences": [
+    0,
+    14
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Notosuchus lived during the Santonian stage, while sentence 15 says it lived during the Coniacian or Santonian stages."
+  },
+  {
+   "sentences": [
+    14,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 15 allows for a Coniacian age, whereas sentence 16 restricts the time range to the Santonian only."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Notosuchus was a terrestrial animal that lived approximately 85 million years ago during the Santonian stage of the Late Cretaceous.\" / \"These terrestrial animals lived approximately 85 million years ago during the Coniacian or Santonian stages of the Late Cretaceous.\": Sentence 1 states Notosuchus lived during the Santonian stage, while sentence 15 claims it lived during the Coniacian or Santonian stages, presenting conflicting age ranges.",
-  "- missing context: \"These terrestrial animals lived approximately 85 million years ago during the Coniacian or Santonian stages of the Late Cretaceous.\": Sentence 15 refers to “These terrestrial animals” without previously introducing a plural subject, leaving the reference unclear."
+  "- missing context: \"The teeth of N. terrestris possessed exceptionally thick cementum compared to other crocodylomorphs.\": Sentence 4 refers to N. terrestris before the species is introduced in sentence 8.",
+  "- missing context: \"These terrestrial animals lived approximately 85 million years ago during the Coniacian or Santonian stages of the Late Cretaceous.\": Sentence 15 uses “These terrestrial animals” without specifying which animals are meant.",
+  "- contradiction: \"Notosuchus was a terrestrial animal that lived approximately 85 million years ago during the Santonian stage of the Late Cretaceous.\" / \"These terrestrial animals lived approximately 85 million years ago during the Coniacian or Santonian stages of the Late Cretaceous.\": Sentence 1 states Notosuchus lived during the Santonian stage, while sentence 15 says it lived during the Coniacian or Santonian stages.",
+  "- contradiction: \"These terrestrial animals lived approximately 85 million years ago during the Coniacian or Santonian stages of the Late Cretaceous.\" / \"The time range for Notosuchus is the Santonian, spanning from 85.7 to 83.6 million years ago.\": Sentence 15 allows for a Coniacian age, whereas sentence 16 restricts the time range to the Santonian only."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:36:06+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:23:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Notosuchus lived during the Santonian stage, while sentence 15 claims it lived during the Coniacian or Santonian stages, presenting conflicting age ranges."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the heterodont dentition of N. terrestris, repeating the same claim."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 15 refers to “These terrestrial animals” without previously introducing a plural subject, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:36:06+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:03+00:00"
 }

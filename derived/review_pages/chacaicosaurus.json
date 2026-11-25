@@ -2,49 +2,77 @@
  "taxon_key": "chacaicosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0d52e04973c7bde7",
- "reviewed_at": "2026-11-24T00:11:04+00:00",
+ "text_hash": "796b44677a942770",
+ "reviewed_at": "2026-11-25T13:18:53+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    16
+    6,
+    22,
+    23,
+    24
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give conflicting phylogenetic placements of Chacaicosaurus, one as basal thunnosaurian outside Stenopterygiidae and Ophthalmosauridae, the other as sister to Ophthalmosauridae."
+   "reason": "Sentence 7 claims Chacaicosaurus is known only from the Aalenian–Bathonian interval, while sentences 23–25 place it in the Bajocian stage, which is later."
   },
   {
    "sentences": [
-    15,
-    17
+    22,
+    23,
+    24
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 places the genus basal thunnosaurian, while sentence 18 suggests it may be a synonym of Stenopterygius, a different taxonomic position."
-  },
-  {
-   "sentences": [
-    16,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 17 identifies Chacaicosaurus as sister to Ophthalmosauridae, whereas sentence 18 proposes it could be synonymous with Stenopterygius, conflicting interpretations."
-  },
-  {
-   "sentences": [
-    18,
-    19
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 19 gives a time range of 171.6–170 Ma for the early Bajocian, while sentence 20 gives 170.9–168.6 Ma for the Bajocian, the lower bound in 19 is older than that in 20, creating an inconsistent age range."
+   "kind": "repetition",
+   "reason": "All three sentences give overlapping age ranges for Chacaicosaurus, repeating the same claim about its temporal range."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Recent cladistic analyses place Chacaicosaurus as a basal thunnosaurian outside both Stenopterygiidae and Ophthalmosauridae.\" / \"Some analyses identify Chacaicosaurus as the sister taxon to Ophthalmosauridae, with Stenopterygius being the closest relative to that group.\": Both sentences give conflicting phylogenetic placements of Chacaicosaurus, one as basal thunnosaurian outside Stenopterygiidae and Ophthalmosauridae, the other as sister to Ophthalmosauridae.",
-  "- contradiction: \"Recent cladistic analyses place Chacaicosaurus as a basal thunnosaurian outside both Stenopterygiidae and Ophthalmosauridae.\" / \"Classification remains debated, with some authors placing it in Thunnosauria near ophthalmosaurids, others near Hauffiopteryx, and researchers Erin Maxwell and colleagues arguing in 2012 that it should be considered a synonym of Stenopterygius due to shared traits.\": Sentence 16 places the genus basal thunnosaurian, while sentence 18 suggests it may be a synonym of Stenopterygius, a different taxonomic position.",
-  "- contradiction: \"Some analyses identify Chacaicosaurus as the sister taxon to Ophthalmosauridae, with Stenopterygius being the closest relative to that group.\" / \"Classification remains debated, with some authors placing it in Thunnosauria near ophthalmosaurids, others near Hauffiopteryx, and researchers Erin Maxwell and colleagues arguing in 2012 that it should be considered a synonym of Stenopterygius due to shared traits.\": Sentence 17 identifies Chacaicosaurus as sister to Ophthalmosauridae, whereas sentence 18 proposes it could be synonymous with Stenopterygius, conflicting interpretations.",
-  "- contradiction: \"Chacaicosaurus lived during the Middle Jurassic, specifically the early Bajocian stage, approximately 171.6 to 170 million years ago.\" / \"Fossil records place the animal in the Bajocian stage between 170.9 and 168.6 million years ago, within a geological zone spanning roughly 170.3 to 168.3 million years ago.\": Sentence 19 gives a time range of 171.6–170 Ma for the early Bajocian, while sentence 20 gives 170.9–168.6 Ma for the Bajocian, the lower bound in 19 is older than that in 20, creating an inconsistent age range."
+  "- contradiction: \"Chacaicosaurus and Mollesaurus are the only diagnostic ichthyosaur specimens known from the interval between the Aalenian and Bathonian stages.\" / \"Chacaicosaurus lived during the Middle Jurassic, specifically the early Bajocian stage, approximately 171.6 to 170 million years ago.\" / \"Fossil records place Chacaicosaurus in the Bajocian stage between 170.9 and 168.6 million years ago.\" / \"The geological zone containing Chacaicosaurus dates to the early Bajocian, spanning roughly 170.3 to 168.3 million years ago.\": Sentence 7 claims Chacaicosaurus is known only from the Aalenian–Bathonian interval, while sentences 23–25 place it in the Bajocian stage, which is later."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:11:37+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:11:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give conflicting phylogenetic placements of Chacaicosaurus, one as basal thunnosaurian outside Stenopterygiidae and Ophthalmosauridae, the other as sister to Ophthalmosauridae."
+    },
+    {
+     "sentences": [
+      15,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 places the genus basal thunnosaurian, while sentence 18 suggests it may be a synonym of Stenopterygius, a different taxonomic position."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 17 identifies Chacaicosaurus as sister to Ophthalmosauridae, whereas sentence 18 proposes it could be synonymous with Stenopterygius, conflicting interpretations."
+    },
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 gives a time range of 171.6–170 Ma for the early Bajocian, while sentence 20 gives 170.9–168.6 Ma for the Bajocian, the lower bound in 19 is older than that in 20, creating an inconsistent age range."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:11:37+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:06:01+00:00"
 }

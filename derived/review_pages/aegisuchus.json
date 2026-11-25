@@ -2,37 +2,83 @@
  "taxon_key": "aegisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "69d4a6396c2a013d",
- "reviewed_at": "2026-11-24T00:50:13+00:00",
+ "text_hash": "c937d8d4fc72d1cf",
+ "reviewed_at": "2026-11-25T13:38:34+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    7,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 gives two very different length estimates (15–22 m vs ~3.9 m)."
+   "reason": "Length estimates conflict: 15–22 m vs. ~3.9 m total length."
   },
   {
    "sentences": [
-    0,
-    17
+    17,
+    18
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Aegisuchus belongs to the family Aegyptosuchidae."
+   "reason": "Both sentences state eyes directed straight up."
   },
   {
    "sentences": [
-    6,
-    24
+    12,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim the central boss may have served as a mating‑display eye spot."
+   "reason": "Both describe Aegisuchus as an ambush predator."
+  },
+  {
+   "sentences": [
+    23,
+    24,
+    25,
+    26
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences discuss the family, evolutionary context, regional geography, and habitat, not the animal itself."
   }
  ],
  "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Estimates based on skull proportions suggest Aegisuchus could have reached lengths between 15 and 22 meters, though critiques suggest a total length of about 3.9 meters.\": Sentence 6 gives two very different length estimates (15–22 m vs ~3.9 m)."
+  "- contradiction: \"Estimates based on skull proportions suggest Aegisuchus could have reached lengths between 15 and 22 meters.\" / \"Critiques of the original size estimates suggest Aegisuchus may have had a skull 62 to 90 cm long and a total length of about 3.9 meters.\": Length estimates conflict: 15–22 m vs. ~3.9 m total length."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:39:38+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:50:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 gives two very different length estimates (15–22 m vs ~3.9 m)."
+    },
+    {
+     "sentences": [
+      0,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Aegisuchus belongs to the family Aegyptosuchidae."
+    },
+    {
+     "sentences": [
+      6,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the central boss may have served as a mating‑display eye spot."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:39:38+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:19:57+00:00"
 }

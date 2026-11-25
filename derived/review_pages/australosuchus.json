@@ -2,38 +2,81 @@
  "taxon_key": "australosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4d23a0a8218f32c7",
- "reviewed_at": "2026-11-24T00:23:51+00:00",
+ "text_hash": "1421dd33caeb5d2b",
+ "reviewed_at": "2026-11-25T13:24:49+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Australosuchus is a generalized member of Mekosuchinae, repeating the same claim."
-  },
-  {
-   "sentences": [
-    13,
-    19
+    7,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 14 says Australosuchus is a generalized Mekosuchinae member, while sentence 20 places it outside Mekosuchinae as sister to Crocodylidae."
+   "reason": "Sentence 8 states Australosuchus lived between 27.3 and 15.98 Ma (Late Oligocene–Early Miocene), while sentence 9 refers to fossils that may belong to the Mampuwordu Sands (Late Pliocene–Early Pleistocene, 5.3–0.8 Ma), which is a later time period."
   },
   {
    "sentences": [
-    4
+    5,
+    6
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions a vestigial fifth toe without any prior context about the animal’s toes or limb morphology."
+   "kind": "repetition",
+   "reason": "Both sentences state that Australosuchus belongs to the subfamily Mekosuchinae."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 9 discusses the Mampuwordu Sands formation and reworked strata, which is a geological context rather than a direct statement about Australosuchus itself."
+  },
+  {
+   "sentences": [
+    6,
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 places Australosuchus outside Mekosuchinae as sister to Crocodylidae, contradicting earlier statements that it belongs to Mekosuchinae."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Due to the lack of specialized adaptations like ziphodont teeth or a longirostrine skull, it is thought to have been a generalized member of Mekosuchinae.\" / \"A 2021 morphological analysis by Rio and Mannion placed Australosuchus outside Mekosuchinae as the sister taxon to Crocodylidae.\": Sentence 14 says Australosuchus is a generalized Mekosuchinae member, while sentence 20 places it outside Mekosuchinae as sister to Crocodylidae.",
-  "- missing context: \"A distinct feature was the vestigial fifth toe, which was robust and thicker than in other crocodilians.\": Sentence 5 mentions a vestigial fifth toe without any prior context about the animal’s toes or limb morphology."
+  "- contradiction: \"Australosuchus lived during the Late Oligocene and Early Miocene epochs. Australosuchus clarkae inhabited the Lake Eyre Basin in South Australia. Its fossil range spans from the Late Oligocene to the Early Miocene. It lived between 27.3 and 15.98 million years ago.\" / \"It is debated whether some fossils belong to the Mampuwordu Sands (Late Pliocene to Early Pleistocene) or were reworked from older strata.\": Sentence 8 states Australosuchus lived between 27.3 and 15.98 Ma (Late Oligocene–Early Miocene), while sentence 9 refers to fossils that may belong to the Mampuwordu Sands (Late Pliocene–Early Pleistocene, 5.3–0.8 Ma), which is a later time period.",
+  "- contradiction: \"The genus belongs to the subfamily Mekosuchinae.\" / \"A 2021 morphological analysis by Rio and Mannion placed Australosuchus outside Mekosuchinae as the sister taxon to Crocodylidae.\": Sentence 10 places Australosuchus outside Mekosuchinae as sister to Crocodylidae, contradicting earlier statements that it belongs to Mekosuchinae."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:56:01+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:23:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Australosuchus is a generalized member of Mekosuchinae, repeating the same claim."
+    },
+    {
+     "sentences": [
+      13,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 says Australosuchus is a generalized Mekosuchinae member, while sentence 20 places it outside Mekosuchinae as sister to Crocodylidae."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions a vestigial fifth toe without any prior context about the animal’s toes or limb morphology."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:56:01+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:11:12+00:00"
 }

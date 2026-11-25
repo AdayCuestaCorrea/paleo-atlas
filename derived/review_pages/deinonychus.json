@@ -2,30 +2,73 @@
  "taxon_key": "deinonychus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9f06dd3a5603235e",
- "reviewed_at": "2026-11-23T23:54:29+00:00",
+ "text_hash": "3ffe0648214a1470",
+ "reviewed_at": "2026-11-25T13:09:55+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    20
+    2,
+    19
    ],
-   "kind": "repetition",
-   "reason": "identical claim about Deinonychus being a well‑known dromaeosaurid and close relative of Velociraptor"
+   "kind": "contradiction",
+   "reason": "bite force estimates differ (4,100–8,200 N vs 706 N)."
   },
   {
    "sentences": [
-    4,
-    23
+    1,
+    8
    ],
-   "kind": "contradiction",
-   "reason": "bite force estimated 4,100–8,200 N in sentence 5 versus 706 N in sentence 24"
+   "kind": "repetition",
+   "reason": "both state the pubis was misidentified as a coracoid. {"
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "missing_context",
+   "reason": "refers to “the discovery” without specifying which discovery. {"
+  },
+  {
+   "sentences": [
+    16
+   ],
+   "kind": "about_something_else",
+   "reason": "talks about Velociraptor and its relatives, not Deinonychus. "
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Analysis of tooth puncture marks estimated a bite force between 4,100 and 8,200 newtons, a strength exceeding that of hyenas.\" / \"It is debated whether Deinonychus specialized on larger prey, as 2020 analysis of snout morphology suggests a short, deep maxilla resembling short-snouted canids, while a 2022 study using a skull estimated Deinonychus bite force at 706 N, contradicting earlier higher estimates based on bite marks.\": bite force estimated 4,100–8,200 N in sentence 5 versus 706 N in sentence 24"
+  "- contradiction: \"Studies based on tooth puncture marks estimated Deinonychus bite force between 4,100 and 8,200 newtons, exceeding that of hyenas and matching similarly sized alligators.\" / \"It is debated whether Deinonychus specialized on larger prey, as 2020 analysis of snout morphology suggests a short, deep maxilla resembling short-snouted canids, while a 2022 study using a skull estimated Deinonychus bite force at 706 N, contradicting earlier higher estimates based on bite marks.\": bite force estimates differ (4,100–8,200 N vs 706 N).",
+  "- missing context: \"The discovery implies that Deinonychus used body heat transfer for egg incubation, indicating an endothermy similar to modern birds.\": refers to “the discovery” without specifying which discovery. {"
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T02:41:21+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-23T23:54:29+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "identical claim about Deinonychus being a well‑known dromaeosaurid and close relative of Velociraptor"
+    },
+    {
+     "sentences": [
+      4,
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "bite force estimated 4,100–8,200 N in sentence 5 versus 706 N in sentence 24"
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T02:41:21+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:01:13+00:00"
 }

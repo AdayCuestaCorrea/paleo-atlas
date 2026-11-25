@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "9ab0a959ab5227cf",
- "reviewed_at": "2026-11-24T01:23:54+00:00",
+ "reviewed_at": "2026-11-25T13:50:49+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,21 +11,50 @@
     15
    ],
    "kind": "contradiction",
-   "reason": "The time range given in sentence 15 (82–68 Ma) conflicts with the single age stated in sentence 16 (83.5 Ma)."
+   "reason": "The age ranges for Plioplatecarpus differ: 82–68 Ma vs a single point of 83.5 Ma."
   },
   {
    "sentences": [
-    11,
-    13
+    3,
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that a different genus name is a synonym of Plioplatecarpus, repeating the synonym claim."
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims the first discovery was in 1882, while sentence 5 reports a specimen found in 1869."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Plioplatecarpus lived during the late Cretaceous period, approximately 82 to 68 million years ago.\" / \"Plioplatecarpus lived in the Upper Cretaceous, about 83.5 million years ago.\": The time range given in sentence 15 (82–68 Ma) conflicts with the single age stated in sentence 16 (83.5 Ma)."
+  "- contradiction: \"Plioplatecarpus lived during the late Cretaceous period, approximately 82 to 68 million years ago.\" / \"Plioplatecarpus lived in the Upper Cretaceous, about 83.5 million years ago.\": The age ranges for Plioplatecarpus differ: 82–68 Ma vs a single point of 83.5 Ma.",
+  "- contradiction: \"Plioplatecarpus was first discovered in Europe by paleontologist Louis Dollo in 1882.\" / \"Edward Drinker Cope found a specimen in North America in 1869 that was initially identified as Mosasaurus but was later reclassified as Plioplatecarpus in 1870.\": Sentence 4 claims the first discovery was in 1882, while sentence 5 reports a specimen found in 1869."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:40:57+00:00"
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:23:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "The time range given in sentence 15 (82–68 Ma) conflicts with the single age stated in sentence 16 (83.5 Ma)."
+    },
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that a different genus name is a synonym of Plioplatecarpus, repeating the synonym claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:40:57+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:28:19+00:00"
 }

@@ -3,29 +3,35 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f16bd55f9c93663a",
- "reviewed_at": "2026-11-24T01:16:37+00:00",
- "problems": [
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "contradiction",
-   "reason": "The age ranges for the fossils differ: sentence 8 gives 152.7–152 Ma, while sentence 9 gives 154.8–152.21 Ma, which conflicts with the earlier figure."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 4 states that fossilized cartilage was reported in 2007 but does not specify who reported it."
-  }
- ],
+ "reviewed_at": "2026-11-25T13:48:50+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The fossils date to the Kimmeridgian stage, between 152.7 and 152 million years ago.\" / \"The dinosaur lived during the Late Jurassic, approximately 155 million years ago, in what is now Europe. The time range for Amanzia is the Kimmeridgian, from 154.8 to 152.21 million years ago.\": The age ranges for the fossils differ: sentence 8 gives 152.7–152 Ma, while sentence 9 gives 154.8–152.21 Ma, which conflicts with the earlier figure.",
-  "- missing context: \"In 2007, the rare preservation of fossilized cartilage in a limb joint was reported.\": Sentence 4 states that fossilized cartilage was reported in 2007 but does not specify who reported it."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:10:16+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:16:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for the fossils differ: sentence 8 gives 152.7–152 Ma, while sentence 9 gives 154.8–152.21 Ma, which conflicts with the earlier figure."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 states that fossilized cartilage was reported in 2007 but does not specify who reported it."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:10:16+00:00"
+  }
+ ]
 }

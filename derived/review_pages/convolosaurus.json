@@ -3,29 +3,58 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "64d4726f84573c60",
- "reviewed_at": "2026-11-24T01:03:21+00:00",
+ "reviewed_at": "2026-11-25T13:44:24+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    13
+    7,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states the holotype is from the Aptian-aged Twin Mountains Formation (early Cretaceous), while sentence 14 places the animal in the middle Cretaceous (~125 Ma). The two age ranges conflict."
+   "reason": "Sentence 8 states fossils were combined into three mounted skeletons, implying multiple specimens, while sentence 12 claims only one fossil occurrence has been recorded."
   },
   {
    "sentences": [
-    7,
-    8
+    12,
+    18
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the formal naming and description of Convolosaurus in 2019 by Andrzejewski and colleagues, repeating the same information."
+   "kind": "contradiction",
+   "reason": "Sentence 13 places Convolosaurus in the Early Cretaceous Aptian age, whereas sentence 19 places it in the middle Cretaceous (~125 Ma)."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype specimen, which is the specific fossil used to define the species, consists of a partial skeleton including a skull from the Aptian-aged Twin Mountains Formation.\" / \"This places the animal in North America approximately 125 million years ago during the middle Cretaceous.\": Sentence 1 states the holotype is from the Aptian-aged Twin Mountains Formation (early Cretaceous), while sentence 14 places the animal in the middle Cretaceous (~125 Ma). The two age ranges conflict."
+  "- contradiction: \"Fossils from the site have been combined into three mounted skeletons displayed at the Proctor Lake US Army Corps of Engineers Office, the Perot Museum of Nature and Science, and the Fort Worth Museum of Science and History.\" / \"Only one fossil occurrence of Convolosaurus has been recorded so far.\": Sentence 8 states fossils were combined into three mounted skeletons, implying multiple specimens, while sentence 12 claims only one fossil occurrence has been recorded.",
+  "- contradiction: \"Convolosaurus lived during the Early Cretaceous period, specifically the Aptian age.\" / \"Convolosaurus lived in North America approximately 125 million years ago during the middle Cretaceous.\": Sentence 13 places Convolosaurus in the Early Cretaceous Aptian age, whereas sentence 19 places it in the middle Cretaceous (~125 Ma)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:02:19+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:03:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states the holotype is from the Aptian-aged Twin Mountains Formation (early Cretaceous), while sentence 14 places the animal in the middle Cretaceous (~125 Ma). The two age ranges conflict."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the formal naming and description of Convolosaurus in 2019 by Andrzejewski and colleagues, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:02:19+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:23:29+00:00"
 }

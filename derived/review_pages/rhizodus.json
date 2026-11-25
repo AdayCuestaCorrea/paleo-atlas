@@ -3,30 +3,49 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "34f5cf4a881bea1f",
- "reviewed_at": "2026-11-24T00:52:57+00:00",
+ "reviewed_at": "2026-11-25T13:40:12+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    8
+    8,
+    9
    ],
    "kind": "contradiction",
-   "reason": "The type species is said to have been discovered in the Viséan stage (Middle Carboniferous), yet sentence 9 claims both species lived during the Early Carboniferous epoch."
-  },
-  {
-   "sentences": [
-    5,
-    8
-   ],
-   "kind": "contradiction",
-   "reason": "The species R. serpukhovensis is reported to have been discovered in the Serpukhovian (Late Carboniferous), but sentence 9 states both species lived during the Early Carboniferous epoch."
+   "reason": "Sentence 9 claims both valid species lived only during the Early Carboniferous, while sentence 10 states Rhizodus existed from the Tournaisian to the Gzhelian, covering the entire Carboniferous including the Late epoch."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type species Rhizodus hibberti was discovered in the Viséan stage of the United Kingdom.\" / \"Both valid species of Rhizodus lived during the Early Carboniferous epoch.\": The type species is said to have been discovered in the Viséan stage (Middle Carboniferous), yet sentence 9 claims both species lived during the Early Carboniferous epoch.",
-  "- contradiction: \"The species Rhizodus serpukhovensis was discovered in the Serpukhovian of Russia.\" / \"Both valid species of Rhizodus lived during the Early Carboniferous epoch.\": The species R. serpukhovensis is reported to have been discovered in the Serpukhovian (Late Carboniferous), but sentence 9 states both species lived during the Early Carboniferous epoch."
+  "- contradiction: \"Both valid species of Rhizodus lived during the Early Carboniferous epoch.\" / \"Rhizodus lived from the Tournaisian to the Gzhelian, between 358.86 and 298.9 million years ago.\": Sentence 9 claims both valid species lived only during the Early Carboniferous, while sentence 10 states Rhizodus existed from the Tournaisian to the Gzhelian, covering the entire Carboniferous including the Late epoch."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:57:28+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:52:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "The type species is said to have been discovered in the Viséan stage (Middle Carboniferous), yet sentence 9 claims both species lived during the Early Carboniferous epoch."
+    },
+    {
+     "sentences": [
+      5,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "The species R. serpukhovensis is reported to have been discovered in the Serpukhovian (Late Carboniferous), but sentence 9 states both species lived during the Early Carboniferous epoch."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:57:28+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:20:47+00:00"
 }

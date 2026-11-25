@@ -3,20 +3,42 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "67ea5603813de7f5",
- "reviewed_at": "2026-11-24T00:30:53+00:00",
+ "reviewed_at": "2026-11-25T13:28:26+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    4,
+    5,
+    6,
+    12
    ],
-   "kind": "missing_context",
-   "reason": "The sentence mentions eggs attributed to Goniopholis without any prior context about eggs or reproduction."
+   "kind": "contradiction",
+   "reason": "Sentences 5, 6, and 7 place Goniopholis species in the Late Jurassic (Kimmeridgian and Berriasian) while sentence 13 states the genus lived from the Bathonian to Santonian stages (Middle to Late Cretaceous), a later time period."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Eggs attributed to Goniopholis have been found in the Late Jurassic of Portugal.\": The sentence mentions eggs attributed to Goniopholis without any prior context about eggs or reproduction."
+  "- contradiction: \"Fossil eggs linked to this animal have been discovered in Late Jurassic rocks in Portugal.\" / \"The type species G. crassidens comes from the Berriasian of England, while G. simus from NW Germany might be the same animal.\" / \"G. baryglyphaeus from the Kimmeridgian of Portugal represents the oldest known member of the genus.\" / \"This animal lived between the Bathonian and Santonian stages, roughly 168.2 to 83.6 million years ago.\": Sentences 5, 6, and 7 place Goniopholis species in the Late Jurassic (Kimmeridgian and Berriasian) while sentence 13 states the genus lived from the Bathonian to Santonian stages (Middle to Late Cretaceous), a later time period."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T00:54:22+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:30:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions eggs attributed to Goniopholis without any prior context about eggs or reproduction."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T00:54:22+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:13:19+00:00"
 }

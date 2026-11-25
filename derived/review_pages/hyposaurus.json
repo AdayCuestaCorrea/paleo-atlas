@@ -2,37 +2,63 @@
  "taxon_key": "hyposaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b33e8ee8a96930a3",
- "reviewed_at": "2026-11-24T00:19:39+00:00",
+ "text_hash": "0f8270901500f92e",
+ "reviewed_at": "2026-11-25T13:22:46+00:00",
  "problems": [
   {
    "sentences": [
-    16
+    5
    ],
    "kind": "missing_context",
-   "reason": "Refers to a Sudanese fossil without any prior mention or description of such a specimen."
+   "reason": "Refers to a trunk bracing system, low‑mass individuals, and high‑walk or gallop without any prior explanation of these terms or context."
   },
   {
    "sentences": [
-    18
+    8,
+    9,
+    19
    ],
-   "kind": "missing_context",
-   "reason": "Mentions Sokotosaurus and Wurnosaurus as doubtful genera before they are introduced elsewhere in the page."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Uses terms like \"low‑mass individuals\" and \"high‑walk or gallop\" without providing context or definition for these concepts."
+   "kind": "repetition",
+   "reason": "The fact that Hyposaurus was first described by Richard Owen in 1849 is stated in sentences 9, 10 and again in 20."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"A Sudanese fossil was identified as Hyposaurus based on its flat mandible and elliptical mandibular symphysis.\": Refers to a Sudanese fossil without any prior mention or description of such a specimen.",
-  "- missing context: \"In 2007, Stéphane Jouve considered Sokotosaurus and Wurnosaurus as doubtful genera indistinguishable from each other and North American forms.\": Mentions Sokotosaurus and Wurnosaurus as doubtful genera before they are introduced elsewhere in the page.",
-  "- missing context: \"Specialized osteoderms suggest Hyposaurus had a trunk bracing system that allowed low-mass individuals to high-walk or gallop.\": Uses terms like \"low‑mass individuals\" and \"high‑walk or gallop\" without providing context or definition for these concepts."
+  "- missing context: \"Specialized osteoderms suggest Hyposaurus had a trunk bracing system that allowed low-mass individuals to high-walk or gallop, a locomotion style unusual for such animals.\": Refers to a trunk bracing system, low‑mass individuals, and high‑walk or gallop without any prior explanation of these terms or context."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-24T06:18:32+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:19:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a Sudanese fossil without any prior mention or description of such a specimen."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Sokotosaurus and Wurnosaurus as doubtful genera before they are introduced elsewhere in the page."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Uses terms like \"low‑mass individuals\" and \"high‑walk or gallop\" without providing context or definition for these concepts."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T06:18:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:09:31+00:00"
 }

@@ -2,30 +2,58 @@
  "taxon_key": "jeholosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "34f97e1cda664cf1",
- "reviewed_at": "2026-11-24T00:41:14+00:00",
+ "text_hash": "93fdcb72a85a4e38",
+ "reviewed_at": "2026-11-25T13:34:29+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    19
+    0,
+    13
    ],
    "kind": "contradiction",
-   "reason": "Sentences 18 and 20 give conflicting age ranges for Jeholosaurus fossils – 126–124 Ma (Barremian) versus ~126 Ma (early Aptian)."
+   "reason": "Sentence 1 claims Jeholosaurus was a herbivore, while sentence 14 (and 22) state it may have been omnivorous."
   },
   {
    "sentences": [
-    17,
-    18
+    13,
+    21
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Jeholosaurus lived during the early Cretaceous, roughly 124 million years ago, repeating the same age claim."
+   "reason": "Both sentences repeat the claim that Jeholosaurus may have been omnivorous."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The fossils date to the Barremian stage of the Early Cretaceous, approximately 126 to 124 million years ago.\" / \"The holotype was found in the lower Yixian Formation dating to the early Aptian, approximately 126 million years ago.\": Sentences 18 and 20 give conflicting age ranges for Jeholosaurus fossils – 126–124 Ma (Barremian) versus ~126 Ma (early Aptian)."
+  "- contradiction: \"Jeholosaurus was a small, bipedal herbivore belonging to the neornithischian group of dinosaurs.\" / \"Researchers suggest Jeholosaurus may have been omnivorous because its front teeth resemble carnivores while its back teeth are fan-shaped like herbivores, leading to a debate about whether it ate both plants and animals.\": Sentence 1 claims Jeholosaurus was a herbivore, while sentence 14 (and 22) state it may have been omnivorous."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T02:28:32+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:41:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 18 and 20 give conflicting age ranges for Jeholosaurus fossils – 126–124 Ma (Barremian) versus ~126 Ma (early Aptian)."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Jeholosaurus lived during the early Cretaceous, roughly 124 million years ago, repeating the same age claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T02:28:32+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:17:00+00:00"
 }

@@ -2,31 +2,54 @@
  "taxon_key": "lucianovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b55d3b242d0d1082",
- "reviewed_at": "2026-11-24T01:16:08+00:00",
+ "text_hash": "ac173164df97276b",
+ "reviewed_at": "2026-11-25T13:48:48+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    1,
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 states that three additional specimens and a proximal right tibia have been referred to the species, while sentence 6 claims there is only one recorded fossil occurrence of Lucianovenator."
+   "kind": "repetition",
+   "reason": "Both sentences state that the anterior cervical ribs are exceptionally long, measuring more than five times the length of the vertebrae."
   },
   {
    "sentences": [
-    7,
-    10
+    1,
+    3
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 places Lucianovenator in the family Coelophysidae, whereas sentence 11 states that later studies suggest it is a coelophysoid outside that family."
+   "kind": "repetition",
+   "reason": "Both sentences describe a pit on the edge of each lamina that grows progressively longer toward the base of the neck."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This holotype consists of an articulated sequence of vertebrae from the third cervical to the fourth dorsal, along with a sacrum and a partial pelvis, while three additional specimens and a proximal right tibia have been referred to the species.\" / \"There is currently only one recorded fossil occurrence of Lucianovenator.\": Sentence 5 states that three additional specimens and a proximal right tibia have been referred to the species, while sentence 6 claims there is only one recorded fossil occurrence of Lucianovenator.",
-  "- contradiction: \"An initial phylogenetic analysis placed Lucianovenator in the family Coelophysidae alongside Coelophysis rhodesiensis and Camposaurus, but later phylogenetic studies recovered Lucianovenator as a coelophysoid that is not a member of the Coelophysidae family.\" / \"While the genus Lucianovenator belongs to the family Coelophysidae according to some classifications, later studies suggest it is a coelophysoid outside that family, creating ongoing debate about its exact placement.\": Sentence 8 places Lucianovenator in the family Coelophysidae, whereas sentence 11 states that later studies suggest it is a coelophysoid outside that family."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T06:09:28+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:16:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states that three additional specimens and a proximal right tibia have been referred to the species, while sentence 6 claims there is only one recorded fossil occurrence of Lucianovenator."
+    },
+    {
+     "sentences": [
+      7,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 places Lucianovenator in the family Coelophysidae, whereas sentence 11 states that later studies suggest it is a coelophysoid outside that family."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T06:09:28+00:00"
+  }
+ ]
 }

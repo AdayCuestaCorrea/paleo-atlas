@@ -2,23 +2,39 @@
  "taxon_key": "jingshanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "888ede690eccbbbb",
- "reviewed_at": "2026-11-24T01:46:25+00:00",
+ "text_hash": "7c2866508451e3c9",
+ "reviewed_at": "2026-11-25T13:57:11+00:00",
  "problems": [
   {
    "sentences": [
     0,
     1
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 1 and 2 give conflicting size estimates for Jingshanosaurus (5 m vs 10 m in length)."
+   "kind": "repetition",
+   "reason": "Both sentences state that some sources estimate Jingshanosaurus reached a length of about 10 meters and a height of 2.5 meters."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Adult Jingshanosaurus reached a length of 5 meters and weighed approximately 4.3 tons.\" / \"Some sources estimate Jingshanosaurus reached a length of about 10 meters and a height of 2.5 meters.\": Sentences 1 and 2 give conflicting size estimates for Jingshanosaurus (5 m vs 10 m in length)."
- ],
- "rewrite": "replaced",
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:28:49+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:46:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 1 and 2 give conflicting size estimates for Jingshanosaurus (5 m vs 10 m in length)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:28:49+00:00"
+  }
+ ]
 }

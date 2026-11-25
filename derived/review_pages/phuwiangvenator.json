@@ -2,35 +2,55 @@
  "taxon_key": "phuwiangvenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fae1c898b8099699",
- "reviewed_at": "2026-11-24T00:14:13+00:00",
+ "text_hash": "2930fe00b3be28ba",
+ "reviewed_at": "2026-11-25T13:20:37+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    24,
+    26
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 gives conflicting age ranges for Phuwiangvenator (125–120 Ma, 130 Ma, 125.77–121.4 Ma)."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 12 repeats the same basic information about the age and location of Phuwiangvenator multiple times."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 13 discusses ichthyosaur and plesiosaur teeth reidentified as crocodyliformes, which is about other taxa rather than Phuwiangvenator itself."
+   "reason": "Sentences 25 and 27 give different age estimates for Phuwiangvenator (125–120 Ma vs ~130 Ma Barremian), which contradict each other."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Phuwiangvenator lived during the Early Cretaceous period, approximately 125 to 120 million years ago. This extinct megaraptoran theropod lived in what is now Thailand during the Early Cretaceous. Phuwiangvenator lived during the Early Cretaceous, approximately 130 million years ago in the Barremian stage. The animal lived in what is now Asia. The time range for Phuwiangvenator is from 125.77 to 121.4 million years ago.\": Sentence 12 gives conflicting age ranges for Phuwiangvenator (125–120 Ma, 130 Ma, 125.77–121.4 Ma)."
+  "- contradiction: \"Phuwiangvenator lived during the Early Cretaceous period, approximately 125 to 120 million years ago.\" / \"Other estimates place the animal at approximately 130 million years ago in the Barremian stage.\": Sentences 25 and 27 give different age estimates for Phuwiangvenator (125–120 Ma vs ~130 Ma Barremian), which contradict each other."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T05:40:16+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:14:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 gives conflicting age ranges for Phuwiangvenator (125–120 Ma, 130 Ma, 125.77–121.4 Ma)."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 12 repeats the same basic information about the age and location of Phuwiangvenator multiple times."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 13 discusses ichthyosaur and plesiosaur teeth reidentified as crocodyliformes, which is about other taxa rather than Phuwiangvenator itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T05:40:16+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:07:33+00:00"
 }

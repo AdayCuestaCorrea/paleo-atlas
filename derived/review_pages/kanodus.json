@@ -2,23 +2,39 @@
  "taxon_key": "kanodus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "47d60de04302646e",
- "reviewed_at": "2026-11-24T02:01:08+00:00",
+ "text_hash": "a7960256320c0645",
+ "reviewed_at": "2026-11-25T13:59:02+00:00",
  "problems": [
   {
    "sentences": [
     4,
     5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 places the animal in the Guadalupian epoch (≈272–260 Ma), while sentence 6 gives a time range of 274.4–266.9 Ma, which extends slightly before the Guadalupian start."
+   "kind": "repetition",
+   "reason": "Both sentences state that the animal lived during the Roadian age, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This creature lived during the Guadalupian epoch of the Permian period.\" / \"Its existence spanned from 274.4 to 266.9 million years ago.\": Sentence 5 places the animal in the Guadalupian epoch (≈272–260 Ma), while sentence 6 gives a time range of 274.4–266.9 Ma, which extends slightly before the Guadalupian start."
- ],
- "rewrite": "replaced",
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:34:16+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:01:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 places the animal in the Guadalupian epoch (≈272–260 Ma), while sentence 6 gives a time range of 274.4–266.9 Ma, which extends slightly before the Guadalupian start."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:34:16+00:00"
+  }
+ ]
 }

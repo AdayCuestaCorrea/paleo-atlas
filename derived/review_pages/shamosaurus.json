@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "6e4e44d59efc31c7",
- "reviewed_at": "2026-11-24T00:57:46+00:00",
+ "reviewed_at": "2026-11-25T13:42:09+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,13 +11,40 @@
     4
    ],
    "kind": "contradiction",
-   "reason": "Both estimate different maximum lengths for the same species without indicating they are different estimates."
+   "reason": "Sentences 4 and 5 give conflicting estimates of the animal’s length (5 m vs. 7 m)."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 6 describes a Soviet‑Mongolian expedition and its discovery, which is about the expedition, not directly about Shamosaurus itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Paleontologist Gregory S. Paul estimated the creature measured 5 meters in length and weighed 2 tonnes in 2010.\" / \"Later, Mark Holtz suggested the species could have reached 7 meters long in 2012.\": Both estimate different maximum lengths for the same species without indicating they are different estimates."
+  "- contradiction: \"Paleontologist Gregory S. Paul estimated the creature measured 5 meters in length and weighed 2 tonnes in 2010.\" / \"Later, Mark Holtz suggested the species could have reached 7 meters long in 2012.\": Sentences 4 and 5 give conflicting estimates of the animal’s length (5 m vs. 7 m)."
  ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T04:26:59+00:00"
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:57:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Both estimate different maximum lengths for the same species without indicating they are different estimates."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T04:26:59+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:21:56+00:00"
 }

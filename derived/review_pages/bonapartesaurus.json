@@ -2,37 +2,69 @@
  "taxon_key": "bonapartesaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c68eec60385254bf",
- "reviewed_at": "2026-11-24T00:35:28+00:00",
+ "text_hash": "17bd70ca622b3af3",
+ "reviewed_at": "2026-11-25T13:30:24+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Both sentences give age ranges for Bonapartesaurus, but 9 states it lived between the Campanian and Maastrichtian stages (~70 Ma), while 10 restricts it to the Maastrichtian stage (72.2–66 Ma), a narrower interval that conflicts with the broader range."
-  },
-  {
-   "sentences": [
-    10,
-    11
+    3,
+    4
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the same debate over the validity of the genus Willinakaqe and conclude that its material likely represents multiple hadrosaurid taxa."
+   "reason": "Both sentences state that Jaime Powell excavated the remains in 1984 and described the species in 1987."
   },
   {
    "sentences": [
+    4,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe Powell’s initial identification of the remains as an indeterminate lambeosaurine."
+  },
+  {
+   "sentences": [
+    11,
     12
    ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses the reclassification of a Willinakaqe paratype as Bonapartesaurus rionegrensis, focusing on Willinakaqe rather than on Bonapartesaurus itself."
+   "kind": "repetition",
+   "reason": "Both sentences discuss the debate over the validity of Willinakaqe and conclude that its fossils likely represent multiple hadrosaurid taxa."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Bonapartesaurus lived during the Late Cretaceous, between the Campanian and Maastrichtian stages, approximately 70 million years ago in what is now South America.\" / \"The animal lived during the Maastrichtian stage of the Late Cretaceous, approximately 72.2 to 66 million years ago.\": Both sentences give age ranges for Bonapartesaurus, but 9 states it lived between the Campanian and Maastrichtian stages (~70 Ma), while 10 restricts it to the Maastrichtian stage (72.2–66 Ma), a narrower interval that conflicts with the broader range."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T01:35:18+00:00"
+ "repetitions_dropped": 3,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:35:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give age ranges for Bonapartesaurus, but 9 states it lived between the Campanian and Maastrichtian stages (~70 Ma), while 10 restricts it to the Maastrichtian stage (72.2–66 Ma), a narrower interval that conflicts with the broader range."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the same debate over the validity of the genus Willinakaqe and conclude that its material likely represents multiple hadrosaurid taxa."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the reclassification of a Willinakaqe paratype as Bonapartesaurus rionegrensis, focusing on Willinakaqe rather than on Bonapartesaurus itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T01:35:18+00:00"
+  }
+ ]
 }

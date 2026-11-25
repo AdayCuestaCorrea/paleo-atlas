@@ -2,38 +2,62 @@
  "taxon_key": "sapeornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "31a35ffd076a2c1b",
- "reviewed_at": "2026-11-24T00:49:59+00:00",
+ "text_hash": "cb18792ca8d85727",
+ "reviewed_at": "2026-11-25T13:38:31+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    25
+    12,
+    18
    ],
-   "kind": "contradiction",
-   "reason": "The age ranges for Sapeornis differ: sentence 25 gives 125–120 Ma, while sentence 26 gives 125.77–113.2 Ma, extending the lower bound and overlapping but not matching."
+   "kind": "repetition",
+   "reason": "Both sentences state that Sapeornis was a herbivore that ate seeds and fruits."
   },
   {
    "sentences": [
     11,
-    18
+    19
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Sapeornis was a glider or soarer and not well adapted for flapping flight, repeating the same claim."
-  },
-  {
-   "sentences": [
-    10,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the diet as plant seeds and fruits, repeating the same dietary claim."
+   "reason": "Both sentences describe Sapeornis as a glider or soarer that could perch on branches."
   }
  ],
  "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"Sapeornis lived during the early Cretaceous period, approximately 125 to 120 million years ago.\" / \"It lived from the Barremian to the Aptian, between 125.77 and 113.2 million years ago.\": The age ranges for Sapeornis differ: sentence 25 gives 125–120 Ma, while sentence 26 gives 125.77–113.2 Ma, extending the lower bound and overlapping but not matching."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T03:38:02+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:49:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Sapeornis differ: sentence 25 gives 125–120 Ma, while sentence 26 gives 125.77–113.2 Ma, extending the lower bound and overlapping but not matching."
+    },
+    {
+     "sentences": [
+      11,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Sapeornis was a glider or soarer and not well adapted for flapping flight, repeating the same claim."
+    },
+    {
+     "sentences": [
+      10,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the diet as plant seeds and fruits, repeating the same dietary claim."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T03:38:02+00:00"
+  }
+ ]
 }

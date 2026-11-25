@@ -2,21 +2,37 @@
  "taxon_key": "archaeorhynchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b11ec05fbcd0cea3",
- "reviewed_at": "2026-11-24T01:12:31+00:00",
+ "text_hash": "55fd800293109485",
+ "reviewed_at": "2026-11-25T13:47:27+00:00",
  "problems": [
   {
    "sentences": [
+    11,
     12
    ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"It\" refers to gastroliths, but the sentence does not explicitly state what \"It\" is, making the reference unclear."
+   "kind": "repetition",
+   "reason": "Both sentences provide overlapping age ranges for Archaeorhynchus spathula, repeating the same information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"It is debated whether the gastroliths were swallowed accidentally or intentionally, though high numbers suggest the latter.\": The pronoun \"It\" refers to gastroliths, but the sentence does not explicitly state what \"It\" is, making the reference unclear."
- ],
- "rewrite": "replaced",
- "rewritten_at": "2026-11-25T05:50:18+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T01:12:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"It\" refers to gastroliths, but the sentence does not explicitly state what \"It\" is, making the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-25T05:50:18+00:00"
+  }
+ ]
 }

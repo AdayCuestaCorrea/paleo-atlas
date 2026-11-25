@@ -2,8 +2,8 @@
  "taxon_key": "allodaposuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8f4e66f32e845945",
- "reviewed_at": "2026-11-24T00:26:24+00:00",
+ "text_hash": "3618436ecbab78f9",
+ "reviewed_at": "2026-11-25T13:26:22+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,29 +11,49 @@
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 states the largest specimen was ~3.7 m long, while sentence 3 claims A. precedens reached 7 m, a direct conflict on size."
-  },
-  {
-   "sentences": [
-    3,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe A. hulki’s large, unique skull sinuses aiding hearing and lightening the skull."
-  },
-  {
-   "sentences": [
-    4,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that well‑developed muscle attachments on forelimb bones would allow a semi‑upright posture for walking on land."
+   "reason": "Sentence 2 gives the largest Allodaposuchus specimen as ~3–3.7 m long, while sentence 3 states the species A. precedens was 7 m long, a direct conflict on size."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The largest known specimen of this animal was approximately 3.7 meters long.\" / \"However, the species A. precedens has been estimated to reach a length of 7 meters, or 23 feet.\": Sentence 2 states the largest specimen was ~3.7 m long, while sentence 3 claims A. precedens reached 7 m, a direct conflict on size."
+  "- contradiction: \"Estimates for the size of the animal vary, with the largest known specimen of Allodaposuchus probably around 3 meters long, while another measurement suggests the largest specimen was approximately 3.7 meters long.\" / \"However, the species A. precedens has been estimated to be 7 meters (23 feet) long.\": Sentence 2 gives the largest Allodaposuchus specimen as ~3–3.7 m long, while sentence 3 states the species A. precedens was 7 m long, a direct conflict on size."
  ],
  "rewrite": "replaced",
- "rewritten_at": "2026-11-24T07:22:14+00:00"
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T00:26:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 states the largest specimen was ~3.7 m long, while sentence 3 claims A. precedens reached 7 m, a direct conflict on size."
+    },
+    {
+     "sentences": [
+      3,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe A. hulki’s large, unique skull sinuses aiding hearing and lightening the skull."
+    },
+    {
+     "sentences": [
+      4,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that well‑developed muscle attachments on forelimb bones would allow a semi‑upright posture for walking on land."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewritten_at": "2026-11-24T07:22:14+00:00"
+  }
+ ],
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T14:12:16+00:00"
 }

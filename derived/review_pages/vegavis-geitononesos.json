@@ -2,44 +2,64 @@
  "taxon_key": "vegavis-geitononesos",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fab8c40b8b6b46a0",
- "reviewed_at": "2026-11-24T02:07:30+00:00",
+ "text_hash": "707d3da839ab0ba3",
+ "reviewed_at": "2026-11-25T13:59:33+00:00",
  "problems": [
   {
    "sentences": [
-    0
+    0,
+    4,
+    5
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 1 discusses Vegavis iaai, a different species than the page’s focus on Vegavis geitononesos."
-  },
-  {
-   "sentences": [
-    1
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 2 refers to the species epithet iaai, which is not the subject of the page."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 mentions the type locality for Vegavis geitononesos but the page has never introduced that species."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to the specific name geitononesos without prior introduction of that species."
+   "kind": "contradiction",
+   "reason": "Sentence 1 names the species Vegavis iaai, while sentences 5 and 6 refer to Vegavis geitononesos, creating an inconsistent species designation for the same animal."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The type locality for Vegavis geitononesos lies within the López de Bertodano Formation of Antarctica.\": Sentence 3 mentions the type locality for Vegavis geitononesos but the page has never introduced that species.",
-  "- missing context: \"Its specific name, geitononesos, commemorates the discovery on Marambio Island.\": Sentence 5 refers to the specific name geitononesos without prior introduction of that species."
+  "- contradiction: \"Vegavis iaai is an extinct bird placed in the order Anseriformes and the family Vegaviidae, representing the sole species known from its genus.\" / \"Its specific name, geitononesos, commemorates the discovery of the species on Marambio Island.\" / \"The earlier Vegavis iaai specimen, catalogued as MLP 93-I-3-1, was recovered from a concretion at Cape Lamb on Vega Island in 1992.\": Sentence 1 names the species Vegavis iaai, while sentences 5 and 6 refer to Vegavis geitononesos, creating an inconsistent species designation for the same animal."
  ],
  "rewrite": "replaced",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-24T02:07:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 1 discusses Vegavis iaai, a different species than the page’s focus on Vegavis geitononesos."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 2 refers to the species epithet iaai, which is not the subject of the page."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions the type locality for Vegavis geitononesos but the page has never introduced that species."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to the specific name geitononesos without prior introduction of that species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T12:35:26+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:35:26+00:00"
+ "rewritten_at": "2026-11-25T14:33:46+00:00"
 }

@@ -230,6 +230,8 @@ def fix_es(text: str) -> str:
             out += " " + _ES_AGREEMENT[m["adj"].lower()]
         return out
 
+    for pattern, repl in _AGO:
+        text = re.sub(pattern, repl, text)
     text = _STAGE_TYPO.sub(lambda m: _capital_like(_STAGE_TYPOS[m[0].lower()], m[0]), text)
     text = _ETAPA.sub(etapa, text)
     # Only the Spanish common noun: *Pleiosaurus* is a real genus.
@@ -368,6 +370,23 @@ _STAGE_TYPO = re.compile(
     r"(?![\wÁÉÍÓÚáéíóúñÑ])",
     re.IGNORECASE,
 )
+
+
+# "entre 155 y 145 millones de años atrás" is a calque of "155 to 145 million years
+# ago"; Spanish says "hace entre 155 y 145 millones de años" (968 pages, round 2 of
+# the blind review). Only these fixed shapes; anything else stays as it is.
+_N = r"(\d+(?:[.,]\d+)?)"
+_AGO: list[tuple[str, Any]] = [
+    (r"\b([Hh])ace ([^.;]{1,40}?) millones de años atrás", r"\1ace \2 millones de años"),
+    (rf"\b([Ee])ntre {_N} y {_N} millones de años atrás",
+     lambda m: ("H" if m[1] == "E" else "h") + f"ace entre {m[2]} y {m[3]} millones de años"),
+    (rf"\b([Dd])esde {_N} hasta {_N} millones de años atrás",
+     lambda m: f"{m[1]}esde hace {m[2]} hasta hace {m[3]} millones de años"),
+    (rf"\b([Dd])e {_N} a {_N} millones de años atrás",
+     lambda m: ("H" if m[1] == "D" else "h") + f"ace entre {m[2]} y {m[3]} millones de años"),
+    (rf"\b([Aa]proximadamente|[Uu]nos|[Aa]lrededor de|[Cc]erca de) {_N} millones de años atrás",
+     lambda m: ("H" if m[1][0].isupper() else "h") + f"ace {m[1].lower()} {m[2]} millones de años"),
+]  # fmt: skip
 
 
 def _canonical_id(fact_id: str) -> str:

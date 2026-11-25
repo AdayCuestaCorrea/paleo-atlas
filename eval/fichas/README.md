@@ -162,3 +162,32 @@ Sentences of the 15 texts with a problem from this set:
 | Any | 8.6 % → 0.7 % | 23.0 % → 0.8 % |
 
 **These figures count only the problems of the first hand review.** The rewrites wrote new sentences, and only those of step 5 were read by hand. A fresh, blind review of the 15 pages is the honest "after" figure.
+
+## Blind review (2026-11-25)
+
+The figures above only count the problems of the first review, which recorded what its reviewers noticed. To measure honestly, the 15 pages were reviewed again, blind (`review2/`):
+- one agent per page;
+- every sentence in both languages;
+- reviewers did not see the earlier findings.
+
+Each agent checked against the facts' quotes and its own knowledge; none fetched Wikipedia.
+
+| Sentences with a problem | English (410) | Spanish (387) |
+|---|---|---|
+| High | 0.5 % | 0.8 % |
+| High or medium | 12.9 % | 18.9 % |
+| Any | 28.0 % | 43.2 % |
+
+216 findings: 4 high, 83 medium, 129 low. The two reviews are not comparable: this one is much stricter, so the earlier "0.2 %" said more about the first review than about the texts. This is the figure the status page shows, because it is the honest estimate for the rest of the site.
+
+**What the reviewers found most:**
+- overstated certainty ("showed" for one study's estimate);
+- missing context (a person, specimen or hypothesis never introduced);
+- small misreadings of the source;
+- in Spanish, calques and wrong terms ("antebrazos" for forelimbs, "millones de años atrás").
+
+**All 15 pages were then fixed by hand.** Every edit cites the page's facts, adds no figure that the facts don't give, and passed `paleo recheck-texts`. `review2/open.csv` lists the 9 low findings left: sizes only in feet in the facts, two sentences still only in English, and three small points.
+
+Two of the Spanish problems were common enough to become rules in `fix_es`:
+- "toneladas métricas" → "toneladas", on 99 pages;
+- "entre X y Y millones de años atrás" → "hace entre X y Y millones de años", on 954 pages.

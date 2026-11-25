@@ -2,7 +2,7 @@
 
 > Alcance y casillas: [`ALCANCE.md` §7, Fase 7](../../ALCANCE.md#7-fases-y-entregables). Este documento explica el porqué. Las cifras y los ficheros de cada paso están en [`eval/fichas/README.md`](../../eval/fichas/README.md).
 >
-> **Estado (2026-11-25): pasos 1 a 6 hechos en `fase-3` y `data-fase-3`, sin publicar.** Faltan la revisión nueva a ciegas de las 15 fichas y la publicación en `main` y `data`.
+> **Estado (2026-11-25): pasos 1 a 6 hechos en `fase-3` y `data-fase-3`, sin publicar.** Falta la publicación en `main` y `data`.
 
 ## 1. En una frase
 
@@ -60,23 +60,23 @@ Tres restricciones:
 
 ## 7. Resultados reales (2026-11-25)
 
-Frases de los 15 textos con un problema de la revisión inicial:
+**Revisión a ciegas de las 15 fichas** (un agente por ficha, todas las frases en los dos idiomas, sin ver las revisiones anteriores): frases con un problema.
 
-| | Inglés | Español |
+| | Inglés (410) | Español (387) |
 |---|---|---|
-| Grave | 1,7 % → 0 % | 3,1 % → 0 % |
-| Grave o medio | 5,2 % → 0,2 % | 13,2 % → 0,3 % |
-| Cualquiera | 8,6 % → 0,7 % | 23,0 % → 0,8 % |
+| Grave | 0,5 % | 0,8 % |
+| Grave o medio | 12,9 % | 18,9 % |
+| Cualquiera | 28,0 % | 43,2 % |
+
+Es la cifra que publica la página de estado. Después se corrigieron a mano los 216 hallazgos de esas 15 fichas, salvo 9 menores (`eval/fichas/review2/open.csv`).
 
 | | |
 |---|---|
-| Hallazgos en el texto | 91: 88 arreglados, 3 abiertos (dos tamaños solo en pies y la muesca de *Parasaurolophus*) |
-| Hallazgos en los paneles | 50: 30 arreglados, 8 en parte, 7 atenuados, 5 abiertos (DOI y sinónimos de PBDB, una imagen discutida) |
-| Revisor, primera ronda | 2.827 fichas; 1.524 frases repetidas quitadas; 974 fichas reescritas enteras y 155 por frases |
-| Revisor, segunda ronda | 1.129 fichas: de 0 a 211 sin problemas; contradicciones de 969 a 687; falta de contexto de 653 a 309 |
-| Español | 289 fichas con el nombre de un piso mal escrito, corregidas por regla |
-
-**La fila «ahora» solo cuenta los errores de la revisión inicial.** Las reescrituras escribieron frases nuevas que solo se leyeron a mano en parte. La cifra completa saldrá de una revisión nueva a ciegas de las mismas 15 fichas.
+| Primera revisión (22 nov.) | 91 hallazgos en el texto y 50 en los paneles; de los del texto, 88 arreglados. No era exhaustiva: anotaba lo que el revisor veía |
+| Paneles | 50 hallazgos: 30 arreglados, 8 en parte, 7 atenuados y 5 abiertos (DOI y sinónimos de PBDB, una imagen discutida) |
+| Revisor automático, primera ronda | 2.827 fichas; 1.524 frases repetidas quitadas; 974 fichas reescritas enteras y 155 por frases |
+| Revisor automático, segunda ronda | 1.129 fichas: las que no tenían problemas pasan de 0 a 211; contradicciones, de 969 a 687; falta de contexto, de 653 a 309 |
+| Reglas de español | nombres de pisos (289 fichas), «toneladas métricas» (99) y «millones de años atrás» (954) |
 
 ## 8. Qué salió mal y qué se aprendió
 
@@ -87,6 +87,7 @@ Frases de los 15 textos con un problema de la revisión inicial:
 - **Una regla no idempotente.** «La etapa valanginiana» solo llegaba a «el piso valanginiense» en la segunda pasada, porque la regla de «etapa → piso» corría antes de corregir el nombre. Se detectó porque una segunda pasada cambió 16 fichas más.
 - **Una ficha corta caía por un cambio de una palabra.** La comprobación de «quedan al menos 3 frases» se aplicaba aunque no se quitara ninguna; *Palaeospiza*, con 2 frases, salía de la web por corregir «priabonense».
 - **La ficha en español de *Stegosaurus* llevaba dos días sin publicarse.** El modelo escribió «estegosaurio» y «allosauro», y la comprobación de nombres científicos la apartó entera. Nadie lo vio hasta medir las 15 fichas otra vez. *Lección: revisar también lo que no se publica.*
+- **Dos revisiones distintas no se comparan.** La tasa «después» de la primera revisión salía 0,2 %, pero solo contaba lo que aquella revisión había anotado. La revisión a ciegas, frase a frase, dio un 12,9 % de frases con un problema grave o medio. *Lección: medir el antes y el después con el mismo instrumento; si no, publicar solo la medida honesta.*
 - **Un hecho venía de un documental.** La segunda ronda «arregló» *Incisivosaurus* con una teoría que salía de la serie *Prehistoric Park*, citada en la Wikipedia en español.
 - **Los temporizadores de systemd se pierden al reiniciar.** La noche 8 no arrancó; desde entonces se usan unidades guardadas, y `paleo-gpu` para parar al terminar la ficha en curso.
 
@@ -103,4 +104,5 @@ Frases de los 15 textos con un problema de la revisión inicial:
 - **Quedan 287 fichas con contradicciones que la reescritura no resolvió** y 26 cuya reescritura falló; siguen publicadas con su texto anterior.
 - **Los errores de los hechos** (una lectura mala de la fuente) solo se arreglan a mano o con un extractor mejor.
 - **Los paneles de PBDB** conservan 5 problemas abiertos que dependen de los datos de PBDB.
-- **Pendiente:** la revisión nueva a ciegas de las 15 fichas y la publicación en `main` y `data`.
+- **La tasa publicada es la de antes de los arreglos a mano.** Las 15 fichas ya no la tienen, pero el resto de la web probablemente sí.
+- **Pendiente:** la publicación en `main` y `data`.

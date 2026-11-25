@@ -106,12 +106,12 @@
       <tbody>
         {% for key in ('high', 'medium', 'any') %}
         <tr><th scope="row">{{ T['trust_' ~ key] }}</th>
-          {% for lang in ('en', 'es') %}<td><s>{{ num(trust.before[lang][key]) }} %</s> → <b>{{ num(trust.now[lang][key]) }} %</b></td>{% endfor %}
+          {% for l in ('en', 'es') %}<td><b>{{ ('%.1f' % trust.rates[l][key]) | replace('.', ',' if lang == 'es' else '.') }} %</b></td>{% endfor %}
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.text_findings, fixed=trust.text_fixed) | md }}</p>
+    <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.findings, high=trust.severities.high, medium=trust.severities.medium, open=trust.open) | md }}</p>
     <div class="st-grid2">
       <div><h3>{{ T.trust_catches }}</h3><ul>{% for i in range(1, 6) %}<li>{{ T['trust_catch_' ~ i] | md }}</li>{% endfor %}</ul></div>
       <div><h3>{{ T.trust_misses }}</h3><ul>{% for i in range(1, 4) %}<li>{{ T['trust_miss_' ~ i] | md }}</li>{% endfor %}</ul></div>

@@ -215,3 +215,15 @@ def test_misspelled_spanish_stages():
     assert fix_es("al noreste de Maastricht") == "al noreste de Maastricht"
     assert fix_es("la arcilla de Kimmeridge") == "la arcilla de Kimmeridge"
     assert fix_es("habitó la etapa valanginiana") == "habitó el piso valanginiense"
+
+
+def test_million_years_ago_without_the_calque():
+    assert fix_es("vivió entre 155 y 145 millones de años atrás.") == (
+        "vivió hace entre 155 y 145 millones de años."
+    )
+    assert fix_es("Entre 1 y 2 millones de años atrás") == "Hace entre 1 y 2 millones de años"
+    assert fix_es("desde 37,71 hasta 33,9 millones de años atrás") == (
+        "desde hace 37,71 hasta hace 33,9 millones de años"
+    )
+    assert fix_es("hace unos 150 millones de años atrás") == "hace unos 150 millones de años"
+    assert fix_es("entre hace 68 y 66 millones de años") == "entre hace 68 y 66 millones de años"

@@ -176,3 +176,27 @@ def test_recheck_leaves_out_the_sentence_in_both_languages(tmp_path):
         doc = json.loads((texts / f"iguanodon.{lang}.json").read_text(encoding="utf-8"))
         texts_now = [s["text"] for sec in doc["sections"] for s in sec["sentences"]]
         assert texts_now == [kept[0], kept[1], kept[3]]
+
+
+def test_a_short_page_with_only_a_fixed_word_stays(tmp_path):
+    texts = tmp_path / "texts"
+    texts.mkdir()
+    _write(texts / "palaeospiza.en.json", "Palaeospiza", "palaeospiza", "en",
+           ["Palaeospiza was a small perching bird found in the lake beds of Colorado.",
+            "It lived in the Priabonian stage, from 37.71 to 33.9 million years ago."])
+    _write(texts / "palaeospiza.es.json", "Palaeospiza", "palaeospiza", "es",
+           ["Palaeospiza fue un pequeño pájaro hallado en los lechos lacustres de Colorado.",
+            "Vivió en el piso priabonense, hace entre 37,71 y 33,9 millones de años."])
+    out = recheck_quality(tmp_path, {})
+    assert out["es_changed"] == ["palaeospiza"] and out["failed"] == []
+    doc = json.loads((texts / "palaeospiza.es.json").read_text(encoding="utf-8"))
+    assert "priaboniense" in doc["sections"][0]["sentences"][1]["text"]
+
+
+def test_misspelled_spanish_stages():
+    assert fix_es("del Kimmeríjico Tardío") == "del Kimmeridgiense Tardío"
+    assert fix_es("el títónico temprano") == "el titoniense temprano"
+    assert fix_es("piso caloviense") == "piso calloviense"
+    assert fix_es("al noreste de Maastricht") == "al noreste de Maastricht"
+    assert fix_es("la arcilla de Kimmeridge") == "la arcilla de Kimmeridge"
+    assert fix_es("habitó la etapa valanginiana") == "habitó el piso valanginiense"

@@ -214,6 +214,7 @@ def fix_es(text: str) -> str:
             out += " " + _ES_AGREEMENT[m["adj"].lower()]
         return out
 
+    text = _STAGE_TYPO.sub(lambda m: _capital_like(_STAGE_TYPOS[m[0].lower()], m[0]), text)
     text = _ETAPA.sub(etapa, text)
     # Only the Spanish common noun: *Pleiosaurus* is a real genus.
     text = re.sub(r"\bPleiosauria\b", "Plesiosauria", text)  # not a taxon
@@ -285,6 +286,62 @@ _ES_FIXED: list[tuple[str, str]] = [
     (r"\bgarrote caudal\b", "maza caudal"),
     (r"\b([Gg])rupo (?:padre|parental)\b", r"\1rupo superior"),
 ]
+
+
+# Misspelled Spanish stage names found in the verified texts after round 2 of the page
+# review (Phase 7), each with its name on the Spanish ICS chart (site/terms.py). Only
+# spellings that are never another word: "noreste", "Maastricht" (the city) and
+# "Kimmeridge" (the clay) stay.
+_STAGE_TYPOS: dict[str, str] = {
+    **dict.fromkeys(["hetangiense"], "hettangiense"),
+    **dict.fromkeys(["caloviense"], "calloviense"),
+    **dict.fromkeys(["frasnense"], "frasniense"),
+    **dict.fromkeys(
+        ["kimeridgiense", "kimmeridiense", "kimmeríense", "kimmeridgiano", "kimmeridgiana",
+         "kimmeridgio", "kimmeríjico", "kimeríjico"],
+        "kimmeridgiense",
+    ),
+    **dict.fromkeys(["maastrichtiano", "mastrichtiense"], "maastrichtiense"),
+    **dict.fromkeys(["albense"], "albiense"),
+    **dict.fromkeys(["givetense"], "givetiense"),
+    **dict.fromkeys(
+        ["titiense", "tithoniense", "títoniense", "títónico", "titónico", "títonio", "titonio"],
+        "titoniense",
+    ),
+    **dict.fromkeys(["ladinense"], "ladiniense"),
+    **dict.fromkeys(["santonense"], "santoniense"),
+    **dict.fromkeys(["anisense"], "anisiense"),
+    **dict.fromkeys(["serpukoviense", "serpuquoviense"], "serpujoviense"),
+    **dict.fromkeys(["viséense", "visiense"], "viseense"),
+    **dict.fromkeys(["valanginiana", "valanginiano", "valangiense"], "valanginiense"),
+    **dict.fromkeys(["hauteriense", "auteriviense"], "hauteriviense"),
+    **dict.fromkeys(["burdigalense"], "burdigaliense"),
+    **dict.fromkeys(["bartonense"], "bartoniense"),
+    **dict.fromkeys(["berriasense"], "berriasiense"),
+    **dict.fromkeys(["langiense"], "langhiense"),
+    **dict.fromkeys(["pliensbachiano"], "pliensbachiense"),
+    **dict.fromkeys(["mesiniense"], "messiniense"),
+    **dict.fromkeys(["famenniense", "fameníense"], "fameniense"),
+    **dict.fromkeys(["batoniense"], "bathoniense"),
+    **dict.fromkeys(["aquitanense"], "aquitaniense"),
+    **dict.fromkeys(["raetiense", "retiense"], "rhaetiense"),
+    **dict.fromkeys(["pragianense"], "pragiense"),
+    **dict.fromkeys(["aseliense"], "asseliense"),
+    **dict.fromkeys(["priabonense"], "priaboniense"),
+    **dict.fromkeys(["serravallense", "serravaliense"], "serravalliense"),
+    **dict.fromkeys(["turonense"], "turoniense"),
+    **dict.fromkeys(["torciense"], "toarciense"),
+    **dict.fromkeys(["coniacense"], "coniaciense"),
+    **dict.fromkeys(["aleuniense"], "aaleniense"),
+    **dict.fromkeys(["changsiniense"], "changhsingiense"),
+    **dict.fromkeys(["selandense"], "selandiense"),
+    **dict.fromkeys(["danianiense"], "daniense"),
+}
+_STAGE_TYPO = re.compile(
+    r"(?<![\wÁÉÍÓÚáéíóúñÑ])(" + "|".join(sorted(_STAGE_TYPOS, key=len, reverse=True)) + r")"
+    r"(?![\wÁÉÍÓÚáéíóúñÑ])",
+    re.IGNORECASE,
+)
 
 
 def _canonical_id(fact_id: str) -> str:
@@ -914,7 +971,7 @@ def recheck_quality(
             )
 
         en_ok = not bad_en or holds(kept_en, en)
-        es_ok = es is None or holds(kept_es, es)  # type: ignore[arg-type]
+        es_ok = es is None or kept_es == fixed or holds(kept_es, es)  # type: ignore[arg-type]
         if not en_ok:
             # the English page fails, and its Spanish adaptation with it
             for path, doc, sents in ((en_path, en_doc, en), (es_path, es_doc, fixed or es)):

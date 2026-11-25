@@ -112,3 +112,31 @@ I checked 18 replaced pages, drawn at random, by hand:
   - *Camarillasaurus*: two sentences now repeat the reinterpretation.
 
 The *Atlantosuchus* error led to a new alignment rule: a Spanish sentence may not name a period that its English sentence doesn't name. It also recognises the British spelling Palaeocene, Mississippian and Pennsylvanian, and Paleogene, Neogene and Tertiary. Run over every page, it left out 4 wrong Spanish sentences: *Atlantosuchus*, *Lithornis*, *Presbyornis* and *Antliodus*.
+
+### Round 2: the rewritten pages reviewed again
+
+The reviewer read again the 1,129 pages that a rewrite had replaced. Each page gets at most two rounds:
+
+| On the same 1,129 pages | First review | Second review |
+|---|---|---|
+| Pages with no problems | 0 | 211 |
+| Contradictions | 969 | 687 |
+| Missing context | 653 | 309 |
+| Repetitions | 755 | 747 |
+| About something else | 182 | 275 |
+
+The rewrites bring back about as many repetitions as they remove. The reviewer left out 749 repeated sentences on 482 pages. The flagged sentences were then fixed on 371 pages; 287 stayed unchanged and 24 failed.
+
+I checked 8 of those pages by hand:
+- 2 better;
+- 2 mixed;
+- 2 worse;
+- 2 with no real change.
+
+The two worse ones were fixed by hand:
+- *Incisivosaurus*: the claim about wings once used for flight came from the TV series *Prehistoric Park*.
+- *Liliensternus*: the same size estimates were given three times.
+
+*Diogenornis* and *Camarillasaurus* were fixed by hand as well.
+
+Many Spanish stage names were misspelled, most of them since before round 2 ("títónico", "caloviense", "Kimmeríjico"). `fix_es` now replaces 45 such spellings with the name on the Spanish ICS chart, on 289 pages. Spellings that are also other words stay as they are: "noreste", Maastricht (the city), Kimmeridge (the clay).

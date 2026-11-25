@@ -2,31 +2,31 @@
  "taxon_key": "abyssosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b805b90c0b38b0bf",
- "reviewed_at": "2026-11-25T13:31:32+00:00",
+ "text_hash": "b137afc63b2a0fb0",
+ "reviewed_at": "2026-11-25T22:39:04+00:00",
  "problems": [
   {
    "sentences": [
-    0,
     4
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Abyssosaurus had very large eye sockets."
+   "reason": "Sentence 5 repeats the same information about the genus description, type species, and discovery details multiple times."
   },
   {
    "sentences": [
-    8
+    4,
+    7
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 classifies Abyssosaurus within Aristonectidae, while earlier sentences (e.g., 1 and 6) place it in Cryptoclididae, presenting conflicting family assignments."
+   "reason": "Sentence 5 states Abyssosaurus is a cryptoclidid and the first reliable record of an aristonectid in Russia, while sentence 8 classifies it within Aristonectidae and notes the Paleobiology Database lists it under Cryptoclididae, presenting conflicting family assignments."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Berezin initially suggested Abyssosaurus was an aberrant member of the subfamily Aristonectinae within Cryptocleidoidea. Later studies concluded that A. nataliae was a colymbosaurine, sister to Colymbosaurus, rather than an aristonectine. It is debated whether Abyssosaurus was a basal aristonectid or related to Colymbosaurus, with later studies supporting the latter. Abyssosaurus is classified within the family Aristonectidae. The Paleobiology Database lists the parent group of Abyssosaurus as Cryptoclididae.\": Sentence 9 classifies Abyssosaurus within Aristonectidae, while earlier sentences (e.g., 1 and 6) place it in Cryptoclididae, presenting conflicting family assignments."
+  "- contradiction: \"The genus Abyssosaurus was described by Alexander Yu Berezin in 2011. Fossils of Abyssosaurus date to the Early Cretaceous period. The type species, A. nataliae, was named by Alexander Yu Berezin in 2011 after his wife, Nataliya Berezina. Vasily V. Mita discovered a partial plesiosaur skeleton in Chuvashia, Russia, in 1992. The strata containing the fossils are dated to the late or upper Hauterivian age of the Early Cretaceous. Additional remains were discovered in 1998, expanding the initial collection of twenty cervical vertebrae. In 2011, Alexander Yu Berezin designated the specimen as the holotype for the new species Abyssosaurus nataliae. Berezin published further papers on the cranial anatomy of Abyssosaurus in 2018 and 2019. Abyssosaurus was an extinct plesiosaur that lived during the Early Cretaceous in what is now Russia. The holotype specimen was discovered in Chuvashia and dates to the late Hauterivian, approximately 133 to 130 million years ago. Abyssosaurus represents the first reliable record of an aristonectid plesiosaur in Russia. The genus was formally named by Alexander Yu. Berezin in 2011, with the type species designated as Abyssosaurus nataliae.\" / \"Berezin initially suggested Abyssosaurus was an aberrant member of the subfamily Aristonectinae within Cryptocleidoidea. Later studies concluded that A. nataliae was a colymbosaurine, sister to Colymbosaurus, rather than an aristonectine. It is debated whether Abyssosaurus was a basal aristonectid or related to Colymbosaurus, with later studies supporting the latter. Abyssosaurus is classified within the family Aristonectidae, though the Paleobiology Database lists the parent group as Cryptoclididae.\": Sentence 5 states Abyssosaurus is a cryptoclidid and the first reliable record of an aristonectid in Russia, while sentence 8 classifies it within Aristonectidae and notes the Paleobiology Database lists it under Cryptoclididae, presenting conflicting family assignments."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:36:33+00:00",
@@ -68,8 +68,32 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:49:40+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:31:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Abyssosaurus had very large eye sockets."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 classifies Abyssosaurus within Aristonectidae, while earlier sentences (e.g., 1 and 6) place it in Cryptoclididae, presenting conflicting family assignments."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:14+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:14+00:00"
+ "rewritten_at": "2026-11-25T23:19:43+00:00"
 }

@@ -2,32 +2,41 @@
  "taxon_key": "anabisetia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e25dd2743298762f",
- "reviewed_at": "2026-11-25T13:48:03+00:00",
+ "text_hash": "042233a5c9e2e87d",
+ "reviewed_at": "2026-11-25T22:53:55+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    11
+    4,
+    5
    ],
    "kind": "contradiction",
-   "reason": "One sentence places Anabisetia within Iguanodontia, while another states it may lie just outside that group."
+   "reason": "The holotype (sentence 5) includes a partial braincase, yet sentence 6 claims the nearly complete skeleton is missing the skull."
   },
   {
    "sentences": [
-    12,
-    13
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 gives a range of 95–92 Ma, while sentence 11 gives 93.9–89.8 Ma, presenting two incompatible time intervals for the same species."
+  },
+  {
+   "sentences": [
+    6,
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences repeat the same claim that Anabisetia was classified within the clade Elasmaria in 2015."
+   "reason": "Both sentences state that Anabisetia is a member of the clade Elasmaria."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Anabisetia is classified within the suborder Iguanodontia.\" / \"However, recent cladistic analyses suggest that Anabisetia may be positioned just outside Iguanodontia, similar to its relative Gasparinisaura.\": One sentence places Anabisetia within Iguanodontia, while another states it may lie just outside that group."
+  "- contradiction: \"The holotype specimen MCF-PVPH 74 includes a partial braincase, lower jaw bones, complete forelimb and hindlimb, and vertebrae from all spinal sections.\" / \"Combined, the four known specimens provide a nearly complete skeleton of Anabisetia except for the skull.\": The holotype (sentence 5) includes a partial braincase, yet sentence 6 claims the nearly complete skeleton is missing the skull.",
+  "- contradiction: \"Anabisetia lived in a swamp environment from approximately 95 to 92 million years ago during the Late Cretaceous.\" / \"It lived during the Turonian stage, approximately 93.9 to 89.8 million years ago.\": Sentence 10 gives a range of 95–92 Ma, while sentence 11 gives 93.9–89.8 Ma, presenting two incompatible time intervals for the same species."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:14:09+00:00",
@@ -67,8 +76,33 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:59:06+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:48:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "One sentence places Anabisetia within Iguanodontia, while another states it may lie just outside that group."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the same claim that Anabisetia was classified within the clade Elasmaria in 2015."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:26:04+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:26:04+00:00"
+ "rewritten_at": "2026-11-25T23:27:39+00:00"
 }

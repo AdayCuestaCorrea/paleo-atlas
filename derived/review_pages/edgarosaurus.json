@@ -2,27 +2,23 @@
  "taxon_key": "edgarosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9fae18b25b7fd573",
- "reviewed_at": "2026-11-24T01:39:02+00:00",
+ "text_hash": "2accc50f2e5c0298",
+ "reviewed_at": "2026-11-25T23:01:42+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Edgarosaurus possessed a pineal opening on the top of the skull."
-  },
-  {
-   "sentences": [
-    4,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the symphysis with only six tooth pairs, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Sentence 6 lists bone counts for the first through fifth digits but provides only four numbers (seven, eleven, ten, and nine), leaving the count for the fifth digit unspecified."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The lower arm bones were very short and wide, and the forelimb digits consist of seven, eleven, ten, and nine bones respectively for the first through fifth digits.\": Sentence 6 lists bone counts for the first through fifth digits but provides only four numbers (seven, eleven, ten, and nine), leaving the count for the fifth digit unspecified."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:30:52+00:00"
 }

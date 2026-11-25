@@ -2,33 +2,24 @@
  "taxon_key": "gasparinisaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3b736fb10cc747b0",
- "reviewed_at": "2026-11-25T13:50:03+00:00",
+ "text_hash": "24e733737da87e91",
+ "reviewed_at": "2026-11-25T22:56:15+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    11
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Gasparinisaura was a small, bipedal herbivore that lived during the Late Cretaceous."
-  },
-  {
-   "sentences": [
     8,
-    9,
-    10
+    9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 places Gasparinisaura within the clade Elasmaria; sentence 10 describes it as a basal iguanodontian and possibly the most basal member of Elasmaria; sentence 11 redescribes it as belonging to a new clade Dysalotosaurinae within Dryosauridae, which conflicts with the earlier placement in Elasmaria."
+   "reason": "Sentence 9 places Gasparinisaura in the clade Elasmaria (a hypsilophodont group), while sentence 10 assigns it to a new clade Dysalotosaurinae within Dryosauridae, implying two incompatible higher‑level classifications."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Phylogenetic analysis places Gasparinisaura within the clade Elasmaria, a group of hypsilophodonts known from South America, Antarctica, and possibly Australia.\" / \"Originally, the describers considered it to be a very basal iguanodontian and the most primitive member of the clade Euiguanodontia, and it could be the most basal member of the Elasmaria group.\" / \"In 2026, Dieudonné, Paulina-Carabajal, and Cruzado-Caballero redescribed the skull anatomy and named a new clade, Dysalotosaurinae, within Dryosauridae.\": Sentence 9 places Gasparinisaura within the clade Elasmaria; sentence 10 describes it as a basal iguanodontian and possibly the most basal member of Elasmaria; sentence 11 redescribes it as belonging to a new clade Dysalotosaurinae within Dryosauridae, which conflicts with the earlier placement in Elasmaria."
+  "- contradiction: \"Phylogenetic analysis places Gasparinisaura within the clade Elasmaria, a group of hypsilophodonts known from South America, Antarctica, and possibly Australia.\" / \"In 2026, Dieudonné, Paulina-Carabajal, and Cruzado-Caballero redescribed the skull anatomy of Gasparinisaura cincosaltensis and named a new clade, Dysalotosaurinae, within Dryosauridae.\": Sentence 9 places Gasparinisaura in the clade Elasmaria (a hypsilophodont group), while sentence 10 assigns it to a new clade Dysalotosaurinae within Dryosauridae, implying two incompatible higher‑level classifications."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:21:33+00:00",
@@ -45,8 +36,34 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:27:32+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:50:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Gasparinisaura was a small, bipedal herbivore that lived during the Late Cretaceous."
+    },
+    {
+     "sentences": [
+      8,
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 places Gasparinisaura within the clade Elasmaria; sentence 10 describes it as a basal iguanodontian and possibly the most basal member of Elasmaria; sentence 11 redescribes it as belonging to a new clade Dysalotosaurinae within Dryosauridae, which conflicts with the earlier placement in Elasmaria."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:27:27+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:27:27+00:00"
+ "rewritten_at": "2026-11-25T23:28:41+00:00"
 }

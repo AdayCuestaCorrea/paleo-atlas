@@ -2,47 +2,33 @@
  "taxon_key": "overoraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7fdd4a4d9dedfe5e",
- "reviewed_at": "2026-11-25T13:20:13+00:00",
+ "text_hash": "ea7932e4223eeac6",
+ "reviewed_at": "2026-11-25T22:27:22+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
+    3,
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Overoraptor measured ~1.3 m, while sentence 2 claims it was ~3 m long."
+   "reason": "Sentence 4 states the fossils were found at Violante Farm locality, while sentence 9 claims they were found in the Huincul Formation deposits, implying different localities."
   },
   {
    "sentences": [
-    0,
-    1
+    8,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim that Overoraptor was about 1.3 m long."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 12 refers to “these two species” without previously mentioning a second species."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 13 classifies the genus under the class Reptilia, which is a broader taxonomic level unrelated to the specific animal description."
+   "kind": "contradiction",
+   "reason": "Sentence 9 places Overoraptor in the Aptian stage of the Cretaceous, whereas sentence 10 lists its time range as Albian to Albian, a later stage."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Overoraptor is an extinct genus of paravian theropod with uncertain affinities from the Early Cretaceous of Patagonia, Argentina. The genus contains one species, O. chimentoi, known from fragmentary bones of the hands, feet, hips, and vertebrae. Overoraptor chimentoi was a gracile theropod measuring approximately 1.3 meters in length, with long arms and legs.\" / \"Researchers estimated Overoraptor was about 1.3 meters long, though its mass was not estimated. Gregory S. Paul estimated Overoraptor was about 3 meters long and weighed about 30 kilograms.\": Sentence 1 states Overoraptor measured ~1.3 m, while sentence 2 claims it was ~3 m long.",
-  "- missing context: \"These characteristics suggest these two species might belong to a new group of running paravians, phylogenetically closer to birds than to raptors.\": Sentence 12 refers to “these two species” without previously mentioning a second species."
+  "- contradiction: \"Fossils were found by Dr. Roberto Nicolás Chimento at the Violante Farm locality in Rio Negro Province, Argentina. The species name chimentoi honors Dr. Roberto Nicolás Chimento, who discovered the remains.\" / \"Overoraptor lived during the Aptian stage of the Cretaceous period. The dinosaur was found in the Huincul Formation deposits and lived in the Gondwana continental block, now Río Negro Province, Argentina.\": Sentence 4 states the fossils were found at Violante Farm locality, while sentence 9 claims they were found in the Huincul Formation deposits, implying different localities.",
+  "- contradiction: \"Overoraptor lived during the Aptian stage of the Cretaceous period. The dinosaur was found in the Huincul Formation deposits and lived in the Gondwana continental block, now Río Negro Province, Argentina.\" / \"The Paleobiology Database lists the time range for the genus Overoraptor as Albian to Albian (110.1 to 106.3 million years ago).\": Sentence 9 places Overoraptor in the Aptian stage of the Cretaceous, whereas sentence 10 lists its time range as Albian to Albian, a later stage."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:13:12+00:00",
@@ -75,8 +61,47 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:31:23+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:20:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Overoraptor measured ~1.3 m, while sentence 2 claims it was ~3 m long."
+    },
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim that Overoraptor was about 1.3 m long."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 12 refers to “these two species” without previously mentioning a second species."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 13 classifies the genus under the class Reptilia, which is a broader taxonomic level unrelated to the specific animal description."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:07:03+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:07:03+00:00"
+ "rewritten_at": "2026-11-25T23:13:21+00:00"
 }

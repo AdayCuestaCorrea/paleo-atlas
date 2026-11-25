@@ -2,52 +2,23 @@
  "taxon_key": "nanotyrannus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d7b1a04ca71bdd71",
- "reviewed_at": "2026-11-25T13:10:37+00:00",
+ "text_hash": "b1c40b45e335a11a",
+ "reviewed_at": "2026-11-25T22:18:39+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    16
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the lack of serrations on Nanotyrannus teeth is a point of debate, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"the specimen known as Jane\" without any prior introduction or explanation of who or what Jane is."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:55:38+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      4
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 5 claims an adult specimen weighed ~704 kg, which is inconsistent with the earlier description of Nanotyrannus as a mid‑sized tyrannosauroid measuring only ~17 ft (≈5 m) long."
-    },
-    {
-     "sentences": [
-      9
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 10 refers to “Nanotyrannus Jane” without any prior introduction of that name or specimen, leaving the reader unclear what is meant."
-    },
-    {
-     "sentences": [
-      12
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 13 repeats the information that the type species is *Nanotyrannus lancensis*, which was already stated in sentence 6."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:52:00+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"A 2021 study estimated the bite force of juvenile tyrannosaurs, including the specimen known as Jane, to be between 5,269 and 5,641 Newtons, which is higher than previous estimates.\": The sentence refers to \"the specimen known as Jane\" without any prior introduction or explanation of who or what Jane is."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:08:21+00:00"
 }

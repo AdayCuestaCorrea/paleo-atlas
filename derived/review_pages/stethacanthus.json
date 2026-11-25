@@ -2,34 +2,55 @@
  "taxon_key": "stethacanthus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9c6f02b514154097",
- "reviewed_at": "2026-11-25T13:24:46+00:00",
+ "text_hash": "3419e42ded8195d8",
+ "reviewed_at": "2026-11-25T22:32:40+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    12
+    19
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Stethacanthus died out around 298.9 Ma, while sentence 13 reports fossils dated to ~360 Ma."
+   "kind": "repetition",
+   "reason": "Sentences 1 and 20 state the same lifespan of Stethacanthus."
   },
   {
    "sentences": [
-    21,
-    22,
-    23,
-    24
+    3
    ],
-   "kind": "repetition",
-   "reason": "Sentences 22‑25 all repeat the classification hierarchy of Stethacanthus."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to \"sexually mature males\" without any prior mention of males."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 mentions \"male pelvic claspers\" but the page never introduced the concept of male anatomy."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 16 cites the Bear Gulch Limestone as a potential breeding ground, yet the formation is never defined or mentioned earlier."
+  },
+  {
+   "sentences": [
+    16
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 17 uses the pronoun \"It\" to refer to fin whips, but the antecedent is unclear."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Stethacanthus was an extinct genus of shark-like cartilaginous fish that died out around 298.9 million years ago.\" / \"Stethacanthus fossils have been found in New Mexico approximately 360 million years ago.\": Sentence 1 states Stethacanthus died out around 298.9 Ma, while sentence 13 reports fossils dated to ~360 Ma."
+  "- missing context: \"The distinctive spine-brush complex is known only in sexually mature males.\": Sentence 4 refers to \"sexually mature males\" without any prior mention of males.",
+  "- missing context: \"Male pelvic claspers were club-shaped at the distal ends and made of non-prismatic globular calcified cartilage.\": Sentence 6 mentions \"male pelvic claspers\" but the page never introduced the concept of male anatomy.",
+  "- missing context: \"Stethacanthus may have been migratory, as many specimens were found in the Bear Gulch Limestone, a potential breeding ground.\": Sentence 16 cites the Bear Gulch Limestone as a potential breeding ground, yet the formation is never defined or mentioned earlier.",
+  "- missing context: \"It is suggested that the fin whips were used during mating, though their exact purpose is unknown.\": Sentence 17 uses the pronoun \"It\" to refer to fin whips, but the antecedent is unclear."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:23:49+00:00",
@@ -46,8 +67,35 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:55:28+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Stethacanthus died out around 298.9 Ma, while sentence 13 reports fossils dated to ~360 Ma."
+    },
+    {
+     "sentences": [
+      21,
+      22,
+      23,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 22‑25 all repeat the classification hierarchy of Stethacanthus."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:11:09+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:11:09+00:00"
+ "rewritten_at": "2026-11-25T23:16:03+00:00"
 }

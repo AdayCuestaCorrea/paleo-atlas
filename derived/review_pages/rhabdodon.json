@@ -2,36 +2,38 @@
  "taxon_key": "rhabdodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ca2ec94df1074665",
- "reviewed_at": "2026-11-24T00:32:58+00:00",
+ "text_hash": "625ca4d426096f58",
+ "reviewed_at": "2026-11-25T22:37:18+00:00",
  "problems": [
   {
    "sentences": [
-    20,
-    21
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Rhabdodon belongs to the family Rhabdodontidae."
+   "kind": "missing_context",
+   "reason": "Refers to the Lo Hueco region without having introduced it earlier in the page."
   },
   {
    "sentences": [
-    23,
-    24
+    12
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Rhabdodon as a basal member of Iguanodontia rather than a hypsilophodont."
+   "kind": "missing_context",
+   "reason": "Describes the environment near the Lo Hueco fossil site, but the site itself was not mentioned before."
   },
   {
    "sentences": [
-    26,
-    27,
-    28
+    13
    ],
-   "kind": "repetition",
-   "reason": "All three sentences give overlapping Late Cretaceous time ranges for Rhabdodon, repeating the same information."
+   "kind": "about_something_else",
+   "reason": "Discusses rhabdodontids as a group, which is not the specific animal Rhabdodon itself."
   }
  ],
- "repetitions_dropped": 4,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The Lo Hueco region where fossils were found was near the coast of the Tethys Sea.\": Refers to the Lo Hueco region without having introduced it earlier in the page.",
+  "- missing context: \"The environment near the Lo Hueco fossil site included a brackish-freshwater aquatic area and a muddy floodplain.\": Describes the environment near the Lo Hueco fossil site, but the site itself was not mentioned before."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:18:16+00:00"
 }

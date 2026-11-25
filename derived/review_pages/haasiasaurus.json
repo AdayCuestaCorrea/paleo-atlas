@@ -2,38 +2,23 @@
  "taxon_key": "haasiasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7f94548b4a37fe79",
- "reviewed_at": "2026-11-25T13:57:27+00:00",
+ "text_hash": "df8ad799ec87fe1f",
+ "reviewed_at": "2026-11-25T23:03:56+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    5
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences provide the same age range for Haasiasaurus, making the information redundant."
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to a skull and body parts of H. gittelmani that were not previously mentioned, leaving the reader without context for why the genus might be a chimera."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:49:03+00:00",
-   "problems": [
-    {
-     "sentences": [
-      6
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 7 refers to \"the skull and body parts\" without any prior mention of a skull or body parts in the page."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewrite_mode": "sentences",
-   "rewritten_at": "2026-11-25T12:29:35+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Researchers suggest the genus might be a chimera because the skull and body parts of the single known species, H. gittelmani, were not found together.\": Sentence 5 refers to a skull and body parts of H. gittelmani that were not previously mentioned, leaving the reader without context for why the genus might be a chimera."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:31:59+00:00"
 }

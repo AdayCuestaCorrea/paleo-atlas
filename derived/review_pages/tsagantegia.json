@@ -2,18 +2,38 @@
  "taxon_key": "tsagantegia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "390c811bb9d90fbe",
- "reviewed_at": "2026-11-24T00:25:34+00:00",
+ "text_hash": "5ace83cb1b052df3",
+ "reviewed_at": "2026-11-25T22:33:21+00:00",
  "problems": [
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "The age range for the Bayan Shireh Formation (92–86 Ma) conflicts with the stated age range for Tsagantegia (Cenomanian–Santonian, ~100.5–83.6 Ma)."
+  },
+  {
+   "sentences": [
+    4,
+    8
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the type species of the genus Tsagantegia is Tsagantegia longicranialis."
+  },
   {
    "sentences": [
     7
    ],
    "kind": "repetition",
-   "reason": "Sentence 8 repeats the same comparison with Talarurus twice, stating Tsagantegia was a browser herbivore and Talarurus a grazer in two consecutive clauses."
+   "reason": "Sentence 8 repeats taxonomic classification information that is already implied by earlier sentences."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The age of the Bayan Shireh Formation, where Tsagantegia was found, is confirmed to be between 92 and 86 million years ago, while Tsagantegia lived from the Cenomanian to the Santonian, approximately 100.5 to 83.6 million years ago.\": The age range for the Bayan Shireh Formation (92–86 Ma) conflicts with the stated age range for Tsagantegia (Cenomanian–Santonian, ~100.5–83.6 Ma)."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:16:36+00:00"
 }

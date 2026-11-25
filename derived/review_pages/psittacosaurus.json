@@ -2,19 +2,40 @@
  "taxon_key": "psittacosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bddc74430dabfd98",
- "reviewed_at": "2026-11-23T23:53:49+00:00",
+ "text_hash": "b8562a27eab7f3b0",
+ "reviewed_at": "2026-11-25T22:17:41+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    16
+    3,
+    15
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Psittacosaurus lujiatunensis had an EQ of 0.31, higher than Triceratops."
+   "reason": "Both sentences state the number of species in the genus, giving different counts (13 vs 17 referred, 9-11 valid)."
+  },
+  {
+   "sentences": [
+    17,
+    18
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the family status of Psittacosaurus, mentioning Psittacosauridae and its synonymy with Hongshanosaurus."
+  },
+  {
+   "sentences": [
+    19,
+    20
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 20 gives a range of 125–105 Ma, while sentence 21 gives 125–100 Ma, conflicting on the upper age limit."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 2,
+ "notes": [
+  "- contradiction: \"Psittacosaurus lived between 125 and 105 million years ago.\" / \"Psittacosaurus mongoliensis fossils date to the Aptian to Albian stages of the Early Cretaceous, approximately 125 to 100 million years ago.\": Sentence 20 gives a range of 125–105 Ma, while sentence 21 gives 125–100 Ma, conflicting on the upper age limit."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:07:44+00:00"
 }

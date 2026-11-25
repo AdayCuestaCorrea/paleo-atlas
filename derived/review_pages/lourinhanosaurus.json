@@ -2,31 +2,28 @@
  "taxon_key": "lourinhanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e798832bd91618ab",
- "reviewed_at": "2026-11-25T13:38:39+00:00",
+ "text_hash": "fc07234c4ac3a888",
+ "reviewed_at": "2026-11-25T22:44:56+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"six females\" without previously introducing or specifying these individuals."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"they\" is used without a clear antecedent; the text has not previously mentioned a group of animals to which it refers."
+   "kind": "contradiction",
+   "reason": "Sentences 8–13 present conflicting views on the phylogenetic placement of Lourinhanosaurus, citing it as an allosauroid, a Sinraptoridae relative, a basal Megalosauroidea, a coelurosaur, and a putative metriacanthosaurid without reconciling the differences."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers estimate that at least six females laid eggs simultaneously in an area of only 32 square meters.\": The sentence refers to \"six females\" without previously introducing or specifying these individuals.",
-  "- missing context: \"There is no evidence that Lourinhanosaurus excavated nests or buried eggs; they likely laid them directly on the ground in a sunny spot near a pond.\": The pronoun \"they\" is used without a clear antecedent; the text has not previously mentioned a group of animals to which it refers."
+  "- contradiction: \"There is no firm scientific consensus on the classification of Lourinhanosaurus.\" / \"Lourinhanosaurus was initially considered a primitive member of Allosauroidea and later discussed as closely related to Sinraptoridae.\" / \"Lourinhanosaurus lived from 152.21 to 145.06 million years ago.\" / \"Some researchers suggest Lourinhanosaurus may not be an allosauroid but rather a member of the more basal group Megalosauroidea.\" / \"A 2012 study by Carrano et al. classified Lourinhanosaurus as a coelurosaur.\" / \"A 2022 study refers to Lourinhanosaurus as a putative metriacanthosaurid.\": Sentences 8–13 present conflicting views on the phylogenetic placement of Lourinhanosaurus, citing it as an allosauroid, a Sinraptoridae relative, a basal Megalosauroidea, a coelurosaur, and a putative metriacanthosaurid without reconciling the differences."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:50:20+00:00",
@@ -67,8 +64,31 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T03:41:39+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:38:39+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"six females\" without previously introducing or specifying these individuals."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"they\" is used without a clear antecedent; the text has not previously mentioned a group of animals to which it refers."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:20:04+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:04+00:00"
+ "rewritten_at": "2026-11-25T23:23:03+00:00"
 }

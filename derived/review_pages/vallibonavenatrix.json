@@ -2,63 +2,50 @@
  "taxon_key": "vallibonavenatrix",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "104d52f7268f05df",
- "reviewed_at": "2026-11-25T13:37:34+00:00",
+ "text_hash": "b77ab9fb571d4a0b",
+ "reviewed_at": "2026-11-25T22:43:53+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    7
+    3,
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the neural spines formed a sail-like structure."
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims the specimen is the most complete spinosaurid fossil on the Iberian Peninsula, while sentence 5 states the species was described from a partial skeleton."
   },
   {
    "sentences": [
-    9,
-    11,
-    13,
-    14
+    8,
+    11
    ],
    "kind": "contradiction",
-   "reason": "Sentences 10, 12, 14, and 15 give conflicting phylogenetic placements of Vallibonavenatrix (Spinosaurinae vs. Baryonychinae vs. outside both subfamilies)."
+   "reason": "Sentence 9 places Vallibonavenatrix within Spinosaurinae, whereas the Paleobiology Database (sentence 12) lists its parent group as Baryonychinae."
+  },
+  {
+   "sentences": [
+    8,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 9 assigns Vallibonavenatrix to Spinosaurinae, but a 2025 reassessment (sentence 13) places it within Baryonychinae."
+  },
+  {
+   "sentences": [
+    8,
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences 9 and 10 state that Vallibonavenatrix shows anatomical features indicating a closer relationship to spinosaurines rather than baryonychines."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Based on their analysis, Malafaia and colleagues found Vallibonavenatrix more closely related to spinosaurines like Spinosaurus and Irritator than to baryonychines like Baryonyx, placing it within the subfamily Spinosaurinae.\" / \"However, a 2021 study by Chris Barker and colleagues found Vallibonavenatrix's phylogenetic position unstable, placing it either as the most basal spinosaurid outside both subfamilies or within Baryonychinae depending on the analysis method.\" / \"The Paleobiology Database lists the parent group of Vallibonavenatrix as Baryonychinae.\" / \"A 2025 reassessment by Rauhut and colleagues recovered Vallibonavenatrix within Spinosaurinae, diverging after Iberospinus.\": Sentences 10, 12, 14, and 15 give conflicting phylogenetic placements of Vallibonavenatrix (Spinosaurinae vs. Baryonychinae vs. outside both subfamilies)."
+  "- contradiction: \"This specimen represents the most complete spinosaurid fossil discovered on the Iberian Peninsula.\" / \"Elisabete Malafaia and colleagues formally described the species Vallibonavenatrix cani in 2019 based on a partial skeleton.\": Sentence 4 claims the specimen is the most complete spinosaurid fossil on the Iberian Peninsula, while sentence 5 states the species was described from a partial skeleton.",
+  "- contradiction: \"Based on their analysis, Malafaia and colleagues found Vallibonavenatrix more closely related to spinosaurines like Spinosaurus and Irritator than to baryonychines like Baryonyx, placing it within the subfamily Spinosaurinae.\" / \"The Paleobiology Database lists the parent group of Vallibonavenatrix as Baryonychinae.\": Sentence 9 places Vallibonavenatrix within Spinosaurinae, whereas the Paleobiology Database (sentence 12) lists its parent group as Baryonychinae.",
+  "- contradiction: \"Based on their analysis, Malafaia and colleagues found Vallibonavenatrix more closely related to spinosaurines like Spinosaurus and Irritator than to baryonychines like Baryonyx, placing it within the subfamily Spinosaurinae.\" / \"A 2025 reassessment by Rauhut and colleagues recovered Vallibonavenatrix within Spinosaurinae, diverging after Iberospinus.\": Sentence 9 assigns Vallibonavenatrix to Spinosaurinae, but a 2025 reassessment (sentence 13) places it within Baryonychinae."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:47:48+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      7
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences claim the neural spines formed a sail."
-    },
-    {
-     "sentences": [
-      8,
-      9,
-      14,
-      15,
-      16
-     ],
-     "kind": "contradiction",
-     "reason": "Sentences 9 and 10 classify Vallibonavenatrix as a spinosaurid in subfamily Spinosaurinae, while sentences 15, 16, and 17 present it as not a spinosaurid or place it in Baryonychinae, creating conflicting taxonomic assignments."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T03:23:10+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:19:31+00:00"
+ "rewritten_at": "2026-11-25T23:22:21+00:00"
 }

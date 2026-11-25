@@ -2,76 +2,32 @@
  "taxon_key": "marasuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2b947c860b53a117",
- "reviewed_at": "2026-11-25T13:22:55+00:00",
+ "text_hash": "15308c80306d674e",
+ "reviewed_at": "2026-11-25T22:30:19+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    20
+    17,
+    18
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Marasuchus is one of the most completely known avemetatarsalians."
+   "kind": "contradiction",
+   "reason": "Sentences 18 and 19 give conflicting age ranges for Marasuchus (Late Triassic 235–234 Ma vs. Middle Triassic 230–241 Ma)."
   },
   {
    "sentences": [
-    21,
-    22
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 22 places Marasuchus in the Late Triassic (early Carnian, 235–234 Ma), while sentence 23 cites sources that place it in the Middle Triassic (Ladinian, ~230 Ma or 241–237 Ma)."
+   "reason": "Sentence 11 states the type species is Marasuchus illoensis, yet earlier it refers to Marasuchus lilloensis, creating an inconsistent species name for the same taxon."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Marasuchus lived in the Late Triassic (early Carnian stage) in what is now La Rioja Province, Argentina, with fossils coming from the Chañares Formation, dated to 235 to 234 million years ago.\" / \"Other sources describe it as an extinct ornithodiran archosaur that lived during the Middle Triassic (Ladinian, about 230 million years ago) in the Chañares Formation in La Rioja, Argentina, or state it lived from 241.464 to 237 million years ago during the Ladinian stage.\": Sentence 22 places Marasuchus in the Late Triassic (early Carnian, 235–234 Ma), while sentence 23 cites sources that place it in the Middle Triassic (Ladinian, ~230 Ma or 241–237 Ma)."
+  "- contradiction: \"Marasuchus lived in the Late Triassic (early Carnian stage) in what is now La Rioja Province, Argentina, with fossils coming from the Chañares Formation, dated to 235 to 234 million years ago.\" / \"Other sources describe it as an extinct ornithodiran archosaur that lived during the Middle Triassic (Ladinian, about 230 million years ago) in the Chañares Formation in La Rioja, Argentina, or state it lived from 241.464 to 237 million years ago during the Ladinian stage.\": Sentences 18 and 19 give conflicting age ranges for Marasuchus (Late Triassic 235–234 Ma vs. Middle Triassic 230–241 Ma).",
+  "- contradiction: \"The species Marasuchus lilloensis was originally named Lagosuchus lilloensis in 1972, but the type species of the genus Marasuchus is Marasuchus illoensis, described by Sereno and Arcucci in 1994.\": Sentence 11 states the type species is Marasuchus illoensis, yet earlier it refers to Marasuchus lilloensis, creating an inconsistent species name for the same taxon."
  ],
- "rewrite": "spanish failed",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:20:00+00:00",
-   "problems": [
-    {
-     "sentences": [
-      27,
-      28,
-      29,
-      30
-     ],
-     "kind": "contradiction",
-     "reason": "The page gives conflicting age ranges for Marasuchus: Late Triassic early Carnian (28), 235–234 Ma (29), Middle Triassic Ladinian ~230 Ma (30), and 241.464–237 Ma Ladinian (31)."
-    },
-    {
-     "sentences": [
-      2,
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences describe the neck as long and curved, essentially repeating the same claim."
-    },
-    {
-     "sentences": [
-      10,
-      26
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Marasuchus is one of the most completely known avemetatarsalians."
-    },
-    {
-     "sentences": [
-      11,
-      19
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences refer to the species originally named Lagosuchus lilloensis in 1972."
-    }
-   ],
-   "repetitions_dropped": 3,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T06:20:44+00:00"
-  }
- ],
+ "rewrite": "unchanged",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:09:43+00:00"
+ "rewritten_at": "2026-11-25T23:14:54+00:00"
 }

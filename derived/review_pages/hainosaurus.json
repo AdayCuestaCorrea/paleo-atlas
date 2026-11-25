@@ -2,8 +2,8 @@
  "taxon_key": "hainosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "915f9d89c5526fcb",
- "reviewed_at": "2026-11-25T13:29:16+00:00",
+ "text_hash": "fbf82f27aa9e68a3",
+ "reviewed_at": "2026-11-25T22:37:29+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,47 +11,24 @@
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims its tail is shorter because it has fewer vertebrae."
+   "reason": "Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims Hainosaurus’s tail is shorter because it has fewer vertebrae."
   },
   {
    "sentences": [
-    10
+    11,
+    12
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 11 discusses the social behavior of mosasaurs in general, not specifically Hainosaurus, treating a group behavior as if it applied to the species itself."
+   "kind": "contradiction",
+   "reason": "Sentence 12 says fossils date from Santonian to Maastrichtian, while sentence 13 limits the species’ existence to Campanian–Maastrichtian, excluding the earlier Santonian."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The skeleton includes 53 vertebrae extending from the neck to the tail region where chevrons are found, a count significantly higher than the 35 vertebrae seen in the related genus Tylosaurus.\" / \"Consequently, the tail of Hainosaurus is shorter than that of Tylosaurus because it possesses fewer vertebrae that bear these chevron structures.\": Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims its tail is shorter because it has fewer vertebrae."
+  "- contradiction: \"The skeleton includes 53 vertebrae extending from the neck to the tail region where chevrons are found, a count significantly higher than the 35 vertebrae seen in the related genus Tylosaurus.\" / \"Consequently, the tail of Hainosaurus is shorter than that of Tylosaurus because it possesses fewer vertebrae that bear these chevron structures.\": Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims Hainosaurus’s tail is shorter because it has fewer vertebrae.",
+  "- contradiction: \"Fossils of Hainosaurus date from the Santonian to the Maastrichtian stages of the Late Cretaceous.\" / \"Hainosaurus lived from the Campanian to the Maastrichtian stages, between 83.6 and 66 million years ago.\": Sentence 12 says fossils date from Santonian to Maastrichtian, while sentence 13 limits the species’ existence to Campanian–Maastrichtian, excluding the earlier Santonian."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:33:14+00:00",
-   "problems": [
-    {
-     "sentences": [
-      2,
-      3
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 3 states Hainosaurus has 53 vertebrae, more than Tylosaurus’s 35, yet sentence 4 claims its tail is shorter because it has fewer vertebrae bearing chevrons."
-    },
-    {
-     "sentences": [
-      3
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 4 refers to “fewer vertebrae that bear these chevron structures” implying a comparison to Tylosaurus, but the preceding context does not explicitly establish that comparison."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:16:00+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:03+00:00"
+ "rewritten_at": "2026-11-25T23:18:22+00:00"
 }

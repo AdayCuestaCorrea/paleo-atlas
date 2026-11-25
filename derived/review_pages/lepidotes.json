@@ -2,24 +2,22 @@
  "taxon_key": "lepidotes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "71ed09dc6e080eb0",
- "reviewed_at": "2026-11-25T13:27:12+00:00",
+ "text_hash": "e6811627d0e652c8",
+ "reviewed_at": "2026-11-25T22:34:57+00:00",
  "problems": [
   {
    "sentences": [
     4,
     5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims L. gigas could reach 75 cm, while sentence 6 claims Lepidotes could reach only 30 cm, contradicting each other on maximum size."
+   "kind": "repetition",
+   "reason": "Both sentences state the same size estimates for Lepidotes and L. gigas, repeating the claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Based on some specimens, L. gigas could measure up to 75 cm in length.\" / \"Other estimates suggest Lepidotes could reach a maximum length of 30 centimeters.\": Sentence 5 claims L. gigas could reach 75 cm, while sentence 6 claims Lepidotes could reach only 30 cm, contradicting each other on maximum size."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:28:35+00:00",
@@ -44,8 +42,23 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T07:40:05+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:27:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims L. gigas could reach 75 cm, while sentence 6 claims Lepidotes could reach only 30 cm, contradicting each other on maximum size."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:12:45+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:12:45+00:00"
+ ]
 }

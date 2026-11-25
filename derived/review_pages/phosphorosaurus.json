@@ -2,19 +2,41 @@
  "taxon_key": "phosphorosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "187bfdffa5a61369",
- "reviewed_at": "2026-11-24T00:58:52+00:00",
+ "text_hash": "d78b6aef0acfd048",
+ "reviewed_at": "2026-11-25T22:48:17+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    8
+    3,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims the holotype was found in Hokkaido, Japan, while sentence 6 states the fossils used to define the genus came from Belgium."
+  },
+  {
+   "sentences": [
+    9,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 says the species was reclassified as Halisaurus ortliebi but later rejected, yet sentence 13 lists P. ortliebi as a valid species of Phosphorosaurus."
+  },
+  {
+   "sentences": [
+    10,
+    11
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Phosphorosaurus belongs to the mosasaur family."
+   "reason": "Sentences 11 and 12 both state that Phosphorosaurus lived during the Maastrichtian stage of the Late Cretaceous."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"The name P. ponpetelegans honors the clean Pankerusano-sawa Creek in Hokkaido where the exceptionally preserved holotype was found.\" / \"Louis Dollo defined the genus in 1889 based on fossils from the upper Maastrichtian Craie phosphateé of Ciply in Belgium.\": Sentence 4 claims the holotype was found in Hokkaido, Japan, while sentence 6 states the fossils used to define the genus came from Belgium.",
+  "- contradiction: \"The species was reclassified as Halisaurus ortliebi in 1996, but later authorities rejected this due to cranial differences.\" / \"Two species of Phosphorosaurus are known: P. ortliebi from Belgium and P. ponpetelegans from Japan.\": Sentence 10 says the species was reclassified as Halisaurus ortliebi but later rejected, yet sentence 13 lists P. ortliebi as a valid species of Phosphorosaurus."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:59+00:00"
 }

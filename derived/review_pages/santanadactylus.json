@@ -2,64 +2,32 @@
  "taxon_key": "santanadactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3099a4a744aac4be",
- "reviewed_at": "2026-11-25T13:38:26+00:00",
+ "text_hash": "5d79f71dd87ba866",
+ "reviewed_at": "2026-11-25T22:44:45+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    7
+    1
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state Wellnhofer’s wingspan range for Santanadactylus species (2.9–5.7 m)."
+   "kind": "contradiction",
+   "reason": "Wellnhofer gives a wingspan range of 2.9–5.7 m, while de Buisonjé estimates 6 m for the type species, exceeding that range."
   },
   {
    "sentences": [
-    13
+    11
    ],
    "kind": "missing_context",
-   "reason": "Sentence 14 refers to the paratype RGM.631745 without having previously introduced or described it on the page."
+   "reason": "The paratype RGM.631745 is mentioned without any prior introduction or description of the specimen."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Thomas and McDavid (2025) suggested that the paratype RGM.631745 cannot be confidently referred to Santanadactylus because it belongs to Azhdarchomorpha.\": Sentence 14 refers to the paratype RGM.631745 without having previously introduced or described it on the page."
+  "- contradiction: \"Santanadactylus is described as a rather large pterosaur, with Peter Wellnhofer indicating a wingspan between 2.9 and 5.7 meters for the various species.\" / \"Paul de Buisonjé estimated the wingspan of the type species S. brasilensis to be 6 meters, a figure that exceeds the range given by Wellnhofer.\": Wellnhofer gives a wingspan range of 2.9–5.7 m, while de Buisonjé estimates 6 m for the type species, exceeding that range.",
+  "- missing context: \"Thomas and McDavid (2025) suggested that the paratype RGM.631745 cannot be confidently referred to Santanadactylus because it belongs to Azhdarchomorpha.\": The paratype RGM.631745 is mentioned without any prior introduction or description of the specimen."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:49:56+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that the wingspan of Santanadactylus species ranges from 2.9 to 5.7 meters."
-    },
-    {
-     "sentences": [
-      0,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 1 limits the wingspan to 2.9–5.7 m, while sentence 8 claims a 6 m wingspan for S. brasilensis, exceeding that range."
-    },
-    {
-     "sentences": [
-      12
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 13 refers to a paratype RGM.631745 without any prior mention of this specimen or its context."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T03:36:32+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:19:55+00:00"
+ "rewritten_at": "2026-11-25T23:22:52+00:00"
 }

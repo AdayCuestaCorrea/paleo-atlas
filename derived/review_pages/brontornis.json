@@ -2,48 +2,47 @@
  "taxon_key": "brontornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "538cf907830d8c57",
- "reviewed_at": "2026-11-25T13:27:37+00:00",
+ "text_hash": "86307206d57a0f94",
+ "reviewed_at": "2026-11-25T22:35:16+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 states Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then immediately says it is currently the third heaviest after Aepyornis and Dromornis stirtoni."
+   "reason": "Sentence 4 gives two different rankings for Brontornis’s weight relative to other giant birds, first as fourth‑heaviest after three species, then as third‑heaviest after two species."
   },
   {
    "sentences": [
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 claims the lower jaw was likely not suitable for tearing animal food, which contradicts earlier statements that Brontornis was a predatory carnivore."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 lists Brontornis as possibly a cariamiform, phorusrhacid, or anserimorph, while sentence 14 cites studies placing it as a basal relative of geese, sister taxon of Cariamiformes, and as a Gastornithiform, showing inconsistent taxonomic positions."
-  },
-  {
-   "sentences": [
-    0,
-    14
+    8,
+    9
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Brontornis lived during the Early to Middle Miocene, repeating the same information."
+   "reason": "Sentences 9 and 10 repeat the same information about the taxonomic studies and their conclusions."
+  },
+  {
+   "sentences": [
+    6,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 7 and 8 both state that Brontornis was a predatory carnivore based on beak and claw morphology, with 8 adding a lower‑jaw detail."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 11 mentions the “bone footbridge (Pons Supratendineus)” without any prior introduction or explanation of this bone."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Brontornis is considered the fourth-heaviest bird ever found, after Aepyornis maximus, Dromornis, and Pachystruthio, though it is currently the third heaviest bird known after Aepyornis maximus and Dromornis stirtoni.\": Sentence 6 states Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then immediately says it is currently the third heaviest after Aepyornis and Dromornis stirtoni.",
-  "- contradiction: \"Studies on the lower jaw indicate it was likely not suitable for tearing animal food.\": Sentence 12 claims the lower jaw was likely not suitable for tearing animal food, which contradicts earlier statements that Brontornis was a predatory carnivore.",
-  "- contradiction: \"The taxonomic position of Brontornis is controversial, with it being alternatively classified as a cariamiform, a phorusrhacid (terror bird), or an anserimorph, though it has traditionally been included in the family Phorusrhacidae due to its large size and predatory lifestyle.\" / \"Cladistic studies have suggested that Brontornis is a basal relative of geese, a 2017 study suggested that Brontornis belongs to the sister taxon of Cariamiformes, and a 2021 study classified Brontornis as a Gastornithiform.\": Sentence 13 lists Brontornis as possibly a cariamiform, phorusrhacid, or anserimorph, while sentence 14 cites studies placing it as a basal relative of geese, sister taxon of Cariamiformes, and as a Gastornithiform, showing inconsistent taxonomic positions."
+  "- contradiction: \"Brontornis is considered the fourth-heaviest bird ever found, after Aepyornis maximus, Dromornis, and Pachystruthio, though it is currently the third heaviest bird known after Aepyornis maximus and Dromornis stirtoni.\": Sentence 4 gives two different rankings for Brontornis’s weight relative to other giant birds, first as fourth‑heaviest after three species, then as third‑heaviest after two species.",
+  "- missing context: \"The absence of the bone footbridge (Pons Supratendineus) found in Phorusrhacids is a point used to argue against Brontornis being a terror bird, and the different design of the lower jaw suggests Brontornis had a different diet than Phorusrhacids.\": Sentence 11 mentions the “bone footbridge (Pons Supratendineus)” without any prior introduction or explanation of this bone."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:29:23+00:00",
@@ -73,8 +72,47 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T00:35:56+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:27:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states Brontornis is the fourth-heaviest bird after Aepyornis, Dromornis, and Pachystruthio, but then immediately says it is currently the third heaviest after Aepyornis and Dromornis stirtoni."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 claims the lower jaw was likely not suitable for tearing animal food, which contradicts earlier statements that Brontornis was a predatory carnivore."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 lists Brontornis as possibly a cariamiform, phorusrhacid, or anserimorph, while sentence 14 cites studies placing it as a basal relative of geese, sister taxon of Cariamiformes, and as a Gastornithiform, showing inconsistent taxonomic positions."
+    },
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Brontornis lived during the Early to Middle Miocene, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:12:59+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:12:59+00:00"
+ "rewritten_at": "2026-11-25T23:17:23+00:00"
 }

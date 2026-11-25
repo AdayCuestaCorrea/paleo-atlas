@@ -2,19 +2,25 @@
  "taxon_key": "pegomastax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "52530f323a25f860",
- "reviewed_at": "2026-11-24T00:19:09+00:00",
+ "text_hash": "283db8df954d8a90",
+ "reviewed_at": "2026-11-25T22:30:00+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    2,
+    5,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe a canine-like tooth at the front of the lower jaw, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 3 gives a size estimate, sentence 6 places the specimen in the upper Elliot Formation (Triassic), while sentence 9 states it lived during the earliest Jurassic (200–190 Ma). The formation age and the stated Jurassic age conflict."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"This animal measured no more than 60 centimeters from head to tail, with a skull length of 73 millimeters.\" / \"The holotype specimen, accession number SAM-PK-K10488, was found at the Voyizane locality in the Transkei District within rocks from the upper Elliot Formation.\" / \"Pegomastax lived during the earliest Jurassic, specifically the Hettangian and Sinemurian epochs, approximately 200 to 190 million years ago.\": Sentence 3 gives a size estimate, sentence 6 places the specimen in the upper Elliot Formation (Triassic), while sentence 9 states it lived during the earliest Jurassic (200–190 Ma). The formation age and the stated Jurassic age conflict."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:14:42+00:00"
 }

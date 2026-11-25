@@ -2,67 +2,31 @@
  "taxon_key": "aurornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "741f2cd22081afd7",
- "reviewed_at": "2026-11-25T13:35:13+00:00",
+ "text_hash": "465e05ee4224ae46",
+ "reviewed_at": "2026-11-25T22:41:30+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    7,
-    8,
-    11
+    3,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentences 6, 8, 9, and 12 present mutually incompatible classifications for Aurornis: 6 places it within the avian lineage, 8 within the unranked family Avialae, 9 within the family Anchiornithidae, and 12 places it outside Avialae as a troodontid."
+   "reason": "Sentence 4 classifies Aurornis as an anchiornithid, while sentence 6 classifies it as a troodontid outside Avialae."
   },
   {
    "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to “large feathers” without any prior mention or definition of what constitutes large feathers for Aurornis."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 mentions a re‑evaluation of the “Harlem Archaeopteryx specimen” but the page never introduced or described that specimen."
-  },
-  {
-   "sentences": [
-    12
+    3
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 13 discusses the controversy over the definition of the word “bird,” a topic about the concept of birds rather than a specific claim about Aurornis itself."
+   "reason": "Sentence 4 discusses a re‑evaluation of the Harlem Archaeopteryx specimen, which is a different taxon, not Aurornis itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"A 2013 phylogenetic analysis placed Aurornis within the avian lineage, in a position more basal than Archaeopteryx.\" / \"Aurornis is classified within the unranked family Avialae.\" / \"Aurornis belongs to the family Anchiornithidae.\" / \"A 2014 analysis by Brusatte et al. recovered Aurornis outside Avialae, classifying it as a troodontid closely related to Anchiornis.\": Sentences 6, 8, 9, and 12 present mutually incompatible classifications for Aurornis: 6 places it within the avian lineage, 8 within the unranked family Avialae, 9 within the family Anchiornithidae, and 12 places it outside Avialae as a troodontid.",
-  "- missing context: \"The absence of large feathers suggests that Aurornis xui was incapable of flight.\": Sentence 5 refers to “large feathers” without any prior mention or definition of what constitutes large feathers for Aurornis.",
-  "- missing context: \"A 2017 re-evaluation of the Harlem Archaeopteryx specimen found Aurornis to be an anchiornithid.\": Sentence 7 mentions a re‑evaluation of the “Harlem Archaeopteryx specimen” but the page never introduced or described that specimen."
+  "- contradiction: \"A 2017 re-evaluation of the Harlem Archaeopteryx specimen found Aurornis to be an anchiornithid.\" / \"A 2014 analysis by Brusatte et al. recovered Aurornis outside Avialae, classifying it as a troodontid closely related to Anchiornis.\": Sentence 4 classifies Aurornis as an anchiornithid, while sentence 6 classifies it as a troodontid outside Avialae."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:42:27+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5,
-      11
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 6 places Aurornis within Avialae (basal to Archaeopteryx), while sentence 12 places it outside Avialae as a troodontid."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T02:38:42+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:17:31+00:00"
+ "rewritten_at": "2026-11-25T23:21:06+00:00"
 }

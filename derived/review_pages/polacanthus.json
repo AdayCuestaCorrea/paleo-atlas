@@ -2,25 +2,24 @@
  "taxon_key": "polacanthus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9da68f3148ae187b",
- "reviewed_at": "2026-11-24T00:19:52+00:00",
+ "text_hash": "00fc3d4fcb71e45f",
+ "reviewed_at": "2026-11-25T22:30:17+00:00",
  "problems": [
   {
    "sentences": [
-    17
+    9,
+    10
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 18 discusses Polacanthoides, a different genus, not Polacanthus."
-  },
-  {
-   "sentences": [
-    18
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 19 refers to Hylaeosaurus armatus, a different taxon, not Polacanthus."
+   "kind": "contradiction",
+   "reason": "Sentences 10 and 11 give conflicting time ranges for Polacanthus’s existence (130–125 Ma vs. 124–132 Ma), which do not overlap consistently and present contradictory age estimates."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Polacanthus was an extinct genus of ankylosaurian dinosaurs that lived in England during the Early Cretaceous period, approximately 130 to 125 million years ago.\" / \"Polacanthus lived during the Barremian age, approximately 124 to 132 million years ago.\": Sentences 10 and 11 give conflicting time ranges for Polacanthus’s existence (130–125 Ma vs. 124–132 Ma), which do not overlap consistently and present contradictory age estimates."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:14:50+00:00"
 }

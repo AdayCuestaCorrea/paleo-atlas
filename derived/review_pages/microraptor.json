@@ -2,39 +2,29 @@
  "taxon_key": "microraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "461e6606589812db",
- "reviewed_at": "2026-11-25T13:12:56+00:00",
+ "text_hash": "2d4d89612b531ecc",
+ "reviewed_at": "2026-11-25T22:20:19+00:00",
  "problems": [
   {
    "sentences": [
+    6,
     7
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to an \"initial Microraptor specimen\" that has never been introduced or described earlier in the page."
+   "kind": "repetition",
+   "reason": "Both sentences state that the genus Microraptor was first described by Xu and colleagues in 2000."
   },
   {
    "sentences": [
-    18
+    20
    ],
-   "kind": "missing_context",
-   "reason": "The sentence mentions a \"mammal in Microraptor's gut\" without specifying which specimen or context the gut belongs to."
-  },
-  {
-   "sentences": [
-    19
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to the \"type specimen of M. zhaoianus\" without any prior mention or definition of that specimen in the page."
+   "kind": "about_something_else",
+   "reason": "Sentence 21 claims Microraptor is the parent group of the subfamily Microraptorinae, which is incorrect because Microraptor is a genus, not a parent group of a subfamily."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The initial Microraptor specimen was a chimeric patchwork of different dinosaur species assembled from multiple specimens and smuggled to the USA.\": The sentence refers to an \"initial Microraptor specimen\" that has never been introduced or described earlier in the page.",
-  "- missing context: \"The mammal in Microraptor's gut had an estimated snout-to-vent length of 80 mm and a mass of 13–43 g.\": The sentence mentions a \"mammal in Microraptor's gut\" without specifying which specimen or context the gut belongs to.",
-  "- missing context: \"In 2010, researchers announced that additional preparation of the type specimen of M. zhaoianus revealed preserved stomach contents consisting of mammal bones, including possible skull fragments, limb parts, vertebrae, and an entire foot.\": The sentence refers to the \"type specimen of M. zhaoianus\" without any prior mention or definition of that specimen in the page."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:59:56+00:00",
@@ -65,8 +55,36 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:27:23+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:12:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to an \"initial Microraptor specimen\" that has never been introduced or described earlier in the page."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions a \"mammal in Microraptor's gut\" without specifying which specimen or context the gut belongs to."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to the \"type specimen of M. zhaoianus\" without any prior mention or definition of that specimen in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:15+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:15+00:00"
+ ]
 }

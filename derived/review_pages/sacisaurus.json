@@ -2,59 +2,24 @@
  "taxon_key": "sacisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e85ab78692843423",
- "reviewed_at": "2026-11-25T13:50:57+00:00",
+ "text_hash": "a2e29d9d8452e2b7",
+ "reviewed_at": "2026-11-25T22:57:17+00:00",
  "problems": [
-  {
-   "sentences": [
-    9,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Sacisaurus is not a dinosaur but a reptile from a different lineage, while sentence 13 classifies it under the class Ornithischia, a dinosaur clade."
-  },
   {
    "sentences": [
     10,
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 11 names Sulcimentisauria as the parent group, whereas sentence 12 places Sacisaurus in the family Silesauridae, implying a different higher‑level classification."
+   "reason": "The Paleobiology Database classifies Sacisaurus under the class Ornithischia, while the page states it belongs to the family Silesauridae, a non‑ornithischian dinosauriform."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Research at the University of São Paulo revealed that Sacisaurus was not a dinosaur but a reptile from a different lineage still linked to dinosaur ancestors.\" / \"The Paleobi Database classifies Sacisaurus under the class Ornithischia.\": Sentence 10 states Sacisaurus is not a dinosaur but a reptile from a different lineage, while sentence 13 classifies it under the class Ornithischia, a dinosaur clade.",
-  "- contradiction: \"The parent group of Sacisaurus is Sulcimentisauria.\" / \"Sacisaurus belongs to the family Silesauridae.\": Sentence 11 names Sulcimentisauria as the parent group, whereas sentence 12 places Sacisaurus in the family Silesauridae, implying a different higher‑level classification."
+  "- contradiction: \"Sacisaurus belongs to the family Silesauridae.\" / \"The Paleobi Database classifies Sacisaurus under the class Ornithischia.\": The Paleobiology Database classifies Sacisaurus under the class Ornithischia, while the page states it belongs to the family Silesauridae, a non‑ornithischian dinosauriform."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:24:23+00:00",
-   "problems": [
-    {
-     "sentences": [
-      9,
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 10 states Sacisaurus was not a dinosaur but a reptile from a different lineage, while sentence 13 classifies it under the class Ornithischia, a dinosaur clade."
-    },
-    {
-     "sentences": [
-      10,
-      11
-     ],
-     "kind": "repetition",
-     "reason": "Sentences 11 and 12 both provide taxonomic placement, with 11 naming the parent group Sulcimentisauria and 12 naming the family Silesauridae, effectively repeating classification information."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:43:05+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:28:25+00:00"
+ "rewritten_at": "2026-11-25T23:29:04+00:00"
 }

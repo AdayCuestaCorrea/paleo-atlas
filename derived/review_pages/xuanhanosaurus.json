@@ -2,40 +2,55 @@
  "taxon_key": "xuanhanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1eba5226319607fe",
- "reviewed_at": "2026-11-25T13:41:06+00:00",
+ "text_hash": "a1d1b6a8d602eb72",
+ "reviewed_at": "2026-11-25T22:46:46+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    19
+    13,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the same age range for Xuanhanosaurus, merely reversing the order of the stages and the wording."
+  },
+  {
+   "sentences": [
+    7,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Different age ranges for the same species: 166 Ma (Bathonian) vs 167–161 Ma (Callovian)."
+   "reason": "Sentence 8 classifies Xuanhanosaurus as a tetanuran/allosauroid, while sentence 13 lists it under Piatnitzkysauridae, a different clade."
   },
   {
    "sentences": [
-    11,
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to “strong arms” without any prior mention or description of the dinosaur’s forelimbs."
+  },
+  {
+   "sentences": [
     15
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state Dong assigned Xuanhanosaurus to Megalosauridae."
+   "kind": "missing_context",
+   "reason": "The sentence discusses whether Xuanhanosaurus walked on four legs, but no previous statement establishes its locomotion or posture."
   },
   {
    "sentences": [
-    16,
-    17
+    12
    ],
-   "kind": "repetition",
-   "reason": "Both sentences list Piatnitzkysauridae as the parent group/family."
+   "kind": "about_something_else",
+   "reason": "The sentence reports a database entry rather than a biological fact about the dinosaur itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Xuanhanosaurus lived in the Sichuan Basin, China, during the Middle Jurassic (Bathonian) approximately 166 million years ago.\" / \"Xuanhanosaurus lived in what is now Asia during the Middle Jurassic Callovian stage, between 167 and 161 million years ago.\": Different age ranges for the same species: 166 Ma (Bathonian) vs 167–161 Ma (Callovian)."
+  "- contradiction: \"Most studies agree that Xuanhanosaurus is a tetanuran, possibly a basal allosauroid, notable for retaining a vestigial fourth metacarpal.\" / \"The Paleobiology Database lists the parent group of Xuanhanosaurus as Piatnitzkysauridae.\": Sentence 8 classifies Xuanhanosaurus as a tetanuran/allosauroid, while sentence 13 lists it under Piatnitzkysauridae, a different clade.",
+  "- missing context: \"Researchers suggest the strong arms of Xuanhanosaurus may have been used for catching prey.\": The sentence refers to “strong arms” without any prior mention or description of the dinosaur’s forelimbs.",
+  "- missing context: \"It is debated whether Xuanhanosaurus walked on four legs; while the describer suggested it was the only known four-legged meat-eater, later paleontologists argue it walked on hind legs because arm pronation was impossible.\": The sentence discusses whether Xuanhanosaurus walked on four legs, but no previous statement establishes its locomotion or posture."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:55:10+00:00",
@@ -60,8 +75,41 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:11:25+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:41:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for the same species: 166 Ma (Bathonian) vs 167–161 Ma (Callovian)."
+    },
+    {
+     "sentences": [
+      11,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state Dong assigned Xuanhanosaurus to Megalosauridae."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences list Piatnitzkysauridae as the parent group/family."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:21:19+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:19+00:00"
+ "rewritten_at": "2026-11-25T23:24:08+00:00"
 }

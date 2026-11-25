@@ -2,31 +2,39 @@
  "taxon_key": "gastornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1019159476c20ece",
- "reviewed_at": "2026-11-25T13:14:51+00:00",
+ "text_hash": "f8177ed0fc03f6c4",
+ "reviewed_at": "2026-11-25T22:22:18+00:00",
  "problems": [
   {
    "sentences": [
-    9
+    3
    ],
-   "kind": "repetition",
-   "reason": "Sentence 10 repeats the same claim about Gastornis being herbivorous multiple times within the same sentence."
+   "kind": "missing_context",
+   "reason": "Refers to a feather of the animal without prior mention of feathers or plumage."
   },
   {
    "sentences": [
-    9,
-    10
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Gastornis was herbivorous, while sentence 11 claims Gastornis species were traditionally considered predators of small mammals."
+   "kind": "missing_context",
+   "reason": "Mentions eggshell fragments of “these birds” without earlier context about eggs."
+  },
+  {
+   "sentences": [
+    13,
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "Discusses synonymy and other taxa (Diatryma, Omorhamphus) as if they were the subject of the page, rather than related taxa."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Evidence such as the absence of hooked claws and bone isotopic signatures suggests Gastornis was likely herbivorous, feeding on tough plants and seeds. Studies of calcium isotopes in Gastornis specimens conducted by Thomas Tutken and colleagues did not show the presence of meat in their diet. The absence of raptor-like claws supports the hypothesis that Gastornis was a herbivore rather than a predator or scavenger. Evidence including the lack of sharp claws and beak structure studies has led scientists to reinterpret Gastornis as herbivores that likely ate hard plant material and seeds. It may also have used its strong beak to eat large or very hard vegetation.\" / \"Gastornis species have traditionally been considered predators of small mammals, the most famous of which is the primitive horse Eohippus.\": Sentence 10 states Gastornis was herbivorous, while sentence 11 claims Gastornis species were traditionally considered predators of small mammals."
+  "- missing context: \"A single isolated feather found in the Green River Formation resembles the broad, vaned body feathers of flighted birds, indicating the animal once had wings.\": Refers to a feather of the animal without prior mention of feathers or plumage.",
+  "- missing context: \"Huge eggshell fragments were found in Late Paleocene deposits in Spain and early Eocene deposits in France, proving these birds laid massive eggs.\": Mentions eggshell fragments of “these birds” without earlier context about eggs."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:03:03+00:00",
@@ -64,8 +72,32 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:05:56+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:14:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 10 repeats the same claim about Gastornis being herbivorous multiple times within the same sentence."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Gastornis was herbivorous, while sentence 11 claims Gastornis species were traditionally considered predators of small mammals."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:03:14+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:03:14+00:00"
+ "rewritten_at": "2026-11-25T23:10:27+00:00"
 }

@@ -2,124 +2,48 @@
  "taxon_key": "dacentrurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "194b3f629660606c",
- "reviewed_at": "2026-11-25T13:18:15+00:00",
+ "text_hash": "6a78669d40bbe983",
+ "reviewed_at": "2026-11-25T22:25:36+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    27
+    16,
+    17
    ],
    "kind": "contradiction",
-   "reason": "Both claim the age of Dacentrurus but give different ranges (154–140 Ma vs 157–152 Ma)."
+   "reason": "The age ranges for Dacentrurus differ: sentence 1 gives 154–140 Ma, sentence 17 gives ~145 Ma, and sentence 18 gives 154.8–121.4 Ma."
   },
   {
    "sentences": [
-    0,
-    28
-   ],
-   "kind": "contradiction",
-   "reason": "Age ranges differ (154–140 Ma vs 154.8–121.4 Ma)."
-  },
-  {
-   "sentences": [
-    26,
-    27
-   ],
-   "kind": "contradiction",
-   "reason": "Both give a single age but contradict each other (145 Ma vs 157–152 Ma)."
-  },
-  {
-   "sentences": [
-    11,
-    12
+    1,
+    2
    ],
    "kind": "repetition",
-   "reason": "Both state that Richard Owen named the type species Omosaurus armatus in 1875."
+   "reason": "Both sentences state that Dacentrurus reached large sizes and give overlapping mass ranges (5–7.4 metric tons)."
   },
   {
    "sentences": [
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both describe the establishment of the genus Dacentrurus in 1902."
-  },
-  {
-   "sentences": [
-    15,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both claim Dacentrurus was the first known stegosaur."
-  },
-  {
-   "sentences": [
-    7
+    5
    ],
    "kind": "missing_context",
-   "reason": "Mentions a “small, blunt, asymmetrical plate” without prior introduction of plates."
-  }
- ],
- "repetitions_dropped": 3,
- "notes": [
-  "- contradiction: \"Dacentrurus means \"tail full of points\" and is an extinct stegosaurian dinosaur from Europe living between 154 and 140 million years ago.\" / \"Dacentrurus armatus lived during the late Jurassic period, approximately 157 to 152 million years ago, in what is now Europe.\": Both claim the age of Dacentrurus but give different ranges (154–140 Ma vs 157–152 Ma).",
-  "- contradiction: \"Dacentrurus means \"tail full of points\" and is an extinct stegosaurian dinosaur from Europe living between 154 and 140 million years ago.\" / \"The genus Dacentrurus lived from the Kimmeridgian to the Barremian, between 154.8 and 121.4 million years ago.\": Age ranges differ (154–140 Ma vs 154.8–121.4 Ma).",
-  "- contradiction: \"Dacentrurus lived approximately 145 million years ago during the Jurassic-Cretaceous boundary and was prevalent in the Iberian range.\" / \"Dacentrurus armatus lived during the late Jurassic period, approximately 157 to 152 million years ago, in what is now Europe.\": Both give a single age but contradict each other (145 Ma vs 157–152 Ma).",
-  "- missing context: \"The preserved material includes a small, blunt, asymmetrical plate located on the neck or front back.\": Mentions a “small, blunt, asymmetrical plate” without prior introduction of plates."
- ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
+   "reason": "The phrase “small, blunt, asymmetrical plate located on the neck or front back” refers to a feature without specifying which specimen or context."
+  },
   {
-   "reviewed_at": "2026-11-24T00:10:14+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      26
-     ],
-     "kind": "contradiction",
-     "reason": "Different time ranges for the species: 154–140 Ma vs 154.8–121.4 Ma."
-    },
-    {
-     "sentences": [
-      0,
-      23,
-      24
-     ],
-     "kind": "contradiction",
-     "reason": "Three separate statements give conflicting ages (154–140 Ma, 145 Ma, 157–152 Ma)."
-    },
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences give the same size and mass estimates for Dacentrurus."
-    },
-    {
-     "sentences": [
-      0,
-      3
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 4 claims the generic name derives from Greek for “upper arm,” while sentence 1 says it means “tail full of points.”"
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "missing_context",
-     "reason": "The phrase “small, blunt, asymmetrical plate on the neck or front back” refers to a feature without prior introduction."
-    }
+   "sentences": [
+    9
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T05:01:34+00:00"
+   "kind": "about_something_else",
+   "reason": "The sentence discusses the taxonomic status of Dacentrurus as the default classification for European stegosaur finds, which is about classification rather than the animal itself."
   }
  ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Dacentrurus means \"tail full of points\" and is an extinct stegosaurian dinosaur from Europe living between 154 and 140 million years ago.\" / \"Dacentrurus lived approximately 145 million years ago during the Jurassic-Cretaceous boundary and was prevalent in the Iberian range.\" / \"The genus Dacentrurus lived from the Kimmeridgian to the Barremian, between 154.8 and 121.4 million years ago.\": The age ranges for Dacentrurus differ: sentence 1 gives 154–140 Ma, sentence 17 gives ~145 Ma, and sentence 18 gives 154.8–121.4 Ma.",
+  "- missing context: \"The preserved material includes a small, blunt, asymmetrical plate located on the neck or front back.\": The phrase “small, blunt, asymmetrical plate located on the neck or front back” refers to a feature without specifying which specimen or context."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:30+00:00"
+ "rewritten_at": "2026-11-25T23:12:33+00:00"
 }

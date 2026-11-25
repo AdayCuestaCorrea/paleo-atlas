@@ -2,41 +2,40 @@
  "taxon_key": "coloborhynchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0f6accc4163d3a7b",
- "reviewed_at": "2026-11-25T13:21:53+00:00",
+ "text_hash": "5c8ac05844a9b314",
+ "reviewed_at": "2026-11-25T22:29:21+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    0,
+    1
    ],
-   "kind": "contradiction",
-   "reason": "Both sentences claim Coloborhynchus (or its species) is the largest known toothed pterosaur, but one says the record is held by Tropeognathus."
+   "kind": "repetition",
+   "reason": "Both sentences state that some studies place Coloborhynchus in Ornithocheiridae."
   },
   {
    "sentences": [
     0,
-    15
+    14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 places Coloborhynchus in Anhangueridae, while sentence 16 states it belonged to Ornithocheiridae."
+   "reason": "Sentence 1 classifies it within Anhangueridae, while sentence 15 states it belongs to Ornithocheiridae."
   },
   {
    "sentences": [
     4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 5 refers to “the final two preserved pairs of teeth” without any prior mention of tooth pairs or context for what is being compared."
+   "reason": "The phrase \"final two preserved pairs of teeth\" refers to a specific specimen, but no specimen has been introduced earlier in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Coloborhynchus was once considered the largest known toothed pterosaur, but this record is now held by the closely related genus Tropeognathus.\" / \"The possible species Coloborhynchus capito is considered the largest known toothed pterosaur and the second largest known ornithocheirid, and if proportions held, a specimen could have had a skull length of up to 75 cm and an estimated wingspan of 7 meters.\": Both sentences claim Coloborhynchus (or its species) is the largest known toothed pterosaur, but one says the record is held by Tropeognathus.",
-  "- contradiction: \"Coloborhynchus is a genus of pterodactyloid pterosaur, a type of flying reptile, classified within the family Anhangueridae.\" / \"Coloborhynchus fossils have been found in the Lower Cretaceous of England, dating from 140 to 136 million years ago, and it was a pterodactyloid pterosaur of the family Ornithocheiridae that lived in Europe during the Early Cretaceous (Valanginian), approximately 135 million years ago.\": Sentence 1 places Coloborhynchus in Anhangueridae, while sentence 16 states it belonged to Ornithocheiridae.",
-  "- missing context: \"The final two preserved pairs of teeth in Coloborhynchus pointed downward, a feature that helps distinguish it from other species.\": Sentence 5 refers to “the final two preserved pairs of teeth” without any prior mention of tooth pairs or context for what is being compared."
+  "- contradiction: \"Coloborhynchus is a genus of pterodactyloid pterosaur classified within the family Anhangueridae, although some scientific studies have recovered it as a member of the family Ornithocheiridae.\" / \"Coloborhynchus fossils have been found in the Lower Cretaceous of England, dating from 140 to 136 million years ago, and it was a pterodactyloid pterosaur of the family Ornithocheiridae that lived in Europe during the Early Cretaceous (Valanginian), approximately 135 million years ago.\": Sentence 1 classifies it within Anhangueridae, while sentence 15 states it belongs to Ornithocheiridae.",
+  "- missing context: \"The final two preserved pairs of teeth in Coloborhynchus pointed downward, a feature that helps distinguish it from other species.\": The phrase \"final two preserved pairs of teeth\" refers to a specific specimen, but no specimen has been introduced earlier in the page."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "english failed",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:18:00+00:00",
@@ -68,8 +67,40 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:01:13+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:21:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences claim Coloborhynchus (or its species) is the largest known toothed pterosaur, but one says the record is held by Tropeognathus."
+    },
+    {
+     "sentences": [
+      0,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 places Coloborhynchus in Anhangueridae, while sentence 16 states it belonged to Ornithocheiridae."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to “the final two preserved pairs of teeth” without any prior mention of tooth pairs or context for what is being compared."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:08:29+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:08:29+00:00"
+ "rewritten_at": "2026-11-25T23:14:19+00:00"
 }

@@ -2,29 +2,24 @@
  "taxon_key": "dysmoropelia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "44f52c4cbd24a33d",
- "reviewed_at": "2026-11-25T13:55:23+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "9b525498941ccd07",
+ "reviewed_at": "2026-11-25T23:01:09+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:36:57+00:00",
-   "problems": [
-    {
-     "sentences": [
-      6,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 7 states the bird was hunted to extinction shortly after Saint Helena was discovered in 1502, implying it survived into the 16th century, whereas sentence 8 places its existence between 129 kyr and 11.7 kyr ago, long before 1502."
-    }
+   "sentences": [
+    4,
+    5
    ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T07:36:53+00:00"
+   "kind": "contradiction",
+   "reason": "Sentence 5 places the species between 0.129 and 0.0117 million years ago, while sentence 6 claims it went extinct shortly after 1502 CE, which is far later than 0.0117 Ma."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The bird lived exclusively on Saint Helena in the South Atlantic Ocean between 0.129 and 0.0117 million years ago.\" / \"Some researchers presume the bird was hunted to extinction shortly after the island was discovered in 1502.\": Sentence 5 places the species between 0.129 and 0.0117 million years ago, while sentence 6 claims it went extinct shortly after 1502 CE, which is far later than 0.0117 Ma."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:30:39+00:00"
 }

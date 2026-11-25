@@ -2,25 +2,41 @@
  "taxon_key": "arthropterygius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f334c8648a61c7d7",
- "reviewed_at": "2026-11-25T13:14:42+00:00",
+ "text_hash": "ea636713c73ea906",
+ "reviewed_at": "2026-11-25T22:22:10+00:00",
  "problems": [
   {
    "sentences": [
-    27,
-    30,
-    32
+    24,
+    29
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the age range of Arthropterygius fossils, repeating the same information."
+  },
+  {
+   "sentences": [
+    26,
+    29
    ],
    "kind": "contradiction",
-   "reason": "Sentences 28, 31, and 33 give mutually inconsistent age ranges for Arthropterygius fossils: 28 cites Kimmeridgian to possibly Berriasian, 31 cites Volgian (Tithonian‑early Berriasian), while 33 limits the range to Oxfordian‑Tithonian (161.5–143.1 Ma), excluding the Berriasian."
+   "reason": "Sentence 27 claims the species may have lived into the earliest Cretaceous, while sentence 30 limits the range to the Oxfordian–Tithonian stages (late Jurassic) only."
+  },
+  {
+   "sentences": [
+    24,
+    29
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 25 gives a broader range (Kimmeridgian to possibly Berriasian) that includes the earliest Cretaceous, whereas sentence 30 restricts the range to Oxfordian–Tithonian, excluding the Berriasian."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Arthropterygius fossils date from the Kimmeridgian to possibly the Berriasian.\" / \"The geological outcrops in Svalbard containing Arthropterygius fossils date to the Volgian stage, roughly corresponding to the Tithonian-early Berriasian.\" / \"Arthropterygius lived from the Oxfordian to the Tithonian stages, between 161.5 and 143.1 million years ago.\": Sentences 28, 31, and 33 give mutually inconsistent age ranges for Arthropterygius fossils: 28 cites Kimmeridgian to possibly Berriasian, 31 cites Volgian (Tithonian‑early Berriasian), while 33 limits the range to Oxfordian‑Tithonian (161.5–143.1 Ma), excluding the Berriasian."
+  "- contradiction: \"Arthropterygius lived during the late Jurassic and possibly into the earliest Cretaceous.\" / \"Arthropterygius lived from the Oxfordian to the Tithonian stages, between 161.5 and 143.1 million years ago.\": Sentence 27 claims the species may have lived into the earliest Cretaceous, while sentence 30 limits the range to the Oxfordian–Tithonian stages (late Jurassic) only.",
+  "- contradiction: \"Arthropterygius fossils date from the Kimmeridgian to possibly the Berriasian, though some sources limit the range to the Oxfordian to Tithonian stages (161.5–143.1 Ma), while others note presence in the Volgian stage corresponding to the Tithonian-early Berriasian.\" / \"Arthropterygius lived from the Oxfordian to the Tithonian stages, between 161.5 and 143.1 million years ago.\": Sentence 25 gives a broader range (Kimmeridgian to possibly Berriasian) that includes the earliest Cretaceous, whereas sentence 30 restricts the range to Oxfordian–Tithonian, excluding the Berriasian."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:02:51+00:00",
@@ -59,8 +75,26 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:01:57+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:14:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      27,
+      30,
+      32
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 28, 31, and 33 give mutually inconsistent age ranges for Arthropterygius fossils: 28 cites Kimmeridgian to possibly Berriasian, 31 cites Volgian (Tithonian‑early Berriasian), while 33 limits the range to Oxfordian‑Tithonian (161.5–143.1 Ma), excluding the Berriasian."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:03:02+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:03:02+00:00"
+ "rewritten_at": "2026-11-25T23:10:19+00:00"
 }

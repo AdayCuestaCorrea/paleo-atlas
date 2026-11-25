@@ -2,28 +2,38 @@
  "taxon_key": "preondactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3a08ba9e6b535ceb",
- "reviewed_at": "2026-11-25T13:45:04+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "e0215b9c570d91bc",
+ "reviewed_at": "2026-11-25T22:50:36+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:05:55+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 6 refers to \"the second specimen\" before that specimen is introduced elsewhere on the page."
-    }
+   "sentences": [
+    0,
+    1
    ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T05:14:38+00:00"
+   "kind": "repetition",
+   "reason": "Both sentences describe the same tooth morphology and wear pattern."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to “one specimen” without having introduced which specimen it is."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "about_something_else",
+   "reason": "It discusses a predatory fish and its digestive process, which is not about Preondactylus itself."
   }
- ]
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"Fossil evidence suggests one specimen was preserved inside the gastric pellet of a predatory fish that vomited it up after eating the pterosaur.\": The sentence refers to “one specimen” without having introduced which specimen it is."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:20+00:00"
 }

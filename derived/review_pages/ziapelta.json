@@ -2,88 +2,39 @@
  "taxon_key": "ziapelta",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "87424e868188f50d",
- "reviewed_at": "2026-11-25T13:30:35+00:00",
+ "text_hash": "f0d6ac8b09c68048",
+ "reviewed_at": "2026-11-25T22:38:34+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    29
+    20,
+    21
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give the same age range for the holotype skull, but sentence 15 states it is 72.98–72.62 Ma while sentence 30 repeats the same range; the contradiction arises because sentence 15 already provides the age, making sentence 30 redundant and potentially confusing."
+   "reason": "The age range for the holotype skull (72.98–72.62 Ma) conflicts with the broader temporal range given for the genus (83.6–72.2 Ma)."
   },
   {
    "sentences": [
-    30,
-    33
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 34 claims Ziapelta lived from 83.6 to 72.2 Ma, whereas sentence 31 limits its existence to 74.5–72.5 Ma. The two ranges conflict on the upper bound of the species’ temporal range."
-  },
-  {
-   "sentences": [
-    15,
-    23,
-    26
+    16,
+    19
    ],
    "kind": "repetition",
-   "reason": "All three sentences state that Ziapelta is classified in the family Ankylosauridae, with 16 and 24 also mentioning its sister relationship to Scolosaurus. The classification claim is repeated unnecessarily."
+   "reason": "Both sentences state that Ziapelta is an extinct ankylosaurid dinosaur, repeating the same classification claim."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "The sentence discusses the recolonization of North America by ankylosaurids in general, not specifically about Ziapelta itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Argon dating of ash layers determined the holotype skull's age to be between 72.98 and 72.62 million years old, during the late Campanian.\" / \"The holotype skull of Ziapelta dates to between 72.98 and 72.62 million years ago.\": Both sentences give the same age range for the holotype skull, but sentence 15 states it is 72.98–72.62 Ma while sentence 30 repeats the same range; the contradiction arises because sentence 15 already provides the age, making sentence 30 redundant and potentially confusing.",
-  "- contradiction: \"Ziapelta lived in North America between 74.5 and 72.5 million years ago during the Campanian stage of the Late Cretaceous.\" / \"The genus Ziapelta lived from 83.6 to 72.2 million years ago during the Campanian stage.\": Sentence 34 claims Ziapelta lived from 83.6 to 72.2 Ma, whereas sentence 31 limits its existence to 74.5–72.5 Ma. The two ranges conflict on the upper bound of the species’ temporal range."
+  "- contradiction: \"The holotype skull of Ziapelta dates to between 72.98 and 72.62 million years ago.\" / \"The genus Ziapelta lived from 83.6 to 72.2 million years ago during the Campanian stage.\": The age range for the holotype skull (72.98–72.62 Ma) conflicts with the broader temporal range given for the genus (83.6–72.2 Ma)."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:35:41+00:00",
-   "problems": [
-    {
-     "sentences": [
-      22,
-      23,
-      24,
-      25,
-      26
-     ],
-     "kind": "repetition",
-     "reason": "All state the taxonomic classification of Ziapelta, repeating the same claim."
-    },
-    {
-     "sentences": [
-      27
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 28 repeats the information that the species was described by Arbour et al. in 2014, already stated in sentence 10."
-    },
-    {
-     "sentences": [
-      28,
-      29,
-      30,
-      31
-     ],
-     "kind": "repetition",
-     "reason": "Sentences 29–32 all give overlapping age ranges for Ziapelta, repeating the same temporal information."
-    },
-    {
-     "sentences": [
-      29,
-      31
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 30 gives an age range of 74.5–72.5 Ma, while sentence 32 gives a broader range of 83.6–72.2 Ma, contradicting the earlier estimate."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:39:18+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:44+00:00"
+ "rewritten_at": "2026-11-25T23:19:23+00:00"
 }

@@ -2,42 +2,55 @@
  "taxon_key": "turfanosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "55d42a24657984af",
- "reviewed_at": "2026-11-24T00:35:11+00:00",
+ "text_hash": "7126dae059b5cc88",
+ "reviewed_at": "2026-11-25T22:38:17+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    19
+    11,
+    14
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the family affiliation of Turfanosuchus, repeating the same information."
+   "reason": "Both sentences state that the genus Turfanosuchus was described by C.C. Young in 1973 and that the type species is Turfanosuchus dabanensis, repeating the same information."
   },
   {
    "sentences": [
-    20
+    12,
+    14
    ],
    "kind": "repetition",
-   "reason": "Sentence 21 repeats the type species already mentioned in sentence 14."
+   "reason": "Both sentences describe the type species T. dabanensis and its provenance, repeating the same claim."
   },
   {
    "sentences": [
-    21,
-    22
+    13,
+    16
    ],
    "kind": "repetition",
-   "reason": "Sentences 22 and 23 both assert the family Gracilisuchidae membership, duplicating the claim."
+   "reason": "Both sentences identify Gracilisuchidae as the parent group/family of Turfanosuchus, repeating the classification."
   },
   {
    "sentences": [
-    24,
-    25
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences give the same temporal range for Turfanosuchus, repeating the information."
+   "kind": "missing_context",
+   "reason": "The sentence refers to “one osteoderm” without any prior mention of osteoderms in the text."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence mentions the heel bone without any earlier reference to a heel bone or its relevance."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 2,
+ "notes": [
+  "- missing context: \"Although initially thought to lack them, one osteoderm was later found on the skeleton.\": The sentence refers to “one osteoderm” without any prior mention of osteoderms in the text.",
+  "- missing context: \"The heel bone shares many similarities with those of crurotarsan archosauriforms.\": The sentence mentions the heel bone without any earlier reference to a heel bone or its relevance."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:19:15+00:00"
 }

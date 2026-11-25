@@ -2,19 +2,39 @@
  "taxon_key": "ichthyotitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8425e049b9130c07",
- "reviewed_at": "2026-11-24T00:28:47+00:00",
+ "text_hash": "3a045e6d928f5130",
+ "reviewed_at": "2026-11-25T22:35:00+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the size of Ichthyotitan, with sentence 5 claiming it reached nearly 25 m and sentence 6 claiming it was nearly the size of a blue whale, effectively repeating the same claim about its length."
+   "kind": "missing_context",
+   "reason": "Refers to the Cuers specimen without prior introduction or explanation."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "Discusses suction-feeding in shastasaurids in general, not specifically about Ichthyotitan."
+  },
+  {
+   "sentences": [
+    3,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims Ichthyotitan appeared 13 million years after its relatives, yet sentence 13 places it in the Rhaetian (205–201 Ma) which is contemporaneous with other shastasaurids, creating a temporal inconsistency."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The unique morphology of the posterior jaw in the Cuers specimen has been debated but is now linked to Ichthyotitan, while it is also debated whether shastasaurids were suction-feeders, as current research suggests their jaw structure does not fit that profile.\": Refers to the Cuers specimen without prior introduction or explanation.",
+  "- contradiction: \"Ichthyotitan is the only known shastasaurid from the Rhaetian, appearing 13 million years after its relatives.\" / \"Ichthyotitan lived during the Late Triassic, approximately 205 to 202 million years ago, in Somerset, United Kingdom, specifically during the Rhaetian stage from 205.7 to 201.4 million years ago.\": Sentence 4 claims Ichthyotitan appeared 13 million years after its relatives, yet sentence 13 places it in the Rhaetian (205–201 Ma) which is contemporaneous with other shastasaurids, creating a temporal inconsistency."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:11+00:00"
 }

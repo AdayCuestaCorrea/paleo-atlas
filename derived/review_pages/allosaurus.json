@@ -2,67 +2,32 @@
  "taxon_key": "allosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d780febfbd706981",
- "reviewed_at": "2026-11-25T13:08:39+00:00",
+ "text_hash": "3d78c74eb62a1bee",
+ "reviewed_at": "2026-11-25T22:16:34+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    25,
-    26
+    0,
+    1
    ],
    "kind": "contradiction",
-   "reason": "The three sentences give mutually inconsistent time ranges for Allosaurus: Kimmeridgian–Tithonian, 155–145 Ma, and Oxfordian–Berriasian (161.5–137.05 Ma)."
+   "reason": "Sentence 1 claims Allosaurus had a massive skull, while sentence 2 states its skull was modest in size compared with other theropods of its body size."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to scales that may belong to a sauropod, but the page never mentions any sauropod or context for that comparison."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Allosaurus lived during the Kimmeridgian to Tithonian ages of the Late Jurassic period.\" / \"Allosaurus lived during the late Jurassic period, between 155 and 145 million years ago.\" / \"Allosaurus lived from the Oxfordian to the Berriasian stages, between 161.5 and 137.05 million years ago.\": The three sentences give mutually inconsistent time ranges for Allosaurus: Kimmeridgian–Tithonian, 155–145 Ma, and Oxfordian–Berriasian (161.5–137.05 Ma)."
+  "- contradiction: \"Allosaurus was a large bipedal predator characterized by a massive skull, short neck, long tail, and reduced forelimbs.\" / \"Its skull was lightly built and, like its dozens of sharp, serrated teeth, modest in size compared with other theropods of its body size.\": Sentence 1 claims Allosaurus had a massive skull, while sentence 2 states its skull was modest in size compared with other theropods of its body size.",
+  "- missing context: \"A skin impression from the base of the tail of the \"Big Al Two\" specimen measures 20 by 20 centimeters and contains scales up to 2 centimeters in diameter, though researchers suggest these scales may belong to a sauropod rather than to Allosaurus.\": Sentence 4 refers to scales that may belong to a sauropod, but the page never mentions any sauropod or context for that comparison."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:52:13+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      1
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 1 describes Allosaurus as having a massive skull, while sentence 2 states it had a light skull."
-    },
-    {
-     "sentences": [
-      18,
-      19
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the same time range for Allosaurus (late Jurassic, 155–145 Ma)."
-    },
-    {
-     "sentences": [
-      19,
-      20
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences give overlapping time ranges for Allosaurus (155–145 Ma and 161.5–137.05 Ma)."
-    },
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "missing_context",
-     "reason": "The phrase \"These hollow spaces\" is not defined earlier in the page."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:14:43+00:00"
-  }
- ],
+ "rewrite": "english failed",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:20+00:00",
- "hand_fixed": "2026-11-25"
+ "rewritten_at": "2026-11-25T23:06:57+00:00"
 }

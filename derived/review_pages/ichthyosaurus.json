@@ -2,19 +2,23 @@
  "taxon_key": "ichthyosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "94821c01cf88442e",
- "reviewed_at": "2026-11-24T00:25:07+00:00",
+ "text_hash": "246be41dee922400",
+ "reviewed_at": "2026-11-25T22:33:04+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    14
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences list the species Ichthyosaurus communis (and also I. somersetensis), repeating the same taxonomic information."
+   "kind": "missing_context",
+   "reason": "Sentence 7 introduces the subspecies I. somersetensis without any prior mention or definition of that subspecies in the page."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Three pregnant female specimens of Ichthyosaurus are known, all belonging to the subspecies I. somersetensis.\": Sentence 7 introduces the subspecies I. somersetensis without any prior mention or definition of that subspecies in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:16:22+00:00"
 }

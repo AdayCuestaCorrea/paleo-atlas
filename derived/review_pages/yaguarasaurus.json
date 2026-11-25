@@ -2,69 +2,23 @@
  "taxon_key": "yaguarasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "93701f3cca5c4f09",
- "reviewed_at": "2026-11-25T13:40:21+00:00",
+ "text_hash": "0225979215a91518",
+ "reviewed_at": "2026-11-25T22:46:00+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    2
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same disagreement about subfamily and higher‑level classification, repeating the conflict already mentioned earlier."
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to \"initial estimates\" of size, but no earlier size estimate is provided in the page."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:53:10+00:00",
-   "problems": [
-    {
-     "sentences": [
-      3,
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that a skull measuring 87 cm implies a larger size."
-    },
-    {
-     "sentences": [
-      7,
-      8
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 8 classifies Yaguarasaurus as a basal member of Plioplatecarpinae, while sentence 9 places it within the subfamily Yaguarasaurinae."
-    },
-    {
-     "sentences": [
-      9,
-      10
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 10 says Yaguarasaurinae is sister to Tethysaurinae, whereas sentence 11 groups Yaguarasaurus with Tethysaurinae."
-    },
-    {
-     "sentences": [
-      12,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 13 limits the age to the Turonian, but sentence 15 extends the range from Turonian to Coniacian (93.9–85.7 Ma)."
-    },
-    {
-     "sentences": [
-      2
-     ],
-     "kind": "missing_context",
-     "reason": "The phrase \"The Yaguarasaurus discovered in Yaguará\" lacks a clear antecedent for \"Yaguarasaurus\"."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T03:58:45+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"An additional skull measuring 87 cm long implies that the animal could have been larger than the initial estimates.\": Sentence 3 refers to \"initial estimates\" of size, but no earlier size estimate is provided in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:23:45+00:00"
 }

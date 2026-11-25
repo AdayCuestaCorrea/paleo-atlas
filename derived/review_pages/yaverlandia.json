@@ -2,38 +2,13 @@
  "taxon_key": "yaverlandia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0130f3897d76869a",
- "reviewed_at": "2026-11-25T13:22:02+00:00",
- "problems": [
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 classifies Yaverlandia as belonging to the parent group Theropoda, yet Theropoda is a clade within Dinosauria, not a parent group; this contradicts standard taxonomic hierarchy."
-  },
-  {
-   "sentences": [
-    6,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences 7 and 9 state that Peter Galton recognized Yaverlandia as a distinct genus and classified it within Pachycephalosauridae, repeating the same claim."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 15 repeats the claim that Darren Naish suggested Yaverlandia may be related to maniraptoran theropods, later proposing it was a maniraptoran theropod, and in 2011 proposing it was a troodontid, which is already covered in earlier sentences."
-  }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Yaverlandia is classified within the superorder Dinosauria, belongs to the parent group Theropoda, and is classified in the class Reptilia.\": Sentence 10 classifies Yaverlandia as belonging to the parent group Theropoda, yet Theropoda is a clade within Dinosauria, not a parent group; this contradicts standard taxonomic hierarchy."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "text_hash": "1ec48f8eb6c0721b",
+ "reviewed_at": "2026-11-25T22:29:25+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:18:11+00:00",
@@ -67,8 +42,37 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:03:56+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:22:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 classifies Yaverlandia as belonging to the parent group Theropoda, yet Theropoda is a clade within Dinosauria, not a parent group; this contradicts standard taxonomic hierarchy."
+    },
+    {
+     "sentences": [
+      6,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences 7 and 9 state that Peter Galton recognized Yaverlandia as a distinct genus and classified it within Pachycephalosauridae, repeating the same claim."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 15 repeats the claim that Darren Naish suggested Yaverlandia may be related to maniraptoran theropods, later proposing it was a maniraptoran theropod, and in 2011 proposing it was a troodontid, which is already covered in earlier sentences."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:08:46+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:08:46+00:00"
+ ]
 }

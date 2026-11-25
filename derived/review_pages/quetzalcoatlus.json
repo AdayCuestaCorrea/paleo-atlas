@@ -2,38 +2,24 @@
  "taxon_key": "quetzalcoatlus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a2eb875bd07c831d",
- "reviewed_at": "2026-11-25T13:09:05+00:00",
+ "text_hash": "1f4a35d8f7f196cc",
+ "reviewed_at": "2026-11-25T22:17:00+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    2,
+    3
    ],
-   "kind": "missing_context",
-   "reason": "refers to weight distribution in flight posture without prior explanation of posture"
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "mentions taking off from limited open spaces without context of launch conditions"
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "about_something_else",
-   "reason": "describes structures (pycnofibres/needles) rather than the animal itself"
+   "kind": "contradiction",
+   "reason": "Sentence 3 states a wingspan of 10–11 m, while sentence 4 cites estimates of 15.9 m and a range of 11–21 m for the largest fossils, directly conflicting on the size of the animal."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In any case, the weight distribution in flight posture allowed at least short flights and a spectacular landing by re-balancing the weight on land.\": refers to weight distribution in flight posture without prior explanation of posture",
-  "- missing context: \"Quetzalcoatlus likely used a pacing gait on the ground, moving limbs on one side simultaneously before switching to the opposite side, and must have been capable of taking off from limited open spaces because no nearby trees or elevations were available for launch.\": mentions taking off from limited open spaces without context of launch conditions"
+  "- contradiction: \"Quetzalcoatlus is one of the largest flying animals known in history, with recent estimates placing its wingspan at around 10 to 11 meters.\" / \"When first discovered, scientists estimated the largest fossils came from an individual with a wingspan of about 15.9 meters, though Douglas Lawson later suggested figures ranging from 11 to 21 meters.\": Sentence 3 states a wingspan of 10–11 m, while sentence 4 cites estimates of 15.9 m and a range of 11–21 m for the largest fossils, directly conflicting on the size of the animal."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:53:02+00:00",
@@ -64,8 +50,38 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T02:21:01+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:09:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "refers to weight distribution in flight posture without prior explanation of posture"
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "mentions taking off from limited open spaces without context of launch conditions"
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "describes structures (pycnofibres/needles) rather than the animal itself"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:00:37+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:37+00:00"
+ "rewritten_at": "2026-11-25T23:07:22+00:00"
 }

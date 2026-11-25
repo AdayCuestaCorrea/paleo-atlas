@@ -2,51 +2,41 @@
  "taxon_key": "phyllolepis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9e55c70580389aa9",
- "reviewed_at": "2026-11-25T13:29:05+00:00",
+ "text_hash": "7bc57d17a372bc44",
+ "reviewed_at": "2026-11-25T22:37:02+00:00",
  "problems": [
   {
    "sentences": [
     8,
-    9,
     15
    ],
    "kind": "contradiction",
-   "reason": "Sentences 9 and 10 claim Phyllolepis were blind and used electroreception, while sentence 16 states they had eyes."
+   "reason": "Sentence 9 states Phyllolepis were presumed blind, while sentence 16 says they had eyes on either side of their heads."
   },
   {
    "sentences": [
-    23,
-    24
+    22,
+    23
    ],
    "kind": "contradiction",
-   "reason": "Sentence 24 names the family Phyllolepididae, whereas sentence 25 names the family Phyllolepida."
+   "reason": "Sentence 23 claims Phyllolepis lived about 360 Ma during the Famennian stage, whereas sentence 24 gives a broader range of 387.95–358.86 Ma from Givetian to Famennian."
   },
   {
    "sentences": [
     8
    ],
    "kind": "missing_context",
-   "reason": "Sentence 9 refers to a “wooden surface appearance” without explaining what is meant by this term."
-  },
-  {
-   "sentences": [
-    14,
-    19,
-    24
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentences 15, 20 and 25 discuss classification of the group or order rather than describing the animal itself."
+   "reason": "Sentence 9 ends with \"which created a distinctive wooden or leaf-like surface appearance\" but does not specify what \"which\" refers to, leaving the reader unclear about the source of that appearance."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden surface appearance.\" / \"The highly developed system of lateral ridges on Phyllolepis is suggested to have been used for electroreception to sense their surroundings in the absence of functional eyes.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentences 9 and 10 claim Phyllolepis were blind and used electroreception, while sentence 16 states they had eyes.",
-  "- contradiction: \"Phyllolepis is a member of the family Phyllolepididae.\" / \"Phyllolepis is the type genus of the extinct arthrodire placoderm family Phyllolepida, which lived during the middle to late Devonian periods.\": Sentence 24 names the family Phyllolepididae, whereas sentence 25 names the family Phyllolepida.",
-  "- missing context: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden surface appearance.\": Sentence 9 refers to a “wooden surface appearance” without explaining what is meant by this term."
+  "- contradiction: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden or leaf-like surface appearance.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentence 9 states Phyllolepis were presumed blind, while sentence 16 says they had eyes on either side of their heads.",
+  "- contradiction: \"Species of Phyllolepis lived approximately 360 million years ago during the Famennian stage of the Late Devonian.\" / \"Phyllolepis lived from the Givetian to the Famennian stages, between 387.95 and 358.86 million years ago.\": Sentence 23 claims Phyllolepis lived about 360 Ma during the Famennian stage, whereas sentence 24 gives a broader range of 387.95–358.86 Ma from Givetian to Famennian.",
+  "- missing context: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden or leaf-like surface appearance.\": Sentence 9 ends with \"which created a distinctive wooden or leaf-like surface appearance\" but does not specify what \"which\" refers to, leaving the reader unclear about the source of that appearance."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:32:19+00:00",
@@ -72,8 +62,50 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:09:37+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:29:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 9 and 10 claim Phyllolepis were blind and used electroreception, while sentence 16 states they had eyes."
+    },
+    {
+     "sentences": [
+      23,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 24 names the family Phyllolepididae, whereas sentence 25 names the family Phyllolepida."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to a “wooden surface appearance” without explaining what is meant by this term."
+    },
+    {
+     "sentences": [
+      14,
+      19,
+      24
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentences 15, 20 and 25 discuss classification of the group or order rather than describing the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:13:49+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:13:49+00:00"
+ "rewritten_at": "2026-11-25T23:18:03+00:00"
 }

@@ -2,41 +2,32 @@
  "taxon_key": "mourasuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ad038d1b444ebd09",
- "reviewed_at": "2026-11-25T13:22:05+00:00",
+ "text_hash": "fd605e408272f0da",
+ "reviewed_at": "2026-11-25T22:29:29+00:00",
  "problems": [
   {
    "sentences": [
-    22,
-    23
+    0,
+    1
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the skull as duck‑like, broad, flat and very elongate, repeating the same claim."
+  },
+  {
+   "sentences": [
+    18,
+    19
    ],
    "kind": "contradiction",
-   "reason": "Sentence 23 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 24 gives a temporal range extending to 2.58 Ma (Pliocene), which contradicts the earlier claim."
+   "reason": "Sentence 19 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 20 gives a range from 23.04 to 2.58 Ma (Aquitanian to Piacenzian), spanning Miocene to Pliocene, which contradicts the earlier, narrower time frame."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Mourasuchus lived during the Mid-Late Miocene epoch.\" / \"The animal lived between 23.04 and 2.58 million years ago during the Aquitanian to Piacenzian stages.\": Sentence 23 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 24 gives a temporal range extending to 2.58 Ma (Pliocene), which contradicts the earlier claim."
+  "- contradiction: \"Mourasuchus lived during the Mid-Late Miocene epoch.\" / \"The animal lived between 23.04 and 2.58 million years ago during the Aquitanian to Piacenzian stages.\": Sentence 19 states Mourasuchus lived during the Mid‑Late Miocene, while sentence 20 gives a range from 23.04 to 2.58 Ma (Aquitanian to Piacenzian), spanning Miocene to Pliocene, which contradicts the earlier, narrower time frame."
  ],
- "rewrite": "spanish failed",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:18:19+00:00",
-   "problems": [
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 15 claims Mourasuchus lived during the Mid‑Late Miocene but gives a time range (23.04–2.58 Ma) that extends into the Pliocene (Aquitanian to Piacenzian stages), contradicting the stated epoch."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T06:05:12+00:00"
-  }
- ],
+ "rewrite": "unchanged",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:08:50+00:00"
+ "rewritten_at": "2026-11-25T23:14:21+00:00"
 }

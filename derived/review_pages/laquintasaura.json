@@ -2,32 +2,39 @@
  "taxon_key": "laquintasaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "afbe56a3627c6ea2",
- "reviewed_at": "2026-11-24T00:07:02+00:00",
+ "text_hash": "14b0199b3d3f7bdc",
+ "reviewed_at": "2026-11-25T22:24:11+00:00",
  "problems": [
   {
    "sentences": [
-    16,
-    17,
-    18
+    14,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentences 17, 18 and 19 present mutually inconsistent phylogenetic positions for Laquintasaura, claiming it is either a basal ornithischian or a basal thyreophoran, and then stating it is sister to Scutellosaurus within Thyreophora."
+   "reason": "Sentence 15 states Laquintasaura is a basal member of Ornithischia or the base of Thyreophora, while sentence 17 places it as a sister taxon within Thyreophora, directly contradicting the earlier claim."
   },
   {
    "sentences": [
-    13,
+    14,
     15
    ],
    "kind": "repetition",
-   "reason": "Sentences 14 and 16 both state that Tachiraptor preyed upon Laquintasaura, repeating the same claim."
+   "reason": "Sentences 15 and 16 both discuss the debate over whether Laquintasaura is an early diverging ornithischian or belongs to Thyreophora, repeating the same claim."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 13 describes the behavior of another dinosaur, Tachiraptor, predating Laquintasaura, which is about a different species rather than Laquintasaura itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Laquintasaura is robustly considered a basal member of Ornithischia, though taxonomic uncertainty has led to contradictory theories that it is either the base of Ornithischia or the base of the suborder Thyreophora.\" / \"There is a debate regarding whether it is an early diverging ornithischian or belongs to the subgroup Thyreophora.\" / \"A 2016 phylogenetic analysis by Baron et al. found that Laquintasaura is the sister taxon of Scutellosaurus within the clade Thyreophora, and the parent group of Laquintasaura is Thyreophora.\": Sentences 17, 18 and 19 present mutually inconsistent phylogenetic positions for Laquintasaura, claiming it is either a basal ornithischian or a basal thyreophoran, and then stating it is sister to Scutellosaurus within Thyreophora."
+  "- contradiction: \"Laquintasaura is robustly considered a basal member of Ornithischia, though taxonomic uncertainty has led to contradictory theories that it is either the base of Ornithischia or the base of the suborder Thyreophora.\" / \"A 2016 phylogenetic analysis by Baron et al. found that Laquintasaura is the sister taxon of Scutellosaurus within the clade Thyreophora, and the parent group of Laquintasaura is Thyreophora.\": Sentence 15 states Laquintasaura is a basal member of Ornithischia or the base of Thyreophora, while sentence 17 places it as a sister taxon within Thyreophora, directly contradicting the earlier claim."
  ],
  "rewrite": "unchanged",
- "rewritten_at": "2026-11-25T11:50:27+00:00",
- "rewrite_mode": "sentences"
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:11:41+00:00"
 }

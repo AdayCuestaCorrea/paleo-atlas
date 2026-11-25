@@ -2,39 +2,29 @@
  "taxon_key": "ornithoprion",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "eb2910beb866f2f7",
- "reviewed_at": "2026-11-25T13:12:27+00:00",
+ "text_hash": "8682b20c92d1cf34",
+ "reviewed_at": "2026-11-25T22:20:01+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims the mouth was likely incapable of closing, while sentence 12 states the mandibular rostrum articulated with Meckel's cartilages at a flexible joint, implying the ability to close."
-  },
-  {
-   "sentences": [
-    0,
+    3,
     9
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the rounded, broad tooth crowns; sentence 10 repeats the claim made in sentence 1."
+   "reason": "Sentence 10 repeats the information about the mandibular rostrum articulating with Meckel's cartilages at a flexible joint, which was already stated in sentence 4."
   },
   {
    "sentences": [
-    12
+    10
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 13 discusses feeding traces on other fish skeletons from the Logan Quarry, not directly about Ornithoprion."
+   "reason": "Sentence 11 discusses other fish skeletons from the Logan Quarry and their feeding traces, which is not about Ornithoprion itself but about a different group of fish."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Due to the shape of the Meckel's cartilages, the mouth of Ornithoprion was likely incapable of closing.\" / \"The mandibular rostrum articulated with the Meckel's cartilages at a flexible joint.\": Sentence 5 claims the mouth was likely incapable of closing, while sentence 12 states the mandibular rostrum articulated with Meckel's cartilages at a flexible joint, implying the ability to close."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:59:16+00:00",
@@ -101,8 +91,38 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:17:50+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:12:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims the mouth was likely incapable of closing, while sentence 12 states the mandibular rostrum articulated with Meckel's cartilages at a flexible joint, implying the ability to close."
+    },
+    {
+     "sentences": [
+      0,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the rounded, broad tooth crowns; sentence 10 repeats the claim made in sentence 1."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 13 discusses feeding traces on other fish skeletons from the Logan Quarry, not directly about Ornithoprion."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:01+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:01+00:00"
+ ]
 }

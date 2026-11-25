@@ -2,46 +2,31 @@
  "taxon_key": "giganotosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5f71039f04df6284",
- "reviewed_at": "2026-11-25T13:12:03+00:00",
+ "text_hash": "b30d3f0acf98b983",
+ "reviewed_at": "2026-11-25T22:19:50+00:00",
  "problems": [
   {
    "sentences": [
-    19
+    1,
+    18
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 gives a length estimate of 12–13 m, while sentence 19 estimates 13.7–14.3 m for the same animal."
+  },
+  {
+   "sentences": [
+    17
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 20 discusses the composition of the Candeleros Formation, which is about the geological context rather than the animal itself."
+   "reason": "Sentence 18 describes the sedimentary composition of the Candeleros Formation, not a feature of Giganotosaurus itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:58:40+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5,
-      21
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that some individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus."
-    },
-    {
-     "sentences": [
-      5,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 6 claims a weight of 10 metric tons, while sentence 8 estimates a weight of 7 to 8 tons for the same animal."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:13:57+00:00"
-  }
+ "notes": [
+  "- contradiction: \"The holotype has been estimated at 12 to 13 meters long and over 4 meters high at the hips, while weight estimates for the same skeleton range from 4.2 to 13.8 tons.\" / \"It is debated whether Giganotosaurus was larger than Tyrannosaurus, roughly equal in size, or if its largest size estimates are exaggerated. In 1997, Coria estimated Giganotosaurus to be 13.7 to 14.3 meters long and weigh 8 to 10 metric tons, larger than Carcharodontosaurus, while a large dentary bone suggests that some individuals may have reached a weight of 10 metric tons, making them potentially larger than Tyrannosaurus.\": Sentence 2 gives a length estimate of 12–13 m, while sentence 19 estimates 13.7–14.3 m for the same animal."
  ],
- "hand_fixed": "2026-11-25"
+ "rewrite": "english failed",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:02+00:00"
 }

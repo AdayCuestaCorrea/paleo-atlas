@@ -2,26 +2,32 @@
  "taxon_key": "astorgosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7da382a01fadb41a",
- "reviewed_at": "2026-11-24T00:42:38+00:00",
+ "text_hash": "40f8abadc0078552",
+ "reviewed_at": "2026-11-25T22:41:38+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    6
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the side of the lower jaw bone is heavily ornamented with deep circular holes."
+   "kind": "missing_context",
+   "reason": "Sentence 5 mentions the side of the lower jaw bone and lower teeth without any prior reference to the lower jaw or its teeth."
   },
   {
    "sentences": [
-    11
+    8,
+    13
    ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses bite marks on juvenile Paraceratherium bones, which is unrelated to Astorgosuchus itself."
+   "kind": "contradiction",
+   "reason": "Sentence 9 states a maxilla fragment was dated to the Late Miocene, while sentence 14 places Astorgosuchus in the late Oligocene (Rupelian to Chattian)."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The side of the lower jaw bone is heavily ornamented with deep circular holes, and the third, fourth, and fifth lower teeth are adjacent, with the fourth being the largest.\": Sentence 5 mentions the side of the lower jaw bone and lower teeth without any prior reference to the lower jaw or its teeth.",
+  "- contradiction: \"Additional remains were discovered in Baluchistan in the 1920s and presented to the Natural History Museum in London in 1925, and a maxilla fragment reported by K. N. Prasad was found on Piram Island in western India and dated to the Late Miocene.\" / \"Astorgosuchus lived in the Bugti Hills of Balochistan, Pakistan, during the late Oligocene, and the time range for Astorgosuchus is from the Rupelian to the Chattian stages, approximately 33.9 to 23.04 million years ago.\": Sentence 9 states a maxilla fragment was dated to the Late Miocene, while sentence 14 places Astorgosuchus in the late Oligocene (Rupelian to Chattian)."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:21:16+00:00"
 }

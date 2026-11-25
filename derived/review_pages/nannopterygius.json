@@ -2,23 +2,21 @@
  "taxon_key": "nannopterygius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "85b6ab92b0ce173e",
- "reviewed_at": "2026-11-25T13:23:48+00:00",
+ "text_hash": "13c1dad394773ca9",
+ "reviewed_at": "2026-11-25T22:31:43+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
-   "kind": "missing_context",
-   "reason": "The phrase \"this group\" is used without a preceding definition of the group being referred to."
+   "kind": "about_something_else",
+   "reason": "Sentence 4 describes a trait of ophthalmosaurids, a broader group, without first introducing or linking it to Nannopterygius, making it a statement about something else rather than the animal itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Large eyes protected by a bony scleral ring were a defining trait of this group.\": The phrase \"this group\" is used without a preceding definition of the group being referred to."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:22:14+00:00",
@@ -35,8 +33,22 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:36:49+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:23:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"this group\" is used without a preceding definition of the group being referred to."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:10:36+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:10:36+00:00"
+ ]
 }

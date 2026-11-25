@@ -2,66 +2,23 @@
  "taxon_key": "harpacochampsa",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a39e541384c8d674",
- "reviewed_at": "2026-11-25T13:33:01+00:00",
+ "text_hash": "c1d0385f8dfcefcc",
+ "reviewed_at": "2026-11-25T22:40:16+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    9
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Harpachochampsa was a fish‑eater/piscivore."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 classifies Harpachochampsa in the family Crocodylidae and the superfamily Gavialoidea, which are mutually exclusive taxonomic groups."
+   "kind": "missing_context",
+   "reason": "Refers to \"the only preserved functional premaxillary tooth\" without prior mention of a specific tooth or context for which tooth is functional."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Harpachochampsa is classified in the family Crocodylidae and belongs to the parent group Gavialoidea.\": Sentence 11 classifies Harpachochampsa in the family Crocodylidae and the superfamily Gavialoidea, which are mutually exclusive taxonomic groups."
+  "- missing context: \"The only preserved functional premaxillary tooth faced slightly outward instead of straight down.\": Refers to \"the only preserved functional premaxillary tooth\" without prior mention of a specific tooth or context for which tooth is functional."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:39:13+00:00",
-   "problems": [
-    {
-     "sentences": [
-      11,
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Gavialoidea is a superfamily while Crocodylidae is a family; the text simultaneously assigns Harpacochampsa to both, which are incompatible taxonomic levels."
-    },
-    {
-     "sentences": [
-      12,
-      13,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "The species is placed in the family Crocodylidae, yet its subfamily Mekosuchinae is uncertain and some experts doubt that assignment, implying conflicting family-level placement."
-    },
-    {
-     "sentences": [
-      0,
-      8
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Harpacochampsa was a piscivore, repeating the same claim."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T02:11:21+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:16:18+00:00"
+ "rewritten_at": "2026-11-25T23:20:33+00:00"
 }

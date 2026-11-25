@@ -2,57 +2,32 @@
  "taxon_key": "alnashetri",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c1437bf2894c5dc6",
- "reviewed_at": "2026-11-25T13:44:54+00:00",
+ "text_hash": "e029ad5dfa3cfd51",
+ "reviewed_at": "2026-11-25T22:50:16+00:00",
  "problems": [
   {
    "sentences": [
-    0,
     2
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim Alnashetri is the smallest alvarezsauroid."
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to \"the original discovery\" and a specimen with hind limbs perfectly connected, but the page never explains what the original discovery was or which specimen is being described."
   },
   {
    "sentences": [
-    3
+    9,
+    10
    ],
-   "kind": "missing_context",
-   "reason": "The phrase \"perfectly connected to each other\" is unclear without prior explanation of what is connected."
+   "kind": "contradiction",
+   "reason": "Sentence 10 states fossils were recovered from the upper Candeleros Formation, which is Cenomanian in age, while sentence 11 claims the animal lived during the Albian stage (113–110 Ma), a younger period. The two statements give conflicting geological ages for the same fossils."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The original discovery included a specimen with hind limbs that were perfectly connected to each other.\": The phrase \"perfectly connected to each other\" is unclear without prior explanation of what is connected."
+  "- missing context: \"The original discovery included a specimen with hind limbs that were perfectly connected to each other.\": Sentence 3 refers to \"the original discovery\" and a specimen with hind limbs perfectly connected, but the page never explains what the original discovery was or which specimen is being described.",
+  "- contradiction: \"Fossils were recovered from red sandstones in the upper Candeleros Formation near the boundary with the Huincul Formation.\" / \"The animal lived during the Albian stage, approximately 113.2 to 110.1 million years ago.\": Sentence 10 states fossils were recovered from the upper Candeleros Formation, which is Cenomanian in age, while sentence 11 claims the animal lived during the Albian stage (113–110 Ma), a younger period. The two statements give conflicting geological ages for the same fossils."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:05:14+00:00",
-   "problems": [
-    {
-     "sentences": [
-      10,
-      11,
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 11 places Alnashetri within Alvarezsauroidea, sentence 12 states it is a basal alvarezsauroid outside Alvarezsauridae, yet sentence 13 claims its parent group is Alvarezsauridae."
-    },
-    {
-     "sentences": [
-      9
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 10 refers to specimen MPCA Pv377 as female, but MPCA Pv377 was not introduced or described earlier in the page."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T05:10:19+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:23:49+00:00"
+ "rewritten_at": "2026-11-25T23:26:06+00:00"
 }

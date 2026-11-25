@@ -2,19 +2,24 @@
  "taxon_key": "mochlodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8252c55c18d630b5",
- "reviewed_at": "2026-11-24T01:11:38+00:00",
+ "text_hash": "f63d496818f939e0",
+ "reviewed_at": "2026-11-25T22:53:05+00:00",
  "problems": [
   {
    "sentences": [
-    0,
+    7,
     8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Mochlodon is a rhabdodontid dinosaur, repeating the same classification claim."
+   "kind": "contradiction",
+   "reason": "Sentence 8 states Mochlodon vorosi is a valid second species of the rhabdodontid genus Mochlodon, while sentence 9 claims a 2026 study synonymized it with the ceratopsian Ajkaceratops, implying it is not a rhabdodontid."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"A second species, Mochlodon vorosi, was described from Hungary in 2012.\" / \"A 2026 study concluded that Mochlodon vorosi is a junior synonym of the ceratopsian Ajkaceratops.\": Sentence 8 states Mochlodon vorosi is a valid second species of the rhabdodontid genus Mochlodon, while sentence 9 claims a 2026 study synonymized it with the ceratopsian Ajkaceratops, implying it is not a rhabdodontid."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:27:24+00:00"
 }

@@ -2,38 +2,22 @@
  "taxon_key": "altispinax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3dd248bdaec3f34b",
- "reviewed_at": "2026-11-25T13:33:29+00:00",
+ "text_hash": "82de421297c2b52b",
+ "reviewed_at": "2026-11-25T22:40:27+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    8,
+    9
    ],
-   "kind": "missing_context",
-   "reason": "Refers to vertebrae closest to the skull and an injury to a back frill, but the holotype contains only three posterior dorsal vertebrae and no frill is described."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Discusses a gap between front spines, yet the holotype consists of only posterior dorsal vertebrae, leaving the front spines undefined."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the naming of a new genus (Becklespinax) and a synonym (Metriacanthosaurus) rather than providing information about Altispinax itself."
+   "kind": "repetition",
+   "reason": "Both sentences refer to the name Metriacanthosaurus as a synonym of Becklespinax, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Ralph Molnar suggested that the two vertebrae closest to the skull in Altispinax are fused and interpreted this fusion as evidence of an injury to a back frill that healed from behind.\": Refers to vertebrae closest to the skull and an injury to a back frill, but the holotype contains only three posterior dorsal vertebrae and no frill is described.",
-  "- missing context: \"Darren Naish proposed in 2003 that the gap between the front spines was natural rather than the result of injury.\": Discusses a gap between front spines, yet the holotype consists of only posterior dorsal vertebrae, leaving the front spines undefined."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:39:48+00:00",
@@ -66,8 +50,36 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:15:40+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:33:29+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to vertebrae closest to the skull and an injury to a back frill, but the holotype contains only three posterior dorsal vertebrae and no frill is described."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Discusses a gap between front spines, yet the holotype consists of only posterior dorsal vertebrae, leaving the front spines undefined."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the naming of a new genus (Becklespinax) and a synonym (Metriacanthosaurus) rather than providing information about Altispinax itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:16:39+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:16:39+00:00"
+ ]
 }

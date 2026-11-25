@@ -2,24 +2,28 @@
  "taxon_key": "thecodontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8a883e960beae2b9",
- "reviewed_at": "2026-11-25T13:29:43+00:00",
+ "text_hash": "700d708726aff30b",
+ "reviewed_at": "2026-11-25T22:37:54+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
+    11
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 15 states that only T. antiquus is a valid species, while sentence 16 claims that in 2007 the taxon became the separate genus Pantydraco caducus, implying a split or new valid species."
+   "kind": "about_something_else",
+   "reason": "Sentence 12 discusses a hypothesis about carnivorous prosauropods, a group distinct from Thecodontosaurus, rather than describing the animal itself."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 13 refers to Pantydraco caducus, a different taxon, and its possible relation to Thecodontosaurus, which is not a direct description of Thecodontosaurus."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Currently, the only valid species is T. antiquus.\" / \"In 2007 it became the separate genus Pantydraco caducus.\": Sentence 15 states that only T. antiquus is a valid species, while sentence 16 claims that in 2007 the taxon became the separate genus Pantydraco caducus, implying a split or new valid species."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:34:11+00:00",
@@ -52,8 +56,23 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:24:32+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:29:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 states that only T. antiquus is a valid species, while sentence 16 claims that in 2007 the taxon became the separate genus Pantydraco caducus, implying a split or new valid species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:14:17+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:17+00:00"
+ ]
 }

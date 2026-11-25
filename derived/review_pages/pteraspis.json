@@ -2,52 +2,30 @@
  "taxon_key": "pteraspis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3f925328236d10d6",
- "reviewed_at": "2026-11-25T13:52:33+00:00",
+ "text_hash": "9bbc6cdc77829aa3",
+ "reviewed_at": "2026-11-25T22:58:41+00:00",
  "problems": [
   {
    "sentences": [
-    9
+    8
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 10 refers to the type species Cephalaspis rostrata, which is a different genus, not Pteraspis."
+   "reason": "States the type species is Cephalaspis rostrata, which belongs to a different genus, implying a mistake about Pteraspis itself."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions “specifically on shallow banks below the water” without defining what “shallow banks” refers to or providing context for the feeding behavior."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:29:19+00:00",
-   "problems": [
-    {
-     "sentences": [
-      8,
-      9
-     ],
-     "kind": "contradiction",
-     "reason": "The type species is given as Cephalaspis rostrata, yet the species list includes P. rostrata, implying a different genus for the type species."
-    },
-    {
-     "sentences": [
-      12,
-      14
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences provide the same temporal range for Pteraspis, making one redundant."
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence introduces Cephalaspis rostrata as the type species without any prior mention of the genus Cephalaspis, leaving the reader unclear about its relevance."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T07:03:55+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"Pteraspis likely fed on shoals of plankton just beneath the ocean surface, specifically on shallow banks below the water.\": Mentions “specifically on shallow banks below the water” without defining what “shallow banks” refers to or providing context for the feeding behavior."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:39+00:00"
 }

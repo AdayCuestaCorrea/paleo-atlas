@@ -2,32 +2,32 @@
  "taxon_key": "spinostropheus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dee00ade894d3973",
- "reviewed_at": "2026-11-25T13:41:33+00:00",
+ "text_hash": "bcbd43da5296f112",
+ "reviewed_at": "2026-11-25T22:47:21+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    0,
+    1
    ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the specimen\" without having introduced it earlier."
+   "kind": "contradiction",
+   "reason": "Both sentences give different length estimates for Spinostropheus without indicating they are alternative estimates."
   },
   {
    "sentences": [
-    11,
-    12
+    11
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 states Spinostropheus lived during the Middle Jurassic, while sentence 13 lists a time range from Oxfordian (Late Jurassic) to Cenomanian (Late Cretaceous)."
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to the holotype and paratypes, but the page never introduced or described these specimens."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In 1960, Albert-Félix de Lapparent named the specimen as a second species of Elaphrosaurus.\": Refers to \"the specimen\" without having introduced it earlier.",
-  "- contradiction: \"Spinostropheus lived during the Middle Jurassic in the Tiourarén Formation of Niger.\" / \"The Paleobiology Database lists the time range as Oxfordian to Cenomanian (161.5 to 93.9 million years ago).\": Sentence 12 states Spinostropheus lived during the Middle Jurassic, while sentence 13 lists a time range from Oxfordian (Late Jurassic) to Cenomanian (Late Cretaceous)."
+  "- contradiction: \"Gregory S. Paul estimated the length at 4 meters and weight at 200 kg in 2010.\" / \"Thomas R. Holtz Jr estimated the length at 6.2 meters in 2012.\": Both sentences give different length estimates for Spinostropheus without indicating they are alternative estimates.",
+  "- missing context: \"Rauhut and Carrano (2016) suggested Spinostropheus might be a basal tetanuran because the holotype and paratypes lack ceratosaurian features found in specimen MNN TIG6.\": Sentence 12 refers to the holotype and paratypes, but the page never introduced or described these specimens."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:56:32+00:00",
@@ -51,8 +51,32 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:20:13+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:41:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the specimen\" without having introduced it earlier."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states Spinostropheus lived during the Middle Jurassic, while sentence 13 lists a time range from Oxfordian (Late Jurassic) to Cenomanian (Late Cretaceous)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:21:37+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:37+00:00"
+ "rewritten_at": "2026-11-25T23:24:30+00:00"
 }

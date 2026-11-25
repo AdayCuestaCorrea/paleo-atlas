@@ -2,18 +2,31 @@
  "taxon_key": "gnathosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d679e1e2d1c3f1cb",
- "reviewed_at": "2026-11-24T01:05:27+00:00",
+ "text_hash": "899bba8b83ceb93a",
+ "reviewed_at": "2026-11-25T22:50:22+00:00",
  "problems": [
+  {
+   "sentences": [
+    4,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places a specimen in the Purbeck Limestone (Early Cretaceous), while sentence 7 states that Gnathosaurus fossils date to the Late Jurassic."
+  },
   {
    "sentences": [
     4
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses the misidentification of the jaw fragments as a crocodile jaw, treating the crocodile as if it were the subject rather than a historical error about the specimen."
+   "reason": "Sentence 5 discusses the Purbeck Limestone formation, which is a geological context rather than a characteristic of Gnathosaurus itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"A large specimen originally named Pterodactylus macrurus was found in the Purbeck Limestone of England.\" / \"Gnathosaurus fossils date back to the Late Jurassic period.\": Sentence 5 places a specimen in the Purbeck Limestone (Early Cretaceous), while sentence 7 states that Gnathosaurus fossils date to the Late Jurassic."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:12+00:00"
 }

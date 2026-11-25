@@ -2,31 +2,24 @@
  "taxon_key": "ouranosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "de845ca85f6e00d4",
- "reviewed_at": "2026-11-25T13:17:44+00:00",
+ "text_hash": "97509b4e4639c1a6",
+ "reviewed_at": "2026-11-25T22:24:51+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    17,
+    18
    ],
-   "kind": "missing_context",
-   "reason": "refers to \"chewing teeth\" without prior introduction of teeth"
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "missing_context",
-   "reason": "mentions \"subadult paratype specimen\" without earlier context"
+   "kind": "contradiction",
+   "reason": "Sentence 18 states the dinosaur lived only in the upper part of the Elrhaz Formation, probably Aptian age, while sentence 19 extends its time range from the Aptian to the Maastrichtian (121.4–66 Ma)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Spaces between its chewing teeth were filled with the growing tips of replacement teeth, creating a smooth, continuous grinding surface.\": refers to \"chewing teeth\" without prior introduction of teeth",
-  "- missing context: \"Bone tissue showing signs of rapid repair and high blood vessel density suggests that the subadult paratype specimen experienced fast growth.\": mentions \"subadult paratype specimen\" without earlier context"
+  "- contradiction: \"It inhabited the upper portion of the Elrhaz Formation, which is probably of Aptian age.\" / \"Its time range extends from the Aptian to the Maastrichtian stages, spanning from 121.4 to 66 million years ago.\": Sentence 18 states the dinosaur lived only in the upper part of the Elrhaz Formation, probably Aptian age, while sentence 19 extends its time range from the Aptian to the Maastrichtian (121.4–66 Ma)."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:08:36+00:00",
@@ -43,8 +36,31 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T11:50:28+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:17:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "refers to \"chewing teeth\" without prior introduction of teeth"
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "missing_context",
+     "reason": "mentions \"subadult paratype specimen\" without earlier context"
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:00+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:00+00:00"
+ "rewritten_at": "2026-11-25T23:12:02+00:00"
 }

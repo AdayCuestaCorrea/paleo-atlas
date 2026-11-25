@@ -2,25 +2,22 @@
  "taxon_key": "piksi",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8eeab0b26b96f087",
- "reviewed_at": "2026-11-25T13:49:13+00:00",
+ "text_hash": "f502d6ca856daa46",
+ "reviewed_at": "2026-11-25T22:55:11+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    11,
-    14
+    8,
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 11 and 12 assert that Piksi is a pterosaur (with affinities for Pteranodontoidea), while sentence 15 states that its humerus lacks features found in any pterodactyloid pterosaurs, implying it may not be a pterosaur."
+   "kind": "repetition",
+   "reason": "Both sentences state that Piksi has affinities for the suborder Pteranodontoidea, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Agnolin and Varricchio (2012) reinterpreted Piksi as a pterosaur instead of a bird.\" / \"Recent studies suggest affinities for the suborder Pteranodontoidea.\" / \"It is debated whether Piksi is a pterosaur, as its humerus possesses features found in theropods but not in any pterodactyloid pterosaurs.\": Sentences 11 and 12 assert that Piksi is a pterosaur (with affinities for Pteranodontoidea), while sentence 15 states that its humerus lacks features found in any pterodactyloid pterosaurs, implying it may not be a pterosaur."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:17:43+00:00",
@@ -38,8 +35,24 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:15:23+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:49:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 11 and 12 assert that Piksi is a pterosaur (with affinities for Pteranodontoidea), while sentence 15 states that its humerus lacks features found in any pterodactyloid pterosaurs, implying it may not be a pterosaur."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:26:58+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:26:58+00:00"
+ ]
 }

@@ -2,24 +2,41 @@
  "taxon_key": "boverisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b0b32ef252161e5b",
- "reviewed_at": "2026-11-25T13:32:13+00:00",
+ "text_hash": "a87e1a6b357d0a7f",
+ "reviewed_at": "2026-11-25T22:39:34+00:00",
  "problems": [
   {
    "sentences": [
     5,
-    9
+    8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 states the first Boverisuchus specimen was found in the middle‑late Paleocene, while sentence 10 limits the fossils to the Early to Middle Eocene (Ypresian to Lutetian)."
+   "reason": "[9] places Boverisuchus in the Early to Middle Eocene (Ypresian–Lutetian), while [6] reports a specimen from the middle‑late Paleocene of Saskatchewan."
+  },
+  {
+   "sentences": [
+    0,
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "[9] gives a temporal range of 61.66–37.71 Ma (Selandian–Bartonian), which extends into the Paleocene, whereas [1] implies an Eocene age."
+  },
+  {
+   "sentences": [
+    0,
+    6
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Boverisuchus was adapted for running/galloping."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"In 2026, Lindblad et al. described the first Boverisuchus specimen from the middle-late Paleocene of Saskatchewan, Canada.\" / \"Boverisuchus fossils date from the Early to Middle Eocene, specifically the Ypresian to Lutetian stages. The time range for Boverisuchus is estimated from 61.66 to 37.71 million years ago, spanning the Selandian to Bartonian stages.\": Sentence 6 states the first Boverisuchus specimen was found in the middle‑late Paleocene, while sentence 10 limits the fossils to the Early to Middle Eocene (Ypresian to Lutetian)."
+  "- contradiction: \"In 2026, Lindblad et al. described a Boverisuchus specimen from the middle-late Paleocene of Saskatchewan, Canada.\" / \"Boverisuchus fossils date from the Early to Middle Eocene, specifically the Ypresian to Lutetian stages. The time range for Boverisuchus is estimated from 61.66 to 37.71 million years ago, spanning the Selandian to Bartonian stages.\": [9] places Boverisuchus in the Early to Middle Eocene (Ypresian–Lutetian), while [6] reports a specimen from the middle‑late Paleocene of Saskatchewan.",
+  "- contradiction: \"Boverisuchus was a relatively small crocodyliform, estimated to reach 2.2 to 3.6 meters in length and weigh around 100 kilograms. It is assumed to have had heavily armored skin and long limbs adapted for a running habitus. The animal possessed hoof-like toes, suggesting it lived primarily on land and likely hunted terrestrial mammals.\" / \"Boverisuchus fossils date from the Early to Middle Eocene, specifically the Ypresian to Lutetian stages. The time range for Boverisuchus is estimated from 61.66 to 37.71 million years ago, spanning the Selandian to Bartonian stages.\": [9] gives a temporal range of 61.66–37.71 Ma (Selandian–Bartonian), which extends into the Paleocene, whereas [1] implies an Eocene age."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:37:28+00:00",
@@ -44,8 +61,25 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:59:39+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:32:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states the first Boverisuchus specimen was found in the middle‑late Paleocene, while sentence 10 limits the fossils to the Early to Middle Eocene (Ypresian to Lutetian)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:43+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:43+00:00"
+ "rewritten_at": "2026-11-25T23:20:10+00:00"
 }

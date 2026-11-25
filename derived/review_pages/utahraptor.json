@@ -2,35 +2,52 @@
  "taxon_key": "utahraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "458dba721bd9f3e8",
- "reviewed_at": "2026-11-24T00:00:39+00:00",
+ "text_hash": "a8f726e8a6c12b6f",
+ "reviewed_at": "2026-11-25T22:20:48+00:00",
  "problems": [
   {
    "sentences": [
-    1,
+    18,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Utahraptor is a large dromaeosaurid in the family Dromaeosauridae, repeating the same classification."
+  },
+  {
+   "sentences": [
     5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same size and weight estimates for the largest Utahraptor."
+   "kind": "about_something_else",
+   "reason": "Sentence 6 discusses a student’s proposal to make Utahraptor the Utah state dinosaur, which is a political action unrelated to the animal’s biology."
   },
   {
    "sentences": [
-    15,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the speed comparison between Utahraptor, Deinonychus, Velociraptor, iguanodonts, and sauropods."
-  },
-  {
-   "sentences": [
-    6,
-    7
+    6
    ],
    "kind": "about_something_else",
-   "reason": "Sentences 7 and 8 discuss the state dinosaur designation and a visitor center, which are about state or park matters rather than the animal itself."
+   "reason": "Sentence 7 describes a visitor center and a park, which are about a location and exhibit, not the animal itself."
+  },
+  {
+   "sentences": [
+    22
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 23 refers to a criticism of a name emendation, a taxonomic issue rather than a biological fact about the animal."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 mentions the holotype’s toe claw length but never introduces or defines the holotype earlier in the page."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"The second toe claw of the holotype measured 22 cm along its curve and is estimated to be 24 cm in total length.\": Sentence 4 mentions the holotype’s toe claw length but never introduces or defines the holotype earlier in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:31+00:00"
 }

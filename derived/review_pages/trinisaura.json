@@ -2,59 +2,54 @@
  "taxon_key": "trinisaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a2e3620e98259113",
- "reviewed_at": "2026-11-25T13:15:24+00:00",
+ "text_hash": "2c51d12e5e425e65",
+ "reviewed_at": "2026-11-25T22:22:51+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Trinisaura was formally described in 2013 by Coria and colleagues."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 5 discusses Asteraceae pollen grains from the formation, not directly about Trinisaura."
-  },
-  {
-   "sentences": [
+    9,
     10
    ],
+   "kind": "contradiction",
+   "reason": "Sentences 10 and 11 give conflicting phylogenetic placements: 10 places Trinisaura as a basal ornithopod, while 11 places it within the basal iguanodontid group Elasmaria."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences 10 and 11 repeat the claim that Trinisaura is a basal member of a larger ornithopod clade."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 contradicts sentences 10 and 11 by placing Trinisaura in Rhabdodontoidea, a different clade."
+  },
+  {
+   "sentences": [
+    3
+   ],
    "kind": "about_something_else",
-   "reason": "Sentence 11 lists other fossils found in the same formation, not describing Trinisaura itself."
+   "reason": "Sentence 4 discusses Asteraceae pollen grains, which is about plant fossils, not about Trinisaura."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 13 describes the climate of Antarctica during the Upper Cretaceous, not a trait or fact about Trinisaura itself."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:04:07+00:00",
-   "problems": [
-    {
-     "sentences": [
-      14,
-      18
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 15 states Trinisaura is part of the basal iguanodontid group Elasmaria, while sentence 19 reports a 2022 analysis that finds no Elasmaria clade and places Trinisaura in a different branch."
-    },
-    {
-     "sentences": [
-      4
-     ],
-     "kind": "about_something_else",
-     "reason": "Sentence 5 discusses Asteraceae pollen grains from the formation, which is a botanical claim unrelated to the dinosaur itself."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T04:13:43+00:00"
-  }
- ]
+ "notes": [
+  "- contradiction: \"Trinisaura is classified as a basal member of the ornithopod clade, and the describers placed Trinisaura basally within the Euornithopoda group.\" / \"In 2015, it was discovered that Trinisaura formed part of the basal iguanodontid group Elasmaria, and the parent group of Trinisaura is Elasmaria.\": Sentences 10 and 11 give conflicting phylogenetic placements: 10 places Trinisaura as a basal ornithopod, while 11 places it within the basal iguanodontid group Elasmaria.",
+  "- contradiction: \"A 2022 analysis by Karen Poole found no Elasmaria clade, instead placing Trinisaura in a branch of Rhabdodontoidea with Patagonian and South African genera.\": Sentence 12 contradicts sentences 10 and 11 by placing Trinisaura in Rhabdodontoidea, a different clade."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:55+00:00"
 }

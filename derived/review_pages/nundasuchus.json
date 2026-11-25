@@ -2,51 +2,28 @@
  "taxon_key": "nundasuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bab8a6c21ec07c3b",
- "reviewed_at": "2026-11-25T13:17:15+00:00",
+ "text_hash": "5d5a9582e9682496",
+ "reviewed_at": "2026-11-25T22:24:43+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    20
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Nundasuchus is an extinct genus of crurotarsan archosaurs related to Paracrocodylomorpha."
+   "kind": "about_something_else",
+   "reason": "Mentions Vancleavea, an unrelated aquatic archosauriform, as if it were a feature of Nundasuchus"
   },
   {
    "sentences": [
-    2,
-    14,
-    19
+    16
    ],
-   "kind": "repetition",
-   "reason": "All three sentences describe the animal’s diet or dental features as carnivorous with ziphodont, steak‑knife‑like teeth."
-  },
-  {
-   "sentences": [
-    11,
-    30
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 claims the twist is shared with most eucrocopodans except dinosaurs, while sentence 31 says the 2014 description supports Nundasuchus being more advanced than basal groups, implying a different phylogenetic placement."
-  },
-  {
-   "sentences": [
-    15,
-    27,
-    28
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 asserts the ventral keels are unique and convergent with Vancleavea, whereas sentences 28–29 dispute the presence of hyposphene‑hypantrum articulations, implying a different interpretation of vertebral morphology."
+   "kind": "about_something_else",
+   "reason": "References Nesbitt (2011) discussion of crocodylomorph ancestry, which is unrelated to the specific anatomy of Nundasuchus"
   }
  ],
- "repetitions_dropped": 3,
- "notes": [
-  "- contradiction: \"This twist creates a 45-degree angle between the extremities, a trait shared with most eucrocopodans except dinosaurs.\" / \"One hypothesis, supported by its 2014 description, considers Nundasuchus to be more \"advanced\" than basal groups rather than closer to Ticinosuchus and paracrocodylomorphs.\": Sentence 12 claims the twist is shared with most eucrocopodans except dinosaurs, while sentence 31 says the 2014 description supports Nundasuchus being more advanced than basal groups, implying a different phylogenetic placement.",
-  "- contradiction: \"The ventral keels on the vertebrae are considered a unique trait among archosaurs and likely evolved convergently with similar structures in the unrelated aquatic archosauriform Vancleavea.\" / \"The original description of Nundasuchus vertebrae suggested the possible presence of hyposphene-hypantrum articulations.\" / \"A 2018 study disputed the presence of hyposphene-hypantrum articulations in Nundasuchus, arguing they were misidentified parts of the zygapophyses.\": Sentence 16 asserts the ventral keels are unique and convergent with Vancleavea, whereas sentences 28–29 dispute the presence of hyposphene‑hypantrum articulations, implying a different interpretation of vertebral morphology."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:08:23+00:00",
@@ -88,8 +65,49 @@
    "repetitions_dropped": 3,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:48:35+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:17:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Nundasuchus is an extinct genus of crurotarsan archosaurs related to Paracrocodylomorpha."
+    },
+    {
+     "sentences": [
+      2,
+      14,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe the animal’s diet or dental features as carnivorous with ziphodont, steak‑knife‑like teeth."
+    },
+    {
+     "sentences": [
+      11,
+      30
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 claims the twist is shared with most eucrocopodans except dinosaurs, while sentence 31 says the 2014 description supports Nundasuchus being more advanced than basal groups, implying a different phylogenetic placement."
+    },
+    {
+     "sentences": [
+      15,
+      27,
+      28
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 asserts the ventral keels are unique and convergent with Vancleavea, whereas sentences 28–29 dispute the presence of hyposphene‑hypantrum articulations, implying a different interpretation of vertebral morphology."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:04:56+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:04:56+00:00"
+ ]
 }

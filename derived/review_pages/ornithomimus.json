@@ -2,44 +2,45 @@
  "taxon_key": "ornithomimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "585f2bc740e4c0ed",
- "reviewed_at": "2026-11-25T13:20:06+00:00",
+ "text_hash": "ce046af311503727",
+ "reviewed_at": "2026-11-25T22:27:05+00:00",
  "problems": [
   {
    "sentences": [
-    9
+    7
    ],
    "kind": "repetition",
-   "reason": "Sentence 10 repeats the claim that body shape suggests an omnivorous or herbivorous lifestyle twice."
+   "reason": "Sentence 8 repeats the same claim twice about large eye sockets and nocturnality."
   },
   {
    "sentences": [
-    11
+    8
    ],
    "kind": "repetition",
-   "reason": "Sentence 12 repeats the same claim about large eye sockets and nocturnality."
+   "reason": "Sentence 9 repeats the same study information twice."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to a \"fourth\" feathered specimen without any prior mention of how many specimens have been described."
   },
   {
    "sentences": [
     12
    ],
-   "kind": "repetition",
-   "reason": "Sentence 13 repeats the same study and result twice."
-  },
-  {
-   "sentences": [
-    9
-   ],
    "kind": "missing_context",
-   "reason": "Sentence 10 uses the pronoun \"their\" referring to Ornithomimus, which is singular, creating ambiguous context."
+   "reason": "Sentence 13 mentions Coelosaurus antiquus in relation to Ornithomimus without any earlier introduction of Coelosaurus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The diet of Ornithomimus is debated; while theropods might have been carnivorous, its body shape suggests a largely omnivorous lifestyle, and their body shape also suggests a partially or largely herbivorous lifestyle.\": Sentence 10 uses the pronoun \"their\" referring to Ornithomimus, which is singular, creating ambiguous context."
+  "- missing context: \"A fourth feathered Ornithomimus specimen, described in October 2015 by Aaron van der Reest, Alex Wolfe, and Phil Currie, was the first to preserve tail feathers.\": Sentence 4 refers to a \"fourth\" feathered specimen without any prior mention of how many specimens have been described.",
+  "- missing context: \"It is debated whether Coelosaurus antiquus belongs to Ornithomimus, with some researchers considering it a nomen dubium.\": Sentence 13 mentions Coelosaurus antiquus in relation to Ornithomimus without any earlier introduction of Coelosaurus."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:12:40+00:00",
@@ -88,8 +89,45 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:29:03+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:20:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 10 repeats the claim that body shape suggests an omnivorous or herbivorous lifestyle twice."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 12 repeats the same claim about large eye sockets and nocturnality."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 13 repeats the same study and result twice."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 uses the pronoun \"their\" referring to Ornithomimus, which is singular, creating ambiguous context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:06:47+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:06:47+00:00"
+ "rewritten_at": "2026-11-25T23:13:15+00:00"
 }

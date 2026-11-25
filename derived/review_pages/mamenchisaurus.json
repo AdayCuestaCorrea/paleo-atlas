@@ -2,40 +2,32 @@
  "taxon_key": "mamenchisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2752709479de1905",
- "reviewed_at": "2026-11-25T13:12:42+00:00",
+ "text_hash": "283cf127a38bbed9",
+ "reviewed_at": "2026-11-25T22:20:11+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the neck posture of M. youngi in essentially the same way."
-  },
-  {
-   "sentences": [
-    17,
-    19
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 18 claims the neck was too immobile to erect, while sentence 20 states the base could bend strongly upward."
-  },
-  {
-   "sentences": [
-    6
+    8
    ],
    "kind": "missing_context",
-   "reason": "Sentence 7 refers to fused tail vertebrae without specifying which species or specimen it concerns."
+   "reason": "Refers to \"M. youngi\" without having introduced or defined this species earlier in the page."
+  },
+  {
+   "sentences": [
+    10,
+    11,
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Discusses phylogenetic positions and taxonomic actions concerning Euhelopus, Xinjiangtitan, and generic transfers, which are not directly about Mamenchisaurus itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"A recent biomechanical study suggests the neck was too immobile to erect due to very long cervical ribs, unlike diplodocids which had significantly more mobile necks.\" / \"Manual analysis of cervical vertebrae mobility showed that the base of the neck could bend strongly upward.\": Sentence 18 claims the neck was too immobile to erect, while sentence 20 states the base could bend strongly upward.",
-  "- missing context: \"Researchers believe the fused tail vertebrae with expanded neural arches might have functioned as a club or sensory organ.\": Sentence 7 refers to fused tail vertebrae without specifying which species or specimen it concerns."
+  "- missing context: \"Analysis of M. youngi suggests its neck was almost straight in neutral posture, with slight upward bending at the base and downward bending near the head.\": Refers to \"M. youngi\" without having introduced or defined this species earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:59:41+00:00",
@@ -60,8 +52,40 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:23:34+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:12:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the neck posture of M. youngi in essentially the same way."
+    },
+    {
+     "sentences": [
+      17,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 claims the neck was too immobile to erect, while sentence 20 states the base could bend strongly upward."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to fused tail vertebrae without specifying which species or specimen it concerns."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:08+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:08+00:00"
+ "rewritten_at": "2026-11-25T23:09:13+00:00"
 }

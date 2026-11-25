@@ -2,19 +2,23 @@
  "taxon_key": "alaskacephale",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "012f879a3393435c",
- "reviewed_at": "2026-11-24T00:25:00+00:00",
+ "text_hash": "df9e11280f2a40db",
+ "reviewed_at": "2026-11-25T22:33:00+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    8
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences list the same set of coexisting species (Pachyrhinosaurus, Edmontosaurus, Nanuqsaurus, Unnuakomys) as evidence that Alaskacephale lived alongside them."
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to \"animals thriving in this extreme latitude\" without specifying that it is discussing Alaskacephale, making the reference ambiguous."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Researchers suggest that animals thriving in this extreme latitude were likely endotherms, as the absence of common ectothermic clades in the Prince Creek Formation implies a need for internal heat generation.\": Sentence 6 refers to \"animals thriving in this extreme latitude\" without specifying that it is discussing Alaskacephale, making the reference ambiguous."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:16:20+00:00"
 }

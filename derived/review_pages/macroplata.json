@@ -2,19 +2,39 @@
  "taxon_key": "macroplata",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f70360627f57713f",
- "reviewed_at": "2026-11-24T00:52:28+00:00",
+ "text_hash": "c8abbda6003abe14",
+ "reviewed_at": "2026-11-25T22:45:39+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    9
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Macroplata belongs to the family Rhomaleosauridae, repeating the same classification claim."
+   "kind": "missing_context",
+   "reason": "Refers to \"large shoulder bones\" without any prior mention of shoulder anatomy."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions the holotype and its maxilla without introducing the holotype earlier."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Discusses the pineal foramen size without any earlier reference to the pineal foramen."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Large shoulder bones suggest Macroplata used powerful forward strokes to swim fast.\": Refers to \"large shoulder bones\" without any prior mention of shoulder anatomy.",
+  "- missing context: \"The better-preserved maxilla of the holotype has 18 tooth sockets, with the smallest located at the back.\": Mentions the holotype and its maxilla without introducing the holotype earlier.",
+  "- missing context: \"There is a debate regarding the size of the pineal foramen in Macroplata, with sources claiming it was both large and small.\": Discusses the pineal foramen size without any earlier reference to the pineal foramen."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:23:34+00:00"
 }

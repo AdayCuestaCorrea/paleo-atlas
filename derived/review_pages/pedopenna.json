@@ -2,33 +2,32 @@
  "taxon_key": "pedopenna",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "39cb58d087cbf103",
- "reviewed_at": "2026-11-25T13:45:21+00:00",
+ "text_hash": "e4dd43132f350690",
+ "reviewed_at": "2026-11-25T22:50:58+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14,
-    15
+    3,
+    4
    ],
    "kind": "contradiction",
-   "reason": "The age of Pedopenna is given as 163 Ma, 168 Ma, and a range 165.3–161.5 Ma, which are mutually inconsistent."
+   "reason": "Sentence 4 classifies Pedopenna as a scansoriopterygid (a theropod dinosaur related to birds), while sentence 5 places it in the class Reptilia, which is inconsistent."
   },
   {
    "sentences": [
-    9,
-    10
+    5,
+    6
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Pedopenna has been recovered as a scansoriopterygid."
+   "reason": "Both sentences state the same estimated time range (165.3–161.5 Ma) for Pedopenna."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Pedopenna lived during the Middle Jurassic, approximately 163 million years ago in the Callovian stage, in what is now Asia.\" / \"However, recent radiometric dating places Pedopenna in the middle Jurassic Callovian, approximately 168 million years ago.\" / \"The estimated time range for this taxon spans between 165.3 and 161.5 million years ago.\": The age of Pedopenna is given as 163 Ma, 168 Ma, and a range 165.3–161.5 Ma, which are mutually inconsistent."
+  "- contradiction: \"Recent studies have recovered Pedopenna as a scansoriopterygid.\" / \"This animal is classified under the class Reptilia.\": Sentence 4 classifies Pedopenna as a scansoriopterygid (a theropod dinosaur related to birds), while sentence 5 places it in the class Reptilia, which is inconsistent."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:06:35+00:00",
@@ -54,8 +53,34 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:19:02+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:45:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "The age of Pedopenna is given as 163 Ma, 168 Ma, and a range 165.3–161.5 Ma, which are mutually inconsistent."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Pedopenna has been recovered as a scansoriopterygid."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:24:15+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:24:15+00:00"
+ "rewritten_at": "2026-11-25T23:26:31+00:00"
 }

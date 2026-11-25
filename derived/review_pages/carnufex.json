@@ -2,57 +2,33 @@
  "taxon_key": "carnufex",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2324b5ace290af06",
- "reviewed_at": "2026-11-25T13:31:49+00:00",
+ "text_hash": "06e59bec1b9c9676",
+ "reviewed_at": "2026-11-25T22:39:23+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    9,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 14 states Carnufex is a primitive crocodylomorph more derived than Rauisuchidae, while sentence 15 claims it is the most basal crocodylomorph, directly contradicting each other."
+   "reason": "Sentence 10 states Carnufex is a primitive crocodylomorph more derived than Rauisuchidae, while sentence 11 claims it is the most basal crocodylomorph, a direct conflict on its phylogenetic position."
   },
   {
    "sentences": [
-    6
+    6,
+    11
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to \"decorative features\" on the skull without specifying what features or context were previously mentioned, leaving the claim unsupported."
+   "kind": "contradiction",
+   "reason": "Sentence 12 gives a time range of 237–227.3 Ma for Carnufex fossils, whereas sentence 7 implies a single age of about 231 Ma, presenting inconsistent age estimates."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Carnufex is classified as a primitive crocodylomorph, belonging to a group of suchians more derived than Rauisuchidae.\" / \"Phylogenetic analysis suggests Carnufex is the most basal crocodylomorph, sharing this position with an unnamed genus.\": Sentence 14 states Carnufex is a primitive crocodylomorph more derived than Rauisuchidae, while sentence 15 claims it is the most basal crocodylomorph, directly contradicting each other.",
-  "- missing context: \"Rough areas and bumps on the top of the skull suggest that decorative features may have developed there.\": Sentence 7 refers to \"decorative features\" on the skull without specifying what features or context were previously mentioned, leaving the claim unsupported."
+  "- contradiction: \"Carnufex is classified as a primitive crocodylomorph, belonging to a group of suchians more derived than Rauisuchidae.\" / \"Phylogenetic analysis suggests Carnufex is the most basal crocodylomorph, sharing this position with an unnamed genus.\": Sentence 10 states Carnufex is a primitive crocodylomorph more derived than Rauisuchidae, while sentence 11 claims it is the most basal crocodylomorph, a direct conflict on its phylogenetic position.",
+  "- contradiction: \"Based on the holotype, Carnufex was estimated to be about 3 meters long and 1.5 meters tall, though it may have grown larger as the specimen was immature.\" / \"Fossils of Carnufex date to the Carnian age of the Late Triassic, approximately 231 million years ago, with a time range from 237 to 227.3 million years ago.\": Sentence 12 gives a time range of 237–227.3 Ma for Carnufex fossils, whereas sentence 7 implies a single age of about 231 Ma, presenting inconsistent age estimates."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:37:04+00:00",
-   "problems": [
-    {
-     "sentences": [
-      10
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 11 refers to \"the top of the head\" without having previously introduced or described a head or skull context."
-    },
-    {
-     "sentences": [
-      16,
-      17
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 17 classifies Carnufex as a primitive crocodylomorph more derived than Rauisuchidae, while sentence 18 states it is the most basal crocodylomorph, a direct contradiction in its phylogenetic position."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:54:29+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:29+00:00"
+ "rewritten_at": "2026-11-25T23:20:00+00:00"
 }

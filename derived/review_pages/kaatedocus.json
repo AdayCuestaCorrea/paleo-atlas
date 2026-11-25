@@ -2,48 +2,21 @@
  "taxon_key": "kaatedocus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "871d1a88f47116f2",
- "reviewed_at": "2026-11-25T13:36:54+00:00",
+ "text_hash": "2cee3046010d8cd4",
+ "reviewed_at": "2026-11-25T22:43:13+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 15 classifies Kaatedocus within family Diplodocidae, while sentence 16 states it belongs to family Dicraeosauridae."
-  },
-  {
-   "sentences": [
-    16,
-    17
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 17 claims Kaatedocus is the most basal dicraeosaurid, whereas sentence 18 places it as the most basal diplodocine."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 refers to \"originally discovered fossils\" without prior mention of the original discovery context."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 discusses the reopening of a site and discovery of bones, which is about the site and its history rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Sentence 7 repeats the classification of Kaatedocus as belonging to the family Dicraeosauridae, which is already stated in sentence 6."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Kaatedocus is classified within the family Diplodocidae and the subfamily Diplodocinae.\" / \"However, it also belongs to the parent group Dicraeosauridae and is classified in the family Dicraeosauridae.\": Sentence 15 classifies Kaatedocus within family Diplodocidae, while sentence 16 states it belongs to family Dicraeosauridae.",
-  "- contradiction: \"Whitlock and Wilson (2020) argue that Kaatedocus is the most basal dicraeosaurid, a position they consider more likely than being a diplodocid.\" / \"In 2017, Tschopp and Mateus positioned Kaatedocus as the most basal diplodocine during a phylogenetic review associated with the description of the genus Galeamopus.\": Sentence 17 claims Kaatedocus is the most basal dicraeosaurid, whereas sentence 18 places it as the most basal diplodocine.",
-  "- missing context: \"Only 10% of the originally discovered fossils survived, including a skull.\": Sentence 11 refers to \"originally discovered fossils\" without prior mention of the original discovery context."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:46:17+00:00",
@@ -83,8 +56,45 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T03:09:50+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:36:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 classifies Kaatedocus within family Diplodocidae, while sentence 16 states it belongs to family Dicraeosauridae."
+    },
+    {
+     "sentences": [
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 17 claims Kaatedocus is the most basal dicraeosaurid, whereas sentence 18 places it as the most basal diplodocine."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 refers to \"originally discovered fossils\" without prior mention of the original discovery context."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 12 discusses the reopening of a site and discovery of bones, which is about the site and its history rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:18:54+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:18:54+00:00"
+ ]
 }

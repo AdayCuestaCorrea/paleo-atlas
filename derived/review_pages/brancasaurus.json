@@ -2,46 +2,23 @@
  "taxon_key": "brancasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5da212de298d978b",
- "reviewed_at": "2026-11-25T13:18:01+00:00",
+ "text_hash": "9f645bc930ea9df8",
+ "reviewed_at": "2026-11-25T22:25:16+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Refers to the pubis being damaged into 176 pieces without prior mention of the pubis."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions the Bückeberg Group without earlier context of that formation."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "References Wealden 5 and 6 layers without prior introduction of the Wealden layers."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes deposition of Wealden layers, a geological formation, as if it were about the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 3 describes forelimbs as including three pectoral vertebrae, which is anatomically incorrect because vertebrae are part of the axial skeleton, not forelimbs."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Workers discovered the holotype near Gronau in northwestern Germany in July 1910 using pickaxes, an event that damaged the pubis into 176 pieces.\": Refers to the pubis being damaged into 176 pieces without prior mention of the pubis.",
-  "- missing context: \"Plesiosaurs of the Bückeberg Group, including Brancasaurus, were presumably preserved after sinking to the oxygen-poor bottom of the lake.\": Mentions the Bückeberg Group without earlier context of that formation.",
-  "- missing context: \"During the deposition of the Wealden 5 and Wealden 6 layers, the lake expanded and became more brackish due to marine transgression.\": References Wealden 5 and 6 layers without prior introduction of the Wealden layers."
+  "- contradiction: \"The forelimbs included three pectoral vertebrae with rectangular spines, humeri about 24 cm long, and a femur measuring 21.5 cm with one concave edge.\": Sentence 3 describes forelimbs as including three pectoral vertebrae, which is anatomically incorrect because vertebrae are part of the axial skeleton, not forelimbs."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:09:11+00:00",
@@ -59,8 +36,45 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:57:22+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:18:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the pubis being damaged into 176 pieces without prior mention of the pubis."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the Bückeberg Group without earlier context of that formation."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "References Wealden 5 and 6 layers without prior introduction of the Wealden layers."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes deposition of Wealden layers, a geological formation, as if it were about the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:18+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:18+00:00"
+ "rewritten_at": "2026-11-25T23:12:17+00:00"
 }

@@ -2,103 +2,40 @@
  "taxon_key": "pachycephalosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "826b30e97f8a57cf",
- "reviewed_at": "2026-11-25T13:13:31+00:00",
+ "text_hash": "874896864d83d702",
+ "reviewed_at": "2026-11-25T22:21:05+00:00",
  "problems": [
   {
    "sentences": [
     1,
     3
    ],
+   "kind": "repetition",
+   "reason": "Both sentences state the dome thickness of Pachycephalosaurus, repeating the same claim."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"bony spikes located on the snout\" without any prior mention of spikes or a context that introduces them."
+  },
+  {
+   "sentences": [
+    10,
+    11
+   ],
    "kind": "contradiction",
-   "reason": "Sentence 2 states the skull roof thickness is 22 cm, while sentence 4 claims a dome thickness of up to 25 cm."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the same temporal range (Maastrichtian, 68–66 Ma) for the species."
-  },
-  {
-   "sentences": [
-    24,
-    25
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences discuss the debate over head‑butting versus flank‑butting behavior."
-  },
-  {
-   "sentences": [
-    18
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 19 describes the clade Pachycephalosauria, not the animal itself, and presents it as if it were a characteristic of Pachycephalosaurus."
+   "reason": "Sentence 11 claims the teeth are very small, ridged, and unsuitable for chewing fibrous plants, while sentence 12 describes the most complete jaw as having serrated, blade‑like front teeth reminiscent of carnivorous theropods, which contradicts the earlier tooth description."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The animal is known mainly from a single skull and thick skull roofs measuring 22 cm, with estimates of its length at 4.5 meters and weight between 370 and 450 kilograms.\" / \"A large bony dome on its skull reached up to 25 cm in thickness, serving to cushion the brain.\": Sentence 2 states the skull roof thickness is 22 cm, while sentence 4 claims a dome thickness of up to 25 cm."
+  "- missing context: \"The bony spikes located on the snout were likely blunted rather than sharp.\": The sentence refers to \"bony spikes located on the snout\" without any prior mention of spikes or a context that introduces them.",
+  "- contradiction: \"Pachycephalosaurus had very small, ridged teeth that could not chew tough, fibrous plants as effectively as those of other dinosaurs of its time.\" / \"The most complete fossil jaw shows serrated, blade-like front teeth reminiscent of carnivorous theropods.\": Sentence 11 claims the teeth are very small, ridged, and unsuitable for chewing fibrous plants, while sentence 12 describes the most complete jaw as having serrated, blade‑like front teeth reminiscent of carnivorous theropods, which contradicts the earlier tooth description."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:01:14+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Weight estimates differ: 370–450 kg vs up to 2000 kg."
-    },
-    {
-     "sentences": [
-      1,
-      17,
-      18,
-      19,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Dietary claims conflict: herbivore vs small ineffective teeth vs serrated carnivorous teeth vs omnivorous."
-    },
-    {
-     "sentences": [
-      17,
-      18
-     ],
-     "kind": "contradiction",
-     "reason": "Teeth described as ineffective for chewing fibrous plants vs serrated blade‑like teeth resembling theropods."
-    },
-    {
-     "sentences": [
-      17,
-      18,
-      19,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Omnivorous claim contradicts herbivorous description and tooth morphology."
-    },
-    {
-     "sentences": [
-      0,
-      7
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences give length estimates (4.5 m) and weight ranges."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:40:00+00:00"
-  }
- ],
+ "rewrite": "english failed",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:38+00:00",
- "hand_fixed": "2026-11-25"
+ "rewritten_at": "2026-11-25T23:09:39+00:00"
 }

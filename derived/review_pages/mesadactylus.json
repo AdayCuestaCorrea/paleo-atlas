@@ -2,37 +2,24 @@
  "taxon_key": "mesadactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ff2bd83067af07d5",
- "reviewed_at": "2026-11-25T13:53:59+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "fee9c940751d7e30",
+ "reviewed_at": "2026-11-25T22:59:51+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:32:35+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that the holotype has a synsacrum with a unique complete fusion of spinae into a supraneural blade."
-    },
-    {
-     "sentences": [
-      1,
-      8
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 2 claims the holotype specimen BYU 2024 includes the synsacrum and associated arm bones, etc., implying they belong to the same specimen, while sentence 9 asserts that the synsacrum and the rest of the material come from different forms."
-    }
+   "sentences": [
+    6,
+    7
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T07:16:58+00:00"
+   "kind": "contradiction",
+   "reason": "Sentence 7 states Mesadactylus was classified as a pterodactyloid, while sentence 8 claims the holotype synsacrum belongs to an Anurognathidae member, contradicting the earlier classification of the same specimen."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Jensen and Padian originally classified Mesadactylus as a pterodactyloid.\" / \"In 2007, S. Christopher Bennett claimed that the holotype and referred material came from different forms, arguing the synsacrum belonged to an Anurognathidae member while the rest was pterodactyloid.\": Sentence 7 states Mesadactylus was classified as a pterodactyloid, while sentence 8 claims the holotype synsacrum belongs to an Anurognathidae member, contradicting the earlier classification of the same specimen."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:59+00:00"
 }

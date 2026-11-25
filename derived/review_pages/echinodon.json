@@ -2,61 +2,24 @@
  "taxon_key": "echinodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fdca0895cb69cd7b",
- "reviewed_at": "2026-11-25T13:14:45+00:00",
+ "text_hash": "d38b48544f9a3ffb",
+ "reviewed_at": "2026-11-25T22:22:12+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    5
+    9,
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Echinodon grew to about 60 centimeters in length."
-  },
-  {
-   "sentences": [
-    2,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim that Echinodon possessed one or two canine‑like teeth in each jaw."
+   "kind": "contradiction",
+   "reason": "Sentences 10 and 11 present opposing views on the animal’s diet—one claims it cropped vegetation, the other suggests an omnivorous diet—without indicating they are different hypotheses or estimates."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:02:57+00:00",
-   "problems": [
-    {
-     "sentences": [
-      2,
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that the premaxilla bore only three teeth lacking denticles."
-    },
-    {
-     "sentences": [
-      3,
-      5
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences claim the animal was about 60 centimeters long."
-    },
-    {
-     "sentences": [
-      10
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to \"the enlarged canines of the clade\" without specifying which clade is meant."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T04:03:13+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Research by Sereno in 2012 suggests the primary role of the front tooth row was cropping vegetation, based on wear patterns and jaw movement.\" / \"However, Butler and colleagues in 2008 proposed that enlarged canines within the clade served an omnivorous diet, differing from the vegetation-cropping idea.\": Sentences 10 and 11 present opposing views on the animal’s diet—one claims it cropped vegetation, the other suggests an omnivorous diet—without indicating they are different hypotheses or estimates."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:21+00:00"
 }

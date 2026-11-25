@@ -2,50 +2,32 @@
  "taxon_key": "teratornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ae116cbda7387087",
- "reviewed_at": "2026-11-25T13:35:21+00:00",
+ "text_hash": "e3f14c34dbfaf7ac",
+ "reviewed_at": "2026-11-25T22:41:40+00:00",
  "problems": [
   {
    "sentences": [
     0,
     3
    ],
-   "kind": "contradiction",
-   "reason": "Weight estimate in sentence 1 (12.5–15 kg) conflicts with sentence 4 (22.5 kg)."
-  },
-  {
-   "sentences": [
-    0,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 5 (2.938–3.379 m)."
-  },
-  {
-   "sentences": [
-    0,
-    1
-   ],
-   "kind": "contradiction",
-   "reason": "Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 2 (>4 m)."
+   "kind": "repetition",
+   "reason": "Sentences 1 and 4 repeat the same estimate of wingspan and weight for Teratornis merriami."
   },
   {
    "sentences": [
     0,
     2
    ],
-   "kind": "repetition",
-   "reason": "Sentences 1 and 3 repeat the same measurements for Teratornis merriami."
+   "kind": "contradiction",
+   "reason": "Sentence 1 gives a weight range of 12.5–15.0 kg for Teratornis merriami, while sentence 3 estimates a weight of about 22.5 kg, nearly double the former."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Teratornis merriami stood approximately 75 cm tall with an estimated wingspan of 3.5 to 3.8 meters and a weight between 12.5 and 15.0 kg.\" / \"Calculations based on the sternum and synsacrum estimated Teratornis merriami weighed about 22.5 kg, nearly double the weight of an average California condor.\": Weight estimate in sentence 1 (12.5–15 kg) conflicts with sentence 4 (22.5 kg).",
-  "- contradiction: \"Teratornis merriami stood approximately 75 cm tall with an estimated wingspan of 3.5 to 3.8 meters and a weight between 12.5 and 15.0 kg.\" / \"A 1983 study estimated a wingspan range of 2.938 to 3.379 meters and a weight of 13.7 kg for Teratornis merriami.\": Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 5 (2.938–3.379 m).",
-  "- contradiction: \"Teratornis merriami stood approximately 75 cm tall with an estimated wingspan of 3.5 to 3.8 meters and a weight between 12.5 and 15.0 kg.\" / \"A partial skeleton of Teratornis woodburnensis indicates an estimated wingspan of over 4 meters.\": Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 2 (>4 m)."
+  "- contradiction: \"Teratornis merriami stood approximately 75 cm tall with an estimated wingspan of 3.5 to 3.8 meters and a weight between 12.5 and 15.0 kg, though a 1983 study estimated a wingspan range of 2.938 to 3.379 meters and a weight of 13.7 kg.\" / \"Calculations based on the sternum and synsacrum estimated Teratornis merriami weighed about 22.5 kg, nearly double the weight of an average California condor.\": Sentence 1 gives a weight range of 12.5–15.0 kg for Teratornis merriami, while sentence 3 estimates a weight of about 22.5 kg, nearly double the former."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:42:45+00:00",
@@ -78,8 +60,49 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:41:03+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:35:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Weight estimate in sentence 1 (12.5–15 kg) conflicts with sentence 4 (22.5 kg)."
+    },
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 5 (2.938–3.379 m)."
+    },
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Wingspan in sentence 1 (3.5–3.8 m) conflicts with sentence 2 (>4 m)."
+    },
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 1 and 3 repeat the same measurements for Teratornis merriami."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:17:42+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:17:42+00:00"
+ "rewritten_at": "2026-11-25T23:21:18+00:00"
 }

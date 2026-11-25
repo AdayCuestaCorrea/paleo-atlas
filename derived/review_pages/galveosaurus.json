@@ -2,19 +2,55 @@
  "taxon_key": "galveosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e2034f38787a27de",
- "reviewed_at": "2026-11-24T00:50:34+00:00",
+ "text_hash": "16a14faca04dc976",
+ "reviewed_at": "2026-11-25T22:45:03+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    2,
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the fossil bones were moved to the Paleontological Museum of Galve for public display/exhibition."
+   "kind": "contradiction",
+   "reason": "Sentence 3 states Galveosaurus is in Macronaria, which includes Brachiosauridae, while sentence 5 places it as a sister taxon of Titanosauriformes outside Brachiosauridae."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "The text refers to the \"Aragosaurus team\" without any prior introduction or explanation of who they are."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 6 discusses a dispute about the validity of the name, which concerns the team’s publication practices rather than the animal itself."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "The mention of \"Sánchez Hernández\" and her alleged unethical practices assumes prior knowledge of her identity and role, which is not provided."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 8 refers to \"Sánchez Hernández\" and her photos, but no context about her or the photos has been given earlier."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The parent group of this dinosaur is Macronaria.\" / \"A 2024 phylogenetic analysis recovered Galvesaurus as a sister taxon of Titanosauriformes outside Brachiosauridae.\": Sentence 3 states Galveosaurus is in Macronaria, which includes Brachiosauridae, while sentence 5 places it as a sister taxon of Titanosauriformes outside Brachiosauridae.",
+  "- missing context: \"The Aragosaurus team disputed the validity of the name Galveosaurus, arguing that their publication date of July 1, 2005, was valid within the journal's July–December 2005 range.\": The text refers to the \"Aragosaurus team\" without any prior introduction or explanation of who they are.",
+  "- missing context: \"The Aragosaurus team alleged that Sánchez Hernández knew other scientists were working on the specimen and cited their previous research, suggesting unethical publication practices.\": The mention of \"Sánchez Hernández\" and her alleged unethical practices assumes prior knowledge of her identity and role, which is not provided.",
+  "- missing context: \"It is debated whether Sánchez Hernández had first-hand access to the specimen, with the Aragosaurus team claiming her photos showed the public display cabinet frame.\": Sentence 8 refers to \"Sánchez Hernández\" and her photos, but no context about her or the photos has been given earlier."
+ ],
+ "rewrite": "spanish failed",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:23:23+00:00"
 }

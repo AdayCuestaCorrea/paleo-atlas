@@ -2,48 +2,30 @@
  "taxon_key": "kaijutitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3456a512f5493b73",
- "reviewed_at": "2026-11-25T13:55:43+00:00",
+ "text_hash": "0edd1bc34923de21",
+ "reviewed_at": "2026-11-25T23:01:34+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    14
+    6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 claims Kaijutitan was the youngest known titanosaur, while sentence 15 places it in the late Coniacian (≈87 Ma), which is not the youngest time for known titanosaurs."
+   "reason": "Sentence 7 states Kaijutitan is outside the Eutitanosauria clade, yet also says it belongs to Lithostrotia, a subgroup of Eutitanosauria."
   },
   {
    "sentences": [
-    13,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 14 states Kaijutitan is a basal titanosaurian outside the Eutitanosauria clade, yet also says it belongs to Lithostrotia, a derived clade within Titanosauria."
-  },
-  {
-   "sentences": [
-    10,
-    11
+    5
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the discovery location and context of the holotype, repeating the same information."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 15 repeats the age range information twice."
+   "reason": "Sentence 6 repeats the discovery and naming information already given in sentences 1 and 2."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"In 2019, Kaijutitan was the youngest known titanosaur with such a basal phylogenetic position.\" / \"Kaijutitan lived during the Late Cretaceous Coniacian stage, approximately 89 to 86 million years ago, in what is now South America. Kaijutitan lived during the late Coniacian stage, approximately 87 million years ago. The time range for Kaijutitan is estimated from 89.8 to 85.7 million years ago.\": Sentence 10 claims Kaijutitan was the youngest known titanosaur, while sentence 15 places it in the late Coniacian (≈87 Ma), which is not the youngest time for known titanosaurs.",
-  "- contradiction: \"Kaijutitan is classified as a basal titanosaurian, outside the Eutitanosauria clade, alongside Epachthosaurus. It is one of the most basal titanosaurs characterized by procoelic tail vertebrae. Kaijutitan belongs to the parent group Lithostrotia and is classified within the class Saurischia.\" / \"Kaijutitan lived during the Late Cretaceous Coniacian stage, approximately 89 to 86 million years ago, in what is now South America. Kaijutitan lived during the late Coniacian stage, approximately 87 million years ago. The time range for Kaijutitan is estimated from 89.8 to 85.7 million years ago.\": Sentence 14 states Kaijutitan is a basal titanosaurian outside the Eutitanosauria clade, yet also says it belongs to Lithostrotia, a derived clade within Titanosauria."
+  "- contradiction: \"Kaijutitan is classified as a basal titanosaurian, outside the Eutitanosauria clade, alongside Epachthosaurus. It is one of the most basal titanosaurs characterized by procoelic tail vertebrae. Kaijutitan belongs to the parent group Lithostrotia and is classified within the class Saurischia.\": Sentence 7 states Kaijutitan is outside the Eutitanosauria clade, yet also says it belongs to Lithostrotia, a subgroup of Eutitanosauria."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:38:08+00:00",
@@ -82,8 +64,48 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T07:41:28+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:55:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims Kaijutitan was the youngest known titanosaur, while sentence 15 places it in the late Coniacian (≈87 Ma), which is not the youngest time for known titanosaurs."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 states Kaijutitan is a basal titanosaurian outside the Eutitanosauria clade, yet also says it belongs to Lithostrotia, a derived clade within Titanosauria."
+    },
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the discovery location and context of the holotype, repeating the same information."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 15 repeats the age range information twice."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:31:30+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:31:30+00:00"
+ "rewritten_at": "2026-11-25T23:30:49+00:00"
 }

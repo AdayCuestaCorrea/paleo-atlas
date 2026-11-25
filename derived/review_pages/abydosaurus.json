@@ -2,27 +2,24 @@
  "taxon_key": "abydosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b64de0de1c93d9f5",
- "reviewed_at": "2026-11-24T01:29:25+00:00",
+ "text_hash": "0af726fb312e942c",
+ "reviewed_at": "2026-11-25T22:58:43+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    9
+    3,
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state Abydosaurus is classified within the family Brachiosauridae."
-  },
-  {
-   "sentences": [
-    5,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the genus authority as Chure et al., 2010."
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims Abydosaurus fossils are from the \"Upper Lower Cretaceous\" of northeastern Utah, while sentence 7 specifies they date to the Albian stage of the Early Cretaceous (≈104 Ma). The two statements give incompatible geological ages for the same fossils."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Abydosaurus is a brachiosaurid sauropod dinosaur known from fossils found in the Upper Lower Cretaceous rocks of northeastern Utah, United States.\" / \"Fossils of Abydosaurus date to the Albian stage of the Early Cretaceous, with an age of less than 104.46 ± 0.95 million years.\": Sentence 4 claims Abydosaurus fossils are from the \"Upper Lower Cretaceous\" of northeastern Utah, while sentence 7 specifies they date to the Albian stage of the Early Cretaceous (≈104 Ma). The two statements give incompatible geological ages for the same fossils."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:41+00:00"
 }

@@ -2,44 +2,31 @@
  "taxon_key": "concavenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a5b18ace0e34f93a",
- "reviewed_at": "2026-11-25T13:28:51+00:00",
+ "text_hash": "225d3f79dc4f0c11",
+ "reviewed_at": "2026-11-25T22:36:44+00:00",
  "problems": [
   {
    "sentences": [
-    14
+    4,
+    12
    ],
    "kind": "repetition",
-   "reason": "Sentence 15 repeats the age range of Concavenator, which is already stated earlier in the page."
+   "reason": "Both sentences assert that Concavenator’s ulnar bumps are quill‑knob‑like structures, repeating the same claim."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 13 refers to “the specimen’s forearm is dislocated” and “the ulnar bumps are on the anterior surface” without any prior mention of a dislocated forearm or definition of the specimen’s anatomy, leaving the reader without necessary context."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:32:08+00:00",
-   "problems": [
-    {
-     "sentences": [
-      13,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 14 states Concavenator is an early‑diverging member of Carcharodontosauridae, while sentence 15 claims it is more derived than the African ancestor Veterupristisaurus, implying a later divergence."
-    },
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "about_something_else",
-     "reason": "Sentence 15 discusses the geographic expansion of the entire Carcharodontosauridae family, which is a group-level claim presented as if it were about Concavenator itself."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:06:34+00:00"
-  }
- ]
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"The interpretation that the bumps on Concavenator's ulna represent quill knobs remains controversial among experts, as Darren Naish speculated that the nodules are too far apart and irregularly spaced to serve as feather anchors. Andrea Cau compared Concavenator's forearm to those of Allosaurus and Acrocanthosaurus, showing the specimen's forearm is dislocated and the ulnar bumps are on the anterior surface rather than the posterolateral surface. Cau concluded that the ulnar bumps likely formed part of a crest on the anterior side of the ulna, possibly for muscle insertion connecting the ulna and radius.\": Sentence 13 refers to “the specimen’s forearm is dislocated” and “the ulnar bumps are on the anterior surface” without any prior mention of a dislocated forearm or definition of the specimen’s anatomy, leaving the reader without necessary context."
+ ],
+ "rewrite": "nothing to fix",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:57+00:00"
 }

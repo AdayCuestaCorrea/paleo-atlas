@@ -2,49 +2,38 @@
  "taxon_key": "massospondylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e5f41b148ce52be3",
- "reviewed_at": "2026-11-25T13:09:15+00:00",
+ "text_hash": "7777c5b0de87f37a",
+ "reviewed_at": "2026-11-25T22:17:07+00:00",
  "problems": [
   {
    "sentences": [
-    16,
-    17
+    14,
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 17 classifies Massospondylus within the family Massospondylidae, while sentence 18 places it in the family Anchisauridae and the group Theropoda, conflicting taxonomic assignments."
+   "reason": "Sentence 15 places Massospondylus in the family Massospondylidae (sauropodomorph), while sentence 16 assigns it to the family Anchisauridae and the group Theropoda."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 5 discusses the Massospondylus Range Zone, a geological biozone, not a characteristic of the animal itself."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 18 describes the geological formations (upper Elliot and Clarens Formations) where remains are found, which is about the environment rather than the animal."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Massospondylus is often classified within the family Massospondylidae.\" / \"In 1888, Lydekker classified Massospondylus as a dinosaur within the family Anchisauridae and the group Theropoda.\": Sentence 17 classifies Massospondylus within the family Massospondylidae, while sentence 18 places it in the family Anchisauridae and the group Theropoda, conflicting taxonomic assignments."
+  "- contradiction: \"Massospondylus is often classified within the family Massospondylidae.\" / \"In 1888, Lydekker classified Massospondylus as a dinosaur within the family Anchisauridae and the group Theropoda.\": Sentence 15 places Massospondylus in the family Massospondylidae (sauropodomorph), while sentence 16 assigns it to the family Anchisauridae and the group Theropoda."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:53:07+00:00",
-   "problems": [
-    {
-     "sentences": [
-      9,
-      10
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Richard Owen described the genus Massospondylus in 1854."
-    },
-    {
-     "sentences": [
-      5
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to \"This massive fossil\" but the page never previously introduced a specific fossil specimen to which it refers."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:23:16+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:46+00:00"
+ "rewritten_at": "2026-11-25T23:07:30+00:00"
 }

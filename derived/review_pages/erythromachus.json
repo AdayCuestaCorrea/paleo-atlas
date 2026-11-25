@@ -2,38 +2,22 @@
  "taxon_key": "erythromachus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "71f1701053c2c4ef",
- "reviewed_at": "2026-11-25T13:18:33+00:00",
+ "text_hash": "51e85dfc3fc94c61",
+ "reviewed_at": "2026-11-25T22:25:49+00:00",
  "problems": [
   {
    "sentences": [
-    8
+    2,
+    6
    ],
    "kind": "repetition",
-   "reason": "Sentence 9 repeats the fact that the Rodrigues rail was flightless and fed on tortoise eggs, which was already stated in sentence 1 and 4."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"they\" in sentence 9 refers to the Rodrigues rail, but the antecedent is not explicitly stated in that sentence."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 12 refers to \"birds\" in plural, but the page has only discussed the Rodrigues rail as a single species, creating an ambiguous reference."
+   "reason": "Both sentences state that the Rodrigues rail fed on tortoise eggs, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The Rodrigues rail was flightless and fed on tortoise eggs, and they had no fear of humans because they evolved in the absence of predators, allowing hunters to catch them in large numbers.\": The pronoun \"they\" in sentence 9 refers to the Rodrigues rail, but the antecedent is not explicitly stated in that sentence.",
-  "- missing context: \"The fat of birds that had fed on turtle eggs was bright orange and used as a remedy for people recovering from illness.\": Sentence 12 refers to \"birds\" in plural, but the page has only discussed the Rodrigues rail as a single species, creating an ambiguous reference."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:10:32+00:00",
@@ -78,8 +62,36 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:06:02+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:18:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 9 repeats the fact that the Rodrigues rail was flightless and fed on tortoise eggs, which was already stated in sentence 1 and 4."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"they\" in sentence 9 refers to the Rodrigues rail, but the antecedent is not explicitly stated in that sentence."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 12 refers to \"birds\" in plural, but the page has only discussed the Rodrigues rail as a single species, creating an ambiguous reference."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:50+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:50+00:00"
+ ]
 }

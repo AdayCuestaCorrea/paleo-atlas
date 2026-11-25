@@ -2,57 +2,36 @@
  "taxon_key": "arenysuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7b1bc32449a59903",
- "reviewed_at": "2026-11-25T13:40:25+00:00",
+ "text_hash": "f92aae27213e0261",
+ "reviewed_at": "2026-11-25T22:46:03+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    19,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences state that Arenysuchus is classified within the family Allodaposuchidae."
-  },
-  {
-   "sentences": [
-    22,
-    26
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the Tremp Formation as dating to the Late Cretaceous and being dated with planktonic foraminifera and magnetostratigraphy."
-  },
-  {
-   "sentences": [
-    15,
-    16
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 16 classifies Arenysuchus as a basal member of Crocodyloidea, while sentence 17 places it as the sister taxon of Allodaposuchus within Allodaposuchidae, a different clade."
-  },
-  {
-   "sentences": [
+    10,
     11
    ],
-   "kind": "missing_context",
-   "reason": "The specific epithet is said to honor researchers who discovered the holotype, but those researchers are not named earlier in the page."
+   "kind": "repetition",
+   "reason": "Both sentences state that subsequent phylogenetic studies found Arenysuchus to be the sister taxon of Allodaposuchus and a member of Allodaposuchidae."
   },
   {
    "sentences": [
-    27
+    12
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to a fossa between the seventh and eighth maxillary teeth without previously introducing or describing this anatomical feature."
+   "kind": "about_something_else",
+   "reason": "Sentence 13 discusses the geological context of Europe as an island archipelago, which is not a property of the animal itself."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 14 describes dating methods for the Tremp Formation, a formation rather than the animal."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [
-  "- contradiction: \"In its original 2011 analysis, Arenysuchus was classified as one of the most basal members of the superfamily Crocodyloidea.\" / \"Subsequent phylogenetic studies have debated the classification of Arenysuchus, finding it to be the sister taxon of Allodaposuchus and a member of Allodaposuchidae.\": Sentence 16 classifies Arenysuchus as a basal member of Crocodyloidea, while sentence 17 places it as the sister taxon of Allodaposuchus within Allodaposuchidae, a different clade.",
-  "- missing context: \"The specific epithet of Arenysuchus honors the researchers who discovered the holotype.\": The specific epithet is said to honor researchers who discovered the holotype, but those researchers are not named earlier in the page.",
-  "- missing context: \"It is debated whether the fossa between the seventh and eighth maxillary teeth held a dentary bone tooth if the lower jaw was present.\": The sentence refers to a fossa between the seventh and eighth maxillary teeth without previously introducing or describing this anatomical feature."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:53:16+00:00",
@@ -101,8 +80,54 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:00:15+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:40:25+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that Arenysuchus is classified within the family Allodaposuchidae."
+    },
+    {
+     "sentences": [
+      22,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the Tremp Formation as dating to the Late Cretaceous and being dated with planktonic foraminifera and magnetostratigraphy."
+    },
+    {
+     "sentences": [
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 16 classifies Arenysuchus as a basal member of Crocodyloidea, while sentence 17 places it as the sister taxon of Allodaposuchus within Allodaposuchidae, a different clade."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The specific epithet is said to honor researchers who discovered the holotype, but those researchers are not named earlier in the page."
+    },
+    {
+     "sentences": [
+      27
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a fossa between the seventh and eighth maxillary teeth without previously introducing or describing this anatomical feature."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:20:54+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:54+00:00"
+ ]
 }

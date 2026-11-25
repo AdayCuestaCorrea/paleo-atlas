@@ -2,18 +2,33 @@
  "taxon_key": "diamantinasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "04a772eb667d8296",
- "reviewed_at": "2026-11-24T00:06:37+00:00",
+ "text_hash": "89964d1ad2935494",
+ "reviewed_at": "2026-11-25T22:23:59+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    0,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Sentence 12 repeats the locomotion claim already implied in sentence 1 about a large quadrupedal herbivore."
+   "kind": "contradiction",
+   "reason": "Sentence 1 describes Diamantinasaurus as medium‑sized (16 m, 25 t), while sentence 10 calls it a large quadrupedal herbivore, implying a larger size."
+  },
+  {
+   "sentences": [
+    17,
+    18
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 18 gives a single age of ~94 Ma, whereas sentence 19 provides a broader range (100.5–89.8 Ma), conflicting on the time span."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Diamantinasaurus was a medium-sized titanosaurian that reached lengths of 16 meters and weighed up to 25 tonnes.\" / \"This large quadrupedal herbivore moved on four legs.\": Sentence 1 describes Diamantinasaurus as medium‑sized (16 m, 25 t), while sentence 10 calls it a large quadrupedal herbivore, implying a larger size.",
+  "- contradiction: \"Diamantinasaurus lived in Australia during the early Late Cretaceous, roughly 94 million years ago, within the middle to upper Winton Formation.\" / \"The estimated time range spans from 100.5 to 89.8 million years ago, covering the Cenomanian to Turonian stages.\": Sentence 18 gives a single age of ~94 Ma, whereas sentence 19 provides a broader range (100.5–89.8 Ma), conflicting on the time span."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:11:31+00:00"
 }

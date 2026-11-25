@@ -2,23 +2,22 @@
  "taxon_key": "koutalisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dd1fe667085c3231",
- "reviewed_at": "2026-11-25T13:46:47+00:00",
+ "text_hash": "aef844d43b9b4dc1",
+ "reviewed_at": "2026-11-25T22:52:36+00:00",
  "problems": [
   {
    "sentences": [
+    4,
     5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 claims Koutalisaurus is an arenysaurin, while earlier sentences classify it as a hadrosaurid, presenting conflicting taxonomic placement for the same animal."
+   "kind": "repetition",
+   "reason": "Sentences 5 and 6 both state that Prieto‑Marquez et al. (2006) classified the animal as a hadrosaurid but noted its uncertain placement within the family."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Recent work by Prieto-Marquez and Wagner suggests that Koutalisaurus is the same genus as Pararhabdodon, as originally hypothesized. A 2020 study by Nick Longrich and colleagues classified Koutalisaurus as an arenysaurin. The Paleobiology Database lists the parent group of Koutalisaurus as Arenysaurini.\": Sentence 6 claims Koutalisaurus is an arenysaurin, while earlier sentences classify it as a hadrosaurid, presenting conflicting taxonomic placement for the same animal."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:10:42+00:00",
@@ -42,8 +41,22 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:42:31+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:46:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 claims Koutalisaurus is an arenysaurin, while earlier sentences classify it as a hadrosaurid, presenting conflicting taxonomic placement for the same animal."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:25:13+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:25:13+00:00"
+ ]
 }

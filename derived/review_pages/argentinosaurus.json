@@ -2,53 +2,31 @@
  "taxon_key": "argentinosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "23ee6f742a615810",
- "reviewed_at": "2026-11-25T13:11:59+00:00",
+ "text_hash": "55c5afd43f71713c",
+ "reviewed_at": "2026-11-25T22:19:48+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "Both claim a length of 30–35 m but give different weight ranges (65–80 t vs 80–100 t)."
-  },
-  {
-   "sentences": [
-    0,
-    5
+    5,
+    6
    ],
    "kind": "repetition",
-   "reason": "Both sentences repeat the same length estimate for Argentinosaurus."
+   "reason": "Both sentences describe the discovery of the first bone of Argentinosaurus by Guillermo Heredia in 1987; the information is repeated."
   },
   {
    "sentences": [
-    0,
-    6,
-    8
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 7 and 9 give length estimates (45 m and 39.7 m) that conflict with the 30–35 m range in sentence 1."
-  },
-  {
-   "sentences": [
-    24,
-    25,
-    26,
-    27,
-    28
-   ],
-   "kind": "about_something_else",
-   "reason": "These sentences describe the Huincul Formation and other taxa, not characteristics of Argentinosaurus itself."
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to the holotype of Argentinosaurus, but the page never defines or mentions a holotype earlier, leaving the reference unclear."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Despite being known only from fragmentary remains, Argentinosaurus is estimated to have been 30 to 35 meters long and weighed 65 to 80 tonnes.\" / \"An early reconstruction by Gregory S. Paul estimated Argentinosaurus to be between 30 and 35 meters long and weigh between 80 and 100 tons.\": Both claim a length of 30–35 m but give different weight ranges (65–80 t vs 80–100 t).",
-  "- contradiction: \"Despite being known only from fragmentary remains, Argentinosaurus is estimated to have been 30 to 35 meters long and weighed 65 to 80 tonnes.\" / \"A later publication in Current Science proposed a maximum estimate of 45 meters in length and 100 tons in weight.\" / \"A volumetric reconstruction displayed at the Carmen Funes Municipal Museum depicts the animal as 39.7 meters long, 7.3 meters high at the shoulders, and weighing 83.2 tons.\": Sentences 7 and 9 give length estimates (45 m and 39.7 m) that conflict with the 30–35 m range in sentence 1."
+  "- missing context: \"In 2023, Paul and Larramendi proposed that the holotype of Argentinosaurus weighed a maximum of 75 to 80 metric tonnes.\": Sentence 5 refers to the holotype of Argentinosaurus, but the page never defines or mentions a holotype earlier, leaving the reference unclear."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:58:38+00:00",
@@ -121,8 +99,53 @@
    "repetitions_dropped": 4,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:12:43+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:11:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Both claim a length of 30–35 m but give different weight ranges (65–80 t vs 80–100 t)."
+    },
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the same length estimate for Argentinosaurus."
+    },
+    {
+     "sentences": [
+      0,
+      6,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 7 and 9 give length estimates (45 m and 39.7 m) that conflict with the 30–35 m range in sentence 1."
+    },
+    {
+     "sentences": [
+      24,
+      25,
+      26,
+      27,
+      28
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences describe the Huincul Formation and other taxa, not characteristics of Argentinosaurus itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:01:48+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:01:48+00:00"
+ "rewritten_at": "2026-11-25T23:08:53+00:00"
 }

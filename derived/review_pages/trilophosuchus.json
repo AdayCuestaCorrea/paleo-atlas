@@ -2,42 +2,22 @@
  "taxon_key": "trilophosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a9c1abbf9f0e8911",
- "reviewed_at": "2026-11-25T13:18:23+00:00",
+ "text_hash": "92bab362813a1697",
+ "reviewed_at": "2026-11-25T22:25:39+00:00",
  "problems": [
   {
    "sentences": [
-    21,
-    22
+    14,
+    15
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 22 states Trilophosuchus lived in the early Miocene (~20 Ma), while sentence 23 gives a range from 27.3 to 11.63 Ma (Chattian to Serravallian), which includes the Oligocene and extends beyond the early Miocene."
-  },
-  {
-   "sentences": [
-    22,
-    25
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 23 limits the species’ range to 27.3–11.63 Ma (Chattian to Serravallian), whereas sentence 26 claims additional remains extend the range into the Oligocene, contradicting the earlier stated upper bound."
-  },
-  {
-   "sentences": [
-    21,
-    25
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 22 places the species in the early Miocene (~20 Ma), but sentence 26 asserts that older material from the Hiatus Site extends its known range into the Oligocene, which is earlier than the early Miocene."
+   "kind": "repetition",
+   "reason": "Sentences 15 and 16 state the same temporal range for Trilophosuchus, making the information redundant."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Trilophosuchus lived in the early Miocene, approximately 20 million years ago.\" / \"Trilophosuchus lived from the Chattian to the Serravallian, between 27.3 and 11.63 million years ago.\": Sentence 22 states Trilophosuchus lived in the early Miocene (~20 Ma), while sentence 23 gives a range from 27.3 to 11.63 Ma (Chattian to Serravallian), which includes the Oligocene and extends beyond the early Miocene.",
-  "- contradiction: \"Trilophosuchus lived from the Chattian to the Serravallian, between 27.3 and 11.63 million years ago.\" / \"Additional remains found at the older Hiatus Site extend the known range of Trilophosuchus into the Oligocene.\": Sentence 23 limits the species’ range to 27.3–11.63 Ma (Chattian to Serravallian), whereas sentence 26 claims additional remains extend the range into the Oligocene, contradicting the earlier stated upper bound.",
-  "- contradiction: \"Trilophosuchus lived in the early Miocene, approximately 20 million years ago.\" / \"Additional remains found at the older Hiatus Site extend the known range of Trilophosuchus into the Oligocene.\": Sentence 22 places the species in the early Miocene (~20 Ma), but sentence 26 asserts that older material from the Hiatus Site extends its known range into the Oligocene, which is earlier than the early Miocene."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:10:16+00:00",
@@ -77,8 +57,39 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:02:44+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:18:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 22 states Trilophosuchus lived in the early Miocene (~20 Ma), while sentence 23 gives a range from 27.3 to 11.63 Ma (Chattian to Serravallian), which includes the Oligocene and extends beyond the early Miocene."
+    },
+    {
+     "sentences": [
+      22,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 limits the species’ range to 27.3–11.63 Ma (Chattian to Serravallian), whereas sentence 26 claims additional remains extend the range into the Oligocene, contradicting the earlier stated upper bound."
+    },
+    {
+     "sentences": [
+      21,
+      25
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 22 places the species in the early Miocene (~20 Ma), but sentence 26 asserts that older material from the Hiatus Site extends its known range into the Oligocene, which is earlier than the early Miocene."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:34+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:34+00:00"
+ ]
 }

@@ -2,10 +2,39 @@
  "taxon_key": "thambetochen",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "34719f15868f2434",
- "reviewed_at": "2026-11-24T01:56:31+00:00",
- "problems": [],
+ "text_hash": "fec355af5d7c19f4",
+ "reviewed_at": "2026-11-25T23:05:12+00:00",
+ "problems": [
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 claims Thambetochen existed up to 0 Ma (present), while sentence 7 states it went extinct when Polynesians colonized the Hawaiian islands (a few thousand years ago)."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 3 refers to “islands that lacked terrestrial mammals” without specifying which islands or providing prior context."
+  },
+  {
+   "sentences": [
+    2
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 3 discusses the islands’ mammal absence, which is about the environment rather than the animal itself."
+  }
+ ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Thambetochen lived from the Gelasian to the Holocene, between 2.58 and 0 million years ago.\" / \"Thambetochen likely went extinct when Polynesians colonized the Hawaiian islands.\": Sentence 6 claims Thambetochen existed up to 0 Ma (present), while sentence 7 states it went extinct when Polynesians colonized the Hawaiian islands (a few thousand years ago).",
+  "- missing context: \"These ducks evolved in isolation on islands that lacked terrestrial mammals.\": Sentence 3 refers to “islands that lacked terrestrial mammals” without specifying which islands or providing prior context."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:32:31+00:00"
 }

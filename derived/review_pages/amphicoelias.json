@@ -2,92 +2,66 @@
  "taxon_key": "amphicoelias",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a619558f7e453bd6",
- "reviewed_at": "2026-11-25T13:20:11+00:00",
+ "text_hash": "07740bac86f54ac1",
+ "reviewed_at": "2026-11-25T22:27:17+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    3
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 gives a length of ~18 m, while sentence 4 claims Amphicoelias altus was ~25 m long, a direct conflict."
-  },
-  {
-   "sentences": [
-    0,
+    3,
     4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states ~18 m, whereas sentence 5 proposes 40–60 m based on a vertebra."
-  },
-  {
-   "sentences": [
-    6,
-    22
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 says the genus was described in 1878, but sentence 23 says 1877."
-  },
-  {
-   "sentences": [
-    11,
-    14
-   ],
    "kind": "repetition",
-   "reason": "Both sentences state that large size improves digestive efficiency in herbivores, citing elephants and rhinos."
+   "reason": "Both sentences state the same claim about a typographical error in the original scale bar for the vertebra of A. fragillimus."
   },
   {
    "sentences": [
-    12,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both describe sauropods living in semi‑arid, seasonally dry environments with low food quality."
-  },
-  {
-   "sentences": [
-    10,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both assert Amphicoelias lived in a savanna‑like environment with poor‑quality food."
-  },
-  {
-   "sentences": [
-    19,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Both discuss secondary advantages of large size such as predator immunity, lower energy costs, and longer life."
-  },
-  {
-   "sentences": [
-    9
+    8
    ],
    "kind": "missing_context",
-   "reason": "Sentence 10 mentions the femur of Amphicoelias latus, but the page never introduced the species latus."
+   "reason": "The sentence refers to the femur of Amphicoelias latus, but the page never introduced or defined the species \"latus\" before this mention."
   },
   {
    "sentences": [
-    11,
-    12,
-    16,
-    17
+    10
    ],
    "kind": "about_something_else",
-   "reason": "These sentences discuss elephants, rhinos, and general sauropod ecology rather than Amphicoelias itself."
+   "reason": "It discusses giant mammalian herbivores (elephants and rhinos) rather than Amphicoelias itself."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "about_something_else",
+   "reason": "It generalizes about sauropod dinosaurs’ environments, not specifically about Amphicoelias."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "It refers to sauropod digestive systems in general, not directly to Amphicoelias."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "It discusses general benefits of giant size for animals, not specifically for Amphicoelias."
+  },
+  {
+   "sentences": [
+    20
+   ],
+   "kind": "about_something_else",
+   "reason": "It mentions other sauropods (A. amphicoeliidae, Brontosaurus) and their features, not Amphicoelias itself."
   }
  ],
- "repetitions_dropped": 4,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Amphicoelias was a moderately sized sauropod, reaching about 18 meters in length and weighing 15 metric tons, which is shorter than its relative Diplodocus.\" / \"The species Amphicoelias altus was approximately 25 meters long, similar in size to Diplodocus.\": Sentence 1 gives a length of ~18 m, while sentence 4 claims Amphicoelias altus was ~25 m long, a direct conflict.",
-  "- contradiction: \"Amphicoelias was a moderately sized sauropod, reaching about 18 meters in length and weighing 15 metric tons, which is shorter than its relative Diplodocus.\" / \"Early estimates suggested Amphicoelias fragillimus could have been between 40 and 60 meters long, based on a 2.7-meter dorsal vertebra.\": Sentence 1 states ~18 m, whereas sentence 5 proposes 40–60 m based on a vertebra.",
-  "- contradiction: \"The genus Amphicoelias was described by Edward Drinker Cope in 1878.\" / \"The genus Amphicoelias was established by Cope in 1877.\": Sentence 7 says the genus was described in 1878, but sentence 23 says 1877.",
-  "- missing context: \"The femur of Amphicoelias latus measures 1.4 meters in length, though its proximal end is incomplete.\": Sentence 10 mentions the femur of Amphicoelias latus, but the page never introduced the species latus."
+  "- missing context: \"The femur of Amphicoelias latus measures 1.4 meters in length, though its proximal end is incomplete.\": The sentence refers to the femur of Amphicoelias latus, but the page never introduced or defined the species \"latus\" before this mention."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:13:00+00:00",
@@ -149,8 +123,90 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:30:34+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:20:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 gives a length of ~18 m, while sentence 4 claims Amphicoelias altus was ~25 m long, a direct conflict."
+    },
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states ~18 m, whereas sentence 5 proposes 40–60 m based on a vertebra."
+    },
+    {
+     "sentences": [
+      6,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 says the genus was described in 1878, but sentence 23 says 1877."
+    },
+    {
+     "sentences": [
+      11,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that large size improves digestive efficiency in herbivores, citing elephants and rhinos."
+    },
+    {
+     "sentences": [
+      12,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both describe sauropods living in semi‑arid, seasonally dry environments with low food quality."
+    },
+    {
+     "sentences": [
+      10,
+      17
+     ],
+     "kind": "repetition",
+     "reason": "Both assert Amphicoelias lived in a savanna‑like environment with poor‑quality food."
+    },
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both discuss secondary advantages of large size such as predator immunity, lower energy costs, and longer life."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 mentions the femur of Amphicoelias latus, but the page never introduced the species latus."
+    },
+    {
+     "sentences": [
+      11,
+      12,
+      16,
+      17
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences discuss elephants, rhinos, and general sauropod ecology rather than Amphicoelias itself."
+    }
+   ],
+   "repetitions_dropped": 4,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:06:58+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:06:58+00:00"
+ "rewritten_at": "2026-11-25T23:13:19+00:00"
 }

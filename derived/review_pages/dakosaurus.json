@@ -2,27 +2,32 @@
  "taxon_key": "dakosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "afb785b168e8855d",
- "reviewed_at": "2026-11-24T00:20:26+00:00",
+ "text_hash": "baaf10488e8c8b21",
+ "reviewed_at": "2026-11-25T22:30:36+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    6
+    8,
+    12
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Dakosaurus had serrated teeth, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 13 states the type species is Geosaurus maximus, while sentence 9 says the genus was established based on an isolated tooth previously named Geosaurus maximus, implying D. maximus is the type species."
   },
   {
    "sentences": [
-    1,
-    13
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Dakosaurus as having large short‑snouted skulls and serrated teeth, repeating the same description."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to “large openings” without any prior mention or explanation of these openings."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The genus was established by Friedrich August von Quenstedt in 1856 based on an isolated tooth previously named Geosaurus maximus by Plieninger.\" / \"The type species of the genus is Geosaurus maximus.\": Sentence 13 states the type species is Geosaurus maximus, while sentence 9 says the genus was established based on an isolated tooth previously named Geosaurus maximus, implying D. maximus is the type species.",
+  "- missing context: \"Its triangular skull contained large openings that housed strong muscles for a powerful bite, anchored by large abductor muscles in the supratemporal fenestrae.\": Sentence 4 refers to “large openings” without any prior mention or explanation of these openings."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:15:04+00:00"
 }

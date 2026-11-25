@@ -2,46 +2,52 @@
  "taxon_key": "tylosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4036c404ca1e9ec8",
- "reviewed_at": "2026-11-25T13:08:26+00:00",
+ "text_hash": "57d718650ffa2448",
+ "reviewed_at": "2026-11-25T22:16:13+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    5
+    12,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the largest well-known Tylosaurus specimen is nicknamed \"Bunker\"."
+   "reason": "Both sentences state that Tylosaurus was endothermic."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions T. saskatchewanensis and T. bernardi without prior introduction."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes a fish fossil, not a Tylosaurus."
   },
   {
    "sentences": [
     11
    ],
-   "kind": "missing_context",
-   "reason": "Mentions a fossil skeleton identified as a 45‑foot‑long fish without prior introduction of the fossil or its significance."
+   "kind": "about_something_else",
+   "reason": "Discusses Hainosaurus bernardi, a different genus."
   },
   {
    "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "References the species Hainosaurus bernardi and its discovery without explaining its relevance to Tylosaurus."
-  },
-  {
-   "sentences": [
-    23
+    26
    ],
    "kind": "about_something_else",
-   "reason": "Describes bite marks on a hadrosaur fossil, which is unrelated to the animal itself."
+   "reason": "Mentions genus Liodon, not Tylosaurus."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"In 1804, the Lewis and Clark Expedition discovered a fossil skeleton along the Missouri River that was identified as a 45-foot-long fish.\": Mentions a fossil skeleton identified as a 45‑foot‑long fish without prior introduction of the fossil or its significance.",
-  "- missing context: \"Louis Dollo described the species Hainosaurus bernardi in 1885 based on a skeleton found in a phosphate quarry in the Ciply Basin of Mesvin, Belgium.\": References the species Hainosaurus bernardi and its discovery without explaining its relevance to Tylosaurus."
+  "- missing context: \"The frontal bone in Tylosaurus usually has a low midline crest, most prominent in T. proriger and moderately developed in T. saskatchewanensis and T. bernardi.\": Mentions T. saskatchewanensis and T. bernardi without prior introduction."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:51:19+00:00",
@@ -101,8 +107,46 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T02:11:20+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:08:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the largest well-known Tylosaurus specimen is nicknamed \"Bunker\"."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a fossil skeleton identified as a 45‑foot‑long fish without prior introduction of the fossil or its significance."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "References the species Hainosaurus bernardi and its discovery without explaining its relevance to Tylosaurus."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes bite marks on a hadrosaur fossil, which is unrelated to the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:00:11+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:11+00:00"
+ "rewritten_at": "2026-11-25T23:06:39+00:00"
 }

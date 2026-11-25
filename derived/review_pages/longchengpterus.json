@@ -2,27 +2,31 @@
  "taxon_key": "longchengpterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "075c57330584db3f",
- "reviewed_at": "2026-11-24T01:29:52+00:00",
+ "text_hash": "bd6a5ce596dec3c5",
+ "reviewed_at": "2026-11-25T22:58:56+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the age of Longchengpterus, with sentence 13 repeating the information given in sentence 12."
+   "kind": "missing_context",
+   "reason": "Sentence 8 refers to \"This classification\" without a prior mention of a classification."
   },
   {
    "sentences": [
-    11,
-    13
+    8
    ],
-   "kind": "repetition",
-   "reason": "Sentences 12 and 14 both provide age ranges for Longchengpterus, repeating the same temporal information."
+   "kind": "missing_context",
+   "reason": "Sentence 9 mentions a \"broad snout\" but no earlier description of snout morphology."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"This classification is based on shared tooth form, tooth count, and a large skull opening with Istiodactylus.\": Sentence 8 refers to \"This classification\" without a prior mention of a classification.",
+  "- missing context: \"A notable difference between Longchengpterus and Istiodactylus is the lack of a broad snout in Longchengpterus.\": Sentence 9 mentions a \"broad snout\" but no earlier description of snout morphology."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:45+00:00"
 }

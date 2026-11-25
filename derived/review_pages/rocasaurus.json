@@ -2,33 +2,33 @@
  "taxon_key": "rocasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b411c71fe7264fe6",
- "reviewed_at": "2026-11-25T13:42:16+00:00",
+ "text_hash": "9fdadafeb732488c",
+ "reviewed_at": "2026-11-25T22:47:57+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    19,
-    21
+    2,
+    7
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 places Rocasaurus in the Allen Formation dated to the middle Campanian to early Maastrichtian (~83–70 Ma), while sentence 20 gives a narrower range of 75–70 Ma and sentence 22 gives 72.2–66 Ma; the overlapping but inconsistent age ranges contradict each other without indicating different estimates."
+   "kind": "repetition",
+   "reason": "Both sentences state the same age range for Rocasaurus (75 to 70 million years ago)."
   },
   {
    "sentences": [
-    19,
-    20
+    2,
+    7,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Rocasaurus lived during the Late Cretaceous, repeating the same temporal claim."
+   "kind": "contradiction",
+   "reason": "Sentence 3/8 give a middle Campanian to early Maastrichtian age (75–70 Ma), while sentence 9 places it in the Maastrichtian stage (72.2–66 Ma), which conflicts with the earlier estimate."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Rocasaurus was discovered in Argentina in 2000 within the Allen Formation, dating to the middle Campanian to early Maastrichtian.\" / \"Rocasaurus lived during the Late Cretaceous, specifically from 75 to 70 million years ago.\" / \"Other estimates place Rocasaurus during the Maastrichtian stage of the Late Cretaceous, between 72.2 and 66 million years ago.\": Sentence 7 places Rocasaurus in the Allen Formation dated to the middle Campanian to early Maastrichtian (~83–70 Ma), while sentence 20 gives a narrower range of 75–70 Ma and sentence 22 gives 72.2–66 Ma; the overlapping but inconsistent age ranges contradict each other without indicating different estimates."
+  "- contradiction: \"Rocasaurus was discovered in Argentina in 2000 within the Allen Formation, dating to the middle Campanian to early Maastrichtian (75 to 70 million years ago).\" / \"Rocasaurus lived during the Late Cretaceous, specifically from 75 to 70 million years ago.\" / \"Other estimates place Rocasaurus during the Maastrichtian stage of the Late Cretaceous, between 72.2 and 66 million years ago.\": Sentence 3/8 give a middle Campanian to early Maastrichtian age (75–70 Ma), while sentence 9 places it in the Maastrichtian stage (72.2–66 Ma), which conflicts with the earlier estimate."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:57:53+00:00",
@@ -68,8 +68,34 @@
    "repetitions_dropped": 3,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:28:35+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:42:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      19,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 places Rocasaurus in the Allen Formation dated to the middle Campanian to early Maastrichtian (~83–70 Ma), while sentence 20 gives a narrower range of 75–70 Ma and sentence 22 gives 72.2–66 Ma; the overlapping but inconsistent age ranges contradict each other without indicating different estimates."
+    },
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Rocasaurus lived during the Late Cretaceous, repeating the same temporal claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:21:59+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:59+00:00"
+ "rewritten_at": "2026-11-25T23:24:47+00:00"
 }

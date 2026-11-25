@@ -2,49 +2,28 @@
  "taxon_key": "archaeornithomimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d5245efa06b8bafe",
- "reviewed_at": "2026-11-25T13:25:07+00:00",
+ "text_hash": "a2b10355c3f17794",
+ "reviewed_at": "2026-11-25T22:32:54+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    3
+    11
    ],
-   "kind": "contradiction",
-   "reason": "Different length and weight estimates for the same species."
+   "kind": "about_something_else",
+   "reason": "Describes the environment (floodplain terrains, braided rivers) rather than a characteristic of Archaeornithomimus itself."
   },
   {
    "sentences": [
-    10,
-    11,
     12
    ],
-   "kind": "repetition",
-   "reason": "All three sentences repeat the same classification claim."
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Class Reptilia is incorrect; the correct class is Dinosauria."
-  },
-  {
-   "sentences": [
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "States the remains are not ornithomimosaurian, contradicting earlier statements that it is an ornithomimosaurian."
+   "kind": "about_something_else",
+   "reason": "Discusses the taxonomic status of a different species (Archaeornithomimus affinis) as if it were about the main subject."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"This medium-sized dinosaur reached 3.4 meters in length and weighed over 71.5 kilograms.\" / \"Other measurements estimate the animal measured about 3.3 meters in length, 1.8 meters in height, and weighed no more than 50 kilograms.\": Different length and weight estimates for the same species.",
-  "- contradiction: \"Archaeornithomimus is classified under the class Reptilia.\": Class Reptilia is incorrect; the correct class is Dinosauria.",
-  "- contradiction: \"In 1990, Smith and Galton concluded that the remains were not from an ornithomimosaurian but from a small theropod.\": States the remains are not ornithomimosaurian, contradicting earlier statements that it is an ornithomimosaurian."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:24:41+00:00",
@@ -91,8 +70,46 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T07:02:07+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:25:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Different length and weight estimates for the same species."
+    },
+    {
+     "sentences": [
+      10,
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences repeat the same classification claim."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Class Reptilia is incorrect; the correct class is Dinosauria."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "States the remains are not ornithomimosaurian, contradicting earlier statements that it is an ornithomimosaurian."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:11:23+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:11:23+00:00"
+ ]
 }

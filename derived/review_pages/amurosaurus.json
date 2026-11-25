@@ -2,56 +2,32 @@
  "taxon_key": "amurosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f811816ac7ae7f4d",
- "reviewed_at": "2026-11-25T13:26:46+00:00",
+ "text_hash": "928d0ea279b56e50",
+ "reviewed_at": "2026-11-25T22:34:35+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
+    16,
+    18
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Sahaliyania is a junior synonym of Amurosaurus."
+   "kind": "contradiction",
+   "reason": "Both sentences state the age range of Amurosaurus, but give different lower bounds (70 Ma vs 72.2 Ma)."
   },
   {
    "sentences": [
-    25,
-    26
+    16,
+    18
    ],
-   "kind": "about_something_else",
-   "reason": "These sentences discuss biogeographic hypotheses about basal lambeosaurines, not directly about Amurosaurus itself."
+   "kind": "repetition",
+   "reason": "Both sentences describe the time period in which Amurosaurus lived, repeating the same claim."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:27:52+00:00",
-   "problems": [
-    {
-     "sentences": [
-      19,
-      20,
-      21,
-      22
-     ],
-     "kind": "contradiction",
-     "reason": "Different age ranges for Amurosaurus are given: 70–66 Ma, ~68 Ma, 74–66 Ma, and 72.2–66 Ma."
-    },
-    {
-     "sentences": [
-      19,
-      22
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the age of Amurosaurus as the Maastrichtian, 70–66 Ma and 72.2–66 Ma."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T07:32:25+00:00"
-  }
- ]
+ "notes": [
+  "- contradiction: \"Amurosaurus lived in eastern Asia during the Late Cretaceous, between 70 and 66 million years ago.\" / \"Amurosaurus lived during the Maastrichtian, from 72.2 to 66 million years ago.\": Both sentences state the age range of Amurosaurus, but give different lower bounds (70 Ma vs 72.2 Ma)."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:01+00:00"
 }

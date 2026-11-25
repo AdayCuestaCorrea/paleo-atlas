@@ -2,54 +2,23 @@
  "taxon_key": "avimimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e46bccafebf6f054",
- "reviewed_at": "2026-11-25T13:27:53+00:00",
+ "text_hash": "4b5dad1c21437562",
+ "reviewed_at": "2026-11-25T22:35:19+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the skull had large bones protecting a large brain, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to \"bonebeds\" and their preservation without any prior mention or explanation of these bonebeds on the page."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:29:40+00:00",
-   "problems": [
-    {
-     "sentences": [
-      8,
-      16,
-      18,
-      19
-     ],
-     "kind": "contradiction",
-     "reason": "The page states that the initial specimens were found in the Djadokhta Formation (9) and that the dinosaur lived in the Barun Goyot Formation (17), yet also says it coexisted with dinosaurs in the Nemegt Formation (19) and later debates that it likely originated from the Nemegt Formation (20). These conflicting formation references contradict each other."
-    },
-    {
-     "sentences": [
-      3
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 4 mentions a \"keel and other structures\" on the ulna without explaining what the keel refers to or providing context for its significance."
-    },
-    {
-     "sentences": [
-      10
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 11 refers to \"the same area\" where footprints were found, but the page never previously defined or described this area, leaving the reference unclear."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T00:40:13+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The preservation of bonebeds suggests the animals were buried quickly by a rapid water flow and then reburied a short distance away.\": Sentence 6 refers to \"bonebeds\" and their preservation without any prior mention or explanation of these bonebeds on the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:25+00:00"
 }

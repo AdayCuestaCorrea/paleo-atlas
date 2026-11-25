@@ -2,72 +2,40 @@
  "taxon_key": "camposipterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d8c31806fe223981",
- "reviewed_at": "2026-11-25T13:30:33+00:00",
+ "text_hash": "c82f43f2b18c7d04",
+ "reviewed_at": "2026-11-25T22:38:32+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    9,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 places Camposipterus incertae sedis within Anhangueria, while sentence 14 assigns it to the family Ornithocheiridae."
+   "reason": "Sentence 10 states Camposipterus is incertae sedis within Anhangueria, implying an uncertain position, while sentence 11 places it firmly within Ornithocheiridae as the sister taxon of Cimoliopterus."
   },
   {
    "sentences": [
-    13,
-    14
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 14 states Camposipterus is the sister taxon of Cimoliopterus, implying equal derivation, whereas sentence 15 claims it is more derived than Cimoliopterus."
+   "kind": "missing_context",
+   "reason": "Sentence 5 mentions a \"unique combination of traits\" but does not specify which traits or provide context for what makes it unique."
+  },
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 9 refers to \"Camposipterus(?) sedgwickii\" without explaining the question mark or the context of the reassignment."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Rodrigues and Kellner assigned Camposipterus to the clade Anhangueria but placed it incertae sedis due to an unknown position, meaning its exact position is uncertain.\" / \"A 2019 study by Jacobs et al. placed Camposipterus within the family Ornithocheiridae as the sister taxon of Cimoliopterus.\": Sentence 13 places Camposipterus incertae sedis within Anhangueria, while sentence 14 assigns it to the family Ornithocheiridae.",
-  "- contradiction: \"A 2019 study by Jacobs et al. placed Camposipterus within the family Ornithocheiridae as the sister taxon of Cimoliopterus.\" / \"Some cladistic analyses suggested Camposipterus was more derived than Cimoliopterus but less derived than Cearadactylus atrox.\": Sentence 14 states Camposipterus is the sister taxon of Cimoliopterus, implying equal derivation, whereas sentence 15 claims it is more derived than Cimoliopterus."
+  "- contradiction: \"Rodrigues and Kellner assigned Camposipterus to the clade Anhangueria but placed it incertae sedis due to an unknown position, meaning its exact position is uncertain.\" / \"A 2019 study by Jacobs et al. placed Camposipterus within the family Ornithocheiridae as the sister taxon of Cimoliopterus.\": Sentence 10 states Camposipterus is incertae sedis within Anhangueria, implying an uncertain position, while sentence 11 places it firmly within Ornithocheiridae as the sister taxon of Cimoliopterus.",
+  "- missing context: \"The second and third pairs of teeth point obliquely sideways, contributing to a unique combination of traits.\": Sentence 5 mentions a \"unique combination of traits\" but does not specify which traits or provide context for what makes it unique.",
+  "- missing context: \"Camposipterus(?) sedgwickii was reassigned to the genus Aerodraco in 2020.\": Sentence 9 refers to \"Camposipterus(?) sedgwickii\" without explaining the question mark or the context of the reassignment."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:35:38+00:00",
-   "problems": [
-    {
-     "sentences": [
-      14,
-      18
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Rodrigues and Kellner assigned Camposipterus to the clade Anhangueria but placed it incertae sedis."
-    },
-    {
-     "sentences": [
-      13
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to a depression on the snout, but no earlier sentence describes such a depression."
-    },
-    {
-     "sentences": [
-      16
-     ],
-     "kind": "missing_context",
-     "reason": "It mentions Camposipterus(?) sedgwickii, but the page never introduced that species name before this sentence."
-    },
-    {
-     "sentences": [
-      19
-     ],
-     "kind": "missing_context",
-     "reason": "It discusses derivedness relative to Cimoliopterus and Cearadactylus atrox, but no prior mention of those taxa or the context of the analysis."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:37:39+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:41+00:00"
+ "rewritten_at": "2026-11-25T23:19:22+00:00"
 }

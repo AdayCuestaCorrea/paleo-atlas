@@ -2,24 +2,22 @@
  "taxon_key": "seazzadactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "79a0964781e3c09b",
- "reviewed_at": "2026-11-25T13:50:28+00:00",
+ "text_hash": "432856b03b30297c",
+ "reviewed_at": "2026-11-25T22:56:47+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    10,
+    11
    ],
-   "kind": "contradiction",
-   "reason": "The two sentences give different time ranges for the species' existence."
+   "kind": "repetition",
+   "reason": "Sentences 11 and 12 both state the time range for Seazzadactylus, repeating the same claim with slightly different wording."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Seazzadactylus lived during the late Triassic, specifically the Norian stage between 219 and 214 million years ago, in what is now Italy.\" / \"Other records suggest the time range for this animal is the Norian stage, from 227.3 to 205.7 million years ago.\": The two sentences give different time ranges for the species' existence."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:22:50+00:00",
@@ -36,8 +34,23 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:34:32+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:50:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "The two sentences give different time ranges for the species' existence."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:27:57+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:27:57+00:00"
+ ]
 }

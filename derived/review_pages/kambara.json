@@ -2,27 +2,31 @@
  "taxon_key": "kambara",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bc7eebc90161b443",
- "reviewed_at": "2026-11-24T00:01:00+00:00",
+ "text_hash": "53680a8e326d9116",
+ "reviewed_at": "2026-11-25T22:21:01+00:00",
  "problems": [
   {
    "sentences": [
-    0,
     3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the size range of Kambara, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Refers to \"the turtle\" without introducing the turtle species earlier."
   },
   {
    "sentences": [
-    14,
-    16
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences assert that Kambara is the earliest diverging/branching member of the Mekosuchinae, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Mentions \"an unnamed Kambara\" without prior context or explanation."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"A fossilized plastron of Kambara taraina bears linear circular pits matching the bite marks of a crocodile, suggesting the turtle was bitten repeatedly in a behavior similar to the \"juggling\" seen in modern crocodiles.\": Refers to \"the turtle\" without introducing the turtle species earlier.",
+  "- missing context: \"Similarities between an unnamed Kambara and other Australian crocodilians were noted after the Murgon mandible was described in 1982.\": Mentions \"an unnamed Kambara\" without prior context or explanation."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:34+00:00"
 }

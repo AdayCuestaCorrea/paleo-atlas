@@ -2,24 +2,22 @@
  "taxon_key": "gryposuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "28edab7cb11eab04",
- "reviewed_at": "2026-11-25T13:24:11+00:00",
+ "text_hash": "70e6dcbece97dc56",
+ "reviewed_at": "2026-11-25T22:32:01+00:00",
  "problems": [
   {
    "sentences": [
-    20,
-    22
+    11,
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 21 states Gryposuchus lived only during the Miocene, while sentence 23 extends its range to the Late Pleistocene."
+   "kind": "repetition",
+   "reason": "Both sentences state the same time range for Gryposuchus (Burdigalian to Late Pleistocene, ~20.45–0.0117 Ma)."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Gryposuchus lived during the Miocene epoch, specifically from the Colhuehuapian to the Huayquerian ages.\" / \"The time range for Gryposuchus spans from the Burdigalian to the Late Pleistocene, approximately 20.45 to 0.0117 million years ago.\": Sentence 21 states Gryposuchus lived only during the Miocene, while sentence 23 extends its range to the Late Pleistocene."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:23:00+00:00",
@@ -44,8 +42,23 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:44:20+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      20,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 21 states Gryposuchus lived only during the Miocene, while sentence 23 extends its range to the Late Pleistocene."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:10:46+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:10:46+00:00"
+ ]
 }

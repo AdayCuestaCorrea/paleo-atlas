@@ -2,43 +2,30 @@
  "taxon_key": "goniopholis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2e725e4830f82e81",
- "reviewed_at": "2026-11-25T13:28:26+00:00",
+ "text_hash": "15157fbd98b4e781",
+ "reviewed_at": "2026-11-25T22:36:12+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5,
-    6,
-    12
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 5, 6, and 7 place Goniopholis species in the Late Jurassic (Kimmeridgian and Berriasian) while sentence 13 states the genus lived from the Bathonian to Santonian stages (Middle to Late Cretaceous), a later time period."
+   "kind": "about_something_else",
+   "reason": "The sentence discusses fossil eggs, which are not the animal itself but related material."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "It refers to \"this animal\" without specifying which species of Goniopholis it refers to."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Fossil eggs linked to this animal have been discovered in Late Jurassic rocks in Portugal.\" / \"The type species G. crassidens comes from the Berriasian of England, while G. simus from NW Germany might be the same animal.\" / \"G. baryglyphaeus from the Kimmeridgian of Portugal represents the oldest known member of the genus.\" / \"This animal lived between the Bathonian and Santonian stages, roughly 168.2 to 83.6 million years ago.\": Sentences 5, 6, and 7 place Goniopholis species in the Late Jurassic (Kimmeridgian and Berriasian) while sentence 13 states the genus lived from the Bathonian to Santonian stages (Middle to Late Cretaceous), a later time period."
+  "- missing context: \"Fossil eggs linked to this animal have been discovered in Late Jurassic rocks in Portugal.\": It refers to \"this animal\" without specifying which species of Goniopholis it refers to."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:30:53+00:00",
-   "problems": [
-    {
-     "sentences": [
-      4
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence mentions eggs attributed to Goniopholis without any prior context about eggs or reproduction."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T00:54:22+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:13:19+00:00"
+ "rewritten_at": "2026-11-25T23:17:35+00:00"
 }

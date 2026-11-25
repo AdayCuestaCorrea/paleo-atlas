@@ -2,52 +2,24 @@
  "taxon_key": "thalassiodracon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "354a2e3aef881456",
- "reviewed_at": "2026-11-25T13:31:00+00:00",
+ "text_hash": "c280693f36781f0d",
+ "reviewed_at": "2026-11-25T22:38:40+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    11,
+    12
    ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses dinosaur and pterosaur bones found in plesiosaur remains, which is about other animals rather than describing Thalassiodracon itself."
+   "kind": "contradiction",
+   "reason": "Sentence 12 claims Thalassiodracon is one of the oldest plesiosaur representatives, yet sentence 13 places it in the Late Triassic to Early Jurassic (≈201.6–196.5 Ma), a period that is not the earliest for plesiosaurs."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:35:56+00:00",
-   "problems": [
-    {
-     "sentences": [
-      16,
-      17
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Thalassiodracon is one of the oldest plesiosaur representatives and may be ancestral to the superfamily Pliosauroidea."
-    },
-    {
-     "sentences": [
-      18,
-      19
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences give the same geographic and temporal range for Thalassiodracon."
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to dinosaur and pterosaur bones in plesiosaur remains as evidence of predation, but the page never explains where these bones were found or how they relate to Thalassiodracon."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T01:42:20+00:00"
-  }
- ]
+ "notes": [
+  "- contradiction: \"Thalassiodracon is considered one of the oldest plesiosaur representatives and may be ancestral to the superfamily Pliosauroidea, which includes short-necked plesiosaurs.\" / \"Thalassiodracon lived in Europe from the Late Triassic to the Early Jurassic, approximately 201.6 to 196.5 million years ago.\": Sentence 12 claims Thalassiodracon is one of the oldest plesiosaur representatives, yet sentence 13 places it in the Late Triassic to Early Jurassic (≈201.6–196.5 Ma), a period that is not the earliest for plesiosaurs."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:19:27+00:00"
 }

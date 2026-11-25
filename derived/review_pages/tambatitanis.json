@@ -2,33 +2,24 @@
  "taxon_key": "tambatitanis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "75e8c92610ed09ed",
- "reviewed_at": "2026-11-25T13:36:15+00:00",
+ "text_hash": "5abb74fa53332db2",
+ "reviewed_at": "2026-11-25T22:42:37+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Tambatitanis lived during the Lower Cretaceous (lower Albian) in Japan, while sentence 11 claims it lived during the mid‑Cretaceous (112–109 Ma) in Asia, giving conflicting age ranges and geographic locations."
-  },
-  {
-   "sentences": [
     0,
-    7
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), whereas sentence 8’s phylogenetic analysis places it within Euhelopodidae, a different clade."
+   "reason": "Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), while sentence 4 places it in the family Euhelopodidae, which is a separate lineage within sauropods and not a titanosaurian, creating a conflicting taxonomic assignment."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Tambatitanis lived during the Lower Cretaceous (lower Albian) in what is now Japan.\" / \"Tambatitanis amicitiae lived during the mid-Cretaceous, between 112 and 109 million years ago, in what is now Asia. The time range for Tambatitanis is the Albian, from 113.2 to 110.1 million years ago.\": Sentence 10 states Tambatitanis lived during the Lower Cretaceous (lower Albian) in Japan, while sentence 11 claims it lived during the mid‑Cretaceous (112–109 Ma) in Asia, giving conflicting age ranges and geographic locations.",
-  "- contradiction: \"Tambatitanis is an extinct genus of sauropod dinosaur classified as a titanosauriform, possibly a titanosaurian. The genus is known from a single species, Tambatitanis amicitiae, represented by a partial skeleton.\" / \"Phylogenetic analysis suggests Tambatitanis belonged to Euhelopodidae, but its specific placement within the group remains uncertain.\": Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), whereas sentence 8’s phylogenetic analysis places it within Euhelopodidae, a different clade."
+  "- contradiction: \"Tambatitanis is an extinct genus of sauropod dinosaur classified as a titanosauriform, possibly a titanosaurian.\" / \"Phylogenetic analysis suggests Tambatitanis belonged to Euhelopodidae, but its specific placement within the group remains uncertain.\": Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), while sentence 4 places it in the family Euhelopodidae, which is a separate lineage within sauropods and not a titanosaurian, creating a conflicting taxonomic assignment."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:45:01+00:00",
@@ -46,8 +37,33 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:57:59+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:36:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Tambatitanis lived during the Lower Cretaceous (lower Albian) in Japan, while sentence 11 claims it lived during the mid‑Cretaceous (112–109 Ma) in Asia, giving conflicting age ranges and geographic locations."
+    },
+    {
+     "sentences": [
+      0,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 classifies Tambatitanis as a titanosauriform (possibly titanosaurian), whereas sentence 8’s phylogenetic analysis places it within Euhelopodidae, a different clade."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:18:15+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:18:15+00:00"
+ "rewritten_at": "2026-11-25T23:21:41+00:00"
 }

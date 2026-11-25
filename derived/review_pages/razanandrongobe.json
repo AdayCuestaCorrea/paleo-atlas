@@ -2,27 +2,39 @@
  "taxon_key": "razanandrongobe",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f6b0b0d885028e52",
- "reviewed_at": "2026-11-24T00:09:51+00:00",
+ "text_hash": "f92d6c870b40e66b",
+ "reviewed_at": "2026-11-25T22:25:31+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    10
+    3,
+    12
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Razanandrongobe occupied a predatory niche similar to theropod dinosaurs."
+   "reason": "Both sentences state that the fossils are from the Bathonian stage of the Middle Jurassic, giving the same age information twice."
   },
   {
    "sentences": [
-    18,
-    19
+    8
    ],
-   "kind": "repetition",
-   "reason": "Sentences 19 and 20 repeat the claim that Razanandrongobe predates all other known Notosuchians by 42 million years."
+   "kind": "missing_context",
+   "reason": "The sentence refers to the environment as \"river-based or lake-based\" without any prior mention or description of the environment in the text."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "The comparison of serration size to Tyrannosaurus is made without establishing the context of the comparison (e.g., relative size or significance)."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"The environment where Razanandrongobe lived is inferred to have been river-based or lake-based.\": The sentence refers to the environment as \"river-based or lake-based\" without any prior mention or description of the environment in the text.",
+  "- missing context: \"The teeth bore large serrations on both front and rear edges that were proportionally larger than those of Tyrannosaurus.\": The comparison of serration size to Tyrannosaurus is made without establishing the context of the comparison (e.g., relative size or significance)."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:12:27+00:00"
 }

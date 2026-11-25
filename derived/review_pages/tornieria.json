@@ -2,48 +2,31 @@
  "taxon_key": "tornieria",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "76adacfa937ab754",
- "reviewed_at": "2026-11-25T13:40:53+00:00",
+ "text_hash": "b91e097e499225b9",
+ "reviewed_at": "2026-11-25T22:46:36+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15,
-    16,
-    17
+    5
    ],
-   "kind": "repetition",
-   "reason": "All four sentences state the same classification of Tornieria as a member of the subfamily Diplodocinae or as a distinct genus separate from Barosaurus, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to \"T. africana\" without having previously introduced a species name for Tornieria."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 7 discusses \"Tornieria africana\" but the page never defined that species."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:54:22+00:00",
-   "problems": [
-    {
-     "sentences": [
-      2,
-      3
-     ],
-     "kind": "contradiction",
-     "reason": "Both sentences give different estimates for Tornieria’s length and weight (25 m/10 t vs. 26 m/23 t)."
-    },
-    {
-     "sentences": [
-      12,
-      17
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Tornieria is a member of the subfamily Diplodocinae."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:07:21+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Werner Janensch re-evaluated Tornieria in 1922, concluding that T. africana was actually Barosaurus africanus.\": Sentence 6 refers to \"T. africana\" without having previously introduced a species name for Tornieria.",
+  "- missing context: \"A 2026 study found evidence of at least five independent origins or reversals of pneumaticity in anterior caudal vertebrae among neosauropods, including Tornieria africana.\": Sentence 7 discusses \"Tornieria africana\" but the page never defined that species."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:04+00:00"
 }

@@ -2,24 +2,32 @@
  "taxon_key": "leonerasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2c1eb585e2b51789",
- "reviewed_at": "2026-11-25T13:31:47+00:00",
+ "text_hash": "76fe21efd580c30d",
+ "reviewed_at": "2026-11-25T22:39:21+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    13
+    11,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the age of Leonerasaurus is debated due to an undefined lower age limit of the Las Leoneras Formation."
+  },
+  {
+   "sentences": [
+    11,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 states the animal lived during the Sinemurian stage (~190 Ma, Early Jurassic), while sentence 14 suggests it may have lived in the Late Triassic, directly conflicting on the age of the species."
+   "reason": "Sentence 12 asserts the dinosaur lived during the Sinemurian stage (~190 Ma), while sentence 13 suggests it may have lived in the Late Triassic, presenting conflicting age estimates."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The animal lived approximately 190 million years ago during the Sinemurian stage in what is now South America.\" / \"It is debated whether Leonerasaurus lived in the Late Triassic, as the lower age limit of the Las Leoneras Formation is not well-defined.\": Sentence 13 states the animal lived during the Sinemurian stage (~190 Ma, Early Jurassic), while sentence 14 suggests it may have lived in the Late Triassic, directly conflicting on the age of the species."
+  "- contradiction: \"Leonerasaurus lived approximately 190 million years ago during the Sinemurian stage in what is now South America, though this age is debated because the lower age limit of the Las Leoneras Formation is not well-defined.\" / \"It is debated whether Leonerasaurus lived in the Late Triassic, as the lower age limit of the Las Leoneras Formation is not well-defined.\": Sentence 12 asserts the dinosaur lived during the Sinemurian stage (~190 Ma), while sentence 13 suggests it may have lived in the Late Triassic, presenting conflicting age estimates."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:37:01+00:00",
@@ -43,8 +51,25 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:53:43+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:31:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states the animal lived during the Sinemurian stage (~190 Ma, Early Jurassic), while sentence 14 suggests it may have lived in the Late Triassic, directly conflicting on the age of the species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:27+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:27+00:00"
+ "rewritten_at": "2026-11-25T23:19:56+00:00"
 }

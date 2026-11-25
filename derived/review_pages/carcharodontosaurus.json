@@ -2,46 +2,33 @@
  "taxon_key": "carcharodontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bd66f37736fa67a9",
- "reviewed_at": "2026-11-25T13:09:19+00:00",
+ "text_hash": "441d66dce36a32e0",
+ "reviewed_at": "2026-11-25T22:17:18+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    25
+    7
    ],
-   "kind": "about_something_else",
-   "reason": "Sentences 25 and 26 discuss the subfamily and its geographic range as if describing the animal itself, rather than the group"
+   "kind": "missing_context",
+   "reason": "Refers to \"the main specimen\" without prior introduction or description."
   },
   {
    "sentences": [
-    26,
-    27
+    17,
+    18,
+    19
    ],
-   "kind": "about_something_else",
-   "reason": "Sentences 27 and 28 refer to fossil attribution and taxonomic reassignment, treating the group’s history as if it were a property of the species"
+   "kind": "contradiction",
+   "reason": "Sentence 18 states Carcharodontosaurus lived in Northwest Africa, while sentence 20 claims the subfamily Carcharodontosaurinae was restricted to southern Gondwana, and sentence 19 says Carcharodontosaurians were found on every continent except Antarctica—these statements conflict regarding geographic distribution."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:53:25+00:00",
-   "problems": [
-    {
-     "sentences": [
-      7,
-      9
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 8 states the genus was first described based on two lost teeth, implying the main specimen is a Carcharodontosaurus skull, while sentence 10 claims the main specimen was redescribed as a distinct genus named Tameryraptor, contradicting the earlier identification."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:25:53+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"In 2025, the main specimen was redescribed as the holotype of a distinct genus named Tameryraptor.\": Refers to \"the main specimen\" without prior introduction or description.",
+  "- contradiction: \"Carcharodontosaurus lived in Northwest Africa between 100 and 94 million years ago during the Cenomanian stage of the Late Cretaceous.\" / \"Carcharodontosaurians have been found from the Late Jurassic to the Mid-Cretaceous on every continent except Antarctica.\" / \"The subfamily Carcharodontosaurinae, containing Carcharodontosaurus, was likely restricted to the southern continent of Gondwana, where it probably served as an apex predator.\": Sentence 18 states Carcharodontosaurus lived in Northwest Africa, while sentence 20 claims the subfamily Carcharodontosaurinae was restricted to southern Gondwana, and sentence 19 says Carcharodontosaurians were found on every continent except Antarctica—these statements conflict regarding geographic distribution."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:07:41+00:00"
 }

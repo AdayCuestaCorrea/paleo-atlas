@@ -2,44 +2,23 @@
  "taxon_key": "edestus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "37eebb00fd8e98d8",
- "reviewed_at": "2026-11-25T13:24:29+00:00",
+ "text_hash": "39816f83289b00f5",
+ "reviewed_at": "2026-11-25T22:32:13+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    19
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Edestus belongs to the family Edestidae."
+   "kind": "missing_context",
+   "reason": "Refers to \"jaw cartilage\" without prior introduction of jaw anatomy or context for the specimen."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:23:13+00:00",
-   "problems": [
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 15 states the parent group and family of Edestus twice."
-    },
-    {
-     "sentences": [
-      17
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 18 refers to \"These localities\" without previously listing specific localities in the text."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T06:49:53+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"A specimen described by Oliver Hay in 1912 as E. mirus preserved two whorls attached to jaw cartilage, definitively showing the whorls were situated in the mouth.\": Refers to \"jaw cartilage\" without prior introduction of jaw anatomy or context for the specimen."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:15:40+00:00"
 }

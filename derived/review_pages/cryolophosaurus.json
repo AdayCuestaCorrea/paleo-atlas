@@ -2,24 +2,22 @@
  "taxon_key": "cryolophosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ac063c2a1d5da17e",
- "reviewed_at": "2026-11-25T13:17:11+00:00",
+ "text_hash": "dd8e88be0a672581",
+ "reviewed_at": "2026-11-25T22:24:37+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    18
+    11,
+    12
    ],
-   "kind": "contradiction",
-   "reason": "Both claim the animal is the largest known theropod from the Early Jurassic, but sentence 19 classifies it as a derived neotheropod, implying a different taxonomic status inconsistent with the claim of being the largest known theropod."
+   "kind": "repetition",
+   "reason": "Both sentences state that a 2020 study by Adam Marsh and Timothy Rowe classified Cryolophosaurus as a basal neotheropod."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Based on size estimates, it stands as the largest known theropod from the Early Jurassic.\" / \"The animal is currently classified as a derived neotheropod closely related to Averostra.\": Both claim the animal is the largest known theropod from the Early Jurassic, but sentence 19 classifies it as a derived neotheropod, implying a different taxonomic status inconsistent with the claim of being the largest known theropod."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:08:12+00:00",
@@ -76,8 +74,23 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:44:56+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:17:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Both claim the animal is the largest known theropod from the Early Jurassic, but sentence 19 classifies it as a derived neotheropod, implying a different taxonomic status inconsistent with the claim of being the largest known theropod."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:04:45+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:04:45+00:00"
+ ]
 }

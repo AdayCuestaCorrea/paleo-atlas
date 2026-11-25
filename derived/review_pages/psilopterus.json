@@ -2,32 +2,22 @@
  "taxon_key": "psilopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "60fed1ebcc670a06",
- "reviewed_at": "2026-11-25T13:24:18+00:00",
+ "text_hash": "4e2463c082ff4dcc",
+ "reviewed_at": "2026-11-25T22:32:06+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Psilopterus lived from the Middle Oligocene to the Late Pleistocene, while sentence 15 claims the genus lived from the Aquitanian (early Miocene) to the Late Pleistocene, giving conflicting temporal ranges."
-  },
-  {
-   "sentences": [
-    12,
-    13
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the genus Psilopterus is divided into four species, repeating the same claim."
+   "reason": "Both sentences state the same temporal range for Psilopterus (Aquitanian to Late Pleistocene, ~23.04–0.0117 Ma)."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Psilopterus is an extinct genus of terror birds known in Greek as \"naked wing\" that lived in Argentina and Uruguay from the Middle Oligocene to possibly the Late Pleistocene.\" / \"Psilopterus lived from the middle Oligocene to the late Pleistocene in Argentina, while other sources state the genus lived from the Aquitanian to the Late Pleistocene, approximately 23.04 to 0.0117 million years ago.\": Sentence 1 states Psilopterus lived from the Middle Oligocene to the Late Pleistocene, while sentence 15 claims the genus lived from the Aquitanian (early Miocene) to the Late Pleistocene, giving conflicting temporal ranges."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:23:04+00:00",
@@ -52,8 +42,31 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:46:50+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Psilopterus lived from the Middle Oligocene to the Late Pleistocene, while sentence 15 claims the genus lived from the Aquitanian (early Miocene) to the Late Pleistocene, giving conflicting temporal ranges."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus Psilopterus is divided into four species, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:10:54+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:10:54+00:00"
+ ]
 }

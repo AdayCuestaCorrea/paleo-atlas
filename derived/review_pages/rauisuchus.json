@@ -2,42 +2,30 @@
  "taxon_key": "rauisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "95c84a2639d63364",
- "reviewed_at": "2026-11-25T13:49:14+00:00",
+ "text_hash": "8f3bfd805fbe3144",
+ "reviewed_at": "2026-11-25T22:55:13+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    9
+    4
    ],
-   "kind": "contradiction",
-   "reason": "The age ranges for Rauisuchus differ: sentence 1 gives 235–228 Ma, while sentence 10 gives 240–230 Ma."
+   "kind": "missing_context",
+   "reason": "Refers to R. tiradentes without prior introduction or explanation of its relevance to Rauisuchus."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "about_something_else",
+   "reason": "Discusses removal of remains from Locality 15 (Find 1020) from the genus, which is a separate taxonomic issue not directly about Rauisuchus itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Rauisuchus, meaning \"Wilhelm Rau's crocodile,\" is an extinct genus of archosaurs that lived in Brazil between 235 and 228 million years ago.\" / \"Rauisuchus lived in what is now the Paleorrota Geopark in Brazil during the middle Triassic period, between 240 and 230 million years ago.\": The age ranges for Rauisuchus differ: sentence 1 gives 235–228 Ma, while sentence 10 gives 240–230 Ma."
+  "- missing context: \"Krebs described the tarsus of R. tiradentes in 1973, and the lectotype was assigned in 1976.\": Refers to R. tiradentes without prior introduction or explanation of its relevance to Rauisuchus."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:17:49+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      9
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 1 states Rauisuchus lived in the Late Triassic, while sentence 10 states it inhabited the area during the middle Triassic (240–230 Ma)."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:15:44+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:27:00+00:00"
+ "rewritten_at": "2026-11-25T23:28:13+00:00"
 }

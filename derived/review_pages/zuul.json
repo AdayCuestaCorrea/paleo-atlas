@@ -2,52 +2,30 @@
  "taxon_key": "zuul",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0466cbb5760bfc65",
- "reviewed_at": "2026-11-25T13:27:19+00:00",
+ "text_hash": "ee4d4ffe14a04fce",
+ "reviewed_at": "2026-11-25T22:35:05+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    14
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Zuul is an ankylosaurine ankylosaurid."
+   "kind": "missing_context",
+   "reason": "Refers to \"the skeleton\" without prior introduction of a specific skeleton."
   },
   {
    "sentences": [
-    7
+    11
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 8 discusses a company excavating a potential Gorgosaurus specimen, which is unrelated to Zuul."
+   "reason": "Discusses phylogenetic placement of other ankylosaurids (Anodontosaurus, Ziapelta) rather than Zuul itself."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:28:53+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      12
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the taxonomic placement of Zuul within the family Ankylosauridae and subfamily Ankylosaurinae, repeating the same classification claim."
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 9 refers to a truck striking a tail club of an ankylosaur, but does not specify that the ankylosaur is Zuul, leaving the reference ambiguous."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T07:41:43+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"The skeleton was found when a truck carrying a twelve-meter-high load accidentally struck a tail club of an ankylosaur.\": Refers to \"the skeleton\" without prior introduction of a specific skeleton."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:13+00:00"
 }

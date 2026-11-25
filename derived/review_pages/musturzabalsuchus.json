@@ -2,37 +2,31 @@
  "taxon_key": "musturzabalsuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "94a78aa0b63f037d",
- "reviewed_at": "2026-11-25T13:43:36+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "cf73a5a7446339a2",
+ "reviewed_at": "2026-11-25T22:49:02+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:00:42+00:00",
-   "problems": [
-    {
-     "sentences": [
-      6,
-      10
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 7 states the material dates to Early or Middle Campanian, while sentence 11 states it lived during Late Campanian or very Early Maastrichtian, which are later stages."
-    },
-    {
-     "sentences": [
-      7,
-      9
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences assert that Musturzabalsuchus is a member of Allodaposuchidae and distinct from Alligatoroidea."
-    }
+   "sentences": [
+    4
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:49:19+00:00"
+   "kind": "missing_context",
+   "reason": "Refers to a specimen from the Fuvelian Lignites in France without prior introduction of that formation."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions material from Valencia, Spain, without earlier context about Valencia."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"A specimen from the Fuvelian Lignites in France was referred to Musturzabalsuchus in 1999, but a 2008 study questioned the characteristics used to assign it to the genus.\": Refers to a specimen from the Fuvelian Lignites in France without prior introduction of that formation.",
+  "- missing context: \"Material from Valencia, Spain, dates to the Early or Middle Campanian, making it slightly older than specimens from other localities.\": Mentions material from Valencia, Spain, without earlier context about Valencia."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:25:24+00:00"
 }

@@ -2,57 +2,31 @@
  "taxon_key": "genyodectes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3bc5f427d3582ba5",
- "reviewed_at": "2026-11-25T13:51:43+00:00",
+ "text_hash": "69fabdca57142a34",
+ "reviewed_at": "2026-11-25T22:58:00+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5
+    1,
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 claims a length of ~9 m, while sentence 6 gives a different estimate of 6.25 m for the same species."
+   "kind": "repetition",
+   "reason": "Both sentences state that Genyodectes’ premaxillary teeth are similar to those of Ceratosaurus, repeating the same claim."
   },
   {
    "sentences": [
-    8
+    7
    ],
    "kind": "missing_context",
-   "reason": "Sentence 9 refers to the holotype being removed from an artificial matrix, but the text never previously mentioned that the holotype was displayed in such a matrix."
+   "reason": "Sentence 8 refers to the holotype being removed from an artificial matrix, but the matrix itself has not been previously described or introduced in the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Some estimates suggest Genyodectes could have reached a length of around 9 meters.\" / \"In 2016, Genyodectes was estimated to reach a length of 6.25 meters and a weight of 790 kilograms.\": Sentence 5 claims a length of ~9 m, while sentence 6 gives a different estimate of 6.25 m for the same species.",
-  "- missing context: \"The taxonomic validity of Genyodectes was strengthened after the holotype was removed from the artificial matrix in which it had been displayed for a long time.\": Sentence 9 refers to the holotype being removed from an artificial matrix, but the text never previously mentioned that the holotype was displayed in such a matrix."
+  "- missing context: \"The taxonomic validity of Genyodectes was strengthened after the holotype was removed from the artificial matrix in which it had been displayed for a long time.\": Sentence 8 refers to the holotype being removed from an artificial matrix, but the matrix itself has not been previously described or introduced in the page."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:26:51+00:00",
-   "problems": [
-    {
-     "sentences": [
-      4,
-      8
-     ],
-     "kind": "contradiction",
-     "reason": "Both sentences give different length estimates for Genyodectes without indicating they are separate estimates."
-    },
-    {
-     "sentences": [
-      7
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to an “artificial matrix” without explaining what it is or why it matters."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:53:14+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:28:59+00:00"
+ "rewritten_at": "2026-11-25T23:29:21+00:00"
 }

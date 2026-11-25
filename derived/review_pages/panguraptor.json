@@ -2,34 +2,32 @@
  "taxon_key": "panguraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "355000d4ac1428af",
- "reviewed_at": "2026-11-24T00:56:22+00:00",
+ "text_hash": "dd79111fcdd22ca8",
+ "reviewed_at": "2026-11-25T22:47:18+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    5
+    1,
+    7
    ],
    "kind": "repetition",
-   "reason": "Both state the first digit had a flattened, recurved claw that was the largest in the holotype."
+   "reason": "Both sentences describe the teeth as slightly recurved and lacking serrations."
   },
   {
    "sentences": [
-    3,
-    11
+    11,
+    12
    ],
-   "kind": "repetition",
-   "reason": "Both describe ten cervical vertebrae, thirteen sacral vertebrae, and a rudimentary fifth metatarsal."
-  },
-  {
-   "sentences": [
-    16
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence discusses the age of the sediments rather than the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 12 places Panguraptor in the Hettangian stage (201.4–199.5 Ma), while sentence 13 claims the sediments date to the late Sinemurian to possibly Toarcian stages, which are later than the Hettangian."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Panguraptor lived during the Early Jurassic, approximately 199.3 million years ago, specifically during the Hettangian stage, between 201.4 and 199.5 million years ago.\" / \"The sediments containing Panguraptor are dated to the late Sinemurian to possibly Toarcian stages, indicating a slightly later or overlapping temporal range in some interpretations.\": Sentence 12 places Panguraptor in the Hettangian stage (201.4–199.5 Ma), while sentence 13 claims the sediments date to the late Sinemurian to possibly Toarcian stages, which are later than the Hettangian."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:27+00:00"
 }

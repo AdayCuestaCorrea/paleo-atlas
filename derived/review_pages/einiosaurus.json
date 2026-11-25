@@ -2,42 +2,31 @@
  "taxon_key": "einiosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "eaca15891b5bb1fc",
- "reviewed_at": "2026-11-25T13:11:48+00:00",
+ "text_hash": "60eea66ca8319e9e",
+ "reviewed_at": "2026-11-25T22:19:44+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
+    3
    ],
-   "kind": "contradiction",
-   "reason": "Sampson’s anagenesis hypothesis (20) states Einiosaurus evolved gradually without branching, while Dodson (21) argues it was a separate branch."
+   "kind": "missing_context",
+   "reason": "The phrase \"these dinosaurs\" is used without a prior introduction of the group."
   },
   {
    "sentences": [
-    19,
-    21
+    11
    ],
-   "kind": "contradiction",
-   "reason": "Sampson’s anagenesis hypothesis (20) denies branching, whereas Wilson and Scannella (22) support Achelousaurus as a direct descendant of Einiosaurus."
-  },
-  {
-   "sentences": [
-    20,
-    21
-   ],
-   "kind": "contradiction",
-   "reason": "Dodson (21) claims Einiosaurus was a separate branch, but Wilson and Scannella (22) argue it is the ancestor of Achelousaurus."
+   "kind": "missing_context",
+   "reason": "\"Single-species bone beds\" is mentioned without earlier definition or context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Horner hypothesized that Einiosaurus represented a transitional form in an anagenetic lineage, arguing that the species evolved gradually without splitting into separate branches.\" / \"Some researchers, such as Dodson, argued against the anagenesis hypothesis, suggesting that the single pair of spikes in Einiosaurus indicated it was a separate branch rather than a direct descendant of Styracosaurus.\": Sampson’s anagenesis hypothesis (20) states Einiosaurus evolved gradually without branching, while Dodson (21) argues it was a separate branch.",
-  "- contradiction: \"Horner hypothesized that Einiosaurus represented a transitional form in an anagenetic lineage, arguing that the species evolved gradually without splitting into separate branches.\" / \"In 2006, researchers proposed that the dubious species Monoclonius lowei might actually be a sub-adult specimen of Einiosaurus, while later studies by Wilson and Scannella supported the idea that Achelousaurus was the direct descendant of Einiosaurus.\": Sampson’s anagenesis hypothesis (20) denies branching, whereas Wilson and Scannella (22) support Achelousaurus as a direct descendant of Einiosaurus.",
-  "- contradiction: \"Some researchers, such as Dodson, argued against the anagenesis hypothesis, suggesting that the single pair of spikes in Einiosaurus indicated it was a separate branch rather than a direct descendant of Styracosaurus.\" / \"In 2006, researchers proposed that the dubious species Monoclonius lowei might actually be a sub-adult specimen of Einiosaurus, while later studies by Wilson and Scannella supported the idea that Achelousaurus was the direct descendant of Einiosaurus.\": Dodson (21) claims Einiosaurus was a separate branch, but Wilson and Scannella (22) argue it is the ancestor of Achelousaurus."
+  "- missing context: \"Mass deaths occurred when these dinosaurs gathered around oxbow lakes during severe droughts, creating dense bone beds.\": The phrase \"these dinosaurs\" is used without a prior introduction of the group.",
+  "- missing context: \"Single-species bone beds are interpreted as evidence of herding behavior, possibly resulting from catastrophic events like droughts or floods.\": \"Single-species bone beds\" is mentioned without earlier definition or context."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:58:07+00:00",
@@ -67,8 +56,41 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:10:22+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:11:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sampson’s anagenesis hypothesis (20) states Einiosaurus evolved gradually without branching, while Dodson (21) argues it was a separate branch."
+    },
+    {
+     "sentences": [
+      19,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Sampson’s anagenesis hypothesis (20) denies branching, whereas Wilson and Scannella (22) support Achelousaurus as a direct descendant of Einiosaurus."
+    },
+    {
+     "sentences": [
+      20,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Dodson (21) claims Einiosaurus was a separate branch, but Wilson and Scannella (22) argue it is the ancestor of Achelousaurus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:01:40+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:01:40+00:00"
+ "rewritten_at": "2026-11-25T23:08:49+00:00"
 }

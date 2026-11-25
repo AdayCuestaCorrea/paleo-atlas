@@ -2,8 +2,8 @@
  "taxon_key": "austriadraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e48abadd433e2041",
- "reviewed_at": "2026-11-25T13:48:36+00:00",
+ "text_hash": "35604842e61b1635",
+ "reviewed_at": "2026-11-25T22:54:24+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,15 @@
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states the humerus is about 4 cm (≈40 mm), yet sentence 3 claims the shinbone is 57.7 mm long and equals 70 % of the humerus length, which would require a humerus of ≈82 mm, inconsistent with sentence 1."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 refers to the shinbone and the first wing‑finger phalanx without having introduced or defined those elements earlier in the page."
+   "reason": "Sentence 1 gives the shinbone length as 57.7 mm, longer than the humerus (≈40 mm), yet sentence 3 states the shinbone is only 70 % of the humerus length."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Austriadraco dallavecchiai is an extinct genus of pterosaur known from a small species with a humerus length of about four centimetres.\" / \"Its shoulder blade is 62% longer than the coracoid, while the shinbone is 57.7 millimetres long, reaching 70% of the humerus length and 92% of the first wing finger phalanx length.\": Sentence 1 states the humerus is about 4 cm (≈40 mm), yet sentence 3 claims the shinbone is 57.7 mm long and equals 70 % of the humerus length, which would require a humerus of ≈82 mm, inconsistent with sentence 1.",
-  "- missing context: \"Its shoulder blade is 62% longer than the coracoid, while the shinbone is 57.7 millimetres long, reaching 70% of the humerus length and 92% of the first wing finger phalanx length.\": Sentence 3 refers to the shinbone and the first wing‑finger phalanx without having introduced or defined those elements earlier in the page."
+  "- contradiction: \"Austriadraco dallavecchiai is an extinct genus of pterosaur known from a small species with a humerus length of about four centimetres, while the shinbone measures 57.7 millimetres.\" / \"The shoulder blade is 62% longer than the coracoid, and the shinbone reaches 70% of the humerus length and 92% of the first wing finger phalanx length.\": Sentence 1 gives the shinbone length as 57.7 mm, longer than the humerus (≈40 mm), yet sentence 3 states the shinbone is only 70 % of the humerus length."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:15:06+00:00",
@@ -50,8 +42,32 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:06:07+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:48:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states the humerus is about 4 cm (≈40 mm), yet sentence 3 claims the shinbone is 57.7 mm long and equals 70 % of the humerus length, which would require a humerus of ≈82 mm, inconsistent with sentence 1."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to the shinbone and the first wing‑finger phalanx without having introduced or defined those elements earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:26:18+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:26:18+00:00"
+ "rewritten_at": "2026-11-25T23:27:52+00:00"
 }

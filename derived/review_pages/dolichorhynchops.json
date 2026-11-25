@@ -2,27 +2,31 @@
  "taxon_key": "dolichorhynchops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "506c82df016a4bb7",
- "reviewed_at": "2026-11-24T00:26:23+00:00",
+ "text_hash": "e6dc672a86ab6fa9",
+ "reviewed_at": "2026-11-25T22:33:57+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the elongated snout of Dolichorhynchops."
+   "kind": "missing_context",
+   "reason": "Mentions the parent group \"Dolichorhynchia\" without any prior introduction or definition."
   },
   {
    "sentences": [
-    10,
-    11
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences provide overlapping information about the temporal and geographic range of D. herschelensis."
+   "kind": "missing_context",
+   "reason": "References the species \"T. bonneri\" and its reclassification without explaining what \"T.\" stands for or providing context for the taxonomic change."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Dolichorhynchops belongs to the family Polycotylidae, the subfamily Polycotylinae, and the parent group Dolichorhynchia, and it is classified as a reptile.\": Mentions the parent group \"Dolichorhynchia\" without any prior introduction or definition.",
+  "- missing context: \"The species D. herschelensis was described by Tamaki Sato in 2005, while a 2008 study classified T. bonneri as the valid species D. bonneri within the genus.\": References the species \"T. bonneri\" and its reclassification without explaining what \"T.\" stands for or providing context for the taxonomic change."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:16:46+00:00"
 }

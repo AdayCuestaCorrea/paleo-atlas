@@ -2,30 +2,37 @@
  "taxon_key": "necropsittacus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a041a829a6395298",
- "reviewed_at": "2026-11-25T13:21:10+00:00",
+ "text_hash": "a8b315819df1418a",
+ "reviewed_at": "2026-11-25T22:28:15+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    9
    ],
-   "kind": "repetition",
-   "reason": "Sentence 12 repeats the same claim about the last mention and extinction of the Rodrigues parrot three times."
+   "kind": "contradiction",
+   "reason": "The genus is stated to have existed from 0.0117 to 0 million years ago, implying it survived into the present, yet the species is reported extinct in 1761."
   },
   {
    "sentences": [
     10
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 states the genus lived during the Holocene, from 0.0117 to 0 million years ago, which is a nonsensical time range and lacks context for the units (likely 0.0117 million years = 11,700 years)."
+   "kind": "repetition",
+   "reason": "Sentence 11 repeats the same information about the last mention in 1761 and the subsequent extinction three times."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 14 discusses N. borbonicus, a different species, rather than the Rodrigues parrot itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The species is known only from subfossil remains and mentions in contemporary accounts. The genus Necropsittacus lived during the Holocene, from 0.0117 to 0 million years ago.\": Sentence 11 states the genus lived during the Holocene, from 0.0117 to 0 million years ago, which is a nonsensical time range and lacks context for the units (likely 0.0117 million years = 11,700 years)."
+  "- contradiction: \"The genus Necropsittacus lived during the Holocene, from 0.0117 to 0 million years ago.\": The genus is stated to have existed from 0.0117 to 0 million years ago, implying it survived into the present, yet the species is reported extinct in 1761."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:15:05+00:00",
@@ -55,8 +62,31 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:46:33+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:21:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 12 repeats the same claim about the last mention and extinction of the Rodrigues parrot three times."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 states the genus lived during the Holocene, from 0.0117 to 0 million years ago, which is a nonsensical time range and lacks context for the units (likely 0.0117 million years = 11,700 years)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:07:51+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:07:51+00:00"
+ "rewritten_at": "2026-11-25T23:13:46+00:00"
 }

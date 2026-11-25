@@ -2,37 +2,23 @@
  "taxon_key": "huallasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dcb7517e2d1321c7",
- "reviewed_at": "2026-11-25T13:42:30+00:00",
+ "text_hash": "b024d6201006e1cd",
+ "reviewed_at": "2026-11-25T22:48:07+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    13
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Huallasaurus fossils were found in the Los Alamitos Formation of Río Negro Province, Argentina."
+   "kind": "contradiction",
+   "reason": "Sentence 8 gives an age range of 73–69 Ma, then immediately narrows it to the Maastrichtian stage (72.2–66 Ma), which extends beyond the upper bound of the first range, making the two statements inconsistent."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:58:21+00:00",
-   "problems": [
-    {
-     "sentences": [
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 13 gives two overlapping but inconsistent age ranges for Huallasaurus (73–69 Ma and 72.2–66 Ma), which conflict without clarification."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:32:35+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Huallasaurus lived during the Late Cretaceous, approximately between 73 and 69 million years ago, in what is now South America, specifically during the Maastrichtian stage from 72.2 to 66 million years ago.\": Sentence 8 gives an age range of 73–69 Ma, then immediately narrows it to the Maastrichtian stage (72.2–66 Ma), which extends beyond the upper bound of the first range, making the two statements inconsistent."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:55+00:00"
 }

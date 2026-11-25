@@ -2,32 +2,32 @@
  "taxon_key": "chilantaisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "07f5e0002c139b5b",
- "reviewed_at": "2026-11-25T13:15:15+00:00",
+ "text_hash": "af844cf987a584db",
+ "reviewed_at": "2026-11-25T22:22:39+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    11
+    13,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Both sentences refer to the formation where the type specimen was found, but one names it Ulansuhai Formation and the other Ulanhushi Formation, giving conflicting information."
+   "reason": "The Ulansuhai Formation is dated 85.7–72.2 Ma, yet the genus is said to have lived 93.9–83.6 Ma, placing its existence before the formation’s age."
   },
   {
    "sentences": [
-    4
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 states that the metatarsus is the largest known among purported megaraptorans or Neovenator, but it does not specify that the comparison is about the metatarsus, leaving the subject ambiguous."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same floodplain environment of the Ulansuhai Formation, repeating identical information."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The holotype specimen of Chilantaisaurus was discovered by a joint Sino-Soviet expedition in Inner Mongolia within the Ulansuhai Formation.\" / \"The type species Ch. tashuikouensis was described by Hu in 1964 from fossils found in the Ulanhushi Formation in Inner Mongolia, China.\": Both sentences refer to the formation where the type specimen was found, but one names it Ulansuhai Formation and the other Ulanhushi Formation, giving conflicting information.",
-  "- missing context: \"The animal possessed long hindlimbs with a robust metatarsus, which is the largest known among purported megaraptorans or Neovenator.\": Sentence 5 states that the metatarsus is the largest known among purported megaraptorans or Neovenator, but it does not specify that the comparison is about the metatarsus, leaving the subject ambiguous."
+  "- contradiction: \"The Ulansuhai Formation containing Chilantaisaurus fossils is estimated to date from the Santonian to Campanian stages, between 85.7 and 72.2 million years ago.\" / \"The genus lived from the Turonian to the Santonian stages, approximately 93.9 to 83.6 million years ago.\": The Ulansuhai Formation is dated 85.7–72.2 Ma, yet the genus is said to have lived 93.9–83.6 Ma, placing its existence before the formation’s age."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:03:45+00:00",
@@ -80,8 +80,32 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:10:08+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:15:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences refer to the formation where the type specimen was found, but one names it Ulansuhai Formation and the other Ulanhushi Formation, giving conflicting information."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 states that the metatarsus is the largest known among purported megaraptorans or Neovenator, but it does not specify that the comparison is about the metatarsus, leaving the subject ambiguous."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:03:23+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:03:23+00:00"
+ "rewritten_at": "2026-11-25T23:10:44+00:00"
 }

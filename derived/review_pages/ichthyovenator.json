@@ -2,19 +2,47 @@
  "taxon_key": "ichthyovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1f917ead06cceb44",
- "reviewed_at": "2026-11-24T00:03:36+00:00",
+ "text_hash": "59519e579661e39f",
+ "reviewed_at": "2026-11-25T22:22:30+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 gives two different age ranges for the same period – 121.4–113.2 Ma and ~125 Ma – without explaining the discrepancy."
+  },
+  {
+   "sentences": [
+    1,
+    14
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Ichthyovenator’s ilium was proportionally longer relative to its pubic bone than in any other known large theropod."
+   "reason": "Both sentences state that Ichthyovenator has been reclassified into Spinosaurinae, repeating the same claim."
+  },
+  {
+   "sentences": [
+    3,
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentences 4 and 6 refer to specific anatomical measurements (blade‑like ilium, thirteenth dorsal neural spine) without identifying the specimen or context in which these measurements were taken."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses enlarged thumb claws of related spinosaurids, which is not a feature of Ichthyovenator itself."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Ichthyovenator lived during the Early Cretaceous period, specifically the Aptian stage, between 121.4 and 113.2 million years ago, approximately 125 million years ago, in what is now Asia.\": Sentence 12 gives two different age ranges for the same period – 121.4–113.2 Ma and ~125 Ma – without explaining the discrepancy.",
+  "- missing context: \"The animal featured a blade-like ilium measuring 92 cm long, which was proportionally longer relative to its 65 cm pubic bone than in any other known large theropod, and it had elongated neural spines forming a sail on its back with a particular wavy curvature and division into two parts over the hips.\" / \"Researchers identified the thirteenth dorsal neural spine as being 410% the length of the centrum, highlighting the extreme proportions of its sail structure.\": Sentences 4 and 6 refer to specific anatomical measurements (blade‑like ilium, thirteenth dorsal neural spine) without identifying the specimen or context in which these measurements were taken."
+ ],
+ "rewrite": "spanish failed",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:41+00:00"
 }

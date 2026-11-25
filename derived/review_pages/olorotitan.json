@@ -2,57 +2,31 @@
  "taxon_key": "olorotitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e2e33278e50de8dc",
- "reviewed_at": "2026-11-25T13:46:36+00:00",
+ "text_hash": "382210b7b48c79bb",
+ "reviewed_at": "2026-11-25T22:52:31+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "two different length estimates for the same species"
-  },
-  {
-   "sentences": [
-    3,
-    5
-   ],
-   "kind": "repetition",
-   "reason": "both describe the crest as a hatchet/fan shape"
-  },
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "different formations cited as the discovery site for the same specimen"
-  },
-  {
-   "sentences": [
-    7
+    5,
+    6
    ],
    "kind": "missing_context",
-   "reason": "mentions zygomatic bone length without prior introduction of the bone"
+   "reason": "Sentences 6 and 7 refer to “this specimen” and “it” without a prior explicit mention of a specific specimen; the page never introduced a particular skeleton before these statements."
   },
   {
    "sentences": [
-    10
+    14
    ],
-   "kind": "missing_context",
-   "reason": "states femur size relative to tibia without earlier mention of tibia"
+   "kind": "about_something_else",
+   "reason": "Sentence 15 discusses the broader diversity of Asian lambeosaurines, which is a general statement about a group rather than a specific claim about Olorotitan itself."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This large hadrosaurid reached up to 8 meters in length, stood 3.5 meters tall, and weighed between 2.6 and 3.4 metric tons.\" / \"Some sources suggest the animal may have reached lengths of 11 to 12 meters.\": two different length estimates for the same species",
-  "- contradiction: \"Fossils of Olorotitan were discovered in the Udurchukan Formation near the Amur River in Eastern Russia.\" / \"The holotype specimen of Olorotitan was discovered in the Tsagayan Formation in the Amur region of eastern Russia.\": different formations cited as the discovery site for the same specimen",
-  "- missing context: \"The zygomatic bone was 0.9 meters long, featuring a very high alveolar crest and an extremely straight anterior margin.\": mentions zygomatic bone length without prior introduction of the bone",
-  "- missing context: \"The femur of Olorotitan did not differ in size from the tibia.\": states femur size relative to tibia without earlier mention of tibia"
+  "- missing context: \"This specimen was the first nearly complete dinosaur skeleton described from Russia and represents the most complete dinosaur find in the Russian Federation.\" / \"It holds the record for the most complete lambeosaurine skeleton found outside of western North America.\": Sentences 6 and 7 refer to “this specimen” and “it” without a prior explicit mention of a specific specimen; the page never introduced a particular skeleton before these statements."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:10:14+00:00",
@@ -84,8 +58,55 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:40:18+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:46:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "two different length estimates for the same species"
+    },
+    {
+     "sentences": [
+      3,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "both describe the crest as a hatchet/fan shape"
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "different formations cited as the discovery site for the same specimen"
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "mentions zygomatic bone length without prior introduction of the bone"
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "states femur size relative to tibia without earlier mention of tibia"
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:25:05+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:25:05+00:00"
+ "rewritten_at": "2026-11-25T23:27:08+00:00"
 }

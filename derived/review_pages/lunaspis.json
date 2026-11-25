@@ -2,19 +2,32 @@
  "taxon_key": "lunaspis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5b9e4d9ce40d2358",
- "reviewed_at": "2026-11-24T00:55:47+00:00",
+ "text_hash": "4bbb21a3d78ab1d1",
+ "reviewed_at": "2026-11-25T22:47:04+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    6
+    9,
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the fusion of tubercles into a ridge is a unique trait of Lunaspis, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "The two sentences give different time ranges for Lunaspis (409.1–402.5 Ma vs 410.62–399.5 Ma), which are inconsistent without stating they are different estimates."
+  },
+  {
+   "sentences": [
+    1
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 2 refers to “curved spinal plates acted as wings off the center armor” and “anterior ridge” without earlier explanation of what the center armor or ridge are, leaving the reader unclear about the referenced structures."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Lunaspis lived in shallow marine environments during the Early Devonian, between approximately 409.1 and 402.5 million years ago.\" / \"The time range for Lunaspis is the Emsian stage, from 410.62 to 399.5 million years ago.\": The two sentences give different time ranges for Lunaspis (409.1–402.5 Ma vs 410.62–399.5 Ma), which are inconsistent without stating they are different estimates.",
+  "- missing context: \"They had long, thin tails resembling whips, while their curved spinal plates acted as wings off the center armor featuring many small spines along their anterior ridge.\": Sentence 2 refers to “curved spinal plates acted as wings off the center armor” and “anterior ridge” without earlier explanation of what the center armor or ridge are, leaving the reader unclear about the referenced structures."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:17+00:00"
 }

@@ -2,52 +2,24 @@
  "taxon_key": "aniksosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "44cfad68abc8faa3",
- "reviewed_at": "2026-11-25T13:36:10+00:00",
+ "text_hash": "cae39f0f57202c19",
+ "reviewed_at": "2026-11-25T22:42:27+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
+    1,
+    2
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the age of the fossils as 96–91 million years ago."
+   "kind": "contradiction",
+   "reason": "The tibia length (270 mm) is 9.3 % longer than the femur (247 mm), but sentence 3 states the tibia is 13 % longer than the femur."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:44:33+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "contradiction",
-     "reason": "The shin bone length (270 mm) is only ~9% longer than the thigh bone (247 mm), not the 13% stated."
-    },
-    {
-     "sentences": [
-      13
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to “soft tissues” and “carcass” without any prior mention of a carcass or soft tissue preservation."
-    },
-    {
-     "sentences": [
-      20
-     ],
-     "kind": "about_something_else",
-     "reason": "It lists other species and predators, which is about the environment rather than Aniksosaurus itself."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T02:56:28+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Measurements indicate the longest femur reached 247 mm, while the longest tibia measured 270 mm.\" / \"In this animal, the tibia is on average 13% longer than the femur, a proportion linked to cursorial habits.\": The tibia length (270 mm) is 9.3 % longer than the femur (247 mm), but sentence 3 states the tibia is 13 % longer than the femur."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:21:35+00:00"
 }

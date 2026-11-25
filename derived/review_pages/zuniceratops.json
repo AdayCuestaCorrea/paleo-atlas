@@ -2,31 +2,23 @@
  "taxon_key": "zuniceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f33930a927b5616e",
- "reviewed_at": "2026-11-25T13:41:56+00:00",
+ "text_hash": "5e1e1858874243da",
+ "reviewed_at": "2026-11-25T22:47:45+00:00",
  "problems": [
   {
    "sentences": [
     2
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"larger fossils\" without prior mention of any fossils."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions \"brow horns\" without earlier introduction of that feature."
+   "reason": "Sentence 3 refers to \"first discovered specimen\" but the page never introduced a specimen before this reference."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Larger fossils show double-rooted teeth, indicating that teeth became double-rooted with age.\": Refers to \"larger fossils\" without prior mention of any fossils.",
-  "- missing context: \"Researchers believe that the brow horns of Zuniceratops would have grown much larger with age.\": Mentions \"brow horns\" without earlier introduction of that feature."
+  "- missing context: \"While the first discovered specimen had unusual single-rooted teeth, larger fossils of Zuniceratops show double-rooted teeth, indicating that teeth became double-rooted with age.\": Sentence 3 refers to \"first discovered specimen\" but the page never introduced a specimen before this reference."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:57:33+00:00",
@@ -51,8 +43,31 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:25:30+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:41:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"larger fossils\" without prior mention of any fossils."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"brow horns\" without earlier introduction of that feature."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:21:51+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:51+00:00"
+ "rewritten_at": "2026-11-25T23:24:41+00:00"
 }

@@ -2,51 +2,24 @@
  "taxon_key": "qinornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "aa5af3c17177a3fe",
- "reviewed_at": "2026-11-25T13:57:58+00:00",
+ "text_hash": "0c85fc8146676ea6",
+ "reviewed_at": "2026-11-25T23:04:38+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    7
+    1,
+    6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 states Qinornis lived during the early to mid‑Paleocene (~61 Ma), while sentence 8 gives a time range of 66–61.66 Ma, which includes the Late Cretaceous, contradicting the Paleocene‑only claim."
-  },
-  {
-   "sentences": [
-    6,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 8 repeats the time range already mentioned in sentence 7."
+   "reason": "Sentence 2 states that the foot bones of Qinornis are not completely fused, while sentence 7 claims that the distal tarsalia were fused with the metatarsalia."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Qinornis lived during the early to mid-Paleocene epoch, approximately 61 million years ago, though its time range extends from 66 to 61.66 million years ago.\" / \"The time range for Qinornis is from 66 to 61.66 million years ago.\": Sentence 7 states Qinornis lived during the early to mid‑Paleocene (~61 Ma), while sentence 8 gives a time range of 66–61.66 Ma, which includes the Late Cretaceous, contradicting the Paleocene‑only claim."
+  "- contradiction: \"Unusually for a bird of its recent age, the foot bones of Qinornis are not completely fused.\" / \"Mayr argued in 2007 that the Qinornis specimen was an adult because the distal tarsalia were fused with the metatarsalia and lacked the blurred surfaces typical of growing juvenile neornithine birds.\": Sentence 2 states that the foot bones of Qinornis are not completely fused, while sentence 7 claims that the distal tarsalia were fused with the metatarsalia."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:52:41+00:00",
-   "problems": [
-    {
-     "sentences": [
-      6,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 7 states Qinornis lived during the early to mid‑Paleocene, approximately 61 Ma, whereas sentence 8 gives a time range of 66 to 61.66 Ma, which includes the K‑Pg boundary (66 Ma) and therefore conflicts with the Paleocene‑only range."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewrite_mode": "sentences",
-   "rewritten_at": "2026-11-25T12:30:58+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:32:48+00:00"
+ "rewritten_at": "2026-11-25T23:32:21+00:00"
 }

@@ -2,30 +2,31 @@
  "taxon_key": "saurophaganax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "af7d7feff983dd3a",
- "reviewed_at": "2026-11-25T13:31:55+00:00",
+ "text_hash": "2796dc541e3d4d04",
+ "reviewed_at": "2026-11-25T22:39:26+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    0,
+    3
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 describes the Morrison Basin’s geography and climate, which is about the formation rather than the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Saurophaganax is incertae sedis (family placement uncertain), while sentence 4 claims it belongs to the parent group Allosauridae."
   },
   {
    "sentences": [
     6
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to a tibia being designated as the lectotype, but the page never previously introduced the concept of a lectotype or mentioned any other type specimen besides the holotype neural arch."
+   "kind": "about_something_else",
+   "reason": "Sentence 7 describes the Morrison Basin, a geological formation, not characteristics of Saurophaganax itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In 1987, Spencer George Lucas incorrectly designated a tibia as the lectotype without realizing the genus was invalid at the time.\": Sentence 7 refers to a tibia being designated as the lectotype, but the page never previously introduced the concept of a lectotype or mentioned any other type specimen besides the holotype neural arch."
+  "- contradiction: \"Saurophaganax is currently classified as incertae sedis, meaning its family placement remains uncertain within the broader group of saurischian dinosaurs.\" / \"Studies suggest the taxonomic placement is unstable, with some research linking it to Metriacanthosauridae, Allosauria, or Carcharodontosauria, though it belongs to the parent group Allosauridae.\": Sentence 1 states Saurophaganax is incertae sedis (family placement uncertain), while sentence 4 claims it belongs to the parent group Allosauridae."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:37:09+00:00",
@@ -57,8 +58,31 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:55:44+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:31:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 12 describes the Morrison Basin’s geography and climate, which is about the formation rather than the animal itself."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to a tibia being designated as the lectotype, but the page never previously introduced the concept of a lectotype or mentioned any other type specimen besides the holotype neural arch."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:33+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:33+00:00"
+ "rewritten_at": "2026-11-25T23:20:05+00:00"
 }

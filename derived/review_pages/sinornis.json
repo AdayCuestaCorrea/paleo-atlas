@@ -2,66 +2,31 @@
  "taxon_key": "sinornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cc0904a1d69bf37f",
- "reviewed_at": "2026-11-25T13:38:42+00:00",
+ "text_hash": "053d73c7fb8bead6",
+ "reviewed_at": "2026-11-25T22:44:58+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10
+    9
    ],
    "kind": "contradiction",
-   "reason": "Classifies Sinornis as both subclass Enantiornithes (bird) and class Reptilia, which are incompatible."
+   "reason": "Classifies Sinornis as Reptilia, contradicting its description as a bird with avian features."
   },
   {
    "sentences": [
-    11,
-    16
+    0,
+    8
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Paul Sereno and colleagues considered Cathayornis a junior synonym of Sinornis."
-  },
-  {
-   "sentences": [
-    12,
-    17
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Zhou and Hou distinguishing Cathayornis from Sinornis based on size and digit/claw differences."
+   "reason": "Both sentences state that Sinornis was roughly the size of a modern sparrow and had flight/perching abilities similar to sparrow-sized birds."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Sinornis is classified within the subclass Enantiornithes.\" / \"Sinornis is classified under the class Reptilia.\": Classifies Sinornis as both subclass Enantiornithes (bird) and class Reptilia, which are incompatible."
+  "- contradiction: \"Sinornis is classified under the class Reptilia.\": Classifies Sinornis as Reptilia, contradicting its description as a bird with avian features."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:50:25+00:00",
-   "problems": [
-    {
-     "sentences": [
-      11,
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 12 places Sinornis in the subclass Enantiornithes, while sentence 13 classifies it within the broader group Reptilia, which is inconsistent with the first claim."
-    },
-    {
-     "sentences": [
-      13,
-      16
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 14 states that Cathayornis is a junior synonym of Sinornis, whereas sentence 17 argues that Cathayornis and Sinornis are distinct genera, directly contradicting the earlier claim."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T03:42:51+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:06+00:00"
+ "rewritten_at": "2026-11-25T23:23:05+00:00"
 }

@@ -2,30 +2,24 @@
  "taxon_key": "ligabuesaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "24c1469e826b5901",
- "reviewed_at": "2026-11-25T13:35:42+00:00",
+ "text_hash": "6aa39b3311835636",
+ "reviewed_at": "2026-11-25T22:42:01+00:00",
  "problems": [
   {
    "sentences": [
-    8
+    8,
+    12
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to \"multiple fragmentary specimens\" without prior introduction of those specimens."
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 14 discusses the habitat shared with other sauropods, which is about other taxa rather than the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 9 classifies Ligabuesaurus as a non‑titanosaur Somphospondylian, while sentence 13 states that some analyses consider it a true titanosaur."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers suggest that multiple fragmentary specimens found at the site likely belong to a single individual due to a lack of repeated bone elements.\": Sentence 9 refers to \"multiple fragmentary specimens\" without prior introduction of those specimens."
+  "- contradiction: \"Later analyses classified the genus as a non-titanosaur member of the group Somphospondyli.\" / \"Some analyses suggest it is a true titanosaur because it is a close relative of Andesaurus, while others classify it as a non-titanosaur somphospondylian.\": Sentence 9 classifies Ligabuesaurus as a non‑titanosaur Somphospondylian, while sentence 13 states that some analyses consider it a true titanosaur."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:43:32+00:00",
@@ -50,8 +44,31 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:45:41+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:35:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to \"multiple fragmentary specimens\" without prior introduction of those specimens."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 14 discusses the habitat shared with other sauropods, which is about other taxa rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:17:53+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:17:53+00:00"
+ "rewritten_at": "2026-11-25T23:21:24+00:00"
 }

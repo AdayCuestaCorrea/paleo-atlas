@@ -2,47 +2,21 @@
  "taxon_key": "dicraeosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d5aa0f885bb31a2a",
- "reviewed_at": "2026-11-25T13:53:35+00:00",
+ "text_hash": "0c0c8d72b0bc1e1c",
+ "reviewed_at": "2026-11-25T22:59:24+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the neck length (2.4 m) and total body length (up to 20 m) for Dicraeosaurus."
-  },
-  {
-   "sentences": [
-    2,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 gives a weight of ~15 t, while sentence 5 lists a mass range of 10–40 t."
-  },
-  {
-   "sentences": [
-    23
+    6
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 24 discusses sexual selection for long necks in sauropods, which is not a property of Dicraeosaurus, which has a short neck."
-  },
-  {
-   "sentences": [
-    23
-   ],
-   "kind": "contradiction",
-   "reason": "It contradicts earlier statements that Dicraeosaurus had a short neck (sentence 2)."
+   "reason": "The sentence discusses pneumaticity in Neosauropoda, a broader group, rather than a specific feature or fact about Dicraeosaurus itself."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"A crest or comb-like structure sat on the back of its head, and the animal stood up to 6 meters tall, weighing approximately 15 tons.\" / \"Numerous attempts to estimate its mass yielded varied results, placing the weight of D. hansemanni between 10 and 40 tons.\": Sentence 3 gives a weight of ~15 t, while sentence 5 lists a mass range of 10–40 t.",
-  "- contradiction: \"The long neck of sauropods like Dicraeosaurus may have evolved as a result of sexual selection.\": It contradicts earlier statements that Dicraeosaurus had a short neck (sentence 2)."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:31:13+00:00",
@@ -81,8 +55,45 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T07:13:23+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:53:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the neck length (2.4 m) and total body length (up to 20 m) for Dicraeosaurus."
+    },
+    {
+     "sentences": [
+      2,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 gives a weight of ~15 t, while sentence 5 lists a mass range of 10–40 t."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 24 discusses sexual selection for long necks in sauropods, which is not a property of Dicraeosaurus, which has a short neck."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "It contradicts earlier statements that Dicraeosaurus had a short neck (sentence 2)."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:30:02+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:30:02+00:00"
+ ]
 }

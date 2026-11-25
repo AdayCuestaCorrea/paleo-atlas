@@ -2,24 +2,22 @@
  "taxon_key": "strigogyps",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0cce20559117f0bf",
- "reviewed_at": "2026-11-25T13:47:49+00:00",
+ "text_hash": "260d36c2e428584e",
+ "reviewed_at": "2026-11-25T22:53:41+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    12
+    12,
+    14
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 places Strigogyps in the order Cariamiformes, while sentence 13 places it within Gruiformes as part of a clade with Salmila and Cariamae."
+   "kind": "repetition",
+   "reason": "Both sentences state the age range of Strigogyps fossils (Middle Eocene to Early Oligocene / 48.07–33.9 Ma), repeating the same information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Strigogyps belongs to the order Cariamiformes.\" / \"Salmila robusta is considered more basal than Strigogyps, with the clade of Salmila and Cariamae being the sister taxon to Psophiidae within Gruiformes.\": Sentence 10 places Strigogyps in the order Cariamiformes, while sentence 13 places it within Gruiformes as part of a clade with Salmila and Cariamae."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:13:21+00:00",
@@ -44,8 +42,23 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:54:44+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:47:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 places Strigogyps in the order Cariamiformes, while sentence 13 places it within Gruiformes as part of a clade with Salmila and Cariamae."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:25:50+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:25:50+00:00"
+ ]
 }

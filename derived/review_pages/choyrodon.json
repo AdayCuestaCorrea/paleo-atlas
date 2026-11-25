@@ -2,30 +2,30 @@
  "taxon_key": "choyrodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "47a6dd41e7eca342",
- "reviewed_at": "2026-11-25T13:54:40+00:00",
+ "text_hash": "e438ffeb56fa3921",
+ "reviewed_at": "2026-11-25T23:00:22+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 claims the holotype was found in the Khuren Dukh Formation, but also says it was discovered in the Choeren Doe Formation, which are different formations."
+   "reason": "Sentence 4 states that three specimens were found in the Khuren Dukh Formation, while the holotype is said to come from the Choeren Doe Formation—two different formations for the same taxon’s material."
   },
   {
    "sentences": [
-    6
+    5
    ],
    "kind": "repetition",
-   "reason": "Sentence 7 repeats the same age information twice (110–100 Ma and 110.1–100.5 Ma)."
+   "reason": "Sentence 6 repeats the same age information in multiple clauses, making the statement redundant."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Three distinct specimens of Choyrodon have been found in the lower member of the Khuren Dukh Formation. The holotype specimen MPC-D 100/801 was discovered in the lower deposits of the Choeren Doe formation dating to the middle Albian.\": Sentence 5 claims the holotype was found in the Khuren Dukh Formation, but also says it was discovered in the Choeren Doe Formation, which are different formations."
+  "- contradiction: \"Three distinct specimens of Choyrodon have been found in the lower member of the Khuren Dukh Formation, while the holotype specimen MPC-D 100/801 was discovered in the lower deposits of the Choeren Doe formation dating to the middle Albian.\": Sentence 4 states that three specimens were found in the Khuren Dukh Formation, while the holotype is said to come from the Choeren Doe Formation—two different formations for the same taxon’s material."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:34:22+00:00",
@@ -49,8 +49,31 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T07:26:11+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:54:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims the holotype was found in the Khuren Dukh Formation, but also says it was discovered in the Choeren Doe Formation, which are different formations."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 7 repeats the same age information twice (110–100 Ma and 110.1–100.5 Ma)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:30:42+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:30:42+00:00"
+ "rewritten_at": "2026-11-25T23:30:11+00:00"
 }

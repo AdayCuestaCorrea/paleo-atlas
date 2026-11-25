@@ -2,52 +2,30 @@
  "taxon_key": "valdosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6c7848ebcf321697",
- "reviewed_at": "2026-11-25T13:16:14+00:00",
+ "text_hash": "f9c9b821fd60694d",
+ "reviewed_at": "2026-11-25T22:23:43+00:00",
  "problems": [
   {
    "sentences": [
-    13
+    11
    ],
    "kind": "repetition",
-   "reason": "Sentence 14 repeats the same claim about the uncertainty of English specimens belonging to Valdosaurus twice within the same sentence."
+   "reason": "Sentence 12 repeats the same claim about English specimens and cranial material/teeth twice."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to \"many English specimens\" without prior introduction of these specimens on the page."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:06:08+00:00",
-   "problems": [
-    {
-     "sentences": [
-      18,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Different age ranges for Valdosaurus: 130–125 Ma vs 154.8–119.57 Ma."
-    },
-    {
-     "sentences": [
-      3,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Mass estimates (10 kg vs 400 kg) conflict with the broader age range that includes the 400 kg estimate."
-    },
-    {
-     "sentences": [
-      4
-     ],
-     "kind": "missing_context",
-     "reason": "The phrase \"overhang more than one following vertebra\" lacks a clear reference to what is overhanging."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T04:30:38+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"It is debated whether many English specimens, including cranial elements and teeth, truly belong to Valdosaurus, and it is uncertain whether many of the English specimens truly belong to Valdosaurus, including all cranial material and teeth.\": Sentence 12 refers to \"many English specimens\" without prior introduction of these specimens on the page."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:11:21+00:00"
 }

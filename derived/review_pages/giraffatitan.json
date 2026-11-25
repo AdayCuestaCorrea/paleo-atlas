@@ -2,44 +2,38 @@
  "taxon_key": "giraffatitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cfdeb02aea8c50e2",
- "reviewed_at": "2026-11-25T13:12:49+00:00",
+ "text_hash": "f1db055a3e3b7fc3",
+ "reviewed_at": "2026-11-25T22:20:15+00:00",
  "problems": [
   {
    "sentences": [
-    20
+    14
+   ],
+   "kind": "contradiction",
+   "reason": "The page states Giraffatitan lived during the Kimmeridgian to Tithonian stages (≈157–145 Ma) but then claims the age range is 145–150 Ma, which excludes the Kimmeridgian period."
+  },
+  {
+   "sentences": [
+    6,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the type species of Giraffatitan is G. brancai."
+  },
+  {
+   "sentences": [
+    16
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses the genus Brachiosaurus and its classification, which is not directly about Giraffatitan itself."
+   "reason": "The sentence discusses whether the high‑crested skull is a characteristic of the genus Brachiosaurus, not of Giraffatitan itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:59:49+00:00",
-   "problems": [
-    {
-     "sentences": [
-      16,
-      17
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 17 states the fossils date to 145–150 Ma (Tithonian), while sentence 18 places them in the Kimmeridgian–Tithonian interval (≈157–145 Ma), giving conflicting age ranges for the same species."
-    },
-    {
-     "sentences": [
-      15
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 16 repeats the information that G. brancai is the type species, which was already stated in sentence 9."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:25:30+00:00"
-  }
- ]
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Giraffatitan fossils date to the Late Jurassic period, specifically the Tithonian stage, though the animal lived during the Kimmeridgian to Tithonian stages of the Late Jurassic in what is now the Lindi Region of Tanzania. This places the animal between 145 and 150 million years ago.\": The page states Giraffatitan lived during the Kimmeridgian to Tithonian stages (≈157–145 Ma) but then claims the age range is 145–150 Ma, which excludes the Kimmeridgian period."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:16+00:00"
 }

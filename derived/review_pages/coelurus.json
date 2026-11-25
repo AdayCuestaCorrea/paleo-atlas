@@ -2,50 +2,13 @@
  "taxon_key": "coelurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "04d4e56fe3736777",
- "reviewed_at": "2026-11-25T13:17:54+00:00",
- "problems": [
-  {
-   "sentences": [
-    14,
-    15
-   ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for the same species"
-  },
-  {
-   "sentences": [
-    8,
-    9
-   ],
-   "kind": "repetition",
-   "reason": "Same dietary claim repeated"
-  },
-  {
-   "sentences": [
-    5,
-    10
-   ],
-   "kind": "repetition",
-   "reason": "Same statement about only valid species"
-  },
-  {
-   "sentences": [
-    11,
-    12,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Conflicting taxonomic placement: coelurosaurian vs ceratosaurian"
-  }
- ],
- "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"Coelurus lived during the Late Jurassic period, specifically between 155 and 152 million years ago.\" / \"Coelurus lived during the late Jurassic Period, approximately 152 to 145 million years ago, between the Kimmeridgian and Tithonian stages.\": Different age ranges for the same species",
-  "- contradiction: \"Since the 1980s, Coelurus has generally been classified as a coelurosaurian with uncertain affinities that does not fit well into better-known Cretaceous clades.\" / \"Coelurus is the only known species of the extinct Coelurus genus, a ceratosaurian dinosaur.\" / \"Coelurus belongs to the parent group Coelurosauria.\": Conflicting taxonomic placement: coelurosaurian vs ceratosaurian"
- ],
- "rewrite": "replaced",
- "round": 2,
+ "text_hash": "7ca8a4184f5b0803",
+ "reviewed_at": "2026-11-25T22:25:11+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:09:04+00:00",
@@ -70,8 +33,48 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:55:34+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:17:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for the same species"
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Same dietary claim repeated"
+    },
+    {
+     "sentences": [
+      5,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Same statement about only valid species"
+    },
+    {
+     "sentences": [
+      11,
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Conflicting taxonomic placement: coelurosaurian vs ceratosaurian"
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:13+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:13+00:00"
+ ]
 }

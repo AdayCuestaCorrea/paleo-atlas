@@ -2,29 +2,23 @@
  "taxon_key": "xiaosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "16873d5b474dc735",
- "reviewed_at": "2026-11-25T13:56:36+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "33de872fcbc99ebf",
+ "reviewed_at": "2026-11-25T23:02:09+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:41:33+00:00",
-   "problems": [
-    {
-     "sentences": [
-      6
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 7 refers to a \"secondary specimen\" without having introduced or defined it earlier in the page."
-    }
+   "sentences": [
+    6
    ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewrite_mode": "sentences",
-   "rewritten_at": "2026-11-25T12:27:23+00:00"
+   "kind": "contradiction",
+   "reason": "The original authors are said to have placed Xiaosaurus in both Fabrosauridae and Hypsilophodontidae families, which are distinct taxonomic groups, creating a contradictory classification."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The original authors placed the animal in both the Fabrosauridae and Hypsilophodontidae families.\": The original authors are said to have placed Xiaosaurus in both Fabrosauridae and Hypsilophodontidae families, which are distinct taxonomic groups, creating a contradictory classification."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:31:09+00:00"
 }

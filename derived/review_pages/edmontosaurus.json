@@ -2,31 +2,60 @@
  "taxon_key": "edmontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1523bff0deb8ddd5",
- "reviewed_at": "2026-11-25T13:08:50+00:00",
+ "text_hash": "a12286606a68acdd",
+ "reviewed_at": "2026-11-25T22:16:49+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    32
+    11,
+    15
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Edmontosaurus did not have a bony crest."
+   "reason": "Both sentences describe Edmontosaurus locomotion as capable of bipedal and quadrupedal movement, repeating the same claim."
+  },
+  {
+   "sentences": [
+    1,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Edmontosaurus was a large duck‑billed dinosaur, repeating the size claim."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 11 refers to \"specimens for Claosaurus annectens\" without any prior introduction of Claosaurus, leaving the reference unclear."
   },
   {
    "sentences": [
     21
    ],
-   "kind": "missing_context",
-   "reason": "Mentions the Denver specimen’s tail height without prior introduction of the specimen."
+   "kind": "about_something_else",
+   "reason": "Sentence 22 discusses a T. rex height comparison, which is about another species rather than Edmontosaurus itself."
+  },
+  {
+   "sentences": [
+    28
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 29 describes the Lance Formation as a bayou setting, which is a statement about the geological formation, not about Edmontosaurus."
+  },
+  {
+   "sentences": [
+    29
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 30 compares the ages of rocks containing Edmontosaurus and Claosaurus fossils, focusing on the rocks rather than the dinosaur."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"The top of the tail of the Denver specimen was at least 2.9 meters high, a height only reachable by T. rex from the same rock formation.\": Mentions the Denver specimen’s tail height without prior introduction of the specimen."
+  "- missing context: \"The specimens for Claosaurus annectens were collected in 1891 by John Bell Hatcher from the Lance Formation of Wyoming.\": Sentence 11 refers to \"specimens for Claosaurus annectens\" without any prior introduction of Claosaurus, leaving the reference unclear."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:52:34+00:00",
@@ -65,8 +94,32 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T02:18:36+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:08:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      32
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Edmontosaurus did not have a bony crest."
+    },
+    {
+     "sentences": [
+      21
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the Denver specimen’s tail height without prior introduction of the specimen."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:00:30+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:30+00:00"
+ "rewritten_at": "2026-11-25T23:07:12+00:00"
 }

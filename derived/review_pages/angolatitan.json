@@ -2,32 +2,22 @@
  "taxon_key": "angolatitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e2fe6f6470bc2b47",
- "reviewed_at": "2026-11-25T13:49:55+00:00",
+ "text_hash": "c1f685383c00ea88",
+ "reviewed_at": "2026-11-25T22:56:00+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
+    4,
+    6
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Angolatitan is the first dinosaur formally named from Angola."
-  },
-  {
-   "sentences": [
-    7,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 places the animal in the Late Cretaceous, while sentence 10 places it in the mid-Cretaceous (~90 Ma)."
+   "reason": "Both sentences state the same age range (89.8–85.7 million years ago, Coniacian stage)."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"This basal titanosauriform lived during the Late Cretaceous, an era when more derived titanosaurs were dominant.\" / \"It lived approximately 90 million years ago during the mid-Cretaceous in what is now Africa.\": Sentence 8 places the animal in the Late Cretaceous, while sentence 10 places it in the mid-Cretaceous (~90 Ma)."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:20:36+00:00",
@@ -52,8 +42,31 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:26:03+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:49:55+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Angolatitan is the first dinosaur formally named from Angola."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 places the animal in the Late Cretaceous, while sentence 10 places it in the mid-Cretaceous (~90 Ma)."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:27:21+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:27:21+00:00"
+ ]
 }

@@ -2,19 +2,32 @@
  "taxon_key": "styxosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5bcbba451d211514",
- "reviewed_at": "2026-11-24T00:31:45+00:00",
+ "text_hash": "66f530829c4257ee",
+ "reviewed_at": "2026-11-25T22:36:29+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    11
+    7,
+    14
+   ],
+   "kind": "contradiction",
+   "reason": "The species Styxosaurus rezaci is said to be from the Cenomanian (≈100–94 Ma), yet the genus is reported to have existed only from the Coniacian to Campanian (≈89.8–72.2 Ma), a later interval."
+  },
+  {
+   "sentences": [
+    1,
+    8
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Styxosaurus swallowed its food whole because of conical teeth designed to pierce and hold rather than cut."
+   "reason": "Both sentences state that Styxosaurus fed on belemnites, fish, and squid, repeating the same dietary claim."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"In 2023, Smith and O'Keefe named the species Styxosaurus rezaci based on a specimen from the Cenomanian of Nebraska.\" / \"Styxosaurus lived from the Coniacian to the Campanian stages, between 89.8 and 72.2 million years ago.\": The species Styxosaurus rezaci is said to be from the Cenomanian (≈100–94 Ma), yet the genus is reported to have existed only from the Coniacian to Campanian (≈89.8–72.2 Ma), a later interval."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:50+00:00"
 }

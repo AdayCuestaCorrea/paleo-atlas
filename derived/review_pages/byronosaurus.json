@@ -2,55 +2,23 @@
  "taxon_key": "byronosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dbaab2819a754cee",
- "reviewed_at": "2026-11-25T13:28:24+00:00",
+ "text_hash": "3f77a15639a083b4",
+ "reviewed_at": "2026-11-25T22:36:09+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    20
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state Byronosaurus is a member of Troodontidae, repeating the same classification."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give the same time range for the Late Cretaceous, duplicating the age information."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to juvenile skulls in an oviraptorid nest without any prior mention of such skulls or context for why they are relevant."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:30:52+00:00",
-   "problems": [
-    {
-     "sentences": [
-      9,
-      17
-     ],
-     "kind": "contradiction",
-     "reason": "Both sentences discuss juvenile specimens; one says they belong to Byronosaurus, the other says they belong to Almas ukhae."
-    },
-    {
-     "sentences": [
-      5,
-      9,
-      13
-     ],
-     "kind": "missing_context",
-     "reason": "Sentences refer to juvenile or very young specimens without earlier introduction of such specimens in the page."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T00:53:44+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Researchers suggested that juvenile skulls found in an oviraptorid nest were washed there from a nearby Byronosaurus nest by water flow.\": Sentence 4 refers to juvenile skulls in an oviraptorid nest without any prior mention of such skulls or context for why they are relevant."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:34+00:00"
 }

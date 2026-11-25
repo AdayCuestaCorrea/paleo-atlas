@@ -2,36 +2,32 @@
  "taxon_key": "amanzia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "73adcdbef904c3be",
- "reviewed_at": "2026-11-25T13:48:50+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "d196ec4b10c683ea",
+ "reviewed_at": "2026-11-25T22:54:49+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:16:37+00:00",
-   "problems": [
-    {
-     "sentences": [
-      7,
-      8
-     ],
-     "kind": "contradiction",
-     "reason": "The age ranges for the fossils differ: sentence 8 gives 152.7–152 Ma, while sentence 9 gives 154.8–152.21 Ma, which conflicts with the earlier figure."
-    },
-    {
-     "sentences": [
-      3
-     ],
-     "kind": "missing_context",
-     "reason": "Sentence 4 states that fossilized cartilage was reported in 2007 but does not specify who reported it."
-    }
+   "sentences": [
+    0,
+    1
    ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:10:16+00:00"
+   "kind": "repetition",
+   "reason": "Both sentences state that Amanzia is the first sauropod dinosaur named from remains discovered in Switzerland."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 gives an age range of 152.7–152 Ma, while sentence 11 gives 154.8–152.21 Ma for the same species."
   }
- ]
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The fossils date to the Kimmeridgian stage, between 152.7 and 152 million years ago.\" / \"The time range for Amanzia is the Kimmeridgian, from 154.8 to 152.21 million years ago.\": Sentence 10 gives an age range of 152.7–152 Ma, while sentence 11 gives 154.8–152.21 Ma for the same species."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:28:01+00:00"
 }

@@ -2,59 +2,31 @@
  "taxon_key": "oviraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1c095f5db7920921",
- "reviewed_at": "2026-11-25T13:14:21+00:00",
+ "text_hash": "ba1e565b1db2bc77",
+ "reviewed_at": "2026-11-25T22:21:56+00:00",
  "problems": [
   {
    "sentences": [
-    29,
-    30
+    6,
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the same Late Cretaceous time range (71–75 Ma) for Oviraptor, repeating the same claim."
+   "reason": "Both sentences describe the 1923 discovery of Oviraptor in the Djadokhta Formation, essentially repeating the same information."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to “the skull of the holotype” without having previously introduced the holotype specimen, leaving the reference unclear."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:02:20+00:00",
-   "problems": [
-    {
-     "sentences": [
-      29,
-      30
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the same age range (71–75 Ma) and location (Asia) for Oviraptor."
-    },
-    {
-     "sentences": [
-      4
-     ],
-     "kind": "missing_context",
-     "reason": "Refers to the holotype skull but no prior mention of the holotype."
-    },
-    {
-     "sentences": [
-      18
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions the type specimen without defining it earlier in the page."
-    },
-    {
-     "sentences": [
-      20
-     ],
-     "kind": "missing_context",
-     "reason": "Refers to the holotype again without prior introduction."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:56:49+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"The skull of the holotype — the specimen the species is based on — became particularly flattened and distorted during fossilization.\": Sentence 5 refers to “the skull of the holotype” without having previously introduced the holotype specimen, leaving the reference unclear."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:04+00:00"
 }

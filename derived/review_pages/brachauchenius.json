@@ -2,24 +2,23 @@
  "taxon_key": "brachauchenius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8f35c421cdb13e3e",
- "reviewed_at": "2026-11-25T13:24:08+00:00",
+ "text_hash": "5b689002c4537080",
+ "reviewed_at": "2026-11-25T22:31:59+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    3
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 gives a maximum length of 5.3 m, while sentence 4 claims the genus grew to nearly 10 m."
+   "kind": "missing_context",
+   "reason": "Sentence 10 refers to the holotype’s origin in the Greenhorn Limestone or Fairport Chalk without previously introducing or describing the holotype’s geological context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype specimen, which serves as the primary reference for the species, is estimated to have reached a maximum length of 5.3 meters and a body mass of 2.2 tons.\" / \"However, other estimates suggest the genus grew to a body length of nearly 10 meters.\": Sentence 3 gives a maximum length of 5.3 m, while sentence 4 claims the genus grew to nearly 10 m."
+  "- missing context: \"Microscopic analysis in 2005 dated the holotype to the early Middle Turonian based on its origin in the Greenhorn Limestone or Fairport Chalk.\": Sentence 10 refers to the holotype’s origin in the Greenhorn Limestone or Fairport Chalk without previously introducing or describing the holotype’s geological context."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:22:57+00:00",
@@ -65,8 +64,25 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:42:36+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 gives a maximum length of 5.3 m, while sentence 4 claims the genus grew to nearly 10 m."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:10:43+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:10:43+00:00"
+ "rewritten_at": "2026-11-25T23:15:36+00:00"
 }

@@ -2,23 +2,23 @@
  "taxon_key": "acynodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "48ab4e02d54979a5",
- "reviewed_at": "2026-11-25T13:46:33+00:00",
+ "text_hash": "b3a039d356a23422",
+ "reviewed_at": "2026-11-25T22:52:25+00:00",
  "problems": [
   {
    "sentences": [
-    1
+    2
    ],
    "kind": "missing_context",
-   "reason": "Sentence 2 refers to the species A. adriaticus without having previously introduced or defined that species in the text."
+   "reason": "Sentence 3 refers to \"the specimen\" without specifying which specimen; the page only mentions specimens in general in sentence 1, not a particular one."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Articulated postcranial material is preserved in at least two specimens of the only known species, A. adriaticus.\": Sentence 2 refers to the species A. adriaticus without having previously introduced or defined that species in the text."
+  "- missing context: \"Histological analysis of a dorsal rib reveals a thickened cortical layer and at least 31 Lines of Arrested Growth (LAGs) despite the specimen being somatically immature.\": Sentence 3 refers to \"the specimen\" without specifying which specimen; the page only mentions specimens in general in sentence 1, not a particular one."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:10:07+00:00",
@@ -34,8 +34,24 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:39:26+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:46:33+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 2 refers to the species A. adriaticus without having previously introduced or defined that species in the text."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:24:59+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:24:59+00:00"
+ "rewritten_at": "2026-11-25T23:27:03+00:00"
 }

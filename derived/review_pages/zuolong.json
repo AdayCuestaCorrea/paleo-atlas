@@ -2,39 +2,24 @@
  "taxon_key": "zuolong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "939525c65a904f9f",
- "reviewed_at": "2026-11-25T13:15:19+00:00",
+ "text_hash": "62a12ae5cf06f995",
+ "reviewed_at": "2026-11-25T22:22:42+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    15
+    12,
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Zuolong’s length was estimated at 3 meters, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Both sentences give adult size estimates for Zuolong but the lengths and masses differ (3 m/50 kg vs. 3.35 m/43 kg) without indicating they are alternative estimates."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:03:52+00:00",
-   "problems": [
-    {
-     "sentences": [
-      10,
-      11,
-      12
-     ],
-     "kind": "contradiction",
-     "reason": "Adult length and mass estimates differ among sentences 11, 12, and 13."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T04:11:38+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Gregory S. Paul hypothesized that the holotype is a juvenile and estimated an adult length of 3 meters and a mass of 50 kg.\" / \"Some authors suggest an adult Zuolong reached a length of 3.35 meters and a mass of 43 kg.\": Both sentences give adult size estimates for Zuolong but the lengths and masses differ (3 m/50 kg vs. 3.35 m/43 kg) without indicating they are alternative estimates."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:46+00:00"
 }

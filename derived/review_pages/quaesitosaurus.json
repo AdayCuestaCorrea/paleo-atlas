@@ -2,75 +2,48 @@
  "taxon_key": "quaesitosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "16ed507fc38a7a6a",
- "reviewed_at": "2026-11-25T13:28:41+00:00",
+ "text_hash": "84ca2fb81b494b87",
+ "reviewed_at": "2026-11-25T22:36:36+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    20
-   ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for the same species: 12 m long estimate vs 83.6–72.2 Ma"
-  },
-  {
-   "sentences": [
-    17,
-    19
-   ],
-   "kind": "contradiction",
-   "reason": "Conflicting age ranges: 72–71 Ma vs 85–71 Ma"
-  },
-  {
-   "sentences": [
-    14,
-    15,
-    16
-   ],
-   "kind": "contradiction",
-   "reason": "Different family assignments: Dicraeosauridae vs Nemegtosauridae"
-  },
-  {
-   "sentences": [
-    14,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both state the family of Quaesitosaurus"
-  },
-  {
-   "sentences": [
-    17,
-    19,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "All three give overlapping but inconsistent time ranges"
-  },
-  {
-   "sentences": [
+    0,
     5
    ],
-   "kind": "missing_context",
-   "reason": "Mentions a channel in the basioccipital and basipterygoid without explaining its significance or context"
+   "kind": "contradiction",
+   "reason": "Sentence 1 says the genus name means \"extraordinary lizard\", while sentence 6 says it means \"abnormal lizard\"."
   },
   {
    "sentences": [
-    18
+    2,
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 3 gives a time range of 83.6–72.2 Ma, whereas sentence 12 gives 72–71 Ma and also 85–71 Ma."
+  },
+  {
+   "sentences": [
+    1,
+    7
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences speculate that the body was diplodocid‑like based on the skull."
+  },
+  {
+   "sentences": [
+    12
    ],
    "kind": "about_something_else",
-   "reason": "Describes the Barun Goyot Formation’s depositional environments as if it were a feature of the animal"
+   "reason": "Sentence 13 describes the depositional environment of the Barun Goyot Formation, not a feature of Quaesitosaurus itself."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Based on related species, Quaesitosaurus is estimated to have been about 12 meters long.\" / \"The time range for Quaesitosaurus is estimated from 83.6 to 72.2 million years ago.\": Different age ranges for the same species: 12 m long estimate vs 83.6–72.2 Ma",
-  "- contradiction: \"Quaesitosaurus lived between 72 and 71 million years ago in the Late Cretaceous within the Barun Goyot Formation.\" / \"It lived at the end of the Cretaceous, approximately 85 to 71 million years ago during the Campanian, in what is now Asia.\": Conflicting age ranges: 72–71 Ma vs 85–71 Ma",
-  "- contradiction: \"Originally, Quaesitosaurus was classified in Dicraeosauridae with Dicraeosaurus because it was one of the few sauropods with preserved skulls.\" / \"Recent analysis has reclassified Quaesitosaurus into the family Nemegtosauridae alongside Nemegtosaurus.\" / \"Quaesitosaurus belongs to the family Nemegtosauridae.\": Different family assignments: Dicraeosauridae vs Nemegtosauridae",
-  "- missing context: \"A notable feature is a channel in the basioccipital and basipterygoid leading from the pituitary gland to the region below the occipital condyle.\": Mentions a channel in the basioccipital and basipterygoid without explaining its significance or context"
+  "- contradiction: \"Quaesitosaurus is a genus of sauropod containing only one species, Q. orientalis, which means \"extraordinary lizard\".\" / \"The genus name means \"abnormal lizard\" due to its strange skull, while the species name means \"eastern\" because the fossils came from Mongolia.\": Sentence 1 says the genus name means \"extraordinary lizard\", while sentence 6 says it means \"abnormal lizard\".",
+  "- contradiction: \"Based on related species, Quaesitosaurus is estimated to have been about 12 meters long, while its time range is estimated from 83.6 to 72.2 million years ago.\" / \"Quaesitosaurus lived between 72 and 71 million years ago in the Late Cretaceous within the Barun Goyot Formation, though it also lived at the end of the Cretaceous, approximately 85 to 71 million years ago during the Campanian.\": Sentence 3 gives a time range of 83.6–72.2 Ma, whereas sentence 12 gives 72–71 Ma and also 85–71 Ma."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:31:59+00:00",
@@ -105,8 +78,73 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:03:58+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:28:41+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for the same species: 12 m long estimate vs 83.6–72.2 Ma"
+    },
+    {
+     "sentences": [
+      17,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Conflicting age ranges: 72–71 Ma vs 85–71 Ma"
+    },
+    {
+     "sentences": [
+      14,
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Different family assignments: Dicraeosauridae vs Nemegtosauridae"
+    },
+    {
+     "sentences": [
+      14,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both state the family of Quaesitosaurus"
+    },
+    {
+     "sentences": [
+      17,
+      19,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "All three give overlapping but inconsistent time ranges"
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a channel in the basioccipital and basipterygoid without explaining its significance or context"
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the Barun Goyot Formation’s depositional environments as if it were a feature of the animal"
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:13:34+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:13:34+00:00"
+ "rewritten_at": "2026-11-25T23:17:53+00:00"
 }

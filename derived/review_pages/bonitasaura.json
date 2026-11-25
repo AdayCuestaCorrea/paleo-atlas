@@ -2,34 +2,38 @@
  "taxon_key": "bonitasaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1e6075300750eaf1",
- "reviewed_at": "2026-11-24T01:14:49+00:00",
+ "text_hash": "83baabebdb6a73ae",
+ "reviewed_at": "2026-11-25T22:54:16+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    6
+    0,
+    2
    ],
    "kind": "repetition",
-   "reason": "The same description of the jaw’s keratin sheath and teeth appears in both sentences."
+   "reason": "Both sentences describe the short neck with robust vertebrae projections."
   },
   {
    "sentences": [
-    3,
     7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim that the short neck’s robust vertebrae were used for vigorous feeding rather than reaching high foliage."
+   "kind": "about_something_else",
+   "reason": "Sentence 8 discusses Antarctosaurus, not Bonitasaura."
   },
   {
    "sentences": [
-    11
+    1
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 12 discusses Antarctosaurus, not Bonitasaura, yet is presented as part of the Bonitasaura page."
+   "kind": "missing_context",
+   "reason": "Mentions a keratin sheath, teeth, and a posterior bone blade without prior introduction of these structures."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"The keratin sheath on Bonitasaura's jaw functioned like a guillotine to crop vegetation, aided by small, continuously replacing front teeth and a smooth posterior bone blade.\": Mentions a keratin sheath, teeth, and a posterior bone blade without prior introduction of these structures."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:27:47+00:00"
 }

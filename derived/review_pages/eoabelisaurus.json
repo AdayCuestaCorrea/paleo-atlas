@@ -2,47 +2,32 @@
  "taxon_key": "eoabelisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ba74e2574f16f0cf",
- "reviewed_at": "2026-11-25T13:28:28+00:00",
+ "text_hash": "931811b4b5ab85a1",
+ "reviewed_at": "2026-11-25T22:36:15+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    19
+    8,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Sentences 19 and 20 state the same claim that Eoabelisaurus extends the temporal range of abelisaurids by more than 40 million years into the Middle Jurassic."
+   "kind": "contradiction",
+   "reason": "Both sentences assign Eoabelisaurus to different basal positions—one to Abelisauridae, the other to Ceratosauridae—without reconciling the difference."
   },
   {
    "sentences": [
-    17,
-    19
+    10
    ],
-   "kind": "repetition",
-   "reason": "Sentences 18 and 20 both claim that Eoabelisaurus would be the oldest known abelisaurid for forty million years."
+   "kind": "contradiction",
+   "reason": "Sentence 11 gives two mutually exclusive age ranges (Toarcian 184–174 Ma vs. Bajocian ~170 Ma) for the same species."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:30:59+00:00",
-   "problems": [
-    {
-     "sentences": [
-      18,
-      19
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 19 states Eoabelisaurus lived during the Lower Jurassic, while sentence 20 claims it extended the clade’s temporal range into the Middle Jurassic."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewrite_mode": "sentences",
-   "rewritten_at": "2026-11-25T12:25:46+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The original describers assigned Eoabelisaurus to the basalmost position in the family Abelisauridae.\" / \"In 2018, Rafael Delcourt placed Eoabelisaurus at the base of Ceratosauridae, though he noted the classification was problematic.\": Both sentences assign Eoabelisaurus to different basal positions—one to Abelisauridae, the other to Ceratosauridae—without reconciling the difference.",
+  "- contradiction: \"Eoabelisaurus lived during the Lower Jurassic in the Cañadón Asfalto Basin of Argentina, specifically in the Toarcian stage (184.2 to 174.7 million years ago) or the Bajocian stage of the Middle Jurassic (approximately 170 million years ago).\": Sentence 11 gives two mutually exclusive age ranges (Toarcian 184–174 Ma vs. Bajocian ~170 Ma) for the same species."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:17:39+00:00"
 }

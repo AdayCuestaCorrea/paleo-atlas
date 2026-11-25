@@ -2,41 +2,31 @@
  "taxon_key": "shastasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9424f51be22fd376",
- "reviewed_at": "2026-11-25T13:31:44+00:00",
+ "text_hash": "6a7570b32ac4dbb1",
+ "reviewed_at": "2026-11-25T22:39:16+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Sentences 12-14 describe Shastasaurus as a suction feeder, while sentence 15 argues its jaws and hyoid bones were unsuitable for suction feeding and suggests a different diet."
-  },
-  {
-   "sentences": [
-    22
+    4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 23 introduces the genus Guanlingsaurus without any prior mention or explanation of its relevance."
+   "reason": "Refers to \"related species\" without naming them earlier on the page."
   },
   {
    "sentences": [
-    10,
-    22
+    8
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 states the hyoid bones were large, whereas sentence 23 claims Guanlingsaurus (formerly Shastasaurus liangae) should be considered distinct due to a shorter hyoid bone."
+   "kind": "missing_context",
+   "reason": "Mentions Guanlingsaurus and its shorter hyoid bone without prior introduction of Guanlingsaurus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The short snout suggests Shastasaurus was likely a suction feeder that ate mainly soft-bodied cephalopods lacking shells for defense.\" / \"Current research suggests Shastasaurus jaws may not have been adapted for suction feeding because their hyoid bones were unsuitable for impact forces and related species possessed teeth and gut contents indicating a different diet.\": Sentences 12-14 describe Shastasaurus as a suction feeder, while sentence 15 argues its jaws and hyoid bones were unsuitable for suction feeding and suggests a different diet.",
-  "- missing context: \"A 2013 discovery of a juvenile specimen suggested that Guanlingsaurus (formerly Shastasaurus liangae) should be considered a distinct genus due to its shorter hyoid bone.\": Sentence 23 introduces the genus Guanlingsaurus without any prior mention or explanation of its relevance.",
-  "- contradiction: \"The part of the Shastasaurus skull containing the jaw-opening muscles was particularly large, and the animal had large hyoid bones that allowed it to pull its tongue back abruptly.\" / \"A 2013 discovery of a juvenile specimen suggested that Guanlingsaurus (formerly Shastasaurus liangae) should be considered a distinct genus due to its shorter hyoid bone.\": Sentence 11 states the hyoid bones were large, whereas sentence 23 claims Guanlingsaurus (formerly Shastasaurus liangae) should be considered distinct due to a shorter hyoid bone."
+  "- missing context: \"Current research suggests Shastasaurus jaws may not have been adapted for suction feeding because their hyoid bones were unsuitable for impact forces and related species possessed teeth and gut contents indicating a different diet.\": Refers to \"related species\" without naming them earlier on the page.",
+  "- missing context: \"A 2013 discovery of a juvenile specimen of Shastasaurus liangae suggested that Guanlingsaurus, a genus defined by its shorter hyoid bone, should be considered distinct from Shastasaurus.\": Mentions Guanlingsaurus and its shorter hyoid bone without prior introduction of Guanlingsaurus."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:36:49+00:00",
@@ -63,8 +53,40 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:52:44+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:31:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 12-14 describe Shastasaurus as a suction feeder, while sentence 15 argues its jaws and hyoid bones were unsuitable for suction feeding and suggests a different diet."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 23 introduces the genus Guanlingsaurus without any prior mention or explanation of its relevance."
+    },
+    {
+     "sentences": [
+      10,
+      22
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states the hyoid bones were large, whereas sentence 23 claims Guanlingsaurus (formerly Shastasaurus liangae) should be considered distinct due to a shorter hyoid bone."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:23+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:23+00:00"
+ "rewritten_at": "2026-11-25T23:19:52+00:00"
 }

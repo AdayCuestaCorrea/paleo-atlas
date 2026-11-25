@@ -2,18 +2,24 @@
  "taxon_key": "craspedodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8c0a21c5e123612d",
- "reviewed_at": "2026-11-24T01:36:25+00:00",
+ "text_hash": "7a118d27f511dbec",
+ "reviewed_at": "2026-11-25T23:01:00+00:00",
  "problems": [
   {
    "sentences": [
+    4,
     5
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 6 discusses the geological age of the Lonzée Member, a formation, rather than providing information about the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea), giving two incompatible classifications for the same taxon."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Craspedodon was originally classified as an ornithopod related to Iguanodon, but the Paleobi Database currently lists its parent group as Iguanodontoidea.\" / \"A 2007 study suggested the tooth shape, ridge length, and thickened base might indicate membership in Neoceratopsia, specifically basal Ceratopsoidea.\": Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea), giving two incompatible classifications for the same taxon."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:30:36+00:00"
 }

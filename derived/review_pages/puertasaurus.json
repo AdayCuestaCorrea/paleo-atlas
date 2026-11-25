@@ -2,64 +2,31 @@
  "taxon_key": "puertasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6ca45d0043299398",
- "reviewed_at": "2026-11-25T13:22:37+00:00",
+ "text_hash": "45b5118344e8c7c0",
+ "reviewed_at": "2026-11-25T22:30:05+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    6
+    11,
+    12
    ],
    "kind": "repetition",
-   "reason": "Both sentences claim Puertasaurus was perhaps the largest sauropod in the world, repeating the same statement."
+   "reason": "Both sentences state the same temporal context (Late Cretaceous) without adding new information."
   },
   {
    "sentences": [
-    2,
-    6
+    13
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the same dorsal vertebra as the broadest known sauropod vertebra, repeating the claim."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to \"including the ribs\" without previously mentioning ribs, leaving the context unclear."
+   "kind": "contradiction",
+   "reason": "Sentence 14 presents mutually exclusive age ranges for the Cerro Fortaleza Formation and Puertasaurus, contradicting itself."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The preserved cervical vertebra has a transverse width of 140 centimeters, including the ribs.\": Sentence 5 refers to \"including the ribs\" without previously mentioning ribs, leaving the context unclear."
+  "- contradiction: \"Recent studies date the Cerro Fortaleza Formation, where Puertasaurus fossils were found, to between 76 and 70 million years ago, while other studies indicate the deposits belong to the Cerro Fortaleza Formation, dating to the Campanian or Maastrichtian stages, and Puertasaurus lived between 83.6 and 72.2 million years ago during the Campanian stage.\": Sentence 14 presents mutually exclusive age ranges for the Cerro Fortaleza Formation and Puertasaurus, contradicting itself."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:19:20+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5,
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences claim Puertasaurus was among the largest sauropods, repeating the same size claim."
-    },
-    {
-     "sentences": [
-      18
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 19 presents conflicting age ranges for the Cerro Fortaleza Formation and Puertasaurus, contradicting each other."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T06:17:36+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:09:30+00:00"
+ "rewritten_at": "2026-11-25T23:14:44+00:00"
 }

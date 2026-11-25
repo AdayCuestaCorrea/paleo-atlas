@@ -2,40 +2,23 @@
  "taxon_key": "camelotia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4ebaf3d923db26cf",
- "reviewed_at": "2026-11-25T13:28:30+00:00",
+ "text_hash": "735a4ed0cdf3b564",
+ "reviewed_at": "2026-11-25T22:36:18+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    6
+    5
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Camelotia reached a body length of 8‑10 m and a mass of 3.8 t."
-  },
-  {
-   "sentences": [
-    1,
-    2
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2/7 gives a maximum length of 8‑10 m, while sentence 3 claims the largest individuals were 12 m long."
-  },
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentences 8 and 9 describe the etymology of the genus and species names, which is about the naming origin rather than the animal itself."
+   "kind": "missing_context",
+   "reason": "Sentence 6 mentions \"Avalonianus\" and \"theropod teeth\" without any prior introduction or context for these taxa, making the reference unclear."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The holotype femur is approximately 1 meter long, suggesting the animal was roughly 8-10 meters in length based on scaling comparisons.\" / \"The largest individuals of Camelotia borealis had an estimated length of 12 meters.\": Sentence 2/7 gives a maximum length of 8‑10 m, while sentence 3 claims the largest individuals were 12 m long."
+  "- missing context: \"Peter M. Galton suggested in 1998 that theropod teeth historically assigned to Avalonianus, which were associated with the Camelotia holotype, actually represent the species Newtonsaurus cambrensis.\": Sentence 6 mentions \"Avalonianus\" and \"theropod teeth\" without any prior introduction or context for these taxa, making the reference unclear."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:31:22+00:00",
@@ -75,8 +58,41 @@
    "repetitions_dropped": 3,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T00:58:05+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:28:30+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Camelotia reached a body length of 8‑10 m and a mass of 3.8 t."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2/7 gives a maximum length of 8‑10 m, while sentence 3 claims the largest individuals were 12 m long."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentences 8 and 9 describe the etymology of the genus and species names, which is about the naming origin rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:13:22+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:13:22+00:00"
+ "rewritten_at": "2026-11-25T23:17:40+00:00"
 }

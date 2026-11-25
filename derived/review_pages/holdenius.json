@@ -2,8 +2,8 @@
  "taxon_key": "holdenius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7254f08aaa0514fa",
- "reviewed_at": "2026-11-24T01:47:52+00:00",
+ "text_hash": "55493f73762b23d1",
+ "reviewed_at": "2026-11-25T23:03:34+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,23 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "Both sentences claim the current family placement of Holdenius but give different families (Aspinothoracidi vs Dunkleosteidae)."
+   "reason": "The family placement of Holdenius is given as Aspinothoracidi in sentence 8, but the Paleobiology Database lists its parent group as Dinichthyidae in sentence 9, which are incompatible classifications."
   },
   {
    "sentences": [
-    7,
-    9
+    5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states Holdenius is now in Aspinothoracidi, while sentence 10 lists its parent group as Dinichthyidae, giving conflicting taxonomic placement."
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to \"its prey\" without specifying which prey species or size, making the statement unclear without prior context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Holdenius was previously classified in the family Dunkleosteidae but is now placed in the family Aspinothoracidi.\" / \"The Spanish taxonomic record lists Holdenius as belonging to the family Dunkleosteidae.\": Both sentences claim the current family placement of Holdenius but give different families (Aspinothoracidi vs Dunkleosteidae).",
-  "- contradiction: \"Holdenius was previously classified in the family Dunkleosteidae but is now placed in the family Aspinothoracidi.\" / \"The Paleobiology Database lists the parent group of Holdenius as Dinichthyidae.\": Sentence 8 states Holdenius is now in Aspinothoracidi, while sentence 10 lists its parent group as Dinichthyidae, giving conflicting taxonomic placement."
+  "- contradiction: \"Holdenius was previously classified in the family Dunkleosteidae but is now placed in the family Aspinothoracidi.\" / \"The Paleobiology Database lists the parent group of Holdenius as Dinichthyidae.\": The family placement of Holdenius is given as Aspinothoracidi in sentence 8, but the Paleobiology Database lists its parent group as Dinichthyidae in sentence 9, which are incompatible classifications.",
+  "- missing context: \"Because its prey was over half its size, Holdenius is inferred to have been an exceptionally aggressive predator.\": Sentence 6 refers to \"its prey\" without specifying which prey species or size, making the statement unclear without prior context."
  ],
- "rewrite": "unchanged",
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:29:15+00:00"
+ "rewritten_at": "2026-11-25T23:31:48+00:00"
 }

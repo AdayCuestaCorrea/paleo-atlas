@@ -2,27 +2,46 @@
  "taxon_key": "pterichthyodes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "188bd03e6ef0eb03",
- "reviewed_at": "2026-11-24T01:37:59+00:00",
+ "text_hash": "f48a5aaf748c1456",
+ "reviewed_at": "2026-11-25T23:01:33+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Pterichthyodes fed by browsing or moving through shallow lake beds searching for decaying detritus."
+   "kind": "missing_context",
+   "reason": "Mentions \"its pectoral appendages\" without having introduced or described them earlier."
   },
   {
    "sentences": [
-    13,
-    14
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the genus is distinguished by its wing-like or wing-shaped appendages."
+   "kind": "missing_context",
+   "reason": "Refers to \"its appendages\" without prior context or description of those appendages."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "States the name refers to wing-like appendages, but the appendages have not been described previously in the text."
+  },
+  {
+   "sentences": [
+    1
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes the Old Red Sandstone formation and its study history, which concerns the geological formation rather than the animal itself."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Fossils suggest Pterichthyodes was a bottom-dweller that crawled on lake beds using its pectoral appendages.\": Mentions \"its pectoral appendages\" without having introduced or described them earlier.",
+  "- missing context: \"It is theorized that Pterichthyodes used its appendages to bury itself in the sediment.\": Refers to \"its appendages\" without prior context or description of those appendages.",
+  "- missing context: \"The name Pterichthyodes refers to the genus's unique wing-like appendages.\": States the name refers to wing-like appendages, but the appendages have not been described previously in the text."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:30:47+00:00"
 }

@@ -2,30 +2,32 @@
  "taxon_key": "sinovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2a87cc357ba8164c",
- "reviewed_at": "2026-11-25T13:36:04+00:00",
+ "text_hash": "77a9d7114c78bc3a",
+ "reviewed_at": "2026-11-25T22:42:20+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    0,
+    5
    ],
-   "kind": "missing_context",
-   "reason": "The pronoun \"This\" in sentence 7 refers to the preservation detail in sentence 6, not to the size of Sinovenator, creating a missing context for the claim about size."
+   "kind": "contradiction",
+   "reason": "Sentence 1 describes Sinovenator as a small troodontid, while sentence 6 claims it is one of the largest troodontid species in the Yixian Formation ecosystem."
   },
   {
    "sentences": [
-    22
+    4,
+    5
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 23 discusses a synapomorphy of a broader clade (basal troodontids, dromaeosaurids, and basal Avialae) rather than a specific trait of Sinovenator, yet it is presented as if it were about the animal itself."
+   "kind": "repetition",
+   "reason": "Both sentences state that Sinovenator fossils are preserved in three dimensions rather than being strongly compressed on a flat slab."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"This makes Sinovenator one of the largest troodontid species found in the Yixian Formation ecosystem.\": The pronoun \"This\" in sentence 7 refers to the preservation detail in sentence 6, not to the size of Sinovenator, creating a missing context for the claim about size."
+  "- contradiction: \"Sinovenator is a genus of troodontid dinosaur from China, a group of small, graceful maniraptorans that closely resemble birds.\" / \"The preservation of Sinovenator fossils in three dimensions, rather than being strongly compressed on a flat slab, makes it one of the largest troodontid species found in the Yixian Formation ecosystem.\": Sentence 1 describes Sinovenator as a small troodontid, while sentence 6 claims it is one of the largest troodontid species in the Yixian Formation ecosystem."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:44:15+00:00",
@@ -41,8 +43,31 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:53:09+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:36:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The pronoun \"This\" in sentence 7 refers to the preservation detail in sentence 6, not to the size of Sinovenator, creating a missing context for the claim about size."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 23 discusses a synapomorphy of a broader clade (basal troodontids, dromaeosaurids, and basal Avialae) rather than a specific trait of Sinovenator, yet it is presented as if it were about the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:18:05+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:18:05+00:00"
+ "rewritten_at": "2026-11-25T23:21:32+00:00"
 }

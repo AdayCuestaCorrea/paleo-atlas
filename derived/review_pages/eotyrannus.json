@@ -2,68 +2,23 @@
  "taxon_key": "eotyrannus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4abead7b65ac9704",
- "reviewed_at": "2026-11-25T13:32:53+00:00",
+ "text_hash": "55955c8e5ede6840",
+ "reviewed_at": "2026-11-25T22:40:04+00:00",
  "problems": [
   {
    "sentences": [
-    16,
-    17,
-    18
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 17, 18, and 19 give mutually inconsistent classifications for Eotyrannus—Stokesosauridae, sister to Proceratosauridae, and a megaraptorian, respectively."
-  },
-  {
-   "sentences": [
-    23,
-    24
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 24 and 25 both state that the European discovery of Eotyrannus challenges the supposed Asian origin of tyrannosauroids."
+   "kind": "missing_context",
+   "reason": "The sentence states the location of the main fossil specimen is secret, but no prior sentence provides any information about the location or context that would make this statement meaningful."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Eotyrannus is classified within the family Stokesosauridae.\" / \"In 2024, Andrea Cau recovered Eotyrannus as a sister taxon to Proceratosauridae, distant from Megaraptora.\" / \"A recent 2014 analysis by Porfiri et al. found that Eotyrannus is a megaraptorian closely related to taxa like Megaraptor.\": Sentences 17, 18, and 19 give mutually inconsistent classifications for Eotyrannus—Stokesosauridae, sister to Proceratosauridae, and a megaraptorian, respectively."
+  "- missing context: \"The exact location where the main fossil specimen was found remains secret to protect the site from erosion and to allow for future collections.\": The sentence states the location of the main fossil specimen is secret, but no prior sentence provides any information about the location or context that would make this statement meaningful."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:38:53+00:00",
-   "problems": [
-    {
-     "sentences": [
-      18,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Both claim different phylogenetic positions: 19 places Eotyrannus as a sister taxon to Proceratosauridae, distant from Megaraptora, while 21 states it is a megaraptorian closely related to Megaraptor."
-    },
-    {
-     "sentences": [
-      18,
-      19,
-      20
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 20 classifies Eotyrannus within Stokesosauridae, conflicting with the phylogenetic placements in 19 and 21."
-    },
-    {
-     "sentences": [
-      22,
-      24
-     ],
-     "kind": "contradiction",
-     "reason": "The age ranges differ: 23 gives 125–120 Ma (Barremian), whereas 25 gives 132.6–121.4 Ma (Hauterivian to Barremian)."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T02:08:45+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:16:15+00:00"
+ "rewritten_at": "2026-11-25T23:20:27+00:00"
 }

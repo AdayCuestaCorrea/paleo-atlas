@@ -2,32 +2,24 @@
  "taxon_key": "palintropus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b99c598543ae40ac",
- "reviewed_at": "2026-11-25T13:52:11+00:00",
+ "text_hash": "4c81fb126f2623d3",
+ "reviewed_at": "2026-11-25T22:58:26+00:00",
  "problems": [
   {
    "sentences": [
-    4,
-    5,
-    6
+    1,
+    2
    ],
    "kind": "contradiction",
-   "reason": "Sentences 5, 6, and 7 give mutually incompatible taxonomic assignments for Palintropus (family Palintropiformes vs. Quercymegapodiidae and class Reptilia)."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 8 discusses other birds of the Western Interior Seaway and subtropical coastlands, not Palintropus itself."
+   "reason": "Sentence 2 claims Palintropus belongs to the family Palintropiformes, while sentence 3 states it is assigned to Quercymegapodiidae, giving conflicting family assignments for the same species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"A 2009 cladistic analysis by Longrich and colleagues suggested Palintropus is a primitive bird related to Apsaravis and belongs in the family Palintropiformes, a conclusion supported by earlier work proposing the newly established group.\" / \"In contrast, the Paleobiology Database lists the parent group and family assigned to Palintropus as Quercymegapodiidae.\" / \"The Paleobiology Database also classifies Palintropus under the class Reptilia.\": Sentences 5, 6, and 7 give mutually incompatible taxonomic assignments for Palintropus (family Palintropiformes vs. Quercymegapodiidae and class Reptilia)."
+  "- contradiction: \"A 2009 cladistic analysis by Longrich and colleagues suggested Palintropus is a primitive bird related to Apsaravis and belongs in the family Palintropiformes, a conclusion supported by earlier work proposing the newly established group, though other sources assign it to Quercymegapodiidae or the class Reptilia.\" / \"In contrast, the Paleobiology Database lists the parent group and family assigned to Palintropus as Quercymegapodiidae and classifies it under the class Reptilia.\": Sentence 2 claims Palintropus belongs to the family Palintropiformes, while sentence 3 states it is assigned to Quercymegapodiidae, giving conflicting family assignments for the same species."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:28:22+00:00",
@@ -84,8 +76,33 @@
    "repetitions_dropped": 3,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:59:31+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:52:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 5, 6, and 7 give mutually incompatible taxonomic assignments for Palintropus (family Palintropiformes vs. Quercymegapodiidae and class Reptilia)."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 8 discusses other birds of the Western Interior Seaway and subtropical coastlands, not Palintropus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:29:17+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:29:17+00:00"
+ "rewritten_at": "2026-11-25T23:29:32+00:00"
 }

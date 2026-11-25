@@ -2,19 +2,31 @@
  "taxon_key": "oplosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f9f8148dcd79028d",
- "reviewed_at": "2026-11-24T01:05:35+00:00",
+ "text_hash": "bb8f09eb222cc5f8",
+ "reviewed_at": "2026-11-25T22:50:27+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    3,
+    6
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Oplosaurus belongs to the general group Macronaria."
+   "reason": "Both sentences state that the Oplosaurus tooth is comparable in size to that of Brachiosaurus."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 11 references Mosasaurus and Hylaeosaurus without any prior mention or context for these taxa."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"It is debated whether the name Oplosaurus originally referred to an armored dinosaur or an armed carnivore, with recent research suggesting Gervais compared the tooth to Mosasaurus rather than Hylaeosaurus.\": Sentence 11 references Mosasaurus and Hylaeosaurus without any prior mention or context for these taxa."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:14+00:00"
 }

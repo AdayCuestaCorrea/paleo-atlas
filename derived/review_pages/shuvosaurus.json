@@ -2,25 +2,41 @@
  "taxon_key": "shuvosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b94be84876466cbd",
- "reviewed_at": "2026-11-25T13:22:23+00:00",
+ "text_hash": "881fc247740b5bab",
+ "reviewed_at": "2026-11-25T22:29:47+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    10,
-    11
+    14,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentences 10, 11, and 12 give conflicting family assignments for Shuvosaurus—Poposauridae in 10 versus Shuvosauridae in 11 and 12."
+   "reason": "Sentence 15 claims Chatterjeea is a distinct theropod dinosaur, while sentence 17 states Shuvosaurus and Chatterjeea are synonymous, implying they are the same taxon."
+  },
+  {
+   "sentences": [
+    15,
+    16
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 16 places Shuvosaurus as a coelophysoid theropod, whereas sentence 17 identifies it as a pseudosuchian related to crocodilians."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the relationships between North American shuvosaurids, including Shuvosaurus, remain unresolved."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Shuvosaurus is classified within the order Rauisuchia, belongs to the family Poposauridae, and is placed in the subfamily Shuvosaurinae.\" / \"The parent group of Shuvosaurus is the family Shuvosauridae.\" / \"Phylogenetic analyses consistently place Shuvosaurus as a close relative of Effigia and the South American Sillosuchus, and until 2026, Shuvosaurus and Effigia were consistently recovered as sister taxa within the family Shuvosauridae.\": Sentences 10, 11, and 12 give conflicting family assignments for Shuvosaurus—Poposauridae in 10 versus Shuvosauridae in 11 and 12."
+  "- contradiction: \"In 1995, Long and Murry described the skull material as a new taxon named Chatterjeea elegans, while Oliver Rauhut argued that Shuvosaurus was a distinct theropod dinosaur that evolved traits similar to ornithomimosaurs.\" / \"In 2006, Nesbitt and Norell named Effigia based on fossils combining a Shuvosaurus-like skull with Chatterjeea-like body parts, and the discovery of Effigia proved that Shuvosaurus is a pseudosuchian related to crocodilians and that Shuvosaurus and Chatterjeea are synonymous.\": Sentence 15 claims Chatterjeea is a distinct theropod dinosaur, while sentence 17 states Shuvosaurus and Chatterjeea are synonymous, implying they are the same taxon.",
+  "- contradiction: \"In a 2003 analysis, Rauhut recovered Shuvosaurus as a coelophysoid theropod.\" / \"In 2006, Nesbitt and Norell named Effigia based on fossils combining a Shuvosaurus-like skull with Chatterjeea-like body parts, and the discovery of Effigia proved that Shuvosaurus is a pseudosuchian related to crocodilians and that Shuvosaurus and Chatterjeea are synonymous.\": Sentence 16 places Shuvosaurus as a coelophysoid theropod, whereas sentence 17 identifies it as a pseudosuchian related to crocodilians."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:18:56+00:00",
@@ -54,8 +70,26 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:13:10+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:22:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 10, 11, and 12 give conflicting family assignments for Shuvosaurus—Poposauridae in 10 versus Shuvosauridae in 11 and 12."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:09:11+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:09:11+00:00"
+ "rewritten_at": "2026-11-25T23:14:29+00:00"
 }

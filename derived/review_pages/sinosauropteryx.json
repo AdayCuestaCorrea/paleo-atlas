@@ -2,10 +2,46 @@
  "taxon_key": "sinosauropteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2ca8de6f46b68ef8",
- "reviewed_at": "2026-11-24T00:02:31+00:00",
- "problems": [],
+ "text_hash": "45305d92804829be",
+ "reviewed_at": "2026-11-25T22:22:02+00:00",
+ "problems": [
+  {
+   "sentences": [
+    8
+   ],
+   "kind": "missing_context",
+   "reason": "Refers to specimen NIGP 127587 without prior introduction of the specimen."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions eggs of Sinosauropteryx without explaining the context of the specimen that contained them."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "States the age of the fossil beds containing Sinosauropteryx without having previously mentioned those beds."
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes climate, volcanic eruptions, and wildfires, which pertain to the environment rather than to the animal itself."
+  }
+ ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"Well-preserved fossils of Sinosauropteryx provide evidence regarding its diet and reproduction. Fossil evidence from specimen NIGP 127587 shows that Sinosauropteryx ate small, fast-moving lizards like Dalinghosaurus.\": Refers to specimen NIGP 127587 without prior introduction of the specimen.",
+  "- missing context: \"Specimen NIGP 127587 contained several small eggs in its abdomen, providing evidence of reproduction in Sinosauropteryx. The eggs of Sinosauropteryx measured 36 mm in length and 26 mm in width.\": Mentions eggs of Sinosauropteryx without explaining the context of the specimen that contained them.",
+  "- missing context: \"The fossil beds containing Sinosauropteryx are dated to between 124.6 and 122 million years ago.\": States the age of the fossil beds containing Sinosauropteryx without having previously mentioned those beds."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:15+00:00"
 }

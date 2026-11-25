@@ -2,40 +2,24 @@
  "taxon_key": "patagotitan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5743cca02dfd2460",
- "reviewed_at": "2026-11-25T13:14:06+00:00",
+ "text_hash": "9105deadd8c43faa",
+ "reviewed_at": "2026-11-25T22:21:44+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Patagotitan’s forested habitat in essentially the same way."
-  },
-  {
-   "sentences": [
+    20,
     22
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"the animals\" without previously specifying which animals are meant."
-  },
-  {
-   "sentences": [
-    15,
-    16,
-    29
-   ],
-   "kind": "about_something_else",
-   "reason": "These sentences discuss a genus of cypress and tree heights, which are about plants, not directly about Patagotitan itself."
+   "kind": "contradiction",
+   "reason": "The page states Patagotitan lived during the Early Cretaceous Albian stage (≈101.62 Ma) but other evidence places it in the Cenomanian (Late Cretaceous)."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The animals were approximately the same size, differing by no more than 5% in length.\": The sentence refers to \"the animals\" without previously specifying which animals are meant."
+  "- contradiction: \"Patagotitan lived during the Early Cretaceous period, specifically the Albian stage.\" / \"The rock layers containing Patagotitan fossils are dated to approximately 101.62 million years ago.\": The page states Patagotitan lived during the Early Cretaceous Albian stage (≈101.62 Ma) but other evidence places it in the Cenomanian (Late Cretaceous)."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:01:59+00:00",
@@ -67,8 +51,41 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:52:00+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:14:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Patagotitan’s forested habitat in essentially the same way."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"the animals\" without previously specifying which animals are meant."
+    },
+    {
+     "sentences": [
+      15,
+      16,
+      29
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences discuss a genus of cypress and tree heights, which are about plants, not directly about Patagotitan itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:50+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:50+00:00"
+ "rewritten_at": "2026-11-25T23:09:53+00:00"
 }

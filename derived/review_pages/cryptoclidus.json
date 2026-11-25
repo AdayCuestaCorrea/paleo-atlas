@@ -2,23 +2,30 @@
  "taxon_key": "cryptoclidus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5910b5c060c47563",
- "reviewed_at": "2026-11-25T13:40:15+00:00",
+ "text_hash": "b55ff6789d6b3481",
+ "reviewed_at": "2026-11-25T22:45:56+00:00",
  "problems": [
   {
    "sentences": [
+    5,
     9
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"its trunk\" and the bone structure that allowed the animal to live only in the water, but the page never previously described the trunk or its bone structure."
+   "kind": "repetition",
+   "reason": "Both sentences state that fossils were found in England."
+  },
+  {
+   "sentences": [
+    6,
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences mention fossils from Cuba."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Recent discoveries indicate that the bone structure of its trunk allowed the animal to live only in the water.\": The sentence refers to \"its trunk\" and the bone structure that allowed the animal to live only in the water, but the page never previously described the trunk or its bone structure."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:52:59+00:00",
@@ -34,8 +41,22 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T03:58:02+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:40:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"its trunk\" and the bone structure that allowed the animal to live only in the water, but the page never previously described the trunk or its bone structure."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:20:48+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:48+00:00"
+ ]
 }

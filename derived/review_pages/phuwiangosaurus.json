@@ -2,23 +2,24 @@
  "taxon_key": "phuwiangosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f3cf71af68ba049b",
- "reviewed_at": "2026-11-25T13:30:14+00:00",
+ "text_hash": "2befe8b77c5b4ead",
+ "reviewed_at": "2026-11-25T22:38:14+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    11,
+    13
    ],
-   "kind": "missing_context",
-   "reason": "The sentence states that theropod dinosaurs fed on this species but provides no evidence or context for this claim."
+   "kind": "contradiction",
+   "reason": "One sentence places Phuwiangosaurus in Euhelopodidae, while another suggests it may be paraphyletic at the base of Somphospondyli rather than belonging to Euhelopodidae."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fossil evidence indicates that theropod dinosaurs fed on this species.\": The sentence states that theropod dinosaurs fed on this species but provides no evidence or context for this claim."
+  "- contradiction: \"Recent phylogenetic analyses place Phuwiangosaurus within the family Euhelopodidae.\" / \"Some analyses suggest Phuwiangosaurus may be paraphyletic at the base of Somphospondyli rather than belonging to Euhelopodidae.\": One sentence places Phuwiangosaurus in Euhelopodidae, while another suggests it may be paraphyletic at the base of Somphospondyli rather than belonging to Euhelopodidae."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:35:08+00:00",
@@ -35,8 +36,24 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:32:23+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:30:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence states that theropod dinosaurs fed on this species but provides no evidence or context for this claim."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:14:32+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:32+00:00"
+ "rewritten_at": "2026-11-25T23:19:11+00:00"
 }

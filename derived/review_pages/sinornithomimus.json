@@ -2,10 +2,32 @@
  "taxon_key": "sinornithomimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1e47147015768827",
- "reviewed_at": "2026-11-24T01:01:57+00:00",
- "problems": [],
+ "text_hash": "cdf93a3df141d73e",
+ "reviewed_at": "2026-11-25T22:49:16+00:00",
+ "problems": [
+  {
+   "sentences": [
+    4,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Both sentences claim to identify the discoverer of the first Sinornithomimus fossils, but they name different individuals and projects."
+  },
+  {
+   "sentences": [
+    6
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase \"This later expedition\" refers to a previous expedition that is never explicitly mentioned in the preceding sentences."
+  }
+ ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"The first remains of Sinornithomimus were found in 1997 and formally described in 2003 by Yoshitsugu Kobayashi and Lü Junchang.\" / \"Dong Zhiming uncovered the first Sinornithomimus fossils in 1997 as part of the Mongol Highland International Dinosaur Project.\": Both sentences claim to identify the discoverer of the first Sinornithomimus fossils, but they name different individuals and projects.",
+  "- missing context: \"This later expedition found another herd of thirteen juveniles and subadults at the same site.\": The phrase \"This later expedition\" refers to a previous expedition that is never explicitly mentioned in the preceding sentences."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:25:38+00:00"
 }

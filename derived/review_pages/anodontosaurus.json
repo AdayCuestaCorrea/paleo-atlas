@@ -2,27 +2,31 @@
  "taxon_key": "anodontosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6da93347dee5b28d",
- "reviewed_at": "2026-11-24T00:45:24+00:00",
+ "text_hash": "faa30c68357be21f",
+ "reviewed_at": "2026-11-25T22:42:51+00:00",
  "problems": [
   {
    "sentences": [
-    18,
-    22
+    0,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that a specimen from the Dinosaur Park Formation was designated as the holotype for a new species, repeating the same claim."
+   "reason": "Both sentences state that the animal belongs to the family Ankylosauridae."
   },
   {
    "sentences": [
-    19,
-    22
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences refer to the species Anodontosaurus inceptus, with sentence 23 naming the holotype for that species, repeating the same information."
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to damage that removed the teeth, but the page never mentions the animal having teeth or a dentition before this."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"The original name came from damage to the fossil that took away the teeth.\": Sentence 5 refers to damage that removed the teeth, but the page never mentions the animal having teeth or a dentition before this."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:21:51+00:00"
 }

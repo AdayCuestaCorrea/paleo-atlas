@@ -2,32 +2,25 @@
  "taxon_key": "paratypothorax",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b83a5e48c916ebb5",
- "reviewed_at": "2026-11-25T13:48:46+00:00",
+ "text_hash": "b5652a5f8acf5c23",
+ "reviewed_at": "2026-11-25T22:54:43+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    11
+    4,
+    7,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the species belongs to the tribe Paratypothoracisini."
-  },
-  {
-   "sentences": [
-    6,
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to \"these best‑known remains\" and sentence 8 to \"the new genus\" without earlier introduction of the specific specimens or genus."
+   "kind": "contradiction",
+   "reason": "The page states fossils were first identified in the Chinle Group in 1992 (sentence 5), yet earlier specimens were collected in Germany in 1945 (sentence 9) and the genus was recognized as an aetosaur in 1953 and named in 1985 (sentence 8). The dates conflict, implying contradictory information about when the animal was first discovered and described."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"For over a century, these best-known remains were wrongly thought to be phytosaur armor.\" / \"Scientists finally recognized it as an aetosaur in 1953 and formally named the new genus in 1985.\": Sentence 7 refers to \"these best‑known remains\" and sentence 8 to \"the new genus\" without earlier introduction of the specific specimens or genus."
+  "- contradiction: \"Fossils were first identified in the Chinle Group of the southwestern United States in 1992.\" / \"Scientists finally recognized Paratypothorax as an aetosaur in 1953 and formally named the new genus in 1985.\" / \"A complete skeleton, specimen SMNS 19003, was unearthed in 1945 from the Schlipf Quarry near Murrhardt.\": The page states fossils were first identified in the Chinle Group in 1992 (sentence 5), yet earlier specimens were collected in Germany in 1945 (sentence 9) and the genus was recognized as an aetosaur in 1953 and named in 1985 (sentence 8). The dates conflict, implying contradictory information about when the animal was first discovered and described."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:15:49+00:00",
@@ -52,8 +45,33 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:09:05+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:48:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      11
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the species belongs to the tribe Paratypothoracisini."
+    },
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to \"these best‑known remains\" and sentence 8 to \"the new genus\" without earlier introduction of the specific specimens or genus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:26:28+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:26:28+00:00"
+ "rewritten_at": "2026-11-25T23:28:00+00:00"
 }

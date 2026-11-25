@@ -2,27 +2,40 @@
  "taxon_key": "besanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9f3938d5b662c6b1",
- "reviewed_at": "2026-11-23T23:54:51+00:00",
+ "text_hash": "5de16a2c48a2bde1",
+ "reviewed_at": "2026-11-25T22:18:23+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    19
+    14,
+    16
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Besanosaurus swimming by undulating its body like an eel, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 15 claims Besanosaurus had strong jaw muscles for rapid snapping bites, while sentence 17 states it could not support a powerful bite."
   },
   {
    "sentences": [
-    26,
-    27
+    21,
+    22
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Besanosaurus lived during the latest Anisian stage, repeating the same temporal information."
+   "reason": "Both sentences describe the uncertainty of Besanosaurus’s relationship within shastasaurid ichthyosaurs."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 13 refers to “shastasaurs” without previously introducing or defining that group."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"Strong jaw muscles and a delicate snout suggest Besanosaurus fed on small fish and coleoid cephalopods using rapid, snapping bites.\" / \"Besanosaurus could not support a powerful bite, but its thin jaws allowed for rapid closing.\": Sentence 15 claims Besanosaurus had strong jaw muscles for rapid snapping bites, while sentence 17 states it could not support a powerful bite.",
+  "- missing context: \"Dal Sasso and Pinna designated the specimen as the holotype of the new genus and species Besanosaurus leptorhynchus due to its differences from other shastasaurs.\": Sentence 13 refers to “shastasaurs” without previously introducing or defining that group."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:08:15+00:00"
 }

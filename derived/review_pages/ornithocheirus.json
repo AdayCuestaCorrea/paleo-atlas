@@ -2,40 +2,47 @@
  "taxon_key": "ornithocheirus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "423ffdab6b614a2e",
- "reviewed_at": "2026-11-24T00:14:26+00:00",
+ "text_hash": "beb4bc345e8b7c9a",
+ "reviewed_at": "2026-11-25T22:28:01+00:00",
  "problems": [
   {
    "sentences": [
-    2,
+    2
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 3 repeats the information that fragmentary pterosaur fossils were found within the Cambridge Greensand formation, which is already stated in the same sentence."
+  },
+  {
+   "sentences": [
+    3,
     4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences give wingspan estimates for Ornithocheirus, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 4 states that in 2013 researchers determined Ornithocheirus is monotypic (only O. simus), while sentence 5 mentions that in 2019 Pêgas et al. classified Ornithocheirus as a basal member of Ornithocheirae and that a 2025 analysis identified Thapunngaka as the closest relative, implying multiple taxa within the clade."
   },
   {
    "sentences": [
-    6
+    4
    ],
-   "kind": "repetition",
-   "reason": "Sentence 7 repeats the location and age of the Cambridge Greensand formation already mentioned."
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to Thapunngaka and the parent group Ornithocheiroidea without any prior introduction or explanation of these terms."
   },
   {
    "sentences": [
-    9
+    7
    ],
-   "kind": "about_something_else",
-   "reason": "Describes decomposing pterosaur carcasses in general, not specifically about Ornithocheirus."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "about_something_else",
-   "reason": "Mentions unrelated taxa (Thapunngaka, Ornithocheiroidea, Reptilia) as if they are directly about Ornithocheirus."
+   "kind": "missing_context",
+   "reason": "Sentence 8 mentions the revival of the genus Lonchodectes and the classification of Tropeognathus mesembrinus as Ornithocheirus mesembrinus without providing context or prior mention of these taxa."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Seeley described 27 species of Ornithocheirus between 1869 and 1870 based on fragmentary material, Reginald Walter Hooley in 1914 merged Owen's genera Coloborhynchus and Criorhynchus back into Ornithocheirus, and in 2013, researchers Rodrigues and Kellner determined that Ornithocheirus is monotypic, containing only the species O. simus.\" / \"In 2019, Pêgas et al. classified Ornithocheirus as a basal member of the clade Ornithocheirae, a 2025 phylogenetic analysis identified Thapunngaka as the closest relative of Ornithocheirus, Ornithocheirus belongs to the parent group Ornithocheiroidea, and Ornithocheirus is classified within the class Reptilia.\": Sentence 4 states that in 2013 researchers determined Ornithocheirus is monotypic (only O. simus), while sentence 5 mentions that in 2019 Pêgas et al. classified Ornithocheirus as a basal member of Ornithocheirae and that a 2025 analysis identified Thapunngaka as the closest relative, implying multiple taxa within the clade.",
+  "- missing context: \"In 2019, Pêgas et al. classified Ornithocheirus as a basal member of the clade Ornithocheirae, a 2025 phylogenetic analysis identified Thapunngaka as the closest relative of Ornithocheirus, Ornithocheirus belongs to the parent group Ornithocheiroidea, and Ornithocheirus is classified within the class Reptilia.\": Sentence 5 refers to Thapunngaka and the parent group Ornithocheiroidea without any prior introduction or explanation of these terms.",
+  "- missing context: \"In 2000, David Unwin argued that Criorhynchus was invalid and that O. simus was the correct type species, which allowed the revival of the genus Lonchodectes, and David Unwin considered Tropeognathus mesembrinus to be Ornithocheirus mesembrinus in 2003.\": Sentence 8 mentions the revival of the genus Lonchodectes and the classification of Tropeognathus mesembrinus as Ornithocheirus mesembrinus without providing context or prior mention of these taxa."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:13:42+00:00"
 }

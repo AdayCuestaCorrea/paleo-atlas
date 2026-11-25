@@ -2,24 +2,22 @@
  "taxon_key": "teleosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9327af30df6146d7",
- "reviewed_at": "2026-11-25T13:42:36+00:00",
+ "text_hash": "3ee047595360009e",
+ "reviewed_at": "2026-11-25T22:48:09+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    3,
+    4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 claims Teleosaurus laid eggs on shore, while sentence 9 claims it incubated eggs internally and hatchlings emerged fully formed."
+   "kind": "about_something_else",
+   "reason": "Sentences 4 and 5 discuss the taxonomy of Teleosaurus species rather than describing the animal’s biology or physical characteristics."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Like aquatic turtles, this marine reptile only went to shore to lay eggs.\" / \"Marine crocodiles like Teleosaurus likely incubated eggs internally, with hatchlings emerging fully formed and ready to swim, breathe, and eat.\": Sentence 8 claims Teleosaurus laid eggs on shore, while sentence 9 claims it incubated eggs internally and hatchlings emerged fully formed."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:58:40+00:00",
@@ -36,8 +34,23 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:33:49+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:42:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 claims Teleosaurus laid eggs on shore, while sentence 9 claims it incubated eggs internally and hatchlings emerged fully formed."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:22:09+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:22:09+00:00"
+ ]
 }

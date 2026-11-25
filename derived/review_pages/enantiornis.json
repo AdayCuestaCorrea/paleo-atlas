@@ -2,18 +2,23 @@
  "taxon_key": "enantiornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ff753b2fbdb6b207",
- "reviewed_at": "2026-11-24T01:06:03+00:00",
+ "text_hash": "a196d58c3355a03b",
+ "reviewed_at": "2026-11-25T22:50:38+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    3
    ],
-   "kind": "about_something_else",
-   "reason": "Claims Enantiornithidae as a separate family for Enantiornis, but Enantiornithidae is the family of all enantiornithines, not a distinct family."
+   "kind": "contradiction",
+   "reason": "Sentence 4 claims Enantiornis leali was placed in its own family, Enantiornithidae, but Enantiornithidae is the family that contains all enantiornithines, not a separate family for this genus."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Enantiornis leali was placed in its own family, Enantiornithidae.\": Sentence 4 claims Enantiornis leali was placed in its own family, Enantiornithidae, but Enantiornithidae is the family that contains all enantiornithines, not a separate family for this genus."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:21+00:00"
 }

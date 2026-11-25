@@ -2,35 +2,32 @@
  "taxon_key": "dromornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e2efe836b49e3d84",
- "reviewed_at": "2026-11-24T00:07:21+00:00",
+ "text_hash": "6f86f7e556e424a6",
+ "reviewed_at": "2026-11-25T22:24:16+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    4
+    0,
+    1
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Dromornis stirtoni could reach a weight of 650 kg."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Dromornis belongs to the flightless bird family Dromornithidae, while sentence 2 claims it is more closely related to early waterfowl (Anseriformes) or a basal galliform, presenting two different phylogenetic placements without indicating they are alternative hypotheses."
   },
   {
    "sentences": [
-    3,
-    5
+    8,
+    9
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe Dromornis planei as having a remarkably large head and skull with a curved, deep bill."
-  },
-  {
-   "sentences": [
-    7,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the same femur specimen of Dromornis australis found at Peak Downs, Queensland."
+   "reason": "Both sentences discuss the diet of Dromornis species, specifically noting that D. stirtoni was herbivorous (with sentence 10 adding possible scavenging). The same claim is repeated in two separate sentences."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The genus Dromornis includes extinct flightless birds known as mihirungs, which resemble modern ostriches or emus but possess greatly reduced wings and large legs. The name Dromornis comes from Ancient Greek words meaning 'course' or 'race' and 'bird', reflecting their terrestrial nature. These birds belong to the family Dromornithidae, a group of extinct flightless birds.\" / \"Although they look like giant emus, Dromornis is more closely related to early waterfowl of the Anseriformes order or a basal galliform.\": Sentence 1 states Dromornis belongs to the flightless bird family Dromornithidae, while sentence 2 claims it is more closely related to early waterfowl (Anseriformes) or a basal galliform, presenting two different phylogenetic placements without indicating they are alternative hypotheses."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:11:46+00:00"
 }

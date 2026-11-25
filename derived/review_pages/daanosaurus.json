@@ -2,54 +2,24 @@
  "taxon_key": "daanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "639f332b0506cc13",
- "reviewed_at": "2026-11-25T13:49:10+00:00",
+ "text_hash": "b3583ec2101022ac",
+ "reviewed_at": "2026-11-25T22:55:09+00:00",
  "problems": [
   {
    "sentences": [
     2,
-    3
+    4
    ],
-   "kind": "repetition",
-   "reason": "Sentences 3 and 4 state the same information about the origin of the genus name and the location of the fossils."
+   "kind": "contradiction",
+   "reason": "Sentence 3 places Daanosaurus in the family Brachiosauridae, while sentence 5 lists its parent group as Mamenchisauridae, giving two incompatible taxonomic assignments."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:17:25+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      4
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that the genus name refers to the Da'an district."
-    },
-    {
-     "sentences": [
-      9,
-      10
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 10 gives an age of ~156 Ma, while sentence 11 gives a range of 154.8–143.1 Ma, which does not include 156 Ma."
-    },
-    {
-     "sentences": [
-      5,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 6 places Daanosaurus in the family Brachiosauridae, whereas sentence 8 lists its parent group as Mamenchisauridae."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:14:26+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Daanosaurus was originally classified in the subfamily Bellusaurinae, which is part of the family Brachiosauridae.\" / \"The Paleobi Database lists the parent group of Daanosaurus as Mamenchisauridae.\": Sentence 3 places Daanosaurus in the family Brachiosauridae, while sentence 5 lists its parent group as Mamenchisauridae, giving two incompatible taxonomic assignments."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:28:10+00:00"
 }

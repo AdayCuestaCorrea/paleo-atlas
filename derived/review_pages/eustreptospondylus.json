@@ -2,10 +2,31 @@
  "taxon_key": "eustreptospondylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cb7675315d0f1ac7",
- "reviewed_at": "2026-11-24T00:34:17+00:00",
- "problems": [],
+ "text_hash": "ceff7c8ef54430c3",
+ "reviewed_at": "2026-11-25T22:37:56+00:00",
+ "problems": [
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "missing_context",
+   "reason": "refers to fossils found on islands and insular dwarfism without earlier mention of islands or insular context"
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "mentions insular dwarfism debate without establishing that the species lived on islands"
+  }
+ ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"Because fossils were found on islands when Europe was an archipelago, Eustreptospondylus might have been capable of swimming short distances.\": refers to fossils found on islands and insular dwarfism without earlier mention of islands or insular context",
+  "- missing context: \"The hypothesis that Eustreptospondylus evolved insular dwarfism is debated, as some researchers argue the small size was due to the holotype being a subadult.\": mentions insular dwarfism debate without establishing that the species lived on islands"
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:18:39+00:00"
 }

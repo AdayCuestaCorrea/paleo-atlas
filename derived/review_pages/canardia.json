@@ -2,8 +2,8 @@
  "taxon_key": "canardia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8b66fb3678fe3de4",
- "reviewed_at": "2026-11-25T13:21:38+00:00",
+ "text_hash": "7287dcc3b5ffb15b",
+ "reviewed_at": "2026-11-25T22:28:44+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,39 +11,30 @@
     1
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims a maxilla is present in juvenile fossils, while sentence 2 states no maxilla is preserved in juvenile specimens."
+   "reason": "Sentence 1 claims all known fossils of Canardia are juvenile individuals, implying they belong to Canardia, while sentence 2 states it is not possible to confirm that the juvenile specimens belong to Canardia."
   },
   {
    "sentences": [
     1,
     2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 says no maxilla is preserved in juvenile specimens, yet sentence 3 describes a juvenile specimen with an 11.5 cm maxilla."
+   "kind": "repetition",
+   "reason": "Both sentences describe a juvenile Canardia specimen with an 11.5 cm maxilla that was transported by a river to marine deposits."
   },
   {
    "sentences": [
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 gives two conflicting age ranges for Canardia (67.5–66 Ma and 72.2–66 Ma)."
-  },
-  {
-   "sentences": [
-    15
+    13
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 16 refers to a sauropod, which is unrelated to the lambeosaurine Canardia discussed in the page."
+   "reason": "Sentence 14 discusses a sauropod (Atsinganosaurus-like form), which is unrelated to the dinosaur genus Canardia being described."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"All known fossils of Canardia belong to juvenile individuals, and the maxilla features a prominent subrectangular flange rising vertically above the rostroventral process.\" / \"Because no maxilla is preserved in the juvenile specimens, it is not possible to confirm if they belong to Canardia or another lambeosaurine.\": Sentence 1 claims a maxilla is present in juvenile fossils, while sentence 2 states no maxilla is preserved in juvenile specimens.",
-  "- contradiction: \"Because no maxilla is preserved in the juvenile specimens, it is not possible to confirm if they belong to Canardia or another lambeosaurine.\" / \"A juvenile Canardia specimen with an 11.5 cm maxilla was transported by a river to marine deposits.\": Sentence 2 says no maxilla is preserved in juvenile specimens, yet sentence 3 describes a juvenile specimen with an 11.5 cm maxilla.",
-  "- contradiction: \"Canardia lived during the late Cretaceous period, between approximately 67.5 and 66 million years ago in the late Maastrichtian stage, with a time range extending from 72.2 to 66 million years ago.\": Sentence 11 gives two conflicting age ranges for Canardia (67.5–66 Ma and 72.2–66 Ma)."
+  "- contradiction: \"All known fossils of Canardia belong to juvenile individuals, and the maxilla features a prominent subrectangular flange rising vertically above the rostroventral process.\" / \"Because no maxilla is preserved in the juvenile specimens, it is not possible to confirm if they belong to Canardia or another lambeosaurine, although one juvenile specimen with an 11.5 cm maxilla was transported by a river to marine deposits.\": Sentence 1 claims all known fossils of Canardia are juvenile individuals, implying they belong to Canardia, while sentence 2 states it is not possible to confirm that the juvenile specimens belong to Canardia."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:16:36+00:00",
@@ -81,8 +72,47 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:55:57+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:21:38+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims a maxilla is present in juvenile fossils, while sentence 2 states no maxilla is preserved in juvenile specimens."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 says no maxilla is preserved in juvenile specimens, yet sentence 3 describes a juvenile specimen with an 11.5 cm maxilla."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 gives two conflicting age ranges for Canardia (67.5–66 Ma and 72.2–66 Ma)."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 16 refers to a sauropod, which is unrelated to the lambeosaurine Canardia discussed in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:08:21+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:08:21+00:00"
+ "rewritten_at": "2026-11-25T23:13:59+00:00"
 }

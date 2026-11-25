@@ -2,49 +2,25 @@
  "taxon_key": "cartorhynchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b8369c2255a5f7f0",
- "reviewed_at": "2026-11-25T13:15:46+00:00",
+ "text_hash": "9aee5ac1239beee6",
+ "reviewed_at": "2026-11-25T22:23:16+00:00",
  "problems": [
   {
    "sentences": [
-    24
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the oceanic basin location rather than a feature of Cartorhynchus itself."
-  },
-  {
-   "sentences": [
-    25
-   ],
-   "kind": "about_something_else",
-   "reason": "Mentions diversification of marine reptiles, a group-level event, not a trait of the animal."
-  },
-  {
-   "sentences": [
-    21,
-    22,
-    23
-   ],
-   "kind": "repetition",
-   "reason": "All three sentences state the age of Cartorhynchus, with overlapping information."
-  },
-  {
-   "sentences": [
-    21,
-    22,
-    23,
-    24
+    14,
+    15,
+    16
    ],
    "kind": "contradiction",
-   "reason": "Sentence 25 places Cartorhynchus in the Middle Triassic, while sentences 22-24 place it in the Early Triassic."
+   "reason": "Sentences 15, 16, and 17 give conflicting geological ages for Cartorhynchus: 15 states it lived during the Early Triassic (Olenekian stage, ~248 Ma), while 16 and 17 place it in the Middle Triassic (Spathian substage)."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Cartorhynchus lived during the Early Triassic epoch, approximately 248 million years ago.\" / \"More precise dating places the animal at approximately 248.41 million years ago.\" / \"It lived at the beginning of the Lower Triassic, specifically the Olenekian stage, approximately 248 million years ago.\" / \"Cartorhynchus lived in an oceanic basin located relatively far from the coast during the Middle Triassic.\": Sentence 25 places Cartorhynchus in the Middle Triassic, while sentences 22-24 place it in the Early Triassic."
+  "- contradiction: \"Cartorhynchus lived during the Early Triassic epoch, approximately 248 million years ago, at the beginning of the Lower Triassic (Olenekian stage).\" / \"Cartorhynchus lived in an oceanic basin located relatively far from the coast during the Middle Triassic.\" / \"The animal was part of a rapid diversification of marine reptiles during the Spathian substage, occurring about one million years after the Permian-Triassic extinction event.\": Sentences 15, 16, and 17 give conflicting geological ages for Cartorhynchus: 15 states it lived during the Early Triassic (Olenekian stage, ~248 Ma), while 16 and 17 place it in the Middle Triassic (Spathian substage)."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:05:01+00:00",
@@ -63,8 +39,50 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T04:21:48+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:15:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the oceanic basin location rather than a feature of Cartorhynchus itself."
+    },
+    {
+     "sentences": [
+      25
+     ],
+     "kind": "about_something_else",
+     "reason": "Mentions diversification of marine reptiles, a group-level event, not a trait of the animal."
+    },
+    {
+     "sentences": [
+      21,
+      22,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state the age of Cartorhynchus, with overlapping information."
+    },
+    {
+     "sentences": [
+      21,
+      22,
+      23,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 25 places Cartorhynchus in the Middle Triassic, while sentences 22-24 place it in the Early Triassic."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:03:44+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:03:44+00:00"
+ "rewritten_at": "2026-11-25T23:11:09+00:00"
 }

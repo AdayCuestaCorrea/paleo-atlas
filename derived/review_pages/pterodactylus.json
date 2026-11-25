@@ -2,41 +2,55 @@
  "taxon_key": "pterodactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f548835c14aecfa6",
- "reviewed_at": "2026-11-23T23:54:49+00:00",
+ "text_hash": "b3c2c67755e68320",
+ "reviewed_at": "2026-11-25T22:18:21+00:00",
  "problems": [
-  {
-   "sentences": [
-    10,
-    11
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Pterodactylus was a carnivore that likely hunted fish and other small animals."
-  },
-  {
-   "sentences": [
-    18,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim that Pterodactylus antiquus may have been diurnal based on scleral ring comparisons."
-  },
   {
    "sentences": [
     4
    ],
-   "kind": "about_something_else",
-   "reason": "The sentence describes the flying monsters of Tolkien’s legendarium, which is unrelated to the biology of Pterodactylus."
+   "kind": "missing_context",
+   "reason": "Mentions Nazgûl monsters without explaining their relevance to Pterodactylus."
   },
   {
    "sentences": [
-    26
+    22,
+    23
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses soft-bodied organisms in the Solnhofen Limestone, not characteristics of Pterodactylus itself."
+   "reason": "Describes the Solnhofen Limestone as a diverse fossil site, which is about the formation, not the animal itself."
+  },
+  {
+   "sentences": [
+    2,
+    6
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences discuss the size of the wings, repeating the claim about large wings."
+  },
+  {
+   "sentences": [
+    3,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both describe the number of teeth, repeating the claim about up to 90 narrow conical teeth."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "repetition",
+   "reason": "Both describe tooth counts in immature specimens, repeating the same information."
   }
  ],
  "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"The flying monsters ridden by the Nazgûl in J.R.R. Tolkien's legendarium were described as looking similarly built to Pterodactylus.\": Mentions Nazgûl monsters without explaining their relevance to Pterodactylus."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:08:11+00:00"
 }

@@ -2,19 +2,47 @@
  "taxon_key": "leucoraja",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "43cad6f2e66c0adc",
- "reviewed_at": "2026-11-24T01:41:40+00:00",
+ "text_hash": "74930adc07d554d0",
+ "reviewed_at": "2026-11-25T23:02:13+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    21
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 2 states there are 15 recognized species, yet sentences 4–19 list 20 distinct species."
+  },
+  {
+   "sentences": [
+    3,
+    8
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Leucoraja is a genus in the family Rajidae, repeating the same taxonomic claim."
+   "reason": "Both sentences claim Leucoraja fullonica is the type species and was described by Linnaeus in 1758."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"There are currently 15 recognized species within this genus.\" / \"The type species of the genus Leucoraja is Raja fullonica, which was originally described by Linnaeus in 1758.\" / \"Leucoraja circularis, known as the sandy ray, was described by Couch in 1838.\" / \"Leucoraja compagnoi, known as the tigertail skate, was described by Stehmann in 1995.\" / \"Leucoraja elaineae was described by Ebert and Leslie in 2019.\" / \"Leucoraja erinaceus, known as the little skate, was described by Mitchill in 1825.\" / \"Leucoraja fullonica, known as the shagreen skate, was described by Linnaeus in 1758.\" / \"Leucoraja garmani, known as the rosette skate, was described by Whitley in 1939.\" / \"Leucoraja lentiginosa, known as the freckled skate, was described by Bigelow and Schroeder in 1951.\" / \"Leucoraja leucosticta, known as the whitedappled skate, was described by Stehmann in 1971.\" / \"Leucoraja longirostris, known as the brown longnose skate, was described by Weigmann, Stehmann, Séret, and Ishihara in 2024.\" / \"Leucoraja melitensis, known as the Maltese skate, was described by R. S. Clark in 1926.\" / \"Leucoraja naevus, known as the cuckoo skate, was described by J. P. Müller and Henle in 1841.\" / \"Leucoraja ocellata, known as the winter skate, was described by Mitchill in 1815.\" / \"Leucoraja pristispina, known as the sawback skate, was described by Last, Stehmann, and Séret in 2008.\" / \"Leucoraja wallacei, known as the yellow-spotted skate, was described by Hulley in 1970.\" / \"Leucoraja yucatanensis, known as the Yucatán skate, was described by Bigelow and Schroeder in 1950.\": Sentence 2 states there are 15 recognized species, yet sentences 4–19 list 20 distinct species."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:31:18+00:00"
 }

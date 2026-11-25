@@ -2,32 +2,22 @@
  "taxon_key": "nurhachius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d1882c94df030910",
- "reviewed_at": "2026-11-25T13:43:18+00:00",
+ "text_hash": "7fe61bcd933c3f4a",
+ "reviewed_at": "2026-11-25T22:48:44+00:00",
  "problems": [
   {
    "sentences": [
     0,
     1
    ],
-   "kind": "contradiction",
-   "reason": "The wingspan ranges 2.4–2.5 m in sentence 1 but sentence 2 gives a separate estimate of 2.28 m, a value outside that range."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to “54 individuals” of teeth but never explains what those individuals are or how they were counted."
+   "kind": "repetition",
+   "reason": "Both sentences state the wingspan calculated by Witton in 2008, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Nurhachius possessed an estimated wingspan ranging from 2.4 to 2.5 meters.\" / \"A separate calculation from 2008 suggested the span was 228 centimeters and the weight was 4 kilograms.\": The wingspan ranges 2.4–2.5 m in sentence 1 but sentence 2 gives a separate estimate of 2.28 m, a value outside that range.",
-  "- missing context: \"These teeth were limited to the front of the jaws, totaling 54 individuals across both the upper and lower mandibles.\": Sentence 6 refers to “54 individuals” of teeth but never explains what those individuals are or how they were counted."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:59:59+00:00",
@@ -52,8 +42,30 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:44:17+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:43:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "The wingspan ranges 2.4–2.5 m in sentence 1 but sentence 2 gives a separate estimate of 2.28 m, a value outside that range."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to “54 individuals” of teeth but never explains what those individuals are or how they were counted."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:22:35+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:22:35+00:00"
+ ]
 }

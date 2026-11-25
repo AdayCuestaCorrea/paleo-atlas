@@ -2,52 +2,24 @@
  "taxon_key": "barosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a1c0242b6b705b00",
- "reviewed_at": "2026-11-25T13:14:26+00:00",
+ "text_hash": "a1987ca23b9199a4",
+ "reviewed_at": "2026-11-25T22:21:59+00:00",
  "problems": [
   {
    "sentences": [
-    20
+    0,
+    15
    ],
-   "kind": "about_something_else",
-   "reason": "States that diplodocid fossils, including those of Barosaurus, are found in Europe and Africa, which refers to the broader group rather than the species itself, contradicting earlier claims that Barosaurus lived only in North America."
-  },
-  {
-   "sentences": [
-    23
-   ],
-   "kind": "about_something_else",
-   "reason": "Mentions Barosaurus africanus as a distinct species, but the page never introduced or discussed an African species of Barosaurus, treating it as a separate entity unrelated to the main subject."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states Barosaurus lentus is the only known species, while sentence 16 introduces Barosaurus africanus as a distinct species."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:02:28+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      4
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 2 claims Barosaurus had a long whip‑like tail, while sentence 5 states it had a shorter tail than Diplodocus."
-    },
-    {
-     "sentences": [
-      22,
-      23
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 23 says Barosaurus lived only in present‑day North America, whereas sentence 24 says its fossils are found in North America, Europe, and Africa."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:59:09+00:00"
-  }
- ]
+ "notes": [
+  "- contradiction: \"Barosaurus lentus is the only known species of the extinct genus Barosaurus, a diplodocid sauropod dinosaur.\" / \"Paleontologists suspected that Barosaurus africanus was distinct from the North American genus, a view confirmed by a 2006 redescription.\": Sentence 1 states Barosaurus lentus is the only known species, while sentence 16 introduces Barosaurus africanus as a distinct species."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:10:08+00:00"
 }

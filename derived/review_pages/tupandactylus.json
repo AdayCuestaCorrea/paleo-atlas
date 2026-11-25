@@ -2,41 +2,61 @@
  "taxon_key": "tupandactylus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fc5d1343fa44e7bc",
- "reviewed_at": "2026-11-25T13:20:27+00:00",
+ "text_hash": "8024c533ed941f69",
+ "reviewed_at": "2026-11-25T22:27:45+00:00",
  "problems": [
   {
    "sentences": [
-    9,
-    21
+    8,
+    17
    ],
-   "kind": "contradiction",
-   "reason": "Different dates for when the genus Tupandactylus was established (2007 vs 2006)."
+   "kind": "repetition",
+   "reason": "Both sentences state that Kellner and Campos established the genus Tupandactylus in 2007."
   },
   {
    "sentences": [
-    11,
     12
    ],
-   "kind": "contradiction",
-   "reason": "The holotype is said to come from the Crato Formation, while the genus is said to be based on material from the Santana Formation. This conflicts on the provenance of the type material."
+   "kind": "missing_context",
+   "reason": "Sentence 13 refers to specimen GP/2E 9266 without any prior introduction or description of this specimen."
   },
   {
    "sentences": [
-    14
+    13
    ],
    "kind": "missing_context",
-   "reason": "Sentence 15 references specimen GP/2E 9266 without any prior mention or description of that specimen in the page."
+   "reason": "Sentence 14 mentions plant material associated with the mandible but never previously introduced or described."
+  },
+  {
+   "sentences": [
+    15,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Sentences 16 and 17 both state that Tupandactylus belongs to the group Tapejaridae."
+  },
+  {
+   "sentences": [
+    20
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 21 discusses the common origin of pterosaur and bird feathers, which is a broader evolutionary topic rather than a specific fact about Tupandactylus."
+  },
+  {
+   "sentences": [
+    21
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 22 addresses aerodynamic effects of the crest and counteracting adaptations, a general aerodynamic discussion rather than a direct fact about the animal itself."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"The genus Tupandactylus was established by Kellner and Campos in 2007.\" / \"Researchers Kellner and Campos proposed the new genus Tupandactylus in 2006 because they found that species previously assigned to Tapejara were anatomically distinct.\": Different dates for when the genus Tupandactylus was established (2007 vs 2006).",
-  "- contradiction: \"The holotype specimen, a skull and partial lower jaw, was found in the Crato Formation and dates to about 112 million years ago at the Aptian-Albian boundary.\" / \"Tupandactylus is based on material MCT 1622-R, an almost complete skull found in the Santana Formation.\": The holotype is said to come from the Crato Formation, while the genus is said to be based on material from the Santana Formation. This conflicts on the provenance of the type material.",
-  "- missing context: \"Examination of specimen GP/2E 9266 suggests Tupandactylus was capable of flight but spent much time on the ground due to its large crest, long forelimbs, and long neck, taking only short flights possibly to escape predators.\": Sentence 15 references specimen GP/2E 9266 without any prior mention or description of that specimen in the page."
+  "- missing context: \"Examination of specimen GP/2E 9266 suggests Tupandactylus was capable of flight but spent much time on the ground due to its large crest, long forelimbs, and long neck, taking only short flights possibly to escape predators.\": Sentence 13 refers to specimen GP/2E 9266 without any prior introduction or description of this specimen.",
+  "- missing context: \"The mandible of the well-preserved T. imperator skull is associated with plant material, which may represent a taphonomic phenomenon or tentative evidence of herbivory.\": Sentence 14 mentions plant material associated with the mandible but never previously introduced or described."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:14:05+00:00",
@@ -53,8 +73,40 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:36:28+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:20:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      21
+     ],
+     "kind": "contradiction",
+     "reason": "Different dates for when the genus Tupandactylus was established (2007 vs 2006)."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "The holotype is said to come from the Crato Formation, while the genus is said to be based on material from the Santana Formation. This conflicts on the provenance of the type material."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 15 references specimen GP/2E 9266 without any prior mention or description of that specimen in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:07:23+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:07:23+00:00"
+ "rewritten_at": "2026-11-25T23:13:29+00:00"
 }

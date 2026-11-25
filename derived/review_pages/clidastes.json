@@ -2,49 +2,32 @@
  "taxon_key": "clidastes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4d8f14adf3564b51",
- "reviewed_at": "2026-11-25T13:23:02+00:00",
+ "text_hash": "f050dfd50156c3dc",
+ "reviewed_at": "2026-11-25T22:30:31+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20,
-    21
+    1,
+    13
    ],
-   "kind": "repetition",
-   "reason": "All three sentences discuss the type species of Clidastes, repeating the same information."
+   "kind": "contradiction",
+   "reason": "Sentence 2 claims Clidastes was an agile swimmer capable of chasing fast prey, while sentence 14 states it was not considered very agile because its flippers were not fully webbed."
   },
   {
    "sentences": [
     14,
     15
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 15 claims Clidastes was an agile swimmer, while sentence 16 states they were not considered very agile."
-  },
-  {
-   "sentences": [
-    17,
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 18 places Clidastes firmly in Mosasaurinae, whereas sentence 19 describes it as a basal mosasaurine, conflicting classifications."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses humeri and femora of specimens, focusing on limb bones rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Sentences 15 and 16 repeat the same information about Clidastes being a basal mosasaurine and the most basal hydropedal mosasaurine genus, with only minor wording differences."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Clidastes was likely an agile swimmer that hunted cephalopods, fish, and small vertebrates in shallow waters.\" / \"They are not considered very agile because their flippers were not fully webbed.\": Sentence 15 claims Clidastes was an agile swimmer, while sentence 16 states they were not considered very agile.",
-  "- contradiction: \"Clidastes is firmly placed in the subfamily Mosasaurinae due to its dental and vertebral morphology being closer to Mosasaurus than any other mosasaur.\" / \"Clidastes is often recovered as a basal mosasaurine and the most basal hydropedal mosasaurine genus, more derived than Dallasaurus but less derived than Prognathodon or Globidens.\": Sentence 18 places Clidastes firmly in Mosasaurinae, whereas sentence 19 describes it as a basal mosasaurine, conflicting classifications."
+  "- contradiction: \"It possessed a delicate, slim form with expanded neural spines and chevrons near the tail tip, enabling it to chase fast prey.\" / \"Clidastes was likely an agile swimmer that hunted cephalopods, fish, and small vertebrates in shallow waters, though it is not considered very agile because its flippers were not fully webbed.\": Sentence 2 claims Clidastes was an agile swimmer capable of chasing fast prey, while sentence 14 states it was not considered very agile because its flippers were not fully webbed."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:20:15+00:00",
@@ -88,8 +71,49 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:22:45+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:23:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences discuss the type species of Clidastes, repeating the same information."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 claims Clidastes was an agile swimmer, while sentence 16 states they were not considered very agile."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 places Clidastes firmly in Mosasaurinae, whereas sentence 19 describes it as a basal mosasaurine, conflicting classifications."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses humeri and femora of specimens, focusing on limb bones rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:09:49+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:09:49+00:00"
+ "rewritten_at": "2026-11-25T23:14:59+00:00"
 }

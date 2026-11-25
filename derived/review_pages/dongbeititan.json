@@ -2,46 +2,23 @@
  "taxon_key": "dongbeititan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fa0e766eeda12190",
- "reviewed_at": "2026-11-25T13:41:36+00:00",
+ "text_hash": "b891a51eb5bab1cd",
+ "reviewed_at": "2026-11-25T22:47:24+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same geographic and stratigraphic context (Yixian Formation, Early Cretaceous) for Dongbeititan."
-  },
-  {
-   "sentences": [
-    13,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences give overlapping age ranges for the species, repeating the temporal information."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to the holotype’s incomplete thoracic rib shaft, but the page never introduces or describes the holotype before this mention."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:56:44+00:00",
-   "problems": [
-    {
-     "sentences": [
-      13,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "The age ranges given in sentences 14 (130–125 Ma) and 15 (125.77–119.57 Ma) do not overlap and are mutually exclusive."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:20:59+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"In 2012, an embedded tooth of the carnivorous theropod Sinocalliopteryx was found within the holotype's incomplete thoracic rib shaft.\": Sentence 4 refers to the holotype’s incomplete thoracic rib shaft, but the page never introduces or describes the holotype before this mention."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:33+00:00"
 }

@@ -2,49 +2,40 @@
  "taxon_key": "arcovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3650f0e0f11e354a",
- "reviewed_at": "2026-11-25T13:25:35+00:00",
+ "text_hash": "48f6f3b3e128e20f",
+ "reviewed_at": "2026-11-25T22:33:12+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    18,
-    19
+    13,
+    14
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for Arcovenator are inconsistent: sentence 3 gives a size estimate, while sentences 19 and 20 provide conflicting time ranges (72–76 Ma vs 74–72 Ma and 83.6–66 Ma)."
+   "reason": "Sentences 14 and 15 give conflicting age ranges for Arcovenator without indicating they are different estimates."
   },
   {
    "sentences": [
-    0,
-    15
+    13,
+    14
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Arcovenator is a theropod in the family Abelisauridae."
+   "reason": "Both sentences repeat the claim that other sources place the age between 74 and 72 million years ago."
   },
   {
    "sentences": [
-    0,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 1 and sentence 17 both classify Arcovenator as an abelisaurid theropod."
-  },
-  {
-   "sentences": [
-    6
+    5
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to a maxilla found at Pourcieux, but the page never previously mentioned Pourcieux or provided context for this locality."
+   "reason": "Sentence 6 refers to a maxilla found at Pourcieux, but the page never introduced Pourcieux as a location or context."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"While the nearly complete skull initially suggested a length of 5 to 6 meters, later estimates in 2016 revised this size to 4.8 meters.\" / \"Arcovenator lived between 72 and 76 million years ago in the Aix-en-Provence Basin of southeastern France, while other sources place it between 74 and 72 million years ago.\" / \"The animal lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago.\": The age ranges for Arcovenator are inconsistent: sentence 3 gives a size estimate, while sentences 19 and 20 provide conflicting time ranges (72–76 Ma vs 74–72 Ma and 83.6–66 Ma).",
-  "- missing context: \"A single maxilla found at Pourcieux is likely referable to Arcovenator based on its proximity in time and space and phylogenetic analysis.\": The sentence refers to a maxilla found at Pourcieux, but the page never previously mentioned Pourcieux or provided context for this locality."
+  "- contradiction: \"Arcovenator lived between 72 and 76 million years ago in the Aix-en-Provence Basin of southeastern France, while other sources place it between 74 and 72 million years ago.\" / \"The animal lived during the Campanian to Maastrichtian stages, from 83.6 to 66 million years ago, though other sources place it between 74 and 72 million years ago.\": Sentences 14 and 15 give conflicting age ranges for Arcovenator without indicating they are different estimates.",
+  "- missing context: \"A single maxilla found at Pourcieux is likely referable to Arcovenator based on its proximity in time and space and phylogenetic analysis.\": Sentence 6 refers to a maxilla found at Pourcieux, but the page never introduced Pourcieux as a location or context."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:25:18+00:00",
@@ -85,8 +76,49 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T07:09:10+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:25:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Arcovenator are inconsistent: sentence 3 gives a size estimate, while sentences 19 and 20 provide conflicting time ranges (72–76 Ma vs 74–72 Ma and 83.6–66 Ma)."
+    },
+    {
+     "sentences": [
+      0,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Arcovenator is a theropod in the family Abelisauridae."
+    },
+    {
+     "sentences": [
+      0,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 1 and sentence 17 both classify Arcovenator as an abelisaurid theropod."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a maxilla found at Pourcieux, but the page never previously mentioned Pourcieux or provided context for this locality."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:11:40+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:11:40+00:00"
+ "rewritten_at": "2026-11-25T23:16:24+00:00"
 }

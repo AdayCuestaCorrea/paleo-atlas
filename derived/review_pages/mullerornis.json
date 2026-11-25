@@ -2,23 +2,23 @@
  "taxon_key": "mullerornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c06e6181310022ae",
- "reviewed_at": "2026-11-25T13:45:17+00:00",
+ "text_hash": "cee4c9692e15379d",
+ "reviewed_at": "2026-11-25T22:50:55+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states the species lived from 0.129 to 0 million years ago, implying a range of up to 129,000 years, which contradicts sentence 2 that it went extinct about one millennium ago."
+   "kind": "missing_context",
+   "reason": "Sentence 6 contains an ambiguous time range \"0.129 to 0 million years ago\" that is not clearly defined or contextualized, making it unclear what the intended span is."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Mullerornis lived during the Late Pleistocene to Holocene, from 0.129 to 0 million years ago, with radiocarbon dating of a bone suggesting it survived until approximately 1260 years before present.\": Sentence 8 states the species lived from 0.129 to 0 million years ago, implying a range of up to 129,000 years, which contradicts sentence 2 that it went extinct about one millennium ago."
+  "- missing context: \"Mullerornis lived during the Late Pleistocene to Holocene, from 0.129 to 0 million years ago, with radiocarbon dating of a bone suggesting it survived until approximately 1260 years before present, though other estimates place its extinction approximately one millennium ago.\": Sentence 6 contains an ambiguous time range \"0.129 to 0 million years ago\" that is not clearly defined or contextualized, making it unclear what the intended span is."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:06:28+00:00",
@@ -34,8 +34,24 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:17:37+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:45:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states the species lived from 0.129 to 0 million years ago, implying a range of up to 129,000 years, which contradicts sentence 2 that it went extinct about one millennium ago."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:24:11+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:24:11+00:00"
+ "rewritten_at": "2026-11-25T23:26:28+00:00"
 }

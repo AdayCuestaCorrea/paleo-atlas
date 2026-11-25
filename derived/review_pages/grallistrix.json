@@ -2,8 +2,8 @@
  "taxon_key": "grallistrix",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b342e565921e1f9d",
- "reviewed_at": "2026-11-24T01:53:34+00:00",
+ "text_hash": "c947d0b8e44d3935",
+ "reviewed_at": "2026-11-25T23:04:46+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,14 +11,23 @@
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims the owls’ terrestrial habits evolved in the absence of mammalian predators, while sentence 4 says they hunted on the ground to fill niches occupied by medium‑sized predatory mammals, implying such predators existed."
+   "reason": "Sentence 1 claims the owls evolved without mammalian predators, yet sentence 4 says they hunted on the ground to fill niches occupied by medium‑sized predatory mammals, implying such predators existed."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "The time range \"between 0.129 and 0 million years ago\" is ambiguous and likely a typo; it lacks a clear upper bound (e.g., 0.0 million years ago) and therefore provides incomplete context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The genus name Grallistrix means 'owl on stilts' because of their long legs and terrestrial habits evolved without mammalian predators.\" / \"Although capable of flight, these owls likely hunted mostly on the ground to fill niches occupied by medium-sized predatory mammals.\": Sentence 1 claims the owls’ terrestrial habits evolved in the absence of mammalian predators, while sentence 4 says they hunted on the ground to fill niches occupied by medium‑sized predatory mammals, implying such predators existed."
+  "- contradiction: \"The genus name Grallistrix means 'owl on stilts' because of their long legs and terrestrial habits evolved without mammalian predators.\" / \"Although capable of flight, these owls likely hunted mostly on the ground to fill niches occupied by medium-sized predatory mammals.\": Sentence 1 claims the owls evolved without mammalian predators, yet sentence 4 says they hunted on the ground to fill niches occupied by medium‑sized predatory mammals, implying such predators existed.",
+  "- missing context: \"Grallistrix lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": The time range \"between 0.129 and 0 million years ago\" is ambiguous and likely a typo; it lacks a clear upper bound (e.g., 0.0 million years ago) and therefore provides incomplete context."
  ],
  "rewrite": "unchanged",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T12:31:23+00:00"
+ "rewritten_at": "2026-11-25T23:32:23+00:00"
 }

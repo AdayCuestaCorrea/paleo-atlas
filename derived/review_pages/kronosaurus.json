@@ -2,40 +2,38 @@
  "taxon_key": "kronosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9e45c8f12eb886c8",
- "reviewed_at": "2026-11-25T13:09:46+00:00",
+ "text_hash": "be288ef7356d1f56",
+ "reviewed_at": "2026-11-25T22:17:57+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    11,
-    12
+    4,
+    22
    ],
    "kind": "repetition",
-   "reason": "All three sentences describe the teeth of Kronosaurus as specialized for large prey, repeating the same claim."
+   "reason": "Both sentences claim a maximum length of 10.5 m for Kronosaurus."
   },
   {
    "sentences": [
-    24
+    22
    ],
    "kind": "missing_context",
-   "reason": "Sentence 25 refers to the fragmentary holotype specimen, but the holotype has never been described or introduced earlier in the page."
+   "reason": "Sentence 23 refers to a “Harvard skeleton” and a “real fossil” without prior introduction of those terms."
   },
   {
    "sentences": [
-    27
+    21
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 28 mentions the “Harvard skeleton” and specific anatomical features without any prior introduction of that specimen or context."
+   "kind": "about_something_else",
+   "reason": "Sentence 22 discusses the temperature of the Eromanga Sea, a formation, rather than a characteristic of Kronosaurus itself."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"The validity of the genus Kronosaurus has been questioned due to the fragmentary nature of the holotype specimen.\": Sentence 25 refers to the fragmentary holotype specimen, but the holotype has never been described or introduced earlier in the page.",
-  "- missing context: \"Colin McHenry suggests the Harvard skeleton has eight extra vertebrae and lacks the bulbous sagittal crest found on the real fossil.\": Sentence 28 mentions the “Harvard skeleton” and specific anatomical features without any prior introduction of that specimen or context."
+  "- missing context: \"Colin McHenry suggests the Harvard skeleton has eight extra vertebrae and lacks the bulbous sagittal crest found on the real fossil; based on this specimen, he estimated a length of 10.5 to 10.9 meters and a body mass of 10.6 to 12.1 tons.\": Sentence 23 refers to a “Harvard skeleton” and a “real fossil” without prior introduction of those terms."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "nothing to fix",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-23T23:54:16+00:00",
@@ -59,8 +57,40 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T02:36:38+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:09:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences describe the teeth of Kronosaurus as specialized for large prey, repeating the same claim."
+    },
+    {
+     "sentences": [
+      24
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 25 refers to the fragmentary holotype specimen, but the holotype has never been described or introduced earlier in the page."
+    },
+    {
+     "sentences": [
+      27
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 28 mentions the “Harvard skeleton” and specific anatomical features without any prior introduction of that specimen or context."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:01:05+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:01:05+00:00"
+ "rewritten_at": "2026-11-25T23:07:52+00:00"
 }

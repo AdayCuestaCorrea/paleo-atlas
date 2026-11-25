@@ -2,31 +2,21 @@
  "taxon_key": "diabloceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e076be614f826b08",
- "reviewed_at": "2026-11-25T13:26:43+00:00",
+ "text_hash": "60f27427dd9fd33d",
+ "reviewed_at": "2026-11-25T22:34:32+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    5
+    10
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Diabloceratops had a pair of very long spikes on its frill."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to a trace fossil and its features without having previously introduced or defined the trace fossil."
+   "kind": "about_something_else",
+   "reason": "Sentence 11 discusses a fossil trackway with mammalian den complexes and digging grooves attributed to a maniraptoran dinosaur, which is about a trackway and other organisms rather than the dinosaur Diabloceratops itself."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"The trace fossil includes mammalian den complexes and digging grooves presumably made by a maniraptoran dinosaur.\": The sentence refers to a trace fossil and its features without having previously introduced or defined the trace fossil."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:27:41+00:00",
@@ -51,8 +41,30 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T07:30:57+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:26:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Diabloceratops had a pair of very long spikes on its frill."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to a trace fossil and its features without having previously introduced or defined the trace fossil."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:12:26+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:12:26+00:00"
+ ]
 }

@@ -2,18 +2,31 @@
  "taxon_key": "revueltosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7587159ef1e64624",
- "reviewed_at": "2026-11-24T00:33:40+00:00",
+ "text_hash": "9c18dde3adb37661",
+ "reviewed_at": "2026-11-25T22:37:40+00:00",
  "problems": [
   {
    "sentences": [
-    23
+    17,
+    18
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 24 discusses the geological formation (Cumnock Formation and Chathan Group) rather than the animal itself."
+   "kind": "repetition",
+   "reason": "Both sentences state the age range of Revueltosaurus, repeating the same information."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 13 mentions osteoderms at the tail’s end forming a club-like structure, but the page never previously introduced or described these osteoderms."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"Researchers suggest that osteoderms located at the tail's end may have formed a club-like structure.\": Sentence 13 mentions osteoderms at the tail’s end forming a club-like structure, but the page never previously introduced or described these osteoderms."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:18:26+00:00"
 }

@@ -2,10 +2,33 @@
  "taxon_key": "agnosphitys",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "11d99f4afac1ec49",
- "reviewed_at": "2026-11-24T01:31:51+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "text_hash": "92f27d345ad177ba",
+ "reviewed_at": "2026-11-25T22:59:44+00:00",
+ "problems": [
+  {
+   "sentences": [
+    0,
+    2
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences describe the composition of the known fossils of Agnosphitys."
+  },
+  {
+   "sentences": [
+    0,
+    2,
+    3
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 1 lists multiple fossil elements (ilium, maxilla, astragalus, humerus), while sentence 3 states there are only two distinct specimens and sentence 4 says the holotype is a single isolated left ilium, implying the other specimen is not listed."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"The known fossils of Agnosphitys consist of an ilium, maxilla, astragalus, and humerus.\" / \"Fossils of Agnosphitys consist of two distinct specimens.\" / \"The holotype specimen is a single isolated left ilium.\": Sentence 1 lists multiple fossil elements (ilium, maxilla, astragalus, humerus), while sentence 3 states there are only two distinct specimens and sentence 4 says the holotype is a single isolated left ilium, implying the other specimen is not listed."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:56+00:00"
 }

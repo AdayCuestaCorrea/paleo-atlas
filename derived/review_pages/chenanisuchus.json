@@ -2,37 +2,25 @@
  "taxon_key": "chenanisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "51c1108186783b60",
- "reviewed_at": "2026-11-25T13:54:10+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "9428013c460d552f",
+ "reviewed_at": "2026-11-25T23:00:01+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T01:33:08+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      4
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the adult length estimate based on a 60‑centimeter skull."
-    },
-    {
-     "sentences": [
-      2,
-      6
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 3 claims Chenanisuchus survived the Cretaceous‑Paleogene extinction, while sentence 7 places it in the Thanetian stage (59–56 Ma), long after the K‑Pg boundary."
-    }
+   "sentences": [
+    3,
+    4,
+    5
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T07:21:10+00:00"
+   "kind": "contradiction",
+   "reason": "Sentences 4 and 6 claim that Chenanisuchus survived the Cretaceous‑Paleogene extinction event, while sentence 5 places the species in the Thanetian stage (59–56 Ma), which is after the extinction at ~66 Ma. The statements cannot both be true without additional context."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Fossils found in Mali indicate that Chenanisuchus survived the Cretaceous-Paleogene extinction event.\" / \"Fossil records place Chenanisuchus in the Thanetian stage, between 59.24 and 56 million years ago.\" / \"It is suggested that their ability to walk on the sea floor helped dyrosaurids like Chenanisuchus survive the K-Pg extinction.\": Sentences 4 and 6 claim that Chenanisuchus survived the Cretaceous‑Paleogene extinction event, while sentence 5 places the species in the Thanetian stage (59–56 Ma), which is after the extinction at ~66 Ma. The statements cannot both be true without additional context."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:30:05+00:00"
 }

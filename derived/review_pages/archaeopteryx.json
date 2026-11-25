@@ -2,109 +2,47 @@
  "taxon_key": "archaeopteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "62aafad225ded767",
- "reviewed_at": "2026-11-25T13:08:45+00:00",
+ "text_hash": "4c0babc610c7ab76",
+ "reviewed_at": "2026-11-25T22:16:44+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"total airfoil\" without explaining what is meant by airfoil for a feathered dinosaur."
+   "reason": "Refers to \"total airfoil\" without explaining what airfoil is or how it relates to the animal."
   },
   {
    "sentences": [
-    6,
-    8
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 claims all known fossils come from Solnhofen, while sentence 9 states a specimen comes from the Painten Formation, contradicting the earlier claim."
+   "kind": "missing_context",
+   "reason": "Mentions the Mühlheim Specimen and its taxonomic history without prior introduction of that specimen."
   },
   {
    "sentences": [
-    8
+    13
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 9 discusses the Painten Formation and its age relative to other specimens, which is information about the geological formation rather than about Archaeopteryx itself."
+   "kind": "missing_context",
+   "reason": "Introduces the Thermopolis Specimen without any earlier mention or context for that specimen."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "References Jurapteryx, A. siemensii, and A. bavarica without prior explanation of these taxa."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A 2006 study found that Archaeopteryx's leg feathers formed up to 12% of its total airfoil.\": Refers to \"total airfoil\" without explaining what is meant by airfoil for a feathered dinosaur.",
-  "- contradiction: \"All known fossils of Archaeopteryx come from limestone deposits near Solnhofen, Germany.\" / \"The Schamhaupten Specimen is the only known specimen lacking preserved feathers and comes from the Painten Formation, making it somewhat older than other Archaeopteryx specimens.\": Sentence 7 claims all known fossils come from Solnhofen, while sentence 9 states a specimen comes from the Painten Formation, contradicting the earlier claim."
+  "- missing context: \"A 2006 study found that Archaeopteryx's leg feathers formed up to 12% of its total airfoil.\": Refers to \"total airfoil\" without explaining what airfoil is or how it relates to the animal.",
+  "- missing context: \"The Mühlheim Specimen was initially considered a thirteenth Archaeopteryx and was assigned to the separate genus Alcmonavis in 2019, although a 2026 study argues that it most likely belongs to Archaeopteryx.\": Mentions the Mühlheim Specimen and its taxonomic history without prior introduction of that specimen.",
+  "- missing context: \"In 1960, Swinton proposed placing the name Archaeopteryx lithographica on the official list, which would make alternative names like Griphosaurus and Griphornis invalid; a 2007 review of well-preserved specimens, including the Thermopolis Specimen, concluded that two species, A. lithographica and A. siemensii, could be supported.\": Introduces the Thermopolis Specimen without any earlier mention or context for that specimen.",
+  "- missing context: \"In 2007, Phil Senter suggested that Jurapteryx, A. siemensii, and A. bavarica are junior synonyms of A. lithographica, arguing that their diagnostic features can be explained by growth; earlier, John Ostrom had noted that Archaeopteryx was remarkably similar to the theropod family Dromaeosauridae.\": References Jurapteryx, A. siemensii, and A. bavarica without prior explanation of these taxa."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:52:31+00:00",
-   "problems": [
-    {
-     "sentences": [
-      10,
-      31
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 11 claims all fossils are from limestone deposits near Solnhofen, while sentence 32 states the Schamhaupten specimen is from the Painten Formation."
-    },
-    {
-     "sentences": [
-      20,
-      30
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the age of Archaeopteryx as approximately 150 million years ago."
-    },
-    {
-     "sentences": [
-      2,
-      3
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences describe asymmetrical flight feathers, with sentence 3 providing more detail."
-    },
-    {
-     "sentences": [
-      11
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions \"The Unnumbered Specimen\" without prior introduction."
-    },
-    {
-     "sentences": [
-      12
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions \"The Mühlheim Specimen\" without prior introduction."
-    },
-    {
-     "sentences": [
-      16
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions \"The Schamhaupten Specimen\" without prior introduction."
-    },
-    {
-     "sentences": [
-      18
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions \"the London specimen\" without prior introduction."
-    },
-    {
-     "sentences": [
-      21
-     ],
-     "kind": "about_something_else",
-     "reason": "Discusses similarity to the theropod family Dromaeosauridae, a relative group, rather than a trait of Archaeopteryx itself."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:17:18+00:00"
-  }
- ],
+ "rewrite": "english failed",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:00:27+00:00",
- "hand_fixed": "2026-11-25"
+ "rewritten_at": "2026-11-25T23:07:10+00:00"
 }

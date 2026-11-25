@@ -2,55 +2,23 @@
  "taxon_key": "pinguinus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0c22e32726e66ca1",
- "reviewed_at": "2026-11-25T13:10:22+00:00",
+ "text_hash": "2bee91fcc0e63fca",
+ "reviewed_at": "2026-11-25T22:18:35+00:00",
  "problems": [
   {
    "sentences": [
-    23,
-    24
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the earliest fossils date to about 400,000 years ago."
+   "kind": "missing_context",
+   "reason": "The phrase \"these birds\" refers to the great auk but the antecedent is not explicitly stated in the preceding sentences."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-23T23:55:21+00:00",
-   "problems": [
-    {
-     "sentences": [
-      14,
-      17,
-      23
-     ],
-     "kind": "repetition",
-     "reason": "All three sentences state the great auk’s main diet consisted of fish 12–20 cm long and 40–50 g, repeating the same claim."
-    },
-    {
-     "sentences": [
-      10,
-      13,
-      22
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 23 says the great auk was never observed or described by modern scientists during its existence, yet it was formally described by Linnaeus in 1758 and declared extinct in 1852, both modern scientific events."
-    },
-    {
-     "sentences": [
-      30
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 31 claims that after Pinguinus alfrednewtoni went extinct, the great auk expanded into its former territory, which is impossible because Pinguinus alfrednewtoni is the great auk itself."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T02:48:30+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Remains found near campfires prove Neanderthals used these birds as a food source over 100,000 years ago.\": The phrase \"these birds\" refers to the great auk but the antecedent is not explicitly stated in the preceding sentences."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:08:18+00:00"
 }

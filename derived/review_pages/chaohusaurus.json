@@ -2,19 +2,39 @@
  "taxon_key": "chaohusaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a9fcbfc55b33b5da",
- "reviewed_at": "2026-11-24T00:20:17+00:00",
+ "text_hash": "137150275c6b1a09",
+ "reviewed_at": "2026-11-25T22:30:34+00:00",
  "problems": [
   {
    "sentences": [
-    10,
-    22
+    0,
+    16
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that the genus Chaohusaurus was first described by Young and Dong in 1972."
+   "reason": "Both sentences state that Chaohusaurus is a basal member of the ichthyopterygian/ichthyosauriform clade."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to a specimen with embryos but no prior mention of which specimen or its provenance."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 15 mentions a Chinese-Italian project discovering fossils but never introduced the project or its context."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- missing context: \"One reported specimen preserves the remains of three embryos.\": Sentence 6 refers to a specimen with embryos but no prior mention of which specimen or its provenance.",
+  "- missing context: \"A Chinese-Italian paleontological project has since discovered eighty Chaohusaurus fossils.\": Sentence 15 mentions a Chinese-Italian project discovering fossils but never introduced the project or its context."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:15:02+00:00"
 }

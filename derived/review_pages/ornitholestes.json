@@ -2,59 +2,40 @@
  "taxon_key": "ornitholestes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "87ed801186b1b4cc",
- "reviewed_at": "2026-11-24T00:11:53+00:00",
+ "text_hash": "19cd0ff0bd7b56ba",
+ "reviewed_at": "2026-11-25T22:26:50+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "The two sentences give different ages for the same species (154 Ma vs 157 Ma)."
-  },
-  {
-   "sentences": [
-    14,
-    19
-   ],
-   "kind": "contradiction",
-   "reason": "One sentence places Ornitholestes in the family Compsognathidae, while another classifies it as a coelurosaur, a different clade. In modern taxonomy these are incompatible. "
-  },
-  {
-   "sentences": [
-    14,
-    19,
-    22
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 23 claims Ornitholestes is the earliest‑diverging oviraptorosaur, which conflicts with its placement in Compsognathidae and as a coelurosaur. The three statements cannot all be true. "
-  },
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 says Ornitholestes was the first theropod discovered in the 1900s, but sentence 5 states it was discovered in 1900, which is not the first discovery of a theropod in that decade. The claim is inconsistent with known history. "
-  },
-  {
-   "sentences": [
-    0,
     2
    ],
    "kind": "repetition",
-   "reason": "Both sentences discuss the length of Ornitholestes relative to other dinosaurs, effectively repeating the same size claim. "
+   "reason": "Sentence 3 repeats the same information about the single specimen twice."
+  },
+  {
+   "sentences": [
+    12,
+    15
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 13 classifies Ornitholestes as belonging to Compsognathidae, while sentence 16 claims it is the earliest-diverging oviraptorosaur."
+  },
+  {
+   "sentences": [
+    10,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 11 places Ornitholestes in the clade Coelurosauria, whereas sentence 13 assigns it to the family Compsognathidae, a different taxonomic level."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Ornitholestes lived about 154 million years ago in the late Jurassic of what is now North America.\" / \"Ornitholestes lived during the Late Jurassic, approximately 157 million years ago, from the Kimmeridgian to the Tithonian stages, in what is now North America.\": The two sentences give different ages for the same species (154 Ma vs 157 Ma).",
-  "- contradiction: \"All published cladistic analyses classify Ornitholestes as a coelurosaur as defined by Gauthier.\" / \"Ornitholestes belongs to the parent group Compsognathidae.\": One sentence places Ornitholestes in the family Compsognathidae, while another classifies it as a coelurosaur, a different clade. In modern taxonomy these are incompatible. ",
-  "- contradiction: \"All published cladistic analyses classify Ornitholestes as a coelurosaur as defined by Gauthier.\" / \"Ornitholestes belongs to the parent group Compsognathidae.\" / \"Kimberley Chapelle and colleagues presented robust evidence in 2021 suggesting Ornitholestes is the earliest-diverging oviraptorosaur based on CT scan analysis of the skull.\": Sentence 23 claims Ornitholestes is the earliest‑diverging oviraptorosaur, which conflicts with its placement in Compsognathidae and as a coelurosaur. The three statements cannot all be true. ",
-  "- contradiction: \"Ornitholestes is known from a single partial skeleton with a crushed skull found at Bone Cabin Quarry in Wyoming in 1900. All known information about Ornitholestes comes from a single specimen discovered in 1900 at the Bone Cabin Mine near Medicine Bow, Wyoming, and described by Henry Fairfield Osborn in 1903.\" / \"Ornitholestes was the first theropod dinosaur discovered in the 1900s.\": Sentence 6 says Ornitholestes was the first theropod discovered in the 1900s, but sentence 5 states it was discovered in 1900, which is not the first discovery of a theropod in that decade. The claim is inconsistent with known history. "
+  "- contradiction: \"Ornitholestes belongs to the parent group Compsognathidae.\" / \"Kimberley Chapelle and colleagues presented robust evidence in 2021 suggesting Ornitholestes is the earliest-diverging oviraptorosaur based on CT scan analysis of the skull.\": Sentence 13 classifies Ornitholestes as belonging to Compsognathidae, while sentence 16 claims it is the earliest-diverging oviraptorosaur.",
+  "- contradiction: \"All published cladistic analyses classify Ornitholestes as a coelurosaur as defined by Gauthier.\" / \"Ornitholestes belongs to the parent group Compsognathidae.\": Sentence 11 places Ornitholestes in the clade Coelurosauria, whereas sentence 13 assigns it to the family Compsognathidae, a different taxonomic level."
  ],
- "rewrite": "unchanged",
- "rewritten_at": "2026-11-25T12:25:32+00:00",
- "rewrite_mode": "sentences"
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:13:04+00:00"
 }

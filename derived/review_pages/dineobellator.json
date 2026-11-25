@@ -2,19 +2,30 @@
  "taxon_key": "dineobellator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6ef1484f4a6fb313",
- "reviewed_at": "2026-11-24T01:00:55+00:00",
+ "text_hash": "5606a2552517e0f0",
+ "reviewed_at": "2026-11-25T22:49:09+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    9
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 9 states Dineobellator lived approximately 67 million years ago, yet also says it lived between 72.2 and 66 million years ago, giving conflicting age ranges."
+  },
+  {
+   "sentences": [
+    8
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the same injury evidence—a claw gouge and a healed rib—without adding new information."
+   "reason": "Sentence 9 repeats the same information about age, location, and formation multiple times within the same sentence."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Dineobellator lived during the Late Cretaceous (Maastrichtian age) in the Ojo Alamo Formation of New Mexico, United States, approximately 67 million years ago during the Maastrichtian stage of the Late Cretaceous in what is now North America, specifically in Maastrichtian sediments of the Naashoibito Member of the Ojo Alamo Formation in New Mexico, USA, between 72.2 and 66 million years ago during the Maastrichtian epoch.\": Sentence 9 states Dineobellator lived approximately 67 million years ago, yet also says it lived between 72.2 and 66 million years ago, giving conflicting age ranges."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:25:30+00:00"
 }

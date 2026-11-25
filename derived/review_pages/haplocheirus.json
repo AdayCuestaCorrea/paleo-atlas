@@ -2,8 +2,8 @@
  "taxon_key": "haplocheirus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bce118de5630779a",
- "reviewed_at": "2026-11-25T13:18:30+00:00",
+ "text_hash": "8f35f31da7b382d0",
+ "reviewed_at": "2026-11-25T22:25:46+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,79 +11,57 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "Estimated adult mass ranges (21 kg vs 38–43 kg) conflict."
-  },
-  {
-   "sentences": [
-    1,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state Haplocheirus is an alvarezsaur."
+   "reason": "Sentence 3 gives a maximum adult weight of 21 kg, while sentence 9 estimates an adult mass of 38–43 kg."
   },
   {
    "sentences": [
     9,
-    20
+    19
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 claims Haplocheirus predates others by ~63 million years, but the dates in sentence 21 place it only ~11–13 million years older than Archaeopteryx, not 63 million."
+   "reason": "Sentence 10 dates the fossil to 161.2–158.7 Ma, whereas sentence 20 gives a broader range of 161.5–154.8 Ma."
+  },
+  {
+   "sentences": [
+    16,
+    19
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 17 states the age as 161.2–158.7 Ma (Oxfordian), conflicting with the 161.5–154.8 Ma range in sentence 20."
+  },
+  {
+   "sentences": [
+    9,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat the same age range for Haplocheirus."
+  },
+  {
+   "sentences": [
+    9,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat the age range, though with slightly different bounds."
+  },
+  {
+   "sentences": [
+    16,
+    19
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat the age range, again with slightly different bounds."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 2,
  "notes": [
-  "- contradiction: \"Gregory S. Paul estimated the animal was about 2 meters long and weighed 21 kilograms, while other measurements suggest a length of 1.9 to 2.3 meters and a weight up to 10.56 kilograms.\" / \"Based on growth curves derived from related species, researchers estimate the adult mass of Haplocheirus to be between 38 kg and 43 kg.\": Estimated adult mass ranges (21 kg vs 38–43 kg) conflict.",
-  "- contradiction: \"Haplocheirus is the most basal and oldest member of its group, predating others by approximately 63 million years and is approximately 15 million years older than the first bird, Archaeopteryx.\" / \"Haplocheirus lived during the Late Jurassic, between 161.2 and 158.7 million years ago, and dating of volcanic feldspar places the habitat of Haplocheirus at the Oxfordian stage of the Late Jurassic.\": Sentence 10 claims Haplocheirus predates others by ~63 million years, but the dates in sentence 21 place it only ~11–13 million years older than Archaeopteryx, not 63 million."
+  "- contradiction: \"Gregory S. Paul estimated the animal was about 2 meters long and weighed 21 kilograms, while other measurements suggest a length of 1.9 to 2.3 meters and a weight up to 10.56 kilograms.\" / \"Based on growth curves derived from related species, researchers estimate the adult mass of Haplocheirus to be between 38 kg and 43 kg.\": Sentence 3 gives a maximum adult weight of 21 kg, while sentence 9 estimates an adult mass of 38–43 kg.",
+  "- contradiction: \"The genus Haplocheirus was described by Choiniere and colleagues in 2010 from a fossil found in rocks dated between 161.2 and 158.7 million years old from the Shishugou Formation in the Junggar Basin of northwestern China.\" / \"The time range for Haplocheirus is from 161.5 to 154.8 million years ago.\": Sentence 10 dates the fossil to 161.2–158.7 Ma, whereas sentence 20 gives a broader range of 161.5–154.8 Ma.",
+  "- contradiction: \"Haplocheirus lived during the Late Jurassic, between 161.2 and 158.7 million years ago, and dating of volcanic feldspar places the habitat of Haplocheirus at the Oxfordian stage of the Late Jurassic.\" / \"The time range for Haplocheirus is from 161.5 to 154.8 million years ago.\": Sentence 17 states the age as 161.2–158.7 Ma (Oxfordian), conflicting with the 161.5–154.8 Ma range in sentence 20."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:10:27+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1
-     ],
-     "kind": "contradiction",
-     "reason": "Weight estimate 21 kg conflicts with other estimates up to 10.56 kg."
-    },
-    {
-     "sentences": [
-      17,
-      18
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state Haplocheirus lived in the Oxfordian stage of the Late Jurassic."
-    },
-    {
-     "sentences": [
-      17,
-      19
-     ],
-     "kind": "contradiction",
-     "reason": "Time range 161.5–154.8 Ma conflicts with the 161.2–158.7 Ma range given in sentence 18."
-    },
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "missing_context",
-     "reason": "The species name 'sollers' is introduced without prior mention of the name or its origin."
-    },
-    {
-     "sentences": [
-      15
-     ],
-     "kind": "missing_context",
-     "reason": "Reference to digging into tree trunks assumes knowledge of tree trunks that the page never provides."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T05:05:14+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:47+00:00"
+ "rewritten_at": "2026-11-25T23:12:37+00:00"
 }

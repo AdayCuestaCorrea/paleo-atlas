@@ -2,19 +2,32 @@
  "taxon_key": "chindesaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "71ee0d255b9e9f47",
- "reviewed_at": "2026-11-24T00:08:53+00:00",
+ "text_hash": "2a52f69c79e73d9b",
+ "reviewed_at": "2026-11-25T22:25:09+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    4
+    5,
+    7
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the neural spines expanding outward to form 'spine-tables' in Chindesaurus."
+   "reason": "Both sentences state that Chindesaurus is a herrerasaurid, repeating the same classification claim."
+  },
+  {
+   "sentences": [
+    7,
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 8 places Chindesaurus within Herrerasauridae as a herrerasaurid theropod, while sentence 9 reclassifies it as a non‑herrerasaurid herrerasaurian within Morphoraptora, presenting conflicting taxonomic positions."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "notes": [
+  "- contradiction: \"Research suggested that the Chindesaurus and Tawa clade belonged to basal Saurischia, before the split between sauropodomorphs and theropods, leading to its classification within the family Herrerasauridae and as a herrerasaurid theropod.\" / \"A 2019 study suggested Chindesaurus was a theropod closely related to Tawa, while a 2026 study placed it in a new clade called Morphoraptora, grouping it with Tawa as non-herrerasaurid herrerasaurians based on a unique trait: a posterior margin on the proximal tibia divided by two notches.\": Sentence 8 places Chindesaurus within Herrerasauridae as a herrerasaurid theropod, while sentence 9 reclassifies it as a non‑herrerasaurid herrerasaurian within Morphoraptora, presenting conflicting taxonomic positions."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:12:10+00:00"
 }

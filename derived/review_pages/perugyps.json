@@ -2,41 +2,45 @@
  "taxon_key": "perugyps",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a8cf252e9c42d8e3",
- "reviewed_at": "2026-11-25T13:34:45+00:00",
+ "text_hash": "96eb750cb43f9142",
+ "reviewed_at": "2026-11-25T22:41:14+00:00",
  "problems": [
   {
    "sentences": [
-    27,
-    28
+    9,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 28 states Perugyps lived from Late Miocene to Early Pliocene, while sentence 29 limits it to 7.246–5.333 Ma during the Messinian age (Late Miocene), excluding the Early Pliocene."
+   "kind": "repetition",
+   "reason": "Both sentences state that Perugyps was about 7% larger than the Andean condor."
   },
   {
    "sentences": [
-    11,
-    12,
-    21
+    21,
+    22
    ],
    "kind": "repetition",
-   "reason": "All three sentences state that the genus Perugyps was described/established by Stucchi and Emslie in 2005."
+   "reason": "Both sentences give the same age range and epoch for Perugyps."
   },
   {
    "sentences": [
-    14,
-    15
+    13,
+    23
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the discovery of Perugyps fossils in the Pisco Formation, with only minor locality detail differences."
+   "reason": "Both sentences state that Perugyps was found in the Pisco Formation of Peru."
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 25 describes the localities as ancient coastal environments, which is information about the environment rather than about the animal itself."
   }
  ],
  "repetitions_dropped": 3,
- "notes": [
-  "- contradiction: \"Perugyps lived during the Late Miocene to Early Pliocene epochs.\" / \"Perugyps lived between 7.246 and 5.333 million years ago during the Messinian age.\": Sentence 28 states Perugyps lived from Late Miocene to Early Pliocene, while sentence 29 limits it to 7.246–5.333 Ma during the Messinian age (Late Miocene), excluding the Early Pliocene."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:41:45+00:00",
@@ -69,8 +73,40 @@
    "repetitions_dropped": 3,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T02:32:00+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:34:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      27,
+      28
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 28 states Perugyps lived from Late Miocene to Early Pliocene, while sentence 29 limits it to 7.246–5.333 Ma during the Messinian age (Late Miocene), excluding the Early Pliocene."
+    },
+    {
+     "sentences": [
+      11,
+      12,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "All three sentences state that the genus Perugyps was described/established by Stucchi and Emslie in 2005."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the discovery of Perugyps fossils in the Pisco Formation, with only minor locality detail differences."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:17:12+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:17:12+00:00"
+ ]
 }

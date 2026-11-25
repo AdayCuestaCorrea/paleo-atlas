@@ -2,40 +2,23 @@
  "taxon_key": "isisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1e5cce461b763d1c",
- "reviewed_at": "2026-11-25T13:29:51+00:00",
+ "text_hash": "28d3035446a97ec1",
+ "reviewed_at": "2026-11-25T22:38:00+00:00",
  "problems": [
   {
    "sentences": [
-    6,
-    14
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 states the type specimen was originally described as Titanosaurus colberti and later moved to its own genus Isisaurus, whereas sentence 15 claims it was placed within the family Titanosauridae under the genus Titanosaurus in 2001."
-  },
-  {
-   "sentences": [
-    18,
-    20
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 19 reports Isisaurus fossils in both the Lameta Formation of India and the Pab Formation of Pakistan, while sentence 21 limits its existence to the territory of modern India during the Maastrichtian."
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 14 discusses the classification of all Indian sauropods as Titanosauria, which is a broader statement not directly about Isisaurus itself."
+   "kind": "missing_context",
+   "reason": "The sentence refers to coprolites attributed to Isisaurus without any prior mention of coprolites or how they were identified as belonging to this species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The type specimen of Isisaurus colberti was originally described and named Titanosaurus colberti by Sohan Lal Jain and Saswati Bandyopadhyay in 1997, before it was placed in its own genus by Wilson and Upchurch in 2003.\" / \"In 2001, Isisaurus was placed within the family Titanosauridae under the genus Titanosaurus.\": Sentence 7 states the type specimen was originally described as Titanosaurus colberti and later moved to its own genus Isisaurus, whereas sentence 15 claims it was placed within the family Titanosauridae under the genus Titanosaurus in 2001.",
-  "- contradiction: \"Isisaurus fossils have been found in the Late Cretaceous Lameta Formation of India and the Pab Formation of Pakistan.\" / \"Isisaurus lived in the territory of modern India during the Maastrichtian stage, the final stage of the Cretaceous period, between 72.2 and 66 million years ago.\": Sentence 19 reports Isisaurus fossils in both the Lameta Formation of India and the Pab Formation of Pakistan, while sentence 21 limits its existence to the territory of modern India during the Maastrichtian."
+  "- missing context: \"Fossilized fungi found in coprolites attributed to Isisaurus suggest it ate leaves from various tree species.\": The sentence refers to coprolites attributed to Isisaurus without any prior mention of coprolites or how they were identified as belonging to this species."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:34:22+00:00",
@@ -66,8 +49,40 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:26:00+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:29:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states the type specimen was originally described as Titanosaurus colberti and later moved to its own genus Isisaurus, whereas sentence 15 claims it was placed within the family Titanosauridae under the genus Titanosaurus in 2001."
+    },
+    {
+     "sentences": [
+      18,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 19 reports Isisaurus fossils in both the Lameta Formation of India and the Pab Formation of Pakistan, while sentence 21 limits its existence to the territory of modern India during the Maastrichtian."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 14 discusses the classification of all Indian sauropods as Titanosauria, which is a broader statement not directly about Isisaurus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:14:22+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:14:22+00:00"
+ "rewritten_at": "2026-11-25T23:18:43+00:00"
 }

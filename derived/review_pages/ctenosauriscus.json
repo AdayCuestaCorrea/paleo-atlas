@@ -2,51 +2,23 @@
  "taxon_key": "ctenosauriscus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0fb0c0ea2cec3f51",
- "reviewed_at": "2026-11-25T13:41:19+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
+ "text_hash": "c5e44eae7b46629c",
+ "reviewed_at": "2026-11-25T22:47:09+00:00",
+ "problems": [
   {
-   "reviewed_at": "2026-11-24T00:55:52+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "One sentence claims the animal walked upright on two legs, while another states its sail would have prevented upright walking."
-    },
-    {
-     "sentences": [
-      9,
-      10
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state the animal is classified as an archosaur, repeating the same taxonomic claim."
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to \"the same geological layer\" but no layer has been previously mentioned."
-    },
-    {
-     "sentences": [
-      12
-     ],
-     "kind": "about_something_else",
-     "reason": "The sentence describes the environment rather than the animal itself."
-    }
+   "sentences": [
+    9
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:15:21+00:00"
+   "kind": "missing_context",
+   "reason": "The phrase \"same formation\" is not defined earlier in the page; the formation is only mentioned later in sentence 14."
   }
- ]
+ ],
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Xiphosurans, or horseshoe crabs, found in the same formation may have been prey for Ctenosauriscus.\": The phrase \"same formation\" is not defined earlier in the page; the formation is only mentioned later in sentence 14."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:22+00:00"
 }

@@ -2,79 +2,25 @@
  "taxon_key": "moganopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "35e3630914c54033",
- "reviewed_at": "2026-11-25T13:42:23+00:00",
+ "text_hash": "c58a61804af4cb01",
+ "reviewed_at": "2026-11-25T22:48:03+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    19
+    2,
+    16,
+    20
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Moganopterus belongs to the family Boreopteridae."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the time and location of Moganopterus’ existence, essentially repeating the same information."
+   "kind": "contradiction",
+   "reason": "Sentences 3, 17, and 21 give conflicting taxonomic placements for Moganopterus, with 3 claiming it is one of the largest ctenochasmatid pterosaurs, 17 placing it in Boreopteridae, and 21 suggesting it belongs to Ctenochasmatidae."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:58:10+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      4,
-      5
-     ],
-     "kind": "repetition",
-     "reason": "Sentences 1, 5, and 6 all state that Moganopterus had a wingspan of about 7 m and was one of the largest known ctenochasmatid pterosaurs."
-    },
-    {
-     "sentences": [
-      1,
-      9
-     ],
-     "kind": "repetition",
-     "reason": "Sentences 2 and 10 repeat the description of the jaws, teeth, and lower jaw length."
-    },
-    {
-     "sentences": [
-      2,
-      6,
-      10
-     ],
-     "kind": "repetition",
-     "reason": "Sentences 3, 7, and 11 all describe the fenestra nasoantorbitalis, parietal crest, skull proportions, and neck vertebrae."
-    },
-    {
-     "sentences": [
-      11
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 12 repeats the classification information already given in sentence 12 itself (Boreopteridae, subfamily Moganopterinae, superfamily Ornithocheiroidea, suborder Pterodactyloidea)."
-    },
-    {
-     "sentences": [
-      11,
-      13
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 12 places Moganopterus in Boreopteridae, while sentence 14 states that some researchers place it in Ctenochasmatidae."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:30:47+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Based on its skull and neck size, Moganopterus had a wingspan of about 7 meters, making it one of the largest known ctenochasmatid pterosaurs.\" / \"In 2012, Moganopterus was classified within the family Boreopteridae and subfamily Moganopterinae.\" / \"Some researchers, such as Longrich, Martill, and Andres (2018), place Moganopterus within the Ctenochasmatidae rather than the Boreopteridae.\": Sentences 3, 17, and 21 give conflicting taxonomic placements for Moganopterus, with 3 claiming it is one of the largest ctenochasmatid pterosaurs, 17 placing it in Boreopteridae, and 21 suggesting it belongs to Ctenochasmatidae."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:24:52+00:00"
 }

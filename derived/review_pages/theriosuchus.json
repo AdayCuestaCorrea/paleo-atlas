@@ -2,86 +2,24 @@
  "taxon_key": "theriosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e0c2c4835f6cfeb0",
- "reviewed_at": "2026-11-25T13:49:13+00:00",
+ "text_hash": "5ee9ba3b86f06424",
+ "reviewed_at": "2026-11-25T22:55:10+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    3
+    6,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the year the genus was first described, giving two different years (1879 and 1878) for the same event."
+   "kind": "contradiction",
+   "reason": "Sentence 7 states fossils date from the Late Jurassic to the Early Cretaceous, while sentence 9 claims fragmentary records from the Middle Jurassic, which contradicts the earlier age range."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:17:35+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      2
-     ],
-     "kind": "contradiction",
-     "reason": "[1] places Theriosuchus in the Early Cretaceous, while [3] states it was present in the Late Cretaceous."
-    },
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "contradiction",
-     "reason": "[2] claims it was a common terrestrial basal crocodilian in Europe during the Cretaceous, whereas [3] says it was one of the few basal crocodilians in Laurasia during the Late Cretaceous."
-    },
-    {
-     "sentences": [
-      6,
-      8
-     ],
-     "kind": "contradiction",
-     "reason": "[7] assigns Theriosuchus to the family Atoposauridae, but [9] suggests it is a neosuchian related to Paralligatoridae."
-    },
-    {
-     "sentences": [
-      0,
-      7
-     ],
-     "kind": "contradiction",
-     "reason": "[8] lists a North American species (T. morrisonensis), contradicting [1] that the genus is known only from Asia and England."
-    },
-    {
-     "sentences": [
-      12,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "[13] limits fossils to Late Jurassic–Early Cretaceous, while [15] reports Middle Jurassic occurrences."
-    },
-    {
-     "sentences": [
-      4,
-      11
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Richard Owen described the genus in 1879."
-    },
-    {
-     "sentences": [
-      4,
-      5
-     ],
-     "kind": "contradiction",
-     "reason": "[6] attributes the genus to Owen in 1878, conflicting with the 1879 date in [5] and [12]."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T06:15:05+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Fossils of Theriosuchus date from the Late Jurassic to the Early Cretaceous periods.\" / \"Fragmentary records of Theriosuchus exist from the Middle Jurassic and Early Cretaceous in China, Morocco, and Scotland.\": Sentence 7 states fossils date from the Late Jurassic to the Early Cretaceous, while sentence 9 claims fragmentary records from the Middle Jurassic, which contradicts the earlier age range."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:28:11+00:00"
 }

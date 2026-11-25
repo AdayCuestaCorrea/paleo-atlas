@@ -2,43 +2,30 @@
  "taxon_key": "agujaceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "80ce302983f11ef8",
- "reviewed_at": "2026-11-25T13:44:55+00:00",
+ "text_hash": "94e520182c83f4d2",
+ "reviewed_at": "2026-11-25T22:50:17+00:00",
  "problems": [
   {
    "sentences": [
-    10
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "The phrase \"During this time\" refers to a period that has not been previously mentioned or defined in the page."
+  },
+  {
+   "sentences": [
+    7
    ],
    "kind": "about_something_else",
-   "reason": "The sentence describes the geographic location of the Aguja Formation, not a characteristic of Agujaceratops itself."
+   "reason": "Sentence 8 describes the geographic location of the Aguja Formation, which is a geological context rather than a characteristic of Agujaceratops itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:05:16+00:00",
-   "problems": [
-    {
-     "sentences": [
-      9
-     ],
-     "kind": "about_something_else",
-     "reason": "Sentence 10 describes the location of the Aguja Formation, not a characteristic of Agujaceratops itself."
-    },
-    {
-     "sentences": [
-      9
-     ],
-     "kind": "missing_context",
-     "reason": "The phrase \"During this time\" refers to a period not previously mentioned, leaving the timing unclear."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T05:10:51+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"During this time, the Aguja Formation was located along the western margin of the Western Interior Seaway.\": The phrase \"During this time\" refers to a period that has not been previously mentioned or defined in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:08+00:00"
 }

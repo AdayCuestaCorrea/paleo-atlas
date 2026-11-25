@@ -2,52 +2,33 @@
  "taxon_key": "eoraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "d01509157d5aa678",
- "reviewed_at": "2026-11-25T13:18:48+00:00",
+ "text_hash": "44338c29de0bafff",
+ "reviewed_at": "2026-11-25T22:26:13+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    2
+    4,
+    5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 states Eoraptor measures 1.2–1.3 m long, while sentence 3 says an adult was only about 1 m long."
+   "reason": "One sentence claims Eoraptor was an omnivore, another claims it was a carnivorous sprinter that tore apart prey."
   },
   {
    "sentences": [
-    8,
-    9,
-    14,
-    16,
-    17,
-    18
+    1,
+    4
    ],
-   "kind": "repetition",
-   "reason": "All these sentences repeat the claim that Eoraptor was an omnivore or a carnivore with similar dental features."
-  },
-  {
-   "sentences": [
-    10,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Eoraptor as a swift sprinter that used claws and teeth to tear prey."
-  },
-  {
-   "sentences": [
-    28
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 29 refers to a “relatively large eye orbit” without any prior mention of the eye orbit or its significance."
+   "kind": "contradiction",
+   "reason": "The size and weight description in sentence 2 implies a small herbivorous/omnivorous diet, while sentence 5 explicitly states it had multiple tooth shapes suggesting omnivory, which conflicts with the later claim of it being a swift carnivore in sentence 6."
   }
  ],
- "repetitions_dropped": 5,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Known specimens of this animal measure 1.2 to 1.3 meters in length and weigh around or less than 10 kilograms.\" / \"An adult individual was approximately 1 meter long, 30 centimeters tall, and weighed about 10 kilograms.\": Sentence 2 states Eoraptor measures 1.2–1.3 m long, while sentence 3 says an adult was only about 1 m long.",
-  "- missing context: \"Bonaparte interpreted the relatively large eye orbit as a juvenile trait in 1996.\": Sentence 29 refers to a “relatively large eye orbit” without any prior mention of the eye orbit or its significance."
+  "- contradiction: \"Eoraptor possessed multiple tooth shapes, suggesting it was an omnivore.\" / \"Eoraptor was a swift sprinter that used claws and teeth to tear apart prey after catching it.\": One sentence claims Eoraptor was an omnivore, another claims it was a carnivorous sprinter that tore apart prey.",
+  "- contradiction: \"Known specimens of Eoraptor measure 1.2 to 1.3 meters in length and weigh around or less than 10 kilograms, while one specific adult individual was approximately 1 meter long, 30 centimeters tall, and weighed about 10 kilograms.\" / \"Eoraptor possessed multiple tooth shapes, suggesting it was an omnivore.\": The size and weight description in sentence 2 implies a small herbivorous/omnivorous diet, while sentence 5 explicitly states it had multiple tooth shapes suggesting omnivory, which conflicts with the later claim of it being a swift carnivore in sentence 6."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:10:43+00:00",
@@ -80,8 +61,52 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:09:38+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:18:48+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 states Eoraptor measures 1.2–1.3 m long, while sentence 3 says an adult was only about 1 m long."
+    },
+    {
+     "sentences": [
+      8,
+      9,
+      14,
+      16,
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "All these sentences repeat the claim that Eoraptor was an omnivore or a carnivore with similar dental features."
+    },
+    {
+     "sentences": [
+      10,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Eoraptor as a swift sprinter that used claws and teeth to tear prey."
+    },
+    {
+     "sentences": [
+      28
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 29 refers to a “relatively large eye orbit” without any prior mention of the eye orbit or its significance."
+    }
+   ],
+   "repetitions_dropped": 5,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:05:57+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:05:57+00:00"
+ "rewritten_at": "2026-11-25T23:12:45+00:00"
 }

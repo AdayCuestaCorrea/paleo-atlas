@@ -2,31 +2,32 @@
  "taxon_key": "nanuqsaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b8687cc186ed9a00",
- "reviewed_at": "2026-11-25T13:24:44+00:00",
+ "text_hash": "f212719d4c75e8ab",
+ "reviewed_at": "2026-11-25T22:32:35+00:00",
  "problems": [
   {
    "sentences": [
     1,
-    12
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 estimates 500–900 kg, while sentence 13 estimates over 1.9 metric tons for adult Nanuqsaurus."
+   "kind": "repetition",
+   "reason": "Both sentences state that Nanuqsaurus was likely similar in size to large North American tyrannosaurids like Albertosaurus rather than being a small animal."
   },
   {
    "sentences": [
-    14
+    1,
+    8
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 15 discusses the paleogeography of northern Alaska, not a characteristic of the animal itself."
+   "kind": "contradiction",
+   "reason": "Sentence 2 gives an early estimate of 6 m length and 500–900 kg weight, while sentence 9 estimates adult weight over 1.9 t, which is inconsistent with the earlier estimate."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Early estimates placed the animal at about 6 meters long and weighing between 500 and 900 kilograms, roughly half the length of a Tyrannosaurus rex.\" / \"Based on recently collected fossils, adult Nanuqsaurus specimens are estimated to have weighed over 1.9 metric tons.\": Sentence 2 estimates 500–900 kg, while sentence 13 estimates over 1.9 metric tons for adult Nanuqsaurus."
+  "- contradiction: \"Early estimates placed the animal at about 6 meters long and weighing between 500 and 900 kilograms, roughly half the length of a Tyrannosaurus rex, but later studies suggest it was likely similar in size to large North American tyrannosaurids like Albertosaurus rather than being a small animal.\" / \"Based on recently collected fossils, adult Nanuqsaurus specimens are estimated to have weighed over 1.9 metric tons, suggesting it was likely similar in size to large North American tyrannosaurids like Albertosaurus rather than being a small animal as initially thought.\": Sentence 2 gives an early estimate of 6 m length and 500–900 kg weight, while sentence 9 estimates adult weight over 1.9 t, which is inconsistent with the earlier estimate."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:23:47+00:00",
@@ -51,8 +52,32 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:54:18+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 estimates 500–900 kg, while sentence 13 estimates over 1.9 metric tons for adult Nanuqsaurus."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 15 discusses the paleogeography of northern Alaska, not a characteristic of the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:11:06+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:11:06+00:00"
+ "rewritten_at": "2026-11-25T23:15:59+00:00"
 }

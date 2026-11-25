@@ -2,67 +2,31 @@
  "taxon_key": "maxakalisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b004c0243cfd7e65",
- "reviewed_at": "2026-11-25T13:46:02+00:00",
+ "text_hash": "041fe995d47e8982",
+ "reviewed_at": "2026-11-25T22:52:00+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    3
+    1
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Maxakalisaurus has unusually grooved teeth, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 2 claims the type specimen is 12.1 m long while a separate juvenile is 13 m long, implying adults may reach 20 m, which contradicts the earlier statement that the type specimen is the representative adult size."
   },
   {
    "sentences": [
-    4,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 5 introduces the genus and species name, and sentence 9 restates the same information, repeating the claim about the name."
-  },
-  {
-   "sentences": [
-    7
+    4
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 8 discusses the evolution of South American sauropods in general, not specifically about Maxakalisaurus, treating a broader group as if it were about the animal itself."
+   "reason": "Sentence 5 discusses the evolution of South American sauropods in general, not specifically Maxakalisaurus, and is presented as if it were a characteristic of the animal itself."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T01:09:03+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 3 claims Maxakalisaurus is the largest dinosaur ever described in Brazil, while sentence 2 suggests adults may have reached 20 m, implying it may not be the largest."
-    },
-    {
-     "sentences": [
-      6
-     ],
-     "kind": "repetition",
-     "reason": "Sentence 7 repeats information already given in sentence 6 about the specimen being stored at the National Museum of Brazil before the 2018 fire."
-    },
-    {
-     "sentences": [
-      8
-     ],
-     "kind": "about_something_else",
-     "reason": "Sentence 9 discusses the evolution of South American sauropods in general, not specifically about Maxakalisaurus."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T05:32:53+00:00"
-  }
- ]
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Maxakalisaurus was a medium-sized titanosaur, a group of large, long-necked herbivorous dinosaurs. It possessed a long neck and tail, along with ridged teeth, a feature that was unusual among sauropods. The animal also had osteoderms, which are bony deposits in the skin, a trait shared by many other titanosaurs.\" / \"The type specimen represents an animal approximately 12.1 meters long and weighing an estimated 5 tons. However, a separate juvenile specimen was estimated at 13 meters long and 9 tons, suggesting that adults may have reached 20 meters.\": Sentence 2 claims the type specimen is 12.1 m long while a separate juvenile is 13 m long, implying adults may reach 20 m, which contradicts the earlier statement that the type specimen is the representative adult size."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:26:49+00:00"
 }

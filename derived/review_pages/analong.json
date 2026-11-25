@@ -2,8 +2,8 @@
  "taxon_key": "analong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0ad6e3225ebc9f22",
- "reviewed_at": "2026-11-25T13:46:20+00:00",
+ "text_hash": "80465703de919926",
+ "reviewed_at": "2026-11-25T22:52:14+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,24 +11,24 @@
     4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 introduces a new species Analong chuanjiensis, while sentence 1 states the only known species is Analong chuanjieensis, presenting conflicting species names."
+   "reason": "Sentence 1 claims Analong chuanjieensis is the only known species, while sentence 5 introduces a new species Analong chuanjiensis, contradicting the earlier statement."
   },
   {
    "sentences": [
-    8,
-    9
+    3,
+    4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 10 places Analogue (likely Analong) in the Bajocian age (170.9–168.2 Ma), whereas sentence 9 places it in the Middle Jurassic (~168 Ma), giving inconsistent temporal ranges."
+   "reason": "Sentence 4 says the skeletons were named Chuanjiesaurus, but sentence 5 says they were reclassified as Analong chuanjiensis, conflicting on the genus name."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The only known species of this dinosaur is Analong chuanjieensis.\" / \"In 2020, Xin-Xin Ren and colleagues re-examined the specimen LFGT LCD9701-1 and determined that it was distinct enough from the Chuanjiesaurus holotype to warrant a new genus and species, Analong chuanjiensis.\": Sentence 5 introduces a new species Analong chuanjiensis, while sentence 1 states the only known species is Analong chuanjieensis, presenting conflicting species names.",
-  "- contradiction: \"Analong lived during the Middle Jurassic, approximately 168 million years ago, in what is now Asia, with remains found in the Chuanjie Formation in Yunnan Province, China.\" / \"Analogue lived between 170.9 and 168.2 million years ago during the Bajocian age.\": Sentence 10 places Analogue (likely Analong) in the Bajocian age (170.9–168.2 Ma), whereas sentence 9 places it in the Middle Jurassic (~168 Ma), giving inconsistent temporal ranges."
+  "- contradiction: \"The only known species of this dinosaur is Analong chuanjieensis.\" / \"In 2020, Xin-Xin Ren and colleagues re-examined the specimen LFGT LCD9701-1 and determined that it was distinct enough from the Chuanjiesaurus holotype to warrant a new genus and species, Analong chuanjiensis.\": Sentence 1 claims Analong chuanjieensis is the only known species, while sentence 5 introduces a new species Analong chuanjiensis, contradicting the earlier statement.",
+  "- contradiction: \"The skeletons remained in situ until 2000, when they were described and named Chuanjiesaurus.\" / \"In 2020, Xin-Xin Ren and colleagues re-examined the specimen LFGT LCD9701-1 and determined that it was distinct enough from the Chuanjiesaurus holotype to warrant a new genus and species, Analong chuanjiensis.\": Sentence 4 says the skeletons were named Chuanjiesaurus, but sentence 5 says they were reclassified as Analong chuanjiensis, conflicting on the genus name."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:09:47+00:00",
@@ -45,8 +45,33 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T05:37:28+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:46:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 introduces a new species Analong chuanjiensis, while sentence 1 states the only known species is Analong chuanjieensis, presenting conflicting species names."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 places Analogue (likely Analong) in the Bajocian age (170.9–168.2 Ma), whereas sentence 9 places it in the Middle Jurassic (~168 Ma), giving inconsistent temporal ranges."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:24:52+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:24:52+00:00"
+ "rewritten_at": "2026-11-25T23:26:57+00:00"
 }

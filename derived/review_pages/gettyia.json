@@ -2,32 +2,56 @@
  "taxon_key": "gettyia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "920fb85efd1320f5",
- "reviewed_at": "2026-11-25T13:54:08+00:00",
+ "text_hash": "9bc1be95ab854cf1",
+ "reviewed_at": "2026-11-25T22:59:59+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 classifies Gettyia as an enantiornithean bird in the family Avisauridae, while sentence 13 classifies it as an avialan belonging to the clade Enantiornithes, which are mutually exclusive taxonomic positions."
+   "kind": "missing_context",
+   "reason": "Refers to a knob-like structure on the second metatarsal, but the page only mentions a tarsometatarsus and never describes a second metatarsal."
   },
   {
    "sentences": [
-    14,
-    15
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "States that the third and fourth metatarsals were fused, yet the only fossil described is a tarsometatarsus."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions the tibialis cranialis tubercule without having introduced or defined it earlier in the text."
+  },
+  {
+   "sentences": [
+    7,
+    8,
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences discuss general bird behavior (forceful flexion) unrelated to Gettyia and are presented as if they describe the animal itself."
+  },
+  {
+   "sentences": [
+    10,
+    11
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Gettyia is classified within the family Avisauridae, repeating the same claim."
+   "reason": "Both sentences state that Gettyia is an extinct genus of avialan/enantiornithean belonging to Avisauridae, repeating the same classification."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Gettyia is an extinct genus of enantiornithean bird belonging to the family Avisauridae that lived in North America during the Late Cretaceous.\" / \"Gettyia is an extinct genus of avialan belonging to the clade Enantiornithes.\": Sentence 12 classifies Gettyia as an enantiornithean bird in the family Avisauridae, while sentence 13 classifies it as an avialan belonging to the clade Enantiornithes, which are mutually exclusive taxonomic positions."
+  "- missing context: \"The bird possessed a knob-like structure on the front edge of its second metatarsal that connected to the tibialis cranialis muscle.\": Refers to a knob-like structure on the second metatarsal, but the page only mentions a tarsometatarsus and never describes a second metatarsal.",
+  "- missing context: \"The third and fourth metatarsals were more extensively fused than in other avisaurids, with fusion occurring near both the ankle and the toes.\": States that the third and fourth metatarsals were fused, yet the only fossil described is a tarsometatarsus.",
+  "- missing context: \"The position of the tibialis cranialis tubercule suggests that Gettyia had a more specialized lifestyle than other avisaurids.\": Mentions the tibialis cranialis tubercule without having introduced or defined it earlier in the text."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:33:01+00:00",
@@ -51,8 +75,33 @@
    "repetitions_dropped": 1,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T07:20:58+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:54:08+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 classifies Gettyia as an enantiornithean bird in the family Avisauridae, while sentence 13 classifies it as an avialan belonging to the clade Enantiornithes, which are mutually exclusive taxonomic positions."
+    },
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Gettyia is classified within the family Avisauridae, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:30:18+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:30:18+00:00"
+ "rewritten_at": "2026-11-25T23:30:02+00:00"
 }

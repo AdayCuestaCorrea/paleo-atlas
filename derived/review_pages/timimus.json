@@ -2,8 +2,8 @@
  "taxon_key": "timimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "4817d260c3174716",
- "reviewed_at": "2026-11-25T13:41:58+00:00",
+ "text_hash": "a2dde10232e6495d",
+ "reviewed_at": "2026-11-25T22:47:47+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,49 +11,23 @@
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 estimates Timimus at 2.5 m long, while sentence 3 estimates the holotype at 4.3 m long."
+   "reason": "Sentence 1 estimates Timimus hermani at 2.5 m based on femur length, while sentence 3 cites a 2016 estimate of 4.3 m for the holotype, giving two different total lengths for the same animal."
   },
   {
    "sentences": [
-    6,
-    14
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Timimus lived during the Early Cretaceous."
+   "kind": "missing_context",
+   "reason": "Sentence 10 mentions a “possible Timimus relative” but no earlier sentence introduces or describes such a relative, leaving the reference unclear."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Timimus hermani was a small theropod dinosaur that lived in Australia during the Early Cretaceous, with a total estimated length of 2.5 meters based on the length of its femur.\" / \"A 2016 estimate suggests the holotype specimen was 4.3 meters long and weighed 200 kilograms.\": Sentence 1 estimates Timimus at 2.5 m long, while sentence 3 estimates the holotype at 4.3 m long."
+  "- contradiction: \"Timimus hermani was a small theropod dinosaur that lived in Australia during the Early Cretaceous, with a total estimated length of 2.5 meters based on the length of its femur.\" / \"A 2016 estimate suggests the holotype specimen was 4.3 meters long and weighed 200 kilograms.\": Sentence 1 estimates Timimus hermani at 2.5 m based on femur length, while sentence 3 cites a 2016 estimate of 4.3 m for the holotype, giving two different total lengths for the same animal.",
+  "- missing context: \"A fossilized toe bone from a possible Timimus relative shows a depressed fracture on the bottom surface, suggesting injury.\": Sentence 10 mentions a “possible Timimus relative” but no earlier sentence introduces or describes such a relative, leaving the reference unclear."
  ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:57:38+00:00",
-   "problems": [
-    {
-     "sentences": [
-      0,
-      3
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 1 states the estimated total length of Timimus hermani is 2.5 m, while sentence 4 gives a 2016 estimate of 4.3 m."
-    },
-    {
-     "sentences": [
-      9,
-      10
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 10 classifies Timimus as a tyrannosauroid, whereas sentence 11 places it within Paraves as a possible dromaeosaurid."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:26:11+00:00"
-  }
- ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:53+00:00"
+ "rewritten_at": "2026-11-25T23:24:44+00:00"
 }

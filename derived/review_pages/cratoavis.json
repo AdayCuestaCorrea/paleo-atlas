@@ -2,30 +2,23 @@
  "taxon_key": "cratoavis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1ebc98d81c1dc4e6",
- "reviewed_at": "2026-11-25T13:50:11+00:00",
+ "text_hash": "a8bc570d31c71fae",
+ "reviewed_at": "2026-11-25T22:56:27+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    2
    ],
    "kind": "missing_context",
-   "reason": "Refers to the gut of the holotype without prior mention of the gut."
-  },
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the lake environment of the formation, not a characteristic of the animal itself."
+   "reason": "Sentence 3 refers to the holotype’s intestine, but the page never describes or introduces the intestine before this mention."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fish remains found near the gut of the holotype provide direct evidence that Cratoavis ate fish.\": Refers to the gut of the holotype without prior mention of the gut."
+  "- missing context: \"Fish remains found near the holotype's intestine provide direct evidence that Cratoavis ate fish.\": Sentence 3 refers to the holotype’s intestine, but the page never describes or introduces the intestine before this mention."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:22:02+00:00",
@@ -48,8 +41,31 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T06:29:41+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:50:11+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the gut of the holotype without prior mention of the gut."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the lake environment of the formation, not a characteristic of the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:27:37+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:27:37+00:00"
+ "rewritten_at": "2026-11-25T23:28:43+00:00"
 }

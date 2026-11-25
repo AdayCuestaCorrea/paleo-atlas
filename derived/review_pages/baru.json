@@ -2,40 +2,47 @@
  "taxon_key": "baru",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e41b1c6b5cd07bae",
- "reviewed_at": "2026-11-25T13:14:18+00:00",
+ "text_hash": "d1afb4e69c973636",
+ "reviewed_at": "2026-11-25T22:21:52+00:00",
  "problems": [
   {
    "sentences": [
-    28,
-    29
+    19
    ],
-   "kind": "contradiction",
-   "reason": "The fossil age range for Baru is stated as Late Oligocene to Late Miocene in sentence 29, but as Late Oligocene to Middle Miocene in sentence 30."
+   "kind": "missing_context",
+   "reason": "Refers to the \"second premaxillary tooth\" without any prior mention of premaxillary teeth."
   },
   {
    "sentences": [
-    7,
-    30
+    20
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim that Baru adults reached a length of around 4 meters."
+   "kind": "missing_context",
+   "reason": "Mentions juveniles of Baru iylwenpeny before the species has been introduced."
   },
   {
    "sentences": [
-    19,
-    22
+    26
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Baru as hunting in shallower waters than modern saltwater crocodiles."
+   "kind": "missing_context",
+   "reason": "Cites the \"D Site\" and \"Whitehunter Site\" without explaining what these sites are."
+  },
+  {
+   "sentences": [
+    27
+   ],
+   "kind": "missing_context",
+   "reason": "Introduces the Pliocene as a time of improved conditions without any earlier reference to the Pliocene."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Baru fossils date from the Late Oligocene to the Late Miocene.\" / \"Fossils of Baru date from the Late Oligocene to the Middle Miocene.\": The fossil age range for Baru is stated as Late Oligocene to Late Miocene in sentence 29, but as Late Oligocene to Middle Miocene in sentence 30."
+  "- missing context: \"The second premaxillary tooth was gradually reduced and lost as Baru aged.\": Refers to the \"second premaxillary tooth\" without any prior mention of premaxillary teeth.",
+  "- missing context: \"Juveniles of Baru iylwenpeny had more compressed teeth than adults, with anterior teeth becoming circular in cross-section while posterior teeth remained only mildly flattened.\": Mentions juveniles of Baru iylwenpeny before the species has been introduced.",
+  "- missing context: \"Baru wickeni is known exclusively from the D Site and Whitehunter Site within Faunal Zone A of the Riversleigh deposits.\": Cites the \"D Site\" and \"Whitehunter Site\" without explaining what these sites are.",
+  "- missing context: \"One hypothesis suggests a devastating pulse of aridification destroyed Baru's preferred habitat before conditions improved in the Pliocene.\": Introduces the Pliocene as a time of improved conditions without any earlier reference to the Pliocene."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:02:13+00:00",
@@ -84,8 +91,41 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:55:11+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:14:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      28,
+      29
+     ],
+     "kind": "contradiction",
+     "reason": "The fossil age range for Baru is stated as Late Oligocene to Late Miocene in sentence 29, but as Late Oligocene to Middle Miocene in sentence 30."
+    },
+    {
+     "sentences": [
+      7,
+      30
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim that Baru adults reached a length of around 4 meters."
+    },
+    {
+     "sentences": [
+      19,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe Baru as hunting in shallower waters than modern saltwater crocodiles."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:54+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:54+00:00"
+ "rewritten_at": "2026-11-25T23:10:02+00:00"
 }

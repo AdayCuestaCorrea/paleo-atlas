@@ -2,24 +2,22 @@
  "taxon_key": "ningchengopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "fd43d82e742db34b",
- "reviewed_at": "2026-11-25T13:57:22+00:00",
+ "text_hash": "04a99a83b4bd1164",
+ "reviewed_at": "2026-11-25T23:03:33+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15
+    12,
+    13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 15 states Ningchengopterus lived only during the Aptian stage, while sentence 16 claims it existed from 125.77 to 119.57 Ma, spanning both Barremian and Aptian stages."
+   "kind": "repetition",
+   "reason": "Sentences 13 and 14 state the same temporal range for Ningchengopterus, repeating the information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Ningchengopterus lived during the Early Cretaceous period, specifically the Aptian stage.\" / \"Ningchengopterus existed between 125.77 and 119.57 million years ago, spanning the Barremian to Aptian stages.\": Sentence 15 states Ningchengopterus lived only during the Aptian stage, while sentence 16 claims it existed from 125.77 to 119.57 Ma, spanning both Barremian and Aptian stages."
- ],
- "rewrite": "replaced",
- "round": 2,
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:47:48+00:00",
@@ -52,8 +50,23 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T12:29:14+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:57:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 15 states Ningchengopterus lived only during the Aptian stage, while sentence 16 claims it existed from 125.77 to 119.57 Ma, spanning both Barremian and Aptian stages."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:32:36+00:00"
   }
- ],
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:32:36+00:00"
+ ]
 }

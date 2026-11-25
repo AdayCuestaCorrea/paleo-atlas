@@ -2,30 +2,31 @@
  "taxon_key": "lonchodraco",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b23ca9b65ed6a319",
- "reviewed_at": "2026-11-25T13:31:22+00:00",
+ "text_hash": "91d43f93fa82ae36",
+ "reviewed_at": "2026-11-25T22:38:57+00:00",
  "problems": [
   {
    "sentences": [
-    12
+    1
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"the original specimen\" without specifying which specimen or providing prior context."
+   "reason": "Refers to a \"related species\" that has not been named or described earlier in the page."
   },
   {
    "sentences": [
-    13
+    6
    ],
-   "kind": "about_something_else",
-   "reason": "Describes how researchers treat Lonchodraco as a group, which is about the taxonomic group rather than the individual animal."
+   "kind": "missing_context",
+   "reason": "Mentions species L. machaerorhynchus and L. microdon without any prior introduction or context in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The original specimen was discovered in the Chalk Formation.\": Refers to \"the original specimen\" without specifying which specimen or providing prior context."
+  "- missing context: \"Earlier, Bowerbank had guessed the span of a related species was roughly eight to nine feet.\": Refers to a \"related species\" that has not been named or described earlier in the page.",
+  "- missing context: \"Averianov (2020) debated the classification of Lonchodraco, assigning L. machaerorhynchus to the genus Ikrandraco and declaring L. microdon a junior synonym.\": Mentions species L. machaerorhynchus and L. microdon without any prior introduction or context in the page."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:36:20+00:00",
@@ -50,8 +51,31 @@
    "repetitions_dropped": 2,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T01:48:04+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:31:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the original specimen\" without specifying which specimen or providing prior context."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes how researchers treat Lonchodraco as a group, which is about the taxonomic group rather than the individual animal."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:15:09+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:15:09+00:00"
+ "rewritten_at": "2026-11-25T23:19:37+00:00"
 }

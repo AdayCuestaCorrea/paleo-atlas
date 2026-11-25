@@ -2,58 +2,33 @@
  "taxon_key": "sunosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ac94b0740b5b64ae",
- "reviewed_at": "2026-11-25T13:36:40+00:00",
+ "text_hash": "197145068b5383b6",
+ "reviewed_at": "2026-11-25T22:43:05+00:00",
  "problems": [
   {
    "sentences": [
-    19,
-    20
+    14,
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 20 limits Sunosuchus to the Bajocian–Tithonian (170.9–143.1 Ma), while sentence 21 allows fossils from the Early Jurassic, earlier than the Bajocian."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 states “up to four species” but then lists five species (S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, S. thailandicus)."
-  },
-  {
-   "sentences": [
-    13,
-    23
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the fauna found with Sunosuchus indicates freshwater environments."
+   "reason": "Sentence 15 limits Sunosuchus to Bajocian–Tithonian (up to 143.1 Ma), while sentence 16 claims fossils from Middle Jurassic to Early Cretaceous, extending beyond the Tithonian."
   },
   {
    "sentences": [
     14,
-    24
+    16
    ],
-   "kind": "repetition",
-   "reason": "Both sentences claim marine hybodont sharks and dipnoans indicate an estuarine environment."
-  },
-  {
-   "sentences": [
-    13,
-    14,
-    23,
-    24
-   ],
-   "kind": "about_something_else",
-   "reason": "These sentences discuss environmental context and associated fauna rather than traits of Sunosuchus itself."
+   "kind": "contradiction",
+   "reason": "Sentence 15 states the species existed only to the Tithonian, yet sentence 17 allows some fossils to be Early Cretaceous, which postdates the Tithonian."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Sunosuchus lived from the Bajocian to the Tithonian stages, between 170.9 and 143.1 million years ago.\" / \"Fossils date from the Middle Jurassic to the Early Cretaceous, with possible Early Jurassic occurrences.\": Sentence 20 limits Sunosuchus to the Bajocian–Tithonian (170.9–143.1 Ma), while sentence 21 allows fossils from the Early Jurassic, earlier than the Bajocian.",
-  "- contradiction: \"Up to four species have been assigned to the genus Sunosuchus, including S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, and S. thailandicus.\": Sentence 13 states “up to four species” but then lists five species (S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, S. thailandicus)."
+  "- contradiction: \"Sunosuchus lived from the Bajocian to the Tithonian stages, between 170.9 and 143.1 million years ago.\" / \"Fossils date from the Middle Jurassic to the Early Cretaceous, with possible Early Jurassic occurrences.\": Sentence 15 limits Sunosuchus to Bajocian–Tithonian (up to 143.1 Ma), while sentence 16 claims fossils from Middle Jurassic to Early Cretaceous, extending beyond the Tithonian.",
+  "- contradiction: \"Sunosuchus lived from the Bajocian to the Tithonian stages, between 170.9 and 143.1 million years ago.\" / \"Fossils of Sunosuchus have been found in China, Kyrgyzstan, and Thailand and are Jurassic in age, though some may be Early Cretaceous.\": Sentence 15 states the species existed only to the Tithonian, yet sentence 17 allows some fossils to be Early Cretaceous, which postdates the Tithonian."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:45:55+00:00",
@@ -110,8 +85,58 @@
    "repetitions_dropped": 4,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T03:04:12+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:36:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      19,
+      20
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 20 limits Sunosuchus to the Bajocian–Tithonian (170.9–143.1 Ma), while sentence 21 allows fossils from the Early Jurassic, earlier than the Bajocian."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states “up to four species” but then lists five species (S. miaoi, S. junggarensis, S. shartegensis, S. shunanensis, S. thailandicus)."
+    },
+    {
+     "sentences": [
+      13,
+      23
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim the fauna found with Sunosuchus indicates freshwater environments."
+    },
+    {
+     "sentences": [
+      14,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences claim marine hybodont sharks and dipnoans indicate an estuarine environment."
+    },
+    {
+     "sentences": [
+      13,
+      14,
+      23,
+      24
+     ],
+     "kind": "about_something_else",
+     "reason": "These sentences discuss environmental context and associated fauna rather than traits of Sunosuchus itself."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:18:36+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:18:36+00:00"
+ "rewritten_at": "2026-11-25T23:21:59+00:00"
 }

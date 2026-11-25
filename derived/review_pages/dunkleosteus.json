@@ -2,31 +2,62 @@
  "taxon_key": "dunkleosteus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "348202fa2a742818",
- "reviewed_at": "2026-11-25T13:13:17+00:00",
+ "text_hash": "e716d3af175ef460",
+ "reviewed_at": "2026-11-25T22:20:35+00:00",
  "problems": [
   {
    "sentences": [
-    25,
-    26
+    3,
+    10
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 26 and 27 give conflicting family assignments for Dunkleosteus (Dunkleosteidae vs Dinichthyidae)."
+   "kind": "repetition",
+   "reason": "Both sentences state that D. terrelli is the largest and best-known species of Dunkleosteus."
   },
   {
    "sentences": [
-    22
+    4,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 gives a 4.6‑m adult weighing 665 kg, while sentence 6 gives a 3.41‑m adult weighing 950–1200 kg and a 4.1‑m adult weighing 1494–1764 kg, contradicting the weight–length relationship."
+  },
+  {
+   "sentences": [
+    10,
+    11
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 11 claims typical adults are about 3.4 m long, whereas sentence 12 suggests lengths of 5 m or more may be accurate, conflicting without noting different estimates."
+  },
+  {
+   "sentences": [
+    18
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 23 discusses viviparity evidence in other placoderms, not specifically Dunkleosteus."
+   "reason": "The sentence discusses viviparity in other placoderms, not specifically in Dunkleosteus."
+  },
+  {
+   "sentences": [
+    19
+   ],
+   "kind": "about_something_else",
+   "reason": "It describes the naming of the genus, not a biological fact about the animal."
+  },
+  {
+   "sentences": [
+    20
+   ],
+   "kind": "about_something_else",
+   "reason": "It discusses the taxonomic status of the genus, not the biology of Dunkleosteus."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Dunkleosteus is classified as a member of the class Placodermi, order Arthrodira, suborder Brachythoraci, family Dunkleosteidae, and superfamily Dunkleosteoidea.\" / \"Dunkleosteus belongs to the family Dinichthyidae, which was named based on the genus Dinichthys.\": Sentences 26 and 27 give conflicting family assignments for Dunkleosteus (Dunkleosteidae vs Dinichthyidae)."
+  "- contradiction: \"A 4.6-meter-long adult Dunkleosteus terrelli was estimated to weigh 665 kilograms based on a shark-like body plan.\" / \"Using an ellipsoid volumetric method, a typical 3.41-meter-long adult Dunkleosteus was estimated to weigh 950 to 1200 kilograms, while the largest 4.1-meter individual weighed 1494 to 1764 kilograms.\": Sentence 5 gives a 4.6‑m adult weighing 665 kg, while sentence 6 gives a 3.41‑m adult weighing 950–1200 kg and a 4.1‑m adult weighing 1494–1764 kg, contradicting the weight–length relationship.",
+  "- contradiction: \"Extensive analyses suggest typical adult Dunkleosteus terrelli were about 3.4 meters long, with rare individuals potentially reaching 4.1 meters.\" / \"It is debated whether lengths of 5 meters or more for Dunkleosteus terrelli are accurate, as most such estimates lack quantitative or statistical backing.\": Sentence 11 claims typical adults are about 3.4 m long, whereas sentence 12 suggests lengths of 5 m or more may be accurate, conflicting without noting different estimates."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:00:24+00:00",
@@ -67,8 +98,32 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T03:33:22+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:13:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      25,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 26 and 27 give conflicting family assignments for Dunkleosteus (Dunkleosteidae vs Dinichthyidae)."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 23 discusses viviparity evidence in other placoderms, not specifically Dunkleosteus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:02:28+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:02:28+00:00"
+ "rewritten_at": "2026-11-25T23:09:29+00:00"
 }

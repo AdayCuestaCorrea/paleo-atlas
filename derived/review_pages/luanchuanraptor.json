@@ -2,33 +2,31 @@
  "taxon_key": "luanchuanraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "776da3f415c402cb",
- "reviewed_at": "2026-11-25T13:39:57+00:00",
+ "text_hash": "54b05d0be73bca45",
+ "reviewed_at": "2026-11-25T22:45:40+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    1
+    0
    ],
    "kind": "contradiction",
-   "reason": "Sentences 1 and 2 give incompatible estimates for the animal’s length and weight."
+   "reason": "Sentence 1 gives two different size and weight ranges for the same animal without indicating they are alternative estimates."
   },
   {
    "sentences": [
-    8,
-    9
+    6
    ],
    "kind": "contradiction",
-   "reason": "Sentences 9 and 10 assign Luanchuanraptor to two different Cretaceous stages (Late Maastrichtian vs Campanian)."
+   "reason": "Sentence 7 presents two different geological stages for the animal’s age, contradicting each other."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Adult Luanchuanraptor are estimated to have been 1.1 to 1.8 meters long and weighed between 2.2 and 2.5 kilograms.\" / \"Other estimates suggest the animal reached a height of 0.60 meters and a weight of approximately 12 kilograms.\": Sentences 1 and 2 give incompatible estimates for the animal’s length and weight.",
-  "- contradiction: \"Luanchuanraptor lived during the Late Maastrichtian stage, approximately 72 to 66 million years ago.\" / \"The species lived during the Campanian stage of the Late Cretaceous, roughly 84 to 71 million years ago.\": Sentences 9 and 10 assign Luanchuanraptor to two different Cretaceous stages (Late Maastrichtian vs Campanian)."
+  "- contradiction: \"Adult Luanchuanraptor are estimated to have been 1.1 to 1.8 meters long and weighed between 2.2 and 2.5 kilograms, while other estimates suggest the animal reached a height of 0.60 meters and a weight of approximately 12 kilograms.\": Sentence 1 gives two different size and weight ranges for the same animal without indicating they are alternative estimates.",
+  "- contradiction: \"Luanchuanraptor lived during the Late Maastrichtian stage, approximately 72 to 66 million years ago, whereas other sources place it in the Campanian stage of the Late Cretaceous, roughly 84 to 71 million years ago.\": Sentence 7 presents two different geological stages for the animal’s age, contradicting each other."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:52:32+00:00",
@@ -51,8 +49,33 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T03:54:21+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:39:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 1 and 2 give incompatible estimates for the animal’s length and weight."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 9 and 10 assign Luanchuanraptor to two different Cretaceous stages (Late Maastrichtian vs Campanian)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:20:43+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:43+00:00"
+ "rewritten_at": "2026-11-25T23:23:36+00:00"
 }

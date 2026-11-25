@@ -2,59 +2,38 @@
  "taxon_key": "gryposaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6092bf541a1791a6",
- "reviewed_at": "2026-11-24T00:06:42+00:00",
+ "text_hash": "23b68189ae38327f",
+ "reviewed_at": "2026-11-25T22:24:01+00:00",
  "problems": [
   {
    "sentences": [
-    9,
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "mentions \"inflatable air sacs\" without prior introduction of air sacs."
+  },
+  {
+   "sentences": [
     11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe Lambe’s description and naming of Gryposaurus."
+   "kind": "missing_context",
+   "reason": "refers to \"its dental microwear\" but no earlier mention of microwear analysis."
   },
   {
    "sentences": [
-    13,
-    14
+    15
    ],
-   "kind": "repetition",
-   "reason": "Both state Gryposaurus was a herbivore that could walk on two or four legs."
-  },
-  {
-   "sentences": [
-    15,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both describe skull joints, chewing motion, and dental batteries."
-  },
-  {
-   "sentences": [
-    18,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both give the feeding height range of up to about 4 meters."
-  },
-  {
-   "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both mention preference for riverine habitats."
-  },
-  {
-   "sentences": [
-    5,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both discuss the nasal arch’s use for social communication and air sacs."
+   "kind": "about_something_else",
+   "reason": "discusses Kaiparowits Formation deposition age, which is about the formation, not directly about Gryposaurus."
   }
  ],
- "repetitions_dropped": 6,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Researchers suggest the nasal arch may have been used for pushing or butting in contests, possibly flanked by inflatable air sacs for signaling.\": mentions \"inflatable air sacs\" without prior introduction of air sacs.",
+  "- missing context: \"Because only one specimen was analyzed, the feeding patterns inferred from its dental microwear may not represent the whole taxon.\": refers to \"its dental microwear\" but no earlier mention of microwear analysis."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:11:33+00:00"
 }

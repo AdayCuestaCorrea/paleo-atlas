@@ -2,56 +2,55 @@
  "taxon_key": "saurolophus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "0f2cbaebce490226",
- "reviewed_at": "2026-11-25T13:16:49+00:00",
+ "text_hash": "9b59117dbb9c6145",
+ "reviewed_at": "2026-11-25T22:24:22+00:00",
  "problems": [
   {
    "sentences": [
-    13
+    2,
+    17
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 14 mentions Tarbosaurus without any prior introduction or context for that taxon."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same spike‑like crest of Saurolophus, repeating the claim."
+  },
+  {
+   "sentences": [
+    5,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 gives a weight estimate of ~3 tonnes for S. osborni, while sentence 7 claims footprints of S. angustirostris suggest it could have grown as large as Shantungosaurus, implying a larger size."
   },
   {
    "sentences": [
     13
    ],
-   "kind": "about_something_else",
-   "reason": "The claim in sentence 14 concerns the behavior of Tarbosaurus, not Saurolophus itself."
-  }
- ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The Saurolophus humerus bears three distinctive feeding marks interpreted as punctures, drag marks, and bite-and-drag marks, while the lack of large wounds on the rest of the skeleton suggests that the Tarbosaurus scavenged an already dead Saurolophus angustirostris.\": Sentence 14 mentions Tarbosaurus without any prior introduction or context for that taxon."
- ],
- "rewrite": "unchanged",
- "round": 2,
- "earlier": [
+   "kind": "missing_context",
+   "reason": "Sentence 14 refers to Tarbosaurus scavenging a dead Saurolophus angustirostris, but Tarbosaurus has never been mentioned earlier in the page."
+  },
   {
-   "reviewed_at": "2026-11-24T00:07:35+00:00",
-   "problems": [
-    {
-     "sentences": [
-      1,
-      2
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 2 claims S. osborni weighed ~3 tonnes, while sentence 3 suggests S. angustirostris could have grown as large as Shantungosaurus, which is considerably larger, implying a larger weight."
-    },
-    {
-     "sentences": [
-      11,
-      13
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Saurolophus comprises two valid species, repeating the same fact."
-    }
+   "sentences": [
+    16
    ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T04:38:33+00:00"
+   "kind": "missing_context",
+   "reason": "Sentence 17 discusses the Nemegt Formation environment, yet the page never introduced the Nemegt Formation or its relevance to Saurolophus."
+  },
+  {
+   "sentences": [
+    16
+   ],
+   "kind": "about_something_else",
+   "reason": "The Nemegt Formation is a geological formation, not a feature of Saurolophus itself, so the sentence is about something else."
   }
  ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- contradiction: \"S. osborni is estimated to have weighed around 3 tonnes, a figure supported by a 2010 analysis by Paul.\" / \"Footprints attributed to S. angustirostris suggest it might have grown as large as Shantungosaurus.\": Sentence 6 gives a weight estimate of ~3 tonnes for S. osborni, while sentence 7 claims footprints of S. angustirostris suggest it could have grown as large as Shantungosaurus, implying a larger size.",
+  "- missing context: \"The Saurolophus humerus bears three distinctive feeding marks interpreted as punctures, drag marks, and bite-and-drag marks, while the lack of large wounds on the rest of the skeleton suggests that the Tarbosaurus scavenged an already dead Saurolophus angustirostris.\": Sentence 14 refers to Tarbosaurus scavenging a dead Saurolophus angustirostris, but Tarbosaurus has never been mentioned earlier in the page.",
+  "- missing context: \"The Nemegt Formation environment was semi-arid during certain times of the year.\": Sentence 17 discusses the Nemegt Formation environment, yet the page never introduced the Nemegt Formation or its relevance to Saurolophus."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:04:32+00:00"
+ "rewritten_at": "2026-11-25T23:11:52+00:00"
 }

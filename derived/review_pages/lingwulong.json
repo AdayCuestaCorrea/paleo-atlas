@@ -2,83 +2,51 @@
  "taxon_key": "lingwulong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b4068f25d8a4e094",
- "reviewed_at": "2026-11-25T13:40:40+00:00",
+ "text_hash": "94d61b251fbe1be5",
+ "reviewed_at": "2026-11-25T22:46:27+00:00",
  "problems": [
   {
    "sentences": [
     3,
-    8
+    4
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state Lingwulong is the earliest known neosauropod and the only definitive diplodocoid in East Asia."
+   "kind": "contradiction",
+   "reason": "Sentence 4 states that Lingwulong’s parent group is Flagellicaudata, while sentence 5 suggests it may lie outside Flagellicaudata (or within Diplodocidae), directly conflicting on its higher‑level classification."
   },
   {
    "sentences": [
-    13,
-    15,
-    17,
-    18
+    5,
+    6
    ],
    "kind": "contradiction",
-   "reason": "The age ranges given are inconsistent: 178–168 Ma (early–middle Jurassic), 174–? Ma, 174.7–161.5 Ma, and Bathonian to early Oxfordian (later)."
+   "reason": "Sentence 6 gives an age range of 174.0–171.7 Ma for Lingwulong based on the Yanan Formation, whereas sentence 7 extends the range to 174.7–161.5 Ma, implying a broader and older time span that contradicts the narrower estimate."
+  },
+  {
+   "sentences": [
+    5,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 places Lingwulong in the Yanan Formation (174.0–171.7 Ma), while sentence 8 claims the fossils come from the Zhiluo Formation, which would date the animal to the Bathonian–early Oxfordian (≈168–157 Ma), a younger period."
+  },
+  {
+   "sentences": [
+    6,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 7 lists an age range of 174.7–161.5 Ma, whereas sentence 8 assigns a younger Bathonian–early Oxfordian range (≈168–157 Ma), conflicting on the temporal placement."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Lingwulong lived during the early to middle Jurassic, approximately 178 to 168 million years ago, in what is now Asia.\" / \"Its exact age is uncertain, but it lived between the late Toarcian and Bajocian, with an estimated midpoint age of 174 million years.\" / \"The time range for Lingwulong is from the Aalenian to the Callovian, between 174.7 and 161.5 million years ago.\" / \"Some researchers argue the fossils came from the Zhiluo Formation, which would make Lingwulong younger, dating to the Bathonian to early Oxfordian.\": The age ranges given are inconsistent: 178–168 Ma (early–middle Jurassic), 174–? Ma, 174.7–161.5 Ma, and Bathonian to early Oxfordian (later)."
+  "- contradiction: \"The parent group of Lingwulong is Flagellicaudata.\" / \"Recent 2025 analyses suggest Lingwulong is a sister taxon to Cetiosauriscus, potentially outside the Flagellicaudata clade or within Diplodocidae.\": Sentence 4 states that Lingwulong’s parent group is Flagellicaudata, while sentence 5 suggests it may lie outside Flagellicaudata (or within Diplodocidae), directly conflicting on its higher‑level classification.",
+  "- contradiction: \"Research dating the Yanan Formation suggests Lingwulong lived between 174.0 and 171.7 million years ago.\" / \"The time range for Lingwulong is from the Aalenian to the Callovian, between 174.7 and 161.5 million years ago.\": Sentence 6 gives an age range of 174.0–171.7 Ma for Lingwulong based on the Yanan Formation, whereas sentence 7 extends the range to 174.7–161.5 Ma, implying a broader and older time span that contradicts the narrower estimate.",
+  "- contradiction: \"Research dating the Yanan Formation suggests Lingwulong lived between 174.0 and 171.7 million years ago.\" / \"Some researchers argue the fossils came from the Zhiluo Formation, which would make Lingwulong younger, dating to the Bathonian to early Oxfordian.\": Sentence 6 places Lingwulong in the Yanan Formation (174.0–171.7 Ma), while sentence 8 claims the fossils come from the Zhiluo Formation, which would date the animal to the Bathonian–early Oxfordian (≈168–157 Ma), a younger period.",
+  "- contradiction: \"The time range for Lingwulong is from the Aalenian to the Callovian, between 174.7 and 161.5 million years ago.\" / \"Some researchers argue the fossils came from the Zhiluo Formation, which would make Lingwulong younger, dating to the Bathonian to early Oxfordian.\": Sentence 7 lists an age range of 174.7–161.5 Ma, whereas sentence 8 assigns a younger Bathonian–early Oxfordian range (≈168–157 Ma), conflicting on the temporal placement."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:53:57+00:00",
-   "problems": [
-    {
-     "sentences": [
-      3,
-      10
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences claim Lingwulong is the only definitive diplodocoid known from East Asia."
-    },
-    {
-     "sentences": [
-      4,
-      9
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 5 says the species name translates to 'amazing' in Mandarin, while sentence 10 says the species name means 'dragon' in Chinese."
-    },
-    {
-     "sentences": [
-      12,
-      14
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 13 states the immediate ancestral group is Flagellicaudata, whereas sentence 15 suggests Lingwulong may sit outside the Flagellicaudata clade."
-    },
-    {
-     "sentences": [
-      14
-     ],
-     "kind": "missing_context",
-     "reason": "The sentence refers to 'Studies from 2025' without specifying the study or its authors, leaving the source unclear."
-    },
-    {
-     "sentences": [
-      21,
-      22
-     ],
-     "kind": "about_something_else",
-     "reason": "Sentences 22 and 23 discuss the East Asia Isolation Hypothesis and its implications, which are about a hypothesis rather than directly about Lingwulong."
-    }
-   ],
-   "repetitions_dropped": 1,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T04:03:57+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:20:58+00:00"
+ "rewritten_at": "2026-11-25T23:23:55+00:00"
 }

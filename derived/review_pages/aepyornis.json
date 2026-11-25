@@ -2,48 +2,39 @@
  "taxon_key": "aepyornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5c4310e54d4b1214",
- "reviewed_at": "2026-11-25T13:24:52+00:00",
+ "text_hash": "b5f455c0179757da",
+ "reviewed_at": "2026-11-25T22:32:43+00:00",
  "problems": [
   {
    "sentences": [
-    12,
-    24
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 says Aepyornis was described by I. Geoffroy Saint-Hilaire in 1851, while sentence 25 says it was named by Geoffroy in 1850."
+   "reason": "Sentence 11 states the genus was described in 1851 but named in 1850, presenting two different dates for the same event without clarification."
   },
   {
    "sentences": [
-    12,
-    24
+    19
    ],
-   "kind": "repetition",
-   "reason": "Both sentences repeat the claim about the author and year of naming, but give different details."
+   "kind": "contradiction",
+   "reason": "Sentence 20 gives an age range of \"0.129 and 0 million years ago\" which is nonsensical and conflicts with the expected Late Pleistocene–Holocene timeframe."
   },
   {
    "sentences": [
-    23,
-    24
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences discuss the number of species in the genus, providing overlapping but slightly different lists."
-  },
-  {
-   "sentences": [
-    25
+    19
    ],
    "kind": "missing_context",
-   "reason": "Sentence 26 gives a time range of \"0.129 and 0 million years ago\" which is incomplete and lacks a lower bound."
+   "reason": "The phrase \"0.129 and 0 million years ago\" lacks a clear unit or reference point, leaving the reader unable to interpret the intended time span."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The genus Aepyornis was described by I. Geoffroy Saint-Hilaire in 1851.\" / \"The genus Aepyornis was named by Geoffroy in 1850 and belongs to the family Aepyornithidae.\": Sentence 13 says Aepyornis was described by I. Geoffroy Saint-Hilaire in 1851, while sentence 25 says it was named by Geoffroy in 1850.",
-  "- missing context: \"Aepyornis lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": Sentence 26 gives a time range of \"0.129 and 0 million years ago\" which is incomplete and lacks a lower bound."
+  "- contradiction: \"The genus Aepyornis was described by I. Geoffroy Saint-Hilaire in 1851, though it was named by Geoffroy in 1850.\": Sentence 11 states the genus was described in 1851 but named in 1850, presenting two different dates for the same event without clarification.",
+  "- contradiction: \"Aepyornis lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": Sentence 20 gives an age range of \"0.129 and 0 million years ago\" which is nonsensical and conflicts with the expected Late Pleistocene–Holocene timeframe.",
+  "- missing context: \"Aepyornis lived from the Late Pleistocene to the Holocene, between 0.129 and 0 million years ago.\": The phrase \"0.129 and 0 million years ago\" lacks a clear unit or reference point, leaving the reader unable to interpret the intended time span."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "unchanged",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:24:00+00:00",
@@ -66,8 +57,48 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T06:57:03+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:24:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      24
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 says Aepyornis was described by I. Geoffroy Saint-Hilaire in 1851, while sentence 25 says it was named by Geoffroy in 1850."
+    },
+    {
+     "sentences": [
+      12,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences repeat the claim about the author and year of naming, but give different details."
+    },
+    {
+     "sentences": [
+      23,
+      24
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences discuss the number of species in the genus, providing overlapping but slightly different lists."
+    },
+    {
+     "sentences": [
+      25
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 26 gives a time range of \"0.129 and 0 million years ago\" which is incomplete and lacks a lower bound."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:11:15+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:11:15+00:00"
+ "rewritten_at": "2026-11-25T23:16:05+00:00"
 }

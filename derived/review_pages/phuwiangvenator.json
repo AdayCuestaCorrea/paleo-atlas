@@ -2,24 +2,45 @@
  "taxon_key": "phuwiangvenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "815a498d90a4cf7a",
- "reviewed_at": "2026-11-25T13:20:37+00:00",
+ "text_hash": "90e2de59dc000f29",
+ "reviewed_at": "2026-11-25T22:27:52+00:00",
  "problems": [
   {
    "sentences": [
-    24,
-    26
+    11
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 25 and 27 give different age estimates for Phuwiangvenator (125–120 Ma vs ~130 Ma Barremian), which contradict each other."
+   "kind": "about_something_else",
+   "reason": "Sentence 12 discusses the Sao Khua Formation itself, not Phuwiangvenator."
+  },
+  {
+   "sentences": [
+    23
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 24 describes the sedimentary environment of the Sao Khua Formation, not the animal."
+  },
+  {
+   "sentences": [
+    20,
+    21
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences provide overlapping age ranges for Phuwiangvenator, effectively repeating the same information."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 references “two” grooves without specifying what is counted, leaving the comparison unclear."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Phuwiangvenator lived during the Early Cretaceous period, approximately 125 to 120 million years ago.\" / \"Other estimates place the animal at approximately 130 million years ago in the Barremian stage.\": Sentences 25 and 27 give different age estimates for Phuwiangvenator (125–120 Ma vs ~130 Ma Barremian), which contradict each other."
+  "- missing context: \"Unlike Vayuraptor, which had two, Phuwiangvenator had only one groove on the body of the astragalus.\": Sentence 6 references “two” grooves without specifying what is counted, leaving the comparison unclear."
  ],
  "rewrite": "replaced",
- "round": 2,
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:14:13+00:00",
@@ -49,8 +70,25 @@
    "repetitions_dropped": 0,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-24T05:40:16+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:20:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      24,
+      26
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 25 and 27 give different age estimates for Phuwiangvenator (125–120 Ma vs ~130 Ma Barremian), which contradict each other."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:07:33+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:07:33+00:00"
+ "rewritten_at": "2026-11-25T23:13:32+00:00"
 }

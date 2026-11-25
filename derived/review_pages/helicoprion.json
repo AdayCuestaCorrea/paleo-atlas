@@ -2,10 +2,45 @@
  "taxon_key": "helicoprion",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a16a847a7e580459",
- "reviewed_at": "2026-11-23T23:56:48+00:00",
- "problems": [],
- "repetitions_dropped": 0,
- "notes": [],
- "rewrite": "none"
+ "text_hash": "e6841e869656b964",
+ "reviewed_at": "2026-11-25T22:19:03+00:00",
+ "problems": [
+  {
+   "sentences": [
+    2,
+    16
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Helicoprion belongs to the chondrichthyan subclass Holocephali."
+  },
+  {
+   "sentences": [
+    3
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to “labial cartilage” without any prior introduction of this structure in the page."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses the species Lissoprion ferrieri, which belongs to a different genus and is not a Helicoprion."
+  },
+  {
+   "sentences": [
+    17
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 18 refers to Parahelicoprion, a separate genus, in the context of Helicoprion taxonomy."
+  }
+ ],
+ "repetitions_dropped": 1,
+ "notes": [
+  "- missing context: \"Helicoprion jaws were extensively laterally compressed, though this may be partly due to fossil compression artifacts, while the upper jaw was lined with small, low, rounded teeth that formed a pavement scraping against the main tooth whorl. The labial cartilage wedged into the upper jaw to distribute forces and limit jaw closure.\": Sentence 4 refers to “labial cartilage” without any prior introduction of this structure in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:08:28+00:00"
 }

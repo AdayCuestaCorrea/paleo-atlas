@@ -2,35 +2,33 @@
  "taxon_key": "parapsicephalus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1fd24ea9bce3c754",
- "reviewed_at": "2026-11-24T00:17:38+00:00",
+ "text_hash": "41505f339fff6b3b",
+ "reviewed_at": "2026-11-25T22:29:07+00:00",
  "problems": [
   {
    "sentences": [
-    16,
-    17,
-    18,
-    21
+    13,
+    18
    ],
-   "kind": "repetition",
-   "reason": "All four sentences state that Parapsicephalus is a rhamphorhynchid pterosaur, repeating the same classification claim."
+   "kind": "contradiction",
+   "reason": "Sentence 14 states Parapsicephalus is a type of rhamphorhynchid pterosaur, while sentence 19 claims phylogenies support a close affiliation with Dimorphodon, implying a Dimorphodontian relationship."
   },
   {
    "sentences": [
-    13
+    7,
+    8
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 14 describes the depositional environment of the Alum Shale Member, which is a formation, not a feature of the animal itself."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 15 lists other marine reptiles that co‑existed with Parapsicephalus, focusing on other animals rather than the subject."
+   "kind": "missing_context",
+   "reason": "Sentences 8 and 9 mention specimens of Parapsicephalus, but the page never previously introduced or described any specimen, leaving the reference unclear."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"The prevailing view is that Parapsicephalus is a type of rhamphorhynchid pterosaur.\" / \"Several phylogenies by Brian Andres and colleagues supported the hypothesis that Parapsicephalus is closely affiliated with Dimorphodon.\": Sentence 14 states Parapsicephalus is a type of rhamphorhynchid pterosaur, while sentence 19 claims phylogenies support a close affiliation with Dimorphodon, implying a Dimorphodontian relationship.",
+  "- missing context: \"A specimen of Parapsicephalus was discovered in 2011 at Saltwick Bay.\" / \"A possible additional skull specimen was collected in 1994 from Altdorf, Bavaria, Germany.\": Sentences 8 and 9 mention specimens of Parapsicephalus, but the page never previously introduced or described any specimen, leaving the reference unclear."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:14:08+00:00"
 }

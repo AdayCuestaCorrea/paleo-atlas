@@ -2,66 +2,31 @@
  "taxon_key": "alamosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "069a92d63474e27f",
- "reviewed_at": "2026-11-25T13:13:53+00:00",
+ "text_hash": "32863c4b11fe21b4",
+ "reviewed_at": "2026-11-25T22:21:28+00:00",
  "problems": [
   {
    "sentences": [
-    20,
-    22
+    7
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that a massive tibia is debated to belong to Alamosaurus or a new sauropod species."
+   "kind": "missing_context",
+   "reason": "Sentence 8 refers to “the association of Alamosaurus and Quetzalcoatlus” and “likely inhabited semi‑arid inland plains” without having introduced or defined the association earlier in the page."
   },
   {
    "sentences": [
-    13
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses the association of Alamosaurus with Quetzalcoatlus as if it were about the animal itself, rather than its environment."
-  },
-  {
-   "sentences": [
+    13,
     14
    ],
-   "kind": "about_something_else",
-   "reason": "The sentence refers to shared environment with Triceratops, which is about another animal, not directly about Alamosaurus."
+   "kind": "repetition",
+   "reason": "Both sentences 14 and 15 state that scientists debate whether certain fossils or a tibia belong to Alamosaurus or a different genus/species, repeating the same claim about a taxonomic debate."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:01:39+00:00",
-   "problems": [
-    {
-     "sentences": [
-      3,
-      6
-     ],
-     "kind": "contradiction",
-     "reason": "Mass estimates differ: 30–35 t vs 72.5–80 t."
-    },
-    {
-     "sentences": [
-      15
-     ],
-     "kind": "contradiction",
-     "reason": "Classifies Alamosaurus in family Titanosauridae but lists parent group Saltasaurinae, which is a subfamily of Titanosauridae."
-    },
-    {
-     "sentences": [
-      13
-     ],
-     "kind": "missing_context",
-     "reason": "Mentions “The association of Alamosaurus and Quetzalcoatlus likely inhabited semi‑arid inland plains” without prior explanation of the association or context."
-    }
-   ],
-   "repetitions_dropped": 0,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-24T03:47:28+00:00"
-  }
- ]
+ "notes": [
+  "- missing context: \"The association of Alamosaurus and Quetzalcoatlus likely inhabited semi-arid inland plains.\": Sentence 8 refers to “the association of Alamosaurus and Quetzalcoatlus” and “likely inhabited semi‑arid inland plains” without having introduced or defined the association earlier in the page."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:47+00:00"
 }

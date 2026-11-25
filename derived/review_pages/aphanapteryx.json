@@ -2,27 +2,31 @@
  "taxon_key": "aphanapteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8edef77d07e60540",
- "reviewed_at": "2026-11-24T00:01:46+00:00",
+ "text_hash": "7ecc9b54e91bec3f",
+ "reviewed_at": "2026-11-25T22:21:35+00:00",
  "problems": [
   {
    "sentences": [
-    15,
-    16
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that pigs ate the red rail’s eggs and chicks, contributing to its extinction."
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"its beak attacks\" without any prior mention of the red rail attacking with its beak."
   },
   {
    "sentences": [
-    19,
-    20
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the taxonomic placement of the red rail in the genus Aphanapteryx."
+   "kind": "missing_context",
+   "reason": "The sentence mentions \"attacks from the red rail's beak\" but no earlier context explains that the red rail performed such attacks."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"Fossil snail shells found with damage matching its beak attacks provide evidence of its feeding habits.\": The sentence refers to \"its beak attacks\" without any prior mention of the red rail attacking with its beak.",
+  "- missing context: \"Subfossil shells found with puncture holes suggest predation by birds, likely matching attacks from the red rail's beak.\": The sentence mentions \"attacks from the red rail's beak\" but no earlier context explains that the red rail performed such attacks."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:09:49+00:00"
 }

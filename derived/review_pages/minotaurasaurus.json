@@ -2,26 +2,30 @@
  "taxon_key": "minotaurasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "12f4862490a1deb4",
- "reviewed_at": "2026-11-24T00:11:50+00:00",
+ "text_hash": "3ed8b95604f8f75d",
+ "reviewed_at": "2026-11-25T22:26:47+00:00",
  "problems": [
   {
    "sentences": [
-    1,
     3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the skull as triangular with large, ornate nasal osteoderms and laterally open nostril windows, repeating the same claim."
+   "kind": "missing_context",
+   "reason": "Sentence 4 refers to a \"second specimen\" that has not been introduced or described earlier in the page."
   },
   {
    "sentences": [
-    11
+    9
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 12 discusses a shift from bulk to selective feeding in Mongolian ankylosaurines due to climate change or competition with hadrosaurids, which is a broader ecological claim rather than a direct description of Minotaurasaurus itself."
+   "reason": "Sentence 10 discusses a feeding shift in Mongolian ankylosaurines in general, not specifically about Minotaurasaurus."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- missing context: \"A second specimen shows insect burrows in a pattern unique to Late Cretaceous Gobi deposits.\": Sentence 4 refers to a \"second specimen\" that has not been introduced or described earlier in the page."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:13:00+00:00"
 }

@@ -2,19 +2,24 @@
  "taxon_key": "brochuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "de99510ad93149ff",
- "reviewed_at": "2026-11-24T01:30:25+00:00",
+ "text_hash": "b40b9a9ed3e268f2",
+ "reviewed_at": "2026-11-25T22:59:09+00:00",
  "problems": [
   {
    "sentences": [
     7,
     8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same classification of Brochuchus within the crocodile family Crocodylidae and subfamily Osteolaeminae."
+   "kind": "contradiction",
+   "reason": "Sentence 8 states Brochuchus lived during the Early Miocene, while sentence 9 gives a time range (20.45–13.82 Ma) that extends from the Burdigalian (Early Miocene) into the Langhian (Middle Miocene), contradicting the earlier claim of strictly Early Miocene."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Brochuchus lived during the Early Miocene epoch.\" / \"Brochuchus lived between 20.45 and 13.82 million years ago, spanning the Burdigalian to Langhian stages.\": Sentence 8 states Brochuchus lived during the Early Miocene, while sentence 9 gives a time range (20.45–13.82 Ma) that extends from the Burdigalian (Early Miocene) into the Langhian (Middle Miocene), contradicting the earlier claim of strictly Early Miocene."
+ ],
+ "rewrite": "unchanged",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:29:51+00:00"
 }

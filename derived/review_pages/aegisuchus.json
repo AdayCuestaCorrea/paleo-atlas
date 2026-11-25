@@ -2,83 +2,40 @@
  "taxon_key": "aegisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c937d8d4fc72d1cf",
- "reviewed_at": "2026-11-25T13:38:34+00:00",
+ "text_hash": "3142ac0cbf1c9f45",
+ "reviewed_at": "2026-11-25T22:44:52+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    0,
+    14
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that Aegisuchus belongs to the family Aegyptosuchidae."
+  },
+  {
+   "sentences": [
+    5,
+    6
    ],
    "kind": "contradiction",
-   "reason": "Length estimates conflict: 15–22 m vs. ~3.9 m total length."
+   "reason": "Sentence 6 claims a length of 15–22 m, while sentence 7 claims a total length of only about 3.9 m."
   },
   {
    "sentences": [
-    17,
-    18
+    11
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state eyes directed straight up."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Both describe Aegisuchus as an ambush predator."
-  },
-  {
-   "sentences": [
-    23,
-    24,
-    25,
-    26
-   ],
-   "kind": "about_something_else",
-   "reason": "These sentences discuss the family, evolutionary context, regional geography, and habitat, not the animal itself."
+   "kind": "missing_context",
+   "reason": "Sentence 12 refers to “surrounding raised ridges” without any prior mention of such ridges in the text."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Estimates based on skull proportions suggest Aegisuchus could have reached lengths between 15 and 22 meters.\" / \"Critiques of the original size estimates suggest Aegisuchus may have had a skull 62 to 90 cm long and a total length of about 3.9 meters.\": Length estimates conflict: 15–22 m vs. ~3.9 m total length."
+  "- contradiction: \"Estimates based on skull proportions suggest Aegisuchus could have reached lengths between 15 and 22 meters.\" / \"Critiques of the original size estimates suggest Aegisuchus may have had a skull 62 to 90 cm long and a total length of about 3.9 meters.\": Sentence 6 claims a length of 15–22 m, while sentence 7 claims a total length of only about 3.9 m.",
+  "- missing context: \"Aegisuchus likely had eyes positioned to face directly upward without surrounding raised ridges.\": Sentence 12 refers to “surrounding raised ridges” without any prior mention of such ridges in the text."
  ],
  "rewrite": "unchanged",
- "round": 2,
- "earlier": [
-  {
-   "reviewed_at": "2026-11-24T00:50:13+00:00",
-   "problems": [
-    {
-     "sentences": [
-      5
-     ],
-     "kind": "contradiction",
-     "reason": "Sentence 6 gives two very different length estimates (15–22 m vs ~3.9 m)."
-    },
-    {
-     "sentences": [
-      0,
-      17
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences state that Aegisuchus belongs to the family Aegyptosuchidae."
-    },
-    {
-     "sentences": [
-      6,
-      24
-     ],
-     "kind": "repetition",
-     "reason": "Both sentences claim the central boss may have served as a mating‑display eye spot."
-    }
-   ],
-   "repetitions_dropped": 2,
-   "rewrite": "replaced",
-   "rewritten_at": "2026-11-25T03:39:38+00:00"
-  }
- ],
+ "round": 1,
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:19:57+00:00"
+ "rewritten_at": "2026-11-25T23:22:59+00:00"
 }

@@ -2,56 +2,32 @@
  "taxon_key": "vespersaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5807da425ddbd706",
- "reviewed_at": "2026-11-25T13:40:49+00:00",
+ "text_hash": "1d3c4385c72f16e4",
+ "reviewed_at": "2026-11-25T22:46:34+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    21
+    8,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the genus Vespersaurus was named and described in 2019."
-  },
-  {
-   "sentences": [
-    22,
-    26
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Vespersaurus belongs to the family Noasauridae."
-  },
-  {
-   "sentences": [
-    23,
-    25
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Vespersaurus is classified within the subfamily Noasaurinae."
+   "kind": "contradiction",
+   "reason": "Sentence 9 states Vespersaurus lived only in the Cretaceous Rio Paraná Formation (Aptian), while sentence 10 claims it existed from the Aptian to the Campanian stages (121.4–72.2 Ma), extending beyond that formation."
   },
   {
    "sentences": [
     10
    ],
    "kind": "missing_context",
-   "reason": "The phrase \"these animals\" is used without prior introduction of the group being referred to."
-  },
-  {
-   "sentences": [
-    30,
-    31
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 31 places Vespersaurus in the Turonian stage (~90 Ma), while sentence 32 claims it lived from Aptian to Campanian (121.4–72.2 Ma), which is a broader and conflicting time range."
+   "reason": "Sentence 11 mentions the ichnospecies Farlowichnus rapidus and its possible attribution to Vespersaurus, but the page never introduced or described this ichnospecies before."
   }
  ],
- "repetitions_dropped": 3,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A whole branch of these animals likely populated the 1.3 million square kilometer Botucatu Desert for millions of years.\": The phrase \"these animals\" is used without prior introduction of the group being referred to.",
-  "- contradiction: \"Vespersaurus lived during the mid-Cretaceous, approximately 90 million years ago in the Turonian stage, in what is now South America.\" / \"Vespersaurus lived from the Aptian to the Campanian stages, between 121.4 and 72.2 million years ago.\": Sentence 31 places Vespersaurus in the Turonian stage (~90 Ma), while sentence 32 claims it lived from Aptian to Campanian (121.4–72.2 Ma), which is a broader and conflicting time range."
+  "- contradiction: \"Vespersaurus is a noasaurid theropod dinosaur from the Cretaceous Rio Paraná Formation in the Paraná Basin, Brazil.\" / \"Vespersaurus lived from the Aptian to the Campanian stages, between 121.4 and 72.2 million years ago.\": Sentence 9 states Vespersaurus lived only in the Cretaceous Rio Paraná Formation (Aptian), while sentence 10 claims it existed from the Aptian to the Campanian stages (121.4–72.2 Ma), extending beyond that formation.",
+  "- missing context: \"It is debated whether the ichnospecies Farlowichnus rapidus was made by Vespersaurus, as some researchers question the noasaurid interpretation due to anatomical differences.\": Sentence 11 mentions the ichnospecies Farlowichnus rapidus and its possible attribution to Vespersaurus, but the page never introduced or described this ichnospecies before."
  ],
- "rewrite": "replaced",
- "round": 2,
+ "rewrite": "spanish failed",
+ "round": 3,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:54:14+00:00",
@@ -95,8 +71,56 @@
    "repetitions_dropped": 5,
    "rewrite": "replaced",
    "rewritten_at": "2026-11-25T04:06:06+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T13:40:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      21
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus Vespersaurus was named and described in 2019."
+    },
+    {
+     "sentences": [
+      22,
+      26
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Vespersaurus belongs to the family Noasauridae."
+    },
+    {
+     "sentences": [
+      23,
+      25
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Vespersaurus is classified within the subfamily Noasaurinae."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"these animals\" is used without prior introduction of the group being referred to."
+    },
+    {
+     "sentences": [
+      30,
+      31
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 31 places Vespersaurus in the Turonian stage (~90 Ma), while sentence 32 claims it lived from Aptian to Campanian (121.4–72.2 Ma), which is a broader and conflicting time range."
+    }
+   ],
+   "repetitions_dropped": 3,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T14:21:07+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T14:21:07+00:00"
+ "rewritten_at": "2026-11-25T23:24:01+00:00"
 }

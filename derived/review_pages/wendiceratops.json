@@ -2,35 +2,24 @@
  "taxon_key": "wendiceratops",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "50cdefcc414e670e",
- "reviewed_at": "2026-11-24T00:36:41+00:00",
+ "text_hash": "2b222bcc3057a1d7",
+ "reviewed_at": "2026-11-25T22:39:10+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    1,
+    3
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same measurement of a broken nasal horn specimen."
-  },
-  {
-   "sentences": [
-    2,
-    7
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences claim the upper jaw contained at least twenty-six tooth positions."
-  },
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the episquamosals on the front of the frill curling upwards."
+   "kind": "contradiction",
+   "reason": "Sentence 2 states that Wendiceratops has an erect nasal horn but lacks a vertical spine on the frill, whereas sentence 4 describes a broken nasal horn that was borne on a vertical nasal bone, implying the presence of a vertical structure."
   }
  ],
- "repetitions_dropped": 3,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"This dinosaur is distinguished by a broad skull frill and an erect nasal horn, while lacking a vertical spine on the frill.\" / \"A broken nasal horn specimen measured 11.5 cm in height and 9 cm in base length, borne on a vertical nasal bone.\": Sentence 2 states that Wendiceratops has an erect nasal horn but lacks a vertical spine on the frill, whereas sentence 4 describes a broken nasal horn that was borne on a vertical nasal bone, implying the presence of a vertical structure."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:19:46+00:00"
 }

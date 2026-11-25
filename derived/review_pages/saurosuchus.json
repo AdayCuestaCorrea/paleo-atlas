@@ -2,19 +2,24 @@
  "taxon_key": "saurosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9f75d4d45387e240",
- "reviewed_at": "2026-11-24T00:19:08+00:00",
+ "text_hash": "d3b8d87395754eb4",
+ "reviewed_at": "2026-11-25T22:29:57+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    8
+    16,
+    17
    ],
-   "kind": "repetition",
-   "reason": "Sentences 1 and 9 state the same size and weight information for adult Saurosuchus."
+   "kind": "contradiction",
+   "reason": "Sentence 17 classifies Saurosuchus as a basal member of Loricata, while sentence 18 places it within the Prestosuchidae clade, a different subgroup of Loricata, presenting conflicting taxonomic assignments."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [],
- "rewrite": "none"
+ "repetitions_dropped": 0,
+ "notes": [
+  "- contradiction: \"Saurosuchus is now classified as a basal member of the clade Loricata, which includes rauisuchians and crocodylomorphs.\" / \"Recent analyses place Saurosuchus within the loricatan clade Prestosuchidae.\": Sentence 17 classifies Saurosuchus as a basal member of Loricata, while sentence 18 places it within the Prestosuchidae clade, a different subgroup of Loricata, presenting conflicting taxonomic assignments."
+ ],
+ "rewrite": "replaced",
+ "round": 1,
+ "rewrite_mode": "sentences",
+ "rewritten_at": "2026-11-25T23:14:32+00:00"
 }

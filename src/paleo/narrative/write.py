@@ -298,7 +298,7 @@ _STAGE_TYPOS: dict[str, str] = {
     **dict.fromkeys(["frasnense"], "frasniense"),
     **dict.fromkeys(
         ["kimeridgiense", "kimmeridiense", "kimmeríense", "kimmeridgiano", "kimmeridgiana",
-         "kimmeridgio", "kimmeríjico", "kimeríjico"],
+         "kimmeridgio", "kimmeríjico", "kimeríjico", "kiméridico"],
         "kimmeridgiense",
     ),
     **dict.fromkeys(["maastrichtiano", "mastrichtiense"], "maastrichtiense"),

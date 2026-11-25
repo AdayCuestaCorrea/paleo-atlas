@@ -140,3 +140,25 @@ The two worse ones were fixed by hand:
 *Diogenornis* and *Camarillasaurus* were fixed by hand as well.
 
 Many Spanish stage names were misspelled, most of them since before round 2 ("títónico", "caloviense", "Kimmeríjico"). `fix_es` now replaces 45 such spellings with the name on the Spanish ICS chart, on 289 pages. Spellings that are also other words stay as they are: "noreste", Maastricht (the city), Kimmeridge (the clay).
+
+**Step 6, hand fixes on the 15 pages (2026-11-25):** each finding still open was fixed by hand from its recorded correction and the page's facts. Every edit then passed `paleo recheck-texts`. Fixed:
+- 33 text findings, including the last high one (*Parasaurolophus*: Joe reached 25 % of adult size at about one year, not maturity);
+- the 3 medium problems added by the step 5 rewrites (*Ankylosaurus*, *Velociraptor*, *Pachycephalosaurus*).
+
+Three findings needed no new edit:
+- *Stegosaurus* and *Pachycephalosaurus* were already written from their current facts; step 4 rewrote them.
+- The *Stegosaurus* Spanish page had been off the site since step 4, because the model wrote "estegosaurio" and "allosauro" for the scientific names. It is back, with the names restored and "Dinosaur Ridge" corrected.
+
+Left open:
+- the two sizes given in feet (*Triceratops*'s Kelsey, *Tyrannosaurus*'s Bucky): the metric figures are not in the facts;
+- *Parasaurolophus*'s neck notch: the 2020 study that confirmed it as a pathology is not in the facts.
+
+Sentences of the 15 texts with a problem from this set:
+
+| | English | Spanish |
+|---|---|---|
+| High | 1.7 % → 0.0 % | 3.1 % → 0.0 % |
+| High or medium | 5.2 % → 0.2 % | 13.2 % → 0.3 % |
+| Any | 8.6 % → 0.7 % | 23.0 % → 0.8 % |
+
+**These figures count only the problems of the first hand review.** The rewrites wrote new sentences, and only those of step 5 were read by hand. A fresh, blind review of the 15 pages is the honest "after" figure.

@@ -114,6 +114,7 @@
         {% endfor %}
       </tbody>
     </table>
+    {% if trust.now %}<p>{{ t('trust_now', pages=trust.pages, en=('%.1f' % trust.now.en.high) | replace('.', ',' if lang == 'es' else '.'), es=('%.1f' % trust.now.es.high) | replace('.', ',' if lang == 'es' else '.'), en_med=('%.1f' % trust.now.en.medium) | replace('.', ',' if lang == 'es' else '.'), es_med=('%.1f' % trust.now.es.medium) | replace('.', ',' if lang == 'es' else '.')) | md }}</p>{% endif %}
     <p class="note">{{ t('trust_note', pages=trust.pages, found=trust.findings, high=trust.severities.high, medium=trust.severities.medium, famous=trust_famous.pages if trust_famous else 0) | md }}</p>
     <div class="st-grid2">
       <div><h3>{{ T.trust_catches }}</h3><ul>{% for i in range(1, 6) %}<li>{{ T['trust_catch_' ~ i] | md }}</li>{% endfor %}</ul></div>

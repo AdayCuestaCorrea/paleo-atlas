@@ -227,3 +227,28 @@ def test_million_years_ago_without_the_calque():
     )
     assert fix_es("hace unos 150 millones de años atrás") == "hace unos 150 millones de años"
     assert fix_es("entre hace 68 y 66 millones de años") == "entre hace 68 y 66 millones de años"
+
+
+def test_spanish_wikipedia_only_sentences_are_left_out_when_english_facts_exist(tmp_path):
+    from paleo.narrative.write import drop_eswiki_only
+
+    (tmp_path / "texts").mkdir()
+    (tmp_path / "facts").mkdir()
+    wikis = {1: "enwiki", 2: "eswiki", 3: "enwiki", 4: "enwiki"}
+    facts = [{"fact_id": f"F00{i}", "statement": "x", "category": "description",
+              "chunk_id": f"rex:{w}:1"} for i, w in wikis.items()]  # fmt: skip
+    (tmp_path / "facts" / "rex.json").write_text(json.dumps({"facts": facts}), encoding="utf-8")
+    long = " with a long tail, a large skull and strong legs that it used to walk across plains"
+    en = [f"Rex sentence {n}{long}." for n in ("one", "two", "three", "four")]
+    es = [f"Frase {n} de Rex{long}." for n in ("uno", "dos", "tres", "cuatro")]
+    _write(tmp_path / "texts" / "rex.en.json", "Rex", "rex", "en", en)
+    _write(tmp_path / "texts" / "rex.es.json", "Rex", "rex", "es", es)
+    assert drop_eswiki_only(tmp_path) == ["rex"]
+    for lang, sent in (("en", en), ("es", es)):
+        doc = json.loads((tmp_path / "texts" / f"rex.{lang}.json").read_text(encoding="utf-8"))
+        assert [s["text"] for sec in doc["sections"] for s in sec["sentences"]] == [
+            sent[0],
+            sent[2],
+            sent[3],
+        ]
+    assert drop_eswiki_only(tmp_path) == []  # nothing left to drop

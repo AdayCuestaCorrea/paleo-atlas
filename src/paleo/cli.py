@@ -466,9 +466,14 @@ def _recheck_texts() -> None:
     path = ranges.ranges_path(derived)
     rows = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     ages = {r["taxon_name"]: (r["max_ma"], r["min_ma"]) for r in rows}
-    from paleo.narrative.write import stale_texts
+    from paleo.narrative.write import drop_eswiki_only, stale_texts
 
-    results = {**recheck_quality(derived, ages), "stale_facts": stale_texts(derived)}
+    spanish_only = drop_eswiki_only(derived)
+    results = {
+        "eswiki_only_dropped": spanish_only,
+        **recheck_quality(derived, ages),
+        "stale_facts": stale_texts(derived),
+    }
     for kind, keys in results.items():
         shown = f" ({', '.join(keys)})" if keys and len(keys) <= 40 else ""
         typer.echo(f"recheck {kind}: {len(keys)}{shown}")

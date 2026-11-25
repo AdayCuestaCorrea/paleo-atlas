@@ -208,3 +208,22 @@ def test_trust_counts_each_sentence_once_at_its_worst_severity(tmp_path):
     assert t["rates"]["en"] == {"sentences": 10, "high": 10.0, "medium": 10.0, "any": 20.0}
     assert t["rates"]["es"] == {"sentences": 5, "high": 20.0, "medium": 40.0, "any": 40.0}
     assert status.trust(tmp_path / "missing") is None
+
+
+def test_trust_now_counts_only_findings_whose_sentence_is_still_there(tmp_path):
+    import json
+
+    review, texts = tmp_path / "review", tmp_path / "texts"
+    review.mkdir()
+    texts.mkdir()
+    doc = {"taxon_key": "a", "en_sentences": 3, "es_sentences": 3, "findings": [
+        {"lang": "both", "severity": "high", "en_sentence": "S1", "es_sentence": "E1"},
+        {"lang": "en", "severity": "medium", "en_sentence": "S2", "es_sentence": ""},
+    ]}  # fmt: skip
+    (review / "a.json").write_text(json.dumps(doc), encoding="utf-8")
+    for lang, kept in (("en", ["S2", "S3"]), ("es", ["E2", "E3"])):
+        sections = [{"section": "d", "sentences": [{"text": t} for t in kept]}]
+        (texts / f"a.{lang}.json").write_text(json.dumps({"sections": sections}))
+    now = status.trust(review, texts)["now"]
+    assert now["en"] == {"sentences": 2, "high": 0.0, "medium": 50.0, "any": 50.0}
+    assert now["es"] == {"sentences": 2, "high": 0.0, "medium": 0.0, "any": 0.0}

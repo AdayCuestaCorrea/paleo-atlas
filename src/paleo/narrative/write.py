@@ -958,6 +958,53 @@ def _word_count(sentences: list[tuple[str, list[str], str]]) -> int:
     return sum(len(words(t)) for t, _, _ in sentences)
 
 
+def drop_eswiki_only(derived_root: Path) -> list[str]:
+    """No model (ALCANCE Phase 7): on a page that also has facts from the English
+    Wikipedia, the sentences that cite only Spanish Wikipedia facts are left out, in
+    both languages. In the blind review of 15 random pages they were seriously wrong
+    17.6 % of the time, against 5.1 % for the rest, and held 9 of the 17 serious errors.
+    A page that would keep fewer than 3 sentences or under MIN_WORDS words keeps them.
+    Returns the keys of the pages changed."""
+    changed = []
+    texts = derived_root / "texts"
+    for en_path in sorted(texts.glob("*.en.json")):
+        en_doc = json.loads(en_path.read_text(encoding="utf-8"))
+        if en_doc.get("status") != "verified":
+            continue
+        key = en_doc["taxon_key"]
+        facts = {f["fact_id"]: f for f in _facts_of(derived_root, key)}
+        if not any(":enwiki:" in f.get("chunk_id", "") for f in facts.values()):
+            continue
+        en = _stored_sentences(en_doc)
+        spanish_only = {
+            i for i, (_, ids, _) in enumerate(en)
+            if ids and all(":eswiki:" in facts.get(x, {}).get("chunk_id", "") for x in ids)
+        }  # fmt: skip
+        kept_en = [x for i, x in enumerate(en) if i not in spanish_only]
+        if not spanish_only or len(kept_en) < 3 or _word_count(kept_en) < MIN_WORDS:
+            continue
+        pairs = [(en_path, en_doc, en, kept_en)]
+        es_path = texts / f"{key}.es.json"
+        if es_path.exists():
+            es_doc = json.loads(es_path.read_text(encoding="utf-8"))
+            es = _stored_sentences(es_doc)
+            index = _match_kept(en, es) if es_doc.get("status") == "verified" else None
+            if index is not None:
+                kept_es = [x for j, x in enumerate(es) if index[j] not in spanish_only]
+                if kept_es != es:
+                    pairs.append((es_path, es_doc, es, kept_es))
+        for path, doc, _, kept in pairs:
+            _save(
+                path, taxon=doc["taxon"], key=key, lang=doc["lang"], status="verified",
+                llm=SimpleNamespace(label=doc["generator"]), version=doc["prompt_version"],
+                facts_hash=doc["facts_hash"], sentences=kept,
+                report=SimpleNamespace(word_count=_word_count(kept)),  # type: ignore[arg-type]
+                problems=[], review=doc.get("review"),
+            )  # fmt: skip
+        changed.append(key)
+    return changed
+
+
 def recheck_quality(
     derived_root: Path, ages: dict[str, tuple[float, float]]
 ) -> dict[str, list[str]]:

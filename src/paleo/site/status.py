@@ -243,7 +243,7 @@ def line_chart(points: list[dict[str, Any]], keys=("en", "es"), height: int = 17
 _SEVERITY = {"high": 3, "medium": 2, "low": 1}
 
 
-def trust(review_dir: Path) -> dict[str, Any] | None:
+def trust(review_dir: Path, texts_dir: Path | None = None) -> dict[str, Any] | None:
     """Error rate of the texts from the blind review of the 15 evaluated pages
     (eval/fichas/review2, ALCANCE Phase 7): one reviewer per page checked every
     sentence in both languages. Sentences with a problem, each counted once at its
@@ -277,6 +277,7 @@ def trust(review_dir: Path) -> dict[str, Any] | None:
             "sentences": n,
             **{k: round(100 * c / n, 1) if n else 0.0 for k, c in shares},
         }
+    now = _still_there(pages, texts_dir) if texts_dir else None
     open_path = review_dir / "open.csv"
     still_open = (
         list(csv.DictReader(open_path.open(encoding="utf-8"))) if open_path.exists() else []
@@ -288,4 +289,37 @@ def trust(review_dir: Path) -> dict[str, Any] | None:
         "open": len(still_open),
         "open_serious": sum(1 for r in still_open if r["severity"] != "low"),
         "rates": rates,
+        "now": now,
     }
+
+
+def _still_there(pages: list[Path], texts_dir: Path) -> dict[str, dict[str, Any]] | None:
+    """The same review over today's texts: findings whose sentence is still on the page
+    (a sentence left out or rewritten takes its finding with it), out of today's
+    sentences. Only meaningful for pages that were not fixed by hand afterwards."""
+    totals = {"en": 0, "es": 0}
+    worst: dict[str, dict[tuple[str, str], int]] = {"en": {}, "es": {}}
+    for path in pages:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+        key = doc["taxon_key"]
+        current = {}
+        for lang in ("en", "es"):
+            text = texts_dir / f"{key}.{lang}.json"
+            if not text.exists():
+                return None
+            sections = json.loads(text.read_text(encoding="utf-8"))["sections"]
+            current[lang] = {s["text"] for sec in sections for s in sec["sentences"]}
+            totals[lang] += len(current[lang])
+        for f in doc["findings"]:
+            for lang in ("en", "es"):
+                sentence = f.get(f"{lang}_sentence") or ""
+                if f["lang"] in (lang, "both") and sentence in current[lang]:
+                    k = (key, sentence)
+                    worst[lang][k] = max(worst[lang].get(k, 0), _SEVERITY[f["severity"]])
+    out = {}
+    for lang in ("en", "es"):
+        n = totals[lang]
+        counts = [sum(1 for v in worst[lang].values() if v >= level) for level in (3, 2, 1)]
+        shares = zip(("high", "medium", "any"), counts, strict=True)
+        out[lang] = {"sentences": n, **{k: round(100 * c / n, 1) if n else 0.0 for k, c in shares}}
+    return out

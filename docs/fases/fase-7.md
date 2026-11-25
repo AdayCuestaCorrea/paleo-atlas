@@ -78,6 +78,8 @@ Es la cifra que publica la página de estado. Después se corrigieron a mano los
 | Revisor automático, segunda ronda | 1.129 fichas: las que no tenían problemas pasan de 0 a 211; contradicciones, de 969 a 687; falta de contexto, de 653 a 309 |
 | Reglas de español | nombres de pisos (289 fichas), «toneladas métricas» (99) y «millones de años atrás» (954) |
 
+**Muestra al azar de 15 fichas** (la misma revisión): grave 6,9 % EN y 6,8 % ES; grave o medio 25,3 % y 30,6 %. Las frases que solo citaban la Wikipedia en español tenían un error grave en el 17,6 % de los casos, frente al 5,1 % del resto. Desde que se quitan cuando la ficha tiene la inglesa (6.112 frases en 1.466 fichas), la misma revisión da un 3,9 % y un 4,6 %.
+
 ## 8. Qué salió mal y qué se aprendió
 
 - **El revisor no encuentra lo que la frase dice fielmente mal.** La mayoría de los errores que quedaban eran fieles a su propio hecho: el hecho ya había leído mal la fuente (*Parasaurolophus* «alcanzó la madurez en un año»). Ningún modelo ni prompt de revisión frase a frase pasó de 5 de 42. *Lección: comprobar una frase contra su cita no comprueba la cita contra la fuente.*
@@ -88,6 +90,7 @@ Es la cifra que publica la página de estado. Después se corrigieron a mano los
 - **Una ficha corta caía por un cambio de una palabra.** La comprobación de «quedan al menos 3 frases» se aplicaba aunque no se quitara ninguna; *Palaeospiza*, con 2 frases, salía de la web por corregir «priabonense».
 - **La ficha en español de *Stegosaurus* llevaba dos días sin publicarse.** El modelo escribió «estegosaurio» y «allosauro», y la comprobación de nombres científicos la apartó entera. Nadie lo vio hasta medir las 15 fichas otra vez. *Lección: revisar también lo que no se publica.*
 - **Dos revisiones distintas no se comparan.** La tasa «después» de la primera revisión salía 0,2 %, pero solo contaba lo que aquella revisión había anotado. La revisión a ciegas, frase a frase, dio un 12,9 % de frases con un problema grave o medio. *Lección: medir el antes y el después con el mismo instrumento; si no, publicar solo la medida honesta.*
+- **Las fichas famosas no representan la web.** La muestra al azar tenía el doble de errores medios y diez veces más graves que las 15 famosas, porque sus artículos de Wikipedia son más cortos y menos revisados. *Lección: medir con una muestra al azar, no con los casos que uno conoce mejor.*
 - **Un hecho venía de un documental.** La segunda ronda «arregló» *Incisivosaurus* con una teoría que salía de la serie *Prehistoric Park*, citada en la Wikipedia en español.
 - **Los temporizadores de systemd se pierden al reiniciar.** La noche 8 no arrancó; desde entonces se usan unidades guardadas, y `paleo-gpu` para parar al terminar la ficha en curso.
 

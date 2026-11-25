@@ -191,3 +191,44 @@ Each agent checked against the facts' quotes and its own knowledge; none fetched
 Two of the Spanish problems were common enough to become rules in `fix_es`:
 - "toneladas métricas" → "toneladas", on 99 pages;
 - "entre X y Y millones de años atrás" → "hace entre X y Y millones de años", on 954 pages.
+
+## Random sample (2026-11-25)
+
+The same blind review was run on 15 random pages (`sample1/`, seed 20261125, drawn from the 2,779 genera with verified texts in both languages, the famous 15 left out).
+
+| Sentences with a problem | English (231) | Spanish (220) |
+|---|---|---|
+| High | 6.9 % | 6.8 % |
+| High or medium | 25.3 % | 30.6 % |
+| Any | 39.1 % | 55.0 % |
+
+Lesser-known pages are much worse than the famous ones: their Wikipedia articles are shorter and less reviewed.
+
+**Where the serious errors come from:**
+- About half are the model misreading its source, faithfully kept by the checks.
+- About a third come from errors in the Spanish Wikipedia that the English one doesn't make: a wrong age, a mistranslated climate, a wrong place of discovery.
+
+**By source of the cited facts** (English sentences of the sample):
+
+| Cited facts | Sentences | High or medium | High |
+|---|---|---|---|
+| English Wikipedia (alone or mixed) | 158 | 30 % | 5.1 % |
+| PBDB only | 22 | 27 % | 0 % |
+| Spanish Wikipedia only | 51 | 41 % | 17.6 % |
+
+**Decision (user, 2026-11-25):** `drop_eswiki_only` (run by `paleo recheck-texts`) leaves out, in both languages, the sentences that cite only Spanish Wikipedia facts, on pages that also have English facts.
+
+Effect across the site:
+- 6,112 sentences left out on 1,466 pages; a median affected page loses 22 % of its sentences;
+- 22 pages would fall under the minimum length, and keep their text.
+
+Measured with the same review over the texts as they are now:
+
+| | Before | After |
+|---|---|---|
+| High, English | 6.9 % | 3.9 % |
+| High, Spanish | 6.8 % | 4.6 % |
+| High or medium, English | 25.3 % | 21.1 % |
+| High or medium, Spanish | 30.6 % | 29.3 % |
+
+The status page computes this "after" figure at each build.

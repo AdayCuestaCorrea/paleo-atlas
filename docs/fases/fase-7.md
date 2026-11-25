@@ -78,7 +78,7 @@ Es la cifra que publica la página de estado. Después se corrigieron a mano los
 | Revisor automático, segunda ronda | 1.129 fichas: las que no tenían problemas pasan de 0 a 211; contradicciones, de 969 a 687; falta de contexto, de 653 a 309 |
 | Reglas de español | nombres de pisos (289 fichas), «toneladas métricas» (99) y «millones de años atrás» (954) |
 
-**Muestra al azar de 15 fichas** (la misma revisión): grave 6,9 % EN y 6,8 % ES; grave o medio 25,3 % y 30,6 %. Las frases que solo citaban la Wikipedia en español tenían un error grave en el 17,6 % de los casos, frente al 5,1 % del resto. Desde que se quitan cuando la ficha tiene la inglesa (6.112 frases en 1.466 fichas), la misma revisión da un 3,9 % y un 4,6 %.
+**Muestra al azar de 15 fichas** (la misma revisión): grave 6,9 % EN y 6,8 % ES; grave o medio 25,3 % y 30,6 %. Las frases que solo citaban la Wikipedia en español tenían un error grave en el 17,6 % de los casos, frente al 5,1 % del resto. Desde que se quitan cuando la ficha tiene la inglesa (6.017 frases en inglés y 5.478 en español, en 1.466 fichas), la misma revisión da un 3,9 % y un 4,6 %.
 
 ## 8. Qué salió mal y qué se aprendió
 

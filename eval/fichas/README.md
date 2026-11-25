@@ -219,7 +219,7 @@ Lesser-known pages are much worse than the famous ones: their Wikipedia articles
 **Decision (user, 2026-11-25):** `drop_eswiki_only` (run by `paleo recheck-texts`) leaves out, in both languages, the sentences that cite only Spanish Wikipedia facts, on pages that also have English facts.
 
 Effect across the site:
-- 6,112 sentences left out on 1,466 pages; a median affected page loses 22 % of its sentences;
+- 6,017 English and 5,478 Spanish sentences left out on 1,466 pages; a median affected page loses 22 % of its sentences;
 - 22 pages would fall under the minimum length, and keep their text.
 
 Measured with the same review over the texts as they are now:

@@ -689,10 +689,17 @@ def review_rewrite(
     until: Annotated[str | None, typer.Option(help="Start no new page after HH:MM.")] = None,
     limit: Limit = None,
     stop_file: StopFile = None,
+    whole_page: Annotated[
+        bool,
+        typer.Option(
+            help="Write the whole page again (nights 8-9), not only the flagged sentences."
+        ),
+    ] = False,
 ) -> None:
-    """Write again, with the reviewer's notes, the pages `paleo review pages` flagged,
-    best known first. A rewrite replaces the page only if it passes every check in both
-    languages; otherwise the current text stays. Resumable."""
+    """Write again the sentences `paleo review pages` flagged (contradictions, missing
+    context), best known first; the rest of each page stays. A fix replaces the page
+    only if it passes every check in both languages; otherwise the current text stays.
+    Pages whose whole-page rewrite failed get one try this way. Resumable."""
     import time
 
     from paleo import ranges
@@ -727,7 +734,12 @@ def review_rewrite(
         if limit is not None and done >= limit:
             break
         record = rv.page_record(derived, key)
-        if not record or record.get("rewrite") != "pending":
+        if not record:
+            continue
+        state = record.get("rewrite")
+        retry = (not whole_page and record.get("rewrite_mode") != "sentences"
+                 and state not in ("pending", "none", "replaced"))  # fmt: skip
+        if state != "pending" and not retry:
             continue
         taxon = json.loads((derived / "texts" / f"{key}.en.json").read_text("utf-8"))["taxon"]
         start = time.monotonic()
@@ -736,14 +748,22 @@ def review_rewrite(
                 chunks = genus_chunks_for(taxon, **roots)
             except LookupError:  # a new species, not a genus
                 chunks = chunks_for(taxon, **roots)
-            outcome = rv.rewrite_page(llm, key, chunks, record["notes"], derived_root=derived,
-                                      scientific_names=names, ages=ages)  # fmt: skip
+            if whole_page:
+                outcome = rv.rewrite_page(llm, key, chunks, record["notes"],
+                                          derived_root=derived, scientific_names=names,
+                                          ages=ages)  # fmt: skip
+            else:
+                total = len(rv.page_pairs(derived, key) or [])
+                outcome = rv.fix_sentences(llm, key, chunks, rv.flagged_now(record, total),
+                                           derived_root=derived, scientific_names=names,
+                                           ages=ages)  # fmt: skip
         except QuotaExhausted as exc:
             typer.echo(f"Quota exhausted ({exc})")
             break
         except (LLMOutputError, LookupError, OSError) as exc:
             outcome = f"skipped ({type(exc).__name__})"
         record["rewrite"] = outcome
+        record["rewrite_mode"] = "whole page" if whole_page else "sentences"
         if outcome == "replaced":  # the new text counts as reviewed: no second round
             record["text_hash"] = rv._text_hash(rv.page_pairs(derived, key))
         record["rewritten_at"] = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")

@@ -347,3 +347,208 @@ def rewrite_page(
                 shutil.copy(path, texts / path.name)
                 (derived_root / "texts_review" / path.name).unlink(missing_ok=True)
     return "replaced"
+
+
+class FixedSentence(BaseModel):
+    index: int
+    text: str
+    fact_ids: list[str]
+
+
+class FixedSentences(BaseModel):
+    sentences: list[FixedSentence]
+
+
+def flagged_now(record: dict[str, Any], total: int) -> list[dict[str, Any]]:
+    """The record's contradictions and missing context, with their sentence numbers
+    moved to today's text: the review numbered the page before its repeated sentences
+    were left out (drop_repetitions leaves out all of them or none)."""
+    later: set[int] = set()
+    if record.get("repetitions_dropped"):
+        later = {i for p in record["problems"] if p["kind"] == "repetition"
+                 for i in p["sentences"][1:]}  # fmt: skip
+    out = []
+    for p in record["problems"]:
+        if p["kind"] not in REWRITE_KINDS:
+            continue
+        idx = [i - sum(j < i for j in later) for i in p["sentences"] if i not in later]
+        idx = [i for i in idx if 0 <= i < total]
+        if idx:
+            out.append({**p, "sentences": idx})
+    return out
+
+
+def _fix_message(
+    taxon: str,
+    en: list[tuple[str, list[str], str]],
+    problems: list[dict[str, Any]],
+    facts: list[dict[str, Any]],
+    feedback: list[str] | None,
+) -> str:
+    flagged = sorted({i for p in problems for i in p["sentences"]})
+    lines = [f"ANIMAL: {taxon}", "", "PAGE:"]
+    lines += [f"[{i}] {t}" for i, (t, _, _) in enumerate(en, 1)]
+    lines += ["", "PROBLEMS FOUND BY THE REVIEWER:"]
+    lines += [
+        f"- {p['kind'].replace('_', ' ')} in sentences "
+        f"{', '.join(str(i + 1) for i in p['sentences'])}: {p['reason']}"
+        for p in problems
+    ]
+    lines += ["", "TO FIX: sentences " + ", ".join(str(i + 1) for i in flagged)]
+    lines += ["", "VERIFIED FACTS:"]
+    lines += [f"{f['fact_id']} [{f['category']}] {f['statement']}" for f in facts]
+    if feedback:
+        lines += ["", "Your previous answer failed these automatic checks. Fix every one:",
+                  *feedback,
+                  "A number must be written exactly as in a cited fact or dropped; a name must "
+                  "appear in the facts; a copied run of words must be rephrased."]  # fmt: skip
+    return "\n".join(lines)
+
+
+def fix_sentences(
+    llm: Any,
+    key: str,
+    chunks: list[Any],
+    problems: list[dict[str, Any]],
+    *,
+    derived_root: Path,
+    scientific_names: set[str],
+    ages: dict[str, tuple[float, float]],
+    retries: int = 2,
+) -> str:
+    """Write again only the sentences the reviewer flagged (``problems`` numbered on
+    today's text, from flagged_now); the rest of the page, and the Spanish of the rest,
+    stay as they are. The new sentences go through every check, their Spanish is
+    adapted and aligned, and the page through the Phase 7 recheck, in a scratch folder:
+    the published texts are replaced only when all of it passes. Returns "replaced" or
+    why not. Asked for by the user on 2026-11-25, after the whole-page rewrites of
+    nights 8-9 fixed 14 known problems on the 15 pages but added 8 and shortened some."""
+    import shutil
+    import tempfile
+    from types import SimpleNamespace
+
+    from paleo.narrative.checks import check_alignment, check_text
+    from paleo.narrative.write import (
+        _adapt_es,
+        _canonical_id,
+        _fact_texts,
+        _match_kept,
+        _max_dropped,
+        _save,
+        _stored_sentences,
+        _tidy,
+        _word_count,
+        recheck_quality,
+        select_facts,
+    )
+
+    texts = derived_root / "texts"
+    en_doc = json.loads((texts / f"{key}.en.json").read_text(encoding="utf-8"))
+    en = _stored_sentences(en_doc)
+    flagged = {i for p in problems for i in p["sentences"] if 0 <= i < len(en)}
+    if not flagged:
+        return "nothing to fix"
+    facts_doc = json.loads((derived_root / "facts" / f"{key}.json").read_text("utf-8"))
+    facts = select_facts(facts_doc["facts"])
+    fact_texts = _fact_texts(facts)
+    sources = {lang: [c.text for c in chunks if c.lang == lang and c.public_quote]
+               for lang in ("en", "es")}  # fmt: skip
+    taxon = en_doc["taxon"]
+    system, _ = prompt("fix_sentences")
+
+    def check(rows: list, lang: str) -> Any:
+        sents = [(t, f) for (t, f, _), _, _ in rows]
+        return check_text(sents, fact_texts, sources[lang], check_names=lang == "en")
+
+    def holds(rows: list) -> bool:
+        return len(en) - len(rows) <= _max_dropped(len(en)) and len(rows) >= 3
+
+    # rows: (sentence, index of the English sentence it replaces, is new)
+    rows: list[tuple[tuple[str, list[str], str], int, bool]] = []
+    feedback: list[str] | None = None
+    for attempt in range(retries + 1):
+        result = llm.complete_json(system, _fix_message(taxon, en, problems, facts, feedback),
+                                   FixedSentences, max_tokens=2_000)  # fmt: skip
+        changes = {s.index - 1: s for s in result.sentences if s.index - 1 in flagged}
+        if not changes:
+            feedback = ["you returned none of the sentences listed under TO FIX"]
+            continue
+        rows = []
+        for i, sent in enumerate(en):
+            if i not in changes:
+                rows.append((sent, i, False))
+            elif text := _tidy(changes[i].text):
+                ids = [_canonical_id(x) for x in changes[i].fact_ids]
+                rows.append(((text, ids, sent[2]), i, True))
+        report = check(rows, "en")
+        if report.passed and holds(rows):
+            break
+        failed = {r.index for r in report.sentences if r.problems}
+        last = attempt == retries  # on the last try, leave out the new ones that fail
+        if last and not report.problems and all(rows[k][2] for k in failed):
+            kept = [r for k, r in enumerate(rows) if k not in failed]
+            if holds(kept) and check(kept, "en").passed:
+                rows = kept
+                break
+        feedback = report.summary() or ["too many sentences left out: fix them instead"]
+        rows = []
+    if not rows:
+        return "english failed"
+    new_en = [r[0] for r in rows]
+
+    # Spanish: the unchanged sentences keep theirs; only the new ones are adapted.
+    es_path = texts / f"{key}.es.json"
+    es_doc = json.loads(es_path.read_text(encoding="utf-8")) if es_path.exists() else None
+    new_es = None
+    if es_doc:
+        es = _stored_sentences(es_doc)
+        index = _match_kept(en, es)
+        if index is None:
+            return "spanish failed"
+        es_of = {index[j]: es[j] for j in range(len(es))}
+        need = [k for k, r in enumerate(rows) if r[2]]
+        es_feedback: list[str] | None = None
+        for _attempt in range(retries + 1):
+            adapted = _adapt_es(llm, taxon, [new_en[k] for k in need], es_feedback) if need else []
+            es_problems = check_alignment([new_en[k][:2] for k in need], adapted, scientific_names)
+            if not es_problems:
+                by_row = dict(zip(need, adapted, strict=True))
+                es_rows = []
+                for k, (sent, src, _) in enumerate(rows):
+                    if k in by_row:
+                        es_rows.append(((by_row[k], sent[1], sent[2]), src, True))
+                    elif src in es_of:  # a sentence the Spanish had left out stays out
+                        es_rows.append((es_of[src], src, False))
+                report = check(es_rows, "es")
+                if report.passed:
+                    new_es = [r[0] for r in es_rows]
+                    break
+                es_problems = report.summary()
+            es_feedback = es_problems
+        if new_es is None:
+            return "spanish failed"
+
+    with tempfile.TemporaryDirectory(prefix="paleo-fix-") as tmp_name:
+        tmp = Path(tmp_name)
+        (tmp / "facts").mkdir()
+        shutil.copy(derived_root / "facts" / f"{key}.json", tmp / "facts" / f"{key}.json")
+        for lang, doc, sents in (("en", en_doc, new_en), ("es", es_doc, new_es)):
+            if doc is None or sents is None:
+                continue
+            _save(tmp / "texts" / f"{key}.{lang}.json", taxon=taxon, key=key, lang=lang,
+                  status="verified", llm=SimpleNamespace(label=llm.label),
+                  version=doc["prompt_version"], facts_hash=doc["facts_hash"],
+                  sentences=sents,
+                  report=SimpleNamespace(word_count=_word_count(sents)),  # type: ignore[arg-type]
+                  problems=[], review=doc.get("review"))  # fmt: skip
+        recheck_quality(tmp, ages)
+        out = {lang: tmp / "texts" / f"{key}.{lang}.json" for lang in ("en", "es")}
+        if not out["en"].exists():
+            return "english failed"
+        if es_doc and not out["es"].exists():
+            return "spanish failed"
+        for path in out.values():
+            if path.exists():
+                shutil.copy(path, texts / path.name)
+                (derived_root / "texts_review" / path.name).unlink(missing_ok=True)
+    return "replaced"

@@ -1,0 +1,179 @@
+[
+ {
+  "started_at": "2026-11-25T17:25:08Z",
+  "trigger": "schedule",
+  "changed": true,
+  "status": "ok",
+  "finished_at": "2026-11-25T17:29:11Z",
+  "steps": [
+   {
+    "name": "Set up job",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Run actions/checkout@v7.0.1",
+    "conclusion": "success",
+    "seconds": 1
+   },
+   {
+    "name": "Check out the data branch",
+    "conclusion": "success",
+    "seconds": 8
+   },
+   {
+    "name": "Run astral-sh/setup-uv@v10.3.3",
+    "conclusion": "success",
+    "seconds": 8
+   },
+   {
+    "name": "Install",
+    "conclusion": "success",
+    "seconds": 6
+   },
+   {
+    "name": "Anything new?",
+    "conclusion": "success",
+    "seconds": 3
+   },
+   {
+    "name": "Ingest and parse",
+    "conclusion": "success",
+    "seconds": 54
+   },
+   {
+    "name": "Facts and texts for pending species (Groq)",
+    "conclusion": "success",
+    "seconds": 9
+   },
+   {
+    "name": "dbt build",
+    "conclusion": "success",
+    "seconds": 50
+   },
+   {
+    "name": "Silhouettes for the size comparator",
+    "conclusion": "success",
+    "seconds": 0
+   },
+   {
+    "name": "Build the website",
+    "conclusion": "in_progress",
+    "seconds": 130,
+    "partial": true
+   }
+  ],
+  "sources_changed": {
+   "commons/files": 52,
+   "commons/taxon_files": 3,
+   "crossref/works": 1,
+   "news/items": 3,
+   "pbdb/taxa": 6,
+   "phylopic/nodes": 4,
+   "wikipedia_articles/en": 1
+  },
+  "wikipedia_revisions": {
+   "2026_in_archosaur_paleontology": 1387718933,
+   "2026_in_paleoichthyology": 1387646917,
+   "2026_in_reptile_paleontology": 1387277305
+  },
+  "wikipedia_new_revisions": [
+   "2026_in_archosaur_paleontology",
+   "2026_in_paleoichthyology"
+  ],
+  "summary": {
+   "totals": {
+    "taxa_new": 117,
+    "taxa_known": 26,
+    "events": 19572,
+    "studies": 8222,
+    "texts_en": 2838,
+    "texts_es": 2820,
+    "gallery_images": 1388,
+    "texts_pending": 0
+   },
+   "events_by_type": {
+    "description": 9798,
+    "entry_changed": 3,
+    "invalidated": 869,
+    "new_study": 2403,
+    "recombined": 2400,
+    "replaced": 193,
+    "revalidated": 687,
+    "study_corrected": 4,
+    "synonymized": 3215
+   },
+   "pbdb": {
+    "genus": {
+     "matched": 4751,
+     "total": 4751
+    },
+    "known": {
+     "matched": 25,
+     "total": 26
+    },
+    "new": {
+     "matched": 44,
+     "total": 117
+    }
+   },
+   "images": {
+    "phylopic/clade": 2343,
+    "commons/taxon": 2071,
+    "phylopic/group": 293,
+    "phylopic/taxon": 173,
+    "phylopic/genus": 14
+   }
+  },
+  "changes_since_previous": {
+   "taxa_known": 2,
+   "events": 11,
+   "studies": 1,
+   "gallery_images": 4
+  },
+  "dbt": {
+   "counts": {
+    "pass": 201,
+    "success": 81,
+    "warn": 4
+   },
+   "tests": {
+    "data": {
+     "pass": 192,
+     "warn": 4
+    },
+    "unit": {
+     "pass": 9
+    }
+   },
+   "issues": [
+    {
+     "status": "warn",
+     "node": "assert_catalog_homonyms",
+     "failures": 1
+    },
+    {
+     "status": "warn",
+     "node": "not_null_stg_wikipedia__new_taxa_primary_doi",
+     "failures": 4
+    },
+    {
+     "status": "warn",
+     "node": "not_null_stg_wikipedia__research_items_primary_doi",
+     "failures": 11
+    },
+    {
+     "status": "warn",
+     "node": "assert_pbdb_lag_warning",
+     "failures": 73
+    }
+   ]
+  },
+  "llm_tokens": {
+   "openai/gpt-oss-120b": {
+    "requests": 2,
+    "tokens": 1950
+   }
+  }
+ }
+]

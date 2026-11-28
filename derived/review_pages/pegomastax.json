@@ -3,24 +3,30 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "283db8df954d8a90",
- "reviewed_at": "2026-11-25T22:30:00+00:00",
- "problems": [
-  {
-   "sentences": [
-    2,
-    5,
-    8
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 gives a size estimate, sentence 6 places the specimen in the upper Elliot Formation (Triassic), while sentence 9 states it lived during the earliest Jurassic (200–190 Ma). The formation age and the stated Jurassic age conflict."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:10:40+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This animal measured no more than 60 centimeters from head to tail, with a skull length of 73 millimeters.\" / \"The holotype specimen, accession number SAM-PK-K10488, was found at the Voyizane locality in the Transkei District within rocks from the upper Elliot Formation.\" / \"Pegomastax lived during the earliest Jurassic, specifically the Hettangian and Sinemurian epochs, approximately 200 to 190 million years ago.\": Sentence 3 gives a size estimate, sentence 6 places the specimen in the upper Elliot Formation (Triassic), while sentence 9 states it lived during the earliest Jurassic (200–190 Ma). The formation age and the stated Jurassic age conflict."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:14:42+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:30:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 gives a size estimate, sentence 6 places the specimen in the upper Elliot Formation (Triassic), while sentence 9 states it lived during the earliest Jurassic (200–190 Ma). The formation age and the stated Jurassic age conflict."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:14:42+00:00"
+  }
+ ]
 }

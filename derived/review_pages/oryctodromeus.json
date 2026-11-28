@@ -3,37 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "03c66a1e0cd9a939",
- "reviewed_at": "2026-11-25T22:47:07+00:00",
+ "reviewed_at": "2026-11-28T13:15:17+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    8
    ],
    "kind": "repetition",
-   "reason": "Sentence 7 repeats the same statement that Oryctodromeus was basal within Euornithopoda."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions digging adaptations in the femur without prior mention of femur anatomy."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"smaller animals\" creating secondary cylinders, but no earlier context introduces these animals."
+   "reason": "Sentence 9 repeats the same time range information multiple times."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Adaptations in the jaws, forelimbs, and pelvis likely helped the animal move and manipulate soil. Additional fossils from the Wayan Formation reveal further digging adaptations located in the femur. Oryctodromeus shared a wide snout with Orodromeus and Zephyrosaurus, features that may have been used for digging.\": Sentence 5 mentions digging adaptations in the femur without prior mention of femur anatomy.",
-  "- missing context: \"The preserved burrow section includes two turns and smaller secondary sandstone cylinders up to a few centimeters in cross-section, likely created by smaller animals sharing the space. The burrow dimensions fit well with the probable proportions of an adult dinosaur, supporting the idea that Oryctodromeus was the burrower.\": Sentence 6 refers to \"smaller animals\" creating secondary cylinders, but no earlier context introduces these animals."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:24:20+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:47:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 7 repeats the same statement that Oryctodromeus was basal within Euornithopoda."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions digging adaptations in the femur without prior mention of femur anatomy."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"smaller animals\" creating secondary cylinders, but no earlier context introduces these animals."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:24:20+00:00"
+  }
+ ]
 }

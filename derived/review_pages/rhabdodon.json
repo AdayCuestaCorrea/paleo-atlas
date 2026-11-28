@@ -3,37 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "625ca4d426096f58",
- "reviewed_at": "2026-11-25T22:37:18+00:00",
+ "reviewed_at": "2026-11-28T13:12:40+00:00",
  "problems": [
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to the Lo Hueco region without having introduced it earlier in the page."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "missing_context",
-   "reason": "Describes the environment near the Lo Hueco fossil site, but the site itself was not mentioned before."
-  },
   {
    "sentences": [
     13
    ],
    "kind": "about_something_else",
-   "reason": "Discusses rhabdodontids as a group, which is not the specific animal Rhabdodon itself."
+   "reason": "Sentence 14 discusses the group Ceratopsoidea as if it were the animal itself, introducing a new taxonomic group not previously mentioned in the context of Rhabdodon."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The Lo Hueco region where fossils were found was near the coast of the Tethys Sea.\": Refers to the Lo Hueco region without having introduced it earlier in the page.",
-  "- missing context: \"The environment near the Lo Hueco fossil site included a brackish-freshwater aquatic area and a muddy floodplain.\": Describes the environment near the Lo Hueco fossil site, but the site itself was not mentioned before."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:18:16+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:37:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the Lo Hueco region without having introduced it earlier in the page."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Describes the environment near the Lo Hueco fossil site, but the site itself was not mentioned before."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Discusses rhabdodontids as a group, which is not the specific animal Rhabdodon itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:18:16+00:00"
+  }
+ ]
 }

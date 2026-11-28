@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "988f62f78f982f2a",
- "reviewed_at": "2026-11-25T23:04:21+00:00",
+ "reviewed_at": "2026-11-28T13:19:17+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,34 @@
     3
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states Aragosaurus lived during the early Berriasian (≈145–140 Ma), while sentence 4 cites a range from the Kimmeridgian to Tithonian (≈154.8–143.1 Ma), giving conflicting age estimates for the same animal."
+   "reason": "Sentence 1 states Aragosaurus lived during the early Berriasian (145–140 Ma), while sentence 4 cites the Paleobiology Database giving a range of Kimmeridgian to Tithonian (154.8–143.1 Ma), which are inconsistent time periods."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Aragosaurus was a large, quadrupedal herbivore that lived during the early Berriasian, approximately 145 to 140 million years ago, in Galve, Teruel, Spain.\" / \"The Paleobiology Database records the time range for Aragosaurus as Kimmeridgian to Tithonian, from 154.8 to 143.1 million years ago.\": Sentence 1 states Aragosaurus lived during the early Berriasian (≈145–140 Ma), while sentence 4 cites a range from the Kimmeridgian to Tithonian (≈154.8–143.1 Ma), giving conflicting age estimates for the same animal."
+  "- contradiction: \"Aragosaurus was a large, quadrupedal herbivore that lived during the early Berriasian, approximately 145 to 140 million years ago.\" / \"The Paleobiology Database records the time range for Aragosaurus as Kimmeridgian to Tithonian, from 154.8 to 143.1 million years ago.\": Sentence 1 states Aragosaurus lived during the early Berriasian (145–140 Ma), while sentence 4 cites the Paleobiology Database giving a range of Kimmeridgian to Tithonian (154.8–143.1 Ma), which are inconsistent time periods."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:04:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Aragosaurus lived during the early Berriasian (≈145–140 Ma), while sentence 4 cites a range from the Kimmeridgian to Tithonian (≈154.8–143.1 Ma), giving conflicting age estimates for the same animal."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:32:10+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:32:10+00:00"
+ "rewritten_at": "2026-11-28T13:24:45+00:00"
 }

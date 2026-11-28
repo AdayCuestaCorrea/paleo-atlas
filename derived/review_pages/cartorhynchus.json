@@ -2,25 +2,39 @@
  "taxon_key": "cartorhynchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9aee5ac1239beee6",
- "reviewed_at": "2026-11-25T22:23:16+00:00",
+ "text_hash": "cfff11cb0655d9a8",
+ "reviewed_at": "2026-11-28T13:09:11+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    15,
-    16
+    9,
+    17
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 15, 16, and 17 give conflicting geological ages for Cartorhynchus: 15 states it lived during the Early Triassic (Olenekian stage, ~248 Ma), while 16 and 17 place it in the Middle Triassic (Spathian substage)."
+   "kind": "repetition",
+   "reason": "Both sentences discuss the feeding lifestyle of Cartorhynchus, repeating the claim that it was a durophagous/suction feeder."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to \"jaw twisting during preservation or the loss of soft tissues\" without explaining what caused these conditions or how they relate to the specimen."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "about_something_else",
+   "reason": "These sentences describe taxonomic groupings and clade relationships rather than characteristics of Cartorhynchus itself."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Cartorhynchus lived during the Early Triassic epoch, approximately 248 million years ago, at the beginning of the Lower Triassic (Olenekian stage).\" / \"Cartorhynchus lived in an oceanic basin located relatively far from the coast during the Middle Triassic.\" / \"The animal was part of a rapid diversification of marine reptiles during the Spathian substage, occurring about one million years after the Permian-Triassic extinction event.\": Sentences 15, 16, and 17 give conflicting geological ages for Cartorhynchus: 15 states it lived during the Early Triassic (Olenekian stage, ~248 Ma), while 16 and 17 place it in the Middle Triassic (Spathian substage)."
+  "- missing context: \"Researchers proposed that the unusual wear patterns on Cartorhynchus teeth might be due to jaw twisting during preservation or the loss of soft tissues, though neither fully explains the evidence.\": The sentence refers to \"jaw twisting during preservation or the loss of soft tissues\" without explaining what caused these conditions or how they relate to the specimen."
  ],
- "rewrite": "replaced",
- "round": 3,
+ "rewrite": "unchanged",
+ "round": 4,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:05:01+00:00",
@@ -81,8 +95,26 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T14:03:44+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T22:23:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15,
+      16
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 15, 16, and 17 give conflicting geological ages for Cartorhynchus: 15 states it lived during the Early Triassic (Olenekian stage, ~248 Ma), while 16 and 17 place it in the Middle Triassic (Spathian substage)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:11:09+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:11:09+00:00"
+ "rewritten_at": "2026-11-28T13:20:49+00:00"
 }

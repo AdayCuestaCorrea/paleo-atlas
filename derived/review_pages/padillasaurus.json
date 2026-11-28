@@ -2,30 +2,32 @@
  "taxon_key": "padillasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "1433548a0d8e79c5",
- "reviewed_at": "2026-11-25T22:52:13+00:00",
+ "text_hash": "50a6632781b24dd0",
+ "reviewed_at": "2026-11-28T13:16:49+00:00",
  "problems": [
   {
    "sentences": [
-    21
+    9,
+    10,
+    17
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 22 discusses ammonite fossils in the rock matrix to date the formation, which is about the geological context rather than the animal itself."
+   "kind": "contradiction",
+   "reason": "Says Padillasaurus is a brachiosaurid from South America (10,11) but later reclassified as a basal Somphospondyli (18), conflicting taxonomic placement."
   },
   {
    "sentences": [
-    17
+    20
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 18 refers to “Cavities in the sacral vertebrae lacking connection to the hollow interior, a lack of true pleurocoel” without previously introducing these cavities or explaining their significance, leaving the reader unclear about what is being described."
+   "kind": "about_something_else",
+   "reason": "Describes ammonite fossils in the rock matrix, which pertains to the formation, not to Padillasaurus itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Cavities in the sacral vertebrae lacking connection to the hollow interior, a lack of true pleurocoel, linked Padillasaurus to brachiosaurids.\": Sentence 18 refers to “Cavities in the sacral vertebrae lacking connection to the hollow interior, a lack of true pleurocoel” without previously introducing these cavities or explaining their significance, leaving the reader unclear about what is being described."
+  "- contradiction: \"Padillasaurus was initially classified as the first record of a Cretaceous brachiosaurid from South America, whereas previous Cretaceous brachiosaurid findings were only known from North America.\" / \"It is also the latest known brachiosaurid from the ancient continent of Gondwana.\" / \"However, a more recent study reclassified Padillasaurus as a basal member of the Somphospondyli.\": Says Padillasaurus is a brachiosaurid from South America (10,11) but later reclassified as a basal Somphospondyli (18), conflicting taxonomic placement."
  ],
- "rewrite": "replaced",
- "round": 3,
+ "rewrite": "unchanged",
+ "round": 4,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T01:09:44+00:00",
@@ -101,8 +103,31 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T14:24:48+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T22:52:13+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 22 discusses ammonite fossils in the rock matrix to date the formation, which is about the geological context rather than the animal itself."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 18 refers to “Cavities in the sacral vertebrae lacking connection to the hollow interior, a lack of true pleurocoel” without previously introducing these cavities or explaining their significance, leaving the reader unclear about what is being described."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:26:55+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:26:55+00:00"
+ "rewritten_at": "2026-11-28T13:23:49+00:00"
 }

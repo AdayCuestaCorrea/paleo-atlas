@@ -2,24 +2,39 @@
  "taxon_key": "lingyuanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9c96762e6d957b10",
- "reviewed_at": "2026-11-25T22:34:42+00:00",
+ "text_hash": "4b260b7669826855",
+ "reviewed_at": "2026-11-28T13:12:05+00:00",
  "problems": [
   {
    "sentences": [
     17,
     18
    ],
-   "kind": "contradiction",
-   "reason": "Both describe the paleoenvironment of Lingyuanosaurus but give conflicting temperature and climate conditions (cold winters vs warm humid)."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same warm and humid conditions of the Jehol Group, repeating the same information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The environment where Lingyuanosaurus lived had an average yearly temperature of 10°C, featuring relatively cold winters.\" / \"The paleoenvironment of the Jehol Group, where Lingyuanosaurus lived, featured warm and humid conditions with seasonal dry periods.\": Both describe the paleoenvironment of Lingyuanosaurus but give conflicting temperature and climate conditions (cold winters vs warm humid)."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:17:06+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:34:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Both describe the paleoenvironment of Lingyuanosaurus but give conflicting temperature and climate conditions (cold winters vs warm humid)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:17:06+00:00"
+  }
+ ]
 }

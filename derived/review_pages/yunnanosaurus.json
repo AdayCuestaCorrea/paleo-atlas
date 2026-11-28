@@ -2,24 +2,43 @@
  "taxon_key": "yunnanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b2a27c2d988e25b3",
- "reviewed_at": "2026-11-25T22:36:26+00:00",
+ "text_hash": "64bce9828fc9e2b7",
+ "reviewed_at": "2026-11-28T13:12:23+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    5
+    4
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 claims the generic Yunnanosaurus measured up to 7 m long, while sentence 6 states that the species Y. youngi reached 13 m, implying a larger size for the same genus without explaining the difference."
+   "reason": "Sentence 1 claims Y. youngi reached 12 m, while sentence 5 describes Y. robustus features but the earlier part of sentence 1 states the species Y. youngi reached a length of 12 m, contradicting the earlier claim that the animal measured up to 7 m long."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This large, ground-dwelling quadrupedal herbivore could also walk on two legs and measured up to 7 meters long and 2 meters high.\" / \"The species Y. youngi reached a length of 13 meters, making it significantly larger than Y. huangi.\": Sentence 1 claims the generic Yunnanosaurus measured up to 7 m long, while sentence 6 states that the species Y. youngi reached 13 m, implying a larger size for the same genus without explaining the difference."
+  "- contradiction: \"This large, ground-dwelling quadrupedal herbivore could also walk on two legs and measured up to 7 meters long and 2 meters high, though the species Y. youngi reached a length of 12 meters.\" / \"Y. robustus is distinguished by the absence of anteroposterior expansion on the astragalus and a dorsoventrally compressed metatarsal IV shaft.\": Sentence 1 claims Y. youngi reached 12 m, while sentence 5 describes Y. robustus features but the earlier part of sentence 1 states the species Y. youngi reached a length of 12 m, contradicting the earlier claim that the animal measured up to 7 m long."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:36:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 claims the generic Yunnanosaurus measured up to 7 m long, while sentence 6 states that the species Y. youngi reached 13 m, implying a larger size for the same genus without explaining the difference."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:17:47+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:17:47+00:00"
+ "rewritten_at": "2026-11-28T13:22:13+00:00"
 }

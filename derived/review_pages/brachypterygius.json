@@ -2,44 +2,62 @@
  "taxon_key": "brachypterygius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7b23ad6e76be539e",
- "reviewed_at": "2026-11-25T22:38:20+00:00",
+ "text_hash": "672d51344cb06ce9",
+ "reviewed_at": "2026-11-28T13:13:02+00:00",
  "problems": [
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions the holotype’s provenance without having introduced the holotype earlier in the text."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes Owen’s erection of Ichthyosaurus trigonus, a different taxon, without linking it to Brachypterygius."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "about_something_else",
-   "reason": "Mentions Grendelius mordax, a separate species, without relating it to Brachypterygius."
-  },
   {
    "sentences": [
     9
    ],
-   "kind": "about_something_else",
-   "reason": "Discusses Grendelius mordax’s distinctness from Brachypterygius extremus, a different taxon, as if it were about Brachypterygius itself."
+   "kind": "missing_context",
+   "reason": "Sentence 10 refers to \"Brachypterygius extremus\" which is not defined or mentioned earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"While the holotype was originally thought to come from the Lias Group of Bath, evidence suggests it likely originated from the Kimmeridgian Kimmeridge Clay of Kimmeridge Bay, Dorset.\": Mentions the holotype’s provenance without having introduced the holotype earlier in the text."
+  "- missing context: \"A 2015 study by Zverkov and colleagues argued that Grendelius mordax is distinct enough from Brachypterygius extremus to warrant classification as a separate genus and species.\": Sentence 10 refers to \"Brachypterygius extremus\" which is not defined or mentioned earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:38:20+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the holotype’s provenance without having introduced the holotype earlier in the text."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes Owen’s erection of Ichthyosaurus trigonus, a different taxon, without linking it to Brachypterygius."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "about_something_else",
+     "reason": "Mentions Grendelius mordax, a separate species, without relating it to Brachypterygius."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "about_something_else",
+     "reason": "Discusses Grendelius mordax’s distinctness from Brachypterygius extremus, a different taxon, as if it were about Brachypterygius itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:19:17+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:19:17+00:00"
+ "rewritten_at": "2026-11-28T13:22:28+00:00"
 }

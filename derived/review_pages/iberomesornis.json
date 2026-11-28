@@ -2,23 +2,42 @@
  "taxon_key": "iberomesornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a57202a377b13710",
- "reviewed_at": "2026-11-25T22:46:28+00:00",
+ "text_hash": "7cbae8489ed9410b",
+ "reviewed_at": "2026-11-28T13:15:03+00:00",
  "problems": [
   {
    "sentences": [
-    5
+    0,
+    2
    ],
-   "kind": "missing_context",
-   "reason": "The phrase \"As a constant flyer\" assumes prior discussion of flight behavior, which is not provided earlier in the page."
+   "kind": "contradiction",
+   "reason": "Sentence 1 states the bird was roughly 20 cm long, yet sentence 3 gives an axial column length of 87 mm (8.7 cm), which is inconsistent with the overall length claim."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"As a constant flyer, its shorter tail and higher shoulder position aided in swooping and turning at speed.\": The phrase \"As a constant flyer\" assumes prior discussion of flight behavior, which is not provided earlier in the page."
+  "- contradiction: \"This ancient bird measured roughly twenty centimetres in length, with an axial column preserved at eighty-seven millimetres.\" / \"Its ribcage lacked ossified uncinate processes, though cartilaginous versions likely existed.\": Sentence 1 states the bird was roughly 20 cm long, yet sentence 3 gives an axial column length of 87 mm (8.7 cm), which is inconsistent with the overall length claim."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:46:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"As a constant flyer\" assumes prior discussion of flight behavior, which is not provided earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:23:57+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:23:57+00:00"
+ "rewritten_at": "2026-11-28T13:23:16+00:00"
 }

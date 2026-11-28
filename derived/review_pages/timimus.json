@@ -2,32 +2,53 @@
  "taxon_key": "timimus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "a2dde10232e6495d",
- "reviewed_at": "2026-11-25T22:47:47+00:00",
+ "text_hash": "7b47716c9d980a6b",
+ "reviewed_at": "2026-11-28T13:15:32+00:00",
  "problems": [
   {
    "sentences": [
     0,
     2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 estimates Timimus hermani at 2.5 m based on femur length, while sentence 3 cites a 2016 estimate of 4.3 m for the holotype, giving two different total lengths for the same animal."
+   "kind": "repetition",
+   "reason": "Both sentences state the 2016 estimate that the holotype specimen was 4.3 m long."
   },
   {
    "sentences": [
     9
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 mentions a “possible Timimus relative” but no earlier sentence introduces or describes such a relative, leaving the reference unclear."
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses a fossilized toe bone from a possible Timimus relative, not the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Timimus hermani was a small theropod dinosaur that lived in Australia during the Early Cretaceous, with a total estimated length of 2.5 meters based on the length of its femur.\" / \"A 2016 estimate suggests the holotype specimen was 4.3 meters long and weighed 200 kilograms.\": Sentence 1 estimates Timimus hermani at 2.5 m based on femur length, while sentence 3 cites a 2016 estimate of 4.3 m for the holotype, giving two different total lengths for the same animal.",
-  "- missing context: \"A fossilized toe bone from a possible Timimus relative shows a depressed fracture on the bottom surface, suggesting injury.\": Sentence 10 mentions a “possible Timimus relative” but no earlier sentence introduces or describes such a relative, leaving the reference unclear."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:24:44+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:47:47+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 estimates Timimus hermani at 2.5 m based on femur length, while sentence 3 cites a 2016 estimate of 4.3 m for the holotype, giving two different total lengths for the same animal."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 mentions a “possible Timimus relative” but no earlier sentence introduces or describes such a relative, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:24:44+00:00"
+  }
+ ]
 }

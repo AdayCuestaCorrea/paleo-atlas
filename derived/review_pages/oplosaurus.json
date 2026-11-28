@@ -2,31 +2,50 @@
  "taxon_key": "oplosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "bb8f09eb222cc5f8",
- "reviewed_at": "2026-11-25T22:50:27+00:00",
+ "text_hash": "675a0c88a467757e",
+ "reviewed_at": "2026-11-28T13:16:31+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    6
+    7,
+    8
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the Oplosaurus tooth is comparable in size to that of Brachiosaurus."
-  },
-  {
-   "sentences": [
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 11 references Mosasaurus and Hylaeosaurus without any prior mention or context for these taxa."
+   "kind": "contradiction",
+   "reason": "Sentence 8 states Oplosaurus belongs to Macronaria, while sentence 9 argues it is either a turiasaur or a Camarasauridae, groups not within Macronaria."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated whether the name Oplosaurus originally referred to an armored dinosaur or an armed carnivore, with recent research suggesting Gervais compared the tooth to Mosasaurus rather than Hylaeosaurus.\": Sentence 11 references Mosasaurus and Hylaeosaurus without any prior mention or context for these taxa."
+  "- contradiction: \"Oplosaurus likely belongs to the broader group Macronaria.\" / \"There is an open debate regarding the classification of Oplosaurus, with some researchers suggesting it is a turiasaur while others conclude it is a member of the Camarasauridae.\": Sentence 8 states Oplosaurus belongs to Macronaria, while sentence 9 argues it is either a turiasaur or a Camarasauridae, groups not within Macronaria."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:50:27+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the Oplosaurus tooth is comparable in size to that of Brachiosaurus."
+    },
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 11 references Mosasaurus and Hylaeosaurus without any prior mention or context for these taxa."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:26:14+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:26:14+00:00"
+ "rewritten_at": "2026-11-28T13:23:43+00:00"
 }

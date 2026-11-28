@@ -2,23 +2,31 @@
  "taxon_key": "tupuxuara",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "68fd80eb7aae449b",
- "reviewed_at": "2026-11-25T22:30:53+00:00",
+ "text_hash": "703762e8681f502e",
+ "reviewed_at": "2026-11-28T13:11:05+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state that the validity of Tupuxuara deliradamus is debated and that it has been classified as a nomen dubium."
+  },
+  {
+   "sentences": [
+    12
    ],
    "kind": "missing_context",
-   "reason": "Sentence 8 refers to a \"subadult\" that has not been introduced earlier in the page, leaving the reader unsure which specimen is being described."
+   "reason": "Sentence 13 introduces Tupuxuara deliradamus without any prior mention or context of this species on the page."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"A subadult described in 2006 lacked a fully developed crest, supporting the idea that the crest size indicates when an individual reached adulthood.\": Sentence 8 refers to a \"subadult\" that has not been introduced earlier in the page, leaving the reader unsure which specimen is being described."
+  "- missing context: \"Recent studies suggest Tupuxuara deliradamus, a species whose validity is debated due to its classification as a nomen dubium, should be removed from the genus Tupuxuara and placed in the subfamily Tapejarinae.\": Sentence 13 introduces Tupuxuara deliradamus without any prior mention or context of this species on the page."
  ],
- "rewrite": "replaced",
- "round": 3,
+ "rewrite": "unchanged",
+ "round": 4,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:21:01+00:00",
@@ -74,8 +82,24 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T14:09:54+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T22:30:53+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 refers to a \"subadult\" that has not been introduced earlier in the page, leaving the reader unsure which specimen is being described."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:15:12+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:15:12+00:00"
+ "rewritten_at": "2026-11-28T13:21:42+00:00"
 }

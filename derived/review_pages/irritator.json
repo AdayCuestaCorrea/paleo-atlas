@@ -3,44 +3,58 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ef528213ea936135",
- "reviewed_at": "2026-11-25T22:17:12+00:00",
+ "reviewed_at": "2026-11-28T13:07:32+00:00",
  "problems": [
   {
    "sentences": [
-    5,
-    10
-   ],
-   "kind": "missing_context",
-   "reason": "These sentences refer to the skull before it has been introduced in the text."
-  },
-  {
-   "sentences": [
-    25
+    12
    ],
    "kind": "about_something_else",
-   "reason": "It discusses the formation rather than the animal itself."
-  },
-  {
-   "sentences": [
-    26
-   ],
-   "kind": "about_something_else",
-   "reason": "It comments on herbivorous dinosaur scarcity, not directly on the animal."
-  },
-  {
-   "sentences": [
-    29
-   ],
-   "kind": "about_something_else",
-   "reason": "It describes taphonomic context of the holotype, not a biological feature of the animal."
+   "reason": "Sentence 13 describes a replica skeleton of Angaturama, a different dinosaur, which is not directly about Irritator."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The genus name reflects the frustration researchers felt because the skull had been heavily damaged by fossil collectors.\" / \"When discovered, the holotype skull was lying on its side.\": These sentences refer to the skull before it has been introduced in the text."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:07:33+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:17:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      10
+     ],
+     "kind": "missing_context",
+     "reason": "These sentences refer to the skull before it has been introduced in the text."
+    },
+    {
+     "sentences": [
+      25
+     ],
+     "kind": "about_something_else",
+     "reason": "It discusses the formation rather than the animal itself."
+    },
+    {
+     "sentences": [
+      26
+     ],
+     "kind": "about_something_else",
+     "reason": "It comments on herbivorous dinosaur scarcity, not directly on the animal."
+    },
+    {
+     "sentences": [
+      29
+     ],
+     "kind": "about_something_else",
+     "reason": "It describes taphonomic context of the holotype, not a biological feature of the animal."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:07:33+00:00"
+  }
+ ]
 }

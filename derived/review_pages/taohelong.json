@@ -3,29 +3,54 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f6d6779fe82a1359",
- "reviewed_at": "2026-11-25T23:00:31+00:00",
+ "reviewed_at": "2026-11-28T13:18:32+00:00",
  "problems": [
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "contradiction",
+   "reason": "The age ranges for Taohelong’s existence are presented inconsistently: one estimate spans 125.77–113.2 Ma, while another places it narrowly at 113–110 Ma, implying conflicting temporal ranges without clarifying that they are alternative hypotheses."
+  },
   {
    "sentences": [
     10
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 11 describes a sauropod found near the site, which is unrelated to the description of Taohelong itself."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 introduces \"Other estimates\" about the age of Taohelong without any prior mention of such estimates or context for the comparison."
+   "reason": "Sentence 11 discusses a sauropod found near the site, which is unrelated to the description of Taohelong itself and therefore presents information about another organism."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Other estimates suggest Taohelon lived from the Barremian to the Aptian, spanning from 125.77 to 113.2 million years ago.\": Sentence 10 introduces \"Other estimates\" about the age of Taohelong without any prior mention of such estimates or context for the comparison."
+  "- contradiction: \"While one estimate suggests Taohelon lived from the Barremian to the Aptian, spanning from 125.77 to 113.2 million years ago, other analyses place it more narrowly in the mid-Cretaceous, approximately 113 to 110 million years ago in the Aptian stage.\": The age ranges for Taohelong’s existence are presented inconsistently: one estimate spans 125.77–113.2 Ma, while another places it narrowly at 113–110 Ma, implying conflicting temporal ranges without clarifying that they are alternative hypotheses."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:00:31+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 11 describes a sauropod found near the site, which is unrelated to the description of Taohelong itself."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 introduces \"Other estimates\" about the age of Taohelong without any prior mention of such estimates or context for the comparison."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:30:19+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:30:19+00:00"
+ "rewritten_at": "2026-11-28T13:24:35+00:00"
 }

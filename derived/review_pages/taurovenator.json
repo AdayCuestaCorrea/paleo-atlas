@@ -2,47 +2,71 @@
  "taxon_key": "taurovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "960b4e30270de746",
- "reviewed_at": "2026-11-25T22:24:05+00:00",
+ "text_hash": "76e16bb7701b302e",
+ "reviewed_at": "2026-11-28T13:09:26+00:00",
  "problems": [
   {
    "sentences": [
-    1,
     12
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 assigns Taurovenator to the Albian (110–106 Ma), whereas the rest of the page places it in the Late Cretaceous as a large carcharodontosaurid theropod."
+   "kind": "repetition",
+   "reason": "Sentence 13 repeats the claim that Taurovenator is synonymous with Mapusaurus, stating it twice."
   },
   {
    "sentences": [
-    13,
     14
    ],
    "kind": "contradiction",
-   "reason": "Sentence 14 states that Taurovenator may be synonymous with Mapusaurus, implying they are the same taxon, while sentence 15 argues that stratigraphic differences support Taurovenator as a distinct genus."
-  },
-  {
-   "sentences": [
-    13
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 14 repeats the claim that Taurovenator is synonymous with Mapusaurus multiple times."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 6 discusses fossilized pollen and plant community, which is about the environment, not directly about Taurovenator itself."
+   "reason": "Sentence 15 places Taurovenator outside Carcharodontosauridae, contradicting earlier statements that it belongs to that family."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"It is classified as a very large carcharodontosaurid and ranks among the largest known theropod dinosaurs and one of the biggest terrestrial carnivores.\" / \"The Paleobi Database records the time range of Taurovenator as the Albian, between 110.1 and 106.3 million years ago, differing from other estimates.\": Sentence 13 assigns Taurovenator to the Albian (110–106 Ma), whereas the rest of the page places it in the Late Cretaceous as a large carcharodontosaurid theropod.",
-  "- contradiction: \"Some paleontologists have debated whether Taurovenator is synonymous with the genus Mapusaurus. Coria et al. (2019) suggested Taurovenator is synonymous with Mapusaurus because their original distinguishing features were shared, arguing that its unique features were shared with Mapusaurus. Researcher Mickey Mortimer believed Taurovenator was synonymous with Mapusaurus due to insufficient diagnostic material, and it has been suggested that Taurovenator is a synonym of Mapusaurus.\" / \"However, differences in stratigraphic layers suggest Taurovenator, Meraxes, and Mapusaurus may not have lived at the same time, supporting Taurovenator's validity.\": Sentence 14 states that Taurovenator may be synonymous with Mapusaurus, implying they are the same taxon, while sentence 15 argues that stratigraphic differences support Taurovenator as a distinct genus."
+  "- contradiction: \"A 2025 study by Cau and Paterna debated the classification of Taurovenator, placing it outside the family Carcharodontosauridae.\": Sentence 15 places Taurovenator outside Carcharodontosauridae, contradicting earlier statements that it belongs to that family."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:24:05+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 assigns Taurovenator to the Albian (110–106 Ma), whereas the rest of the page places it in the Late Cretaceous as a large carcharodontosaurid theropod."
+    },
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 14 states that Taurovenator may be synonymous with Mapusaurus, implying they are the same taxon, while sentence 15 argues that stratigraphic differences support Taurovenator as a distinct genus."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 14 repeats the claim that Taurovenator is synonymous with Mapusaurus multiple times."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 6 discusses fossilized pollen and plant community, which is about the environment, not directly about Taurovenator itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:11:39+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:11:39+00:00"
+ "rewritten_at": "2026-11-28T13:20:56+00:00"
 }

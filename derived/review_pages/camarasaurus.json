@@ -2,24 +2,47 @@
  "taxon_key": "camarasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "252454995f103b1e",
- "reviewed_at": "2026-11-25T22:16:24+00:00",
+ "text_hash": "436bb6d0b099fdb3",
+ "reviewed_at": "2026-11-28T13:07:21+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    12
+    21,
+    22
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 describes early reconstructions of Camarasaurus with long, sharp teeth implying carnivory, while sentence 13 states it was a herbivore that fed on vegetation."
+   "kind": "repetition",
+   "reason": "Both sentences state that Camarasaurus is classified as a member of the sauropod group Macronaria."
+  },
+  {
+   "sentences": [
+    25,
+    26
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences provide overlapping age ranges for Camarasaurus, with one giving a broader range and the other specifying the Tithonian stage."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Because little was known about the skull and most reptiles were assumed to be carnivorous, early reconstructions depicted Camarasaurus with a hypothetical skull bearing long, sharp teeth.\" / \"Camarasaurus was a herbivore that likely fed on vegetation at heights between 2 and 5 meters. It was likely a selective feeder that browsed at these heights.\": Sentence 4 describes early reconstructions of Camarasaurus with long, sharp teeth implying carnivory, while sentence 13 states it was a herbivore that fed on vegetation."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:06:47+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:16:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 describes early reconstructions of Camarasaurus with long, sharp teeth implying carnivory, while sentence 13 states it was a herbivore that fed on vegetation."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:06:47+00:00"
+  }
+ ]
 }

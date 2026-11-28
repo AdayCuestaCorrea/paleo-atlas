@@ -2,31 +2,50 @@
  "taxon_key": "sinornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "053d73c7fb8bead6",
- "reviewed_at": "2026-11-25T22:44:58+00:00",
+ "text_hash": "a01f35116e366608",
+ "reviewed_at": "2026-11-28T13:14:43+00:00",
  "problems": [
   {
    "sentences": [
+    8,
     9
    ],
    "kind": "contradiction",
-   "reason": "Classifies Sinornis as Reptilia, contradicting its description as a bird with avian features."
-  },
-  {
-   "sentences": [
-    0,
-    8
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Sinornis was roughly the size of a modern sparrow and had flight/perching abilities similar to sparrow-sized birds."
+   "reason": "Both sentences claim different taxonomic conclusions about Cathayornis and Sinornis—one says they are synonyms, the other says they are distinct genera."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Sinornis is classified under the class Reptilia.\": Classifies Sinornis as Reptilia, contradicting its description as a bird with avian features."
+  "- contradiction: \"In 2001, Paul Sereno and colleagues considered the species Cathayornis to be a junior synonym of Sinornis due to their similar anatomy.\" / \"In 2001, Zhou and Hou argued that Cathayornis and Sinornis are distinct genera, citing differences in size, finger structure, and claw length.\": Both sentences claim different taxonomic conclusions about Cathayornis and Sinornis—one says they are synonyms, the other says they are distinct genera."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:44:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Classifies Sinornis as Reptilia, contradicting its description as a bird with avian features."
+    },
+    {
+     "sentences": [
+      0,
+      8
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Sinornis was roughly the size of a modern sparrow and had flight/perching abilities similar to sparrow-sized birds."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:23:05+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:23:05+00:00"
+ "rewritten_at": "2026-11-28T13:23:14+00:00"
 }

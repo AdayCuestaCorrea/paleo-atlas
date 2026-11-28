@@ -2,24 +2,52 @@
  "taxon_key": "haliskia",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2e10b0807debb3fd",
- "reviewed_at": "2026-11-25T22:48:40+00:00",
+ "text_hash": "a7cd4a25cd4b8212",
+ "reviewed_at": "2026-11-28T13:15:51+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    2
+    7,
+    10
    ],
    "kind": "contradiction",
-   "reason": "Sentence 1 states that Haliskia is known only from a partial skeleton, while sentence 3 claims it is the most complete pterosaur species known from Australia, implying a complete or near‑complete specimen."
+   "reason": "Sentence 8 states phylogenetic analyses agree Haliskia is a member of Ornithocheirae, while sentence 11 claims analyses produced significantly different results regarding its evolutionary relationships."
+  },
+  {
+   "sentences": [
+    9,
+    10
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 10 gives a specific clade placement (sister to Ornithocheirinae within Ornithocheiridae), whereas sentence 11 says analyses have produced significantly different results."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The genus Haliskia contains only one species, H. peterseni, which is known from a partial skeleton including a skull.\" / \"Haliskia is the most complete pterosaur species known from Australia.\": Sentence 1 states that Haliskia is known only from a partial skeleton, while sentence 3 claims it is the most complete pterosaur species known from Australia, implying a complete or near‑complete specimen."
+  "- contradiction: \"Phylogenetic analyses agree that Haliskia is a member of the Ornithocheirae.\" / \"Phylogenetic analyses of Haliskia have produced significantly different results regarding its evolutionary relationships and clade composition.\": Sentence 8 states phylogenetic analyses agree Haliskia is a member of Ornithocheirae, while sentence 11 claims analyses produced significantly different results regarding its evolutionary relationships.",
+  "- contradiction: \"One phylogenetic analysis places Haliskia and Ferrodraco in a clade sister to the Ornithocheirinae within the Ornithocheiridae.\" / \"Phylogenetic analyses of Haliskia have produced significantly different results regarding its evolutionary relationships and clade composition.\": Sentence 10 gives a specific clade placement (sister to Ornithocheirinae within Ornithocheiridae), whereas sentence 11 says analyses have produced significantly different results."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:48:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states that Haliskia is known only from a partial skeleton, while sentence 3 claims it is the most complete pterosaur species known from Australia, implying a complete or near‑complete specimen."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:25:17+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:25:17+00:00"
+ "rewritten_at": "2026-11-28T13:23:29+00:00"
 }

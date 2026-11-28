@@ -2,31 +2,79 @@
  "taxon_key": "kambara",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "53680a8e326d9116",
- "reviewed_at": "2026-11-25T22:21:01+00:00",
+ "text_hash": "da687aa79cd340c3",
+ "reviewed_at": "2026-11-28T13:08:34+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Refers to \"the turtle\" without introducing the turtle species earlier."
+   "reason": "refers to Kambara taraina without prior introduction"
   },
   {
    "sentences": [
-    6
+    12
    ],
    "kind": "missing_context",
-   "reason": "Mentions \"an unnamed Kambara\" without prior context or explanation."
+   "reason": "mentions K. molnari and K. taraina without earlier context"
+  },
+  {
+   "sentences": [
+    13
+   ],
+   "kind": "missing_context",
+   "reason": "mentions K. murgonensis and K. implexidens without prior context"
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "mentions Rundle Formation fossils and pelvic form two without prior context"
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "describes the Rundle Formation as if it were about the animal rather than the geological context"
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"A fossilized plastron of Kambara taraina bears linear circular pits matching the bite marks of a crocodile, suggesting the turtle was bitten repeatedly in a behavior similar to the \"juggling\" seen in modern crocodiles.\": Refers to \"the turtle\" without introducing the turtle species earlier.",
-  "- missing context: \"Similarities between an unnamed Kambara and other Australian crocodilians were noted after the Murgon mandible was described in 1982.\": Mentions \"an unnamed Kambara\" without prior context or explanation."
+  "- missing context: \"A fossilized plastron of Kambara taraina bears linear circular pits matching the bite marks of a crocodile, suggesting the turtle was bitten repeatedly in a behavior similar to the \"juggling\" seen in modern crocodiles.\": refers to Kambara taraina without prior introduction",
+  "- missing context: \"The Rundle Formation, inhabited by K. molnari and K. taraina, is thought to represent lagoonal mud flats.\": mentions K. molnari and K. taraina without earlier context",
+  "- missing context: \"It is debated how the coexisting species K. murgonensis and K. implexidens differed in their ecological niches despite anatomical differences.\": mentions K. murgonensis and K. implexidens without prior context",
+  "- missing context: \"It is debated whether Rundle Formation fossils belong to another Kambara species or a different genus, as they display \"pelvic form two\" with deeper peduncles shared with younger mekosuchines.\": mentions Rundle Formation fossils and pelvic form two without prior context"
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:21:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the turtle\" without introducing the turtle species earlier."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions \"an unnamed Kambara\" without prior context or explanation."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:34+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:34+00:00"
+ "rewritten_at": "2026-11-28T13:20:32+00:00"
 }

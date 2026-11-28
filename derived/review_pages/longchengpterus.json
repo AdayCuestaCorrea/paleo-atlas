@@ -3,30 +3,35 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "bd6a5ce596dec3c5",
- "reviewed_at": "2026-11-25T22:58:56+00:00",
- "problems": [
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 8 refers to \"This classification\" without a prior mention of a classification."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 mentions a \"broad snout\" but no earlier description of snout morphology."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:18:09+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"This classification is based on shared tooth form, tooth count, and a large skull opening with Istiodactylus.\": Sentence 8 refers to \"This classification\" without a prior mention of a classification.",
-  "- missing context: \"A notable difference between Longchengpterus and Istiodactylus is the lack of a broad snout in Longchengpterus.\": Sentence 9 mentions a \"broad snout\" but no earlier description of snout morphology."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:45+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:58:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 refers to \"This classification\" without a prior mention of a classification."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 mentions a \"broad snout\" but no earlier description of snout morphology."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:45+00:00"
+  }
+ ]
 }

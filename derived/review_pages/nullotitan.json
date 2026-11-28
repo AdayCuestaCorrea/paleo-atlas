@@ -3,38 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7786c455a0c0bdba",
- "reviewed_at": "2026-11-25T22:38:07+00:00",
+ "reviewed_at": "2026-11-28T13:12:55+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    9
    ],
-   "kind": "missing_context",
-   "reason": "Refers to a \"broken arch\" that is not defined or described earlier in the page."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions the \"first tail vertebra\" without specifying which specimen or context it belongs to."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Describes a \"new fauna across 2,000 square kilometers\" but does not explain what fauna is being referred to or how it relates to the species."
+   "kind": "about_something_else",
+   "reason": "Sentence 10 discusses eggshells and teeth found in the formation, not attributes of Nullotitan itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The neck vertebra measures 45 centimeters in length and 22 centimeters in height, excluding the broken arch, and contains many small internal air chambers called camellae.\": Refers to a \"broken arch\" that is not defined or described earlier in the page.",
-  "- missing context: \"The first tail vertebra measures approximately 25 centimeters in length and 40 centimeters in width.\": Mentions the \"first tail vertebra\" without specifying which specimen or context it belongs to.",
-  "- missing context: \"Excavations revealed a new fauna across 2,000 square kilometers containing six bone concentrations linked to the original discovery.\": Describes a \"new fauna across 2,000 square kilometers\" but does not explain what fauna is being referred to or how it relates to the species."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:19:00+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:38:07+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to a \"broken arch\" that is not defined or described earlier in the page."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions the \"first tail vertebra\" without specifying which specimen or context it belongs to."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Describes a \"new fauna across 2,000 square kilometers\" but does not explain what fauna is being referred to or how it relates to the species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:19:00+00:00"
+  }
+ ]
 }

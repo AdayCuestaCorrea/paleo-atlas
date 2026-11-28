@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "8d402ca0a146a7c9",
- "reviewed_at": "2026-11-25T22:32:49+00:00",
+ "reviewed_at": "2026-11-28T13:11:36+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,24 +11,42 @@
     9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 places Cedarpelta in Ankylosauridae, while sentence 10 places it as the most basal member of Nodosauridae, a different family."
-  },
-  {
-   "sentences": [
-    7,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 8 states the closure of the lateral temporal fenestra is an advanced trait found only in ankylosaurids, yet sentence 10 interprets Cedarpelta as a nodosaurid, which lacks this feature."
+   "reason": "Sentence 9 classifies Cedarpelta within Ankylosauridae, while sentence 10 places it as the most basal member of Nodosauridae."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Carpenter classified the taxon within the family Ankylosauridae.\" / \"Vickaryous and colleagues interpreted the genus as the most basal member of the family Nodosauridae, placed below Pawpawsaurus, Silvisaurus, and Sauropelta.\": Sentence 9 places Cedarpelta in Ankylosauridae, while sentence 10 places it as the most basal member of Nodosauridae, a different family.",
-  "- contradiction: \"The animal exhibits the closure of the lateral temporal fenestra, an advanced trait found only in ankylosaurids.\" / \"Vickaryous and colleagues interpreted the genus as the most basal member of the family Nodosauridae, placed below Pawpawsaurus, Silvisaurus, and Sauropelta.\": Sentence 8 states the closure of the lateral temporal fenestra is an advanced trait found only in ankylosaurids, yet sentence 10 interprets Cedarpelta as a nodosaurid, which lacks this feature."
+  "- contradiction: \"Carpenter classified the taxon within the family Ankylosauridae.\" / \"Vickaryous and colleagues interpreted the genus as the most basal member of the family Nodosauridae, placed below Pawpawsaurus, Silvisaurus, and Sauropelta.\": Sentence 9 classifies Cedarpelta within Ankylosauridae, while sentence 10 places it as the most basal member of Nodosauridae."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:32:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 places Cedarpelta in Ankylosauridae, while sentence 10 places it as the most basal member of Nodosauridae, a different family."
+    },
+    {
+     "sentences": [
+      7,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states the closure of the lateral temporal fenestra is an advanced trait found only in ankylosaurids, yet sentence 10 interprets Cedarpelta as a nodosaurid, which lacks this feature."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:18+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:18+00:00"
+ "rewritten_at": "2026-11-28T13:21:56+00:00"
 }

@@ -2,24 +2,39 @@
  "taxon_key": "sahitisuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5c2327c08b4a36b8",
- "reviewed_at": "2026-11-25T22:44:01+00:00",
+ "text_hash": "1f683500d7343e1a",
+ "reviewed_at": "2026-11-28T13:14:25+00:00",
  "problems": [
   {
    "sentences": [
     14,
     15
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 15 and 16 give conflicting age ranges for Sahitisuchus: 53–50 Ma versus 59.24–48.07 Ma."
+   "kind": "repetition",
+   "reason": "Both sentences state the same temporal range for Sahitisuchus."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The animal lived during the late Itaboraian age of the Early Eocene, approximately 53 to 50 million years ago.\" / \"Sahitisuchus lived from the Thanetian to the Ypresian stages, between 59.24 and 48.07 million years ago.\": Sentences 15 and 16 give conflicting age ranges for Sahitisuchus: 53–50 Ma versus 59.24–48.07 Ma."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:22:26+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:44:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 15 and 16 give conflicting age ranges for Sahitisuchus: 53–50 Ma versus 59.24–48.07 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:22:26+00:00"
+  }
+ ]
 }

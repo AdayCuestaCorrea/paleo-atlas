@@ -3,31 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "18b886828d312370",
- "reviewed_at": "2026-11-25T22:34:10+00:00",
- "problems": [
+ "reviewed_at": "2026-11-28T13:11:53+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    11,
-    12
+   "reviewed_at": "2026-11-25T22:34:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the taxonomic classification of Rutiodon, essentially repeating the same information."
+    },
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 places Rutiodon in the family Phytosauridae (Mystriosuchinae), while sentence 14 states it is classified within the family Parasuchidae, presenting conflicting family assignments."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the taxonomic classification of Rutiodon, essentially repeating the same information."
-  },
-  {
-   "sentences": [
-    12,
-    13
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 13 places Rutiodon in the family Phytosauridae (Mystriosuchinae), while sentence 14 states it is classified within the family Parasuchidae, presenting conflicting family assignments."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:51+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Recent studies place Rutiodon in the phytosaur family tree as more derived than Paleorhinus but less derived than Leptosuchus, and it belongs to the clade Phytosauridae (Mystriosuchinae).\" / \"Some sources classify Rutiodon within the family Parasuchidae.\": Sentence 13 places Rutiodon in the family Phytosauridae (Mystriosuchinae), while sentence 14 states it is classified within the family Parasuchidae, presenting conflicting family assignments."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:51+00:00"
+ ]
 }

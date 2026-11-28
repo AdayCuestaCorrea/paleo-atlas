@@ -2,23 +2,38 @@
  "taxon_key": "sphenacanthus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "f7157734c9af4753",
- "reviewed_at": "2026-11-25T22:56:57+00:00",
+ "text_hash": "5454089b9c010fec",
+ "reviewed_at": "2026-11-28T13:17:35+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    2,
+    5
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"smaller relatives\" without any prior mention or definition of who those relatives are."
+   "kind": "repetition",
+   "reason": "Both sentences state that the animal lived in freshwater environments, repeating the same habitat claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"It is possible that the animal preyed on its smaller relatives.\": The sentence refers to \"smaller relatives\" without any prior mention or definition of who those relatives are."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:28:50+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:56:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"smaller relatives\" without any prior mention or definition of who those relatives are."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:28:50+00:00"
+  }
+ ]
 }

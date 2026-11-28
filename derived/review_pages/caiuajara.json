@@ -2,8 +2,8 @@
  "taxon_key": "caiuajara",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "cdc71bc98898344e",
- "reviewed_at": "2026-11-25T22:39:15+00:00",
+ "text_hash": "adb71a202df8c578",
+ "reviewed_at": "2026-11-28T13:13:18+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,7 +11,7 @@
     12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states the snout tip points downward at 142–149° relative to the upper jaw edge, while sentence 13 says the crest inclination changed from about 115° to 90°, giving conflicting angles for the same feature."
+   "reason": "Both sentences describe angles of the snout crest, but give incompatible ranges (142–149° vs 115° to 90°)."
   },
   {
    "sentences": [
@@ -19,16 +19,51 @@
     17
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 claims Caiuajara was the geologically youngest known tapejarid, yet sentence 18 lists its fossil record from the Aptian to the Campanian (121.4–72.2 Ma), which is not the youngest possible age for tapejarids."
+   "reason": "Sentence 5 claims Caiuajara is the geologically youngest known tapejarid, yet sentence 18 states its fossil record extends to the Campanian (≈72 Ma), older than the youngest possible age for a tapejarid."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 11 mentions a nursery site near an inland lake, but no lake has been introduced earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The tip of this snout pointed downward at angles between 142 and 149 degrees relative to the upper jaw edge.\" / \"The snout crest grew significantly taller and steeper during development, changing inclination from about 115 degrees to 90 degrees.\": Sentence 3 states the snout tip points downward at 142–149° relative to the upper jaw edge, while sentence 13 says the crest inclination changed from about 115° to 90°, giving conflicting angles for the same feature.",
-  "- contradiction: \"In 2014, it was considered the geologically youngest known tapejarid and the most southern one known.\" / \"The fossil record for Caiuajara spans from the Aptian to the Campanian stages, between 121.4 and 72.2 million years ago.\": Sentence 5 claims Caiuajara was the geologically youngest known tapejarid, yet sentence 18 lists its fossil record from the Aptian to the Campanian (121.4–72.2 Ma), which is not the youngest possible age for tapejarids."
+  "- contradiction: \"The tip of the snout points downward at angles between 142 and 149 degrees relative to the upper jaw edge.\" / \"The snout crest grew significantly taller and steeper during development, changing inclination from about 115 degrees to 90 degrees.\": Both sentences describe angles of the snout crest, but give incompatible ranges (142–149° vs 115° to 90°).",
+  "- contradiction: \"In 2014, it was considered the geologically youngest known tapejarid and the most southern one known.\" / \"The fossil record for Caiuajara spans from the Aptian to the Campanian stages, between 121.4 and 72.2 million years ago.\": Sentence 5 claims Caiuajara is the geologically youngest known tapejarid, yet sentence 18 states its fossil record extends to the Campanian (≈72 Ma), older than the youngest possible age for a tapejarid.",
+  "- missing context: \"The predominance of juvenile fossils suggests possible creching behavior where young formed groups separate from adults, perhaps at a nursery site near an inland lake.\": Sentence 11 mentions a nursery site near an inland lake, but no lake has been introduced earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:39:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states the snout tip points downward at 142–149° relative to the upper jaw edge, while sentence 13 says the crest inclination changed from about 115° to 90°, giving conflicting angles for the same feature."
+    },
+    {
+     "sentences": [
+      4,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 claims Caiuajara was the geologically youngest known tapejarid, yet sentence 18 lists its fossil record from the Aptian to the Campanian (121.4–72.2 Ma), which is not the youngest possible age for tapejarids."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:19:49+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:19:49+00:00"
+ "rewritten_at": "2026-11-28T13:22:35+00:00"
 }

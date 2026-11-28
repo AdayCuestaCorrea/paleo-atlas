@@ -2,41 +2,55 @@
  "taxon_key": "austroraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ac090a4faf971e3d",
- "reviewed_at": "2026-11-25T22:32:44+00:00",
+ "text_hash": "99f951fa97ce60f1",
+ "reviewed_at": "2026-11-28T13:11:28+00:00",
  "problems": [
   {
    "sentences": [
-    13,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Different age ranges for Austroraptor: 78–66 Ma vs 72.2–66 Ma."
-  },
-  {
-   "sentences": [
-    12,
-    14
-   ],
-   "kind": "contradiction",
-   "reason": "Stage ranges conflict: 13 claims Campanian and Maastrichtian, 15 limits to Maastrichtian only."
-  },
-  {
-   "sentences": [
-    0,
-    3
+    11,
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences state Austroraptor’s size relative to other large dromaeosaurids."
+   "reason": "Sentences 12 and 14 state the same time range for Austroraptor."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Thomas R. Holtz Jr. estimated that Austroraptor lived between 78 and 66 million years ago.\" / \"The time range for Austroraptor is the Maastrichtian, from 72.2 to 66 million years ago.\": Different age ranges for Austroraptor: 78–66 Ma vs 72.2–66 Ma.",
-  "- contradiction: \"The animal lived during the Campanian and Maastrichtian stages of the Late Cretaceous period.\" / \"The time range for Austroraptor is the Maastrichtian, from 72.2 to 66 million years ago.\": Stage ranges conflict: 13 claims Campanian and Maastrichtian, 15 limits to Maastrichtian only."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:09+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:32:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Different age ranges for Austroraptor: 78–66 Ma vs 72.2–66 Ma."
+    },
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "contradiction",
+     "reason": "Stage ranges conflict: 13 claims Campanian and Maastrichtian, 15 limits to Maastrichtian only."
+    },
+    {
+     "sentences": [
+      0,
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state Austroraptor’s size relative to other large dromaeosaurids."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:09+00:00"
+  }
+ ]
 }

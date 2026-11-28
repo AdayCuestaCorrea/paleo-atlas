@@ -2,38 +2,71 @@
  "taxon_key": "cimoliopterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "122e1a15f0cfd623",
- "reviewed_at": "2026-11-25T22:18:14+00:00",
+ "text_hash": "79a4c185685b0535",
+ "reviewed_at": "2026-11-28T13:07:46+00:00",
  "problems": [
   {
    "sentences": [
-    1,
-    20
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the same specimen being found in the Grey Chalk Subgroup of Kent, England, and identified as C. cuvieri."
-  },
-  {
-   "sentences": [
+    20,
     21
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 22 refers to \"C. colorhinus\" without any prior introduction or context for this taxon."
+   "kind": "repetition",
+   "reason": "Both sentences state the same uncertainty about C. colorhinus having a crest."
   },
   {
    "sentences": [
-    23
+    20
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 21 refers to C. colorhinus, which has not been introduced earlier in the page."
+  },
+  {
+   "sentences": [
+    22
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 24 discusses the lack of close ties between North and South American pterosaurs, a topic unrelated to the specific animal Cimoliopterus."
+   "reason": "Sentence 23 discusses a general lack of ties between North and South American pterosaurs, not specifically about Cimoliopterus."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"While Seeley speculated the depression above the first tooth pair in C. colorhinus was for lip attachment, Rodrigues and Kellner questioned this in 2013, noting pterosaurs likely had horny beaks.\": Sentence 22 refers to \"C. colorhinus\" without any prior introduction or context for this taxon."
+  "- missing context: \"While Seeley speculated the depression above the first tooth pair in C. colorhinus was for lip attachment, Rodrigues and Kellner questioned this in 2013, noting pterosaurs likely had horny beaks. It is uncertain whether C. colorhinus had a crest because all known specimens are incomplete.\": Sentence 21 refers to C. colorhinus, which has not been introduced earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:18:14+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      20
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the same specimen being found in the Grey Chalk Subgroup of Kent, England, and identified as C. cuvieri."
+    },
+    {
+     "sentences": [
+      21
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 22 refers to \"C. colorhinus\" without any prior introduction or context for this taxon."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 24 discusses the lack of close ties between North and South American pterosaurs, a topic unrelated to the specific animal Cimoliopterus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:08:09+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:08:09+00:00"
+ "rewritten_at": "2026-11-28T13:20:16+00:00"
 }

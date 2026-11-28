@@ -2,32 +2,47 @@
  "taxon_key": "prestosuchus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c608bcf620005209",
- "reviewed_at": "2026-11-25T22:22:26+00:00",
+ "text_hash": "ceb8e70f26c80624",
+ "reviewed_at": "2026-11-28T13:08:59+00:00",
  "problems": [
   {
    "sentences": [
-    17,
-    18
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 18 limits the fossil range of Prestosuchus to the Ladinian stage, while sentence 19 extends it from the Ladinian to the Carnian stage, which includes a later stage (Carnian) not mentioned in sentence 18."
-  },
-  {
-   "sentences": [
-    17,
-    18
+    9,
+    10
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the temporal range of the genus, providing overlapping information that could be consolidated."
+   "reason": "Both sentences describe the discovery of the holotype of Prestosuchus chiniquensis and its co-discovery with Rauisuchus tiradentes, repeating the same information."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"The fossil range of Prestosuchus is the Middle Triassic, specifically the Ladinian stage.\" / \"Prestosuchus lived from the Ladinian to the Carnian stages, between 241.464 and 227.3 million years ago.\": Sentence 18 limits the fossil range of Prestosuchus to the Ladinian stage, while sentence 19 extends it from the Ladinian to the Carnian stage, which includes a later stage (Carnian) not mentioned in sentence 18."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:10:29+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:22:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 limits the fossil range of Prestosuchus to the Ladinian stage, while sentence 19 extends it from the Ladinian to the Carnian stage, which includes a later stage (Carnian) not mentioned in sentence 18."
+    },
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the temporal range of the genus, providing overlapping information that could be consolidated."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:10:29+00:00"
+  }
+ ]
 }

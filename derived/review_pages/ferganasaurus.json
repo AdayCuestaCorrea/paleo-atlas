@@ -2,24 +2,39 @@
  "taxon_key": "ferganasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8d60ce3892cf79cd",
- "reviewed_at": "2026-11-25T23:03:58+00:00",
+ "text_hash": "ad9be99df0f5d85a",
+ "reviewed_at": "2026-11-28T13:19:10+00:00",
  "problems": [
   {
    "sentences": [
     2,
     5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 states the original holotype fossils were lost, while sentence 6 claims the holotype specimen was discovered in 1966."
+   "kind": "repetition",
+   "reason": "Both sentences state the same information about the holotype being discovered in 1966 and the original fossils being lost."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The original holotype fossils were lost, leaving only drawings of the remains.\" / \"The holotype specimen was discovered in 1966 by Kurzanov and Rhozdestvensky.\": Sentence 3 states the original holotype fossils were lost, while sentence 6 claims the holotype specimen was discovered in 1966."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:32:02+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:03:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states the original holotype fossils were lost, while sentence 6 claims the holotype specimen was discovered in 1966."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:32:02+00:00"
+  }
+ ]
 }

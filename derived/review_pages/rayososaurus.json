@@ -3,30 +3,47 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "dd8f7266c5c6d753",
- "reviewed_at": "2026-11-25T22:52:32+00:00",
+ "reviewed_at": "2026-11-28T13:16:54+00:00",
  "problems": [
   {
    "sentences": [
     5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"the specimen\" but no specimen has been introduced earlier in the page."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 mentions the species Rebbachisaurus tessonei without any prior introduction or context for that species."
+   "reason": "Sentence 6 refers to the holotype specimen of Rayososaurus, but the page never previously introduced or described this specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Later research in 2008 and 2009 determined the specimen actually came from the Candeleros Formation rather than the Rayoso Formation.\": Sentence 6 refers to \"the specimen\" but no specimen has been introduced earlier in the page.",
-  "- missing context: \"In 1998, Jeffrey Wilson and Paul Sereno proposed that the species Rebbachisaurus tessonei should be assigned to the genus Rayososaurus.\": Sentence 7 mentions the species Rebbachisaurus tessonei without any prior introduction or context for that species."
+  "- missing context: \"Later research in 2008 and 2009 determined that the holotype specimen of Rayososaurus actually came from the Candeleros Formation rather than the Rayoso Formation.\": Sentence 6 refers to the holotype specimen of Rayososaurus, but the page never previously introduced or described this specimen."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:52:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"the specimen\" but no specimen has been introduced earlier in the page."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 mentions the species Rebbachisaurus tessonei without any prior introduction or context for that species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:27:11+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:27:11+00:00"
+ "rewritten_at": "2026-11-28T13:23:51+00:00"
 }

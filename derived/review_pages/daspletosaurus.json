@@ -2,24 +2,39 @@
  "taxon_key": "daspletosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "60cd4652310bebdf",
- "reviewed_at": "2026-11-25T22:19:06+00:00",
+ "text_hash": "ec0cd56c9ce786cb",
+ "reviewed_at": "2026-11-28T13:08:09+00:00",
  "problems": [
   {
    "sentences": [
     0,
     6
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Daspletosaurus weighed 2–3 metric tons, while sentence 7 claims a specimen could weigh 4–5 metric tons."
+   "kind": "repetition",
+   "reason": "Both sentences state that a large specimen could reach lengths over 9 m and weigh 4–5 metric tons."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Adult Daspletosaurus measured between 8.5 and 9 meters long and weighed 2 to 3 metric tons.\" / \"One large specimen suggests the animal could reach lengths over 9 meters, potentially up to 11 meters and 4 to 5 metric tons in weight.\": Sentence 1 states Daspletosaurus weighed 2–3 metric tons, while sentence 7 claims a specimen could weigh 4–5 metric tons."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:08:31+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:19:06+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Daspletosaurus weighed 2–3 metric tons, while sentence 7 claims a specimen could weigh 4–5 metric tons."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:08:31+00:00"
+  }
+ ]
 }

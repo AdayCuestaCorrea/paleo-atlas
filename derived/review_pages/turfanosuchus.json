@@ -3,54 +3,71 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7126dae059b5cc88",
- "reviewed_at": "2026-11-25T22:38:17+00:00",
+ "reviewed_at": "2026-11-28T13:12:57+00:00",
  "problems": [
-  {
-   "sentences": [
-    11,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that the genus Turfanosuchus was described by C.C. Young in 1973 and that the type species is Turfanosuchus dabanensis, repeating the same information."
-  },
-  {
-   "sentences": [
-    12,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the type species T. dabanensis and its provenance, repeating the same claim."
-  },
-  {
-   "sentences": [
-    13,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences identify Gracilisuchidae as the parent group/family of Turfanosuchus, repeating the classification."
-  },
   {
    "sentences": [
     8
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to “one osteoderm” without any prior mention of osteoderms in the text."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence mentions the heel bone without any earlier reference to a heel bone or its relevance."
+   "reason": "Sentence 9 mentions an osteoderm found on the skeleton, but the page never introduced or described osteoderms before this mention."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Although initially thought to lack them, one osteoderm was later found on the skeleton.\": The sentence refers to “one osteoderm” without any prior mention of osteoderms in the text.",
-  "- missing context: \"The heel bone shares many similarities with those of crurotarsan archosauriforms.\": The sentence mentions the heel bone without any earlier reference to a heel bone or its relevance."
+  "- missing context: \"Although initially thought to lack them, one osteoderm was later found on the skeleton of Turfanosuchus after further preparation.\": Sentence 9 mentions an osteoderm found on the skeleton, but the page never introduced or described osteoderms before this mention."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:38:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that the genus Turfanosuchus was described by C.C. Young in 1973 and that the type species is Turfanosuchus dabanensis, repeating the same information."
+    },
+    {
+     "sentences": [
+      12,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the type species T. dabanensis and its provenance, repeating the same claim."
+    },
+    {
+     "sentences": [
+      13,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences identify Gracilisuchidae as the parent group/family of Turfanosuchus, repeating the classification."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to “one osteoderm” without any prior mention of osteoderms in the text."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions the heel bone without any earlier reference to a heel bone or its relevance."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:19:15+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:19:15+00:00"
+ "rewritten_at": "2026-11-28T13:22:26+00:00"
 }

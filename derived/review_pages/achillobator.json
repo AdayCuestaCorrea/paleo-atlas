@@ -2,24 +2,60 @@
  "taxon_key": "achillobator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e89a44f441f86569",
- "reviewed_at": "2026-11-25T22:21:45+00:00",
+ "text_hash": "95d73acdc0833a49",
+ "reviewed_at": "2026-11-28T13:08:50+00:00",
  "problems": [
   {
    "sentences": [
-    8,
-    9
+    11,
+    12
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 claims Achillobator was not adapted for high‑speed running, while sentence 10 states it had massive thighs and robust legs suited for moderate fast‑running."
+   "reason": "Sentence 12 claims dromaeosaurid sickle claws were ideal for both climbing and ground-dwelling, while sentence 13 states that large dromaeosaurids like Achillobator were too large to climb trees effectively."
+  },
+  {
+   "sentences": [
+    11,
+    13
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 12 says claws were ideal for climbing, whereas sentence 14 says larger dromaeosaurids adapted their claws exclusively for aggressive predatory behavior, implying no climbing."
+  },
+  {
+   "sentences": [
+    4
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 5 refers to \"evidence from relatives\" but no relatives have been previously introduced or described in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Achillobator's stocky build and short legs suggest it was not adapted for high-speed running.\" / \"Research by Perle and team in 1999 suggested that Achillobator had massive thighs and robust legs suited for moderate fast-running.\": Sentence 9 claims Achillobator was not adapted for high‑speed running, while sentence 10 states it had massive thighs and robust legs suited for moderate fast‑running."
+  "- contradiction: \"Manning and team found that dromaeosaurid sickle claws were ideal for both climbing and a ground-dwelling lifestyle.\" / \"Peter Mackovicky suggested that while sickle claws might have been used for climbing in primitive dromaeosaurids, giant animals like Achillobator were likely too large to climb trees effectively.\": Sentence 12 claims dromaeosaurid sickle claws were ideal for both climbing and ground-dwelling, while sentence 13 states that large dromaeosaurids like Achillobator were too large to climb trees effectively.",
+  "- contradiction: \"Manning and team found that dromaeosaurid sickle claws were ideal for both climbing and a ground-dwelling lifestyle.\" / \"Peter Mackovicky suggested that larger dromaeosaurids adapted their sickle claws exclusively for aggressive predatory behavior.\": Sentence 12 says claws were ideal for climbing, whereas sentence 14 says larger dromaeosaurids adapted their claws exclusively for aggressive predatory behavior, implying no climbing.",
+  "- missing context: \"Although the holotype lacked feather traces, evidence from relatives suggests Achillobator likely had plumage.\": Sentence 5 refers to \"evidence from relatives\" but no relatives have been previously introduced or described in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:21:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 claims Achillobator was not adapted for high‑speed running, while sentence 10 states it had massive thighs and robust legs suited for moderate fast‑running."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:56+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:56+00:00"
+ "rewritten_at": "2026-11-28T13:20:39+00:00"
 }

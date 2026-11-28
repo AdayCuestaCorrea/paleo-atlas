@@ -3,39 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "d95be0ad07f48b04",
- "reviewed_at": "2026-11-25T22:17:52+00:00",
- "problems": [
+ "reviewed_at": "2026-11-28T13:07:41+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    0,
-    1
+   "reviewed_at": "2026-11-25T22:17:52+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same weight range (200–300 kg) for Thescelosaurus."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to the \"Willo\" specimen without any prior introduction or description of that specimen."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 claims the limbs were not adapted for running, while sentence 13 states Gilmore proposed the animal was an agile runner."
+    }
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the same weight range (200–300 kg) for Thescelosaurus."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to the \"Willo\" specimen without any prior introduction or description of that specimen."
-  },
-  {
-   "sentences": [
-    11,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 claims the limbs were not adapted for running, while sentence 13 states Gilmore proposed the animal was an agile runner."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:07:52+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"In 2000, researchers interpreted a chest concretion in the \"Willo\" specimen as a fossilized heart with three low-density areas resembling ventricles and an aorta.\": Sentence 7 refers to the \"Willo\" specimen without any prior introduction or description of that specimen.",
-  "- contradiction: \"Thescelosaurus had robust limbs with a femur longer than its tibia, suggesting it was not adapted for running.\" / \"In 1915, Gilmore proposed that Thescelosaurus was an agile, two-legged animal adapted for running.\": Sentence 12 claims the limbs were not adapted for running, while sentence 13 states Gilmore proposed the animal was an agile runner."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:07:52+00:00"
+ ]
 }

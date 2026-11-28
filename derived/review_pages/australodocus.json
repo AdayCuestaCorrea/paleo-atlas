@@ -3,30 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4e56f687156434bc",
- "reviewed_at": "2026-11-25T22:55:59+00:00",
+ "reviewed_at": "2026-11-28T13:17:29+00:00",
  "problems": [
-  {
-   "sentences": [
-    2,
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 claims Australodocus may belong to the titanosauriform clade, while sentence 5 classifies it as a non‑titanosaur somphospondyl and potential euhelopodid, giving conflicting taxonomic assignments."
-  },
   {
    "sentences": [
     6
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 7 discusses the relative abundance of macronarian sauropods in Tendaguru versus diplodocoids in the Morrison Formation, which is about other taxa and formations rather than Australodocus itself."
+   "reason": "The sentence discusses a debate about macronarian sauropods in Tendaguru versus diplodocoids in the Morrison Formation, which is unrelated to the specific animal Australodocus."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"While initially classified as a diplodocid, recent analyses suggest Australodocus may instead belong to the titanosauriform clade.\" / \"Mannion et al. (2019) classified Australodocus as a non-titanosaur somphospondyl and considered it a potential euhelopodid based on cervical internal structure.\": Sentence 3 claims Australodocus may belong to the titanosauriform clade, while sentence 5 classifies it as a non‑titanosaur somphospondyl and potential euhelopodid, giving conflicting taxonomic assignments."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:28:38+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:55:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims Australodocus may belong to the titanosauriform clade, while sentence 5 classifies it as a non‑titanosaur somphospondyl and potential euhelopodid, giving conflicting taxonomic assignments."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 7 discusses the relative abundance of macronarian sauropods in Tendaguru versus diplodocoids in the Morrison Formation, which is about other taxa and formations rather than Australodocus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:28:38+00:00"
+  }
+ ]
 }

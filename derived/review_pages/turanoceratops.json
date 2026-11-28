@@ -3,40 +3,57 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ecebf4648be91dd4",
- "reviewed_at": "2026-11-25T22:52:59+00:00",
+ "reviewed_at": "2026-11-28T13:17:00+00:00",
  "problems": [
   {
    "sentences": [
-    10,
+    9,
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentences 11 and 12 give different age ranges for Turanoceratops (90 Ma vs 93.9–89.8 Ma)."
-  },
-  {
-   "sentences": [
-    9,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 claims Turanoceratops is a true Ceratopsidae member, while sentence 13 states some scientists argue it is not a member of the clade."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to “the long duration of the research” without explaining what research is being referenced."
+   "reason": "Sentence 10 asserts Turanoceratops is a true member of Ceratopsidae, while sentence 12 states that some scientists disagree and consider it only a close relative, not a member of the clade."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Turanoceratops lived roughly 90 million years ago during the mid-late Turonian stage of the late Cretaceous period.\" / \"Turanoceratops lived from 93.9 to 89.8 million years ago during the Turonian stage.\": Sentences 11 and 12 give different age ranges for Turanoceratops (90 Ma vs 93.9–89.8 Ma).",
-  "- contradiction: \"A 2009 study by Hans-Dieter Sues concluded that Turanoceratops was a true member of the family Ceratopsidae.\" / \"Some scientists, including Andrew Farke, disagree with the classification of Turanoceratops as a true Ceratopsid, arguing instead that it is a close relative but not a member of the clade.\": Sentence 10 claims Turanoceratops is a true Ceratopsidae member, while sentence 13 states some scientists argue it is not a member of the clade.",
-  "- missing context: \"The specific name tardabilis means retarding in Latin, referring to the long duration of the research.\": Sentence 6 refers to “the long duration of the research” without explaining what research is being referenced."
+  "- contradiction: \"A 2009 study by Hans-Dieter Sues concluded that Turanoceratops was a true member of the family Ceratopsidae.\" / \"Some scientists, including Andrew Farke, disagree with the classification of Turanoceratops as a true Ceratopsid, arguing instead that it is a close relative but not a member of the clade.\": Sentence 10 asserts Turanoceratops is a true member of Ceratopsidae, while sentence 12 states that some scientists disagree and consider it only a close relative, not a member of the clade."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:52:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 11 and 12 give different age ranges for Turanoceratops (90 Ma vs 93.9–89.8 Ma)."
+    },
+    {
+     "sentences": [
+      9,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims Turanoceratops is a true Ceratopsidae member, while sentence 13 states some scientists argue it is not a member of the clade."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to “the long duration of the research” without explaining what research is being referenced."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:27:21+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:27:21+00:00"
+ "rewritten_at": "2026-11-28T13:23:53+00:00"
 }

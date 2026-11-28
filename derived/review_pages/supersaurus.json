@@ -3,30 +3,49 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "5ae0f324bfc71f22",
- "reviewed_at": "2026-11-25T22:30:58+00:00",
+ "reviewed_at": "2026-11-28T13:11:06+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    13,
+    14
    ],
-   "kind": "missing_context",
-   "reason": "Refers to the \"Jimbo\" specimen as possibly the oldest known dinosaur without any prior mention or description of this specimen."
-  },
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Supersaurus was first discovered in 1972, but give different details (discoverer vs location), repeating the discovery claim."
+   "kind": "contradiction",
+   "reason": "The age ranges for the fossils overlap but give different bounds (153–145 Ma vs 154.8–143.1 Ma), implying inconsistent dating."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Despite unreliable dating methods, the \"Jimbo\" specimen is considered possibly the oldest known dinosaur.\": Refers to the \"Jimbo\" specimen as possibly the oldest known dinosaur without any prior mention or description of this specimen."
+  "- contradiction: \"The fossils of Supersaurus date between 153 and 145 million years ago.\" / \"Supersaurus lived from the Kimmeridgian to the Tithonian stages, between 154.8 and 143.1 million years ago.\": The age ranges for the fossils overlap but give different bounds (153–145 Ma vs 154.8–143.1 Ma), implying inconsistent dating."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:30:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the \"Jimbo\" specimen as possibly the oldest known dinosaur without any prior mention or description of this specimen."
+    },
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Supersaurus was first discovered in 1972, but give different details (discoverer vs location), repeating the discovery claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:15:14+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:15:14+00:00"
+ "rewritten_at": "2026-11-28T13:21:44+00:00"
 }

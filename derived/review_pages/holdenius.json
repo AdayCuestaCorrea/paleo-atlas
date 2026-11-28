@@ -2,8 +2,8 @@
  "taxon_key": "holdenius",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "55493f73762b23d1",
- "reviewed_at": "2026-11-25T23:03:34+00:00",
+ "text_hash": "2db01b7bd0a26296",
+ "reviewed_at": "2026-11-28T13:19:04+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,41 @@
     8
    ],
    "kind": "contradiction",
-   "reason": "The family placement of Holdenius is given as Aspinothoracidi in sentence 8, but the Paleobiology Database lists its parent group as Dinichthyidae in sentence 9, which are incompatible classifications."
-  },
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to \"its prey\" without specifying which prey species or size, making the statement unclear without prior context."
+   "reason": "States Holdenius is in family Aspinothoracidi but also lists parent group Dinichthyidae, conflicting classifications."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Holdenius was previously classified in the family Dunkleosteidae but is now placed in the family Aspinothoracidi.\" / \"The Paleobiology Database lists the parent group of Holdenius as Dinichthyidae.\": The family placement of Holdenius is given as Aspinothoracidi in sentence 8, but the Paleobiology Database lists its parent group as Dinichthyidae in sentence 9, which are incompatible classifications.",
-  "- missing context: \"Because its prey was over half its size, Holdenius is inferred to have been an exceptionally aggressive predator.\": Sentence 6 refers to \"its prey\" without specifying which prey species or size, making the statement unclear without prior context."
+  "- contradiction: \"Holdenius was previously classified in the family Dunkleosteidae but is now placed in the family Aspinothoracidi.\" / \"The Paleobiology Database lists the parent group of Holdenius as Dinichthyidae.\": States Holdenius is in family Aspinothoracidi but also lists parent group Dinichthyidae, conflicting classifications."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:03:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "The family placement of Holdenius is given as Aspinothoracidi in sentence 8, but the Paleobiology Database lists its parent group as Dinichthyidae in sentence 9, which are incompatible classifications."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to \"its prey\" without specifying which prey species or size, making the statement unclear without prior context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:31:48+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:31:48+00:00"
+ "rewritten_at": "2026-11-28T13:24:41+00:00"
 }

@@ -3,22 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7c7778d0cb8e657c",
- "reviewed_at": "2026-11-25T23:04:04+00:00",
+ "reviewed_at": "2026-11-28T13:19:16+00:00",
  "problems": [
   {
    "sentences": [
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 3 states the fossils are dated to the middle Volgian stage, yet it also claims the genus lived between 149.2 and 143.1 Ma during the Tithonian stage—two incompatible age ranges for the same material."
+   "reason": "Sentence 3 presents two conflicting age estimates for the same fossils (middle Volgian vs. Tithonian 149.2–143.1 Ma) without clarifying that they are alternative hypotheses."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The fossils are dated to the middle Volgian stage, while the genus lived between 149.2 and 143.1 million years ago during the Tithonian stage.\": Sentence 3 states the fossils are dated to the middle Volgian stage, yet it also claims the genus lived between 149.2 and 143.1 Ma during the Tithonian stage—two incompatible age ranges for the same material."
+  "- contradiction: \"The fossils are dated to the middle Volgian stage, while the genus lived between 149.2 and 143.1 million years ago during the Tithonian stage; these represent different estimates for the age of the material.\": Sentence 3 presents two conflicting age estimates for the same fossils (middle Volgian vs. Tithonian 149.2–143.1 Ma) without clarifying that they are alternative hypotheses."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:04:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 states the fossils are dated to the middle Volgian stage, yet it also claims the genus lived between 149.2 and 143.1 Ma during the Tithonian stage—two incompatible age ranges for the same material."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:32:08+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:32:08+00:00"
+ "rewritten_at": "2026-11-28T13:24:43+00:00"
 }

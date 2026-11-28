@@ -2,23 +2,42 @@
  "taxon_key": "kangnasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "affc2e7bf50bcf7f",
- "reviewed_at": "2026-11-25T22:53:42+00:00",
+ "text_hash": "63f92bc26a8a6ce0",
+ "reviewed_at": "2026-11-28T13:17:10+00:00",
  "problems": [
   {
    "sentences": [
-    7
+    5,
+    6
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 8 mentions \"Cooper\" and \"other deposits\" without any prior introduction or explanation of who Cooper is or what those deposits refer to."
+   "kind": "contradiction",
+   "reason": "Sentence 6 states the animal lived during the Late Cretaceous (Campanian–Maastrichtian), while sentence 7 claims some sources propose an earlier age at the start of the Cretaceous (Cenomanian)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"It is debated whether additional fossils described by Haughton and Cooper actually belong to Kangnasaurus, as some bones may have come from other deposits.\": Sentence 8 mentions \"Cooper\" and \"other deposits\" without any prior introduction or explanation of who Cooper is or what those deposits refer to."
+  "- contradiction: \"Sedimentological analyses suggest the animal lived during the Late Cretaceous, between the Campanian and Maastrichtian periods.\" / \"However, some sources propose an earlier age at the start of the Cretaceous, while the Paleobiology Database lists a range from the Cenomanian to the Maastrichtian.\": Sentence 6 states the animal lived during the Late Cretaceous (Campanian–Maastrichtian), while sentence 7 claims some sources propose an earlier age at the start of the Cretaceous (Cenomanian)."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:53:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 8 mentions \"Cooper\" and \"other deposits\" without any prior introduction or explanation of who Cooper is or what those deposits refer to."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:27:35+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:27:35+00:00"
+ "rewritten_at": "2026-11-28T13:24:06+00:00"
 }

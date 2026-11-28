@@ -3,30 +3,55 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "c41f2b790c1d8e63",
- "reviewed_at": "2026-11-25T22:58:59+00:00",
+ "reviewed_at": "2026-11-28T13:18:13+00:00",
  "problems": [
-  {
-   "sentences": [
-    0,
-    1
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 describes Stenorhynchosaurus as a medium‑sized pliosaur, while sentence 2 refers to fossils of a plesiosaur snout, implying a different group."
-  },
   {
    "sentences": [
     1
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 2 discusses a plesiosaur snout, which is not the subject of the page (Stenorhynchosaurus)."
+   "reason": "Sentence 2 describes a plesiosaur snout, which is a different group than the pliosaur discussed in the page."
+  },
+  {
+   "sentences": [
+    1
+   ],
+   "kind": "missing_context",
+   "reason": "The sentence refers to a \"front of a plesiosaur snout\" without any prior mention of a plesiosaur, leaving the context unclear."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"This medium-sized pliosaur grew to an adult body length of 7 meters.\" / \"Fossils of the front of a plesiosaur snout were found in 2000 on land owned by Jorge Muñoz near Villa de Leyva, Colombia.\": Sentence 1 describes Stenorhynchosaurus as a medium‑sized pliosaur, while sentence 2 refers to fossils of a plesiosaur snout, implying a different group."
+  "- missing context: \"Fossils of the front of a plesiosaur snout were discovered in 2000 on the property of Jorge Muñoz in Loma La Cabrera, near Villa de Leyva, Boyacá, Colombia.\": The sentence refers to a \"front of a plesiosaur snout\" without any prior mention of a plesiosaur, leaving the context unclear."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:58:59+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 describes Stenorhynchosaurus as a medium‑sized pliosaur, while sentence 2 refers to fossils of a plesiosaur snout, implying a different group."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 2 discusses a plesiosaur snout, which is not the subject of the page (Stenorhynchosaurus)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:48+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:48+00:00"
+ "rewritten_at": "2026-11-28T13:24:23+00:00"
 }

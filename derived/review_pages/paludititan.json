@@ -2,48 +2,61 @@
  "taxon_key": "paludititan",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "8ff9a3041545285c",
- "reviewed_at": "2026-11-25T22:41:09+00:00",
+ "text_hash": "133b58e8ea8871e6",
+ "reviewed_at": "2026-11-28T13:13:43+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    6
+    5,
+    12
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 claims the skeleton was the most complete sauropod ever found in Romania, while sentence 7 describes the holotype as a partial skeleton lacking the skull."
-  },
-  {
-   "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Paludititan was classified as a relatively advanced titanosaurian with unclear closest relatives, whereas sentence 11 assigns it to Lithostrotia, identifies a sister species, and later places it in Saltasauridae."
-  },
-  {
-   "sentences": [
-    1
-   ],
-   "kind": "missing_context",
-   "reason": "The phrase \"this trait\" in sentence 2 refers to the triangular process on the ischium peduncle, but the sentence does not explicitly state what \"this trait\" is compared to."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 9 discusses other taxa (Struthiosaurus, Balaur, Hatzegopteryx) and the island ecosystem, which are not directly about Paludititan."
+   "kind": "repetition",
+   "reason": "Both sentences state that the skeleton was initially thought to belong to Magyarosaurus dacus before being assigned a separate species name."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"When first described, this skeleton was the most complete sauropod ever found in Romania.\" / \"The holotype, a partial skeleton lacking the skull, was found in the Sânpetru Formation and included dorsal and tail vertebrae, chevrons, pelvis parts, a femur fragment, and toe claws.\": Sentence 3 claims the skeleton was the most complete sauropod ever found in Romania, while sentence 7 describes the holotype as a partial skeleton lacking the skull.",
-  "- contradiction: \"Paludititan was classified within the Titanosauria in 2010 as a relatively advanced titanosaurian, though its closest relatives remain unclear.\" / \"It was considered a probable member of the Lithostrotia clade, a sister species to the South American Epachthosaurus, and later placed in the Saltasauridae family.\": Sentence 10 states Paludititan was classified as a relatively advanced titanosaurian with unclear closest relatives, whereas sentence 11 assigns it to Lithostrotia, identifies a sister species, and later places it in Saltasauridae.",
-  "- missing context: \"Its back vertebrae featured unique ridges that ran parallel rather than touching, and the ischium peduncle had a triangular process forming a buttress over the ilium, though this trait is no longer seen as unique to the species.\": The phrase \"this trait\" in sentence 2 refers to the triangular process on the ischium peduncle, but the sentence does not explicitly state what \"this trait\" is compared to."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:20:57+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:41:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims the skeleton was the most complete sauropod ever found in Romania, while sentence 7 describes the holotype as a partial skeleton lacking the skull."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Paludititan was classified as a relatively advanced titanosaurian with unclear closest relatives, whereas sentence 11 assigns it to Lithostrotia, identifies a sister species, and later places it in Saltasauridae."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase \"this trait\" in sentence 2 refers to the triangular process on the ischium peduncle, but the sentence does not explicitly state what \"this trait\" is compared to."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 9 discusses other taxa (Struthiosaurus, Balaur, Hatzegopteryx) and the island ecosystem, which are not directly about Paludititan."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:20:57+00:00"
+  }
+ ]
 }

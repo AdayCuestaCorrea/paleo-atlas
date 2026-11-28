@@ -2,24 +2,38 @@
  "taxon_key": "suzhousaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9ae41332f9d6c497",
- "reviewed_at": "2026-11-25T22:35:23+00:00",
+ "text_hash": "8d4316d78a6b170f",
+ "reviewed_at": "2026-11-28T13:12:12+00:00",
  "problems": [
   {
    "sentences": [
-    10,
     11
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 11 states the species lived ~115 Ma during the Aptian, while sentence 12 claims a younger specimen dates to the early Albian, which is later than 115 Ma."
+   "kind": "about_something_else",
+   "reason": "Sentence 12 describes a lake and landscape features, not a characteristic of Suzhousaurus itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This creature lived approximately 115 million years ago during the Aptian stage of the Early Cretaceous period in Asia.\" / \"The older specimen dates to the early to middle Aptian from grey rock layers, while the younger one comes from red beds of the early Albian.\": Sentence 11 states the species lived ~115 Ma during the Aptian, while sentence 12 claims a younger specimen dates to the early Albian, which is later than 115 Ma."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:17:30+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:35:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 11 states the species lived ~115 Ma during the Aptian, while sentence 12 claims a younger specimen dates to the early Albian, which is later than 115 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:17:30+00:00"
+  }
+ ]
 }

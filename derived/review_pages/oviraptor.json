@@ -2,31 +2,46 @@
  "taxon_key": "oviraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ba1e565b1db2bc77",
- "reviewed_at": "2026-11-25T22:21:56+00:00",
+ "text_hash": "339b9262a53eb477",
+ "reviewed_at": "2026-11-28T13:08:52+00:00",
  "problems": [
   {
    "sentences": [
     6,
-    7
+    19
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the 1923 discovery of Oviraptor in the Djadokhta Formation, essentially repeating the same information."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to “the skull of the holotype” without having previously introduced the holotype specimen, leaving the reference unclear."
+   "reason": "Both sentences state that Oviraptor is associated with the Djadokhta Formation in Mongolia."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"The skull of the holotype — the specimen the species is based on — became particularly flattened and distorted during fossilization.\": Sentence 5 refers to “the skull of the holotype” without having previously introduced the holotype specimen, leaving the reference unclear."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:10:04+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:21:56+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the 1923 discovery of Oviraptor in the Djadokhta Formation, essentially repeating the same information."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to “the skull of the holotype” without having previously introduced the holotype specimen, leaving the reference unclear."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:10:04+00:00"
+  }
+ ]
 }

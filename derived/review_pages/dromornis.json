@@ -2,32 +2,65 @@
  "taxon_key": "dromornis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6f86f7e556e424a6",
- "reviewed_at": "2026-11-25T22:24:16+00:00",
+ "text_hash": "de010d1d2af2ce30",
+ "reviewed_at": "2026-11-28T13:09:29+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    1
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 states Dromornis belongs to the flightless bird family Dromornithidae, while sentence 2 claims it is more closely related to early waterfowl (Anseriformes) or a basal galliform, presenting two different phylogenetic placements without indicating they are alternative hypotheses."
-  },
-  {
-   "sentences": [
-    8,
     9
    ],
    "kind": "repetition",
-   "reason": "Both sentences discuss the diet of Dromornis species, specifically noting that D. stirtoni was herbivorous (with sentence 10 adding possible scavenging). The same claim is repeated in two separate sentences."
+   "reason": "Sentence 10 repeats the statement that the parent group of Dromornis is Dromornithidae, already stated in sentence 1."
+  },
+  {
+   "sentences": [
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Sentence 10 also repeats the earlier mention that Dromornis belongs to Dromornithidae, duplicating information from sentence 1."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 15 refers to \"Various factors\" contributing to extinction, but no factors are listed or described earlier in the page."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The genus Dromornis includes extinct flightless birds known as mihirungs, which resemble modern ostriches or emus but possess greatly reduced wings and large legs. The name Dromornis comes from Ancient Greek words meaning 'course' or 'race' and 'bird', reflecting their terrestrial nature. These birds belong to the family Dromornithidae, a group of extinct flightless birds.\" / \"Although they look like giant emus, Dromornis is more closely related to early waterfowl of the Anseriformes order or a basal galliform.\": Sentence 1 states Dromornis belongs to the flightless bird family Dromornithidae, while sentence 2 claims it is more closely related to early waterfowl (Anseriformes) or a basal galliform, presenting two different phylogenetic placements without indicating they are alternative hypotheses."
+  "- missing context: \"Despite the accepted herbivorous diet, various indicators suggest Dromornis stirtoni may have been carnivorous or omnivorous. Various factors are proposed to have contributed to the extinction of Dromornis stirtoni. Murray and Vickers-Rich suggested Dromornis stirtoni went extinct because it was out-competed for food sources due to dietary overlap with other large animals.\": Sentence 15 refers to \"Various factors\" contributing to extinction, but no factors are listed or described earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:24:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      1
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 states Dromornis belongs to the flightless bird family Dromornithidae, while sentence 2 claims it is more closely related to early waterfowl (Anseriformes) or a basal galliform, presenting two different phylogenetic placements without indicating they are alternative hypotheses."
+    },
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences discuss the diet of Dromornis species, specifically noting that D. stirtoni was herbivorous (with sentence 10 adding possible scavenging). The same claim is repeated in two separate sentences."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:11:46+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:11:46+00:00"
+ "rewritten_at": "2026-11-28T13:20:58+00:00"
 }

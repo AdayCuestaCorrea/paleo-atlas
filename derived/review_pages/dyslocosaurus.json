@@ -2,41 +2,54 @@
  "taxon_key": "dyslocosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9052e80be7fb707f",
- "reviewed_at": "2026-11-25T23:02:00+00:00",
+ "text_hash": "a1096c6ccd78bec8",
+ "reviewed_at": "2026-11-28T13:18:46+00:00",
  "problems": [
-  {
-   "sentences": [
-    1,
-    3
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 claims scarcity of data about the fossil's original location, while sentence 4 provides a specific location (Lance Creek, east Wyoming)."
-  },
   {
    "sentences": [
     6,
     8
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 7 states the limb bones were interpreted as belonging to a diplodocid dinosaur, whereas sentence 9 proposes the specimen is a chimera of titanosaur limb bones and theropod phalanges."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 refers to “one pedal bone” and its differing preservation and color, but no earlier sentence introduces or describes a pedal bone or its characteristics."
+   "kind": "repetition",
+   "reason": "Both sentences state that Paul Sereno and Jeffrey A. Wilson proposed the specimen was a chimera mixing titanosaur limb bones and theropod phalanges."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The genus name Dyslocosaurus means \"hard-to-place lizard\" and refers to the scarcity of data about the fossil's original location.\" / \"The only known location for the Dyslocosaurus fossil is Lance Creek, a county in east Wyoming.\": Sentence 2 claims scarcity of data about the fossil's original location, while sentence 4 provides a specific location (Lance Creek, east Wyoming).",
-  "- contradiction: \"The original describers interpreted the limb bones of Dyslocosaurus as belonging to a diplodocid dinosaur.\" / \"In 1998, Paul Sereno and Jeffrey A. Wilson proposed that the Dyslocosaurus specimen was actually a chimera mixing titanosaur limb bones and theropod phalanges from the Lance Formation.\": Sentence 7 states the limb bones were interpreted as belonging to a diplodocid dinosaur, whereas sentence 9 proposes the specimen is a chimera of titanosaur limb bones and theropod phalanges.",
-  "- missing context: \"In 2015, Tschopp et al. raised doubts about whether Dyslocosaurus had more than three claws, noting that one pedal bone in the specimen differed in preservation and color from the others.\": Sentence 10 refers to “one pedal bone” and its differing preservation and color, but no earlier sentence introduces or describes a pedal bone or its characteristics."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:31:05+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:02:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 claims scarcity of data about the fossil's original location, while sentence 4 provides a specific location (Lance Creek, east Wyoming)."
+    },
+    {
+     "sentences": [
+      6,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 states the limb bones were interpreted as belonging to a diplodocid dinosaur, whereas sentence 9 proposes the specimen is a chimera of titanosaur limb bones and theropod phalanges."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 refers to “one pedal bone” and its differing preservation and color, but no earlier sentence introduces or describes a pedal bone or its characteristics."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:31:05+00:00"
+  }
+ ]
 }

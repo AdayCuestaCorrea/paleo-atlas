@@ -3,22 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "84df3e8d22470385",
- "reviewed_at": "2026-11-25T22:57:42+00:00",
+ "reviewed_at": "2026-11-28T13:17:52+00:00",
  "problems": [
   {
    "sentences": [
-    3
+    2
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 4 states Daxiatitan is classified within the unranked family Titanosauria, yet also identifies its parent group as Euhelopodidae, which are distinct taxonomic categories, creating a contradictory classification."
+   "kind": "missing_context",
+   "reason": "Refers to a 2008 assessment before the genus was named, but the page never explains the context of that earlier study."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Daxiatitan is classified within the unranked family Titanosauria, and the parent group for Daxiatitan is identified as Euhelopodidae. A 2020 study suggested that Daxiatitan and Euhelopus might form a clade with mamenchisaurids.\": Sentence 4 states Daxiatitan is classified within the unranked family Titanosauria, yet also identifies its parent group as Euhelopodidae, which are distinct taxonomic categories, creating a contradictory classification."
+  "- missing context: \"In 2008, Daxiatitan was considered potentially the largest known dinosaur found in China, and the genus Daxiatitan and its species D. binglingi were named by You Hailu, Li Daqing, Zhou Lingqi, and Ji Qiang.\": Refers to a 2008 assessment before the genus was named, but the page never explains the context of that earlier study."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:57:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states Daxiatitan is classified within the unranked family Titanosauria, yet also identifies its parent group as Euhelopodidae, which are distinct taxonomic categories, creating a contradictory classification."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:15+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:15+00:00"
+ "rewritten_at": "2026-11-28T13:24:19+00:00"
 }

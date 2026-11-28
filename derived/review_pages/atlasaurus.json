@@ -3,23 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "da7a4246a8e44610",
- "reviewed_at": "2026-11-25T22:58:34+00:00",
+ "reviewed_at": "2026-11-28T13:18:04+00:00",
  "problems": [
   {
    "sentences": [
-    7,
-    8
+    7
    ],
    "kind": "contradiction",
-   "reason": "One sentence claims Atlasaurus is a Turiasaur, the other claims it is a Brachiosaurid."
+   "reason": "Sentence 8 states Atlasaurus may be Turiasauria, while the most recent analysis classifies it as Brachiosaurid, presenting two conflicting classifications for the same taxon."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Recent analyses have suggested that Atlasaurus may be a member of the Turiasauria.\" / \"The most recent analysis of turiasaurs classifies Atlasaurus as a Brachiosaurid.\": One sentence claims Atlasaurus is a Turiasaur, the other claims it is a Brachiosaurid."
+  "- contradiction: \"Recent analyses have suggested that Atlasaurus may be a member of the Turiasauria, while the most recent analysis of turiasaurs classifies it as a Brachiosaurid.\": Sentence 8 states Atlasaurus may be Turiasauria, while the most recent analysis classifies it as Brachiosaurid, presenting two conflicting classifications for the same taxon."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:58:34+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "One sentence claims Atlasaurus is a Turiasaur, the other claims it is a Brachiosaurid."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:37+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:37+00:00"
+ "rewritten_at": "2026-11-28T13:24:21+00:00"
 }

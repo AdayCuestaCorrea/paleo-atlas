@@ -3,24 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "c0c40f9b6d17db93",
- "reviewed_at": "2026-11-25T22:49:37+00:00",
+ "reviewed_at": "2026-11-28T13:16:08+00:00",
  "problems": [
   {
    "sentences": [
-    6,
     7,
+    8,
     11
    ],
    "kind": "contradiction",
-   "reason": "Sentence 12 states that only one fossil occurrence of Convolosaurus has been recorded, whereas sentences 7 and 8 describe a dense concentration of fossils at Proctor Lake and the creation of three mounted skeletons from that site, implying multiple specimens."
+   "reason": "The page states only one fossil occurrence of Convolosaurus has been recorded (sentence 12), yet sentences 8 and 9 describe multiple fossils from the site that have been mounted and displayed in several museums, implying more than one specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"The name Convolosaurus means \"flocking lizard\" because fossils were found in a dense concentration at Proctor Lake in Texas.\" / \"Fossils from the site have been combined into three mounted skeletons displayed at the Proctor Lake US Army Corps of Engineers Office, the Perot Museum of Nature and Science, and the Fort Worth Museum of Science and History.\" / \"Only one fossil occurrence of Convolosaurus has been recorded so far.\": Sentence 12 states that only one fossil occurrence of Convolosaurus has been recorded, whereas sentences 7 and 8 describe a dense concentration of fossils at Proctor Lake and the creation of three mounted skeletons from that site, implying multiple specimens."
+  "- contradiction: \"Fossils from the site have been combined into three mounted skeletons displayed at the Proctor Lake US Army Corps of Engineers Office, the Perot Museum of Nature and Science, and the Fort Worth Museum of Science and History.\" / \"James \"Rusty\" Branch discovered the fossil site in May 1985, noting it was one of the richest Lower Cretaceous sites in North America.\" / \"Only one fossil occurrence of Convolosaurus has been recorded so far.\": The page states only one fossil occurrence of Convolosaurus has been recorded (sentence 12), yet sentences 8 and 9 describe multiple fossils from the site that have been mounted and displayed in several museums, implying more than one specimen."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:49:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states that only one fossil occurrence of Convolosaurus has been recorded, whereas sentences 7 and 8 describe a dense concentration of fossils at Proctor Lake and the creation of three mounted skeletons from that site, implying multiple specimens."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:25:46+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:25:46+00:00"
+ "rewritten_at": "2026-11-28T13:23:36+00:00"
 }

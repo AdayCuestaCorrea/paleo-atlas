@@ -2,30 +2,45 @@
  "taxon_key": "conchoraptor",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "98cb26dff3175946",
- "reviewed_at": "2026-11-25T22:45:17+00:00",
+ "text_hash": "0b78c5ba77b8e683",
+ "reviewed_at": "2026-11-28T13:14:50+00:00",
  "problems": [
   {
    "sentences": [
-    4
+    2,
+    8
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"ear region\" and \"resonance chambers\" without any prior mention of the ear region in the page."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "about_something_else",
-   "reason": "It describes the environment of the Baruun Goyot Formation, which is not directly about Conchoraptor itself."
+   "kind": "repetition",
+   "reason": "Both sentences state that Conchoraptor fed on mollusks—[3] describes beak adaptation for crushing mollusk shells, while [9] repeats the claim that it specialized in mollusk feeding."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"Internal connections within the ear region functioned as resonance chambers that improved its hearing.\": The sentence refers to \"ear region\" and \"resonance chambers\" without any prior mention of the ear region in the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:23:28+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:45:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"ear region\" and \"resonance chambers\" without any prior mention of the ear region in the page."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "It describes the environment of the Baruun Goyot Formation, which is not directly about Conchoraptor itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:23:28+00:00"
+  }
+ ]
 }

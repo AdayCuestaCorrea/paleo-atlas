@@ -3,23 +3,41 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "04beb3e5b562ffda",
- "reviewed_at": "2026-11-25T23:05:24+00:00",
+ "reviewed_at": "2026-11-28T13:19:26+00:00",
  "problems": [
   {
    "sentences": [
-    3,
-    4
+    3
    ],
    "kind": "contradiction",
-   "reason": "Sentences 4 and 5 give conflicting family assignments for Hastanectes, one stating Pliosauridae and the other Leptocleididae."
+   "reason": "The text states Hastanectes is classified within Pliosauridae, yet it also notes the Paleobiology Database lists its parent group as Leptocleididae, presenting conflicting taxonomic assignments."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Hastanectes is classified within the family Pliosauridae, although the Paleobiology Database lists its parent group as Leptocleididae.\" / \"Hastanectes is also classified in the family Leptocleididae.\": Sentences 4 and 5 give conflicting family assignments for Hastanectes, one stating Pliosauridae and the other Leptocleididae."
+  "- contradiction: \"Hastanectes is classified within the family Pliosauridae, although the Paleobiology Database lists its parent group as Leptocleididae.\": The text states Hastanectes is classified within Pliosauridae, yet it also notes the Paleobiology Database lists its parent group as Leptocleididae, presenting conflicting taxonomic assignments."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:05:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 4 and 5 give conflicting family assignments for Hastanectes, one stating Pliosauridae and the other Leptocleididae."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:32:34+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:32:34+00:00"
+ "rewritten_at": "2026-11-28T13:24:50+00:00"
 }

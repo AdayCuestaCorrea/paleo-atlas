@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "a36cd938d4a4851c",
- "reviewed_at": "2026-11-25T22:42:54+00:00",
+ "reviewed_at": "2026-11-28T13:14:10+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,41 @@
     13
    ],
    "kind": "contradiction",
-   "reason": "Sentence 13 states Ctenochasma lived during the Late Jurassic, while sentence 14 describes a time span that includes the Berriasian, which is Early Cretaceous, contradicting the stated age."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 mentions a \"pumping mechanism found in related species\" without previously identifying which species or mechanism it refers to."
+   "reason": "Late Jurassic spans only the Tithonian stage, but sentence 14 extends the period to the Berriasian (Early Cretaceous)."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Ctenochasma lived during the Late Jurassic period.\" / \"This period spans from the Tithonian to the Berriasian, between 149.2 and 137.05 million years ago.\": Sentence 13 states Ctenochasma lived during the Late Jurassic, while sentence 14 describes a time span that includes the Berriasian, which is Early Cretaceous, contradicting the stated age.",
-  "- missing context: \"The closely packed teeth formed a comb-like basket traditionally thought to be used for filter feeding, though it lacked the pumping mechanism found in related species.\": Sentence 7 mentions a \"pumping mechanism found in related species\" without previously identifying which species or mechanism it refers to."
+  "- contradiction: \"Ctenochasma lived during the Late Jurassic period.\" / \"This period spans from the Tithonian to the Berriasian, between 149.2 and 137.05 million years ago.\": Late Jurassic spans only the Tithonian stage, but sentence 14 extends the period to the Berriasian (Early Cretaceous)."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:42:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 13 states Ctenochasma lived during the Late Jurassic, while sentence 14 describes a time span that includes the Berriasian, which is Early Cretaceous, contradicting the stated age."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 mentions a \"pumping mechanism found in related species\" without previously identifying which species or mechanism it refers to."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:21:54+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:21:54+00:00"
+ "rewritten_at": "2026-11-28T13:22:57+00:00"
 }

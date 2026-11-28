@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "adc5d25218442d21",
- "reviewed_at": "2026-11-25T22:43:01+00:00",
+ "reviewed_at": "2026-11-28T13:14:11+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,34 @@
     9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 states Voay existed until the present, while sentence 10 claims it went extinct around 2000 years ago."
+   "reason": "Sentence 9 claims Voay existed until the present, while sentence 10 states it went extinct about 2000 years ago."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Voay lived during the Late Pleistocene and Holocene epochs, from 0.129 million years ago until the present.\" / \"It is suggested that Voay went extinct around 2000 years ago alongside other endemic megafauna like the elephant bird after humans arrived in Madagascar.\": Sentence 9 states Voay existed until the present, while sentence 10 claims it went extinct around 2000 years ago."
+  "- contradiction: \"Voay lived from 0.129 million years ago until the present (Holocene).\" / \"It is suggested that Voay went extinct around 2000 years ago alongside other endemic megafauna like the elephant bird after humans arrived in Madagascar.\": Sentence 9 claims Voay existed until the present, while sentence 10 states it went extinct about 2000 years ago."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:43:01+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 states Voay existed until the present, while sentence 10 claims it went extinct around 2000 years ago."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:21:57+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:21:57+00:00"
+ "rewritten_at": "2026-11-28T13:22:58+00:00"
 }

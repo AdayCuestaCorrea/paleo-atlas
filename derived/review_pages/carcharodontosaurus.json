@@ -3,15 +3,8 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "441d66dce36a32e0",
- "reviewed_at": "2026-11-25T22:17:18+00:00",
+ "reviewed_at": "2026-11-28T13:07:36+00:00",
  "problems": [
-  {
-   "sentences": [
-    7
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to \"the main specimen\" without prior introduction or description."
-  },
   {
    "sentences": [
     17,
@@ -19,16 +12,42 @@
     19
    ],
    "kind": "contradiction",
-   "reason": "Sentence 18 states Carcharodontosaurus lived in Northwest Africa, while sentence 20 claims the subfamily Carcharodontosaurinae was restricted to southern Gondwana, and sentence 19 says Carcharodontosaurians were found on every continent except Antarctica—these statements conflict regarding geographic distribution."
+   "reason": "The page states Carcharodontosaurus lived in Northwest Africa (north) during the Cenomanian, yet claims the subfamily Carcharodontosaurinae was restricted to the southern continent of Gondwana and that Carcharodontosaurians were found on every continent except Antarctica, which conflicts with the northern African location."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"In 2025, the main specimen was redescribed as the holotype of a distinct genus named Tameryraptor.\": Refers to \"the main specimen\" without prior introduction or description.",
-  "- contradiction: \"Carcharodontosaurus lived in Northwest Africa between 100 and 94 million years ago during the Cenomanian stage of the Late Cretaceous.\" / \"Carcharodontosaurians have been found from the Late Jurassic to the Mid-Cretaceous on every continent except Antarctica.\" / \"The subfamily Carcharodontosaurinae, containing Carcharodontosaurus, was likely restricted to the southern continent of Gondwana, where it probably served as an apex predator.\": Sentence 18 states Carcharodontosaurus lived in Northwest Africa, while sentence 20 claims the subfamily Carcharodontosaurinae was restricted to southern Gondwana, and sentence 19 says Carcharodontosaurians were found on every continent except Antarctica—these statements conflict regarding geographic distribution."
+  "- contradiction: \"Carcharodontosaurus lived in Northwest Africa between 100 and 94 million years ago during the Cenomanian stage of the Late Cretaceous.\" / \"Carcharodontosaurians have been found from the Late Jurassic to the Mid-Cretaceous on every continent except Antarctica.\" / \"The subfamily Carcharodontosaurinae, containing Carcharodontosaurus, was likely restricted to the southern continent of Gondwana, where it probably served as an apex predator.\": The page states Carcharodontosaurus lived in Northwest Africa (north) during the Cenomanian, yet claims the subfamily Carcharodontosaurinae was restricted to the southern continent of Gondwana and that Carcharodontosaurians were found on every continent except Antarctica, which conflicts with the northern African location."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:17:18+00:00",
+   "problems": [
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"the main specimen\" without prior introduction or description."
+    },
+    {
+     "sentences": [
+      17,
+      18,
+      19
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 18 states Carcharodontosaurus lived in Northwest Africa, while sentence 20 claims the subfamily Carcharodontosaurinae was restricted to southern Gondwana, and sentence 19 says Carcharodontosaurians were found on every continent except Antarctica—these statements conflict regarding geographic distribution."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:07:41+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:07:41+00:00"
+ "rewritten_at": "2026-11-28T13:20:13+00:00"
 }

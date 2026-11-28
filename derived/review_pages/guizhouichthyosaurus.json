@@ -3,29 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7d95c26735c6c9b1",
- "reviewed_at": "2026-11-25T22:27:12+00:00",
+ "reviewed_at": "2026-11-28T13:10:16+00:00",
  "problems": [
   {
    "sentences": [
     5
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 6 describes a thalattosaur (Xinpusaurus) preserved within a Guizhouichthyosaurus specimen, focusing on the thalattosaur rather than on the ichthyosaur itself."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to a specimen of \"G. tangae\" without any prior introduction or definition of that taxon, leaving the reader without context for the referenced species."
+   "reason": "Sentence 6 describes a thalattosaur (Xinpusaurus) as part of a Guizhouichthyosaurus specimen, treating another animal as if it were the subject of the page."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"A specimen of G. tangae preserves fish bones and bivalves in its stomach region, indicating it ate other prey besides large marine reptiles.\": Sentence 9 refers to a specimen of \"G. tangae\" without any prior introduction or definition of that taxon, leaving the reader without context for the referenced species."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:13:18+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:27:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 6 describes a thalattosaur (Xinpusaurus) preserved within a Guizhouichthyosaurus specimen, focusing on the thalattosaur rather than on the ichthyosaur itself."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to a specimen of \"G. tangae\" without any prior introduction or definition of that taxon, leaving the reader without context for the referenced species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:13:18+00:00"
+  }
+ ]
 }

@@ -2,46 +2,85 @@
  "taxon_key": "sinosauropteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "45305d92804829be",
- "reviewed_at": "2026-11-25T22:22:02+00:00",
+ "text_hash": "90bb576ffe3274c5",
+ "reviewed_at": "2026-11-28T13:08:57+00:00",
  "problems": [
   {
    "sentences": [
+    6,
     8
    ],
-   "kind": "missing_context",
-   "reason": "Refers to specimen NIGP 127587 without prior introduction of the specimen."
+   "kind": "repetition",
+   "reason": "Both sentences describe the first fossil specimen of Sinosauropteryx prima uncovered in August 1996 by Li Yumin and its location."
   },
   {
    "sentences": [
     9
    ],
    "kind": "missing_context",
-   "reason": "Mentions eggs of Sinosauropteryx without explaining the context of the specimen that contained them."
+   "reason": "Sentence 10 mentions eggs in the abdomen of specimen NIGP 127587 without any prior introduction of eggs in the page."
   },
   {
    "sentences": [
-    12
+    14,
+    15
    ],
-   "kind": "missing_context",
-   "reason": "States the age of the fossil beds containing Sinosauropteryx without having previously mentioned those beds."
+   "kind": "repetition",
+   "reason": "Both sentences discuss the debate over whether filamentous impressions are feathers or collagen fibers, essentially repeating the same claim."
   },
   {
    "sentences": [
     13
    ],
    "kind": "about_something_else",
-   "reason": "Describes climate, volcanic eruptions, and wildfires, which pertain to the environment rather than to the animal itself."
+   "reason": "Sentence 14 describes the climate and environmental events of the habitat, which is about the environment rather than the animal itself."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 2,
  "notes": [
-  "- missing context: \"Well-preserved fossils of Sinosauropteryx provide evidence regarding its diet and reproduction. Fossil evidence from specimen NIGP 127587 shows that Sinosauropteryx ate small, fast-moving lizards like Dalinghosaurus.\": Refers to specimen NIGP 127587 without prior introduction of the specimen.",
-  "- missing context: \"Specimen NIGP 127587 contained several small eggs in its abdomen, providing evidence of reproduction in Sinosauropteryx. The eggs of Sinosauropteryx measured 36 mm in length and 26 mm in width.\": Mentions eggs of Sinosauropteryx without explaining the context of the specimen that contained them.",
-  "- missing context: \"The fossil beds containing Sinosauropteryx are dated to between 124.6 and 122 million years ago.\": States the age of the fossil beds containing Sinosauropteryx without having previously mentioned those beds."
+  "- missing context: \"Specimen NIGP 127587, the first fossil of Sinosauropteryx prima found in the Yixian Formation in the Beipiao and Lingyuan regions of Liaoning, China, contained several small eggs in its abdomen, providing evidence of reproduction in Sinosauropteryx. The eggs of Sinosauropteryx measured 36 mm in length and 26 mm in width.\": Sentence 10 mentions eggs in the abdomen of specimen NIGP 127587 without any prior introduction of eggs in the page."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:22:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to specimen NIGP 127587 without prior introduction of the specimen."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions eggs of Sinosauropteryx without explaining the context of the specimen that contained them."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "States the age of the fossil beds containing Sinosauropteryx without having previously mentioned those beds."
+    },
+    {
+     "sentences": [
+      13
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes climate, volcanic eruptions, and wildfires, which pertain to the environment rather than to the animal itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:10:15+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:10:15+00:00"
+ "rewritten_at": "2026-11-28T13:20:41+00:00"
 }

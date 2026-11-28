@@ -2,31 +2,46 @@
  "taxon_key": "herrerasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "19c13b873b0b93c3",
- "reviewed_at": "2026-11-25T22:20:10+00:00",
+ "text_hash": "713f474ee499e23b",
+ "reviewed_at": "2026-11-28T13:08:14+00:00",
  "problems": [
   {
    "sentences": [
-    11,
-    12
+    5,
+    11
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the age of the formation, essentially repeating the same information."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 refers to a \"specific skull specimen\" without any prior mention or description of that specimen in the page."
+   "reason": "Both sentences state that the fossils (holotype or all known specimens) come from the Ischigualasto Formation, repeating the same location claim."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"A specific skull specimen bears bite pits on the bone and surrounding tissue suggesting a short-lived non-lethal infection, likely resulting from a fight with another individual.\": Sentence 3 refers to a \"specific skull specimen\" without any prior mention or description of that specimen in the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:11+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:20:10+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the age of the formation, essentially repeating the same information."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to a \"specific skull specimen\" without any prior mention or description of that specimen in the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:11+00:00"
+  }
+ ]
 }

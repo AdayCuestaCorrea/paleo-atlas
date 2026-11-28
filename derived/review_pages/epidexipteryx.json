@@ -2,31 +2,64 @@
  "taxon_key": "epidexipteryx",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "dc2d941013146b85",
- "reviewed_at": "2026-11-25T22:40:36+00:00",
+ "text_hash": "44fc0688d01e960e",
+ "reviewed_at": "2026-11-28T13:13:35+00:00",
  "problems": [
-  {
-   "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions Scansoriopteryx as a comparison without prior introduction."
-  },
   {
    "sentences": [
     9
    ],
    "kind": "missing_context",
-   "reason": "References a related dinosaur Yi without prior mention or context."
+   "reason": "Mentions a membrane wing for gliding without prior description of wings."
+  },
+  {
+   "sentences": [
+    10
+   ],
+   "kind": "missing_context",
+   "reason": "References long claws used for digging without earlier mention of claws."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "States belonging to Paraves without earlier context defining Paraves."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The hip configuration featured a pubis shorter than the ischium, a trait similar to Scansoriopteryx.\": Mentions Scansoriopteryx as a comparison without prior introduction.",
-  "- missing context: \"Researchers hypothesize that Epidexipteryx likely lacked wing feathers but may have had a membrane wing for gliding, similar to the related dinosaur Yi.\": References a related dinosaur Yi without prior mention or context."
+  "- missing context: \"Researchers hypothesize that Epidexipteryx likely lacked wing feathers but may have had a membrane wing for gliding, similar to the related dinosaur Yi.\": Mentions a membrane wing for gliding without prior description of wings.",
+  "- missing context: \"Scientists have suggested that the animal used its long claws to dig for grubs in trees, similar to the aye-aye.\": References long claws used for digging without earlier mention of claws.",
+  "- missing context: \"Epidexipteryx belongs to the parent group Paraves.\": States belonging to Paraves without earlier context defining Paraves."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:40:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Scansoriopteryx as a comparison without prior introduction."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "References a related dinosaur Yi without prior mention or context."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:20:39+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:20:39+00:00"
+ "rewritten_at": "2026-11-28T13:22:48+00:00"
 }

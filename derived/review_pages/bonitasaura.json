@@ -3,37 +3,51 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "83baabebdb6a73ae",
- "reviewed_at": "2026-11-25T22:54:16+00:00",
+ "reviewed_at": "2026-11-28T13:17:12+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    2
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the short neck with robust vertebrae projections."
-  },
-  {
-   "sentences": [
-    7
+    6
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 8 discusses Antarctosaurus, not Bonitasaura."
-  },
-  {
-   "sentences": [
-    1
-   ],
-   "kind": "missing_context",
-   "reason": "Mentions a keratin sheath, teeth, and a posterior bone blade without prior introduction of these structures."
+   "reason": "The sentence discusses Antarctosaurus, a different taxon, rather than Bonitasaura."
   }
  ],
- "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"The keratin sheath on Bonitasaura's jaw functioned like a guillotine to crop vegetation, aided by small, continuously replacing front teeth and a smooth posterior bone blade.\": Mentions a keratin sheath, teeth, and a posterior bone blade without prior introduction of these structures."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:27:47+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:54:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the short neck with robust vertebrae projections."
+    },
+    {
+     "sentences": [
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 8 discusses Antarctosaurus, not Bonitasaura."
+    },
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a keratin sheath, teeth, and a posterior bone blade without prior introduction of these structures."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:27:47+00:00"
+  }
+ ]
 }

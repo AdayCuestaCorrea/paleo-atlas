@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "b35a21c8fe28ec3b",
- "reviewed_at": "2026-11-25T22:33:43+00:00",
+ "reviewed_at": "2026-11-28T13:11:44+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,41 @@
     11
    ],
    "kind": "contradiction",
-   "reason": "Both sentences classify Umoonasaurus in Leptocleididae but place it in different higher clades (Pliosauroidea vs Plesiosauroidea)."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions \"crests\" without any prior mention or definition of crests in the text."
+   "reason": "Both sentences classify Umoonasaurus in different higher-level groups (Pliosauroidea vs. Plesiosauroidea) without indicating they are alternative hypotheses."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"In 2008, Smith and Dyke reclassified Umoonasaurus as a member of Leptocleididae within Pliosauroidea.\" / \"In 2010, Ketchum and Benson placed Umoonasaurus in Leptocleididae, which they classified within Plesiosauroidea.\": Both sentences classify Umoonasaurus in Leptocleididae but place it in different higher clades (Pliosauroidea vs Plesiosauroidea).",
-  "- missing context: \"The crests were likely covered in keratin, making them considerably taller than the bone alone suggests.\": Sentence 5 mentions \"crests\" without any prior mention or definition of crests in the text."
+  "- contradiction: \"In 2008, Smith and Dyke reclassified Umoonasaurus as a member of Leptocleididae within Pliosauroidea.\" / \"In 2010, Ketchum and Benson placed Umoonasaurus in Leptocleididae, which they classified within Plesiosauroidea.\": Both sentences classify Umoonasaurus in different higher-level groups (Pliosauroidea vs. Plesiosauroidea) without indicating they are alternative hypotheses."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:33:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      10,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences classify Umoonasaurus in Leptocleididae but place it in different higher clades (Pliosauroidea vs Plesiosauroidea)."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions \"crests\" without any prior mention or definition of crests in the text."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:43+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:43+00:00"
+ "rewritten_at": "2026-11-28T13:21:59+00:00"
 }

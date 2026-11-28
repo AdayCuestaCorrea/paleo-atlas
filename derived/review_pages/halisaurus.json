@@ -3,29 +3,48 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "94a8b19e165e5243",
- "reviewed_at": "2026-11-25T22:37:58+00:00",
+ "reviewed_at": "2026-11-28T13:12:49+00:00",
  "problems": [
   {
    "sentences": [
-    11
+    12,
+    13
    ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"H. (\"Phosphorosaurus\") ponpetelegans\" without having introduced or explained this taxon earlier in the page."
-  },
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "about_something_else",
-   "reason": "It discusses the fish Halosaurus and the naming issue, which is about a different organism and not directly about Halisaurus itself."
+   "kind": "contradiction",
+   "reason": "Sentence 13 states Halisaurus appeared early in mosasaur evolution during the Santonian stage, while sentence 14 says the type specimen comes from the Maastrichtian-age New Egypt Formation, implying a later age."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers suggest that H. (\"Phosphorosaurus\") ponpetelegans might represent a distinct genus requiring a new name rather than belonging to Halisaurus.\": The sentence refers to \"H. (\"Phosphorosaurus\") ponpetelegans\" without having introduced or explained this taxon earlier in the page."
+  "- contradiction: \"Halisaurus appeared early in mosasaur evolution during the Santonian stage.\" / \"The type specimen of H. platyspondylus comes from the Maastrichtian-age New Egypt Formation in New Jersey, and H. platyspondylus ranged along the eastern coast of North America during the Middle to Late Maastrichtian.\": Sentence 13 states Halisaurus appeared early in mosasaur evolution during the Santonian stage, while sentence 14 says the type specimen comes from the Maastrichtian-age New Egypt Formation, implying a later age."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:37:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"H. (\"Phosphorosaurus\") ponpetelegans\" without having introduced or explained this taxon earlier in the page."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "about_something_else",
+     "reason": "It discusses the fish Halosaurus and the naming issue, which is about a different organism and not directly about Halisaurus itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:18:41+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:18:41+00:00"
+ "rewritten_at": "2026-11-28T13:22:25+00:00"
 }

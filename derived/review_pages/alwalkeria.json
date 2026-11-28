@@ -2,41 +2,62 @@
  "taxon_key": "alwalkeria",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "383c224d0bedf79c",
- "reviewed_at": "2026-11-25T22:45:50+00:00",
+ "text_hash": "f4e5d121a54ff8cc",
+ "reviewed_at": "2026-11-28T13:14:57+00:00",
  "problems": [
   {
    "sentences": [
-    1,
     4,
-    5,
-    8
+    6
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 2, 5, and 9 classify Alwalkeria as a dinosaur (basal theropod, basal Saurischian), while sentence 5 states the skull is crurotarsan (pseudosuchian) and sentence 6 reinterprets the taxon as an indeterminate Pan‑Aves member, directly conflicting on its phylogenetic placement."
+   "kind": "repetition",
+   "reason": "Sentences 5 and 7 repeat the claim that the fossils are chimeric, with some bones from a dinosaur and the skull from a pseudosuchian."
   },
   {
    "sentences": [
-    5
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 6 refers to “Alickmeron maleriensis” without any prior introduction or explanation of this name, leaving the reader unclear about its relation to Alwalkeria."
-  },
-  {
-   "sentences": [
-    5
+    2
    ],
    "kind": "about_something_else",
-   "reason": "The sentence discusses the nomenclature and reinterpretation of Alickmeron maleriensis, a separate taxon, yet presents it as if it were directly about Alwalkeria, conflating two distinct taxa."
+   "reason": "Sentence 3 discusses a bryozoan that preoccupied the name, which is about another organism rather than the animal itself."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The genus Alwalkeria was first described by Sankar Chatterjee in 1987 as a basal theropod.\" / \"In 2005, Rauhut and Remes found Alwalkeria to be a chimera with a crurotarsan skull and dinosaurian femur and astragalus.\" / \"McDavid, Marchant, and Reid in 2026 revised the nomenclature of Alickmeron maleriensis, considering it a junior objective synonym of Alwalkeria maleriensis and reinterpreting it as an indeterminate member of Pan-Aves.\" / \"Alwalkeria is classified within the superorder Dinosauria and the order Saurischia, with the current scientific consensus placing it at a basal position within Saurischia.\": Sentences 2, 5, and 9 classify Alwalkeria as a dinosaur (basal theropod, basal Saurischian), while sentence 5 states the skull is crurotarsan (pseudosuchian) and sentence 6 reinterprets the taxon as an indeterminate Pan‑Aves member, directly conflicting on its phylogenetic placement.",
-  "- missing context: \"McDavid, Marchant, and Reid in 2026 revised the nomenclature of Alickmeron maleriensis, considering it a junior objective synonym of Alwalkeria maleriensis and reinterpreting it as an indeterminate member of Pan-Aves.\": Sentence 6 refers to “Alickmeron maleriensis” without any prior introduction or explanation of this name, leaving the reader unclear about its relation to Alwalkeria."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:23:42+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:45:50+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      4,
+      5,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 2, 5, and 9 classify Alwalkeria as a dinosaur (basal theropod, basal Saurischian), while sentence 5 states the skull is crurotarsan (pseudosuchian) and sentence 6 reinterprets the taxon as an indeterminate Pan‑Aves member, directly conflicting on its phylogenetic placement."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 6 refers to “Alickmeron maleriensis” without any prior introduction or explanation of this name, leaving the reader unclear about its relation to Alwalkeria."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the nomenclature and reinterpretation of Alickmeron maleriensis, a separate taxon, yet presents it as if it were directly about Alwalkeria, conflating two distinct taxa."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:23:42+00:00"
+  }
+ ]
 }

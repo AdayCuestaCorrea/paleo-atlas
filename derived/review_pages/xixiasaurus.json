@@ -2,24 +2,40 @@
  "taxon_key": "xixiasaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "80d40a39ae2b0f20",
- "reviewed_at": "2026-11-25T22:25:19+00:00",
+ "text_hash": "feff8bd31b891a5d",
+ "reviewed_at": "2026-11-28T13:09:42+00:00",
  "problems": [
   {
    "sentences": [
     11,
+    12,
     13
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 states Xixiasaurus lived during the Santonian age (~86 Ma), while sentence 14 claims the Majiacun Formation (where its fossils are found) dates to the Campanian age based on comparison with Byronosaurus."
+   "kind": "repetition",
+   "reason": "All three sentences discuss the age of the Majiacun Formation and its uncertainty, repeating the same information."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Xixiasaurus lived during the Late Cretaceous period, approximately 86 million years ago during the Santonian age in what is now Asia.\" / \"Lü and colleagues suggested the Majiacun Formation dates to the Campanian age based on similarities between Xixiasaurus and the Campanian genus Byronosaurus.\": Sentence 12 states Xixiasaurus lived during the Santonian age (~86 Ma), while sentence 14 claims the Majiacun Formation (where its fossils are found) dates to the Campanian age based on comparison with Byronosaurus."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:12:20+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:25:19+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 states Xixiasaurus lived during the Santonian age (~86 Ma), while sentence 14 claims the Majiacun Formation (where its fossils are found) dates to the Campanian age based on comparison with Byronosaurus."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:12:20+00:00"
+  }
+ ]
 }

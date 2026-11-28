@@ -3,23 +3,29 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "fe2f4d1151c6053a",
- "reviewed_at": "2026-11-25T22:49:15+00:00",
- "problems": [
-  {
-   "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 claims fossils are known from the Carboniferous‑Permian, while sentence 11 extends the time range to the Norian (Late Triassic), which is outside the Permian."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:15:57+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Xenacanthus fossils are known from the Carboniferous-Permian periods in North America, Europe, and South America.\" / \"The time range for Xenacanthus is from the Moscovian to the Norian, between 312.8 and 205.7 million years ago.\": Sentence 10 claims fossils are known from the Carboniferous‑Permian, while sentence 11 extends the time range to the Norian (Late Triassic), which is outside the Permian."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:25:34+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:49:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims fossils are known from the Carboniferous‑Permian, while sentence 11 extends the time range to the Norian (Late Triassic), which is outside the Permian."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:25:34+00:00"
+  }
+ ]
 }

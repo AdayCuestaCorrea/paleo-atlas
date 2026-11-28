@@ -2,23 +2,38 @@
  "taxon_key": "eotyrannus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "55955c8e5ede6840",
- "reviewed_at": "2026-11-25T22:40:04+00:00",
+ "text_hash": "97e4c027af44e589",
+ "reviewed_at": "2026-11-28T13:13:25+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    2,
+    5
    ],
-   "kind": "missing_context",
-   "reason": "The sentence states the location of the main fossil specimen is secret, but no prior sentence provides any information about the location or context that would make this statement meaningful."
+   "kind": "repetition",
+   "reason": "Both sentences state that the fossil was found in a plant debris clay bed."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"The exact location where the main fossil specimen was found remains secret to protect the site from erosion and to allow for future collections.\": The sentence states the location of the main fossil specimen is secret, but no prior sentence provides any information about the location or context that would make this statement meaningful."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:20:27+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:40:04+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence states the location of the main fossil specimen is secret, but no prior sentence provides any information about the location or context that would make this statement meaningful."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:20:27+00:00"
+  }
+ ]
 }

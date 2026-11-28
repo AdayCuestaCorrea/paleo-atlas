@@ -2,24 +2,39 @@
  "taxon_key": "daanosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b3583ec2101022ac",
- "reviewed_at": "2026-11-25T22:55:09+00:00",
+ "text_hash": "bc25be71b646afa0",
+ "reviewed_at": "2026-11-28T13:17:17+00:00",
  "problems": [
   {
    "sentences": [
     2,
     4
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 places Daanosaurus in the family Brachiosauridae, while sentence 5 lists its parent group as Mamenchisauridae, giving two incompatible taxonomic assignments."
+   "kind": "repetition",
+   "reason": "Both sentences state that the Paleobiology Database lists Daanosaurus’ parent group as Mamenchisauridae."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Daanosaurus was originally classified in the subfamily Bellusaurinae, which is part of the family Brachiosauridae.\" / \"The Paleobi Database lists the parent group of Daanosaurus as Mamenchisauridae.\": Sentence 3 places Daanosaurus in the family Brachiosauridae, while sentence 5 lists its parent group as Mamenchisauridae, giving two incompatible taxonomic assignments."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:28:10+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:55:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 places Daanosaurus in the family Brachiosauridae, while sentence 5 lists its parent group as Mamenchisauridae, giving two incompatible taxonomic assignments."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:28:10+00:00"
+  }
+ ]
 }

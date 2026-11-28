@@ -2,31 +2,46 @@
  "taxon_key": "skorpiovenator",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ffff46fe3aff5aea",
- "reviewed_at": "2026-11-25T22:29:36+00:00",
+ "text_hash": "d9e364c64187241d",
+ "reviewed_at": "2026-11-28T13:10:36+00:00",
  "problems": [
   {
    "sentences": [
-    14,
-    16
+    0,
+    12
    ],
    "kind": "repetition",
-   "reason": "Both sentences state the same age (106.2 million years) for the Huincul Formation and the fossil strata."
-  },
-  {
-   "sentences": [
-    11
-   ],
-   "kind": "missing_context",
-   "reason": "The line \"topic\": \"diet\" is a fragment that refers to a section heading but provides no context or content within the page."
+   "reason": "Both sentences state that Skorpiovenator is an abelisaurid theropod dinosaur."
   }
  ],
  "repetitions_dropped": 1,
- "notes": [
-  "- missing context: \"topic\": \"diet\"\": The line \"topic\": \"diet\" is a fragment that refers to a section heading but provides no context or content within the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:14:23+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:29:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      14,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the same age (106.2 million years) for the Huincul Formation and the fossil strata."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The line \"topic\": \"diet\" is a fragment that refers to a section heading but provides no context or content within the page."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:14:23+00:00"
+  }
+ ]
 }

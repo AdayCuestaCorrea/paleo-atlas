@@ -3,31 +3,58 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "38cfe51d37fe7ec8",
- "reviewed_at": "2026-11-25T22:57:23+00:00",
+ "reviewed_at": "2026-11-28T13:17:49+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    10
+    0
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for Tataouinea differ: sentence 1 gives 112–109 Ma, while sentence 11 gives 113.2–100.5 Ma."
+   "reason": "Sentence 1 gives two conflicting age ranges for the same species (112–109 Ma vs. 113.2–100.5 Ma)."
   },
   {
    "sentences": [
-    0,
-    10
+    4,
+    9
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state the temporal range of Tataouinea, repeating the same claim."
+   "kind": "contradiction",
+   "reason": "Sentence 5 states only one fossil occurrence, while sentence 10 reports fossils from two distinct members of the formation."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Tataouinea was an extinct sauropod dinosaur that lived in Tunisia during the Early Cretaceous period, specifically in what is now Africa during the Albian stage approximately 112 to 109 million years ago.\" / \"Tataouinea lived from 113.2 to 100.5 million years ago during the Albian stage.\": The age ranges for Tataouinea differ: sentence 1 gives 112–109 Ma, while sentence 11 gives 113.2–100.5 Ma."
+  "- contradiction: \"Tataouinea was an extinct sauropod dinosaur that lived in Tunisia during the Early Cretaceous period, specifically in what is now Africa during the Albian stage approximately 112 to 109 million years ago, though some estimates suggest it lived from 113.2 to 100.5 million years ago.\": Sentence 1 gives two conflicting age ranges for the same species (112–109 Ma vs. 113.2–100.5 Ma).",
+  "- contradiction: \"Only one fossil occurrence of Tataouinea has been recorded.\" / \"Tataouinea fossils were found in the Jebel El Mra or Oum ed Diab members of the Aptian-Albian Aïn el Guettar Formation.\": Sentence 5 states only one fossil occurrence, while sentence 10 reports fossils from two distinct members of the formation."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:57:23+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Tataouinea differ: sentence 1 gives 112–109 Ma, while sentence 11 gives 113.2–100.5 Ma."
+    },
+    {
+     "sentences": [
+      0,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the temporal range of Tataouinea, repeating the same claim."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:09+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:09+00:00"
+ "rewritten_at": "2026-11-28T13:24:17+00:00"
 }

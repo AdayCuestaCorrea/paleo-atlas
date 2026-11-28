@@ -2,33 +2,95 @@
  "taxon_key": "agnosphitys",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "92f27d345ad177ba",
- "reviewed_at": "2026-11-25T22:59:44+00:00",
+ "text_hash": "95210ac62d0c0777",
+ "reviewed_at": "2026-11-28T13:18:16+00:00",
  "problems": [
   {
    "sentences": [
-    0,
-    2
+    4,
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 states Agnosphitys was placed outside Dinosauria, while sentence 6 places it as a theropod, which is within Dinosauria."
+  },
+  {
+   "sentences": [
+    4,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places it outside Dinosauria, whereas sentence 7 places it in the family Guaibasauridae, a dinosaur clade."
+  },
+  {
+   "sentences": [
+    4,
+    7
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places it outside Dinosauria, but sentence 8 considers it a silesaurid, a dinosaur-related clade."
+  },
+  {
+   "sentences": [
+    4,
+    8
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places it outside Dinosauria, while sentence 9 places it in the clade Silesauridae, within Dinosauria."
+  },
+  {
+   "sentences": [
+    1,
+    9
    ],
    "kind": "repetition",
-   "reason": "Both sentences describe the composition of the known fossils of Agnosphitys."
+   "reason": "Sentence 10 repeats that the genus contains only one species, which is already stated in sentence 2."
   },
   {
    "sentences": [
     0,
-    2,
-    3
+    9
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 1 lists multiple fossil elements (ilium, maxilla, astragalus, humerus), while sentence 3 states there are only two distinct specimens and sentence 4 says the holotype is a single isolated left ilium, implying the other specimen is not listed."
+   "kind": "repetition",
+   "reason": "Sentence 10 repeats the single-species status, which is implied by the mention of only one species in sentence 1."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"The known fossils of Agnosphitys consist of an ilium, maxilla, astragalus, and humerus.\" / \"Fossils of Agnosphitys consist of two distinct specimens.\" / \"The holotype specimen is a single isolated left ilium.\": Sentence 1 lists multiple fossil elements (ilium, maxilla, astragalus, humerus), while sentence 3 states there are only two distinct specimens and sentence 4 says the holotype is a single isolated left ilium, implying the other specimen is not listed."
+  "- contradiction: \"In its original description, Agnosphitys was placed outside Dinosauria based on the definition provided by Padian and May (1995).\" / \"A 2007 phylogenetic analysis by Yates recovered Agnosphitys as a theropod.\": Sentence 5 states Agnosphitys was placed outside Dinosauria, while sentence 6 places it as a theropod, which is within Dinosauria.",
+  "- contradiction: \"In its original description, Agnosphitys was placed outside Dinosauria based on the definition provided by Padian and May (1995).\" / \"A 2010 analysis by Ezcurra recovered Agnosphitys as a member of the family Guaibasauridae.\": Sentence 5 places it outside Dinosauria, whereas sentence 7 places it in the family Guaibasauridae, a dinosaur clade.",
+  "- contradiction: \"In its original description, Agnosphitys was placed outside Dinosauria based on the definition provided by Padian and May (1995).\" / \"Recent studies have considered Agnosphitys to be a silesaurid based on unpublished descriptions of Asilisaurus.\": Sentence 5 places it outside Dinosauria, but sentence 8 considers it a silesaurid, a dinosaur-related clade.",
+  "- contradiction: \"In its original description, Agnosphitys was placed outside Dinosauria based on the definition provided by Padian and May (1995).\" / \"A 2017 large-scale phylogenetic analysis by Baron, Norman, and Barrett recovered Agnosphitys as a member of the clade Silesauridae.\": Sentence 5 places it outside Dinosauria, while sentence 9 places it in the clade Silesauridae, within Dinosauria."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:59:44+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the composition of the known fossils of Agnosphitys."
+    },
+    {
+     "sentences": [
+      0,
+      2,
+      3
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 1 lists multiple fossil elements (ilium, maxilla, astragalus, humerus), while sentence 3 states there are only two distinct specimens and sentence 4 says the holotype is a single isolated left ilium, implying the other specimen is not listed."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:56+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:56+00:00"
+ "rewritten_at": "2026-11-28T13:24:31+00:00"
 }

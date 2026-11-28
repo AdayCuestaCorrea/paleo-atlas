@@ -3,38 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "9aafce51e5c316dd",
- "reviewed_at": "2026-11-25T22:24:45+00:00",
- "problems": [
+ "reviewed_at": "2026-11-28T13:09:37+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    9
+   "reviewed_at": "2026-11-25T22:24:45+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 claims oxygen‑isotope ratios indicate Hypacrosaurus was homeothermic, yet it states this contradicts earlier findings based on nasal turbinates, but no earlier findings are presented in the page."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 refers to “earlier findings based on nasal turbinates” that are not mentioned anywhere else on the page."
+    },
+    {
+     "sentences": [
+      9,
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences 10 and 15 discuss the debate over Hypacrosaurus’ endothermy and the presence or absence of nasal turbinates, repeating the same claim."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 claims oxygen‑isotope ratios indicate Hypacrosaurus was homeothermic, yet it states this contradicts earlier findings based on nasal turbinates, but no earlier findings are presented in the page."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 refers to “earlier findings based on nasal turbinates” that are not mentioned anywhere else on the page."
-  },
-  {
-   "sentences": [
-    9,
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences 10 and 15 discuss the debate over Hypacrosaurus’ endothermy and the presence or absence of nasal turbinates, repeating the same claim."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:11:59+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Oxygen-isotope ratios suggest Hypacrosaurus was a homeotherm and likely endothermic, though this contradicts earlier findings based on nasal turbinates.\": Sentence 10 claims oxygen‑isotope ratios indicate Hypacrosaurus was homeothermic, yet it states this contradicts earlier findings based on nasal turbinates, but no earlier findings are presented in the page.",
-  "- missing context: \"Oxygen-isotope ratios suggest Hypacrosaurus was a homeotherm and likely endothermic, though this contradicts earlier findings based on nasal turbinates.\": Sentence 10 refers to “earlier findings based on nasal turbinates” that are not mentioned anywhere else on the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:11:59+00:00"
+ ]
 }

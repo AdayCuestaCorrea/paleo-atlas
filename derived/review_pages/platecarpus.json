@@ -3,40 +3,44 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "24fb00e97b13cd3a",
- "reviewed_at": "2026-11-25T22:34:29+00:00",
- "problems": [
-  {
-   "sentences": [
-    4,
-    5
-   ],
-   "kind": "contradiction",
-   "reason": "One sentence states Platecarpus ate moderate‑sized fish, while another says it fed on small fish and squid."
-  },
-  {
-   "sentences": [
-    11,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "The page claims the genus is paraphyletic, yet also says it is monotypic due to synonymization."
-  },
-  {
-   "sentences": [
-    2
-   ],
-   "kind": "missing_context",
-   "reason": "It refers to a “complete skeleton” that has never been introduced or described earlier in the page."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:11:58+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Evidence from a well-preserved specimen indicates Platecarpus ate moderate-sized fish, while hypotheses suggest it also consumed squid and ammonites.\" / \"Platecarpus had less robust teeth than tylosaurs, suggesting it fed on smaller or softer prey like small fish and squid.\": One sentence states Platecarpus ate moderate‑sized fish, while another says it fed on small fish and squid.",
-  "- contradiction: \"Scientists now consider Platecarpus to be a paraphyletic genus.\" / \"Platecarpus is considered monotypic because P. coryphaeus and P. ictericus were synonymized with the type species P. tympaniticus.\": The page claims the genus is paraphyletic, yet also says it is monotypic due to synonymization.",
-  "- missing context: \"Fossil material within the scleral ring of a complete skeleton may represent the actual retina of the eye.\": It refers to a “complete skeleton” that has never been introduced or described earlier in the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:59+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:34:29+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "One sentence states Platecarpus ate moderate‑sized fish, while another says it fed on small fish and squid."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "The page claims the genus is paraphyletic, yet also says it is monotypic due to synonymization."
+    },
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "It refers to a “complete skeleton” that has never been introduced or described earlier in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:59+00:00"
+  }
+ ]
 }

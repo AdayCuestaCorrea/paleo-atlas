@@ -2,23 +2,63 @@
  "taxon_key": "beibeilong",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "42b9017040d7c65c",
- "reviewed_at": "2026-11-25T22:22:28+00:00",
+ "text_hash": "ef010df824db5fef",
+ "reviewed_at": "2026-11-28T13:09:01+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to \"the Baby Louie specimen\" without any prior mention or explanation of this specimen in the page."
+   "reason": "Refers to the \"Baby Louie specimen\" without prior introduction or explanation."
+  },
+  {
+   "sentences": [
+    7
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions \"fossil specimen\" and \"perinate skeletal remains\" without specifying which specimen or context."
+  },
+  {
+   "sentences": [
+    14
+   ],
+   "kind": "about_something_else",
+   "reason": "Describes the presence of Araucariaceae conifers, a plant group, as if it were a characteristic of Beibeilong itself."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "about_something_else",
+   "reason": "States that large oviraptorosaurs like Beibeilong preferred well‑watered habitats, treating a group preference as a trait of the species."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The skull of the Baby Louie specimen has been damaged due to scavenging and erosion.\": Sentence 4 refers to \"the Baby Louie specimen\" without any prior mention or explanation of this specimen in the page."
+  "- missing context: \"The skull of the Baby Louie specimen, a popular name for the embryonic skeleton of Beibeilong, has been damaged due to scavenging and erosion.\": Refers to the \"Baby Louie specimen\" without prior introduction or explanation.",
+  "- missing context: \"The fossil specimen includes perinate skeletal remains found alongside 2 to 3 eggs.\": Mentions \"fossil specimen\" and \"perinate skeletal remains\" without specifying which specimen or context."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:22:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to \"the Baby Louie specimen\" without any prior mention or explanation of this specimen in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:10:31+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:10:31+00:00"
+ "rewritten_at": "2026-11-28T13:20:44+00:00"
 }

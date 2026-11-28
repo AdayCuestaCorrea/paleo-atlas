@@ -3,54 +3,72 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "b3c2c67755e68320",
- "reviewed_at": "2026-11-25T22:18:21+00:00",
+ "reviewed_at": "2026-11-28T13:07:51+00:00",
  "problems": [
   {
    "sentences": [
     4
    ],
    "kind": "missing_context",
-   "reason": "Mentions Nazgûl monsters without explaining their relevance to Pterodactylus."
-  },
-  {
-   "sentences": [
-    22,
-    23
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes the Solnhofen Limestone as a diverse fossil site, which is about the formation, not the animal itself."
-  },
-  {
-   "sentences": [
-    2,
-    6
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences discuss the size of the wings, repeating the claim about large wings."
-  },
-  {
-   "sentences": [
-    3,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both describe the number of teeth, repeating the claim about up to 90 narrow conical teeth."
-  },
-  {
-   "sentences": [
-    11,
-    12
-   ],
-   "kind": "repetition",
-   "reason": "Both describe tooth counts in immature specimens, repeating the same information."
+   "reason": "Refers to Nazgûl without prior introduction."
   }
  ],
- "repetitions_dropped": 2,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The flying monsters ridden by the Nazgûl in J.R.R. Tolkien's legendarium were described as looking similarly built to Pterodactylus.\": Mentions Nazgûl monsters without explaining their relevance to Pterodactylus."
+  "- missing context: \"The flying monsters ridden by the Nazgûl in J.R.R. Tolkien's legendarium were described as looking similarly built to Pterodactylus, a popular association that reflects the creature's elongated head crest and large wings.\": Refers to Nazgûl without prior introduction."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:18:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions Nazgûl monsters without explaining their relevance to Pterodactylus."
+    },
+    {
+     "sentences": [
+      22,
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes the Solnhofen Limestone as a diverse fossil site, which is about the formation, not the animal itself."
+    },
+    {
+     "sentences": [
+      2,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences discuss the size of the wings, repeating the claim about large wings."
+    },
+    {
+     "sentences": [
+      3,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both describe the number of teeth, repeating the claim about up to 90 narrow conical teeth."
+    },
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "repetition",
+     "reason": "Both describe tooth counts in immature specimens, repeating the same information."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:08:11+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:08:11+00:00"
+ "rewritten_at": "2026-11-28T13:20:17+00:00"
 }

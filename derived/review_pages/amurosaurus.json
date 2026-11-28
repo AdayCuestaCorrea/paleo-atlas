@@ -3,31 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "928d0ea279b56e50",
- "reviewed_at": "2026-11-25T22:34:35+00:00",
- "problems": [
+ "reviewed_at": "2026-11-28T13:12:00+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    16,
-    18
+   "reviewed_at": "2026-11-25T22:34:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      16,
+      18
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences state the age range of Amurosaurus, but give different lower bounds (70 Ma vs 72.2 Ma)."
+    },
+    {
+     "sentences": [
+      16,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences describe the time period in which Amurosaurus lived, repeating the same claim."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "Both sentences state the age range of Amurosaurus, but give different lower bounds (70 Ma vs 72.2 Ma)."
-  },
-  {
-   "sentences": [
-    16,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences describe the time period in which Amurosaurus lived, repeating the same claim."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:17:01+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Amurosaurus lived in eastern Asia during the Late Cretaceous, between 70 and 66 million years ago.\" / \"Amurosaurus lived during the Maastrichtian, from 72.2 to 66 million years ago.\": Both sentences state the age range of Amurosaurus, but give different lower bounds (70 Ma vs 72.2 Ma)."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:17:01+00:00"
+ ]
 }

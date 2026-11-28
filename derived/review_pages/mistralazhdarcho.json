@@ -3,23 +3,29 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4d7d6aae2796c706",
- "reviewed_at": "2026-11-25T22:40:49+00:00",
- "problems": [
-  {
-   "sentences": [
-    5,
-    6
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 6 estimates a wingspan of 424–485 cm based on a humerus length, while sentence 7 claims adult individuals reached 5–6 m (500–600 cm), which exceeds the earlier estimate."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:13:39+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Based on a humerus length of 19 centimeters, estimates using different formulas suggest a wingspan between 424 and 485 centimeters.\" / \"Since the holotype was not fully grown, adult individuals are thought to have reached wingspans of 5 to 6 meters.\": Sentence 6 estimates a wingspan of 424–485 cm based on a humerus length, while sentence 7 claims adult individuals reached 5–6 m (500–600 cm), which exceeds the earlier estimate."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:20:46+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:40:49+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 estimates a wingspan of 424–485 cm based on a humerus length, while sentence 7 claims adult individuals reached 5–6 m (500–600 cm), which exceeds the earlier estimate."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:20:46+00:00"
+  }
+ ]
 }

@@ -3,22 +3,36 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "36ec043b022ea94b",
- "reviewed_at": "2026-11-25T22:50:42+00:00",
+ "reviewed_at": "2026-11-28T13:16:37+00:00",
  "problems": [
   {
    "sentences": [
-    1
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 2 refers to \"its front back vertebrae\" before any vertebrae have been introduced, leaving the reader unsure which vertebrae are meant."
+   "kind": "about_something_else",
+   "reason": "The sentence discusses turiasaurs, a different group, as if it were a feature of Tendaguria itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- missing context: \"It is distinguished from other sauropods by possessing two separate hollow spaces on the transverse processes of its front back vertebrae.\": Sentence 2 refers to \"its front back vertebrae\" before any vertebrae have been introduced, leaving the reader unsure which vertebrae are meant."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:26:23+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:50:42+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 2 refers to \"its front back vertebrae\" before any vertebrae have been introduced, leaving the reader unsure which vertebrae are meant."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:26:23+00:00"
+  }
+ ]
 }

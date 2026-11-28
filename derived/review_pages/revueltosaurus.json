@@ -2,31 +2,49 @@
  "taxon_key": "revueltosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "9c18dde3adb37661",
- "reviewed_at": "2026-11-25T22:37:40+00:00",
+ "text_hash": "da35df922a138e38",
+ "reviewed_at": "2026-11-28T13:12:45+00:00",
  "problems": [
-  {
-   "sentences": [
-    17,
-    18
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the age range of Revueltosaurus, repeating the same information."
-  },
   {
    "sentences": [
     12
    ],
    "kind": "missing_context",
-   "reason": "Sentence 13 mentions osteoderms at the tail’s end forming a club-like structure, but the page never previously introduced or described these osteoderms."
+   "reason": "The sentence refers to osteoderms forming a tail club without any prior mention of osteoderms in the page."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers suggest that osteoderms located at the tail's end may have formed a club-like structure.\": Sentence 13 mentions osteoderms at the tail’s end forming a club-like structure, but the page never previously introduced or described these osteoderms."
+  "- missing context: \"Researchers suggest that osteoderms at the end of the tail may have formed a tail club.\": The sentence refers to osteoderms forming a tail club without any prior mention of osteoderms in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:37:40+00:00",
+   "problems": [
+    {
+     "sentences": [
+      17,
+      18
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the age range of Revueltosaurus, repeating the same information."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 13 mentions osteoderms at the tail’s end forming a club-like structure, but the page never previously introduced or described these osteoderms."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:18:26+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:18:26+00:00"
+ "rewritten_at": "2026-11-28T13:22:23+00:00"
 }

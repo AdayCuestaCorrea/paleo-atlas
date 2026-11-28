@@ -3,31 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "3c7579cf03cb1ece",
- "reviewed_at": "2026-11-25T22:41:15+00:00",
- "problems": [
+ "reviewed_at": "2026-11-28T13:13:44+00:00",
+ "problems": [],
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
   {
-   "sentences": [
-    13,
-    15
+   "reviewed_at": "2026-11-25T22:41:15+00:00",
+   "problems": [
+    {
+     "sentences": [
+      13,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "The page states Talenkauen lived during the Campanian to Maastrichtian stages (14) but later claims it lived only during the Campanian stage (16)."
+    },
+    {
+     "sentences": [
+      13,
+      15
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences provide age information for Talenkauen, repeating the same claim with different details."
+    }
    ],
-   "kind": "contradiction",
-   "reason": "The page states Talenkauen lived during the Campanian to Maastrichtian stages (14) but later claims it lived only during the Campanian stage (16)."
-  },
-  {
-   "sentences": [
-    13,
-    15
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences provide age information for Talenkauen, repeating the same claim with different details."
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:20:58+00:00"
   }
- ],
- "repetitions_dropped": 1,
- "notes": [
-  "- contradiction: \"Talenkauen lived during the Campanian to Maastrichtian stages of the Late Cretaceous.\" / \"Talenkauen lived during the Campanian stage, between 83.6 and 72.2 million years ago.\": The page states Talenkauen lived during the Campanian to Maastrichtian stages (14) but later claims it lived only during the Campanian stage (16)."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:20:58+00:00"
+ ]
 }

@@ -2,38 +2,63 @@
  "taxon_key": "dilophosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3b883079e1d9066d",
- "reviewed_at": "2026-11-25T22:16:28+00:00",
+ "text_hash": "fc59e14e87db733b",
+ "reviewed_at": "2026-11-28T13:07:25+00:00",
  "problems": [
   {
    "sentences": [
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state the temporal range of Dilophosaurus, repeating the same information."
-  },
-  {
-   "sentences": [
-    11
+    2
    ],
    "kind": "missing_context",
-   "reason": "Sentence 12 refers to a holotype, but the page never introduced or described a holotype specimen."
+   "reason": "Mentions tail vertebrae containing air sacs without explaining the significance or context of air sacs in this dinosaur."
   },
   {
    "sentences": [
-    23
+    12
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 24 discusses the Kayenta Formation and other dinosaurs, presenting formation and relative information as if it were directly about Dilophosaurus itself."
+   "reason": "Describes a resting trace of a Dilophosaurus-like theropod, implying it is about Dilophosaurus itself, but the trace may belong to a different species."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Welles concluded the specimens were buried near their death sites with little transport, though the holotype shows signs of scavenger disturbance such as rotated vertebrae and a crushed skull.\": Sentence 12 refers to a holotype, but the page never introduced or described a holotype specimen."
+  "- missing context: \"The skeleton included 10 neck vertebrae, 14 back vertebrae, and 45 tail vertebrae that contained air sacs.\": Mentions tail vertebrae containing air sacs without explaining the significance or context of air sacs in this dinosaur."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:16:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      21,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state the temporal range of Dilophosaurus, repeating the same information."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 12 refers to a holotype, but the page never introduced or described a holotype specimen."
+    },
+    {
+     "sentences": [
+      23
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 24 discusses the Kayenta Formation and other dinosaurs, presenting formation and relative information as if it were directly about Dilophosaurus itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:06:50+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:06:50+00:00"
+ "rewritten_at": "2026-11-28T13:20:07+00:00"
 }

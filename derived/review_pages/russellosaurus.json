@@ -2,32 +2,50 @@
  "taxon_key": "russellosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "2a06d47dba2e6699",
- "reviewed_at": "2026-11-25T22:57:22+00:00",
+ "text_hash": "d4bf64e4fde6b308",
+ "reviewed_at": "2026-11-28T13:17:44+00:00",
  "problems": [
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 refers to the \"type specimen\" without having introduced or defined it earlier in the page."
-  },
   {
    "sentences": [
     7,
     8
    ],
    "kind": "contradiction",
-   "reason": "Sentence 8 states that fragmentary specimens have been recovered from two other localities, yet sentence 9 claims that only one fossil occurrence of Russellosaurus has been recorded."
+   "reason": "Sentence 8 reports fragmentary specimens recovered from two other localities, while sentence 9 states only one fossil occurrence has been recorded."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The type specimen is notable as the oldest well-preserved mosasaur found in North America.\": Sentence 5 refers to the \"type specimen\" without having introduced or defined it earlier in the page.",
-  "- contradiction: \"Fragmentary specimens have also been recovered from the Kamp Ranch Limestone at two other localities in the Dallas area.\" / \"Currently, only one fossil occurrence of Russellosaurus has been recorded in the database.\": Sentence 8 states that fragmentary specimens have been recovered from two other localities, yet sentence 9 claims that only one fossil occurrence of Russellosaurus has been recorded."
+  "- contradiction: \"Fragmentary specimens have also been recovered from the Kamp Ranch Limestone at two other localities in the Dallas area.\" / \"Currently, only one fossil occurrence of Russellosaurus has been recorded in the database.\": Sentence 8 reports fragmentary specimens recovered from two other localities, while sentence 9 states only one fossil occurrence has been recorded."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:57:22+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to the \"type specimen\" without having introduced or defined it earlier in the page."
+    },
+    {
+     "sentences": [
+      7,
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 8 states that fragmentary specimens have been recovered from two other localities, yet sentence 9 claims that only one fossil occurrence of Russellosaurus has been recorded."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:07+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:07+00:00"
+ "rewritten_at": "2026-11-28T13:24:14+00:00"
 }

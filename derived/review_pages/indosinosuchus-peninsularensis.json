@@ -2,8 +2,8 @@
  "taxon_key": "indosinosuchus-peninsularensis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "b93ec6373299de9e",
- "reviewed_at": "2026-11-25T23:05:58+00:00",
+ "text_hash": "21366e7cab3fbd30",
+ "reviewed_at": "2026-11-28T13:19:34+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,42 @@
     9
    ],
    "kind": "contradiction",
-   "reason": "Sentence 4 states I. peninsularensis is a freshwater‑living thalattosuchian, while sentence 10 claims it is interpreted as a marine species, presenting two mutually exclusive habitat descriptions for the same species."
+   "reason": "Sentence 4 claims I. peninsularensis is freshwater contrasting with the marine habit of the type species, while sentence 10 claims the type species has a freshwater habit, contradicting each other."
+  },
+  {
+   "sentences": [
+    3,
+    9
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat the contrast between the freshwater habit of I. peninsularensis and the type species, stating it twice."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"I. peninsularensis is the first confirmed freshwater-living thalattosuchian, contrasting with the marine habit of the type species.\" / \"I. peninsularensis is interpreted as a marine species, contrasting with the freshwater habit of the type species.\": Sentence 4 states I. peninsularensis is a freshwater‑living thalattosuchian, while sentence 10 claims it is interpreted as a marine species, presenting two mutually exclusive habitat descriptions for the same species."
+  "- contradiction: \"I. peninsularensis is the first confirmed freshwater-living thalattosuchian, contrasting with the marine habit of the type species.\" / \"This contrasts with the freshwater habit of the type species.\": Sentence 4 claims I. peninsularensis is freshwater contrasting with the marine habit of the type species, while sentence 10 claims the type species has a freshwater habit, contradicting each other."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:05:58+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 4 states I. peninsularensis is a freshwater‑living thalattosuchian, while sentence 10 claims it is interpreted as a marine species, presenting two mutually exclusive habitat descriptions for the same species."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:32:54+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:32:54+00:00"
+ "rewritten_at": "2026-11-28T13:24:55+00:00"
 }

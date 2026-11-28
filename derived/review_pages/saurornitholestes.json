@@ -2,23 +2,41 @@
  "taxon_key": "saurornitholestes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "42658a56b1f87762",
- "reviewed_at": "2026-11-25T22:30:12+00:00",
+ "text_hash": "41d7bfb86506023f",
+ "reviewed_at": "2026-11-28T13:10:50+00:00",
  "problems": [
   {
    "sentences": [
-    6
+    5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 7 refers to \"Saurornitholestes sullivani\" without any prior introduction or context for this taxon on the page."
+   "reason": "The sentence refers to the holotype skeleton of Saurornitholestes but never specifies which species it belongs to or provides any prior context identifying the specimen."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Saurornitholestes sullivani likely had a keen sense of smell, indicated by an unusually large olfactory bulb in its skull.\": Sentence 7 refers to \"Saurornitholestes sullivani\" without any prior introduction or context for this taxon on the page."
+  "- missing context: \"The holotype skeleton of Saurornitholestes was discovered in 1974 by amateur paleontologist Irene Vanderloh near Steveville, Alberta.\": The sentence refers to the holotype skeleton of Saurornitholestes but never specifies which species it belongs to or provides any prior context identifying the specimen."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:30:12+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to \"Saurornitholestes sullivani\" without any prior introduction or context for this taxon on the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:14:47+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:14:47+00:00"
+ "rewritten_at": "2026-11-28T13:21:37+00:00"
 }

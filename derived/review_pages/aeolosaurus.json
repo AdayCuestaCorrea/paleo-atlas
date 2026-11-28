@@ -2,24 +2,60 @@
  "taxon_key": "aeolosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "722e71ee326f0f15",
- "reviewed_at": "2026-11-25T22:32:46+00:00",
+ "text_hash": "730193323e8282a0",
+ "reviewed_at": "2026-11-28T13:11:31+00:00",
  "problems": [
+  {
+   "sentences": [
+    4,
+    12
+   ],
+   "kind": "contradiction",
+   "reason": "[5] states the species lived 83–74 Ma, while [13] states 74–70 Ma."
+  },
   {
    "sentences": [
     12,
     13
    ],
    "kind": "contradiction",
-   "reason": "Both sentences give conflicting time ranges for Aeolosaurus; sentence 13 limits it to 74–70 Ma, while sentence 14 extends it from 83.6 to 66 Ma."
+   "reason": "[13] gives 74–70 Ma, [14] gives 83.6–66 Ma."
+  },
+  {
+   "sentences": [
+    12,
+    13
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences repeat the same time range information."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Aeolosaurus lived during the Late Cretaceous period, specifically during the late Cretaceous Campanian stage, approximately 74 to 70 million years ago, in what is now South America.\" / \"Aeolosaurus lived from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.\": Both sentences give conflicting time ranges for Aeolosaurus; sentence 13 limits it to 74–70 Ma, while sentence 14 extends it from 83.6 to 66 Ma."
+  "- contradiction: \"The type species was discovered in the Angostura Colorada Formation in Argentina, dating from 83 to 74 million years ago.\" / \"Aeolosaurus lived during the Late Cretaceous period, specifically during the late Cretaceous Campanian stage, approximately 74 to 70 million years ago, in what is now South America, though other estimates suggest the genus ranged from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.\": [5] states the species lived 83–74 Ma, while [13] states 74–70 Ma.",
+  "- contradiction: \"Aeolosaurus lived during the Late Cretaceous period, specifically during the late Cretaceous Campanian stage, approximately 74 to 70 million years ago, in what is now South America, though other estimates suggest the genus ranged from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.\" / \"Aeolosaurus lived from the Campanian to the Maastrichtian, between 83.6 and 66 million years ago.\": [13] gives 74–70 Ma, [14] gives 83.6–66 Ma."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:32:46+00:00",
+   "problems": [
+    {
+     "sentences": [
+      12,
+      13
+     ],
+     "kind": "contradiction",
+     "reason": "Both sentences give conflicting time ranges for Aeolosaurus; sentence 13 limits it to 74–70 Ma, while sentence 14 extends it from 83.6 to 66 Ma."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:16:14+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:16:14+00:00"
+ "rewritten_at": "2026-11-28T13:21:54+00:00"
 }

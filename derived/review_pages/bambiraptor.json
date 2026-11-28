@@ -3,32 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "f5bdd4384db0519d",
- "reviewed_at": "2026-11-25T22:41:43+00:00",
- "problems": [
-  {
-   "sentences": [
-    4,
-    9
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 states Bambiraptor feinbergi was formally named and described in 2000, implying it is a distinct genus, whereas sentence 10 claims it may not be a distinct genus but merely a juvenile Saurornitholestes, directly contradicting the earlier claim of its distinctiveness."
-  },
-  {
-   "sentences": [
-    2,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 describes the holotype skeleton as approximately 95 % complete, suggesting a single, well-preserved individual, while sentence 11 alleges the specimen is a chimera composed of elements from three different lower legs, implying it is not a single individual."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:13:52+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Bambiraptor feinbergi was named and described in 2000 by David Burnham, Kraig Derstler, Phil Currie, Robert Bakker, Zhou Zhonge, and John Ostrom.\" / \"It is debated whether Bambiraptor is a distinct genus or merely a juvenile Saurornitholestes, while some believe it should be synonymized with Saurornitholestes.\": Sentence 5 states Bambiraptor feinbergi was formally named and described in 2000, implying it is a distinct genus, whereas sentence 10 claims it may not be a distinct genus but merely a juvenile Saurornitholestes, directly contradicting the earlier claim of its distinctiveness.",
-  "- contradiction: \"The excavation of the holotype skeleton yielded approximately 95 percent completeness, making it one of the most complete juvenile dinosaur skeletons ever found.\" / \"Some researchers suspect the holotype specimen is a chimera because it contains elements from three different similarly sized lower legs.\": Sentence 3 describes the holotype skeleton as approximately 95 % complete, suggesting a single, well-preserved individual, while sentence 11 alleges the specimen is a chimera composed of elements from three different lower legs, implying it is not a single individual."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:21:22+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:41:43+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      9
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states Bambiraptor feinbergi was formally named and described in 2000, implying it is a distinct genus, whereas sentence 10 claims it may not be a distinct genus but merely a juvenile Saurornitholestes, directly contradicting the earlier claim of its distinctiveness."
+    },
+    {
+     "sentences": [
+      2,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 describes the holotype skeleton as approximately 95 % complete, suggesting a single, well-preserved individual, while sentence 11 alleges the specimen is a chimera composed of elements from three different lower legs, implying it is not a single individual."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:21:22+00:00"
+  }
+ ]
 }

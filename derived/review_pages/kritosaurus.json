@@ -3,54 +3,67 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "50cd6b776f52e2d9",
- "reviewed_at": "2026-11-25T22:22:57+00:00",
+ "reviewed_at": "2026-11-28T13:09:08+00:00",
  "problems": [
   {
    "sentences": [
-    2,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 3 claims a partial skeleton is 11 m long, while sentence 11 states Kritosaurus reached a body length of 9 m."
-  },
-  {
-   "sentences": [
-    2,
-    10
+    13
    ],
    "kind": "repetition",
-   "reason": "Both sentences provide size estimates for Kritosaurus, repeating the same claim."
-  },
-  {
-   "sentences": [
-    14
-   ],
-   "kind": "repetition",
-   "reason": "Sentence 15 gives two overlapping age ranges (74.5–66 Ma and 73 Ma) for the same time period."
-  },
-  {
-   "sentences": [
-    2,
-    19
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences refer to a partial skeleton from the Sabinas Basin, repeating the same locality information."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 10 mentions inflatable air sacs flanking the crest, but the page never introduces the concept of air sacs before this claim."
+   "reason": "Sentence 14 repeats the time range and location information already given in the same sentence, creating redundant statements."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- contradiction: \"A partial skeleton from the Sabinas Basin is around 11 meters long, about 20% larger than other known specimens, and represents one of the largest well-documented North American saurolophines.\" / \"The remains indicate that Kritosaurus reached a body length of 9 meters and a mass of 4 metric tons.\": Sentence 3 claims a partial skeleton is 11 m long, while sentence 11 states Kritosaurus reached a body length of 9 m.",
-  "- missing context: \"It is hypothesized that inflatable air sacs flanked the crest for visual and auditory signaling.\": Sentence 10 mentions inflatable air sacs flanking the crest, but the page never introduces the concept of air sacs before this claim."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:10:59+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:22:57+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 3 claims a partial skeleton is 11 m long, while sentence 11 states Kritosaurus reached a body length of 9 m."
+    },
+    {
+     "sentences": [
+      2,
+      10
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences provide size estimates for Kritosaurus, repeating the same claim."
+    },
+    {
+     "sentences": [
+      14
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 15 gives two overlapping age ranges (74.5–66 Ma and 73 Ma) for the same time period."
+    },
+    {
+     "sentences": [
+      2,
+      19
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences refer to a partial skeleton from the Sabinas Basin, repeating the same locality information."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 10 mentions inflatable air sacs flanking the crest, but the page never introduces the concept of air sacs before this claim."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:10:59+00:00"
+  }
+ ]
 }

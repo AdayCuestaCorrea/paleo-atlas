@@ -2,40 +2,44 @@
  "taxon_key": "camposipterus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "c82f43f2b18c7d04",
- "reviewed_at": "2026-11-25T22:38:32+00:00",
- "problems": [
-  {
-   "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states Camposipterus is incertae sedis within Anhangueria, implying an uncertain position, while sentence 11 places it firmly within Ornithocheiridae as the sister taxon of Cimoliopterus."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 5 mentions a \"unique combination of traits\" but does not specify which traits or provide context for what makes it unique."
-  },
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 refers to \"Camposipterus(?) sedgwickii\" without explaining the question mark or the context of the reassignment."
-  }
- ],
+ "text_hash": "f738cc41f63f1a59",
+ "reviewed_at": "2026-11-28T13:13:04+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Rodrigues and Kellner assigned Camposipterus to the clade Anhangueria but placed it incertae sedis due to an unknown position, meaning its exact position is uncertain.\" / \"A 2019 study by Jacobs et al. placed Camposipterus within the family Ornithocheiridae as the sister taxon of Cimoliopterus.\": Sentence 10 states Camposipterus is incertae sedis within Anhangueria, implying an uncertain position, while sentence 11 places it firmly within Ornithocheiridae as the sister taxon of Cimoliopterus.",
-  "- missing context: \"The second and third pairs of teeth point obliquely sideways, contributing to a unique combination of traits.\": Sentence 5 mentions a \"unique combination of traits\" but does not specify which traits or provide context for what makes it unique.",
-  "- missing context: \"Camposipterus(?) sedgwickii was reassigned to the genus Aerodraco in 2020.\": Sentence 9 refers to \"Camposipterus(?) sedgwickii\" without explaining the question mark or the context of the reassignment."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:19:22+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:38:32+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states Camposipterus is incertae sedis within Anhangueria, implying an uncertain position, while sentence 11 places it firmly within Ornithocheiridae as the sister taxon of Cimoliopterus."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 mentions a \"unique combination of traits\" but does not specify which traits or provide context for what makes it unique."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 refers to \"Camposipterus(?) sedgwickii\" without explaining the question mark or the context of the reassignment."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:19:22+00:00"
+  }
+ ]
 }

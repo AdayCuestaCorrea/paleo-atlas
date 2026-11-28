@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "5642d038546c2a1c",
- "reviewed_at": "2026-11-25T22:28:26+00:00",
+ "reviewed_at": "2026-11-28T13:10:21+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,42 @@
     7
    ],
    "kind": "contradiction",
-   "reason": "Sentence 7 places Dakotaraptor in Dromaeosauridae, while sentence 8 places it in Unenlagiidae, two different families, without indicating that these are alternative hypotheses."
+   "reason": "Sentences 7 and 8 give mutually exclusive taxonomic placements for Dakotaraptor (Dromaeosauridae vs Unenlagiidae)."
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "missing_context",
+   "reason": "Sentence 6 refers to \"which morph was male and which was female\" without defining what \"morph\" refers to or providing context for morphs."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Dakotaraptor was placed in Dromaeosauridae, and a cladistic analysis showed it was the sister taxon of Dromaeosaurus.\" / \"However, a 2019 study by Hartman et al. recovered a placement of Dakotaraptor in Unenlagiidae, suggesting it is likely a member of the subfamily Unenlagiinae.\": Sentence 7 places Dakotaraptor in Dromaeosauridae, while sentence 8 places it in Unenlagiidae, two different families, without indicating that these are alternative hypotheses."
+  "- contradiction: \"Dakotaraptor was placed in Dromaeosauridae, and a cladistic analysis showed it was the sister taxon of Dromaeosaurus, though this classification is not universally accepted.\" / \"However, a 2019 study by Hartman et al. recovered a placement of Dakotaraptor in Unenlagiidae, suggesting it is likely a member of the subfamily Unenlagiinae.\": Sentences 7 and 8 give mutually exclusive taxonomic placements for Dakotaraptor (Dromaeosauridae vs Unenlagiidae).",
+  "- missing context: \"It cannot yet be deduced which morph was male and which was female.\": Sentence 6 refers to \"which morph was male and which was female\" without defining what \"morph\" refers to or providing context for morphs."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "spanish failed",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:28:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 7 places Dakotaraptor in Dromaeosauridae, while sentence 8 places it in Unenlagiidae, two different families, without indicating that these are alternative hypotheses."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:13:52+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:13:52+00:00"
+ "rewritten_at": "2026-11-28T13:21:27+00:00"
 }

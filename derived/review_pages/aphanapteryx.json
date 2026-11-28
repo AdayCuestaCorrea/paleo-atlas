@@ -3,30 +3,47 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7ecc9b54e91bec3f",
- "reviewed_at": "2026-11-25T22:21:35+00:00",
+ "reviewed_at": "2026-11-28T13:08:46+00:00",
  "problems": [
-  {
-   "sentences": [
-    3
-   ],
-   "kind": "missing_context",
-   "reason": "The sentence refers to \"its beak attacks\" without any prior mention of the red rail attacking with its beak."
-  },
   {
    "sentences": [
     11
    ],
    "kind": "missing_context",
-   "reason": "The sentence mentions \"attacks from the red rail's beak\" but no earlier context explains that the red rail performed such attacks."
+   "reason": "Sentence 12 refers to \"birds\" and \"beak\" without explicitly identifying the bird as the red rail, which was not mentioned earlier in that context."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Fossil snail shells found with damage matching its beak attacks provide evidence of its feeding habits.\": The sentence refers to \"its beak attacks\" without any prior mention of the red rail attacking with its beak.",
-  "- missing context: \"Subfossil shells found with puncture holes suggest predation by birds, likely matching attacks from the red rail's beak.\": The sentence mentions \"attacks from the red rail's beak\" but no earlier context explains that the red rail performed such attacks."
+  "- missing context: \"Subfossil shells found with puncture holes suggest predation by birds, likely matching attacks from the red rail's beak.\": Sentence 12 refers to \"birds\" and \"beak\" without explicitly identifying the bird as the red rail, which was not mentioned earlier in that context."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:21:35+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"its beak attacks\" without any prior mention of the red rail attacking with its beak."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence mentions \"attacks from the red rail's beak\" but no earlier context explains that the red rail performed such attacks."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:49+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:49+00:00"
+ "rewritten_at": "2026-11-28T13:20:36+00:00"
 }

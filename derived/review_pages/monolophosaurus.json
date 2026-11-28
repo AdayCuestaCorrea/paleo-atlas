@@ -2,38 +2,56 @@
  "taxon_key": "monolophosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "5007f05134d47f12",
- "reviewed_at": "2026-11-25T22:28:28+00:00",
+ "text_hash": "993ab7e781a45e68",
+ "reviewed_at": "2026-11-28T13:10:23+00:00",
  "problems": [
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "missing_context",
-   "reason": "Refers to \"a specimen\" without prior introduction of which specimen."
-  },
-  {
-   "sentences": [
-    6,
-    7
-   ],
-   "kind": "about_something_else",
-   "reason": "Describes discovery and unearthed dates of a new theropod unrelated to Monolophosaurus."
-  },
   {
    "sentences": [
     15
    ],
-   "kind": "about_something_else",
-   "reason": "Mentions Alpkarakush, a different taxon, in context of Monolophosaurus phylogeny."
+   "kind": "missing_context",
+   "reason": "Mentions \"Alpkarakush\" without prior introduction or explanation of what it is."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Parallel ridges on the dentary of a specimen may represent tooth marks from another animal.\": Refers to \"a specimen\" without prior introduction of which specimen."
+  "- missing context: \"The describers of Alpkarakush included Monolophosaurus within Spinosauridae in a 2024 phylogenetic analysis.\": Mentions \"Alpkarakush\" without prior introduction or explanation of what it is."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:28:28+00:00",
+   "problems": [
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to \"a specimen\" without prior introduction of which specimen."
+    },
+    {
+     "sentences": [
+      6,
+      7
+     ],
+     "kind": "about_something_else",
+     "reason": "Describes discovery and unearthed dates of a new theropod unrelated to Monolophosaurus."
+    },
+    {
+     "sentences": [
+      15
+     ],
+     "kind": "about_something_else",
+     "reason": "Mentions Alpkarakush, a different taxon, in context of Monolophosaurus phylogeny."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:13:54+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:13:54+00:00"
+ "rewritten_at": "2026-11-28T13:21:30+00:00"
 }

@@ -2,23 +2,49 @@
  "taxon_key": "lonchodectes",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "efb78587006491e7",
- "reviewed_at": "2026-11-25T22:41:24+00:00",
+ "text_hash": "e705d7c1ae6c9bdb",
+ "reviewed_at": "2026-11-28T13:13:47+00:00",
  "problems": [
   {
    "sentences": [
+    1,
     2
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 3 mentions crests on the lower jaws of Lonchodectes compressirostris, but the page never introduces or describes the lower jaws of the animal before this claim."
+   "kind": "repetition",
+   "reason": "Both sentences describe the same jaw morphology of Lonchodectes"
+  },
+  {
+   "sentences": [
+    5
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 6 places the genus in Azhdarchoidea while also stating it belongs to Ornithocheiroidea, which are distinct clades"
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Researchers suggest that Lonchodectes compressirostris likely had crests on its lower jaws, similar to related species.\": Sentence 3 mentions crests on the lower jaws of Lonchodectes compressirostris, but the page never introduces or describes the lower jaws of the animal before this claim."
+  "- contradiction: \"In 2003, the genus was placed in the family Lonchodectidae within Ctenochasmatoidea, and later in 2006, it was placed within Azhdarchoidea, though it also belongs to the parent group Ornithocheiroidea.\": Sentence 6 places the genus in Azhdarchoidea while also stating it belongs to Ornithocheiroidea, which are distinct clades"
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:41:24+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 mentions crests on the lower jaws of Lonchodectes compressirostris, but the page never introduces or describes the lower jaws of the animal before this claim."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:21:00+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:21:00+00:00"
+ "rewritten_at": "2026-11-28T13:22:51+00:00"
 }

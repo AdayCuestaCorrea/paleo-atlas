@@ -2,48 +2,82 @@
  "taxon_key": "dacentrurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "6a78669d40bbe983",
- "reviewed_at": "2026-11-25T22:25:36+00:00",
+ "text_hash": "56718457dd0fc651",
+ "reviewed_at": "2026-11-28T13:09:47+00:00",
  "problems": [
   {
    "sentences": [
     0,
-    16,
-    17
+    16
    ],
    "kind": "contradiction",
-   "reason": "The age ranges for Dacentrurus differ: sentence 1 gives 154–140 Ma, sentence 17 gives ~145 Ma, and sentence 18 gives 154.8–121.4 Ma."
+   "reason": "Both sentences state the temporal range of Dacentrurus, but sentence 1 gives 154–140 Ma while sentence 17 gives 154.8–121.4 Ma, a different lower bound and a longer upper bound."
   },
   {
    "sentences": [
-    1,
-    2
+    0,
+    16
    ],
    "kind": "repetition",
-   "reason": "Both sentences state that Dacentrurus reached large sizes and give overlapping mass ranges (5–7.4 metric tons)."
+   "reason": "Both sentences repeat the claim that Dacentrurus lived from the Kimmeridgian to the Barremian (154.8–121.4 Ma)."
   },
   {
    "sentences": [
-    5
+    4
    ],
    "kind": "missing_context",
-   "reason": "The phrase “small, blunt, asymmetrical plate located on the neck or front back” refers to a feature without specifying which specimen or context."
-  },
-  {
-   "sentences": [
-    9
-   ],
-   "kind": "about_something_else",
-   "reason": "The sentence discusses the taxonomic status of Dacentrurus as the default classification for European stegosaur finds, which is about classification rather than the animal itself."
+   "reason": "Sentence 5 mentions a small, blunt, asymmetrical plate on the neck or front back, but the page never explains what ‘front back’ refers to or provides context for the plate’s position."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Dacentrurus means \"tail full of points\" and is an extinct stegosaurian dinosaur from Europe living between 154 and 140 million years ago.\" / \"Dacentrurus lived approximately 145 million years ago during the Jurassic-Cretaceous boundary and was prevalent in the Iberian range.\" / \"The genus Dacentrurus lived from the Kimmeridgian to the Barremian, between 154.8 and 121.4 million years ago.\": The age ranges for Dacentrurus differ: sentence 1 gives 154–140 Ma, sentence 17 gives ~145 Ma, and sentence 18 gives 154.8–121.4 Ma.",
-  "- missing context: \"The preserved material includes a small, blunt, asymmetrical plate located on the neck or front back.\": The phrase “small, blunt, asymmetrical plate located on the neck or front back” refers to a feature without specifying which specimen or context."
+  "- contradiction: \"Dacentrurus means \"tail full of points\" and is an extinct stegosaurian dinosaur from Europe; while some estimates place its range between 154 and 140 million years ago, other studies define the genus as living from the Kimmeridgian to the Barremian, between 154.8 and 121.4 million years ago.\" / \"The genus Dacentrurus lived from the Kimmeridgian to the Barremian, between 154.8 and 121.4 million years ago.\": Both sentences state the temporal range of Dacentrurus, but sentence 1 gives 154–140 Ma while sentence 17 gives 154.8–121.4 Ma, a different lower bound and a longer upper bound.",
+  "- missing context: \"The holotype skeleton of Dacentrurus includes a small, blunt, asymmetrical plate located on the neck or front back.\": Sentence 5 mentions a small, blunt, asymmetrical plate on the neck or front back, but the page never explains what ‘front back’ refers to or provides context for the plate’s position."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:25:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      0,
+      16,
+      17
+     ],
+     "kind": "contradiction",
+     "reason": "The age ranges for Dacentrurus differ: sentence 1 gives 154–140 Ma, sentence 17 gives ~145 Ma, and sentence 18 gives 154.8–121.4 Ma."
+    },
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Dacentrurus reached large sizes and give overlapping mass ranges (5–7.4 metric tons)."
+    },
+    {
+     "sentences": [
+      5
+     ],
+     "kind": "missing_context",
+     "reason": "The phrase “small, blunt, asymmetrical plate located on the neck or front back” refers to a feature without specifying which specimen or context."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "about_something_else",
+     "reason": "The sentence discusses the taxonomic status of Dacentrurus as the default classification for European stegosaur finds, which is about classification rather than the animal itself."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:12:33+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:12:33+00:00"
+ "rewritten_at": "2026-11-28T13:21:08+00:00"
 }

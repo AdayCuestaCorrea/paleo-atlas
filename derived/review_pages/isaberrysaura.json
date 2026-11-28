@@ -2,26 +2,49 @@
  "taxon_key": "isaberrysaura",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "338447820f064546",
- "reviewed_at": "2026-11-25T22:44:09+00:00",
+ "text_hash": "6dd9fc636d5c4e57",
+ "reviewed_at": "2026-11-28T13:14:29+00:00",
  "problems": [
   {
    "sentences": [
     4,
-    5,
+    5
+   ],
+   "kind": "repetition",
+   "reason": "Both sentences state the classification of Isaberrysaura within Huayangosauridae."
+  },
+  {
+   "sentences": [
     6,
     7
    ],
-   "kind": "contradiction",
-   "reason": "The page states that Isaberrysaura belongs to the family Huayangosauridae (an ankylosaurian group) while also asserting it is allied with Stegosauria and confidently classified as a stegosaur in later analyses."
+   "kind": "repetition",
+   "reason": "Both sentences describe the phylogenetic placement of Isaberrysaura as a stegosaur."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The parent group for this species is identified as Huayangosauridae.\" / \"Consequently, Isaberrysaura is classified within the family Huayangosauridae.\" / \"Although initially thought to be a basal neornithischian, it is now allied with Stegosauria because its skull shape resembles other members of that group.\" / \"Several subsequent phylogenetic analyses have confidently classified Isaberrysaura as a stegosaur.\": The page states that Isaberrysaura belongs to the family Huayangosauridae (an ankylosaurian group) while also asserting it is allied with Stegosauria and confidently classified as a stegosaur in later analyses."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:22:35+00:00"
+ "repetitions_dropped": 2,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:44:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "kind": "contradiction",
+     "reason": "The page states that Isaberrysaura belongs to the family Huayangosauridae (an ankylosaurian group) while also asserting it is allied with Stegosauria and confidently classified as a stegosaur in later analyses."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:22:35+00:00"
+  }
+ ]
 }

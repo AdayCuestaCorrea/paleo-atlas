@@ -3,22 +3,40 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "4f4c237f547eea94",
- "reviewed_at": "2026-11-25T22:55:37+00:00",
+ "reviewed_at": "2026-11-28T13:17:24+00:00",
  "problems": [
   {
    "sentences": [
     4
    ],
    "kind": "missing_context",
-   "reason": "Sentence 5 refers to \"the original collection\" without any prior mention or definition of that collection in the page."
+   "reason": "Sentence 5 refers to an \"original collection\" that has not been mentioned earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Anatoly Rozhdestvensky designated a fragment of the skull roof as the lectotype because the original collection contained multiple individuals.\": Sentence 5 refers to \"the original collection\" without any prior mention or definition of that collection in the page."
+  "- missing context: \"Anatoly Rozhdestvensky designated a partial skull roof (PIN 1/5009) as the lectotype of Jaxartosaurus because the original collection contained multiple individuals.\": Sentence 5 refers to an \"original collection\" that has not been mentioned earlier in the page."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:55:37+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 5 refers to \"the original collection\" without any prior mention or definition of that collection in the page."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:28:24+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:28:24+00:00"
+ "rewritten_at": "2026-11-28T13:24:12+00:00"
 }

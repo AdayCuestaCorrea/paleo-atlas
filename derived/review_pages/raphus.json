@@ -2,31 +2,46 @@
  "taxon_key": "raphus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "91f9a5906205fd92",
- "reviewed_at": "2026-11-25T22:16:16+00:00",
+ "text_hash": "b3405297a61e9edb",
+ "reviewed_at": "2026-11-28T13:07:15+00:00",
  "problems": [
   {
    "sentences": [
     1,
     5
    ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 gives weight range 10.6–17.5 kg, while sentence 6 states male dodos weighed 21 kg, contradicting the earlier estimate."
-  },
-  {
-   "sentences": [
-    22
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 23 discusses the ecological impact of the dodo’s extinction on seed dispersal, which is about the ecosystem rather than the dodo itself."
+   "kind": "repetition",
+   "reason": "Both sentences state that male dodos weighed 21 kg, repeating the same claim."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Subfossil evidence indicates the dodo stood between 62.6 and 75 cm tall and weighed between 10.6 and 17.5 kg.\" / \"A 1993 study by Bradley C. Livezey estimated male dodos weighed 21 kg and females 17 kg.\": Sentence 2 gives weight range 10.6–17.5 kg, while sentence 6 states male dodos weighed 21 kg, contradicting the earlier estimate."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:06:42+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:16:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 gives weight range 10.6–17.5 kg, while sentence 6 states male dodos weighed 21 kg, contradicting the earlier estimate."
+    },
+    {
+     "sentences": [
+      22
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 23 discusses the ecological impact of the dodo’s extinction on seed dispersal, which is about the ecosystem rather than the dodo itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:06:42+00:00"
+  }
+ ]
 }

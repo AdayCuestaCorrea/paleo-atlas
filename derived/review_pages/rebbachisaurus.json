@@ -2,8 +2,8 @@
  "taxon_key": "rebbachisaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3dc0963f205bff4c",
- "reviewed_at": "2026-11-25T22:20:00+00:00",
+ "text_hash": "a4845b86f7e6d004",
+ "reviewed_at": "2026-11-28T13:08:12+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,23 +11,49 @@
     2
    ],
    "kind": "contradiction",
-   "reason": "Sentence 2 claims the vertebrae could reach up to 150 cm in height, implying a very tall animal, while sentence 3 describes Rebbachisaurus as a medium‑sized sauropod yet also one of the largest known rebbachisaurids—these two size claims are inconsistent."
+   "reason": "Sentence 2 claims Rebbachisaurus is medium-sized, while sentence 3 states it is one of the largest known rebbachisaurids."
   },
   {
    "sentences": [
-    12
+    1,
+    2
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 13 refers to \"R. tamesnensis\" as a possible camarasaurid, but the page never introduced or defined this taxon before this mention."
+   "kind": "repetition",
+   "reason": "Both sentences repeat the claim that Rebbachisaurus is medium-sized, despite the contradictory size description."
   }
  ],
- "repetitions_dropped": 0,
+ "repetitions_dropped": 1,
  "notes": [
-  "- contradiction: \"Its vertebrae could reach up to 150 cm in height, which is significantly taller than those of South American rebbachisaurids.\" / \"Rebbachisaurus is classified as a medium-sized sauropod but represents one of the largest known rebbachisaurids.\": Sentence 2 claims the vertebrae could reach up to 150 cm in height, implying a very tall animal, while sentence 3 describes Rebbachisaurus as a medium‑sized sauropod yet also one of the largest known rebbachisaurids—these two size claims are inconsistent.",
-  "- missing context: \"Some researchers have hypothesized that R. tamesnensis is a camarasaurid rather than a diplodocoid or valid species.\": Sentence 13 refers to \"R. tamesnensis\" as a possible camarasaurid, but the page never introduced or defined this taxon before this mention."
+  "- contradiction: \"Its vertebrae could reach up to 150 cm in height, which is significantly taller than those of South American rebbachisaurids; however, Rebbachisaurus is classified as a medium-sized sauropod.\" / \"Rebbachisaurus is classified as a medium-sized sauropod but represents one of the largest known rebbachisaurids.\": Sentence 2 claims Rebbachisaurus is medium-sized, while sentence 3 states it is one of the largest known rebbachisaurids."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:20:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      2
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 claims the vertebrae could reach up to 150 cm in height, implying a very tall animal, while sentence 3 describes Rebbachisaurus as a medium‑sized sauropod yet also one of the largest known rebbachisaurids—these two size claims are inconsistent."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 13 refers to \"R. tamesnensis\" as a possible camarasaurid, but the page never introduced or defined this taxon before this mention."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:06+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:06+00:00"
+ "rewritten_at": "2026-11-28T13:20:23+00:00"
 }

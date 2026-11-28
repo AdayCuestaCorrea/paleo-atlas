@@ -2,8 +2,8 @@
  "taxon_key": "craspedodon",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7a118d27f511dbec",
- "reviewed_at": "2026-11-25T23:01:00+00:00",
+ "text_hash": "6a1f5211c33536ff",
+ "reviewed_at": "2026-11-28T13:18:41+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,43 @@
     5
    ],
    "kind": "contradiction",
-   "reason": "Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea), giving two incompatible classifications for the same taxon."
+   "reason": "Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea)."
+  },
+  {
+   "sentences": [
+    4,
+    6
+   ],
+   "kind": "contradiction",
+   "reason": "Sentence 5 places Craspedodon in Iguanodontoidea, whereas sentence 7 suggests it may be a hadrosauroid ornithopod, a different clade."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Craspedodon was originally classified as an ornithopod related to Iguanodon, but the Paleobi Database currently lists its parent group as Iguanodontoidea.\" / \"A 2007 study suggested the tooth shape, ridge length, and thickened base might indicate membership in Neoceratopsia, specifically basal Ceratopsoidea.\": Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea), giving two incompatible classifications for the same taxon."
+  "- contradiction: \"Craspedodon was originally classified as an ornithopod related to Iguanodon, but the Paleobi Database currently lists its parent group as Iguanodontoidea.\" / \"A 2007 study by Godefroit and Lambert suggested that the tooth shape, ridge length, and thickened base might indicate membership in Neoceratopsia, specifically basal Ceratopsoidea.\": Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea).",
+  "- contradiction: \"Craspedodon was originally classified as an ornithopod related to Iguanodon, but the Paleobi Database currently lists its parent group as Iguanodontoidea.\" / \"Researchers were unable to determine if Craspedodon is a valid diagnostic taxon or a nomen dubium because tooth anatomy is too poorly understood, leading some to suggest it might instead represent a hadrosauroid ornithopod.\": Sentence 5 places Craspedodon in Iguanodontoidea, whereas sentence 7 suggests it may be a hadrosauroid ornithopod, a different clade."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T23:01:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4,
+      5
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 states Craspedodon’s parent group is Iguanodontoidea, while sentence 6 proposes it belongs to Neoceratopsia (basal Ceratopsoidea), giving two incompatible classifications for the same taxon."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:30:36+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:30:36+00:00"
+ "rewritten_at": "2026-11-28T13:24:39+00:00"
 }

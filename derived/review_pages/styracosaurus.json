@@ -2,31 +2,64 @@
  "taxon_key": "styracosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e3d5dad831b91b0a",
- "reviewed_at": "2026-11-25T22:20:21+00:00",
+ "text_hash": "e51851658b8ffd9e",
+ "reviewed_at": "2026-11-28T13:08:22+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Refers to the holotype specimen without having introduced or described it earlier in the page."
+   "reason": "Mentions the holotype specimen of Styracosaurus albertensis without having introduced or described it earlier in the page."
   },
   {
    "sentences": [
-    11
+    7
    ],
    "kind": "missing_context",
-   "reason": "Mentions a mass death event at a specific site but provides no prior context or description of that site or event."
+   "reason": "Refers to the lost site of S. parksi, but S. parksi has not been previously defined or mentioned before this sentence."
+  },
+  {
+   "sentences": [
+    15
+   ],
+   "kind": "missing_context",
+   "reason": "States that S. parksi is now generally accepted as a specimen of S. albertensis, yet S. parksi was only introduced in sentence 8 and not described in detail earlier, leaving the context unclear."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Evidence suggests the frill of the holotype specimen broke during the animal's life and was shortened by approximately 6 centimeters.\": Refers to the holotype specimen without having introduced or described it earlier in the page.",
-  "- missing context: \"Researchers suggest the mass death of Styracosaurus at the Dinosaur Park Formation site may have occurred when non-herding animals gathered around a waterhole during a drought in a seasonal, semi-arid environment.\": Mentions a mass death event at a specific site but provides no prior context or description of that site or event."
+  "- missing context: \"Evidence suggests the frill of the holotype specimen of Styracosaurus albertensis broke during the animal's life and was shortened by approximately 6 centimeters.\": Mentions the holotype specimen of Styracosaurus albertensis without having introduced or described it earlier in the page.",
+  "- missing context: \"Darren Tanke of the Royal Tyrrell Museum relocated the lost site of S. parksi in the summer of 2006.\": Refers to the lost site of S. parksi, but S. parksi has not been previously defined or mentioned before this sentence.",
+  "- missing context: \"The species S. parksi is now generally accepted as a specimen of S. albertensis.\": States that S. parksi is now generally accepted as a specimen of S. albertensis, yet S. parksi was only introduced in sentence 8 and not described in detail earlier, leaving the context unclear."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:20:21+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Refers to the holotype specimen without having introduced or described it earlier in the page."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "Mentions a mass death event at a specific site but provides no prior context or description of that site or event."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:09:22+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:09:22+00:00"
+ "rewritten_at": "2026-11-28T13:20:26+00:00"
 }

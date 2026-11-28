@@ -2,45 +2,79 @@
  "taxon_key": "helicoprion",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e6841e869656b964",
- "reviewed_at": "2026-11-25T22:19:03+00:00",
+ "text_hash": "d1ce59d07bd13528",
+ "reviewed_at": "2026-11-28T13:08:06+00:00",
  "problems": [
-  {
-   "sentences": [
-    2,
-    16
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that Helicoprion belongs to the chondrichthyan subclass Holocephali."
-  },
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to “labial cartilage” without any prior introduction of this structure in the page."
+   "reason": "Mentions labial cartilage without prior introduction."
   },
   {
    "sentences": [
-    9
+    19
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 10 discusses the species Lissoprion ferrieri, which belongs to a different genus and is not a Helicoprion."
+   "kind": "missing_context",
+   "reason": "Suggests whorl as defensive structure without earlier context."
   },
   {
    "sentences": [
-    17
+    11,
+    12
    ],
-   "kind": "about_something_else",
-   "reason": "Sentence 18 refers to Parahelicoprion, a separate genus, in the context of Helicoprion taxonomy."
+   "kind": "repetition",
+   "reason": "Both describe diet as soft‑bodied prey, repeating the same claim."
   }
  ],
  "repetitions_dropped": 1,
  "notes": [
-  "- missing context: \"Helicoprion jaws were extensively laterally compressed, though this may be partly due to fossil compression artifacts, while the upper jaw was lined with small, low, rounded teeth that formed a pavement scraping against the main tooth whorl. The labial cartilage wedged into the upper jaw to distribute forces and limit jaw closure.\": Sentence 4 refers to “labial cartilage” without any prior introduction of this structure in the page."
+  "- missing context: \"The labial cartilage wedged into the upper jaw to distribute forces and limit jaw closure.\": Mentions labial cartilage without prior introduction.",
+  "- missing context: \"Eastman supported the hypothesis that the whorl was a defensive structure on the body rather than part of the mouth, despite similarities to other chondrichthyan teeth.\": Suggests whorl as defensive structure without earlier context."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:19:03+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2,
+      16
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that Helicoprion belongs to the chondrichthyan subclass Holocephali."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to “labial cartilage” without any prior introduction of this structure in the page."
+    },
+    {
+     "sentences": [
+      9
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 10 discusses the species Lissoprion ferrieri, which belongs to a different genus and is not a Helicoprion."
+    },
+    {
+     "sentences": [
+      17
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 18 refers to Parahelicoprion, a separate genus, in the context of Helicoprion taxonomy."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:08:28+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:08:28+00:00"
+ "rewritten_at": "2026-11-28T13:20:20+00:00"
 }

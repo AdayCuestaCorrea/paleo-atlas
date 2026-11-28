@@ -2,23 +2,65 @@
  "taxon_key": "byronosaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "3f77a15639a083b4",
- "reviewed_at": "2026-11-25T22:36:09+00:00",
+ "text_hash": "dfb2257c5f108928",
+ "reviewed_at": "2026-11-28T13:12:16+00:00",
  "problems": [
   {
    "sentences": [
     3
    ],
    "kind": "missing_context",
-   "reason": "Sentence 4 refers to juvenile skulls in an oviraptorid nest without any prior mention of such skulls or context for why they are relevant."
+   "reason": "Refers to a \"nearby Byronosaurus nest\" and an \"oviraptorid nest\" without prior mention of such nests."
+  },
+  {
+   "sentences": [
+    11
+   ],
+   "kind": "missing_context",
+   "reason": "Mentions \"juvenile specimens previously assigned to Byronosaurus\" without earlier introduction of juvenile specimens."
+  },
+  {
+   "sentences": [
+    12
+   ],
+   "kind": "missing_context",
+   "reason": "Cites skull morphology differences of juvenile skulls without prior context of those skulls."
+  },
+  {
+   "sentences": [
+    11,
+    12
+   ],
+   "kind": "about_something_else",
+   "reason": "Discusses assignment of juvenile skulls to Byronosaurus but actually concerns the genus Almas ukhae, presenting it as if it were about Byronosaurus."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Researchers suggested that juvenile skulls found in an oviraptorid nest were washed there from a nearby Byronosaurus nest by water flow.\": Sentence 4 refers to juvenile skulls in an oviraptorid nest without any prior mention of such skulls or context for why they are relevant."
+  "- missing context: \"Researchers suggested that juvenile Byronosaurus skulls found in an oviraptorid nest were washed there from a nearby Byronosaurus nest by water flow.\": Refers to a \"nearby Byronosaurus nest\" and an \"oviraptorid nest\" without prior mention of such nests.",
+  "- missing context: \"In 2017, researchers suggested that juvenile specimens previously assigned to Byronosaurus actually belong to Almas ukhae due to differences in skull features like the number of maxillary teeth.\": Mentions \"juvenile specimens previously assigned to Byronosaurus\" without earlier introduction of juvenile specimens.",
+  "- missing context: \"Some researchers dispute the assignment of the juvenile skulls to Byronosaurus, citing skull morphology differences and suggesting they may not belong to the genus.\": Cites skull morphology differences of juvenile skulls without prior context of those skulls."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:36:09+00:00",
+   "problems": [
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 4 refers to juvenile skulls in an oviraptorid nest without any prior mention of such skulls or context for why they are relevant."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:17:34+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:17:34+00:00"
+ "rewritten_at": "2026-11-28T13:22:10+00:00"
 }

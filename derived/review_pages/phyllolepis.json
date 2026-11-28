@@ -2,8 +2,8 @@
  "taxon_key": "phyllolepis",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "7bc57d17a372bc44",
- "reviewed_at": "2026-11-25T22:37:02+00:00",
+ "text_hash": "e9852891192e5a95",
+ "reviewed_at": "2026-11-28T13:12:34+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,32 +11,47 @@
     15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 9 states Phyllolepis were presumed blind, while sentence 16 says they had eyes on either side of their heads."
+   "reason": "Sentence 9 claims Phyllolepis lacked functional eyes, yet sentence 16 states they had eyes on either side of their heads."
   },
   {
    "sentences": [
-    22,
-    23
+    9,
+    15
    ],
    "kind": "contradiction",
-   "reason": "Sentence 23 claims Phyllolepis lived about 360 Ma during the Famennian stage, whereas sentence 24 gives a broader range of 387.95–358.86 Ma from Givetian to Famennian."
+   "reason": "Sentence 10 says they used long tails for rapid propulsion to catch prey, while sentence 16 describes them as ambush bottom‑dwelling predators."
   },
   {
    "sentences": [
-    8
+    8,
+    14
    ],
-   "kind": "missing_context",
-   "reason": "Sentence 9 ends with \"which created a distinctive wooden or leaf-like surface appearance\" but does not specify what \"which\" refers to, leaving the reader unclear about the source of that appearance."
+   "kind": "contradiction",
+   "reason": "Sentence 15 asserts Phyllolepis had eyes, contradicting sentence 9’s claim of no functional eyes."
+  },
+  {
+   "sentences": [
+    24
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 25 discusses the Pennsylvania Catskill formation and its sediment composition, which is about the formation, not directly about the animal."
+  },
+  {
+   "sentences": [
+    25
+   ],
+   "kind": "about_something_else",
+   "reason": "Sentence 26 speculates on freshwater/marine habitats and land connections, which is about environmental context rather than the animal itself."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden or leaf-like surface appearance.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentence 9 states Phyllolepis were presumed blind, while sentence 16 says they had eyes on either side of their heads.",
-  "- contradiction: \"Species of Phyllolepis lived approximately 360 million years ago during the Famennian stage of the Late Devonian.\" / \"Phyllolepis lived from the Givetian to the Famennian stages, between 387.95 and 358.86 million years ago.\": Sentence 23 claims Phyllolepis lived about 360 Ma during the Famennian stage, whereas sentence 24 gives a broader range of 387.95–358.86 Ma from Givetian to Famennian.",
-  "- missing context: \"Phyllolepis were presumed to be blind, bottom-dwelling predators that detected prey using sensory organs located in the grooves of their armor plates, which created a distinctive wooden or leaf-like surface appearance.\": Sentence 9 ends with \"which created a distinctive wooden or leaf-like surface appearance\" but does not specify what \"which\" refers to, leaving the reader unclear about the source of that appearance."
+  "- contradiction: \"The highly developed system of lateral ridges on Phyllolepis is suggested to have been used for electroreception to sense their surroundings in the absence of functional eyes.\" / \"Phyllolepis were likely ambush predators that lay in wait in the substrate as bottom-dwellers.\": Sentence 9 claims Phyllolepis lacked functional eyes, yet sentence 16 states they had eyes on either side of their heads.",
+  "- contradiction: \"Phyllolepis used their long tails for rapid propulsion to catch prey.\" / \"Phyllolepis were likely ambush predators that lay in wait in the substrate as bottom-dwellers.\": Sentence 10 says they used long tails for rapid propulsion to catch prey, while sentence 16 describes them as ambush bottom‑dwelling predators.",
+  "- contradiction: \"The highly developed system of lateral ridges on Phyllolepis is suggested to have been used for electroreception to sense their surroundings in the absence of functional eyes.\" / \"Phyllolepis had eyes located on either side of their heads and lacked a scleral ring, unlike modern flounders.\": Sentence 15 asserts Phyllolepis had eyes, contradicting sentence 9’s claim of no functional eyes."
  ],
- "rewrite": "replaced",
- "round": 3,
+ "rewrite": "spanish failed",
+ "round": 4,
  "earlier": [
   {
    "reviewed_at": "2026-11-24T00:32:19+00:00",
@@ -104,8 +119,40 @@
    "rewrite": "replaced",
    "rewrite_mode": "sentences",
    "rewritten_at": "2026-11-25T14:13:49+00:00"
+  },
+  {
+   "reviewed_at": "2026-11-25T22:37:02+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8,
+      15
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 states Phyllolepis were presumed blind, while sentence 16 says they had eyes on either side of their heads."
+    },
+    {
+     "sentences": [
+      22,
+      23
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 23 claims Phyllolepis lived about 360 Ma during the Famennian stage, whereas sentence 24 gives a broader range of 387.95–358.86 Ma from Givetian to Famennian."
+    },
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 9 ends with \"which created a distinctive wooden or leaf-like surface appearance\" but does not specify what \"which\" refers to, leaving the reader unclear about the source of that appearance."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:18:03+00:00"
   }
  ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:18:03+00:00"
+ "rewritten_at": "2026-11-28T13:22:18+00:00"
 }

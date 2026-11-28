@@ -3,7 +3,7 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "593c6036f8fcbd5a",
- "reviewed_at": "2026-11-25T22:57:36+00:00",
+ "reviewed_at": "2026-11-28T13:17:51+00:00",
  "problems": [
   {
    "sentences": [
@@ -11,15 +11,34 @@
     6
    ],
    "kind": "contradiction",
-   "reason": "Sentence 6 states the fossils are from the Carnian age (Late Triassic), while sentence 7 claims Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
+   "reason": "Sentence 6 states fossils are from the Carnian age, while sentence 7 claims the animal lived during the Ladinian stage, giving conflicting age ranges."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- contradiction: \"Fossils of Procerosuchus come from the Late Triassic Santa Maria Formation in the Paleorrota Geopark of Rio Grande do Sul, Brazil, which dates to the Carnian age.\" / \"Procerosuchus lived during the Ladinian stage, between 241.464 and 237 million years ago.\": Sentence 6 states the fossils are from the Carnian age (Late Triassic), while sentence 7 claims Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
+  "- contradiction: \"Fossils of Procerosuchus come from the Late Triassic Santa Maria Formation in the Paleorrota Geopark of Rio Grande do Sul, Brazil, which dates to the Carnian age, though some estimates place the animal in the earlier Ladinian stage between 241.464 and 237 million years ago.\" / \"Procerosuchus lived during the Ladinian stage, between 241.464 and 237 million years ago.\": Sentence 6 states fossils are from the Carnian age, while sentence 7 claims the animal lived during the Ladinian stage, giving conflicting age ranges."
  ],
- "rewrite": "replaced",
- "round": 1,
+ "rewrite": "unchanged",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:57:36+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 6 states the fossils are from the Carnian age (Late Triassic), while sentence 7 claims Procerosuchus lived during the Ladinian stage (earlier in the Triassic)."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:29:12+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:29:12+00:00"
+ "rewritten_at": "2026-11-28T13:24:18+00:00"
 }

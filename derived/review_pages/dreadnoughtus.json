@@ -2,31 +2,57 @@
  "taxon_key": "dreadnoughtus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e0fe3de6b663049d",
- "reviewed_at": "2026-11-25T22:25:51+00:00",
+ "text_hash": "13897d301ee7ab9c",
+ "reviewed_at": "2026-11-28T13:09:49+00:00",
  "problems": [
   {
    "sentences": [
-    5,
     6
    ],
-   "kind": "repetition",
-   "reason": "Both sentences state that fossils were found in the Cerro Fortaleza Formation, repeating the same location claim."
+   "kind": "missing_context",
+   "reason": "Refers to \"both specimens\" but the page never introduced a second specimen; only one individual is mentioned."
   },
   {
    "sentences": [
-    11
+    8
    ],
    "kind": "missing_context",
-   "reason": "The sentence refers to \"Orkoraptor\" without any prior introduction or context for this genus."
+   "reason": "Mentions \"both specimens\" again without prior context of a second specimen."
   }
  ],
- "repetitions_dropped": 1,
+ "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"Small theropod teeth found near the bones suggest scavenging, possibly by megaraptorans like Orkoraptor.\": The sentence refers to \"Orkoraptor\" without any prior introduction or context for this genus."
+  "- missing context: \"To study the bones in detail, researchers utilized a NextEngine 3D laser scanner to create digital models of both specimens.\": Refers to \"both specimens\" but the page never introduced a second specimen; only one individual is mentioned.",
+  "- missing context: \"Evidence indicates the holotype was not fully grown when it died, a finding supported by a 2014 study showing both specimens were immature and still growing.\": Mentions \"both specimens\" again without prior context of a second specimen."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:25:51+00:00",
+   "problems": [
+    {
+     "sentences": [
+      5,
+      6
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that fossils were found in the Cerro Fortaleza Formation, repeating the same location claim."
+    },
+    {
+     "sentences": [
+      11
+     ],
+     "kind": "missing_context",
+     "reason": "The sentence refers to \"Orkoraptor\" without any prior introduction or context for this genus."
+    }
+   ],
+   "repetitions_dropped": 1,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:12:39+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:12:39+00:00"
+ "rewritten_at": "2026-11-28T13:21:12+00:00"
 }

@@ -3,23 +3,29 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7763d1cb2f6575dd",
- "reviewed_at": "2026-11-25T22:32:16+00:00",
- "problems": [
-  {
-   "sentences": [
-    1,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 2 classifies Zalmoxes as an ornithopod dinosaur, while sentence 12 states that recent studies place Z. shqiperorum in Ceratopsia, directly contradicting the earlier classification."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:11:14+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"This extinct genus includes two known species of ornithopod dinosaurs belonging to the subfamily Rhabdodontinae and the class Ornithischia, which is part of the parent group Rhabdodontoidea.\" / \"It is debated whether Zalmoxes shqiperorum is an ornithopod or a ceratopsian, with recent studies in 2026 placing it in Ceratopsia.\": Sentence 2 classifies Zalmoxes as an ornithopod dinosaur, while sentence 12 states that recent studies place Z. shqiperorum in Ceratopsia, directly contradicting the earlier classification."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:15:43+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:32:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      1,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 2 classifies Zalmoxes as an ornithopod dinosaur, while sentence 12 states that recent studies place Z. shqiperorum in Ceratopsia, directly contradicting the earlier classification."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:15:43+00:00"
+  }
+ ]
 }

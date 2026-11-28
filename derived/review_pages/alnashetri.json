@@ -2,32 +2,49 @@
  "taxon_key": "alnashetri",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "e029ad5dfa3cfd51",
- "reviewed_at": "2026-11-25T22:50:16+00:00",
+ "text_hash": "c4e4c19dad749542",
+ "reviewed_at": "2026-11-28T13:16:19+00:00",
  "problems": [
   {
    "sentences": [
-    2
+    5
    ],
    "kind": "missing_context",
-   "reason": "Sentence 3 refers to \"the original discovery\" and a specimen with hind limbs perfectly connected, but the page never explains what the original discovery was or which specimen is being described."
-  },
-  {
-   "sentences": [
-    9,
-    10
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 10 states fossils were recovered from the upper Candeleros Formation, which is Cenomanian in age, while sentence 11 claims the animal lived during the Albian stage (113–110 Ma), a younger period. The two statements give conflicting geological ages for the same fossils."
+   "reason": "Sentence 6 refers to \"the site\" which has not been mentioned earlier in the page."
   }
  ],
  "repetitions_dropped": 0,
  "notes": [
-  "- missing context: \"The original discovery included a specimen with hind limbs that were perfectly connected to each other.\": Sentence 3 refers to \"the original discovery\" and a specimen with hind limbs perfectly connected, but the page never explains what the original discovery was or which specimen is being described.",
-  "- contradiction: \"Fossils were recovered from red sandstones in the upper Candeleros Formation near the boundary with the Huincul Formation.\" / \"The animal lived during the Albian stage, approximately 113.2 to 110.1 million years ago.\": Sentence 10 states fossils were recovered from the upper Candeleros Formation, which is Cenomanian in age, while sentence 11 claims the animal lived during the Albian stage (113–110 Ma), a younger period. The two statements give conflicting geological ages for the same fossils."
+  "- missing context: \"The specific name cerropoliciensis honors the village of Cerro Policía, which assisted researchers after the site was found in 1999.\": Sentence 6 refers to \"the site\" which has not been mentioned earlier in the page."
  ],
  "rewrite": "replaced",
- "round": 1,
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:50:16+00:00",
+   "problems": [
+    {
+     "sentences": [
+      2
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 3 refers to \"the original discovery\" and a specimen with hind limbs perfectly connected, but the page never explains what the original discovery was or which specimen is being described."
+    },
+    {
+     "sentences": [
+      9,
+      10
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 10 states fossils were recovered from the upper Candeleros Formation, which is Cenomanian in age, while sentence 11 claims the animal lived during the Albian stage (113–110 Ma), a younger period. The two statements give conflicting geological ages for the same fossils."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:26:06+00:00"
+  }
+ ],
  "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:26:06+00:00"
+ "rewritten_at": "2026-11-28T13:23:40+00:00"
 }

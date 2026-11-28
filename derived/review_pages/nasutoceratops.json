@@ -3,60 +3,74 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "69d18ae09d754d96",
- "reviewed_at": "2026-11-25T22:19:00+00:00",
+ "reviewed_at": "2026-11-28T13:08:03+00:00",
  "problems": [
-  {
-   "sentences": [
-    18,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Both sentences state that researchers in 2013 assigned Nasutoceratops to the subfamily Centrosaurinae based on skull features."
-  },
-  {
-   "sentences": [
-    20,
-    21,
-    22
-   ],
-   "kind": "repetition",
-   "reason": "Sentences 21, 22, and 23 all discuss the Late Cretaceous age and the hypothesis of separate dinosaur provinces in Laramidia, repeating the same idea."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "missing_context",
-   "reason": "Sentence 7 refers to a hexagonal scale pattern resembling 'star' patterns later found on the limbs of Psittacosaurus, but Psittacosaurus has not been introduced earlier in the page."
-  },
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 5 compares a syncervical vertebra to that found in Styracosaurus, which is a different taxon, not the subject of the page."
-  },
-  {
-   "sentences": [
-    6
-   ],
-   "kind": "about_something_else",
-   "reason": "The comparison to Psittacosaurus in sentence 7 discusses another dinosaur’s limb patterns rather than a feature of Nasutoceratops itself."
-  },
   {
    "sentences": [
     19
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 20 describes the genus Crittendenceratops, a different taxon, and its assignment to Nasutoceratopsini, which is not the focus of the page."
+   "reason": "Sentence 20 describes the genus Crittendenceratops, which is a different taxon, not the subject Nasutoceratops."
   }
  ],
- "repetitions_dropped": 2,
- "notes": [
-  "- missing context: \"The unique hexagonal scale pattern on its skin resembles 'star' patterns later found on the limbs of Psittacosaurus.\": Sentence 7 refers to a hexagonal scale pattern resembling 'star' patterns later found on the limbs of Psittacosaurus, but Psittacosaurus has not been introduced earlier in the page."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:08:26+00:00"
+ "repetitions_dropped": 0,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:19:00+00:00",
+   "problems": [
+    {
+     "sentences": [
+      18,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Both sentences state that researchers in 2013 assigned Nasutoceratops to the subfamily Centrosaurinae based on skull features."
+    },
+    {
+     "sentences": [
+      20,
+      21,
+      22
+     ],
+     "kind": "repetition",
+     "reason": "Sentences 21, 22, and 23 all discuss the Late Cretaceous age and the hypothesis of separate dinosaur provinces in Laramidia, repeating the same idea."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "missing_context",
+     "reason": "Sentence 7 refers to a hexagonal scale pattern resembling 'star' patterns later found on the limbs of Psittacosaurus, but Psittacosaurus has not been introduced earlier in the page."
+    },
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 5 compares a syncervical vertebra to that found in Styracosaurus, which is a different taxon, not the subject of the page."
+    },
+    {
+     "sentences": [
+      6
+     ],
+     "kind": "about_something_else",
+     "reason": "The comparison to Psittacosaurus in sentence 7 discusses another dinosaur’s limb patterns rather than a feature of Nasutoceratops itself."
+    },
+    {
+     "sentences": [
+      19
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 20 describes the genus Crittendenceratops, a different taxon, and its assignment to Nasutoceratopsini, which is not the focus of the page."
+    }
+   ],
+   "repetitions_dropped": 2,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:08:26+00:00"
+  }
+ ]
 }

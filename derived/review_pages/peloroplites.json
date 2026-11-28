@@ -3,36 +3,50 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ceff373d27d432b7",
- "reviewed_at": "2026-11-25T22:26:17+00:00",
+ "reviewed_at": "2026-11-28T13:09:57+00:00",
  "problems": [
-  {
-   "sentences": [
-    8
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 9 gives two different length estimates (5–5.5 m and 6 m) without indicating they are separate studies or ranges."
-  },
-  {
-   "sentences": [
-    12
-   ],
-   "kind": "about_something_else",
-   "reason": "Sentence 13 describes the location of the holotype, which is about the specimen’s repository, not about the animal’s biology."
-  },
   {
    "sentences": [
     18
    ],
    "kind": "about_something_else",
-   "reason": "Sentence 19 reports the age of the Mussentuchit Member, a geological formation, not a characteristic of Peloroplites itself."
+   "reason": "Sentence 19 discusses the age of the Mussentuchit Member, a geological formation, not the animal Peloroplites itself."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Carpenter et al. originally estimated Peloroplites to be 5 to 5.5 meters long, while Gregory S. Paul later estimated it to be 6 meters long and weigh 2 tonnes.\": Sentence 9 gives two different length estimates (5–5.5 m and 6 m) without indicating they are separate studies or ranges."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:12:48+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:26:17+00:00",
+   "problems": [
+    {
+     "sentences": [
+      8
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 9 gives two different length estimates (5–5.5 m and 6 m) without indicating they are separate studies or ranges."
+    },
+    {
+     "sentences": [
+      12
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 13 describes the location of the holotype, which is about the specimen’s repository, not about the animal’s biology."
+    },
+    {
+     "sentences": [
+      18
+     ],
+     "kind": "about_something_else",
+     "reason": "Sentence 19 reports the age of the Mussentuchit Member, a geological formation, not a characteristic of Peloroplites itself."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:12:48+00:00"
+  }
+ ]
 }

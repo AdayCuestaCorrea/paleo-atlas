@@ -2,24 +2,39 @@
  "taxon_key": "neuquensaurus",
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
- "text_hash": "ed961ac7d64e7d42",
- "reviewed_at": "2026-11-25T22:41:26+00:00",
+ "text_hash": "18aefe1d3ffc626a",
+ "reviewed_at": "2026-11-28T13:13:49+00:00",
  "problems": [
   {
    "sentences": [
     11,
     12
    ],
-   "kind": "contradiction",
-   "reason": "Sentences 12 and 13 give conflicting time ranges for when Neuquensaurus lived."
+   "kind": "repetition",
+   "reason": "Both sentences state the same time range estimates for Neuquensaurus, merely reversing the order of the statements."
   }
  ],
- "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Neuquensaurus lived in Argentina during the Late Cretaceous, approximately 83 to 74.5 million years ago.\" / \"Other estimates suggest the animal lived from the Santonian to the Maastrichtian stages, between 85.7 and 66 million years ago.\": Sentences 12 and 13 give conflicting time ranges for when Neuquensaurus lived."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:21:04+00:00"
+ "repetitions_dropped": 1,
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:41:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentences 12 and 13 give conflicting time ranges for when Neuquensaurus lived."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:21:04+00:00"
+  }
+ ]
 }

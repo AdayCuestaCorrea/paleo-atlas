@@ -3,32 +3,37 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "7391841e9d9cc8bd",
- "reviewed_at": "2026-11-25T22:49:54+00:00",
- "problems": [
-  {
-   "sentences": [
-    11,
-    12
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 12 describes Osteolepis as living in a calm freshwater lake that dries periodically, while sentence 13 places it in Lake Orcadie, a marine basin that does not dry."
-  },
-  {
-   "sentences": [
-    4,
-    11
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 refers to anoxic events in deep water causing mass fish kills, implying a deep marine setting, whereas sentence 12 describes a calm freshwater lake habitat."
-  }
- ],
+ "reviewed_at": "2026-11-28T13:16:12+00:00",
+ "problems": [],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"The habitat of Osteolepis was a calm freshwater lake that experienced periodic drying.\" / \"Osteolepis lived in Lake Orcadie in northern Scotland.\": Sentence 12 describes Osteolepis as living in a calm freshwater lake that dries periodically, while sentence 13 places it in Lake Orcadie, a marine basin that does not dry.",
-  "- contradiction: \"Anoxic events in deep water likely caused mass fish kills that preserved articulated fossils of the animal.\" / \"The habitat of Osteolepis was a calm freshwater lake that experienced periodic drying.\": Sentence 5 refers to anoxic events in deep water causing mass fish kills, implying a deep marine setting, whereas sentence 12 describes a calm freshwater lake habitat."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:25:54+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:49:54+00:00",
+   "problems": [
+    {
+     "sentences": [
+      11,
+      12
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 12 describes Osteolepis as living in a calm freshwater lake that dries periodically, while sentence 13 places it in Lake Orcadie, a marine basin that does not dry."
+    },
+    {
+     "sentences": [
+      4,
+      11
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 refers to anoxic events in deep water causing mass fish kills, implying a deep marine setting, whereas sentence 12 describes a calm freshwater lake habitat."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:25:54+00:00"
+  }
+ ]
 }

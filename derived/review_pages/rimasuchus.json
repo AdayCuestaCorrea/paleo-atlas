@@ -3,29 +3,43 @@
  "generator": "ollama/gpt-oss:20b",
  "prompt_version": "review-page-v1",
  "text_hash": "ec571712fab23937",
- "reviewed_at": "2026-11-25T22:43:26+00:00",
+ "reviewed_at": "2026-11-28T13:14:21+00:00",
  "problems": [
-  {
-   "sentences": [
-    4
-   ],
-   "kind": "contradiction",
-   "reason": "Sentence 5 gives two incompatible time ranges for Rimasuchus (1.88–7.44 Ma and 20.45–0.0117 Ma) and also states it lived during the Early Miocene while later claiming a range up to the Late Pleistocene."
-  },
   {
    "sentences": [
     3
    ],
    "kind": "repetition",
-   "reason": "Sentence 4 repeats the same claim twice: \"It is closely related to the modern dwarf crocodile Osteolaemus\" and also states it belongs to Osteolaeminae/Osteolaemini, effectively repeating the relationship information."
+   "reason": "Sentence 4 repeats the claim that Rimasuchus is closely related to the modern dwarf crocodile Osteolaemus twice."
   }
  ],
  "repetitions_dropped": 0,
- "notes": [
-  "- contradiction: \"Rimasuchus lived during the Early Miocene. Fossils of Rimasuchus date from approximately 1.88 to 7.44 million years ago. The genus Rimasuchus lived from the Burdigalian to the Late Pleistocene, between 20.45 and 0.0117 million years ago.\": Sentence 5 gives two incompatible time ranges for Rimasuchus (1.88–7.44 Ma and 20.45–0.0117 Ma) and also states it lived during the Early Miocene while later claiming a range up to the Late Pleistocene."
- ],
- "rewrite": "replaced",
- "round": 1,
- "rewrite_mode": "sentences",
- "rewritten_at": "2026-11-25T23:22:08+00:00"
+ "notes": [],
+ "rewrite": "none",
+ "round": 2,
+ "earlier": [
+  {
+   "reviewed_at": "2026-11-25T22:43:26+00:00",
+   "problems": [
+    {
+     "sentences": [
+      4
+     ],
+     "kind": "contradiction",
+     "reason": "Sentence 5 gives two incompatible time ranges for Rimasuchus (1.88–7.44 Ma and 20.45–0.0117 Ma) and also states it lived during the Early Miocene while later claiming a range up to the Late Pleistocene."
+    },
+    {
+     "sentences": [
+      3
+     ],
+     "kind": "repetition",
+     "reason": "Sentence 4 repeats the same claim twice: \"It is closely related to the modern dwarf crocodile Osteolaemus\" and also states it belongs to Osteolaeminae/Osteolaemini, effectively repeating the relationship information."
+    }
+   ],
+   "repetitions_dropped": 0,
+   "rewrite": "replaced",
+   "rewrite_mode": "sentences",
+   "rewritten_at": "2026-11-25T23:22:08+00:00"
+  }
+ ]
 }
